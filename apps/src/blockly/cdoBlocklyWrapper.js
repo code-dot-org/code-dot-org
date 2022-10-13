@@ -233,6 +233,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     getBlockFields: function(block) {
       return block.getTitles();
     },
+    getToolboxWidth: function() {
+      return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    },
     getBlockLimit: function(blockType) {
       return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
         blockType
@@ -243,6 +246,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     setHSV: function(block, h, s, v) {
       block.setHSV(h, s, v);
+    },
+    workspaceSvgResize: function(workspace) {
+      return workspace.blockSpaceEditor.svgResize();
+    },
+    bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
+      return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
     }
   };
   return blocklyWrapper;

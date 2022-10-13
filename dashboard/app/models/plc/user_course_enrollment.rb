@@ -24,9 +24,6 @@ class Plc::UserCourseEnrollment < ApplicationRecord
   has_many :plc_unit_assignments, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
   has_many :plc_module_assignments, through: :plc_unit_assignments, class_name: '::Plc::EnrollmentModuleAssignment', dependent: :destroy
 
-  validates :user, presence: true
-  validates :plc_course, presence: true
-
   validates :user_id, uniqueness: {scope: :plc_course_id}, on: :create
 
   after_save :create_enrollment_unit_assignments, :create_authorized_teacher_user_permission
@@ -44,7 +41,7 @@ class Plc::UserCourseEnrollment < ApplicationRecord
     other_failure_errors = []
 
     user_keys.each do |user_key|
-      user = user_key =~ /^\d+$/ ? User.find(user_key) : User.find_by_email_or_hashed_email(user_key)
+      user = /^\d+$/.match?(user_key) ? User.find(user_key) : User.find_by_email_or_hashed_email(user_key)
 
       email = user.try(:email)
 

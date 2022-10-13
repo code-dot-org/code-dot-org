@@ -1,4 +1,4 @@
-require pegasus_dir 'data/csv'
+require lib_dir 'cdo/data/csv_to_sql_table'
 require 'active_support/core_ext/module/attribute_accessors'
 
 # Inject static Sequel models for all CSV-derived Pegasus database tables.

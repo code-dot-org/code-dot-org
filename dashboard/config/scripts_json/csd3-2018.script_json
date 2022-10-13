@@ -10,7 +10,8 @@
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csd-post-survey-2018",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "249e1d1d-7ed0-4042-8e57-17f5f2061a9f"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -25,35 +26,13 @@
       ],
       "project_widget_visible": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-18/unit3/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd3"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-18/unit3/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-18/unit3/standards/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csd-18/unit3/code/"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-03-22 21:16:13 UTC",
+    "serialized_at": "2022-09-28 14:31:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -671,6 +671,47 @@ in:
         PL_CSP_EIPMOverview: crwdns2857751:0crwdne2857751:0
         tesstest: crwdns2865694:0crwdne2865694:0
         CSA-PL-debugging-temp: crwdns2887208:0crwdne2887208:0
+        csd_app_lab_design_mode: crwdns2905986:0crwdne2905986:0
+        csd_app_lab_events: crwdns2905988:0crwdne2905988:0
+        PL_CSD_Unit4_AppTesting: crwdns2907916:0crwdne2907916:0
+        csd_u6_circuit_playground: crwdns2907918:0crwdne2907918:0
+        csd_u6_input_output: crwdns2907920:0crwdne2907920:0
+        CSA-PL-for-loops: crwdns2917488:0crwdne2917488:0
+        CSA-PL-variables: crwdns2917490:0crwdne2917490:0
+        PL_CS_Journeys_Overview: crwdns2917492:0crwdne2917492:0
+        CSA-PL-intro-to-java-lab: crwdns2917494:0crwdne2917494:0
+        CSA-PL-first-program: crwdns2917496:0crwdne2917496:0
+        CSD_u6_variables_part1: crwdns2917498:0crwdne2917498:0
+        csd_u6_if_statements: crwdns2917500:0crwdne2917500:0
+        csc-poem-art-intro: crwdns2917502:0crwdne2917502:0
+        csc-poem-art-outro: crwdns2917504:0crwdne2917504:0
+        csd_u6_call_define_functions: crwdns2917506:0crwdne2917506:0
+        csp_applab_parameters: crwdns2917508:0crwdne2917508:0
+        starquilts_intro_artist: crwdns2917510:0crwdne2917510:0
+        CSA-PL-intro-to-arrays: crwdns2917512:0crwdne2917512:0
+        CSA-PL-1d-arrays-new-values: crwdns2917514:0crwdne2917514:0
+        CSA-PL-conditionals: crwdns2917516:0crwdne2917516:0
+        CSA-PL-two-way-selection: crwdns2917518:0crwdne2917518:0
+        CSA-PL-Printing-in-Java: crwdns2917520:0crwdne2917520:0
+        CSA-PL-multi-selection-statements: crwdns2917522:0crwdne2917522:0
+        PL_CSP_TeacherTips_Advice: crwdns2927700:0crwdne2927700:0
+        PL_CSP_TeacherTips_IntroToCSP: crwdns2927702:0crwdne2927702:0
+        PL_CSP_TeacherTips_Debugging: crwdns2927704:0crwdne2927704:0
+        PL_CSP_TeacherTips_LeadLearner: crwdns2927706:0crwdne2927706:0
+        PL_CSP_TeacherTips_APExam: crwdns2927708:0crwdne2927708:0
+        PL_CSP_TeacherTips_EIPM: crwdns2927710:0crwdne2927710:0
+        PL_CSD_CircuitPlayground_Overview: crwdns2927712:0crwdne2927712:0
+        CSA-PL-debugging-22: crwdns2929394:0crwdne2929394:0
+        CSD_Unit6_InteractiveArtExemplar: crwdns2929396:0crwdne2929396:0
+        CS_Changing_Everything: crwdns2929398:0crwdne2929398:0
+        csa-alias-video: crwdns2929942:0crwdne2929942:0
+        csa-equals-video: crwdns2929944:0crwdne2929944:0
+        csa-user-stories: crwdns2929946:0crwdne2929946:0
+        csa-pl-vpl-m1-unit-3: crwdns2929948:0crwdne2929948:0
+        csa-pl-intro-to-equality: crwdns2929950:0crwdne2929950:0
+        csa-pl-intro-to-equals-method: crwdns2929952:0crwdne2929952:0
+        csa-pl-equals-book: crwdns2950540:0crwdne2950540:0
+        csa-multi-select-pl: crwdns3120070:0crwdne3120070:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

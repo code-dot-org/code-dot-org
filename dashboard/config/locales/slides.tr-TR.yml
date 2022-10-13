@@ -3779,23 +3779,259 @@ tr:
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
+        text: Benim adım Caia. Şair ve bilgisayar bilimi öğrencisiyim. Kodlama bana
+          daha iyi bir şair olmamı sağlayan çok şey öğretti ve şiirle ilgilenmek kodlamada
+          daha iyi olmamı sağladı çünkü gerçekten seçtiğiniz kelimeleri ve hepsi bir
+          araya geldiğinde nasıl bir şey ortaya çıkacağını düşünmeniz gerekiyor.
       2:
         image: notes/hoc_poem_art_2021_introduction_02.jpg
+        text: Önümüzdeki bir saat boyunca, animasyonlu bir şiir oluşturarak bilgisayar
+          bilimi ve şiir hakkında bilgi edineceksiniz. Özünde şiir, kelimelerle sanat
+          yapmaktır. Kendimi ifade etmek için şiir yazarım. Kendi tarzımı ve ritmimi
+          kullanarak yazarken izleyicinin hayal gücünü ve duygularını harekete geçirmeye
+          çalışırım.
       3:
         image: notes/hoc_poem_art_2021_introduction_03.jpg
+        text: Tıpkı sanat gibi, şiir de birçok farklı şekilde yorumlanabilir. Aynı
+          şiir farklı insanlar için çok farklı şeyler ifade edebilir ve her şiirin
+          kendi ruh hali vardır. Ruh hali, bir şiirden aldığınız duygudur. Bazen insanlar
+          belirli renkleri ve görüntüleri farklı ruh halleriyle ilişkilendirir.
       4:
         image: notes/hoc_poem_art_2021_introduction_04.jpg
+        text: Mesela sarı renk bana neşe verir. Ve korku gibi bir ruh halini düşündüğümde,
+          bazen karanlık ve fırtınalı bir gece hayal ederim. Bu aktivitede, bir şiirin
+          ruh halini, size verdiği hislere bağlı olarak gösterme ve canlandırma fırsatına
+          sahip olacaksınız.
       5:
         image: notes/hoc_poem_art_2021_introduction_05.jpg
+        text: Bunu kod kullanarak nasıl yapacağınıza bir göz atalım. Ekranınızın üç
+          ana bölüme ayrıldığını göreceksiniz. Solda oyun alanı var. Animasyonlu şiirinizin
+          ortaya çıkacağı yer burasıdır. Her şiirin bir başlığı ve bir yazarı vardır.
       6:
         image: notes/hoc_poem_art_2021_introduction_06.jpg
+        text: Bu orta alan araç kutusudur. Derste ilerledikçe bu alanda yeni kod blokları
+          bulunacaktır.
       7:
         image: notes/hoc_poem_art_2021_introduction_07.jpg
+        text: Sağdaki alan çalışma alanıdır. Programınızı yapmak için blokları araç
+          kutusundan çalışma alanına sürükleyebilirsiniz.
       8:
         image: notes/hoc_poem_art_2021_introduction_08.jpg
+        text: Her bir seviye için talimatlar, burada ekranın üstünde olacaktır. Bir
+          ipucuna ihtiyacınız olursa ampule tıklamanız yeterlidir.
       9:
         image: notes/hoc_poem_art_2021_introduction_09.jpg
+        text: İlk önce beğendiğiniz bir şiir seçin. Her türde şiir olabilir ve her
+          seviyede yeni bir tane seçebilirsiniz.
       10:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
+        text: Ardından, şiirinizi canlandırmak için blokları araç kutusundan çalışma
+          alanınıza sürükleyeceksiniz. Şiirinizin havasına uyan bir arka plan rengi
+          veya efekti seçebilir, ardından şiirinizi çalışırken görmek için "Çalıştır"a
+          tıklayabilirsiniz.
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+        text: Farklı şiirleri okumak için biraz zaman ayırın ve içinizde bir duygu
+          uyandıran bir şiir bulun. Nasıl hissettiğinizi ve bu duyguyu imgeler ve
+          kodlar aracılığıyla nasıl aktarabileceğinizi düşünün.
+    poemart_events:
+      1:
+        image: notes/hoc_poem_art_2021_events_01.jpg
+        text: Bazen bir şiirin ruh hali şiirin bir noktasında kısmen değişir. Kulağa
+          mutlu gelen bir şiir olarak başlamışken hüzünlü bir hal alır ya da belki
+          karanlık aydınlığa dönüşür.
+      2:
+        image: notes/hoc_poem_art_2021_events_02.jpg
+        text: Bu aktivitede olaylarla çalışacaksınız. Şiirinizin belirli bir satırı
+          göründüğünde programınızın gidişatını değiştirmek için bu olay bloğunu kullanabilirsiniz.
+          Olay bloklarının ana programınıza uymadığına dikkat edin. Bunun yerine,
+          kendilerine ait küçük programlar yaratırlar.
+      3:
+        image: notes/hoc_poem_art_2021_events_03.jpg
+        text: 'Şiirinizi okuyun ve ruh halinizin değiştiği bir an bulun. Hangi satırda
+          olduğunu bulun: birinci, ikinci, üçüncü. Olay bloğunuza satırın numarasını
+          girin.'
+      4:
+        image: notes/hoc_poem_art_2021_events_04.jpg
+        text: Ardından, o satır ekranda göründüğünde ruh halindeki değişimi yansıtacak
+          bir şey programlayın. "Çalıştır"a bastığınızda ne kodladığınızı görebilirsiniz.
+    poemart_imagery:
+      1:
+        image: notes/hoc_poem_art_2021_imagery_01.jpg
+        text: Şiirde yazarlar, okuyucunun zihninde bir resim çizmek için imgeleri
+          kullanırlar. Timsah kelimesini gördüğümüzde, zihnimizde otomatik olarak
+          yeşil bir timsah hayal ederiz. Bunun gibi bir görüntüyü bir animasyona dönüştürmek
+          için hareketli nesneler kullanacağız.
+      2:
+        image: notes/hoc_poem_art_2021_imagery_02.jpg
+        text: Bu, bir hareketli nesne oluşturmanıza ve bunun için bir kostüm seçmenize
+          olanak tanıyan yeni bir hareketli nesne bloğu oluşturur. Şiirle uyumlu olduğunu
+          düşündüğünüz hareketli nesne için bir kostüm seçin.
+      3:
+        image: notes/hoc_poem_art_2021_imagery_03.jpg
+        text: Hareketli nesnenin konumunu değiştirmek için konum bloğundaki pin simgesine
+          tıklayabilir, ardından da oyun alanı içinde gitmesini istediğiniz yere tıklayabilirsiniz.
+      4:
+        image: notes/hoc_poem_art_2021_imagery_04.jpg
+        text: Sonraki birkaç seviyede bazı yeni bloklar göreceksiniz. Bu blok, hareketli
+          nesnenizin boyutunu değiştirmenize olanak tanır. Bu blok, hareketli nesnenizi
+          davranışla canlandırmanızı sağlar.
+      5:
+        image: notes/hoc_poem_art_2021_imagery_05.jpg
+        text: Bir şiir dolaşan bulutlardan bahsediyorsa, önce bulut hareketli nesnesini
+          yapın; ardından bu davranış bloğunu seçin, dışarı sürükleyin ve gezinmeyi
+          seçin.
+      6:
+        image: notes/hoc_poem_art_2021_imagery_06.jpg
+        text: Hareketli nesne kostümlerinizin eşleştiğinden emin olun. Çalıştır'a
+          bastığınızda, okuyacak ve dolaşan bir bulut göreceksiniz.
+      7:
+        image: notes/hoc_poem_art_2021_imagery_07.jpg
+        text: Artık şiirdeki kelimeleri göstermek için gerçek görseller ekleyebilirsiniz.
+          İyi eğlenceler!
+    poemart_celebration:
+      1:
+        image: notes/hoc_poem_art_2021_celebration_01.jpg
+        text: Tebrikler! Az önce bilgisayar biliminin temellerini ve bir şiirin ruh
+          halini nasıl bulacağınızı öğrendiniz. Artık arkadaşlarınızla paylaşmak için
+          kendi animasyonlu şiirinizi oluşturabilirsiniz.
+      2:
+        image: notes/hoc_poem_art_2021_celebration_02.jpg
+        text: Tüm şiir için basit bir sahneyi dikkatli bir şekilde mi seçeceksiniz?
+      3:
+        image: notes/hoc_poem_art_2021_celebration_03.jpg
+        text: Yoksa şiirinizin her satırı için yeni bir sahne oluşturmak üzere birçok
+          olay mı kullanacaksınız?
+      4:
+        image: notes/hoc_poem_art_2021_celebration_04.jpg
+        text: Öğreticinin sonunda, eserinizin bağlantısını arkadaşlarınızla paylaşabilirsiniz.
+      5:
+        image: notes/hoc_poem_art_2021_celebration_05.jpg
+        text: Hayal gücünüzü geliştirin ve eğlenin!
+    hello_world_intro:
+      1:
+        image: notes/hoc_hello_world_2021_introduction_01.jpg
+        text: Merhaba! Benim adım Erin. Code.org'da yazılım mühendisiyim. Çok heyecanlıyım
+          çünkü yapmak üzere olduğunuz öğretici üzerinde çalışmalıyım! Biz bu öğerticiye
+          "Merhaba Dünya" adını verdik.
+      2:
+        image: notes/hoc_hello_world_2021_introduction_02.jpg
+        text: '"Merhaba Dünya", bilgisayar bilimlerinde ünlü bir deyimdir ve bu deyim
+          ekranda göstermek, bilgisayar bilimi öğrenme sürecinde ortak bir ilk adımdır.
+          Önümüzdeki bir saat içinde, Hareketli Nesne Laboratuvarı''nda programlama
+          yaparak bilgisayar bilimine başlayacaksınız.'
+      3:
+        image: notes/hoc_hello_world_2021_introduction_03.jpg
+        text: Hareketli Nesne Laboratuvarı, yaratıcı ve eğlenceli projeler oluşturmak
+          için kullanabileceğiniz bir araçtır. Ekranınızın üç ana bölüme ayrıldığını
+          göreceksiniz. Solda oyun alanı var. Burası hareketli nesnelerinizin görüneceği
+          yer.
+      4:
+        image: notes/hoc_hello_world_2021_introduction_04.jpg
+        text: Hareketli nesneler, bir hikaye veya oyundaki bir karakter veya öğe gibi
+          ekranda etkileşim kurabileceğiniz nesnelerdir.
+      5:
+        image: notes/hoc_hello_world_2021_introduction_05.jpg
+        text: Bu orta alan araç kutusudur. Derste ilerledikçe bu alanda yeni kod blokları
+          bulunacaktır.
+      6:
+        image: notes/hoc_hello_world_2021_introduction_06.jpg
+        text: Sağdaki alan çalışma alanıdır. Programınızı yapmak için blokları araç
+          kutusundan çalışma alanına sürükleyebilirsiniz.
+      7:
+        image: notes/hoc_hello_world_2021_introduction_07.jpg
+        text: Her bir seviye için talimatlar, burada ekranın üstünde olacaktır. Bir
+          ipucuna ihtiyacınız olursa ampule tıklamanız yeterlidir.
+      8:
+        image: notes/hoc_hello_world_2021_introduction_08.jpg
+        text: Başlamak için, bir hareketli nesne yapalım! Bu blok, hareketli nesnenize
+          bir kostüm ve bir konum vermenizi sağlar. Kostüm, bir hareketli nesnenin
+          görünümünü tanımlamak için kullandığımız kelimedir. Hareketli nesnenin konumunu
+          değiştirmek için konum bloğundaki pim simgesine ve ardından gitmesini istediğiniz
+          yere tıklayabilirsiniz.
+      9:
+        image: notes/hoc_hello_world_2021_introduction_09.jpg
+        text: Şimdi hareketli nesnenin kendisini tanıtmasını sağlayalım! Sprite'ın
+          bir şey söylemesini sağlamak için bu "Söyle" bloğunu kullanın ve programınıza
+          ekleyin. "Söyle" bloğunuzda seçilen kostümün, hareketli nesnenizdeki kostümle
+          eşleştiğinden emin olun.
+      10:
+        image: notes/hoc_hello_world_2021_introduction_10.jpg
+        text: '"Çalıştır"a bastığınızda, hareketli grafik, ona söylediğiniz metni
+          söyleyecektir. Şimdi Hareketli Nesne Laboratuvarını kullanmaya başlama ve
+          hayal gücünüzün sizi nereye götürdüğünü görme zamanı!'
+    hello_world_events:
+      1:
+        image: notes/hoc_hello_world_2021_events_01.jpg
+        text: Artık Hareketli Laboratuvarı nasıl kullanacağınızı öğrendiğinize göre,
+          birisi onunla oynadığında programınızın tepki vermesini isteyeceksiniz.
+          Bunu yapmak için olayları kullanacaksınız. Bir olay, programınıza bir şeyin
+          olup olmadığını izlemesini ve ardından hemen tepki vermesini söyler.
+      2:
+        image: notes/hoc_hello_world_2021_events_02.jpg
+        text: Bazı olay örneklerinde, bir fare tıklaması, bir ok düğmesi veya ekrana
+          bir dokunuş olup olmadığını izlenir. "Tıklandığı zaman" gibi bloklara olay
+          blokları denir. Bir olay bloğuna bağlanan kod, uygun eylem algılandığında
+          çalışır.
+      3:
+        image: notes/hoc_hello_world_2021_events_03.jpg
+        text: Örneğin, bu "söyle" bloğunu "tıklandığı zaman" olayına eklersem, hareketli
+          nesnem kullanıcı ona tıkladığında veya üzerine dokunduğunda bir şeyler söyleyecektir.
+          Olay bloklarının ana programınızın parçası olmadığına dikkat edin. Aksine,
+          kendi başlarına küçük programlardırlar.
+      4:
+        image: notes/hoc_hello_world_2021_events_04.jpg
+        text: Birden fazla hareketli nesneniz varsa, etkileşimli bir hikaye anlatmak
+          için ek olaylar kullanabilirsiniz.
+      5:
+        image: notes/hoc_hello_world_2021_events_05.jpg
+        text: Yakında Hareketli Nesne Laboratuvarında bir hareketli nesnenin boyutunu
+          veya görünümünü değiştirmek, farklı arka planlar ayarlamak, ses oynatmak
+          ve daha fazlasını nasıl yapacağınızı öğreneceksiniz. Birisi onlarla etkileşime
+          girdiğinde hareketli nesnelerinizin ne yapmasını istersiniz? Size bağlı!
+    hello_world_congrats:
+      1:
+        image: notes/hoc_hello_world_2021_freeplay_01.jpg
+        text: Tebrikler! Az önce bilgisayar biliminin temellerini öğrendiniz. Artık
+          istediğinizi oluşturmak için Harekerli Nesne Laboratuvarını kullanabilirsiniz.
+      2:
+        image: notes/hoc_hello_world_2021_freeplay_02.jpg
+        text: Kostümler yazan bir düğme göreceksiniz. Üzerine tıkladığınızda, bir
+          kütüphaneden yeni hareketli nesne kostümleri seçebilirsiniz.
+      3:
+        image: notes/hoc_hello_world_2021_freeplay_03.jpg
+        text: Kendi kostümünüzü de çizebilirsiniz. Beğendiğiniz bir kostüm olunca
+          kodunuza geri dönün.
+      4:
+        image: notes/hoc_hello_world_2021_freeplay_04.jpg
+        text: Şimdi de hareketli nesneniz için o kostümü seçin.
+      5:
+        image: notes/hoc_hello_world_2021_freeplay_05.jpg
+        text: Araç kutusuna bakarsanız, daha önce görmediğiniz yepyeni bloklar bulacaksınız.
+          Örneğin hareketli nesnenizi eğlenceli ve ilginç şekillerde hareket ettirmenizi
+          sağlayacak birçok davranış bloğu vardır.
+      6:
+        image: notes/hoc_hello_world_2021_freeplay_06.jpg
+        text: İki hareketli nesne birbirine çarptığında ne olacağını kontrol etmek
+          için "Dokunduğu zaman" olay bloğunu kullanabilirsiniz.
+      7:
+        image: notes/hoc_hello_world_2021_freeplay_07.jpg
+        text: '"Efekt oluştur" bloğunu arayın. Bu güçlü blok, komut üzerine patlayan
+          veya yağmur yağdıran bir sürü hareketli nesne yapmak için kullanılabilir.'
+      8:
+        image: notes/hoc_hello_world_2021_freeplay_08.jpg
+        text: Etrafınıza bir göz atın ve bu yeni blokları ve özellikleri kullanmayı
+          deneyin. Öğreticinin sonunda, eserinizin bağlantısını arkadaşlarınızla paylaşmak
+          için "Paylaş" düğmesine tıklayın.
+      9:
+        image: notes/hoc_hello_world_2021_freeplay_09.jpg
+        text: Hareketli Nesne Laboratuvarında uygulamalar, oyunlar ve başka yeni programlar
+          geliştirmeye başlamak için ihtiyacınız olan tüm güçlü becerilere sahipsiniz!
+          Yeni güçlerini iyilik için kullan. Tıpkı kağıt üzerinde bir şeyler yaratırken
+          veya bir arkadaşınızla konuşurken yaptığınız gibi nazik ve saygılı olun.
+      10:
+        image: notes/hoc_hello_world_2021_freeplay_10.jpg
+        text: Peki ne yaratacaksınız? Kendiniz hakkında bir hikaye anlatabilir veya
+          kendi özel karakterlerinizle bir hikaye uydurabilirsiniz. Belki bir sonraki
+          okul projenizde yeni bilgisayar bilimi becerilerinizi bile kullanırsınız!
+          Hayal gücünüzü geliştirin ve eğlenin!

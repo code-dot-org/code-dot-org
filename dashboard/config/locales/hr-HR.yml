@@ -260,7 +260,6 @@ hr:
     popup:
       progress_for_user: Napredak %{name}
       progress: Tvoj napredak
-      lines: 'Ukupno linija kôda: %{lines}'
       close: ZATVORI
       mastery: Pojmovi
       puzzle_map: Faze
@@ -355,6 +354,7 @@ hr:
     no_primary_course: Isprobaj tečaj Code Studio
     choose_next_course: Isprobaj tečaj Code Studio uz niže navedeni odabir
     print_certificate: Ispišite diplome
+  certificate_hour_of_code: Hour of Code
   share:
     title: Naučite o Code Studiu
     description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije
@@ -722,6 +722,7 @@ hr:
         music: Glazba
         art: Umjetnost
         other: 'Ostalo:'
+        na: Nije primjenjivo
       resources:
         bootstrap: Bootstrap
         codecademy: CodeCademy
@@ -730,7 +731,8 @@ hr:
         kodable: Kodable
         scratch: Scratch
         tynker: Tynker
-        other: 'Ostalo:'
+        other: Ostalo
+        na: Nije primjenjivo
       robotics:
         grok: Grok Learning
         kodable: Kodable
@@ -740,7 +742,8 @@ hr:
         sphero: Sphero
         raspberry: Raspberry Pi
         wonder: Wonder Workshop
-        other: 'Ostalo:'
+        other: Ostalo
+        na: Nije primjenjivo
       workshop_course:
         csf_af: Osnove RZ (Tečajevi A-F)
         csf_express: Osnove RZ (Pred-Brzi ili Brzi)

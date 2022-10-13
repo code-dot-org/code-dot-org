@@ -1662,6 +1662,11 @@
       "spinning right": "spinning right",
       "spinning left": "spinning left",
       "swimming left and right": "swimming left and right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen"
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/21/levels/3": {
@@ -1694,6 +1699,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/21/levels/8": {
@@ -1715,6 +1723,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/22/levels/1": {
@@ -1743,6 +1754,11 @@
       "spinning right": "spinning right",
       "spinning left": "spinning left",
       "swimming left and right": "swimming left and right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen"
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/22/levels/3": {
@@ -1763,6 +1779,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/22/levels/5": {
@@ -1779,6 +1798,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/22/levels/6": {
@@ -1795,6 +1817,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/22/levels/7": {
@@ -1811,6 +1836,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/23/levels/1": {
@@ -1894,6 +1922,19 @@
       "patrolling": "patrolling",
       "swimming left and right": "swimming left and right"
     },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
+    },
     "placeholder_texts": {
       "40d7755b0c04b15ca69f0f8d8c510f91": "Feed the bunny!",
       "498cd895eb5a102c5aeb977e2b928dee": "Thank you!"
@@ -1925,6 +1966,19 @@
       "moving west": "moving west",
       "patrolling": "patrolling"
     },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
+    },
     "placeholder_texts": {
       "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
       "8437002ea42b64a5fd68abfb2ab8dae0": "Game over.",
@@ -1955,6 +2009,19 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursee-2018/lessons/26/levels/1": {

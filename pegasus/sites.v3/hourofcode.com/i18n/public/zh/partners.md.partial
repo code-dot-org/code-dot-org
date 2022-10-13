@@ -2,39 +2,37 @@
 title: 合作夥伴
 ---
 
-一小時玩程式活動是由一小時玩程式與計算機科學教育諮詢與審查委員會所推動。
+一小時玩程式由一小時玩程式評審委員會推動。
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. 這個委員會是一小時玩程式的指導單位。
+[審查委員會]({{ urls/review_committee }})由12名當前和過去的K-12年級教育工作者組成，他們使用諮詢委員會制定的標準對活動進行評估和建議。 這些教育工作者審查由數以百計的活動夥伴提交的由學生主導的活動和由教師引導的課程計劃，評估活動的教育價值、吸引學員的能力以及對各類學生的潛在吸引力。
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. 這些教育工作者負責審查學生導向的教程，也審查由數以百計教育伙伴提供的教學計畫，他們評價活動的教育價值、能給學習者的技能、還有對不同特質學生是否有吸引潛能。
+委員會所做的工作和貢獻讓一小時玩程式活動得以成功，同時實現活動讓每個學生認識電腦科學的願景。
 
-這二個委員會所做的工作與貢獻讓一小時玩程式活動得以成功，同時提供了每個學生認識計算機科學的機會。
-
-# Major Partners and Corporate Supporters
+# 主要合作夥伴和企業贊助商
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# 國際合作夥伴
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# 課程和教程合作夥伴
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# 基礎設施合作夥伴和工具
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# 其他合作夥伴
 
 {{ partners/additional_partners }}
 

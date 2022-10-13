@@ -1,6 +1,6 @@
 name 'CSA U5L5-L3_2022'
 display_name 'Using Enhanced For Loops with 2D Arrays'
-description 'Practice using enhanced for loops with 2D arrays using the console or The Theater.'
+description 'Practice using enhanced `for` loops with 2D arrays using the console or The Theater.'
 
 sublevels
 level 'CSA U5L5-L3a_2022'

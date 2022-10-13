@@ -1,6 +1,6 @@
 name 'CSA U7L1-L1_2022'
-display_name 'Title Sequence Project Examples'
-description 'Examples of the Title Sequence Project'
+display_name 'Creative Coding with The Theater Project Examples'
+description 'Examples of the Creative Coding with The Theater Project'
 
 sublevels
 level 'CSA U7L1-L1a_2022'

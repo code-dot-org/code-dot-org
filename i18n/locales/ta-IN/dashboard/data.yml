@@ -27,6 +27,7 @@ ta:
         ArtistEC: கலைஞர்
         NetSim: இணைய மாதிரி
         Custom: கலைஞர்
+        Spritelab: ஸ்பிரைட் லேப்
     trophy:
       name:
         Bronze: வெண்கலம்
@@ -99,17 +100,29 @@ ta:
         Unplug6: நிபந்தனைகள்
         Unplug7: பாடல் எழுதுதல்
         Unplug8: நுண்புல
+        Unplug10: இணையதளம்
+        C1_happy_maps_unplugged: மகிழ்ச்சியான வரைபடம் 
+        C1_bigevent_unplugged: பெரிய நிகழ்வு
+        C1_getting_loopy: லூப்பி பெறுதல்
         C1_artist_intro: கலைஞர் அறிமுகம்
+        C1_building_foundation: ஒரு அடித்தளத்தை உருவாக்குதல்
+        C1_going_places_safely: பாதுகாப்பாக செல்லும் இடங்கள்
         C2_artist_intro: கலைஞர் அறிமுகம்
         C2_artist_loops: கலைஞர் சுழல்கள்
         C2_artist_debugging: கலைஞர் பிழைத்திருத்தம்
         C2_graph_paper: வரைதாள் செய்நிரல்
         C2_conditionals_with_cards: நிபந்தனைகள்
+        C2_binary_bracelets: பைனரி பிரெஸ்ட்லெட்ஸ் 
+        C2_digital_footprint: உங்கள் டிஜிட்டல் தடம்
+        C2_digital_footprint_v2: உங்கள் டிஜிட்டல் தடம்
         C3_artist_intro: கலைஞர் அறிமுகம்
         C3_artist_functions: கலைஞர் செயல்பாடுகள்
         C3_artist_nested_loops: உள்ளமை சுழல்கள்
         C3_bee_nested_loops: உள்ளமை சுழல்கள்
         C3_computational_thinking: கணினிபூர்வமான சிந்தனை
+        C3_internet: இணையதளம்
+        C3_crowdsourcing: க்ரவுட்சோர்சிங்
+        C3_functional_suncatchers: செயல்பாட்டு சன்கேட்சர்கள்
         C3_songwriting_with_parameters: பாடல் எழுதுதல்
         C4_loops_zombie: சுழற்சிகள்
         C4_variables_artist: மாறிகள் - கலைஞர்
@@ -120,6 +133,7 @@ ta:
         CSF_artist_angles: கலைஞரின் கோணங்கள்
         CSF_debugging_k1_blocks: பிழைத்திருத்தம்
         CSF_debugging_text_blocks: பிழைத்திருத்தம்
+        CSF_my_robotic_friends: என் ரோபோடிக் நண்பர்கள்
         frozen_intro: குறியீடு அறிமுக நேரம்
         frozen_loops: சுழல்கள் அறிமுகம்
         frozen_functions: செயல்பாடுகளுக்கு அறிமுகம்
@@ -155,12 +169,15 @@ ta:
         hoc_dance_events: நடன விருந்து - நிகழ்வுகள்
         hoc_dance_properties: நடன விருந்து - பண்புகள்
         hoc_dance_congrats: Dance Party – பார்ட்டி ஆன்!
+        c_and_c_great_to_create: ப்ளே ஃபேர் உருவாக்குவது அருமை 
+        c_and_c_digital_sharing: டிஜிட்டல் பகிர்வு
         csd_debugging: பிழைத்திருத்தம்
         oceans_machine_learning: இயந்திர வழி கற்றல்
         hoc_dance_congrats_2019: Dance Party – பார்ட்டி ஆன்!
         hoc_dance_warmup_2019: டான்ஸ் பார்ட்டி - வார்ம் அப்
         hoc_dance_events_2019: நடன விருந்து - நிகழ்வுகள்
         hoc_dance_properties_2019: நடன விருந்து - பண்புகள்
+        csf_private_and_personal_information: தனியார் மற்றும் தனிப்பட்ட தகவல்
         csf21pilot_events: 'ஸ்ப்ரைட் லேப்: ஸ்ப்ரைட்ஸ் இன் ஆக்சன்'
         outbreak_mike: கோட் பெய்ட் எபிசோடு 3 மைக் உடன்- அவுட் பிரேக் சிமுலேட்டர் 
         csf_lots_of_sprites: 'ஸ்ப்ரைட் ஆய்வகம்: நிறைய உருவங்கள் '
@@ -186,3 +203,22 @@ ta:
         poetry_module_multichoiceprompts: பல விருப்பத் தூண்டிகள் - Coding with Poetry
         poetry_module_conditionals: நிபந்தனை சார்ந்தவை - Coding with Poetry
         poemart_intro: கவிதை கலை அறிமுகம்
+        CSA-PL-debugging-temp: Java Lab - temp-ல் பிழைத்திருத்தத்திற்கான அறிமுகம்
+        CSA-PL-for-loops: ஜாவாவில் லூப்களுக்கு
+        CSA-PL-variables: ஜாவாவில் மாறிகளை உருவாக்குதல்
+        PL_CS_Journeys_Overview: CS பயணங்கள்
+        CSA-PL-intro-to-java-lab: ஜாவா லேப் அடிப்படைகள்
+        CSA-PL-first-program: ஜாவாவில் ஒரு நிரலை எழுதுதல்
+        CSD_u6_variables_part1: 'CSD: மாறிகள்'
+        csd_u6_if_statements: 'CSD: அறிக்கைகள் என்றால்'
+        csc-poem-art-intro: அறிமுக வீடியோ
+        csc-poem-art-outro: அவுட்ரோ வீடியோ
+        csd_u6_call_define_functions: 'CSD: அழைப்பு மற்றும் செயல்பாடுகளை வரையறுத்தல்'
+        starquilts_intro_artist: ஸ்டார் க்வில்ட்ஸ் அறிமுகம் 
+        CSA-PL-intro-to-arrays: ஒரு பரிமாண (1D) அணிவரிசைகள்
+        CSA-PL-1d-arrays-new-values: 1D வரிசைகளில் மதிப்புகளை உள்ளிடுகிறது
+        CSA-PL-conditionals: ஜாவாவில் நிபந்தனை அறிக்கைகள்
+        CSA-PL-two-way-selection: இரு வழி தேர்வு
+        CSA-PL-Printing-in-Java: ஜாவாவில் அச்சிடுதல்
+        CSA-PL-multi-selection-statements: பல தேர்வு அறிக்கைகள்
+        CS_Changing_Everything: கணினி அறிவியல் எல்லாவற்றையும் மாற்றுகிறது

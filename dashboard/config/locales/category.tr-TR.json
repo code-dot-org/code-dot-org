@@ -1,0 +1,89 @@
+{
+  "tr-TR": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Literatür Okuması"
+        },
+        "csta/AP": {
+          "description": "Algoritmalar ve Programlama"
+        },
+        "ccela/SL": {
+          "description": "Konuşma & Dinleme"
+        },
+        "ccmath/MP": {
+          "description": "Matematik Pratikleri"
+        },
+        "csta2011/CPP": {
+          "description": "Bilişim Pratiği & Programlama"
+        },
+        "csta2011/CT": {
+          "description": "Sayısal Düşünme"
+        },
+        "iste/1": {
+          "description": "Öğrenciler, teknolojiyi kullanarak yaratıcı düşünür, bilgilenir ve yenilikçi ürünler ve süreçler geliştirir."
+        },
+        "iste/4": {
+          "description": "Öğrenciler, uygun dijital araçları ve kaynakları kullanarak araştırmayı planlamak ve yürütmek, projeleri yönetmek, sorunları çözmek ve bilinçli kararlar vermek için eleştirel düşünme becerilerini kullanır."
+        },
+        "iste/6": {
+          "description": "Öğrenciler; teknoloji kavramları, sistemleri ve işlemlerini iyi bir şekilde anladığını gösterir."
+        },
+        "ccela/L": {
+          "description": "Dil"
+        },
+        "ccela/RI": {
+          "description": "Bilgilendirici Okuma"
+        },
+        "ccmath/OA": {
+          "description": "İşlemler ve Cebirsel Düşünme"
+        },
+        "csta2011/CD": {
+          "description": "Bilgisayarlar & İletişim Cihazları"
+        },
+        "csta2011/CI": {
+          "description": "Topluluk, Küresel ve Etik Etkileri"
+        },
+        "ccmath/MD": {
+          "description": "Karar Vermek İçin Olasılığı Kullanma"
+        },
+        "ccmath/NBT": {
+          "description": "Onluk Tabanda Sayı Ve İşlemler"
+        },
+        "ccmath/G": {
+          "description": "Geometri"
+        },
+        "ccela/W": {
+          "description": "Yazma"
+        },
+        "csta2011/CL": {
+          "description": "İşbirliği"
+        },
+        "iste/2": {
+          "description": "Öğrenciler, belli bir mesafede bireysel öğrenimi desteklemek ve başkalarının öğrenmesine katkı sağlamak dahil olmak üzere işbirliği içerisinde iletişim kurmak ve çalışmak için dijital medya ve ortamları kullanır."
+        },
+        "csta/IC": {
+          "description": "Bilgisayarın Etkileri"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Bilgi işlem kaynaklarının nasıl korunabileceğini ve kötüye kullanılabileceğini açıklayın."
+        },
+        "csta/NI": {
+          "description": "Ağlar ve İnternet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Belirli bir bağlamda hangisinin en iyi olduğunu belirlemek için veri sıkıştırma algoritmalarını karşılaştırın."
+        },
+        "csta/DA": {
+          "description": "Veri ve Analiz"
+        },
+        "csta/CS": {
+          "description": "Bilişim Sistemleri"
+        },
+        "ngss/ETS1": {
+          "description": "Mühendislik Tasarımı"
+        }
+      }
+    }
+  }
+}

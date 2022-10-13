@@ -13,24 +13,6 @@
       "pilot_experiment": "csd-2021-preview",
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-preview-21/unit5/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-preview-21/unit5/vocab"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-preview-21/unit5/standards/"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },

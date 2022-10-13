@@ -1,9 +1,5 @@
 <Craft>
   <config><![CDATA[{
-  "game_id": 49,
-  "created_at": "2016-10-28T22:41:25.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"grass\",\"grass\",\"grass\",\"planksOak\",\"planksOak\",\"planksOak\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"planksOak\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
@@ -45,10 +41,23 @@
     "show_popup_on_load": "playerSelection",
     "video_key": "mc_2016_events",
     "instructions_important": "true",
-    "contained_level_names": null
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
+    "preload_asset_list": null
   },
+  "game_id": 49,
   "published": true,
+  "created_at": "2016-10-28T22:41:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "UPDATE:\r\n\r\nThis level teaches Walking and Use",
+  "audit_log": "[{\"changed_at\":\"2022-04-28 22:03:29 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":963,\"changed_by_email\":\"clare@code.org\"},{\"changed_at\":\"2022-04-28 22:05:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\"],\"changed_by_id\":963,\"changed_by_email\":\"clare@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -70,17 +79,5 @@
       <xml>
 </xml>
     </required_blocks>
-    <solution_blocks>
-      <xml>
-        <block type="when_run" movable="false" deletable="false"/>
-        <block type="craft_sheep">
-          <statement name="WHEN_USED">
-            <block type="craft_drop">
-              <title name="TYPE">wool</title>
-            </block>
-          </statement>
-        </block>
-      </xml>
-    </solution_blocks>
   </blocks>
 </Craft>

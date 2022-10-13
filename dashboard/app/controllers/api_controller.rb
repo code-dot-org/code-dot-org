@@ -174,6 +174,7 @@ class ApiController < ApplicationController
   end
 
   def update_lockable_state
+    return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.no_updates")} if params[:updates].blank?
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
@@ -182,17 +183,17 @@ class ApiController < ApplicationController
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.missing_params")}
       end
 
       if item[:locked] && item[:readonly_answers]
         # Can not view answers while locked
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.cannot_view_locked_answers")}
       end
 
       unless User.find(user_level_data[:user_id]).teachers.include? current_user
         # Can only update lockable state for user's students
-        return head :forbidden
+        return render status: :forbidden, json: {error: I18n.t("lesson_lock.error.forbidden")}
       end
       UserLevel.update_lockable_state(
         user_level_data[:user_id],
@@ -268,14 +269,14 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map do |id|
+        user_levels = script_level.level_ids.filter_map do |id|
           contained_levels = Script.cache_find_level(id).contained_levels
           if contained_levels.any?
             level_map[contained_levels.first.id]
           else
             level_map[id]
           end
-        end.compact
+        end
         user_levels_ids = user_levels.map(&:id)
         level_class = (best_activity_css_class user_levels).dup
         paired = (paired_user_level_ids & user_levels_ids).any?
@@ -435,7 +436,7 @@ class ApiController < ApplicationController
     if current_user
       if params[:user_id].present?
         user = User.find(params[:user_id])
-        return head :forbidden unless user.student_of?(current_user)
+        return head :forbidden unless user.student_of?(current_user) || user.id == current_user.id
       else
         user = current_user
       end
@@ -494,6 +495,7 @@ class ApiController < ApplicationController
       # need to be sent down.  See LP-2086 for a list of potential values.
 
       response[:disableSocialShare] = user.under_13?
+      response[:isInstructor] = script.can_be_instructor?(current_user)
       response.merge!(progress_app_options(script, level, user))
     else
       response[:signedIn] = false
@@ -565,7 +567,7 @@ class ApiController < ApplicationController
     data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_levels.map do |level_hash|
+      text_response_levels.filter_map do |level_hash|
         last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
@@ -577,7 +579,7 @@ class ApiController < ApplicationController
           response: response,
           url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
         }
-      end.compact
+      end
     end.flatten
 
     render json: data

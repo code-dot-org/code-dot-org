@@ -22,6 +22,7 @@ ro:
       level: nivel
       name: nume
       nectar: nectar
+      object: obiect
       planet: planetă
       points: puncte
       random: aleator
@@ -29,10 +30,12 @@ ro:
       right: dreapta
       score: scor
       shout: țipăt
+      sides: laturi
       size: dimensiune
       speed: viteză
       startX: startX
       startY: startY
+      type: tip
       variable: Variabilă
       width: lăţime
       wizard: vrăjitor

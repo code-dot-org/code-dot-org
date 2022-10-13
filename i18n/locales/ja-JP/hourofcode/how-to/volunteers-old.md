@@ -9,7 +9,7 @@ title: Hour of Codeボランティアの手引き
 
 ***
 
-## なぜボランティア活動が必要？
+## なぜボランティア活動が必要なのでしょうか？
 過去にボランティアをした方のご意見
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
@@ -40,7 +40,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 ## 同僚をボランティアに誘ってみましょう
 友人や同僚に、Hour of Codeについて話してみてください。 Hour of Codeに登録した何千人もの教育者が、エンジニアのボランティアを探しています。[ボランティアの登録](https://code.org/volunteer/engineer)で登録するよう勧めてください。 上司の方に働きかけてみるのもいいかもしれません。 [このメール]({{ promote/sample_emails }})を上司や社長、CEOにも送り、みんなに関心を持ってもらいましょう。
 
-## 準備の仕方は？
+## 準備方法
 - 子どもたちの注意をクラスにひきつけ、Hour of Codeをやりたくなるような[動画を選びます]({{ promote/videos }})。
 - [Hour of Code ボランティアツールキット](/files/hoc-volunteer-toolkit.pdf) をみてみましょう。Hour of Codeの概要や進行表、備品、広告用の素材が含まれています。 ボランティアを始めるために必要なすべて物がそろっています。
 - セッション中にチュートリアルを行う場合は、少なくとも1つの[Hour of Code チュートリアル]({{ urls/learn }})を30分ほどかけて試してみてください。
@@ -58,8 +58,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 | 時刻     | 内容                                                                                                                                                                                                                                                                                                        |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 5 分    | [ひらめきを与えるビデオを見せる]({{ promote/videos }})。                                                                                                                                                                                                                                                                  |
-| 5 -10分 | Introduce yourself and learn more about the students: </ul><li>自分の仕事内容、仕事の好きなところ</li><li>何にまたは誰からの影響が強いのか？</li><li>コンピューターサイエンスに関心を持ったきっかけは？</li><li>指導者はいましたか？
-</li><li>テクノロジーがみんなにとってどのように影響を与えるのかについて話す</li><br>生徒に質問をし、質疑応答の時間も設けます。</br> <li> どんな仕事に興味があるか、どんな機器/ アプリが好きか、それらがどんな風に出来上がっていると考えているか </li><li> 子どもたちはどんなことを自分に質問したいか</ul> |
+| 5 -10分 | Introduce yourself and learn more about the students: </ul><li>自分の仕事内容、仕事の好きなところ</li><li>何にまたは誰から影響を受けましたか？</li><li>コンピューターサイエンスに関心を持ったきっかけは？</li><li>指導者はいましたか？</li><li>テクノロジーがみんなにとってどのように影響を与えるのかについて話す</li><br>生徒に質問をし、質疑応答の時間も設けます。</br> <li> どんな仕事に興味があるか、どんな機器/ アプリが好きか、それらがどんな風に出来上がっていると考えているか </li><li> 子どもたちはどんなことを自分に質問したいか</ul> |
 | 30-60分 | **Code!** Walk around, answer questions, and guide them through tough puzzles. すぐに答えを教えるのではなく、どこで間違えたのかを子どもたちが自分で気づけるように質問して導いて上げましょう。さらに、子どもたち同士で聞き合ったり教えあったりできるように促してみましょう。 お互いに学び合えることは、学びの機会を最大限に活かすことに繋がります。                                                                                         |
 | 1-3分   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                           |
 | 終了後    | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! [code.org/yourschool](https://code.org/yourschool)をみて先生と一緒に学校の教員の現状について回答し、授業の中でコンピューターサイエンスを継続的に取り入れることを約束してもらいましょう。                                                                  |
@@ -72,19 +71,19 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 - １ヶ月頃をめどに、先生がコンピューターサイエンスを子どもたちにもっと提供したいと思っているかを確認しましょう <br/>[リソースを共有し、専門的に学ぶことができるように支援しましょう](https://code.org/yourschool)
 
 ## ゲストスピーカーとして技術面の支援を依頼される手順
-- 先生方は[ボランティアマップ](https://code.org/volunteer/local)からボランティアを探します
-- できるだけプロフィールを完成させることで、より多くの先生からの依頼を受ける可能性が高まります
+- 先生は[ボランティアマップ](https://code.org/volunteer/local)からボランティアを探します
+- できるだけプロフィールを充実させることで、先生から依頼を受けやすくなります。
 - この連絡先情報から、先生はあなたに連絡します（あなたのメールアドレスが先生に公開されることはありません） *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
-## Hour of CodeのボランティアFAQ
+## Hour of Code中のボランティアFAQ
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
 地元の学校を探してみましょう。校長や先生、事務局に電話して何か手伝えることがないか聞いてみましょう。
 
-### 学校での開催は何時間くらいですか？
+### 学校での開催は何時間くらいかかりますか？
 通常、実際に教室を訪れる場合には60～90分、仮想教室の場合には20～30分です。
 
-### Hour of Codeアクティビティを行うのに適切な年齢はどのくらいですか？
+### Hour of Codeアクティビティの対象年齢を教えてください。
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 

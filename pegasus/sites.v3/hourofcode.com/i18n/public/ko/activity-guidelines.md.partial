@@ -33,11 +33,10 @@ Code.org는 다양한 아워오브코드™ 활동과 레슨, 비디오를 Code.
 - [Hour of Code™ 활동을 만들기 위한 일반 가이드라인](#guidelines)
 - [제출 방법](#submit)
 - [활동 평가 방식](#inclusion)
-- [조기 정성 검사 NEW를 위한 제출 가이드라인](#earlyreview)
-- [활동 설계를 위한 제안사항](#design)
-- [상표 가이드라인](#tm)
-- [트랙킹 픽셀](#pixel)
-- [활동과 CSEdWeek, 아워오브코드 홍보](#promote)
+- [조기 정성 검사 NEW를 위한 제출 가이드라인](#design)
+- [활동 설계를 위한 제안사항](#tm)
+- [상표 가이드라인](#pixel)
+- [트랙킹 픽셀](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -185,96 +184,79 @@ Code.org는 다양한 아워오브코드™ 활동과 레슨, 비디오를 Code.
 - 공립학교 수업에 적절 (총기, 성적으로 노골적인/성인물, 종교적 내용 등이 없어야 합니다)
 - 가입할 필요가 없습니다. 
 - 결제할 필요가 없습니다 (로봇/키트 구매를 요구하는 로봇공학 활동 제외) 새 교사와 신입생을 위한 자기 주도형 활동의 경우, 검토 위원회가 다음을 살펴볼 것입니다.
-- 컴퓨터 과학 배경이 없이 교사가 튜토리얼 또는 활동을 이용할 수 있는지
-- 컴퓨터 과학 배경이 없이 학생이 성공할 수 있는지
-- 학생이 부모 또는 교사의 안내 없이 튜토리얼을 스스로 끝까지 할 수 있는지
 
-교사와 학생은 학년 또는 경험 수준, 과목, 하드웨어 등과 같은 검색어에 기초하여 활동 목록을 검색 및 필터링 할 수 있습니다. 기본적으로, 먼저 다음과 같은 레슨 플랜과 활동을 보여드리겠습니다. 
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
 - 검토 위원회에서 최고 점수를 받음
 - 초보자 (학생과 교사)를 위해 설계된 한 시간 자기 주도형 활동임 
 - 광범위한 사용자에게서 주목을 받음 (플랫폼과 언어, 연령을 망라하여).
-- 설치할 필요 없음
-- 올해 새 레슨 플랜/활동임.
 
-[**맨 위로**](#top)
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
-<a id="earlyreview"></a>
-
-## 조기 정성 검사 (신설)를 위한 제출 가이드라인
-
-4월 30일과 8월 16일 사이에 제출된 활동은 [아워오브코드 활동 검토 위원회](/review-committee)의 최소 3명의 위원에게서 정성 검토를 받습니다.
-
-검토자는 다음을 제공하였는지의 여부에 중점을 둘 것입니다.
-
-* 긍정적인 피드백 - 무엇이 잘 되고 있는지?
-* 비판적 피드백 - 개선해야 할 점은?
-* 버그 또는 오류 -버그 또는 구문 오류, 문법 오류가 있습니까? 있으면, 어느 활동에서 개선해야 합니까?
-* 이 활동이 학생들에게 독창적인 것을 만들도록 북돋아 줍니까?
-
-비고: 다음은 피드백을 제공하기 위한 일반 가이드라인입니다. 활동 조기 검토에는 다음 범주 모두에서의 피드백을 포함시키거나 또는 한 두개 범주의 피드백만을 포함시킬 수 있습니다. 또한 **하나의 활동에서 모든 버그 또는 문제를 잡아 낼 것이라는 보장은 없습니다**.
-
-**조기 검토는 아직 끝나지 활동에서의 피드백은 검토 대상으로 고려하지 않습니다. 검토자가 미완성이라 평가할 수 없다고 여기는 활동은 검토하지 않습니다.**
-
-조기 검토를 위해 제출된 모든 활동은 9월 1일까지 피드백을 받을 것입니다. 또한 피드백에 대한 반응으로 수정한 경우, 수정 사항을 설명하기 위해 사용할 양식을 링크로 제공할 것입니다.
-
-10월 1일 전에 제출된 각 활동은 조기 검토를 받았는지 여부와 상관 없이 기본 검토를 받을 것입니다. 이 기본 검토 과정 (9월~10월) 동안, 검토자는 활동을 위의 "활동 평가 방법" 섹션에서 설명한 기준에 의거하여 등급을 매기는 데 중점을 둘 것입니다. 활동의 특정 변경사항을 명시하지 않은 한, 검토자는 조기 검토 피드백에 의지해 활동 점수를 매길 수 밖에 없으며 또한 그렇 가능성이 높습니다.
+- 긍정적인 피드백 - 무엇이 잘 되고 있는지?
+- 비판적 피드백 - 개선해야 할 점은?
+- Appeal to a wide range of users (across platforms, languages, and ages)
+- 이 활동이 학생들에게 독창적인 것을 만들도록 북돋아 줍니까?
+- Are new this year
 
 [**맨 위로**](#top)
 
 <a id="design"></a>
 
-## 한 시간 자기 주도형 튜토리얼 설계를 위한 제안사항
+## 조기 정성 검사 (신설)를 위한 제출 가이드라인
 
-[아워오브코드 로고](https://hourofcode.com/us/promote/resources#logo)를 튜토리얼에 삽입할 수 있지만 필수 사항은 아닙니다. 아워오브코드 로고를 사용하면 아래 상표 가이드라인을 참조하세요. <u>어떤 상황에서도 Code.org 로고와 이름은 사용할 수 없습니다.</u> 두 가지 모두 상표이며 명시적 서면 허가 없이는 제 3자 브랜드 명과 혼용할 수 없습니다.
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 
-**보통 학생이 한 시간 안에 편안하게 마칠 수 있어야 합니다.** 레슨을 남보다 더 빨리 마친 학생을 위해 끝에 열린 결말 활동을 추가할 것을 고려합니다. 대부분의 아동이 컴퓨터 과학과 코딩에 완전 초보자임을 기억하세요.
+비고: 다음은 피드백을 제공하기 위한 일반 가이드라인입니다. 활동 조기 검토에는 다음 범주 모두에서의 피드백을 포함시키거나 또는 한 두개 범주의 피드백만을 포함시킬 수 있습니다.
 
-**교사 메모 포함.** 대부분의 활동은 학생 주도형이어야 하지만 활동이 교사에 의해 촉진 또는 관리되면, 활동과 함께 제출한 별도의 URL에 별도의 교사 메모 형태로 교사의 명확하고 간단한 지시 사항을 넣어야 합니다. 학생 만 초보자일 뿐만 아니라 일부 교사 역시 그렇습니다. 다음과 같은 정보를 포함시켜주세요:
+**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
 
 - 튜토리얼이 가장 잘 작동하는 플랫폼과 브라우저는 무엇입니까?
 - 스마트폰에서도 동작합니까? 태블릿은 어떤가요?
 - 페어 프로그래밍을 추천하나요? 
 - 교실에서 사용할 것을 고려하나요? 예. 동영상이 있으면, 교사에게 전체 학급이 함께 보도록 프로젝터 화면에 동영상을 띄우도록 조언합니다.
 
-**활동 끝 부분에 피드백 포함.** (예. “10개 레벨을 끝마쳤으며, 루프에 관해 배웠습니다! 잘 했습니다!)
+조기 검토를 위해 제출된 모든 활동은 9월 1일까지 피드백을 받을 것입니다. 또한 피드백에 대한 반응으로 수정한 경우, 수정 사항을 설명하기 위해 사용할 양식을 링크로 제공할 것입니다.
 
-**학생들에게 활동을 마치면 소셜 미디어에 작품을 게시하도록 권합니다 (적절한).** 예를 들어, “아워오브코드를 ________ 으로 끝마쳤지요. 그렇죠 ? #HourOfCode” 또는 “#HourOfCode를 #CSEdWeek의 일부로 끝마쳤습니다. 그렇죠? @Scratch.” 해시태그 **#HourOfCode** 사용하기 (대문자 H, O, C와 함께)
+10월 1일 전에 제출된 각 활동은 조기 검토를 받았는지 여부와 상관 없이 기본 검토를 받을 것입니다. 이 기본 검토 과정 (9월~10월) 동안, 검토자는 활동을 위의 "활동 평가 방법" 섹션에서 설명한 기준에 의거하여 등급을 매기는 데 중점을 둘 것입니다. 활동의 특정 변경사항을 명시하지 않은 한, 검토자는 조기 검토 피드백에 의지해 활동 점수를 매길 수 밖에 없으며 또한 그렇 가능성이 높습니다. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**스페인어 또는 영어 외 다른 언어로 활동을 만드세요.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**사회적으로 중요한 일을 설명하고 활동과 연결시킵니다.** 컴퓨터 프로그래밍은 학생이 그것이 세상을 더 나은 세상으로 바꿀 수 있음을 알게 될 때 슈퍼 파워가 될 수 있습니다!
+**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
 
-**튜토리얼은[페어 프로그래밍](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) 패러다임에서도 사용할 수 있음을 명심하세요.** 모든 학생을 위한 1:1 하드웨어가 있는 교실은 많지 않기 때문에 이 방식은 특히 아워오브코드에 유용합니다.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
 [**맨 위로**](#top)
 
 <a id="tm"></a>
 
-## 상표 가이드라인
+## 한 시간 자기 주도형 튜토리얼 설계를 위한 제안사항
 
-많은 튜토리얼 파트너가 그들의 웹 사이트에서 "아워오브코드" 상표를 사용하고 있습니다. 이러한 상표 사용을 막고 싶지는 않지만, 다음과 같은 몇 가지 제한 사항은 지켜주길 바랍니다.
+**활동 끝 부분에 피드백 포함.** (예. “10개 레벨을 끝마쳤으며, 루프에 관해 배웠습니다! 잘 했습니다!) We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. 패션 제품에는 "아워오브코드" 라는 참조 표시를 사용해야 한다는 것은 그것이 귀사의 고유 브랜드명임을 나타내는 것이 아니라 "아워오브코드"를 풀뿌리 운동으로서 지칭하는 것입니다. 좋은 예: "ACMECorp.com에서 아워오브코드™ 에 참여하세요." 나쁜 예: "ACME Corp의 아워오브코드를 해보세요".
-2. "TM" 첨자는 웹사이트와 앱 설명 모두에서 "아워오브코드"를 언급한 가장 두드러진 위치에서 사용하세요.
-3. 페이지 (또는 꼬리말)에 아워오브코드와 CSEdWeek, Code.org 웹사이트로의 링크를 포함하여 다음과 같이 말하는 언어를 넣으세요: a. “ '[아워오브코드](http://hourofcode.com)™'는[컴퓨터 과학 교육주간](http://csedweek.org)과 [Code.org](http://code.org)에 의해 수 백만 학생에게 한 시간 동안 컴퓨터 과학과 컴퓨터 프로그래밍을 소개하기 위해 벌이는 전국적인 운동입니다.”
-4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
 [**맨 위로**](#top)
 
 <a id="pixel"></a>
 
-## 트랙킹 픽셀
+## 상표 가이드라인
 
-참가를 더 정확하게 추적관리하기 위해, 각 튜토리얼 파트너에게 아워오브코드 튜토리얼의 첫 번째 페이지에 1-픽셀 추적 이미지를 넣어줄 것을 요청합니다. 픽셀 이미지는 시작 페이지에만 나와야 합니다. 튜토리얼에 중간 페이지는 삽입시키지 마십시오.
+In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
-아워오브코드 튜토리얼을 하는 사용자를 셀 수 있게 허용합니다. 그렇게 하면 튜토리얼에 얼마나 많은 사람들이 참여하는지 정확하게 셀 수 있게 해줍니다.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-튜토리얼이 승인되어 최종 튜터리얼 페이지에 포함되면, Code.org는 튜토리얼에 통합시킬 고유 추적 픽셀을 제공할 것입니다. 아래 예 참조.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
 
-참고: 설치 가능형 앱 (iOS/안드로이드 앱 또는 데스크톱 설치 앱)에는 별로 중요하지 않습니다.
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-예 댄스 파티를 위한 트랙킹 픽셀:
+Example tracking pixels for Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -283,9 +265,9 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 <a id="promote"></a>
 
-## 활동과 CSEdWeek, 아워오브코드 홍보
+## 트랙킹 픽셀
 
-활동을 네트워크에서 홍보해 주세요! 아워오브코드 페이지로 가게 합니다. 활동에 관한 우편물에 사용자가 답장을 할 가능성이 훨씬 더 높습니다. 컴퓨터 과학 교육주간 동안 국제 아워오브코드 캠페인을 사용자가 다른 이들을 참여하게 초대하고 우리가 더 많은 학생들에게 다가 가는데 도움을 주도록 권장하는 구실로 활용합니다.
+아워오브코드 튜토리얼을 하는 사용자를 셀 수 있게 허용합니다. 그렇게 하면 튜토리얼에 얼마나 많은 사람들이 참여하는지 정확하게 셀 수 있게 해줍니다. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
 - 웹사이트를 아워오브코드와 CSEdWeek 내용으로 구성. 예: <http://www.tynker.com/hour-of-code>
 - 소셜 미디어와 전통적 매체, 우편 목록 등을 사용하고 해시태그#HourOfCode (대문자 H, O, C와 함께)를 붙여 아워오브코드를 홍보합니다.
@@ -294,4 +276,4 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 [**맨 위로**](#top)
 
-{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+참고: 설치 가능형 앱 (iOS/안드로이드 앱 또는 데스크톱 설치 앱)에는 별로 중요하지 않습니다.<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

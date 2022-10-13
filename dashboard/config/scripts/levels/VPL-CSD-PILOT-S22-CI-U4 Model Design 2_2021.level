@@ -46,23 +46,23 @@
     "encrypted_examples": "D/vbRcyih3hebbQzZLTcIq1q+TR12Fy8VvMz8MCSrO4M522CVabHk8q63WB/\ngevwLtJIqfAjZ5mCFuG2Y5Fwaw==\n",
     "parent_level_id": 20235,
     "name_suffix": "_2021",
-    "map_reference": "/docs/concepts/app-lab/design-mode/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/design-mode",
     "mini_rubric": "false",
     "encrypted": "false",
     "video_key": "csd_applab_designmode",
     "code_functions": {
       "setScreen": null
     },
-    "preload_asset_list": null,
     "libraries_enabled": "false",
     "widget_mode": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-03-31T19:15:52.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-31T19:15:52.000Z",
   "user_id": 155,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-31T19:15:52.916+00:00\",\"changed\":[\"cloned from \\\"U4 Model Design 2_2021\\\"\"],\"cloned_from\":\"U4 Model Design 2_2021\"},{\"changed_at\":\"2022-03-31 19:59:39 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

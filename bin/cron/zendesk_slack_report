@@ -31,22 +31,23 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
-  'ap-csa-dev' => ['CSA Engineering'],
   'ap-csa-pilot' => ['CSA Curric.'],
   'csf' => ['CSF'],
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
-  'disco-party' => ['CSD'],
-  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Jess', 'EdPop Kristyn', 'EdPop Rosie', 'EdPop Tawny'],
+  'cs-discoveries' => ['CSD'],
+  'acquisition-products' => ['Acquisition Products'],
+  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'EdPop Alicia'],
   'facilitator-things' => ['PnP Andrea'],
   'foundations' => ['Accounts'],
+  'hour-of-code' => ['Hour of Code'],
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],
   'product' => ['Product'],
   'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
-  'star-labs-cabal' => ['*Labs']
+  'student-learning' => ['*Labs', 'CSA Engineering']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
@@ -67,7 +68,6 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'ed-programs-tools' => ['zendesk-plctools'],
   'outreach_honky-tonk' => ['zendesk-outreach'],
   'pl-team-only' => ['zendesk-pl']
 }
@@ -192,14 +192,14 @@ def get_tickets_by_group
 
   # Report out for each Slack room
   MONITORING_GROUPS.each do |slack_room, groups|
-    group_messages = groups.map do |group_name|
+    group_messages = groups.filter_map do |group_name|
       count = group_counts[group_name] || 0
       next nil if count == 0
 
       url = Zendesk.group_url(group: group_name, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{group_name} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if group_messages.empty?
@@ -229,7 +229,7 @@ def get_tickets_by_user
 
   # Report out for each Slack room
   MONITORING_USERS.each do |slack_room, users|
-    user_messages = users.map do |user|
+    user_messages = users.filter_map do |user|
       user_email = "#{user}@code.org"
       count = user_counts[user_email] || 0
       next nil if count == 0
@@ -237,7 +237,7 @@ def get_tickets_by_user
       url = Zendesk.user_url(user: user_email, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{user_email} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if user_messages.empty?

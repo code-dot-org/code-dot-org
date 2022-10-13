@@ -2,8 +2,26 @@
 id:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: mengonfirmasi pengguna {QUESTION} untuk variabel {VAR} dengan pilihan {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': sangat kecil
+            '0.75': kecil
+            '1.00': sedang
+            '2.00': besar
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': sangat kecil
+            '0.75': kecil
+            '1.00': sedang
+            '2.00': besar
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} berganti setiap {N}
@@ -1065,7 +1083,7 @@ id:
         text: gambar garis {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: tepi blok {SPRITE} dari bergerak
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
@@ -1224,8 +1242,6 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
-      gamelab_makeNewScaledSprite:
-        text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNumSprites:
@@ -1240,6 +1256,13 @@ id:
             '90': turun
             '180': kiri
             '270': atas
+      gamelab_makeSpritesWithSize:
+        text: buat {NUM} sprite {SIZE} {COSTUME} baru
+        options:
+          SIZE:
+            '30': kecil
+            '50': sedang
+            '100': besar
       gamelab_mirrorSprite:
         text: "{SPRITE} wajah {DIRECTION}"
         options:
@@ -1458,6 +1481,37 @@ id:
         text: "{SPRITE} ucapan {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}ucapan{TEXT1}selama{NUM}detik"
+      gamelab_spriteThink:
+        text: "{SPRITE} berpikir {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}berpikir{TEXT1}selama{NUM}detik"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} berpikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"Time to make friends with the sheep."': Saatnya berteman dengan domba.
+            '"She''ll never recognize me now."': Ia pasti tak akan bisa mengenalku sekarang.
+            '"This costume keeps me warm."': Kostum ini menghangatkanku.
+            '"I am actually a wolf."': Aku sebenarnya adalah seekor serigala.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} berpikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m feeling sleepy."': Aku merasa mengantuk.
+            '"No one could ever beat me."': Tak ada yang bisa mengalahkanku.
+            '"I''ve done this race before."': Aku sudah pernah mengikuti lomba ini.
+            '"My feet are bigger than Turtle''s feet."': Kakiku lebih dari besar dari kaki Kura-kura.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} berpikir {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Hmm...
+            '"I''m so hungry."': Aku sangat lapar.
+            '"I''m a visitor in this town."': Aku hanya pengunjung di kota ini.
+            '"If we share, we''ll all have something to eat. "': Jika berbagi, kita semua bisa makan.
+            '"I''ll trick everyone into giving me their food."': Akuakan menipu semua orang agar memberi makanannya padaku.
       gamelab_startAvoiding:
         text: "{SPRITE} mulai menghindari {TARGET}"
       gamelab_startFollowing:
@@ -2092,6 +2146,11 @@ id:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: ketika {VAR} dijawab
       RyanLab_moveForward:

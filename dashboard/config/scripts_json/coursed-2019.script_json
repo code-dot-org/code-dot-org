@@ -14,28 +14,6 @@
         "cs-CZ",
         "sk-SK"
       ],
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csf-19/coursed/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csf"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csf-19/coursed/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csf-19/coursed/standards/"
-        ],
-        [
-          "curriculumGuide",
-          "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2019"

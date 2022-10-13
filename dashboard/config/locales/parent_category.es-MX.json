@@ -1,0 +1,20 @@
+{
+  "es-MX": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": "El uso de las innovaciones informáticas puede implicar riesgos para tu seguridad personal y tu identidad."
+        },
+        "csp2021/DAT-1": {
+          "description": "La forma en que el ordenador representa los datos es diferente de la forma en que los datos se interpretan y se muestran al usuario. Los programas se utilizan para traducir los datos en una representación que sea más fácil de entender para las personas."
+        },
+        "ngss/ETS": {
+          "description": "Ingeniería en las Ciencias"
+        },
+        "ai4k12-2021/BI-3": {
+          "description": "Las computadoras pueden aprender de los datos"
+        }
+      }
+    }
+  }
+}

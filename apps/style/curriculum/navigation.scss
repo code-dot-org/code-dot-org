@@ -1,5 +1,5 @@
-@import 'color';
-@import 'font';
+@import "color.scss";
+@import "font";
 
 .nav-bar {
   margin-right: 5px;
@@ -16,10 +16,11 @@
     overflow: hidden;
 
     .title {
-      padding: 16px 0px;
+      padding: 16px 0;
       display: block;
       overflow: hidden;
       text-overflow: ellipsis;
+      cursor: pointer;
     }
 
     .nav-link {

@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSA Self Paced PL",
       "is_migrated": true,
-      "pilot_experiment": "csa-getting-started-preview"
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-20 13:15:37 UTC",
+    "serialized_at": "2022-06-03 14:31:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -507,6 +508,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-java-lab-intro-main-method-video"
+        ],
         "progression": "Introduction to Java Lab"
       },
       "bonus": false,
@@ -556,14 +560,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+          "SP-VPL-CSA-22-printing-in-java-video"
         ],
         "progression": "Printing to the console"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+          "SP-VPL-CSA-22-printing-in-java-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -571,7 +575,7 @@
         "activity_section.key": "ee698b7b-813d-4c68-a616-24af954e7bb7"
       },
       "level_keys": [
-        "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+        "SP-VPL-CSA-22-printing-in-java-video"
       ]
     },
     {
@@ -759,6 +763,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-L2-variables-video"
+        ],
         "progression": "Introduction to variables"
       },
       "bonus": false,
@@ -1850,6 +1857,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-2"
+        ],
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-L5-array-video-2"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "SP-VPL-CSA-22-mod3-L5-declaring-arrays-mc"
         ],
         "progression": "Declaring and initializing arrays"
@@ -1869,9 +1901,34 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 58,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-indices-map"
+        ],
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-indices-map"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L5-indices-map"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1894,40 +1951,15 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-indices-map"
-        ],
-        "progression": "Accessing and updating elements in an array"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-indices-map"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "f900c372-d542-494f-8f70-ae898d7cabff"
-      },
-      "level_keys": [
-        "SP-VPL-CSA-22-mod3-L5-indices-map"
-      ]
-    },
-    {
-      "chapter": 59,
-      "position": 6,
-      "activity_section_position": 2,
+      "chapter": 60,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L5-accessing-mutating-mc"
         ],
-        "progression": "Accessing and updating elements in an array"
+        "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
       "seeding_key": {
@@ -1937,16 +1969,16 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "f900c372-d542-494f-8f70-ae898d7cabff"
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
       },
       "level_keys": [
         "SP-VPL-CSA-22-mod3-L5-accessing-mutating-mc"
       ]
     },
     {
-      "chapter": 60,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 61,
+      "position": 8,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1969,9 +2001,9 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 62,
+      "position": 9,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -1995,9 +2027,9 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 9,
-      "activity_section_position": 5,
+      "chapter": 63,
+      "position": 10,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -2021,8 +2053,8 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 10,
+      "chapter": 64,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2046,32 +2078,9 @@
       ]
     },
     {
-      "chapter": 64,
-      "position": 11,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "instructor_in_training": true,
-        "progression": "Traversing arrays"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
-      },
-      "level_keys": [
-        "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
-      ]
-    },
-    {
       "chapter": 65,
       "position": 12,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2096,7 +2105,7 @@
     {
       "chapter": 66,
       "position": 13,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -2122,7 +2131,7 @@
     {
       "chapter": 67,
       "position": 14,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -2148,7 +2157,7 @@
     {
       "chapter": 68,
       "position": 15,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -2174,6 +2183,32 @@
     {
       "chapter": 69,
       "position": 16,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
+        ],
+        "progression": "Traversing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2197,8 +2232,8 @@
       ]
     },
     {
-      "chapter": 70,
-      "position": 17,
+      "chapter": 71,
+      "position": 18,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2274,9 +2309,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-Printing-to-the-console-map",
+        "level.key": "SP-VPL-CSA-22-printing-in-java-video",
         "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-Printing-to-the-console-map"
+          "SP-VPL-CSA-22-printing-in-java-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -2886,9 +2921,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-L5-array-video-2",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-L5-array-video-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-CSA-22-mod3-L5-declaring-arrays-mc",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-mod3-L5-declaring-arrays-mc"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L5-indices-map",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-indices-map"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -2910,18 +2969,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-L5-indices-map",
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-indices-map"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "f900c372-d542-494f-8f70-ae898d7cabff"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "SP-VPL-CSA-22-mod3-L5-accessing-mutating-mc",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-mod3-L5-accessing-mutating-mc"
@@ -2929,7 +2976,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "f900c372-d542-494f-8f70-ae898d7cabff"
+        "activity_section.key": "7271dab8-84e6-45ad-b954-248fa86846ea"
       }
     },
     {
@@ -2982,18 +3029,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3",
-        "script_level.level_keys": [
-          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "SP-VPL-CSA-22-mod3-L5-traversing-mc",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-mod3-L5-traversing-mc"
@@ -3033,6 +3068,18 @@
         "level.key": "SP-VPL-CSA-22-L5-traverse-practice-2",
         "script_level.level_keys": [
           "SP-VPL-CSA-22-L5-traverse-practice-2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "776a757f-da8b-4851-8ddb-8ed647fc53d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",

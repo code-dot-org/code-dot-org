@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-04-26T18:52:44.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -64,6 +60,10 @@
     "long_instructions": "**Note:** This is the same level that students will complete in Unit 3 Lesson 11 Level 5 in the CS Discoveries curriculum.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-04-26T18:52:44.000Z",
+  "user_id": 106,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-26T18:52:44.071+00:00\",\"changed\":[\"cloned from \\\"VPL -CSD-U3 Draw Loop Plugged predict 2_2021\\\"\"],\"cloned_from\":\"VPL -CSD-U3 Draw Loop Plugged predict 2_2021\"}]"

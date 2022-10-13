@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ca:
   errors:
     messages:
@@ -292,7 +298,6 @@ ca:
     popup:
       progress_for_user: "Progrés de %{name}"
       progress: 'El teu progrés'
-      lines: 'Línies totals de codi: %{lines}'
       close: 'TANCA'
       mastery: 'Conceptes'
       puzzle_map: 'Etapes'
@@ -375,6 +380,7 @@ ca:
     no_primary_course: "Intenta un curs a Code Studio"
     choose_next_course: "Intenta un curs Code Studio triant-ne un a continuació"
     print_certificate: "Imprimeix el certificat"
+  certificate_hour_of_code: "L'hora del codi"
   share:
     title: "Aprendre sobre Code Studio"
     description: "Tothom pot aprendre programació. Crea jocs, apps i art amb codi."
@@ -631,10 +637,13 @@ ca:
         math: 'Matemàtiques'
         science: 'Ciència'
         la: 'Arts del llenguatge'
+        other: "Altres"
       resources:
         kodable: 'Kodable'
+        other: "Altres"
       robotics:
         kodable: 'Kodable'
+        other: "Altres"
       email_opt_in:
         opt_in_yes: 'Sí'
         opt_in_no: 'No'
@@ -642,3 +651,10 @@ ca:
     accept: 'D''acord'
   copy: 'Copiar'
   confirm: 'confirmació'
+  lesson_lock:
+    error:
+      no_updates: "No hi ha actualitzacions per realitzar"
+      missing_params: "S'ha de proporcionar identificadors d'usuari, nivell i unitat"
+      cannot_view_locked_answers: "No es poden visualitzar les respostes mentre està bloquejat"
+      forbidden: "L'usuari no pot actualitzar l'estat bloquejable de l'alumne"
+  reset_predict_progress_button: "Esborrar resposta"

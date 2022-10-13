@@ -11,18 +11,18 @@
     "parent_level_id": 20007,
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/headings-and-paragraphs",
     "encrypted": "false",
     "validation_enabled": "true",
     "mini_rubric": "false"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-03-20T18:58:38.000Z",
   "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-20T18:58:38.000Z",
   "user_id": 324,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-20T18:58:38.243+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Demo_2021\\\"\"],\"cloned_from\":\"CSD U2 Heading Demo_2021\"},{\"changed_at\":\"2022-03-20 19:08:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-20 19:09:20 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

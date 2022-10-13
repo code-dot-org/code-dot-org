@@ -3,15 +3,26 @@ id:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" dengan Lebah'
+      8-Bit Binary Number Widget: Widget Angka Biner 8-Bit
+      AI Lab and Isaac's Data: AI Lab dan Data Isaac
+      AI Lab and Kim's Data: AI Lab dan Data Kim
       AI Machine Learning - Video: Pembelajaran Mesin AI - Video
+      'AI for Oceans: Fish vs Not Fish': 'AI for Oceans: Ikan vs Bukan Ikan'
+      'AI for Oceans: Types of Fish': 'AI for Oceans: Jenis-jenis Ikan'
       'AI: Impact on Society - Video': 'AI: Dampak terhadap Masyarakat - Video'
       'AI: Training Data & Bias - Video': 'AI: Data & Bias Pelatihan - Video'
       Accelerometer Events: Accelerometer Event
       Add Content and HTML: Tambah Konten dan HTML
+      Add Content and Structure to Your Page: Tambahkan Konten dan Struktur ke Halaman
+        Anda
       Add Movement: Tambah Gerakan
+      Add Sprites: Tambahkan Sprite
       Add Style: Tambah Gaya
+      Add Style to Your Page: Tambahkan Gaya ke Halaman Anda
       Add Text: Tambah Teks
+      Add a Welcome Screen: Tambahkan Layar Sambutan
       Adding Images: Menambahkan Gambar
+      Adding New Screens: Menambahkan Layar Baru
       Adding Pages: Menambahkan Halaman
       Adding Screens: Menambahkan Layar
       Alien Defender: Pembela Alien
@@ -19,6 +30,20 @@ id:
       Animate Your Scene: Buat Animasi Adegan Anda
       App Lab Intro - Video: Pengantar App Lab - Video
       'App Project: Screen Design': 'App Project: Desain Layar'
+      'App: Choose a Kid''s Movie': 'Apl: Pilih Film Anak'
+      'App: Friend Finder': 'Apl: Pencari Teman'
+      'App: Guess the Number': 'Apl: Tebak Angka'
+      'App: How Many Countries': 'Apl: Berapa Banyak Negara'
+      'App: Improved Pet App': 'Apl: Apl. Piaraan yang Lebih Baik'
+      'App: Is It Your Birthday?': 'Apl: Apakah Sekarang Ulang Tahunmu?'
+      'App: My Famous Birthday': 'Apl: Hari Ulang Tahunku yang Terkenal'
+      'App: National Parks': 'Apl: Taman Nasional'
+      'App: Outfit Picker': 'App: Pemilih Pakaian'
+      'App: Pet Chooser': 'Apl: Pemilih Hewan Piaraan'
+      'App: Stamp Notebook': 'Apl: Buku Catatan Stempel'
+      'App: Story Creator': 'Apl: Pembuat Cerita'
+      'App: The Fastest Finger': 'Apl: Jari Tercepat'
+      'App: Where Should I Live?': 'Apl: Aku Harus Tinggal di Mana?'
       Arrays: Array
       Artist Intro with JR Hildebrand: Pengantar Artis bersama JR Hildebrand
       Artist Intro with JR Hildebrande: Pengantar Artis bersama JR Hildebrande
@@ -33,10 +58,13 @@ id:
       Begin planning your project: Mulai rencanakan proyek Anda
       Begin planning your project_2018: Mulai rencanakan project_2018 Anda
       Binary Bracelets - Unplugged Activity: Gelang Binary - Aktivitas Unplugged
+      Binary Number Widget: Widget Angka Biner
       Binary Numbers: Bilangan Biner
       Binary and Data: Binary dan Data
       Board Events: Event Papan
       Board Input and Output: Board Input dan Output
+      Book Recommender App: Apl. Pemberi Rekomendasi Buku
+      Book Recommender Model Card: Kartu Model Pemberi Rekomendasi Buku
       Boolean Comparison: Perbandingan Boolean
       Build a Platform Jumper: Buat Platform Jumper
       Build a Screen: Buat Layar
@@ -56,12 +84,20 @@ id:
       Cake Survey: Survei Kue
       Challenge: Tantangan
       Challenge Levels: Level Tantangan
+      'Challenge: Lists': 'Tantangan: Daftar'
+      'Challenge: RGB Colors': 'Tantangan: Warna RGB'
       Challenges: Tantangan
       Change: Ubah
+      Check Your Work: Periksa Karya Anda
+      Check-In Survey: Survei Tengah Semester
       Checking for a Winner: Memeriksa Pemenang
+      'Choice Levels: Customize Your App': 'Level Pilihan: Sesuaikan Apl. Anda'
       Choose Your Own Adventure: Pilih Petualangan Anda Sendiri
       Choosing Good IDs: Memilih ID yang Bagus
+      Club Datasets: Club Datasets
+      Code Prediction: Prediksi Kode
       Code Your Own Flappy Game: Buat Code Flappy Game Anda Sendiri
+      Code Your Page: Buat Kode Halaman Anda
       Collector Game: Game Kolektor
       Collision Detection: Deteksi tumbukan
       Collisions: Tumbukan
@@ -73,6 +109,7 @@ id:
         Unplugged
       'Conditionals: If Statements': 'Conditional: Pernyataan If'
       'Conditionals: If and If/Else Statements': 'Conditional: Pernyataan If dan If/Else'
+      Control Your Player: Kontrol Pemainmu
       Course E Artist Project: Kursus E Proyek Artis
       Course E Sprite Lab Project: Kursus E Proyek Sprite Lab
       'Course E: Play Lab Project': 'Kursus E: Proyek Play Lab'
@@ -85,25 +122,36 @@ id:
       Crack Random Substitution: Retas Substitusi Acak
       Crack a Caesar Cipher: Retas Caesar Cipher
       Create Your Own Animation: Buat Animasi Anda Sendiri
+      Create Your Sprites: Buat Sprite-mu
+      Create a Background: Buat Latar Belakang
+      Create a Google Form: Buat Google Form
       Create a Story: Buat Cerita
+      Create an App in App Lab: Buat Apl. di App Lab
       Create your project: Buat proyek Anda
       Creative Commons Search: Karya kreatif
       Customize: Sesuaikan
+      Customize Your App: Sesuaikan Apl. Anda
       Dance Crews: Kru Tari
       Data Visualization: Visualisasi Data
       De-bugging with the Step Button: De-bugging dengan Tombol Step
       Debugging: Debugging
       Debugging with the Step Button: Debugging dengan Tombol Step
+      'Demo App: Interactive Card': 'Apl. Demo: Kartu Interaktif'
       Demo Apps: Aplikasi Demo
       Design Mode: Mode desain
       Design Your Game: Desain Game Anda
       Design Your Prototype: Desain Prototipe Anda
       Design a Screen for your App: Desain Layar untuk Aplikasi Anda
+      Design an AI App - AI Lab: Desain Apl. AI - AI Lab
+      Design an AI App - App Lab: Desain Apl. AI - App Lab
       Designing Screens with Code: Perancangan Layar dengan Kode
       Designing for Accessibility: Mendesain untuk Aksesibilitas
       Digital Sharing - Unplugged Activity: Digital Sharing - Aktivitas Unplugged
       Dogger Example: Contoh Dogger
+      Draw Your Background: Gambar Latar Belakang Anda
+      Draw a Background: Gambar sebuah Latar Belakang
       Drawing: Menggambar
+      Driver Alert System: Sistem Peringatan Pengemudi
       End of Course Projects: Proyek Akhir Kursus
       Escape Room Example: Contoh Escape Room
       Event Types: Jenis Event
@@ -111,7 +159,10 @@ id:
       Events and Linking Screens: Event dan Menautkan Layar
       Events and Properties: Event dan Properti
       Example: Contoh
+      Example Animated Scene: Contoh Adegan Animasi
       Example App Types: Contoh Jenis Aplikasi
+      'Example App: Zoo Classification': Apl. Contoh; Klasifikasi Zoo
+      Example Apps: Apl. Contoh
       Example Projects: Proyek-Proyek Contoh
       Example projects: Contoh proyek
       Exemplar Personal Websites: Contoh Situs Web Pribadi
@@ -129,6 +180,8 @@ id:
       Exploring CS in Entertainment: Mengeksplorasi CS dalam Hiburan
       Exploring more CSS: Mengeksplorasi CSS selengkapnya
       Extra: Tambahan
+      Extra Challenge: Tantangan Ekstra
+      'Extra Challenge: Sound Board': 'Tantangan Ekstra: Sound Board'
       Final Personal Website: Situs Pribadi
       Final Room Escape App: Aplikasi Room Escape Final
       Find the Wizard: Temukan Wizard
@@ -149,6 +202,7 @@ id:
       Free Play: Permainan Gratis
       'Free Play: Make a Scene': 'Bermain Bebas: Membuat Adegan'
       'Free Play: Make an Interactive Scene': 'Bermain Bebas: Membuat Adegan Interaktif'
+      Fruit and Veggie Explorer: Fruit and Veggie Explorer
       Functions: fungsi
       Functions with Parameters: Fungsi dengan parameter
       Geometric Sun: Matahari Geometris
@@ -157,6 +211,7 @@ id:
       Getting Properties: Mendapatkan Properti
       Graph Paper Programming - Unplugged Activity: Graph Paper Programming - Aktivitas
         Unplugged
+      Green Glass Door: Green Glass Door
       Guess The Number: Tebak Angka
       HTML Tags: Tag HTML
       Headings: Tajuk
@@ -168,20 +223,30 @@ id:
       Ice Age Loops: Ice Age Loops
       Images and Sounds: Gambar dan Suara
       Images in HTML: Gambar dalam HTML
+      Import Your Model: impor Model Anda
+      Import a Model: Impor sebuah Model
+      Importing Your Model: Mengimpor Model Anda
+      Improved Shoe Recommender: Pemberi Rekomendasi Sepatu yang Lebih Baik
+      Incorporate Feedback: Sertakan Umpan Balik
       Innovation Research: Riset Inovasi
       Input Examples: Contoh Input
       Input with If-Else: Input dengan If-Else
       Inspiration!: Inspirasi!
       InspirationalArtwork: Karya Seni Inspiratif
+      Intro to Flyer Game: Pengantar Flyer Game
       Intro to For Loops: Pengantar For Loop
+      Intro to Side Scrollers: Pengantar Side Scroller
       Intro to Sprites: Pengantar Sprite
       Intro to Variables: Pengantar Variable
       Introducing Sprite Lab: Memperkenalkan Sprite Lab
       Introduction to Arrays: Pengenalan Array
+      Isaac's Survey Data: Data Survei Isaac
       Iteration and Parameters: Iterasi dan Parameter
       Keep On Dancing!: Teruslah Berdansa!
       Keeping Data Secret: Menjaga Kerahasiaan Data
       Keyboard Input: Input Keyboard
+      Kim's Survey: Survei Kim
+      Kim's Survey Data: Data Survei Kim
       LED Apps: Aplikasi LED
       Layout Properties: Layout property
       Layout with CSS: Tata Letak dengan CSS
@@ -194,8 +259,12 @@ id:
       Linking Screens: Menautkan Layar
       Lists: List
       Lists in HTML: List dalam HTML
+      Looking for Patterns: Mencari Pola
+      Looping: Perulangan
       Loops with the Artist: Loop dengan Artis
+      Make Your Sprites: Buat Sprite Anda
       Make a Prediction: Buat Prediksi
+      Make an Interactive Card: Buat Kartu Interaktif
       Make it Interactive: Buatlah Interaktif
       Making Music: Membuat musik
       Making Scenes: Membuat Adegan
@@ -205,6 +274,8 @@ id:
       'Maze Intro: Programming with Blocks': 'Pengantar Labirin: Pemrograman dengan
         Block'
       Measures: Langkah
+      Medical Dataset Model Cards: "  Kartu Model Dataset Medis"
+      Medical Priority App: Apl. Prioritas Medis
       'Minecraft: Hero''s Journey': 'Minecraft: Perjalanan Pahlawan'
       'Mini-Project: About Me': Tentang Saya dengan Sprite Lab
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Gerakan Dansa Alien'
@@ -251,14 +322,20 @@ id:
       'Overview: onEvent': 'Ikhtisar: onEvent'
       'Overview: setPosition': 'Ikhtisar: setPosition'
       Pair Programming: Pair Programming
+      Pet Recommender: Pemberi Rekomendasi Piaraan
       Picturing Data: Penggambaran Data
+      Pizza Party Data: Data Pesta Pizza
+      Pizza Recommendations: Rekomendasi Pizza
       Plan Your Project: Susun Rencana Proyek Anda
+      Plan Your Scene: Rencanakan Adeganmu
       Planning: Perencanaan
       Platform Jumper - Background and Variables: Platform Jumper - Latar Belakang
         dan Variable
       Platform Jumper - Items: Platform Jumper - Item
       Platform Jumper - Platforms: Platform Jumper - Platform
       Platform Jumper - Player: Platform Jumper - Pemain
+      Platform Jumper Review: Ulasan Platform Jumper
+      Player Controls: Kontrol Pemain
       Playing Notes: Catatan Permainan
       Playing with Notes: Bermain dengan Catatan
       Polling Events: Event Angket
@@ -280,9 +357,15 @@ id:
       Properties: Properti
       Publishing Your Website: Sedang diterbitkan situs web
       Quarter Notes: Not Seperempat
+      Quick Check: Pemeriksaan Cepat
       RGB Exploration: Eksplorasi RGB
       RGB Widget: RGB Widget
+      Raspado Recommender: Pemberi Rekomendasi Raspado
       Reading Sensors: Sensor Baca
+      Recognizing Expressions: Mengenali Ekspresi
+      Recognizing Fish: Mengenal Ikan
+      Recognizing Fish Features: Mengenali Ciri-ciri Ikan
+      Recognizing Shapes: Mengenal Bentuk
       Reflection: Bayangan
       Relay Programming - Unplugged Activity: Relay Programming - Aktivitas Unplugged
       Repeat Blocks: Repeat Block
@@ -292,17 +375,39 @@ id:
       Repeat Until Statements: Pernyataan Repeat Until
       Representing Images: Merepresentasikan Gambar
       Review: Tinjauan
+      Review Your Animated Scene: Memeriksa Adegan Animasimu
+      Review Your App: Periksa Aplikasimu
+      Review Your Game: Periksa Game-Mu
+      Review Your Page: Periksa Halamanmu
+      Review Your Scene: Periksa Adeganmu
+      'Review: CSS': 'Ulasan: CSS'
+      'Review: HTML': 'Ulasan: HTML'
       Revise Artist Project: Revisi Proyek Artis
       Revise Sprite Lab Project: Revisi Proyek Sprite Lab
       Robot Doodle: Gambar Robot
       Run a simulation: Lakukan simulasi
+      Safari App: Apl. Safari
+      Safari Model: Model Safari
+      Same Game: Game yang Sama
+      Sample Apps for Good: Contoh Aplikasi untuk Kebaikan
+      Sample Games: Contoh Game
+      Sample Personal Web Pages: Contoh Halaman Web Pribadi
+      Sample Personal Websites: Contoh Situs Web Pribadi
       Sample Programs: Program-Program Contoh
+      Sample Web Page: Contoh Situs Web
+      Sample Website: Contoh Situs Web
+      Scoring & Scoreboard: Skor & Papan Skor
       Screen Design: Desain Layar
       Sensor Events: Event Sensor
       Sensors to Colors: Sensor ke Warna
+      Set Up Sprites: Membuat Sprite
       Setting Properties: Mengatur Properti
       Shapes and the Draw Loop: Bentuk dan Draw Loop
       Share Your App: Bagikan Aplikasi Anda
+      Share Your Pages: Bagikan Halaman Anda
+      Share Your Stylesheets: Bagikan Stylesheet Anda
+      Shoe Recommendation Survey: Survei Rekomendasi Sepatu
+      Shoe Recommender: Pemberi Rekomendasi Sepatu
       Side Scroller: Side Scroller
       Simple Circuits: Sirkuit Sederhana
       Skill Building: Pembangunan Keterampilan
@@ -316,6 +421,7 @@ id:
       Sprite Lab Example Project: Proyek Contoh Sprite Lab
       Sprite Lab Project: Proyek Sprite Lab
       Sprite Movement: Gerakan Sprite
+      Sprite Properties: Properti Sprite
       Sprites and the Draw Loop: Sprite dan Draw Loop
       Star Chaser: Pengejar Bintang
       Styling Text: Membuat Style Teks
@@ -339,8 +445,12 @@ id:
       The Right App - Unplugged Activity: Aplikasi yang Tepat - Aktivitas Unplugged
       Top Websites: Situs Web Teratas
       Train AI to Clean the Ocean: Latih AI Membersihkan Lautan
+      Train a Model in AI Lab: Latih Model di AI Lab
+      Train an AI to Clean the Ocean: Latih AI untuk Membersihkan Lautan
       UI Element Properties: Properti Elemen UI
+      Ultimate Shoe Recommender: Pemberi Rekomendasi Sepatu Terbaik
       Unit 5 Lesson 1 Overview: Unit 5 Pelajaran 1 Ikhtisar
+      Upload Your Images: Unggah Gambar Anda
       User Interface: Antarmuka Pengguna
       Using Getters and Setters: Menggunakan Getter dan Setter
       Using HTML Tags: Menggunakan Tag HTML
@@ -361,11 +471,13 @@ id:
       'Video:  Text  and Prompts': 'Video:  Teks  dan Prompt'
       'Video: "If/Else"': 'Video: "If/Else"'
       'Video: AI: What is Machine Learning?': 'Video: AI: Apa itu Pembelajaran Mesin?'
+      'Video: Amazon and Data': 'Video: Amazon dan Data'
       'Video: Artist Intro with JR Hildebrand': 'Video: Pengantar Artis bersama JR
         Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Video: Pengantar Artis bersama JR
         Hildebrande'
       'Video: CS Matters': 'Video: Masalah CS'
+      'Video: Circuits and Logic': 'Video: Sirkuit dan Logika'
       'Video: Code Your Own Flappy Game': 'Video: Buat Code untuk Flappy Game Anda
         Sendiri'
       'Video: Conditionals: If Statements': 'Video: Conditional: Pernyataan If'
@@ -377,6 +489,7 @@ id:
       'Video: Dance Party Properties': 'Video: Properti Pesta Dansa'
       'Video: Dance Party Warm Up': 'Video: Pemanasan Pesta Dansa'
       'Video: De-bugging with the Step Button': 'Video : Debugging dengan Tombol Step'
+      'Video: Debugging': 'Video: Debugging'
       'Video: Debugging with Scrat ': 'Video: Debugging dengan Scrat '
       'Video: Debugging with the Step Button': 'Video : Debugging dengan Tombol Step'
       'Video: Events': 'Video: Event'
@@ -384,18 +497,26 @@ id:
       'Video: Getting Loopy': 'Video: Getting Loopy'
       'Video: Happy Maps - Unplugged Activity': 'Video: Happy Maps - Aktivitas Unplugged'
       'Video: Harvesting with Conditionals': 'Video: Memanen dengan Conditional'
+      'Video: How Search Works': 'Video: Cara Kerja Pencarian'
       'Video: How to Create a Simple Function': 'Video : Cara Membuat Function Sederhana'
       'Video: How to Make a Sprite': 'Video: Cara Membuat Sprite'
+      'Video: IOSP Model': 'Video: Model IOSP'
       'Video: Ice Age Loops': 'Video : Ice Age Loop'
+      'Video: Impact on Society': 'Video: Dampak terhadap Masyarakat'
       'Video: Impacts on Society': 'Video: Dampak terhadap Masyarakat'
       'Video: Intro to CSS': 'Video: Pendahuluan untuk CSS'
+      'Video: Intro to CSS - Part 1': 'Video: Pengantar CSS - Bagian 1'
+      'Video: Intro to CSS - Part 2': 'Video: Pengantar CSS - Bagian 2'
       'Video: Intro to CSS Part 2': 'Video: Pendahuluan untuk CSS Bagian 2'
+      'Video: Intro to Design Mode': 'Video: Pengantar Mode Desain'
       'Video: Intro to Web Lab - Part 1': 'Video: Pendahuluan Web Lab - Bagian 1'
       'Video: Intro to Web Lab - Part 2': Pendahuluan Web Lab - Bagian 2
       'Video: Introducing Sprite Lab': 'Video: Memperkenalkan Sprite Lab'
       'Video: Introduction to Play Lab': 'Video: Pengantar Play Lab'
+      'Video: Introduction to Variables': 'Video: Pengantar Variabel'
       'Video: Loops in Artist': 'Video: Loop dalam Artis'
       'Video: Loops with the Artist': 'Video: Loop dengan Artis'
+      'Video: Managing Disagreement': 'Video: Mengelola Ketidakcocokan'
       'Video: Maze Intro - Programming with Blocks': 'Video : Pengantar Labirin -
         Pemrograman dengan Block'
       'Video: Maze Intro - Programming with Blocks ': 'Video : Pengantar Labirin -
@@ -417,12 +538,14 @@ id:
         Air Repeat Until'
       'Video: Nested Loops': 'Video: Nested Loop'
       'Video: Nested Loops with the Bee': 'Video : Nested Loop dengan Lebah'
+      'Video: Netflix and Data': 'Video: Netflix dan Data'
       'Video: Pair Programming': 'Video: Pair Programming'
       'Video: Pair Programming ': 'Video: Pair Programming'
       'Video: Problem Solving Process': 'Video: proses pemecahan masalah'
       'Video: Programming with Blocks': 'Video: Pemrograman dengan Block'
       'Video: Programming with Rey and BB-8': 'Video: Pemrograman dengan Rey dan BB-8'
       'Video: Properties': 'Video: Properti'
+      'Video: Publishing Your Website': 'Video: Mempublikasikan Situs Web Anda'
       'Video: Repeat Blocks': 'Video: Repeat Block'
       'Video: Repeat Blocks with BB-8': 'Video : Repeat Block dengan BB-8'
       'Video: Repeat Blocks with the Artist': 'Video : Repeat Block dengan Artis'
@@ -430,6 +553,7 @@ id:
       'Video: Repeat Until Statements': 'Video : Pernyataan Repeat Until'
       'Video: Sprites in Action': 'Video: Sprite sedang Beraksi'
       'Video: Star Wars Project': 'Video: Proyek Star Wars'
+      'Video: Teamwork': 'Video: Kerja Tim'
       'Video: Text and Prompts': 'Video:  Teks dan Prompt'
       'Video: The Artist in Code Studio': 'Video: Artis di Code Studio'
       'Video: The Big Event - Unplugged Activity': 'Video: Event Besar - Aktivitas
@@ -437,13 +561,16 @@ id:
       'Video: The Collector': 'Video: Kolektor'
       'Video: The Harvester': 'Video: Pemanen'
       'Video: Training Data & Bias': 'Video: Data & Bias Pelatihan'
+      'Video: Training Data and Bias': 'Video: Data Pelatihan dan Bias'
       'Video: Unplugged Variables in Envelopes': 'Video: Variable Unplugged dalam
         Amplop'
       'Video: Using the Repeat Block': 'Video: Menggunakan Repeat Block'
       'Video: Variables in Artist': 'Video: Variable dalam Artis'
       'Video: Warm Up': 'Video: Pemanasan'
+      'Video: Waze and Data': 'Video: Waze dan Data'
       'Video: What Makes a Computer, a Computer?': Apa yang menbuat sebuah komputer,
         sebuah komputer?
+      'Video: What is Machine Learning?': 'Video: Apa itu Machine Learning?'
       'Video: While Loops with the Farmer': 'Video: While Loops dengan Petani'
       'Video: Wrap-up': 'Video: Rangkuman'
       Warm Up: Pemanasan
@@ -453,7 +580,11 @@ id:
       While Loops with the Farmer: While Loop dengan Petani
       'Widget: Text Compression': 'Widget: Kompresi Teks'
       Wrap-up: Penutupan
+      'You Choose: Improve Your App': 'Silakan Pilih: Sempurnakan Apl. Anda'
+      'You Choose: Restaurant Recommendations': 'Silakan Pilih: Rekomendasi Restoran'
       Your Personal Website: Website pribadi anda
+      Your Team Project: Proyek Tim Anda
+      Zoo Predictions: Prediksi Zoo
       getText vs getNumber: getText vs getNumber
       isTouching: isTouching
       setProperty: setProperty

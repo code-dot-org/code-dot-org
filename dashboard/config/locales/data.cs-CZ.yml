@@ -669,6 +669,8 @@ cs:
         hoc_dance_events: Taneční večírek  - Události
         hoc_dance_properties: Taneční večírek  - vlastnosti
         hoc_dance_congrats: Dance Party - Jedeme dál!
+        c_and_c_great_to_create: Tvoření a férová hra jsou super
+        c_and_c_digital_sharing: Digitální sdílení
         what_is_cs: Co je informatika?
         lesson_planning: Plánování hodiny
         writing_first_program: Psaní svého prvního počítačového programu
@@ -687,6 +689,7 @@ cs:
         hoc_dance_properties_2019: Dance Party 2019 - Vlastnosti
         csd_what_computers_do: Co dělají počítače?
         csf_my_online_neighborhood_2020: Mé online sousedství
+        csf_private_and_personal_information: Soukromé a osobní informace
         outbreak_mike: CodeBytes Díl 3 s Mikem - Simulátor epidemií
         csf_lots_of_sprites: 'Laboratoř sprajtů: spousta sprajtů'
         playlab_2021: Úvod do Play Labu
@@ -719,6 +722,26 @@ cs:
         poemart_events: Básnické umění Události
         poemart_imagery: Básnické umění Obrazotvornost
         poemart_celebration: Básnické umění Gratulace
+        CSA-PL-debugging-temp: Příprava na ladění v prostředí Java Lab – dočasné
+        CSA-PL-for-loops: Cykly for v jazyce Java
+        CSA-PL-variables: Vytrváření proměnných v jazyce Java
+        PL_CS_Journeys_Overview: Cesty informatiky
+        CSA-PL-intro-to-java-lab: Základy Java Lab
+        CSA-PL-first-program: Psaní programu v jazyce Java
+        CSD_u6_variables_part1: 'Objevování informatiky: Proměnné'
+        csd_u6_if_statements: 'Objevování informatiky: Příkazy if'
+        csc-poem-art-intro: Úvodní video
+        csc-poem-art-outro: Závěrečné video
+        csd_u6_call_define_functions: 'Objevování informatiky: Volání a definice funkcí'
+        csp_applab_parameters: Funkce s Parametry
+        starquilts_intro_artist: Úvod do hvězdicových vzorů
+        CSA-PL-intro-to-arrays: Jednorozměnrá (1D) pole
+        CSA-PL-1d-arrays-new-values: Zadávání hodnot do jednorozměrných (1D) polí
+        CSA-PL-conditionals: Podmíněné příkazy v Java
+        CSA-PL-two-way-selection: Volba dvou možností
+        CSA-PL-Printing-in-Java: Tisk v Java
+        CSA-PL-multi-selection-statements: Příkazy s více volbami
+        CS_Changing_Everything: Informatika mění vše
     callout:
       text:
         drag_blocks: Přetáhni blok "posunout vpřed" pod ten druhý blok

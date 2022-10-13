@@ -1,4 +1,5 @@
-- if request.locale == "en-US"
+- display_professional_learning_banners = false
+- if request.locale == "en-US" && display_professional_learning_banners
   = inline_css 'professional_learning_marketing_banner.css'
   - header_text = 'Help students become superheroes!'
   - text = "Our Professional Learning program helps #{audience_text} teach computer science!"

@@ -2,8 +2,27 @@
 hi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: उपयोगकर्ता को {QUESTION} वेरिएबल {VAR} के लिए विकल्पों {A}{B}{C} के
+          साथ सुझाव दें
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': बेहद छोटा
+            '0.75': छोटा
+            '1.00': मध्यम
+            '2.00': बड़ा
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': बेहद छोटा
+            '0.75': छोटा
+            '1.00': मध्यम
+            '2.00': बड़ा
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} प्रत्येक {N} संगीत प्रविधियों के बाद \n{MOVE1} और {MOVE2} को
           बदलता है"
@@ -1017,7 +1036,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
       gamelab_clickedOn:
         text: जब {SPRITE} पर क्लिक किया
       gamelab_clickedSpritePointer:
@@ -1053,7 +1072,7 @@ hi:
         text: लाइन {COLOR}  {LOC1}  {LOC2} चित्रित करें
       gamelab_edgesDisplace:
         text: किनारे {SPRITE} को मूव होने से रोकते हैं
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'प्रत्येक {N} {UNIT} '
         options:
           UNIT:
@@ -1155,7 +1174,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
           KEY:
             '"up"': ऊपर
             '"down"': नीचे
@@ -1212,8 +1231,6 @@ hi:
             '"pop"': पॉप
             '"rain"': बारिश
             '"spiral"': घुमावदार
-      gamelab_makeNewScaledSprite:
-        text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       gamelab_makeNumSprites:
@@ -1227,6 +1244,13 @@ hi:
             '90': नीचे
             '180': बाएं
             '270': ऊपर
+      gamelab_makeSpritesWithSize:
+        text: बनाएं {NUM} नया {SIZE} {COSTUME} स्प्राइट्स
+        options:
+          SIZE:
+            '30': छोटा
+            '50': मध्यम
+            '100': बड़ा
       gamelab_mirrorSprite:
         text: "{SPRITE} सामने की ओर {DIRECTION} "
         options:
@@ -1459,11 +1483,46 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
       gamelab_spriteSay:
         text: "{SPRITE} {SPEECH} बोलता है"
       gamelab_spriteSayTime:
         text: "{SPRITE}{TEXT1}को{NUM}सेकंड तक बोलता है"
+      gamelab_spriteThink:
+        text: "{SPRITE} सोचें {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}सोचें{TEXT1}के लिए{NUM}सेकंड्स"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} सोचें {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"Time to make friends with the sheep."': भेड़ों से दोस्ती करने का समय
+              है।
+            '"She''ll never recognize me now."': वह अब मुझे कभी नहीं पहचान पाएगी।
+            '"This costume keeps me warm."': यह पोशाक मुझे गर्म रखती है।
+            '"I am actually a wolf."': मैं वास्तव में एक भेड़िया हूँ।
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} सोचें {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I''m feeling sleepy."': मुझे नींद आ रही है।
+            '"No one could ever beat me."': मुझे कभी कोई हरा नहीं सकता था।
+            '"I''ve done this race before."': मैं यह रेस पहले भी की है।
+            '"My feet are bigger than Turtle''s feet."': मेरे पैर कछुए के पैरों से
+              बड़े हैं।
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} सोचें {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': हम्म...
+            '"I''m so hungry."': मुझे बहुत भूख लगी है।
+            '"I''m a visitor in this town."': मैं इस शहर में एक आगंतुक हूं।
+            '"If we share, we''ll all have something to eat. "': यदि हम साँझा करते
+              हैं, तो हम सभी के पास खाने के लिए कुछ न कुछ होगा।
+            '"I''ll trick everyone into giving me their food."': मैं सबके साथ मुझे
+              उनका खाना देने में छल करूंगा।
       gamelab_startAvoiding:
         text: "{SPRITE} {TARGET} से बचना शुरू करता है"
       gamelab_startFollowing:
@@ -2148,6 +2207,11 @@ hi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: जब {VAR} जवाब दिया गया हो
       RyanLab_moveForward:

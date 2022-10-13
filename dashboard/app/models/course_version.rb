@@ -17,13 +17,13 @@
 #
 #  index_course_versions_on_content_root_type_and_content_root_id  (content_root_type,content_root_id)
 #  index_course_versions_on_course_offering_id                     (course_offering_id)
-#  index_course_versions_on_course_offering_id_and_key             (course_offering_id,key) UNIQUE
+#  index_course_versions_on_offering_id_and_key_and_type           (course_offering_id,key,content_root_type) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord
   include Rails.application.routes.url_helpers
 
-  belongs_to :course_offering
+  belongs_to :course_offering, optional: true
   has_many :resources
   has_many :vocabularies
   has_many :reference_guides
@@ -50,7 +50,7 @@ class CourseVersion < ApplicationRecord
   # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
   #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
   #   False for the CSP1-2019 Unit.
-  belongs_to :content_root, polymorphic: true
+  belongs_to :content_root, polymorphic: true, optional: true
 
   alias_attribute :version_year, :key
 
@@ -59,6 +59,7 @@ class CourseVersion < ApplicationRecord
   # into the course version itself.
 
   delegate :name, to: :content_root, allow_nil: true
+  delegate :localized_title, to: :content_root, allow_nil: true
   delegate :pl_course?, to: :content_root, allow_nil: true
   delegate :stable?, to: :content_root, allow_nil: true
   delegate :launched?, to: :content_root, allow_nil: true
@@ -104,7 +105,7 @@ class CourseVersion < ApplicationRecord
     if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
       raise "cannot change course version of #{content_root.name}"
     end
-    course_version.save! if course_version
+    course_version&.save!
 
     # Destroy the previously associated CourseVersion and CourseOffering if appropriate. This can happen if either:
     #   - family_name or version_year was changed
@@ -138,7 +139,7 @@ class CourseVersion < ApplicationRecord
 
   def self.course_offering_keys(content_root_type)
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
-      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
+      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).filter_map {|cv| cv.course_offering&.key}.uniq.sort
     end
   end
 

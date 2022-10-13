@@ -4,16 +4,21 @@ import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedCommitsAndReviewTab as CommitsAndReviewTab} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import javalabMsg from '@cdo/javalab/locale';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import Button from '@cdo/apps/templates/Button';
 
 const DEFAULT_PROPS = {
-  onLoadComplete: () => {},
   channelId: 'asdfjkl',
   serverLevelId: 1,
   serverScriptId: 2,
   viewAsCodeReviewer: true,
   viewAsTeacher: false,
-  codeReviewEnabled: true
+  userIsTeacher: false,
+  codeReviewEnabled: true,
+  locale: 'en_us',
+  isReadOnlyWorkspace: false,
+  setIsReadOnlyWorkspace: () => {},
+  setHasOpenCodeReview: () => {}
 };
 
 const setUp = (overrideProps = {}) => {
@@ -44,8 +49,36 @@ describe('CommitsAndReviewTab', () => {
 
   it('displays refresh button', () => {
     const wrapper = setUp();
-    const refreshButton = wrapper.find(Button);
-    expect(refreshButton).to.have.length(1);
+    const refreshButton = wrapper.find(Button).first();
     expect(refreshButton.props().icon).to.equal('refresh');
+  });
+
+  it('displays a CodeReviewTimeline', () => {
+    const wrapper = setUp();
+    expect(wrapper.find(CodeReviewTimeline)).to.have.length(1);
+  });
+
+  it('displays the open review button if there is no open review data loaded and it is not readonly workspace', () => {
+    const wrapper = setUp();
+    const openReviewButton = wrapper.find(Button).at(1);
+    expect(openReviewButton).to.have.length(1);
+    expect(openReviewButton.props().text).to.equal(javalabMsg.startReview());
+  });
+
+  it('hides the open review button if it is a readonly workspace', () => {
+    const wrapper = setUp({isReadOnlyWorkspace: true});
+    const openReviewButton = wrapper.find(Button).at(1);
+    expect(openReviewButton).to.have.length(0);
+  });
+
+  it('disables the open review button when prop codeReviewEnabled is false', () => {
+    const wrapper = setUp({codeReviewEnabled: false});
+    const openReviewButton = wrapper.find(Button).at(1);
+    expect(openReviewButton.props().disabled).to.be.true;
+  });
+
+  it('displays code review disabled message when prop codeReviewEnabled is false', () => {
+    const wrapper = setUp({codeReviewEnabled: false});
+    expect(wrapper.contains(javalabMsg.codeReviewDisabledMessage())).to.be.true;
   });
 });

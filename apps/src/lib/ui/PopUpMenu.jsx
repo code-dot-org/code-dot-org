@@ -2,7 +2,7 @@
 import React, {Component, Children} from 'react';
 import PropTypes from 'prop-types';
 
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {PortalWithState} from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
@@ -206,8 +206,10 @@ class Item extends Component {
     }
 
     const paddingStyle = {
-      paddingTop: first ? STANDARD_PADDING : STANDARD_PADDING / 4,
-      paddingBottom: last ? STANDARD_PADDING : STANDARD_PADDING / 4,
+      marginTop: first ? STANDARD_PADDING * (3 / 4) : undefined,
+      marginBottom: last ? STANDARD_PADDING * (3 / 4) : undefined,
+      paddingTop: STANDARD_PADDING / 4,
+      paddingBottom: STANDARD_PADDING / 4,
       paddingLeft: STANDARD_PADDING,
       paddingRight: STANDARD_PADDING,
       cursor: 'pointer',

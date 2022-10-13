@@ -1,5 +1,23 @@
 mr:
   data:
     shared_functions:
+      driving with arrow keys: ॲरो कीज वापरून ड्रायव्हिंग
+      fluttering: फडफडणे
+      growing: आकार वाढवणे
+      jittering: थरथरणे
+      moving east: पूर्वेकडे जाणे
+      moving east and looping: पूर्वेकडे जाणे आणि लूपिंग
+      moving north: उत्तरेकडे जाणे
       moving north and looping: उत्तरेकडे जाणे आणि लुपिंग करणे 
+      moving south: दक्षिणेकडे जाणे
       moving south and looping: दक्षिणेकडे जाणे आणि लुपिंग करणे 
+      moving west: पश्चिमेकडे जाणे
+      moving west and looping: पश्चिमेकडे जाणे आणि लूपिंग
+      moving with arrow keys: ॲरो कीज वापरून हालचाल करणे
+      patrolling: गस्त घालणे
+      shrinking: आकार कमी होणे
+      spinning left: डावीकडे स्पिन होणे
+      spinning right: उजवीकडे स्पिन होणे
+      swimming left and right: डावीकडे आणि उजवीकडे पोहणे
+      wandering: भटकणे
+      wobbling: डगमगणे

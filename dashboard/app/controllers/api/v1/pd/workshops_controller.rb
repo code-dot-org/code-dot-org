@@ -90,8 +90,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       # teachercon
       cities = current_user.
         regional_partners.
-        map {|partner| get_matching_teachercon(partner)}.
-        compact.
+        filter_map {|partner| get_matching_teachercon(partner)}.
         to_set.
         pluck(:city).
         map {|city| "%#{city}%"}
@@ -289,7 +288,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
       # Since these ids are supplied by the caller, make sure they each actually represent a real user
       # and that the user is actually a facilitator before adding.
-      next unless facilitator && facilitator.facilitator?
+      next unless facilitator&.facilitator?
       @workshop.facilitators << facilitator
     end
   end

@@ -1,7 +1,6 @@
 /** A single list item representing an animation. */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';
@@ -38,7 +37,7 @@ class AnimationListItem extends React.Component {
     children: PropTypes.node,
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired,
+    isSpriteLab: PropTypes.bool.isRequired,
     labType: PropTypes.string.isRequired
   };
 
@@ -89,7 +88,7 @@ class AnimationListItem extends React.Component {
   };
 
   deleteAnimation = () => {
-    this.props.deleteAnimation(this.props.animationKey);
+    this.props.deleteAnimation(this.props.animationKey, this.props.isSpriteLab);
   };
 
   setAnimationLooping = looping => {
@@ -180,7 +179,7 @@ class AnimationListItem extends React.Component {
         <div style={styles.nameInputWrapper}>
           <input
             type="text"
-            style={[styles.nameInput, invalidNameStyle]}
+            style={{...styles.nameInput, ...invalidNameStyle}}
             value={name}
             onChange={this.onNameChange}
           />
@@ -190,13 +189,10 @@ class AnimationListItem extends React.Component {
       animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
-    const tileStyle = [
-      styles.tile,
-      this.props.isSelected && styles.selectedTile,
-      this.props.style
-    ];
+    const selectedStyle = this.props.isSelected ? styles.selectedTile : {};
+    const tileStyle = {...styles.tile, ...selectedStyle, ...this.props.style};
 
-    const arrowStyle = [this.props.isSelected && styles.rightArrow];
+    const arrowStyle = this.props.isSelected ? styles.rightArrow : {};
 
     return (
       <button style={tileStyle} onClick={this.onSelect} type="button">
@@ -207,7 +203,7 @@ class AnimationListItem extends React.Component {
           isSelected={this.props.isSelected}
           singleFrameAnimation={this.props.allAnimationsSingleFrame}
         />
-        {!this.props.spriteLab && animationName}
+        {!this.props.isSpriteLab && animationName}
         {this.props.isSelected && (
           <ListItemButtons
             onFrameDelayChanged={this.setAnimationFrameDelay}
@@ -241,20 +237,11 @@ const styles = {
     // Allows looping button to display relative to whole card
     position: 'relative',
 
-    ':hover': {
-      cursor: 'pointer',
-      backgroundColor: color.lighter_purple
-    },
     border: 0,
     margin: '5px 0 0 0'
   },
   selectedTile: {
-    backgroundColor: color.purple,
-
-    ':hover': {
-      cursor: 'auto',
-      backgroundColor: color.purple
-    }
+    backgroundColor: color.purple
   },
   nameLabel: {
     marginLeft: 4,
@@ -294,15 +281,15 @@ export default connect(
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,
-    spriteLab: state.pageConstants.isBlockly
+    isSpriteLab: state.pageConstants.isBlockly
   }),
   dispatch => {
     return {
       cloneAnimation(animationKey) {
         dispatch(cloneAnimation(animationKey));
       },
-      deleteAnimation(animationKey) {
-        dispatch(deleteAnimation(animationKey));
+      deleteAnimation(animationKey, isSpriteLab) {
+        dispatch(deleteAnimation(animationKey, isSpriteLab));
       },
       selectAnimation(animationKey) {
         dispatch(selectAnimation(animationKey));
@@ -318,4 +305,4 @@ export default connect(
       }
     };
   }
-)(Radium(AnimationListItem));
+)(AnimationListItem);

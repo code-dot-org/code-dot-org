@@ -1,0 +1,26 @@
+{
+  "pt-BR": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Normas de Língua e Literatura Inglesa do Núcleo Comum"
+        },
+        "csta": {
+          "name": "Normas de ciência da computação CSTA K-12 (2017)"
+        },
+        "ccmath": {
+          "name": "Normas de Matemática do Núcleo Comum"
+        },
+        "csta2011": {
+          "name": "Normas CSTA K-12 para Ciência da Computação (2011)"
+        },
+        "iste": {
+          "name": "Normas ISTE para Estudantes"
+        },
+        "csp2021": {
+          "name": "Estrutura conceitual de CSP"
+        }
+      }
+    }
+  }
+}

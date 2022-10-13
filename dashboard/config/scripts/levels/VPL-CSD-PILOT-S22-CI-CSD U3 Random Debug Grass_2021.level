@@ -49,9 +49,9 @@
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2021",
     "reference_links": [
-      "/docs/concepts/game-lab/drawing-shapes/"
+      "/courses/vpl-csd-summer-pilot-ci-2022/guides/drawing-shapes"
     ],
-    "map_reference": " /docs/concepts/game-lab/shapes-and-parameters/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-ci-2022/guides/shapes-and-parameters",
     "long_instructions": "<img src=\"https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Help a Student Debug Their Code\r\n\r\nA student is using the four parameter version of `rect()` and `ellipse()` to draw a simple scene. They expected the green rectangle representing the grass to extend all the way to the edge of the screen, but it is only covering half of the screen. \r\n\r\n# Do This\r\n\r\n* Find the bug in the program that is preventing the grass from extending across the entire bottom of the screen.\r\n* Consider the guiding questions that you might use to help the student debug their code. ",
     "parent_level_id": 20655,
     "encrypted": "false",
@@ -59,11 +59,11 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-03-24T14:29:49.000Z",
   "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-24T14:29:49.000Z",
   "user_id": 106,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-24T14:29:49.584+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random Debug Grass_2021\\\"\"],\"cloned_from\":\"CSD U3 Random Debug Grass_2021\"},{\"changed_at\":\"2022-03-25 01:19:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-25 01:21:38 +0000\",\"changed\":[\"code_functions\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-25 14:04:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
 }]]></config>

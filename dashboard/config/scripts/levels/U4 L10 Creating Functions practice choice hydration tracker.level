@@ -16,13 +16,14 @@
       "setText": null,
       "setProperty": null,
       "functionParams_none": null,
-      "callMyFunction": null
+      "callMyFunction": null,
+      "playSound": null
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "This program keeps track of how hydrated you are. One of the buttons already has working code inside of it. The other three buttons will work very similarly. Rather than write repeated code, practice creating an `updateScreen` function that you can call inside each `onEvent`.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it works.\r\n* Read the code for the \"Cup\" button carefully. Decide which lines of code belong in an `updateScreen` function\r\n* **Declare** an `updateScreen` function at the bottom of your code. Add in any code you think will need to run inside each button.\r\n* Add code to make the \"Bottle\", \"Running\", and \"Weights\" buttons work. They should increase or decrease the total amount of water and  increase either the total number of cups or workouts. Make sure you **call** your `updateScreen` function where it is necessary.",
+    "long_instructions": "This program keeps track of how hydrated you are. One of the buttons already has working code inside of it. The other three buttons will work very similarly. Rather than write repeated code, practice creating an `updateScreen` function that you can call inside each `onEvent`.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it works.\r\n* Read the code for the \"Cup\" button carefully. Decide which lines of code belong in an `updateScreen` function\r\n* **Declare** an `updateScreen` function at the bottom of your code. Add in any code you think will need to run inside each button.\r\n* Add code to make the \"Bottle\", \"Running\", and \"Weights\" buttons work. They should increase or decrease the total amount of water and  increase either the total number of cups or workouts. Make sure you **call** your `updateScreen` function where it is necessary.\r\n\r\n<br>\r\n\r\n::: details [**Show Me How**]\r\nYou can declare a function as shown below:\r\n\r\n![](https://images.code.org/20d7ee772a21a079bb25add0e089a1f4-image-1653266430975.png)\r\n\r\nWhen declaring a function, make sure to replace `myFunction`(#e7e8ea) with name you want the function to have. \r\n\r\nYou can call a function as shown below:\r\n\r\n![](https://images.code.org/bc0e62f52194df2dd83ca780f97bc34a-image-1653266617250.png)\r\n\r\nWhen calling a function, make sure to replace `myFunction`(#e7e8ea) with name of the function.\r\n:::\r\n",
     "submittable": "false",
-    "start_blocks": "// Create and assign values to variables\nvar totalWater = 100;\nvar cupsConsumed = 0;\nvar workouts = 0;\nvar cup = 8;\nvar bottle = 32;\nvar running = 24;\nvar weights = 16;\n\n// Use the code in this button to guide how you\n// add code to the others.\nonEvent(\"cupButton\",\"click\",function(){\n  // Increase cups consumed\n  cupsConsumed = cupsConsumed + 1;\n  // Increase total water drank\n  totalWater = totalWater + cup;\n  setProperty(\"waterLabel\", \"text\", totalWater + \"oz\");\n  setProperty(\"cupsLabel\", \"text\", cupsConsumed + \" cups\");\n  playSound(\"sound://category_digital/coin_2.mp3\");\n});\n\n// Add code to make this button work\nonEvent(\"bottleButton\",\"click\",function(){\n\n  playSound(\"sound://category_digital/coin_2.mp3\");\n});\n\n// Add code to make this button work\nonEvent(\"runningButton\",\"click\",function(){\n\n  playSound(\"sound://category_digital/coin_2.mp3\");\n});\n\n// Add code to make this button work\nonEvent(\"weightsButton\",\"click\",function(){\n\n  playSound(\"sound://category_digital/coin_2.mp3\");\n});\n",
+    "start_blocks": "// Create and assign values to variables\r\nvar totalWater = 100;\r\nvar cupsConsumed = 0;\r\nvar workouts = 0;\r\nvar cup = 8;\r\nvar bottle = 32;\r\nvar running = 24;\r\nvar weights = 16;\r\n\r\n// Use the code in this button to guide how you\r\n// add code to the others.\r\nonEvent(\"cupButton\",\"click\",function(){\r\n  // Increase cups consumed\r\n  cupsConsumed = cupsConsumed + 1;\r\n  // Increase total water drank\r\n  totalWater = totalWater + cup;\r\n  \r\n  //Update Screen\r\n  setProperty(\"waterLabel\", \"text\", totalWater + \"oz\");\r\n  setProperty(\"cupsLabel\", \"text\", cupsConsumed + \" cups\");\r\n  setProperty(\"exerciseLabel\",\"text\", workouts + \" workouts\");\r\n  playSound(\"sound://category_digital/coin_2.mp3\");\r\n});\r\n\r\n// Add code to make this button work\r\nonEvent(\"bottleButton\",\"click\",function(){\r\n\r\n  playSound(\"sound://category_digital/coin_2.mp3\");\r\n});\r\n\r\n// Add code to make this button work\r\nonEvent(\"runningButton\",\"click\",function(){\r\n\r\n  playSound(\"sound://category_digital/coin_2.mp3\");\r\n});\r\n\r\n// Add code to make this button work\r\nonEvent(\"weightsButton\",\"click\",function(){\r\n\r\n  playSound(\"sound://category_digital/coin_2.mp3\");\r\n});\r\n",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
@@ -52,15 +53,16 @@
     "display_name": "Hydration Tracker",
     "ai_enabled": "false",
     "thumbnail_url": "https://images.code.org/739f829a067b18a3ec875d34f502cabd-image-1647378025746.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "+7WyIE7GdShupyCzQJ0QQ5VW0KYYu6dyest9xyVFR6rPVSlE3JBfjnQXa8w6\nY0x7OtLBCSVJb4AdC6yVDIAUWA==\n"
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2022-04-13T23:36:59.000Z",
   "level_num": "custom",
   "user_id": 106,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-13T23:36:59.501+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Variables operator practice choice b 2022\\\"\"],\"cloned_from\":\"U4 L03 Variables operator practice choice b 2022\"},{\"changed_at\":\"2022-04-13 23:46:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"slider_speed\",\"expand_debugger\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-21 22:51:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-13T23:36:59.501+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Variables operator practice choice b 2022\\\"\"],\"cloned_from\":\"U4 L03 Variables operator practice choice b 2022\"},{\"changed_at\":\"2022-04-13 23:46:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"slider_speed\",\"expand_debugger\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-21 22:51:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-20 17:58:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-20 18:01:22 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-05-23 00:50:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

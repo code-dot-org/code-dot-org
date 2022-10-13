@@ -1,14 +1,10 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:49:17.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Update the Zoo App\r\n\r\nAnother student has started creating an app based on Zoo data. They've imported their model and added additional screens, but still need to add updates. Can you help them update their app so it's more descriptive, and so the screens change when pressing the predict button?\r\n\r\n## Do This:\r\n\r\n- Use the Model Card to update the text on the Predict Screen\r\n\t- You can access the model card by pressing the gear icon and selecting \"Import Model\". \r\n    - Scroll to the bottom of the model card to see the Label and Feature information\r\n- Add if-statements inside the [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block to change the screen based on the predicted animal\r\n\t- You can use the model card to see all of the possible values for the prediction\r\n    - You will need six if-statements - one for each screen that you want to change to",
+    "long_instructions": "# Update the Zoo App\r\n\r\nAnother student has started creating an app based on Zoo data. They've imported their model and added additional screens, but still need to add updates. Can you help them update their app so it's more descriptive, and so the screens change when pressing the predict button?\r\n\r\n## Do This:\r\n\r\n- Use the Model Card to update the text on the Predict Screen\r\n\t- You can access the model card by pressing the gear icon and selecting \"Manage AI Models\". \r\n    - Scroll to the bottom of the model card to see the Label and Feature information\r\n- Add if-statements inside the [`getPrediction`(#d3e965)](/docs/applab/getPrediction/) block to change the screen based on the predicted animal\r\n\t- You can use the model card to see all of the possible values for the prediction\r\n    - You will need seven if-statements - one for each screen that you want to change to",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -43,7 +39,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "parent_level_id": 27925,
     "encrypted": "false",
     "mini_rubric": "true",
@@ -54,10 +49,10 @@
     "ai_enabled": "true",
     "callout_json": "[]",
     "reference_links": [
-      "/docs/concepts/app-lab/changing-screens/",
-      "/docs/concepts/app-lab/if-statements/",
-      "/docs/concepts/app-lab/design-mode/",
-      "/docs/concepts/app-lab/multi-screen-apps/"
+      "/courses/csd-2022/guides/changing-screens",
+      "/courses/csd-2022/guides/if-statements-2",
+      "/courses/csd-2022/guides/design-mode",
+      "/courses/csd-2022/guides/multi-screen-apps"
     ],
     "video_key": "csp_applab_conditionals_2A",
     "ai_model_id": "8Tyv0p3Hfl19",
@@ -115,9 +110,13 @@
     "name_suffix": "_2022",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-03-30T23:49:17.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:17.552+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-zoo assessment\\\"\"],\"cloned_from\":\"ml-models in applab-zoo assessment\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:49:17.552+00:00\",\"changed\":[\"cloned from \\\"ml-models in applab-zoo assessment\\\"\"],\"cloned_from\":\"ml-models in applab-zoo assessment\"},{\"changed_at\":\"2022-05-23 23:10:21 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-04 17:05:29 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

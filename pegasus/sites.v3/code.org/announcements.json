@@ -1,10 +1,18 @@
 {
   "pages": {
     "/projects": "coldplay",
-    "/home": "superhero",
-    "/certificates": "hoc-more"
+    "/certificates": "hoc-more",
+    "/home": "csjourneys-22"
   },  
   "banners": {
+    "csjourneys-22": {
+      "image": "/images/csjourneys/csjourneys22-dash.png",
+      "title": "CS Journeys is back, along with NEW Careers with CS videos",
+      "body": "Watch unique tech professionals at work, plus join virtual field trips of NASA’s Artemis mission and more.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys22-dashboard"
+    },
     "hoc-more": {
       "image": "/images/marketing/certificates-promo.png",
       "title": "Keep learning!",

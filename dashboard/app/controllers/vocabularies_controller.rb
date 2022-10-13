@@ -13,7 +13,7 @@ class VocabulariesController < ApplicationController
   def create
     course_version = CourseVersion.find_by_id(vocabulary_params[:course_version_id])
     unless course_version
-      render status: 400, json: {error: "course version not found"}
+      render status: :bad_request, json: {error: "course version not found"}
       return
     end
     vocabulary = Vocabulary.new(
@@ -27,7 +27,7 @@ class VocabulariesController < ApplicationController
       vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
     rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => e
-      render status: 400, json: {error: e.message.to_json}
+      render status: :bad_request, json: {error: e.message.to_json}
     end
   end
 
@@ -40,7 +40,7 @@ class VocabulariesController < ApplicationController
         lesson.script.write_script_json
       end
     end
-    if vocabulary && vocabulary.update!(vocabulary_params.except(:lesson_ids))
+    if vocabulary&.update!(vocabulary_params.except(:lesson_ids))
       vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
     else
@@ -50,7 +50,7 @@ class VocabulariesController < ApplicationController
 
   # GET /courses/:course_name/vocab/edit
   def edit
-    @course_version = find_matching_course_version(params[:course_name])
+    @course_version = CurriculumHelper.find_matching_course_version(params[:course_name])
     @vocabularies = @course_version.vocabularies.order(:word).map(&:summarize_for_edit)
   end
 

@@ -41,7 +41,13 @@
       "description": "The callback function that is run automatically after the model makes its decision. The result from the model is stored in the *value* variable and can be used within the callback function."
     }
   ],
-  "return_value": "When *getPrediction()* is finished, the decision from the model is stored in the *value* variable and all code inside the callback function is automatically run.",
+  "parameters": [
+    "name",
+    "id",
+    "data",
+    "callback"
+  ],
+  "return_value": "When **getPrediction()** is finished, the decision from the model is stored in the *value* variable and all code inside the callback function is automatically run.",
   "short_description": "getPrediction(name, id, data, callback)\r\n\r\nUses an AI Model trained in AI Lab to make a prediction based on a collection of data",
   "syntax": "getPrediction(name, id, data, callback)",
   "tips": "Importing an AI Model will automatically generate the [`getPrediction()`(#d3e965)](/docs/applab/getPrediction/) block for your model. You shouldn't need to change the *name* or *id* of the model, but you can make changes to the *data* parameter and the code inside the *callback* function."

@@ -80,13 +80,13 @@ module Pd::Application
     test 'meets criteria says an application meets criteria when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher_application, course: 'csd',
                                   response_scores: {
-                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].map {|x| [x, 'Yes']}.to_h
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].index_with('Yes')
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher_application, course: 'csp',
                                   response_scores: {
-                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].map {|x| [x, 'Yes']}.to_h
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].index_with('Yes')
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
     end
@@ -428,7 +428,7 @@ module Pd::Application
       application.update!(status: 'pending')
       assert_status_log(
         [
-          {status: 'unreviewed', at: Time.zone.now - 2.seconds},
+          {status: 'unreviewed', at: 2.seconds.ago},
           {status: 'pending', at: Time.zone.now}
         ],
         application
@@ -797,9 +797,14 @@ module Pd::Application
         # Updates the application with principal's responses and run auto_score! again
         application.on_successful_principal_approval_create(principal_approval)
 
-        assert_equal test_case[:meet_requirement],
-          application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
-          "Test case index #{index} failed"
+        # Written as a conditional to address Minitest 6 deprecation: `DEPRECATED: Use assert_nil if expecting nil`
+        if test_case[:meet_requirement]
+          assert application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+                 "Test case index #{index} failed"
+        else
+          refute application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+                 "Test case index #{index} failed"
+        end
       end
     end
 
@@ -835,6 +840,8 @@ module Pd::Application
         application.queue_email :principal_approval, deliver_now: true
         assert_equal incomplete, application.reload.principal_approval_state
       end
+
+      refute application.reload.principal_approval_not_required
 
       # even if it's not required, when an email was sent display incomplete
       application.update!(principal_approval_not_required: true)

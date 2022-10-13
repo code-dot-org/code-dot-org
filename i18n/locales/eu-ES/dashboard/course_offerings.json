@@ -1,5 +1,6 @@
 {
   "csp": "AP® Informatikaren Oinarriak",
+  "csa": "Informatika A",
   "20-hour": "CS kurtsora sarrera azkarra",
   "flappy": "Flappy Code",
   "jigsaw": "Buruhaustea",
@@ -16,5 +17,8 @@
   "infinity": "Disneyren Infinity Play Lab",
   "mc": "Minecraft Kode Ordua",
   "playlab": "Jolas Laborategia",
-  "edit-code": "Editatu kodea"
+  "k5-onlinepd": "Informatika-oinarriak irakastea",
+  "edit-code": "Editatu kodea",
+  "step": "pauso",
+  "soccer": "futbola"
 }

@@ -9,16 +9,9 @@
 
 #donorslider
   .container_responsive
-    #donorheader{style: "position:relative; height:40px"}
+    .donor-header
       %h1
         = I18n.t(:homepage_header_donors)
-
-      #donorlinks.desktop-feature
-        %a{href: "/about/donors"}
-          = I18n.t(:homepage_donors_seall)
-        &nbsp; &nbsp; &nbsp;
-        %a{href: "/donate"}
-          = I18n.t(:homepage_donors_donate)
 
     .donor-slider
       - diamond_supporters.each_with_index do |supporter|
@@ -33,3 +26,8 @@
             = "#{supporter[:name_s]}"
           - else
             = "#{supporter[:name_s]}, "
+    
+    .donor-button
+      %a{href: "/donate"}
+        %button
+          = I18n.t(:homepage_donors_donate)

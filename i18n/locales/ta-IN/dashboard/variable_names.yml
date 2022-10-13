@@ -25,8 +25,10 @@ ta:
       right: வலது
       score: மதிப்பெண்
       shout: கத்தும் ஓசை
+      sides: பக்கங்களிலும் 
       size: அளவு
       speed: வேகம்
+      type: வகை
       variable: மாறி
       width: அகலம்
       wizard: மந்திரவாதி

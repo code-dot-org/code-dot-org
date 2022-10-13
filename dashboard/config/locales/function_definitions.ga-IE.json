@@ -2194,6 +2194,283 @@
               "binary": "dénártha"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "tarraing cearnóg"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "fad"
+            }
+          }
+        },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "feidhm 1"
+          },
+          "function 2": {
+            "name": "feidhm 2"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "m'fheidhm"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "tarraing réalta",
+            "parameters": {
+              "points": "pointí",
+              "length": "fad"
+            }
+          },
+          "draw a circle": {
+            "name": "tarraing ciorcal"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "fad",
+              "repeat": "athdhéan"
+            }
+          },
+          "draw a triangle": {
+            "name": "tarraing triantán",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a house": {
+            "name": "tarraing teach",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a square": {
+            "name": "tarraing cearnóg",
+            "parameters": {
+              "length": "fad"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "tarraing réalta",
+            "parameters": {
+              "points": "pointí",
+              "length": "fad"
+            }
+          },
+          "draw a circle": {
+            "name": "tarraing ciorcal"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "fad",
+              "repeat": "athdhéan"
+            }
+          },
+          "draw a triangle": {
+            "name": "tarraing triantán",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a house": {
+            "name": "tarraing teach",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a square": {
+            "name": "tarraing cearnóg",
+            "parameters": {
+              "length": "fad"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "tarraing réalta",
+            "parameters": {
+              "points": "pointí",
+              "length": "fad"
+            }
+          },
+          "draw a circle": {
+            "name": "tarraing ciorcal"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "fad",
+              "repeat": "athdhéan"
+            }
+          },
+          "draw a triangle": {
+            "name": "tarraing triantán",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a house": {
+            "name": "tarraing teach",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a square": {
+            "name": "tarraing cearnóg",
+            "parameters": {
+              "length": "fad"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "tóg droichead"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "glan cosán"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "deisigh cosán fada"
+          },
+          "fix short path": {
+            "name": "deisigh cosán gearr"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "tóg droichead gearr"
+          },
+          "build long bridge": {
+            "name": "tóg droichead fada"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "feidhm 1"
+          },
+          "function 2": {
+            "name": "feidhm 2"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "tarraing cearnóg"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "tarraing réalta"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "tarraing réalta"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "tarraing cearnóg"
+          },
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "tarraing cearnóg"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "rud éigin a dhéanamh"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "cuir deireadh leis an gcluiche"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "cuir deireadh leis an gcluiche"
+          }
+        },
+        "courseF_bee_for_challenge12022": {
+          "move and get nectar with counter": {
+            "name": "téigh agus bailigh neachtar le háiritheoir"
+          }
         }
       }
     }

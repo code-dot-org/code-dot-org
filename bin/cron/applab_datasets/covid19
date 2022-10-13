@@ -7,7 +7,7 @@ require 'net/http'
 require 'csv'
 require 'date'
 require 'datapackage'
-require_relative '../../../shared/middleware/helpers/firebase_helper'
+require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 
 US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
 MAX_DAYS = 90 # there are 55 states/territories, and the table must be less than 5000 total rows (5000/55 = 90.9)
@@ -57,8 +57,8 @@ def get_us_covid19_data
 end
 
 def get_world_covid19_data
-  package = DataPackage::Package.new('https://datahub.io/core/covid-19/datapackage.json')
-  resource = package.resources.find {|r| r['name'] == "countries-aggregated_csv"}
+  package = JSON.parse(Net::HTTP.get_response(URI('https://datahub.io/core/covid-19/datapackage.json')).body)
+  resource = package['resources'].find {|r| r['name'] == "countries-aggregated_csv"}
   return unless resource
   response = Net::HTTP.get_response(URI(resource['path']))
   return unless response.code == '200'

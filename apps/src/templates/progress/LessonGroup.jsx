@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
@@ -104,7 +104,7 @@ class LessonGroup extends React.Component {
           />
           <span style={headingTextStyle}>{displayName}</span>
           {hasLessonGroupInfo && (
-            <div>
+            <span>
               <FontAwesome
                 icon="info-circle"
                 style={styles.lessonGroupInfo}
@@ -123,7 +123,7 @@ class LessonGroup extends React.Component {
                 description={description}
                 closeDialog={this.closeLessonGroupInfoDialog}
               />
-            </div>
+            </span>
           )}
         </div>
         {!this.state.collapsed && (

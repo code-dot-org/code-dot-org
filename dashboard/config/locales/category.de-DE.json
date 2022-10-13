@@ -1,0 +1,89 @@
+{
+  "de-DE": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Lesen von Literatur"
+        },
+        "csta/AP": {
+          "description": "Algorithmen und Programmierung"
+        },
+        "ccela/SL": {
+          "description": "Sprechen und zuhören"
+        },
+        "ccmath/MP": {
+          "description": "Mathematische Übungen"
+        },
+        "csta2011/CPP": {
+          "description": "Praxis und Programmierung in der Datenverarbeitung"
+        },
+        "csta2011/CT": {
+          "description": "Computerorientiertes Denken"
+        },
+        "iste/1": {
+          "description": "Unter Einsatz von Technologie Zeigen Studenten kreative Denkweisen, bauen Wissen auf und entwickeln innovative Produkte und Prozesse."
+        },
+        "iste/4": {
+          "description": "Studenten benutzen kritische Denkfähigkeiten in der Planung und Ausführung von Forschungsarbeiten, dem Management von Projekten, der Lösung von Problemen und dem Treffen von unterbauten Entscheidungen, unter Einsatz von geeigneten digitalen Werkzeugen und Ressourcen.."
+        },
+        "iste/6": {
+          "description": "Schüler zeigen ein gesundes Verständnis von technologischen Konzepten, Systemen und Operationen."
+        },
+        "ccela/L": {
+          "description": "Sprache"
+        },
+        "ccela/RI": {
+          "description": "Lesen von informativen"
+        },
+        "ccmath/OA": {
+          "description": "Operationen und mathematisches Denken"
+        },
+        "csta2011/CD": {
+          "description": "Computer und Kommunikationsgeräte"
+        },
+        "csta2011/CI": {
+          "description": "Gesellschaftliche, globale und ethische Auswirkungen"
+        },
+        "ccmath/MD": {
+          "description": "Entscheidungsfindung mithilfe der Wahrscheinlichkeitsrechnung"
+        },
+        "ccmath/NBT": {
+          "description": "Zahlen und Operationen im Dezimalsystem"
+        },
+        "ccmath/G": {
+          "description": "Geometrie"
+        },
+        "ccela/W": {
+          "description": "Schreiben"
+        },
+        "csta2011/CL": {
+          "description": "Zusammenarbeit"
+        },
+        "iste/2": {
+          "description": "Um ein individuelles Lernen zu unterstützen, und um einen Beitrag zu dem Wissen von anderen zu erbringen, benutzen Studenten digitale Medien und Umgebungen in der Kommunikation und der gemeinsamen Arbeit."
+        },
+        "csta/IC": {
+          "description": "Auswirkungen der Datenverarbeitung"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Erklären Sie, wie Computerressourcen geschützt und wie sie missbraucht werden können."
+        },
+        "csta/NI": {
+          "description": "Netzwerke und das Internet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Vergleichen Sie den Algorithmus der Datenkomprimierung, der am besten in einen bestimmten Kontext passt."
+        },
+        "csta/DA": {
+          "description": "Daten und Analyse"
+        },
+        "csta/CS": {
+          "description": "Computersysteme"
+        },
+        "ngss/ETS1": {
+          "description": "Konstruktive Gestaltung"
+        }
+      }
+    }
+  }
+}

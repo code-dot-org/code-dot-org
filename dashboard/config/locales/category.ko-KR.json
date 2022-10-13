@@ -1,0 +1,89 @@
+{
+  "ko-KR": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "문학 읽기"
+        },
+        "csta/AP": {
+          "description": "알고리즘 및 프로그래밍"
+        },
+        "ccela/SL": {
+          "description": "말하기와 듣기"
+        },
+        "ccmath/MP": {
+          "description": "수학 연습"
+        },
+        "csta2011/CPP": {
+          "description": "컴퓨팀 연습 및 프로그래밍"
+        },
+        "csta2011/CT": {
+          "description": "컴퓨터과학(정보과학)적 사고"
+        },
+        "iste/1": {
+          "description": "학생들은 창의적 사고를 보여주고 지식을 쌓으며 기술을 사용하여 혁신적인 제품과 프로세스를 개발합니다."
+        },
+        "iste/4": {
+          "description": "학생들은 비판적 사고력을 사용하여 리서치를 계획 및 실시하고 프로젝트를 관리하며 문제를 해결하고 적절한 디지털 툴과 리소스를 사용하여 정보에 기초한 의사결정을 합니다."
+        },
+        "iste/6": {
+          "description": "학생은 테크놀로지 개념 및 시스템, 운영을 충분히 이해하고 있음을 입증합니다."
+        },
+        "ccela/L": {
+          "description": "언어"
+        },
+        "ccela/RI": {
+          "description": "정보 읽기"
+        },
+        "ccmath/OA": {
+          "description": "연산 및 대수적 사고"
+        },
+        "csta2011/CD": {
+          "description": "컴퓨터와 커뮤니케이션 기기"
+        },
+        "csta2011/CI": {
+          "description": "공동체 및 세계, 윤리적 영향"
+        },
+        "ccmath/MD": {
+          "description": "결정을 내리기 위해 확률 사용"
+        },
+        "ccmath/NBT": {
+          "description": "수와 10에 기초한 연산"
+        },
+        "ccmath/G": {
+          "description": "기하학"
+        },
+        "ccela/W": {
+          "description": "쓰기"
+        },
+        "csta2011/CL": {
+          "description": "협력"
+        },
+        "iste/2": {
+          "description": "학생들은 디지털 매체와 환경을 사용하여 원격 방식을 포함하여 서로 소통하고 협력하여 개인의 학습을 지원하고 다른 이의 학습에 기여합니다.  "
+        },
+        "csta/IC": {
+          "description": "컴퓨팅의 영향"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "컴퓨팅 리소스의 보호 방법과 그러한 리소스를 오용하는 방식을 설명합니다."
+        },
+        "csta/NI": {
+          "description": "네트워크 및 인터넷"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "데이터 압축 알고리즘을 비교하여 어느 것이 특정 맥락에서 최선인지 결정합니다."
+        },
+        "csta/DA": {
+          "description": "데이터 및 분석"
+        },
+        "csta/CS": {
+          "description": "컴퓨팅 시스템"
+        },
+        "ngss/ETS1": {
+          "description": "엔지니어링 설계"
+        }
+      }
+    }
+  }
+}

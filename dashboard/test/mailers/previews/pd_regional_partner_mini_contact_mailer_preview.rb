@@ -1,5 +1,5 @@
-# This can be viewed on non-production environments at /rails/mailers/pd/regional_partner_mini_contact_mailer
-class Pd::RegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
+# This can be viewed on non-production environments at /rails/mailers/pd_regional_partner_mini_contact_mailer
+class PdRegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
   include FactoryGirl::Syntax::Methods
 
   def contact_receipt_with_partner

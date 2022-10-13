@@ -57,31 +57,29 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationControl
     error = nil
     submission_ids = []
     survey_submission_ids = []
-    if facilitator_answers
-      facilitator_answers.each do |_, data|
-        # data needs to have facilitator id
-        next unless data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID]
-        # If data only contains metadata, do not store, as there were no answers for this facilitator.
-        next if data.except(Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID,
-          Pd::WorkshopSurveyFoormConstants::FACILITATOR_NAME,
-          Pd::WorkshopSurveyFoormConstants::FACILITATOR_POSITION
-        ).nil_or_empty?
-        survey_submission = ::Pd::WorkshopSurveyFoormSubmission.new(
-          user_id: params[:user_id],
-          pd_session_id: params[:pd_session_id],
-          pd_workshop_id: params[:pd_workshop_id],
-          day: params[:day],
-          facilitator_id: data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID],
-          workshop_agenda: params[:workshop_agenda].presence
-        )
-        begin
-          survey_submission.save_with_foorm_submission(data.to_json, params[:form_name], params[:form_version])
-          submission_ids << survey_submission.foorm_submission_id
-          survey_submission_ids << survey_submission.id
-        rescue ActiveRecord::ActiveRecordError => e
-          save_success = true
-          error = e.message
-        end
+    facilitator_answers&.each do |_, data|
+      # data needs to have facilitator id
+      next unless data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID]
+      # If data only contains metadata, do not store, as there were no answers for this facilitator.
+      next if data.except(Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID,
+        Pd::WorkshopSurveyFoormConstants::FACILITATOR_NAME,
+        Pd::WorkshopSurveyFoormConstants::FACILITATOR_POSITION
+      ).nil_or_empty?
+      survey_submission = ::Pd::WorkshopSurveyFoormSubmission.new(
+        user_id: params[:user_id],
+        pd_session_id: params[:pd_session_id],
+        pd_workshop_id: params[:pd_workshop_id],
+        day: params[:day],
+        facilitator_id: data[Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID],
+        workshop_agenda: params[:workshop_agenda].presence
+      )
+      begin
+        survey_submission.save_with_foorm_submission(data.to_json, params[:form_name], params[:form_version])
+        submission_ids << survey_submission.foorm_submission_id
+        survey_submission_ids << survey_submission.id
+      rescue ActiveRecord::ActiveRecordError => e
+        save_success = true
+        error = e.message
       end
     end
     {

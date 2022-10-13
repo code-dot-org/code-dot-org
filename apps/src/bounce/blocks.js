@@ -527,7 +527,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Blocks.bounce_setPaddleDropdown.VALUES = skin.paddles.map(paddle => [
-    skin[paddle].paddle,
+    skin[paddle].paddle || skin[paddle],
     `"${paddle}"`
   ]);
 

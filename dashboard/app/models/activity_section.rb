@@ -27,7 +27,7 @@
 class ActivitySection < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :lesson_activity
+  belongs_to :lesson_activity, optional: true
   has_one :script, through: :lesson_activity
   has_one :lesson, through: :lesson_activity
 

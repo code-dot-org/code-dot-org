@@ -12,8 +12,6 @@
 
 module Services
   module ScriptSeed
-    prepend CurriculumPdfs::ScriptSeed
-
     # Holds data that we've already retrieved from the database. Used to look up
     # associations of objects without making additional queries.
     # Storing this data together in a "data object" makes it easier to pass around.

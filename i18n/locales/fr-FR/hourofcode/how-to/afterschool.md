@@ -8,7 +8,7 @@ title: Hour of Code How-to Guide for After-school
 
 ### Rejoignez le mouvement et initiez vos étudiants à l'informatique en suivant ces étapes.
 
-La pensée computationnelle contribue à développer les compétences de résolution de problèmes, la logique et la créativité. Et la technologie est en train de transformer toutes les industries au monde. Les élèves d'aujourd'hui doivent apprendre à fabriquer la technologie, et non seulement à l'utiliser. En commençant tôt, ils auront les bases de réussite nécessaires pour n'importe quel parcours du XXIème siècle.
+La pensée informatique permet de développer les aptitudes à la résolution des problèmes, la logique et la créativité. Et la technologie est en train de créer de grands changements dans tous les secteurs du monde. Les apprenants d'aujourd'hui doivent savoir comment créer de la technologie, et pas seulement l'utiliser. En commençant tôt, ils disposeront d'une bonne base pour réussir dans n'importe quel domaine professionnel du XXIe siècle.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -16,7 +16,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 * * *
 
-## 1. Regarder cette vidéo de formation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Regarder cette vidéo de formation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Choisir un tutoriel
 

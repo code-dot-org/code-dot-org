@@ -50,7 +50,7 @@ class JSONFileDatastoreAdapter
     begin
       File.open(@file_path, "r") do |f|
         contents = f.read
-        @hash = JSON.load(contents)
+        @hash = JSON.parse(contents)
         @hash = {} if @hash.nil?
       end
     rescue

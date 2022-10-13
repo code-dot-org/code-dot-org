@@ -12,11 +12,12 @@
       "lesson_extras_available": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 14:47:07 UTC",
+    "serialized_at": "2022-08-03 14:13:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,7 +74,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "Students learn about the structure and expectations of the AP CSA Exam. In the process, students identify and answer questions about the exam. Students explore test-taking strategies and study resources that they can use to prepare for the exam.",
-        "preparation": "* Print copies of the Course Exam Description (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the Exploring Exam Expectations handout (one for each student)\n* Gather three sticky notes for each student",
+        "preparation": "* Print copies of the Course Exam Description (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the Exploring Exam Expectations handout (one for each student)\n* Gather three sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-1-the-ap-csa-exam/36306/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You did it! You have completed the content for the course, and now it is time to prepare for the AP CSA Exam. In the process, you identify and answer questions you may have about the exam. You explore test-testing strategies and study resources that you can use to prepare for the exam."
       },
       "seeding_key": {
@@ -91,7 +92,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "Students complete a Multiple-Choice Pre-Assessment on AP Classroom.",
-        "preparation": "* Create a multiple-choice pre-assessment on AP Classroom as indicated on the Creating a Multiple-Choice Pre-Assessment resource\n* Print copies of the Java Quick Reference (one for each student)",
+        "preparation": "* Create a multiple-choice pre-assessment on AP Classroom as indicated on the Creating a Multiple-Choice Pre-Assessment resource\n* Print copies of the Java Quick Reference (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-2-mcq-pre-assessment/36305/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "To identify your current strengths and weaknesses on the multiple-choice portion of the AP CSA Exam, you take a Multiple-Choice Pre-Assessment on AP Classroom. Best of luck!"
       },
       "seeding_key": {
@@ -109,7 +110,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "Students review their results from the multiple-choice pre-assessment to create a study plan.",
-        "preparation": "* Print copies of the MCQ Pre-Assessment Scoring Reflection handout (one for each student)\n* Print copies of the AP CSA Exam Study Plan (one for each student)\n* Gather 5-10 sticky notes for each student",
+        "preparation": "* Print copies of the MCQ Pre-Assessment Scoring Reflection handout (one for each student)\n* Print copies of the AP CSA Exam Study Plan (one for each student)\n* Gather 5-10 sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-3-mcq-study-plan/36304/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You review your results from the multiple-choice pre-assessment to create a study plan."
       },
       "seeding_key": {
@@ -127,7 +128,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "Students identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.",
-        "preparation": "* Print out the station materials in the MCQ Practice Stations resource\n* Print copies of the MCQ Practice handout (one for each student)",
+        "preparation": "* Print out the station materials in the MCQ Practice Stations resource\n* Print copies of the MCQ Practice handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-4-5-mcq-practice/36303/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Now it's time to practice! You identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type."
       },
       "seeding_key": {
@@ -145,7 +146,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.",
-        "preparation": "* Create a digital copy of the MCQ Choice Board and make it accessible to students\n* Gather several index cards\n* Assign MCQ Progress Checks on AP Classroom (If you have already used these, create your own quizzes with the Question Bank.)",
+        "preparation": "* Create a digital copy of the MCQ Choice Board and make it accessible to students\n* Gather several index cards\n* Assign MCQ Progress Checks on AP Classroom (If you have already used these, create your own quizzes with the Question Bank.)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-4-5-mcq-practice/36303/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam."
       },
       "seeding_key": {
@@ -163,7 +164,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "Students complete an FRQ Pre-Assessment. ",
-        "preparation": "* Create an FRQ pre-assessment on AP Classroom\n* Print copies of the FRQ Answer Sheet (two for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper",
+        "preparation": "* Create an FRQ pre-assessment on AP Classroom\n* Print copies of the FRQ Answer Sheet (two for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-6-frq-pre-assessment/36302/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "To identify your current strengths and weaknesses on the FRQ portion of the AP CSA Exam, you take an FRQ Pre-Assessment. Best of luck!"
       },
       "seeding_key": {
@@ -181,7 +182,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "Students review their results from the FRQ pre-assessment to create a study plan.",
-        "preparation": "* Gather the FRQ Pre-Assessment and Scoring Guidelines for the FRQ Pre-Assessment (one for each student)\n* Print copies of the FRQ Study Plan (one for each student)",
+        "preparation": "* Gather the FRQ Pre-Assessment and Scoring Guidelines for the FRQ Pre-Assessment (one for each student)\n* Print copies of the FRQ Study Plan (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lesson-7-frq-study-plan/36301/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You review your results from the FRQ pre-assessment to create a study plan."
       },
       "seeding_key": {
@@ -199,7 +200,7 @@
       "relative_position": 8,
       "properties": {
         "overview": "Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.",
-        "preparation": "* Create a digital copy of the FRQ Choice Board and make it accessible to students\n* Assign the FRQ Progress Checks on AP Classroom (If you have already used these, create your own quizzes with the Question Bank.). Make sure that all Progress Checks have Self Score enabled\n* (Optional) Instead of using AP Classroom, print copies of FRQs, scoring guidelines, and solutions\n* Gather 1-3 sticky notes for each student\n* Gather blank paper and markers, or colored pencils\n* Print the Fishbowl Skill Practice Slips resource\n* (Optional) Gather backlog folders used in Units 6-8",
+        "preparation": "* Create a digital copy of the FRQ Choice Board and make it accessible to students\n* Assign the FRQ Progress Checks on AP Classroom (If you have already used these, create your own quizzes with the Question Bank.). Make sure that all Progress Checks have Self Score enabled\n* (Optional) Instead of using AP Classroom, print copies of FRQs, scoring guidelines, and solutions\n* Gather 1-3 sticky notes for each student\n* Gather blank paper and markers, or colored pencils\n* Print the Fishbowl Skill Practice Slips resource\n* (Optional) Gather backlog folders used in Units 6-8\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-8-9-frq-practice/36300/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam."
       },
       "seeding_key": {
@@ -217,7 +218,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "Students identify strategies for approaching FRQs on the AP CSA Exam.",
-        "preparation": "* Print out the station materials in the FRQ Practice Stations resource\n* Print copies of the FRQ Practice handout (one for each student)",
+        "preparation": "* Print out the station materials in the FRQ Practice Stations resource\n* Print copies of the FRQ Practice handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-8-9-frq-practice/36300/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You identify strategies for approaching FRQs on the AP CSA Exam."
       },
       "seeding_key": {
@@ -235,7 +236,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "Students complete the first half of a mock AP CSA multiple-choice exam.",
-        "preparation": "* Print copies of the generated MCQ (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* (Optional) print copies of the answer sheet (one for each student)",
+        "preparation": "* Print copies of the generated MCQ (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* (Optional) print copies of the answer sheet (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-10-12-mock-mcq-exam/36299/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You complete the first half of a mock AP CSA multiple-choice exam. Best of luck!"
       },
       "seeding_key": {
@@ -253,7 +254,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "Students complete the second half of a mock AP CSA multiple-choice exam.",
-        "preparation": "* Gather several sharpened pencils and scratch paper\n* (Optional) Redistribute exam materials before students arrive",
+        "preparation": "* Gather several sharpened pencils and scratch paper\n* (Optional) Redistribute exam materials before students arrive\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-10-12-mock-mcq-exam/36299/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You complete the second half of a mock AP CSA multiple-choice exam. Best of luck!"
       },
       "seeding_key": {
@@ -271,6 +272,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "Students review their results on the MCQ Mock Exam and update their study plans.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-10-12-mock-mcq-exam/36299/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You review your results on the MCQ Mock Exam and update your study plans."
       },
       "seeding_key": {
@@ -288,7 +290,7 @@
       "relative_position": 13,
       "properties": {
         "overview": "Students complete the first half of a mock AP CSA free response exam.",
-        "preparation": "* Print copies of the FRQ (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Print four copies of the FRQ answer sheet for each student",
+        "preparation": "* Print copies of the FRQ (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Gather several sharpened pencils and scratch paper\n* Print four copies of the FRQ answer sheet for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-13-15-mock-frq-exam/36298/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You complete the first half of a mock AP CSA free response exam. Best of luck!"
       },
       "seeding_key": {
@@ -306,7 +308,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "Students complete the second half of a mock AP CSA free response exam.",
-        "preparation": "* Gather several sharpened pencils and scratch paper\n* (Optional) Redistribute exam materials before students arrive",
+        "preparation": "* Gather several sharpened pencils and scratch paper\n* (Optional) Redistribute exam materials before students arrive\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-13-15-mock-frq-exam/36298/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You complete the second half of a mock AP CSA free response exam. Best of luck!"
       },
       "seeding_key": {
@@ -324,7 +326,7 @@
       "relative_position": 15,
       "properties": {
         "overview": "Students review their results on the FRQ Mock Exam and update their study plans.",
-        "preparation": "* Redistribute student answer sheets\n* Print multiple copies of the FRQs for each station\n* Print multiple copies of the scoring guidelines for each station\n* Gather one sticky note for each student",
+        "preparation": "* Redistribute student answer sheets\n* Print multiple copies of the FRQs for each station\n* Print multiple copies of the scoring guidelines for each station\n* Gather one sticky note for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-9-lessons-13-15-mock-frq-exam/36298/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "You review your results on the FRQ Mock Exam and update your study plans."
       },
       "seeding_key": {
@@ -3049,6 +3051,7 @@
       "key": "ap_classroom_user_guide_for_students",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -3092,11 +3095,12 @@
       }
     },
     {
-      "name": "Course Exam Description",
+      "name": "Course and Exam Description",
       "url": "https://docs.google.com/document/d/13plMgDK_6RDMdtAs52nP8R9obQf9i4RM6UsdhD0GnRU/edit?usp=sharing",
       "key": "course_exam_description",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -3121,6 +3125,7 @@
       "key": "exploring_exam_expectations",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3133,6 +3138,7 @@
       "key": "frq_answer_sheet",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3145,6 +3151,7 @@
       "key": "frq_choice_board",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3169,6 +3176,7 @@
       "key": "frq_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3193,6 +3201,7 @@
       "key": "frq_study_plan",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3205,6 +3214,7 @@
       "key": "java_quick_reference",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -3217,6 +3227,7 @@
       "key": "mcq_choice_board",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3241,6 +3252,7 @@
       "key": "mcq_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3265,6 +3277,7 @@
       "key": "mcq_pre-assessment_scoring_reflection",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -3277,6 +3290,7 @@
       "key": "mcq_study_plan",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {

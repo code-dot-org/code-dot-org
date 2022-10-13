@@ -10,18 +10,18 @@ title: 'Hodina kódu: návod pre dobrovoľníkov'
 
 * * *
 
-Algoritmické myslenie pomáha rozvijať logiku, tvorivosť a schopnosť riešiť problémy. A technológie v súčasnosti menia všetky odvetvia na svete. Žiaci by sa dnes mali učiť, ako technológie vytvárať, nie len používať.
+Algoritmické myslenie pomáha rozvijať logiku, tvorivosť a schopnosť riešiť problémy. A technológie v súčasnosti menia všetky odvetvia na svete. Žiaci by sa dnes mali učiť, ako technológie vytvárať, nielen používať.
 
 Projekt Hodina kódu je koncipovaný ako jednohodinový úvod do informatiky. Je navrhnutý tak, aby demystifikoval programovanie, zapojil viac ľudí do oblasti informatiky a poukázal na to, že základy programovania sa môže naučiť každý. Ak chcete zvýšiť povedomie o našom informatickom hnutí, môžete nám poskytnúť dobrovoľnícku pomoc. Žiakov tak môžete inšpirovať, aby si vyskúšali informatiku, pričom dôraz kladieme najmä na dievčatá a žiakov z marginalizovaných skupín.
 
-- [Kto sa môže stať dobrovoľníkom?](#who-can-volunteer)
-- [Prečo sa stať dobrovoľníkom?](#why-volunteer)
-- [Ako prebieha výber dobrovoľníkov?](#selection)
-- [Čo ak sa chcem stať dobrovoľníkom na konkrétnej škole?](#choose-a-school)
-- [Ako sa pripraviť](#how-to-prepare)
-- [Keď organizujete podujatie](#hosting-an-event)
-- [Dajte o Hodine kódu vedieť ostatným](#promote-hour-of-code)
-- [Ďalšie spôsoby, ako podporiť Hodinu kódu](#support-hour-of-code)
+- [Kto sa môže stať dobrovoľníkom?](#kto-sa-môže-stať-dobrovoľníkom)
+- [Prečo sa stať dobrovoľníkom?](#prečo-sa-stať-dobrovoľníkom)
+- [Ako prebieha výber dobrovoľníkov?](#výber)
+- [Čo ak sa chcem stať dobrovoľníkom na konkrétnej škole?](#vybrať-školu)
+- [Ako sa pripraviť](#ako-sa-pripraviť)
+- [Keď organizujete podujatie](#usporiadať-podujatie)
+- [Dajte o Hodine kódu vedieť ostatným](#podporovať-hodinu-kódu)
+- [Ďalšie spôsoby, ako podporiť Hodinu kódu](#podporovať-hodinu-kódu)
 - [Najčastejšie otázky o dobrovoľníctve](#faq)
 
 Nezáleží na tom, či sa zapájate ako dobrovoľník virtuálne, osobne alebo v rámci vašej spoločnosti. Vaše úsilie môže mať obrovský vplyv na to, ako žiaci vnímajú informatiku a svoj vlastný potenciál. Ak máte ďalšie otázky, prečítajte si našu [príručku pre dobrovoľníkov]({{ localized_files/hoc_volunteer_toolkit }})
@@ -48,9 +48,9 @@ Informatika je jedným z najdôležitejších odborov 21. storočia, no na vä
 
 Prečítajte si zopár vyjadrení bývalých dobrovoľníkov:
 
-- „Najviac sa mi páčilo, že trieda bola plná dievčat a ľudí rôznych rás. Pre budúcnosť nášho odvetvia je výborné, že môžeme za týmito deťmi prísť a zaujať ich.“ 
-- „Nadchla ma predovšetkým možnosť povzbudiť dievčatá, aby sa viac zaujímali o technológie. Mala som pocit, budúcej generácii vo svojom okolí skutočne pomáham.“ 
-- „Bolo ÚŽASNÉ vidieť, aké boli deti nadšené. Najlepšie na tom bolo, keď si učitelia všimli, že aj niektorí študenti s horšími známkami boli výborní v algoritmickom myslení, vďaka čomu dokázali pomáhať aj ostatným. Dostali tak príležitosť zlepšiť si sebavedomie.“ 
+- „Najviac sa mi páčilo, že trieda bola plná dievčat a ľudí rôznych rás. Pre budúcnosť nášho odvetvia je výborné, že môžeme za týmito deťmi prísť a zaujať ich.“
+- „Nadchla ma predovšetkým možnosť povzbudiť dievčatá, aby sa viac zaujímali o technológie. Mala som pocit, budúcej generácii vo svojom okolí skutočne pomáham.“
+- „Bolo ÚŽASNÉ vidieť, aké boli deti nadšené. Najlepšie na tom bolo, keď si učitelia všimli, že aj niektorí študenti s horšími známkami boli výborní v algoritmickom myslení, vďaka čomu dokázali pomáhať aj ostatným. Dostali tak príležitosť zlepšiť si sebavedomie.“
 
 [<button>Zaregistrovať sa ako dobrovoľník</button>]({{ urls/volunteer }})
 
@@ -92,16 +92,16 @@ Ako začať: – Ak ste rodič alebo zákonný zástupca dieťaťa, pošlite jeh
 
 Ak budete v triede pomáhať ako dobrovoľník, vopred s učiteľom prediskutujte nasledujúce veci:
 
-- Aká bude vaša úloha na podujatí. Ak pracujete v oblasti technológií, učiteľ vás môže požiadať, aby ste sa podelili o svoje skúsenosti a príbeh: Ako ste sa dostali ku kariére vo svete technológií? Prečo je pre vás informatika dôležitá? Aké činnosti v rámci svojej práce vykonávate a ako súvisia s technológiami? 
-- Ak budete v triede ako dobrovoľník osobne, uistite sa, že vy aj učiteľ poznáte miestne a školské usmernenia pre bezpečnosť a ochranu zdravia. V závislosti od požadovaných postupov možno bude potrebné prísť o niečo skôr. 
-- Či budete dobrovoľníkom virtuálne alebo osobne, keďže práve od toho môže závisieť, kedy musíte byť k dispozícii a čo bude vašou úlohou. 
-- Ak budete dobrovoľníkom virtuálne, v spolupráci s učiteľom vyberte, ktorá platforma na videokonferencie bude najvhodnejšia, a vyskúšajte si spolu priebeh podujatia na nečisto. 
-- Ak už učiteľ určil aktivity pre dané podujatie Hodiny kódu, [vopred sa s nimi oboznámte](https://hourofcode.com/us/learn). 
+- Aká bude vaša úloha na podujatí. Ak pracujete v oblasti technológií, učiteľ vás môže požiadať, aby ste sa podelili o svoje skúsenosti a príbeh: Ako ste sa dostali ku kariére vo svete technológií? Prečo je pre vás informatika dôležitá? Aké činnosti v rámci svojej práce vykonávate a ako súvisia s technológiami?
+- Ak budete v triede ako dobrovoľník osobne, uistite sa, že vy aj učiteľ poznáte miestne a školské usmernenia pre bezpečnosť a ochranu zdravia. V závislosti od požadovaných postupov možno bude potrebné prísť o niečo skôr.
+- Či budete dobrovoľníkom virtuálne alebo osobne, keďže práve od toho môže závisieť, kedy musíte byť k dispozícii a čo bude vašou úlohou.
+- Ak budete dobrovoľníkom virtuálne, v spolupráci s učiteľom vyberte, ktorá platforma na videokonferencie bude najvhodnejšia, a vyskúšajte si spolu priebeh podujatia na nečisto.
+- Ak už učiteľ určil aktivity pre dané podujatie Hodiny kódu, [vopred sa s nimi oboznámte](https://hourofcode.com/us/learn).
 
 ### Myslite na účastníkov
 
-- Myslite na žiakov, ktorým budete rozprávať, a zamyslite sa nad tým, čo by ich mohlo najviac zaujať. Ako dobrovoľník im môžete pomôcť uvedomiť si, že počítače sú všade okolo nás a aj oni sami sa môžu stať informatikmi. Berte do úvahy ich vek, zázemie i rodovú identitu a pripravte si témy, ktoré by ich mohli osloviť. Tu nájdete dodatočné tipy, ako k účasti na podujatí motivovať [dievčatá](http://code.org/girls). 
-- Snažte sa žiakov nadchnúť! V spolupráci s učiteľom vyberte [inšpiratívne video,](https://hourofcode.com/us/promote/resources#videos) ktoré žiakom pomôže skoncentrovať sa a nabudí ich na Hodinu kódu. 
+- Myslite na žiakov, ktorým budete rozprávať, a zamyslite sa nad tým, čo by ich mohlo najviac zaujať. Ako dobrovoľník im môžete pomôcť uvedomiť si, že počítače sú všade okolo nás a aj oni sami sa môžu stať informatikmi. Berte do úvahy ich vek, zázemie i rodovú identitu a pripravte si témy, ktoré by ich mohli osloviť. Tu nájdete dodatočné tipy, ako k účasti na podujatí motivovať [dievčatá](http://code.org/girls).
+- Snažte sa žiakov nadchnúť! V spolupráci s učiteľom vyberte [inšpiratívne video,](https://hourofcode.com/us/promote/resources#videos) ktoré žiakom pomôže skoncentrovať sa a nabudí ich na Hodinu kódu.
 - Ak ste dobrovoľníkom virtuálne, pokúste sa do svojej prezentácie vložiť niečo, čo žiakom pomôže udržiavať pozornosť.
 
 Hľadáte ďalšie zdroje? [Pozrite si ďalšie tipy](https://code.org/files/CSTT_Volunteers.pdf).
@@ -116,7 +116,7 @@ Ak ste rečníkom na podujatí v triede, pomôžte si vzorovým harmonogramom ak
 
 Ak uvažujete o tom, že zorganizujete Hodinu kódu doma alebo vo svojej komunite, odporúčame vám pozrieť si niektorý z našich podrobných návodov pre [rodičov](https://hourofcode.com/us/how-to/parents) a [organizácie alebo spoločnosti](https://hourofcode.com/us/how-to/companies).
 
-### 1. Pozrite si video, ako na organizáciu podujatia <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+### 1. Pozrite si video, ako na organizáciu podujatia <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Vyberte si dátum, formát a miesto konania podujatia
 
@@ -126,13 +126,11 @@ V spolupráci so školou alebo učiteľom sa rozhodnite, aké riešenie bude na
 
 #### Vzorový program podujatia:
 
-|Čas | Bod programu | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1 – 5 minút | Prehrajte [inšpiratívne video](https://hourofcode.com/us/promote/resources#videos)|  
-|5 –10 minút | Predstavte sa a zistite viac o žiakoch: Kde pracujete, čo robíte a čo máte na svojej práci najradšej? Kto alebo čo vás inšpirovalo? Prečo ste sa začali zaujímať o informačné technológie? Mali ste mentora? Klaďte žiakom otázky na záver im dajte čas, aby sa pýtali oni.   
-|30 – 60 minút | Čas na programovanie! Ak sa vaše podujatie koná naživo, teraz je ten správny čas na to, aby ste zodpovedali otázky a povzbudili žiakov pri riešení ťažkých úloh. Skúste im riešenie neposkytnúť priamo, namiesto toho sa im pokúste klásť otázky, aby si mohli sami odpovedať na to, čo sa pokazilo, a povzbuďte žiakov, aby si otázky kládli aj medzi sebou navzájom. Ak sa podujatie koná virtuálne, spolupracujte s učiteľom a zhodnoťte, aký prístup by bol najlepší. Možno bude dobré, ak sa na konci stretnutia vrátite, aby ste videli, ako žiaci pokročili. | | |1 – 3 minúty | Všetkým sa poďakujte a na rozlúčku sa podeľte o pár inšpiratívnych slov. Rozdajte žiakom nejaké reklamné predmety svojej firmy (výbornou voľbou sú [nálepky](#celebrate)). | | <br />
+|Čas | Bod programu | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\---\--- | |1 – 5 minút | Zobraziť [inšpiratívne video](https://hourofcode.com/us/promote/resources#videos)| |5 – 10 minút | Predstavte sa a zistite viac o študentoch: Kde pracujete, čo robíte a čo máte na svojej práci najradšej? Kto alebo čo vás inšpirovalo? Prečo ste sa začali zaujímať o informačné technológie? Mali ste mentora? Klaďte žiakom otázky na záver im dajte čas, aby sa pýtali oni. | |30 – 60 minút | Kódujte! Ak sa vaše podujatie koná naživo, teraz je ten správny čas na to, aby ste zodpovedali otázky a povzbudili žiakov pri riešení ťažkých úloh. Skúste im riešenie neposkytnúť priamo, namiesto toho sa im pokúste klásť otázky, aby si mohli sami odpovedať na to, čo sa pokazilo, a povzbuďte žiakov, aby si otázky kládli aj medzi sebou navzájom. Ak sa podujatie koná virtuálne, spolupracujte s učiteľom a zhodnoťte, aký prístup by bol najlepší. Možno bude dobré, ak sa na konci stretnutia vrátite, aby ste videli, ako žiaci pokročili. | | |1 – 3 minúty | Všetkým sa poďakujte a na rozlúčku sa podeľte o pár inšpiratívnych slov. Rozdajte žiakom nejaké reklamné predmety svojej firmy (výbornou voľbou sú [nálepky](#celebrate)). | | <br />
 
 #### Ďalšie nápady, čo spraviť na vašom podujatí
 
-- Vysvetlite, ako technológie ovplyvňujú naše životy, pomocou príkladov, ktoré budú zaujímať žiakov z rozličných prostredí – hovorte o technológiách, ktoré zachraňujú životy, pomáhajú ľuďom alebo ich spájajú. 
+- Vysvetlite, ako technológie ovplyvňujú naše životy, pomocou príkladov, ktoré budú zaujímať žiakov z rozličných prostredí – hovorte o technológiách, ktoré zachraňujú životy, pomáhajú ľuďom alebo ich spájajú.
 - Ak pracujete pre technologickú spoločnosť, predstavte zábavné a inovatívne produkty, na ktorých vaša firma práve pracuje. Ak nepracujete pre technologickú spoločnosť, porozprávajte o spôsoboch, ako vaša firma využíva technológie na riešenie problémov a dosahovanie cieľov.
 - Pozvite programátorov z vašej spoločnosti, nech žiakom povedia, prečo sa rozhodli študovať informatiku, a predstavia im svoje aktuálne projekty.
 - Ak máte skupinu zamestnancov, ktorí budú organizovať vaše podujatie alebo pracovať ako dobrovoľníci v miestnej škole, môžete im objednať [tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
@@ -160,20 +158,20 @@ Ponúkame množstvo zábavných kurzov a aktivít pre začiatočníkov aj pokro
 
 <a href="https://hourofcode.com/us/learn">Prezrite si ponúkané aktivity</a> a vopred sa rozhodnite, či vyberiete jednu aktivitu pre všetkých svojich žiakov, alebo dovolíte každému vybrať si vlastnú aktivitu. **Všetky aktivity k Hodine kódu** si vyžadujú len minimálny čas na prípravu a sú individuálne – umožňujú účastníkom pracovať vlastným tempom a podľa vlastných schopností.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 Keď budete mať svoje podujatie naplánované dostatočne detailne, môžete naň začať pozývať žiakov, školu alebo širšiu komunitu. Odporúčame začať s miestnou školou, ku ktorej máte vzťah, alebo si [prehliadnuť našu mapu](https://hourofcode.com/us/map) podujatí organizovaných v rámci Hodiny kódu.
 
 <a id="celebrate"></a>
 
-### Čas na oslavu
+### 5. Čas na oslavu
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
 Keď žiaci alebo hostia dokončia Hodinu kódu, je čas osláviť ich úspech. Tu je niekoľko nápadov, ako urobiť zorganizovať čo najzábavnejšie podujatie:
 
 - Odovzdajte účastníkom a žiakom [certifikáty]({{ urls/certificates }}).
-- [Vytlačte pre účastníkov nálepky s textom „I did the Hour of Code!“]({{ promote/resources_stickers }}) (Mám za sebou Hodinu kódu!) alebo si vyberte iné ceny a darčeky [v e-shope Code.org na Amazone](https://code.org/shop). 
+- [Vytlačte pre účastníkov nálepky s textom „I did the Hour of Code!“]({{ promote/resources_stickers }}) (Mám za sebou Hodinu kódu!) alebo si vyberte iné ceny a darčeky [v e-shope Code.org na Amazone](https://code.org/shop).
 - Zdieľajte na sociálnych sieťach fotky a videá z vašej Hodiny kódu. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
 
 * * *
@@ -188,7 +186,7 @@ Jedným z najlepších spôsobov, ako pomôcť, je šíriť povedomie o Hodine 
 
 ### 1. Zaregistrujte svoje podujatie
 
-Keď svoje podujatie Hodiny kódu zaregistrujete, budete dostávať užitočnú e-mailovú komunikáciu s novinkami a tipmi, ako Hodinu kódu úspešne usporiadať. Takto zároveň dáte miestnym školám alebo rodičom vedieť, že v ich blízkosti organizujete podujatie.
+Keď svoje [podujatie Hodiny kódu zaregistrujete](/#join), budete dostávať užitočnú e-mailovú komunikáciu s novinkami a tipmi, ako Hodinu kódu úspešne usporiadať. Takto zároveň dáte miestnym školám alebo rodičom vedieť, že v ich blízkosti organizujete podujatie.
 
 ### 2. Uverejnite príspevky na sociálnych sieťach
 
@@ -196,23 +194,23 @@ Pomôžte zvyšovať povedomie o našom informatickom hnutí pomocou týchto vz
 
 #### Všeobecné oznámenie Hodiny kódu
 
-- Informatika mení náš svet, tak pomôžte žiakom stať sa súčasťou tejto zmeny. Stačí jedna #HodinaKodu! #HourOfCode. https://hourofcode.com/ 
-- Technológie nestačí len využívať – naučte sa ich tvoriť! Pomôžte niekomu zistiť, čo dokáže #HodinaKodu. #HourOfCode. https://hourofcode.com/ 
+- Informatika mení náš svet, tak pomôžte žiakom stať sa súčasťou tejto zmeny. Stačí jedna #HodinaKodu! #HourOfCode. https://hourofcode.com/
+- Technológie nestačí len využívať – naučte sa ich tvoriť! Pomôžte niekomu zistiť, čo dokáže #HodinaKodu. #HourOfCode. https://hourofcode.com/
 
 #### Štatistiky
 
-- Vedeli ste, že iba 45 % škôl v USA vyučuje informatiku? Dajte každému žiakovi šancu vyskúšať si, čo dokáže #HodinaKodu. #HourOfCode https://hourofcode.com/ 
-- V USA tvoria ženy len 26 % odborníkov na programovanie. Zasväťte do oblasti informatiky viac dievčat s Hodinou kódu. #HourOfCode https://hourofcode.com/ 
-- Až 67 % pracovných miest v oblasti výpočtovej techniky v USA nie je v technologickom sektore. Pomôžte začleniť informatiku do štandardného učebného plánu! #HodinaKodu #HourOfCode https://hourofcode.com/ 
+- Vedeli ste, že iba 53 % škôl v USA vyučuje informatiku? Dajte každému žiakovi šancu vyskúšať si, čo dokáže #HodinaKodu. #HourOfCode https://hourofcode.com/
+- V USA tvoria ženy len 26 % odborníkov na programovanie. Zasväťte do oblasti informatiky viac dievčat s Hodinou kódu. #HourOfCode https://hourofcode.com/
+- Až 67 % pracovných miest v oblasti výpočtovej techniky v USA nie je v technologickom sektore. Pomôžte začleniť informatiku do štandardného učebného plánu! #HodinaKodu #HourOfCode https://hourofcode.com/
 
 #### Vytvorte si vlastné
 
-- Už jedna #HodinaKodu môže viesť k [doplňte svoj príbeh]. #HourOfCode https://hourofcode.com/ 
-- Podporujem podujatie #HodinaKodu, pretože [doplňte svoje myšlienky]. Pridajte sa k nám! #HourOfCode https://hourofcode.com 
+- Už jedna #HodinaKodu môže viesť k [doplňte svoj príbeh]. #HourOfCode https://hourofcode.com/
+- Podporujem podujatie #HodinaKodu, pretože [doplňte svoje myšlienky]. Pridajte sa k nám! #HourOfCode https://hourofcode.com
 
 #### Cielené na programátorov
 
-- Ak vám prvý napísaný riadok kódu zmenil život, pomôžte žiakom vo svojom okolí napísať ho tiež na podujatí #HodinaKodu. #HourOfCode https://code.org/volunteer 
+- Ak vám prvý napísaný riadok kódu zmenil život, pomôžte žiakom vo svojom okolí napísať ho tiež na podujatí #HodinaKodu. #HourOfCode https://code.org/volunteer
 - Ak ste sa učili programovať – aký je váš príbeh? Inšpirujte žiakov vo svojom okolí prostredníctvom podujatia #HodinaKodu. #HourOfCode https://code.org/volunteer
 
 <a href="https://hourofcode.com/promote/resources#posters">Získajte viac informácií</a> o plagátoch, videách, nálepkách a ďalších spôsoboch, ako plánované podujatie spropagovať vo vašej komunite.
@@ -226,11 +224,11 @@ Pomôžte zvyšovať povedomie o našom informatickom hnutí pomocou týchto vz
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
 - Šírte povedomie používaním [oblečenia a doplnkov s logom Code.org](https://store.code.org/) (celý výťažok z predaja využívame na to, aby sme mohli čo najväčšiemu počtu žiakov pomôcť získať prístup k informatickému vzdelaniu).
-- Pri nakupovaní cez [AmazonSmile](https://code.org/donate/amazonsmile) si vyberte, že podporíte Code.org. 
+- Pri nakupovaní cez [AmazonSmile](https://code.org/donate/amazonsmile) si vyberte, že podporíte Code.org.
 - Požiadajte svojho generálneho riaditeľa, nech pošle celej firme e-mail, v ktorom zdôrazní dôležitosť informatiky a povzbudí zamestnancov, aby šírili povedomie o podujatí.
 - Zabavte sa s kolegami zorganizovaním [kampane na vyzbieranie peňazí](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Podpíšte túto petíciu](https://code.org/promote), aby ste zabezpečili, že každý študent bude mať možnosť učiť sa informatiku. 
-- [Prispejte](https://code.org/donate) Code.org, aby mohli naše vzdelávacie zdroje zostať aj naďalej bezplatné a dostupné pre všetkých. 
+- [Podpíšte túto petíciu](https://code.org/promote), aby ste zabezpečili, že každý študent bude mať možnosť učiť sa informatiku.
+- [Prispejte](https://code.org/donate) Code.org, aby mohli naše vzdelávacie zdroje zostať aj naďalej bezplatné a dostupné pre všetkých.
 
 Ďalšie tipy, ako podporiť Code.org a Hodinu kódu, nájdete na adrese [Code.org/Help](https://code.org/help)
 

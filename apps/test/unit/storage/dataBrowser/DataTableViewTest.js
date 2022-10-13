@@ -9,6 +9,7 @@ const DEFAULT_PROPS = {
   tableListMap: {},
   view: DataView.TABLE,
   tableRecords: [],
+  libraryManifest: {},
   onShowWarning: () => {},
   onViewChange: () => {}
 };

@@ -10,25 +10,35 @@ ky:
   campaign_date_short: Дек. 4-10
   campaign_date_full: 4-10-декабрда
   campaign_date_year: '2017'
-  campaign_date_full_year: 2021, 6-12-декабрда
+  campaign_date_full_year: 2017, 4-10-декабрда
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_full: October 1 - December 18
+  nonus_campaign_date_year: '2017'
+  nonus_campaign_date_full_year: October 1, 2022 - December 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_full: October 1 - December 18
   latam_campaign_date_year: '2017'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 4-дек
-  europe_campaign_date_start_long: 4-декабрдан
-  europe_campaign_date_short: Дек. 4-10
-  europe_campaign_date_full: 4-10-декабрда
+  latam_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_full: October 1 - December 18
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: 2021, 6-12-декабрда
-  africa_campaign_date_start_short: 4-дек
-  africa_campaign_date_start_long: 4-декабрдан
-  africa_campaign_date_short: Дек. 4-10
-  africa_campaign_date_full: 4-10-декабрда
+  europe_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: 2021, 6-12-декабрда
+  africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  hoc2022_header: Explore, Play, Create!
+  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
+  codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
+    there are so many ways to try computer science.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -161,6 +171,11 @@ ky:
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
   hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -479,6 +494,24 @@ ky:
   front_join_us_n_students_served: "# көрүштү"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Көптү үйрөн
+  cta_see_whats_new: See what's new
+  cta_try_more_activities: Try more activities
+  cta_try_an_activity: Try an activity
+  hoc_homepage_join_the_movement_heading: Join the movement
+  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
+    but every year in December your class can join millions of students around the
+    world celebrating Computer Science Education Week with the Hour of Code. Registration
+    for the annual celebration starts each year in October.
+  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
+    needed. Hour of Code activities are available for free year-round.
+  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    This grassroots campaign is supported by over 400 partners and 200,000 educators
+    worldwide.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
+    to plan an event for your class."
+  hoc_homepage_highlights_heading: Hour of Code highlights
+  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
   signup_closed: Код саатына катталуу токтотулду. Кийинки Код саатына катталуу үчүн
     октябрда дагы аракет кылып көрүңүз.
   signup_registration_not_required: You don't need to register to participate! The
@@ -526,7 +559,6 @@ ky:
     жаана шаарыңарды картага кошобуз. Эгерде сиз бир нече долбоорлордо катышсаңар,
     сураныч, ар бирөөсүндө бир гана ысымды жана эмейлди колдонуңуз. Биз бир ысым жана
     эмейлге бир долбоорду гана туура табабыз.
-  signup_registration_deadline: Код саатына катталуу 11-декабрда аяктайт.
   signup_name_placeholder: Ысымыңыз
   signup_email_placeholder: sizdin_email@example.com
   signup_organization_name_placeholder: 'Мисалы: Линкольн жогорку мектеби'
@@ -656,11 +688,11 @@ ky:
     жана Байкоочу комитеттери </a>, аты аталбаган, бирок Код сааттын колдоо максатында
     &mdash; Microsoft, Apple, Amazon, Американын балдар жана кыздар клубдары жана
     College Board менен биргелешкен өнөктөр тарабынан башкарылат.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Код жазуу тууралуу эч нерсе билбейм. Иш-чарага катышсам болобу?
   hoc_faq_host_a: Албетте. Код сааты тапшырмалары өз алдынча аткарылат. Болгону <a
     href='%{codeorg_url}/learn'>учурдагы жетектемелерибизди байкап көргүлө</a>. Жаккан
@@ -10532,86 +10564,167 @@ ky:
   all: Баары
   dont_know: Мен билбейм
   language_label: Language
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: Англисче
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Англисче
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Англисче
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

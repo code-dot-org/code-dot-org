@@ -157,7 +157,6 @@ describe('EnrollmentsPanel', () => {
 
     // Select the first enrollment
     wrapper.instance().handleClickSelect(enrollments[0]);
-    wrapper.update();
     assert.deepEqual(
       [_.pick(enrollments[0], ['id', 'email', 'first_name', 'last_name'])],
       wrapper.state('selectedEnrollments')
@@ -209,7 +208,6 @@ describe('EnrollmentsPanel', () => {
 
     // Select the first enrollment
     wrapper.instance().handleClickSelect(enrollments[0]);
-    wrapper.update();
     assert.deepEqual(
       [_.pick(enrollments[0], ['id', 'email', 'first_name', 'last_name'])],
       wrapper.state('selectedEnrollments')

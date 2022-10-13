@@ -19,7 +19,7 @@ class Youtube
   # When downloading from YouTube, an HTTP head request will first check the absence of the file.
   # If `force`==true, the head request will be skipped.
   def self.process(id, filename=nil, force=false)
-    raise 'Invalid YouTube ID' unless id =~ /^#{Video::YOUTUBE_ID_REGEX}$/
+    raise 'Invalid YouTube ID' unless /^#{Video::YOUTUBE_ID_REGEX}$/o.match?(id)
     if filename.nil? && !force
       thumbnail_url = "https:#{CDO.videos_url}/youtube/#{id}.jpg"
       response = HTTParty.head(thumbnail_url).response
@@ -58,7 +58,7 @@ class Youtube
       CDO.log.info "https:#{CDO.videos_url}/#{video_filename}"
 
       thumbnail_file = "https://i.ytimg.com/vi/#{id}/0.jpg"
-      thumbnail = open(thumbnail_file) || raise('Could not retrieve thumbnail for video')
+      thumbnail = File.open(thumbnail_file) || raise('Could not retrieve thumbnail for video')
       thumbnail_filename = AWS::S3.upload_to_bucket(CDO.videos_s3_bucket, "youtube/#{id}.jpg", thumbnail, acl: 'public-read', no_random: true)
       CDO.log.info "https:#{CDO.videos_url}/#{thumbnail_filename}"
     end

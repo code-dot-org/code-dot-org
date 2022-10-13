@@ -5,30 +5,41 @@ sk:
   language: Angličtina
   front_title: Pripojte sa k najväčšiemu vzdelávaciemu podujatiu v dejinách, už %{campaign_date}
   coming_soon: Už čoskoro
-  campaign_date_start_short: 6. 12.
-  campaign_date_start_long: 6. decembra
-  campaign_date_short: 6. – 11. 12.
-  campaign_date_full: 6. až 12. decembra
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6. – 12. decembra 2021
+  campaign_date_start_short: 5. december
+  campaign_date_start_long: 5. december
+  campaign_date_short: 5.-11. dec
+  campaign_date_full: 5. až 11. december
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5.-11. December 2022
+  nonus_campaign_date_start_short: 1. október
+  nonus_campaign_date_start_long: 1. október
+  nonus_campaign_date_short: 1. október - 18. december
+  nonus_campaign_date_full: 1. októbra – 18. decembra
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   latam_campaign_date_start_short: 1. október
   latam_campaign_date_start_long: 1. október
   latam_campaign_date_short: 1. október - 18. december
   latam_campaign_date_full: 1. októbra – 18. decembra
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1. októbra 2020  – 18. decembra 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   europe_campaign_date_start_short: 10. október
   europe_campaign_date_start_long: 10. október
   europe_campaign_date_short: 10. - 25. október
   europe_campaign_date_full: 10. - 25. október
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10. - 25. október 2020
-  africa_campaign_date_start_short: 6. 12.
-  africa_campaign_date_start_long: 6. decembra
+  africa_campaign_date_start_short: 1. október
+  africa_campaign_date_start_long: 1. október
   africa_campaign_date_short: 1. - 31. október
   africa_campaign_date_full: 1. - 31. október
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. - 31. október 2020
+  hoc2022_header: Skúmajte, hrajte sa, tvorte!
+  social_hoc2022_explore_play_create: Využite informatiku na objavovanie, hranie sa
+    a tvorenie!
+  codeorg_homepage_hoc2022_body: Skúmajte vesmír, streľte gól, prelomte pohyb – existuje
+    veľ spôsobov, ako vyskúšať informatiku.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 'Uč sa už dnes a vytvor lepší zajtrajšok. '
@@ -159,6 +170,11 @@ sk:
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
   hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -479,6 +495,25 @@ sk:
   front_join_us_n_students_served: "# ľudí si to už vyskúšalo."
   front_join_us_challenge: Vyhrajte video konferenciu s celebritou pre celú Vašu triedu!
   front_join_us_learn_more: Viac info
+  cta_see_whats_new: Zobraziť novinky
+  cta_try_more_activities: Vyskúšajte ďalšie aktivity
+  cta_try_an_activity: Vyskúšajte aktivitu
+  hoc_homepage_join_the_movement_heading: Pripojte sa k hnutiu
+  hoc_homepage_join_the_movement_description: Hodina kódu je k dispozícii po celý
+    rok, ale každý rok v decembri sa vaša trieda môže pripojiť k miliónom študentov
+    na celom svete, ktorí oslavujú Týždeň vzdelávania informatiky prostredníctvom
+    Hodiny kódu. Registrácia na výročnú oslavu začína každý rok v októbri.
+  hoc_homepage_what_is_hoc_subhead: Hodinové výukové programy vo viac ako 45 jazykoch.
+    Nie sú potrebné žiadne skúsenosti. Aktivity Hodiny kódu sú k dispozícii bezplatne
+    po celý rok.
+  hoc_homepage_what_is_hoc_description: Hodina kódu je 1-hodinový úvod do informatiky,
+    ktorý pomocou zábavných tutoriálov ukazuje, že základy sa môže naučiť každý. Túto
+    základnú kampaň podporuje viac ako 400 partnerov a 200 000 pedagógov po celom
+    svete.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Prečítajte si našu príručku na používanie](%{howto_guide_url}),
+    ak chcete naplánovať udalosť pre svoju triedu."
+  hoc_homepage_highlights_heading: 'Hlavné myšlienky Hodiny kódu  '
+  hoc_homepage_organized_by: Hodinu kódu organizuje [Code.org](%{codeorg_url}).
   signup_closed: Registrácia pre Hour of Code je nateraz uzavretá. Skontrolujte prosím
     znova v Októbri možnosť prihlásenia sa do ďalšej Hour of Code.
   signup_registration_not_required: Na zúčastnenie sa nemusíte registrovať! Aktivity
@@ -525,7 +560,6 @@ sk:
   signup_multiple_event_warning: Meno školy a mesto zverejníme na mape po registrácií.
     Ak organizujete viacero udalostí, prosím, uveďte iné meno nebo e-mail pre každú
     udalosť. Počítame iba jednu udalosť na jedno meno alebo e-mail.
-  signup_registration_deadline: Registrácia na Hodinu kódu sa uzavrie 11. decembra.
   signup_name_placeholder: Vaše meno
   signup_email_placeholder: meno@priklad.sk
   signup_organization_name_placeholder: Napr. Základná škola Selec
@@ -573,7 +607,7 @@ sk:
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
   map_title: Hodina kódu mapa
-  map_header: "# Udalosti Hodiny kódu po celom svete"
+  map_header: "# Podujatia Hodiny kódu po celom svete"
   map_header_count_year: V roku %{year} sme mali %{event_count} registrovaných podujatí.
   see_all_events: Zobraziť všetky udalosti
   map_header_company: "# podľa názvu organizátora"
@@ -948,18 +982,18 @@ sk:
   title_signup_thanks: Ďakujeme vám, že organizujete Hodinu kódu!
   title_tutorial_guidelines: Výukový návod
   title_whole_school: Účasť celej školy
-  events_nav_title: Udalosti Hodiny kódu
-  events_nav_all: Všetky udalosti
+  events_nav_title: Podujatia Hodiny kódu
+  events_nav_all: Všetky podujatia
   events_nav_whole_schools: Celoškolské podujatia
   events_nav_special: Špeciálne podujatia
   events_nav_orgs: Organizácie
   events_all_old_title: Všetky podujatia Hodiny kódu v roku @year
   events_all_title: Všetky podujatia Hodiny kódu
-  events_whole_school_title: Celoškolské udalosti Hodiny kódu
+  events_whole_school_title: Celoškolské podujatia Hodiny kódu
   events_special_title: Špeciálne podujatia Hodiny kódu
   events_orgs_title: Všetky Hodiny kódu organizované partnerskými organizáciami
   event: udalosť
-  events: udalostí
+  events: podujatí
   highlights_title: Dávame do pozornosti
   highlights_header: Hodina kódu - Highlights
   highlights_description: Niektoré z našich obľúbených momentov kampane Hodina kódu.
@@ -10511,86 +10545,167 @@ sk:
   all: Všetky
   dont_know: Neviem
   language_label: Jazyk
-  ar: arabčina
-  az: azerbajdžančina
-  bg: bulharčina
-  bn: bengálčina
-  br: bretónčina
-  bs: bosniačtina
-  ca: katalánčina
-  cs: čeština
-  cs-cz: čeština (Česko)
-  da: dánčina
-  da-dk: dánčina (Dánsko)
-  de: nemčina
-  de-de: nemčina (Nemecko)
-  el: gréčtina
-  el-gr: gréčtina (Grécko)
-  en: Angličtina
-  en-gb: angličtina (Spojené kráľovstvo)
-  es: španielčina
-  es-es: španielčina (Španielsko)
-  es-mx: španielčina (Mexiko)
-  et: estónčina
-  eu: baskičtina
-  fa: perzština
-  fa-ir: perzština (Irán)
-  fi: fínčina
-  fi-fi: fínčina (Fínsko)
-  fil-ph: filipínčina (Filipíny)
-  fr: francúzština
-  gl: galícijčina
-  he: hebrejčina
-  hi: hindčina
-  hi-in: hindčina (India)
-  hr: chorvátčina
-  hu: maďarčina
-  ia: interlingua (IALA)
-  id: Indonézčina (Bahasa)
-  is: islandčina
-  it: taliančina
-  it-it: taliančina (Taliansko)
-  ja: japončina
-  ja-jp: japončina (Japonsko)
-  ka: gruzínčina
-  kk: kazaština
-  ko: kórejčina
-  lt: litovčina
-  lv: lotyština
-  mk: macedónčina
-  mr: maráthčina
-  ms: malajčina
-  my: barmčina
-  nl: holandčina
-  nl-nl: holandčina (Holandsko)
-  nn: nórčina (Nynorsk)
-  false: nórčina
-  pl: polština
-  pl-pl: polština (Poľsko)
-  pt: portugalčina
-  pt-br: portugalčina (Brazília)
-  pt-pt: portugalčina (Portugalsko)
-  ro: rumunčina
-  ru: ruština
-  sk: slovenčina
-  sl: slovinčina
-  sq: albánčina
-  sr: srbčina
-  sv: švédčina
-  sv-se: švédčina (Švédsko)
-  sw: swahilčina
-  ta: tamilčina
-  te: telugčina
-  th: thajčina
-  tl: tagalčina
-  tr: turečtina
-  uk: ukrajinčina
-  ur: urdčina
-  ur-in: urdčina (India)
-  ur-pk: urdčina (Pakistan)
-  vi: vietnamčina
-  zh: čínština (zjednodušená)
-  zh-cn: čínština (zjednodušená, Čína)
-  zh-hans: čínština (zjednodušená) (zh-Hans)
-  zh-hant: čínština (tradičná) (zh-Hant)
-  zh-tw: čínština (tradičná, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Angličtina
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Angličtina
+    es-es: Spanish (Spain)
+    es-mx: španielčina (Mexiko)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

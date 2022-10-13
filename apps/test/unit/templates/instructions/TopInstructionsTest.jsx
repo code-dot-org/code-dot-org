@@ -7,8 +7,6 @@ import {
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import sinon from 'sinon';
-import experiments from '@cdo/apps/util/experiments';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -34,6 +32,7 @@ const DEFAULT_PROPS = {
   isMinecraft: false,
   isBlockly: false,
   isRtl: false,
+  hasBackgroundMusic: false,
   displayReviewTab: false,
   exampleSolutions: [],
   isViewingAsInstructorInTraining: false
@@ -50,6 +49,34 @@ describe('TopInstructions', () => {
       />
     );
     expect(wrapper.find('ContainedLevelAnswer')).to.have.lengthOf(1);
+  });
+
+  it('shows ContainedLevelResetButton on instructions tab', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.INSTRUCTIONS}
+      />
+    );
+    expect(
+      wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
+    ).to.have.lengthOf(1);
+  });
+
+  it('does not shows ContainedLevelResetButton on teacher only tab', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        hasContainedLevels={true}
+        isViewingAsInstructorInTraining={true}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+    expect(
+      wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
+    ).to.have.lengthOf(0);
   });
 
   it('shows teacher only markdown in teacher only tab if instructor in training level', () => {
@@ -149,7 +176,7 @@ describe('TopInstructions', () => {
 
   describe('viewing the Feedback Tab', () => {
     describe('as a instructor', () => {
-      it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the instructor is not giving feedback', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the instructor is not viewing student work', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -166,7 +193,7 @@ describe('TopInstructions', () => {
           .be.false;
       });
 
-      it('passes displayFeedback = true to TopInstructionsHeader on a level with a rubric where the instructor is not giving feedback', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level with a rubric where the instructor is not viewing student work', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -189,7 +216,7 @@ describe('TopInstructions', () => {
           .be.true;
       });
 
-      it('passes displayFeedback = false to TopInstructionsHeader if displayReviewTab = true and there is no rubric', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work', () => {
         const props = {...DEFAULT_PROPS, displayReviewTab: true};
         const wrapper = shallow(<TopInstructions {...props} />);
 
@@ -198,7 +225,7 @@ describe('TopInstructions', () => {
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.false;
+          .be.true;
       });
     });
 
@@ -256,26 +283,7 @@ describe('TopInstructions', () => {
           .be.false;
       });
 
-      it('passes displayCommitsAndReviewTab false if displayReviewTab is false', () => {
-        const wrapper = shallow(
-          <TopInstructions
-            {...DEFAULT_PROPS}
-            viewAs={ViewType.Participant}
-            displayReviewTab={false}
-          />
-        );
-
-        expect(
-          wrapper.find(TopInstructionsHeader).props().displayCommitsAndReviewTab
-        ).to.be.false;
-      });
-
-      it('passes displayCommitsAndReviewTab false if the code_review_v2 experiment is not enabled', () => {
-        sinon
-          .stub(experiments, 'isEnabled')
-          .withArgs('code_review_v2')
-          .returns(false);
-
+      it('passes displayReviewTab=true to TopInstructionsHeader if displayReviewTab is true', () => {
         const wrapper = shallow(
           <TopInstructions
             {...DEFAULT_PROPS}
@@ -284,11 +292,8 @@ describe('TopInstructions', () => {
           />
         );
 
-        expect(
-          wrapper.find(TopInstructionsHeader).props().displayCommitsAndReviewTab
-        ).to.be.false;
-
-        experiments.isEnabled.restore();
+        expect(wrapper.find(TopInstructionsHeader).props().displayReviewTab).to
+          .be.true;
       });
     });
   });

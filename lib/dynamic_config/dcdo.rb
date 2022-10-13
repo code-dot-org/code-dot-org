@@ -44,7 +44,13 @@ class DCDOBase < DynamicConfigBase
       'clearerSignUpUserType': DCDO.get('clearerSignUpUserType', false),
       'thebadguys-promotion': DCDO.get('thebadguys-promotion', false),
       'thebadguys-projects-page': DCDO.get('thebadguys-projects-page', false),
-      'code_review_v2': DCDO.get('code_review_v2', false)
+      'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
+      'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
+      'ceos-for-cs-banner': DCDO.get('ceos-for-cs-banner', false),
+      'ceos-for-cs-banner-govs': DCDO.get('ceos-for-cs-banner-govs', false),
+      'use-s3-path-for-default-animations': DCDO.get('use-s3-path-for-default-animations', true),
+      'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
+      'cs-leaders-prize': DCDO.get('cs-leaders-prize', false)
     }
   end
 end

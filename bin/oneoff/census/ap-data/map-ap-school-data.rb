@@ -1,6 +1,19 @@
 #!/usr/bin/env ruby
 
 require_relative '../../../../dashboard/config/environment'
+
+# This script depends on the StreetAddress gem; because it's the only thing in
+# our codebase that does and because these scripts are only included here for
+# posterity not for actual use, we don't currently install that gem.
+#
+# As-is, attempting to run this script will fail with the error:
+#
+#     cannot load such file -- street_address (LoadError)
+#
+# To restore, add the following line back to the Gemfile:
+#
+#     gem 'StreetAddress', require: "street_address"
+#
 require 'street_address'
 
 ap_data_by_address = {}
@@ -16,9 +29,9 @@ CSV.open('ap-school-code-map.csv', 'w') do |csv|
   csv << %w(ap_school_code ap_school_name nces_school_id nces_school_name)
 
   School.find_each do |school|
-    address = %w(address_line1 address_line2 address_line3 city state zip).map do |col|
+    address = %w(address_line1 address_line2 address_line3 city state zip).filter_map do |col|
       school.attributes[col].presence
-    end.compact.join(', ').upcase
+    end.join(', ').upcase
 
     if address
       CDO.log.info "Processing school id: #{school.id} with address: \"#{address}\""

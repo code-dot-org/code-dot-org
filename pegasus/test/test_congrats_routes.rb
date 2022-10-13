@@ -26,14 +26,14 @@ class CongratsRoutesTest < Minitest::Test
         ScriptConstants::COURSEF_NAME,
         ScriptConstants::EXPRESS_NAME,
         ScriptConstants::PRE_READER_EXPRESS_NAME,
-        ScriptConstants::COURSEA_2018_NAME,
-        ScriptConstants::COURSEB_2018_NAME,
-        ScriptConstants::COURSEC_2018_NAME,
-        ScriptConstants::COURSED_2018_NAME,
-        ScriptConstants::COURSEE_2018_NAME,
-        ScriptConstants::COURSEF_2018_NAME,
-        ScriptConstants::EXPRESS_2018_NAME,
-        ScriptConstants::PRE_READER_EXPRESS_2018_NAME
+        ScriptConstants::COURSEA_2022_NAME,
+        ScriptConstants::COURSEB_2022_NAME,
+        ScriptConstants::COURSEC_2022_NAME,
+        ScriptConstants::COURSED_2022_NAME,
+        ScriptConstants::COURSEE_2022_NAME,
+        ScriptConstants::COURSEF_2022_NAME,
+        ScriptConstants::EXPRESS_2022_NAME,
+        ScriptConstants::PRE_READER_EXPRESS_2022_NAME
       ].each do |course|
         @pegasus.get "/congrats/#{course}"
         assert_equal 200, @pegasus.last_response.status

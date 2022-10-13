@@ -9,9 +9,13 @@ module JavalabFilesHelper
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
       http.request(upload_request)
     end
-    response.code == '200'
-  rescue StandardError
-    false
+    return response
+  rescue StandardError => e
+    event_details = {
+      error_details: e.to_json
+    }
+    NewRelic::Agent.record_custom_event("JavabuilderHttpConnectionError", event_details) if CDO.newrelic_logging
+    nil
   end
 
   # Get all files related to the project at the given channel id as a hash.

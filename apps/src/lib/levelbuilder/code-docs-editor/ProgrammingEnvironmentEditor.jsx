@@ -4,9 +4,8 @@ import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 import OrderableList from './OrderableList';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import Button from '@cdo/apps/templates/Button';
-import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import ImageInput from './ImageInput';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
@@ -65,7 +64,6 @@ export default function ProgrammingEnvironmentEditor({
     updateProgrammingEnvironment,
     setProgrammingEnvironment
   ] = useProgrammingEnvironment(remainingProgrammingEnvironment);
-  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -110,10 +108,6 @@ export default function ProgrammingEnvironmentEditor({
   return (
     <div>
       <h1>{`Editing ${name}`}</h1>
-      <h2>
-        This feature is in development. Please continue to use curriculum
-        builder to edit code documentation.
-      </h2>
       <label>
         Title
         <input
@@ -183,19 +177,12 @@ export default function ProgrammingEnvironmentEditor({
           style={styles.textInput}
         />
       </label>
-      <label>
-        Image
-        <Button
-          onClick={() => setUploadImageDialogOpen(true)}
-          text="Choose Image"
-          color="gray"
-          icon="plus-circle"
-        />
-        {programmingEnvironment.imageUrl && (
-          <span>{programmingEnvironment.imageUrl}</span>
-        )}
-      </label>
-
+      <ImageInput
+        initialImageUrl={programmingEnvironment.imageUrl}
+        updateImageUrl={imgUrl =>
+          updateProgrammingEnvironment('imageUrl', imgUrl)
+        }
+      />
       <TextareaWithMarkdownPreview
         markdown={programmingEnvironment.description || ''}
         label={'Description'}
@@ -219,12 +206,6 @@ export default function ProgrammingEnvironmentEditor({
         lastSaved={lastUpdated}
         error={error}
         handleView={() => navigateToHref(showPath)}
-      />
-      <UploadImageDialog
-        isOpen={uploadImageDialogOpen}
-        handleClose={() => setUploadImageDialogOpen(false)}
-        uploadImage={imgUrl => updateProgrammingEnvironment('imageUrl', imgUrl)}
-        allowExpandable={false}
       />
     </div>
   );

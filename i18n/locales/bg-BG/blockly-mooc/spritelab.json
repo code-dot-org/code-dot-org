@@ -8,6 +8,7 @@
   "addSpaces": "В отпечатаното съобщение липсват някои празни мяста. Можеш ли да измислиш къде да ги добавиш?",
   "addText": "Добави текст към екрана си с блок за отпечатване:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
   "addTitleScreen": "Трябва да добавиш заглавен екран към твоя проект. ",
+  "addWhenTouchesEventToMakePetGrow": "Добави събитие блокче `когато се докосват` и направи твоят любимец да расте, когато яде.",
   "allBehaviors": "Увери се, че всички спрайтове имат поведение.",
   "answerPrompt": "Не забравяй да въведеш нещо в подканата си!",
   "cardAddPrompt": "Твоята програма трябва да зададе на потребителя поне един въпрос.\n Следващата ти стъпка е да добавиш подкана. Например, можеш да поискаш името на читателя. Преименувай променливата на нещо, което ще ти помогне да запомните каква информация се съхранява.\n<xml><block type=\"gamelab_setPrompt\"><value name=\"QUESTION\"><block type=\"text\" can_disconnect_from_parent=\"false\"><title name=\"TEXT\">За кого е тази карта?</title> </block></value><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">име</title></block></value> </block></xml>",

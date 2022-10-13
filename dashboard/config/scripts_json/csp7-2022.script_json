@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "https://studio.code.org/form/teacher_csp_unit_survey?survey_data[unit_number]=7",
+          "type": "feedback",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More",
+          "key": "33e8bffa-388c-4593-a12d-5661f0867e5d"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -13,11 +25,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 22:40:46 UTC",
+    "serialized_at": "2022-09-28 14:31:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -76,7 +89,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work with envelopes and paper to model functions with parameters and return values. Students create their own physical function envelope for drawing a house that takes in different parameters, and then build another function to calculate and return the cost of building that house.  ",
-        "preparation": "* Collect various sizes of sticky notes. Small sticky notes are particularly useful for this activity. \r\n* Two envelopes per group\r\n* Pencils/pens\r\n* One baggy for a teacher demonstration (optional)\r\n* Print out copies of the Activity Guide for students\r\n* Review the Unit 7, Lesson 1 slides prior to the class",
+        "preparation": "* Collect various sizes of sticky notes. Small sticky notes are particularly useful for this activity. \n* Two envelopes per group\n* Pencils/pens\n* One baggy for a teacher demonstration (optional)\n* Print out copies of the Activity Guide for students\n* Review the Unit 7, Lesson 1 slides prior to the class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this Explore lesson, students follow a presentation and use manipulatives to understand the basics of creating a function with parameters and return values. ",
         "student_overview": "Develop a mental model for how functions can be generalized using parameters and return values.",
         "unplugged": true
@@ -97,7 +110,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students work with partners to investigate two different apps that use parameters and return values. ",
-        "preparation": "* Review the two apps that students will investigate in the lesson and make sure you understand the goals of the discussion prompts ",
+        "preparation": "* Review the two apps that students will investigate in the lesson and make sure you understand the goals of the discussion prompts \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "As with all Investigate lessons, this is an opportunity for students to dig into programs that use a new concept, in this case parameters and return, in the context of working apps. Encourage students to read the code carefully, discuss their findings with classmates, make connections to the Explore activity from the day before, and start making simple modifications to the program. Students will not leave this lesson as experts in writing programs with parameters and return, but they should understand the high level context and know they can refer back to the code in these investigate projects when they need help getting unstuck in the coming Practice and Make lessons.",
         "student_overview": "Investigate and modify sample apps that use parameters and return values. "
       },
@@ -117,7 +130,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice writing programs with parameters and return values by creating and debugging functions that use them.",
-        "preparation": "* Review the programming levels students will complete",
+        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This is students' opportunity to practice using parameters and return values in a variety of contexts. The progression of levels builds in complexity from students merely calling functions with parameters to designing functions and debugging complex programs that use parameters and return values. This lesson should build students familiarity with these concepts as they prepare for the Make project in the next lesson.",
         "student_overview": "Practice programming with parameters and return values through a set of programming puzzles."
       },
@@ -137,7 +150,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students use the knowledge and skills they've developed working with parameters and return values to develop a Rock Paper Scissors App. Unlike typical Make projects, students are given a significant portion of the starter code but are given three functions with parameters and return values that they'll need to develop themselves. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter",
+        "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Make lessons typically ask students to take on an entirely blank screen when writing their program. In this instance students have to take on the \"blank function\" which needs to fit within the larger program they're developing. This is part of a broader mindset shift that students develop in this unit. Functions with parameters and return values operate like their own \"mini programs\" which can be written and tested independently. There is actually less difference than students might think between previous make projects, in which students get the user interface elements and no code, and this project, in which they get some starter code but blank functions with parameters. In each case they need to develop programs that integrate into a larger portion of the project. The focus of this unit is how functions with parameters and return values help further split programs into logical chunks like this.",
         "student_overview": "Make an app that uses functions with parameters and return."
       },
@@ -157,7 +170,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn the basics of libraries while building upon the envelope model of a function with a folder to represent a library. ",
-        "preparation": "* Review the slides and click through all the animations\r\n* Watch the Libraries video which introduces the Libraries tool in App Lab",
+        "preparation": "* Review the slides and click through all the animations\n* Watch the Libraries video which introduces the Libraries tool in App Lab\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "The mental model of a folder containing a group of functions is used to introduce the concept of a library. Throughout this lesson student explore the requirements for working with libraries and documentation. ",
         "student_overview": "Develop a mental model for how libraries work. ",
         "unplugged": true
@@ -178,7 +191,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate two apps that use libraries as well as the code used to make a library. Through a series of guided discussions they learn how libraries help programmers simplify and reuse their code.",
-        "preparation": "* Read the code for both sample apps and their associated libraries\r\n* Practice sharing and importing libraries yourself in order to understand the process",
+        "preparation": "* Read the code for both sample apps and their associated libraries\n* Practice sharing and importing libraries yourself in order to understand the process\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students get a chance to see how libraries are used in actual apps before they begin building libraries themselves in the subsequent project. The sample apps are written in a clean and simple manner, helping students understand the usefulness of well-documented libraries. ",
         "student_overview": "Investigate and modify sample apps that use libraries learn how libraries help programmers simplify and reuse their code."
       },
@@ -198,7 +211,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice important skills for working with libraries, including testing and debugging libraries, and using libraries to help develop apps. After a brief introduction to these practices by the teacher, students spend the majority of their time programming in a level progression.",
-        "preparation": "* Review the programming levels students will complete",
+        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-libraries-lessons-5-7/36485) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Using libraries highlights a number of important concepts, skills, and mindsets. Here is a short list\r\n\r\n* Testing: Before sharing a library it is critical to make sure your functions actually work as intended. The best way to do this is to write tests that try out different cases of your program. By doing this like testing positive and negative numbers, or testing out edge cases, it's possible to assure yourself that your code works as you expect.\r\n* Debugging: Closely related to the point above, debugging libraries can be tricky once the program is shared with another student. While students can test functions that were shared with them, it will be up to the original author of the code to make the changes and ensure their library is bug free.\r\n* Abstraction: Libraries allow you to make blocks that are \"higher level\" than other blocks in the toolbox. The result is that the actual programs you write either will be shorter, since library code does the heavy lifting, or more complex, because library code allows you to focus on bigger problems. In either case, libraries help you focus on the high level problem you're solving rather than focus on the low level details, and this is an example of abstraction in programming.",
         "student_overview": "Practice programming with libraries through a set of programming puzzles."
       },
@@ -219,7 +232,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students begin a multi-day project designing a library of functions. Students will brainstorm common problems they've encountered while programming this year and begin to design functions that address those common problems.",
-        "preparation": "* Review the Project Guide to make sure you understand what students will be expected to do in the project\r\n* Review the Examples Submission for the Project found in the last lesson of this project",
+        "preparation": "* Review the Project Guide to make sure you understand what students will be expected to do in the project\n* Review the Examples Submission for the Project found in the last lesson of this project\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-library-unit-7-lessons-8-10/36486) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This project caps off everything students have learned about programming as they head into the Create PT. Students are literally \"building blocks\" that classmates will literally have access to in order to create projects of their own. This kind of thinking requires not only a mastery of programming concepts and skills, but the ability to think more abstractly about how programs are built. Students need to identify common situations or problems that they and other programmers may encounter, and help build commands to address that problem.\r\n\r\nThis project also caps off a unit that is all about abstraction. On one level students are thinking about procedural abstraction, and simply learning how to design functions. On another level, however, they're learning to think abstractly. They're not merely designing a function, but they're thinking about the entire process of how programs are developed and common problems or situations that arise. This mental approach to thinking about why to build a function is just as important as knowing the steps to design one.",
         "student_overview": "The first day of a three day project where students build and test their own libraries."
       },
@@ -240,7 +253,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students continue to develop their library of functions. Students are encouraged to begin developing tests for their functions to make sure they return values as expected. Late in the lesson students exchange their library with a classmate for feedback.",
-        "preparation": "* Ensure students have access to their project guides from last class.",
+        "preparation": "* Ensure students have access to their project guides from last class.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-library-unit-7-lessons-8-10/36486) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this lesson students continue to write the code for their libraries, but a big focus is on making sure it works as expected. Through writing tests of their own students practice thinking through how different inputs into a function lead to expected outputs. Sharing their libraries with classmates helps check not only that their code works as expected, but that their library is clear, approachable, and useful, to someone else.",
         "student_overview": "The second day of a three day project where students build and test their own libraries."
       },
@@ -261,7 +274,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete their library project, finalizing their code and writing written responses explaining the way one of the functions in their library works.",
-        "preparation": "* Ensure students have access to their project guides\n* Review the [Example Project Guide Submission](https://studio.code.org/s/csp7-2020/stage/10/puzzle/1)\n and [Example Library](https://studio.code.org/s/csp7-2020/stage/10/puzzle/2) (in the blue teacher panel) ",
+        "preparation": "* Ensure students have access to their project guides\n* Review the Example Project Guide and Library in the \"Resources\" section of the lesson plan\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-library-unit-7-lessons-8-10/36486) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson wraps up this quick project but also gives students a chance to practice responding to questions that appear in the Create PT. This lesson and project should therefore serve as a cap on students' study of procedural abstraction and if you are teaching this class as an AP, prepare them for the Create Task that they will complete in the following unit.",
         "student_overview": "The third day of a three day project where students build and test their own libraries."
       },
@@ -2671,6 +2684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 Console Choice"
+        ],
         "progression": "Putting It Together: Console"
       },
       "bonus": false,
@@ -3770,7 +3786,7 @@
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/10yJToYHpOMPFkazfY6Lxh6G_CULAxHyWpVK8OEMJjVo/view",
+      "url": "https://docs.google.com/presentation/d/10yJToYHpOMPFkazfY6Lxh6G_CULAxHyWpVK8OEMJjVo/copy",
       "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "audience": "Teacher",

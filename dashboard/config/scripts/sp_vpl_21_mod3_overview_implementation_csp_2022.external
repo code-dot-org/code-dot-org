@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Overview of implementation
 
-<img src="https://images.code.org/8200ea91b2db9f26dc288151d340b514-image-1639441966344.31.00 PM.jpg" alt="Three students work at desks on laptops." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/8200ea91b2db9f26dc288151d340b514-image-1639441966344.31.00 PM.jpg" alt="Three students work at desks on laptops. One student is smiling while they work." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
 
 #### CS Principles is intended to be implemented over the course of a school year, with five units per semester. As  the teacher, you have the option to offer this course as an AP or non-AP course. This module will give you more information about the AP exam and prompt you to think more about implementation.
 

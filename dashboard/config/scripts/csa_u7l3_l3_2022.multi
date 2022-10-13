@@ -1,12 +1,27 @@
 name 'CSA U7L3-L3_2022'
 title 'Check for Understanding'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+right '`public void mystery()`'
+wrong '`public void mystery(int second)`'
+wrong '`public void mystery(int second, double first)`'
+wrong '`public void mystery(int second, String first)`'
+wrong '`public void mystery(int first)`'
 
 markdown <<MARKDOWN
-question
+Consider the following class.
+
+```
+public class MysteryClass {
+  public void mystery(int first)
+  { / * implementation not shown * / }
+
+  public void mystery(int first, double second)
+  { / * implementation not shown * / }
+
+  public void mystery(int first, String second)
+  { / * implementation not shown * / }
+}
+```
+
+Which of the following methods can be added to the `MysteryClass` class without causing a compile-time error?
 MARKDOWN

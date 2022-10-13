@@ -194,6 +194,7 @@ class AdminUsersController < ApplicationController
     UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
     ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
     TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end
@@ -203,7 +204,7 @@ class AdminUsersController < ApplicationController
     search_term = params[:search_term]
     permission = params[:permission]
     if search_term.present?
-      if search_term =~ /^\d+$/
+      if /^\d+$/.match?(search_term)
         @user = restricted_users.find_by(id: search_term)
       else
         users = restricted_users.where(hashed_email: User.hash_email(search_term)).or(restricted_users.where(username: search_term))

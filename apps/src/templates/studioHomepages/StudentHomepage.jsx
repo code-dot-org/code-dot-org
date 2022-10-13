@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
@@ -21,7 +20,6 @@ export default class StudentHomepage extends Component {
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
-    isEnglish: PropTypes.bool.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool
   };
 
@@ -38,7 +36,6 @@ export default class StudentHomepage extends Component {
       sections,
       topCourse,
       hasFeedback,
-      isEnglish,
       showVerifiedTeacherWarning
     } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
@@ -54,7 +51,6 @@ export default class StudentHomepage extends Component {
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
-          {isEnglish && <SpecialAnnouncement isTeacher={false} />}
           {showVerifiedTeacherWarning && (
             <Notification
               type={NotificationType.failure}
@@ -65,7 +61,9 @@ export default class StudentHomepage extends Component {
               dismissible={false}
             />
           )}
-          {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
+          {hasFeedback && (
+            <ParticipantFeedbackNotification studentId={studentId} />
+          )}
           <RecentCourses
             courses={courses}
             topCourse={topCourse}

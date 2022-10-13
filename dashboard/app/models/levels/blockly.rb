@@ -162,7 +162,7 @@ class Blockly < Level
   end
 
   def self.count_xml_blocks(xml_string)
-    unless xml_string.blank?
+    if xml_string.present?
       xml = Nokogiri::XML(xml_string, &:noblanks)
       # The structure of the XML will be
       # <document>
@@ -319,6 +319,7 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_placeholder_text_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_loop_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -383,7 +384,7 @@ class Blockly < Level
 
       if is_a?(Maze) && step_mode
         step_mode_value = JSONValue.value(step_mode)
-        level_prop['step'] = step_mode_value == 1 || step_mode_value == 2
+        level_prop['step'] = [1, 2].include?(step_mode_value)
         level_prop['stepOnly'] = step_mode_value == 2
       end
 
@@ -517,9 +518,9 @@ class Blockly < Level
         return loc_val
       end
     else
-      val = [game.app, game.name].map do |name|
+      val = [game.app, game.name].filter_map do |name|
         I18n.t("data.level.instructions.#{name}_#{level_num}", default: nil)
-      end.compact.first
+      end.first
       return val unless val.nil?
     end
   end
@@ -685,6 +686,27 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
+  # Localizing variable names in "controls_for" block types
+  def localized_loop_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
+    block_xml.xpath("//block[@type=\"controls_for\"]").each do |controls_for_block|
+      controls_for_name = controls_for_block.at_xpath("./#{tag}[@name=\"VAR\"]")
+      next unless controls_for_name
+      localized_name = I18n.t(
+        controls_for_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      controls_for_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
   # Localizes all supported types of the given placeholder text blockly
   # blocks in the given XML document string.
   # @param blocks [String] an XML doc to be localized.
@@ -801,9 +823,16 @@ class Blockly < Level
         arg["name"] = I18n.t('behaviors.this_sprite')
       end
 
-      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name|
-        localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
-        name.content = localized_name if localized_name
+      behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name_element|
+        localized_name = I18n.t(name_element.content, scope: [:data, :shared_functions], default: nil, smart: true)
+        name_element.content = localized_name if localized_name
+
+        mutation.xpath('.//description').each do |description|
+          # Using name_element['id'] so we still access the correct translation key even if the
+          # content has been translated in a previous step
+          localized_description = I18n.t(name_element['id'], scope: [:data, :behavior_descriptions, name], default: nil, smart: true)
+          description.content = localized_description if localized_description
+        end
       end
     end
 

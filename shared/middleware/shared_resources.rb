@@ -17,9 +17,11 @@ class SharedResources < Sinatra::Base
   ONE_HOUR = 3600
 
   configure do
+    # Note 1: pegasus/router.rb has additional configuration for Sass::Plugin
+    # Note 2: the generated css files written to /pegasus/cache/css are served
+    #         from the url path /shared/css (see route below)
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
-    Sass::Plugin.options[:template_location] = shared_dir('css')
+    Sass::Plugin.add_template_location(shared_dir('css'), pegasus_dir('cache', 'css'))
 
     set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :javascript_extnames, ['.js']
@@ -80,7 +82,7 @@ class SharedResources < Sinatra::Base
     if File.file?(erb_path)
       content_type extname[1..-1].to_sym
       cache :static
-      return ERB.new(IO.read(erb_path)).result
+      return ERB.new(File.read(erb_path)).result
     end
 
     pass

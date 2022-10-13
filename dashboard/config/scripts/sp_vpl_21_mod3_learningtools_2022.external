@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Tools across the course
 
-#### CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
+##### CS Discoveries introduces students to tools and programming languages that are accessible for beginners while offering more advanced students opportunities to create sophisticated projects. All of the tools below are integrated directly into the Code.org website, allowing teachers to have visibility into all student work and progress. 
 
 <div style="clear:both"/>
 
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
 
 ##### **Units that use Web Lab:** 
 
-##### Unit 2 - Web Development
+##### Web Development
 
 
 <hr style="clear:both">
@@ -31,7 +31,7 @@ markdown <<MARKDOWN
 
 ##### **Units that use Game Lab:** 
 
-##### Unit 3 - Interactive Animations and Games
+##### Interactive Animations and Games
 
 <hr style="clear:both">
 
@@ -43,8 +43,8 @@ markdown <<MARKDOWN
 
 ##### **Units that use App Lab:** 
 
-##### Unit 4 - The Design Process 
-##### Unit 7 - AI and Machine Learning
+##### The Design Process 
+##### AI and Machine Learning
 
 <hr style="clear:both">
 
@@ -56,7 +56,7 @@ Maker App is a downloadable program that connects App Lab to Adafruit's Circuit 
 
 ##### **Units that use the Maker App:** 
 
-##### Unit 6 - Physical Computing 
+##### Physical Computing 
 
 <hr style="clear:both">
 
@@ -68,7 +68,7 @@ AI Lab is a browser-based tool for creating machine learning models from tabular
 
 ##### **Units that use AI Lab:** 
 
-##### Unit 7 - AI and Machine Learning
+##### AI and Machine Learning
 
 <div style="clear:both"/>
 

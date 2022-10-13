@@ -1,0 +1,102 @@
+{
+  "is-IS": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Vefsmiðja"
+        },
+        "gamelab": {
+          "name": "Leikjasmiðjan",
+          "categories": {
+            "game_lab": {
+              "name": "Leikjasmiðjan"
+            },
+            "sprites": {
+              "name": "Kvikar"
+            },
+            "groups": {
+              "name": "Hópar"
+            },
+            "drawing": {
+              "name": "Teikning"
+            },
+            "math": {
+              "name": "Reikningur"
+            },
+            "variables": {
+              "name": "Breytur"
+            },
+            "functions": {
+              "name": "Föll"
+            }
+          }
+        },
+        "applab": {
+          "name": "Appsmiðjan",
+          "description": "App Lab smiðjan er forritunarumhverfi þar sem þú getur búið til einföld öpp. Hannaðu app og forritaðu það með kubbum eða JavaScript svo það virki. Deildu því svo með öðrum.",
+          "categories": {
+            "data": {
+              "name": "Gögn"
+            },
+            "math": {
+              "name": "Reikningur"
+            },
+            "variables": {
+              "name": "Breytur"
+            },
+            "functions": {
+              "name": "Föll"
+            },
+            "advanced": {
+              "name": "Ítarlegt"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Kvikasmiðjan",
+          "categories": {
+            "sprites": {
+              "name": "Kvikar"
+            },
+            "world": {
+              "name": "Heimur"
+            },
+            "location": {
+              "name": "Staðir"
+            },
+            "actions": {
+              "name": "Aðgerðir"
+            },
+            "events": {
+              "name": "Atvik"
+            },
+            "behaviors": {
+              "name": "Hegðun"
+            },
+            "loops": {
+              "name": "Lykkjur"
+            },
+            "variables": {
+              "name": "Breytur"
+            },
+            "math": {
+              "name": "Reikningur"
+            },
+            "logic": {
+              "name": "Rökvísi"
+            },
+            "functions": {
+              "name": "Föll"
+            },
+            "text": {
+              "name": "texti"
+            },
+            "comments": {
+              "name": "Athugasemdir"
+            }
+          }
+        }
+      }
+    }
+  }
+}

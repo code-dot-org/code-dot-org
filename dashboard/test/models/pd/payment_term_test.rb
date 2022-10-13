@@ -69,7 +69,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     term_2 = build(:pd_payment_term, start_date: Date.today)
     term_2.save
 
-    assert_equal ['Regional partner is required'], term_2.errors.full_messages
+    assert_equal ['Regional partner must exist'], term_2.errors.full_messages
 
     term_3 = build(:pd_payment_term, regional_partner: @regional_partner_1, start_date: nil)
     term_3.save
@@ -90,7 +90,7 @@ class Pd::PaymentTermTest < ActiveSupport::TestCase
     create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: Date.today + 2.months, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1)
 
     [term_1, term_2].map(&:reload)
-    assert_empty [term_1, term_2].map(&:end_date).compact
+    assert_empty [term_1, term_2].filter_map(&:end_date)
 
     # this should truncate term 2
     create(:pd_payment_term, regional_partner: @regional_partner_1, start_date: 3.months.from_now.to_date, course: Pd::Workshop::COURSE_CSF)

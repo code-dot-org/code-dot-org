@@ -1,7 +1,6 @@
 import React from 'react';
 import color from '../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import dom from '../dom';
 
 const style = {
@@ -206,4 +205,4 @@ class SpeedSlider extends React.Component {
   }
 }
 
-export default Radium(SpeedSlider);
+export default SpeedSlider;

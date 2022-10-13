@@ -29,11 +29,11 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Hackathons and competitions</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank">
+<a class="linktag" id="bcg-hackathons" href="https://wearebgc.org/events/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/events/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
+  <a class="linktag" id="bcg-hackathons" href="https://wearebgc.org/events/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
   <p>Community oriented "girls only" hackathons for girls between the ages of 12 and 17. Students participate in creating solutions to social issues within their communities while they build their skills, confidence, experience and have lots of fun!</p>
   <p><i>Check event calendar for dates.</i></p>
 </div>
@@ -84,6 +84,17 @@ social:
 <div style="clear:both"></div>
 <br>
 
+<a class="linktag" id="nasa-appdev" href="http://www.nasa.gov/education/appchallenge" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/nasa-adc.png" alt="Logo for NASA App Development Challenge">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="nasa-appdev" href="http://www.nasa.gov/education/appchallenge" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>NASA App Development Challenge</strong></h3></a>
+  <p>The NASA App Development Challenge (ADC) is a coding challenge in which NASA presents technical problems to middle and high school students seeking student contributions to future deep space exploration missions. By responding to the ADC, students take a part directly in the Artemis Generation endeavors to land American astronauts, including the first woman and first person of color on the Moon.</p>
+  <p><i>Team registration closes September 28th.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
 <a class="linktag" id="technovation" href="https://technovationchallenge.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/technovation.png" alt="Technovation logo">
 </a>
@@ -130,7 +141,7 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="google-codenext" href="https://codenext.withgoogle.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Google Code Next</strong></h3></a>
-  <p>Code Next is a free, computer science education program that meets Black and Latinx high school students in their own communities and provides the skills and inspiration they need for long and rewarding careers in computer science-related fields. Learn computer science, plug in with a mentor, and work on impactful projects.</p>
+  <p>Code Next is a free, computer science education program that meets Black and Hispanic/Latino high school students in their own communities and provides the skills and inspiration they need for long and rewarding careers in computer science-related fields. Learn computer science, plug in with a mentor, and work on impactful projects.</p>
   <p><i>Clubs run quarterly and last approximately 9 weeks.</i></p>
 </div>
 <div style="clear:both"></div>
@@ -198,12 +209,12 @@ social:
 <div style="clear:both"></div>
 <br>
 
-<a class="linktag" id="hackthehood" href="https://www.hackthehood.org/tech-education.html" target="_blank">
+<a class="linktag" id="hackthehood" href="https://www.hackthehood.org/programs" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/hack-the-hood.png" alt="Hack the Hood logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="hackthehood" href="https://www.hackthehood.org/tech-education.html" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Hack the Hood</strong></h3></a>
-  <p>Learn in-demand tech skills and launch your career with Hack the Hood’s two immersion programs: Using Tech for Social Justice and Web Development & Data Literacy. For Black, Latinx, and Indigenous learners aged 16-25.</p>
+  <a class="linktag" id="hackthehood" href="https://www.hackthehood.org/programs" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Hack the Hood</strong></h3></a>
+  <p>Learn in-demand tech skills and launch your career with Hack the Hood’s immersion programs. For Black, Hispanic/Latino, and Indigenous learners aged 16-25.</p>
   <p><i>Program dates vary. Applications are open April-June.</i></p>
 </div>
 <div style="clear:both"></div>

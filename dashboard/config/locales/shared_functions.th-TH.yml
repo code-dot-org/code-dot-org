@@ -2,8 +2,23 @@
 th:
   data:
     shared_functions:
+      driving with arrow keys: ขับด้วยปุ่มลูกศร
+      fluttering: กระพือปีก
+      growing: ขยายตัว
+      jittering: กระสับกระส่าย
+      moving east: เคลื่อนไปทางตะวันออก
+      moving east and looping: เคลื่อนไปทางตะวันออกและวนรอบ
       moving north: เคลื่อนที่ไปทางเหนือ
       moving north and looping: เคลื่อนไปทางทิศเหนือแล้วลูป
+      moving south: เคลื่อนที่ไปทางใต้
       moving south and looping: เคลื่อนไปทางทิศใต้แล้วลูป
+      moving west: เคลื่อนที่ไปทางตะวันตก
+      moving west and looping: เคลื่อนที่ไปทางตะวันตกและวนรอบ
       moving with arrow keys: เคลื่อนไหวด้วยปุ่มลูกศร
+      patrolling: เดินลาดตระเวน
+      shrinking: หดตัว
+      spinning left: หมุนไปทางซ้าย
+      spinning right: หมุนไปทางขวา
+      swimming left and right: ว่ายน้ำไปทางซ้ายและขวา
       wandering: เคลื่อนที่
+      wobbling: โยกเยก

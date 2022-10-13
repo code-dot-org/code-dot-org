@@ -186,10 +186,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'can not update participant type' do
-    section = create :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    section = create :section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     error = assert_raises do
-      section.participant_type = SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.participant_type = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       section.grade = 'pl'
       section.save!
     end
@@ -274,9 +274,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student raises for admin students' do
-    assert_raises do
-      assert_does_not_create(Follower) do
-        @section.add_student (create :admin)
+    assert_does_not_create(Follower) do
+      assert_raises ActiveRecord::RecordInvalid do
+        @section.add_student(create(:admin))
       end
     end
   end
@@ -421,6 +421,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -469,6 +470,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/s/jigsaw',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: 'jigsaw',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -520,6 +522,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
         linkToCurrentUnit: '/s/jigsaw',
+        courseVersionName: 'somecourse',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
@@ -564,6 +567,7 @@ class SectionTest < ActiveSupport::TestCase
         linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
+        courseVersionName: nil,
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,

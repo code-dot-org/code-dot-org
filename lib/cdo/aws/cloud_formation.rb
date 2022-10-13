@@ -16,6 +16,7 @@ module AWS
 
     # @return [Cdo::CloudFormation::StackTemplate]
     attr_reader :stack
+
     delegate :stack_name, to: :stack
 
     # @return [Hash]
@@ -138,7 +139,7 @@ module AWS
         log.info "#{action} stack: #{stack_name}..."
         stack_options.delete(:change_set_type)
         if File.file?(options[:policy])
-          stack_policy = JSON.pretty_generate(YAML.load(stack.render(filename: options[:policy])))
+          stack_policy = JSON.pretty_generate(YAML.safe_load(stack.render(filename: options[:policy])))
           stack_options[:stack_policy_body] = stack_policy
           stack_options[:stack_policy_during_update_body] = stack_policy if action == :update
         end
@@ -173,9 +174,14 @@ module AWS
     end
 
     def parameters(template)
+      # These templates include complex classes like Dates that are not
+      # supported by safe_load
+      #
+      # rubocop:disable Security/YAMLLoad
       params = YAML.load(template)['Parameters']
+      # rubocop:enable Security/YAMLLoad
       return [] unless params
-      params.map do |key, properties|
+      params.filter_map do |key, properties|
         value = CDO[key.underscore] || ENV[key.underscore.upcase]
         param = {parameter_key: key}
         if value
@@ -192,7 +198,7 @@ module AWS
             HighLine.new.ask("Enter value for Parameter #{key}:", String)
         end
         param
-      end.compact
+      end
     end
 
     def base_options

@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-04-01T20:30:33.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -16,13 +12,17 @@
     "bubble_choice_description": "Learn the code for the special character \">\" and practice using it.",
     "encrypted_examples": "tddRX+ePAO7OoYqx5L80zaiTVpf8jLsGqFGk2/IG9XSfU50Qbfh/xWnI5UHQ\n+fvt8gWDipYOPbXZD4OJ2Bg/Cg==\n",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/headings-and-paragraphs",
     "parent_level_id": 18834,
     "thumbnail_url": "https://images.code.org/3f901f2dcae340aa1869832e123ffdec-image-1562019763695.JPG",
     "name_suffix": "_vpl-summer-pilot-2022"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-04-01T20:30:33.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:30:33.244+00:00\",\"changed\":[\"cloned from \\\"CSD Web Headings Special Character 2_2022\\\"\"],\"cloned_from\":\"CSD Web Headings Special Character 2_2022\"}]"

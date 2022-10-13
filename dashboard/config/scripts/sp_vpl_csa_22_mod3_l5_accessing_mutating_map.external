@@ -16,7 +16,7 @@ arrayName[index]
 For example, assume we have the `topScores` array declared and initialized as follows:
 
 ```
-int topScores = {98, 96, 95, 94, 91};
+int[] topScores = {98, 96, 95, 94, 91};
 ``` 
 
 Let's look at this array in a table:
@@ -55,6 +55,14 @@ After running this code `topScores` will look like this.
 
 <img src="https://images.code.org/226f18c275aa8af443ec6b46347f59be-image-1647904837955.20.28 PM.png" alt="Syntax for updating values in an array" style="border-radius:10px; height: 70px; clear: both; margin: 0 20px 20px 0; ">
 
+
+## Additional resources
+Looking for more practice and resource understanding arrays in Java? Consider using the following resources:
+
+*  <a href="https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html" target="_blank">CS Awesome’s chapter on arrays</a>
+
+* <a href="https://codehs.com/textbook/apcsa_textbook/6.1" target="_blank">CodeHS's chapter on arrays</a>
+
 ---
-**Up next:**. We will practice using arrays.
+**Up next:**. We will practice writing code that uses arrays.
 MARKDOWN

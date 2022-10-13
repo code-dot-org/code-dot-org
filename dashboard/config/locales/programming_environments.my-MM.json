@@ -1,0 +1,56 @@
+{
+  "my-MM": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "name": "ပုံ​ရေးဆွဲခြင်း"
+            },
+            "math": {
+              "name": "သင်္ချာ"
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "math": {
+              "name": "သင်္ချာ"
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "လုပ်​ဆောင်ချက်များ"
+            },
+            "loops": {
+              "name": "Loops"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "သင်္ချာ"
+            },
+            "logic": {
+              "name": "Logic"
+            },
+            "text": {
+              "name": "စာ"
+            }
+          }
+        }
+      }
+    }
+  }
+}

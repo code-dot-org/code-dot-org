@@ -316,6 +316,7 @@ th:
         CSF_scrat_loops_K1: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_scrat_loops_CF: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         CSF_loops_AB: ลูป
+        CSF_SpriteLabIntro_CDEF: นี่คือสไปร์ทแลป
         CSF_StarWars_ProjectIntro: แนะนำโปรเจ็กต์สตาร์วอร์ส
         mc_2018_intro: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ เรื่องบทนำ'
         MC_2018_loops: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ เรื่องทำซ้ำจนกระทั่ง'
@@ -326,6 +327,7 @@ th:
         lesson_planning: การวางแผนการเรียนการสอน
         csd_pair_programming: การจับคู่เพื่อเขียนโปรแกรม
         csd_applab_parameters: ฟังก์ชันกับพารามิเตอร์
+        CSF_Spritelab_MakeSprite_v2: วิธีทำสไปรท์
         csd_debugging: การแก้ไขจุดบกพร่อง
         oceans_machine_learning: การเรียนรู้ของระบบ
         hoc_dance_congrats_2019: Dance Party 2019 - ปาร์ตี้กัน!
@@ -358,6 +360,11 @@ th:
         poetry_module_multichoiceprompts: พร้อมท์ตัวเลือกแบบปรนัย - การเขียนโค้ดด้วยบทกวี
         poetry_module_conditionals: เงื่อนไข - การเขียนโค้ดด้วยบทกวี
         poemart_intro: ความรู้เบื้องต้นเกี่ยวกับศิลปะบทกวี
+        CSA-PL-debugging-temp: การดีบั๊กเบื้องต้นใน Java Lab - temp
+        PL_CS_Journeys_Overview: CS Journeys
+        csp_applab_parameters: ฟังก์ชันกับพารามิเตอร์
+        CSA-PL-intro-to-arrays: อาร์เรย์มิติเดียว (1D)
+        CS_Changing_Everything: วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกสรรพสิ่ง
     callout:
       text:
         run: กด "เริ่ม" เพื่อดูโปรแกรมของคุณทำงาน

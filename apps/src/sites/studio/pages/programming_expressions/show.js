@@ -23,6 +23,13 @@ $(document).ready(() => {
   const programmingEnvironmentTitle = getScriptData(
     'programmingEnvironmentTitle'
   );
+  const programmingEnvironmentName = getScriptData(
+    'programmingEnvironmentName'
+  );
+  const programmingEnvironmentLanguage = getScriptData(
+    'programmingEnvironmentLanguage'
+  );
+
   const categoriesForNavigation = getScriptData('categoriesForNavigation');
   const currentCategoryKey = getScriptData('currentCategoryKey');
   ReactDOM.render(
@@ -36,6 +43,8 @@ $(document).ready(() => {
         >
           <ProgrammingExpressionOverview
             programmingExpression={programmingExpression}
+            programmingEnvironmentName={programmingEnvironmentName}
+            programmingEnvironmentLanguage={programmingEnvironmentLanguage}
           />
         </PageContainer>
         <ExpandableImageDialog />

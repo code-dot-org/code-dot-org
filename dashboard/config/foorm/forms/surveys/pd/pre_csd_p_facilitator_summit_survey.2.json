@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "intro",
-          "html": "<p>We are interested in learning about all facilitators' sense of readiness to lead high-quality, equity-focused Professional Learning experiences in 2022-2023. Your responses will be shared anonymously with Code.org staff running these workshops. Thank you for taking a few minutes to complete this survey!</p>"
+          "html": "<p>We are interested in learning about all facilitators' sense of readiness to lead high-quality, equity-focused Professional Learning experiences in 2022-2023. Your responses will be shared anonymously with Code.org staff. Thank you for taking a few minutes to complete this survey!</p>"
         },
         {
           "type": "html",
@@ -67,6 +67,37 @@
             }
           ],
           "noneText": "I am not facilitating in 2022-23"
+        },
+        {
+          "type": "radiogroup",
+          "name": "ayw_facilitator_experience",
+          "title": "How many Code.org workshops did you facilitate during the 2021-22 school year between August 2021 and May 2022? Do not include 5-day summer workshop. Note: virtual modules should be considered in pairs i.e. M1 + M2 is one workshop.",
+          "choices": [
+            {
+              "value": "0",
+              "text": "0"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5up",
+              "text": "5 or more"
+            }
+          ]
         },
         {
           "type": "radiogroup",

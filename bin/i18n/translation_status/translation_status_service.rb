@@ -5,9 +5,6 @@ require_relative './translation_service'
 module I18n
   module TranslationStatus
     class Updater
-      def initialize
-        super
-      end
       # Redshift table where known normalized_keys are logged to.
       STRING_TRACKING_TABLE = 'analysis.i18n_string_tracking_events'.freeze
       # Redshift table where the translation status of normalized_key is stored.
@@ -25,7 +22,7 @@ module I18n
       # @param [TranslationService] translation_service Get information about translations.
       def update_translation_status(
         day_count = 7,
-        locales = Languages.get_locale.map {|lang| lang[:locale_s]},
+        locales = PegasusLanguages.get_locale.map {|lang| lang[:locale_s]},
         current_time = Time.now.utc.strftime("%Y-%m-%d %H:%M:%S"),
         redshift_client = RedshiftClient.instance,
         translation_service = TranslationService.new
@@ -65,7 +62,7 @@ module I18n
       def get_all_unique_normalized_keys(redshift_client, day_count)
         # Retrieve all the unique normalized_key's we have logged in the
         # analysis.i18n_string_tracking_events table.
-        unique_normalized_key_query = unique_normalized_key_sql_query(day_count)
+        unique_normalized_key_query = unique_scope_string_normalized_key_sql_query(day_count)
         redshift_client.exec(unique_normalized_key_query).reduce({}) do |keys, row|
           keys.update(row['normalized_key'] =>
             {
@@ -126,10 +123,21 @@ module I18n
       end
 
       # @param [Integer] day_count The number of days in the past to look for unique normalized_key's
-      # @return [String] A SQL query which returns the unique normalized_key's logged in the past day_count days.
-      def unique_normalized_key_sql_query(day_count)
+      # @return [String] A SQL query which returns the unique records of normalized_key, string_key, and scope logged in the past day_count days.
+      def unique_scope_string_normalized_key_sql_query(day_count)
         <<~SQL.squish
           SELECT DISTINCT normalized_key, scope, string_key
+          FROM #{STRING_TRACKING_TABLE}
+          WHERE environment = 'production'
+          AND created_at >= current_timestamp - interval '#{day_count} days'
+        SQL
+      end
+
+      # @param [Integer] day_count The number of days in the past to look for unique normalized_key's
+      # @return [String] A SQL query which returns the unique normalized_keys logged in the past day_count days.
+      def unique_normalized_key_sql_query(day_count)
+        <<~SQL.squish
+          SELECT DISTINCT normalized_key
           FROM #{STRING_TRACKING_TABLE}
           WHERE environment = 'production'
           AND created_at >= current_timestamp - interval '#{day_count} days'

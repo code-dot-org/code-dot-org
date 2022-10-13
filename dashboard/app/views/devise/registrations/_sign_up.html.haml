@@ -4,13 +4,10 @@
   .row
     .span8.header
       %h1= t('signup_form.title')
-      - if @already_hoc_registered
-        = t('signup_form.hoc_already_signed_up_content_post_hoc_markdown', studio_url: CDO.studio_url('/'), markdown: true).html_safe
-      - else
-        = t('signup_form.overview_markdown', markdown: true).html_safe
-        = t('auth.already_signedup')
-        &nbsp;
-        = link_to t('nav.user.signin'), new_session_path(resource_name)
+      = t('signup_form.overview_markdown', markdown: true).html_safe
+      = t('auth.already_signedup')
+      &nbsp;
+      = link_to t('nav.user.signin'), new_session_path(resource_name)
   .row
     .span7.oauth-links
       = render "devise/shared/oauth_links"

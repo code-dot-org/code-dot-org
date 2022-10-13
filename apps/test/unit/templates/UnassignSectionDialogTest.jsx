@@ -8,6 +8,7 @@ const DEFAULT_PROPS = {
   isOpen: true,
   sectionId: 1,
   onClose: () => {},
+  cancelUnassign: () => {},
   unassignSection: () => {},
   courseName: 'myCourse',
   sectionName: 'mySection'
@@ -29,13 +30,13 @@ describe('UnassignSectionDialog', () => {
     expect(unassignSpy).to.have.been.calledOnce;
   });
 
-  it('calls close function when user clicks cancel', () => {
-    const closeSpy = sinon.spy();
-    const wrapper = setUp({onClose: closeSpy});
+  it('calls cancel function when user clicks cancel', () => {
+    const cancelSpy = sinon.spy();
+    const wrapper = setUp({cancelUnassign: cancelSpy});
     const button = wrapper.find('Button').at(0);
 
     button.simulate('click');
-    expect(closeSpy).to.have.been.calledOnce;
+    expect(cancelSpy).to.have.been.calledOnce;
   });
 
   it('displays the right section and unit text', () => {

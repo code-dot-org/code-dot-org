@@ -18,7 +18,7 @@ title: Mga pwedeng makatulong
 
 ## Isabit ang mga poster na ito sa paaralan mo
 
-Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakira at iba pa! Sa taong ito, magkakaroon din ang bawat set ng 6 na poster at 126 na "Ginawa ko ang Hour of Code" na mga sticker. Limitado ang mga supply, kaya[mag-order na ng](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)mga poster mo. Upang i-print, i-click lang ang isang imahe sa ibaba upang tingnan at i-save ang isang pwedeng i-print na bersyon.
+Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakira at iba pa! Sa taong ito, magkakaroon din ang bawat set ng 6 na poster at 126 na "Ginawa ko ang Hour of Code" na mga sticker. Limitado ang mga supply, kaya[mag-order na ng](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)mga poster mo. Upang i-print, i-click lang ang isang imahe sa ibaba upang tingnan at i-save ang isang pwedeng i-print na bersiyon.
 
 {{ promote_new_posters }}
 
@@ -42,7 +42,7 @@ Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakir
 
 [I-download ang mga hi-res na bersiyon](https://images.code.org/share/hour-of-code-logo.zip)
 
-**Naka-trademark ang "Hour of Code" at "Hora del Código". Ayaw nating mapigilan ang pag gamit nito, ngunit gusto nating masiguro na akma ito sa loob ng ilang limitasyon:**
+**Naka-trademark ang "Hour of Code" at "Hora del Código". Hindi namin nais na pigilan ang paggamit nito, ngunit gusto nating masiguro na akma ito sa loob ng ilang limitasyon:**
 
 1. Dapat gamitin ang anumang sanggunian sa "Hour of Code" na hindi nagmumungkahing sarili mong brand ang tatak nito, ngunit sa halip ay sinasanggunian ang Hour of Code tulad ng isang kilusang grassroots.
 
@@ -64,7 +64,7 @@ Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakir
 
 <a id="stickers"></a>
 
-## I-print itong mga stickers upang ibigay sa mga estudyante mo
+## I-print itong mga stickers upang ibigay sa mga mag-aaral mo
 
 (1" diameter ang mga sticker, 63 bawat sheet)<br />
 
@@ -82,9 +82,9 @@ Available ang bagong poster set na nagtatampok kay Malala, Stephen Curry, Shakir
 
 ### Hilingin sa paaralan, employer, o mga kaibigan mo na mag-sign up:
 
-**Linya ng paksa:** Samahan ako at ang mahigit 100 milyong estudyante sa isang Hour of Code <br />
+**Linya ng paksa:** Samahan ako at ang mahigit 100 milyong mag-aaral sa isang Hour of Code <br />
 
-Nasa lahat ng dako ang mga computer, binabago ang bawat industriya sa planeta. But only 51% of all high schools offer computer science. Ang magandang balita ay papunta na tayo upang baguhin ito! Kung narinig mo na dati ang tungkol sa Hour of Code, baka alam mo nang gumawa ito ng kasaysayan. Mahigit 100 milyong mga estudyante na ang sumubok sa Hour of Code.
+Nasa lahat ng dako ang mga computer, binabago ang bawat industriya sa planeta. Ngunit 51% lamang ng lahat ng haiskul ang nag-aalok ng computer science. Ang magandang balita ay papunta na tayo upang baguhin ito! Kung narinig mo na dati ang tungkol sa Hour of Code, baka alam mo nang gumawa ito ng kasaysayan. Mahigit 100 milyong mga mag-aaral na ang sumubok sa Hour of Code.
 
 Sa Hour of Code, ang computer science ay nasa hompages ng Google, MSN, Yahoo!, at Disney. Mahigit 100 na mga kasosyo ang nagsama-sama upang suportahan itong kilusan. Nakapag-host na ng Hour of Code ang bawat Apple Store sa buong mundo, at sumulat ng kanilang unang mga linya ng code bilang bahagi ng kampanya ang mga lider gaya ni Presidente Obama at Canadian Prime Minister Justin Trudeau.
 
@@ -104,15 +104,15 @@ Magsimula sa http://hourofcode.com/{{ country_language }}<br />
 
 **Linya ng paksa:** Matutulungan ka ba naming mag-host ng Hour of Code?
 
-Sa pagitan ng {{ campaign_date/short }}, magdiriwang ng Linggo ng Edukasyon ng Computer Science ang sampung porsyento ng mga mag-aaral sa buong mundo sa pamamagitan ng paggawa ng Hour of Code sa paaralan nila. Ito'y isang pagkakataon sa bawat bata na matuto kung paano gumagana ang teknolohiya.
+Sa pagitan ng {{ campaign_date/short }}, magdidiwang ng Linggo ng Edukasyon ng Computer Science ang sampung porsyento ng mga mag-aaral sa buong mundo sa pamamagitan ng paggawa ng Hour of Code sa paaralan nila. Ito'y isang pagkakataon sa bawat bata na matuto kung paano gumagana ang teknolohiya.
 
 [Organisasyon natin/Pangalan ko] ay gustong tumulong sa [pangalan ng paaralan] na magpatakbo ng event ng Hour of Code. Pwede natin tulungan ang mga guro na mag-host ng Hour of Code sa kanilang mga silid-aralan (hindi na natin kailangan ng computer!) o kung nais mong mag-host ng isang pagtitipon sa paaralan, maaari tayong magsaayos ng tagapagsalita upang pag-usapan kung paano gumagana ang teknolohiya at kung ano ang pakiramdam na maging isang software engineer.
 
-Gagawa ang mga estudyante ng sarili nilang mga app o mga laro na ipapakita sa kanilang mga magulang, at magpi-print din kami ng mga sertipiko sa Hour of Code na pwede nilang dalhin sa bahay. At, masaya ito! Sa interaktibo, hands-on na aktibidad, matututunan ng mga estudyante ang computational na pag-iisip sa madaling paraan.
+Gagawa ang mga mag-aaral ng sarili nilang mga app o mga laro na ipapakita sa kanilang mga magulang, at magpi-print din kami ng mga sertipiko sa Hour of Code na pwede nilang dalhin sa bahay. At, masaya ito! Sa interaktibo, hands-on na aktibidad, matututunan ng mga estudyante ang computational na pag-iisip sa madaling paraan.
 
-Nasa lahat ng dako ang mga computer, binabago ang bawat industriya sa planeta. But only 51% of all high schools offer computer science. Ang mabuting balita ay papunta na tayo upang baguhin ito! Kung narinig mo na dati ang tungkol sa Hour of Code, maaaring alam mong gumawa na ito ng ksaysayan - mahigit 100 milyong mga estudyante sa buong mundo ang sumubok na sa Hour of Code. At sumulat na ng kanilang unang mga linya ng code bilang bahagi ng kampanya ang mga lider gaya ni Presidente Obama at Canadian Prime Minister Justin Trudeau.
+Nasa lahat ng dako ang mga computer, binabago ang bawat industriya sa planeta. Ngunit 51% lamang ng lahat ng haiskul ang nag-aalok ng computer science. Ang mabuting balita ay papunta na tayo upang baguhin ito! Kung narinig mo na dati ang tungkol sa Hour of Code, maaaring alam mong gumawa na ito ng ksaysayan - mahigit 100 milyong mga mag-aaral sa buong mundo ang sumubok na sa Hour of Code. At sumulat na ng kanilang unang mga linya ng code bilang bahagi ng kampanya ang mga lider gaya ni Presidente Obama at Canadian Prime Minister Justin Trudeau.
 
-Mababasa mo ang higit pang tungkol sa kaganapan sa http://hourofcode.com/. O, ipaalam mo sa amin kung nais mong mag-schedule ng ilang oras upang pag-usapan ang tungkol sa kung paano makikibahagi ang [pangalan ng paaralan].<br />
+Mababasa mo ang higit pang tungkol sa event sa http://hourofcode.com/. O, ipaalam mo sa amin kung nais mong mag-schedule ng ilang oras upang pag-usapan ang tungkol sa kung paano makikibahagi ang [pangalan ng paaralan].<br />
 
 * * *
 
@@ -120,15 +120,15 @@ Mababasa mo ang higit pang tungkol sa kaganapan sa http://hourofcode.com/. O, ip
 
 ### Sabihin sa mga magulang ang tungkol sa event ng paaralan:
 
-**Linya ng paksa:** Binabago ng ating mga estudyante ang kinabukasan sa Hour of Code
+**Linya ng paksa:** Binabago ng ating mga mag-aaral ang kinabukasan sa Hour of Code
 
 Mahal na mga Magulang,
 
-Nabubuhay tayo sa mundong napapalibutan ng teknolohiya. At alam natin na kahit anong larangan man ang piliin ng ating mga estudyante pagtanda nila, nakadepende ang abilidad nilang magtagumpay sa kaunawaan kung paano gumagana ang teknolohiya.
+Nabubuhay tayo sa mundong napapalibutan ng teknolohiya. At alam natin na kahit anong larangan man ang piliin ng ating mga mag-aaral pagtanda nila, nakadepende ang abilidad nilang magtagumpay sa kaunawaan kung paano gumagana ang teknolohiya.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
+Ngunit maliit na bahagi lamang sa atin ang natututo **kung paano** gumagana ang teknolohiya. 51% lamang ng lahat ng haiskul ang nag-aalok ng computer science.
 
-Kaya naman sumasali ang ating buong paaralan sa pinakamalaking kaganapan sa pag-aaral sa kasaysayan: Ang Hour of Code, sa panahon ng Linggo ng Edukasyon ng Computer Science ({{ campaign_date/full }}). Mahigit 100 milyong mga estudyante sa buong mundo ang sumubok na ng Hour of Code. Gumagawa ang aming Hour of Code ng pahayag na handa ng magturo nitong batayang mga kasanayan ang [PANGALAN NG PAARALAN] sa ika-21 na siglo. Upang patuloy na magdala ng mga aktibidad sa programming sa mga mag-aaral mo, gusto naming gawing malaking event ang Hour of Code. Hinihikayat kitang mag-boluntaryo, makipag-ugnayan sa lokal na media, ibahagi ang mga balita sa mga social media channel at isiping mag-host ng karagdagang event sa Hour of Code sa komunidad.
+Kaya naman sumasali ang ating buong paaralan sa pinakamalaking event sa pag-aaral sa kasaysayan: Ang Hour of Code, sa panahon ng Linggo ng Edukasyon ng Computer Science ({{ campaign_date/full }}). Mahigit 100 milyong mga mag-aaral sa buong mundo ang sumubok na ng Hour of Code. Gumagawa ang aming Hour of Code ng pahayag na handa ng magturo nitong batayang mga kasanayan ang [PANGALAN NG PAARALAN] sa ika-21 na siglo. Upang patuloy na magdala ng mga aktibidad sa programming sa mga mag-aaral mo, gusto naming gawing malaking event ang Hour of Code. Hinihikayat kitang mag-boluntaryo, makipag-ugnayan sa lokal na media, ibahagi ang mga balita sa mga social media channel at isiping mag-host ng karagdagang event sa Hour of Code sa komunidad.
 
 Pagkakataon na itong mabago ang kinabukasan ng edukasyon sa [PANGALAN NH BAYAN/LUNGSOD].
 
@@ -144,11 +144,11 @@ Tignan ang http://hourofcode.com/{{ country_language }} para sa mga detalye at t
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Ang magandang balita ay, patungo tayo sa daan upang baguhin ito.
+May mga computer kahit saan, na binabago ang bawat industriya sa planeta, ngunit 51% lamang ng lahat mga haiskul ang nag-aalok ng computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Ang magandang balita ay, patungo tayo sa daan upang baguhin ito.
 
 Sa Hour of Code, ang computer science ay nasa hompages ng Google, MSN, Yahoo!, at Disney. Mahigit 100 na mga kasosyo ang nagsama-sama upang suportahan itong kilusan. Bawat Apple Store sa mundo ay nag-host na ng Hour of Code. Kahit si Presidente Obama ay sumulat ng kanyang unang linya ng code bilang bahagi ng kmpanya.
 
-Kaya ang bawat isa sa \[X number\] (na) estudyante sa [PANGALAN NG PAARALAN] ay sumali sa pinakamalaking event sa pag-aaral sa kasaysayan: Ang Hour of Code, sa Linggo ng Edukasyon ng Computer Science (Disyembre 3-9).
+Kaya ang bawat isa sa \[X number\] (na) mag-aaral sa [PANGALAN NG PAARALAN] ay sumali sa pinakamalaking event sa pag-aaral sa kasaysayan: Ang Hour of Code, sa Linggo ng Edukasyon ng Computer Science (Disyembre 3-9).
 
 Sumulat ako para imbitahin ka na dumalo sa aming kickoff na pagtitipon at makita ang mga batang mag-umpisa ng gawain sa [DATE].
 
@@ -164,19 +164,19 @@ I look forward to being in touch. <br />
 
 ### Imbitahin ang lokal na pulitiko sa event mo sa paaralan:
 
-#### [Kailangan ng karagdagang impormasyon?Tingnan ang mga mapagkukunan namin para sa pag-imbita ng mga pulitiko na dumalo sa event mo]({{ how_to_public_officials_url }}).
+#### [Kailangan ng karagdagang impormasyon? Tingnan ang mga mapagkukunan namin para sa pag-imbita ng mga pulitiko na dumalo sa event mo]({{ how_to_public_officials_url }}).
 
 **Paksa na linya:**: Sumali sa paaralan namin habang binabago natin ang hinaharap kasama ang Hour of Code
 
 Mahal na [APELYIDO ng Alkalde/Gobernador/Kinatawan/Senador]:
 
-Alam mo ba na ang computing ang #1 na pinagmulan ng mga sahod sa U.S.? Mayroong higit 500,000 computing ang bukas na mga trabaho sa buong bansa, ngunit 42,969 na computer science na mga estudyante lang sa nakaraang taon ang nagtapos sa workforce.
+Alam mo ba na ang computing ang #1 na pinagmulan ng mga sahod sa U.S.? Mayroong higit 500,000 computing ang bukas na mga trabaho sa buong bansa, ngunit 42,969 na computer science na mga mag-aaral lang sa nakaraang taon ang nagtapos sa workforce.
 
-Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
+Ang computer science ay pundasyon sa bawat industriya ngayon, ngunit karamihan sa mga paaralan ay hindi nag-aalok nito. Sa [PANGALAN NG SCHOOL], sinusubukan naming baguhin iyon.
 
-Kaya naman sumasali ang ating buong paaralan sa pinakamalaking kaganapan sa pag-aaral sa kasaysayan: Ang Hour of Code, sa panahon ng Linggo ng Edukasyon ng Computer Science ({{ campaign_date/full }}). Mahigit 100 milyong mga estudyante sa buong mundo ang sumubok na ng Hour of Code.
+Kaya naman sumasali ang ating buong paaralan sa pinakamalaking event sa pag-aaral sa kasaysayan: Ang Hour of Code, sa panahon ng Linggo ng Edukasyon ng Computer Science ({{ campaign_date/full }}). Mahigit 100 milyong mga mag-aaral sa buong mundo ang sumubok na ng Hour of Code.
 
-Sumulat ako upang imbitahin ka na sumali sa event namin sa Hour of Code at magsalita sa aming kickoff na pagtitipon. Ito ay gaganapin sa [PETSA, ORAS, LUGAR], at gagawa ng malakas na pahayag na ang [pangalan ng Estado o Lungsod] ay handa na upang turuan ang mga estudyante ng kritikal na kasanayan sa ika-21 na siglo. Gusto naming masiguro na nasa unahan ng paggawa ng teknolohiya ang mga estudyante namin sa hinaharap—hindi lang ginagamit ito.
+Sumulat ako upang imbitahin ka na sumali sa event namin sa Hour of Code at magsalita sa aming kickoff na pagtitipon. Ito ay gaganapin sa [PETSA, ORAS, LUGAR], at gagawa ng malakas na pahayag na ang [pangalan ng Estado o Lungsod] ay handa na upang turuan ang mga mag-aaral ng kritikal na kasanayan sa ika-21 na siglo. Gusto naming masiguro na nasa unahan ng paggawa ng teknolohiya ang mga mag-aaral namin sa hinaharap—hindi lang ginagamit ito.
 
 Kontakin ako sa [NUMERO NG TELEPONO O EMAIL ADDRESS]. Inaasahan ko ang pagtugon mo.
 

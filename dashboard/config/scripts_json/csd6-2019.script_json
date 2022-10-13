@@ -19,28 +19,6 @@
       ],
       "project_widget_visible": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-19/unit6/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-19/unit6/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-19/unit6/standards/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csd-19/unit6/code/"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2019"

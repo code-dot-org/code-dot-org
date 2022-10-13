@@ -5,7 +5,7 @@ title: Comment héberger Une Heure de Code - Entreprises
 {{ signup_button }}
 
 # Comment organiser une Heure de Code dans votre société
-### Découvrez comment vous pouvez, avec vos collaborateurs, inspirer des élèves à essayer l'informatique !
+### Découvrez comment vous pouvez, avec vos collaborateurs, pousser vos élèves à essayer l'informatique !
 
 ***
 
@@ -32,7 +32,7 @@ Pour plus de conseils sur l'encouragement des employés et la mise en relation d
 - Faites la promotion de votre événement [Heure de Code]({{ urls/promote }}), et encouragez les autres à organiser le leur.
 - Encouragez les ingénieurs en informatique de votre entreprise à se rendre dans une salle de classe locale pour aider à diriger une Heure de Code et inciter les étudiants à étudier l'informatique. Ils peuvent [s’inscrire]({{ urls/volunteer_engineer }}) pour être mis en relation avec une salle de classe.
 
-## 2. Regardez cette vidéo de démonstration  <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Regardez cette vidéo de démonstration  <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choisissez une activité
 Nous organisons une variété d'[activités amusantes d'une heure]({{ urls/learn }}), pour des participants de tous âges, et créées par divers partenaires. [Essayez-les !]({{ urls/learn }})

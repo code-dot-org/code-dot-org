@@ -12,7 +12,8 @@ describe('ChangeEmailModal', () => {
 
   const EMAIL_SELECTOR = 'input[type="email"]';
   const PASSWORD_SELECTOR = 'input[type="password"]';
-  const EMAIL_OPT_IN_SELECTOR = 'select';
+  const EMAIL_OPT_IN_SELECTOR = 'input[type="radio"][value="yes"]';
+  const EMAIL_OPT_OUT_SELECTOR = 'input[type="radio"][value="no"]';
 
   const DEFAULT_PROPS = {
     handleSubmit: () => {},
@@ -24,7 +25,8 @@ describe('ChangeEmailModal', () => {
   // Helpers for selecting particular elements/components
   const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
   const passwordInput = wrapper => wrapper.find(PASSWORD_SELECTOR);
-  const emailOptInSelect = wrapper => wrapper.find(EMAIL_OPT_IN_SELECTOR);
+  const emailOptInButton = wrapper => wrapper.find(EMAIL_OPT_IN_SELECTOR);
+  const emailOptOutButton = wrapper => wrapper.find(EMAIL_OPT_OUT_SELECTOR);
   const submitButton = wrapper =>
     wrapper
       .find(Button)
@@ -49,7 +51,8 @@ describe('ChangeEmailModal', () => {
         expect(emailInput(wrapper)).to.have.attr('disabled');
         expect(passwordInput(wrapper)).to.have.attr('disabled');
         if ('teacher' === userType) {
-          expect(emailOptInSelect(wrapper)).to.have.attr('disabled');
+          expect(emailOptInButton(wrapper)).to.have.attr('disabled');
+          expect(emailOptOutButton(wrapper)).to.have.attr('disabled');
         }
         expect(submitButton(wrapper)).to.have.attr('disabled');
         expect(cancelButton(wrapper)).to.have.attr('disabled');
@@ -278,9 +281,7 @@ describe('ChangeEmailModal', () => {
             expect(wrapper.state().serverErrors.emailOptIn).to.equal(
               'test-server-error'
             );
-            emailOptInSelect(wrapper).simulate('change', {
-              target: {value: 'no'}
-            });
+            emailOptOutButton(wrapper).simulate('click');
             expect(wrapper.state().serverErrors.emailOptIn).to.be.undefined;
           });
         }

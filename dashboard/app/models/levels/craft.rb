@@ -562,104 +562,104 @@ class Craft < Blockly
   end
 
   def adventurer_blocks
-    <<-XML.chomp
-<category name="Actions">
-  <block type='craft_moveForward'></block>
-  <block type="craft_turn">
-    <title name="DIR">left</title>
-  </block>
-  <block type="craft_turn">
-    <title name="DIR">right</title>
-  </block>
-  <block type='craft_destroyBlock'></block>
-  <block type='craft_shear'></block>
-  <block type='craft_placeBlock'></block>
-  <block type='craft_placeTorch'></block>
-  <block type='craft_plantCrop'></block>
-  <block type='craft_tillSoil'></block>
-  <block type='craft_placeBlockAhead'></block>
-  <block type="when_run"></block>
-</category>
+    <<~XML.chomp
+      <category name="Actions">
+        <block type='craft_moveForward'></block>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type='craft_destroyBlock'></block>
+        <block type='craft_shear'></block>
+        <block type='craft_placeBlock'></block>
+        <block type='craft_placeTorch'></block>
+        <block type='craft_plantCrop'></block>
+        <block type='craft_tillSoil'></block>
+        <block type='craft_placeBlockAhead'></block>
+        <block type="when_run"></block>
+      </category>
     XML
   end
 
   def agent_blocks
-    <<-XML.chomp
-<category name="Actions">
-  <block type='craft_moveForward'></block>
-  <block type='craft_moveBackward'></block>
-  <block type="craft_turn">
-    <title name="DIR">left</title>
-  </block>
-  <block type="craft_turn">
-    <title name="DIR">right</title>
-  </block>
-  <block type='craft_destroyBlock'></block>
-  <block type='craft_placeBlock'></block>
-  <block type="when_run"></block>
-</category>
+    <<~XML.chomp
+      <category name="Actions">
+        <block type='craft_moveForward'></block>
+        <block type='craft_moveBackward'></block>
+        <block type="craft_turn">
+          <title name="DIR">left</title>
+        </block>
+        <block type="craft_turn">
+          <title name="DIR">right</title>
+        </block>
+        <block type='craft_destroyBlock'></block>
+        <block type='craft_placeBlock'></block>
+        <block type="when_run"></block>
+      </category>
     XML
   end
 
   def event_blocks
-    <<-XML.chomp
-<category name="Event Loops">
-  <block type="craft_forever"></block>
-  <block type="craft_repeatDropdown"></block>
-  <block type="craft_repeatRandom"></block>
-  <block type="craft_repeatTimes"></block>
-</category>
-<category name="Global Actions">
-  <block type='craft_playSound'></block>
-  <block type='craft_addScore'></block>
-  <block type="craft_spawnEntity"></block>
-  <block type="craft_spawnEntityRandom"></block>
-</category>
-<category name="Entity Actions">
-  <block type="craft_attack"></block>
-  <block type="craft_destroyEntity"></block>
-  <block type="craft_drop"></block>
-  <block type="craft_explodeEntity"></block>
-  <block type="craft_flashEntity"></block>
-  <block type="craft_moveAway"></block>
-  <block type="craft_moveDirection"></block>
-  <block type="craft_moveForward"></block>
-  <block type="craft_moveRandom"></block>
-  <block type="craft_moveTo"></block>
-  <block type="craft_moveToward"></block>
-  <block type="craft_entityTurn"></block>
-  <block type="craft_entityTurnLR"></block>
-  <block type="craft_wait"></block>
-</category>
-<category name="Limited Actions">
-  <block type="craft_moveTowardSheepPlayerChicken"></block>
-</category>
-<category name="Limited Entities">
-  <block type="craft_chickenSpawned"></block>
-  <block type="craft_sheepSpawnedClicked"></block>
-  <block type="craft_creeperSpawnedTouchedClicked"></block>
-  <block type="craft_sheepClicked"></block>
-  <block type="craft_chickenSpawnedClicked"></block>
-  <block type="craft_sheepSpawnedTouchedClicked"></block>
-  <block type="craft_cowSpawnedTouchedClicked"></block>
-  <block type="craft_zombieSpawnedTouchedClickedDay"></block>
-  <block type="craft_creeperSpawnedTouchedClickedDay"></block>
-  <block type="craft_zombieNoDayNight"></block>
-  <block type="craft_ironGolemNoDayNight"></block>
-</category>
-<category name="Entities">
-  <block type="craft_sheep"></block>
-  <block type="craft_zombie"></block>
-  <block type="craft_ironGolem"></block>
-  <block type="craft_creeper"></block>
-  <block type="craft_cow"></block>
-  <block type="craft_chicken"></block>
-</category>
-<category name="Global Events">
-  <block type="craft_whenRun"></block>
-  <block type="craft_whenDay"></block>
-  <block type="craft_whenNight"></block>
-</category>
+    <<~XML.chomp
+      <category name="Event Loops">
+        <block type="craft_forever"></block>
+        <block type="craft_repeatDropdown"></block>
+        <block type="craft_repeatRandom"></block>
+        <block type="craft_repeatTimes"></block>
+      </category>
+      <category name="Global Actions">
+        <block type='craft_playSound'></block>
+        <block type='craft_addScore'></block>
+        <block type="craft_spawnEntity"></block>
+        <block type="craft_spawnEntityRandom"></block>
+      </category>
+      <category name="Entity Actions">
+        <block type="craft_attack"></block>
+        <block type="craft_destroyEntity"></block>
+        <block type="craft_drop"></block>
+        <block type="craft_explodeEntity"></block>
+        <block type="craft_flashEntity"></block>
+        <block type="craft_moveAway"></block>
+        <block type="craft_moveDirection"></block>
+        <block type="craft_moveForward"></block>
+        <block type="craft_moveRandom"></block>
+        <block type="craft_moveTo"></block>
+        <block type="craft_moveToward"></block>
+        <block type="craft_entityTurn"></block>
+        <block type="craft_entityTurnLR"></block>
+        <block type="craft_wait"></block>
+      </category>
+      <category name="Limited Actions">
+        <block type="craft_moveTowardSheepPlayerChicken"></block>
+      </category>
+      <category name="Limited Entities">
+        <block type="craft_chickenSpawned"></block>
+        <block type="craft_sheepSpawnedClicked"></block>
+        <block type="craft_creeperSpawnedTouchedClicked"></block>
+        <block type="craft_sheepClicked"></block>
+        <block type="craft_chickenSpawnedClicked"></block>
+        <block type="craft_sheepSpawnedTouchedClicked"></block>
+        <block type="craft_cowSpawnedTouchedClicked"></block>
+        <block type="craft_zombieSpawnedTouchedClickedDay"></block>
+        <block type="craft_creeperSpawnedTouchedClickedDay"></block>
+        <block type="craft_zombieNoDayNight"></block>
+        <block type="craft_ironGolemNoDayNight"></block>
+      </category>
+      <category name="Entities">
+        <block type="craft_sheep"></block>
+        <block type="craft_zombie"></block>
+        <block type="craft_ironGolem"></block>
+        <block type="craft_creeper"></block>
+        <block type="craft_cow"></block>
+        <block type="craft_chicken"></block>
+      </category>
+      <category name="Global Events">
+        <block type="craft_whenRun"></block>
+        <block type="craft_whenDay"></block>
+        <block type="craft_whenNight"></block>
+      </category>
     XML
   end
 
@@ -673,52 +673,52 @@ class Craft < Blockly
         adventurer_blocks
       end
 
-    <<-XML.chomp
-#{level_specific_blocks}
-<category name="Loops">
-  <block type='controls_repeat'>
-    <title name='TIMES'>5</title>
-  </block>
-  <block type="controls_repeat_dropdown">
-    <title name="TIMES" config="2-10">???</title>
-  </block>
-  <block type="controls_repeat_dropdown">
-    <title name="TIMES" config="2-10">3</title>
-  </block>
-  <block type='controls_repeat_ext'></block>
-  <block type="controls_for" inline="true">
-    <title name="VAR">i</title>
-    <value name="FROM">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-    <value name="TO">
-      <block type="math_number">
-        <title name="NUM">10</title>
-      </block>
-    </value>
-    <value name="BY">
-      <block type="math_number">
-        <title name="NUM">1</title>
-      </block>
-    </value>
-  </block>
-</category>
-<category name="Variables" custom="VARIABLE"></category>
-<category name="Logic">
-  <block type='craft_ifLavaAhead'></block>
-  <block type='craft_ifBlockAhead'></block>
-</category>
+    <<~XML.chomp
+      #{level_specific_blocks}
+      <category name="Loops">
+        <block type='controls_repeat'>
+          <title name='TIMES'>5</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">???</title>
+        </block>
+        <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="2-10">3</title>
+        </block>
+        <block type='controls_repeat_ext'></block>
+        <block type="controls_for" inline="true">
+          <title name="VAR">i</title>
+          <value name="FROM">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+          <value name="TO">
+            <block type="math_number">
+              <title name="NUM">10</title>
+            </block>
+          </value>
+          <value name="BY">
+            <block type="math_number">
+              <title name="NUM">1</title>
+            </block>
+          </value>
+        </block>
+      </category>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Logic">
+        <block type='craft_ifLavaAhead'></block>
+        <block type='craft_ifBlockAhead'></block>
+      </category>
     XML
   end
 
   def toolbox(type)
-    <<-XML.chomp
-<category name="Category">
-  <block type="category"></block>
-</category>
-#{common_blocks(type)}
+    <<~XML.chomp
+      <category name="Category">
+        <block type="category"></block>
+      </category>
+      #{common_blocks(type)}
     XML
   end
 end

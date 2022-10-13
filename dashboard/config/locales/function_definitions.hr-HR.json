@@ -2063,6 +2063,236 @@
               "width": "širina"
             }
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "moja funkcija"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu",
+            "parameters": {
+              "points": "bodovi",
+              "length": "duljina"
+            }
+          },
+          "draw a circle": {
+            "name": "nacrtaj krug"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "duljina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nacrtaj trokut",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a house": {
+            "name": "nacrtaj kuću",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a square": {
+            "name": "nacrtaj kvadrat",
+            "parameters": {
+              "length": "duljina"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu",
+            "parameters": {
+              "points": "bodovi",
+              "length": "duljina"
+            }
+          },
+          "draw a circle": {
+            "name": "nacrtaj krug"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "duljina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nacrtaj trokut",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a house": {
+            "name": "nacrtaj kuću",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a square": {
+            "name": "nacrtaj kvadrat",
+            "parameters": {
+              "length": "duljina"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu",
+            "parameters": {
+              "points": "bodovi",
+              "length": "duljina"
+            }
+          },
+          "draw a circle": {
+            "name": "nacrtaj krug"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "duljina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nacrtaj trokut",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a house": {
+            "name": "nacrtaj kuću",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a square": {
+            "name": "nacrtaj kvadrat",
+            "parameters": {
+              "length": "duljina"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          },
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "završi igru"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "završi igru"
+          }
         }
       }
     }

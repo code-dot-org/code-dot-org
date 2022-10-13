@@ -1,6 +1,6 @@
 name 'CSA U6L9-L3v2_2022'
 display_name 'String Algorithms'
-description 'level description here'
+description 'Use methods in the `String` class to implement standard algorithms to find `String`s that have specific properties or meet specific criteria.'
 
 sublevels
 level 'CSA U6L9-L3a_2022'

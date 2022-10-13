@@ -13,13 +13,14 @@
     "csp10-2022",
     "csp-post-survey-2022"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csp",
     "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2022"
   },
   "resources": [
@@ -131,6 +132,18 @@
       },
       "seeding_key": {
         "resource.key": "peer_feedback"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://drive.google.com/file/d/114xWx2VpNd1sH09t9UiW0bra25ouskIh/view?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
       }
     },
     {

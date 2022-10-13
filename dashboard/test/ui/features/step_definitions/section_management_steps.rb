@@ -1,6 +1,6 @@
 # Helper steps for creating and managing sections
 
-And (/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
+And(/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
   grade = participant_type == 'student' ? 'Other' : 'pl'
   section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type, grade: grade}))
   section_code = section['code']
@@ -8,7 +8,7 @@ And (/^I create a new (student|teacher|facilitator) section( and go home)?$/) do
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
-And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" version "([^"]*)"(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
+And /^I create a new student section named "([^"]*)" assigned to "([^"]*)"(?: version "([^"]*)")?(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
   individual_steps %Q{
     When I see the section set up box
     When I press the new section button
@@ -18,10 +18,14 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" versi
     And I press keys "#{section_name}" for element "#uitest-section-name"
     Then I wait to see "#uitest-assignment-family"
     When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-
-    And I click selector "#assignment-version-year" once I see it
-    And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
   }
+
+  if version_year
+    individual_steps %Q{
+      And I click selector "#assignment-version-year" once I see it
+      And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
+    }
+  end
 
   if secondary
     individual_steps %Q{
@@ -37,7 +41,7 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" versi
   }
 end
 
-Given (/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
+Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
   browser_request(
     url: '/api/test/create_student_section_assigned_to_script',
     method: 'POST',
@@ -235,6 +239,13 @@ Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for th
   expect(@section_id).to be > 0
   steps %{
     Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
+  }
+end
+
+Then /^I navigate to the script "([^"]*)" lesson (\d+) level (\d+) for the section I saved$/ do |script_name, lesson_num, level_num|
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/levels/#{level_num}?section_id=#{@section_id}&noautoplay=true"
   }
 end
 

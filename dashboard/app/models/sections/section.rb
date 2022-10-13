@@ -38,7 +38,7 @@ require 'cdo/safe_names'
 class Section < ApplicationRecord
   include SerializedProperties
   include SharedConstants
-  include SharedCourseConstants
+  include Curriculum::SharedCourseConstants
   self.inheritance_column = :login_type
 
   class << self
@@ -58,7 +58,7 @@ class Section < ApplicationRecord
   include Rails.application.routes.url_helpers
   acts_as_paranoid
 
-  belongs_to :user
+  belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
   has_many :followers, dependent: :destroy
@@ -69,8 +69,8 @@ class Section < ApplicationRecord
 
   validates :name, presence: true, unless: -> {deleted?}
 
-  belongs_to :script
-  belongs_to :unit_group, foreign_key: 'course_id'
+  belongs_to :script, optional: true
+  belongs_to :unit_group, foreign_key: 'course_id', optional: true
 
   has_many :section_hidden_lessons
   has_many :section_hidden_scripts
@@ -80,7 +80,7 @@ class Section < ApplicationRecord
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
 
-  validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+  validates :participant_type, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
   validates :grade, acceptance: {accept: [SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten, message: "must be one of the valid student grades. Expected one of: #{[SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten}. Got: \"%{value}\"."}
 
   validate :pl_sections_must_use_email_logins
@@ -113,7 +113,7 @@ class Section < ApplicationRecord
   end
 
   def pl_section?
-    participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   serialized_attrs %w(code_review_expires_at)
@@ -152,7 +152,7 @@ class Section < ApplicationRecord
   end
 
   def self.valid_participant_type?(type)
-    SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.include? type
+    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.value?(type)
   end
 
   def self.valid_grade?(grade)
@@ -224,11 +224,11 @@ class Section < ApplicationRecord
   def can_join_section_as_participant?(user)
     return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
 
-    if participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+    if participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       return user.permission?(UserPermission::FACILITATOR)
-    elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    elsif participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       return user.teacher?
-    elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    elsif participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
       return true #if participant_type is student let anyone join
     end
 
@@ -238,7 +238,7 @@ class Section < ApplicationRecord
   # Sections can not be assigned courses where participants in the section
   # can not be participants in the course
   def self.can_be_assigned_course?(participant_audience, participant_type)
-    SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
+    Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
   end
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
@@ -284,7 +284,7 @@ class Section < ApplicationRecord
   # Follower is determined by the controller so that it can authorize first.
   # Optionally email the teacher.
   def remove_student(student, follower, options)
-    follower.delete
+    follower.destroy
 
     if student.sections_as_student.empty?
       if student.under_13?
@@ -323,10 +323,12 @@ class Section < ApplicationRecord
     link_to_assigned = base_url
     title_of_current_unit = ''
     link_to_current_unit = ''
+    course_version_name = nil
 
     if unit_group
       title = unit_group.localized_title
       link_to_assigned = course_path(unit_group)
+      course_version_name = unit_group.name
       if script_id
         title_of_current_unit = script.title_for_display
         link_to_current_unit = script_path(script)
@@ -334,6 +336,7 @@ class Section < ApplicationRecord
     elsif script_id
       title = script.title_for_display
       link_to_assigned = script_path(script)
+      course_version_name = script.name
     end
 
     # Remove ordering from scope when not including full
@@ -353,6 +356,7 @@ class Section < ApplicationRecord
       linkToAssigned: link_to_assigned,
       currentUnitTitle: title_of_current_unit,
       linkToCurrentUnit: link_to_current_unit,
+      courseVersionName: course_version_name,
       numberOfStudents: num_students,
       linkToStudents: "#{base_url}#{id}/manage_students",
       code: code,
@@ -434,7 +438,7 @@ class Section < ApplicationRecord
     end
   end
 
-  # One of the contstraints for teachers looking for discount codes is that they
+  # One of the constraints for teachers looking for discount codes is that they
   # have a section in which 10+ students have made progress on 5+ levels in both
   # csd2 and csd3
   # Note: This code likely belongs in CircuitPlaygroundDiscountCodeApplication
@@ -515,13 +519,13 @@ class Section < ApplicationRecord
   # We can remove this once our database has utf8mb4 support everywhere.
   def strip_emoji_from_name
     # We don't want to fill in a default name if the caller intentionally tried to clear it.
-    return unless name.present?
+    return if name.blank?
 
     # Drop emoji and other unsupported characters
     self.name = name&.strip_utf8mb4&.strip
 
     # If dropping emoji resulted in a blank name, use a default
-    self.name = I18n.t('sections.default_name', default: 'Untitled Section') unless name.present?
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
 end

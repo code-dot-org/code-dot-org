@@ -1,11 +1,24 @@
 name 'CSA U7 Assessment 2022 q10'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+right '`10`'
+wrong '`11`'
+wrong '`12 11 10`'
+wrong '`12 11`'
+wrong '`11 12`'
 
 markdown <<MARKDOWN
-question
+Consider the following method.
+
+```
+public static void showMe(int arg) {
+  if (arg > 10) {
+    showMe(arg - 1);
+  }
+  else {
+    System.out.println(arg + " ");
+  }
+}
+```
+
+What will be printed as a result of the call `showMe(12)`?
 MARKDOWN

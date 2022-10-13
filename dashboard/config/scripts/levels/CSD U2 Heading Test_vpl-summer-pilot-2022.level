@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-04-01T20:30:32.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\nMy Pets\\n    \\nI have three different pets, and they are all my favorite for different reasons. I feed them and give them water every day, and even though it's a lot of work, they are totally worth it.\\n    \\nLula\\n\\nDog\\n\\nLula's been my dog for two years, and she's really fun to play with.  I like to take her to the park.  Her favorite toy is an old tennis ball.\\n    \\nSlowpoke\\n\\nTurtle\\n\\nSlowpoke is my turtle.  I have had him for as long as I can remember, but he became mine for real when I turned 10 because I promised to take care of him.\\n\\nHamster\\n\\nFish\\n\\nHamster is the name of my fish.  I named him hamster because I wanted a hamster and not a fish, but I like him anyway.  He basically just swims around all day, but I still like him.\\n\\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
@@ -15,9 +11,9 @@
     "parent_level_id": 20012,
     "name_suffix": "_vpl-summer-pilot-2022",
     "reference_links": [
-      "/docs/concepts/html/html-tags/"
+      "/courses/vpl-csd-summer-pilot-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/headings-and-paragraphs/",
+    "map_reference": "/courses/vpl-csd-summer-pilot-2022/guides/headings-and-paragraphs",
     "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images.\r\n\r\nUnderstand the need for precision when using computer languages and use appropriate syntax.\r\n",
     "mini_rubric": "true",
     "validation_enabled": "true",
@@ -27,6 +23,10 @@
     "rubric_performance_level_3": "Most content is contained in tags.  At least one heading tag is used.",
     "rubric_performance_level_4": "Little or no content is contained in tags."
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-04-01T20:30:32.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-01T20:30:32.365+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Test_2022\\\"\"],\"cloned_from\":\"CSD U2 Heading Test_2022\"}]"

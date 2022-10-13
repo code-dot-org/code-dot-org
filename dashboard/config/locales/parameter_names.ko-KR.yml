@@ -16,6 +16,8 @@ ko:
       nectar units: 꽃꿀 유닛
       nectars: 꽃꿀
       points: 점수
+      radius: 반지름
+      sides: 변
       size: 크기
       speed: 스피드
       theGuess: 추측

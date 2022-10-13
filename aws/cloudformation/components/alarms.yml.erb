@@ -25,7 +25,7 @@
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - {Name: InstanceId, Value: !Ref <%=daemon%>}
-      EvaluationPeriods: 5
+      EvaluationPeriods: 7
       MetricName: MemoryUtilization
       Namespace: 'System/Linux'
       Period: 60

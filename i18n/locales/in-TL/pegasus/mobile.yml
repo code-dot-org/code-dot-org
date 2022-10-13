@@ -364,6 +364,7 @@
   homepage_slot_text_link_buy: "crwdns36540:0crwdne36540:0"
   homepage_slot_text_link_donate: "crwdns35786:0crwdne35786:0"
   homepage_slot_text_link_shop: "crwdns56704:0crwdne56704:0"
+  homepage_slot_text_link_thebadguys: "crwdns2917524:0crwdne2917524:0"
   homepage_slot_text_link_administrators: "crwdns91196:0crwdne91196:0"
   homepage_gallery_header: "crwdns394100:0%{project_count}crwdne394100:0"
   homepage_header_donors: "crwdns35788:0crwdne35788:0"
@@ -372,6 +373,10 @@
   homepage_below_hero_announcement_text: "crwdns134766:0crwdne134766:0"
   homepage_below_hero_announcement_link_text: "crwdns134767:0crwdne134767:0"
   homepage_higher_power_body: "crwdns2865696:0crwdne2865696:0"
+  homepage_thebadguys_body: "crwdns2905990:0crwdne2905990:0"
+  homepage_csa_subhead: "crwdns2927714:0crwdne2927714:0"
+  homepage_csa_title: "crwdns2927716:0crwdne2927716:0"
+  homepage_csa_body: "crwdns2927718:0crwdne2927718:0"
   contact_form_topic_student: "crwdns4686:0crwdne4686:0"
   contact_form_topic_parent: "crwdns4687:0crwdne4687:0"
   contact_form_topic_teacher: "crwdns4688:0crwdne4688:0"
@@ -503,6 +508,8 @@
   video_title_marco_belinelli: "crwdns69504:0crwdne69504:0"
   video_title_chris_bosh: "crwdns69505:0crwdne69505:0"
   video_title_my_name_is_aracely: "crwdns132873:0crwdne132873:0"
+  video_title_change_face_of_cs: "crwdns2907922:0crwdne2907922:0"
+  video_title_latam_hoc: "crwdns2907924:0crwdne2907924:0"
   video_1min: "crwdns69453:0crwdne69453:0"
   video_2min: "crwdns69454:0crwdne69454:0"
   video_3min: "crwdns132874:0crwdne132874:0"
@@ -976,6 +983,12 @@
   coursed-2021_name: crwdns2688480:0crwdne2688480:0
   coursee-2021_name: crwdns2688482:0crwdne2688482:0
   coursef-2021_name: crwdns2688484:0crwdne2688484:0
+  coursea-2022_name: crwdns2927720:0crwdne2927720:0
+  courseb-2022_name: crwdns2927722:0crwdne2927722:0
+  coursec-2022_name: crwdns2927724:0crwdne2927724:0
+  coursed-2022_name: crwdns2927726:0crwdne2927726:0
+  coursee-2022_name: crwdns2927728:0crwdne2927728:0
+  coursef-2022_name: crwdns2927730:0crwdne2927730:0
   express-2018_name: crwdns135969:0crwdne135969:0
   pre-express-2018_name: crwdns135970:0crwdne135970:0
   express-2019_name: crwdns1625442:0crwdne1625442:0
@@ -984,6 +997,8 @@
   pre-express-2020_name: crwdns2370244:0crwdne2370244:0
   express-2021_name: crwdns2688486:0crwdne2688486:0
   pre-express-2021_name: crwdns2688488:0crwdne2688488:0
+  express-2022_name: crwdns2927732:0crwdne2927732:0
+  pre-express-2022_name: crwdns2927734:0crwdne2927734:0
   csd2_name: 'crwdns2066990:0crwdne2066990:0'
   csd3_name: 'crwdns2043992:0crwdne2043992:0'
   accelerated_name: "crwdns2041128:0crwdne2041128:0"
@@ -1098,6 +1113,12 @@
   coursed-2021_gradelevel: crwdns2710505:0crwdne2710505:0
   coursee-2021_gradelevel: crwdns2710507:0crwdne2710507:0
   coursef-2021_gradelevel: crwdns2710509:0crwdne2710509:0
+  coursea-2022_gradelevel: crwdns2927736:0crwdne2927736:0
+  courseb-2022_gradelevel: crwdns2927738:0crwdne2927738:0
+  coursec-2022_gradelevel: crwdns2927740:0crwdne2927740:0
+  coursed-2022_gradelevel: crwdns2927742:0crwdne2927742:0
+  coursee-2022_gradelevel: crwdns2927744:0crwdne2927744:0
+  coursef-2022_gradelevel: crwdns2927746:0crwdne2927746:0
   accelerated_gradelevel: "crwdns56094:0crwdne56094:0"
   codeorg_platformtext: "crwdns21807:0crwdne21807:0"
   codeintl_platformtext: "crwdns23749:0crwdne23749:0"
@@ -1236,6 +1257,12 @@
   coursed-2021_shortdescription_congrats: crwdns2688496:0crwdne2688496:0
   coursee-2021_shortdescription_congrats: crwdns2688498:0crwdne2688498:0
   coursef-2021_shortdescription_congrats: crwdns2688500:0crwdne2688500:0
+  coursea-2022_shortdescription_congrats: crwdns2927748:0crwdne2927748:0
+  courseb-2022_shortdescription_congrats: crwdns2927750:0crwdne2927750:0
+  coursec-2022_shortdescription_congrats: crwdns2927752:0crwdne2927752:0
+  coursed-2022_shortdescription_congrats: crwdns2927754:0crwdne2927754:0
+  coursee-2022_shortdescription_congrats: crwdns2927756:0crwdne2927756:0
+  coursef-2022_shortdescription_congrats: crwdns2927758:0crwdne2927758:0
   codeorg_longdescription: "crwdns21574:0crwdne21574:0"
   codeintl_longdescription: "crwdns23751:0crwdne23751:0"
   thinkersmithspanish_longdescription: "crwdns25939:0crwdne25939:0"
@@ -1496,6 +1523,7 @@
   header_educate_beyond: "crwdns84064:0crwdne84064:0"
   header_educate_inspire: "crwdns84065:0crwdne84065:0"
   header_educate_community: "crwdns84066:0crwdne84066:0"
+  header_educate_requirements: "crwdns2917526:0crwdne2917526:0"
   header_educate_tools: "crwdns84067:0crwdne84067:0"
   header_about_us: "crwdns84068:0crwdne84068:0"
   header_about_leadership: "crwdns84069:0crwdne84069:0"
@@ -1806,6 +1834,8 @@
   ai_ibm_machine_learning_for_kids: 'crwdns2571368:0crwdne2571368:0'
   ai_ecs: 'crwdns2571370:0crwdne2571370:0'
   ai_ecs_description: "crwdns2571372:0crwdne2571372:0"
+  ai_aiedu_intro: 'crwdns2950542:0crwdne2950542:0'
+  ai_aiedu_intro_description: "crwdns2950544:0crwdne2950544:0"
   ai_elements: "crwdns2571374:0crwdne2571374:0"
   ai_elements_description: "crwdns2571376:0crwdne2571376:0"
   ai_cognimates: "crwdns2571378:0crwdne2571378:0"
@@ -1815,3 +1845,5 @@
   outbreak_tile_subtitle: "crwdns2711043:0crwdne2711043:0"
   outbreak_tile_alt: "crwdns2715287:0crwdne2715287:0"
   footer_cookie_notice: "crwdns2864047:0crwdne2864047:0"
+  top_hoc_tutorial_applab_alt_text: "crwdns2917528:0crwdne2917528:0"
+  minecraft_tile_alt: "crwdns2917530:0crwdne2917530:0"

@@ -79,7 +79,7 @@ class S3Packaging
   private def target_commit_hash(location)
     filename = "#{location}/commit_hash"
     return nil unless File.exist?(filename)
-    IO.read(filename)
+    File.read(filename)
   end
 
   # Creates a zipped package of the provided assets folder
@@ -101,7 +101,7 @@ class S3Packaging
     @logger.info "Creating #{package.path}"
     Dir.chdir(@source_location + '/' + sub_path) do
       # add a commit_hash file whose contents represent the key for this package
-      IO.write('commit_hash', @commit_hash)
+      File.write('commit_hash', @commit_hash)
       RakeUtils.system "tar -cz --exclude='*.cache.json' --file #{package.path} *"
     end
     @logger.info 'Created'
@@ -111,14 +111,14 @@ class S3Packaging
   def log_bundle_size
     stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
     Metrics.write_batch_metric(
-      stats['assets'].map do |asset|
+      stats['assets'].filter_map do |asset|
         next nil unless asset['name'].end_with? '.js'
         {
           name: 'bundle_size',
           metadata: asset['name'],
           value: asset['size'],
         }
-      end.compact
+      end
     )
   rescue => e
     # Just log and continue
@@ -197,7 +197,7 @@ class S3Packaging
       # https://github.com/aws/aws-sdk-ruby/issues/1149
       url = Aws::S3::Bucket.new(BUCKET_NAME, credentials: 0).object(s3_key).public_url
       File.open(package, 'wb') do |file|
-        IO.copy_stream open(url), file
+        IO.copy_stream URI.parse(url).open, file
       rescue OpenURI::HTTPError
         raise Aws::S3::Errors::NoSuchKey.new(nil, file.path)
       end

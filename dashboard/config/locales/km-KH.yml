@@ -368,7 +368,6 @@ km:
     popup:
       progress_for_user: ដំណើរការរបស់%{name}
       progress: ដំណើរការ​របស់​អ្នក
-      lines: បន្ទាត់​កូដ​សរុប៖ %{lines}
       close: បិទ
       mastery: គោល​គំនិត
       puzzle_map: ដំណាក់កាល
@@ -452,6 +451,7 @@ km:
     try_beta_courses: ថ្មី! សាកល្បងវគ្គសិក្សាសាកល្បងរបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥
       ។
   certificate_sponsor_message: "%{sponsor_name} បានជូនកាដូដល់អ្នក ដើម្បីឧបត្ថម្ភការសិក្សារបស់អ្នក ។"
+  certificate_hour_of_code: កម្មវិធី Hour of Code
   share:
     title: រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម
     description: រាល់គ្នាអាចរៀនបាននូវមុខវិជ្ជាវិទ្យាសាស្រ្តកំុព្យូទ័រ។​ អាចបង្កើតហ្គេម
@@ -600,10 +600,13 @@ km:
         math: គណិត​វិទ្យា
         science: វិទ្យាសាស្រ្ត
         la: អក្សរសាស្រ្ត
+        other: ផ្សេងៗ
       resources:
         kodable: Kodable
+        other: ផ្សេងៗ
       robotics:
         kodable: Kodable
+        other: ផ្សេងៗ
       email_opt_in:
         opt_in_yes: យល់ព្រម
         opt_in_no: ទេ

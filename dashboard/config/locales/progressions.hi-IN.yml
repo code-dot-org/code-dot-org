@@ -3,18 +3,48 @@ hi:
   data:
     progressions:
       '"If/Else" with the Bee': मधुमक्खी के साथ "इफ/एल्स"
+      8-Bit Binary Number Widget: 8-बिट बाइनरी नंबर विजेट
+      AI Lab and Isaac's Data: AI लैब और Isaac का डेटा
+      AI Lab and Kim's Data: AI लैब और Kim का डेटा
       AI Machine Learning - Video: AI मशीन प्रशिक्षण - वीडियो
+      'AI for Oceans: Fish vs Not Fish': 'महासागरों के लिए AI: मछली बनाम मछली नहीं'
+      'AI for Oceans: Types of Fish': 'महासागरों के लिए AI: मछली के प्रकार'
       'AI: Impact on Society - Video': 'AI: समाज पर प्रभाव - वीडियो'
       'AI: Training Data & Bias - Video': 'AI: प्रशिक्षण डेटा और पक्षपात - वीडियो'
       Accelerometer Events: 'त्वरणमापी इवेंट्स
 
 '
+      Add Content and HTML: सामग्री और HTML शामिल करें
+      Add Content and Structure to Your Page: अपने पेज में सामग्री और संरचना जोड़ें
+      Add Movement: मूवमेंट जोड़ें
+      Add Sprites: स्प्राइट्स जोड़ें
+      Add Style: स्टाइल जोड़ें
+      Add Style to Your Page: अपने पेज में स्टाइल जोड़ें
+      Add Text: टेक्स्ट जोड़ें
+      Add a Welcome Screen: वेलकम स्क्रीन जोड़ें
       Adding Images: चित्र शामिल करना
+      Adding New Screens: नई स्क्रीन्स जोड़ना
+      Adding Pages: पेज जोड़ना
       Adding Screens: स्क्रीनें शामिल करना
       Alien Defender: एलियन डिफेंडर
+      Alternative Datasets: वैकल्पिक डेटासेट्स
       Animate Your Scene: अपने सीन का एनिमेशन बनाएं
       App Lab Intro - Video: ऐप लैब परिचय - वीडियो
       'App Project: Screen Design': 'ऐप प्रोजेक्ट: स्टिकर डिजाइन'
+      'App: Choose a Kid''s Movie': 'ऐप: बच्चे की मूवी चुनें'
+      'App: Friend Finder': 'ऐप: फ्रेंड फाइंडर'
+      'App: Guess the Number': 'ऐप: संख्या का अनुमान लगाएं'
+      'App: How Many Countries': 'ऐप: कितने देश'
+      'App: Improved Pet App': 'ऐप: बेहतर पालतू ऐप'
+      'App: Is It Your Birthday?': 'ऐप: क्या आपका जन्मदिन है?'
+      'App: My Famous Birthday': 'ऐप: मेरा प्रसिद्ध जन्मदिन'
+      'App: National Parks': 'ऐप: राष्ट्रीय पार्क्स'
+      'App: Outfit Picker': 'ऐप: आउटफिट पिकर'
+      'App: Pet Chooser': 'ऐप: पालतू चयनकर्ता'
+      'App: Stamp Notebook': 'ऐप: स्टाम्प नोटबुक'
+      'App: Story Creator': 'ऐप: कहानी निर्माता'
+      'App: The Fastest Finger': 'ऐप: दि फास्टेस्ट फिंगर'
+      'App: Where Should I Live?': 'ऐप: मुझे कहाँ रहना चाहिए?'
       Arrays: श्रृंखला समूह
       Artist Intro with JR Hildebrand: JR Hildebrande के साथ आर्टिस्ट का परिचय
       Artist Intro with JR Hildebrande: JR Hildebrande के साथ आर्टिस्ट का परिचय
@@ -29,9 +59,12 @@ hi:
       Begin planning your project: अपने प्रोजेक्ट की योजना बनाना शुरू करें
       Begin planning your project_2018: अपने प्रोजेक्ट की योजना बनाना शुरू करें_2018
       Binary Bracelets - Unplugged Activity: युग्मक ब्रैस्लेट्स - अनप्लग्ड गतिविधि
+      Binary Number Widget: बाइनरी नंबर विजेट
       Binary Numbers: युग्मक संख्याएं
       Board Events: बोर्ड इवेंट्स
       Board Input and Output: बोर्ड इनपुट और आउटपुट
+      Book Recommender App: पुस्तक सिफारिशकर्ता ऐप
+      Book Recommender Model Card: पुस्तक सिफारिशकर्ता मॉडल कार्ड
       Boolean Comparison: बूलियन तुलना
       Build a Platform Jumper: प्लेटफॉर्म जम्पर बनाएं
       Build a Screen: स्क्रीन बनाएं
@@ -47,14 +80,22 @@ hi:
       Cake Survey: केक सर्वेक्षण
       Challenge: चुनौती
       Challenge Levels: चुनौती स्तर
+      'Challenge: Lists': 'चुनौती: सूचियाँ'
+      'Challenge: RGB Colors': 'चुनौती: RGB रंग'
       Challenges: चुनौतियां
       Change: बदलें
+      Check Your Work: अपने काम की जांच करें
+      Check-In Survey: चेक-इन सर्वेक्षण
       Checking for a Winner: विजेता की जांच हो रही है
+      'Choice Levels: Customize Your App': 'पसंद के स्तर: अपने ऐप को अनुकूलित करें'
       Choose Your Own Adventure: अपना खुद का एडवेंचर चुनें
       Choosing Good IDs: 'अच्छी ID चुनना
 
 '
+      Club Datasets: क्लब डेटासेट
+      Code Prediction: कोड भविष्यवाणी
       Code Your Own Flappy Game: अपनी खुद की फ्लैपी गेम को कोड करें
+      Code Your Page: अपने पेज को कोड करें
       Collector Game: कलेक्टर गेम
       Collision Detection: संघट्टन अभिज्ञान
       Collisions: संघट्टन
@@ -66,6 +107,7 @@ hi:
         गतिविधि
       'Conditionals: If Statements': 'सापेक्ष: इफ स्टेटमेंट्स'
       'Conditionals: If and If/Else Statements': 'सापेक्ष: इफ और इफ/एल्स स्टेटमेंट्स'
+      Control Your Player: अपने खिलाड़ी को नियंत्रित करें
       Course E Artist Project: कोर्स E कलाकार प्रोजेक्ट
       'Course E: Play Lab Project': 'कोर्स E: प्ले लैब प्रोजेक्ट'
       Course F Artist Project: कोर्स E कलाकार प्रोजेक्ट
@@ -76,23 +118,34 @@ hi:
       Crack Random Substitution: बेतरतीब प्रतिस्थापन सुलझाएं
       Crack a Caesar Cipher: सीजर सिफर सुलझाएं
       Create Your Own Animation: अपना खुद का एनिमेशन बनाएं
+      Create Your Sprites: अपने स्प्राइट्स बनाएं
+      Create a Background: पृष्ठभूमि बनाएं
+      Create a Google Form: गूगल फॉर्म बनाएं
       Create a Story: कहानी बनाएं
+      Create an App in App Lab: ऐप लैब में एक ऐप बनाएं
       Create your project: अपना प्रोजेक्ट बनाएं
       Customize: अनुकूलित करें
+      Customize Your App: अपनी ऐप को अनुकूलित करें
       Dance Crews: डांस कर्मीदल
       Data Visualization: डेटा विजुलाइज़ेशन
       De-bugging with the Step Button: स्टेप बटन के साथ डी-बगिंग
       Debugging: डीबगिंग
       Debugging with the Step Button: स्टेप बटन के साथ डीबगिंग
+      'Demo App: Interactive Card': 'डेमो ऐप: इंटरएक्टिव कार्ड'
       Demo Apps: डेमो ऐप्स
       Design Mode: डिजाइन मोड
       Design Your Game: अपनी गेम डिजाइन करें
       Design Your Prototype: अपना प्रोटोटाइप डिजाइन करें
       Design a Screen for your App: अपने ऐप के लिए स्क्रीन डिजाइन करें
+      Design an AI App - AI Lab: एक AI ऐप डिज़ाइन करें - AI लैब
+      Design an AI App - App Lab: एक AI ऐप डिज़ाइन करें - ऐप लैब
       Designing Screens with Code: कोड के साथ स्क्रीन डिजाइन करना
       Designing for Accessibility: सुलभता के लिए डिजाइन करना
       Digital Sharing - Unplugged Activity: डिजीटल शेयरिंग - अनप्लग्ड गतिविधि
+      Draw Your Background: अपनी पृष्ठभूमि चित्रित करें
+      Draw a Background: पृष्ठभूमि चित्रित करें
       Drawing: ड्राइंग
+      Driver Alert System: ड्राईवर चेतावनी प्रणाली
       End of Course Projects: समाप्ति कोर्स प्रोजेक्ट
       Escape Room Example: कमरे से बचकर निकलने का उदाहरण
       Event Types: इवेंट के प्रकार
@@ -100,7 +153,10 @@ hi:
       Events and Linking Screens: इवेंट्स और लिंकिंग स्क्रीनें
       Events and Properties: इवेंट्स और विशेषताएं
       Example: 'उदाहरण:'
+      Example Animated Scene: उदाहरण एनिमेटेड दृश्य
       Example App Types: उदाहरण ऐप प्रकार
+      'Example App: Zoo Classification': 'उदाहरण ऐप: चिड़ियाघर वर्गीकरण'
+      Example Apps: उदाहरण ऐप्स
       Example Projects: उदाहरण प्रोजेक्ट्स
       Example projects: उदाहरण प्रोजेक्ट
       Exemplar Personal Websites: नमूना निजी वेबसाइटें
@@ -116,6 +172,8 @@ hi:
       Exploring CS in Entertainment: मनोरंजन में CS की पड़ताल करना
       Exploring more CSS: अधिक CSS की पड़ताल करना
       Extra: अतिरिक्त
+      Extra Challenge: अतिरिक्त चुनौती
+      'Extra Challenge: Sound Board': 'अतिरिक्त चुनौती: साउंड बोर्ड'
       Final Room Escape App: फाइनल रूम एस्केप ऐप
       Find the Wizard: जादूगर ढूंढें
       Finish a Screen: स्क्रीन समाप्त करें
@@ -135,6 +193,7 @@ hi:
       Free Play: फ्री प्ले
       'Free Play: Make a Scene': 'फ्री प्ले: दृश्य बनाएं '
       'Free Play: Make an Interactive Scene': 'फ्री प्ले: संवादात्मक दृश्य बनाएं '
+      Fruit and Veggie Explorer: फल और सब्जी एक्सप्लोरर
       Functions: कार्य
       Functions with Parameters: मापदंडों के साथ फंक्शन
       Get In Formation: सुव्यवस्थित क्रम में प्रवेश करें
@@ -142,6 +201,7 @@ hi:
       Getting Properties: गेटिंग विशेषताएं
       Graph Paper Programming - Unplugged Activity: ग्राफ पेपर प्रोग्रामिंग - अनप्लग्ड
         गतिविधि
+      Green Glass Door: ग्रीन ग्लास डोर
       Guess The Number: संख्या का अंदाजा लगाएं
       Headings: शीर्षक
       Hello World: हैलो दुनिया
@@ -150,19 +210,29 @@ hi:
       Ice Age Loops: हिमयुग लूप्स
       Images and Sounds: चित्र और ध्वनियां
       Images in HTML: HTML में चित्र
+      Import Your Model: अपना मॉडल आयात करें
+      Import a Model: मॉडल आयात करें
+      Importing Your Model: अपना मॉडल आयात करना
+      Improved Shoe Recommender: बेहतर जूता सिफारिशकर्ता
+      Incorporate Feedback: फीडबैक शामिल करें
       Innovation Research: इनोवेशन रिसर्च
       Input Examples: इनपुट उदाहरण
       Input with If-Else: इफ-एल्स के साथ इनपुट
       InspirationalArtwork: InspirationalArtwork
+      Intro to Flyer Game: फ्लायर गेम से परिचय
       Intro to For Loops: फॉर लूप्स का परिचय
+      Intro to Side Scrollers: साइड स्क्रॉलर्स से परिचय
       Intro to Sprites: स्प्राइट्स का परिचय
       Intro to Variables: वेरिएबल्स का परिचय
       Introducing Sprite Lab: स्प्राइट लैब का परिचय
       Introduction to Arrays: श्रृंखला समूहों का परिचय
+      Isaac's Survey Data: Isaac का सर्वेक्षण डेटा
       Iteration and Parameters: पुनरावृत्ति और मापदंड
       Keep On Dancing!: डांस करते रहें!
       Keeping Data Secret: डेटा को गोपनीय रखना
       Keyboard Input: कीबोर्ड इनपुट
+      Kim's Survey: Kim का सर्वेक्षण
+      Kim's Survey Data: Kim का सर्वेक्षण डेटा
       LED Apps: LED ऐप्स
       Layout with CSS: CSS के साथ लेआउट
       Learning from Simulations: सिम्युलेशन से सीखना
@@ -173,8 +243,12 @@ hi:
       Linking Pages: पृष्ठों को लिंक करना
       Linking Screens: स्क्रीनों को लिंक करना
       Lists: सूचियाँ
+      Looking for Patterns: पैटर्न्स को देखना
+      Looping: लूपिंग
       Loops with the Artist: आर्टिस्ट के साथ लूप्स
+      Make Your Sprites: अपने स्प्राइट्स बनाएं।
       Make a Prediction: अनुमान लगाएं
+      Make an Interactive Card: एक संवादात्मक कार्ड बनाएं
       Make it Interactive: इसे संवादात्मक बनाएं
       Making Music: संगीत बनाना
       Making Scenes: दृश्य बनाना
@@ -183,6 +257,8 @@ hi:
       Making an Interactive Card: संवादात्मक कार्ड बनाना
       'Maze Intro: Programming with Blocks': 'भूलभुलैया का परिचय: ब्लॉक्स के साथ प्रोग्रामिंग'
       Measures: संगीत प्रविधियां
+      Medical Dataset Model Cards: मेडिकल डेटासेट्स मॉडल कार्ड्स
+      Medical Priority App: मेडिकल प्राथमिकता ऐप
       'Minecraft: Hero''s Journey': 'Minecraft: हीरो का सफर'
       'Mini-Project: About Me': स्प्राइट लैब के साथ मेरे बारे में
       'Mini-Project: Alien Dance Moves': 'लघु-प्रोजेक्ट: एलियन डांस मूव्स'
@@ -228,14 +304,20 @@ hi:
       'Overview: onEvent': संक्षिप्त विवरण - onEvent
       'Overview: setPosition': 'संक्षिप्त विवरण: setPosition'
       Pair Programming: जोड़ी प्रोग्रामिंग
+      Pet Recommender: पालतू सिफारिशकर्ता
       Picturing Data: तस्वीरों वाला डेटा
+      Pizza Party Data: पिज़्ज़ा पार्टी डेटा
+      Pizza Recommendations: पिज़्ज़ा सिफारिशें
       Plan Your Project: अपने प्रोजेक्ट की योजना बनाएं
+      Plan Your Scene: अपने दृश्य की योजना बनाएं
       Planning: नियोजन
       Platform Jumper - Background and Variables: प्लेटफॉर्म जम्पर - पृष्ठभूमि और
         वेरिएबल्स
       Platform Jumper - Items: प्लेटफॉर्म जम्पर - आइटमें
       Platform Jumper - Platforms: प्लेटफॉर्म जम्पर - प्लेटफॉर्म्स
       Platform Jumper - Player: प्लेटफॉर्म जम्पर - प्लेयर
+      Platform Jumper Review: प्लेटफॉर्म जम्पर समीक्षा
+      Player Controls: खिलाड़ी नियंत्रण
       Playing Notes: नोट्स प्ले करना
       Playing with Notes: नोट्स के साथ प्ले करना
       Polling Events: पोलिंग इवेंट्स
@@ -258,8 +340,14 @@ hi:
       Properties: गुण
       Publishing Your Website: आपकी वेबसाइट का प्रकाशन
       Quarter Notes: क्वार्टर नोट्स
+      Quick Check: त्वरित जांच
       RGB Exploration: RGB पड़ताल
+      Raspado Recommender: रास्पाडो सिफारिशकर्ता
       Reading Sensors: संवेदकों को पढ़ना
+      Recognizing Expressions: भावों को पहचानना
+      Recognizing Fish: मछली को पहचानना
+      Recognizing Fish Features: मछली के गुणों को पहचानना
+      Recognizing Shapes: आकृतियों को पहचानना
       Reflection: प्रतिबिंब
       Relay Programming - Unplugged Activity: रिले प्रोग्रामिंग - अनप्लग्ड गतिविधि
       Repeat Blocks: दोहराएं ब्लॉक्स
@@ -269,14 +357,36 @@ hi:
       Repeat Until Statements: तक स्टेटमेंट्स दोहराएं
       Representing Images: चित्र प्रस्तुत करना
       Review: समीक्षा करें
+      Review Your Animated Scene: अपने एनिमेटेड दृश्य की समीक्षा करें
+      Review Your App: अपने ऐप की समीक्षा करें
+      Review Your Game: अपने गेम की समीक्षा करें
+      Review Your Page: अपने पेज की समीक्षा करें
+      Review Your Scene: अपने दृश्य की समीक्षा करें
+      'Review: CSS': 'समीक्षा: CSS'
+      'Review: HTML': 'समीक्षा: HTML'
       Run a simulation: सिम्युलेशन चलाएं
+      Safari App: सफारी ऐप
+      Safari Model: सफारी मॉडल
+      Same Game: समान गेम
+      Sample Apps for Good: सुविधा के लिए नमूना ऐप्स
+      Sample Games: नमूना गेम्स
+      Sample Personal Web Pages: नमूना व्यक्तिगत वेब पेज
+      Sample Personal Websites: नमूना व्यक्तिगत वेबसाइटें
       Sample Programs: नमूना प्रोग्राम
+      Sample Web Page: नमूना वेब पेज
+      Sample Website: नमूना वेबसाइट
+      Scoring & Scoreboard: स्कोरिंग और स्कोरबोर्ड
       Screen Design: स्क्रीन डिजाइन
       Sensor Events: संवेदक इवेंट्स
       Sensors to Colors: संवेदकों से रंग
+      Set Up Sprites: स्प्राइट्स सेट करें
       Setting Properties: विशेषताएं सेट करना
       Shapes and the Draw Loop: आकृतियां और ड्रॉ लूप
       Share Your App: अपना ऐप साझा करना
+      Share Your Pages: अपने पेज साँझा करें
+      Share Your Stylesheets: अपनी स्टाइलशीट्स सांझी करें
+      Shoe Recommendation Survey: जूता सिफारिश सर्वेक्षण
+      Shoe Recommender: जूता सिफारिशकर्ता
       Side Scroller: साइड स्क्रॉलर
       Simple Circuits: सामान्य सर्किट
       Skill Building: कौशल विकास
@@ -288,6 +398,7 @@ hi:
       Speed it Up, Slow it Down: इसकी गति तेज़ करें, इसकी गति धीमी करें
       Sprite Lab Project: स्प्राइट लैब प्रोजेक्ट
       Sprite Movement: स्प्राइट गतिविधि
+      Sprite Properties: स्प्राइट्स की विशेषताएं
       Sprites and the Draw Loop: स्प्राइट्स और ड्रॉ लूप
       Star Chaser: Star Chaser
       Styling Text: स्टाइलिंग टेक्स्ट
@@ -310,8 +421,12 @@ hi:
       The Right App - Unplugged Activity: सही ऐप - अनप्लग्ड गतिविधि
       Top Websites: प्रमुख वेबसाइटें
       Train AI to Clean the Ocean: AI को समुद्र साफ करने के लिए प्रशिक्षित करें
+      Train a Model in AI Lab: AI लैब में मॉडल को प्रशिक्षित करें
+      Train an AI to Clean the Ocean: समुद्र को साफ करने के लिए AI को प्रशिक्षित करें
       UI Element Properties: UI एलिमेंट विशेषताएं
+      Ultimate Shoe Recommender: अंतिम जूता सिफारिशकर्ता
       Unit 5 Lesson 1 Overview: इकाई 5 पाठ 1 संक्षिप्त विवरण
+      Upload Your Images: अपनी इमेजेस अपलोड करें
       User Interface: उपयोगकर्ता इंटरफेस
       Using Getters and Setters: गेटर्स एंड सेटर्स का प्रयोग करना
       Using HTML Tags: HTML टैग्स का प्रयोग करना
@@ -332,10 +447,12 @@ hi:
       'Video:  Text  and Prompts': 'वीडियो: टेक्सट और सुझाव'
       'Video: "If/Else"': 'वीडियो: "इफ/एल्स"'
       'Video: AI: What is Machine Learning?': 'वीडियो: AI: मशीन प्रशिक्षण क्या है?'
+      'Video: Amazon and Data': 'वीडियो: अमेज़न और डेटा'
       'Video: Artist Intro with JR Hildebrand': 'वीडियो: JR Hildebrande के साथ आर्टिस्ट
         का परिचय'
       'Video: Artist Intro with JR Hildebrande': 'वीडियो: JR Hildebrande के साथ आर्टिस्ट
         का परिचय'
+      'Video: Circuits and Logic': 'वीडियो: सर्किट्स और तर्क'
       'Video: Code Your Own Flappy Game': 'वीडियो: अपनी खुद की फ्लैपी गेम बनाएं'
       'Video: Conditional Statements': 'व्हिडिओ: सापेक्ष स्टेटमेंट्स'
       'Video: Conditionals: If Statements': 'वीडियो: सापेक्ष: इफ स्टेटमेंट्स'
@@ -347,22 +464,32 @@ hi:
       'Video: Dance Party Properties': 'वीडियो: डांस पार्टी विशेषताएं'
       'Video: Dance Party Warm Up': 'वीडियो: डांस पार्टी की तैयारी'
       'Video: De-bugging with the Step Button': 'वीडियो: स्टेप बटन के साथ डी-बगिंग'
+      'Video: Debugging': 'वीडियो: डीबगिंग'
       'Video: Debugging with Scrat ': 'वीडियो: स्क्रैट के साथ डीबगिंग '
       'Video: Debugging with the Step Button': 'वीडियो: स्टेप बटन के साथ डीबगिंग'
       'Video: Events': 'वीडियो: इवेंट्स'
       'Video: Follow The Digital Trail': 'वीडियो: डिजीटल ट्रेल का अनुसरण करें'
+      'Video: For Loops': 'वीडियो: फॉर लूप्स'
       'Video: Getting Loopy': 'वीडियो: लूपी होना'
       'Video: Happy Maps - Unplugged Activity': 'वीडियो: हैप्पी मैप्स - अनप्लग्ड गतिविधि '
       'Video: Harvesting with Conditionals': 'वीडियो: सापेक्षों के साथ कटाई करना'
+      'Video: How Search Works': 'वीडियो: खोज कैसे काम करती है'
       'Video: How to Create a Simple Function': 'वीडियो: साधारण फंक्शन कैसे बनाएं'
       'Video: How to Make a Sprite': 'वीडियो: स्प्राइट कैसे बनाएं'
+      'Video: IOSP Model': 'वीडियो: IOSP मॉडल'
       'Video: Ice Age Loops': 'वीडियो: हिमयुग लूप्स'
       'Video: If/Else Statements': 'व्हिडिओ: इफ/ एल्स स्टेटमेंट्स'
+      'Video: Impact on Society': 'वीडियो: समाज पर प्रभाव'
       'Video: Impacts on Society': 'वीडियो: समाज पर प्रभाव '
+      'Video: Intro to CSS - Part 1': 'वीडियो: CSS से परिचय - भाग 1'
+      'Video: Intro to CSS - Part 2': 'वीडियो: CSS से परिचय - भाग 2'
+      'Video: Intro to Design Mode': 'वीडियो: डिजाइन मोड से परिचय'
       'Video: Introducing Sprite Lab': 'वीडियो: स्प्राइट लैब का परिचय'
       'Video: Introduction to Play Lab': 'वीडियो: प्ले लैब का परिचय'
+      'Video: Introduction to Variables': 'वीडियो: वेरिएबल्स से परिचय'
       'Video: Loops in Artist': 'वीडियो: आर्टिस्ट में लूप्स'
       'Video: Loops with the Artist': 'वीडियो: आर्टिस्ट के साथ लूप्स'
+      'Video: Managing Disagreement': 'वीडियो: असहमति का प्रबंधन'
       'Video: Maze Intro - Programming with Blocks': 'वीडियो: भूलभुलैया का परिचय -
         ब्लॉक्स के साथ प्रोग्रामिंग'
       'Video: Maze Intro - Programming with Blocks ': 'वीडियो: भूलभुलैया का परिचय
@@ -384,6 +511,7 @@ hi:
         यात्रा जलचर तक दोहराएं'
       'Video: Nested Loops': 'वीडियो: नेस्टड लूप्स'
       'Video: Nested Loops with the Bee': 'वीडियो: मधुमक्खी के साथ नेस्टड लूप्स'
+      'Video: Netflix and Data': 'वीडियो: नेटफ्लिक्स और डेटा'
       'Video: Outbreak Simulator: Introduction': 'वीडियो: बहुत-से स्प्राइट्स'
       'Video: Pair Programming': 'वीडियो: जोड़ी प्रोग्रामिंग'
       'Video: Pair Programming ': 'वीडियो: जोड़ी प्रोग्रामिंग '
@@ -391,6 +519,7 @@ hi:
       'Video: Programming with Blocks': 'वीडियो: ब्लॉक्स के साथ प्रोग्रामिंग'
       'Video: Programming with Rey and BB-8': 'वीडियो: रे और BB-8 के साथ प्रोग्रामिंग'
       'Video: Properties': 'वीडियो: विशेषताएं'
+      'Video: Publishing Your Website': 'वीडियो: अपनी वेबसाइट का प्रकाशन'
       'Video: Repeat Blocks': 'वीडियो: दोहराएं ब्लॉक्स'
       'Video: Repeat Blocks with BB-8': 'वीडियो: BB-8 के साथ दोहराएं ब्लॉक्स'
       'Video: Repeat Blocks with the Artist': 'वीडियो: आर्टिस्ट के साथ दोहराएं ब्लॉक्स'
@@ -398,6 +527,7 @@ hi:
       'Video: Repeat Until Statements': 'वीडियो: तक स्टेटमेंट्स दोहराएं '
       'Video: Sprites in Action': 'वीडियो: क्रिया में स्प्राइट्स'
       'Video: Star Wars Project': 'वीडियो: Star Wars प्रोजेक्ट'
+      'Video: Teamwork': 'वीडियो: टीमवर्क'
       'Video: Text and Prompts': 'वीडियो: टेक्सट और सुझाव'
       'Video: The Artist in Code Studio': 'वीडियो: Code Studio में आर्टिस्ट'
       'Video: The Big Event - Unplugged Activity': 'वीडियो: विशाल इवेंट - अनप्लग्ड
@@ -405,10 +535,13 @@ hi:
       'Video: The Collector': 'वीडियो: कलेक्टर'
       'Video: The Harvester': 'वीडियो: कटाई मशीन'
       'Video: Training Data & Bias': 'वीडियो: प्रशिक्षण डेटा और पक्षपात'
+      'Video: Training Data and Bias': 'वीडियो: प्रशिक्षण डेटा और पूर्वाग्रह'
       'Video: Unplugged Variables in Envelopes': 'वीडियो: एनवलोप्स में अनप्लग्ड वेरिएबल्स'
       'Video: Using the Repeat Block': 'वीडियो: दोहराएं ब्लॉक का उपयोग करना'
       'Video: Variables in Artist': 'वीडियो: आर्टिस्ट में वेरिएबल्स'
       'Video: Warm Up': 'वीडियो: तैयारी'
+      'Video: Waze and Data': 'वीडियो: वेज़ और डेटा'
+      'Video: What is Machine Learning?': 'वीडियो: मशीन लर्निंग क्या है?'
       'Video: While Loops with the Farmer': 'वीडियो: फार्मर के साथ व्हाइल लूप्स'
       'Video: Wrap-up': 'वीडियो: समाप्ति'
       Warm Up: तैयार हों
@@ -418,7 +551,11 @@ hi:
       While Loops with the Farmer: फार्मर के साथ व्हाइल लूप्स
       'Widget: Text Compression': 'विजेट : टेक्सट संक्षिप्तीकरण'
       Wrap-up: समाप्ति
+      'You Choose: Improve Your App': 'आप चुनें: अपने ऐप में सुधार करें'
+      'You Choose: Restaurant Recommendations': 'आप चुनें: रेस्तरां सिफारिशें'
       Your Personal Website: आपकी निजी वेबसाइट
+      Your Team Project: आपका टीम प्रोजेक्ट
+      Zoo Predictions: चिड़ियाघर संबंधी भविष्यवाणियां
       getText vs getNumber: getText बनाम getNumber
       isTouching: isTouching
       setProperty: setProperty

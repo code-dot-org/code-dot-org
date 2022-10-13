@@ -13,66 +13,31 @@ social:
   "og:image:height": 630
 ---
 <a id="top"></a>
-<img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px; margin-top:50px"/>
 
-
-<div class="col-75" style="padding:25px; border-radius:15px; background-image: url('/images/fit-1000x300/csjourneys/rtc-banner2.png')">
-  <h1 style="margin-bottom:15px; margin-top:15px; color:black">What's it like to take CS in college?</h1>
-  <h2 style="margin-top:0; color:black">Monthly discussions for young women, by young women</h2>
-  <p style="color:black">Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey, in this monthly discussion series from Code.org and Rewriting the Code.</p>
-</div>
-<div class="col-25" style="text-align:center; padding:10px; padding-left:15px; padding-right:15px; border-radius:15px">
-  <h3 style="margin-top:0"><strong>Presented by:</strong></h3>
-  <br>
-  <a href="https://rewritingthecode.org/" target="_blank">
-  <img src="/images/csjourneys/rtc-logo.png" style="width: 70%; margin-bottom: 12px" alt="Rewriting the Code logo">
-  </a>
-  <br>
-  <br>
-  <img src="/images/logo.svg" style="width: 25%" alt="Code.org logo">
-</div>
-
-<div style="clear: both; margin-bottom:40px"></div>
-
-<ul>
-    <li><a href="#upcoming">Upcoming discussions</a></li>
-    <li><a href="#past">Past discussions</a></li>
-</ul>    
+<h1 style="margin-top:25px"><a href="/csjourneys"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/></a><br/>What's it like to take CS in college?</h1>
 <br>
 
-<a id="upcoming"></a>
-
-<div class="col-100" style="padding:25px; background-color: #7665a0; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Internships + Non-SWE Positions with Companies</h2>
+<div class="col-60" style="border-radius:15px;">
+  <h2 style="margin-top:0;">Discussions for young women, by young women</h2>
+  <p>Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey, in these chat-style discussions from Code.org and Rewriting the Code.</p>
 </div>
-<div class="col-100" style="padding:25px; border: 1px solid #7665a0; border-radius:0 0 15px 15px; border-top:none">
-  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, April 27th at 8 pm EDT / 5 pm PDT</strong></h3>
-  <p>Join us as Rewriting the Code (RTC) college women attending University of Maryland, Williams College, Barnard College, Princeton, and Duke discuss what it's like to apply for, interview for, and participate in internships. Panelists will also discuss roles other than software engineering that a CS degree can lead to.</p>
-  <a href="https://us02web.zoom.us/webinar/register/WN_Ju05I7UETs6PADD8ZV659w" target="_blank"><button>Register</button></a> 
-  <br>
-  <br>
-  <p>Featuring:</p>
-  <ul>
-    <li>Archika Dogra, Sophomore at <a href="https://www.princeton.edu/" target="_blank">Princeton University</a></li>
-    <li>Esha Kapoor, Sophomore at <a href="https://umd.edu/" target="_blank">University of Maryland</a></li>
-    <li>Hana Memon, Sophomore at <a href="https://barnard.edu/" target="_blank">Barnard College</a></li>
-    <li>Anh (Rachel) Nguyen, Junior at <a href="https://www.williams.edu/" target="_blank">Williams College</a></li>
-    <li>Yihan Shi, Junior at <a href="https://duke.edu/" target="_blank">Duke University</a></li>
-  </ul>
-  <br>
-  <a href="#top">Back to top</a>
+
+<div class="col-33" style="padding: .5em 1em 0 0; float: right;">
+  <h4 style="margin-top:0">Presented by:</h4>
+  <a href="https://rewritingthecode.org/" target="_blank">
+  <img src="/images/csjourneys/rtc-logo.png" style="width: 190px; margin: 0 1em 1em 0" alt="Rewriting the Code logo">
+  </a>
+  <img src="/images/logo.svg" style="width: 80px; margin-top: -1em;" alt="Code.org logo">
 </div>
-<div style="clear:both"></div>
 
-<div style="clear: both; margin-bottom:40px"></div>
 
-<a id="past"></a>
-<h2>Past discussions</h2>
+<div style="clear: both; margin-bottom:30px"></div>
+
 
 <div class="col-40" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ rtc_panel1 }}
 </div>
-<div class="col-60" style="padding:-top:15px; padding-left: 10px">
+<div class="col-60" style="padding-top:15px; padding-left: 10px">
   <h3><strong>The Transition from High School to College</strong></h3>
   <p>This first discussion is all about transitions! Learn how Computer Science 101 is different than taking CS in high school. Get the inside scoop on what lectures and projects are like, who to seek help from and when (TAs and office hours), and the importance of finding/building community.</p>
 </div>
@@ -82,7 +47,7 @@ social:
 <div class="col-40" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ rtc_panel2 }}
 </div>
-<div class="col-60" style="padding:-top:15px; padding-left: 10px">
+<div class="col-60" style="padding-top:15px; padding-left: 10px">
   <h3><strong>Day in the Life of a Woman College Student in CS</strong></h3>
   <p>Rewriting the Code (RTC) college women attending Columbia, Dartmouth, Michigan, Stanford and UCLA share their experiences as computer science majors. The discussion includes classes to take in HS to be prepared for college courses, what classes are like, navigating impostor syndrome, and ways to get involved in CS outside of class.</p>
 </div>
@@ -92,13 +57,19 @@ social:
 <div class="col-40" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ rtc_panel3 }}
 </div>
-<div class="col-60" style="padding:-top:15px; padding-left: 10px">
+<div class="col-60" style="padding-top:15px; padding-left: 10px">
   <h3><strong>Overcoming Imposter Syndrome: Building Confidence & Belonging</strong></h3>
   <p>In our third panel, Rewriting the Code (RTC) college women attending Stanford, Yale, the Universities of Washington, Maryland, and British Columbia share their experiences as computer science majors. Hear about their experiences with tech internships, navigating and overcoming imposter syndrome, and strategies for building confidence and belonging.</p>
 </div>
 
 <div style="clear: both"></div>
 
+<div class="col-40" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ rtc_panel4 }}
+</div>
+<div class="col-60" style="padding-top:15px; padding-left: 10px">
+  <h3><strong>Internships + Non-SWE Positions with Companies</strong></h3>
+  <p>In our fourth panel, Rewriting the Code (RTC) college women attending the University of Maryland, Williams College, Barnard College, Princeton, and Duke discuss what it's like to apply for, interview for, and participate in internships, along with discussing roles that a CS degree can lead to outside of software engineering.</p>
+</div>
 
-
-
+<div style="clear: both"></div>

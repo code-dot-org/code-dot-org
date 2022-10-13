@@ -12,6 +12,6 @@
 #  index_ug_student_resources_on_unit_group_id_and_resource_id  (unit_group_id,resource_id) UNIQUE
 #
 class UnitGroupsStudentResource < ApplicationRecord
-  belongs_to :unit_group
-  belongs_to :resource
+  belongs_to :unit_group, optional: true
+  belongs_to :resource, optional: true
 end

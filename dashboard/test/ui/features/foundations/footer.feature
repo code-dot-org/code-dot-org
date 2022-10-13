@@ -2,10 +2,10 @@ Feature: Checking the footer appearance
 
   @eyes
   Scenario: Desktop puzzle using light small footer
+    When I open my eyes to test "Desktop puzzle using light small footer"
     Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1?noautoplay=true"
     And I wait for the page to fully load
 
-    When I open my eyes to test "Desktop puzzle using light small footer"
     Then I see no difference for "small footer"
 
     When I press the first ".copyright-link" element
@@ -37,10 +37,10 @@ Feature: Checking the footer appearance
 
   @eyes
   Scenario: Desktop Minecraft puzzle using dark small footer
+    When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
     And I wait for the page to fully load
 
-    When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
     Then I see no difference for "small footer"
 
     When I press the first ".copyright-link" element
@@ -51,6 +51,7 @@ Feature: Checking the footer appearance
 
   @eyes
   Scenario: Desktop Star Wars share small footer
+    When I open my eyes to test "Desktop Star Wars share small footer"
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15?noautoplay=true"
     And I wait for the page to fully load
     And I press "runButton"
@@ -60,7 +61,6 @@ Feature: Checking the footer appearance
     And I navigate to the share URL
     And I wait until element ".small-footer-base" is visible
 
-    When I open my eyes to test "Desktop Star Wars share small footer"
     Then I see no difference for "small footer"
 
     When I open the small footer menu
@@ -86,6 +86,7 @@ Feature: Checking the footer appearance
   # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
   @eyes @skip
   Scenario: Desktop Minecraft share small footer
+    When I open my eyes to test "Desktop Minecraft share small footer"
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
     And I wait for the page to fully load
     And I press "runButton"
@@ -93,7 +94,6 @@ Feature: Checking the footer appearance
     And I navigate to the share URL
     And I wait until element ".small-footer-base" is visible
 
-    When I open my eyes to test "Desktop Minecraft share small footer"
     Then I see no difference for "small footer"
 
     When I open the small footer menu
@@ -124,12 +124,12 @@ Feature: Checking the footer appearance
 
   @eyes @as_student
   Scenario: Desktop Applab share small footer
+    When I open my eyes to test "Desktop Applab share small footer"
     Given I start a new Applab project
     And I navigate to the shared version of my project
     And I wait until element ".small-footer-base" is visible
     And I wait for 2 seconds
 
-    When I open my eyes to test "Desktop Applab share small footer"
     Then I see no difference for "small footer"
 
     When I open the small footer menu
@@ -142,6 +142,7 @@ Feature: Checking the footer appearance
 
   @eyes_mobile @skip
   Scenario: Mobile Star Wars share small footer
+    When I open my eyes to test "Mobile Star Wars share small footer"
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
@@ -158,7 +159,6 @@ Feature: Checking the footer appearance
     # pin-to-home-screen popup go away
     And I wait for 10 seconds
 
-    When I open my eyes to test "Mobile Star Wars share small footer"
     Then I see no difference for "small footer"
 
     When I open the small footer menu
@@ -172,6 +172,7 @@ Feature: Checking the footer appearance
   # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
   @eyes_mobile @skip
   Scenario: Mobile Minecraft share small footer
+    When I open my eyes to test "Mobile Minecraft share small footer"
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
@@ -186,7 +187,6 @@ Feature: Checking the footer appearance
     # pin-to-home-screen popup go away
     And I wait for 10 seconds
 
-    When I open my eyes to test "Mobile Minecraft share small footer"
     Then I see no difference for "small footer"
 
     When I open the small footer menu
@@ -199,6 +199,7 @@ Feature: Checking the footer appearance
 
   @eyes_mobile @as_student
   Scenario: Mobile Applab share small footer
+    When I open my eyes to test "Mobile Applab share small footer"
     Given I am on "http://studio.code.org/home"
     And I rotate to landscape
     And I start a new Applab project
@@ -210,7 +211,6 @@ Feature: Checking the footer appearance
     # pin-to-home-screen popup go away
     And I wait for 20 seconds
 
-    When I open my eyes to test "Mobile Applab share small footer"
     Then I see no difference for "small footer"
 
     When I open the small footer menu

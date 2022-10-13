@@ -1,4 +1,5 @@
-require pegasus_dir 'data/csv'
+require lib_dir 'cdo/data/csv_to_sql_table'
+require lib_dir 'cdo/data/google_sheet_to_csv'
 
 $gdrive_ = nil
 
@@ -9,12 +10,12 @@ namespace :seed do
 
   desc 'import any CSV files that were modified since the last import'
   task :migrate do
-    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import}
+    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i, PEGASUS_DB).import}
   end
 
   desc 'drop and import all CSV files'
   task :reset do
-    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i).import!}
+    Dir.glob(pegasus_dir('data/*.csv')) {|i| CsvToSqlTable.new(i, PEGASUS_DB).import!}
   end
 
   desc 'download modified Google Sheets as CSV'

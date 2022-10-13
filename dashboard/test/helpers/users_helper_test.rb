@@ -7,14 +7,13 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_summarize_user_progress
     script = create(:script, :with_levels, levels_count: 3)
-    user = create :user, total_lines: 42
+    user = create :user
 
     # Verify results for no completed levels.
     assert_equal(
       {
-        linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
+        isInstructor: false,
         progress: {},
         current_lesson: script.lessons.first.id,
         completed: false,
@@ -28,9 +27,8 @@ class UsersHelperTest < ActionView::TestCase
 
     assert_equal(
       {
-        linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
+        isInstructor: false,
         progress: {
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
@@ -45,9 +43,8 @@ class UsersHelperTest < ActionView::TestCase
     exclude_level_progress = true
     assert_equal(
       {
-        linesOfCode: 42,
         lockableAuthorized: false,
-        linesOfCodeText: 'Total lines of code: 42',
+        isInstructor: false,
       },
       summarize_user_progress(script, user, exclude_level_progress)
     )
@@ -56,7 +53,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_pages
-    user = create :user, total_lines: 42
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
@@ -102,9 +99,8 @@ class UsersHelperTest < ActionView::TestCase
     # Validate.
     assert_equal(
       {
-        linesOfCode: 42,
-        linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
+        isInstructor: false,
         progress: {
           ul.level_id => {
             status: LEVEL_STATUS.perfect,
@@ -121,7 +117,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_bubble_choice
-    user = create :user, total_lines: 150
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
@@ -135,9 +131,8 @@ class UsersHelperTest < ActionView::TestCase
     create :user_level, user: user, level: sublevel2, script: script, best_result: 20
 
     expected_summary = {
-      linesOfCode: 150,
-      linesOfCodeText: 'Total lines of code: 150',
       lockableAuthorized: false,
+      isInstructor: false,
       progress: {
         # BubbleChoice levels return status/result using the sublevel with the highest best_result.
         level.id => {
@@ -160,7 +155,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_with_locked
-    user = create :user, total_lines: 42
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
 
@@ -253,7 +248,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress_non_lockable
-    user = create :user, total_lines: 42
+    user = create :user
     script = create :script
     lesson_group = create :lesson_group, script: script
 
@@ -310,7 +305,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # Create BubbleChoice level with sublevels, script_level, and user_levels.
     sublevel1 = create :level, name: 'choice_1'
-    sublevel1_contained_level = create :level, name: "choice_1 contained"
+    sublevel1_contained_level = create :free_response, name: "choice_1 contained"
     sublevel1.contained_level_names = [sublevel1_contained_level.name]
     sublevel1.save!
 

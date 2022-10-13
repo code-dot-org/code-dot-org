@@ -10,12 +10,13 @@ module Curriculum::CourseTypes
   extend ActiveSupport::Concern
 
   included do
-    validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
-    validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be universal instructor, plc reviewer, facilitator, or teacher'}
-    validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+    validates :instruction_type, acceptance: {accept: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
+    validates :instructor_audience, acceptance: {accept: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be universal instructor, plc reviewer, facilitator, or teacher'}
+    validates :participant_audience, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
     validate :cannot_have_same_audiences
-    validate :must_have_same_course_type_as_family
+    # (Dani) Turning off this validation while I move over K5 self paced pl to the right audience
+    # validate :must_have_same_course_type_as_family
   end
 
   # All courses in the same family name must have the save instruction_type, instructor_audience, and participant audience

@@ -17,10 +17,11 @@ const DEFAULT_PROPS = {
   levelHasRubric: false,
   isViewingAsTeacher: false,
   isViewingAsInstructorInTraining: false,
+  hasBackgroundMusic: false,
   fetchingData: false,
   handleDocumentationClick: () => {},
   handleInstructionTabClick: () => {},
-  handleCommitsAndReviewTabClick: () => {},
+  handleReviewV2TabClick: () => {},
   handleHelpTabClick: () => {},
   handleCommentTabClick: () => {},
   handleDocumentationTabClick: () => {},
@@ -103,6 +104,20 @@ describe('TopInstructionsHeader', () => {
       tabSelected: TabType.COMMENTS
     });
     expect(wrapper.find('.uitest-feedback')).to.have.length(0);
+  });
+
+  it('does not show mute button when hasBackgroundMusic is false', () => {
+    const wrapper = setUp({
+      hasBackgroundMusic: false
+    });
+    expect(wrapper.find('.uitest-mute-music-button')).to.have.length(0);
+  });
+
+  it('shows mute button when hasBackgroundMusic is true', () => {
+    const wrapper = setUp({
+      hasBackgroundMusic: true
+    });
+    expect(wrapper.find('.uitest-mute-music-button')).to.have.length(1);
   });
 
   it('on the resources tab selects the resources tab', () => {

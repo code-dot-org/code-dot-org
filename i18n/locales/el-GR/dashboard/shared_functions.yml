@@ -2,6 +2,21 @@ el:
   data:
     shared_functions:
       driving with arrow keys: μετακίνηση με τα πλήκτρα βέλους
+      fluttering: τριγύρισμα
       growing: αυξάνεται
+      jittering: τρεμούλιασμα
+      moving east: μετακίνηση ανατολικά
+      moving east and looping: μετακίνηση ανατολικά και δημιουργία βρόχου
+      moving north: μετακίνηση βόρεια
+      moving north and looping: μετακίνηση βόρεια και δημιουργία βρόχου
+      moving south: μετακίνηση νότια
+      moving south and looping: μετακίνηση νότια και δημιουργία βρόχου
+      moving west: μετακίνηση δυτικά
+      moving west and looping: μετακίνηση δυτικά και δημιουργία βρόχου
       moving with arrow keys: μετακίνηση με τα πλήκτρα βέλους
+      patrolling: περιφρούρηση
       shrinking: συρρικνώνεται
+      spinning left: περιστροφή αριστερά
+      spinning right: περιστροφή δεξιά
+      wandering: περιπλάνηση
+      wobbling: ταλάντευση

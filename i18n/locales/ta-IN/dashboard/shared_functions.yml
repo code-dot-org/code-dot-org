@@ -1,6 +1,23 @@
 ta:
   data:
     shared_functions:
+      driving with arrow keys: அம்புக்குறி விசைகளை ஓட்டுதல்
+      fluttering: படபடக்கும் 
+      growing: வளர்கிறது
+      jittering: நடுக்கம் 
+      moving east: கிழக்கு நோக்கி நகரும் 
+      moving east and looping: கிழக்கு நோக்கி நகர்ந்து வளையும் 
+      moving north: வடக்கு நோக்கி நகர்கிறது
       moving north and looping: வடக்கே நகர்ந்து வளையும்
+      moving south: தெற்கு நகரும் 
       moving south and looping: தெற்கே நகர்ந்து வளையும்
+      moving west: மேற்கு நோக்கி நகரும்
+      moving west and looping: மேற்கு நோக்கி நகர்ந்து வளையும்
       moving with arrow keys: அம்பு விசைகளுடன் நகரும்
+      patrolling: ரோந்து
+      shrinking: சுருங்குகிறது
+      spinning left: இடதுபுறமாக சுழல்கிறது
+      spinning right: வலதுபுறம் சுழல்கிறது  
+      swimming left and right: இடது மற்றும் வலது நீச்சல்
+      wandering: அலைந்து திரிதல்
+      wobbling: தள்ளாட்டம்

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2020-12-04T21:52:55.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -51,6 +47,10 @@
     "name_suffix": "_2021",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2020-12-04T21:52:55.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-08-16 21:22:06 +0000\",\"changed\":[\"notes\",\"published\",\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"debugger_disabled\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 21:27:44 +0000\",\"changed\":[\"encrypted_examples\",\"video_key\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-08-16 22:20:41 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-18 17:57:37 +0000\",\"changed\":[\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-20 18:09:56 +0000\",\"changed\":[\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-21 16:54:37 +0000\",\"changed\":[\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-04 16:46:43 +0000\",\"changed\":[\"show_debug_watch\",\"start_html\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
