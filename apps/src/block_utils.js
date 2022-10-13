@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import xml from './xml';
+import {BlocklyVersion} from '@cdo/apps/constants';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -774,11 +775,8 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
-      const field = new BlocklyField(
-        '',
-        getFieldInputChangeHandler(blockly, inputConfig.type)
-      );
+      const {type} = inputConfig;
+      const field = getField(blockly, type);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(field, inputConfig.name);
@@ -812,6 +810,39 @@ function getFieldInputChangeHandler(blockly, type) {
   } else {
     return undefined;
   }
+}
+
+/**
+ * Returns a new Field object,
+ * conditional on the version of blockly we're using and the type of field.
+ * @param {Blockly} blockly
+ * @param {string} type
+ * @returns {?Blockly.Field}
+ */
+function getField(blockly, type) {
+  let field;
+  if (blockly.version === BlocklyVersion.GOOGLE) {
+    if (type === 'Number') {
+      field = new blockly.FieldNumber();
+    } else if (type.includes('ClampedNumber')) {
+      const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+      if (clampedNumberMatch) {
+        const min = parseFloat(clampedNumberMatch[1]);
+        const max = parseFloat(clampedNumberMatch[2]);
+        field = new blockly.FieldNumber(0, min, max);
+      }
+    } else {
+      field = new blockly.FieldTextInput();
+    }
+  } else {
+    // CDO Blockly always uses FieldTextInput
+    field = new blockly.FieldTextInput(
+      '',
+      getFieldInputChangeHandler(blockly, type)
+    );
+  }
+
+  return field;
 }
 
 const groupInputsByRow = function(inputs, inputTypes = STANDARD_INPUT_TYPES) {
