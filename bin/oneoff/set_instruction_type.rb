@@ -12,7 +12,7 @@ require_relative '../../dashboard/config/environment'
 def set_instruction_type
   raise unless Rails.application.config.levelbuilder_mode
 
-  Unit.all.each do |script|
+  Script.all.each do |script|
     # scripts in unit_groups get their instruction type from their unit group
     next if script.unit_group
 

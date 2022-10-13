@@ -492,7 +492,7 @@ class Level < ApplicationRecord
   end
 
   def self.cache_find(id)
-    Unit.cache_find_level(id)
+    Script.cache_find_level(id)
   end
 
   def icon
@@ -754,7 +754,7 @@ class Level < ApplicationRecord
       ],
       scriptOptions: [
         ['All scripts', ''],
-        *Unit.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
       ],
       ownerOptions: [
         ['Any owner', ''],

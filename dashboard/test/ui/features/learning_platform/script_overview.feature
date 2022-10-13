@@ -1,4 +1,4 @@
-Feature: Unit overview page
+Feature: Script overview page
 
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
@@ -43,7 +43,7 @@ Feature: Unit overview page
     And I reload the page
     And I wait to see ".uitest-unassign-button"
 
-  Scenario: Unit overview contents
+  Scenario: Script overview contents
     Given I create a student named "Jean"
     And I am on "http://studio.code.org/s/allthethings"
     # make sure we are in summary view and the page has finished loading
@@ -62,7 +62,7 @@ Feature: Unit overview page
     # verify script name overrides lesson name when there is only one lesson
     And element "td:contains(1. Minecraft Hour of Code)" is visible
 
-  Scenario: Unit overview end-of-lesson
+  Scenario: Script overview end-of-lesson
     Given I create a student named "Jean"
     # On last level of the lesson
     And I am on "http://studio.code.org/s/csp3-2019/lessons/3/levels/1"
