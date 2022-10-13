@@ -24,7 +24,7 @@ Feature: Creating and deleting data docs
     And the element contains the path to the temp data doc
 
     # edit data doc from edit all page
-    And I click selector "a:contains('Edit All')"
+    Then I am on "http://studio.code.org/data_docs/edit"
     And element "a" contains the name of the temp data doc
     And the element contains the path to the temp data doc
     And I click the icon to edit the temp data doc
