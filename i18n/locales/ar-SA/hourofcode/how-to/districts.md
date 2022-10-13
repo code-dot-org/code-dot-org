@@ -37,6 +37,6 @@ title: الدليل الإرشادي الخاص ب "ساعة من البرمجة
 إنَّ "ساعة من البرمجة" هي الخطوة الأولى في الرحلة لمعرفة المزيد حول كيفية عمل التكنولوجيا وكيفية إنشاء التطبيقات البرمجية. لمواصلة هذه الرحلة:
 
 - شجِّع الطلاب على مواصلة [التعلّم عبر الإنترنت]({{ urls/learn_beyond }}).
-- [احضر]({{ urls/professional_development_workshops }}) ورشة عمل شخصية لمدة يوم واحد لتلقي تعليمات من خبراء يشرحون علوم الحاسوب بأسلوب مبسَّط. (معلمون من الولايات المتحدة فقط)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

@@ -2429,6 +2429,15 @@ nl:
               display_name: Content
             lessonGroup-5:
               display_name: Vragenlijst
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Lussen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vragenlijst
+            lessonGroup-3:
+              display_name: Content
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

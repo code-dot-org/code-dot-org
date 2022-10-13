@@ -380,6 +380,7 @@ ko:
       about: "소개"
       legal: "개인정보 보호 및 법률"
       legal_privacy: "개인정보보호 정책"
+      legal_cookie_notice: "쿠키 방침"
       legal_tos: "이용 약관"
     user:
       classroom: '선생님 홈페이지'

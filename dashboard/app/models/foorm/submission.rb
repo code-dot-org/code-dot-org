@@ -82,7 +82,7 @@ class Foorm::Submission < ApplicationRecord
       return {question_name => choices[answer]}
     when ANSWER_MULTI_SELECT
       choices = question_details[:choices]
-      return {question_name => answer.map {|selected| choices[selected]}.compact.sort.join(', ')}
+      return {question_name => answer.filter_map {|selected| choices[selected]}.sort.join(', ')}
     end
 
     # Return blank hash if question_type not found

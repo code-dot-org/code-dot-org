@@ -49,7 +49,8 @@ class DCDOBase < DynamicConfigBase
       'ceos-for-cs-banner': DCDO.get('ceos-for-cs-banner', false),
       'ceos-for-cs-banner-govs': DCDO.get('ceos-for-cs-banner-govs', false),
       'use-s3-path-for-default-animations': DCDO.get('use-s3-path-for-default-animations', true),
-      'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true)
+      'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
+      'cs-leaders-prize': DCDO.get('cs-leaders-prize', false)
     }
   end
 end

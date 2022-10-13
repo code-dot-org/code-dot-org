@@ -4048,6 +4048,15 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Questionário
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: laços
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

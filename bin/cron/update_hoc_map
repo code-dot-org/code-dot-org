@@ -14,7 +14,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require 'cdo/properties'
+require_relative '../../pegasus/helpers/properties'
 require 'dynamic_config/dcdo'
 require 'open3'
 require 'tempfile'
@@ -30,6 +30,11 @@ def main
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
     data = JSON.parse(form[:data])
     processed_data = JSON.parse(form[:processed_data]) rescue {}
+    # ***
+    # If these rules are changed and we wish to display a broader set of events,
+    # update our JS code (hoc_events_map.js) that visualizes these events
+    # to handle missing data.
+    # ***
     # In order to be placed on the map, all events require an organization name,
     # processed location, and city. With the exception that approved special events
     # don't need a city so we can show events like the Cocos Keeling Islands.
