@@ -37,6 +37,6 @@ Xem [hướng dẫn cách tiến hành sự kiện]({{ urls/how_to_events }}) c�
 Giờ lập trình chỉ là bước đầu tiên trên hành trình tìm hiểu thêm về cách thức hoạt động của công nghệ và cách tạo ra các ứng dụng phần mềm. Để tiếp tục cuộc hành trình này, hãy:
 
 - Khuyến khích học sinh tiếp tục [học trực tuyến]({{ urls/learn_beyond }}).
-- [Tham dự]({{ urls/professional_development_workshops }}) hội thảo trực tiếp kéo dài 1 ngày để nhận hướng dẫn từ giảng viên môn khoa học máy tính có kinh nghiệm. (Chỉ dành cho giáo viên tại Hoa Kỳ)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

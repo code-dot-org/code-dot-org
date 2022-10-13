@@ -111,7 +111,7 @@ Det är okej om både du och alla dina studenter är helt nya på datavetenskap.
 
 Visa eleverna hur de kommer in till övningen
 
-- Skriv länken till handledningen på en whiteboard. Länken finns på [informationen för din valda handledning]({{ urls/learn }}) under siffran som visar antalet deltagare.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 När dina elever stöter på problem så är det okej att svara:
 
@@ -138,7 +138,6 @@ Vad gör jag om en elev blir färdig tidigt?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Skiv ut "Jag gjorde en Hour of Code!"]({{ urls/promote_stickers }})-stickers för dina elever.
-- [Beställ specialgjorda t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) till din skola.
 - Dela foton och videoklipp från ditt Hour of Code på sociala medier. Använd #HourOfCode och @codeorg så vi kan se vad du gjort!
 
 * * *
@@ -152,6 +151,6 @@ Vad gör jag om en elev blir färdig tidigt?
 
 ### Vad kan jag göra efter Hour of Code?
 
-Datorvetenskap behöver inte sluta med Hour of Code! Vår läroplan är webbaserad och gratis att använda för alltid. [Lär dig hur](/beyond) att föra in Datavetenskap till din skola och elever.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

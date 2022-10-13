@@ -113,7 +113,7 @@ Nem baj, ha számodra és a tanulók számára is újdonság a számítástechni
 
 Vezesd a tanulókat a tevékenységhez
 
-- Írd fel a gyakorlat linkjét a táblára. A linket megtalálod a [kiválasztott gyakorlatra vonatkozó információk]({{ urls/learn }}) között, a résztvevők száma alatt.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Ha a tanulóknak nehézségeik vannak, lehet így reagálni:
 
@@ -140,7 +140,6 @@ Mi történjen, ha egy tanuló korábban végez?
 
 - [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
 - [Nyomtass "Megcsináltam a Kódolás Óráját!"]({{ urls/promote_stickers }}) matricákat.
-- [Rendeljen személyre szabott pólókat](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) az iskolának.
 - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
 * * *
@@ -154,6 +153,6 @@ Mi történjen, ha egy tanuló korábban végez?
 
 ### Mi jön a "Hour of Code" esemény után?
 
-A számítástechnikának nincs vége a Kódolás órájával! Tantervünk webalapú és bármikor ingyenesen használható. [hogyan lehet](/beyond) a számítástechnikát bevinni az iskolába és a diákok közé.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

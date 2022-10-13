@@ -11,7 +11,7 @@ describe('PrintCertificates', () => {
   const wrapper = shallow(
     <PrintCertificates
       sectionId={sectionId}
-      assignmentName="playlab"
+      courseVersionName="playlab"
       curriedPegasusUrl={path => `${path}`}
     />
   );
@@ -21,10 +21,10 @@ describe('PrintCertificates', () => {
     assert(wrapper.props().action, pegasus('/certificates'));
   });
 
-  it('has a hidden input for the assigned script', () => {
+  it('has a hidden input for the course name', () => {
     assert(wrapper.childAt(1).is('input'));
     assert.equal(wrapper.childAt(1).props().type, 'hidden');
-    assert.equal(wrapper.childAt(1).props().defaultValue, 'playlab');
+    assert.equal(atob(wrapper.childAt(1).props().value), 'playlab');
   });
 
   it('has trigger to open /certificates', () => {

@@ -6,7 +6,7 @@ title: 각종 자료
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Hour of Code 를 홍보해주세요.
+# Promote the Hour of Code
 
 ### 아워오브코드를 주목받게 하기 위해 필요한 모든 자료를 찾으세요. 어디에서부터 시작해야 할지 모르시겠다구요? 아워오브코드 주최를 위한 [하우 투 가이드]({{ how_to_url }})부터 시작하세요!
 
