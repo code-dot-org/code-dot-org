@@ -268,7 +268,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get no text_responses results for section with script without text response" do
-    script = Script.find_by_name('course1')
+    script = Unit.find_by_name('course1')
 
     get :section_text_responses, params: {
       section_id: @section.id,
@@ -1148,7 +1148,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get progress for section with section script" do
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
 
     assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
@@ -1207,7 +1207,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get progress for section with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
 
     get :section_progress, params: {
       section_id: @section.id,
@@ -1219,7 +1219,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paginated progress with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
 
     get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success
@@ -1282,7 +1282,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get section level progress with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
     get :section_level_progress, params: {
       section_id: @section.id,
       script_id: script.id
@@ -1291,7 +1291,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paginated section level progress with specific script" do
-    script = Script.find_by_name('algebra')
+    script = Unit.find_by_name('algebra')
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success

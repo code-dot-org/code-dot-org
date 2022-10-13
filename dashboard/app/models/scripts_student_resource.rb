@@ -12,7 +12,7 @@
 #  index_scripts_student_resources_on_script_id_and_resource_id  (script_id,resource_id) UNIQUE
 #
 class ScriptsStudentResource < ApplicationRecord
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :resource, optional: true
 
   # Used for seeding from JSON. Returns the full set of information needed to

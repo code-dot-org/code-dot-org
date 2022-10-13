@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'cdo/shared_constants'
 
-class ScriptTest < ActiveSupport::TestCase
+class UnitTest < ActiveSupport::TestCase
   include SharedConstants
 
   self.use_transactional_test_case = true
@@ -55,15 +55,15 @@ class ScriptTest < ActiveSupport::TestCase
 
   setup do
     UnitGroup.clear_cache
-    Script.clear_cache
+    Unit.clear_cache
   end
 
   def populate_cache_and_disconnect_db
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
     # Only need to populate cache once per test-suite run
-    @@script_cached ||= Script.unit_cache_to_cache
-    Script.script_cache
-    Script.unit_family_cache
+    @@script_cached ||= Unit.unit_cache_to_cache
+    Unit.script_cache
+    Unit.unit_family_cache
 
     # Also populate course_cache, as it's used by course_link
     UnitGroup.stubs(:should_cache?).returns true
@@ -71,13 +71,13 @@ class ScriptTest < ActiveSupport::TestCase
     UnitGroup.course_cache
 
     CourseVersion.stubs(:should_cache?).returns true
-    CourseVersion.course_offering_keys('Script')
+    CourseVersion.course_offering_keys('Unit')
 
     CourseOffering.all.pluck(:key).each do |key|
       CourseOffering.get_from_cache(key)
     end
 
-    Script.all.pluck(:id, :name).each do |sid, name|
+    Unit.all.pluck(:id, :name).each do |sid, name|
       CourseOffering.get_from_cache(sid)
       CourseOffering.get_from_cache(name)
     end
@@ -89,14 +89,14 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can setup migrated unit with new models' do
-    Script.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Unit.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
     create :maze, name: 'test_maze_level'
-    Script.seed_from_json_file('test-migrated-models')
-    unit = Script.find_by_name('test-migrated-models')
+    Unit.seed_from_json_file('test-migrated-models')
+    unit = Unit.find_by_name('test-migrated-models')
     assert unit.is_migrated
     assert_equal 1, unit.lesson_groups.count
     assert_equal 1, unit.lessons.count
@@ -151,90 +151,90 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
-    artist = Script.find_by_name('artist')
+    artist = Unit.find_by_name('artist')
     assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'get_from_cache uses cache' do
     # We test the cache using name lookups...
-    flappy = Script.find_by_name('flappy')
-    frozen = Script.find_by_name('frozen')
+    flappy = Unit.find_by_name('flappy')
+    frozen = Unit.find_by_name('frozen')
     # ...and ID lookups.
     flappy_id = flappy.id
     frozen_id = frozen.id
 
     populate_cache_and_disconnect_db
 
-    assert_equal flappy, Script.get_from_cache('flappy')
-    assert_equal flappy, Script.get_from_cache(flappy_id)
-    assert_equal frozen, Script.get_from_cache('frozen')
-    assert_equal frozen, Script.get_from_cache(frozen_id)
+    assert_equal flappy, Unit.get_from_cache('flappy')
+    assert_equal flappy, Unit.get_from_cache(flappy_id)
+    assert_equal frozen, Unit.get_from_cache('frozen')
+    assert_equal frozen, Unit.get_from_cache(frozen_id)
   end
 
   test 'get_from_cache raises if called with a family_name' do
     error = assert_raises do
-      Script.get_from_cache('coursea')
+      Unit.get_from_cache('coursea')
     end
-    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: coursea', error.message
+    assert_equal 'Do not call Unit.get_from_cache with a family_name. Call Unit.get_unit_family_redirect_for_user instead.  Family: coursea', error.message
   end
 
   test 'get_family_from_cache uses unit_family_cache' do
-    family_scripts = Script.where(family_name: 'family-cache-test')
+    family_scripts = Unit.where(family_name: 'family-cache-test')
     assert_equal [@unit_2017.name, @unit_2018.name], family_scripts.map(&:name)
 
     populate_cache_and_disconnect_db
 
-    cached_family_scripts = Script.get_family_from_cache('family-cache-test')
+    cached_family_scripts = Unit.get_family_from_cache('family-cache-test')
     assert_equal [@unit_2017.name, @unit_2018.name], cached_family_scripts.map(&:name).uniq
   end
 
   test 'cache_find_script_level uses cache' do
-    script_level = Script.first.script_levels.first
+    script_level = Unit.first.script_levels.first
 
     populate_cache_and_disconnect_db
 
-    assert_equal script_level, Script.cache_find_script_level(script_level.id)
+    assert_equal script_level, Unit.cache_find_script_level(script_level.id)
   end
 
   test 'cache_find_level uses cache with ID lookup' do
-    level = Script.find_by_name(Script::FLAPPY_NAME).script_levels.first.level
+    level = Unit.find_by_name(Unit::FLAPPY_NAME).script_levels.first.level
 
     populate_cache_and_disconnect_db
 
-    assert_equal level, Script.cache_find_level(level.id)
+    assert_equal level, Unit.cache_find_level(level.id)
   end
 
   test 'cache_find_level uses cache with name lookup' do
-    level = Script.find_by_name(Script::FLAPPY_NAME).script_levels.first.level
+    level = Unit.find_by_name(Unit::FLAPPY_NAME).script_levels.first.level
 
     populate_cache_and_disconnect_db
 
-    assert_equal level, Script.cache_find_level(level.name)
+    assert_equal level, Unit.cache_find_level(level.name)
   end
 
   test 'cache_find_level raises exception on bad ID and bad name' do
     bad_id = Level.last.id + 1
 
     assert_raises(ActiveRecord::RecordNotFound) do
-      Script.cache_find_level(bad_id)
+      Unit.cache_find_level(bad_id)
     end
     assert_raises(ActiveRecord::RecordNotFound) do
-      Script.cache_find_level('not a level name')
+      Unit.cache_find_level('not a level name')
     end
   end
 
   test 'level uses cache' do
-    script_level = Script.first.script_levels.first
+    script_level = Unit.first.script_levels.first
     expected_level = script_level.level
 
     populate_cache_and_disconnect_db
 
     assert_equal expected_level,
-      Script.cache_find_script_level(script_level.id).level
+      Unit.cache_find_script_level(script_level.id).level
   end
 
   test 'lesson hierarchy uses cache' do
-    unit = Script.first
+    unit = Unit.first
     lesson = unit.lessons.first
     expected_script_level = lesson.script_levels.first
     expected_level = lesson.script_levels.first.levels.first
@@ -242,9 +242,9 @@ class ScriptTest < ActiveSupport::TestCase
     populate_cache_and_disconnect_db
 
     assert_equal expected_script_level,
-      Script.get_from_cache(unit.id).lessons.first.script_levels.first
+      Unit.get_from_cache(unit.id).lessons.first.script_levels.first
     assert_equal expected_level,
-      Script.get_from_cache(unit.id).
+      Unit.get_from_cache(unit.id).
         lessons.first.script_levels.first.levels.first
   end
 
@@ -256,14 +256,14 @@ class ScriptTest < ActiveSupport::TestCase
 
     populate_cache_and_disconnect_db
 
-    assert_equal expected, Script.get_from_cache(script.name).script_levels.first.level.level_concept_difficulty
+    assert_equal expected, Unit.get_from_cache(script.name).script_levels.first.level.level_concept_difficulty
   end
 
   test 'get_without_cache raises exception for bad id' do
-    bad_id = Script.last.id + 1
+    bad_id = Unit.last.id + 1
 
     assert_raises(ActiveRecord::RecordNotFound) do
-      Script.get_from_cache(bad_id)
+      Unit.get_from_cache(bad_id)
     end
   end
 
@@ -276,14 +276,14 @@ class ScriptTest < ActiveSupport::TestCase
     participant = create :teacher
     section.students << participant
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: participant)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: participant)
     assert_equal pl_csp1_2017.name, redirect_unit.redirect_to
 
     # participant makes progress in csp1_2018.
     create :user_level, user: participant, script: pl_csp1_2018
     participant.reload
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: participant)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: participant)
     assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
   end
 
@@ -292,7 +292,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
 
-    assert_nil Script.get_unit_family_redirect_for_user('pl-csp', user: student)
+    assert_nil Unit.get_unit_family_redirect_for_user('pl-csp', user: student)
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if student' do
@@ -304,14 +304,14 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     section.students << student
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: student)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2017.name, redirect_unit.redirect_to
 
     # Student makes progress in csp1_2018.
     create :user_level, user: student, script: csp1_2018
     student.reload
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: student)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
@@ -322,7 +322,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp', version_year: '2019', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     create :section, user: facilitator, script: pl_csp1_2017
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: facilitator)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('pl-csp', user: facilitator)
     assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
   end
 
@@ -333,20 +333,20 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
     create :section, user: teacher, script: csp1_2017
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: teacher)
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', user: teacher)
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns nil if no units in family are stable' do
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
-    assert_nil Script.get_unit_family_redirect_for_user('csp')
+    assert_nil Unit.get_unit_family_redirect_for_user('csp')
   end
 
   test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
     create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
     assert_equal csp1_2017.name, redirect_unit.redirect_to
   end
 
@@ -354,7 +354,7 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('csp')
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp')
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
@@ -362,12 +362,12 @@ class ScriptTest < ActiveSupport::TestCase
     create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
 
-    redirect_unit = Script.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
+    redirect_unit = Unit.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'redirect_to_unit_url returns nil unless user can view unit version' do
-    Script.any_instance.stubs(:can_view_version?).returns(false)
+    Unit.any_instance.stubs(:can_view_version?).returns(false)
     student = create :student
     unit = create :script, name: 'my-script'
 
@@ -375,7 +375,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'redirect_to_unit_url returns nil if user is assigned to unit' do
-    Script.any_instance.stubs(:can_view_version?).returns(true)
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     unit = create :script, name: 'my-script'
     section = create :section, script: unit
@@ -385,7 +385,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'redirect_to_unit_url returns nil if user is not assigned to any unit in family' do
-    Script.any_instance.stubs(:can_view_version?).returns(true)
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     unit = create :script, name: 'my-script'
 
@@ -393,7 +393,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'returns nil if latest assigned unit is an older version than the current unit' do
-    Script.any_instance.stubs(:can_view_version?).returns(true)
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
@@ -404,7 +404,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit belonging to course family' do
-    Script.any_instance.stubs(:can_view_version?).returns(true)
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
@@ -423,7 +423,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
-    Script.any_instance.stubs(:can_view_version?).returns(true)
+    Unit.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
     courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_course: true)
     CourseOffering.add_course_offering(courseg_2017)
@@ -508,29 +508,29 @@ class ScriptTest < ActiveSupport::TestCase
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
 
-    assert_nil Script.latest_stable_version('fake-family', locale: 'es-mx')
+    assert_nil Unit.latest_stable_version('fake-family', locale: 'es-mx')
   end
 
   test 'self.latest_stable_version returns latest stable version for user locale' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
     unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
 
-    assert_equal unit_2018, Script.latest_stable_version('fake-family', locale: 'it-it')
+    assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'it-it')
   end
 
   test 'self.latest_stable_version returns latest stable version for English locales' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
-    assert_equal unit_2018, Script.latest_stable_version('fake-family')
-    assert_equal unit_2018, Script.latest_stable_version('fake-family', locale: 'en-ca')
+    assert_equal unit_2018, Unit.latest_stable_version('fake-family')
+    assert_equal unit_2018, Unit.latest_stable_version('fake-family', locale: 'en-ca')
   end
 
   test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
     unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
-    assert_equal unit_2017, Script.latest_stable_version('fake-family', version_year: '2017')
+    assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
   end
 
   test 'self.latest_assigned_version returns nil if no units in family are assigned to user' do
@@ -538,7 +538,7 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     student.scripts << unit1
 
-    assert_nil Script.latest_assigned_version('family-2', student)
+    assert_nil Unit.latest_assigned_version('family-2', student)
   end
 
   test 'self.latest_assigned_version returns latest assigned unit in family if unit is in course family' do
@@ -553,7 +553,7 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, unit_group: csp_2017
     section.students << student
 
-    assert_equal csp1_2017, Script.latest_assigned_version('csp', student)
+    assert_equal csp1_2017, Unit.latest_assigned_version('csp', student)
   end
 
   test 'self.latest_assigned_version returns latest assigned unit in family if unit is not in course family' do
@@ -563,11 +563,11 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, script: courseg_2017
     section.students << student
 
-    assert_equal courseg_2017, Script.latest_assigned_version('courseg', student)
+    assert_equal courseg_2017, Unit.latest_assigned_version('courseg', student)
   end
 
   test 'has_other_versions? makes no queries when there is one other unit group version' do
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
@@ -579,35 +579,35 @@ class ScriptTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
     CourseOffering.add_course_offering(csp_2018)
 
-    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    csp1_2017 = Unit.get_from_cache(csp1_2017.id)
     assert_queries(0) do
       assert csp1_2017.has_other_versions?
     end
   end
 
   test 'has_other_versions? makes no queries when there are no other unit group versions' do
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
 
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
     CourseOffering.add_course_offering(csp_2017)
 
-    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    csp1_2017 = Unit.get_from_cache(csp1_2017.id)
     assert_queries(0) do
       refute csp1_2017.has_other_versions?
     end
   end
 
   test 'has_other_versions? makes no queries when there is one other unit version' do
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
 
     foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
     CourseOffering.add_course_offering(foo17)
     foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
     CourseOffering.add_course_offering(foo18)
 
-    foo17 = Script.get_from_cache(foo17.id)
+    foo17 = Unit.get_from_cache(foo17.id)
     assert_queries(0) do
       assert foo17.has_other_versions?
     end
@@ -615,27 +615,27 @@ class ScriptTest < ActiveSupport::TestCase
 
   # we expect to hit this case when serving uncached hoc unit overview pages.
   test 'has_other_versions? makes no queries when there are no other unit versions' do
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
 
     foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
     CourseOffering.add_course_offering(foo17)
 
-    foo17 = Script.get_from_cache(foo17.id)
+    foo17 = Unit.get_from_cache(foo17.id)
     assert_queries(0) do
       refute foo17.has_other_versions?
     end
   end
 
   test 'banner image' do
-    assert_nil Script.find_by_name('flappy').banner_image
-    assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
-    assert_equal 'banner_course2.jpg', Script.find_by_name('course2').banner_image
-    assert_nil Script.find_by_name('csf1').banner_image
+    assert_nil Unit.find_by_name('flappy').banner_image
+    assert_equal 'banner_course1.jpg', Unit.find_by_name('course1').banner_image
+    assert_equal 'banner_course2.jpg', Unit.find_by_name('course2').banner_image
+    assert_nil Unit.find_by_name('csf1').banner_image
   end
 
   test 'old_professional_learning_course?' do
-    refute Script.find_by_name('flappy').old_professional_learning_course?
-    assert Script.find_by_name('ECSPD').old_professional_learning_course?
+    refute Unit.find_by_name('flappy').old_professional_learning_course?
+    assert Unit.find_by_name('ECSPD').old_professional_learning_course?
   end
 
   test 'should summarize migrated unit' do
@@ -1218,8 +1218,8 @@ class ScriptTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations I18n.locale, i18n['en']
 
-    Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
-    unit = Script.seed_from_json_file('test-plc')
+    Unit.stubs(:unit_json_directory).returns(self.class.fixture_path)
+    unit = Unit.seed_from_json_file('test-plc')
 
     assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
@@ -1243,8 +1243,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'updating plc unit updates its unit group' do
-    Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
-    unit = Script.seed_from_json_file('test-plc')
+    Unit.stubs(:unit_json_directory).returns(self.class.fixture_path)
+    unit = Unit.seed_from_json_file('test-plc')
 
     unit_group = unit.plc_course_unit.plc_course.unit_group
 
@@ -1367,7 +1367,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
 
     # updated represents what will get written to scripts.en.yml
-    updated = Script.update_i18n(original_yml, lessons_i18n)
+    updated = Unit.update_i18n(original_yml, lessons_i18n)
 
     assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
     assert_equal course4_yml, updated['en']['data']['script']['name']['course4']
@@ -1381,19 +1381,19 @@ class ScriptTest < ActiveSupport::TestCase
     # No updates to lesson names
     lessons_i18n = {'en' => {'data' => {'name' => {}}}}
 
-    unit_name = 'Report Script'
+    unit_name = 'Report Unit'
 
     metadata = {
-      'title' => 'Report Script Name',
-      'description' => 'This is what Report Script is all about',
+      'title' => 'Report Unit Name',
+      'description' => 'This is what Report Unit is all about',
     }
 
-    updated = Script.update_i18n(original_yml, lessons_i18n, unit_name, metadata)
+    updated = Unit.update_i18n(original_yml, lessons_i18n, unit_name, metadata)
 
-    updated_report_unit = updated['en']['data']['script']['name']['Report Script']
+    updated_report_unit = updated['en']['data']['script']['name']['Report Unit']
 
-    assert_equal 'Report Script Name', updated_report_unit['title']
-    assert_equal 'This is what Report Script is all about', updated_report_unit['description']
+    assert_equal 'Report Unit Name', updated_report_unit['title']
+    assert_equal 'This is what Report Unit is all about', updated_report_unit['description']
     assert_equal 'report-lesson-1', updated_report_unit['lessons']['Report Lesson 1']['name']
   end
 
@@ -1410,7 +1410,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
 
     # updated represents what will get written to scripts.en.yml
-    updated = Script.update_i18n(original_yml, lessons_i18n)
+    updated = Unit.update_i18n(original_yml, lessons_i18n)
 
     assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
 
@@ -1421,7 +1421,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
 
     # updated represents what will get written to scripts.en.yml
-    updated = Script.update_i18n(original_yml, lessons_i18n)
+    updated = Unit.update_i18n(original_yml, lessons_i18n)
 
     assert_equal course3_yml, updated['en']['data']['script']['name']['course3']
   end
@@ -1506,9 +1506,9 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'course_link uses cache' do
     populate_cache_and_disconnect_db
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
     UnitGroup.stubs(:should_cache?).returns true
-    unit = Script.get_from_cache(@unit_in_unit_group.name)
+    unit = Unit.get_from_cache(@unit_in_unit_group.name)
     assert_equal "/courses/#{@unit_group.name}", unit.course_link
   end
 
@@ -1619,16 +1619,16 @@ class ScriptTest < ActiveSupport::TestCase
     course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
     course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
 
-    Script.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
+    Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
 
-    assert Script.modern_elementary_courses_available?("en-us")
-    assert_not Script.modern_elementary_courses_available?("ch-ch")
-    assert_not Script.modern_elementary_courses_available?("it-it")
-    assert_not Script.modern_elementary_courses_available?("fr-fr")
+    assert Unit.modern_elementary_courses_available?("en-us")
+    assert_not Unit.modern_elementary_courses_available?("ch-ch")
+    assert_not Unit.modern_elementary_courses_available?("it-it")
+    assert_not Unit.modern_elementary_courses_available?("fr-fr")
   end
 
   test 'locale_english_name_map' do
-    english_names = Script.locale_english_name_map
+    english_names = Unit.locale_english_name_map
     assert english_names.key?('en-US')
     assert_equal english_names['en-US'], 'English'
     assert english_names.key?('fr-FR')
@@ -1636,7 +1636,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'locale_native_name_map' do
-    native_names = Script.locale_native_name_map
+    native_names = Unit.locale_native_name_map
     assert native_names.key?('en-US')
     assert_equal native_names['en-US'], 'English'
     assert native_names.key?('fr-FR')
@@ -1817,11 +1817,11 @@ class ScriptTest < ActiveSupport::TestCase
     create :script, pilot_experiment: 'my-experiment'
     levelbuilder = create :levelbuilder
 
-    refute Script.has_any_pilot_access?
-    refute Script.has_any_pilot_access?(student)
-    refute Script.has_any_pilot_access?(teacher)
-    assert Script.has_any_pilot_access?(pilot_teacher)
-    assert Script.has_any_pilot_access?(levelbuilder)
+    refute Unit.has_any_pilot_access?
+    refute Unit.has_any_pilot_access?(student)
+    refute Unit.has_any_pilot_access?(teacher)
+    assert Unit.has_any_pilot_access?(pilot_teacher)
+    assert Unit.has_any_pilot_access?(levelbuilder)
   end
 
   test 'platformization partner has pilot access' do
@@ -1863,22 +1863,22 @@ class ScriptTest < ActiveSupport::TestCase
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
       ["20-hour", "course1", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_unit.name, @csf_unit_2019.name],
-      Script.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
+      Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
       [@csd_unit.name],
-      Script.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
+      Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
-    assert Script.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP).include? @csp_unit.name
+    assert Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP).include? @csp_unit.name
     assert_equal(
       [@csa_unit.name],
-      Script.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
+      Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     )
     assert_equal(
       [@csc_unit.name],
-      Script.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
+      Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     )
-    assert Script.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC).include? @hoc_unit.name
+    assert Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC).include? @hoc_unit.name
   end
 
   test "under_curriculum_umbrella and helpers" do
@@ -2050,8 +2050,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase
     setup do
-      Script.any_instance.stubs(:write_script_json)
-      Script.stubs(:merge_and_write_i18n)
+      Unit.any_instance.stubs(:write_script_json)
+      Unit.stubs(:merge_and_write_i18n)
 
       @standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
       create :course_version, content_root: @standalone_unit
@@ -2263,7 +2263,7 @@ class ScriptTest < ActiveSupport::TestCase
       raise = assert_raises do
         @standalone_unit.clone_migrated_unit('my-name', version_year: '2022')
       end
-      assert_equal 'Script name has already been taken', raise.message
+      assert_equal 'Unit name has already been taken', raise.message
     end
 
     test 'clone raises exception if destination_unit_group does not have a course version' do

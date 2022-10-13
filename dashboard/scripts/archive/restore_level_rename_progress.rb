@@ -54,7 +54,7 @@ course_names_to_old_new_renames = {
 }
 
 course_names_to_old_new_renames.each do |course_name, old_to_new_levels|
-  script_id = Script.find_by(name: course_name).id
+  script_id = Unit.find_by(name: course_name).id
 
   old_to_new_levels.each do |old_name, new_name|
     old_level_id = Level.find_by('name' => old_name).id
