@@ -45,7 +45,7 @@ class LevelGroupDSL < LevelDSL
     @level_and_text_names << name
 
     # Ensure level is appropriate type.
-    level = Unit.cache_find_level(name)
+    level = Script.cache_find_level(name)
     if level.nil?
       raise "Unable to locate level '#{name}'"
     end
