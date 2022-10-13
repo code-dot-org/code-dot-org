@@ -45,11 +45,11 @@ Then /^I do not see "([^"]*)" in the Game Lab console$/ do |message|
 end
 
 Then /^I see (\d+) animations in the animation column$/ do |num_animations|
-  expect(@browser.execute_script('return $(".animationList>div>button").not(".newListItem").length')).to eq num_animations.to_i
+  expect(@browser.execute_script('return $(".animationList>div>button").not("#newListItem").length')).to eq num_animations.to_i
 end
 
 Then /^I open the animation picker$/ do
-  @browser.execute_script("$(\".newListItem\")[0].click();")
+  @browser.execute_script("$(\"#newListItem\")[0].click();")
 end
 
 Then /^I select a blank animation$/ do
@@ -87,48 +87,48 @@ Then /^I add the bear animal head animation from the library$/ do
 end
 
 Then /^I append gamelab code to draw a ninja$/ do
-  code = <<CODE.gsub(/\n/, '\\n')
-function draw() {
-  noStroke();
+  code = <<~CODE.gsub(/\n/, '\\n')
+    function draw() {
+      noStroke();
 
-  // Feet
-  fill('black');
-  ellipse(190, 350, 30, 30);
-  ellipse(210, 350, 30, 30);
+      // Feet
+      fill('black');
+      ellipse(190, 350, 30, 30);
+      ellipse(210, 350, 30, 30);
 
-  // Hands
-  fill('black');
-  ellipse(145, 310, 30, 30);
-  ellipse(260, 300, 30, 30);
+      // Hands
+      fill('black');
+      ellipse(145, 310, 30, 30);
+      ellipse(260, 300, 30, 30);
 
-  // Body
-  fill('white');
-  ellipse(200, 300, 110, 110);
-  fill('black');
-  ellipse(200, 300, 100, 100);
+      // Body
+      fill('white');
+      ellipse(200, 300, 110, 110);
+      fill('black');
+      ellipse(200, 300, 100, 100);
 
-  // Head
-  fill('white');
-  ellipse(200, 180, 210, 210);
-  fill('black');
-  ellipse(200, 180, 200, 200);
-  fill('white');
-  rect(0, 170, 400, 50);
-  fill('black');
-  ellipse(150, 195, 30, 40);
-  ellipse(250, 195, 30, 40);
-  fill('white');
-  ellipse(155, 190, 6, 8);
-  ellipse(255, 190, 6, 8);
-}
-CODE
+      // Head
+      fill('white');
+      ellipse(200, 180, 210, 210);
+      fill('black');
+      ellipse(200, 180, 200, 200);
+      fill('white');
+      rect(0, 170, 400, 50);
+      fill('black');
+      ellipse(150, 195, 30, 40);
+      ellipse(250, 195, 30, 40);
+      fill('white');
+      ellipse(155, 190, 6, 8);
+      ellipse(255, 190, 6, 8);
+    }
+  CODE
 
-  script = <<SCRIPT
-var aceEditor = __TestInterface.getDroplet().aceEditor;
-aceEditor.navigateFileEnd();
-aceEditor.textInput.focus();
-aceEditor.onTextInput(\"#{code}\");
-SCRIPT
+  script = <<~SCRIPT
+    var aceEditor = __TestInterface.getDroplet().aceEditor;
+    aceEditor.navigateFileEnd();
+    aceEditor.textInput.focus();
+    aceEditor.onTextInput(\"#{code}\");
+  SCRIPT
 
   @browser.execute_script(script)
 end

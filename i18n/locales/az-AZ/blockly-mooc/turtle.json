@@ -38,6 +38,8 @@
   "drawATriangle": "üçbucaq çək",
   "drawUpperWave": "üst dalğa çək",
   "drawLowerWave": "alt dalğa çək",
+  "drawShape": "forma çəkmək",
+  "drawShapeWithSideLength": "yan uzunluğu ilə figur çəkin",
   "drawSticker": "etiket çək",
   "drawStickerWithSize": "ölçüsü ilə stiker çəkin\n",
   "forward": "irəli",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Rəssamı görünən və ya görünməz edir.",
   "widthTooltip": "Karandaşın qalınlığını dəyişir.",
   "withSize": "ölçüsü ilə\n",
+  "withSideLength": "yan uzunluğu ilə",
   "wrongColour": "Sizin şəkliniz səhv rəngdədir. Bu tapmaca üçün bu %1 olmalıdır."
 }

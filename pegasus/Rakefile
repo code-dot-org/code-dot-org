@@ -36,9 +36,9 @@ def there_can_be_only_one(pidfile)
   at_exit {File.unlink(pidfile) if File.exist?(pidfile)}
 end
 
-there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.downcase == 'true'
+there_can_be_only_one("#{File.basename(__FILE__)}.pid") unless ENV['PEGASUS_RAKE_RECURSIVE'].to_s.casecmp?('true')
 
-if ENV['PEGASUS_RAKE_LOGGER'].to_s.downcase != 'true'
+unless ENV['PEGASUS_RAKE_LOGGER'].to_s.casecmp?('true')
   $log = Logger.new STDOUT
   $log.level = Logger::INFO
 end

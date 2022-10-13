@@ -3,6 +3,10 @@ import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {fakeLesson, fakeLevels} from './progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import progress from '@cdo/apps/code-studio/progressRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
@@ -20,19 +24,46 @@ const defaultProps = {
       name: 'Last progression'
     }
   ],
-  showTeacherInfo: false,
   viewAs: ViewType.Instructor,
-  lessonIsVisible: () => true,
-  lessonIsLockedForUser: () => false,
-  lessonIsLockedForAllStudents: () => false,
+  isVisible: true,
+  isLockedForUser: false,
+  isLockedForAllStudents: false,
   lockableAuthorized: true,
-  lockableAuthorizedLoaded: true
+  lockableAuthorizedLoaded: true,
+  hiddenForStudents: false,
+  lockStatusLoaded: true
+};
+
+const initialState = {
+  progress: {
+    lessonGroups: [],
+    lessons: [
+      {
+        levels: []
+      }
+    ],
+    focusAreaLessonIds: [],
+    isSummaryView: false,
+    deeperLearningCourse: false,
+    scriptName: 'script-name',
+    scriptId: 17
+  },
+  teacherSections: {
+    sectionsAreLoaded: true,
+    sections: {},
+    sectionIds: []
+  },
+  hiddenLesson: {},
+  lessonLock: {}
 };
 
 export default storybook => {
   storybook
     .storiesOf('Progress/ProgressLesson', module)
-    .withReduxStore()
+    .withReduxStore(
+      {progress, teacherSections, hiddenLesson, lessonLock},
+      initialState
+    )
     .addStoryTable([
       {
         name: 'progress lesson',
@@ -105,12 +136,7 @@ export default storybook => {
       {
         name: 'hidden progress lesson as instructor',
         description: 'should be white with full opacity',
-        story: () => (
-          <ProgressLesson
-            {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Instructor}
-          />
-        )
+        story: () => <ProgressLesson {...defaultProps} isVisible={true} />
       },
       {
         name: 'hidden progress lesson as participant',
@@ -118,9 +144,8 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) =>
-              viewAs === ViewType.Participant
-            }
+            hiddenForStudents={true}
+            isVisible={true}
           />
         )
       },
@@ -131,7 +156,7 @@ export default storybook => {
             {...defaultProps}
             lesson={fakeLesson('Assessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForAllStudents={() => true}
+            isLockedForAllStudents={true}
           />
         )
       },
@@ -142,7 +167,7 @@ export default storybook => {
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForAllStudents={() => false}
+            isLockedForAllStudents={false}
           />
         )
       },
@@ -153,7 +178,7 @@ export default storybook => {
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={() => true}
+            isLockedForUser={true}
             lockableAuthorized={false}
           />
         )
@@ -166,7 +191,7 @@ export default storybook => {
             viewAs={ViewType.Participant}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={() => true}
+            isLockedForUser={true}
           />
         )
       },
@@ -181,7 +206,7 @@ export default storybook => {
               ...level,
               isLocked: true
             }))}
-            lessonIsLockedForUser={() => true}
+            isLockedForUser={true}
           />
         )
       },

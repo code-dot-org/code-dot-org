@@ -5,32 +5,42 @@ uk:
   language: Англійською
   front_title: Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}
   coming_soon: Незабаром
-  campaign_date_start_short: 4 грудня
+  campaign_date_start_short: 5 грудня
   campaign_date_start_long: 4 грудня
-  campaign_date_short: 4-10 грудня
-  campaign_date_full: 4-10 грудня
-  campaign_date_year: '2021'
-  campaign_date_full_year: 7-13 грудня 2020 року
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 4 грудня
-  europe_campaign_date_start_long: 4 грудня
-  europe_campaign_date_short: 4-10 грудня
+  campaign_date_short: 5-11 грудня
+  campaign_date_full: 5-11 грудня
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 грудня 2022 року
+  nonus_campaign_date_start_short: Жов. 1
+  nonus_campaign_date_start_long: 1 Жовтня
+  nonus_campaign_date_short: 1 жовтня – 18 грудня
+  nonus_campaign_date_full: 1 жовтня - 18 грудня
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  latam_campaign_date_start_short: Жов. 1
+  latam_campaign_date_start_long: 1 Жовтня
+  latam_campaign_date_short: 1 жовтня – 18 грудня
+  latam_campaign_date_full: 1 жовтня - 18 грудня
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  europe_campaign_date_start_short: Жов. 1
+  europe_campaign_date_start_long: 1 Жовтня
+  europe_campaign_date_short: 1 жовтня – 18 грудня
   europe_campaign_date_full: 10-25 жовтня
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10-25 жовтня 2020
-  africa_campaign_date_start_short: 4 грудня
-  africa_campaign_date_start_long: 4 грудня
-  africa_campaign_date_short: 4-10 грудня
-  africa_campaign_date_full: 4-10 грудня
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 7-13 грудня 2020 року
-  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
-    the connections!'
+  africa_campaign_date_start_short: Жов. 1
+  africa_campaign_date_start_long: 1 Жовтня
+  africa_campaign_date_short: 1 жовтня – 18 грудня
+  africa_campaign_date_full: 1 жовтня - 18 грудня
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  hoc2022_header: досліджуйте, грайте, створюйте
+  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
+  codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
+    there are so many ways to try computer science.
+  social_hoc2021_cse: 'Під час #HourOfCode, ми святкуємо #CSEverywhere. Відкрийте
+    зв''язки!'
   hoc2020_header: Вчіться сьогодні, будуйте світле майбутнє.
   hoc2020_header_with_line_break_markdown: "Вчіться сьогодні, \n\nбудуйте світле майбутнє."
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -139,6 +149,9 @@ uk:
     для вирішення світових проблем. Інформатика – це набагато більше, ніж просто програмування!
     Насолоджуйтесь першим кроком Code.org у новій подорожі, щоб дізнатися більше про
     AI в рамках нашої навчальної програми.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -162,25 +175,30 @@ uk:
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
   hoc_overview_csc_learn_more: Learn more about CS Connections
-  ai_video_title_what_is_ai: What is AI?
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
+  ai_video_title_what_is_ai: Що таке AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ethics_of_ai: Етика AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
+  activity: Активність
+  name: Ім’я
+  description: Опис
+  audience: Аудиторія
   ai_resource_header: Teach and Learn about AI
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
     computer science curriculum, and teacher trainings. (Requires Minecraft: Education
     Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids: Машинне Навчання для Дітей
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
   ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
@@ -189,14 +207,14 @@ uk:
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
   ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
     Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai: Елементи AI
   ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
     and the University of Helsinki.
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_audience_hs: Вища школа
   ai_activity_header: Activities Powered by AI and ML
   ai_activity_seeing_ai: Seeing AI
   ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
@@ -238,7 +256,7 @@ uk:
     чи Стіва через пригоди в цьому світі Майнкрафт.
   codeorg_homepage_hoc2019_dance_heading: Спробуйте новий урок <span class="highlight-word">Танцювальна
     вечірка!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Підтримка батьків та вчителів, які стикаються
     із закриттям школи.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -481,6 +499,24 @@ uk:
   front_join_us_n_students_served: "# учнів вже спробували"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Learn more
+  cta_see_whats_new: See what's new
+  cta_try_more_activities: Try more activities
+  cta_try_an_activity: Try an activity
+  hoc_homepage_join_the_movement_heading: Join the movement
+  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
+    but every year in December your class can join millions of students around the
+    world celebrating Computer Science Education Week with the Hour of Code. Registration
+    for the annual celebration starts each year in October.
+  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
+    needed. Hour of Code activities are available for free year-round.
+  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    This grassroots campaign is supported by over 400 partners and 200,000 educators
+    worldwide.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
+    to plan an event for your class."
+  hoc_homepage_highlights_heading: Hour of Code highlights
+  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -527,7 +563,6 @@ uk:
   signup_multiple_event_warning: Якщо Ви проводите кілька заходів, заповніть унікальну
     назву та електронну скриньку для кожного із них. Ми рахуємо події за комбінацією
     назви та електронної скриньки.
-  signup_registration_deadline: Реєстрація на Годину коду завершується 11 грудня.
   signup_name_placeholder: Ваше ім'я
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Наприклад, СЗШ № 89
@@ -963,6 +998,7 @@ uk:
   footer_menu_support: Підтримка
   footer_menu_terms: Умови
   footer_menu_privacy: Політика конфіденційності
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Година Коду
   learn_banner_blurb: Спробуйте одно-годинні підручники, розроблені для будь-якого
     віку на 45 мовах. Приєднуйтесь до мільйонів учнів та вчителів у більш, як 180
@@ -10356,6 +10392,14 @@ uk:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Дошкільнята - Клас 5
+  tutorial_icomputefireworks_string_platforms: Всі сучасні браузери
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Блоки
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
@@ -10412,86 +10456,167 @@ uk:
   all: All
   dont_know: I don't know
   language_label: Language
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: Англійською
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Англійською
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Англійською
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

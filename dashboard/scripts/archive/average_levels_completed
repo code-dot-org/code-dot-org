@@ -33,13 +33,13 @@ def courses_1_2_3_puzzles(has_teacher)
     joins(:user).
     where("user_levels.best_result >= 20").
     where("users.id #{has_teacher}").
-    where("users.birthday is not null").
+    where.not(users: {birthday: nil}).
     where("users.user_type = 'student'").
     where("users.id in (select distinct user_id from user_scripts where script_id in (#{script_ids.join(',')}))").
     count.to_f
   users = User.
     where("users.id #{has_teacher}").
-    where("users.birthday is not null").
+    where.not(users: {birthday: nil}).
     where("users.user_type = 'student'").
     where("users.id in (select distinct user_id from user_scripts where script_id in (#{script_ids.join(',')}))").
     count.to_f

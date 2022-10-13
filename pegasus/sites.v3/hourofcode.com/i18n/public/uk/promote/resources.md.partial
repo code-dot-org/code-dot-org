@@ -42,7 +42,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 [![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![image]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Завантажити версії з високою роздільністю](http://images.code.org/share/hour-of-code-logo.zip)
+[Завантажити версії з високою роздільністю](https://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
@@ -86,7 +86,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 **Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Комп'ютери є скрізь, вони змінюють кожну галузь на планеті. But only 51% of all high schools teach computer science. Good news is, we’re on our way to change this! Якщо ви чули про Годину коду раніше, ви можете знати, що вона творить історію. Годину коду спробували понад 100 мільйонів учнів.
+Комп'ютери є скрізь, вони змінюють кожну галузь на планеті. But only 51% of all high schools offer computer science. Good news is, we’re on our way to change this! Якщо ви чули про Годину коду раніше, ви можете знати, що вона творить історію. Годину коду спробували понад 100 мільйонів учнів.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Для підтримки цього руху об'єдналися понад 100 партнерів. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
@@ -112,7 +112,7 @@ Between {{ campaign_date/short }}, ten percent of students around the world will
 
 The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Комп'ютери є скрізь, вони змінюють кожну галузь на планеті. But only 51% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Комп'ютери є скрізь, вони змінюють кожну галузь на планеті. But only 51% of all high schools offer computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
@@ -128,7 +128,7 @@ You can read more about the event at http://hourofcode.com. Or, let us know if y
 
 Ми живемо у світі, наповненому технологіями. І ми знаємо, що яку б професію не обрали наші учні у майбутньому, їхній успіх все більше залежатиме від розуміння принципів роботи цих технологій.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. Щоби пропонувати більше занять з програмування нашим учням, ми хочемо зробити нашу подію Години коду величезною. Я закликаю вас стати волонтером, донести цю інформацію до місцевих ЗМІ, поширити ці новини каналами соціальних мереж та розглянути можливість проведення додаткових подій Години коду в нашій громаді.
 
@@ -146,7 +146,7 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Доброю новиною є те, що ми змінюємо це.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Доброю новиною є те, що ми змінюємо це.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Для підтримки цього руху об'єдналися понад 100 партнерів. Кожен з магазинів Apple у світі провів Годину коду. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -174,7 +174,7 @@ I look forward to being in touch. <br />
 
 Чи знали Ви, що інформаційні технології є джерелом №1 зарплат у США? В інформаційних технологіях є понад 500 000 вільних робочих місць, але попереднього року робочу силу поповнили лише 42 969 випускників з інформатики.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду.
 

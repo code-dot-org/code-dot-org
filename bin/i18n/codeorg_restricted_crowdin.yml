@@ -1,5 +1,6 @@
 "project_identifier" : "codeorg-restricted"
-"base_path" : "../../i18n/locales/source"
+"project_id" : "464582"
+"base_path" : "i18n/locales/source"
 "preserve_hierarchy": true
 
 # API Credentials must be loaded from a separate identity file. See

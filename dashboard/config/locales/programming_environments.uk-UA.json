@@ -1,0 +1,102 @@
+{
+  "uk-UA": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "HTML Теги"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Ігрова лабораторія",
+          "categories": {
+            "game_lab": {
+              "name": "Ігрова лабораторія"
+            },
+            "sprites": {
+              "name": "Спрайти"
+            },
+            "groups": {
+              "name": "Групи"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Змінні"
+            },
+            "functions": {
+              "name": "Функції"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "App Lab - це середовище програмування для створення простих додатків. Розробляйте програму, програмуйте її блоками чи JavaScript, а тоді поділіться нею з іншими.",
+          "categories": {
+            "data": {
+              "name": "Дані"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Змінні"
+            },
+            "functions": {
+              "name": "Функції"
+            },
+            "advanced": {
+              "name": "Розширені"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "sprites": {
+              "name": "Спрайти"
+            },
+            "world": {
+              "name": "Світ"
+            },
+            "location": {
+              "name": "Розташування"
+            },
+            "actions": {
+              "name": "Дії"
+            },
+            "events": {
+              "name": "Події"
+            },
+            "behaviors": {
+              "name": "Поведінка"
+            },
+            "loops": {
+              "name": "Цикли"
+            },
+            "variables": {
+              "name": "Змінні"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логіка"
+            },
+            "functions": {
+              "name": "Функції"
+            },
+            "text": {
+              "name": "Текст"
+            },
+            "comments": {
+              "name": "Коментарі"
+            }
+          }
+        }
+      }
+    }
+  }
+}

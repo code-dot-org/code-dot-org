@@ -1,0 +1,74 @@
+{
+  "ms-MY": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Membaca Sastera"
+        },
+        "ccela/SL": {
+          "description": "Bercakap & Mendengar"
+        },
+        "ccmath/MP": {
+          "description": "Amalan Matematik"
+        },
+        "csta2011/CPP": {
+          "description": "Amalan & Pengaturcaraan Pengkomputeran"
+        },
+        "csta2011/CT": {
+          "description": "Pengiraan pemikiran"
+        },
+        "iste/1": {
+          "description": "Pelajar menunjukkan pemikiran kreatif, membina pengetahuan, dan membangunkan produk dan proses inovatif menggunakan teknologi."
+        },
+        "iste/4": {
+          "description": "Pelajar menggunakan kemahiran berfikir kritis untuk merancang dan menjalankan penyelidikan, mengurus projek, menyelesaikan masalah, dan membuat keputusan termaklum menggunakan alat dan sumber digital yang sesuai."
+        },
+        "iste/6": {
+          "description": "Pelajar menunjukkan pemahaman yang baik tentang konsep, sistem dan operasi teknologi."
+        },
+        "ccela/L": {
+          "description": "Bahasa"
+        },
+        "ccela/RI": {
+          "description": "Bacaan Bermaklumat"
+        },
+        "ccmath/OA": {
+          "description": "Operasi Dan Pemikiran Algebra"
+        },
+        "csta2011/CD": {
+          "description": "Peranti Komputer & Komunikasi"
+        },
+        "csta2011/CI": {
+          "description": "Kesan kepada Komuniti, Global dan Etika"
+        },
+        "ccmath/NBT": {
+          "description": "Nombor Dan Operasi Dalam Asas Sepuluh"
+        },
+        "ccmath/G": {
+          "description": "Geometri"
+        },
+        "ccela/W": {
+          "description": "Penulisan"
+        },
+        "csta2011/CL": {
+          "description": "Kerjasama"
+        },
+        "iste/2": {
+          "description": "Pelajar menggunakan media digital dan persekitaran untuk berkomunikasi dan bekerja secara kolaboratif, termasuk pada jarak jauh, untuk menyokong pembelajaran individu dan menyumbang kepada pembelajaran orang lain."
+        },
+        "csta/IC": {
+          "description": "Kesan Pengkomputeran"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Terangkan bagaimana sumber pengkomputeran boleh dilindungi dan boleh disalahgunakan."
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Bandingkan algoritma pemampatan data untuk menentukan yang terbaik dalam konteks tertentu."
+        },
+        "csta/DA": {
+          "description": "Analisis & Data"
+        }
+      }
+    }
+  }
+}

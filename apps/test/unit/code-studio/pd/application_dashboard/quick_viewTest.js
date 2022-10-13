@@ -55,7 +55,7 @@ describe('Quick View', () => {
     const applicationsData = [
       {
         id: 8,
-        created_at: '2017-10-25T21:26:06.000Z',
+        date_applied: '2022-02-23',
         applicant_name: 'Clare Constantine',
         district_name: null,
         school_name: null,

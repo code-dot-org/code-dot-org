@@ -1,0 +1,26 @@
+{
+  "zh-TW": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "英語語言藝術共同核心標準"
+        },
+        "csta": {
+          "name": "CSTA K-12電腦科學標準（2017）"
+        },
+        "ccmath": {
+          "name": "數學共同核心標準"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 電腦科學標準 (2011)"
+        },
+        "iste": {
+          "name": "ISTE 學生標準"
+        },
+        "csp2021": {
+          "name": "CSP概念框架"
+        }
+      }
+    }
+  }
+}

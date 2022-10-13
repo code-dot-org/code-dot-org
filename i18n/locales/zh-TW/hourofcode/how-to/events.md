@@ -13,7 +13,7 @@ title: 一小時玩程式活動指引
 ## 1. 準備你的活動
 
 - 決定場地、日期、與時間。
-- 發送[信件](https://hourofcode.com/promote/resources#sample-emails)給當地市長、國會議員、州長、或是有影響力的商人，邀請他們來講話。 在舉辦一小時玩程式期間接待民選官員時，查看我們的[指引工具包]({{ localized_files/elected_official }})，瞭解更多資訊。
+- 發送[信件](https://hourofcode.com/promote/resources#sample-emails)給當地市長、國會議員、州長、或是有影響力的商人，邀請他們來講話。 在舉辦一小時玩程式期間接待民選官員時，查看我們的[指南工具包]({{ localized_files/elected_official }})，瞭解更多資訊。
 - 邀請新聞媒體，比如本地的新聞社，報紙，教育或技術博客。查看我們的[新聞工具包]({{ promote/press_kit_url }})以獲取幫助。
 
 ## 2. 活動進行時
@@ -35,23 +35,17 @@ title: 一小時玩程式活動指引
 
 * * *
 
-## 借助編程一小時開展家庭編程之夜，邀請父母們也參與進來。
+## Example plan for a school assembly or event
 
-考慮舉辦K-5 晚會，邀請家長們和他們的孩子們一起參加一小時的電腦科學學習。 這是讓更多的社區民眾參加進來的好方法，它也鼓勵家長們支持你學校學習計算機科學。 我們的合作夥伴在家庭程式設計之夜已經創作出一個一體化活動工具包，其中有幫助你舉辦活動的計畫清單、演講腳本、邀請郵件、海報、PPT演示等內容。 點擊這裡[](http://www.familycodenight.org/DownloadCodeDotOrg.html)來下載活動工具冊。
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## 例如計畫一次學校集會或活動
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**活動:**開始學校內的電腦科學教育週集會
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**日期：**{{ campaign_date/start_short }}（電腦科學教育周開始）
-
-**時間:**上學日的某天，活動首選上午，約1小時。
-
-**地點:**學校禮堂(如劇院、體育館、餐廳)
-
-## 流程演示
+## Run of Show
 
 | 時間               | 活動                                                   |
 | ---------------- | ---------------------------------------------------- |

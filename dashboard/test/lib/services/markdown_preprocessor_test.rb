@@ -104,6 +104,15 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     assert_equal expected, result
   end
 
+  test 'sub_resource_links can substitute using a provided proc' do
+    input = "this string has a resource [r first-resource/test-course/1999] link. And a [regular](link)"
+    replace_proc = proc {|r| "RESOURCE: #{r.name}"}
+    expected = "this string has a resource RESOURCE: First Resource link. And a [regular](link)"
+
+    result = Services::MarkdownPreprocessor.sub_resource_links(input, replace_proc)
+    assert_equal expected, result
+  end
+
   test 'sub_resource_links can handle multiple resource links in a single string' do
     input = "this string has [r second-resource/test-course/1999] two resource [r first-resource/test-course/1999] links"
     expected = "this string has [Second Resource](example.com/second) two resource [First Resource](example.com/first) links"
@@ -218,5 +227,14 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
     input = "this string has a vocab [v nonexistent_vocab/test-course/1999] definition."
     result = Services::MarkdownPreprocessor.sub_vocab_definitions(input)
     assert_equal input, result
+  end
+
+  test 'sub_vocab_definitions uses passed in proc if one provided' do
+    input = "this string has a vocab [v first_vocab/test-course/1999] definition."
+    replace_proc = proc {|v| "VOCABULARY: #{v.word}"}
+    expected = "this string has a vocab VOCABULARY: First Vocabulary definition."
+
+    result = Services::MarkdownPreprocessor.sub_vocab_definitions(input, replace_proc)
+    assert_equal expected, result
   end
 end

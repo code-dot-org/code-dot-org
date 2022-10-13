@@ -335,6 +335,7 @@
     "TEXT_TRIM_OPERATOR_RIGHT": "ডান দিক থেকে ফাঁকা স্থানগুলো সরাও।",
     "TEXT_TRIM_TOOLTIP": "এক বা উভয় প্রান্ত থেকে স্পেসগুলো সরিয়ে লেখাটির কপি দেখাও।",
     "UNUSED_CODE": "অব্যবহৃত কোড",
+    "VARIABLE": "চলক",
     "VARIABLES_DEFAULT_NAME": "জিনিষ",
     "VARIABLES_GET_CREATE_SET": "'%1 ধার্য করো' তৈরি করো",
     "VARIABLES_GET_TOOLTIP": "এই রাশির সংখ্যটি দেখায়।",

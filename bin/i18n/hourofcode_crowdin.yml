@@ -2,7 +2,8 @@
 # Your crowdin's credentials
 #
 "project_identifier" : "hour-of-code"
-"base_path" : "../../i18n/locales"
+"project_id" : "55536"
+"base_path" : "i18n/locales"
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials

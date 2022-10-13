@@ -1,6 +1,6 @@
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_widget.js')}
-  = stylesheet_link_tag asset_path('blockly/css/common.css'), media: 'all'
+  = stylesheet_link_tag asset_path('blockly/css/common.css', skip_pipeline: true), media: 'all'
   = stylesheet_link_tag 'css/leveltype_widget', media: 'all'
 
 = render partial: 'levels/dialog', locals: {app: 'external'}
@@ -9,7 +9,10 @@
   dashboard.widget.setupWidgetLevel();
 
 #external
-  - template = @level.properties['href']
-  - template_type = File.extname(template)[1..-1].to_sym
-  = render inline: File.read(Rails.root.join('public', template)), type: template_type
+  / If there is no actual template, the template won't be found and the returned
+  / path will be an absolute path. These are intended to be rendered inline.
+  - if @level.template.start_with?("/")
+    = render inline: File.read(@level.template), type: @level.template_type
+  - else
+    = render partial: @level.template, type: @level.template_type
 .clear

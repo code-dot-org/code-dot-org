@@ -4,6 +4,9 @@ ka:
     progressions:
       Artist Project: მსახიობის პროექტი
       'Artist: Variables': 'მხატვარი: ცვლადები'
+      Assessment: 'შეფასება
+
+'
       Binary Numbers: ორობითი რიცხვები
       Collision Detection: შეჯახების აღმოჩენა
       Collisions: შეჯახებები
@@ -13,6 +16,7 @@ ka:
       Event Types: ღონისძიების ტიპები
       Events: მოვლენები
       Example: მაგალითი
+      Extra: დამატებითი
       For Loops: '"მიზნისთვის" ციკლები'
       Free Play: თავისუფალი თამაში
       Functions: ფუნქციები
@@ -32,6 +36,7 @@ ka:
       Programming with Rey and BB-8: პროგრამირება რეისთან და BB-8-სთან ერთად
       Reflection: არეკვლა
       Review: მიმოხილვა
+      Sprite Movement: სპრაიტების მოძრაობა
       Text Compression: ტექსტის შეკუმშვა
       The Animation Tab: ანიმაციის ტაბი
       The Draw Loop: ხატვის ციკლი

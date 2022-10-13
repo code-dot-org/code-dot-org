@@ -1,0 +1,26 @@
+{
+  "ms-MY": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Standard Kesenian Bahasa Inggeris Teras Umum"
+        },
+        "csta": {
+          "name": "Standard Sains Komputer K-12 CSTA (2017)"
+        },
+        "ccmath": {
+          "name": "Standard Matematik Teras Umum"
+        },
+        "csta2011": {
+          "name": "Standard Sains Komputer K-12 CSTA (2011)"
+        },
+        "iste": {
+          "name": "Standard ISTE untuk Pelajar"
+        },
+        "csp2021": {
+          "name": "Rangka Kerja Konseptual CSP"
+        }
+      }
+    }
+  }
+}

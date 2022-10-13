@@ -18,3 +18,22 @@ Then /^I listen to the (\d+)(?:st|nd|rd|th) inline audio element$/ do |n|
     And element ".inline-audio:eq(#{n}) .playPause i" is visible
   STEPS
 end
+
+Given /^I load the review tab$/ do
+  # Load the review tab in the instructions panel
+  steps <<-STEPS
+     And I wait to see ".uitest-reviewTab"
+     And I click selector ".uitest-reviewTab"
+     And I wait to see ".review-refresh-button"
+  STEPS
+end
+
+Given /^I load the code review for peer number (.*) in the list$/ do |number|
+  steps <<-STEPS
+   And I load the review tab
+   And I press ".peer-dropdown-button" using jQuery
+   And I wait to see ".code-review-peer-link"
+   And I click selector ".code-review-peer-link:nth-child(#{number})" to load a new page
+   And I wait to see ".editable-text-area"
+  STEPS
+end

@@ -11,11 +11,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:41 UTC",
+    "serialized_at": "2021-11-22 19:56:48 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "dlp19-csd-mod-fit"
     }
@@ -219,6 +219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview1"
+        ],
         "progression": "Background"
       },
       "bonus": false,
@@ -241,6 +244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview2"
+        ],
         "progression": "Process"
       },
       "bonus": false,
@@ -263,6 +269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview3"
+        ],
         "progression": "Preparation"
       },
       "bonus": false,
@@ -285,6 +294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview4"
+        ],
         "progression": "Evaluation"
       },
       "bonus": false,
@@ -307,6 +319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview5"
+        ],
         "progression": "Due Dates"
       },
       "bonus": false,
@@ -329,6 +344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,6 +368,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -371,6 +392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,6 +416,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ]
       },
       "bonus": false,
       "seeding_key": {

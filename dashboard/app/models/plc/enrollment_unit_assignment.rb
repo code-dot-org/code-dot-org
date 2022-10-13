@@ -29,10 +29,10 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
     COMPLETED = 'completed'.freeze
   ].freeze
 
-  belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
-  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
+  belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment', optional: true
+  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit', optional: true
   has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
-  belongs_to :user, class_name: 'User'
+  belongs_to :user, class_name: 'User', optional: true
 
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
 

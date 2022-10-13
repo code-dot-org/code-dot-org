@@ -8,6 +8,8 @@ will be regularly updated by the [i18n sync scripts](../bin/i18n/), which will
 also distribute changes out to the various locations in the repository where
 they will be handled.
 
+This [i18n pipeline doc](./i18n_pipeline.md) contains diagrams describing how the i18n sync pipeline works.
+
 ## Modifying/Adding a new string
 
 When adding a string, please make the key as descriptive as possible because

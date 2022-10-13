@@ -3,16 +3,10 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {
-  UnconnectedUnitOverviewTopRow as UnitOverviewTopRow,
-  NOT_STARTED,
-  IN_PROGRESS,
-  COMPLETED
-} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
+import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
@@ -20,25 +14,27 @@ import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {
   sectionsForDropdown: [],
-  unitProgress: NOT_STARTED,
   scriptId: 42,
   scriptName: 'test-script',
   unitTitle: 'Unit test script title',
   viewAs: ViewType.Participant,
   isRtl: false,
-  teacherResources: [],
   studentResources: [],
   showAssignButton: true,
-  isMigrated: false
+  isMigrated: false,
+  unitCompleted: false,
+  hasPerLevelResults: false,
+  isProfessionalLearningCourse: false
 };
 
 describe('UnitOverviewTopRow', () => {
-  it('renders "Try Now" for participant', () => {
+  it('renders "Try Now" for participant if not unitCompleted and not hasPerLevelResults', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Participant}
-        unitProgress={NOT_STARTED}
+        unitCompleted={false}
+        hasPerLevelResults={false}
       />
     );
 
@@ -71,12 +67,13 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Continue" for participant', () => {
+  it('renders "Continue" for participant if has level results and not unitCompleted', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Participant}
-        unitProgress={IN_PROGRESS}
+        unitCompleted={false}
+        hasPerLevelResults={true}
       />
     );
 
@@ -97,7 +94,7 @@ describe('UnitOverviewTopRow', () => {
       <UnitOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Participant}
-        unitProgress={COMPLETED}
+        unitCompleted={true}
       />
     );
 
@@ -111,6 +108,28 @@ describe('UnitOverviewTopRow', () => {
         />
       )
     ).to.be.true;
+  });
+
+  it('does not render "Print Certificate" button for participant in professional learning course', () => {
+    const wrapper = shallow(
+      <UnitOverviewTopRow
+        {...defaultProps}
+        viewAs={ViewType.Participant}
+        unitCompleted={true}
+        isProfessionalLearningCourse={true}
+      />
+    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          __useDeprecatedTag
+          href="/s/test-script/next"
+          text={i18n.printCertificate()}
+          size={Button.ButtonSize.large}
+        />
+      )
+    ).to.be.false;
   });
 
   it('renders SectionAssigner for instructor', () => {
@@ -139,49 +158,13 @@ describe('UnitOverviewTopRow', () => {
   });
 
   describe('instructor resources', () => {
-    it('renders resources for instructor', () => {
-      const wrapper = shallow(
-        <UnitOverviewTopRow
-          {...defaultProps}
-          viewAs={ViewType.Instructor}
-          teacherResources={[
-            {
-              type: ResourceType.curriculum,
-              link: 'https://example.com/a'
-            },
-            {
-              type: ResourceType.vocabulary,
-              link: 'https://example.com/b'
-            }
-          ]}
-        />
-      );
-      expect(
-        wrapper.containsMatchingElement(
-          <ResourcesDropdown
-            resources={[
-              {
-                type: ResourceType.curriculum,
-                link: 'https://example.com/a'
-              },
-              {
-                type: ResourceType.vocabulary,
-                link: 'https://example.com/b'
-              }
-            ]}
-            useMigratedResources={false}
-          />
-        )
-      ).to.be.true;
-    });
-
-    it('renders migrated resources for instructor on a migrated script', () => {
+    it('renders resources for instructor on a migrated script', () => {
       const wrapper = shallow(
         <UnitOverviewTopRow
           {...defaultProps}
           viewAs={ViewType.Instructor}
           isMigrated={true}
-          migratedTeacherResources={[
+          teacherResources={[
             {
               id: 1,
               key: 'curriculum',
@@ -200,7 +183,7 @@ describe('UnitOverviewTopRow', () => {
       expect(
         wrapper.containsMatchingElement(
           <ResourcesDropdown
-            migratedResources={[
+            resources={[
               {
                 id: 1,
                 key: 'curriculum',
@@ -214,58 +197,6 @@ describe('UnitOverviewTopRow', () => {
                 url: 'https://example.com/b'
               }
             ]}
-            useMigratedResources={true}
-          />
-        )
-      ).to.be.true;
-    });
-
-    it('renders legacy resources instead of migrated resources on migrated script', () => {
-      const wrapper = shallow(
-        <UnitOverviewTopRow
-          {...defaultProps}
-          viewAs={ViewType.Instructor}
-          isMigrated={true}
-          teacherResources={[
-            {
-              type: ResourceType.curriculum,
-              link: 'https://example.com/a'
-            },
-            {
-              type: ResourceType.vocabulary,
-              link: 'https://example.com/b'
-            }
-          ]}
-          migratedTeacherResources={[
-            {
-              id: 1,
-              key: 'curriculum',
-              name: 'Curriculum',
-              url: 'https://example.com/a'
-            },
-            {
-              id: 2,
-              key: 'vocabulary',
-              name: 'Vocabulary',
-              url: 'https://example.com/b'
-            }
-          ]}
-        />
-      );
-      expect(
-        wrapper.containsMatchingElement(
-          <ResourcesDropdown
-            resources={[
-              {
-                type: ResourceType.curriculum,
-                link: 'https://example.com/a'
-              },
-              {
-                type: ResourceType.vocabulary,
-                link: 'https://example.com/b'
-              }
-            ]}
-            useMigratedResources={false}
           />
         )
       ).to.be.true;

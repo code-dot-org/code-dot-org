@@ -87,6 +87,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                     text={button.text}
                     target={button.target}
                     id={button.id}
+                    onClick={button.onClick}
                   />
                   &nbsp; &nbsp; &nbsp;
                 </span>
@@ -232,7 +233,7 @@ const styles = {
     paddingBottom: 20,
     fontSize: 24,
     lineHeight: '26px',
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham 4r',
     color: color.charcoal
   },
   textItem: {

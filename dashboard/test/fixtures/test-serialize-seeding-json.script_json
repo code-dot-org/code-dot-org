@@ -12,9 +12,9 @@
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }

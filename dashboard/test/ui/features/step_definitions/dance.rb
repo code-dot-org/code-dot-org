@@ -1,6 +1,6 @@
 # Helper steps for dance party levels
 
-And (/^I wait for the song selector to load/) do
+And(/^I wait for the song selector to load/) do
   wait_for_jquery
   wait_until {@browser.execute_script("return !!$('#song_selector').val();")}
 end

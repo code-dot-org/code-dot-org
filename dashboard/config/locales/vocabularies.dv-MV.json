@@ -2,33 +2,20 @@
   "dv-MV": {
     "data": {
       "vocabularies": {
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+        "copyright/coursee/2022": {
+          "word": "ކޮޕީރައިޓްސް"
         },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/courseb/2022": {
+          "word": "ޑްރޮޕް"
         },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/pre-express/2022": {
+          "word": "ޑްރޮޕް"
         },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/coursea/2022": {
+          "word": "ޑްރޮޕް"
         },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
+        "copyright/csd/2022": {
+          "word": "ކޮޕީރައިޓްސް"
         },
         "drop/courseb/2021": {
           "word": "ޑްރޮޕް"
@@ -40,6 +27,9 @@
           "word": "ޑްރޮޕް"
         },
         "copyright/coursee/2021": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "copyright/csd/2021": {
           "word": "ކޮޕީރައިޓްސް"
         }
       }

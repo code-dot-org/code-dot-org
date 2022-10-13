@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ur:
   errors:
     messages:
@@ -18,27 +24,42 @@ ur:
     errors:
       messages:
         blank: "مطلوب ہے"
+        invalid: "غلط ہے"
+        invalid_plural: "غلط ہیں"
     attributes:
       user:
         name: 'ڈسپلے نام'
+        name_example: 'ظاہری نام (مثلاً، سعد حسن یا ایم شیراز وغیرہ)'
         email: 'Email'
+        parent_email: 'والدین/سرپرست کا ای میل ایڈریس'
+        personal_email: "ذاتی ای میل ایڈریس <a href=\"%{url}\">(اگر آپ کے پاس ای میل ایڈریس نہیں ہے تو یہاں کلک کریں)</a>"
+        personal_email_markdown: "ذاتی ای میل ایڈریس [(اگر آپ کے پاس ای میل ایڈریس نہیں ہے تو یہاں کلک کریں)](%{url})"
         username: 'یوزر کا نام'
         password: 'پاس ورڈ'
+        verified_teacher: 'تصدیق شدہ استاد'
         password_confirmation: 'پاس ورڈ کنفرم کرین'
         current_password: 'موجودہ پاس ورڈ'
         locale: 'زبان'
         age: 'عمر'
         gender: 'Jinss'
         edit_header: 'اکاؤنٹ کی تفصیلات میں ترمیم کیجیے'
+        finish_sign_up_header: 'اپنا اکاؤنٹ بنانا مکمل کریں'
+        finish_sign_up_subheader: 'Code.org پر<strong>%{email}</strong> کا اکاوٗنٹ بنانے کے لئے درج زیل معلومات پُر کریں'
+        finish_sign_up_subheader_markdown: 'Code.org پر**{email}%** کا اکاوٗنٹ بنانے کے لئے درج زیل معلومات پُر کریں'
         error:
           future: مستقبل میں نہیں ہو سکتا
   beta: "beta"
   hello: "hello dunia"
   welcome_back: "خوش آمدید، %{name}"
   submit: جمع کرائیں
+  previous_page: پچھلا صفحہ
   next_page: اگلا صفحہ
   cancel: "منسوخ کریں"
+  okay: "اوکے"
   or: "یا"
+  join_section:
+    code:
+      placeholder: "سیکشن کوڈ (ABCDEF)"
   add_hint_form:
     placeholder: 'براے مہربانی اپنا اشارہ یہاں enter کریں'
     submit: 'اشارہ شامل کریں'
@@ -90,11 +111,22 @@ ur:
     invalid_password: "پاس ورڈ کم از کم ٦ حروف کا ہونا چاہیے"
     mismatch_password: "داخل کے گئے دونوں پاس ورڈزمختلف ہیں"
     additional_information: "ہمیں آپ کو sign in کرنے لئے کچھ مزید معلومات درکار ہے."
+    user_type_button: "اکاؤنٹ کی قسم اپڈیٹ کریں"
+    user_type_label: "اکاؤنٹ کی قسم"
     user_type_student: "Talib-e-ilm"
+    user_type_student_desc: "ہماری تمام کورسیں اور سرگرمیاں دریافت کریں، مزید برآں:"
+    user_type_student_ability_1: "اپنی پیشرفت اور پراجیکٹس محفوظ کریں"
+    user_type_student_ability_2: "اپنے استاد کے کلاسروم سیکشن میں شامل ہوں"
+    user_type_teacher_desc: "وہ سب کچھ جنہیں طلباء کو رسائی حاصل ہو، اور مزید برآں:"
+    user_type_teacher_ability_1: "کلاسروم کے سیکشن بنائیں"
+    user_type_teacher_ability_2: "طلباء کو کام سونپیں اور پیشرفت ٹریک کریں"
+    user_type_teacher_ability_3: "پیشہ ورانہ سیکھنے کے کورسوں میں داخلے لیں"
+    user_type_teacher_ability_4: "ہمارے اساتذہ پلیٹ فارم پر روابط قائم کریں"
     field_is_required: "مطلوب ہے"
     email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
     email_preference_yes: "جی"
     email_preference_no: "نہيں"
+    share_teacher_email_reg_partner_question: "کیا آپ چاہیں گے کہ ہم آپ کی ریاست میں [Code.org علاقائی پارٹنر](%{cdo_regional_partner_desc}) کے ساتھ آپ کے رابطہ کی معلومات کا اشتراک کریں تاکہ وہ آپ کو مقامی پیشہ ورانہ ترقی، وسائل اور واقعات کے بارے میں مطلع کر سکیں؟"
     share_teacher_email_reg_partner_preference_yes: "جی"
     share_teacher_email_reg_partner_preference_no: "نہيں"
     parent_account_checkbox: "میں ایک والد یا والدہ/سرپرست ہوں جو اپنے بچے کی جانب سے دستخط کر رہا/رہی ہوں"
@@ -132,6 +164,10 @@ ur:
   crud:
     edit: 'تدوین کریں'
     submit: 'جمع کرائیں'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "آپ کا فراہم کردہ ایمیل ایڈرس اس اکاؤنٹ سے جڑے ایمیل سے مطابقت نہیں رکھتا"
   nav:
     header:
       finished_hoc: "میں نے ختم کیا!"
@@ -153,7 +189,10 @@ ur:
       algebra_game: 'الجبرا'
       artist_k1: 'آرٹسٹ (پری ریڈر)'
       basketball: 'باسکٹ بال'
+      calc: 'Calc'
       dance: 'ڈانس پارٹی'
+      eval: 'Eval'
+      flappy: 'فلاپی'
       frozen: 'فروزن'
       gamelab_jr: 'کھیل لیب (بیٹا)'
       iceage: 'برفانی عہد'
@@ -161,6 +200,9 @@ ur:
       minecraft_aquatic: 'Minecraft تعلیم کے لئے جانا'
       minecraft_hero: 'Minecraft ہیرو'
       playlab_k1: 'لیب کھیلیں (پری ریڈر)'
+      poetry: 'شاعری'
+      poetry_hoc: 'نظم کا فن'
+      sports: 'کھیل کود'
       starwars: 'اسٹار وارز'
       starwarsblocks: 'اسٹار وارز (بلاکس)'
       starwarsblocks_hour: 'اسٹار وارز (بلاکس)'
@@ -168,21 +210,26 @@ ur:
     popup:
       prizes_link: 'مزید معلومات'
   teacher:
+    dashboard: 'ٹیچر کا ڈیش بورڈ'
     panel:
+      answer_viewer: 'ٹیچر پینل'
       student: 'Talib-e-ilm'
       last_updated: 'آخری تازہ کاری:'
   user:
     new_email_hint: '(اثبات کریں کہ آپ اس ای میل ایڈریس سے ای میلز موصول کر سکتے ہیں کریں.)'
     for_parents_and_guardians: "والدین اور سرپرستوں کے لئے"
     link_a_parent_email: "اپنے بچے کی ترقی اور پراجیکٹس کے بارے میں تازہ احوال سے باخبر رہنے کے لئے والد یا والدہ/سرپرست کا ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں۔ آپ اس ایمیل ایڈرس کو اپنا بھولا ہوا پاسورڈ بدلنے کے لئے استعمال کر سکتے ہیں۔"
+    parent_guardian_email_label: "والدین/سرپرست کا ای میل ایڈریس"
     none: "کوئی نہيں"
     only_one_parent_email_supported_warning: "نوٹ: ہم فعل الحال ایک سٹوڈنٹ اکاؤنٹ میں والدین/سرپرست کا ایک ہی ایمیل ایڈرس رکھنے کی سہولت دے پا رہے ہیں۔"
+    encrypted: "انکرپٹ کردہ"
   home:
     student_reg_link: 'طالبعلم کا سائن اپ'
     teacher_reg_link: 'استاد کا سائن اپ'
     online: آن لائن
     trynow: 'مزید سیکھے'
     try_beta_courses: 'نیا! ہمارے بیٹا کورس برائے K-5 طلبہ کا جائژہ لیں.'
+  certificate_hour_of_code: "آور-آف-کوڈ"
   user_type:
     student: 'Talib-e-ilm'
   footer:
@@ -207,6 +254,10 @@ ur:
       title: 'ڈانس پارٹی'
     dance-2019:
       title: 'ڈانس پارٹی'
+    hello-world:
+      title: 'ہیلو ورلڈ'
+    poem-art:
+      title: 'نظم کا فن'
     20-hour:
       title: 'تیز کردہ کورس'
       body_short: '2-4 کورسز کے تیز کردہ ورژن میں بنیادی کمپیوٹر سائنس سیکھیں۔'
@@ -216,6 +267,8 @@ ur:
       title: "فروزن"
     starwars:
       title: "اسٹار وارز"
+    sports:
+      title: "کھیل کود"
     unplugged:
       title: "ان پلگڈ اسباق"
       body_short: "اگر آپ کے پاس کمپیوٹر نہیں ہے، تو اپنے کلاس روم میں پلگ نکالا اسباق کو آزمائیں۔"
@@ -225,6 +278,15 @@ ur:
       audience: "عمر 14+"
   landing:
     help_support: "مدد اور معاونت"
+  multi-submittable:
+    wrong_title: "آپکا شکریہ"
+    correct_title: "آپکا شکریہ"
+  level_group:
+    wrong_title: "آپکا شکریہ"
+    correct_title: "آپکا شکریہ"
+  level_group-submittable:
+    wrong_title: "آپکا شکریہ"
+    correct_title: "آپکا شکریہ"
   dialog:
     ok: "ٹھیک ہے"
     startover_title: "کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟"
@@ -235,6 +297,8 @@ ur:
     privacy: "رازداری کی پالیسی"
     accept_tos: "Code.org میں سائن اپ کرنے سے، آپ ہماری [سروس کی\nشرائط](%{tos_url}) اور [پرائیویسی پالیسی](%{privacy_url})\nسے اتفاق کرتے ہیں۔."
     print: "پرنٹ کریں"
+  school_info_interstitial:
+    save: "محفوظ کریں"
   race_interstitial:
     races:
       other: "دیگر"
@@ -258,12 +322,20 @@ ur:
   pd:
     form_labels:
       email: 'Email'
+      school_city: 'سکول سٹی'
+      school_city_district: 'سکول سٹی/ضلع'
+      colombian_school_city: 'سکول سٹی'
     form_entries:
       subjects:
         cs: 'کمپیوٹر سائنس'
         math: 'ریاضی'
         science: 'سائنس'
         la: 'لسانی آرٹس'
+        other: "دیگر"
+      resources:
+        other: "دیگر"
+      robotics:
+        other: "دیگر"
       workshop_course:
         csf_express: 'CS بنیادی اصول (پری ایکسپریس یا ایکسپریس)'
       email_opt_in:
@@ -276,3 +348,11 @@ ur:
     text: "**کیا اپ والدین یا سرپرست ہیں؟** اپنے بچے کی ترقی اور پراجیکٹس کے بارے میں تازہ احوال سے باخبر رہنے کے لئے والد یا والدہ/سرپرست کا ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں۔"
     link_your_email: "ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں"
     not_now: "ابھی نہیں"
+  teacher_feedback: "استاد کے حوالے سے رائے"
+  lesson_lock:
+    error:
+      no_updates: "کوئی اپڈیٹ نہیں ہیں"
+      missing_params: "یوزر، لیول، اور یونٹ کے آئی ڈی دینا ضروری ہے"
+      cannot_view_locked_answers: "قفل کی حالت میں جواب نہیں دکھائے جا سکتے"
+      forbidden: "یوزر طالب علم کے قابل قلف حالت کو اپڈیٹ نہیں کر سکتا"
+  reset_predict_progress_button: "جواب ڈیلیٹ کریں"

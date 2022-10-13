@@ -10,7 +10,6 @@
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
  * @property {SerializedAnimationList} initialAnimationList
- * @property {Object} initialGeneratedProperties
  * @property {string} levelGameName
  * @property {string} skinId
  * @property {string} baseUrl
@@ -38,11 +37,11 @@
  * @property {number} serverLevelId
  * @property {number} serverProjectLevelId
  * @property {string} gameDisplayName
+ * @property {string} appName
  * @property {boolean} publicCaching
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
  *           false if they are 12 or younger, and undefined if we don't know
  *           (such as when they are not signed in).
- * @property {boolean} verifiedTeacher
  * @property {boolean} hasContainedLevels
  * @property {boolean} hideSource
  * @property {string} share
@@ -66,6 +65,9 @@
  * @property {?string} authenticityToken
  * @property {boolean} levelRequiresChannel
  * @property {boolean} reduceChannelUpdates
+ * @property {boolean} hasOpenCodeReview
+ * @property {boolean} isViewingOwnProject
+ * @property {?string} codeOwnersName
  */
 
 /**
@@ -119,10 +121,12 @@
  * @property {boolean} iframeEmbedAppAndCode
  * @property {?} lastAttempt
  * @property {boolean} submittable
- * @property {boolean} final_level
  * @property {array} levelVideos
  * @property {string} mapReference
  * @property {array} referenceLinks
+ * @property {boolean} isLastLevelInLesson
+ * @property {boolean} isLastLevelInScript
+ * @property {boolean} showEndOfLessonMsgs
  */
 
 /**
@@ -224,7 +228,6 @@
  * @typedef {Object} MilestoneResponse
  * @property {?} script_id
  * @property {?} level_id
- * @property {?} total_lines
  * @property {AutoplayVideo} video_info
  * @property {string} redirect - path to 'next' level in the lesson/script sequence.
  * @property {{previous: {position: number, name: string}}} lesson_changing

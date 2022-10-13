@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 nl:
   errors:
     messages:
@@ -174,6 +180,7 @@ nl:
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
     email_preference_required: "Je moet een emailvoorkeur instellen."
+    share_teacher_email_reg_partner_question: "Wilt u dat wij uw contactinformatie delen met de [regionale partner van Code.org](%{cdo_regional_partner_desc}) in uw provincie zodat zij u op de hoogte kunnen houden over locale professionele ontwikkelingen, resources en evenementen?"
     share_teacher_email_reg_partner_preference_yes: "Ja"
     share_teacher_email_reg_partner_preference_no: "Nee"
     share_teacher_email_reg_partner_preference_required: "Je moet een emailvoorkeur instellen."
@@ -354,6 +361,7 @@ nl:
       about: "Over"
       legal: "Privacy & juridisch"
       legal_privacy: "Privacybeleid"
+      legal_cookie_notice: "Cookiebeleid"
       legal_tos: "Gebruiksvoorwaarden"
     user:
       classroom: 'Startpagina voor de leerkracht'
@@ -395,17 +403,19 @@ nl:
       minecraft_hero: 'Minecraft Held'
       playlab: 'Speel Lab'
       playlab_k1: 'Play Lab (Peuter)'
+      poetry: 'Poëzie'
+      poetry_hoc: 'Poëzie'
       scratch: 'Scratch'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blokken)'
       starwarsblocks_hour: 'Star Wars (blokken)'
+      loading: 'Laden...'
       weblab: 'Web Lab'
       view_all: 'Bekijk alle projecten...'
     popup:
       progress_for_user: "%{name} de vooruitgang"
       progress: 'Jouw voortgang'
-      lines: 'Totaal aantal regels code: %{lines}'
       close: 'SLUITEN'
       mastery: 'Begrippen'
       puzzle_map: 'Niveaus'
@@ -415,6 +425,7 @@ nl:
       prizes_link: 'Meer info'
   teacher:
     answer: Antwoord
+    dashboard: 'Dashboard Leerkrachten'
     for_teachers_only: Alleen Voor Leraren
     title:
       one: 'Je leraar:'
@@ -518,6 +529,7 @@ nl:
     choose_next_course: "Probeer een Code Studio cursus door er hier onder één te kiezen"
     print_certificate: "print certificaat"
   certificate_sponsor_message: "%{sponsor_name} gaf het gulle geschenk om je leren te sponsoren."
+  certificate_hour_of_code: "Uur Code"
   move_students:
     new_section_dne: "Sorry, maar de groep %{new_section_code} bestaat niet. Vul een andere groepscode in."
     section_code_cant_be_current_section: "Het huidige onderdeel kan niet hetzelfde zijn als het nieuwe onderdeel."
@@ -565,6 +577,7 @@ nl:
     how_it_works: 'Hoe het werkt'
     try_hour_of_code: 'Probeer een Hour of Code!'
     store: 'Winkel'
+    cookie_notice: 'Cookiebeleid'
   reference_area:
     title: 'Hulp nodig?'
     subtitle: 'Bekijk deze video''s en hints'
@@ -628,6 +641,10 @@ nl:
       title: 'Dansfeest'
     dance-2019:
       title: 'Dansfeest'
+    hello-world:
+      title: 'Hallo Wereld'
+    poem-art:
+      title: 'Poëzie'
     hoc:
       title: 'Klassiek doolhof'
       body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
@@ -773,13 +790,6 @@ nl:
     accept: "Accepteren"
     print: "Afdrukken"
     review_terms: "Herzie de aangepaste gebruiksvoorwaarden"
-  donor_interstitial:
-    title: "Je gratis informaticacursussen worden mogelijk gemaakt door..."
-    local_supporters: "Lokale ondersteuners"
-    global_supporters: "Globale ondersteuners"
-    support_codeorg_1: "Elke euro die Code.org ontvangt, geeft meer leerlingen kansen."
-    support_codeorg_2: "[Doneer nu](%{donate_url}) om Code.org te ondersteunen."
-    get_started: "Ga aan de slag op Code.org"
   school_info_interstitial:
     save: "Opslaan"
   race_interstitial:
@@ -880,6 +890,7 @@ nl:
       school: 'School'
       school_name: 'Naam van de school'
       school_city: 'School Stad'
+      school_city_district: 'School stad/district'
       school_country: 'Land van de school'
       colombian_school_city: 'School Stad'
       colombian_chilean_school_name: 'Naam van de school'
@@ -913,14 +924,14 @@ nl:
         lightbot: 'LightBot'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "Anders:"
+        other: "Anders"
       robotics:
         kodable: 'Kodable'
         microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "Anders:"
+        other: "Anders"
       workshop_course:
         csp: 'CW Principes'
       email_opt_in:
@@ -942,3 +953,4 @@ nl:
   behaviors:
     this_sprite: "deze sprite"
   unit_prefix: "Unit %{n}"
+  teacher_feedback: "Docenten feedback"

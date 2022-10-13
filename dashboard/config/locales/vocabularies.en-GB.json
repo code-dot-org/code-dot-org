@@ -14,36 +14,35 @@
         "loops/aquatic/unversioned": {
           "word": "Loops"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "Code"
+        },
+        "variable/coursef/2022": {
+          "word": "Variable"
+        },
+        "define/coursef/2022": {
+          "word": "Define"
+        },
+        "function/coursee/2022": {
+          "word": "Function"
+        },
+        "define/coursee/2022": {
+          "word": "Define"
+        },
+        "function/express/2022": {
+          "word": "Function"
+        },
+        "variable/express/2022": {
+          "word": "Variable"
+        },
+        "define/express/2022": {
+          "word": "Define"
+        },
+        "variable/csd/2022": {
+          "word": "Variable"
+        },
+        "function/csd/2022": {
+          "word": "Function"
         },
         "code/poem-art/unversioned": {
           "word": "Code"
@@ -68,6 +67,12 @@
         },
         "define/coursee/2021": {
           "word": "Define"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "function/csd/2021": {
+          "word": "Function"
         }
       }
     }

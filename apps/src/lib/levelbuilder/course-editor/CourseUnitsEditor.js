@@ -5,9 +5,11 @@ import ReactDOM from 'react-dom';
 export default class CourseUnitsEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
+    initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     unitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    updateUnitsInCourse: PropTypes.func.isRequired
+    updateUnitsInCourse: PropTypes.func.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired
   };
 
   handleChange = () => {
@@ -34,6 +36,10 @@ export default class CourseUnitsEditor extends Component {
             key={index}
             value={selectedUnit}
             onChange={this.handleChange}
+            disabled={
+              !this.props.allowMajorCurriculumChanges &&
+              this.props.initialUnitsInCourse.includes(selectedUnit)
+            }
           >
             <option key="-1" value="">
               Select a unit to add to course

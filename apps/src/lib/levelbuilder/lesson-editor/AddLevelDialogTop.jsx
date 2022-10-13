@@ -26,7 +26,8 @@ function AddLevelDialogTop(props) {
 
   useEffect(() => {
     handleSearch();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage]);
 
   const setCurrentPageAndSearch = value => {
     setCurrentPage(value);

@@ -37,6 +37,6 @@ Zobacz przykładowy przebieg wydarzenia, jak kontaktować się z mediami i inne 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
 - Zachęć uczniów do kontynuowania [ nauki online]({{ urls/learn_beyond }}).
-- [Weź udział ]({{ urls/professional_development_workshops }}) osobiście w jednodniowych warsztatach, by uzyskać instrukcje od doświadczonych informatyków. (Wyłącznie dla dydaktyków ze Stanów Zjednoczonych.)
+- [Learn more](https://code.org/administrators) about implementing a computer science pathway in your district.
 
 {{ signup_button }}

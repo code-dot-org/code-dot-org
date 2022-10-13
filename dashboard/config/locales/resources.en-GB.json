@@ -2,36 +2,35 @@
   "en-GB": {
     "data": {
       "resources": {
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+        "variables/express/2022": {
+          "name": "Variables"
         },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "",
-          "url": ""
+        "variables/csd/2022": {
+          "name": "Variables"
         },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "variables_3/csd/2022": {
+          "name": "Variables"
         },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "text/csd/2022": {
+          "name": "Text"
         },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "lists/csd/2022": {
+          "name": "Lists"
         },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "variables_1/csd/2022": {
+          "name": "Variables"
         },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "",
-          "url": ""
+        "variables_2/csd/2022": {
+          "name": "Variables"
         },
         "variables_video/express/2021": {
           "name": "Variables"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "lists/csd/2021": {
+          "name": "Lists"
         }
       }
     }

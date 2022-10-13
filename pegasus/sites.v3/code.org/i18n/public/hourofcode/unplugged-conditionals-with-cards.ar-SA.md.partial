@@ -1,33 +1,33 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: موارد المعلم - الجمل الشرطية بالبطاقات
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# متغيرات ببطاقات: دورة تعليمية لـساعة البرمجة
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## مصادر المعلم
 
-### Lesson Plans:
+### خطط الدرس
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [العبارات الشرطية باستخدام البطاقات](/files/ConditionalsHoC.pdf)
+- مقطع فيديو:[كيف تبسط المتغيرات بالبطاقات في صفك](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### أنشطة إضافية
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [ما بعد "ساعة من البرمجة"](http://code.org/learn/beyond)
+- [أسس علوم الكمبيوتر: الدورة التدريبية 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### موارد أخرى للمُعلِّم:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [دليل "ساعة من البرمجة" الإرشادي للمعلمين ](https://hourofcode.com/how-to)
+- [أفضل الممارسات لمعلمين ناجحين](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- حدث يبث مباشرةً:[دليل المعلم لـساعة البرمجة](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,12 +35,12 @@ video_player: true
 
 ## نظرة عامة
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+تعلم عن الخوارزميات والعبارات الشرطية في هذا النشاط "غير البرمجي" باستخدام حزمة من البطاقات. يعمل الطلاب في هذا النشاط في فرق وكل فريق يحتاج حزمة من البطاقات.
 
-**Recommended Age Range:** 8-12
+**الفئة العمرية الموصى بها:** ٨-١٢
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**متطلبات التكنولوجيا:** لا شيء! يمكن أن يتم تدريس هذا النشاط "غير البرمجي" باستخدام حزمة من البطاقات فحسب.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>حمِّل هذا النشاط</button></a>
 
 [/col-50]

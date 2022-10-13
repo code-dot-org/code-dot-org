@@ -16,10 +16,9 @@ function isUnsupportedIE() {
 // We support Chrome 33.x +
 function isUnsupportedChrome() {
   var isChrome = navigator.userAgent.lastIndexOf('Chrome/') !== -1;
-  var chromeVersion = navigator.userAgent.substr(
-    navigator.userAgent.lastIndexOf('Chrome/') + 7,
-    2
-  );
+  var chromeVersion = navigator.userAgent
+    .substring(navigator.userAgent.lastIndexOf('Chrome/') + 7)
+    .split('.')[0];
   var unsupported = isChrome && chromeVersion < 33;
   return unsupported;
 }
@@ -27,10 +26,9 @@ function isUnsupportedChrome() {
 // We support Safari 7.0.x +
 function isUnsupportedSafari() {
   var isSafari = navigator.userAgent.indexOf('Safari/') !== -1;
-  var safariVersion = navigator.userAgent.substr(
-    navigator.userAgent.lastIndexOf('Version/') + 8,
-    2
-  );
+  var safariVersion = navigator.userAgent
+    .substring(navigator.userAgent.lastIndexOf('Version/') + 8)
+    .split('.')[0];
   var unsupported = isSafari && safariVersion < 7;
   return unsupported;
 }
@@ -38,10 +36,9 @@ function isUnsupportedSafari() {
 // We support Firefox 25.x +
 function isUnsupportedFirefox() {
   var isFirefox = navigator.userAgent.indexOf('Firefox') !== -1;
-  var firefoxVersion = navigator.userAgent.substr(
-    navigator.userAgent.lastIndexOf('Firefox/') + 8,
-    2
-  );
+  var firefoxVersion = navigator.userAgent
+    .substring(navigator.userAgent.lastIndexOf('Firefox/') + 8)
+    .split('.')[0];
   var unsupported = isFirefox && firefoxVersion < 25;
   return unsupported;
 }

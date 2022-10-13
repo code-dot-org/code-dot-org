@@ -94,7 +94,7 @@ module TextToSpeech
     return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
 
     loc_voice = TextToSpeech.localized_voice
-    url = acapela_text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
+    url = Acapela.text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
     return if url.nil?
     uri = URI.parse(url)
     Net::HTTP.start(uri.host) do |http|
@@ -129,7 +129,7 @@ module TextToSpeech
   # @return [String] URL where the TTS audio file can be downloaded from. `nil` is returned if any of
   # the params are blank or if TTS is not supported for the given locale.
   def tts_url(text, locale = I18n.locale)
-    return nil unless TextToSpeech.locale_supported?(locale) && !text.blank?
+    return nil unless TextToSpeech.locale_supported?(locale) && text.present?
     "https://tts.code.org/#{tts_path(text)}"
   end
 

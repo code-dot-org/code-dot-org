@@ -40,6 +40,7 @@ module Api::V1::Pd
 
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
       @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner
+      @csd_incomplete_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner, status: 'incomplete'
       @csp_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
       @csp_facilitator_application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp', regional_partner: @regional_partner
 
@@ -55,6 +56,15 @@ module Api::V1::Pd
       )
 
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
+    end
+
+    # Manually reload application between tests, to work around an unusual bug
+    # here with the interaction of three things:
+    #   1. Rails 6
+    #   2. composite_primary_keys
+    #   3. SetupAllAndTeardownAll
+    teardown do
+      @csp_facilitator_application.reload
     end
 
     test_redirect_to_sign_in_for :index
@@ -86,6 +96,40 @@ module Api::V1::Pd
       test_user_gets_response_for :update, params: -> {@test_update_params}, user: user, response: response
     end
 
+    # Auth for incomplete applications
+    {
+      program_manager: :forbidden,
+      workshop_admin: :success
+    }.each do |user, response|
+      test_user_gets_response_for :show,
+        name: "#{user} gets #{response} when showing incomplete applications",
+        user: user,
+        params: -> {{id: @csd_incomplete_application_with_partner.id}},
+        response: response
+    end
+
+    {
+      program_manager: :forbidden,
+      workshop_admin: :success
+    }.each do |user, response|
+      test_user_gets_response_for :destroy,
+        name: "#{user} gets #{response} when deleting incomplete applications",
+        user: user,
+        params: -> {{id: @csd_incomplete_application_with_partner.id}},
+        response: response
+    end
+
+    {
+      program_manager: :forbidden,
+      workshop_admin: :success
+    }.each do |user, response|
+      test_user_gets_response_for :update,
+        name: "#{user} gets #{response} when updating incomplete applications",
+        user: user,
+        params: -> {{application: {notes: 'Notes!'}, id: @csd_incomplete_application_with_partner.id}},
+        response: response
+    end
+
     test "quick view returns appropriate application type" do
       create FACILITATOR_APPLICATION_FACTORY, course: 'csf'
       create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
@@ -101,6 +145,14 @@ module Api::V1::Pd
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
+      assert_equal [@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
+        JSON.parse(@response.body).map {|r| r['id']}
+    end
+
+    test 'quick view if not admin returns applications without incomplete apps and with filter' do
+      sign_in @program_manager
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
+      assert_response :success
       assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
     end
 
@@ -108,7 +160,12 @@ module Api::V1::Pd
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers'}
       assert_response :success
-      assert_equal [@csd_teacher_application.id, @csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal [
+        @csd_teacher_application.id,
+        @csd_teacher_application_with_partner.id,
+        @csd_incomplete_application_with_partner.id
+      ],
+        JSON.parse(@response.body).map {|r| r['id']}
     end
 
     test "quick view returns applications with regional partner filter set to no partner" do
@@ -670,6 +727,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -713,6 +771,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -756,6 +815,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -807,6 +867,7 @@ module Api::V1::Pd
         application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
         application.lock!
@@ -851,6 +912,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -893,6 +955,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -975,8 +1038,8 @@ module Api::V1::Pd
         "Which professional learning program would you like to join for the #{APPLICATION_CURRENT_YEAR} school year?",
         "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
         "How will you offer CS Principles?",
-        "How many minutes will your CS program class last?",
-        "How many days per week will your CS program class be offered to one section of students?",
+        "How many minutes per day is one class section?",
+        "How many days per week will this course be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
         "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year?",
@@ -1217,22 +1280,18 @@ module Api::V1::Pd
       assert_equal [], result
     end
 
+    test 'search does not reveal applications incomplete applications if not workshop admin' do
+      sign_in @program_manager
+      get :search, params: {email: @csd_incomplete_application_with_partner.user.email}
+      assert_response :success
+      result = JSON.parse response.body
+      assert_equal [], result
+    end
+
     test 'destroy deletes application' do
       sign_in @workshop_admin
       application = create TEACHER_APPLICATION_FACTORY
       assert_destroys(TEACHER_APPLICATION_CLASS) do
-        delete :destroy, params: {id: application.id}
-      end
-    end
-
-    test 'group 3 partner cannot call delete api' do
-      application = create TEACHER_APPLICATION_FACTORY
-      group_3_partner = create :regional_partner, group: 3
-      group_3_program_manager = create :teacher
-      create :regional_partner_program_manager, regional_partner: group_3_partner, program_manager: group_3_program_manager
-
-      sign_in group_3_program_manager
-      assert_does_not_destroy(TEACHER_APPLICATION_CLASS) do
         delete :destroy, params: {id: application.id}
       end
     end

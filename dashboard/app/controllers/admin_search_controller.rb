@@ -6,8 +6,7 @@ class AdminSearchController < ApplicationController
   before_action :require_admin
   check_authorization
 
-  include SeamlessDatabasePool::ControllerFilter
-  use_database_pool find_students: :persistent
+  use_reader_connection_for_route(:find_students)
 
   MAX_PAGE_SIZE = 50
   MAX_TOTAL_SIZE = 1000
@@ -97,8 +96,9 @@ class AdminSearchController < ApplicationController
   def show_pilot
     @pilot_name = params[:pilot_name]
     return head :bad_request unless Pilot.exists?(name: @pilot_name)
-    user_ids =  SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
+    user_ids = SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
     @emails = User.where(id: user_ids).pluck(:email)
+    @join_url = Pilot.find_by(name: @pilot_name).allow_joining_via_url ? "http://studio.code.org/experiments/set_single_user_experiment/#{@pilot_name}" : nil
   end
 
   # Parses newline separated emails, ignores commas and whitespace

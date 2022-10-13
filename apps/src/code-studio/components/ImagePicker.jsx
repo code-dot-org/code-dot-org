@@ -7,6 +7,7 @@ import IconLibrary from './IconLibrary';
 import ImageURLInput from './ImageURLInput';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 import {RecordingFileType} from './recorders';
+import i18n from '@cdo/locale';
 
 const extensionFilter = {
   // Note: .jfif files will be converted to .jpg by the server.
@@ -129,9 +130,9 @@ export default class ImagePicker extends React.Component {
 
     let modeSwitch,
       title = this.props.assetChosen ? (
-        <p className="dialog-title">Choose Assets</p>
+        <p className="dialog-title">{i18n.chooseAssets()}</p>
       ) : (
-        <p className="dialog-title">Manage Assets</p>
+        <p className="dialog-title">{i18n.manageAssets()}</p>
       );
 
     const imageTypeFilter =
@@ -143,19 +144,19 @@ export default class ImagePicker extends React.Component {
             onClick={() => this.setMode(ImageMode.FILE)}
             style={styles.fileModeToggle}
           >
-            My Files
+            {i18n.myFiles()}
           </span>
           <span
             onClick={() => this.setMode(ImageMode.URL)}
             style={styles.urlModeToggle}
           >
-            Link to Image
+            {i18n.linkToImage()}
           </span>
           <span
             onClick={() => this.setMode(ImageMode.ICON)}
             style={styles.iconModeToggle}
           >
-            Icons
+            {i18n.icons()}
           </span>
           <hr style={styles.divider} />
         </div>
@@ -181,7 +182,7 @@ export default class ImagePicker extends React.Component {
         {title}
         {this.props.showUnderageWarning && (
           <p style={styles.warning}>
-            Warning: Do not upload anything that contains personal information.
+            {i18n.warningUploadingPersonalInformation()}
           </p>
         )}
         {modeSwitch}

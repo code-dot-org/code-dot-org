@@ -39,12 +39,12 @@ class ScriptLevel < ApplicationRecord
   include SharedConstants
   include Rails.application.routes.url_helpers
 
-  belongs_to :script
-  belongs_to :lesson, foreign_key: 'stage_id'
+  belongs_to :script, optional: true
+  belongs_to :lesson, foreign_key: 'stage_id', optional: true
 
   # This field will only be present in scripts which are being edited in the
   # new script / lesson edit GUI.
-  belongs_to :activity_section
+  belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
   has_many :callouts, inverse_of: :script_level
@@ -81,78 +81,6 @@ class ScriptLevel < ApplicationRecord
     level_keys
     instructor_in_training
   )
-
-  # Chapter values order all the script_levels in a script.
-  def self.add_script_levels(script, lesson_group, lesson, raw_script_levels, counters, new_suffix, editor_experiment)
-    script_level_position = 0
-
-    raw_script_levels.map do |raw_script_level|
-      raw_script_level.symbolize_keys!
-
-      # variants are deprecated. when cloning a script, retain only the first
-      # active level in each script level, discarding any variants.
-      if new_suffix && raw_script_level[:levels].length > 1
-        remove_variants(raw_script_level)
-      end
-
-      properties = raw_script_level.delete(:properties) || {}
-
-      levels = Level.add_levels(raw_script_level[:levels], script, new_suffix, editor_experiment)
-
-      script_level_attributes = {
-        script_id: script.id,
-        stage_id: lesson.id,
-        chapter: (counters.chapter += 1),
-        position: (script_level_position += 1),
-        named_level: raw_script_level[:named_level],
-        bonus: raw_script_level[:bonus],
-        assessment: raw_script_level[:assessment]
-      }
-      find_existing_script_level_attributes = script_level_attributes.slice(:script_id, :stage_id)
-      script_level = script.script_levels.detect do |sl|
-        find_existing_script_level_attributes.all? {|k, v| sl.send(k) == v} &&
-          sl.levels.map(&:id).sort == levels.map(&:id).sort
-      end || ScriptLevel.create!(script_level_attributes) do |sl|
-        sl.levels = levels
-      end
-
-      # Generate and store the seed_key, a unique identifier for this script
-      # level which should be stable across environments. We'll use this in our
-      # new, JSON-based seeding process.
-      #
-      # Setting this seed_key also serves the purpose of preventing levels from
-      # being added to the same script twice via the seed process. If we decide
-      # to move away from seed_key, or if we start computing its value in a
-      # different way, we should consider adding a different check to ensure
-      # that levels within scripts are unique when seeding from .script files.
-      seed_context = Services::ScriptSeed::SeedContext.new(script: script, lesson_groups: [lesson_group], lessons: [lesson], lesson_activities: [], activity_sections: [])
-      seed_key_data = script_level.seeding_key(seed_context, false)
-      script_level_attributes[:seed_key] = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
-
-      # Preserve the level_keys property. If we detected an existing script
-      # level earlier, then the level keys have not changed and it is safe to
-      # use the existing level_keys. Otherwise these will be regenerated.
-      # These are not strictly needed, because level_keys are only used during
-      # seeding. However, this eliminates the problem where level_keys disappear
-      # from .script_json files after a script is saved.
-      properties[:level_keys] = script_level.get_level_keys(seed_context, true)
-
-      script_level.assign_attributes(script_level_attributes)
-      # We must assign properties separately since otherwise, a missing property won't correctly overwrite the current value
-      script_level.properties = properties
-      script_level.save! if script_level.changed?
-      script_level
-    end
-  end
-
-  def self.remove_variants(raw_script_level)
-    first_active_level = raw_script_level[:levels].find do |raw_level|
-      variant = raw_script_level[:properties][:variants].try(:[], raw_level[:name].to_sym)
-      !(variant && variant[:active] == false)
-    end
-    raw_script_level[:levels] = [first_active_level]
-    raw_script_level[:properties].delete(:variants)
-  end
 
   def script
     return Script.get_from_cache(script_id) if Script.should_cache?
@@ -216,19 +144,13 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def final_level?
-    !has_another_level_to_go_to?
-  end
-
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson=nil,
     bubble_choice_parent=false
   )
-    if bubble_choice? && !bubble_choice_parent
-      # Redirect user back to the BubbleChoice activity page from sublevels.
-      level_to_follow = self
-    elsif valid_progression_level?(user)
+
+    if valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
       # level (example: if you start a sequence of assessments associated with an
       # unplugged level you should continue on that sequence instead of skipping to
@@ -254,6 +176,9 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif bubble_choice? && !bubble_choice_parent
+      # Redirect user back to the BubbleChoice activity page from sublevels.
+      build_script_level_path(self)
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
@@ -262,13 +187,11 @@ class ScriptLevel < ApplicationRecord
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
-      if end_of_lesson? &&
-        script.show_unit_overview_between_lessons? &&
-        user.has_pilot_experiment?('end-of-lesson-redirects')
+      if end_of_lesson? && script.show_unit_overview_between_lessons?
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
         else
-          script_path(script)
+          script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
         level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
@@ -296,8 +219,7 @@ class ScriptLevel < ApplicationRecord
 
   def valid_progression_level?(user=nil)
     return false if level.unplugged?
-    return false if lesson && lesson.unplugged_lesson?
-    return false unless lesson.published?(user)
+    return false if lesson&.unplugged_lesson?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && lesson && lesson.spelling_bee?
     return false if locked_or_hidden?(user)
@@ -311,7 +233,7 @@ class ScriptLevel < ApplicationRecord
 
   def locked?(user)
     return false unless lesson.lockable?
-    return false if user.authorized_teacher?
+    return false if user.verified_instructor?
 
     # All levels in a lesson key their lock state off of the last script_level
     # in the lesson, which is an assessment. Thus, to answer the question of
@@ -740,12 +662,36 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
+  # In pl courses participants sometimes need to be able to see instructor tools to learn
+  # about how to deliver a course. Those script_levels are marked as instructor_in_training.
+  # Someone is viewing a level as an instructor in training if they are in a participant pl course
+  # and that script_level is an instructor in training script_level
+  def view_as_instructor_in_training?(current_user)
+    instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
+  end
+
   def get_example_solutions(level, current_user, section_id=nil)
     level_example_links = []
 
-    return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
+    return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    if level.try(:examples).present? && (current_user&.authorized_teacher? || script&.csf?) # 'solutions' for applab-type levels
+    # exemplar_sources is used by Javalab levels to store level solutions
+    if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
+      if oldest_active_level.is_a? BubbleChoice
+        # If the script level has sublevels, get a link for the sublevel that looks like
+        # /csa1/lessons/6/levels/5/sublevel/1?exemplar=true
+        sublevel_position = oldest_active_level.sublevel_position(level)
+        return [] unless sublevel_position
+
+        path = build_script_level_path(self, {sublevel_position: sublevel_position})
+        level_example_links = [build_exemplar_url(path)]
+      else
+        # Otherwise, exemplar link should look like
+        # csa1/lessons/2/levels/1?exemplar=true
+        path = build_script_level_path(self)
+        level_example_links = [build_exemplar_url(path)]
+      end
+    elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
@@ -757,6 +703,8 @@ class ScriptLevel < ApplicationRecord
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
         if level.is_a?(Dancelab)
           send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Poetry)
+          send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(GamelabJr)
           send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Artist)
@@ -764,8 +712,6 @@ class ScriptLevel < ApplicationRecord
           send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Studio) # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
-        elsif level.is_a?(Javalab)
-          example
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         end
@@ -787,5 +733,9 @@ class ScriptLevel < ApplicationRecord
     else
       LEVEL_KIND.puzzle
     end
+  end
+
+  def build_exemplar_url(path)
+    CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
   end
 end

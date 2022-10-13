@@ -10,6 +10,7 @@ cs:
       answer: odpověď
       armlength: armlength
       binary: binární
+      birds: ptáci
       blue1: modrá1
       blue2: modrá2
       bodylength: bodylength
@@ -34,6 +35,8 @@ cs:
       myName: mojeJméno
       name: jméno
       nectar: nektar
+      object: objekt
+      planet: planeta
       points: body
       random: náhodně
       red1: červená1
@@ -44,10 +47,13 @@ cs:
       score: výsledek
       screenHeight: výškaObrazovky
       screenWidth: šířkaObrazovky
+      shout: křik
+      sides: strany
       size: velikost
       speed: rychlost
       startX: startX
       startY: startY
+      type: typ
       variable: proměnná
       width: šířka
       wizard: čaroděj

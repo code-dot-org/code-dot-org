@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 he:
   errors:
     messages:
@@ -339,7 +345,7 @@ he:
       create: 'צור'
       algebra_game: 'חשבון'
       applab: 'מעבדת היישומים'
-      artist: 'אמן'
+      artist: 'אומן'
       artist_k1: 'האמן (טרום-קריאה)'
       basketball: 'כדורסל'
       bounce: 'להקפיץ'
@@ -358,12 +364,13 @@ he:
       minecraft_hero: 'גיבור מיינקראפט'
       playlab: 'מעבדת הצעצועים'
       playlab_k1: 'מעבדת הצעצועים (טרום-קריאה)'
+      poetry_hoc: 'אומנות השירה'
       starwars: 'מלחמת הכוכבים'
+      loading: 'טוען...'
       weblab: 'מעבדת האתרים'
     popup:
       progress_for_user: "ההתקדמות של %{name}"
       progress: 'ההתקדמות שלך'
-      lines: 'סה כ שורות קוד: %{lines}'
       close: 'קרוב'
       mastery: 'עקרונות'
       puzzle_map: 'שלבים'
@@ -373,6 +380,7 @@ he:
       prizes_link: 'מידע נוסף'
   teacher:
     answer: "תשובה\n"
+    dashboard: 'לוח בקרה למורה'
     for_teachers_only: למורים בלבד
     title:
       one: 'המורה שלך :'
@@ -463,10 +471,10 @@ he:
     view_course: צפה בקורס
     prize_info: 'פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה.'
     tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
-    trynow: 'נסה עכשיו'
+    trynow: 'לנסות עכשיו'
     add_hint_help: 'אנא עזור לנו להוסים רמזים חכמים למדריכים code.org'
     20hour_overview: 'קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.'
-    test_videos_help: 'נסה את נגן הוידאו החדש שלנו בבית ספרך'
+    test_videos_help: 'נסה את נגן הווידאו החדש שלנו בבית ספרך'
     try_beta_courses: 'חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'''
     use_as_teacher: 'השתמש באתר הזה כמורה'
     your_gallery: גלריה
@@ -474,6 +482,7 @@ he:
     choose_next_course: "נסה קורס מסטודיו קוד ע\"י בחירת אחד מטה"
     print_certificate: "הדפס תעודה"
   certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות ללמידה שלך."
+  certificate_hour_of_code: "שעת הקוד"
   move_students:
     new_section_dne: "מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר קוד קבוצה אחרת."
     section_code_cant_be_current_section: "הקבוצה הנוכחית אינה יכולה להיות זהה כמו הקבוצה החדשה."
@@ -524,7 +533,7 @@ he:
     direction: 'התחל כיוון (במעלות)'
   video:
     tab: 'וידאו.'
-    notes: 'אין וידאו? הצג הערות.'
+    notes: 'אין וידאו? הצג הערות'
     notes_coming_soon: 'הערות עבור וידאו זה יתווספו בקרוב.'
     autoplay_option: 'הפעלה אוטומטית של סרטונים'
     download: 'הורד סרטון'
@@ -548,7 +557,7 @@ he:
   share_code:
     title: "לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה"
     bounce_og_title: "תראה את המשחק קפיצה שלי"
-    flappy_og_title: "תראה את משחק ההתנופפות שלי"
+    flappy_og_title: "כדאי לך לבדוק את המשחק המעופף שלי"
     studio_og_title: "בוא תראה את האפליקצייה שייצרתי במעבדת הצעצועים"
     check_out_what_i_made: "בדוק מה הכנתי"
     og_description: "כתבתי קוד בעצמי באמצעות code.org"
@@ -578,12 +587,14 @@ he:
       title: 'מסיבת ריקודים'
     dance-2019:
       title: 'מסיבת ריקודים'
+    poem-art:
+      title: 'אומנות השירה'
     hoc:
       title: 'מבוך קלאסי'
       body: 'נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.'
     flappy:
-      title: 'קוד מתנופף'
-      body: 'רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!'
+      title: 'קוד מעופף'
+      body: 'רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות שלנו!'
     20-hour:
       title: 'קורס מואץ'
       body: 'קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.'
@@ -612,7 +623,7 @@ he:
       title: "מלחמת הכוכבים"
     infinity:
       title: "אינסוף מעבדת הצעצועים"
-      body: "השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני."
+      body: "בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך \"דיסני אינסוף\"."
     minecraft:
       title: "מיינקראפט"
       body: "גלה את העולם של מיינקראפט באמצעות קוד"
@@ -640,13 +651,13 @@ he:
       cta: "למד כיצד"
   landing:
     report_bug: "דווח על באג"
-    support: "קבל עזרה"
+    support: "עזרה"
     help_resources: "עזרה ומשאבים"
     help_support: "עזרה ותמיכה"
     documentation: "מסמכים"
     tutorials: "מדריכים"
   free_response:
-    placeholder: "הכנס את התשובה שלך כאן"
+    placeholder: "הקלידו את התשובה שלכם כאן"
   multi:
     wrong_title: "תשובה לא נכונה"
     wrong_body: "התשובה שענית אינה נכונה. נא נסה שנית!"
@@ -688,7 +699,7 @@ he:
     baddomainsize: "בחוזה שלך אין את המספר הנכון של פריטים כפי שמופיע בקבוצת המחשבים."
     baddomainname: "לאחד או יותר מן הפריטים בתחום יש שם לא נכון."
   text_match:
-    placeholder: "הכנס את התשובה שלך כאן"
+    placeholder: "הקלידו את התשובה שלכם כאן"
     open_response_title: "תודה"
     open_response_body: "תודה על תגובתך!"
     correct_title: "נכון"
@@ -697,7 +708,7 @@ he:
     ok: "אישור"
     startover_title: "האם אכן להתחיל מחדש?"
     startover_body: "פעולה זו תחזיר את החידה למצב ההתחלתי שלה ותמחוק את כל השינויים שלך."
-    startover_ok: "התחל מחדש"
+    startover_ok: "להתחיל מחדש"
     startover_cancel: "בטל"
   time:
     hour: 'שעה אחת'
@@ -932,10 +943,10 @@ he:
         other: "אחר:"
       resources:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       robotics:
         kodable: 'Kodable'
-        other: "אחר:"
+        other: "אחר"
       email_opt_in:
         opt_in_yes: 'כן'
         opt_in_no: 'לא'
@@ -944,3 +955,11 @@ he:
     accept: 'מסכים'
   copy: 'העתק'
   confirm: 'אשר'
+  teacher_feedback: "משוב מורה"
+  lesson_lock:
+    error:
+      no_updates: "אין עדכונים לבצע"
+      missing_params: "יש להכניס משתמש, רמה וזיהוי יחידות"
+      cannot_view_locked_answers: "לא ניתן לצפות בתשובות כאשר נעול"
+      forbidden: "המשתמש אינו יכול לעדכן מצב נעילה של הסטודנט"
+  reset_predict_progress_button: "מחק תשובה"

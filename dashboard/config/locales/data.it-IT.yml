@@ -639,7 +639,7 @@ it:
         C3_internet: Internet
         C3_crowdsourcing: Intelligenza collettiva
         C3_functional_suncatchers: Acchiappa-sole Funzionale
-        C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
+        C3_songwriting_with_parameters: Scrittura musicale di un programma - Parametri
         C4_intro: Introduzione
         C4_loops_zombie: Cicli
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
@@ -825,7 +825,7 @@ it:
         MC_2018_loops: 'Minecraft: Viaggio Acquatico - Ripeti fino a che'
         mc_2018_conditionals: 'Minecraft: Viaggio Acquatico - Istruzioni condizionali'
         mc_2018_closing: 'Minecraft: Viaggio Acquatico - Congratulazioni'
-        hoc_dance_warmup: Ballando col codice - Riscaldamento
+        hoc_dance_warmup: Ballando col codice - Preparazione
         hoc_dance_events: Ballando col codice - Eventi
         hoc_dance_properties: Ballando col codice - Proprietà
         hoc_dance_congrats: Ballando col codice - Parte la festa!
@@ -855,7 +855,7 @@ it:
         csd_applab_loops: Loop in Sviluppo App
         csd_problem_solving_process: Il Processo di Risoluzione dei Problemi
         CSF_Going_Places_Safely: Il mio quartiere digitale
-        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei Personaggi
+        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei personaggi
         CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)
@@ -883,8 +883,7 @@ it:
         csd_what_computers_do: Cosa Fanno i Computer?
         csf_my_online_neighborhood_2020: Il mio quartiere digitale
         csf_follow_the_digital_trail: Segui le tue tracce digitali
-        csf_private_and_personal_information: Cittadinanza digitale - Dati personali
-          e altri dati
+        csf_private_and_personal_information: Dati personali e altri dati
         csd_what_computers_are: Cos'è un Computer?
         codebreak_e01: 'Code Break 1.0: Algoritmi con Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototipi con Mark Cuban e Lyndsey Scott'
@@ -904,10 +903,54 @@ it:
           McClain'
         codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor e Paula
           Mejia'
+        csf21pilot_events: 'Laboratorio dei personaggi: personaggi in azione'
+        csf21pilot_prompts: 'Laboratorio dei personaggi:  testo  e richieste all''utente'
         csd_ml_intro_to_ai_lab: Lezione 6
         playlab_2021: Introduzione al Laboratorio
         playlab_2021_reader: Introduzione al Laboratorio
         csd_ml_intro_ai_lab_july2021: Lezione 6
+        PL_overview_CSD: Cos'è Alla scoperta dell'informatica?
+        PL_CSD_TeacherTips_Advise: 'Suggerimenti per gli insegnanti: consigli per
+          i nuovi insegnanti'
+        PL_CSD_TeacherTips_IntroToCSD: 'Suggerimenti per gli insegnanti: introduzione
+          Alla scoperta dell''informatica'
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 'Suggerimenti per gli insegnanti:
+          la procedura di risoluzione dei problemi'
+        PL_CSD_TeacherTips_PairProgramming: 'Suggerimenti per gli insegnanti: programmazione
+          in coppia'
+        PL_CSD_TeacherTips_Debugging: 'Suggerimenti per gli insegnanti: debugging'
+        PL_CSD_TeacherTips_LeadLearner: 'Suggerimenti per gli insegnanti: potenziale
+          studente'
+        poembot-playtest-intro: Introduzione al test di gioco di PoemBot
+        poembot-playtest-sprites: Personaggi del test di gioco di PoemBot
+        poembot-playtest-events: Eventi del test di gioco di PoemBot
+        hello_world_intro: Insegna una nuova parola all'IA
+        hello_world_events: 'Ciao a tutti: programmare con gli Eventi'
+        hello_world_congrats: 'Ciao a tutto: cosa desiderate'
+        rough_poemart_intro: L'arte della poesia - Introduzione
+        rough_poemart_events: L'arte della poesia - Eventi
+        rough_poemart_imagery: L'arte della poesia  - Metafore
+        rough_poemart_congrats: L'arte della poesia - Congratulazioni
+        poetry_module_variables: Variabili - Coding con la poesia
+        poetry_module_textandvariables: Testo e variabili - Coding con la poesia
+        poetry_module_planningapp: Pianifica la tua app generatrice di poesie - Coding
+          con la poesia
+        poetry_module_multichoiceprompts: Prompt a scelta multipla - Coding con la
+          poesia
+        poetry_module_conditionals: Condizionali - Coding con la poesia
+        poemart_intro: L'arte della poesia - Introduzione
+        poemart_events: L'arte della poesia - Eventi
+        poemart_imagery: L'arte della poesia  - Metafore
+        poemart_celebration: L'arte della poesia  - Celebrazione
+        outbreak_intro: Simulatore di focolaio - Introduzione
+        outbreak_events: Simulatore di focolaio - Eventi
+        outbreak_scientist: Simulatore di focolaio - Pensa come uno scienziato
+        outbreak_outro: Simulatore di focolaio - Gioco libero
+        CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
+        PL_CS_Journeys_Overview: CS Journeys
+        csp_applab_parameters: Funzioni con parametri
+        CSA-PL-intro-to-arrays: Array unidimensionale (1D)
+        CS_Changing_Everything: L'informatica sta cambiando ogni cosa
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

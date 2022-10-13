@@ -4,6 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Teacher Account Required to Use Course Beginning in February 2022",
+          "details": "If you are not already a verified teacher, click here to complete the form to become a verified teacher.",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "key": "db80eb59-07a6-49a6-81df-73cefd0c9a47"
+        }
+      ],
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,9 +21,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:51 UTC",
+    "serialized_at": "2022-09-28 14:31:48 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
     }

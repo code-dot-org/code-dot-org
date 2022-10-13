@@ -1,44 +1,16 @@
 import React from 'react';
-import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedOwnedSections as OwnedSections} from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import RosterDialog from '@cdo/apps/templates/teacherDashboard/RosterDialog';
-import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
-import EditSectionDialog from '@cdo/apps/templates/teacherDashboard/EditSectionDialog';
-import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const defaultProps = {
   sectionIds: [11, 12, 13],
   hiddenSectionIds: [],
-  asyncLoadComplete: true,
-  beginEditingNewSection: () => {},
   beginEditingSection: () => {},
-  beginImportRosterFlow: () => {}
+  isPlSections: false
 };
 
 describe('OwnedSections', () => {
-  it('renders SetUpSections when no sections have been created', () => {
-    const wrapper = shallow(
-      <OwnedSections {...defaultProps} sectionIds={[]} />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <SetUpSections />
-        <RosterDialog />
-        <AddSectionDialog />
-        <EditSectionDialog />
-      </div>
-    );
-  });
-
-  it('renders spinner when sections have not yet loaded', () => {
-    const props = {...defaultProps, asyncLoadComplete: false};
-    const wrapper = shallow(<OwnedSections {...props} />);
-    expect(wrapper).to.containMatchingElement(<Spinner />);
-  });
-
   it('renders a OwnedSectionsTable with no extra button if no archived sections', () => {
     const wrapper = shallow(<OwnedSections {...defaultProps} />);
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
@@ -109,18 +81,5 @@ describe('OwnedSections', () => {
     expect(
       wrapper.find('Connect(OwnedSectionsTable)').props().sectionIds
     ).to.deep.equal([11, 12]);
-  });
-
-  it('renders a SetUpSections about adding a new section', () => {
-    const spy = sinon.spy();
-    const wrapper = shallow(
-      <OwnedSections
-        {...defaultProps}
-        sectionIds={[1, 2, 3]}
-        beginEditingNewSection={spy}
-      />
-    );
-    expect(spy).not.to.have.been.called;
-    expect(wrapper.find(SetUpSections).length).to.equal(1);
   });
 });

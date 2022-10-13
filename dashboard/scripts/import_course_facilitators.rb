@@ -29,12 +29,12 @@ CSV.foreach(facilitators_csv, headers: true) do |row|
   next unless email || user_id
 
   # Some facilitators don't have accounts yet and are marked with - followed by a comment in the id field.
-  next if user_id && user_id.start_with?('-')
+  next if user_id&.start_with?('-')
   facilitator =
     if user_id.nil?
       User.find_by!(email: email) rescue raise "Unable to find user email #{email}"
     else
-      User.find_by!(id: user_id) rescue raise "Unable to find user id #{user_id}"
+      User.find(user_id) rescue raise "Unable to find user id #{user_id}"
     end
 
   courses = row[COL_COURSES].split(',').map(&:strip)

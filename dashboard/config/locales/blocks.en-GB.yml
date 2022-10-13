@@ -173,6 +173,25 @@ en-GB:
           KEY:
             '"yes"': 'yes'
             '"no"': 'no'
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"rainbow"': rainbow
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': night
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': jump
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': cloudy
+          PALETTE:
+            '"rainbow"': rainbow
+            '"winter"': winter
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

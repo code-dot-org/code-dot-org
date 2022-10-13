@@ -14,11 +14,11 @@ nav: how_to_nav
 
 ***
 
-## 1. 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 1. 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 2. 활동과 튜토리얼 탐구
 
-전 연령 그룹과 경험 수준을 위한 다양하고 재미 있는[학생 자기주도 튜토리얼]({{ urls/learn }}) 을 제공합니다. 비록 많은 활동에 교사가 토론을 지도하거나 또는 활동을 확장하는 레슨 플랜이 포함되어 있지만 학생이 스스로 자기 주도로 튜토리얼을 시도하는 것이 인기 있습니다.
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. 비록 많은 활동에 교사가 토론을 지도하거나 또는 활동을 확장하는 레슨 플랜이 포함되어 있지만 학생이 스스로 자기 주도로 튜토리얼을 시도하는 것이 인기 있습니다.
 
 모든 학생을 위해 한 개의 튜토리얼을 선택하거나 또는 각자에게 선택하도록 맡기길 원하면 미리 활동을 검토하여 결정하십시오.
 
@@ -28,7 +28,7 @@ nav: how_to_nav
 
 ### 기술적 필요에 대해 생각하세요 - 컴퓨터는 선택사양입니다!
 
-- Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 학생마다 한 대의 컴퓨터가 있을 필요는 없으며 심지어 컴퓨터가 없이도 아워오브코드를 할 수 있습니다. [언플러그드 활동을 위해](/learn), 간단히 클래스룸 테크놀로지 섹션을 필터링하여 "컴퓨터 또는 기기 없음" 옵션을 나타내세요.
+- The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! [언플러그드 활동을 위해](/learn), 간단히 클래스룸 테크놀로지 섹션을 필터링하여 "컴퓨터 또는 기기 없음" 옵션을 나타내세요.
 - 튜토리얼들이 되는지 확실히 확인하시고 학생들 컴퓨터와 디바이스들에서도 제대로 소리나는 브라우저나 비디오에서 되는지 확인하세요 대역폭이 낮습니까? 동영상을 교실 앞에서 보여주어 학생들이 따로 동영상을 다운로드하지 않게 하십시오. 또는 오프라인 튜토리얼을 시도해 보세요.
 - 소리와 관련된 튜토리얼을 수월하게 하기 위해서 학생들에게 헤드폰을 제공하거나, 그들이 가지고 있는 헤드폰을 가져오도록 요청하셔도 좋습니다.
 - 장치가 충분하지 않습니까? [페어 프로그래밍](https://www.youtube.com/watch?v=vgkahOzFH2Q) 사용. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
@@ -47,9 +47,9 @@ nav: how_to_nav
 
 함께 합류하여 즐거움을 누리고 싶어하는 다른 교사들에게 아워오브코드를 홍보하세요! 또한 학교의 PTSA에 접촉하거나 또는 학부모 뉴스레터에서 공유하고, 그들에게 아동이 집에서 더 많은 활동과 튜토리얼을 하고 싶어한다는 걸 알려줄 좋은 기회입니다!
 
-### 이벤트를 등록하여 자원봉사자에게 알립니다.
+### Let Volunteers Know by Registering Your Event
 
-[아워오브코드 이벤트에 가입 시](/), 뉴스와 아워오브코드를 성공적으로 주최하기 위한 팁을 이메일과 함께 수신할 것입니다. 또한 학교가 참여할 것임을 지역 자원봉사자에게 알릴 수 있는 방법입니다. 자원봉사자는 훌륭한 자원이며 학급에 와서 컴퓨터 과학에 대해 강연을 하거나 또는 간단히 학생의 아워오브코드 활동을 도울 수 있습니다.
+[아워오브코드 이벤트에 가입 시](/), 뉴스와 아워오브코드를 성공적으로 주최하기 위한 팁을 이메일과 함께 수신할 것입니다. It’s also how you can let local volunteers know your school is participating. 자원봉사자는 훌륭한 자원이며 학급에 와서 컴퓨터 과학에 대해 강연을 하거나 또는 간단히 학생의 아워오브코드 활동을 도울 수 있습니다.
 
 ### 학생들이 재미있어 하게 만드세요.
 
@@ -57,7 +57,7 @@ nav: how_to_nav
 
 {{ promote_new_posters }}
 
-포스터와 비디오, 스티커, 또한[이벤트를](/promote/resources#posters) 커뮤니티에 홍보하는 기타 방법에 대해 더 자세히 알아보세요.
+Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
 ## 5. 아워오브코드를 강력하게 시작하세요
 
@@ -107,16 +107,16 @@ nav: how_to_nav
 - [학생들을 위한 인증서를]({{ urls/certificates }}) 프린트합니다.
 - [학생들을 위해 "아워오브코드를 해냈다!"]({{ urls/promote_stickers }}) 스티커를 인쇄합니다.
 - [행사 T-셔츠 주문](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) 하기.
-- 아워오브코드 이벤트 사진과 동영상을 소셜 미디어 상에서 공유 우리 역시 여러분의 성공을 강조할 수 있게 #HourOfCode 및 @codeorg을 사용하세요!
+- Share photos and videos of your Hour of Code event on social media. 우리 역시 여러분의 성공을 강조할 수 있게 #HourOfCode 및 @codeorg을 사용하세요!
 
 ----
 
-## 교육자를 위한 다른 Hour of Code 리소스들
+## 교육자를 위한 기타 아워오브코드 리소스
 
 - 다른 교육자들로부터 조언, 통찰력, 지원을 얻을 수 있는 [Hour of Code 교사 포럼](http://forum.code.org/c/plc/hour-of-code)을 방문하세요.
-- [Hour of Code의 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해보세요.
+- [아워오브코드 FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)를 검토해 보세요.
 
-## Hour of Code 이후에는 어떤 것들이 있나요?
+## What comes after the Hour of Code?
 
 컴퓨터 과학은 아워오브코드로 끝나서는 안됩니다! 우리의 커리큘럼은 웹기반이고 영원히 무료로 사용할 수 있습니다. CS를 학교와 학생들에게 가져다 주는[방법을 알아보세요](/beyond).
 

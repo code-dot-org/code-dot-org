@@ -38,6 +38,8 @@
   "drawATriangle": "narysuj trójkąt",
   "drawUpperWave": "narysuj górna falę",
   "drawLowerWave": "narysuj dolną falę",
+  "drawShape": "narysuj kształt",
+  "drawShapeWithSideLength": "narysuj kształt o długości boku",
   "drawSticker": "narysuj naklejkę",
   "drawStickerWithSize": "narysuj naklejkę o wielkości",
   "forward": "do przodu",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Artysta staje się widoczny lub niewidoczny.",
   "widthTooltip": "Zmienia grubość ołówka.",
   "withSize": "o wielkości",
+  "withSideLength": "o długości boku",
   "wrongColour": "Twój obrazek ma nieodpowiedni kolor. W tej łamigłówce musi to być %1."
 }

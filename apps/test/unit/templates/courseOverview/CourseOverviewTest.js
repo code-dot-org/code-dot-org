@@ -7,6 +7,7 @@ import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
   name: 'csp',
@@ -18,7 +19,6 @@ const defaultProps = {
   descriptionTeacher:
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
-  teacherResources: [],
   viewAs: ViewType.Instructor,
   scripts: [
     {
@@ -36,13 +36,12 @@ const defaultProps = {
       description: 'desc'
     }
   ],
-  isVerifiedTeacher: true,
+  isVerifiedInstructor: true,
   hasVerifiedResources: false,
-  versions: [],
+  versions: {},
   sectionsForDropdown: [],
   announcements: [],
-  isSignedIn: true,
-  useMigratedResources: false
+  isSignedIn: true
 };
 
 const fakeTeacherAnnouncement = {
@@ -79,7 +78,7 @@ describe('CourseOverview', () => {
     const wrapper = shallow(
       <CourseOverview
         {...defaultProps}
-        isTeacher={false}
+        isInstructor={false}
         viewAs={ViewType.Participant}
       />
     );
@@ -114,7 +113,7 @@ describe('CourseOverview', () => {
 
   it('renders a top row for instructors', () => {
     const wrapper = shallow(
-      <CourseOverview {...defaultProps} isTeacher={true} />
+      <CourseOverview {...defaultProps} isInstructor={true} />
     );
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
   });
@@ -127,7 +126,7 @@ describe('CourseOverview', () => {
   describe('VerifiedResourcesNotification', () => {
     const propsToShow = {
       ...defaultProps,
-      isVerifiedTeacher: false,
+      isVerifiedInstructor: false,
       hasVerifiedResources: true
     };
 
@@ -138,7 +137,7 @@ describe('CourseOverview', () => {
 
     it('is not shown if instructor is verified', () => {
       const wrapper = shallow(
-        <CourseOverview {...propsToShow} isVerifiedTeacher={true} />
+        <CourseOverview {...propsToShow} isVerifiedInstructor={true} />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });
@@ -168,69 +167,26 @@ describe('CourseOverview', () => {
     });
 
     it('appears when two versions are present and viewable', () => {
-      const versions = [
-        {
-          name: 'csp-2017',
-          year: '2017',
-          title: '2017',
-          canViewVersion: true,
-          isStable: true,
-          locales: [],
-          localeCodes: []
-        },
-        {
-          name: 'csp-2018',
-          year: '2018',
-          title: '2018',
-          canViewVersion: true,
-          isStable: true,
-          locales: [],
-          localeCodes: []
-        }
-      ];
       const wrapper = shallow(
         <CourseOverview
           {...defaultProps}
-          versions={versions}
-          isTeacher={true}
+          versions={courseOfferings['2'].course_versions}
+          isInstructor={true}
         />
       );
 
       const versionSelector = wrapper.find('AssignmentVersionSelector');
       expect(versionSelector.length).to.equal(1);
-      const renderedVersions = versionSelector.props().versions;
-      assert.equal(2, renderedVersions.length);
-      const csp2018 = renderedVersions.find(v => v.name === 'csp-2018');
-      assert.equal(true, csp2018.isRecommended);
-      assert.equal(true, csp2018.isSelected);
+      const renderedVersions = versionSelector.props().courseVersions;
+      assert.equal(2, Object.values(renderedVersions).length);
     });
 
     it('does not appear when only one version is viewable', () => {
-      const versions = [
-        {
-          name: 'csp-2017',
-          year: '2017',
-          title: '2017',
-          canViewVersion: false,
-          isStable: true,
-          locales: [],
-          localeCodes: []
-        },
-        {
-          name: 'csp-2018',
-          year: '2018',
-          title: '2018',
-          canViewVersion: true,
-          isStable: true,
-          locales: [],
-          localeCodes: []
-        }
-      ];
       const wrapper = shallow(
         <CourseOverview
           {...defaultProps}
-          versions={versions}
-          isTeacher={true}
+          versions={courseOfferings['3'].course_versions}
+          isInstructor={true}
         />
       );
       expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
@@ -238,7 +194,7 @@ describe('CourseOverview', () => {
 
     it('does not appear when no versions are present', () => {
       const wrapper = shallow(
-        <CourseOverview {...defaultProps} isTeacher={true} />
+        <CourseOverview {...defaultProps} isInstructor={true} />
       );
       expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
     });

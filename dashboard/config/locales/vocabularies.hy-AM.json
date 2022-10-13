@@ -44,30 +44,6 @@
         "loops/aquatic/unversioned": {
           "word": "loops"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Debugging"
         },
@@ -80,10 +56,6 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugging"
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "Կոդ"
         },
@@ -95,6 +67,99 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Debugging"
+        },
+        "debugging/coursed/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursed/2022": {
+          "word": "Programming"
+        },
+        "conditionals/coursed/2022": {
+          "word": "conditionals"
+        },
+        "variable/coursef/2022": {
+          "word": "Փոփոխական"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Սահմանել"
+        },
+        "function/coursee/2022": {
+          "word": "Ֆունկցիա"
+        },
+        "conditionals/coursee/2022": {
+          "word": "conditionals"
+        },
+        "copyright/coursee/2022": {
+          "word": "հեղինակային իրավունք"
+        },
+        "define/coursee/2022": {
+          "word": "Սահմանել"
+        },
+        "debugging/courseb/2022": {
+          "word": "Debugging"
+        },
+        "programming/courseb/2022": {
+          "word": "Programming"
+        },
+        "debugging/express/2022": {
+          "word": "Debugging"
+        },
+        "programming/express/2022": {
+          "word": "Programming"
+        },
+        "conditionals/express/2022": {
+          "word": "conditionals"
+        },
+        "function/express/2022": {
+          "word": "Ֆունկցիա"
+        },
+        "variable/express/2022": {
+          "word": "Փոփոխական"
+        },
+        "define/express/2022": {
+          "word": "Սահմանել"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Debugging"
+        },
+        "programming/pre-express/2022": {
+          "word": "Programming"
+        },
+        "debugging/coursea/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursea/2022": {
+          "word": "Programming"
+        },
+        "debugging/coursec/2022": {
+          "word": "Debugging"
+        },
+        "programming/coursec/2022": {
+          "word": "Programming"
+        },
+        "binary/coursec/2022": {
+          "word": "երկուական"
+        },
+        "debugging/csd/2022": {
+          "word": "Debugging"
+        },
+        "variable/csd/2022": {
+          "word": "Փոփոխական"
+        },
+        "conditionals/csd/2022": {
+          "word": "conditionals"
+        },
+        "abstraction/csd/2022": {
+          "word": "աբստրակցիա"
+        },
+        "function/csd/2022": {
+          "word": "Ֆունկցիա"
+        },
+        "copyright/csd/2022": {
+          "word": "հեղինակային իրավունք"
         },
         "code/poem-art/unversioned": {
           "word": "Կոդ"
@@ -173,6 +238,24 @@
         },
         "define/coursee/2021": {
           "word": "Սահմանել"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging"
+        },
+        "variable/csd/2021": {
+          "word": "Փոփոխական"
+        },
+        "conditionals/csd/2021": {
+          "word": "conditionals"
+        },
+        "abstraction/csd/2021": {
+          "word": "աբստրակցիա"
+        },
+        "function/csd/2021": {
+          "word": "Ֆունկցիա"
+        },
+        "copyright/csd/2021": {
+          "word": "հեղինակային իրավունք"
         }
       }
     }

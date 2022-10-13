@@ -6,6 +6,7 @@ pt:
       Advanced: Avançado
       Behaviors: Comportamentos
       Brushes: Pincéis
+      Category: Categoria
       Color: Cor
       Comment: Comentário
       Comments: Comentários
@@ -18,7 +19,7 @@ pt:
       Game/Score: Jogo/Pontuação
       Games/Score: Jogos/Pontuação
       Groups: Grupos
-      Input: Introdução
+      Input: Entrada
       Location: Localização
       Locations: Localizações
       Logic: Lógica
@@ -26,7 +27,7 @@ pt:
       Math: Matemática
       Numbers: Números
       Properties: Propriedades
-      Sprites: Sprites
+      Sprites: Sprite
       Text: Texto
       Variables: Variáveis
       'Variables ': 'Variáveis '

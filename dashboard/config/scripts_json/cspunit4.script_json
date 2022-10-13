@@ -4,16 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSP",
+      "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:15:33 UTC",
+    "family_name": "cspunit4",
+    "serialized_at": "2022-04-08 15:40:35 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspunit4"
     }
@@ -589,6 +592,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L01 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -610,6 +616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L02v2 - Finding Trends"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -631,6 +640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L03v2 - Student Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -652,6 +664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L04v2 - Student Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -673,6 +688,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GoodBadVisualizations_v1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -694,6 +712,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GoodBadVisualizations_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -715,6 +736,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Student Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -736,6 +760,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Getting Started"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -757,6 +784,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Scatter Plot"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -778,6 +808,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Line Chart"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -799,6 +832,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Bar Chart"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -820,6 +856,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Edit Chart Appearance"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -841,6 +880,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -862,6 +904,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06v2 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -883,6 +928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L16 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -904,6 +952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Cleaning Data - Activity Guide"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -925,6 +976,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Cleaning Data Activity Guide Pt2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -946,6 +1000,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Cleaning Data Activity Guide Pt3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -967,6 +1024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Student Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -988,6 +1048,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1009,6 +1072,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1030,6 +1096,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1051,6 +1120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L09 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1072,6 +1144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L10 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1093,6 +1168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L11 Student Lesson Introduction"
+        ],
         "progression": "Video - Data and Medicine"
       },
       "bonus": false,
@@ -1115,6 +1193,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Data and Medicine"
+        ],
         "progression": "Video - Data and Medicine"
       },
       "bonus": false,
@@ -1137,6 +1218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - CS is Changing Everything"
+        ],
         "progression": "Video - CS is Changing Everything"
       },
       "bonus": false,
@@ -1159,6 +1243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L12 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1180,6 +1267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L13 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1201,6 +1291,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Privacy Abandoned - Hot On Your Trail Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1222,6 +1315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L14 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {

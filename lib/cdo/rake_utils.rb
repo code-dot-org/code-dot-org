@@ -105,7 +105,7 @@ module RakeUtils
   def self.system_stream_output(*args, &block)
     command = command_(*args)
     CDO.log.info command
-    if block_given?
+    if block
       IO.popen(command, &block)
     else
       Kernel.system(command)
@@ -127,23 +127,17 @@ module RakeUtils
   # Changes the Bundler environment to the specified directory for the specified block.
   # Runs bundle_install ensuring dependencies are up to date.
   def self.with_bundle_dir(dir)
-    # Using `with_clean_env` is necessary when shelling out to a different bundle.
-    # Ref: http://bundler.io/man/bundle-exec.1.html#Shelling-out
-    Bundler.with_clean_env do
+    # Using `with_clean_env` is recommended when shelling out to a different bundle (ref:
+    # http://bundler.io/man/bundle-exec.1.html#Shelling-out), but `with_clean_env` is
+    # deprecated in favor of `with_unbundled_env` (ref:
+    # https://bundler.io/v2.1/whats_new.html#helper-deprecations) so use that instead.
+    Bundler.with_unbundled_env do
       ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
-        chef_rbenv_exec('bundle install')
+        bundle_install
         yield
       end
     end
-  end
-
-  # As of October 2021, the version of Chef we require depends on
-  # Ruby 3, whereas the rest of our platform is still on Ruby
-  # 2.5. Until we are able to resolve this discrepancy, we need
-  # to provide special support for invoking Chef operations.
-  def self.chef_rbenv_exec(*args)
-    system 'RBENV_VERSION=3.0.0', 'rbenv', 'exec', *args
   end
 
   def self.bundle_exec(*args)
@@ -306,7 +300,7 @@ module RakeUtils
   def self.upload_file_to_s3_bucket_and_create_fetch_file(local_file, destination_local_path, params={})
     raise 'Need to specify bucket' unless params[:bucket]
 
-    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), open(local_file), acl: 'public-read')
+    s3_filename = AWS::S3.upload_to_bucket(params[:bucket], File.basename(local_file), File.open(local_file), acl: 'public-read')
     new_fetchable_url = AWS::S3.public_url(params[:bucket], s3_filename)
 
     destination_local_pathname = Pathname(destination_local_path)

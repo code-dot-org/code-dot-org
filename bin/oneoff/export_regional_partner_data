@@ -159,10 +159,10 @@ def import_from(filename)
 end
 
 case @action
-  when 'export'
-    export_to @filename
-  when 'import'
-    import_from @filename
-  else
-    raise "Unexpected action #{@action}"
+when 'export'
+  export_to @filename
+when 'import'
+  import_from @filename
+else
+  raise "Unexpected action #{@action}"
 end

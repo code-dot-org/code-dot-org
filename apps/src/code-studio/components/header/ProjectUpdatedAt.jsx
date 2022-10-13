@@ -5,14 +5,27 @@ import msg from '@cdo/locale';
 
 import TimeAgo from '@cdo/apps/templates/TimeAgo';
 
-import {projectUpdatedStatuses as statuses} from '../../headerRedux';
+import {projectUpdatedStatuses as statuses} from '../../projectRedux';
 import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
     status: PropTypes.oneOf(Object.values(statuses)),
-    updatedAt: PropTypes.string
+    updatedAt: PropTypes.string,
+    onContentUpdated: PropTypes.func
   };
+
+  componentDidMount() {
+    if (this.props.onContentUpdated) {
+      this.props.onContentUpdated();
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.onContentUpdated) {
+      this.props.onContentUpdated();
+    }
+  }
 
   renderText() {
     if (this.props.status === statuses.error) {
@@ -63,6 +76,6 @@ const styles = {
 };
 
 export default connect(state => ({
-  status: state.header.projectUpdatedStatus,
-  updatedAt: state.header.projectUpdatedAt
+  status: state.project.projectUpdatedStatus,
+  updatedAt: state.project.projectUpdatedAt
 }))(ProjectUpdatedAt);

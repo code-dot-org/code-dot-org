@@ -53,7 +53,7 @@ class SharedBlocklyFunction < ApplicationRecord
           end
           xml.description description
         end
-        xml.title(name, name: 'NAME', id: name)
+        xml.field(name, name: 'NAME', id: name)
         xml.statement(name: 'STACK') do
           xml << stack.gsub(/\n */, '')
         end
@@ -77,7 +77,7 @@ class SharedBlocklyFunction < ApplicationRecord
       block_type: BLOCK_TYPES_BY_DEFINITION_TYPE[
         function_doc.xpath('/block/@type').text
       ],
-      name: function_doc.xpath('/block/title[@name="NAME"]/text()').text,
+      name: function_doc.xpath('/block/field[@name="NAME"]/text()').text,
       description: function_doc.xpath('/block/mutation/description').text,
       arguments: arguments_from_xml(function_doc.xpath('/block/mutation/arg')),
       stack: function_doc.xpath('/block/statement[@name="STACK"]/*'),

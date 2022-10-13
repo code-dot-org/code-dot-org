@@ -1,0 +1,74 @@
+{
+  "vi-VN": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Đọc tác phẩm văn học"
+        },
+        "ccela/SL": {
+          "description": "Nói & Nghe"
+        },
+        "ccmath/MP": {
+          "description": "Thực hành môn Toán"
+        },
+        "csta2011/CPP": {
+          "description": "Luyện tập sử dụng máy tính & lập trình"
+        },
+        "csta2011/CT": {
+          "description": "Tư duy máy tính"
+        },
+        "iste/1": {
+          "description": "Học sinh thể hiện tư duy sáng tạo, tạo lập kiến thức và phát triển các sản phẩm cũng như quy trình sáng tạo sử dụng công nghệ."
+        },
+        "iste/4": {
+          "description": "Học sinh sử dụng kỹ năng tư duy phản biện để lập kế hoạch và tiến hành nghiên cứu, quản lý dự án, giải quyết vấn đề và đưa ra quyết định sáng suốt bằng cách sử dụng các công cụ và tài nguyên số thích hợp."
+        },
+        "iste/6": {
+          "description": "Học sinh thể hiện sự am hiểu về các khái niệm, hệ thống và hoạt động công nghệ."
+        },
+        "ccela/L": {
+          "description": "Ngôn ngữ"
+        },
+        "ccela/RI": {
+          "description": "Đọc cá nhân"
+        },
+        "ccmath/OA": {
+          "description": "Phép toán và tư duy đại số"
+        },
+        "csta2011/CD": {
+          "description": "Máy tính & Thiết bị liên lạc"
+        },
+        "csta2011/CI": {
+          "description": "Cộng đồng, toàn cầu và tác động đạo đức "
+        },
+        "ccmath/NBT": {
+          "description": "Số và phép toán hệ thập phân"
+        },
+        "ccmath/G": {
+          "description": "Hình học"
+        },
+        "ccela/W": {
+          "description": "Viết"
+        },
+        "csta2011/CL": {
+          "description": "Hợp tác"
+        },
+        "iste/2": {
+          "description": "Học sinh sử dụng môi trường và phương tiện kỹ thuật số để giao tiếp và làm việc hợp tác, kể cả ở khoảng cách xa, nhằm hỗ trợ việc học tập của cá nhân và đóng góp vào việc học tập của những người khác."
+        },
+        "csta/IC": {
+          "description": "Tác động của máy tính"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Giải thích cách bảo vệ và sử dụng sai mục đích các tài nguyên máy tính."
+        },
+        "csp2021/DAT-1.D": {
+          "description": "So sánh các thuật toán nén dữ liệu để xác định thuật toán hiệu quả nhất trong trường hợp cụ thể."
+        },
+        "csta/DA": {
+          "description": "Dữ liệu & phân tích"
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # App Lab 
 
-#### App Lab is a browser-based JavaScript programming environment for creating interactive apps. In the AI and Machine Learning unit, students will learn how to import import their machine learning models from AI Lab into App Lab. Once in App Lab, students will be able to create apps that utilize their machine learning model to make a decision. 
+##### App Lab is a browser-based JavaScript programming environment for creating interactive apps. In the AI and Machine Learning unit, students will learn how to create apps using the machine learning models they create in AI Lab.
 
 ## Do students need to know how to use App Lab before beginning the AI and Machine Learning Unit? 
 

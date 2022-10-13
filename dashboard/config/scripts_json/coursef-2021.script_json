@@ -15,16 +15,35 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "hi-IN",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "zh-TW"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-11-09 01:12:38 UTC",
+    "serialized_at": "2022-05-23 13:04:43 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -191,7 +210,7 @@
       "properties": {
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAs kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.",
         "preparation": "- Review instructional materials.\n- Print handout(s) for each student.\n- Prepare a long string (or rope) and paper for class.",
-        "purpose": "Common Sense Education created this lesson to teach students what they should do when someone uses mean or hurtful language on the internet.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Cyberbullying, Digital Drama & Hate Speech. Students take on these tough topics and play the active role of upstanders to build positive, supportive online communities and combat online cruelty.",
         "student_overview": "Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.",
         "unplugged": true
       },
@@ -1335,6 +1354,7 @@
       "key": "d01a520e-a4bb-4422-80ae-fc1fe2157446",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -1348,6 +1368,7 @@
       "key": "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1616,7 +1637,7 @@
       "key": "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Show the User Choices slide, found in the Resources section above.\n\n**Discuss:** For each app or game you see, what choice do you think the app maker is giving the user?\n\n**Goal:** Students should be of the discussion is for students to be discussing ideas not just about what the apps are about, but the specific choices that the user gets to make. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
+        "description": "**Do This:** Show the User Choices slide, found in the Resources section above.\n\n**Discuss:** For each app or game you see, what choice do you think the app maker is giving the user?\n\n**Goal:** Students should discuss the specific choices that the user gets to make, not just ideas about what their app is about. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2191,7 +2212,7 @@
       "key": "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1",
       "position": 1,
       "properties": {
-        "description": "**Do this:** Display the lesson slides for the class.\n\nAsk students to think about we organize and store things. Do students ever keep things in boxes? Are those boxes labeled? Why? If students do not have this experience, ask them to imagine helping you pack up the classroom for the summer.\n\nInform students that today we will be playing a word game, similar to Mad Libs®, where you will be prompted for words that will then be placed into a silly story."
+        "description": "**Do this:** Display the lesson slides for the class.\n\nAsk students to think about how we organize and store things. Do students ever keep things in boxes? Are those boxes labeled? Why? If students do not have this experience, ask them to imagine helping you pack up the classroom for the summer.\n\nInform students that today we will be playing a word game, similar to Mad Libs®, where you will be prompted for words that will then be placed into a silly story."
       },
       "seeding_key": {
         "activity_section.key": "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1",
@@ -2214,7 +2235,7 @@
       "key": "7a4a67f6-dfb0-42ee-a28c-b6604100abde",
       "position": 3,
       "properties": {
-        "description": "\nIn a moment, I’ll have volunteers to help us fill in the blank. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n",
+        "description": "\nIn a moment, I’ll have volunteers to help us fill in the blanks. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -2464,7 +2485,7 @@
       "key": "20919642-5201-4796-9e45-ee76e368614d",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Using the lesson slides, review the concepts that students have explore so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "description": "**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
         "name": "Review",
         "progression_name": "Prediction",
         "tips": [
@@ -2962,7 +2983,7 @@
       "key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
       "position": 1,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n*Standards Addressed:*\n- **MD** - Measurement And Data\n\n - **2.MD.10:** - Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put- together, take-apart, and compare problems4 using information presented in a bar graph."
+        "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n*Standards Addressed:*\n- **MD** - Measurement And Data\n\n - **2.MD.10:** - Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put- together, take-apart, and compare problems using information presented in a bar graph."
       },
       "seeding_key": {
         "activity_section.key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
@@ -3360,8 +3381,8 @@
       "key": "76fe757f-0aa5-4dc0-9864-861f6023828e",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Show the “Lots of Sprites” video and discuss how the special blocks inside the event blocks work.",
-        "progression_name": "Video: Lots of Sprites",
+        "description": "**Do This:** Show the “Outbreak Simulator: Introduction” video.",
+        "progression_name": "Video: Outbreak Simulator: Introduction",
         "tips": [
           {
             "type": "teachingTip",
@@ -3390,7 +3411,7 @@
       "key": "6a891356-b6da-4faa-bb30-f79f23f2bbcb",
       "position": 7,
       "properties": {
-        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.*",
+        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.* You can also show the next video in Level 8.",
         "progression_name": "Learning from Simulations"
       },
       "seeding_key": {
@@ -6398,7 +6419,7 @@
         "level_keys": [
           "courseF_lotsofsprites_video"
         ],
-        "progression": "Video: Lots of Sprites"
+        "progression": "Video: Outbreak Simulator: Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -10029,15 +10050,6 @@
       "seeding_key": {
         "lesson.key": "For Loops in Artist",
         "objective.key": "68c038c1-990a-4009-ad61-619ba6ea71af"
-      }
-    },
-    {
-      "key": "7a69d6de-1a75-41da-a511-9cb735e02a5c",
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "7a69d6de-1a75-41da-a511-9cb735e02a5c"
       }
     },
     {

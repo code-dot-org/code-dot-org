@@ -16,16 +16,14 @@
 require 'cdo/chat_client'
 
 class UserPermission < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   VALID_PERMISSIONS = [
     # Grants access to managing workshops and workshop attendance.
     FACILITATOR = 'facilitator'.freeze,
-    # Grants access to viewing hidden scripts.
-    HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'.freeze,
     # Grants access to managing (e.g., editing) levels, lessons, scripts, etc.
     # Also grants access to viewing extra links related to editing these.
-    # Also makes the account satisfy authorized_teacher?.
+    # Also makes the account satisfy verified_instructor?.
     LEVELBUILDER = 'levelbuilder'.freeze,
     # Grants ability to (un)feature projects in the the public project gallery.
     # Also, grants access to resetting (to 0) the abuse score for projects,
@@ -61,6 +59,11 @@ class UserPermission < ApplicationRecord
 
   after_save :log_permission_save
   before_destroy :log_permission_delete
+  after_create :send_verified_teacher_email, if: proc {permission == AUTHORIZED_TEACHER}
+
+  def send_verified_teacher_email
+    TeacherMailer.verified_teacher_email(user).deliver_now if user&.email.present?
+  end
 
   def log_permission_save
     return if saved_changes.empty?

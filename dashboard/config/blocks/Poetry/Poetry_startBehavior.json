@@ -18,55 +18,55 @@
         "options": [
           [
             "fluttering",
-            "fluttering"
+            "\"fluttering\""
           ],
           [
             "growing",
-            "growing"
+            "\"growing\""
           ],
           [
             "jittering",
-            "jittering"
+            "\"jittering\""
           ],
           [
             "looping north",
-            "moving_north_and_looping"
+            "\"moving_north_and_looping\""
           ],
           [
             "looping south",
-            "moving_south_and_looping"
+            "\"moving_south_and_looping\""
           ],
           [
             "looping east",
-            "moving_east_and_looping"
+            "\"moving_east_and_looping\""
           ],
           [
             "looping west",
-            "moving_west_and_looping"
+            "\"moving_west_and_looping\""
           ],
           [
             "shrinking",
-            "shrinking"
+            "\"shrinking\""
           ],
           [
             "spinning left",
-            "spinning_left"
+            "\"spinning_left\""
           ],
           [
             "spinning right",
-            "spinning_right"
+            "\"spinning_right\""
           ],
           [
             "swimming",
-            "swimming_left_and_right"
+            "\"swimming_left_and_right\""
           ],
           [
             "wandering",
-            "wandering"
+            "\"wandering\""
           ],
           [
             "wobbling",
-            "wobbling"
+            "\"wobbling\""
           ]
         ]
       }

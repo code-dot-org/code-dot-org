@@ -83,6 +83,13 @@
     "callouts": {
       "CSD_U3_rect_c1": "Here is the code",
       "CSD_U3_rect_c2": "Drag this block into the code area."
+    },
+    "mini_rubric": {
+      "rubric_key_concept": "Use a coordinate system to place elements on a screen, accounting for object size and overlay.",
+      "rubric_performance_level_1": "The programmatic drawing is identical to the example and in contained within the seven lines of code.",
+      "rubric_performance_level_2": "The programmatic drawing is mostly the same as the drawing, but there may be some slight positioning errors, and there may be extra lines of code.",
+      "rubric_performance_level_3": "The square has been moved, is purple, and appears in front of the circles.",
+      "rubric_performance_level_4": "The picture is either the same, or any changes appear to be unrelated to the assignment."
     }
   },
   "https://studio.code.org/s/csd3-2019/lessons/3/levels/10": {
@@ -124,7 +131,14 @@
     "long_instructions": "<img src=\"https://images.code.org/08c7c6cd82f4d4ff57459165f29ab624-image-1520402652290.03.37 PM.png\" style=\"float:right;height:150px\">\n\n# Debug - Using 4 Parameters\n\nThis program uses the four parameter version of `rect()` and `ellipse()` to draw a simple scene.\n\n# Do This\n\n-   Debug this program and correct the error so that the grass extends across the entire bottom.\n-   Hint: You only have to change one number. Which parameter makes your rectangle (the grass) wider?"
   },
   "https://studio.code.org/s/csd3-2019/lessons/4/levels/7": {
-    "long_instructions": "<img src=\"https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png\" style=\"float:right;height:150px\">\n\n# Debug - Using 4 Parameters\n\nNow that the grass is working, let's add a cloud to the sky. Unfortunately, it looks a little funny right now.\n\n# Do This\n\n-   Debug this program to make the cloud wider than it is tall, like in the image.\n-   Hint: You'll need to change two parameters. Which ones set your cloud's width and height?"
+    "long_instructions": "<img src=\"https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png\" style=\"float:right;height:150px\">\n\n# Debug - Using 4 Parameters\n\nNow that the grass is working, let's add a cloud to the sky. Unfortunately, it looks a little funny right now.\n\n# Do This\n\n-   Debug this program to make the cloud wider than it is tall, like in the image.\n-   Hint: You'll need to change two parameters. Which ones set your cloud's width and height?",
+    "mini_rubric": {
+      "rubric_key_concept": "Use arguments to change the way a method or command runs. ",
+      "rubric_performance_level_1": "The programmatic drawing appears exactly as it does in the example.",
+      "rubric_performance_level_2": "The programmatic drawing is approximately the same as that in the picture, and the cloud's width and height have been changed.",
+      "rubric_performance_level_3": "The cloud's height, width, or position has been changed, but it may not be wider than it is tall, or it may be moved to somewhere else on the screen.",
+      "rubric_performance_level_4": "No changes have been made to the code, or the changes are unrelated to the instructions."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/4/levels/8": {
     "display_name": "Shapes and Parameters"
@@ -136,7 +150,14 @@
     "long_instructions": "<img src=\"https://images.code.org/8306a9fd01470ac8582cf4374dde7033-image-1520403513967.17.40 PM.png\" style=\"float:right;height:150px\">\n\n# Random Numbers\n\nHere's the same sun from last time.  Right now only the x-coordinate is random, but you can make the y-coordinate random, too.\n\n# Do This\n\n-   Use `randomNumber()` for the ellipse's Y parameter so the circle is drawn in a random Y position, too.\n-   As long as your circle is appearing at random X and Y positions, you can move on."
   },
   "https://studio.code.org/s/csd3-2019/lessons/4/levels/11": {
-    "long_instructions": "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png\" style=\"float:right;height:150px\">\n\n# Rainbow Snake\n\nThis program draws a very rare breed of rainbow snake. To make the snake draw differently every time you'll need to use random numbers.\n\n# Do This\n\n-   Run the program several times to see how the starter code works.\n-   Add at least three new different colored circles to your rainbow snake.\n-   Use `randomNumber()` to make the rest of the snake's body move up and down like the first three.\n\n_Challenge: Can you make the size of some of the circles random, too?_"
+    "long_instructions": "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png\" style=\"float:right;height:150px\">\n\n# Rainbow Snake\n\nThis program draws a very rare breed of rainbow snake. To make the snake draw differently every time you'll need to use random numbers.\n\n# Do This\n\n-   Run the program several times to see how the starter code works.\n-   Add at least three new different colored circles to your rainbow snake.\n-   Use `randomNumber()` to make the rest of the snake's body move up and down like the first three.\n\n_Challenge: Can you make the size of some of the circles random, too?_",
+    "mini_rubric": {
+      "rubric_key_concept": "Generate and use random numbers in a program, use arguments to change the way a method or command runs.",
+      "rubric_performance_level_1": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions, and some circles have a random size.",
+      "rubric_performance_level_2": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions",
+      "rubric_performance_level_3": "At least one student-created circle has a new color, appears at a random vertical position, and has a different horizontal position than any others.",
+      "rubric_performance_level_4": "No student produced circles, or any new circles share a color or horizontal position with circles produced by the original code."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/4/levels/12": {
     "display_name": "Random Numbers"
@@ -186,7 +207,14 @@
   },
   "https://studio.code.org/s/csd3-2019/lessons/5/levels/9": {
     "short_instructions": "Change the value of petalSize multiple times. How does it change your drawing?",
-    "long_instructions": "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\" style=\"float:right;height:150px\">\n\n# Debug: Variables and Random Numbers\n\nVariables can be assigned a random number too. This lets you save a single random value so that you can use it as many times as you want in your program.\n\n# Do This\n\n`eyeSize` is assigned a random number. Unfortunately only one of the eyes is currently using it.\n\n-   **Run the program** to see how it works.\n-   **Change the program** so that both eyes are always the same random size. Hint: you'll only need to make changes to one line of code."
+    "long_instructions": "<img src=\"https://images.code.org/ba9592e887f52c1a538a0517560cdacf-image-1493913633878.gif\" style=\"float:right;height:150px\">\n\n# Debug: Variables and Random Numbers\n\nVariables can be assigned a random number too. This lets you save a single random value so that you can use it as many times as you want in your program.\n\n# Do This\n\n`eyeSize` is assigned a random number. Unfortunately only one of the eyes is currently using it.\n\n-   **Run the program** to see how it works.\n-   **Change the program** so that both eyes are always the same random size. Hint: you'll only need to make changes to one line of code.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use variables to store and update information",
+      "rubric_performance_level_1": "The eyeSize variable is used such that the two eyes have the same random size as instructed, with no other unexpected changes.",
+      "rubric_performance_level_2": "The eyeSize variable is used such that the two eyes have the same random size, but other changes to the code may have introduced other unexpected behaviors.",
+      "rubric_performance_level_3": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
+      "rubric_performance_level_4": "There are no changes to the code, or the changes appear unrelated to the eyeSize variable, or the variable is used in a way that prevents the program from running."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/5/levels/10": {
     "display_name": "Naming Variables"
@@ -329,7 +357,14 @@
     "long_instructions": "# Create Your Scene - Drawing\n\nYou're going to start creating a scene of your own. If you haven't already, take a minute to sketch out a picture of your scene (consider using graph paper). Once you have an idea and plan for your scene, start drawing the background.\n\n# Do This\n\n-   Use a `background()` command to fill the screen with a color.\n-   Add any necessary shape commands to draw the non-sprite elements of your scene."
   },
   "https://studio.code.org/s/csd3-2019/lessons/6/levels/17": {
-    "long_instructions": "# Create Your Scene - Sprites\n\nWith your background in place, it's time to add your sprites.\n\n# Do This\n\n-   Add or create all of your sprite images in the Animation Tab.\n-   Create a variable for each sprite at the top of your program and use `setAnimation()` to assign the images you created in the Animation Tab.\n-   Call `drawSprites()` once at the end of your program.\n\n_Hint: You probably want to call `drawSprites()` at the very end of your program so the sprites are on top of your background, but for some designs you may want to call `drawSprites()` earlier so that your sprites are on top of some shapes but below others._"
+    "long_instructions": "# Create Your Scene - Sprites\n\nWith your background in place, it's time to add your sprites.\n\n# Do This\n\n-   Add or create all of your sprite images in the Animation Tab.\n-   Create a variable for each sprite at the top of your program and use `setAnimation()` to assign the images you created in the Animation Tab.\n-   Call `drawSprites()` once at the end of your program.\n\n_Hint: You probably want to call `drawSprites()` at the very end of your program so the sprites are on top of your background, but for some designs you may want to call `drawSprites()` earlier so that your sprites are on top of some shapes but below others._",
+    "mini_rubric": {
+      "rubric_key_concept": "Create and modify objects (sprites) to manage the complexity of on-screen elements.  Use dot notation to get and set sprite properties.",
+      "rubric_performance_level_1": "At least one sprite is created, given an animation, scaled to a good size, and drawn to the screen.  The sprite variable has a reasonable name.  `drawSprites` is called after all sprite properties have been updated.",
+      "rubric_performance_level_2": "At least one sprite is created, given an animation, and drawn to the screen.  The sprite variable has been renamed.",
+      "rubric_performance_level_3": "At least one sprite has been created and drawn to the screen.  There may be problems with the animation or conflicts from using the same variable name for multiple sprites.",
+      "rubric_performance_level_4": "No sprites are created."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/6/levels/18": {
     "long_instructions": "# Create Your Scene - Text\n\nThe final piece of your scene is to add text.\n\n# Do This\n\n-   Add a `text()` command for each separate line of text.\n-   If necessary, use `fill()` and `textSize()` to change the appearance of your text.\n\n_Hint: Most scenes have the text on top of everything else, which would require your `text()` commands to be the last lines in your program. If, however, you want the text layered in with other elements, you might consider changing the order._"
@@ -387,7 +422,14 @@
   },
   "https://studio.code.org/s/csd3-2019/lessons/7/levels/12": {
     "display_name": "Challenge: Extend Your Scene",
-    "long_instructions": "# Extend Your Scene\n\nThis is the sprite scene you made in the last lesson. You'll now be updating it a little bit to use the draw loop and sprite properties.\n\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\n\n# Do This\n\n-   Add a draw loop to your program (you should only have one).\n-   Use the lasso selector (click, hold and drag) to select the code that will be updated each time and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\n-   Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that they move. You'll need to update them with `randomNumber()`."
+    "long_instructions": "# Extend Your Scene\n\nThis is the sprite scene you made in the last lesson. You'll now be updating it a little bit to use the draw loop and sprite properties.\n\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\n\n# Do This\n\n-   Add a draw loop to your program (you should only have one).\n-   Use the lasso selector (click, hold and drag) to select the code that will be updated each time and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\n-   Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that they move. You'll need to update them with `randomNumber()`.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use loops to repeat behavior within a program.",
+      "rubric_performance_level_1": "The sprite animates as described in the instructions.  Other set up, such as creating the sprite, happen outside of the draw loop, and there are no extra blocks.",
+      "rubric_performance_level_2": "The sprite animates, but there may be small problems with the scene, such the wrong sprite or text being in front.  There may be other errors, such as creating sprites inside the draw loop or having extra calls to `drawSprites` or other extra code.",
+      "rubric_performance_level_3": "The sprite animates, but there are major problems, such as leaving a \"trails\" of previous locations behind or text or other parts of the scene disappearing.",
+      "rubric_performance_level_4": "The sprite does not animate."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/7/extras?level_name=CSD+U3+L7+Freeplay_2019": {
     "display_name": "Free Play",
@@ -604,7 +646,14 @@
     "long_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\n\n# If Statement\n\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\n\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \n\n# Do This\n\nThe race car program you wrote earlier is loaded here for you.\n\n-   Add an `if` statement after you update the position of the race car.\n-   Move the Boolean expression from the console.log statement to the condition of the if statement.\n-   Inside the `if` statement, add a statement to draw text on the screen to say \"Winner\"."
   },
   "https://studio.code.org/s/csd3-2019/lessons/11/levels/11": {
-    "long_instructions": "# Changing Fruit\n\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\n\n# Do This\n\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".\n\n_Challenge: Can you also make the fruit stop growing once it turns into a pear?_"
+    "long_instructions": "# Changing Fruit\n\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\n\n# Do This\n\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".\n\n_Challenge: Can you also make the fruit stop growing once it turns into a pear?_",
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program.",
+      "rubric_performance_level_1": "The sprite's image changes from an apple to a pear when the sprite's scale reaches 2.",
+      "rubric_performance_level_2": "There is a conditional in the draw loop that checks whether the sprite's scale has reached 2.",
+      "rubric_performance_level_3": "There is a conditional in the draw loop that checks the value of a Boolean statement.",
+      "rubric_performance_level_4": "There are no conditionals in the draw loop."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/11/levels/12": {
     "display_name": "If Statements"
@@ -647,7 +696,14 @@
     "long_instructions": "# Gears with Conditionals\n\nLet's make the gears spin only when the space key is being held down.\n\n# Do This\n\n-   Add an `if` statement.\n-   Use `keyDown` as input to the if statement to check when the space key is pressed.\n-   Move the code that makes the gears rotate inside the `if`."
   },
   "https://studio.code.org/s/csd3-2019/lessons/12/levels/7": {
-    "long_instructions": "# Move in All Directions\n\nOnce you've got your sprite moving in one direction by responding to a `keyDown`, getting it to move in all four directions should be more of the same. The basic keyboard control that you're developing here will become the basis for many of the games you make down the road.\n\n# Do This\n\nThe bug sprite you made that responds to the right arrow has been brought to this level. Add the interaction for the other three arrow keys!\n\n-   Add three if statements - one for each arrow.  \n-   Don't forget to include a comment for each if statement!\n-   Each if statement should move the sprite in the direction of the arrow.\n\n_HINT: Make sure you consider both the axis (x or y) of movement, **and** whether you need to increase or decrease that value._"
+    "long_instructions": "# Move in All Directions\n\nOnce you've got your sprite moving in one direction by responding to a `keyDown`, getting it to move in all four directions should be more of the same. The basic keyboard control that you're developing here will become the basis for many of the games you make down the road.\n\n# Do This\n\nThe bug sprite you made that responds to the right arrow has been brought to this level. Add the interaction for the other three arrow keys!\n\n-   Add three if statements - one for each arrow.  \n-   Don't forget to include a comment for each if statement!\n-   Each if statement should move the sprite in the direction of the arrow.\n\n_HINT: Make sure you consider both the axis (x or y) of movement, **and** whether you need to increase or decrease that value._",
+    "mini_rubric": {
+      "rubric_key_concept": "Detect and respond to user input from the keyboard.",
+      "rubric_performance_level_1": "The sprite moves correctly in response to all four arrow keys.  There are no extra `if` statements.",
+      "rubric_performance_level_2": "The sprite moves in response to multiple arrow keys, but may have some errors.",
+      "rubric_performance_level_3": "The program uses an `if` statement to detect user input.",
+      "rubric_performance_level_4": "The program does not detect user input."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/12/levels/8": {
     "display_name": "Editing Images"
@@ -684,7 +740,14 @@
     "long_instructions": "# When to Provide an \"Else\"\n\nThe else clause is useful when you want the program to do one thing when your condition is true, and a _different_ thing when your condition is false.\n\n<img src=\"https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif\" style=\"float:right;\">\n\n# Do This\n\nClick \"Run\" to see the swarm of bees created for you and a flower on the left side of the screen. Make the swarm of bees **appear when the mouse is near the flower** (on the left side of the screen) and **disappear when the mouse is away from the flower** (on the right side of the screen). Look at the example on the right.\n\n-   Add an `if else` statement after the code that updates the position of the bees\n-   In the input of the if use a boolean to check if the x position of the mouse is on the side of the screen with the flower.\n-   Set the `visible` property of each bee inside both the if and else statements appropriately to make the bees only show near the flower."
   },
   "https://studio.code.org/s/csd3-2019/lessons/13/levels/5": {
-    "long_instructions": "# Reverse the Gears\n\nThe gears are back. They already spin one direction when you press the space bar, now you'll want them to spin the other direction when the space bar isn't pressed.\n\n# Do This\n\n-   Makes the gears spin opposite of the direction that they do when the space bar is pressed."
+    "long_instructions": "# Reverse the Gears\n\nThe gears are back. They already spin one direction when you press the space bar, now you'll want them to spin the other direction when the space bar isn't pressed.\n\n# Do This\n\n-   Makes the gears spin opposite of the direction that they do when the space bar is pressed.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program; detect and respond to user input.",
+      "rubric_performance_level_1": "The gears spin in the opposite direction when the space bar is not being pressed, and the teeth of the gears line up properly.",
+      "rubric_performance_level_2": "At least one gear spins in the opposite direction when the space bar is not being pressed, but there may be minor errors in the program that keep all the gears from spinning.",
+      "rubric_performance_level_3": "There is an else clause used, but there are major errors in the program that keep the gears from spinning.",
+      "rubric_performance_level_4": "There is no else clause."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/13/levels/6": {
     "display_name": "If-Else Statements"
@@ -782,6 +845,208 @@
   "https://studio.code.org/s/csd3-2019/lessons/14/levels/9": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U3Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U3Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U3Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U3Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U3Ch1_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd3-2019/lessons/15/levels/1": {
@@ -837,6 +1102,13 @@
     "long_instructions": "# Multiple Controls\n\nAs you saw in the last level, you can change the sprite's velocity with multiple `if` statements. In this program, the fish has three different types of movement, each of which should be controlled by its own `if` statement.\n\n# Do This\n\n-   Look at the three `if` statements inside the draw loop.\n\n-   Use a `sprite.velocityX` block inside each `if` statement to make the three following movements:\n    -   If the user presses the right arrow key, move the fish to the right.\n    -   If the fish gets to the right-hand side of the screen, move the fish to the left.\n    -   If the fish gets to the left-hand side of the screen, stop the fish.",
     "callouts": {
       "CSD_U3_L11_S5_C1": "Look at this code."
+    },
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program; model two dimensional movement on a coordinate plane.",
+      "rubric_performance_level_1": "Pressing the right arrow key once causes the fish to swim to the right side of the screen, turn and swim to the left side of the screen, then stop.  There are no extra blocks in the program, and the counter pattern is not used.",
+      "rubric_performance_level_2": "Pressing the right arrow key once causes the fish sprite to swim right across the screen.  The counter pattern is not used.",
+      "rubric_performance_level_3": "Pressing the right arrow key once causes the fish sprite to move across the screen in some way.",
+      "rubric_performance_level_4": "Pressing the arrow key does not cause movement, or the movement stops as soon as the key is let up."
     }
   },
   "https://studio.code.org/s/csd3-2019/lessons/15/levels/10": {
@@ -891,7 +1163,14 @@
     "long_instructions": "# Making Sounds\n\nYou can also use code to play a blender sound.\n\n# Do This\n\nUse the `playSound` block from the \"World\" drawer to play the \"<https://studio.code.org/docs/sounds/blender.mp3>\" sound when the apple touches the blender.  You will need to paste the address of the sound into the block, so it looks like this: [][0]\n\n[//]: # \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\"\n\n[//]: # \"https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png\"\n\n[//]: # \"https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png\"\n\n[//]: # \"https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png\"\n\n[//]: # \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\"\n\n[//]: # \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\"\n\n[//]: # \"https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png\""
   },
   "https://studio.code.org/s/csd3-2019/lessons/16/levels/7": {
-    "long_instructions": "# Rainbow Horse\n\nWhen the rainbow touches the horse, it should turn into a unicorn.\n\n# Do This\n\nUse the `if`, `isTouching`, and `setAnimation` blocks to change the horse sprite's image when the rainbow touches it.  The unicorn image is already loaded in the animations tab for you.\n\n[//]: # \"https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png\"\n\n[//]: # \"https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png\"\n\n[//]: # \"https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png\"\n\n[//]: # \"https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png\""
+    "long_instructions": "# Rainbow Horse\n\nWhen the rainbow touches the horse, it should turn into a unicorn.\n\n# Do This\n\nUse the `if`, `isTouching`, and `setAnimation` blocks to change the horse sprite's image when the rainbow touches it.  The unicorn image is already loaded in the animations tab for you.\n\n[//]: # \"https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png\"\n\n[//]: # \"https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png\"\n\n[//]: # \"https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png\"\n\n[//]: # \"https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png\"",
+    "mini_rubric": {
+      "rubric_key_concept": "Create and modify objects (sprites) to manage the complexity of on-screen elements. ",
+      "rubric_performance_level_1": "The horse turns into a unicorn when the rainbow touches it.  There are no extra blocks in the program.",
+      "rubric_performance_level_2": "The program reacts in some way when the rainbow touches the horse.",
+      "rubric_performance_level_3": "The program uses a conditional and detects when the rainbow touches the horse, but there are enough errors that it does not react in any way.",
+      "rubric_performance_level_4": "The program does not detect when the rainbow touches the horse, or there is no conditional in the program."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/16/levels/8": {
     "long_instructions": "# Debugging Collisions\n\nThe balloon is popping before the tack touches it.  When sprites aren't doing what you expect, you can use the `debug` block to get more information about why the sprites are behaving that way.  Can you find out what's wrong in the code below?\n\n# Do This\n\n-   Run the code and use the arrow keys to move the tack to pop the balloon.\n-   In the code below, change `balloon.debug = false` to `balloon.debug = true`.\n-   Add a new `debug` block to the code and set the tack sprite's debug property to `true`.\n-   Run the code again, then discuss with your partner why the balloon is popping early.\n\n_Challenge: Can you use the animations tab to resize the balloon picture so it pops at the correct time?_\n\n[//]: # \"https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png\"\n\n[//]: # \"https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png\"\n\n[//]: # \"https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png\"\n\n[//]: # \"https://images.code.org/2892e65635d7a43d0664bb8ff58eb698-image-1471200175665.png\"\n\n[//]: # \"https://images.code.org/9ffeb3f543033353d073794071316860-image-1471200179449.png\""
@@ -944,7 +1223,14 @@
     "long_instructions": "# Slowing Things Down\n\nNow that you've had some practice speeding things up, can you use the counter pattern to slow sprites down? \n\n# Do This\n\nThe car is going to run into the water! You'll need to use the counter pattern to slow it down.\n\n-   Use the `sprite.velocityX` block with a counter pattern to slow the car down by 0.25 as it moves across the screen.  \n-   Discuss with your Partner: What do you think will happen when the car finally stops?\n\n_Challenge: Add code that makes the car slow down only if its velocityX is greater than 0._"
   },
   "https://studio.code.org/s/csd3-2019/lessons/17/levels/7": {
-    "long_instructions": "# Simulating Gravity\n\nIn the last level you slowed down the car with the `sprite.velocityX` block and the counter pattern. It almost looked like the car was getting pulled to the left.\n\nIf you use this same pattern with the `sprite.velocityY` block it will look like your sprite is always being pulled down, which is exactly what gravity does!\n\n# Do This\n\nThe rock is thrown in the air but it never falls back down.\n\n-   Use the `sprite.velocityY` block with the counter pattern to make the rock slow down and then fall in the other direction.\n-   Experiment with different values in your counter pattern. Do you want the rock to slow down quickly or gradually? What looks most realistic to you?\n-   Discuss with your partner: Why are you setting the rock's initial velocity outside the draw loop? Why are you changing the sprite's velocity inside the draw loop?"
+    "long_instructions": "# Simulating Gravity\n\nIn the last level you slowed down the car with the `sprite.velocityX` block and the counter pattern. It almost looked like the car was getting pulled to the left.\n\nIf you use this same pattern with the `sprite.velocityY` block it will look like your sprite is always being pulled down, which is exactly what gravity does!\n\n# Do This\n\nThe rock is thrown in the air but it never falls back down.\n\n-   Use the `sprite.velocityY` block with the counter pattern to make the rock slow down and then fall in the other direction.\n-   Experiment with different values in your counter pattern. Do you want the rock to slow down quickly or gradually? What looks most realistic to you?\n-   Discuss with your partner: Why are you setting the rock's initial velocity outside the draw loop? Why are you changing the sprite's velocity inside the draw loop?",
+    "mini_rubric": {
+      "rubric_key_concept": "Model complex movement on a coordinate plane",
+      "rubric_performance_level_1": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.  The rock reaches a reasonable height, and there are no extra blocks of code.",
+      "rubric_performance_level_2": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.",
+      "rubric_performance_level_3": "The rock starts to move up the screen, and its velocity continually changes in some way as the program is being run.",
+      "rubric_performance_level_4": "There is no change to the rock's velocity as the program is run."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/17/levels/8": {
     "long_instructions": "# Jumping\n\nIncreasing a sprite's y velocity inside the counter pattern can simulate gravity. By adding user interactions you can make your sprite appear to jump as well. For starters you'll make a simple jump, and then make it more realistic looking in the next level.\n\n# Do This\n\nA sprite has already been created for you that falls because its y velocity is increased inside the draw loop. You'll need to make this sprite appear to jump.\n\n-   Inside the `if` block that checks whether the up arrow has been pressed, set the sprite's y velocity to -5. ( [Show me where][0] )\n-   Discuss with a neighbor: Why does this code run the way it does? How would using a number besides -5 affect the way the code works? How could you jump higher or lower?",
@@ -1027,7 +1313,14 @@
     "long_instructions": "# Flyer Game - Change Colliders\n\nRight now your colliders are all rectangular. Switch them over to circles to get more interesting and realistic bounces and collisions.\n\n# Do This\n\n-   Use the `sprite.setCollider()` block to change the colliders of your sprites to circles.\n-   Set your sprites' debug properties to `true` to make sure your game is working the way you want.\n-   Play your game to make sure it's working the way you want."
   },
   "https://studio.code.org/s/csd3-2019/lessons/18/levels/16": {
-    "long_instructions": "# Flyer Game - Make It Your Own\n\nTime to make this game your own by using what you've learned about sprite interactions.\n\n# Do This\n\nAdd at least one more aspect to your game that uses sprite interactions. There's some ideas below or you can choose to add features of your own. Make sure you're ready to share your ideas with your classmates.\n\n-   Create invisible sprites at the edge of your game to keep your character from bouncing out.\n-   Add platforms to the game for your character to navigate around.\n-   Add another obstacle to your game.\n-   Create another idea of your own."
+    "long_instructions": "# Flyer Game - Make It Your Own\n\nTime to make this game your own by using what you've learned about sprite interactions.\n\n# Do This\n\nAdd at least one more aspect to your game that uses sprite interactions. There's some ideas below or you can choose to add features of your own. Make sure you're ready to share your ideas with your classmates.\n\n-   Create invisible sprites at the edge of your game to keep your character from bouncing out.\n-   Add platforms to the game for your character to navigate around.\n-   Add another obstacle to your game.\n-   Create another idea of your own.",
+    "mini_rubric": {
+      "rubric_key_concept": "Model complex movement on a coordinate plane.",
+      "rubric_performance_level_1": "The player character is unable to move through the obstacle, the coin never appears behind the obstacle, and the collider size and shape triggers the collisions at reasonable times.  There is at least one new sprite interaction of the student's choosing.",
+      "rubric_performance_level_2": "The player character is unable to move through the obstacle, and the coin never appears behind the obstacle.",
+      "rubric_performance_level_3": "The player character interacts with the obstacle in some way, but there may be problems, such as the player may move the obstacle, or the coin may sometimes appear behind the obstacle.",
+      "rubric_performance_level_4": "There are no interactions between the player character and the obstacle."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/18/levels/17": {
     "display_name": "Sprite Interactions Review"
@@ -1104,7 +1397,14 @@
     "long_instructions": "# Catch the Coin, Increase the Score\n\nLet's make that score change now, too, to complete the game. You'll need to be able to tell when the bunny is touching the coin and then reset it.\n\n# Do This\n\n-   Use an **if-statement** and the **isTouching** block to increase the score when the bunny catches the coin.\n-   Make sure you're **calling your function** to reset the coin once it's been caught.\n-   Play the game and **randomize the velocity of the coin** to a range that you think is fun."
   },
   "https://studio.code.org/s/csd3-2019/lessons/19/levels/12": {
-    "long_instructions": "# Change the Background with the Score\n\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\n\n# Do This\n\n-   Use an **if-statement** and two separate functions to draw your backgrounds.\n-   Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"silly\" background are. Have fun with it!"
+    "long_instructions": "# Change the Background with the Score\n\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\n\n# Do This\n\n-   Use an **if-statement** and two separate functions to draw your backgrounds.\n-   Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"silly\" background are. Have fun with it!",
+    "mini_rubric": {
+      "rubric_key_concept": "Define and call functions to organize code and make it easier to reuse.",
+      "rubric_performance_level_1": "The two functions are defined and called within the if statement as instructed, so that different backgrounds display according to the current score.  Code is correctly organized inside and outside the draw loop, and there are no extra blocks.",
+      "rubric_performance_level_2": "At least one new background function is defined and called successfully inside the program, but may not work exactly as instructed.  Code is correctly organized inside and outside the draw loop.",
+      "rubric_performance_level_3": "A function is both defined and called inside the program, but there may be major errors that prevent it from running successfully, or code has been incorrectly placed in the draw loop.",
+      "rubric_performance_level_4": "There are no new functions in the program."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/19/levels/13": {
     "display_name": "Functions Review"
@@ -1248,7 +1548,14 @@
   },
   "https://studio.code.org/s/csd3-2019/lessons/21/levels/20": {
     "display_name": "Improve Your Game",
-    "long_instructions": "# Improve Your Game\n\nImprove your game by adding in two or more of the features you saw in the last two examples.  You can use the list below to help you.\n\n-   Choose new animations for your player, platform, and items.\n-   Prevent your player from going off the side of the screen.\n-   Add a different type of item for the player to collect or avoid.\n-   Add a variable that keeps track of how many lives the player has, and end the game if the player runs out.\n-   Make your player's animation change direction when the player changes direction.\n-   Change the player to only jump when it is on a platform.\n-   Add another background and make it appear when the score gets even higher.\n-   Make your items interact with the platforms in some way."
+    "long_instructions": "# Improve Your Game\n\nImprove your game by adding in two or more of the features you saw in the last two examples.  You can use the list below to help you.\n\n-   Choose new animations for your player, platform, and items.\n-   Prevent your player from going off the side of the screen.\n-   Add a different type of item for the player to collect or avoid.\n-   Add a variable that keeps track of how many lives the player has, and end the game if the player runs out.\n-   Make your player's animation change direction when the player changes direction.\n-   Change the player to only jump when it is on a platform.\n-   Add another background and make it appear when the score gets even higher.\n-   Make your items interact with the platforms in some way.",
+    "mini_rubric": {
+      "rubric_key_concept": "Using a structured process to plan and develop a program",
+      "rubric_performance_level_1": "The project guide accurately reflects the program, both as shown in the example and as coded by the student.  Relevant functions, variables, and sprites are consistent between the project guide and actual project, with very few exceptions.",
+      "rubric_performance_level_2": "The project guide is generally consistent with the sample project and student project, with main functions and sprites included.  There may be some inconsistencies.",
+      "rubric_performance_level_3": "The project guide mentions some features of the program and associated functions and sprites, but there are major parts of the program missing from the guide.",
+      "rubric_performance_level_4": "The project guide is incomplete or does not seem to describe the program."
+    }
   },
   "https://studio.code.org/s/csd3-2019/lessons/22/levels/1": {
     "display_name": "Lesson Overview",
@@ -1302,11 +1609,421 @@
   "https://studio.code.org/s/csd3-2019/lessons/22/levels/13": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U3Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U3Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U3Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U3Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U3Ch2_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd3-2019/lockable/1/levels/1": {
     "dsls": {
       "title": "Interactive Animations and Games Post-Project Test"
+    },
+    "sublevels": {
+      "CSD U3 Test clean code": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Use the counter pattern to increase the score",
+              "correct": false
+            },
+            {
+              "text": "Include descriptive comments in the program",
+              "correct": true
+            },
+            {
+              "text": "Use watchers to keep track of variable and sprite property values",
+              "correct": false
+            },
+            {
+              "text": "Give variables and functions names that make sense",
+              "correct": true
+            },
+            {
+              "text": "Declare variables outside of the draw loop, but update them inside the draw loop",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A team of friends is creating a game together.  They want to make sure that everyone can understand the code that the others write.  Which of the following will make it easier for them to read each other's code? (Choose TWO)"
+            }
+          ],
+          "title": "Question 1"
+        }
+      },
+      "CSD U3 Test functions": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "They keep the code organized and easy to understand.",
+              "correct": true
+            },
+            {
+              "text": "They are a good way to store user input to use later in the program.",
+              "correct": false
+            },
+            {
+              "text": "They make the program run faster.",
+              "correct": false
+            },
+            {
+              "text": "They are necessary for any program to run.",
+              "correct": false
+            },
+            {
+              "text": "They let you use the same code in different places in the program without having to rewrite it.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Why do programmers like to use functions? (Choose TWO)"
+            }
+          ],
+          "title": "Question 2"
+        }
+      },
+      "CSD U3 Test variables": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "20",
+              "correct": false
+            },
+            {
+              "text": "90",
+              "correct": true
+            },
+            {
+              "text": "110",
+              "correct": false
+            },
+            {
+              "text": "There will be two apples in two different positions.",
+              "correct": false
+            },
+            {
+              "text": "None, because the program will have an error.",
+              "correct": false
+            }
+          ],
+          "markdown": "Consider the following program (blocks and text)\n\n<img style=\"display:inline-block;width:300px\" src=\"https://images.code.org/39742e261b25c859daa8a62ddf9749a9-image-1552415157293.24.38 AM.png\"><pre style=\"display:inline-block;\">apple.x = 20;\nbanana.x = 60;\napple.x = banana.x + 30;\nbanana.x = 80;</pre>\n",
+          "questions": [
+            {
+              "text": "What is the apple's x position at the end of this program?"
+            }
+          ],
+          "title": "Question 3"
+        }
+      },
+      "CSD U3 Test planning": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The general purpose and design of the program.",
+              "correct": false
+            },
+            {
+              "text": "What kinds of variables and functions you will need to make it work.",
+              "correct": false
+            },
+            {
+              "text": "How the user will interact with the program.",
+              "correct": false
+            },
+            {
+              "text": "How many lines of code you want to write.",
+              "correct": true
+            },
+            {
+              "text": "What types of media, such as pictures or sounds, you will need.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following is NOT best to decide before beginning to write code for a program?"
+            }
+          ],
+          "title": "Question 4"
+        }
+      },
+      "CSD U3 Test debugging": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 only",
+              "correct": false
+            },
+            {
+              "text": "1 and 2",
+              "correct": false
+            },
+            {
+              "text": "1 and 3",
+              "correct": false
+            },
+            {
+              "text": "2 and 3",
+              "correct": true
+            },
+            {
+              "text": "1, 2, and 3",
+              "correct": false
+            }
+          ],
+          "markdown": "A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?\n\n1. They forgot to call `drawSprites` in the draw loop.\n1. The character sprite is drawn behind the background sprite.\n1. The character sprite is drawn off the screen.\n",
+          "title": "Question 5"
+        }
+      },
+      "CSD U3 Test comment": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Give the bubble an outline"
+            },
+            {
+              "text": "Jump up"
+            },
+            {
+              "text": "Fall down"
+            },
+            {
+              "text": "Float up"
+            },
+            {
+              "text": "Shake back and forth"
+            }
+          ],
+          "markdown": "Look at the following code, and match the comments to where they should go in the program.\n\n<img src=\"https://images.code.org/df3e8343eae473fd5af62370579f66e9-image-1552419576823.52.17 PM.png\" style=\"width:400px;\">\n",
+          "questions": [
+            {
+              "text": "Line 5"
+            },
+            {
+              "text": "Line 11"
+            },
+            {
+              "text": "Line 14"
+            },
+            {
+              "text": "Line 17"
+            },
+            {
+              "text": "Line 19"
+            }
+          ],
+          "title": "Question 6"
+        }
+      },
+      "CSD U3 Test debug FR": {
+        "long_instructions": "Think about one difficult bug that you needed to fix in your program.  What was your process for finding and fixing the bug?"
+      },
+      "CSD U3 Test parameter FR": {
+        "long_instructions": "Blocks such as `rect` and `velocityX` have parameters that let you give specific information about what they can do.  Choose a function from your program that could be improved with a parameter and explain how."
+      },
+      "CSD U3 Test collaboration FR": {
+        "long_instructions": "How did you and your partner decide how to divide up the work to make this program?"
+      }
     }
   },
   "https://studio.code.org/s/csd3-2019/lockable/2/levels/1": {
@@ -1317,6 +2034,1376 @@
   "https://studio.code.org/s/csd3-2019/lockable/2/levels/2": {
     "dsls": {
       "title": "CS Discoveries End of Semester Student Survey"
+    },
+    "sublevels": {
+      "csp-post-survey-2017 preamble 1_2019": {
+        "dsls": {
+          "markdown": "### **This survey is anonymous** \n\n*Code.org takes your privacy very seriously.* Your responses here will be kept **anonymous**. No one, not even your teacher, can link your responses back to you as an individual.\n\nWe do this because we want you to **be as open and honest as possible**. We care about your experience in the course, and we make improvements based on what you say.\n\n* The survey should take **10 minutes or less** to complete.\n\n***\n\n## School in general\n\n#### *First, we want to ask you about your thoughts and feelings about school, in general.*\n",
+          "teacher_markdown": "## How to see your students' responses to this survey\n\n* You will be able to see the anonymized results of the survey for your students once at least 5 of them have completed it.\n\n* To view the results of this survey please follow the intstructions in the associated lesson plan. \n\n\n"
+        }
+      },
+      "csp-pre-survey-2017-q3_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think my schoolwork is interesting."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q4_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important for me to be good at my schoolwork."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q9_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can really be myself at school."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 2 cs in general_2019": {
+        "dsls": {
+          "markdown": "### Part 2: Computer Science in general\n\n#### *Next, we'd like to ask for your thoughts and feelings about Computer Science, generally.*\n\n***\n"
+        }
+      },
+      "csp-pre-survey-2017-q10_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q11_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think computer science is interesting. "
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q16_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "It is important to me to be good at computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q12_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science. "
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q13_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I am better at computer science than other kids at my school."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q17_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "People like me do computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017-q18_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I think I could become a computer scientist one day."
+            }
+          ]
+        }
+      },
+      "naturally-better-at-cs": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I believe some people are just naturally better at learning and doing computer science than others."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q33_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Every person has the same ability to learn computer science, no matter what their gender, skin color, or background."
+            }
+          ]
+        }
+      },
+      "same-ability": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Each person has the same ability to learn and do computer science."
+            }
+          ]
+        }
+      },
+      "csp-pre-survey-2017 preamble 3 this class_2019": {
+        "dsls": {
+          "markdown": "### Part 3: You and computer science\n\n#### *Next we ask for your thoughts about this computer science class and your future.* \n\n***\n"
+        }
+      },
+      "i-like-cs-class": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "comfortable-in-cs-class": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-2017-q22_2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Sometimes I feel unsure whether I belong in this class."
+            }
+          ]
+        }
+      },
+      "be-myself-in-cs": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can really be myself in this computer science class."
+            }
+          ]
+        }
+      },
+      "csp-post-survey-worry-seem-less-capable": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I sometimes worry that I am seen by others as less capable in computer science."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-reasons-not-take-csd": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Wanted to, just couldn't due to scheduling conflicts or other constraints (few elective slots, class full, etc.)",
+              "correct": true
+            },
+            {
+              "text": "Thought it would be too hard or they'd get a bad grade",
+              "correct": true
+            },
+            {
+              "text": "Thought it would be boring, wouldn't learn anything useful",
+              "correct": true
+            },
+            {
+              "text": "Had a bad experience in another computer science class",
+              "correct": true
+            },
+            {
+              "text": "Worried they would feel like an outsider, few friends in the class",
+              "correct": true
+            },
+            {
+              "text": "No parent or relative encouraged them",
+              "correct": true
+            },
+            {
+              "text": "No one at the school (teacher, counselor, coach, etc.) encouraged them",
+              "correct": true
+            },
+            {
+              "text": "Someone actively encouraged them NOT to take the class",
+              "correct": true
+            },
+            {
+              "text": "Other reasons not listed here.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Think of a friend of yours at school who didn't take this class, but you think might have enjoyed it. What do you think are the strongest reasons why they didn't take this class? (choose up to two)."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-2017-implementation-teacher_2019": {
+        "dsls": {
+          "markdown": "## Your Classroom Experience\n\n***\n\n<h3>Take a moment to think back over the experiences you had in this class. <br/><em>Thinking back over your time in this class, how often did your <strong>teacher</strong> do the following?</em></h3>\n"
+        }
+      },
+      "csd-post-survey-q26_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to consider relationships between what I was learning in the lesson and real world problems (meaning actual events or situations within or outside of school)."
+            }
+          ]
+        }
+      },
+      "interest-connected-to-life": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Connected a lesson or classroom activities to my own life (for example: by asking about my past experiences, or applying content to my daily life)."
+            }
+          ]
+        }
+      },
+      "asked-to-problem-solve": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to problem solve when something didn't work the way I wanted it to work."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q29_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to explain the logic and reasoning supporting my solutions to problems."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q30_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Worked collaboratively with other students in a small group."
+            }
+          ]
+        }
+      },
+      "csd-post-survey-q31_2018": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Shared responsibility for activity and project work with group members."
+            }
+          ]
+        }
+      },
+      "made-choices-about-assignments": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "A few classes",
+              "correct": true
+            },
+            {
+              "text": "About half the class sessions",
+              "correct": true
+            },
+            {
+              "text": "Many class sessions",
+              "correct": true
+            },
+            {
+              "text": "Once or more per class session",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Made my own choices about assignments in computer science class."
+            }
+          ]
+        }
+      },
+      "curriculum-how-did-you-like-lessons": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Not at all",
+              "correct": true
+            },
+            {
+              "text": "A little bit",
+              "correct": true
+            },
+            {
+              "text": "Somewhat",
+              "correct": true
+            },
+            {
+              "text": "A lot",
+              "correct": true
+            },
+            {
+              "text": "I loved everything!",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "How did you like the lessons and topics covered in this course?"
+            }
+          ]
+        }
+      },
+      "curriculum-how-challenging": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "way too easy.",
+              "correct": true
+            },
+            {
+              "text": "a little too easy.",
+              "correct": true
+            },
+            {
+              "text": "just about right.",
+              "correct": true
+            },
+            {
+              "text": "a little too difficult.",
+              "correct": true
+            },
+            {
+              "text": "way too difficult.",
+              "correct": true
+            }
+          ],
+          "markdown": "<!--\nright 'nothing'  \nright 'too little'\nright 'about the right amount'\nright 'too much'\nright 'way too much'-->\n\n",
+          "questions": [
+            {
+              "text": "How challenging were the lessons and topics in this course for you? I think this course was..."
+            }
+          ]
+        }
+      },
+      "post-assessment survey q31-a-2017b": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I would recommend this computer science class to another student."
+            }
+          ]
+        }
+      },
+      "how-often-pair-programming-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to write code with another student (Pair Programming)"
+            }
+          ]
+        }
+      },
+      "how-often-peer-feedback-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked my peers to give me feedback on my work."
+            }
+          ]
+        }
+      },
+      "how-often-share-ideas-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Asked me to share my ideas with classmates in small-group or large-group discussion."
+            }
+          ]
+        }
+      },
+      "how-often-failure-prob-solve-prcess-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Reminded me that failure is natural and expected part of a problem solving process."
+            }
+          ]
+        }
+      },
+      "how-often-journal-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Gave me the opportunity to write my thoughts down in a journal, or on paper."
+            }
+          ]
+        }
+      },
+      "how-often-tried-new-unsure-how-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tried new things in class even when I was not sure how to do them."
+            }
+          ]
+        }
+      },
+      "how-often-tried-knowing-would-fail-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Tried something I thought I might fail."
+            }
+          ]
+        }
+      },
+      "how-often-consider-alternative-approaches-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Stopped to consider alternative approaches to what I was working on."
+            }
+          ]
+        }
+      },
+      "how-often-explain-why-disagree-2019": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Never",
+              "correct": true
+            },
+            {
+              "text": "Rarely (a few times a year)",
+              "correct": true
+            },
+            {
+              "text": "Sometimes (once or twice a month)",
+              "correct": true
+            },
+            {
+              "text": "Often (once or twice a week)",
+              "correct": true
+            },
+            {
+              "text": "Almost every lesson",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Explain why I agreed or disagreed with the work of other students."
+            }
+          ]
+        }
+      }
     }
   }
 }

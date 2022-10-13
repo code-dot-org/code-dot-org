@@ -1,0 +1,89 @@
+{
+  "pl-PL": {
+    "data": {
+      "category": {
+        "ccela/RL": {
+          "description": "Czytanie literatury"
+        },
+        "csta/AP": {
+          "description": "Algorytmy i Programowanie"
+        },
+        "ccela/SL": {
+          "description": "Mówienie i słuchanie"
+        },
+        "ccmath/MP": {
+          "description": "Ćwiczenia matematyczne"
+        },
+        "csta2011/CPP": {
+          "description": "Praktyki obliczeniowe i programowanie"
+        },
+        "csta2011/CT": {
+          "description": "Myślenie komputacyjne"
+        },
+        "iste/1": {
+          "description": "Uczniowie wykazują myślenie kreatywne, budują wiedzę i opracowują produkty oraz procesy innowacyjne z użyciem technologii."
+        },
+        "iste/4": {
+          "description": "Uczniowie używają umiejętności krytycznego myślenia do zaplanowania i prowadzenia badań, zarządzają projektami, rozwiązują problemy oraz podejmują świadome decyzje z użyciem odpowiednich narzędzi i zasobów cyfrowych."
+        },
+        "iste/6": {
+          "description": "Uczniowie okazują głębokie zrozumienie pojęć, systemów i operacji technologicznych."
+        },
+        "ccela/L": {
+          "description": "Język"
+        },
+        "ccela/RI": {
+          "description": "Czytanie w celach zdobywania informacji"
+        },
+        "ccmath/OA": {
+          "description": "Operacje i myślenie algebraiczne"
+        },
+        "csta2011/CD": {
+          "description": "Komputery i urządzenia komunikacyjne"
+        },
+        "csta2011/CI": {
+          "description": "Społeczność, wymiar globalny i czynniki etyczne"
+        },
+        "ccmath/MD": {
+          "description": "Stosowanie prawdopodobieństwa do podejmowania decyzji"
+        },
+        "ccmath/NBT": {
+          "description": "Liczby i operacje w systemie dziesiętnym"
+        },
+        "ccmath/G": {
+          "description": "Geometria"
+        },
+        "ccela/W": {
+          "description": "Pisanie"
+        },
+        "csta2011/CL": {
+          "description": "Współpraca"
+        },
+        "iste/2": {
+          "description": "Uczniowie używają mediów i środowisk cyfrowych, aby komunikować się i wspólnie pracować, z uwzględnieniem odległości, aby wspierać naukę indywidualną i przyczyniają się do tego, że uczą się inni."
+        },
+        "csta/IC": {
+          "description": "Wplywy informatyki"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "Wyjaśnij, w jaki sposób można chronić zasoby komputerowe i jak można z nich korzystać w niewłaściwy sposób."
+        },
+        "csta/NI": {
+          "description": "Sieci i Internet"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "Porównaj algorytmy kompresji danych w celu stwierdzenia, który jest najlepszy w określonym kontekście."
+        },
+        "csta/DA": {
+          "description": "Dane i Analiza"
+        },
+        "csta/CS": {
+          "description": "Systemy obliczeniowe"
+        },
+        "ngss/ETS1": {
+          "description": "Projektowanie inżynierskie"
+        }
+      }
+    }
+  }
+}

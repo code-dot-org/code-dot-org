@@ -14,7 +14,8 @@ import MarkdownEnabledTextarea, {
 export default class TextareaWithMarkdownPreview extends React.Component {
   static propTypes = {
     markdown: PropTypes.string,
-    label: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    label: PropTypes.node.isRequired,
     inputRows: PropTypes.number,
     helpTip: PropTypes.string,
     handleMarkdownChange: PropTypes.func.isRequired,
@@ -34,6 +35,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
           <div style={styles.container}>
             <div style={{marginBottom: 5}}>Markdown:</div>
             <MarkdownEnabledTextarea
+              name={this.props.name}
               markdown={this.props.markdown}
               inputRows={this.props.inputRows || 5}
               handleMarkdownChange={this.props.handleMarkdownChange}

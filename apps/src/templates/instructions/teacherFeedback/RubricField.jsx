@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
@@ -21,7 +21,7 @@ class RubricField extends Component {
       .isRequired,
     rubricValue: PropTypes.string.isRequired,
     disabledMode: PropTypes.bool,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
     currentlyChecked: PropTypes.bool,
     expandByDefault: PropTypes.bool
   };

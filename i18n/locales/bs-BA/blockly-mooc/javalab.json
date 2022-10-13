@@ -1,4 +1,7 @@
 {
   "cancel": "Poništi",
-  "delete": "Izbriši"
+  "create": "Kreiraj",
+  "delete": "Izbriši",
+  "rename": "Preimenuj",
+  "submit": "Potvrdi"
 }

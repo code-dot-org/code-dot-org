@@ -1,20 +1,16 @@
+- @page_title = I18n.t('teacher.dashboard')
+
 :ruby
   teacher_dashboard_data = {}
   teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
   teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:section] = @section_summary
-  teacher_dashboard_data[:validScripts] = Script.valid_scripts(current_user).map(&:assignable_info)
-  teacher_dashboard_data[:validCourses] = UnitGroup.valid_course_infos(user: @current_user)
-  teacher_dashboard_data[:studentScriptIds] = @section.student_script_ids
+  teacher_dashboard_data[:coursesWithProgress] = CourseVersion.courses_for_unit_selector(@section.participant_unit_ids)
+  teacher_dashboard_data[:validCourseOfferings] = CourseOffering.assignable_course_offerings_info(current_user, @locale_code)
   teacher_dashboard_data[:currentUserId] = @current_user.id
   teacher_dashboard_data[:hasSeenStandardsReportInfo] = @current_user.has_seen_standards_report_info_dialog || false
   teacher_dashboard_data[:userName] = @current_user.short_name
-  teacher_dashboard_data[:validGrades] = @valid_grades
   teacher_dashboard_data[:localeCode] = request.locale
-  teacher_dashboard_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
-  teacher_dashboard_data[:preReaderUnitIds] = Script.pre_reader_unit_ids
-  teacher_dashboard_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
-  teacher_dashboard_data[:showSectionProgressDetails] = SingleUserExperiment.enabled?(user: current_user, experiment_name: 'section-progress-details-pilot')
   teacher_dashboard_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
 
 %script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}

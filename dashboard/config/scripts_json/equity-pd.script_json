@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:51 UTC",
+    "serialized_at": "2021-11-22 19:56:51 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "equity-pd"
     }
@@ -48,7 +48,7 @@
       }
     },
     {
-      "key": "Code.org Equity PD",
+      "key": "Codeorg Equity PD",
       "name": "Code.org Equity PD",
       "absolute_position": 2,
       "lockable": false,
@@ -57,7 +57,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
       }
@@ -85,7 +85,7 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4851d139-7c43-42a5-b859-555ef8f40189",
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd"
       }
@@ -120,6 +120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -141,6 +144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity v equality"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -162,6 +168,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity is more"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,6 +192,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity in CS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -204,13 +216,16 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity lead 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "equity lead 1"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -225,13 +240,16 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity activity"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "equity activity"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -246,13 +264,16 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity vids"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "equity vids"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -267,13 +288,16 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity expect"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "equity expect"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -288,13 +312,16 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity discuss"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "equity discuss"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -309,13 +336,16 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -380,7 +410,7 @@
         "script_level.level_keys": [
           "equity lead 1"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -392,7 +422,7 @@
         "script_level.level_keys": [
           "equity activity"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -404,7 +434,7 @@
         "script_level.level_keys": [
           "equity vids"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -416,7 +446,7 @@
         "script_level.level_keys": [
           "equity expect"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -428,7 +458,7 @@
         "script_level.level_keys": [
           "equity discuss"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"
@@ -440,7 +470,7 @@
         "script_level.level_keys": [
           "Equity Resources"
         ],
-        "lesson.key": "Code.org Equity PD",
+        "lesson.key": "Codeorg Equity PD",
         "lesson_group.key": "",
         "script.name": "equity-pd",
         "activity_section.key": "8ffcb9a4-28f1-4de6-a828-99515ec6669f"

@@ -4,67 +4,67 @@ title: Guide pratique de l'Heure de Code pour les événements virtuels
 
 {{ signup_button }}
 
-# Conseils pour un événement virtuel de l'Heure de Code
+# Astuces pour un événement virtuel de l'Heure de Code
 
-### Vous n'avez pas besoin d'animer en personne pour réussir une Heure de Code !
+### Vous n'avez pas besoin d'animer une Heure de Code en personne pour la réussir !
 
 ***
 
-Bien que l'Heure de Code soit traditionnellement tenue dans les salles de classe, à travers le monde, vous n'avez pas besoin de vous y trouver, en personne, pour passer un bon moment ! Vous pouvez quand même animer une Heure de Code interactive, qui inspire les étudiants, à distance, en appliquant certaines de ces recommandations.  Jetez un œil à notre <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide des événement virtuels</a> si vous avez d’autres questions.
+Bien que l'Heure de Code se tienne normalement dans des salles de classe tout autour du monde, vous n'avez pas besoin de vous y trouver en personne pour passer un bon moment ! Vous pouvez quand même animer à distance une Heure de Code dynamique qui inspirera vos élèves grâce à ces conseils.   Jetez un œil à notre <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide pour les événements virtuels</a> si vous avez d’autres questions.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg
 " />]({{ urls/learn }})
 
-## Vous pouvez être éloigné, mais vous pouvez toujours commencer ensemble
-Même si vous prévoyez que les étudiants terminent leurs activités de manière indépendante, nous vous recommandons de commencer votre événement par un coup d'envoi virtuel, en ligne, pour susciter l'enthousiasme des participants. Vous pouvez démarrer votre événement de plusieurs façons intéressantes : 
+## Vous êtes peut-être loins, mais vous pouvez toujours commencer ensemble.
+Même si vous pensez que vos élèves complèteront leurs activités indépendamment, nous vous conseillons de commencer votre événement par un coup d'envoi virtuel pour susciter l'enthousiasme des participants. Vous avez plusieurs choix intéressants pour démarrer votre événement : 
 
 <ul>
-<li><b>Invitez un conférencier</b> : des milliers de bénévoles, de tous horizons, attendent de vos nouvelles ! Utilisez simplement notre <a href="https://code.org/volunteer/local">carte des bénévoles</a> pour les rechercher. Avec une Heure de Code virtuelle, vous n'êtes pas limité par la distance. Donc, si nécessaire, envisagez de chercher, en dehors de votre code postal, des bénévoles qui se proposent d'aider à distance. Une fois connecté avec un bénévole, vous pouvez vous référer au <a href="http://hourofcode.com/us/how-to/volunteers">guide pratique du bénévole Heure de Code</a> pour vous aider à déterminer des sujets potentiels, des questions de discussion, et plus encore.</li> 
-<li><b>Montrez une vidéo source d'inspiration</b> : une autre option fiable, pour commencer votre événement, est de montrer aux participants l'une de nos nombreuses <a href="http://hourofcode.com/us/promote/resources#videos">vidéos qui les inspireront</a>. De nombreuses vidéos durent moins de 5 minutes, et vos élèves reconnaîtront des célébrités qui leur donneront de l'inspiration et des encouragements.</li> 
-<li><b>Discutez de l'informatique pour de bon</b> : transformez votre événement Heure de Code en une compréhension plus approfondie de l'informatique, en tenant compte de l'influence de la technologie sur notre vie quotidienne. Posez des questions d'orientation aux élèves, et faites du début de votre événement une discussion interactive. Pour des idées sur la façon de démarrer la conversation, consultez ces <a href="https://code.org/csforgood#prompts">questions de discussion</a>.</li>
+<li><b>Invitez un conférencier</b> : des milliers de volontaires, de tous horizons, attendent de vos nouvelles ! Vous pouvez simplement utiliser notre <a href="https://code.org/volunteer/local">carte des volontaires</a> pour les retrouver. Avec une Heure de Code virtuelle, la distance ne pose pas de limites. Donc, au besoin, pensez à rechercher des volontaires qui se proposent d'aider à distance en dehors de votre code postal.  Une fois que vous avez trouvé un volontaire, vous pouvez consulter le <a href="http://hourofcode.com/us/how-to/volunteers">guide pratique du volontaire Une Heure de Code</a> pour vous aider à choisir des sujets potentiels, des questions qui favoriseront la discussion, et plus encore.</li> 
+<li><b>Projetez une vidéo source d'inspiration</b> : une autre option fiable pour cbien ommencer votre événement, est de montrer aux participants l'une de nos nombreuses <a href="http://hourofcode.com/us/promote/resources#videos">vidéos qui les inspireront</a>. Bon nombre de nos vidéos durent moins de 5 minutes, et vos élèves y reconnaîtront des célébrités qui les inspireront et les encourageront.</li> 
+<li><b>Parlez des applications bénéfiques de l'informatique</b> : utilisez votre événement Heure de Code pour approfondir la conception qu'ont vos élèves de l'informatique en examinant l'effet qu'a la technologie sur nos vies quotidiennes. Posez des questions aux élèves pour les orienter dans la bonne direction et commencer votre événement par une discussion.  Si vous voulez des idées pour vous aider à lancer la conversation, consultez ces <a href="https://code.org/csforgood#prompts">questions de discussion</a>.</li>
 </ul>
 
 ---
 
 ## Ce qu'il faut préparer à l'avance
 
-### 1. Déterminez votre plateforme de visioconférence
-Les plateformes telles que Cisco Webex, Google Meet, Microsoft Teams, Skype ou Zoom vous sont probablement familières maintenant. Quel que soit l'outil que vous choisirez, nous vous encourageons simplement à vous familiariser, à tester ses capacités et à parcourir votre programme Heure de Code, avant la date de votre événement.
+### 1. Choisissez votre plateforme de visioconférence
+Vous connaissez probablement certaines plateformes comme Cisco Webex, Google Meet, Microsoft Teams, Skype ou Zoom à présent.  Quel que soit l'outil que vous choisissiez, nous vous conseillons de vous familiariser avec, de tester ses capacités et de revoir votre programme Une Heure de Code en amont de votre événement.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Planifiez la participation des élèves
-**Activité auto-dirigée de l'Heure de Code**<br> Nous recommandons qu'après votre coup d'envoi, vous autorisiez les étudiants à quitter la visioconférence pour qu'ils travaillent sur les <a href="https://hourofcode.com/us/learn" mark= "crwd-mark">activités de l'Heure de Code</a>, indépendamment plutôt qu'en direct, ensemble. Cela permettra aux étudiants de s'immerger dans leurs propres projets et d'acquérir une meilleure compréhension des concepts informatiques. Cela minimisera également la distraction ainsi que l'obstacle de maintenir une fenêtre de visioconférence ouverte.
+### 2. Envisagez la manière dont participeront les élèves
+**Activité Heure de Code auto-dirigée**<br> Après le coup d'envoi, nous vous recommandons d'autoriser vos élèves à quitter la visioconférence pour qu'ils travaillent sur les <a href="https://hourofcode.com/us/learn" mark= "crwd-mark">activités Heure de Code</a> indépendamment plutôt qu'ensemble en direct. Cela permettra aux élèves de se plonger dans leurs propres projets et d'acquérir une meilleure compréhension des concepts informatiques. Cela minimisera également la distraction et enlèvera l'obstacle de maintenir une fenêtre de visioconférence ouverte.
 
-Il peut vous être utile de déterminer, à l'avance, 1 à 3 options de tutoriel parmi lesquelles ils choisiront. Cela vous permet de choisir les activités qui conviennent le mieux à leur niveau scolaire. De plus, si les étudiants ont des questions qui nécessitent votre aide, vous serez mieux préparés pour y répondre si vous connaissez déjà les tutoriels sur lesquels ils travaillent.
+Il peut vous être utile de déterminer, à l'avance, 1 à 3 choix de tutoriels parmi lesquels ils pourront choisir. Cela vous permettra de choisir les activités qui conviennent le mieux à leur niveau scolaire. De plus, si les élèves ont des questions qui demandent votre aide, vous serez mieux à même d'y répondre si vous vous êtes déjà familiarisé avec les tutoriels sur lesquels ils vont travailler.
 
-Si votre classe doit travailler sur son activité immédiatement après le coup d'envoi, vous pouvez envisager de garder une salle de conférence virtuelle, une plate-forme de chat ou d'autres moyens de communication ouverts, afin qu'ils puissent se reconnecter avec vous, au besoin.
+Si votre classe est sensée travailler sur son activité juste après le coup d'envoi, vous pouvez envisager de garder une salle de conférence virtuelle, une plateforme de tchat ou un autre moyen de communication ouvert, afin qu'ils puissent vous contacter au besoin.
 
-**Activité de l'Heure de Code collective en ligne**<br>Si vous préférez garder tous vos participants en visioconférence, pour la durée de votre événement, veuillez noter qu'ils devront maintenir deux fenêtres ouvertes à tout instant - une pour la plate-forme de visioconférence, et l'autre pour pouvoir travailler sur leur activité.
+**Activité Heure de Code collective en ligne**<br>Si vous préférez garder tous vos participants en visioconférence pendant toute la durée de votre événement, veuillez noter qu'ils devront maintenir deux fenêtres ouvertes à tout moment : une pour la plate-forme de visioconférence, et l'autre pour pouvoir travailler sur leur activité.
 
-**Avec les parents**<br>Pour les élèves de cours élémentaire, pensez à encourager leurs parents à animer une Heure de Code, à la maison. Vous pouvez les soutenir avec quelques tutoriels que nous recommandons, ainsi qu'à l'aide de ce <a href="https://hourofcode.com/us/how-to/parents" mark= "crwd-mark">Guide pratique pour les parents</a>.
+**Avec les parents**<br> Pour les élèves de CM1 et d'avant, pensez à encourager leurs parents à faire une Heure de Code à la maison. Vous pouvez les soutenir avec quelques tutoriels que nous recommandons, ainsi qu'à l'aide de ce <a href="https://hourofcode.com/us/how-to/parents" mark= "crwd-mark">Guide pratique pour les parents</a>.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg
 " />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Recruter un bénévole
-Vous pouvez trouver un bénévole qui répondra à vos besoins en consultant notre <a href="https://code.org/volunteer/local" mark= "crwd-mark">carte des bénévoles</a>. Beaucoup sont disponibles pour une participation à distance, et parleront très volontiers de leur expérience en informatique, de l'influence qu'a la technologie dans leurs activités, ou ils pourront tout simplement vous aider à résoudre les questions des étudiants. Une fois que vous avez trouvé un bénévole, assurez-vous de le rencontrer, à l'avance, pour discuter de son rôle pour l'événement, résoudre les contraintes techniques et établir la logistique de la participation en ligne.
+### 3. Recruter un volontaire
+Vous pouvez trouver un volontaire qui répondra à vos besoins en consultant notre <a href="https://code.org/volunteer/local" mark= "crwd-mark">carte des volontaires</a>. Beaucoup sont disponibles pour participer à distance, et parleront très volontiers de leur expérience en informatique, de l'influence qu'a la technologie dans leurs activités, ou pourront tout simplement vous aider à résoudre les questions de vos élèves. Une fois que vous avez trouvé un volontaire, prenez le temps d'avoir un rendez-vous avec eux en amont, pour discuter du rôle qu'ils auront dans l'événement, résoudre les contraintes techniques et parler des détails pratiques de leur participation en ligne.
 
-### 4. Fournitures pour la célébration
-Jetez un œil, ci-dessous, aux idées pour célébrer votre Heure de Code virtuelle. Certaines peuvent nécessiter que vous vous prépariez à l'avance, par exemple en créant des <a href="https://code.org/certificates">certificats</a> d'accomplissement pour tous vos participants.
+### 4. Fournitures pour la fête
+Jetez un œil ci-dessous pour avoir des idées sur comment fêter votre Heure de Code virtuellement. Certaines peuvent nécessiter que vous vous prépariez à l'avance, par exemple en créant des <a href="https://code.org/certificates">certificats</a> de formation pour tous vos participants.
 
 ---
 
 ## Célébrez ensemble
 
-Tout comme vous avez démarré l'événement, rassemblez-vous, ensuite, pour célébrer ! Voici quelques idées pour rendre votre célébration virtuelle interactive et spéciale :
+Tout comme vous l'avez fait pour démarré l'événement, retrouvez-vous à la fin pour fêter cela ! Voici quelques idées pour une fête virtuelle originale et ludique :
 
-- Donnez l'opportunité aux élèves de partager leurs projets avec le reste de la classe. Si votre plate-forme de conférence le permet, vous pouvez même encourager les étudiants à effectuer une capture d'écran de leurs projets et à la définir comme arrière-plan virtuel !
-- Discutez de leur apprentissage : qu'ont-ils appris sur l'informatique ou la technologie ? Qu'ont-ils fait quand ils ont rencontré un problème ? Comment l'ont-ils résolu ?
-- <a href="https://code.org/certificates" marque="crwd-marque">Créez et partagez des certificats</a> pour vos participants
-- Partagez des photos et des vidéos de votre Heure de Code virtuelle sur les médias sociaux. Utilisez #HourOfCode et @codeorg pour que nous puissions souligner votre succès, également !
+- Permettez à vos élèves de partager leurs projets avec le reste de la classe. Si votre plateforme de visioconférence le permet, vous pouvez même encourager vos élèves à faire une prise d'écran de leurs projets et à la définir en arrière-plan virtuel !
+- Parlez de leurs nouveaux acquis : qu'ont-ils appris au sujet de l'informatique ou de la technologie ? Qu'ont-ils fait quand ils ont rencontré un problème ? Comment l'ont-ils résolu ?
+- <a href="https://code.org/certificates" marque="crwd-marque">Créez et partagez des certificats</a> pour vos participants.
+- Partagez des photos et des vidéos de votre Heure de Code virtuelle sur les réseaux sociaux. Utilisez #HourOfCode et @codeorg pour que nous puissions souligner votre succès, également !
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

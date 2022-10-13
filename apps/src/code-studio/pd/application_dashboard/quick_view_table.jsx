@@ -9,6 +9,7 @@ import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
 import {StatusColors, getApplicationStatuses} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
 export class QuickViewTable extends React.Component {
@@ -83,18 +84,20 @@ export class QuickViewTable extends React.Component {
         }
       },
       {
-        property: 'created_at',
+        property: 'date_applied',
         header: {
           label: 'Submitted',
           transforms: [sortable]
         },
         cell: {
           formatters: [
-            created_at =>
-              new Date(created_at).toLocaleDateString('en-us', {
-                month: 'long',
-                day: 'numeric'
-              })
+            date_applied =>
+              date_applied
+                ? new Date(date_applied).toLocaleDateString('en-us', {
+                    month: 'long',
+                    day: 'numeric'
+                  })
+                : 'Not Yet Submitted'
           ]
         }
       },
@@ -158,7 +161,29 @@ export class QuickViewTable extends React.Component {
         {
           property: 'principal_approval_state',
           header: {
-            label: 'Principal Approval',
+            label: 'Princ Approval State',
+            transforms: [sortable]
+          },
+          cell: {
+            formatters: [
+              // Only show 'Incomplete' or 'Complete' states. Otherwise, the principal_approval_not_required
+              // field shows required states.
+              principal_approval_state =>
+                principal_approval_state?.startsWith(
+                  PrincipalApprovalState.inProgress
+                ) ||
+                principal_approval_state?.startsWith(
+                  PrincipalApprovalState.complete
+                )
+                  ? principal_approval_state
+                  : ''
+            ]
+          }
+        },
+        {
+          property: 'principal_approval_not_required',
+          header: {
+            label: 'Princ Approval Required',
             transforms: [sortable]
           },
           cell: {
@@ -300,29 +325,21 @@ export class QuickViewTable extends React.Component {
     );
   };
 
-  formatPrincipalApprovalCell = (principal_approval_state, props) => {
-    if (principal_approval_state) {
-      return (
-        <div>
-          <span>{principal_approval_state}</span>
-          <PrincipalApprovalButtons
-            applicationId={props.rowData.id}
-            showResendEmailButton={props.rowData.allow_sending_principal_email}
-            onChange={this.handlePrincipalApprovalButtonsChange}
-          />
-        </div>
-      );
-    }
+  formatPrincipalApprovalCell = (principal_approval_not_required, props) => {
+    const isRequired = !principal_approval_not_required;
 
     return (
-      <div>
-        <PrincipalApprovalButtons
-          applicationId={props.rowData.id}
-          showSendEmailButton={true}
-          showNotRequiredButton={true}
-          onChange={this.handlePrincipalApprovalButtonsChange}
-        />
-      </div>
+      <PrincipalApprovalButtons
+        applicationId={props.rowData.id}
+        applicationStatus={props.rowData.status}
+        showSendEmailButton={false}
+        showResendEmailButton={
+          isRequired && props.rowData.allow_sending_principal_email
+        }
+        showChangeRequirementButton={true}
+        onChange={this.handlePrincipalApprovalButtonsChange}
+        approvalRequired={isRequired}
+      />
     );
   };
 

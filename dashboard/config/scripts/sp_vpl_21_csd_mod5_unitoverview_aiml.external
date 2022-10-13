@@ -3,41 +3,33 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit overview
+# Introduction
 
-####  AI and machine learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications. Unit 7 of CS Discoveries focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts of artificial intelligence and machine learning.
-
-##
-
-* #### **Artificial Intelligence (AI)** - when a machine acts in ways that mimic human intelligence such as playing a game, creating works of art, having a conversation, performing routine tasks, or solving problems. 
-
-* #### **Machine learning** - how computers recognize patterns and make decisions without being explicitly programmed.
+#####  AI and machine learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications. Code.org's AI and Machine Learning unit focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts of artificial intelligence and machine learning.
 
 ##
 
-<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+* ##### **Artificial Intelligence (AI)** - when a machine acts in ways that mimic human intelligence such as playing a game, creating works of art, having a conversation, performing routine tasks, or solving problems. 
+
+* ##### **Machine learning** - how computers recognize patterns and make decisions without being explicitly programmed.
+
+##
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/237d2fe615107c05651cff10b76647b3-image-1641782708536.44.52 PM.png" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">
 
 
-## Students will:
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">The students were so quiet on the first day. They were so intense as they were looking at the screen because artificial intelligence seemed like such a big concept. We are competing with what students have seen in the cinema, on the news, or conversations that they may have had or overheard from others talking about artificial intelligence and all the possibilities of what it will do.  For them being able to dive in and understand it from the fundamental foundational blocks of what AI is, understanding what machine learning is all about, took the mystique out of it for them. They were able to be creative and collaborate and come up with some wonderful ideas. I’m excited about what they are going to do based on what they’ve learned about artificial intelligence and machine learning.
+</p>
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+</p>
+</div>
+<br>
 
-* ##### Learn how machine learning models use data to make decisions.
-* ##### Create a machine learning model to solve a problem.
-* ##### Test and evaluate machine learning models for accuracy and potential bias. 
-* ##### Create an app that uses their machine learning model.
-
-### **Implementation guidance** 
-
-* ##### Complete Unit 1 Chapter 1 before starting this unit.
-* ##### This unit assumes students have seen App Lab from Unit 4: The Design Process before starting the unit. <a href="https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview" target="blank" rel="noopener noreferrer">Click here</a> to learn more about the App Lab expectations in this unit, and ways to introduce App Lab to students before starting the unit.
-* ##### This is an optional unit that can be used in place of another CS Discoveries unit - see the <a href="https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information
-* ##### You can view the full <a href="https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview#" target="blank" rel="noopener noreferrer">Unit Curriculum Guide</a> for more information about this unit
-
-
-### **Suggested time to complete the unit:** 5 weeks 
-##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2021" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
-
-<div style="clear:both"/>
-
-## Let's start learning!
 
 MARKDOWN

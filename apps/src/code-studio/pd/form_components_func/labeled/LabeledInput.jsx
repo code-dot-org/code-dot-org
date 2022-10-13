@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {FieldGroup} from '../form/FieldGroup';
-import {defaultOptions} from '../LabeledFormComponent';
+import {useDefaultOptions} from '../LabeledFormComponent';
 
 export const LabeledInput = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'text',
     ...props
   };
@@ -17,8 +18,9 @@ LabeledInput.propTypes = {
 };
 
 export const LabeledNumberInput = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'number',
     ...props
   };

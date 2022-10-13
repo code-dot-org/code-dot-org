@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
       "tts": true,
@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-food",
-    "serialized_at": "2021-11-13 05:01:41 UTC",
+    "serialized_at": "2022-09-13 19:03:58 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,7 @@
       "key": "a653c76e-8536-4e82-adad-98306fc15f07",
       "position": 1,
       "properties": {
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -73,6 +74,7 @@
       "key": "48bd058b-2012-4d4a-9fba-52d20d8a922f",
       "position": 2,
       "properties": {
+        "duration": 40,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -86,6 +88,7 @@
       "key": "ae872c5e-1b66-4026-b2d7-e26574ff8b57",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -143,7 +146,8 @@
       "key": "c721eddb-4cfb-4237-a031-0730bbfdc926",
       "position": 2,
       "properties": {
-        "name": "Hello World"
+        "name": "Hello World",
+        "progression_name": "Hello World"
       },
       "seeding_key": {
         "activity_section.key": "c721eddb-4cfb-4237-a031-0730bbfdc926",
@@ -183,7 +187,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_say"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -207,7 +212,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_location"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -231,7 +237,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_multi"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -255,7 +262,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_click"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -279,7 +287,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_events"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -303,7 +312,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_backgrounds"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -327,7 +337,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_costumes"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -351,7 +362,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_sizes"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -375,7 +387,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_behaviors"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -399,7 +412,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_sounds"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -423,7 +437,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_freeplay"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {

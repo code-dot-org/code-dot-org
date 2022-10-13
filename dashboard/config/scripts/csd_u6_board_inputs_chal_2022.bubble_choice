@@ -2,4 +2,9 @@ name 'CSD U6 - Board Inputs - Chal_2022'
 display_name 'Challenge Levels'
 
 sublevels
-level 'ml-models in applab-choice predict typos'
+level 'CSD U6 - Board Inputs - ChalA_2022'
+level 'CSD U6 - Board Inputs - ChalB_2022'
+level 'CSD U6 - Board Inputs - ChalC_2022'
+level 'CSD U6 - Board Inputs - ChalD_2022'
+level 'CSD U6 - Board Inputs - ChalE_2022'
+level 'CSD U6 - Board Inputs - ChalF_2022'

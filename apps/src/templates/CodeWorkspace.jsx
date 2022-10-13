@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
@@ -16,10 +16,13 @@ import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
 import {queryParams} from '../code-studio/utils';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
+    displayOldVersionBanner: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -32,7 +35,9 @@ class CodeWorkspace extends React.Component {
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
+    closeWorkspaceAlert: PropTypes.func,
+    workspaceAlert: PropTypes.object
   };
 
   shouldComponentUpdate(nextProps) {
@@ -43,7 +48,13 @@ class CodeWorkspace extends React.Component {
     Object.keys(nextProps).forEach(
       function(key) {
         // isRunning and style only affect style, and can be updated
-        if (key === 'isRunning' || key === 'style') {
+        // workspaceAlert is involved in displaying or closing workspace alert
+        // therefore this key can be updated
+        if (
+          key === 'isRunning' ||
+          key === 'style' ||
+          key === 'workspaceAlert'
+        ) {
           return;
         }
 
@@ -137,6 +148,22 @@ class CodeWorkspace extends React.Component {
       usingBlocks && studioApp().enableShowBlockCount ? 'inline-block' : 'none';
   };
 
+  // The workspace alert will be displayed at the bottom of codeTextbox if editCode is
+  // assigned true (implies Droplet, not Blockly). Otherwise, it is displayed at the bottom
+  // of the CodeWorkspace
+  renderWorkspaceAlert(isBlocklyType) {
+    return (
+      <WorkspaceAlert
+        type={this.props.workspaceAlert.type}
+        onClose={this.props.closeWorkspaceAlert}
+        isBlockly={isBlocklyType}
+        displayBottom={this.props.workspaceAlert.displayBottom}
+      >
+        <div>{this.props.workspaceAlert.message}</div>
+      </WorkspaceAlert>
+    );
+  }
+
   render() {
     const props = this.props;
 
@@ -209,11 +236,19 @@ class CodeWorkspace extends React.Component {
             ref={codeTextbox => (this.codeTextbox = codeTextbox)}
             id="codeTextbox"
             className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
-          />
+            canUpdate={true}
+          >
+            {this.props.workspaceAlert && this.renderWorkspaceAlert(false)}
+          </ProtectedStatefulDiv>
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
-          <div style={styles.studentNotStartedWarning}>
+          <div id="notStartedBanner" style={styles.studentNotStartedWarning}>
             {i18n.levelNotStartedWarning()}
+          </div>
+        )}
+        {this.props.displayOldVersionBanner && (
+          <div id="oldVersionBanner" style={styles.oldVersionWarning}>
+            {i18n.oldVersionWarning()}
           </div>
         )}
         {props.showDebugger && (
@@ -222,6 +257,9 @@ class CodeWorkspace extends React.Component {
             onSlideOpen={this.onDebuggerSlide}
           />
         )}
+        {!props.editCode &&
+          this.props.workspaceAlert &&
+          this.renderWorkspaceAlert(true)}
       </span>
     );
   }
@@ -240,6 +278,15 @@ const styles = {
   runningIcon: {
     color: color.dark_charcoal
   },
+  oldVersionWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    textAlign: 'center',
+    height: 20,
+    padding: 5,
+    opacity: 0.8,
+    position: 'relative'
+  },
   studentNotStartedWarning: {
     zIndex: 99,
     backgroundColor: color.lightest_red,
@@ -251,19 +298,27 @@ const styles = {
 };
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
-export default connect(state => ({
-  displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
-  editCode: state.pageConstants.isDroplet,
-  isRtl: state.isRtl,
-  readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-  isRunning: !!state.runState.isRunning,
-  showDebugger: !!(
-    state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole
-  ),
-  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon,
-  isMinecraft: !!state.pageConstants.isMinecraft,
-  runModeIndicators: shouldUseRunModeIndicators(state),
-  showMakerToggle: !!state.pageConstants.showMakerToggle
-}))(Radium(CodeWorkspace));
+export default connect(
+  state => ({
+    displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
+    displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
+    editCode: state.pageConstants.isDroplet,
+    isRtl: state.isRtl,
+    readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    isRunning: !!state.runState.isRunning,
+    showDebugger: !!(
+      state.pageConstants.showDebugButtons ||
+      state.pageConstants.showDebugConsole
+    ),
+    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
+    showProjectTemplateWorkspaceIcon: !!state.pageConstants
+      .showProjectTemplateWorkspaceIcon,
+    isMinecraft: !!state.pageConstants.isMinecraft,
+    runModeIndicators: shouldUseRunModeIndicators(state),
+    showMakerToggle: !!state.pageConstants.showMakerToggle,
+    workspaceAlert: state.project.workspaceAlert
+  }),
+  dispatch => ({
+    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert())
+  })
+)(Radium(CodeWorkspace));

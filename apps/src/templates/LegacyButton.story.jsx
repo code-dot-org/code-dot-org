@@ -13,7 +13,7 @@ const docs = {
 export default storybook => {
   storybook.storiesOf('Buttons/LegacyButton', module).addStoryTable([
     {
-      name: 'Overview',
+      name: 'Overview - Legacy Button',
       story: () => (
         <div>
           <h1>Intro</h1>

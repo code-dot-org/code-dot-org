@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-16 21:56:41 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-01-31 19:44:15 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -76,7 +76,7 @@
   "lessons": [
     {
       "key": "lesson-10",
-      "name": "Accessing Object Behavior",
+      "name": "Writing Methods to Satisfy Conditions",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +94,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Writing Methods to Satisfy Conditions",
+      "name": "Exploring Method Components and Functionality",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -112,7 +112,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Exploring Method Components and Functionality",
+      "name": "Using Object References as Parameters",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -130,7 +130,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Using Object References as Parameters",
+      "name": "Overloading Methods",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -147,7 +147,7 @@
     },
     {
       "key": "lesson-9",
-      "name": "Overloading Methods",
+      "name": "Accessing Object Behavior",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -224,6 +224,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "Students compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. Students then participate in a peer review to give and receive feedback on their Title Sequence Project progress.",
+        "preparation": "* Print copies of the Project Development Feedback handout (one per student)",
         "student_overview": "You compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. You then participate in a peer review to give and receive feedback on your Title Sequence Project progress."
       },
       "seeding_key": {
@@ -240,6 +241,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "Students explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. Students identify strategies to test system reliability and recognize their role as software engineers in developing and maintaining functioning software.",
+        "preparation": "* Gather chart paper and markers per group of 6-7 students\n* Print copies of the Testing Software handout (one per pair of students)",
+        "student_overview": "You explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. You identify strategies to test system reliability and recognize your role as a software engineer in developing and maintaining functioning software."
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -321,7 +325,7 @@
       "key": "lesson-5",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -337,12 +341,27 @@
       }
     },
     {
-      "key": "Java Lab",
-      "name": "Java Lab",
+      "key": "lesson-16",
+      "name": "Unit 7 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -354,10 +373,10 @@
     {
       "key": "The Neighborhood",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -369,10 +388,10 @@
     {
       "key": "The Theater",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -384,10 +403,10 @@
     {
       "key": "The Playground",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -584,7 +603,7 @@
       "key": "b59131e5-6924-4178-a32f-55e69d2d4940",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 25,
         "name": "Activity"
       },
       "seeding_key": {
@@ -777,6 +796,48 @@
       }
     },
     {
+      "key": "5bfbc94a-b7be-4c51-9019-35bd4ce4924f",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5bfbc94a-b7be-4c51-9019-35bd4ce4924f",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
       "key": "086c165c-cc69-4d30-9947-db25425be286",
       "position": 1,
       "properties": {
@@ -956,6 +1017,18 @@
       }
     },
     {
+      "key": "75d17a1b-9c6b-42db-b74c-213a10e017af",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75d17a1b-9c6b-42db-b74c-213a10e017af",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
       "key": "3e05bb70-03e7-41e0-aa55-a3bb05e8786a",
       "position": 1,
       "properties": {
@@ -1104,7 +1177,7 @@
       "key": "59796975-2dbe-4aba-93d1-38fa48968457",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to apply method decomposition to the scenario. Have pairs share their approaches with another pair, then have groups share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the example solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might we apply method decomposition to a problem first before writing code?*\n\n**Discussion Goal:** Students realize that applying method decomposition makes it easier to identify which methods they need to write before writing code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to apply method decomposition to the scenario. Have pairs share their approaches with another pair, then have groups share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might we apply method decomposition to a problem first before writing code?*\n\n**Discussion Goal:** Students realize that applying method decomposition makes it easier to identify which methods they need to write before writing code."
       },
       "seeding_key": {
         "activity_section.key": "59796975-2dbe-4aba-93d1-38fa48968457",
@@ -1170,6 +1243,7 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students work with a partner to analyze the exemplars to generate a list of common characteristics and key features on page three of the Project Planning Guide.",
+        "progression_name": "Title Sequence Project Exemplars",
         "tips": [
           {
             "type": "teachingTip",
@@ -1222,7 +1296,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "cdd76d98-c26d-40fe-a4c3-bc62a1bbd66b",
@@ -1294,7 +1369,8 @@
       "key": "692064cc-d20e-4b8d-b3bb-ef20ffd7e9c2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students answer the questions and predict the output for actual and formal parameters."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students answer the questions and predict the output for actual and formal parameters.",
+        "progression_name": "Predict: Actual and Formal Parameters"
       },
       "seeding_key": {
         "activity_section.key": "692064cc-d20e-4b8d-b3bb-ef20ffd7e9c2",
@@ -1305,7 +1381,7 @@
       "key": "a9070374-a1c2-416d-bd23-fdc4c96dd374",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n* *What is the relationship between the actual and formal parameters?*\n* *What was the output of the method call `myShow.display(2,7)`?*\n\n**Discussion Goal:** Students share the actual parameters are the values passed when invoking the method. The formal parameters are the variables defined by the method that receives values when calling the method. The output of the method call is `2 people purchased 7 tickets for the show`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n* *What is the relationship between the actual and formal parameters?*\n* *What was the output of the method call `myShow.display(5,7)`?*\n\n**Discussion Goal:** Students share the actual parameters are the values passed when invoking the method. The formal parameters are the variables defined by the method that receives values when calling the method. The output of the method call is `5 people purchased 7 tickets for the show`."
       },
       "seeding_key": {
         "activity_section.key": "a9070374-a1c2-416d-bd23-fdc4c96dd374",
@@ -1330,7 +1406,8 @@
       "key": "48115fc3-d32b-475f-a87b-fa22aab5c6fb",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review accessor methods and define non-void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review mutator methods and define void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug code that has incorrect method headers and return statements or types."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review accessor methods and define non-void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review mutator methods and define void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug code that has incorrect method headers and return statements or types.",
+        "progression_name": "Void and Non-Void Methods"
       },
       "seeding_key": {
         "activity_section.key": "48115fc3-d32b-475f-a87b-fa22aab5c6fb",
@@ -1396,7 +1473,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "91673dc4-cb84-4fab-9dc4-777c831b9da0",
@@ -1420,7 +1498,7 @@
       "key": "c1862063-7f64-4374-b670-39a0ab7e09a3",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1485,7 +1563,7 @@
       "key": "23b348dc-144a-46a2-b0e4-ef882fe2e44d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Object References as Parameters handout and a set of Object References Manipulatives to each pair.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the first page of the Object References as Parameters handout with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution for passing an object reference as a parameter."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Object References as Parameters handout and a set of Object References Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the code segments and classes on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the first object in the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the second object in the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about how the instance variable is initialized?*\n* *What do you wonder about how the instance variable is initialized?*\n\n**Discussion Goal:** Students notice that the instance variable is initialized with a copy of the referenced object. Students realize that the instance variable is not an alias of the original object, so the original object is not modified."
       },
       "seeding_key": {
         "activity_section.key": "23b348dc-144a-46a2-b0e4-ef882fe2e44d",
@@ -1496,7 +1574,7 @@
       "key": "60b843f5-d0f4-450e-8d08-d51d94f58864",
       "position": 3,
       "properties": {
-        "description": "When you pass an object reference as a parameter, you don't pass a copy of the object. You pass a copy of the object reference, allowing you to access it and change it. The original object reference has the changes made through the copied object reference.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object.\n\nIn this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object.",
         "remarks": true
       },
       "seeding_key": {
@@ -1508,7 +1586,7 @@
       "key": "f69ce3f2-7e93-40c9-a1f4-020e7cab4531",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain best practices for modifying mutable objects passed as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the second page of the Object References as Parameters handout with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution for returning an object reference."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object References as Parameters handout with their partner."
       },
       "seeding_key": {
         "activity_section.key": "f69ce3f2-7e93-40c9-a1f4-020e7cab4531",
@@ -1516,20 +1594,8 @@
       }
     },
     {
-      "key": "dd209008-6cb1-4ec7-9b15-2ba1e3bfe160",
-      "position": 5,
-      "properties": {
-        "description": "When you return an object reference, a copy of that reference is returned, not a copy of the object.\n\nAs you have seen, working with object references as parameters is different than working with primitive variables. With primitive variables, we pass a copy of the value, so the original variable is not modified.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "dd209008-6cb1-4ec7-9b15-2ba1e3bfe160",
-        "lesson_activity.key": "997fe4fd-84ac-41e4-bbbc-9a597c7a25f4"
-      }
-    },
-    {
       "key": "995c7a7f-8047-4567-9046-52ac037a51c7",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "As software engineers, one of our primary goals is to develop software that provides usefulness and value to users. Our goal for our Title Sequence Project is to create a title sequence for our user, our content creator.",
         "duration": "10",
@@ -1543,9 +1609,9 @@
     },
     {
       "key": "b4139597-5c73-4c5b-8a77-62784b312313",
-      "position": 7,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Define end user and user story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: User Stories video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page xx of their Title Sequence Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Define end user and user story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: User Stories video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Title Sequence Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "b4139597-5c73-4c5b-8a77-62784b312313",
@@ -1598,7 +1664,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "1be08ae1-0593-4eb2-badf-56fcc474585c",
@@ -1647,7 +1714,8 @@
       "key": "b6d71f76-f277-47f0-adae-ce568f7f5e19",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why did we use overloading with constructors?*\n* *How might overloading be helpful with methods?*\n\n**Discussion Goal:** Students recall that orders can vary with the Project Mercury Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Overloading methods make code more flexible for program requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why did we use overloading with constructors?*\n* *How might overloading be helpful with methods?*\n\n**Discussion Goal:** Students recall that orders can vary with the Project Mercury Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Overloading methods make code more flexible for program requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict: Overloaded Methods"
       },
       "seeding_key": {
         "activity_section.key": "b6d71f76-f277-47f0-adae-ce568f7f5e19",
@@ -1658,7 +1726,8 @@
       "key": "baa9d8cf-5245-4188-816f-94e725e6e7c8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What is the difference between each version of the overloaded method?*\n* *Why do you think the different methods exist?*\n\n**Discussion Goal:** Students note that the different versions of the methods take in different combinations of parameters. Students share that the methods all perform the same task but give the user different options for performing the task. Students realize that overloaded methods can also call another version of the method by passing in default values to keep things DRY (Don't Repeat Yourself).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students complete a choice level by writing overloaded methods to complete the scene in the console, The Neighborhood, or The Theater. Students continue to complete a Check for Understanding on Level 3."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What is the difference between each version of the overloaded method?*\n* *Why do you think the different methods exist?*\n\n**Discussion Goal:** Students note that the different versions of the methods take in different combinations of parameters. Students share that the methods all perform the same task but give the user different options for performing the task. Students realize that overloaded methods can also call another version of the method by passing in default values to keep things DRY (Don't Repeat Yourself).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students complete a choice level by writing overloaded methods in the console, The Neighborhood, or The Theater. Students continue to complete a Check for Understanding on Level 3.",
+        "progression_name": "Writing Overloaded Methods"
       },
       "seeding_key": {
         "activity_section.key": "baa9d8cf-5245-4188-816f-94e725e6e7c8",
@@ -1687,7 +1756,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students might be unsure what task they should complete next. Encourage students to focus on brainstorming and planning tasks to determine the theme or story they want to convey in their title sequence and identify the major components of their program that they need to develop. Refer students to pages xx through xx for planning space and templates."
+            "markdown": "Students might be unsure what task they should complete next. Encourage students to focus on brainstorming and planning tasks to determine the theme or story they want to convey in their title sequence and identify the major components of their program that they need to develop. Refer students to pages six through twelve for planning space and templates."
           }
         ]
       },
@@ -1753,7 +1822,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ac9bd6a6-a4a7-45eb-827d-661592d2a68a",
@@ -1825,7 +1895,8 @@
       "key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think the minus sign means? What do you think the plus sign means?*\n\n**Discussion Goal:** Students share their predictions for what the minus and plus sign convention represents. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Private Methods video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the accessibility of methods will change if they were changed from `public` to `private`?*\n\n**Discussion Goal:** Students share predictions of different ways the accessibility of methods change when made `private`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, 3, and 4 on Code Studio. In Levels 1 through 3, students explore the effects of attempting to access `private` methods. After exploring all three examples, students move on Level 4 to complete a free response question to explain their findings."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think the minus sign means? What do you think the plus sign means?*\n\n**Discussion Goal:** Students share their predictions for what the minus and plus sign convention represents. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Private Methods video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the accessibility of methods will change if they were changed from `public` to `private`?*\n\n**Discussion Goal:** Students share predictions of different ways the accessibility of methods change when made `private`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, 3, and 4 on Code Studio. In Levels 1 through 3, students explore the effects of attempting to access `private` methods. After exploring all three examples, students move on Level 4 to complete a free response question to explain their findings.",
+        "progression_name": "Predict: Accessing Private Methods"
       },
       "seeding_key": {
         "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a",
@@ -1837,7 +1908,7 @@
       "position": 5,
       "properties": {
         "description": "You now have time to continue your planning for your project. Remember, your planning might include outlines, rough drafts, flowcharts, UML diagrams, or pseudocode for key algorithms in your program. Take a look at your Project Planning Board to decide what task you need to tackle first.",
-        "duration": "15",
+        "duration": "10",
         "name": "Planning Program Structure",
         "remarks": true
       },
@@ -1886,7 +1957,8 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "32a4d33f-90c0-4922-94c7-c0c32b8cb307",
@@ -1923,7 +1995,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students predict the program's outcome, then run the program to compare the results to their predictions.",
         "duration": "15",
-        "name": "Overriding Methods"
+        "name": "Overriding Methods",
+        "progression_name": "Predict: Calling Overridden Methods"
       },
       "seeding_key": {
         "activity_section.key": "a04f60c5-f66e-4f01-baf7-6ea99380feb0",
@@ -1934,7 +2007,8 @@
       "key": "a546592b-fedd-41df-98bc-8f7f4fcec476",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the program?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students note that the program traverses an array of the parent class type, and each child class outputs different information when calling the method. Students predict that each class has a different version of the method used while traversing the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to override methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate rules for overriding methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2, 3, and 4 on Code Studio. On Level 2, students debug code attempting to override a method. On Level 3, students complete a choice level to write an overridden method, then continue to Level 4 to complete a Check for Understanding."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the program?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students note that the program traverses an array of the parent class type, and each child class outputs different information when calling the method. Students predict that each class has a different version of the method used while traversing the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to override methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate rules for overriding methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2, 3, and 4 on Code Studio. On Level 2, students debug code attempting to override a method. On Level 3, students complete a choice level to write an overridden method, then continue to Level 4 to complete a Check for Understanding.",
+        "progression_name": "Overriding Methods"
       },
       "seeding_key": {
         "activity_section.key": "a546592b-fedd-41df-98bc-8f7f4fcec476",
@@ -1976,7 +2050,8 @@
       "key": "3e0f36df-ade7-449b-9553-41a6b0ebac63",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentinel value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would be a reasonable sentinel value for this algorithm? How could the user indicate they finished entering values?*\n\n**Discussion Goal:** Students share that an empty `String` is not a reasonable song title and could indicate that the user finished entering songs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. On Level 5, students translate the pseudocode into Java to accept user input. On Level 6, students complete a choice level by combining sentinel values and overridden methods to solve the given problems."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentinel value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would be a reasonable sentinel value for this algorithm? How could the user indicate they finished entering values?*\n\n**Discussion Goal:** Students share that an empty `String` is not a reasonable song title and could indicate that the user finished entering songs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. On Level 5, students translate the pseudocode into Java to accept user input. On Level 6, students complete a choice level by combining sentinel values and overridden methods to solve the given problems.",
+        "progression_name": "Sentinel Values"
       },
       "seeding_key": {
         "activity_section.key": "3e0f36df-ade7-449b-9553-41a6b0ebac63",
@@ -2029,7 +2104,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "d7d4e6f4-f26f-463e-9dc0-1effd76b8d30",
@@ -2140,6 +2216,7 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "progression_name": "Title Sequence Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2209,7 +2286,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "df64b30f-4094-42c8-9c43-edcb9caa2c62",
@@ -2258,7 +2336,8 @@
       "key": "49d044d3-09d2-4e25-96e4-072144390f3e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the base case for reversing an array?*\n* *Which parts of the iterative solution represent this base case?*\n\n**Discussion Goal:** Students identify the base case as when the index reaches 0. Students note that the condition in the loop represents the base case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the repetitive process in the iterative solution?*\n* *On what lines does this occur?*\n* *How could we make this process occur recursively?*\n\n**Discussion Goal:** Students notice that recursive and iterative solutions have similar structures and can identify which portions of the iterative method need to repeat in the recursive case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. On Level 1, students translate an iterative method to reverse an array to a recursive method. On Level 2, students use the recursive method to make a Painter object complete a specific task. Students continue to complete a Check for Understanding on Level 3."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the base case for reversing an array?*\n* *Which parts of the iterative solution represent this base case?*\n\n**Discussion Goal:** Students identify the base case as when the start is greater than or equal to end. Students note that the condition in the loop represents the base case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the repetitive process in the iterative solution?*\n* *On what lines does this occur?*\n* *How could we make this process occur recursively?*\n\n**Discussion Goal:** Students notice that recursive and iterative solutions have similar structures and can identify which portions of the iterative method need to repeat in the recursive case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. On Level 1, students translate an iterative method to reverse an array to a recursive method. On Level 2, students write a recursive method to make a `Painter` object complete a specific task. Students continue to complete a Check for Understanding on Level 3.",
+        "progression_name": "Recursive Painting"
       },
       "seeding_key": {
         "activity_section.key": "49d044d3-09d2-4e25-96e4-072144390f3e",
@@ -2307,6 +2386,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "progression_name": "Title Sequence Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2376,7 +2456,8 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "dcdca2f3-90da-468d-b9ec-2a7738aebd07",
@@ -2425,7 +2506,8 @@
       "key": "a73d0cf2-cbef-479f-9211-77e6d6f67186",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict: Recursive Strings"
       },
       "seeding_key": {
         "activity_section.key": "a73d0cf2-cbef-479f-9211-77e6d6f67186",
@@ -2450,8 +2532,19 @@
       }
     },
     {
-      "key": "5d33c976-d8a1-4a03-8efd-aea9e7c25cbb",
+      "key": "f755466f-6a9f-4cf4-9904-ff450500c73d",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Recursion video."
+      },
+      "seeding_key": {
+        "activity_section.key": "f755466f-6a9f-4cf4-9904-ff450500c73d",
+        "lesson_activity.key": "13e0f40d-f086-4ec2-be94-62753a5dfaf5"
+      }
+    },
+    {
+      "key": "5d33c976-d8a1-4a03-8efd-aea9e7c25cbb",
+      "position": 5,
       "properties": {
         "description": "Lets practice tracing recursive methods with `String`s, arrays, or `ArrayList`s.",
         "remarks": true
@@ -2463,9 +2556,10 @@
     },
     {
       "key": "4d5820dc-1a92-42c9-95bd-585c8113b46c",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students complete a choice level tracing recursive methods with `String`s, arrays, or `ArrayList`s. Students continue to complete a Check for Understanding on Level 3."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students complete a choice level tracing recursive methods with `String`s, arrays, or `ArrayList`s. Students continue to complete a Check for Understanding on Level 3.",
+        "progression_name": "Predict: Tracing Recursive Methods"
       },
       "seeding_key": {
         "activity_section.key": "4d5820dc-1a92-42c9-95bd-585c8113b46c",
@@ -2474,7 +2568,7 @@
     },
     {
       "key": "6f61dd89-3d55-48a6-9d98-06129804b43c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "Before working towards the next benchmark, it is helpful to assess your achievement of this benchmark and get feedback on your development so far.",
         "duration": "20",
@@ -2488,9 +2582,9 @@
     },
     {
       "key": "a41894df-1528-41fa-9723-f70fcba85e7f",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and framing questions and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "a41894df-1528-41fa-9723-f70fcba85e7f",
@@ -2532,11 +2626,160 @@
       "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "907a8f5c-2230-491e-8b3d-c23379887a46",
         "lesson_activity.key": "bd28a32d-3718-4a9a-a3b5-cbdf9b5d8283"
+      }
+    },
+    {
+      "key": "52ff4d31-c45a-4f88-9599-4c8586dd213c",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in groups of six or seven. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a piece of chart paper and a marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the rules of Simple List Vocabulary with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students play Simple List Vocabulary.",
+        "name": "Simple List Vocabulary",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there is a word wall in the classroom, cover the words to prevent students from writing them down. If students struggle to come up with words,\n* Provide students with the first letter of the words.\n* Provide pictures of the words before they complete their list.\n* Provide students with code segments representing the terms.\n\nIf chart paper is not available, use blank paper and pens."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "52ff4d31-c45a-4f88-9599-4c8586dd213c",
+        "lesson_activity.key": "5bfbc94a-b7be-4c51-9019-35bd4ce4924f"
+      }
+    },
+    {
+      "key": "29f91ce7-71be-4c6a-837a-9a13c242c945",
+      "position": 1,
+      "properties": {
+        "description": "The example programs you shared all compiled but still had bugs and issues that led to these experiences. As software engineers, how do we find these bugs and issues before they impact the user? We will explore some programs and their user stories to identify strategies.",
+        "duration": "15",
+        "name": "Finding Bugs and Issues",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29f91ce7-71be-4c6a-837a-9a13c242c945",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "b7da1014-58ff-4b03-b7d2-ad9b5a804513",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Testing Software handout to each pair.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students select a choice level to explore and test using the guided questions on the Testing Software handout.",
+        "progression_name": "Exploring and Testing Software",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The programs on these choice levels compile but contain bugs and issues discovered from testing the user stories and identifying edge cases. Students should realize a program compiling does not mean that the program is error-free."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7da1014-58ff-4b03-b7d2-ad9b5a804513",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "954c3561-3d90-47ce-8311-8aa642f82b05",
+      "position": 3,
+      "properties": {
+        "description": "As you explored and tested the example programs, you found strategies to identify and correct bugs and issues. In doing so, you found ways to maximize system reliability.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "954c3561-3d90-47ce-8311-8aa642f82b05",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "58def599-5056-4656-9f07-21dc06d7f9cc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define system reliability.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *As software engineers, what strategies can we use to maximize system reliability?*\n\n**Discussion Goal:** Students suggest various strategies they used when exploring the programs. These strategies include considering the different ways an end user will use the program to test their user stories, identifying and testing edge cases, and using code reviews to obtain a fresh perspective to discover possible bugs and issues.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You could choose to capture these strategies on chart paper or a digital whiteboard to post in the classroom."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "58def599-5056-4656-9f07-21dc06d7f9cc",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "4b3a28e6-619a-4d4c-a89d-d1dc1c8cdb2d",
+      "position": 5,
+      "properties": {
+        "description": "Using the items on your Project Planning Board, continue to develop your Title Sequence Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Project Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4b3a28e6-619a-4d4c-a89d-d1dc1c8cdb2d",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "31172e96-8758-43ab-8890-730889243c98",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "progression_name": "Title Sequence Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "31172e96-8758-43ab-8890-730889243c98",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "41f6acf2-a66d-49ba-bc3e-f0ac48bd852e",
+      "position": 1,
+      "properties": {
+        "description": "You have learned a lot in this unit, and now it is time to Show What You Know! We will spend the next three days on our Title Sequence Project. Then we will spend a day answering an AP-style free-response question. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Show What You Know Week Preview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "41f6acf2-a66d-49ba-bc3e-f0ac48bd852e",
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146"
+      }
+    },
+    {
+      "key": "c8b52ccf-10a7-4ac6-aed1-7f47064eef81",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8b52ccf-10a7-4ac6-aed1-7f47064eef81",
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146"
+      }
+    },
+    {
+      "key": "36aaea62-0281-423a-8bb8-89d629c064d0",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "36aaea62-0281-423a-8bb8-89d629c064d0",
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146"
       }
     },
     {
@@ -2632,7 +2875,8 @@
       "key": "8ed753d1-9227-4c51-be68-7d404b0eae16",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to conduct acceptance testing on each other's projects. Students note the results of their testing on page xx of their Title Sequence Project Planning Guide."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to conduct acceptance testing on each other's projects. Students note the results of their testing on page thirteen of their Title Sequence Project Planning Guide.",
+        "progression_name": "Title Sequence Project"
       },
       "seeding_key": {
         "activity_section.key": "8ed753d1-9227-4c51-be68-7d404b0eae16",
@@ -2706,7 +2950,7 @@
       "key": "3a419e6e-980a-476a-bf17-14f91ce7aafe",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and framing questions and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "3a419e6e-980a-476a-bf17-14f91ce7aafe",
@@ -2731,21 +2975,11 @@
       "key": "1c4590a9-d358-427d-b330-f7f21d3e928a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
+        "progression_name": "Title Sequence Project"
       },
       "seeding_key": {
         "activity_section.key": "1c4590a9-d358-427d-b330-f7f21d3e928a",
-        "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e"
-      }
-    },
-    {
-      "key": "4e087266-1473-4bdc-be86-d93c064aa62a",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
-      },
-      "seeding_key": {
-        "activity_section.key": "4e087266-1473-4bdc-be86-d93c064aa62a",
         "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e"
       }
     },
@@ -2792,6 +3026,7 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
+        "progression_name": "Title Sequence Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2846,7 +3081,7 @@
       "key": "888b536c-f0d4-44bc-a4cb-3c8524919842",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the End of Project Self-Reflection on page xx of the Title Sequence Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the End of Project Self-Reflection on page fourteen of the Title Sequence Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3012,7 +3247,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If there is not a visible clock in the room, consider displaying a 30-minute timer.\n\nDuring the AP Exam, students must sit quietly until the allotted testing time has elapsed. If you decide to adhere to this rule closely, encourage students that finish early to:\n* Continue to work on their FRQ\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
+            "markdown": "If there is not a visible clock in the room, consider displaying a 25-minute timer.\n\nDuring the AP Exam, students must sit quietly until the allotted testing time has elapsed. If you decide to adhere to this rule closely, encourage students that finish early to:\n* Continue to work on their FRQ\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
           }
         ]
       },
@@ -3061,7 +3296,8 @@
       "key": "d31e4fda-5785-4037-b812-ad245b777b65",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through Level 7 on Code Studio to complete the post-FRQ survey."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through Level 6 on Code Studio to complete the post-FRQ survey.",
+        "progression_name": "Post-FRQ Survey"
       },
       "seeding_key": {
         "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65",
@@ -3108,6 +3344,17 @@
       "seeding_key": {
         "activity_section.key": "c87654cf-b985-483e-8a87-82b632937d80",
         "lesson_activity.key": "8f7608de-0831-4ccc-83aa-4e8a3106ce3d"
+      }
+    },
+    {
+      "key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 7 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe",
+        "lesson_activity.key": "75d17a1b-9c6b-42db-b74c-213a10e017af"
       }
     },
     {
@@ -3162,6 +3409,1183 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1"
+        ],
+        "progression": "Title Sequence Project Exemplars"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L1-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "e6b76293-cb08-4377-af2e-6eb42478fee3"
+      },
+      "level_keys": [
+        "CSA U7L1-L1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L1-L2"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L1-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "cdd76d98-c26d-40fe-a4c3-bc62a1bbd66b"
+      },
+      "level_keys": [
+        "CSA U7L1-L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L2-L1"
+        ],
+        "progression": "Predict: Actual and Formal Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L2-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "692064cc-d20e-4b8d-b3bb-ef20ffd7e9c2"
+      },
+      "level_keys": [
+        "CSA U7L2-L1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L2-L2"
+        ],
+        "progression": "Void and Non-Void Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L2-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "48115fc3-d32b-475f-a87b-fa22aab5c6fb"
+      },
+      "level_keys": [
+        "CSA U7L2-L2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L2-L3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L2-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "91673dc4-cb84-4fab-9dc4-777c831b9da0"
+      },
+      "level_keys": [
+        "CSA U7L2-L3"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L3-L1"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L3-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "1be08ae1-0593-4eb2-badf-56fcc474585c"
+      },
+      "level_keys": [
+        "CSA U7L3-L1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L4-L1"
+        ],
+        "progression": "Predict: Overloaded Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L4-L1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b6d71f76-f277-47f0-adae-ce568f7f5e19"
+      },
+      "level_keys": [
+        "CSA U7L4-L1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L4-L2"
+        ],
+        "progression": "Writing Overloaded Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L4-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "baa9d8cf-5245-4188-816f-94e725e6e7c8"
+      },
+      "level_keys": [
+        "CSA U7L4-L2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L4-L3"
+        ],
+        "progression": "Writing Overloaded Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L4-L3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "baa9d8cf-5245-4188-816f-94e725e6e7c8"
+      },
+      "level_keys": [
+        "CSA U7L4-L3"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L4-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L4-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "ac9bd6a6-a4a7-45eb-827d-661592d2a68a"
+      },
+      "level_keys": [
+        "CSA U7L4-L4"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L5-L1"
+        ],
+        "progression": "Predict: Accessing Private Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L5-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      },
+      "level_keys": [
+        "CSA U7L5-L1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L5-L2"
+        ],
+        "progression": "Predict: Accessing Private Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L5-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      },
+      "level_keys": [
+        "CSA U7L5-L2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L5-L3"
+        ],
+        "progression": "Predict: Accessing Private Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L5-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      },
+      "level_keys": [
+        "CSA U7L5-L3"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L5-L4"
+        ],
+        "progression": "Predict: Accessing Private Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L5-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      },
+      "level_keys": [
+        "CSA U7L5-L4"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L5-L5"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L5-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "32a4d33f-90c0-4922-94c7-c0c32b8cb307"
+      },
+      "level_keys": [
+        "CSA U7L5-L5"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L6-L1"
+        ],
+        "progression": "Predict: Calling Overridden Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L6-L1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a04f60c5-f66e-4f01-baf7-6ea99380feb0"
+      },
+      "level_keys": [
+        "CSA U7L6-L1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L6-L2"
+        ],
+        "progression": "Overriding Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L6-L2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a546592b-fedd-41df-98bc-8f7f4fcec476"
+      },
+      "level_keys": [
+        "CSA U7L6-L2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L6-L3"
+        ],
+        "progression": "Overriding Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L6-L3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a546592b-fedd-41df-98bc-8f7f4fcec476"
+      },
+      "level_keys": [
+        "CSA U7L6-L3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L6-L4"
+        ],
+        "progression": "Overriding Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L6-L4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a546592b-fedd-41df-98bc-8f7f4fcec476"
+      },
+      "level_keys": [
+        "CSA U7L6-L4"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L6-L5"
+        ],
+        "progression": "Sentinel Values"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L6-L5"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "3e0f36df-ade7-449b-9553-41a6b0ebac63"
+      },
+      "level_keys": [
+        "CSA U7L6-L5"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L6-L6"
+        ],
+        "progression": "Sentinel Values"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L6-L6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "3e0f36df-ade7-449b-9553-41a6b0ebac63"
+      },
+      "level_keys": [
+        "CSA U7L6-L6"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L6-L7"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L6-L7"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d7d4e6f4-f26f-463e-9dc0-1effd76b8d30"
+      },
+      "level_keys": [
+        "CSA U7L6-L7"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L7-L1"
+        ],
+        "progression": "Title Sequence Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L7-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "9ca5e9f9-e5b3-48f8-94d6-2dd5701d578f"
+      },
+      "level_keys": [
+        "CSA U7L7-L1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L7-L2"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L7-L2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "df64b30f-4094-42c8-9c43-edcb9caa2c62"
+      },
+      "level_keys": [
+        "CSA U7L7-L2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L8-L1"
+        ],
+        "progression": "Recursive Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L8-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "49d044d3-09d2-4e25-96e4-072144390f3e"
+      },
+      "level_keys": [
+        "CSA U7L8-L1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L8-L2"
+        ],
+        "progression": "Recursive Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L8-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "49d044d3-09d2-4e25-96e4-072144390f3e"
+      },
+      "level_keys": [
+        "CSA U7L8-L2"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L8-L3"
+        ],
+        "progression": "Recursive Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L8-L3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "49d044d3-09d2-4e25-96e4-072144390f3e"
+      },
+      "level_keys": [
+        "CSA U7L8-L3"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L8-L4"
+        ],
+        "progression": "Title Sequence Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L8-L4"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "565bdf68-b3b3-4a53-a854-1778514c2e97"
+      },
+      "level_keys": [
+        "CSA U7L8-L4"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L8-L5"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L8-L5"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "dcdca2f3-90da-468d-b9ec-2a7738aebd07"
+      },
+      "level_keys": [
+        "CSA U7L8-L5"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L9-L1"
+        ],
+        "progression": "Predict: Recursive Strings"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L9-L1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a73d0cf2-cbef-479f-9211-77e6d6f67186"
+      },
+      "level_keys": [
+        "CSA U7L9-L1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L9-L2"
+        ],
+        "progression": "Predict: Tracing Recursive Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L9-L2"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "4d5820dc-1a92-42c9-95bd-585c8113b46c"
+      },
+      "level_keys": [
+        "CSA U7L9-L2"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L9-L3"
+        ],
+        "progression": "Predict: Tracing Recursive Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L9-L3"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "4d5820dc-1a92-42c9-95bd-585c8113b46c"
+      },
+      "level_keys": [
+        "CSA U7L9-L3"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L9-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L9-L4"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "907a8f5c-2230-491e-8b3d-c23379887a46"
+      },
+      "level_keys": [
+        "CSA U7L9-L4"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L10-L1"
+        ],
+        "progression": "Exploring and Testing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L10-L1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b7da1014-58ff-4b03-b7d2-ad9b5a804513"
+      },
+      "level_keys": [
+        "CSA U7L10-L1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L10-L2"
+        ],
+        "progression": "Title Sequence Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L10-L2"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "31172e96-8758-43ab-8890-730889243c98"
+      },
+      "level_keys": [
+        "CSA U7L10-L2"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L10-L3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L10-L3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "36aaea62-0281-423a-8bb8-89d629c064d0"
+      },
+      "level_keys": [
+        "CSA U7L10-L3"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L11-L1"
+        ],
+        "progression": "Title Sequence Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L11-L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "8ed753d1-9227-4c51-be68-7d404b0eae16"
+      },
+      "level_keys": [
+        "CSA U7L11-L1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L12-L1"
+        ],
+        "progression": "Title Sequence Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L12-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "1c4590a9-d358-427d-b330-f7f21d3e928a"
+      },
+      "level_keys": [
+        "CSA U7L12-L1"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7L13-L1"
+        ],
+        "progression": "Title Sequence Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L13-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "280a9ec8-fcfe-4c44-b4b0-42e1a0d77217"
+      },
+      "level_keys": [
+        "CSA U7L13-L1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L14-L1"
+        ],
+        "progression": "Post-FRQ Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L14-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      },
+      "level_keys": [
+        "CSA U7L14-L1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L14-L2"
+        ],
+        "progression": "Post-FRQ Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L14-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      },
+      "level_keys": [
+        "CSA U7L14-L2"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L14-L3"
+        ],
+        "progression": "Post-FRQ Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L14-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      },
+      "level_keys": [
+        "CSA U7L14-L3"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L14-L4"
+        ],
+        "progression": "Post-FRQ Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L14-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      },
+      "level_keys": [
+        "CSA U7L14-L4"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L14-L5"
+        ],
+        "progression": "Post-FRQ Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L14-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      },
+      "level_keys": [
+        "CSA U7L14-L5"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U7L14-L6"
+        ],
+        "progression": "Post-FRQ Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7L14-L6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      },
+      "level_keys": [
+        "CSA U7L14-L6"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 7 Pilot Assessment 2021"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 7 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "93c8734b-e6b9-4d5d-b704-0d8358da03df"
+      },
+      "level_keys": [
+        "CSA Unit 7 Pilot Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 7"
+        ],
+        "progression": "Unit 7 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 7"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 7"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -3179,11 +4603,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -3201,11 +4628,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -3223,11 +4653,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
         "progression": "The Playground"
       },
       "bonus": false,
@@ -3246,6 +4679,570 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L1-L1",
+        "script_level.level_keys": [
+          "CSA U7L1-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "e6b76293-cb08-4377-af2e-6eb42478fee3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L1-L2",
+        "script_level.level_keys": [
+          "CSA U7L1-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "cdd76d98-c26d-40fe-a4c3-bc62a1bbd66b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L2-L1",
+        "script_level.level_keys": [
+          "CSA U7L2-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "692064cc-d20e-4b8d-b3bb-ef20ffd7e9c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L2-L2",
+        "script_level.level_keys": [
+          "CSA U7L2-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "48115fc3-d32b-475f-a87b-fa22aab5c6fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L2-L3",
+        "script_level.level_keys": [
+          "CSA U7L2-L3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "91673dc4-cb84-4fab-9dc4-777c831b9da0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L3-L1",
+        "script_level.level_keys": [
+          "CSA U7L3-L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "1be08ae1-0593-4eb2-badf-56fcc474585c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L4-L1",
+        "script_level.level_keys": [
+          "CSA U7L4-L1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b6d71f76-f277-47f0-adae-ce568f7f5e19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L4-L2",
+        "script_level.level_keys": [
+          "CSA U7L4-L2"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "baa9d8cf-5245-4188-816f-94e725e6e7c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L4-L3",
+        "script_level.level_keys": [
+          "CSA U7L4-L3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "baa9d8cf-5245-4188-816f-94e725e6e7c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L4-L4",
+        "script_level.level_keys": [
+          "CSA U7L4-L4"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "ac9bd6a6-a4a7-45eb-827d-661592d2a68a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L5-L1",
+        "script_level.level_keys": [
+          "CSA U7L5-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L5-L2",
+        "script_level.level_keys": [
+          "CSA U7L5-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L5-L3",
+        "script_level.level_keys": [
+          "CSA U7L5-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L5-L4",
+        "script_level.level_keys": [
+          "CSA U7L5-L4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "7eda6a11-d32c-4eb6-b3d3-8f75649a491a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L5-L5",
+        "script_level.level_keys": [
+          "CSA U7L5-L5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "32a4d33f-90c0-4922-94c7-c0c32b8cb307"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L6-L1",
+        "script_level.level_keys": [
+          "CSA U7L6-L1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a04f60c5-f66e-4f01-baf7-6ea99380feb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L6-L2",
+        "script_level.level_keys": [
+          "CSA U7L6-L2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a546592b-fedd-41df-98bc-8f7f4fcec476"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L6-L3",
+        "script_level.level_keys": [
+          "CSA U7L6-L3"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a546592b-fedd-41df-98bc-8f7f4fcec476"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L6-L4",
+        "script_level.level_keys": [
+          "CSA U7L6-L4"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a546592b-fedd-41df-98bc-8f7f4fcec476"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L6-L5",
+        "script_level.level_keys": [
+          "CSA U7L6-L5"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "3e0f36df-ade7-449b-9553-41a6b0ebac63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L6-L6",
+        "script_level.level_keys": [
+          "CSA U7L6-L6"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "3e0f36df-ade7-449b-9553-41a6b0ebac63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L6-L7",
+        "script_level.level_keys": [
+          "CSA U7L6-L7"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d7d4e6f4-f26f-463e-9dc0-1effd76b8d30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L7-L1",
+        "script_level.level_keys": [
+          "CSA U7L7-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "9ca5e9f9-e5b3-48f8-94d6-2dd5701d578f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L7-L2",
+        "script_level.level_keys": [
+          "CSA U7L7-L2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "df64b30f-4094-42c8-9c43-edcb9caa2c62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L8-L1",
+        "script_level.level_keys": [
+          "CSA U7L8-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "49d044d3-09d2-4e25-96e4-072144390f3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L8-L2",
+        "script_level.level_keys": [
+          "CSA U7L8-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "49d044d3-09d2-4e25-96e4-072144390f3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L8-L3",
+        "script_level.level_keys": [
+          "CSA U7L8-L3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "49d044d3-09d2-4e25-96e4-072144390f3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L8-L4",
+        "script_level.level_keys": [
+          "CSA U7L8-L4"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "565bdf68-b3b3-4a53-a854-1778514c2e97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L8-L5",
+        "script_level.level_keys": [
+          "CSA U7L8-L5"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "dcdca2f3-90da-468d-b9ec-2a7738aebd07"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L9-L1",
+        "script_level.level_keys": [
+          "CSA U7L9-L1"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "a73d0cf2-cbef-479f-9211-77e6d6f67186"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L9-L2",
+        "script_level.level_keys": [
+          "CSA U7L9-L2"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "4d5820dc-1a92-42c9-95bd-585c8113b46c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L9-L3",
+        "script_level.level_keys": [
+          "CSA U7L9-L3"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "4d5820dc-1a92-42c9-95bd-585c8113b46c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L9-L4",
+        "script_level.level_keys": [
+          "CSA U7L9-L4"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "907a8f5c-2230-491e-8b3d-c23379887a46"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L10-L1",
+        "script_level.level_keys": [
+          "CSA U7L10-L1"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b7da1014-58ff-4b03-b7d2-ad9b5a804513"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L10-L2",
+        "script_level.level_keys": [
+          "CSA U7L10-L2"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "31172e96-8758-43ab-8890-730889243c98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L10-L3",
+        "script_level.level_keys": [
+          "CSA U7L10-L3"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "36aaea62-0281-423a-8bb8-89d629c064d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L11-L1",
+        "script_level.level_keys": [
+          "CSA U7L11-L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "8ed753d1-9227-4c51-be68-7d404b0eae16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L12-L1",
+        "script_level.level_keys": [
+          "CSA U7L12-L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "1c4590a9-d358-427d-b330-f7f21d3e928a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L13-L1",
+        "script_level.level_keys": [
+          "CSA U7L13-L1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "280a9ec8-fcfe-4c44-b4b0-42e1a0d77217"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L14-L1",
+        "script_level.level_keys": [
+          "CSA U7L14-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L14-L2",
+        "script_level.level_keys": [
+          "CSA U7L14-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L14-L3",
+        "script_level.level_keys": [
+          "CSA U7L14-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L14-L4",
+        "script_level.level_keys": [
+          "CSA U7L14-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L14-L5",
+        "script_level.level_keys": [
+          "CSA U7L14-L5"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7L14-L6",
+        "script_level.level_keys": [
+          "CSA U7L14-L6"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 7 Pilot Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 7 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "93c8734b-e6b9-4d5d-b704-0d8358da03df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 7",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 7"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "b06b1354-7ccc-45b5-9b55-a2a2f3d0f1fe"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSA Java Lab Sandbox",
@@ -3306,6 +5303,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_frq_writing_5"
+      }
+    },
+    {
+      "name": "[KEY] Object References as Parameters",
+      "url": "https://docs.google.com/document/d/1VbLew-Wee70jwb75C3CskukAWU9j39-Are3AUcdyxGI/edit?usp=sharing",
+      "key": "_key_object_references_as_parameters",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_object_references_as_parameters"
+      }
+    },
+    {
+      "name": "[KEY] U7L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1QOWaRz8JQeKGbF8IATV4m9WpeR3mqbESGrzuDMoO6NA/edit?usp=sharing",
+      "key": "_key_u7l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u7l10_extra_practice"
       }
     },
     {
@@ -3477,6 +5498,78 @@
       }
     },
     {
+      "name": "Object References as Parameters",
+      "url": "https://docs.google.com/document/d/1S5ChOV-K3V1q-HiYGAcZbmTcxKWyq3E7KUfkfhbMkOk/edit?usp=sharing",
+      "key": "object_references_as_parameters",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "object_references_as_parameters"
+      }
+    },
+    {
+      "name": "Object References Manipulatives",
+      "url": "https://docs.google.com/presentation/d/1ogts7bd7cFQGnV55r-d-t5iT2yPsU1PKn-AB8kIHCeo/edit?usp=sharing",
+      "key": "object_references_manipulatives_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "object_references_manipulatives_1"
+      }
+    },
+    {
+      "name": "Private Methods",
+      "url": "https://youtu.be/9GvkXkCtzu0",
+      "key": "private_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "private_methods"
+      }
+    },
+    {
+      "name": "Project Development Feedback",
+      "url": "https://docs.google.com/document/d/1BOiBilMDnnYnHDY_O2iKbHKanUiI-2Z93HIrq8Tsi0Q/edit?usp=sharing",
+      "key": "project_development_feedback_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "project_development_feedback_2"
+      }
+    },
+    {
+      "name": "Project Development Feedback",
+      "url": "https://docs.google.com/document/d/1eWUmvpTEDeUdqjNLMko-94RXqdAi4tHesv51JjL_EWY/edit?usp=sharing",
+      "key": "project_development_feedback_3",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "project_development_feedback_3"
+      }
+    },
+    {
+      "name": "Project Planning Feedback",
+      "url": "https://docs.google.com/document/d/11FdDfNgc_IuIsuP3acSZrl-AcY22_CPT5zJ6C4QTXtQ/edit?usp=sharing",
+      "key": "project_planning_feedback_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "project_planning_feedback_1"
+      }
+    },
+    {
       "name": "Quiz, Quiz, Trade",
       "url": "https://docs.google.com/document/d/1VtJELMsnEniRSEwcI3fsiBKhgKIlv5msb258O-k7XgU/edit?usp=sharing",
       "key": "quiz_quiz_trade_2",
@@ -3486,6 +5579,18 @@
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade_2"
+      }
+    },
+    {
+      "name": "Recursion",
+      "url": "https://youtu.be/Hk9Rml4nwsA",
+      "key": "recursion",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "recursion"
       }
     },
     {
@@ -3513,6 +5618,30 @@
       }
     },
     {
+      "name": "Simple List Vocabulary",
+      "url": "https://docs.google.com/document/d/1HzXMkkoC7uh_ffUXHH2K_-mVUyPDLbQc5zSM3GoNTLo/edit?usp=sharing",
+      "key": "simple_list_vocabulary_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "simple_list_vocabulary_2"
+      }
+    },
+    {
+      "name": "Testing Software",
+      "url": "https://docs.google.com/document/d/1-MtHKBUbDYODOSsbHETd4BOggYW7wGXtoK86tIezV-g/edit?usp=sharing",
+      "key": "testing_software",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "testing_software"
+      }
+    },
+    {
       "name": "Title Sequence Project Planning Guide",
       "url": "https://docs.google.com/document/d/1ENWJmqeLA_7j1S8oQufipp2pV0Hr8OdWG5QmGLRIS9U/edit",
       "key": "title_sequence_project_planning_guide",
@@ -3522,6 +5651,18 @@
       },
       "seeding_key": {
         "resource.key": "title_sequence_project_planning_guide"
+      }
+    },
+    {
+      "name": "U7L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Q7YuwFQ91JFMd0NI2QDpY_1FUvZ19AlizKb-WAzlTYs/edit?usp=sharing",
+      "key": "u7l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u7l10_extra_practice"
       }
     },
     {
@@ -3781,6 +5922,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "project_development_feedback_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "recursion"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "u7l9_extra_practice"
       }
     },
@@ -3788,6 +5941,42 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "_key_u7l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "simple_list_vocabulary_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "testing_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u7l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "project_development_feedback_3"
       }
     },
     {
@@ -3859,7 +6048,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "_key_object_references_as_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "_key_u7l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "object_references_as_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "object_references_manipulatives_1"
       }
     },
     {
@@ -3896,6 +6103,18 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u7l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "private_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "project_planning_feedback_1"
       }
     },
     {
@@ -4055,6 +6274,16 @@
       }
     },
     {
+      "key": "system_reliability",
+      "word": "System Reliability",
+      "definition": "A system's ability to function without failure",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "system_reliability"
+      }
+    },
+    {
       "key": "title_sequence",
       "word": "Title Sequence",
       "definition": "A scene or sequence of scenes shown at the beginning of a movie or TV show that includes the title and opening credits",
@@ -4134,6 +6363,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "vocabulary.key": "recursive_case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "vocabulary.key": "system_reliability"
       }
     },
     {
@@ -4342,6 +6577,16 @@
       }
     },
     {
+      "key": "b469859e-5a63-414b-82ef-f05e3db4404b",
+      "properties": {
+        "description": "Identify strategies for maximizing system reliability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "b469859e-5a63-414b-82ef-f05e3db4404b"
+      }
+    },
+    {
       "key": "ca562fed-16b2-478f-92be-d5dff6b0c22f",
       "properties": {
         "description": "Identify the recursive call and base case in a recursive method"
@@ -4359,6 +6604,16 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "objective.key": "cabfd901-3224-472b-a166-742c8c901761"
+      }
+    },
+    {
+      "key": "d838628f-311e-48ce-91ed-58cd2b4f16b8",
+      "properties": {
+        "description": "Describe issues and impacts resulting from software bugs"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "d838628f-311e-48ce-91ed-58cd2b4f16b8"
       }
     },
     {
@@ -4532,6 +6787,20 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.O.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.3"
       }
     },
     {

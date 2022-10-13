@@ -1,3 +1,4 @@
+---
 sr:
   data:
     course:
@@ -5,8 +6,8 @@ sr:
         csp-2017:
           assignment_family_title: AP® Принципи информатичких наука
           title: Принципи информатичких наука (2017-2018)
-          version_title: "2017-2018"
+          version_title: 2017-2018
         csd-2017:
-          version_title: "2017-2018"
+          version_title: 2017-2018
         csp-2018:
           assignment_family_title: AP® Принципи информатичких наука

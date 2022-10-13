@@ -28,6 +28,10 @@ const SET_DYNAMIC_INSTRUCTIONS_KEY =
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 const SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK =
   'instructions/SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK';
+const SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL =
+  'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL';
+const SET_CODE_REVIEW_ENABLED_FOR_LEVEL =
+  'instructions/SET_CODE_REVIEW_ENABLED_FOR_LEVEL';
 
 /**
  * Some scenarios:
@@ -62,10 +66,17 @@ const instructionsInitialState = {
   maxAvailableHeight: Infinity,
   allowResize: true,
   hasAuthoredHints: false,
+  // represents if the user is in any unarchived section where tts autoplay is enabled
+  // logic defined in script_levels_controller#show
+  ttsAutoplayEnabledForLevel: false,
+  codeReviewEnabledForLevel: false,
   overlayVisible: false,
   levelVideos: [],
   mapReference: undefined,
-  referenceLinks: []
+  referenceLinks: [],
+  muteBackgroundMusic: () => {},
+  unmuteBackgroundMusic: () => {},
+  programmingEnvironment: null
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -84,7 +95,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       teacherMarkdown,
       levelVideos,
       mapReference,
-      referenceLinks
+      referenceLinks,
+      muteBackgroundMusic,
+      unmuteBackgroundMusic,
+      programmingEnvironment
     } = action;
     let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -103,7 +117,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       isCollapsed,
       levelVideos,
       mapReference,
-      referenceLinks
+      referenceLinks,
+      muteBackgroundMusic,
+      unmuteBackgroundMusic,
+      programmingEnvironment
     });
   }
 
@@ -113,22 +130,14 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (
-    action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT &&
-    state.allowResize &&
-    Math.abs(action.height - state.renderedHeight) > 1
-  ) {
+  if (action.type === SET_INSTRUCTIONS_RENDERED_HEIGHT && state.allowResize) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
       expandedHeight: !state.isCollapsed ? action.height : state.expandedHeight
     });
   }
 
-  if (
-    action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED &&
-    Math.abs(action.maxNeededHeight - state.maxNeededHeight) > 1 &&
-    state.allowResize
-  ) {
+  if (action.type === SET_INSTRUCTIONS_MAX_HEIGHT_NEEDED && state.allowResize) {
     return Object.assign({}, state, {
       maxNeededHeight: action.maxNeededHeight
     });
@@ -156,6 +165,18 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   if (action.type === SET_HAS_AUTHORED_HINTS) {
     return Object.assign({}, state, {
       hasAuthoredHints: action.hasAuthoredHints
+    });
+  }
+
+  if (action.type === SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL) {
+    return Object.assign({}, state, {
+      ttsAutoplayEnabledForLevel: action.ttsAutoplayEnabledForLevel
+    });
+  }
+
+  if (action.type === SET_CODE_REVIEW_ENABLED_FOR_LEVEL) {
+    return Object.assign({}, state, {
+      codeReviewEnabledForLevel: action.codeReviewEnabledForLevel
     });
   }
 
@@ -209,7 +230,10 @@ export const setInstructionsConstants = ({
   teacherMarkdown,
   levelVideos,
   mapReference,
-  referenceLinks
+  referenceLinks,
+  muteBackgroundMusic,
+  unmuteBackgroundMusic,
+  programmingEnvironment
 }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
@@ -222,7 +246,10 @@ export const setInstructionsConstants = ({
   teacherMarkdown,
   levelVideos,
   mapReference,
-  referenceLinks
+  referenceLinks,
+  muteBackgroundMusic,
+  unmuteBackgroundMusic,
+  programmingEnvironment
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -264,6 +291,16 @@ export const setAllowInstructionsResize = allowResize => ({
 export const setHasAuthoredHints = hasAuthoredHints => ({
   type: SET_HAS_AUTHORED_HINTS,
   hasAuthoredHints
+});
+
+export const setTtsAutoplayEnabledForLevel = ttsAutoplayEnabledForLevel => ({
+  type: SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL,
+  ttsAutoplayEnabledForLevel
+});
+
+export const setCodeReviewEnabledForLevel = codeReviewEnabledForLevel => ({
+  type: SET_CODE_REVIEW_ENABLED_FOR_LEVEL,
+  codeReviewEnabledForLevel
 });
 
 export const setFeedback = feedback => ({
@@ -337,6 +374,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels
  * @param {Object} config.skin.instructions2ImageSubstitutions
+ * @param {string} config.level.programmingEnvironment
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
@@ -344,7 +382,9 @@ export const determineInstructionsConstants = config => {
     level,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
-    teacherMarkdown
+    teacherMarkdown,
+    muteBackgroundMusic,
+    unmuteBackgroundMusic
   } = config;
 
   const {
@@ -352,7 +392,8 @@ export const determineInstructionsConstants = config => {
     inputOutputTable,
     levelVideos,
     mapReference,
-    referenceLinks
+    referenceLinks,
+    programmingEnvironment
   } = level;
 
   let {longInstructions, shortInstructions, dynamicInstructions} = level;
@@ -435,7 +476,10 @@ export const determineInstructionsConstants = config => {
     hasContainedLevels,
     levelVideos,
     mapReference,
-    referenceLinks
+    referenceLinks,
+    muteBackgroundMusic,
+    unmuteBackgroundMusic,
+    programmingEnvironment
   };
 };
 

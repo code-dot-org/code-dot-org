@@ -4,19 +4,15 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import ProjectsPromo from './ProjectsPromo';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
-    projectCount: PropTypes.number,
-    specialAnnouncement: PropTypes.object
+    projectCount: PropTypes.number
   };
 
   render() {
-    const projectCountWithCommas = this.props.projectCount.toLocaleString();
-
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/project-banner.jpg';
     return (
@@ -24,18 +20,13 @@ export default class ProjectHeader extends React.Component {
         <HeaderBanner
           short={true}
           headingText={i18n.projects()}
-          subHeadingText={i18n.projectsSubHeading({
-            project_count: projectCountWithCommas
+          subHeadingText={i18n.projectsSubHeadingMillions({
+            project_count: this.props.projectCount
           })}
           backgroundUrl={backgroundUrl}
         />
         <div className={'container main'}>
-          {!this.props.specialAnnouncement && <ProjectsPromo />}
-          {this.props.specialAnnouncement && (
-            <SpecialAnnouncementActionBlock
-              announcement={this.props.specialAnnouncement}
-            />
-          )}
+          <ProjectsPromo />
           <StartNewProject
             canViewFullList
             canViewAdvancedTools={this.props.canViewAdvancedTools}

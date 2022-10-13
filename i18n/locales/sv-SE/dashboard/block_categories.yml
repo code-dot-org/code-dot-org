@@ -5,6 +5,7 @@ sv:
       Advanced: Avancerat
       Behaviors: Beteenden
       Brushes: Borstar
+      Category: Kategori
       Color: Färg
       Comment: Kommentar
       Comments: Kommentarer
@@ -27,4 +28,5 @@ sv:
       Text: text
       Variables: variabler
       'Variables ': 'Variabler '
+      'Variables  ': 'Variabler '
       World: Världen

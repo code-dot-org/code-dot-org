@@ -2,17 +2,17 @@ import $ from 'jquery';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
-import TeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedback';
+import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
 import DocumentationTab from './DocumentationTab';
-import ReviewTab from './ReviewTab';
+import CommitsAndReviewTab from './CommitsAndReviewTab';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
@@ -36,6 +36,7 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import ContainedLevelResetButton from './ContainedLevelResetButton';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -68,10 +69,11 @@ class TopInstructions extends Component {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     exampleSolutions: PropTypes.array,
+    isViewingAsInstructorInTraining: PropTypes.bool,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
+    maxNeededHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
-    maxAvailableHeight: PropTypes.number,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
     dynamicInstructionsKey: PropTypes.string,
@@ -99,6 +101,7 @@ class TopInstructions extends Component {
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
+    hasBackgroundMusic: PropTypes.bool.isRequired,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
@@ -112,12 +115,14 @@ class TopInstructions extends Component {
     standalone: PropTypes.bool,
     // Use this if the caller wants to set an explicit height for the instructions rather
     // than allowing this component to manage its own height.
-    explicitHeight: PropTypes.number
+    explicitHeight: PropTypes.number,
+    inLessonPlan: PropTypes.bool
   };
 
   static defaultProps = {
     resizable: true,
-    collapsible: true
+    collapsible: true,
+    inLessonPlan: false
   };
 
   constructor(props) {
@@ -133,18 +138,14 @@ class TopInstructions extends Component {
       this.props.readOnlyWorkspace &&
       window.location.search.includes('user_id');
 
-    const teacherViewingStudentTab = this.props.displayReviewTab
-      ? TabType.REVIEW
-      : TabType.COMMENTS;
-
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
         this.props.initialSelectedTab ||
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
-          ? teacherViewingStudentTab
+          ? TabType.COMMENTS
           : TabType.INSTRUCTIONS),
-      feedbacks: [],
+      latestFeedback: null,
       rubric: null,
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
@@ -177,9 +178,12 @@ class TopInstructions extends Component {
     if (!dynamicInstructions) {
       const maxNeededHeight = this.adjustMaxNeededHeight();
 
-      // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-      // adjusts max height.
-      this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+      // Initially set to 22% of the window height. This might be adjusted when
+      // InstructionsWithWorkspace adjusts max height.
+      const defaultHeight = Math.round(window.innerHeight * 0.22);
+      this.props.setInstructionsRenderedHeight(
+        Math.min(maxNeededHeight, defaultHeight)
+      );
     }
 
     const promises = [];
@@ -195,7 +199,7 @@ class TopInstructions extends Component {
               (data[0].comment || data[0].performance || data[0].review_state)
             ) {
               this.setState({
-                feedbacks: data,
+                latestFeedback: data[0],
                 tabSelected: TabType.COMMENTS,
                 token: request.getResponseHeader('csrf-token')
               });
@@ -230,7 +234,7 @@ class TopInstructions extends Component {
           )
           .done((data, textStatus, request) => {
             this.setState({
-              feedbacks: request.status === 204 ? [] : [data],
+              latestFeedback: request.status === 204 ? null : data,
               token: request.getResponseHeader('csrf-token')
             });
           })
@@ -294,20 +298,6 @@ class TopInstructions extends Component {
   };
 
   /**
-   * Function to force the height of the instructions area to be the
-   * full size of the content area, up to the max available height. This is
-   * used when the review tab loads in order to make the instructions area
-   * show the whole contents of the review tab.
-   */
-  forceTabResizeToMaxOrAvailableHeight = () => {
-    if (this.state.tabSelected === TabType.REVIEW) {
-      this.props.setInstructionsRenderedHeight(
-        Math.min(this.adjustMaxNeededHeight(), this.props.maxAvailableHeight)
-      );
-    }
-  };
-
-  /**
    * Returns the top Y coordinate of the instructions that are being resized
    * via a call to handleHeightResize from HeightResizer.
    */
@@ -352,7 +342,7 @@ class TopInstructions extends Component {
       shortInstructions,
       longInstructions,
       hasContainedLevels,
-      maxHeight,
+      maxNeededHeight,
       setInstructionsMaxHeightNeeded
     } = this.props;
 
@@ -364,15 +354,21 @@ class TopInstructions extends Component {
       return 0;
     }
 
-    const maxNeededHeight =
-      $(ReactDOM.findDOMNode(this.refForSelectedTab())).outerHeight(true) +
-      HEADER_HEIGHT +
-      RESIZER_HEIGHT;
+    const refForSelectedTab = this.refForSelectedTab();
 
-    if (maxHeight !== maxNeededHeight) {
-      setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (refForSelectedTab) {
+      const maxNeededHeightMeasured =
+        $(ReactDOM.findDOMNode(refForSelectedTab)).outerHeight(true) +
+        HEADER_HEIGHT +
+        RESIZER_HEIGHT;
+
+      if (maxNeededHeight !== maxNeededHeightMeasured) {
+        setInstructionsMaxHeightNeeded(maxNeededHeightMeasured);
+      }
+      return maxNeededHeightMeasured;
+    } else {
+      return 0;
     }
-    return maxNeededHeight;
   };
 
   /**
@@ -475,7 +471,7 @@ class TopInstructions extends Component {
    */
   incrementFeedbackVisitCount = _.debounce(
     () => {
-      const latestFeedback = this.state.feedbacks[0];
+      const latestFeedback = this.state.latestFeedback;
       if (!this.state.teacherViewingStudentWork && latestFeedback) {
         topInstructionsDataApi.incrementVisitCount(
           latestFeedback.id,
@@ -488,9 +484,7 @@ class TopInstructions extends Component {
   );
 
   setInstructionsRef(ref) {
-    if (ref) {
-      this.instructions = ref;
-    }
+    this.instructions = ref;
   }
 
   renderInstructions(isCSF) {
@@ -512,12 +506,15 @@ class TopInstructions extends Component {
             ref={ref => this.setInstructionsRef(ref)}
             hidden={tabSelected !== TabType.INSTRUCTIONS}
           />
+          {!this.props.inLessonPlan && tabSelected === TabType.INSTRUCTIONS && (
+            <ContainedLevelResetButton />
+          )}
         </div>
       );
     } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {
       return (
         <InstructionsCSF
-          ref={ref => this.setInstructionsRef(ref)}
+          setInstructionsRef={ref => this.setInstructionsRef(ref)}
           handleClickCollapser={this.handleClickCollapser}
           adjustMaxNeededHeight={this.adjustMaxNeededHeight}
           isEmbedView={isEmbedView}
@@ -561,6 +558,7 @@ class TopInstructions extends Component {
       overlayVisible,
       hasContainedLevels,
       exampleSolutions,
+      isViewingAsInstructorInTraining,
       noInstructionsWhenCollapsed,
       noVisualization,
       isRtl,
@@ -572,6 +570,7 @@ class TopInstructions extends Component {
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
+      hasBackgroundMusic,
       user,
       mainStyle,
       containerStyle,
@@ -585,7 +584,7 @@ class TopInstructions extends Component {
     } = this.props;
 
     const {
-      feedbacks,
+      latestFeedback,
       teacherViewingStudentWork,
       rubric,
       tabSelected,
@@ -615,7 +614,8 @@ class TopInstructions extends Component {
       isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
         ? styles.csfBody
         : containerStyle || styles.body,
-      isMinecraft && craftStyles.instructionsBody
+      isMinecraft && craftStyles.instructionsBody,
+      tabSelected === TabType.REVIEW && styles.commitAndReview
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -626,15 +626,10 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
-
-    // If we're displaying the review tab (for CSA peer review) the teacher can leave feedback in that tab,
-    // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
-    // where the teacher should leave feedback
-    const displayFeedback =
+    const displayFeedbackTab =
       !!rubric ||
-      (!displayReviewTab && teacherViewingStudentWork) ||
-      studentHasFeedback;
+      teacherViewingStudentWork ||
+      (this.isViewingAsStudent && !!latestFeedback);
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -656,11 +651,13 @@ class TopInstructions extends Component {
       ttsLongInstructionsUrl,
       hasContainedLevels,
       exampleSolutions,
+      isViewingAsInstructorInTraining,
       isRtl,
       documentationUrl,
       teacherMarkdown,
       isEmbedView,
       isCollapsed,
+      hasBackgroundMusic,
       dynamicInstructions,
       dynamicInstructionsKey
     };
@@ -676,11 +673,12 @@ class TopInstructions extends Component {
           tabSelected={tabSelected}
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
-          displayFeedback={displayFeedback}
+          displayFeedback={displayFeedbackTab}
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
+          hasBackgroundMusic={hasBackgroundMusic}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -699,9 +697,7 @@ class TopInstructions extends Component {
         />
         <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
           <div style={instructionsContainerStyle} id="scroll-container">
-            <div ref={ref => this.setInstructionsRef(ref)}>
-              {this.renderInstructions(isCSF)}
-            </div>
+            {this.renderInstructions(isCSF)}
             {tabSelected === TabType.RESOURCES && (
               <HelpTabContents
                 ref={ref => (this.helpTab = ref)}
@@ -713,25 +709,24 @@ class TopInstructions extends Component {
                 }
               />
             )}
-            {displayFeedback && !fetchingData && (
-              <TeacherFeedback
+            {!fetchingData && (
+              <TeacherFeedbackTab
+                teacherViewingStudentWork={teacherViewingStudentWork}
                 visible={tabSelected === TabType.COMMENTS}
-                isEditable={teacherViewingStudentWork}
                 rubric={rubric}
-                ref={ref => (this.commentTab = ref)}
-                latestFeedback={feedbacks.length ? feedbacks[0] : null}
+                innerRef={ref => (this.commentTab = ref)}
+                latestFeedback={latestFeedback}
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
                 teacher={user}
-                hasContainedLevels={hasContainedLevels}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab
+              <CommitsAndReviewTab
                 ref={ref => (this.reviewTab = ref)}
                 onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
               />
@@ -754,7 +749,7 @@ class TopInstructions extends Component {
                   ))}
                 </div>
               )}
-            {this.isViewingAsTeacher &&
+            {(this.isViewingAsTeacher || isViewingAsInstructorInTraining) &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
                   {hasContainedLevels && (
@@ -826,6 +821,15 @@ const styles = {
     right: 0,
     overflow: 'hidden'
   },
+  commitAndReview: {
+    backgroundColor: color.background_gray,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflowY: 'auto'
+  },
   embedView: {
     height: undefined,
     bottom: 0
@@ -856,11 +860,11 @@ export default connect(
     isBlockly: !!state.pageConstants.isBlockly,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
+    maxNeededHeight: state.instructions.maxNeededHeight,
     maxHeight: Math.min(
       state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight
     ),
-    maxAvailableHeight: state.instructions.maxAvailableHeight,
     longInstructions: state.instructions.longInstructions,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     noVisualization: state.pageConstants.noVisualization,
@@ -879,11 +883,16 @@ export default connect(
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
+    hasBackgroundMusic: !!state.pageConstants.hasBackgroundMusic,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,
     exampleSolutions:
-      (state.pageConstants && state.pageConstants.exampleSolutions) || []
+      (state.pageConstants && state.pageConstants.exampleSolutions) || [],
+    isViewingAsInstructorInTraining:
+      (state.pageConstants &&
+        state.pageConstants.isViewingAsInstructorInTraining) ||
+      false
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

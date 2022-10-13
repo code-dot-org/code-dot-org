@@ -52,8 +52,8 @@ class ParentLetter extends React.Component {
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
-        secret_picture_path: PropTypes.string,
-        secret_words: PropTypes.string
+        secretPicturePath: PropTypes.string,
+        secretWords: PropTypes.string
       })
     ),
     teacherName: PropTypes.string.isRequired,
@@ -81,8 +81,8 @@ class ParentLetter extends React.Component {
             .shift()
         : null;
     const studentName = student ? student.name : 'your student';
-    const secretPicturePath = student ? student.secret_picture_path : null;
-    const secretWords = student ? student.secret_words : null;
+    const secretPicturePath = student ? student.secretPicturePath : null;
+    const secretWords = student ? student.secretWords : null;
 
     return (
       <div id="printArea">
@@ -150,7 +150,7 @@ export const UnconnectedParentLetter = ParentLetter;
 export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
-  students: state.sectionData.section.students,
+  students: state.teacherSections.selectedStudents,
   teacherName: state.currentUser.userName,
   studentId: queryParams('studentId')
 }))(ParentLetter);

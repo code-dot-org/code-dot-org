@@ -286,10 +286,10 @@ lt:
       playlab: Laboratorija
       sports: Sportas
       starwars: Žvaigždžių karai
+      loading: Kraunama...
     popup:
       progress_for_user: "%{name} pažanga"
       progress: Jūsų pažanga
-      lines: 'Iš viso kodo eilučių: %{lines}'
       close: UŽDARYTI
       mastery: Laimėjimai
       puzzle_map: Etapai
@@ -299,6 +299,7 @@ lt:
       prizes_link: daugiau informacijos
   teacher:
     answer: Atsakymas
+    dashboard: Mokytojo prietaisų skydelis
     for_teachers_only: Tik mokytojams
     title:
       one: 'Tavo mokytojas:'
@@ -381,6 +382,7 @@ lt:
     no_primary_course: Išmėgink „Code Studio“ kursą
     choose_next_course: Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau
     print_certificate: Atsispausdinti sertifikatą
+  certificate_hour_of_code: "„Programavimo valanda“"
   share:
     title: Mokytis su „Code Studio“
     description: Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles
@@ -742,8 +744,12 @@ lt:
         math: Matematika
         science: Gamtos mokslai
         la: Literatūra
+        other: Kita
       resources:
         khan: Khan Akademija
+        other: Kita
+      robotics:
+        other: Kita
       email_opt_in:
         opt_in_yes: Taip
         opt_in_no: Ne

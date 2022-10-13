@@ -1,7 +1,7 @@
 @no_mobile
 Feature: Map Levels
 
-  # Map levels should render the content from curriculum builder inside an iframe
+  # Map levels should render the reference guide content inside an iframe
 
   Background:
     Given I create a student named "Lillian"

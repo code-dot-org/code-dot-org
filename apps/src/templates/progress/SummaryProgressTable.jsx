@@ -6,7 +6,6 @@ import {groupedLessonsType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
 import {lessonIsVisible} from './progressHelpers';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 class SummaryProgressTable extends React.Component {
   static propTypes = {
@@ -14,12 +13,11 @@ class SummaryProgressTable extends React.Component {
     minimal: PropTypes.bool,
 
     // redux provided
-    viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonIsVisible: PropTypes.func.isRequired
   };
 
   render() {
-    const {viewAs, minimal} = this.props;
+    const {minimal} = this.props;
     const {lessons, levelsByLesson} = this.props.groupedLesson;
 
     if (lessons.length !== levelsByLesson.length) {
@@ -45,7 +43,7 @@ class SummaryProgressTable extends React.Component {
             every other (remaining) one dark */
           lessons
             .map((lesson, index) => ({unfilteredIndex: index, lesson}))
-            .filter(item => this.props.lessonIsVisible(item.lesson, viewAs))
+            .filter(item => this.props.lessonIsVisible(item.lesson))
             .map((item, filteredIndex) => (
               <SummaryProgressRow
                 key={item.unfilteredIndex}
@@ -76,6 +74,5 @@ const styles = {
 
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({
-  viewAs: state.viewAs,
-  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
+  lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs)
 }))(SummaryProgressTable);

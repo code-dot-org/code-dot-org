@@ -11,9 +11,11 @@ zh-CN:
       moving north: '向上移动
 
 '
+      moving north and looping: 向北移动并循环
       moving south: '向下移动
 
 '
+      moving south and looping: 向南移动并循环
       moving west: '向左移动
 
 '

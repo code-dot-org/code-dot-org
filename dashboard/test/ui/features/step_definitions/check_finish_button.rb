@@ -10,7 +10,7 @@ free_play_level_urls = {
   },
   'droplet' => {
     'App Lab' => 'http://studio.code.org/s/applab-intro/lessons/1/levels/15?noautoplay=true&no_redirect=true',
-    'Game Lab' => 'http://studio.code.org/s/csd3-2019/lessons/22/levels/12?noautoplay=true&no_redirect=true'
+    'Game Lab' => 'http://studio.code.org/s/allthethings/lessons/19/levels/4?noautoplay=true&no_redirect=true'
   },
   'minecraft' => {
     'Minecraft Aquatic' => 'http://studio.code.org/s/aquatic/lessons/1/levels/12?noautoplay=true&no_redirect=true',
@@ -23,7 +23,7 @@ free_play_level_urls = {
 When /^I check that the (blockly|droplet|minecraft) free play level for "([^"]*)" shows the finish button for (small|mobile) screens/i do |level_type, level_name, screen_type|
   individual_steps <<-STEPS
     And I set up the #{level_type} free play level for "#{level_name}"
-    #{screen_type == 'small' ? 'And I change the browser window size to 1366 by 600' : ''}
+    #{screen_type == 'small' ? 'And I change the browser window size to 1366 by 636' : ''}
     #{level_type == 'minecraft' ? 'And I wait until the Minecraft game is loaded' : ''}
     And I press "runButton"
     And I check that selector "button:contains('Finish')" is in the viewport

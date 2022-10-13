@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -57,12 +58,6 @@ module Pd::Application
       *(1..12).map {|n| "Grade #{n}".freeze}
     ].freeze
 
-    PRINCIPAL_APPROVAL_STATE = [
-      NOT_REQUIRED = 'Not required',
-      IN_PROGRESS = 'Incomplete - Principal email sent on ',
-      COMPLETE = 'Complete - '
-    ]
-
     REVIEWING_INCOMPLETE = 'Reviewing Incomplete'
 
     # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
@@ -84,13 +79,14 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
+    before_validation :set_course_from_program, if: -> {form_data_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}
-    validates_uniqueness_of :user_id
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_validation :set_course_from_program
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
+    before_save :set_total_course_hours, if: -> {form_data_changed?}
+    before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed?}
 
     serialized_attrs %w(
@@ -103,11 +99,13 @@ module Pd::Application
     # based on these rules in order:
     # 1. Application has a specific school? always overwrite the user's school info
     # 2. User doesn't have a specific school? overwrite with the custom school info.
+    # Will only update the school info if we have enough information for it because
+    # an incomplete application may not have all the information we need to update
     def update_user_school_info!
-      if school_id || user.school_info.try(&:school).nil?
-        school_info = get_duplicate_school_info(school_info_attr) || SchoolInfo.create!(school_info_attr)
-        user.update_school_info(school_info)
-      end
+      return unless school_id || user.school_info.try(&:school).nil?
+      school_info = school_info_attr
+      return unless school_info
+      user.update_school_info(get_duplicate_school_info(school_info) || SchoolInfo.create!(school_info))
     end
 
     def update_scholarship_status(scholarship_status)
@@ -138,6 +136,27 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_total_course_hours
+      hash = sanitize_form_data_hash
+      minutes = hash[:cs_how_many_minutes]
+      days_per_week = hash[:cs_how_many_days_per_week]
+      weeks_per_year = hash[:cs_how_many_weeks_per_year]
+
+      if minutes && days_per_week && weeks_per_year
+        update_form_data_hash(
+          {
+            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
+          }
+        )
+      else
+        update_form_data_hash(
+          {
+            cs_total_course_hours: nil
+          }
+        )
+      end
     end
 
     def save_partner
@@ -237,20 +256,6 @@ module Pd::Application
       pd_application_principal_approval_url(application_guid) if application_guid
     end
 
-    def principal_approval_state
-      principal_approval = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-
-      if principal_approval
-        if principal_approval.placeholder?
-          'Sent'
-        else
-          sanitize_form_data_hash[:principal_approval]
-        end
-      else
-        'No approval sent'
-      end
-    end
-
     # @override
     # Add account_email (based on the associated user's email) to the sanitized form data hash
     def sanitize_form_data_hash
@@ -271,6 +276,7 @@ module Pd::Application
         }
       else
         hash = sanitize_form_data_hash
+        return unless hash[:school_type] && hash[:school_state] && hash[:school_zip_code] && hash[:school_name] && hash[:school_address]
         {
           country: 'US',
           # Take the first word in school type, downcased. E.g. "Public school" -> "public"
@@ -342,6 +348,8 @@ module Pd::Application
     def self.statuses
       %w(
         unreviewed
+        incomplete
+        reopened
         pending
         waitlisted
         declined
@@ -394,15 +402,15 @@ module Pd::Application
     # Otherwise return nil.
     def principal_approval_state
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
-      return COMPLETE + response.full_answers[:do_you_approve] if response
+      return PRINCIPAL_APPROVAL_STATE[:complete] + response.full_answers[:do_you_approve] if response
 
       principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
       if principal_approval_email
         # Format sent date as short-month day, e.g. Oct 8
-        return IN_PROGRESS + principal_approval_email.sent_at&.strftime('%b %-d')
+        return PRINCIPAL_APPROVAL_STATE[:in_progress] + principal_approval_email.sent_at&.strftime('%b %-d')
       end
 
-      return NOT_REQUIRED if principal_approval_not_required
+      return PRINCIPAL_APPROVAL_STATE[:not_required] if principal_approval_not_required
 
       nil
     end
@@ -762,7 +770,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      TeacherApplication.find_by(user: user)
+      TeacherApplication.where(application_year: APPLICATION_CURRENT_YEAR).find_by(user: user)
     end
 
     def assigned_workshop
@@ -857,9 +865,9 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
-      FILTERED_LABELS[course]
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
+      status == 'incomplete' ? {} : FILTERED_LABELS[course]
     end
 
     # List of columns to be filtered out based on selected program (course)
@@ -1109,6 +1117,7 @@ module Pd::Application
     end
 
     def meets_criteria
+      return if incomplete?
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]
@@ -1147,29 +1156,16 @@ module Pd::Application
     end
 
     # Called after the application is created. Do any manipulation needed for the form data
-    # hash here, as well as wend emails
+    # hash here, as well as send emails
     def on_successful_create
-      update_user_school_info!
+      return if status == 'incomplete'
+
       queue_email :confirmation, deliver_now: true
-
-      form_data_hash = sanitize_form_data_hash
-
-      update_form_data_hash(
-        {
-          cs_total_course_hours: form_data_hash.slice(
-            :cs_how_many_minutes,
-            :cs_how_many_days_per_week,
-            :cs_how_many_weeks_per_year
-          ).values.map(&:to_i).reduce(:*) / 60
-        }
-      )
-
       auto_score!
-      save
-
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         queue_email :principal_approval, deliver_now: true
       end
+      save
     end
 
     # Called after principal approval has been created. Do any manipulation needed for the

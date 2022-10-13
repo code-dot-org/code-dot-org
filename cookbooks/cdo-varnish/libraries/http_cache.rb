@@ -13,13 +13,16 @@ class HttpCache
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
+    # Offline experiment flag, to allow users into the pilot
+    'offline_pilot',
+    # Experiment flag used to debug the onetrust cookie experience.
+    'onetrust_cookie_scripts',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
 
   # A list of script levels that should not be cached, even though they are
-  # in a cacheable script, because teachers need to be able to review them.
-  # Currently, teachers are not able to review student work on cached levels.
+  # in a cacheable script
   UNCACHED_UNIT_LEVEL_PATHS = [
     '/s/dance/lessons/1/levels/13',
     '/s/dance-2019/lessons/1/levels/10',
@@ -139,7 +142,7 @@ class HttpCache
               /amazon-future-engineer*
               /create-company-profile*
               /edit-company-profile*
-              /teacher-dashboard*
+              /review-hociyskvuwa*
               /manage-professional-development-workshops*
               /professional-development-workshop-surveys*
               /pd-program-registration*

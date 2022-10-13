@@ -80,15 +80,21 @@ export default function StylizedBaseDialog(props) {
       onClick={props.handleCancellation || props.handleClose}
     />,
     <FooterButton
+      className="uitest-base-dialog-confirm"
       key="confirm"
       type={FooterButtonType.confirm}
       text={props.confirmationButtonText}
       onClick={props.handleConfirmation || props.handleClose}
+      disabled={props.disableConfirmationButton}
     />
   ];
 
   return (
-    <BaseDialog {...passThroughProps()} useUpdatedStyles>
+    <BaseDialog
+      {...passThroughProps()}
+      useUpdatedStyles
+      useFlexbox={props.stickyHeaderFooter}
+    >
       {props.title && (
         <>
           <div style={styles.container}>{renderTitle()}</div>
@@ -98,13 +104,14 @@ export default function StylizedBaseDialog(props) {
       <div
         style={{
           ...styles.container,
-          ...(styles.body[props.type] || {})
+          ...(styles.body[props.type] || {}),
+          overflowY: props.stickyHeaderFooter && 'auto'
         }}
       >
-        {props.body}
+        {props.body ? props.body : props.children}
       </div>
       {!props.hideFooter && (
-        <div>
+        <div className="uitest-base-dialog-footer">
           {horizontalRule}
           <div
             style={{
@@ -123,7 +130,9 @@ export default function StylizedBaseDialog(props) {
 
 StylizedBaseDialog.propTypes = {
   title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+  body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+  // Alternative to providing body prop
+  children: PropTypes.node,
   footerJustification: PropTypes.oneOf([
     'flex-start',
     'flex-end',
@@ -133,10 +142,12 @@ StylizedBaseDialog.propTypes = {
   hideFooter: PropTypes.bool,
   confirmationButtonText: PropTypes.string.isRequired,
   cancellationButtonText: PropTypes.string.isRequired,
+  disableConfirmationButton: PropTypes.bool,
   handleConfirmation: PropTypes.func,
   handleClose: PropTypes.func.isRequired,
   handleCancellation: PropTypes.func,
-  type: PropTypes.oneOf(Object.keys(DialogStyle))
+  type: PropTypes.oneOf(Object.keys(DialogStyle)),
+  stickyHeaderFooter: PropTypes.bool
 };
 
 StylizedBaseDialog.defaultProps = {

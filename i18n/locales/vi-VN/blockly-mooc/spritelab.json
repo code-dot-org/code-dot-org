@@ -52,7 +52,7 @@
   "clickAllSprites": "Hãy đảm bảo nhấp chuột vào từng nhân vật sau khi nhấn *“Run”* (chạy).",
   "clickAnySprite": "Hãy đảm bảo nhấp chuột vào bất kỳ nhân vật nào sau khi nhấn *“Run”* (chạy).",
   "clickButNoPrint": "Bạn đã nhấp chuột vào một nhân vật nhưng không hiện văn bản nào. Hãy thêm khối `print` (hiện) vào sự kiện `when clicked` (khi nhấp chuột).",
-  "clickButNoSay": "Bạn đã nhấp chuột vào một nhân vật nhưng nhân vật không nói gì cả. Hãy thêm khối `say` (nói) vào sự kiện `when clicked` (khi nhấp chuột). \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Xin chào cả thế giới!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"mặc định\"</title></block></value></block></xml>",
+  "clickButNoSay": "Bạn đã nhấp chuột vào một nhân vật nhưng nhân vật không nói gì cả. Hãy thêm khối `say` (nói) vào sự kiện `when clicked` (khi nhấp chuột). \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Xin chào thế giới!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"mặc định\"</title></block></value></block></xml>",
   "clickButNoSpeech": "Bạn đã nhấp chuột vào một nhân vật nhưng không nhân vật nào nói gì cả. Hãy thêm khối `say` (nói) vào sự kiện `when clicked` (khi nhấp chuột). \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Xin chào cả thế giới!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"mặc định\"</title></block></value></block></xml>",
   "clicked": "nhấn vào",
   "clickedSprite": "nhân vật đã nhấp chuột",

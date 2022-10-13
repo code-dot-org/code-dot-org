@@ -13,7 +13,7 @@ import Sounds from '../Sounds';
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? 'songManifest2021.json'
+      ? 'songManifest2021_v3.json'
       : 'testManifest.json';
   }
 
@@ -105,4 +105,16 @@ export function parseSongOptions(songManifest) {
     songs[song.id] = {title: song.text, url: song.url, pg13: song.pg13};
   });
   return songs;
+}
+
+// Given a songManifest, returns a list of keys that represent the songs to
+// be displayed based on whether the song filter is on.
+export function getFilteredSongKeys(fullSongManifest, filterOn) {
+  const allSongKeys = Object.keys(fullSongManifest);
+  if (filterOn) {
+    // Filter is on, only include songs that are not pg13.
+    return allSongKeys.filter(key => !fullSongManifest[key].pg13);
+  }
+  // Filter is off, all songs may be displayed.
+  return allSongKeys;
 }

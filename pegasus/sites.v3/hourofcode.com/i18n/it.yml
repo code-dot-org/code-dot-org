@@ -5,32 +5,43 @@ it:
   language: Italiano
   front_title: Partecipa all'evento didattico più popolare del mondo, %{campaign_date}
   coming_soon: Sta arrivando
-  campaign_date_start_short: 6 dic.
-  campaign_date_start_long: 6 dicembre
-  campaign_date_short: 6 -12 dic.
-  campaign_date_full: 6-12 dicembre
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6- 12 dicembre 2021
+  campaign_date_start_short: 5 dic.
+  campaign_date_start_long: 5 dicembre
+  campaign_date_short: 5 - 11 dic.
+  campaign_date_full: 5-11 dicembre
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5 - 11 dicembre 2022
+  nonus_campaign_date_start_short: 1 ott.
+  nonus_campaign_date_start_long: '1 ottobre '
+  nonus_campaign_date_short: 1 ott. - 18 dic.
+  nonus_campaign_date_full: 1 ottobre - 18 dicembre
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
   latam_campaign_date_start_short: 1 ott.
   latam_campaign_date_start_long: '1 ottobre '
-  latam_campaign_date_short: 1 ott. - 12 dic.
-  latam_campaign_date_full: 1 ottobre - 12 dicembre
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1 ottobre 2020 - 12 dicembre 2021
-  europe_campaign_date_start_short: 10 ottobre
-  europe_campaign_date_start_long: 10 ottobre
-  europe_campaign_date_short: 10-25 ott.
-  europe_campaign_date_full: 10-25 ottobre
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 10-25 ottobre, 2020
-  africa_campaign_date_start_short: 6 dic.
-  africa_campaign_date_start_long: 6 dicembre
+  latam_campaign_date_short: 1 ott. - 18 dic.
+  latam_campaign_date_full: 1 ottobre - 18 dicembre
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
+  europe_campaign_date_start_short: 1 ott.
+  europe_campaign_date_start_long: '1 ottobre '
+  europe_campaign_date_short: 1 ott. - 18 dic.
+  europe_campaign_date_full: 1 ottobre - 18 dicembre
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
+  africa_campaign_date_start_short: 1 ott.
+  africa_campaign_date_start_long: '1 ottobre '
   africa_campaign_date_short: 1-31 ott.
-  africa_campaign_date_full: 1-31 ottobre
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 1-31 ottobre, 2020
-  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
-    the connections!'
+  africa_campaign_date_full: 1 ottobre - 18 dicembre
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
+  hoc2022_header: Esplora, gioca, crea!
+  social_hoc2022_explore_play_create: Utilizza l'informatica per esplorare, giocare
+    e creare!
+  codeorg_homepage_hoc2022_body: 'Esplora l''universo, segnre un gol, prendere il
+    ritmo: ci sono così tanti modi per sfruttare l''informatica.'
+  social_hoc2021_cse: Durante l'#OraDelCodice (#HourOfCode), stiamo celebrando l'#informaticaovunque
+    (#CSEverywhere). Scopri le connessioni.
   hoc2020_header: Impara oggi, costruisci un domani più luminoso.
   hoc2020_header_with_line_break_markdown: |-
     Impara oggi,
@@ -149,6 +160,9 @@ it:
     del mondo. L'informatica è molto più che codifica! Goditi il primo passo di Code.org
     in un nuovo viaggio per insegnare di più sull'intelligenza artificiale durante
     il nostro piano di studi.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: L'Ora del Codice dal vivo
   hoc_live_sign_up_title: Iscriviti a l'Ora del Codice dal vivo
   hoc_live_learn_title: Impara dal vivo con Hour of Code
@@ -167,12 +181,17 @@ it:
     automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni
     etiche e in che modo l'Intelligenza Artificiale può essere utilizzata per affrontare
     i problemi del mondo.
-  hoc_overview_csc_header: Introducing CS Connections
-  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
-    computer science and other subjects like math, language arts, science, and social
-    studies. Through these modules, projects, and lessons, classrooms can explore
-    their usual subjects in exciting new ways!
-  hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_overview_csc_header: Introduzione ai percorsi di informatica interdisciplinare
+  hoc_overview_csc_desc: Questo nostro nuovissimo curriculum evidenzia le connessioni
+    tra l'informatica e altre materie, come matematica, letteratura, arte, scienze
+    e scienze umane. Attraverso questi corsi gli studenti hanno l'opportunità di esplorare
+    le loro consuete materie di studio in modi nuovi ed entusiasmanti!
+  hoc_overview_csc_learn_more: Impara di più sull'informatica interdisciplinare
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Che cosa è l'Intelligenza Artificiale?
   ai_video_title_algorithm_bias: Combattere i pregiudizi negli algoritmi
   ai_video_title_phone_knows_dog: In che modo il tuo telefono capisce che si tratta
@@ -242,13 +261,13 @@ it:
     dell'Ora del Codice. Esercitazioni di un'ora disponibili in oltre 45 lingue. Non
     è necessaria alcuna esperienza.
   hourofcode_homepage_hoc2018_header_line2: Da 4 a 104 anni.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: L'Ora del Codice è in arrivo
   codeorg_homepage_celebrate_cse: Celebra l'informatica ovunque tu sia!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
-  codeorg_homepage_csc_title: CS Connections
+  codeorg_homepage_csc: L'informatica incontra la letteratura, la matematica e molto
+    altro nell'informatica interdisciplinare
+  codeorg_homepage_csc_long: Osserva l'incontro tra l'informatica, la lingusitica,
+    la matematica e molto altro nel nostro curriculu,!
+  codeorg_homepage_csc_title: Informatica interdisciplinare
   hoc2018_tutorial_mchoc_description: Utilizza blocchi di codice per portare Alex
     o Steve in un'avventura nel mondo di Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Prova il nuovo <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -506,6 +525,26 @@ it:
   front_join_us_n_students_served: 'Ore già svolte: #'
   front_join_us_challenge: Vinci una chat video con una celebrità per la tua classe!
   front_join_us_learn_more: Scopri di più
+  cta_see_whats_new: Scopri le novità
+  cta_try_more_activities: Prova altre attività
+  cta_try_an_activity: Prova un'attività
+  hoc_homepage_join_the_movement_heading: Partecipa al movimento
+  hoc_homepage_join_the_movement_description: Hour of Code è disponibile tutto l'anno,
+    ma vailable year-round, ma ogni anno a dicembre alla tua lezione possono partecipare
+    milioni di studenti che celebrano la  Settimana di Educazione all'Informatica
+    con Hour of Code. La registrazione per la celebrazione annuale inizia ogni anno
+    a ottobre.
+  hoc_homepage_what_is_hoc_subhead: Tutorial di un'ora in oltre 45 lingue. Non è richiesta
+    alcuna esperienza. Le attività di Hour of Code sono disponibili gratuitamente
+    tuto l'anno.
+  hoc_homepage_what_is_hoc_description: Hour of Code è un'introduzione all'informatica
+    della durata di un'ora, in cui si ricorre a tutorial divertenti per dimostrare
+    che chiunque può imparare le basi. Questa campagna popolare è supportata da oltre
+    400 partner e 200.000 educatori in tutto il mondo.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Leggi la nostra guida pratica](%{howto_guide_url})
+    per pianificare un evento per la tua lezione."
+  hoc_homepage_highlights_heading: Punti salienti di Hour of Code
+  hoc_homepage_organized_by: Hour of Code è organizzato da [Code.org](%{codeorg_url}).
   signup_closed: Le registrazioni per l'Ora del Codice al momento sono chiuse. Ricontrolla
     ad ottobre per iscriverti alla prossima Ora del Codice.
   signup_registration_not_required: Non è necessario registrarsi per partecipare!
@@ -559,8 +598,6 @@ it:
     per favore indica un differente nome o indirizzo di posta elettronica per ognuno
     di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo
     di posta elettronica.
-  signup_registration_deadline: Le iscrizioni per l'Ora del Codice si chiudono il
-    13 dicembre.
   signup_name_placeholder: Il tuo nome
   signup_email_placeholder: Per esempio, nome.cognome@posta.istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
@@ -1065,13 +1102,15 @@ it:
     Neymar Jr, Carmelo Anthony e altri ancora stimolano gli studenti a dare il massimo.
   highlights_constant_athletes_short_heading: Dai il massimo
   footer_copyright_message: Copyright %{current_year} Code.org. Tutti i diritti riservati.
-  footer_trademark_message: Hour of Code™ è un marchio registrato di Code.org.
+  footer_trademark_message: Hour of Code® e Hora del Código® sono marchi registrati
+    di Code.org.
   footer_built_on_github: Progettato su GitHub da Microsoft
   footer_menu_partners: Partner e Consulenti
   footer_menu_contact: Contattaci
   footer_menu_support: Supporto
   footer_menu_terms: Termini di servizio
   footer_menu_privacy: Informativa sulla privacy
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: ORA del CODICE
   learn_banner_blurb: Prova un'esercitazione di un'ora pensata per tutte le età in
     oltre 45 lingue. Unisciti a milioni di studenti ed insegnanti in oltre 180 paesi
@@ -1515,7 +1554,7 @@ it:
   tutorial_spheroit_name: 'Blocchi 2: Se/Altrimenti'
   tutorial_gameofcodes_name: Gioco di codici
   tutorial_blocklygames_name: Giochi Blockly
-  tutorial_spherohello_name: 'Testo 1: ciao mondo'
+  tutorial_spherohello_name: 'Testo 1: Ciao Mondo'
   tutorial_spheroarcade_name: Parco giochi arcade Sphero
   tutorial_bcpy1_name: Mondo di Python
   tutorial_bcpy2_name: Mondo di Python 2
@@ -9994,10 +10033,10 @@ it:
     gli studenti mettono insieme
   tutorial_ai-oceans_string_detail_programming_languages: Intelligenza Artificiale
     e Apprendimento Automatico (Machine Learning)
-  tutorial_hello_name: Hello World
+  tutorial_hello_name: Ciao Mondo
   tutorial_raspispace_name: 'Space Talk: Launch into Scratch coding'
   tutorial_codemonkeyjump_name: 'Blocks Jumper: Game Creation'
-  tutorial_poemart_name: Poem Art
+  tutorial_poemart_name: L'arte della poesia
   tutorial_kodablehero_name: Design your Hero
   tutorial_cacloud_name: Operation Cloud
   tutorial_blocksmithbot_name: Bot is sus?!
@@ -10094,7 +10133,8 @@ it:
   tutorial_codemonkeyjump_longdescription: Create games and projects with block coding!
     In this short course students will learn to create a simple jumper game using
     basic event and function blocks.
-  tutorial_poemart_longdescription: Illustrate the mood of a poem with code.
+  tutorial_poemart_longdescription: Illustra lo stato d'animo di una poesia con il
+    codice.
   tutorial_kodablehero_longdescription: Welcome to Bug World! The Kodable fuzzFamily
     needs your coding help. Use your real-life heroes and your imagination to design
     a character who will protect the fuzzFamily. You'll choose the properties your
@@ -10612,8 +10652,9 @@ it:
     telefono Windows, telefono Android, iPhone
   tutorial_raspispace_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_codemonkeyjump_string_platforms: Tutti i browser moderni
-  tutorial_poemart_string_platforms: All modern browsers, Android tablet, iPad, Windows
-    phone, Android phone, iPhone, Game console app, Screen reader
+  tutorial_poemart_string_platforms: Tutti i browser moderni, tablet Android, iPad,
+    telefono Windows, telefono Android, iPhone, console per videogame, lettore di
+    schermo
   tutorial_kodablehero_string_platforms: Tutti i browser moderni, iPad, iPhone
   tutorial_cacloud_string_platforms: Tutti i browser moderni
   tutorial_blocksmithbot_string_platforms: Tutti i browser moderni
@@ -10902,6 +10943,14 @@ it:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Da pre-scolare a 11 anni
+  tutorial_icomputefireworks_string_platforms: Tutti i browser moderni
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blocchi
   school_not_found_heading: Non siamo riusciti a trovare la tua scuola. Inserisci
     ulteriori informazioni.
   school_name: Nome della scuola
@@ -10961,86 +11010,167 @@ it:
   all: Tutti
   dont_know: Non lo so
   language_label: Lingua
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: Italiano
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Italiano
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Italiano
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

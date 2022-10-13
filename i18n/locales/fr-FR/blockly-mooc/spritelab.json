@@ -68,7 +68,7 @@
   "debugBehaviors": "Vous avez fait une erreur à propos des comportements.",
   "debugEvents": "Vous avez fait une erreur à propos des évènements.",
   "debugGroups": "Vous avez fait une erreur à propos d'un groupe de sprite.",
-  "debugMovement": "Votre sprite n'a pas bougé.",
+  "debugMovement": "Votre lutin n'a pas bougé.",
   "debugProps": "Vous avez fait une erreur à propos des propriétés des sprites.",
   "debugSprites": "Vous avez fait une erreur à propos des sprites.",
   "debugVariables": "Vous avez fait une erreur à propos des variables.",

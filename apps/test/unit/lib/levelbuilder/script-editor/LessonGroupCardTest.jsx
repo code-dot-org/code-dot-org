@@ -65,6 +65,7 @@ describe('LessonGroupCard', () => {
       lessonGroupMetrics: {},
       targetLessonGroupPos: null,
       lessonKeys: [],
+      allowMajorCurriculumChanges: true,
       lessonGroup: {
         key: 'lg-key',
         displayName: 'Display Name',
@@ -115,6 +116,38 @@ describe('LessonGroupCard', () => {
         .at(1)
         .props().markdown
     ).to.equal('Big questions');
+  });
+
+  it('hides OrderControls when not allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <LessonGroupCard {...defaultProps} allowMajorCurriculumChanges={false} />
+    );
+
+    expect(wrapper.find('OrderControls')).to.have.lengthOf(0);
+  });
+
+  it('hides button when not allowed to make major curriculum changes and not the last LessonGroupCard', () => {
+    const wrapper = shallow(
+      <LessonGroupCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+        lessonGroupsCount={2}
+      />
+    );
+
+    expect(wrapper.find('button')).to.have.lengthOf(0);
+  });
+
+  it('shows button when not allowed to make major curriculum changes and is the last LessonGroupCard', () => {
+    const wrapper = shallow(
+      <LessonGroupCard
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+        lessonGroupsCount={1}
+      />
+    );
+
+    expect(wrapper.find('button')).to.have.lengthOf(1);
   });
 
   it('displays LessonGroupCard correctly when not user facing', () => {

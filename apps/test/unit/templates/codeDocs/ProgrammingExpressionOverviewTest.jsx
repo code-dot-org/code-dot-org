@@ -24,6 +24,12 @@ describe('ProgrammingExpressionOverview', () => {
           description: 'description'
         },
         {name: 'param2'}
+      ],
+      examples: [
+        {
+          name: 'Example 1',
+          description: 'the first example'
+        }
       ]
     };
   });
@@ -39,6 +45,7 @@ describe('ProgrammingExpressionOverview', () => {
       defaultProgrammingExpression.name
     );
     expect(wrapper.find('h2').map(h => h.text())).to.eql([
+      'Examples',
       'Syntax',
       'Parameters',
       'Returns',
@@ -73,6 +80,17 @@ describe('ProgrammingExpressionOverview', () => {
 
     expect(wrapper.text()).to.contain(defaultProgrammingExpression.category);
     expect(wrapper.text()).to.contain(defaultProgrammingExpression.returnValue);
+  });
+
+  it('hides the examples header if no syntax is provided', () => {
+    delete defaultProgrammingExpression.examples;
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={defaultProgrammingExpression}
+      />
+    );
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Examples');
   });
 
   it('hides the syntax header if no syntax is provided', () => {
@@ -130,5 +148,85 @@ describe('ProgrammingExpressionOverview', () => {
     expect(wrapper.find('h2').map(h => h.text())).to.not.include(
       'Additional Information'
     );
+  });
+
+  it('shows block in title if blockName is provided', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          blockName: 'gamelab_location_picker',
+          imageUrl: 'images.code.org/img'
+        }}
+      />
+    );
+    expect(wrapper.find('h3').length).to.equal(0);
+    expect(wrapper.find('img').length).to.equal(0);
+    expect(
+      wrapper.find('div[title="gamelab_location_picker"]').length
+    ).to.equal(1);
+  });
+
+  it('shows image instead of name if image is provided', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          imageUrl: 'images.code.org/img'
+        }}
+      />
+    );
+    expect(wrapper.find('h3').length).to.equal(0);
+    expect(wrapper.find('img').length).to.equal(1);
+    expect(wrapper.find('img').props().src).to.equal('images.code.org/img');
+  });
+
+  it('shows video if one is provided', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{...defaultProgrammingExpression, video: {}}}
+      />
+    );
+    expect(wrapper.find('#programming-expression-video').length).to.equal(1);
+  });
+
+  it('uses hsl color if array is provided for color', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          color: [355, '.7', '.7']
+        }}
+      />
+    );
+    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
+      'hsl(355,70%, 70%)'
+    );
+  });
+
+  it('uses hex color if string is provided for color', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          color: '#fff176'
+        }}
+      />
+    );
+    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
+      '#fff176'
+    );
+  });
+
+  it('handles null color', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={{
+          ...defaultProgrammingExpression,
+          color: null
+        }}
+      />
+    );
+    expect(wrapper.find('span').props().style.backgroundColor).to.be.null;
   });
 });

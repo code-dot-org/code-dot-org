@@ -17,7 +17,6 @@ import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 
 export default function initPage(unitEditorData) {
   const scriptData = unitEditorData.script;
-  const lessonLevelData = unitEditorData.lessonLevelData;
   const lessonGroups = mapLessonGroupDataForEditor(scriptData.lesson_groups);
 
   const locales = unitEditorData.locales;
@@ -30,21 +29,10 @@ export default function initPage(unitEditorData) {
   });
   const store = getStore();
   store.dispatch(init(lessonGroups));
-  const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({
-      type,
-      link
-    })
-  );
   store.dispatch(
-    initResources(
-      'teacherResource',
-      scriptData.migrated_teacher_resources || []
-    ),
+    initResources('teacherResource', scriptData.teacher_resources || []),
     initResources('studentResource', scriptData.student_resources || [])
   );
-
-  let announcements = scriptData.announcements || [];
 
   ReactDOM.render(
     <Provider store={store}>
@@ -52,7 +40,8 @@ export default function initPage(unitEditorData) {
         id={scriptData.id}
         name={unitEditorData.script.name}
         i18nData={unitEditorData.i18n}
-        initialPublishedState={scriptData.publishedState}
+        initialPublishedState={scriptData.coursePublishedState}
+        initialUnitPublishedState={scriptData.unitPublishedState}
         initialInstructionType={scriptData.instructionType}
         initialInstructorAudience={scriptData.instructorAudience}
         initialParticipantAudience={scriptData.participantAudience}
@@ -63,7 +52,7 @@ export default function initPage(unitEditorData) {
           scriptData.student_detail_progress_view
         }
         initialProfessionalLearningCourse={
-          scriptData.professionalLearningCourse || ''
+          scriptData.deeperLearningCourse || ''
         }
         initialOnlyInstructorReviewRequired={
           scriptData.only_instructor_review_required
@@ -72,15 +61,13 @@ export default function initPage(unitEditorData) {
         initialWrapupVideo={scriptData.wrapupVideo || ''}
         initialProjectWidgetVisible={scriptData.project_widget_visible}
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
-        initialTeacherResources={teacherResources}
         initialLastUpdatedAt={scriptData.updated_at}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
-        initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialCurriculumPath={scriptData.curriculum_path || ''}
         initialPilotExperiment={scriptData.pilot_experiment || ''}
         initialEditorExperiment={scriptData.editor_experiment || ''}
-        initialAnnouncements={announcements}
+        initialAnnouncements={scriptData.announcements || []}
         initialSupportedLocales={scriptData.supported_locales || []}
         initialLocales={locales}
         initialProjectSharing={scriptData.project_sharing || false}
@@ -102,13 +89,14 @@ export default function initPage(unitEditorData) {
           scriptData.weeklyInstructionalMinutes
         }
         initialCourseVersionId={scriptData.courseVersionId}
-        preventCourseVersionChange={scriptData.preventCourseVersionChange}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
         initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
+        courseOfferingEditorLink={scriptData.courseOfferingEditPath}
+        isCSDCourseOffering={scriptData.isCSDCourseOffering}
       />
     </Provider>,
     document.querySelector('.edit_container')

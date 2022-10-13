@@ -6,11 +6,12 @@ import {
   ButtonsWithAdditionalTextFields,
   ButtonsWithAdditionalTextFieldsFromOptions
 } from '../form/Buttons';
-import {defaultOptions} from '../LabeledFormComponent';
+import {useDefaultOptions} from '../LabeledFormComponent';
 
 export const LabeledCheckBoxes = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'check',
     ...props
   };
@@ -22,8 +23,9 @@ LabeledCheckBoxes.propTypes = {
 };
 
 export const LabeledCheckBoxesWithAdditionalTextFields = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'check',
     textFieldMap: props.textFieldMap,
     ...props
@@ -37,8 +39,9 @@ LabeledCheckBoxesWithAdditionalTextFields.propTypes = {
 };
 
 export const LabeledDynamicCheckBoxes = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'check',
     answers: props.options,
     ...props
@@ -52,8 +55,9 @@ LabeledDynamicCheckBoxes.propTypes = {
 };
 
 export const LabeledDynamicCheckBoxesWithAdditionalTextFields = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     type: 'check',
     options: props.options,
     textFieldMap: props.textFieldMap,

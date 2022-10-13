@@ -1,0 +1,248 @@
+$light_background_colour: #a69bc1;
+$blue_background_colour: #59b9dc;
+$gold_background_colour: #ffdfa1;
+$dark_blue_background_colour: #0d4172;
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.homepage-professional-learning-banner.animate-text {
+
+  .text-wrapper {
+    animation: fadein 2s;
+  }
+}
+
+.homepage-professional-learning-banner {
+  margin-bottom: 30px;
+
+  a {
+    font-family: "Gotham 4r", sans-serif;
+    text-decoration: none;
+  }
+
+  button {
+    min-width: 100px;
+    background-color: white;
+    border-color: white;
+    color: black;
+    font-weight: bold;
+  }
+
+  .text-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .header {
+      font-weight: bold;
+    }
+  }
+
+  .professional-learning-banner-desktop.homepage {
+
+    .text-wrapper {
+      left: 3.5vw;
+      width: calc(100% - 650px);
+      line-height: 1.3;
+
+      .header {
+        padding-bottom: 5px;
+        font-size: 1.8vw;
+      }
+
+      .text {
+        font-size: 1.2vw;
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+
+      .text-wrapper {
+
+        .header {
+          font-size: 26px;
+        }
+
+        .text {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+
+  .professional-learning-banner-desktop {
+    background-color: $gold_background_colour;
+    height: 97px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+
+    .banner {
+      text-align: center;
+      margin: 0 auto;
+      float: right;
+      height: 100%;
+
+      img {
+        width: 600px;
+        height: 100%;
+      }
+    }
+
+    .text-wrapper {
+      width: 50%;
+      left: 30px;
+
+      .header {
+        color: black;
+        position: relative;
+        font-size: 18px;
+      }
+
+      .text {
+        color: black;
+        position: relative;
+        font-size: 14px;
+        width: calc(100% - 150px);
+      }
+    }
+
+    .right-button {
+      padding-top: 32px;
+      text-align: center;
+      position: absolute;
+      right: 64px;
+
+      button {
+        margin-top: 0px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .professional-learning-banner-tablet.homepage {
+
+    .text-wrapper {
+      right: 24px;
+
+      .header {
+        color: black;
+        padding-bottom: 5px;
+        font-size: 2.5vw;
+      }
+
+      .text {
+        color: black;
+        font-size: 2vw;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .professional-learning-banner-tablet {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+
+    .banner {
+      text-align: center;
+      margin: 0 auto;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text-wrapper {
+      right: 12px;
+      width: 50%;
+      float: right;
+
+      .header {
+        color: white;
+        padding: 15px 0px 5px 0px;
+        text-align: center;
+        top: 0px;
+        font-size: 16px;
+      }
+
+      .text {
+        color: white;
+        line-height: 1.2;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      button {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .professional-learning-banner-phone.homepage {
+    background-color: $gold_background_colour;
+
+    .text-wrapper {
+      color: black;
+
+      .header {
+        font-size: 18px;
+      }
+
+      .text {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .professional-learning-banner-phone {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: $dark_blue_background_colour;
+
+    .text-wrapper {
+      color: white;
+      width: 100%;
+      padding-left: 24px;
+      padding-right: 24px;
+
+      .header {
+        padding: 15px 30px 5px 30px;
+        text-align: center;
+        top: 0px;
+        font-size: 16px;
+      }
+
+      .text {
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 13px;
+      }
+
+      button {
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

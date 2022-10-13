@@ -20,6 +20,19 @@ import reducers from '@cdo/apps/p5lab/reducers';
 import {setExternalGlobals} from '../../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
+const backgroundSprite = {
+  orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
+  propsByKey: {
+    '44c5937d-c5c0-4676-bd0c-f7a86e99dd98': {
+      name: 'grid',
+      sourceUrl:
+        'https://studio.code.org/api/v1/animation-library/spritelab/nG_cj1NXQ56VOdqMbGXqKxKupa4bCoNQ/category_backgrounds/background_grid.png',
+      categories: ['backgrounds']
+    }
+  }
+};
 
 describe('SpriteLab', () => {
   setExternalGlobals();
@@ -40,11 +53,11 @@ describe('SpriteLab', () => {
     });
     afterEach(() => document.body.removeChild(container));
 
-    let studioApp;
+    let mockStudioApp;
     beforeEach(() => {
       registerReducers({...commonReducers, ...reducers});
       instance = new SpriteLab();
-      studioApp = {
+      mockStudioApp = {
         setCheckForEmptyBlocks: sinon.spy(),
         showRateLimitAlert: sinon.spy(),
         setPageConstants: sinon.spy(),
@@ -61,7 +74,7 @@ describe('SpriteLab', () => {
     describe('After being injected with a studioApp instance', () => {
       let muteSpy;
       beforeEach(() => {
-        instance.injectStudioApp(studioApp);
+        instance.injectStudioApp(mockStudioApp);
         registerReducers({...commonReducers, ...reducers});
         instance.areAnimationsReady_ = sinon.stub().returns(true);
         instance.p5Wrapper = sinon.spy();
@@ -107,7 +120,8 @@ describe('SpriteLab', () => {
           }
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
-          initialAnimationList
+          initialAnimationList,
+          backgroundSprite
         );
         expect(resultingAnimations.orderedKeys.length).to.be.above(1);
       });
@@ -124,7 +138,8 @@ describe('SpriteLab', () => {
           }
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
-          initialAnimationList
+          initialAnimationList,
+          backgroundSprite
         );
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });
@@ -135,14 +150,40 @@ describe('SpriteLab', () => {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
             '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
-              name: 'cave'
+              name: 'grid'
             }
           }
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
-          initialAnimationList
+          initialAnimationList,
+          backgroundSprite
         );
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
+      });
+
+      describe('reactToExecutionError', () => {
+        let alertSpy;
+        beforeEach(() => {
+          alertSpy = sinon.stub(studioApp(), 'displayWorkspaceAlert');
+          sinon.stub(instance, 'getMsg').returns({
+            workspaceAlertError: () => 'translated string'
+          });
+        });
+
+        afterEach(() => {
+          alertSpy.restore();
+          instance.getMsg.restore();
+        });
+
+        it('displays a workspace alert if there is an executionError message', () => {
+          instance.reactToExecutionError('test string');
+          expect(alertSpy).to.have.been.calledOnce;
+        });
+
+        it('does nothing if there is no executionError message', () => {
+          instance.reactToExecutionError(undefined);
+          expect(alertSpy).to.not.have.been.called;
+        });
       });
 
       describe('dispatching Blockly events', () => {

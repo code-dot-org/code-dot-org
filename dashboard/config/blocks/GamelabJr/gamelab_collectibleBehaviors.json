@@ -1,0 +1,64 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "collectibleBehaviors",
+    "blockText": "{BEHAVIOR}",
+    "returnType": "Behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ],
+    "args": [
+      {
+        "name": "BEHAVIOR",
+        "options": [
+          [
+            "spinning right",
+            "new Behavior(spinning_right, [])"
+          ],
+          [
+            "spinning left",
+            "new Behavior(spinning_left, [])"
+          ],
+          [
+            "fluttering",
+            "new Behavior(fluttering, [])"
+          ],
+          [
+            "jittering",
+            "new Behavior(jittering, [])"
+          ],
+          [
+            "wobbling",
+            "new Behavior(wobbling, [])"
+          ],
+          [
+            "wandering",
+            "new Behavior(wandering, [])"
+          ],
+          [
+            "patrolling",
+            "new Behavior(patrolling, [])"
+          ],
+          [
+            "moving west and looping",
+            "new Behavior(moving_west_and_looping, [])"
+          ],
+          [
+            "moving east and looping",
+            "new Behavior(moving_east_and_looping, [])"
+          ],
+          [
+            "moving north and looping",
+            "new Behavior(moving_north_and_looping, [])"
+          ],
+          [
+            "moving south and looping",
+            "new Behavior(moving_south_and_looping, [])"
+          ]
+        ]
+      }
+    ]
+  }
+}

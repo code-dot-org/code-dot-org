@@ -4,15 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:16:42 UTC",
+    "family_name": "kindertest",
+    "serialized_at": "2022-04-08 15:40:37 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "kinderTest"
     }
@@ -119,6 +121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_ifvid"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +169,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +193,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new1a"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +217,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new2a"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +241,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +265,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +289,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_ifelsevid"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,6 +313,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -308,6 +337,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -329,6 +361,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new3a"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,6 +385,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new3b"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -371,6 +409,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new3c"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,6 +433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "KTest1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -413,6 +457,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "KTest2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -434,6 +481,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testArtistForTestK"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -455,6 +505,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testBeeFarmer"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -476,6 +529,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testPlaylabLevel"
+        ]
       },
       "bonus": false,
       "seeding_key": {

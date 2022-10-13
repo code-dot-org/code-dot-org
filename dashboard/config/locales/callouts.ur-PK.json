@@ -99,7 +99,7 @@
           "frozen_snowflake_branch": "\"ایک سنوفلیک برانچ بنائیں\" بلاک استعمال کریں"
         },
         "frozen square iterative": {
-          "frozen_create_square": "ایک اسکوائر کری-ایٹ کرنے کے لیے یہاں مزید بلاک اَٹیچ کریں"
+          "frozen_create_square": "ایک مربع بنانے کے لیے یہاں مزید بلاک منسلک کریں"
         },
         "outbreak2": {
           "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
@@ -145,7 +145,8 @@
           "hello_world_new": "نیا بلاک!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "نیا بلاک!"
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "نیا بلاک!"
@@ -250,7 +251,8 @@
           "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔",
+          "craft_run_button_callout": "اپنے پروگرام کو آزمانے کے لیے \"Run\" دبائیں"
         },
         "courseC_starWars_loops2_2018": {
           "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
@@ -274,10 +276,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "نیا بلاک!",
           "poetry_multiple_sprites": "نیا بلاک!",
-          "poetry_new_block": "نیا بلاک!"
+          "poetry_new_block": "نیا بلاک!",
+          "poetry_selector": "کوئی بھی نظم منتخب کریں، یا اپنی نظم درج کریں!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "نیا بلاک!"
+          "poetry_sound": "نیا بلاک!",
+          "poetry_music": "نیا بلاک!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "نیا بلاک!",
@@ -301,6 +305,193 @@
         },
         "MC HOC 2016 New Walk": {
           "MC_HOC_2016_New_Walk_callout2": "چلنا شروع کرنے کے لیے \"چلائیں\" دبائیں۔"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_animals_location": {
+          "pin": "پن"
+        },
+        "helloworld_animals_multi": {
+          "pin": "پن"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_emoji_location": {
+          "pin": "پن"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "پن"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_location": {
+          "pin": "پن"
+        },
+        "helloworld_food_multi": {
+          "pin": "پن"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_retro_location": {
+          "pin": "پن"
+        },
+        "helloworld_retro_multi": {
+          "pin": "پن"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "یہاں کوڈ بلاکس تلاش کریں.",
+          "run_button": "اپنے اینیمیشن کو اس بٹن کے ساتھ آزمائیں."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "اب آپ ڈیزائن موڈ میں ہیں۔"
+        },
+        "frozen line": {
+          "run": "اپنے پروگرام کو آزمانے کے لیے \"Run\" دبائیں!",
+          "move_elsa_forward": "ایلسا کو آگے کی جانب حرکت دینے کے لیے ایک \"Move Forward\" بلاک کو \"When Run\" بلاک کے نیچے رکھ لیں۔"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "ایلسا کو موڑنے کے لیے \"Turn\" بلاک استعمال کریں۔ ڈراپ ڈاون فہرست میں نمبر متعین کرتا ہے کہ ایلسا کتنا مڑے گی۔"
+        },
+        "frozen square loop": {
+          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "ڈراپ ڈاؤن فہرست استعمال کرتے ہوئے \"???\" کی جگہ ایک نمبر لگائیں"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "ڈانسر کی قسم یہاں منتخب کریں."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "اس بلاک کو اپنے پروگرام میں شامل کریں۔.",
+          "arrow_buttons": "اپنے ڈانسر کو کنٹرول کرنے کے لئے ایرو کے بٹن دبائیں۔."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "اس بلاک کو اپنے پروگرام میں شامل کریں!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "اپنے پروگرام میں ایک نیا ایونٹ شامل کریں۔."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "نیا بلاک!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "نیا بلاک!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "نیا بلاک!",
+          "new_block_4": "نیا بلاک!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "بلاک کھولنے کے لئے یہاں کلک کر لیں۔",
+          "pointerlocation": "یہاں پر سبجکٹ بلاک گھسیٹ کر لے آئیں۔"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "یہ چھوٹی سی ہدایت کمپیوٹر کو کام کی جگہ پر اسی نام کے ساتھ کوڈ کا بڑا حصہ چلانے کا کہتی ہے۔"
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "یہ ایک 'دہرائیں' لوپ ہے! اسے کام کی جگہ پر کلک کریں اور کوڈ شامل کریں جسے آپ بار بار چلانا چاہتے ہیں۔"
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "ایجنٹ پانی پر منڈلا سکتا ہے، لیکن کھلاڑی ایسا نہیں کر سکتا!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "آپ ان بلاکس کو پھینک نہیں سکتے ہیں، لیکن آپ ان کی تدوین کر سکتے ہیں!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "ایجنٹ آتش فشاں مادے پر منڈلا سکتا ہے، لیکن اسٹیو اور ایلیکس ایسا نہیں کر سکتے!"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "ایک \"آگے بڑھیں\" بلاک کو گھسیٹ کر لائیں اور اسے دوسرے بلاک کے نیچے لگائیں۔"
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseE_aboutme_22022": {
+          "": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
         }
       }
     }

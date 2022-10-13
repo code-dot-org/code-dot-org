@@ -1,6 +1,6 @@
 module Pd::Application
   class FacilitatorApplicationMailer < ActionMailer::Base
-    default from: 'Code.org <facilitators@code.org>'
+    default from: 'Dave Frye <facilitators@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
     helper_method :signed_by, :from
 
@@ -42,8 +42,8 @@ module Pd::Application
       "#{signed_by(facilitator_application)} <facilitators@code.org>"
     end
 
-    def signed_by(facilitator_application)
-      facilitator_application.csf? ? 'Megan Hochstatter' : 'Sarah Fairweather'
+    def signed_by
+      'Dave Frye'
     end
   end
 end

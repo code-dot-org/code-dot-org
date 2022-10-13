@@ -22,6 +22,7 @@ import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledT
 
 class LessonGroupCard extends Component {
   static propTypes = {
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
     lessonGroup: lessonGroupShape.isRequired,
     lessonGroupsCount: PropTypes.number.isRequired,
     lessonGroupMetrics: PropTypes.object,
@@ -224,7 +225,11 @@ class LessonGroupCard extends Component {
   };
 
   render() {
-    const {lessonGroup, targetLessonGroupPos} = this.props;
+    const {
+      lessonGroup,
+      targetLessonGroupPos,
+      allowMajorCurriculumChanges
+    } = this.props;
     const {draggedLessonPos} = this.state;
     const isTargetLessonGroup = targetLessonGroupPos === lessonGroup.position;
     return (
@@ -244,11 +249,13 @@ class LessonGroupCard extends Component {
                 onChange={this.handleChangeLessonGroupName}
                 style={{width: 300}}
               />
-              <OrderControls
-                name={lessonGroup.key || '(none)'}
-                move={this.handleMoveLessonGroup}
-                remove={this.handleRemoveLessonGroup}
-              />
+              {allowMajorCurriculumChanges && (
+                <OrderControls
+                  name={lessonGroup.key || '(none)'}
+                  move={this.handleMoveLessonGroup}
+                  remove={this.handleRemoveLessonGroup}
+                />
+              )}
             </div>
             <div>
               <label>
@@ -300,19 +307,23 @@ class LessonGroupCard extends Component {
             handleDragStart={this.handleDragStart}
             removeLesson={this.handleRemoveLesson}
             cloneLesson={this.handleCloneLesson}
+            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         ))}
-        <div style={styles.bottomControls}>
-          <button
-            onMouseDown={this.handleAddLesson}
-            className="btn"
-            style={styles.addButton}
-            type="button"
-          >
-            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Lesson
-          </button>
-        </div>
+        {(allowMajorCurriculumChanges ||
+          this.props.lessonGroup.position === this.props.lessonGroupsCount) && (
+          <div style={styles.bottomControls}>
+            <button
+              onMouseDown={this.handleAddLesson}
+              className="btn"
+              style={styles.addButton}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Lesson
+            </button>
+          </div>
+        )}
         {/* This dialog lives outside LessonToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}
         <RemoveLessonDialog

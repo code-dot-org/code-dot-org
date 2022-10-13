@@ -1,7 +1,0 @@
-{
-  "category": "Math",
-  "config": {
-    "docFunc": "codestudio_randomInt",
-    "func": "math_random_int"
-  }
-}

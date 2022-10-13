@@ -875,7 +875,7 @@ Calc.checkExamples_ = function() {
     var name = unfilled
       .getRootBlock()
       .getInputTargetBlock('ACTUAL')
-      .getTitleValue('NAME');
+      .getFieldValue('NAME');
     outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
     return outcome;
   }

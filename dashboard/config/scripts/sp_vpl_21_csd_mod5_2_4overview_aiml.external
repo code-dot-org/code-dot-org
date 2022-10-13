@@ -3,47 +3,27 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to AI and machine learning
+# Lessons 2 - 4
 
-#### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works. 
+##### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. A key takeaway is that A.I. Bot learns best when it has more examples (training data). As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works.  
 
-## Role of the teacher 
+## Key terms used throughout the AI and Machine Learning unit
 
-##### Lessons 1 - 5 are designed to help students build foundational knowledge about how machine learning works before moving into AI Lab where students will create machine learning models of their own. These lessons, and all lessons within the AI and Machine Learning unit, are intended to be facilitated by a teacher. These lessons are not designed as self-paced experiences for students to work through at their own pace. 
-
-## Purpose of offline activities 
-
-##### The lessons within Unit 7 are a mix between online and offline activities. The offline activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
-
-## Key terms used throughout Unit 7
-
+* ##### **Model** - a computer program designed to make a decision.
 * ##### **Features** - the inputs that a model uses to make decisions.
 * ##### **Label** - the output you are trying to decide or predict with a model.
-* ##### **Model** - a computer program designed to make a decision.
 * ##### **Training** - giving examples to a model so it can learn.
 
-## Overview of Lessons 1 - 5 
+## Purpose of unplugged activities 
+
+##### The lessons within the AI and Machine Learning unit are a mix between online and unplugged activities. The unplugged activities include opportunities for students to digest new concepts in approachable ways while also providing a shared and concrete context that the teacher can reference during subsequent lessons. 
+
+## Overview of Lessons 2 - 4 
+
+##### Click the dropdown arrows below to view lesson overviews.
 
 <details>
-<summary><strong>Lesson 1</strong></summary>
-
-<img src="https://images.code.org/f4302117de331dd83e94c497dd711c1e-image-1636126730503.37.01 AM.png" alt="Image of a fish" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
-
-**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?
-
-**Lesson Overview:**
-
-In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.
-
-**Students will be able to:** 
-* Apply the Problem Solving Process to train a computer to solve a problem.
-
-</details>
-
-<div style="clear:both"/>
-
-<details>
-<summary><strong>Lesson 2</strong></summary>
+<summary><strong>Lesson 2: Types of Machine Learning</strong></summary>
 
 <img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
@@ -63,7 +43,7 @@ In this lesson students will consider how they create “mental” models when l
 
 <details>
 
-<summary><strong>Lesson 3</strong></summary>
+<summary><strong>Lesson 3: Innovations in AI</strong></summary>
 
 <img src="https://images.code.org/3df14392372d770ff2d4dfae050c6e29-image-1635957745827.41.42 AM.png" alt="Image of a student activity guide" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
@@ -83,7 +63,7 @@ In this lesson, students explore an application of AI called Seeing AI and exami
 
 <details>
 
-<summary><strong>Lesson 4</strong></summary>
+<summary><strong>Lesson 4: Patterns in Data</strong></summary>
 
 <img src="https://images.code.org/708300a2e109c438cc5716a4a405ca36-image-1635957741359.40.25 AM.png" alt="Image of a shoe recommender app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
@@ -101,22 +81,5 @@ In this lesson students will examine several apps that make decisions about what
 
 <div style="clear:both"/>
 
-<details>
-<summary><strong>Lesson 5</strong></summary>
-
-<img src="https://images.code.org/1646c794e25177e66a89dea8b7259b50-image-1636126442842.31.44 AM.png" alt="Image of a graph" width="220px" style="float:left; margin: 0 0 40px 40px;  padding-right: 10px;">
-
-**Question of the Day:** How do computers learn to classify data?
-
-**Lesson Overview:**
-
-In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.
-
-**Students will be able to:** 
-* Explain how computers can separate data to make a decision
-
-</details>
-
-<div style="clear:both"/>
 
 MARKDOWN

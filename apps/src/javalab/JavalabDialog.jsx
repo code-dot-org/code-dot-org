@@ -2,51 +2,67 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import {DisplayTheme} from './DisplayTheme';
 
 export default class JavalabDialog extends Component {
   static propTypes = {
+    className: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
-    isDarkMode: PropTypes.bool.isRequired,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     handleConfirm: PropTypes.func,
     handleClose: PropTypes.func,
     // message could be a string or html
     message: PropTypes.any,
     confirmButtonText: PropTypes.string,
-    closeButtonText: PropTypes.string
+    closeButtonText: PropTypes.string,
+    showSpinner: PropTypes.bool,
+    disableButtons: PropTypes.bool
   };
 
   render() {
     const {
+      className,
       isOpen,
       handleClose,
       handleConfirm,
-      isDarkMode,
+      displayTheme,
       message,
       confirmButtonText,
-      closeButtonText
+      closeButtonText,
+      showSpinner,
+      disableButtons
     } = this.props;
     return (
       <BaseDialog
+        bodyClassName={className}
         isOpen={isOpen}
         handleClose={handleClose}
         style={{
           ...styles.dialog,
-          ...(isDarkMode && styles.darkDialog)
+          ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
         }}
         useUpdatedStyles
         hideCloseButton
       >
-        <div style={isDarkMode ? styles.darkDialog : {}}>
+        <div
+          style={displayTheme === DisplayTheme.DARK ? styles.darkDialog : {}}
+        >
           <div style={styles.message}>{message}</div>
           <div style={styles.buttons}>
+            {showSpinner && (
+              <i className="fa fa-spin fa-spinner" style={styles.spinner} />
+            )}
             {closeButtonText && (
               <button
                 type="button"
                 style={{
                   ...styles.button,
-                  ...(isDarkMode ? styles.darkButton : styles.lightCancel)
+                  ...(displayTheme === DisplayTheme.DARK
+                    ? styles.darkButton
+                    : styles.lightCancel)
                 }}
                 onClick={handleClose}
+                disabled={disableButtons}
               >
                 {closeButtonText}
               </button>
@@ -56,9 +72,12 @@ export default class JavalabDialog extends Component {
                 type="button"
                 style={{
                   ...styles.button,
-                  ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
+                  ...(displayTheme === DisplayTheme.DARK
+                    ? styles.darkButton
+                    : styles.lightConfirm)
                 }}
                 onClick={handleConfirm}
+                disabled={disableButtons}
               >
                 {confirmButtonText}
               </button>
@@ -83,7 +102,8 @@ const styles = {
   },
   buttons: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    paddingBottom: '10px'
   },
   button: {
     textAlign: 'center',
@@ -106,5 +126,10 @@ const styles = {
     whiteSpace: 'normal',
     lineHeight: '18px',
     padding: 12
+  },
+  spinner: {
+    textAlign: 'center',
+    fontSize: 16,
+    padding: '10px'
   }
 };

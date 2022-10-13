@@ -7,7 +7,7 @@ video_player: true
 # Sobre nós
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Nossa visão é de que todo estudante em toda escola tenha a oportunidade de aprender ciência da computação, assim como aprende biologia, química ou álgebra. Oferecemos o currículo mais utilizado para o ensino de ciência da computação nas escolas de ensino fundamental e médio. Também organizamos a campanha anual <a href="https://hourofcode.com">Hora do Código</a>, que envolveu 10% de todos os alunos do mundo. A Code.org é apoiada por doadores generosos, incluindo a Amazon, o Facebook, o Google, a Infosys Foundation, a Microsoft e <a href="/about/donors"> muitos outros</a>.
+  Code.org® é uma organização sem fins lucrativos dedicada a expansão do acesso à ciência da computação em escolas e ao aumento da participação de jovens mulheres e estudantes de grupos minoritários não representados. Nossa visão é de que todo estudante em toda escola tenha a oportunidade de aprender ciência da computação, assim como aprende biologia, química ou álgebra. Oferecemos o currículo mais utilizado para o ensino de ciência da computação nas escolas de ensino fundamental e médio. Também organizamos a campanha anual <a href="https://hourofcode.com">Hora do Código</a>, que envolveu 10% de todos os alunos do mundo. A Code.org é apoiada por doadores generosos, incluindo a Amazon, o Facebook, o Google, a Infosys Foundation, a Microsoft e <a href="/about/donors"> muitos outros</a>.
 </div>
 
 [col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## História
 
 Em 2013, a Code.org foi lançada pelos irmãos gêmeos Hadi e Ali Partovi com um [vídeo promovendo a ciência da computação](https://www.youtube.com/watch?v=nKIu9yen5nc). Este vídeo chegou ao primeiro lugar no YouTube por um dia, e 15.000 escolas estenderam a mão para nos pedir ajuda. Desde então, expandimos a nossa equipe de voluntários para construir uma organização completa que apoia um movimento mundial. Acreditamos que a qualidade da educação da ciência da computação deveria estar disponível para todas as crianças, não apenas para algumas privilegiadas.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## O que fazemos
 

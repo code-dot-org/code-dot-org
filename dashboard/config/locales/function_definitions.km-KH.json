@@ -1836,6 +1836,267 @@
           "end game": {
             "name": "បញ្ចប់​ហ្គេម"
           }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "ហ្វាំងសិនរបស់ខ្ញុំ"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ",
+            "parameters": {
+              "points": "ពិន្ទុ",
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a circle": {
+            "name": "គូរ​រង្វង់​មួយ"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ប្រវែង",
+              "repeat": "ធ្វើ​ឡើង​វិញ"
+            }
+          },
+          "draw a triangle": {
+            "name": "គូរ​ត្រីកោណ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a house": {
+            "name": "គូរ​ផ្ទះ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ",
+            "parameters": {
+              "points": "ពិន្ទុ",
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a circle": {
+            "name": "គូរ​រង្វង់​មួយ"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ប្រវែង",
+              "repeat": "ធ្វើ​ឡើង​វិញ"
+            }
+          },
+          "draw a triangle": {
+            "name": "គូរ​ត្រីកោណ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a house": {
+            "name": "គូរ​ផ្ទះ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ",
+            "parameters": {
+              "points": "ពិន្ទុ",
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a circle": {
+            "name": "គូរ​រង្វង់​មួយ"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "ប្រវែង",
+              "repeat": "ធ្វើ​ឡើង​វិញ"
+            }
+          },
+          "draw a triangle": {
+            "name": "គូរ​ត្រីកោណ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a house": {
+            "name": "គូរ​ផ្ទះ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          },
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ",
+            "parameters": {
+              "length": "ប្រវែង"
+            }
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "សង់ស្ពាន"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "ទ្រោះត្រាយផ្លូវ"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "ជួសជុលផ្លូវវែង"
+          },
+          "fix short path": {
+            "name": "ជួសជុលផ្លូវខ្លី"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "សង់ស្ពានខ្លី"
+          },
+          "build long bridge": {
+            "name": "សង់ស្ពានវែង"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "ដំណោះស្រាយសក្តានុពល"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "គូរផ្កាយមួយ"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          },
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "គូរ​ការេ​មួយ"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "ធ្វើ​អ្វី​ម្យ៉ាង"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "បញ្ចប់​ហ្គេម"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "បញ្ចប់​ហ្គេម"
+          }
         }
       }
     }

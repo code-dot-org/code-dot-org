@@ -43,13 +43,13 @@ Keress online, hogy elérhetőségi adatokat találj riporterekhez. Ha nem talá
 
 #### Miért rendezzen az iskolád Kódolás órája eseményt?
 
-Bár mindannyian tudjuk, hogy a diákok számára fontos, hogy megtanulják, hogyan kell navigálni a mai technológiailag telített világban, sok tanárnak nincs tapasztalata a számítástechnikában és nem is tudja, hogyan kezdje. Ez az esemény mindenkinek lehetőséget ad arra, hogy megismerje a számítástechnikát.
+Bár mindannyian tudjuk, hogy a diákok számára fontos hogy el tudjanak igazodni a mai, technológiával telített világban, sok tanárnak nincs tapasztalata a számítástechnikában és nem is tudja, hogyan kezdjen neki. Ez az esemény mindenkinek lehetőséget ad arra, hogy megismerje a számítástechnikát.
 
-Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt. A kutatások azt is kimutatták, hogy a gyerekek már azelőtt rá tudnak érezni a programozási alapelvekre, mielőtt megtanulnák, hogyan kell írni vagy olvasni. Ugyanis az agyuk fiatalkorban érzékenyebben reagál a számítógépes nyelvezetre, akárcsak az idegen nyelvekre. <br /> <br />
+Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt. A kutatások azt is kimutatták, hogy a gyerekek már azelőtt ráéreznek a programozási alapelvekre, mielőtt megtanulnának írni vagy olvasni. Az agyuk ugyanis fiatalkorban érzékenyebben reagál a számítógépes nyelvezetre, akárcsak az idegen nyelvekre. <br /> <br />
 
 #### Miért fontos mindez?
 
-A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában, amelyhez előny jelentett volna a programozási ismeret. De az Egyesült Államok iskoláinak 60%-a nem oktat számítástechnikát. Itt az idő, hogy utolérjük a 21. századot. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat és versenyképességet teremt számukra. <br />
+A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában - beleértve a művészetet és a tervezési szakmákat - ahol előny jelentett volna a programozási ismeret. De az Egyesült Államok iskoláinak 60%-a nem oktat számítástechnikát. Itt az idő, hogy utolérjük a 21. századot. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat ad és versenyképessé teszi őket. <br />
 
 <a id="sample-emails"></a>
 
@@ -57,7 +57,7 @@ A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan 
 
 **Tárgy**: Helyi iskola küldetésének teszi, hogy bemutassa a számítástechnikát diákok számára
 
-A számítógépek mindenhol ott vannak, minden iparágat megváltoztatnak a világon, de az iskolák kevesebb, mint fele oktat számítástechnikát. A marginalizált faji és etnikai csoportokból származó fiatal nők és diákok súlyosan alulreprezentáltak az informatika órákon és a technológiai iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
+A számítógépek mindenhol ott vannak, minden iparágat megváltoztatnak a világon, de az iskolák kevesebb, mint fele oktat számítástechnikát. A marginalizált faji és etnikai csoportokból származó fiatal nők és diákok súlyosan alulreprezentáltak az informatika órákon és a technológiai iparban. A jó hír az, hogy mi már dolgozunk a változáson.
 
 A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. Minden Apple Store a világon tartott már egy Kódolás Órája eseményt. Még Obama elnök úr is megírta élete első kódját a kampány részeként.
 
@@ -73,11 +73,11 @@ Elérhetőség: [YOUR NAME], [TITLE], mobil: (212) 555-5555 Dátum: [DATE and TI
 
 ## További adatok és egy idézet, amit használhatsz anyagokban
 
-"A Kódolás órája esemény célja a programozás demisztifikálása, és annak bemutatása, hogy a számítástechnika nem atomfizika - bárki megtanulhatja az alapokat" - mondta Hadi Partovi, a Code.org alapítója és vezérigazgatója. Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját. A 21. századi számítástechnika oktatás iránti kereslet nem ismer határokat." <br /> <br />
+"A Kódolás órájának célja a programozás demisztifikálása, és annak bemutatása, hogy a számítástechnika nem atomfizika - bárki megtanulhatja az alapokat" - mondta Hadi Partovi, a Code.org alapítója és vezérigazgatója. Világszerte már több mint 100 millió diák próbálta ki a Kódolás óráját. A releváns 21. századi számítástechnika oktatás iránti kereslet nem ismer határokat." <br /> <br />
 
 #### A Code.org-ról
 
-A Code.org egy 501c3 számú non-profit szervezet, amelynek célja a számítástechnikában való részvétel bővítése, valamint a nők és az alulreprezentált színesbőrű hallgatók felkarolása. Meglátása szerint, minden iskolában minden diáknak lehetőséget kell teremteni arra, hogy megtanulhassa a számítógépes programozást. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és Amerika szerte 70 középiskolával együttműködve segíti a számítástechnikai programok bővítését. A Code.org-ot különböző társaságok, alapítványok és nagylelkű személyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információkért, kérlek látogass el ide: [code.org]({{ urls/codeorg }}).
+A Code.org egy 501c3 számú közhasznú non-profit szervezet, amelynek célja a számítástechnikában való részvétel bővítése, valamint fiatal nők és az alulreprezentált csoportokba tartozó hallgatók részvételének növelése. A szervezet víziója az, hogy minden iskolában minden diáknak legyen lehetősége számítógépes programozást tanulni. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és országszerte 70 iskolai körzettel együttműködve segíti a számítástechnikai programok bővítését. A Code.org vállalatok, alapítványok és nagylelkű magánszemélyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információkért, kérlek látogass el ide: [code.org]({{ urls/codeorg }}).
 
   
 Találj további anyagokat és minta emaileket [itt]({{ promote/sample_emails }}).

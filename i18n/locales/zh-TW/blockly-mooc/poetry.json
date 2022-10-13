@@ -8,6 +8,7 @@
   "carroll2Title": "鱷魚",
   "carroll3Lines": "晚餐時間溜溜的雪貓\n一圈一圈地挖穿濕鴨子；\n博羅戈布的所有人都很年輕，\n頑皮的驢子咕噥著。\n\n“當心Jabberwalk，我的兒子！\n它咬牙切齒，攥緊爪子！\n當心顴骨鳥，並且避開那\n笨手笨腳的班德斯奈奇！ ”",
   "carroll3Title": "胡言亂語(Jabberwocky)",
+  "chooseAPoem": "選擇詩歌",
   "chooseSound": "這首詩還沒有任何聲音，請選擇要添加到代碼中的音樂或聲音。\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></xml>  \n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>",
   "editCustomPoem": "編輯自定義字段",
   "effectWithEvent": "嘗試在‘線條出現時”事件模塊下使用新的前景或背景效果。",

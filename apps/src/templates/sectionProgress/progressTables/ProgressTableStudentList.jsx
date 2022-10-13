@@ -8,7 +8,8 @@ import {
   studentTableRowType
 } from '../sectionProgressConstants';
 import ProgressTableStudentName from './ProgressTableStudentName';
-import progressTableStyles from './progressTableStyles.scss';
+import styleConstants from './progress-table-constants.module.scss';
+import './progressTableStyles.scss';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -20,8 +21,7 @@ export default class ProgressTableStudentList extends React.Component {
     scriptData: scriptDataPropType.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
-    onToggleRow: PropTypes.func.isRequired,
-    showSectionProgressDetails: PropTypes.bool
+    onToggleRow: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -67,7 +67,6 @@ export default class ProgressTableStudentList extends React.Component {
         studentUrl={studentUrl}
         onToggleExpand={this.props.onToggleRow}
         isExpanded={rowData.isExpanded}
-        showSectionProgressDetails={this.props.showSectionProgressDetails}
       />
     );
   }
@@ -106,7 +105,7 @@ export default class ProgressTableStudentList extends React.Component {
           style={{
             overflowX: 'scroll',
             overflowY: 'hidden',
-            maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
+            maxHeight: parseInt(styleConstants.MAX_BODY_HEIGHT)
           }}
           ref={r => {
             this.body = r && r.getRef();

@@ -7,13 +7,13 @@ social:
   "og:description": "Resources for engaging parents in their children's CS Journeys"
   "twitter:title": "CS Journeys Resources: Engage parents"
   "twitter:description": "GResources for engaging parents in their children's CS Journeys"
-  "twitter:image": "/images/csjourneys/og-internships.jpg"
-  "og:image": "/images/csjourneys/og-internships.jpg"
+  "twitter:image": "/images/csjourneys/og-csjourneys-fall.png"
+  "og:image": "/images/csjourneys/og-csjourneys-fall.png"
   "og:image:width": 1200
   "og:image:height": 630
 ---
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Letters home</h1>
+<h1><a href="/csjourneys"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%; margin-bottom: 12px"/></a><br/>Letters home</h1>
 <p>Did you know students who hear from parents that they would be good at computer science are <a href="https://services.google.com/fh/files/misc/encouraging-students-toward-computer-science-learning-brief.pdf" target="_blank">2-3 times more likely</a> to be interested in learning it? Connect with parents and recruit their help in encouraging students to learn and continue on their computer science journey.</p>
 <p>Here’s some template language you can include in your emails and letters home.</p>
 
@@ -43,7 +43,7 @@ social:
 <h2>CS Discoveries Teachers</h2>
 <h3 style="margin-left:50px; margin-right:30%"><strong>Suggested beginning-of-year message to send home</strong></h3>
 <p style="margin-left:50px; margin-right:30%">This year, your students will be taking Computer Science Discoveries! Computer science teaches critical thinking and problem solving, and improves student performance across subjects. In fact, <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">studies show</a> that students who learn CS are more likely to go to college.</p>
-<p style="margin-left:50px; margin-right:30%">In this class, learners will look at computer science with a wide lens. We’ll cover problem solving, programming, physical computing, user-centered design, and AI/machine learning, while inspiring students as they build their own websites, apps, and games. You can take a look at some of our lessons <a href="https://studio.code.org/courses/csd-2021" target="_blank">here</a>.</p>
+<p style="margin-left:50px; margin-right:30%">In this class, learners will look at computer science with a wide lens. We’ll cover problem solving, programming, physical computing, user-centered design, and AI/machine learning, while inspiring students as they build their own websites, apps, and games. You can take a look at some of our lessons <a href="https://studio.code.org/courses/csd" target="_blank">here</a>.</p>
 <p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning and success. So ask your child to see something they created in class. Or ask them what makes a computer a computer?</p>
 <p style="margin-left:50px; margin-right:30%"><i>[Teachers: optionally, you could share a link to a student project or a link to the projects gallery to give parents a glimpse of what your students might be creating]</i></p>
 <p style="margin-left:50px; margin-right:30%">Outside of the class, you might explore our <a href="/careers-with-cs" target="_blank">career exploration hub</a> to help your child make connections beyond the classroom. Students are more likely to connect with material when given opportunities to see how it's used in the real world. Spark their imagination and help them envision where CS could lead them.</p>

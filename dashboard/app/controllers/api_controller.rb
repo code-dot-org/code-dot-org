@@ -163,15 +163,18 @@ class ApiController < ApplicationController
   end
 
   def user_menu
+    prevent_caching
     show_pairing_dialog = !!session.delete(:show_pairing_dialog)
     @user_header_options = {}
     @user_header_options[:current_user] = current_user
     @user_header_options[:show_pairing_dialog] = show_pairing_dialog
     @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
+    @user_header_options[:show_create_menu] = params[:showCreateMenu]
   end
 
   def update_lockable_state
+    return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.no_updates")} if params[:updates].blank?
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
@@ -180,17 +183,17 @@ class ApiController < ApplicationController
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
         # Must provide user, level, and script ids
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.missing_params")}
       end
 
       if item[:locked] && item[:readonly_answers]
         # Can not view answers while locked
-        return head :bad_request
+        return render status: :bad_request, json: {error: I18n.t("lesson_lock.error.cannot_view_locked_answers")}
       end
 
       unless User.find(user_level_data[:user_id]).teachers.include? current_user
         # Can only update lockable state for user's students
-        return head :forbidden
+        return render status: :forbidden, json: {error: I18n.t("lesson_lock.error.forbidden")}
       end
       UserLevel.update_lockable_state(
         user_level_data[:user_id],
@@ -203,10 +206,11 @@ class ApiController < ApplicationController
     render json: {}
   end
 
-  use_database_pool lockable_state: :persistent
+  use_reader_connection_for_route(:lockable_state)
 
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
+    prevent_caching
     unless current_user
       render json: {}
       return
@@ -229,9 +233,10 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  use_database_pool section_progress: :persistent
+  use_reader_connection_for_route(:section_progress)
 
   def section_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
@@ -305,13 +310,14 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  use_database_pool section_level_progress: :persistent
+  use_reader_connection_for_route(:section_level_progress)
 
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
   # If not specified, the API will default to a page size of 50, providing the first page
   # of students
   def section_level_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
@@ -345,6 +351,7 @@ class ApiController < ApplicationController
   # GET /api/teacher_panel_progress/:section_id
   # Get complete details of a particular section for the teacher panel progress
   def teacher_panel_progress
+    prevent_caching
     section = load_section
     script = load_script(section)
 
@@ -383,7 +390,8 @@ class ApiController < ApplicationController
 
   # Get /api/teacher_panel_section
   def teacher_panel_section
-    teacher_sections = current_user&.sections
+    prevent_caching
+    teacher_sections = current_user&.sections&.where(hidden: false)
 
     if teacher_sections.blank?
       head :no_content
@@ -420,14 +428,15 @@ class ApiController < ApplicationController
     render json: standards
   end
 
-  use_database_pool user_progress: :persistent
+  use_reader_connection_for_route(:user_progress)
 
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
+    prevent_caching
     if current_user
       if params[:user_id].present?
         user = User.find(params[:user_id])
-        return head :forbidden unless user.student_of?(current_user)
+        return head :forbidden unless user.student_of?(current_user) || user.id == current_user.id
       else
         user = current_user
       end
@@ -445,11 +454,12 @@ class ApiController < ApplicationController
     end
   end
 
-  use_database_pool user_app_options: :persistent
+  use_reader_connection_for_route(:user_app_options)
 
   # Returns app_options values that are user-specific. This is used on cached
   # levels.
   def user_app_options
+    prevent_caching
     response = {}
 
     script = Script.get_from_cache(params[:script])
@@ -484,7 +494,8 @@ class ApiController < ApplicationController
       # TODO: There are many other user-specific values in app_options that may
       # need to be sent down.  See LP-2086 for a list of potential values.
 
-      response[:disableSocialShare] = !!user.under_13?
+      response[:disableSocialShare] = user.under_13?
+      response[:isInstructor] = script.can_be_instructor?(current_user)
       response.merge!(progress_app_options(script, level, user))
     else
       response[:signedIn] = false
@@ -506,7 +517,7 @@ class ApiController < ApplicationController
   # given user. This code is analogous to parts of LevelsHelper#app_options.
   # TODO: Eliminate this logic from LevelsHelper#app_options or refactor methods
   # to share code.
-  def progress_app_options(script, level, user)
+  private def progress_app_options(script, level, user)
     response = {}
 
     user_level = user.last_attempt(level, script)

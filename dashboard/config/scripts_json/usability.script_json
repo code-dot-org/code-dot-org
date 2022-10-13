@@ -4,15 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:17:43 UTC",
+    "family_name": "usability",
+    "serialized_at": "2022-04-08 15:40:29 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "usability"
     }
@@ -233,6 +235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Maze 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,6 +259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Bee 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,6 +283,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Bee 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,6 +307,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Bee 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -317,6 +331,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Bee 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -338,6 +355,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,6 +379,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -380,6 +403,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -401,6 +427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Vars 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -422,6 +451,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Vars 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -443,6 +475,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -464,6 +499,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -485,6 +523,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -506,6 +547,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -527,6 +571,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Vars 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -548,6 +595,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Bee For Loops 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -569,6 +619,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Bee For Loops 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -590,6 +643,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Bee For Loops 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -611,6 +667,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Labs For Loops 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,6 +691,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Labs For Loops 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -653,6 +715,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Labs For Loops 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -674,6 +739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Functions 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -695,6 +763,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Functions 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -716,6 +787,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Functions 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -737,6 +811,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -758,6 +835,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -779,6 +859,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -800,6 +883,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Params 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -821,6 +907,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Params 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -842,6 +931,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Params 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -863,6 +955,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Play Lab Params 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -884,6 +979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -905,6 +1003,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -926,6 +1027,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -947,6 +1051,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -968,6 +1075,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -989,6 +1099,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1010,6 +1123,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1031,6 +1147,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1052,6 +1171,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Course 4 Artist Binary Free Play 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {

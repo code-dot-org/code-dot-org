@@ -5,30 +5,41 @@ pl:
   language: Polski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
-  campaign_date_start_short: 6 grudnia
-  campaign_date_start_long: 6 grudnia
-  campaign_date_short: 7-13 grudnia
-  campaign_date_full: 6-12 grudnia
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 grudnia 2021
+  campaign_date_start_short: 5 grud.
+  campaign_date_start_long: 5 grudnia
+  campaign_date_short: 5-11 grud.
+  campaign_date_full: 5-11 grudnia
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 grudnia 2022
+  nonus_campaign_date_start_short: 1 października
+  nonus_campaign_date_start_long: 1 października
+  nonus_campaign_date_short: 1 paźdz. - 18 grud.
+  nonus_campaign_date_full: 1 października - 18 grudnia
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
   latam_campaign_date_start_short: 1 października
   latam_campaign_date_start_long: 1 października
-  latam_campaign_date_short: 1 października - 18 grudnia
+  latam_campaign_date_short: 1 paźdz. - 18 grud.
   latam_campaign_date_full: 1 października - 18 grudnia
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1 października 2020 - 18 grudnia 2020
-  europe_campaign_date_start_short: 10 października
-  europe_campaign_date_start_long: 10 października
-  europe_campaign_date_short: '10 - 25 października '
-  europe_campaign_date_full: 10 - 25 października
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 10 - 25 października 2020
-  africa_campaign_date_start_short: 6 grudnia
-  africa_campaign_date_start_long: 6 grudnia
-  africa_campaign_date_short: '1- 31 października '
-  africa_campaign_date_full: 1 -  31 października
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 1 - 31 października 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
+  europe_campaign_date_start_short: 1 paźdz.
+  europe_campaign_date_start_long: 1 października
+  europe_campaign_date_short: 1 paźdz. - 18 grud.
+  europe_campaign_date_full: 1 października - 18 grudnia
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
+  africa_campaign_date_start_short: 1 paźdz.
+  africa_campaign_date_start_long: 1 października
+  africa_campaign_date_short: 1 paźdz. - 18 grud.
+  africa_campaign_date_full: 1 października - 18 grudnia
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 października 2022 - 18 grudnia 2022
+  hoc2022_header: Odkrywaj, graj, twórz!
+  social_hoc2022_explore_play_create: Korzystaj z informatyki, by odkrywać, grać i
+    tworzyć!
+  codeorg_homepage_hoc2022_body: Eksploruj wszechświat, strzel gola, wykonaj ruch
+    — jest tak wiele sposobów wykorzystania informatyki.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Ucz się dzisiaj, buduj jaśniejsze jutro.
@@ -57,7 +68,7 @@ pl:
     #CSforGood'
   social_hoc2019_learn_computer_science: 'Ucz się informatyki. Zmieniaj świat. #CSforGood
     #HourOfCode'
-  social_hoc_is_coming: Zbliża się Godzina Kodowania!
+  social_hoc_is_coming: Nadchodzi Godzina Kodowania!
   social_hoc2019_hoc_is_about_csforgood: "#HourOfCode dotyczy #CSforGood. Ucz się
     informatyki. Zmieniaj świat."
   social_hoc2019_coming_dates: Godzina Kodowania będzie miała miejsce w dniach 9-15
@@ -144,6 +155,9 @@ pl:
     świecie. Informatyka to coś więcej niż tylko kodowanie! Ciesz się pierwszym krokiem
     Code.org w nowej podróży, aby zacząć uczyć o sztucznej inteligencji z naszym programem
     nauczania.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
   hoc_live_learn_title: Ucz się z Godziną Kodowania na Żywo
@@ -169,6 +183,11 @@ pl:
     studies. Through these modules, projects, and lessons, classrooms can explore
     their usual subjects in exciting new ways!
   hoc_overview_csc_learn_more: Learn more about CS Connections
+  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
+    'Code your own dance party'
+  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
+    a scanner on the bottom, and an LED face
+  hoc_banner_alt_text: Hour of Code banner
   ai_video_title_what_is_ai: Co to jest AI (sztuczna inteligencja)?
   ai_video_title_algorithm_bias: Zwalczanie stronniczości w algorytmach
   ai_video_title_phone_knows_dog: Skąd Twój telefon wie, że to pies?
@@ -222,7 +241,7 @@ pl:
   codeorg_homepage_hoc2018_curriculum: Przejdź dalej dzięki <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link"> Kursom Code.org </a>
   codeorg_homepage_hoc2018_dance_heading: Utwórz własną <span class="highlight-word">Potańcówkę</span>
-  codeorg_homepage_hoc2018_header_line1: Zbliża się Godzina Kodowania...
+  codeorg_homepage_hoc2018_header_line1: Nadchodzi Godzina Kodowania....
   codeorg_homepage_hoc2018_header_line2_desktop: Co będziesz <span class="hoc2018-highlight-word">tworzyć?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Co dziś stworzysz?
   codeorg_homepage_hoc2018_header_line3: Uwolnij wyobraźnię i rodzące się pomysły.
@@ -234,13 +253,13 @@ pl:
   hourofcode_homepage_hoc2018_header_line1: Każdy i wszędzie może zorganizować Godzinę
     Kodowania. Godzinne samouczki w ponad 45 językach. Nie musisz mieć doświadczenia.
   hourofcode_homepage_hoc2018_header_line2: Od 4 do 104 lat.
-  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_hoc_is_coming: Nadchodzi Godzina Kodowania.
   codeorg_homepage_celebrate_cse: Celebruj informatykę wszędzie!
-  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
-    Connections
-  codeorg_homepage_csc_long: See how computer science meets language arts, math, and
-    more in our curriculum!
-  codeorg_homepage_csc_title: CS Connections
+  codeorg_homepage_csc: Zobacz, jak informatyka łączy się ze sztuką języka, matematyką
+    i nie tylko w naszym programie nauczania.
+  codeorg_homepage_csc_long: Przekonaj się jak w naszym programie informatyka łączy
+    się z językiem, sztuką, matematyką i innymi dziedzinami!
+  codeorg_homepage_csc_title: Powiązania z informatyką (CS Connections)
   hoc2018_tutorial_mchoc_description: Użyj bloków kodu, aby zabrać Aleksa i Steve'a
     na wycieczkę po tym świecie Minecraftu.
   codeorg_homepage_hoc2019_dance_heading: Wypróbuj nową <span class="highlight-word">Potańcówkę&nbsp;!</span>
@@ -489,6 +508,25 @@ pl:
   front_join_us_n_students_served: "# ukończone"
   front_join_us_challenge: Wygraj rozmowę wideo dla Twojej klasy z sławą!
   front_join_us_learn_more: Dowiedz się więcej
+  cta_see_whats_new: Zobacz, co nowego
+  cta_try_more_activities: Wypróbuj więcej zajęć
+  cta_try_an_activity: Wypróbuj zajęcia
+  hoc_homepage_join_the_movement_heading: Dołącz do społeczności
+  hoc_homepage_join_the_movement_description: Godzina Kodowania jest dostępna przez
+    cały rok, ale co roku w grudniu Twoja klasa może dołączyć do milionów uczniów
+    na całym świecie, którzy świętują Tydzień Edukacji Informatycznej wraz z Godziną
+    Kodowania. Rejestracja na coroczne obchody rozpoczyna się co roku w październiku.
+  hoc_homepage_what_is_hoc_subhead: Godzinne samouczki w ponad 45 językach. Nie potrzeba
+    żadnego doświadczenia. Zajęcia Godziny Kodowania są dostępne bezpłatnie przez
+    cały rok.
+  hoc_homepage_what_is_hoc_description: Godzina Kodowania to godzinne wprowadzenie
+    do informatyki, wykorzystujące zabawne samouczki, aby pokazać, że każdy może nauczyć
+    się podstaw. Ta oddolna inicjatywa jest wspierana przez ponad 400 partnerów i
+    200 000 nauczycieli na całym świecie.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Przeczytaj nasz przewodnik](%{howto_guide_url}),
+    aby zaplanować wydarzenie dla swojej klasy."
+  hoc_homepage_highlights_heading: Atrakcje Godziny Kodowania
+  hoc_homepage_organized_by: Godzina Kodowania jest organizowana przez [Code.org](%{codeorg_url}).
   signup_closed: Rejestracja do Godziny Kodowania jest teraz zamknięta. Proszę sprawdzić
     ponownie w październiku, by zapisać się do następnej Godziny Kodowania.
   signup_registration_not_required: Nie musisz się rejestrować, aby wziąć udział!
@@ -534,8 +572,6 @@ pl:
   signup_multiple_event_warning: Jeśli jesteś gospodarzem wielu wydarzeń, prosimy
     o przesłanie unikatową nazwę lub e-mail dla każdego z nich. Liczymy tylko jedno
     wydarzenie po kombinacji nazwy i e-mail.
-  signup_registration_deadline: Rejestracja uczestnictwa w Godzinie Kodowania kończy
-    się 12 grudnia.
   signup_name_placeholder: Twoje imię i nazwisko
   signup_email_placeholder: Jan.Kowalski@example.com
   signup_organization_name_placeholder: Na przykład Lincoln High School
@@ -634,8 +670,8 @@ pl:
     że każdy może nauczyć się podstaw i poszerzyć swój udział w obszarze informatyki.
     Od tego czasu ta inicjatywa stała się ogólnoświatowym wydarzeniem na rzecz informatyki,
     zapoczątkowana 1 godziną programowania, rozwijają się następnie jako różnorodne
-    przedsięwzięcia środowiska. Sprawdź [samouczki i zajęcia] ('%{tutorials}. Ta kampania
-    u podstaw jest wspierana przez ponad [400 partnerów] (%{partners} i 200 000 nauczycieli
+    przedsięwzięcia środowiska. Sprawdź [samouczki i zajęcia]('%{tutorials}. Ta kampania
+    u podstaw jest wspierana przez ponad [400 partnerów](%{partners} i 200 000 nauczycieli
     na całym świecie.
   hoc_faq_last_year: Wypróbuj samouczki
   hoc_faq_when_is_hoc_q: Kiedy jest Godzina Kodowania?
@@ -646,11 +682,11 @@ pl:
     pioniera informatyki, <a href='%{grace_hopper}'> Admirał Grace Murray Hopper</a>,
     urodzonej 9 grudnia 1906.
   hoc_faq_when_is_hoc_a_markdown: Godzina kodowania odbywa się każdego roku podczas
-    [Tygodnia Edukacji Informatycznej] (%{csedweek_url}). %{campaign_date_year} Tydzień
+    [Tygodnia Edukacji Informatycznej](%{csedweek_url}). %{campaign_date_year} Tydzień
     Edukacji Informatycznej odbędzie się %{campaign_date_full}, ale możesz organizować
     "Godzinę kodowania" przez cały rok. Tydzień Edukacji Informatycznej odbywa się
-    co roku dla uhonorowania pioniera informatyki,  [pani Admirał Grace Murray Hopper]
-    (%{grace_hopper}) (rodzonej 9 grudnia 1906).
+    co roku dla uhonorowania pioniera informatyki,  [pani Admirał Grace Murray Hopper](%{grace_hopper})
+    (rodzonej 9 grudnia 1906).
   hoc_faq_why_cs_q: Dlaczego informatyka?
   hoc_faq_why_cs_a: "<i>Każdy</i> uczeń powinien mieć możliwość nauki informatyki.
     Pomaga ona rozwijać umiejętności rozwiązywania problemów, logicznego myślenia
@@ -667,32 +703,30 @@ pl:
     nasz przewodnik. Możesz zorganizować Godzinę Kodowania w swojej szkole lub w okolicy
     &mdash; na przykład w ośrodku kultury, w centrum edukacji czy w pracy. Albo po
     prostu spróbuj kodowania sam, gdy nadejdzie %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: '[Rozpocznij planowanie tutaj] (%{howto}) przeglądając
+  hoc_faq_how_participate_a_markdown: '[Rozpocznij planowanie tutaj](%{howto}) przeglądając
     nasz przewodnik. Możesz zorganizować "Godzinę kodowania" w swojej szkole lub w
     okolicy &mdash; na przykład w ośrodku kultury, w centrum edukacji czy w pracy.
     Albo po prostu spróbuj kodowania sam, gdy nadejdzie %{campaign_date}.'
   hoc_faq_behind_hoc_q: Kto jest odpowiedzialny za Godzinę Kodowania?
-  hoc_faq_behind_hoc_a: Godzina Kodowania jest organizowana przez Komitety Doradczy
-    i Kontrolujący the Hour of Code i Computer Science Education Week <a href='%{partner_url}'>
-    </a>, jak również przez bezprecedensową koalicję partnerów, którzy wspólnie wspierają
-    Godzinę Kodowania Hour of Code &mdash; wśród nich Microsoft, Apple, Amazon, Boys
-    i Girls Clubs of America oraz College Board.
-  hoc_faq_behind_hoc_a_markdown: '"Godzina kodowania" jest organizowana przez [Komitety
-    Doradczy i Kontrolujący] "Godzinę kodowania" oraz "Tydzień edukacji informatycznej"
-    (%{partner_url}), jak również przez bezprecedensową koalicję partnerów, którzy
-    wspólnie wspierają "Godzinę kodowania"; wśród nich Microsoft, Apple, Amazon, Boys
-    i Girls Clubs of America [Kluby dla Chłopców i Dziewcząt USA] oraz College Board.'
+  hoc_faq_behind_hoc_a: Godzina Kodowania jest organizowana przez Code.org i prowadzona
+    przez Komitet Rewizyjny Godziny Kodowania jak również przez bezprecedensową koalicję  <a
+    href='%{partnerów_url}'> </a>, którzy wspólnie wspierają Godzinę Kodowania, wśród
+    nich Microsoft, Apple, Amazon, Boys i Girls Clubs of America oraz Rada Kolegiów.
+  hoc_faq_behind_hoc_a_markdown: Godzina Kodowania jest organizowana przez Code.org
+    i prowadzona przez Komitet Rewizyjny Godziny Kodowania jak również przez bezprecedensową
+    koalicję  [partners](%{partner_url}), którzy wspólnie wspierają Godzinę Kodowania,
+    wśród nich Microsoft, Apple, Amazon, Boys i Girls Clubs of America oraz Rada Kolegiów.
   hoc_faq_host_q: Nic nie wiem o kodowaniu. Czy nadal mogę zorganizować wydarzenie?
   hoc_faq_host_a: Oczywiście. Ćwiczenia Godziny Kodowania możesz wykonywać samodzielnie.
     Jedyne co musisz zrobić to <a href='%{codeorg_url}/learn'>spróbować naszych samouczków</a>,
     wybrać samouczek, który chcesz i wybrać godzinę &mdash; my zajmiemy się resztą.
     Posiadamy także opcje dla każdej grupy wiekowej i poziomu zaawansowania, od przedszkola
     wzwyż. Zacznij planowanie swojego wydarzenia poprzez przeczytanie naszych <a href=''how-to'>przewodników</a>.
-  hoc_faq_host_a_markdown: Oczywiście. Zajęcia "Godziny kodowania" możesz wykonywać
-    samodzielnie. Jedyne co musisz zrobić to [wypróbować naszych samouczków] (%{codeorg_url}/learn),
+  hoc_faq_host_a_markdown: Oczywiście. Aktywności Godziny Kodowania możesz wykonywać
+    samodzielnie. Jedyne co musisz zrobić to [wypróbować nasze samouczki] (%{codeorg_url}/learn),
     wybrać samouczek, który chcesz i wybrać godzinę &mdash; my zajmiemy się resztą.
     Posiadamy także opcje dla każdej grupy wiekowej i poziomu zaawansowania, od przedszkola
-    wzwyż. Zacznij planowanie swojego wydarzenia od przeczytania naszego [przewodnika
+    wzwyż. Zacznij planowanie swojego wydarzenia od przeczytania naszego [przewodnika,
     jak to robić] (%{howto}).
   hoc_faq_devices_q: Jakich urządzeń powinienem użyć z moimi uczniami?
   hoc_faq_devices_a: Samouczki Code.org działają na wszystkich urządzeniach i we wszystkich
@@ -704,8 +738,8 @@ pl:
     potrzebnym dla samouczków!
   hoc_faq_devices_a_markdown: Samouczki Code.org działają na wszystkich urządzeniach
     i we wszystkich przeglądarkach. Więcej informacji o wymaganiach technicznych samouczków
-    Code.org można znaleźć [tuta] (%{codeorg_url}). Wymagania techniczne dla samouczków,
-    innych niż samouczki Code.org, można znaleźć na [%{partner_url}/learn] (%{codeorg_url})
+    Code.org można znaleźć [here](%{codeorg_url}/educate/it). Wymagania techniczne
+    dla samouczków, innych niż samouczki Code.org, można znaleźć na [%{partner_url}/learn](%{codeorg_url}/learn)
     w opisie danego samouczka. Nie zapomnij, że oferujemy również [zajęcia w trybie
     "unplugged" - bez użycia komputera] (%{unplugged_url}), jeśli Twoja szkoła nie
     dysponuje zapleczem technicznym potrzebnym dla samouczków!
@@ -723,33 +757,32 @@ pl:
     się bez komputerów.</b> Oferujemy <a href='%{unplugged_url}'> samouczki, które
     nie wymagają komputera </a> at all. </ul>
   hoc_faq_need_computers_a_markdown: "Nie. Mamy samouczki dla Godziny Kodowania na
-    komputery PC, smartfony, tablety i takie, które nie wymagają w ogóle żadnych urządzeń!
+    komputery PC, smartfony, tablety i takie, które w ogóle nie wymagają komputerów!
     Możesz przyłączyć się gdziekolwiek jesteś i jakikolwiek masz sprzęt. \n\n_Oto
-    kilka opcji:_ \n_**Pracujcie w parach.** [Badania wykazują]\n(%{pair_programming_research}
-    ), że uczniowie najlepiej uczą się [programując w parach] (%{pair_programming_video}),
+    kilka opcji:_ \n- **Praca w parach.** [Badania wykazują]\n(%{pair_programming_research}),
+    że uczniowie najlepiej uczą się [programując w parach] (%{pair_programming_video}),
     korzystając ze wspólnego komputera pracując razem. Zachęć swoich uczniów, aby
-    połączyli się w pary. \n_**Użyj projektora.** Jeśli masz komputer z dostępem do
-    Internetu połączony z projektorem, cała Twoja klasa może wspólnie uczestniczyć
-    w Godzinie Kodowania na ekranie. Oglądajcie razem fragmenty i na zmianę rozwiązujcie
-    łamigłówki i znajdujcie odpowiedzi na pytania. \n_**Przejdźcie na tryb \"unplugged\"
-    - bez komputera.** Oferujemy [samouczki, do których w ogóle nie potrzeba komputera]
-    (%{unplugged_url})."
+    połączyli się w pary. \n- **Użyj projektora.** Jeśli masz komputer z dostępem
+    do Internetu połączony z projektorem, cała Twoja klasa może wspólnie uczestniczyć
+    w Godzinie Kodowania na ekranie. Oglądajcie razem fragmenty filmów i na zmianę
+    rozwiązujcie łamigłówki i odpowiadajcie na pytania. \n- **Przejdźcie na tryb \"unplugged\"
+    - bez komputera.** Oferujemy [samouczki, które nie wygają komputera] (%{unplugged_url})."
   hoc_faq_international_q: Jestem w <country>. Jak mogę uczestniczyć na arenie międzynarodowej?
   hoc_faq_international_a: Każdy może zorganizować Godzinę Kodowania, gdziekolwiek
     na całym świecie. W ubiegłym roku uczniowie na całym świecie uczestniczyli w Godzinie
     Kodowania. Dowiedz się więcej <a href='/promote'>tutaj</a>.
-  hoc_faq_international_a_markdown: Każdy może zorganizować Godzinę Kodowania, gdziekolwiek
-    na całym świecie. W ubiegłym roku uczniowie na całym świecie uczestniczyli w Godzinie
-    Kodowania. Dowiedz się więcej [tutaj] (%{promote}).
+  hoc_faq_international_a_markdown: Każdy może zorganizować wydarzenie Godziny Kodowania,
+    gdziekolwiek na całym świecie. W ubiegłym roku uczniowie na całym świecie uczestniczyli
+    w Godzinie Kodowania. Dowiedz się więcej [here] (%{promote}).
   hoc_faq_tutorial_q: Jak mogę utworzyć samouczek dla Godziny Kodowania?
   hoc_faq_tutorial_a: Jeśli jesteś zainteresowany by być partnerem samouczków, <a
     href='target-tutorial-guidelines'> zobacz nasze wskazówki i instrukcje</a>. Chcielibyśmy
     zrealizować wiele angażujących działań, ale głównym celem jest, aby uczniowie
     i nauczyciele, którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia.
-  hoc_faq_tutorial_a_markdown: Jeśli jesteś zainteresowany by być partnerem samouczków,  [zobacz
+  hoc_faq_tutorial_a_markdown: Jeśli jesteś zainteresowany, by być partnerem samouczków,  [zobacz
     nasze wskazówki i instrukcje] (%{tutorial_guidelines}). Chcielibyśmy zrealizować
     wiele angażujących działań, ale głównym celem jest, aby uczniowie i nauczyciele,
-    którzy zaczynają przygodę z informatyką, mieli jak najlepsze wrażenia.
+    którzy zaczynają przygodę z informatyką, mieli jak największe korzyści.
   hoc_faq_account_q: Czy uczniowie muszą się logować i zakładać konto?
   hoc_faq_account_a: Nie. Rejestracja i logowanie nie są wymagane, aby wypróbować
     Godzinę Kodowania. Większość <a href='%{codeorg_url}/learn/beyond'>kursów</a>
@@ -759,10 +792,10 @@ pl:
     <a href='https://youtu.be/_smelV_KISE'>instrukcjami</a>.
   hoc_faq_account_a_markdown: Nie. Rejestracja i logowanie nie są wymagane, aby wypróbować
     Godzinę Kodowania. Większość [dalszych - kursów] (%{codeorg_url}/learn/beyond)
-    wymaga utworzenia konta jedynie aby zapisywać postępy uczniów. Także, rejestracja
-    do Godziny Kodowania nie powoduje automatycznego utworzenia konta na Code Studio.
+    wymaga utworzenia konta jedynie, aby zapisywać postępy uczniów. Także, rejestracja
+    do Godziny Kodowania NIE powoduje automatycznego utworzenia konta na Code Studio.
     Jeśli chcesz utworzyć konta dla swoich uczniów, to postępuj zgodnie z następującymi
-    [instrukcjami](https://youtu.be/_smelV_KISE).
+    [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Jakie zadania powinienem wykonywać z uczniami ze szkół średnich?
   hoc_faq_high_school_a: Nasze samouczki dla Star Wars i Minecraft są świetne dla
     uczniów ze szkół średnich, zwłaszcza w wersji Star Wars JavaScript, a oba samouczki
@@ -774,10 +807,10 @@ pl:
   hoc_faq_high_school_a_markdown: Nasze samouczki dla Star Wars i Minecraft są świetne
     dla uczniów ze szkół średnich, zwłaszcza w wersji Star Wars JavaScript, a oba
     samouczki - na poziomie swobodnej zabawy. Podobnie, polecamy wypróbowanie jednego
-    z samouczków dla początkujących na [%{partner_url}/learn] (%{codeorg_url}/learn),
-    by zacząć, takich jak samouczki z Angry Birds lub Anną i Elsą. Uczeń szkoły średniej
-    powinien być w stanie je ukończyć w 30 minut, a potem może spróbować bardziej
-    zaawansowanych na Khan Academy lub CodeHS.
+    z samouczków dla początkujących na [%{partner_url}/learn](%{codeorg_url}/learn),
+    by zacząć, takie jak samouczki z Angry Birds lub Anną i Elsą. Uczeń szkoły średniej
+    powinien być w stanie ukończyć każdy z nich w 30 minut, a potem może spróbować
+    bardziej zaawansowanych samouczków w JavaScript, takich jak Khan Academy lub CodeHS.
   hoc_faq_scratch_q: Podczas Godziny Kodowania używam Scratcha, ale co jeśli moi uczniowie
     używają iPadów zamiast laptopów?
   hoc_faq_scratch_a: Scratch nie działa na tabletach. Jeśli uczniowie są młodzi, mogą
@@ -786,7 +819,7 @@ pl:
     znaleźć inne samouczki, które będą działać na iPadzie - z Code.org, Tynker, Lightbot
     lub CodeSpark.
   hoc_faq_scratch_a_markdown: Scratch nie działa na tabletach. Jeśli uczniowie są
-    młodzi, mogą użyć aplikacji ScratchJS dla iPada (dla początkujących czytelników).
+    młodzi, mogą użyć aplikacji ScratchJS dla iPada (dla początkujących w czytaniu).
     Jeśli przejrzysz poradniki na [%{partner_url}/learn](%{codeorg_url}/learn), możesz
     znaleźć inne poradniki, które będą działać na iPadzie - z Code.org, Tynker, Lightbot
     lub CodeSpark.
@@ -795,15 +828,16 @@ pl:
   hoc_faq_map_a: Przykro nam, że nie widzisz organizowanego przez Ciebie wydarzenia
     na mapie Godziny Kodowania. W inicjatywie biorą udział dziesiątki tysięcy osób,
     a mapa agreguje dane i wyświetla jeden punkt dla wielu wydarzeń. Jeśli klikniesz
-    licznik wydarzeń nad mapą, zostaniesz przekierowana do listy wszystkich wydarzeń
-    z podziałem na państwa; tam znajdziesz organizowane przez siebie wydarzenie. Ponadto,
-    ponieważ tysiące osób zapisują się na Godzinę Kodowania, uaktualnienie mapy i
-    listy wydarzeń zazwyczaj zajmuje 48 godzin. Sprawdź ponownie za kilka dni!
+    <a href='%{events_url}'>events page</a> link poniżej mapy, zostaniesz przekierowana
+    na listę wszystkich wydarzeń z podziałem na kraje; tam znajdziesz organizowane
+    przez siebie wydarzenie. Ponadto, ponieważ tysiące osób zapisują się na Godzinę
+    Kodowania, uaktualnienie mapy i listy wydarzeń zazwyczaj zajmuje 48 godzin. Sprawdź
+    ponownie za kilka dni!
   hoc_faq_map_a_markdown: Przykro nam, że nie widzisz organizowanego przez Ciebie
     wydarzenia na mapie Godziny Kodowania. W inicjatywie biorą udział dziesiątki tysięcy
     osób, a mapa agreguje dane i wyświetla jeden punkt dla wielu wydarzeń. Jeśli klikniesz
-    link do [strony wydarzeń](%{events_url}) pod mapą, zostaniesz przekierowana do
-    listy wszystkich wydarzeń z podziałem na państwa; tam znajdziesz organizowane
+    <a href='%{events_url}'>events page</a> link pod mapą, zostaniesz przekierowany
+    na listę wszystkich wydarzeń z podziałem na kraje; tam znajdziesz organizowane
     przez siebie wydarzenie. Ponadto, ponieważ tysiące osób zapisują się na Godzinę
     Kodowania, uaktualnienie mapy i listy wydarzeń zazwyczaj zajmuje 48 godzin. Sprawdź
     ponownie za kilka dni!
@@ -816,9 +850,9 @@ pl:
   hoc_faq_count_hoc_a_markdown: Śledzenie udziału w Godzinie Kodowania nie jest dokładnym
     pomiarem uczestnictwa. Nie liczymy dokładnie unikatowych identyfikatorów uczniów,
     kiedy śledzimy udział w Godzinie Kodowania zwłaszcza, że nie wymagamy, aby uczniowie
-    się logowali czy rejestrowali. W rezultacie w tym samym czasie zarówno przeszacowujemy
+    się logowali czy rejestrowali. W rezultacie, w tym samym czasie zarówno przeszacowujemy
     jak i niedoszacowujemy liczbę uczestników. Zapoznaj się ze wszystkimi szczegółami
-    [tutaj](%{codeorg_url}/loc).
+    [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Ile mogę się nauczyć w ciągu godziny?
   hoc_faq_one_hour_a: Celem Godziny Kodowania nie jest wyszkolenie kogokolwiek na
     eksperta informatyki w ciągu godziny. Godzina wystarczy jednak by dowiedzieć się,
@@ -839,7 +873,7 @@ pl:
     a nauczyciele są w stanie uczyć.<br/><br/>Ponadto, wszyscy uczestnicy mogą w ciągu
     godziny przekonać się, że jesteśmy w stanie tego dokonać.
   hoc_faq_one_hour_a_markdown: |-
-    Celem "Godziny kodowania" nie jest wyszkolenie kogokolwiek na eksperta informatyki w ciągu godziny. Godzina wystarczy jednak by dowiedzieć się, że informatyka jest przyjemna i kreatywna, dostępna w każdym wieku, dla wszystkich uczniów, niezależnie od środowiska i doświadczenia. Miarą sukcesu tej inicjatywy nie jest ilość przyswojonej przez uczniów wiedzy z dziedziny informatyki - sukces jest odzwierciedlony szerokim uczestnictwem reprezentantów różnych płci oraz grup etnicznych i społeczno-ekonomicznych, a w rezultacie wzrostem zainteresowania informatyką na różnych etapach edukacji. Miliony uczestniczących nauczycieli i uczniów postanowiły wykroczyć poza limit jednej godziny - aby uczyć się przez cały dzień lub cały tydzień albo nawet dłużej, a wielu uczniów w wyniku tego postanowiło zapisać się na cały kurs (lub nawet obrać informatykę jako główny kierunek studiów).
+    Celem Godziny Kodowania nie jest wyszkolenie kogokolwiek na eksperta informatyki w ciągu godziny. Godzina wystarczy jednak, by dowiedzieć się, że informatyka jest przyjemna i kreatywna, dostępna w każdym wieku, dla wszystkich uczniów, niezależnie od przygotowania. Miarą sukcesu tej inicjatywy nie jest ilość przyswojonej przez uczniów wiedzy z dziedziny informatyki - sukces jest odzwierciedlony szerokim uczestnictwem reprezentantów różnych płci oraz grup etnicznych i społeczno-ekonomicznych, a w rezultacie wzrostem zainteresowania informatyką na różnych etapach edukacji. Miliony uczestniczących nauczycieli i uczniów postanowiły przekroczyć jedną godzinę - aby uczyć się przez cały dzień lub cały tydzień albo nawet dłużej, a wielu uczniów w wyniku tego postanowiło zapisać się na cały kurs (lub nawet obrać informatykę jako główny kierunek studiów).
 
     Oprócz uczniów, dodatkowym "uczącym się" jest osoba prowadząca zajęcia, która po godzinie zdobywa więcej pewności, że może uczyć informatyki, nawet jeśli nie ma specjalistycznego wykształcenia w tym kierunku. Dziesiątki tysięcy nauczycieli postanawiają iść o krok dalej, formalnie podnosząc swoje kwalifikacje w zakresie informatyki lub oferując kursy online, lub jedno i drugie. To samo dotyczy osób zarządzających szkołą, które uświadamiają sobie, że informatyka jest czymś, czego uczniowie chcą, a nauczyciele są w stanie uczyć.
 
@@ -853,13 +887,13 @@ pl:
   hoc_faq_keep_learning_a: Każdy może organizować Godzinę Kodowania w dowolnym czasie.
     Samouczki działają przez cały rok. Możesz oczekiwać, że nasze samouczki i program
     nauczania będą dostępne na naszej stronie przez cały czas. Przejdź proszę do <a
-    href='/promote'>naszych zasobów</a>, aby znaleźć przewodniki do wydarzeń oraz
-    inne materiały, które pomogą sprawić, że Twoja Godzina Kodowania będzie sukcesem.
-  hoc_faq_keep_learning_a_markdown: Każdy może organizować "Godzinę kodowania" w dowolnym
+    href='/promote'>our resources</a>, aby znaleźć przewodniki do wydarzeń oraz inne
+    materiały, które pomogą sprawić, że Twoja Godzina Kodowania będzie sukcesem.
+  hoc_faq_keep_learning_a_markdown: Każdy może organizować Godzinę Kodowania w dowolnym
     czasie. Samouczki działają przez cały rok. Możesz oczekiwać, że nasze samouczki
     i program nauczania będą dostępne na naszej stronie przez cały czas. Przejdź proszę
-    do [naszych zasobów] (%{promote}), aby znaleźć przewodniki "jak to się robi" oraz
-    inne materiały, które pomogą sprawić, że Twoja "Godzina kodowania" będzie sukcesem.
+    do [naszych zasobów] (%{promote}), aby znaleźć przewodniki jak to się robi oraz
+    inne materiały, które pomogą sprawić, że Twoja Godzina Kodowania okaże się sukcesem.
   hoc_faq_certificates_q: Gdzie mogę wydrukować certyfikaty dla moich uczniów?
   hoc_faq_certificates_a: Przejdź do naszej <a href='%{codeorg_url}/certificates'>strony
     certyfikatów</a>, gdzie możesz wydrukować dyplomy dla całej swojej klasy w dowolnej
@@ -870,13 +904,12 @@ pl:
     z wyprzedzeniem. Możesz także wydrukować [specjalne certyfikaty](%{codeorg_url}/certificates?course=mc)
     dla uczniów korzystających z samouczka Minecraft.
   hoc_faq_logo_q: Czy są ograniczenia związane z używaniem logo i nazwy Godziny Kodowania?
-  hoc_faq_logo_a: Godzina Kodowania jest znakiem towarowym. Nie chcemy uniemożliwiać
-    jego używania, ale chcemy być pewni, że jego użycie spełnia pewne warunki. Zobacz
-    <a href='https://support.code.org/hc/en-us/articles/215831637-Czy-są-jakieś- ograniczenia,
-    -jak-mógłbym-używać-logo-Godziny-Kodowania-'> wskazówki, jak go używać</a>.
-  hoc_faq_logo_a_markdown: '"Godzina kodowania" jest znakiem towarowym. Nie chcemy
-    uniemożliwiać jego używania, ale chcemy być pewni, że jego użycie spełnia pewne
-    warunki. Prosimy o zapoznanie się z [tymi wytycznymi korzystania] (%{logo_url}).'
+  hoc_faq_logo_a: Godzina Kodowania jest znakiem towarowym. Nie chcemy ogarniczać
+    jego używania, ale chcemy być pewni, że jego użycie spełnia pewne warunki. Prosimy
+    zapoznać się <a href='%{logo_url}'> z tymi wytycznymi korzystania</a>.
+  hoc_faq_logo_a_markdown: Godzina Kodowania jest znakiem towarowym. Nie chcemy ogarniczać
+    jego używania, ale chcemy być pewni, że jego użycie spełnia pewne warunki. Prosimy
+    zapoznać się z [tymi wytycznymi korzystania] (%{logo_url}).
   stats_hoc_2013_image_alt: Statystyki z Godziny Kodowania 2013
   stats_growth: To jest najszybszy sposób, by zebrać 15 milionów użytkowników.
   stats_i18n: Uczniowie uczą się w 40 językach
@@ -1018,6 +1051,7 @@ pl:
   footer_menu_support: Pomoc techniczna
   footer_menu_terms: Warunki
   footer_menu_privacy: Polityka Prywatności
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Aktywności Godziny Kodowania
   learn_banner_blurb: Wypróbuj jednogodzinny kurs, przeznaczony dla wszystkich grup
     wiekowych, dostępny w ponad 45 językach.  Dołącz do milionów uczniów i nauczycieli
@@ -11009,6 +11043,15 @@ pl:
   tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
   tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
     needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Od dzieci, które uczą się czytać,
+    do klasy 5
+  tutorial_icomputefireworks_string_platforms: Wszystkie współczesne przeglądarki
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Bloki
   school_not_found_heading: Nie możemy znaleźć Twojej szkoły. Proszę podać więcej
     informacji.
   school_name: Nazwa szkoły
@@ -11068,86 +11111,167 @@ pl:
   all: Wszystkie
   dont_know: Nie wiem
   language_label: Język
-  ar: Arabic
-  az: Azerbaijani
-  bg: Bulgarian
-  bn: Bangla
-  br: Breton
-  bs: Bosnian
-  ca: Catalan
-  cs: Czech
-  cs-cz: Czech (Czechia)
-  da: Danish
-  da-dk: Danish (Denmark)
-  de: German
-  de-de: German (Germany)
-  el: Greek
-  el-gr: Greek (Greece)
-  en: Polski
-  en-gb: English (United Kingdom)
-  es: Spanish
-  es-es: Spanish (Spain)
-  es-mx: Spanish (Mexico)
-  et: Estonian
-  eu: Basque
-  fa: Persian
-  fa-ir: Persian (Iran)
-  fi: Finnish
-  fi-fi: Finnish (Finland)
-  fil-ph: Filipino (Philippines)
-  fr: French
-  gl: Galician
-  he: Hebrew
-  hi: Hindi
-  hi-in: Hindi (India)
-  hr: Croatian
-  hu: Hungarian
-  ia: Interlingua (International Auxiliary Language Association)
-  id: Bahasa Indonesian
-  is: Icelandic
-  it: Italian
-  it-it: Italian (Italy)
-  ja: Japanese
-  ja-jp: Japanese (Japan)
-  ka: Georgian
-  kk: Kazakh
-  ko: Korean
-  lt: Lithuanian
-  lv: Latvian
-  mk: Macedonian
-  mr: Marathi
-  ms: Malay
-  my: Burmese
-  nl: Dutch
-  nl-nl: Dutch (Netherlands)
-  nn: Norwegian (Nynorsk)
-  false: Norwegian
-  pl: Polish
-  pl-pl: Polish (Poland)
-  pt: Portuguese
-  pt-br: Portuguese (Brazil)
-  pt-pt: Portuguese (Portugal)
-  ro: Romanian
-  ru: Russian
-  sk: Slovak
-  sl: Slovenian
-  sq: Albanian
-  sr: Serbian
-  sv: Swedish
-  sv-se: Swedish (Sweden)
-  sw: Kiswahili
-  ta: Tamil
-  te: Telugu
-  th: Thai
-  tl: Tagalog
-  tr: Turkish
-  uk: Ukrainian
-  ur: Urdu
-  ur-in: Urdu (India)
-  ur-pk: Urdu (Islamic Republic of Pakistan)
-  vi: Vietnamese
-  zh: Chinese (Simplified)
-  zh-cn: Chinese (Simplified, People's Republic of China)
-  zh-hans: Chinese (Simplified) (zh-Hans)
-  zh-hant: Chinese (Traditional) (zh-Hant)
-  zh-tw: Chinese (Traditional, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Polski
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Polski
+    es-es: Spanish (Spain)
+    es-mx: Spanish (Mexico)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

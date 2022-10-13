@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,11 +19,11 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-11-11 04:31:21 UTC",
+    "serialized_at": "2022-06-22 01:58:07 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -78,6 +79,15 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1. **Apply the Problem Solving Process to train a computer to solve a problem**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
@@ -98,6 +108,15 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe the differences between supervised and unsupervised learning.**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
@@ -119,6 +138,15 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe how Artificial Intelligence is having an impact on society**\n\n\tSee the activity guide for this lesson as a way to measure each step of the problem solving process.",
         "overview": "In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.",
         "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. ",
@@ -2198,7 +2226,7 @@
       "key": "7dc90175-bf56-4c0e-8138-285606169bf6",
       "position": 5,
       "properties": {
-        "description": "We’re going to simulate how a computer might create it's first model to learn someting new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
+        "description": "We’re going to simulate how a computer might create it's first model to learn something new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
         "remarks": true
       },
       "seeding_key": {
@@ -3049,7 +3077,7 @@
       "key": "823c914b-db55-4005-b853-e9bf07946fd1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the show survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\r\n\r\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the shoe survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\n\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -4026,7 +4054,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360027667832-Rubrics-in-Code-org-courses)."
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -4484,7 +4512,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"block boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
+            "markdown": "**Black Boxes**: This video references how AI models are sometimes referred to as \"black boxes\" and how difficult it can be to uncover how a model works once it's trained. Examples of this can be seen in the [ProPublica Breaking the Black Box](https://www.propublica.org/article/breaking-the-black-box-when-algorithms-decide-what-you-pay) journalism series. This is a 4-part series that includes short videos and additional resources about different investigations into machine learning algorithms. One of the videos on pricing calls out how online products can have different prices depending on the zip code of the user, which is a common issue involving bias in machine learning models where a zip code can be used as a proxy for race or socio-economic status.\n\nThese videos aren't intended for classroom use, but you may decide to share some of these videos with students to continue conversations around bias in machine learning and the need for transparency via Model Cards."
           }
         ]
       },
@@ -5861,7 +5889,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Repeated Levels:** The choices in this level are identical to the choices in the last lesson. This is intentional, so students have multiple opportunities to learn the new design tricks or code blocks, or continue to practice the new blcoks they learned last lesson. Encourage students to choose a new challenge for today’s app that’s different from the ones they chose yesterday.\r\n"
+            "markdown": "**Repeated Levels:** The choices in this level are identical to the choices in the last lesson. This is intentional, so students have multiple opportunities to learn the new design tricks or code blocks, or continue to practice the new blocks they learned last lesson. Encourage students to choose a new challenge for today’s app that’s different from the ones they chose yesterday.\n"
           }
         ]
       },
@@ -6256,7 +6284,7 @@
       "key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
@@ -10985,7 +11013,7 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/copy",
       "key": "ai_lab_numerical_data",
       "properties": {
         "audience": "Teacher",
@@ -11330,7 +11358,7 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/copy",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
@@ -11703,7 +11731,7 @@
     },
     {
       "name": "Survey Template [Google Form]",
-      "url": "https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
+      "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy",
       "key": "survey_template_google_form_",
       "properties": {
         "audience": "Student"
@@ -11800,7 +11828,7 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/copy",
       "key": "unplugged_knn",
       "properties": {
         "audience": "Teacher",
@@ -12759,6 +12787,16 @@
       }
     },
     {
+      "key": "2dfd2497-81b1-41b1-8224-64c2d4118c40",
+      "properties": {
+        "description": "Create a machine learning model using a real-world dataset"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "2dfd2497-81b1-41b1-8224-64c2d4118c40"
+      }
+    },
+    {
       "key": "316092e7-641f-433f-837c-db12e34accfd",
       "properties": {
         "description": "Describe the differences between supervised and unsupervised learning."
@@ -12896,6 +12934,16 @@
       "seeding_key": {
         "lesson.key": "lesson9",
         "objective.key": "9dd5b6eb-e1cd-4dae-8bf6-77fb08ba9d59"
+      }
+    },
+    {
+      "key": "b619b215-4403-423d-85c5-93f5c51f2769",
+      "properties": {
+        "description": "Create an app that uses a machine learning model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "b619b215-4403-423d-85c5-93f5c51f2769"
       }
     },
     {

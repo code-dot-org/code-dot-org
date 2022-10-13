@@ -1,0 +1,34 @@
+{
+  "pages": {
+    "homepage": ["hoc2022-soon-hoc"]
+  },
+
+  "banners": {
+    "hoc2022-soon-hoc": {
+      "hoc_modes": ["soon-hoc", "actual-hoc"],
+      "class": "hoc-banner homepage",
+      "desktopImage": "/images/hoc2022-codeorg-hero-banner-01.svg",
+      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-01.svg",
+      "actions": [
+        {
+          "type": "text",
+          "text": "homepage_hero_hoc_is_coming"
+        },
+        {
+          "type": "heading",
+          "text": "hoc2022_banner_title"
+        },
+        {
+          "type": "cta_button_solid_yellow",
+          "text": "homepage_action_text_join_us",
+          "url": "https://hourofcode.com/us/#join"
+        },
+        {
+          "type": "cta_button_hollow_black",
+          "text": "homepage_action_text_try_it",
+          "url": "/hourofcode/overview"
+        }
+      ]
+    }
+  }
+}

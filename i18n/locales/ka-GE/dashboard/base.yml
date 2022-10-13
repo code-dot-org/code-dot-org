@@ -8,8 +8,14 @@
 #To use a different locale, set it with `I18n.locale`:
 #I18n.locale = :es
 #This would use the information in config/locales/es.yml.
+#The following keys must be escaped otherwise they will not be retrieved by
+#the default I18n backend:
+#true, false, on, off, yes, no
+#Instead, surround them with single quotes.
+#en:
+#'true': 'foo'
 #To learn more, please read the Rails Internationalization guide
-#available at http://guides.rubyonrails.org/i18n.html.
+#available at https://guides.rubyonrails.org/i18n.html.
 ka:
   errors:
     messages:
@@ -358,12 +364,12 @@ ka:
       starwars: 'ვარსკვლავური ომები'
       starwarsblocks: 'ვარსკვალვური ომები (ბლოკები)'
       starwarsblocks_hour: 'ვარსკვალვური ომები (ბლოკები)'
+      loading: 'იტვირთება...'
       weblab: 'ვებ ლაბორატორია'
       view_all: 'ყველა პროექტის ნახვა...'
     popup:
       progress_for_user: "%{name}-ს პროგრესი"
       progress: 'თქვენი პროგრესი'
-      lines: 'სულ კოდის ხაზი: %{lines}'
       close: 'დახურვა'
       mastery: 'ძირითადი ცნებები'
       puzzle_map: 'ეტაპები'
@@ -373,6 +379,7 @@ ka:
       prizes_link: 'მეტი ინფორმაცია'
   teacher:
     answer: პასუხი
+    dashboard: 'მასწავლებლის მართვის პანელი'
     for_teachers_only: მხოლოდ მასწავლებლებისთვის
     title:
       one: 'თქვენი მასწავლებელი:'
@@ -472,6 +479,7 @@ ka:
     choose_next_course: "სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი"
     print_certificate: "სერტიფიკატის ამობეჭდვა"
   certificate_sponsor_message: "%{sponsor_name} გააკეთა გულუხვი საჩუქარი სპონსორი თქვენი სწავლის."
+  certificate_hour_of_code: "კოდის ერთი საათი"
   move_students:
     new_section_dne: "სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
     section_code_cant_be_current_section: "მიმდინარე სექცია ვერ იქნება იგივე, რაც ახალი სექცია."
@@ -948,7 +956,7 @@ ka:
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
-        other: "სხვა:"
+        other: "სხვა"
       robotics:
         grok: 'Grok Learning'
         kodable: 'Kodable'
@@ -957,7 +965,7 @@ ka:
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
-        other: "სხვა:"
+        other: "სხვა"
       workshop_course:
         csf_af: 'CS საფუძვლები (კურსები A-F)'
         csf_express: 'CS საფუძვლები (კითხვამდელი დაჩქარებული ან დაჩქარებული კურსი)'

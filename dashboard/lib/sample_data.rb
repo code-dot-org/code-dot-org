@@ -85,7 +85,7 @@ class SampleData
       user.sections.each do |section|
         # Hard-delete all students in each section.
         section.students.each do |student_user|
-          raise "Not a sample student - #{student_user.name}" unless student_user.name =~ SAMPLE_STUDENT_NAME_REGEX
+          raise "Not a sample student - #{student_user.name}" unless SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
           environment_check!
           UserGeo.where(user_id: student_user.id).destroy_all
           student_user.really_destroy!
@@ -228,12 +228,12 @@ class SampleData
     end
   end
 
-  # For the given user id, looks up the storage id, or creates a new one if the user doesn't have one.
+  # Look up or create a storage id for the sample data (used for testing purposes)
   def self.find_or_create_storage_id_for_user_id(user_id)
     environment_check!
-    row = user_storage_ids_table.where(user_id: user_id)
-    return row[:id] if row
-    user_storage_ids_table.insert(user_id: user_id)
+    storage_id = storage_id_for_user_id(user_id)
+    return storage_id if storage_id
+    create_storage_id_for_user(user_id)
   end
 
   # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously

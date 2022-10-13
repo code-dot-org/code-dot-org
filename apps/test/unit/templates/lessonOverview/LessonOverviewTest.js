@@ -49,6 +49,7 @@ describe('LessonOverview', () => {
         },
         id: 1,
         key: 'lesson-1',
+        duration: 45,
         position: 1,
         lockable: false,
         displayName: 'Lesson 1',
@@ -99,7 +100,7 @@ describe('LessonOverview', () => {
       viewAs: ViewType.Instructor,
       isSignedIn: true,
       hasVerifiedResources: false,
-      isVerifiedTeacher: false
+      isVerifiedInstructor: false
     };
   });
 
@@ -112,6 +113,7 @@ describe('LessonOverview', () => {
     expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
 
     expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
     expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
@@ -170,7 +172,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         hasVerifiedResources={true}
       />
     );
@@ -181,7 +183,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={true}
+        isVerifiedInstructor={true}
         hasVerifiedResources={true}
       />
     );
@@ -192,7 +194,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         hasVerifiedResources={false}
       />
     );
@@ -313,6 +315,28 @@ describe('LessonOverview', () => {
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plan',
       'Print Handouts'
+    ]);
+  });
+
+  it('renders dropdown button with lessonPlanPdf if no scriptResourcesPdfUrl provided and not pilot or in development', () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: null
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/lesson_plan.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plan'
     ]);
   });
 

@@ -1,48 +1,16 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
 describe('ResourcesDropdown', () => {
-  it('renders non-migrated resources for teacher', () => {
+  it('renders resources for teacher', () => {
     const wrapper = shallow(
       <ResourcesDropdown
         resources={[
-          {
-            type: ResourceType.curriculum,
-            link: 'https://example.com/a'
-          },
-          {
-            type: ResourceType.vocabulary,
-            link: 'https://example.com/b'
-          }
-        ]}
-        useMigratedResources={false}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <div>
-          <DropdownButton
-            text={i18n.teacherResources()}
-            color={Button.ButtonColor.blue}
-          >
-            <a href="https://example.com/a">{i18n.curriculum()}</a>
-            <a href="https://example.com/b">{i18n.vocabulary()}</a>
-          </DropdownButton>
-        </div>
-      )
-    ).to.be.true;
-  });
-
-  it('renders migrated resources for teacher', () => {
-    const wrapper = shallow(
-      <ResourcesDropdown
-        migratedResources={[
           {
             key: 'key1',
             name: 'Curriculum',
@@ -54,7 +22,6 @@ describe('ResourcesDropdown', () => {
             url: 'https://example.com/b'
           }
         ]}
-        useMigratedResources={true}
       />
     );
     expect(
@@ -72,10 +39,10 @@ describe('ResourcesDropdown', () => {
     ).to.be.true;
   });
 
-  it('renders migrated resources for student', () => {
+  it('renders resources for student', () => {
     const wrapper = shallow(
       <ResourcesDropdown
-        migratedResources={[
+        resources={[
           {
             key: 'key1',
             name: 'Curriculum',
@@ -87,7 +54,6 @@ describe('ResourcesDropdown', () => {
             url: 'https://example.com/b'
           }
         ]}
-        useMigratedResources={true}
         studentFacing={true}
       />
     );

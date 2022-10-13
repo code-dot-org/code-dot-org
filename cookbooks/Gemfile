@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '~> 3.0'
+ruby '>= 2.6', '< 2.8'
 
 gem 'berkshelf'
-gem 'chef', '17.6.18'
+gem 'chef', '15.2.20'
 gem 'chefspec'
 gem 'kitchen-inspec'
 

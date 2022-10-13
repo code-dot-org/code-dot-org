@@ -24,20 +24,22 @@ apt_package %w(
   fonts-noto
 )
 
-# Used by lesson plan generator.
-pdftk_file = 'pdftk-java_3.1.1-1_all.deb'
-pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
-remote_file pdftk_local_file do
-  source "https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/#{pdftk_file}"
-  checksum "8a28ba8b100bc0b6e9f3e91c090a9b8a83a5f8a337a91150cbaadad8accb4901"
+# Used by lesson plan generator
+if node.chef_environment == 'staging'
+  pdftk_file = 'pdftk-java_3.1.1-1_all.deb'
+  pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
+  remote_file pdftk_local_file do
+    source "https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/#{pdftk_file}"
+    checksum "8a28ba8b100bc0b6e9f3e91c090a9b8a83a5f8a337a91150cbaadad8accb4901"
+  end
+  # Dependencies of pdftk-java.
+  apt_package %w(
+    default-jre-headless
+    libbcprov-java
+    libcommons-lang3-java
+  )
+  dpkg_package("pdftk-java") {source pdftk_local_file}
 end
-# Dependencies of pdftk-java.
-apt_package %w(
-  default-jre-headless
-  libbcprov-java
-  libcommons-lang3-java
-)
-dpkg_package("pdftk-java") {source pdftk_local_file}
 
 # Used by lesson plan generator.
 apt_package 'enscript'
@@ -87,7 +89,6 @@ node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
-include_recipe 'cdo-varnish'
 
 include_recipe 'cdo-cloudwatch-agent'
 include_recipe 'cdo-syslog'
@@ -138,8 +139,6 @@ include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 # Patch to fix issue with systemd-resolved: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1805183
 include_recipe 'cdo-apps::resolved'
 
-# Temporarily stop installing rbspy because the current version of Chef client we use bundles a version of OpenSSL
-# that does not include the root certificate that the github.com site's SSL certificate is signed by.
-#include_recipe 'cdo-apps::rbspy'
+include_recipe 'cdo-apps::rbspy'
 
 include_recipe 'cdo-apps::syslog_permissions'

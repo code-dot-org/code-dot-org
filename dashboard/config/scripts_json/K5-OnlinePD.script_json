@@ -13,16 +13,18 @@
           "visibility": "Teacher-only"
         }
       ],
+      "is_course": true,
       "is_migrated": true,
-      "professional_learning_course": "K5 Support"
+      "professional_learning_course": "K5 Support",
+      "version_year": "2018"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-02 14:28:51 UTC",
+    "family_name": "k5-onlinepd",
+    "serialized_at": "2021-11-22 19:55:41 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "self_paced",
+    "instructor_audience": "universal_instructor",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "K5-OnlinePD"
     }
@@ -471,6 +473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -492,6 +497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 PreSurvey"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -513,6 +521,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Welcome 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -534,6 +545,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 About"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -555,6 +569,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Outline"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -576,6 +593,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Participation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -597,6 +617,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CS Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -618,6 +641,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CS Tips"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -639,6 +665,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage1Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -660,6 +689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage2Overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -681,6 +713,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 WhatIsCS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -702,6 +737,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Why teach CS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -723,6 +761,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Younger Grades"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -744,6 +785,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Vocabulary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -765,6 +809,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage2Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -786,6 +833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-Stage3Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -807,6 +857,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Puzzles"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -828,6 +881,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Unplugged Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -849,6 +905,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 What is Mastery"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -870,6 +929,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -891,6 +953,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3aGo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -912,6 +977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 FirstProgram"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -933,6 +1001,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -954,6 +1025,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -975,6 +1049,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -996,6 +1073,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_maze_seq8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1017,7 +1097,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseA_maze_seq10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1039,6 +1122,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage3Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1060,6 +1146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1081,6 +1170,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1102,6 +1194,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 RepeatBlock"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1123,6 +1218,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1144,6 +1242,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1165,6 +1266,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1186,6 +1290,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1207,6 +1314,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1228,6 +1338,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_starWars_loops8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1249,6 +1362,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage4Review"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1270,6 +1386,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1291,6 +1410,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1312,6 +1434,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1333,6 +1458,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1354,6 +1482,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1375,6 +1506,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1396,6 +1530,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1417,6 +1554,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1438,6 +1578,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage5Review"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1459,6 +1602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1480,6 +1626,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1501,6 +1650,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_functionsArtist"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1522,6 +1674,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1543,6 +1698,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1564,6 +1722,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1585,6 +1746,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1606,6 +1770,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1627,6 +1794,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1648,6 +1818,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage6Review"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1669,6 +1842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage7Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1690,6 +1866,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage7Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1711,6 +1890,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 EventsVid"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1732,6 +1914,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_move_events"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1753,6 +1938,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_sound_and_points"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1774,6 +1962,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "iceage_warn_ice_age"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1795,6 +1986,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Congrats"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1816,6 +2010,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CongratsFinal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1837,6 +2034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage8Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1858,6 +2058,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Culture"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1879,6 +2082,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 LessonPlanning"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1900,6 +2106,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Pair"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1921,6 +2130,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Problem Solving"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1942,6 +2154,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage8Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1963,6 +2178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage9Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1984,6 +2202,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 CS Courses"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2005,6 +2226,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Using CS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2026,6 +2250,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2047,6 +2274,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Your Plan"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2068,6 +2298,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage9Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2089,6 +2322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Stage10Start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2110,6 +2346,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 PostSurvey"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2131,6 +2370,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Closing"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2152,6 +2394,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Connect"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2173,6 +2418,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Celebrate"
+        ]
       },
       "bonus": false,
       "seeding_key": {

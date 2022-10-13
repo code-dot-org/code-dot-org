@@ -9,7 +9,9 @@ de:
       moving east: nach Osten gehen
       moving east and looping: nach Osten bewegen und eine Schleife drehen
       moving north: nach Norden gehen
+      moving north and looping: nach Norden bewegen und eine Schleife drehen
       moving south: nach Süden gehen
+      moving south and looping: nach Süden bewegen und eine Schleife drehen
       moving west: nach Westen gehen
       moving west and looping: nach Westen bewegen und eine Schleife drehen
       moving with arrow keys: Scrollen mit Pfeiltasten

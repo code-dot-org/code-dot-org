@@ -22,7 +22,7 @@
 #
 
 class UserGeo < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   def clear_user_geo
     self.ip_address = nil

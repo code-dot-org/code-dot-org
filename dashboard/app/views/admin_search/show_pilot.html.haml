@@ -1,5 +1,9 @@
 %h1
   = @pilot_name
+
+- if @join_url
+  %h2 URL to join:
+  %a{href: @join_url}=@join_url
 %h2 Enter a single email address, or several!
 %p Separate emails by line. For example:
 %p teacher@school.org<br>teacher2@school.org<br>teacher3@school.org

@@ -5,7 +5,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   freeze_time
 
   self.use_transactional_test_case = true
-  setup_all do
+  setup do
     @regional_partner = create(:regional_partner)
     @program_manager = create(:program_manager, regional_partner: @regional_partner)
     @organizer = @program_manager
@@ -31,9 +31,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     )
 
     @standalone_workshop = create(:workshop)
-  end
 
-  setup do
     # Don't actually call the geocoder.
     Geocoder.stubs(:search)
   end
@@ -1169,7 +1167,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   private
 
   def tomorrow_at(hour, minute = nil)
-    tomorrow = Time.zone.now + 1.day
+    tomorrow = 1.day.from_now
     Time.zone.local(tomorrow.year, tomorrow.month, tomorrow.mday, hour, minute)
   end
 

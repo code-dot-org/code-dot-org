@@ -30,7 +30,7 @@ end.parse!
 missing_args = [:filename, :state, :school_year].select {|arg| options[arg].nil?}
 raise OptionParser::MissingArgument.new(missing_args.join(', ')) unless missing_args.empty?
 raise OptionParser::InvalidOption.new("State code must be a two-character US state code") unless us_state_abbr?(options[:state], true)
-raise OptionParser::InvalidOption.new("School year must be four digits") unless options[:school_year] =~ /^\d{4}$/
+raise OptionParser::InvalidOption.new("School year must be four digits") unless /^\d{4}$/.match?(options[:school_year])
 
 bucket_name = Census::StateCsOffering::CENSUS_BUCKET_NAME
 object_key = Census::StateCsOffering.construct_object_key(options[:state].upcase, options[:school_year].to_i)
@@ -42,7 +42,7 @@ begin
     AWS::S3.upload_to_bucket(
       bucket_name,
       backup_object_key,
-      open(filename),
+      File.open(filename),
       no_random: true
     )
   end
@@ -55,6 +55,6 @@ CDO.log.info "Uploading '#{options[:filename]}' to '#{bucket_name}' bucket in S3
 AWS::S3.upload_to_bucket(
   bucket_name,
   object_key,
-  open(options[:filename]),
+  File.open(options[:filename]),
   no_random: true
 )

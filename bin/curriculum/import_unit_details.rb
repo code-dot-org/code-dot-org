@@ -129,7 +129,6 @@ def main(options)
 
     script.update!(show_calendar: !!cb_unit['show_calendar'], is_migrated: true)
     script.fix_script_level_positions
-    script.write_script_dsl
     script.write_script_json
 
     puts "updated #{updated_lesson_group_count} lesson groups in unit #{script.name}"

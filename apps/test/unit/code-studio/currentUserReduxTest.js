@@ -1,12 +1,13 @@
 import {assert} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
 import currentUser, {
   SignInState,
   setUserSignedIn,
   setUserType,
   setCurrentUserHasSeenStandardsReportInfo,
   setCurrentUserName,
-  __testonly__
+  setInitialData,
+  setUserRoleInCourse,
+  CourseRoles
 } from '@cdo/apps/templates/currentUserRedux';
 
 describe('currentUserRedux', () => {
@@ -34,6 +35,25 @@ describe('currentUserRedux', () => {
     });
   });
 
+  describe('setUserRoleInCourse', () => {
+    it('can update userRoleInCourse', () => {
+      const instructor = currentUser(
+        initialState,
+        setUserRoleInCourse(CourseRoles.Instructor)
+      );
+      assert.equal(instructor.userRoleInCourse, CourseRoles.Instructor);
+
+      const participant = currentUser(
+        initialState,
+        setUserRoleInCourse(CourseRoles.Participant)
+      );
+      assert.equal(participant.userRoleInCourse, CourseRoles.Participant);
+    });
+    it('initially sets userRoleInCourse to Unknown', () => {
+      assert.equal(initialState.userRoleInCourse, CourseRoles.Unknown);
+    });
+  });
+
   describe('setUserType', () => {
     it('can set the current user type', () => {
       const action = setUserType('teacher');
@@ -52,40 +72,18 @@ describe('currentUserRedux', () => {
     });
   });
 
-  describe('asyncLoadUserData', () => {
-    const {currentUserFromServer} = __testonly__;
+  describe('setInitialData', () => {
+    const serverUser = {
+      id: 1,
+      username: 'test_user',
+      user_type: 'teacher',
+      is_signed_in: true
+    };
+    const action = setInitialData(serverUser);
+    const nextState = currentUser(initialState, action);
 
-    it('calls /users/current and sets user data to state', async () => {
-      const dispatchSpy = sinon.spy();
-      const serverUser = {
-        id: 1,
-        username: 'test_user',
-        user_type: 'teacher',
-        is_signed_in: true
-      };
-
-      function mockApiResponse() {
-        return new window.Response(JSON.stringify(serverUser), {
-          status: 200,
-          headers: {'Content-type': 'application/json'}
-        });
-      }
-
-      const fetchStub = sinon.stub(window, 'fetch');
-      fetchStub
-        .withArgs('/api/v1/users/current')
-        .returns(Promise.resolve(mockApiResponse()));
-
-      await currentUserFromServer(dispatchSpy);
-
-      const dispatchCalls = dispatchSpy.getCalls();
-      const action1 = dispatchCalls[0].args[0];
-      assert.equal('currentUser/SET_USER_SIGNED_IN', action1.type);
-      assert.equal(true, action1.isSignedIn);
-
-      const action2 = dispatchCalls[1].args[0];
-      assert.equal('currentUser/SET_INITIAL_DATA', action2.type);
-      assert.deepEqual(serverUser, action2.serverUser);
-    });
+    assert.equal(nextState.userId, 1);
+    assert.equal(nextState.userName, 'test_user');
+    assert.equal(nextState.userType, 'teacher');
   });
 });

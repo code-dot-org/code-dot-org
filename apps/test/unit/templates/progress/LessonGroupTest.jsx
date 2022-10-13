@@ -18,7 +18,7 @@ const DEFAULT_PROPS = {
     lessons: [fakeLesson('lesson1', 1)],
     levelsByLesson: []
   },
-  lessonIsVisible: () => true,
+  hasVisibleLesson: true,
   viewAs: ViewType.Instructor
 };
 
@@ -53,20 +53,7 @@ describe('LessonGroup', () => {
     const props = {
       ...DEFAULT_PROPS,
       isSummaryView: true,
-      lessonIsVisible: () => false,
-      viewAs: ViewType.Participant
-    };
-    const wrapper = shallow(<LessonGroup {...props} />);
-    expect(wrapper.get(0)).to.be.null;
-  });
-  it('does not render in participant view if there are no lessons', () => {
-    const props = {
-      ...DEFAULT_PROPS,
-      groupedLesson: {
-        ...DEFAULT_PROPS.groupedLesson,
-        lessons: []
-      },
-      isSummaryView: true,
+      hasVisibleLesson: false,
       viewAs: ViewType.Participant
     };
     const wrapper = shallow(<LessonGroup {...props} />);

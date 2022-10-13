@@ -86,7 +86,8 @@ describe('UnitCard', () => {
       addGroup,
       convertGroupToUserFacing,
       convertGroupToNonUserFacing,
-      lessonGroups
+      lessonGroups,
+      allowMajorCurriculumChanges: true
     };
   });
 

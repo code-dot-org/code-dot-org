@@ -1,51 +1,51 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: اساتذہ کے لیے ذرائع - مائن کرافٹ
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
 style_min: true
 ---
 
-# MINECRAFT Hour of Code
+# مائن کرافٹ آور آف کوڈ
 
 {{ hoc_mc_video }}
 
 [col-50]
 
-## Teacher Resources
+## اساتذہ کے لیے ذرائع
 
-### Lesson Plans:
+### سبق پلانز:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [مائن کرافٹ سبق پلان](/files/minecraft-lp.pdf)
+- [مائن کرافٹ آور آف کوڈ ووئج ایکواٹک کے لیے جوابی پرچہ اور اساتذہ کے لیے تجاویز](/files/minecraft-aquatic-answer-sheet.pdf)
+- [مائن کرافٹ آور آف کوڈ ایڈونچر کے لیے جوابی پرچہ اور اساتذہ کے لیے تجاویز](/files/minecraft-adventurer-answer-sheet.pdf)
+- [مائن کرافٹ آور آف کوڈ ڈیزائنر کے لیے جوابی پرچہ اور اساتذہ کے لیے تجاویز](/files/minecraft-designer-answer-sheet.pdf)
+- [اضافی مشکل مراحل](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### توسیعی سرگرمیاں:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [آور آف کوڈ کے اُس پار](http://code.org/learn/beyond)
+- [کمپیوٹر سائنس کے بنیادی اصول: کورس 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### اساتذہ کے لیے دیگر ذرائع:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [آور آف کوڈ: معلمین کے لیے کیسے کریں گائیڈ](https://hourofcode.com/how-to)
+- [کامیاب معلمین کی بہترین پریکٹس](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- لائیو ایونٹ: [آور آف کوڈ کے لیے ایک معلم کا گائیڈ](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [کسی ایونٹ کی منصوبہ بندی اور قیادت کرنے میں آپ کی مدد کے لیے ذرائع](https://docs.com/hourofcode2016)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## عمومی جائزہ
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+اس مائن کرافٹ دنیا کے ذریعے اسٹیو یا ایلکس کو ایڈونچر پر لے جانے کے لیے کوڈ کے بلاکس استعمال کریں۔.
 
-**Recommended Age Range:** 6+
+**سفارش کردہ عمر کی حد:** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**ٹیکنالوجی کے تقاضے:** جدید براؤزرز + ٹیبلٹس
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>ٹیوٹوریل کو آزمائیں</button></a>
 
 [/col-50]

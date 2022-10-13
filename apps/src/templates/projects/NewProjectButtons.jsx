@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 
 const PROJECT_INFO = {
@@ -113,6 +113,10 @@ const PROJECT_INFO = {
   poetry: {
     label: i18n.projectTypePoetry(),
     thumbnail: '/shared/images/fill-70x70/courses/logo_poetry.png'
+  },
+  thebadguys: {
+    label: i18n.projectTypeThebadguys(),
+    thumbnail: '/shared/images/fill-70x70/courses/logo_thebadguys.png'
   }
 };
 

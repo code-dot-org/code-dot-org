@@ -9,8 +9,11 @@ import TeacherHomepage from './TeacherHomepage';
 import {
   announcement,
   courses,
+  plCourses,
+  topPlCourse,
   topCourse,
   taughtSections,
+  joinedPlSections,
   joinedSections
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
@@ -18,18 +21,16 @@ const serverSections = taughtSections.map(serverSectionFromSection);
 
 const serverCourses = [
   {
-    id: 49,
-    name: 'Play Lab',
-    category: 'Hour of Code',
-    category_priority: 2,
-    script_name: 'playlab'
+    title: 'Play Lab',
+    link: 's/playlab',
+    description: 'HOC for playlab',
+    name: 'playlab'
   },
   {
-    id: 50,
-    name: 'CSP Unit 2 - Digital Information',
-    category: 'CSP',
-    category_priority: 1,
-    script_name: 'csp2'
+    title: 'CSP Unit 2 - Digital Information',
+    link: 's/csp2-2020',
+    description: 'Learning about digital info',
+    name: 'csp2-2020'
   }
 ];
 
@@ -50,7 +51,9 @@ export default storybook => {
               <TeacherHomepage
                 announcements={[announcement]}
                 courses={[]}
-                joinedSections={[]}
+                plCourses={[]}
+                joinedStudentSections={[]}
+                joinedPlSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -72,7 +75,8 @@ export default storybook => {
                 announcements={[announcement]}
                 topCourse={topCourse}
                 courses={courses}
-                joinedSections={[]}
+                joinedStudentSections={[]}
+                joinedPlSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -93,7 +97,8 @@ export default storybook => {
               <TeacherHomepage
                 announcements={[announcement]}
                 courses={[]}
-                joinedSections={[]}
+                joinedStudentSections={[]}
+                joinedPlSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -115,7 +120,8 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={courses}
                 topCourse={topCourse}
-                joinedSections={[]}
+                joinedStudentSections={[]}
+                joinedPlSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -124,7 +130,7 @@ export default storybook => {
         }
       },
       {
-        name: 'Teacher Homepage - courses, sections and joinedSections',
+        name: 'Teacher Homepage - courses, sections and joinedStudentSections',
         description:
           'Teacher Homepage - teacher does have course progress, and does have sections they own and sections in which they are a student',
         story: () => {
@@ -137,7 +143,59 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={courses}
                 topCourse={topCourse}
-                joinedSections={joinedSections}
+                joinedStudentSections={joinedSections}
+                joinedPlSections={[]}
+                isEnglish={true}
+                showCensusBanner={false}
+              />
+            </Provider>
+          );
+        }
+      },
+      {
+        name:
+          'Teacher Homepage - student and pl courses, sections, joinedStudentSections',
+        description:
+          'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
+        story: () => {
+          withFakeServer({courses: serverCourses, sections: serverSections});
+          registerReducers({teacherSections});
+          const store = createStoreWithReducers();
+          return (
+            <Provider store={store}>
+              <TeacherHomepage
+                announcements={[announcement]}
+                courses={courses}
+                topCourse={topCourse}
+                plCourses={plCourses}
+                topPlCourse={topPlCourse}
+                joinedStudentSections={joinedSections}
+                joinedPlSections={[]}
+                isEnglish={true}
+                showCensusBanner={false}
+              />
+            </Provider>
+          );
+        }
+      },
+      {
+        name: 'Teacher Homepage - courses, sections and joinedPlSections',
+        description:
+          'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
+        story: () => {
+          withFakeServer({courses: serverCourses, sections: serverSections});
+          registerReducers({teacherSections});
+          const store = createStoreWithReducers();
+          return (
+            <Provider store={store}>
+              <TeacherHomepage
+                announcements={[announcement]}
+                courses={courses}
+                topCourse={topCourse}
+                plCourses={plCourses}
+                topPlCourse={topPlCourse}
+                joinedStudentSections={[]}
+                joinedPlSections={joinedPlSections}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -157,7 +215,6 @@ function withFakeServer({courses = [], sections = []} = {}) {
     {'Content-Type': 'application/json'},
     JSON.stringify(body)
   ];
-  server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
   server.respondWith(
     'GET',
     '/dashboardapi/sections',
@@ -165,7 +222,7 @@ function withFakeServer({courses = [], sections = []} = {}) {
   );
   server.respondWith(
     'GET',
-    '/dashboardapi/sections/valid_scripts',
+    '/dashboardapi/sections/valid_course_offerings',
     successResponse([])
   );
 }

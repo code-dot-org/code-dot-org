@@ -4,6 +4,7 @@ require 'action_view/helpers/date_helper'
 require '../lib/cdo/git_utils'
 require '../lib/cdo/rake_utils'
 require '../lib/cdo/hash_utils'
+require '../lib/cdo/data/csv_to_sql_table'
 
 # Enables timed_task to be used in place of task when defining rake tasks, which prints
 # how long the task took to stdout.
@@ -64,112 +65,79 @@ namespace :seed do
     Foorm::Form.setup
   end
 
-  SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
-  # TODO(dave): when we switch to seeding .script_json files directly without
-  # looking at a .script file first, the corresponding .script_json files for
-  # these units should be moved from dashboard/config/scripts_json to
-  # dashboard/test/ui/config/scripts_json, to ensure that they do not get seeded
-  # outside of the test environment.
-  SPECIAL_UI_TEST_SCRIPTS = [
-    'ui-test-script-in-course-2017',
-    'ui-test-script-in-course-2019',
-    'ui-test-versioned-script-2017',
-    'ui-test-versioned-script-2019'
-  ].map {|script| "test/ui/config/scripts/#{script}.script"}.freeze
-  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
-    '20-hour',
-    'algebra',
-    'allthehiddenthings',
-    'allthemigratedthings',
-    'alltheplcthings',
-    'allthethings',
-    'allthettsthings',
-    'artist',
-    'course1',
-    'course2',
-    'course3',
-    'course4',
-    'coursea-2017',
-    'courseb-2017',
-    'coursec-2017',
-    'coursed-2017',
-    'coursee-2017',
-    'coursef-2017',
-    'express-2017',
-    'pre-express-2017',
-    'coursea-2018',
-    'coursea-2019',
-    'coursec-2019',
-    'coursee-2019',
-    'coursea-2020',
-    'csd1-2019',
-    'csd2-2019',
-    'csd3-2019',
-    'csd4-2019',
-    'csd5-2019',
-    'csd6-2019',
-    'csp1-2017',
-    'csp2-2017',
-    'csp3-2017',
-    'csp3-a',
-    'csp3-research-mxghyt',
-    'csp4-2017',
-    'csp5-2017',
-    'csp-ap',
-    'csp-explore-2017',
-    'csp-create-2017',
-    'csp-post-survey',
-    'csppostap-2017',
-    'csp1-2018',
-    'csp2-2018',
-    'csp3-2018',
-    'csp4-2018',
-    'csp5-2018',
-    'csp-explore-2018',
-    'csp-create-2018',
-    'csppostap-2018',
-    'csp-post-survey-2018',
-    'csp1-2019',
-    'csp2-2019',
-    'csp3-2019',
-    'csp4-2019',
-    'csp5-2019',
-    'csp-explore-2019',
-    'csp-create-2019',
-    'csppostap-2019',
-    'csp1-2020',
-    'csp2-2020',
-    'csp3-2020',
-    'csp4-2020',
-    'csp5-2020',
-    'csp6-2020',
-    'csp7-2020',
-    'csp8-2020',
-    'csp9-2020',
-    'csp10-2020',
-    'csp-post-survey-2020',
-    'dance',
-    'events',
-    'express-2017',
-    'flappy',
-    'frozen',
-    'hero',
-    'hourofcode',
-    'infinity',
-    'mc',
-    'minecraft',
-    'playlab',
-    'starwars',
-    'starwarsblocks',
-    'step',
-    'oceans',
-    'sports',
-  ].map {|script| "config/scripts/#{script}.script"}.freeze
+  SCRIPTS_GLOB = Dir.glob('config/scripts_json/**/*.script_json').sort.flatten.freeze
+  SPECIAL_UI_TEST_SCRIPTS = %w(
+    ui-test-script-in-course-2017
+    ui-test-script-in-course-2019
+    ui-test-versioned-script-2017
+    ui-test-versioned-script-2019
+    ui-test-csa-family-script
+    ui-test-teacher-pl-course
+    ui-test-facilitator-pl-course
+  ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
+  UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
+    20-hour
+    algebra
+    allthehiddenthings
+    allthemigratedthings
+    alltheplcthings
+    alltheselfpacedplthings
+    allthethings
+    allthettsthings
+    artist
+    course1
+    course2
+    course3
+    course4
+    coursea-2017
+    courseb-2017
+    coursec-2017
+    coursed-2017
+    coursee-2017
+    coursef-2017
+    pre-express-2017
+    express-2017
+    coursea-2019
+    coursec-2019
+    coursee-2019
+    coursea-2020
+    csp1-2017
+    csp2-2017
+    csp3-2017
+    csp3-a
+    csp3-research-mxghyt
+    csp4-2017
+    csp5-2017
+    csp-ap
+    csp-explore-2017
+    csp-create-2017
+    csp-post-survey
+    csppostap-2017
+    csp1-2019
+    csp2-2019
+    csp3-2019
+    csp4-2019
+    csp5-2019
+    csp-explore-2019
+    csp-create-2019
+    csppostap-2019
+    dance
+    events
+    flappy
+    frozen
+    hero
+    hourofcode
+    infinity
+    mc
+    minecraft
+    playlab
+    starwars
+    starwarsblocks
+    step
+    oceans
+    sports
+  ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = 'config/scripts/.seeded'.freeze
-
-  file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
-    update_scripts
-  end
 
   # Update scripts in the database from their file definitions.
   #
@@ -185,8 +153,11 @@ namespace :seed do
     script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
-      _, custom_i18n = Script.setup(custom_scripts, show_progress: Rake.application.options.trace)
-      Script.merge_and_write_i18n(custom_i18n)
+      custom_scripts.each do |filepath|
+        Services::ScriptSeed.seed_from_json_file(filepath)
+      rescue => e
+        raise e, "Error parsing script file #{filepath}: #{e}"
+      end
     rescue
       rm SEEDED # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
       raise
@@ -200,11 +171,12 @@ namespace :seed do
     :deprecated_blockly_levels,
     :custom_levels,
     :dsls,
-    :programming_expressions,
+    :code_docs,
     :blocks,
     :standards,
     :shared_blockly_functions,
     :libraries,
+    :course_offerings
   ].freeze
 
   # Do the minimum amount of work to seed a single script or glob, without
@@ -214,8 +186,8 @@ namespace :seed do
   timed_task single_script: :environment do
     script_name = ENV['SCRIPT_NAME']
     raise "must specify SCRIPT_NAME=" unless script_name
-    script_files = Dir.glob("config/scripts/#{script_name}.script")
-    raise "no matching scripts found" unless script_files.present?
+    script_files = Dir.glob("config/scripts_json/#{script_name}.script_json")
+    raise "no matching scripts found" if script_files.blank?
     puts "seeding only scripts:\n#{script_files.join("\n")}"
     update_scripts(script_files: script_files)
   end
@@ -240,7 +212,7 @@ namespace :seed do
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2018 csd-2019 csp-2019 csp-2020).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
@@ -260,6 +232,8 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task dsls: :environment do
     DSLDefined.transaction do
+      level_md5s_by_name = Hash[DSLDefined.pluck(:name, :md5)]
+
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
       dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
@@ -274,8 +248,12 @@ namespace :seed do
       dsls_glob.each do |filename|
         dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
-          data, _i18n = dsl_class.parse_file(filename)
-          dsl_class.setup data
+          contents = File.read(filename)
+          md5 = Digest::MD5.hexdigest(contents)
+          data, _i18n = dsl_class.parse(contents, filename)
+          unless md5 == level_md5s_by_name[data[:name]]
+            dsl_class.setup(data, md5)
+          end
         rescue Exception
           puts "Error parsing #{filename}"
           raise
@@ -317,6 +295,20 @@ namespace :seed do
     end
   end
 
+  timed_task course_offerings: :environment do
+    CourseOffering.seed_all
+  end
+
+  timed_task course_offerings_ui_tests: :environment do
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
+      CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
+    end
+  end
+
+  timed_task reference_guides: :environment do
+    ReferenceGuide.seed_all
+  end
+
   # Seeds Standards
   timed_task standards: :environment do
     Framework.seed_all
@@ -324,9 +316,14 @@ namespace :seed do
     Standard.seed_all
   end
 
-  timed_task programming_expressions: :environment do
+  timed_task code_docs: :environment do
     ProgrammingEnvironment.seed_all
     ProgrammingExpression.seed_all
+    ProgrammingClass.seed_all
+  end
+
+  timed_task data_docs: :environment do
+    DataDoc.seed_all
   end
 
   # Seeds the data in school_districts
@@ -469,8 +466,15 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools].freeze
+  timed_task :import_pegasus_data do
+    db = DASHBOARD_DB
+    table_prefix = "google_sheets_shared_"
+    files_to_import = %w[data/cdo-languages.csv data/cdo-donors.csv]
+    files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
+  end
+
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :import_pegasus_data].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
@@ -480,8 +484,8 @@ namespace :seed do
   timed_task ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms]
+  timed_task incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :import_pegasus_data]
 
   desc "seed only dashboard data required for tests"
-  timed_task test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]
+  timed_task test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms, :import_pegasus_data]
 end

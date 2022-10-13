@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
-import StudentSections from './StudentSections';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 
@@ -20,7 +20,7 @@ export default class StudentHomepage extends Component {
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
-    isEnglish: PropTypes.bool.isRequired
+    showVerifiedTeacherWarning: PropTypes.bool
   };
 
   componentDidMount() {
@@ -31,7 +31,13 @@ export default class StudentHomepage extends Component {
   }
 
   render() {
-    const {courses, sections, topCourse, hasFeedback, isEnglish} = this.props;
+    const {
+      courses,
+      sections,
+      topCourse,
+      hasFeedback,
+      showVerifiedTeacherWarning
+    } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
@@ -45,8 +51,19 @@ export default class StudentHomepage extends Component {
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
-          {isEnglish && <SpecialAnnouncement isTeacher={false} />}
-          {hasFeedback && <StudentFeedbackNotification studentId={studentId} />}
+          {showVerifiedTeacherWarning && (
+            <Notification
+              type={NotificationType.failure}
+              notice={i18n.studentAsVerifiedTeacherWarning()}
+              details={i18n.studentAsVerifiedTeacherDetails()}
+              buttonText={i18n.learnMore()}
+              buttonLink="https://support.code.org/hc/en-us/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa-"
+              dismissible={false}
+            />
+          )}
+          {hasFeedback && (
+            <ParticipantFeedbackNotification studentId={studentId} />
+          )}
           <RecentCourses
             courses={courses}
             topCourse={topCourse}
@@ -57,7 +74,7 @@ export default class StudentHomepage extends Component {
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <StudentSections initialSections={sections} />
+          <JoinSectionArea initialJoinedStudentSections={sections} />
         </div>
       </div>
     );

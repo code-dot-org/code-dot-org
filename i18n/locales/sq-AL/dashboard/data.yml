@@ -398,6 +398,7 @@ sq:
         csd_debugging: Rregullimi
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab
+        csp_applab_parameters: Funksionet me parametra
     callout:
       text:
         drag_blocks: Lëviz një bllok "move" dhe vendose atë poshtë blloku tjetër

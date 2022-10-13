@@ -1,45 +1,45 @@
 ---
-title: Teacher Resources - Infinity Play Lab
+title: Lärarresurser – Infinity Play Lab
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Infinity Play Lab: An Hour of Code Tutorial
+# Infinity Play Lab: en lektion från Hour of Code
 
 {{ hoc_infinity_video }}
 
 [col-50]
 
-## Teacher Resources
+## Lärarresurser
 
-### Lesson Plans:
+### Lektionsplaner:
 
 - [Play Lab](/files/hoc-playlab-lp.pdf)
 
-### Extension Activities:
+### Avancerade aktiviteter:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Mer än en timmes kodning med Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Andra lärarresurser:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: handbok för lärare](https://hourofcode.com/how-to)
+- [Bästa praxis från framgångsrika lärare](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Direktsänt event: [Lärarhandbok till Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Översikt
 
-Use Play Lab to create a story or game starring Disney Infinity characters.
+Använd Play Lab för att skapa en berättelse eller ett spel med karaktärer från Disney Infinity.
 
-**Recommended Age Range:** 4-104
+**Rekommenderad ålder:** 4–104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Tekniska behov:** Modern webbläsare, smarta telefoner och surfplattor
 
-<a href="http://studio.code.org/s/infinity/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/infinity/reset"><button>Prova på den handledda delen</button></a>
 
 [/col-50]

@@ -1,0 +1,37 @@
+---
+title: Programmeren met poëzie
+theme: responsive
+set_dir: true
+social:
+  og:title: Coding with Poetry
+  twitter:title: Coding with Poetry
+  og:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  twitter:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  og:image: https://code.org/images/social-media/poetry-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/poetry-og-image-1200x630.png
+---
+
+# Programmeren met poëzie
+
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Kunst met gedichten", left_description: "Maak een kunstwerk van een klassiek gedicht en voeg animatie toe tijdens deze activiteit van 'Hour of Code'.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Starten", right_heading: "Programmeren met poëzie", right_description: "Laat informatica en poëzie met elkaar in contact komen in uw klaslokaal dankzij deze serie aan lessen.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Module bekijken" }}
+
+## Kom meer te weten over programmeren met Gedichten
+
+In de module Coderen met poëzie in CS Connections kunnen leerlingen twee vakken - informatica en poëzie - op een nieuwe manier bekijken. In vijf lessen, zullen studenten uit de groepen 4 t/m 8 een programma creëren dat gedichten genereert om verschillende versies van een door hen geschreven gedicht te reciteren. Daarna kunnen studenten hun programma's testen met hun klasgenoten en het project afronden door gedichten die door gebruikers werden gegenereerd in een kring te delen.
+
+Door een generator voor gedichten te bouwen, kunnen studenten leren over hoe computers omgaan met invoer van gebruikers, deze opslaan in het geheugen en een gewenst product als output geven. Door hun eigen gedichten te schrijven, kunnen studenten elementen van poëzie ontdekken zoals grammatica, stemming en de keuze van woorden.
+
+<em>Onze Poem Art Hour of Code-activiteit is ook de eerste les in de module Coderen met poëzie van ons Informatica Connections-lesprogramma. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Schrijf je hier in voor een speciale sessie van CodeBytes</a> op dinsdag 7 december om 10 uur ET en nogmaals om 10 uur PT; we laten leerlingen zien hoe ze aan de slag kunnen met de Poem Art Hour of Code-activiteit.</em>
+
+{{ teacher_info, heading: "Informatie voor de leraar", title: "Hoe door te gaan met leren na 'Programmeren met poëzie'", beschrijving: "In onze nieuwe CS Connections curriculum, worden aanvullende activiteiten verkend die ELA en Informatica met elkaar combineren; bekijk tevens nog meer relaties tussen informatica en andere vakken zoals Wiskunde, Wetenschap, en Maatschappijleer die u in uw klas kunt geven.", button_text: "Meer informatie", url: "/educate/csc" }}
+
+## Bevat creaties gecreëerd door studenten
+
+{{ featured_project, title: "Middag", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "Wolk", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "Ster", author: "B", age: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "Zingen", author: "W", age: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
+{{ clearfix }}

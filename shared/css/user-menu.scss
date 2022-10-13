@@ -1,8 +1,9 @@
-@import 'color';
+@import 'color.scss';
 @import 'font';
 .user_menu, .create_menu, .help_button {
   user-select: none;
   height: 38px;
+  position: relative;
 
   .create_button, .display_name, .pairing_name {
     max-width: 120px;
@@ -31,10 +32,18 @@
       
     }
   }
+
+  .user_options, .create_options {
+    top: 50px;
+  }
+
+  .help_contents {
+    top: 58px;
+  }
+
   .user_options, .create_options, .help_contents {
     position: absolute;
-    top: 55px;
-    right: 71px;
+    right: 0px;
     background-color: $white;
     border: 1px solid $charcoal;
 

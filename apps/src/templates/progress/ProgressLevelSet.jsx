@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
 import {levelWithProgressType} from './progressTypes';
@@ -15,9 +15,10 @@ import {connect} from 'react-redux';
 class ProgressLevelSet extends React.Component {
   static propTypes = {
     name: PropTypes.string,
+    lessonName: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     onBubbleClick: PropTypes.func,
     // Redux
     isRtl: PropTypes.bool
@@ -30,7 +31,8 @@ class ProgressLevelSet extends React.Component {
       disabled,
       selectedSectionId,
       onBubbleClick,
-      isRtl
+      isRtl,
+      lessonName
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -95,6 +97,7 @@ class ProgressLevelSet extends React.Component {
                   disabled={disabled}
                   selectedSectionId={selectedSectionId}
                   onBubbleClick={onBubbleClick}
+                  lessonName={lessonName}
                 />
               </td>
             </tr>

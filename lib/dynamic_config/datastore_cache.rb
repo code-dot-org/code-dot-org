@@ -72,7 +72,7 @@ class DatastoreCache
   # When unicorn preload the app and then forks worker processes the update_thread
   # doesn't make it to the other processes.  Restart it here
   def after_fork
-    @update_thread = spawn_update_thread unless @update_thread && @update_thread.alive?
+    @update_thread = spawn_update_thread unless @update_thread&.alive?
   end
 
   # Pulls all values from the datastore and populates the local cache

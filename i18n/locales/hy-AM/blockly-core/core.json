@@ -204,7 +204,7 @@
     "MATH_POWER_SYMBOL": "^",
     "MATH_RANDOM_FLOAT_TITLE_RANDOM": "պատահական մասն",
     "MATH_RANDOM_FLOAT_TOOLTIP": "Վերադարձնել պատահական խմբակցության միջեւ 0.0 (ներառյալ) եւ 1.0 (բացառիկ):",
-    "MATH_RANDOM_INT_TITLE": "Պատահական ամբողջ թիվ է% 1% 2",
+    "MATH_RANDOM_INT_TITLE": "Պատահական ամբողջ թիվ է %1 %2",
     "MATH_RANDOM_INT_TOOLTIP": "Վերադարձնել պատահական ամբողջ թիվ երկու նշված սահմաններում, ներառյալ:",
     "MATH_ROUND_OPERATOR_ROUND": "ամբողջացնել",
     "MATH_ROUND_OPERATOR_ROUNDDOWN": "կլոր ներքեւ",

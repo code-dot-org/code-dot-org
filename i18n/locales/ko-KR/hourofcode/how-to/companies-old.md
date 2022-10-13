@@ -5,7 +5,7 @@ title: Hour of Code 행사 운영 방법 - 회사
 {{ signup_button }}
 
 # Hour of Code 를 회사에서 진행하는 방법
-### 당신과 당신의 직원들이 어떻게 하면 학생들에게 컴퓨터 과학에 도전하도록 영감을 줄 수 있을지 알아보세요!
+### 귀사와 귀사 임직원이 학생들에게 컴퓨터 과학에 도전하도록 영감을 주는 방법에 관해 알아보세요!
 
 ***
 
@@ -31,7 +31,7 @@ Code.org는 직원에게 아워오브코드를 하고 있는 지역 교실과[�
 - 귀하의 [아워오브코드]({{ urls/promote }}) 이벤트를 홍보하고 다른 사람들이 주최하도록 장려하십시오.
 - 귀사의 소프트웨어 엔지니어를 격려하여  지역 교실을 방문하고 아워오브코드를 지원하여 학생들이 컴퓨터 과학을 공부하도록 동기를 부여하게 해주세요. 자원봉사자로 [등록]({{ urls/volunteer_engineer }})하여 교실과 연결할 수 있습니다.
 
-## 2. 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. 활동 선택
 저희는 다양한 파트너들이 만든 [재미있는, 1시간 분량의 활동]({{ urls/learn }})을 주최하여 모든 연령의 참가자들이 즐길 수 있게 합니다. [한 번 시도해 보세요!]({{ urls/learn }})
@@ -42,7 +42,7 @@ Code.org는 직원에게 아워오브코드를 하고 있는 지역 교실과[�
 
 ## 4. 필요한 기술 용품 계획 - 컴퓨터는 선택 사항입니다.
 
-Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 하지만 각 참가자에게 컴퓨터를 제공할 필요는**없으며,** 컴퓨터가 없어도 아워오브코드를 할 수 있습니다.
+The best Hour of Code experience includes Internet-connected computers. 하지만 각 참가자에게 컴퓨터를 제공할 필요는**없으며,** 컴퓨터가 없어도 아워오브코드를 할 수 있습니다.
 
 **미리 계획을 세우세요!** 이벤트 시작 전에 다음을 하세요:
 
@@ -87,9 +87,9 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## 7) 축하하기
 
-- 참가자와 학생을 위한[수료증 인쇄]({{ urls/certificates }}).
+- [Print certificates]({{ urls/certificates }}) for participants and students.
 - [ "아워오브코드를 해냈다!"]({{ promote/resources_stickers }}) 라는 스티커를 인쇄하세요.
 - 직원들을 위해 [맞춤형 티셔츠](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)를 주문하세요.
-- 아워오브코드 이벤트 사진과 동영상을 소셜 미디어 상에서 공유 우리 역시 여러분의 성공을 강조할 수 있게 #HourOfCode 및 @codeorg을 사용하세요!
+- Share photos and videos of your Hour of Code event on social media. 우리 역시 여러분의 성공을 강조할 수 있게 #HourOfCode 및 @codeorg을 사용하세요!
 
 {{ signup_button }}

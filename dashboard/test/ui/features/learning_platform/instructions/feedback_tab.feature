@@ -25,9 +25,6 @@ Scenario: As student 'Feedback' tab is not visible if no feedback
   And element "ui-test-feedback-input" does not exist
   Then I sign out
 
-@no_ie
-# Disabling IE due to bug where text changes in the feedback text input are not registered
-# so submit button remains disabled
 Scenario: As teacher, when viewing a level with student work,
 feedback can be submitted and displayed. If there is a mini rubric, teacher can give feedback on rubric.
 If a teacher on a level with mini rubric can see the rubric without viewing student work.

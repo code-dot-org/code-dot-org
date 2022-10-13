@@ -10,7 +10,6 @@ const TEST_PROPS = {
   isEnglish: true,
   isTeacher: true,
   isSignedOut: true,
-  linesCount: '0',
   studentsCount: '0',
   modernElementaryCoursesAvailable: true
 };
@@ -39,7 +38,6 @@ describe('Courses', () => {
       it('as student', () => {
         const wrapper = mountCourses({isEnglish, isTeacher: false});
         assertComponentsInOrder(wrapper, [
-          'SpecialAnnouncement',
           'CourseBlocksStudentGradeBands',
           'CourseBlocksHoc',
           'LocalClassActionBlock'

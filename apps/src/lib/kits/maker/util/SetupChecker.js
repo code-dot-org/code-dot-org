@@ -7,12 +7,21 @@ import {
   gtChrome33,
   isChromeOS
 } from './browserChecks';
-import {BOARD_TYPE, detectBoardTypeFromPort} from './boardUtils';
+import {
+  BOARD_TYPE,
+  detectBoardTypeFromPort,
+  isWebSerialPort
+} from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
 
 export default class SetupChecker {
-  port = null;
-  boardController = null;
+  constructor(webSerialPort) {
+    this.port = null;
+    this.boardController = null;
+    if (webSerialPort) {
+      this.port = webSerialPort;
+    }
+  }
 
   /**
    * Resolve if using Chrome > 33 or Code.org Browser
@@ -46,7 +55,12 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    return findPortWithViableDevice().then(port => (this.port = port));
+    if (!isWebSerialPort(this.port)) {
+      return findPortWithViableDevice().then(port => (this.port = port));
+    }
+
+    // In the Web Serial Experiment, user already selected port
+    return Promise.resolve(this.port);
   }
 
   /**
@@ -55,7 +69,9 @@ export default class SetupChecker {
   detectCorrectFirmware(boardType) {
     if (boardType === BOARD_TYPE.MICROBIT) {
       this.boardController = new MicroBitBoard(this.port);
-      return this.boardController.checkExpectedFirmware();
+      return this.boardController.checkExpectedFirmware().catch(err => {
+        return Promise.reject(err);
+      });
     } else {
       this.boardController = new CircuitPlaygroundBoard(this.port);
       return this.boardController.connectToFirmware();

@@ -52,6 +52,7 @@ describe('LevelTokenDetails', () => {
       activityPosition: 1,
       lessonExtrasAvailableForUnit: false,
       isProfessionalLearningCourse: false,
+      allowMajorCurriculumChanges: true,
       inactiveLevelNames: []
     };
   });
@@ -106,6 +107,16 @@ describe('LevelTokenDetails', () => {
       />
     );
     assertDisabled(wrapper, 'Bonus', false);
+  });
+
+  it('bonus is disabled if lesson extras are available for unit but major curriculum changes are not allowed', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        allowMajorCurriculumChanges={false}
+      />
+    );
+    assertDisabled(wrapper, 'Bonus', true);
   });
 
   it('shows checked checkboxes', () => {

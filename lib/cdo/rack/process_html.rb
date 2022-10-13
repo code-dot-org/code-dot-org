@@ -90,8 +90,7 @@ module Rack
       end
 
       # Skip if :skip_if lambda is provided and evaluates to true
-      if @skip_if &&
-          @skip_if.call(env, status, headers, body)
+      if @skip_if&.call(env, status, headers, body)
         return false
       end
 

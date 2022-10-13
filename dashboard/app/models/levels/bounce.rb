@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -92,6 +92,10 @@ class Bounce < Grid
   def self.parse_maze(maze_json, _ = nil)
     maze_json = maze_json.to_json if maze_json.is_a? Array
     {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell['tileType'])}}.to_json}
+  end
+
+  def uses_google_blockly?
+    true
   end
 
   def toolbox(type)
