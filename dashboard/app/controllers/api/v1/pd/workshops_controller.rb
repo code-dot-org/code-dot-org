@@ -90,7 +90,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       # teachercon
       cities = current_user.
         regional_partners.
-        filter_map {|partner| get_matching_teachercon(partner)}.
+        map {|partner| get_matching_teachercon(partner)}.
+        compact.
         to_set.
         pluck(:city).
         map {|city| "%#{city}%"}
