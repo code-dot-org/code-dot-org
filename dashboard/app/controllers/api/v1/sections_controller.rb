@@ -103,6 +103,30 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
+  def multi_update_assignment
+    return render :forbidden unless current_user
+    sections = current_user.sections.where(id: params[:section_ids]).compact
+    return render :ok if sections.empty?
+
+    course_offering = CourseOffering.find(params[:course_offering_id])
+    return render :not_found unless course_offering
+    course_version = course_offering.course_versions.find(params[:course_version_id])
+    return render :not_found unless course_version
+    if course_version.content_root_type == 'UnitGroup'
+      course_id = course_version.content_root_id if course_version.content_root_type = 'UnitGroup'
+      script_id = params[:script_id]
+    else
+      course_id = nil
+      script_id = course_version.content_root_id if course_version.content_root_type = 'Script'
+    end
+
+    sections.each do |section|
+      section.course_id = course_id
+      section.script_id = script_id
+      section.save! if section.changed?
+    end
+  end
+
   # DELETE /api/v1/sections/<id>
   # Delete a section
   def destroy
@@ -282,11 +306,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
+        @unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
         return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      elsif course_version.content_root_type == 'Unit'
+      elsif course_version.content_root_type == 'Script'
         unit_id = course_version.content_root_id
-        @unit = Unit.get_from_cache(unit_id)
+        @unit = Script.get_from_cache(unit_id)
         return head :bad_request unless @unit
         return head :forbidden unless @unit.course_assignable?(current_user)
       end
