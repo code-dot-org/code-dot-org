@@ -51,9 +51,9 @@ class School < ApplicationRecord
   # Gets the full address of the school.
   # @return [String] The full address.
   def full_address
-    %w(address_line1 address_line2 address_line3 city state zip).filter_map do |col|
+    %w(address_line1 address_line2 address_line3 city state zip).map do |col|
       attributes[col].presence
-    end.join(' ')
+    end.compact.join(' ')
   end
 
   def most_recent_school_stats
