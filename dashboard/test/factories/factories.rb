@@ -781,7 +781,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script, aliases: [:unit] do
+  factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true

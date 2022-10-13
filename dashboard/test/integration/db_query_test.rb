@@ -10,7 +10,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = Script.get_from_cache('allthethings')
+    script = Unit.get_from_cache('allthethings')
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
@@ -34,7 +34,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = Script.hoc_2014_unit
+    script = Unit.hoc_2014_unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 

@@ -163,7 +163,7 @@ class I18nScriptUtils
 
   # Used by get_level_from_url, for the script_level-specific case.
   def self.get_script_level(route_params, url)
-    script = Script.get_from_cache(route_params[:script_id])
+    script = Unit.get_from_cache(route_params[:script_id])
     unless script.present?
       error_class = 'Could not find script in get_script_level'
       error_message = "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
@@ -180,7 +180,7 @@ class I18nScriptUtils
       uri = URI.parse(url)
       uri_params = CGI.parse(uri.query)
       if uri_params.key?('id')
-        script_level = Script.cache_find_script_level(uri_params['id'].first)
+        script_level = Unit.cache_find_script_level(uri_params['id'].first)
         script_level&.level
       elsif uri_params.key?('level_name')
         Level.find_by_name(uri_params['level_name'].first)

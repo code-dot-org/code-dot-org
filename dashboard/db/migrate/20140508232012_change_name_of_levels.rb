@@ -10,13 +10,13 @@ class ChangeNameOfLevels < ActiveRecord::Migration[4.2]
 
   def up
     OLD_TO_NEW.each do |old, new|
-      Script.find_by_name(old).try(:update, {name: new})
+      Unit.find_by_name(old).try(:update, {name: new})
     end
   end
 
   def down
     OLD_TO_NEW.each do |old, new|
-      Script.find_by_name(new).try(:update, {name: old})
+      Unit.find_by_name(new).try(:update, {name: old})
     end
   end
 end

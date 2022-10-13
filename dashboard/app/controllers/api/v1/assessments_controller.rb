@@ -6,7 +6,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
   load_and_authorize_resource :script
 
   def load_from_cache
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Unit.get_from_cache(params[:script_id])
   end
 
   # For each assessment in a script, return an object of script_level IDs to question data.
@@ -220,7 +220,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
         level_result[:student_result] = student_answer
         level_result[:status] = ""
       when Multi
-        answer_indexes = Script.cache_find_level(level.id).correct_answer_indexes_array
+        answer_indexes = Unit.cache_find_level(level.id).correct_answer_indexes_array
         student_result = student_answer.split(",").map(&:to_i).sort
         level_result[:student_result] = student_result
 
