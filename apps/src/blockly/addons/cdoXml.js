@@ -80,7 +80,14 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     };
 
     const positionBlock = function(block) {
-      const heightWidth = block.blockly_block.getHeightWidth();
+      const bBox = block.blockly_block.svgGroup_.getBBox();
+      const hasFrameSvg = block.blockly_block.functionalSvg_ ? true : false;
+      const frameSvgSize = hasFrameSvg ? 40 : 0;
+      const frameSvgTop = hasFrameSvg ? 35 : 0;
+      const heightWidth = {
+        height: bBox.height,
+        width: bBox.width
+      };
 
       if (isNaN(block.x)) {
         block.x = cursor.x;
@@ -89,13 +96,22 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       }
 
       if (isNaN(block.y)) {
-        block.y = cursor.y;
-        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
+        block.y = cursor.y + frameSvgTop;
+        cursor.y +=
+          heightWidth.height + verticalSpaceBetweenBlocks + frameSvgSize;
       }
+
       block.blockly_block.moveTo(
         new Blockly.utils.Coordinate(block.x, block.y)
       );
     };
+
+    // Move functional defintions to the end of the block list.
+    blocks.forEach(block => {
+      if (block.blockly_block.type === 'procedures_defnoreturn') {
+        blocks.push(blocks.splice(blocks.indexOf(block), 1)[0]);
+      }
+    });
 
     blocks
       .filter(function(block) {
