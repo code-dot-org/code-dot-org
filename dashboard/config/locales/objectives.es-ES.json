@@ -1451,6 +1451,12 @@
         "13503201-2764-45e3-b644-2f5fd993f710": {
           "description": "Implementar las diferentes características de un programa siguiendo una guía de proyecto estructurada"
         },
+        "149a90c7-273f-4c73-8273-2799340bf90d": {
+          "description": " Aplicar las diferentes características de un programa siguiendo una guía de proyecto estructurada"
+        },
+        "be3ca496-7d99-4db9-8ca3-2844688ce210": {
+          "description": "Identificar las estructuras básicas de programación necesarias para construir los diferentes componentes de un juego"
+        },
         "14cb0543-587a-4d56-9495-f11715494118": {
           "description": "Identificar las razones por las que alguien puede crear un determinado sitio web"
         },
@@ -2812,6 +2818,12 @@
         },
         "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
           "description": "Implementar las diferentes características de un programa siguiendo una guía de proyecto estructurada"
+        },
+        "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016": {
+          "description": "Identificar las estructuras básicas de programación necesarias para construir los diferentes componentes de un juego"
+        },
+        "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16": {
+          "description": " Aplicar las diferentes características de un programa siguiendo una guía de proyecto estructurada"
         },
         "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
           "description": " Comunicarse y colaborar con los compañeros para resolver un problema "

@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-09-19T19:15:14.000Z",
-  "level_num": "custom",
-  "user_id": 833,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -40,7 +36,7 @@
     "parent_level_id": 28361,
     "short_instructions": "It's time to create whatever you want!",
     "mini_rubric": "false",
-    "long_instructions": "*It's time to start creating whatever you want! When you are done, share your project and say \"Hello!\" to the people in your world!*\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/cbCRwipEkaXhe.AzOSYwavvMApEYUkCa/category_food/face_pizza.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/up6b2tgqAjH6fxO6bKFn7O0CrgtxSkFz/category_animals/cuteanimals_bear.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/O1HNS9DSfUZLw6lzWIkyCTLChPoDOJhz/category_retro/retrocreature_18.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\r\n</div>\r\n\r\n- Add more sprite *costumes* to your project by clicking the *costumes* tab.\r\n- Add *code* to the workspace to make sprites appear.\r\n- Try adding more features to your project to make it even better.\r\n- Press the *Share* button above to send your project to some friends!\r\n\r\nFor some extra fun, check out the brand new `create effect` block in the **Sprites** category!\r\n\r\n<xml>\r\n  <block type=\"gamelab_makeBurst\">\r\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\r\n    <value name=\"NUM\">\r\n      <block type=\"math_number\">\r\n        <title name=\"NUM\">10</title>\r\n      </block>\r\n    </value>\r\n  </block>\r\n</xml>\r\n",
+    "long_instructions": "*It's time to start creating whatever you want! When you are done, share your project and say \"Hello!\" to the people in your world!*\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/FtyDPCdPAUpUJaJb_KJYPf7hTvk70qwv/category_sports/soccer_ball.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/8gC4IJlmaANSQ2nC4n6nwspUHroJSWwd/category_sports/soccer_player_4.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/D6gv9H1EUMv3zC.1qarPSuTpjV5xHXN5/category_sports/soccer_trophy.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/WVrdWiyVvKgDIFxer4j9dZynKdcvaOV2/category_sports/soccer_player_1.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\r\n</div>\r\n\r\n- Add more sprite *costumes* to your project by clicking the *costumes* tab.\r\n- Add *code* to the workspace to make sprites appear.\r\n- Try adding more features to your project to make it even better.\r\n- Press the *Share* button above to send your project to some friends!\r\n\r\nFor some extra fun, check out the brand new `create effect` block in the **Sprites** category!\r\n\r\n<xml>\r\n  <block type=\"gamelab_makeBurst\">\r\n    <title name=\"ANIMATION_NAME\">\"face_burger_1\"</title>\r\n    <value name=\"NUM\">\r\n      <block type=\"math_number\">\r\n        <title name=\"NUM\">10</title>\r\n      </block>\r\n    </value>\r\n  </block>\r\n</xml>\r\n",
     "encrypted": "false",
     "soft_buttons": [
       "leftButton",
@@ -54,17 +50,20 @@
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "instructions_icon": "pizza",
-    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"bg-default-plate\",\r\n    \"bg-abstract-blue\",\r\n    \"bg-abstract-pink\",\r\n    \"bg-graident-green\",\r\n    \"bg-graident-pink\",\r\n    \"bg-graident-light-green\",\r\n    \"bg-graident-light-blue\",\r\n    \"bg-abstract-green\",\r\n    \"bg-abstract-orange\",\r\n    \"pizza\",\r\n    \"burger\",\r\n    \"broccoli\",\r\n    \"carrot\",\r\n    \"cupcake\",\r\n    \"ice-cream-cone\",\r\n    \"fries\",\r\n    \"avocado\",\r\n    \"taco\",\r\n    \"birthday-cake\",\r\n    \"strawberry\",\r\n    \"banana\",\r\n    \"sushi\",\r\n    \"popcorn\",\r\n    \"cheese\",\r\n    \"croissant\",\r\n    \"apple\",\r\n    \"salad\",\r\n    \"ramen\",\r\n    \"sandwich\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"bg-default-plate\": {\r\n      \"name\": \"hw_plate_background_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/vYopFokxZKjdlYWHACQAd4NzCDWN2Vee/category_backgrounds/hw_plate_background.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"vYopFokxZKjdlYWHACQAd4NzCDWN2Vee\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"ramen\": {\r\n      \"name\": \"face_ramen_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/eIGQb9ctf8Th5cDSwagkZPaAYcB2gVyE/category_food/face_ramen.png\",\r\n      \"frameSize\": {\r\n        \"x\": 396,\r\n        \"y\": 394\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"eIGQb9ctf8Th5cDSwagkZPaAYcB2gVyE\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"sushi\": {\r\n      \"name\": \"face_sushi_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/Y6uVkOjw90mcXU4mQKnli_F.y.zLVfZR/category_food/face_sushi.png\",\r\n      \"frameSize\": {\r\n        \"x\": 393,\r\n        \"y\": 349\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Y6uVkOjw90mcXU4mQKnli_F.y.zLVfZR\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"sandwich\": {\r\n      \"name\": \"face_sandwich_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/Cme22Vu4ek3Bj1lQ.CjkKH.gnQue9jmx/category_food/face_sandwich.png\",\r\n      \"frameSize\": {\r\n        \"x\": 396,\r\n        \"y\": 177\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Cme22Vu4ek3Bj1lQ.CjkKH.gnQue9jmx\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"salad\": {\r\n      \"name\": \"face_salad_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/iVQuiosXswWTJk5uVoYJzcomovsaPhDx/category_food/face_salad.png\",\r\n      \"frameSize\": {\r\n        \"x\": 398,\r\n        \"y\": 337\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"iVQuiosXswWTJk5uVoYJzcomovsaPhDx\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"popcorn\": {\r\n      \"name\": \"face_popcorn_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/IRBfPV6Qoo4NFeooe7wAoNatT9g4pq4O/category_food/face_popcorn.png\",\r\n      \"frameSize\": {\r\n        \"x\": 257,\r\n        \"y\": 394\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"IRBfPV6Qoo4NFeooe7wAoNatT9g4pq4O\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"croissant\": {\r\n      \"name\": \"face_croissant_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/mZtRLF5Qm6cUNBsHR3XgdjMEDDaPK915/category_food/face_croissant.png\",\r\n      \"frameSize\": {\r\n        \"x\": 396,\r\n        \"y\": 329\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"mZtRLF5Qm6cUNBsHR3XgdjMEDDaPK915\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"cheese\": {\r\n      \"name\": \"face_cheese_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/8nHHLBq18WGnzZOGE0jiFeRVJl6MP0E7/category_food/face_cheese.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 265\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"8nHHLBq18WGnzZOGE0jiFeRVJl6MP0E7\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"birthday-cake\": {\r\n      \"name\": \"face_birthdaycake_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/oYKRn5_nlNKnMsYnLXnI5yRPZdTXfYjg/category_food/face_birthdaycake.png\",\r\n      \"frameSize\": {\r\n        \"x\": 370,\r\n        \"y\": 397\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oYKRn5_nlNKnMsYnLXnI5yRPZdTXfYjg\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"bg-abstract-blue\": {\r\n      \"name\": \"abstract_15_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/kpGIKirow4l3xRdN_BYD7pW3aVlfysex/category_backgrounds/abstract_15.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"kpGIKirow4l3xRdN_BYD7pW3aVlfysex\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-abstract-pink\": {\r\n      \"name\": \"abstract_16_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/OEa2gEbbvs2v84AZcjbUfOw_7tVqVKJr/category_backgrounds/abstract_16.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"OEa2gEbbvs2v84AZcjbUfOw_7tVqVKJr\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-green\": {\r\n      \"name\": \"gradient_13_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/RnFEWg6kwTHgLC2WCCLXYrgyTwZwwy5q/category_backgrounds/gradient_13.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RnFEWg6kwTHgLC2WCCLXYrgyTwZwwy5q\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-pink\": {\r\n      \"name\": \"gradient_14_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/xk9FNA5fI7KifcH2.fXAvYJEzMQCjKsW/category_backgrounds/gradient_14.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"xk9FNA5fI7KifcH2.fXAvYJEzMQCjKsW\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-light-green\": {\r\n      \"name\": \"gradient_10_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/HTm.whWJkR5t0Kf4BGlyLT8QtC3EN356/category_backgrounds/gradient_10.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HTm.whWJkR5t0Kf4BGlyLT8QtC3EN356\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-light-blue\": {\r\n      \"name\": \"gradient_25_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/HJMXamvByE28ZPEEbFg5KUDcFo6EhoEf/category_backgrounds/gradient_25.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 339\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HJMXamvByE28ZPEEbFg5KUDcFo6EhoEf\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-abstract-green\": {\r\n      \"name\": \"abstract_08_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/.g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK/category_backgrounds/abstract_08.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \".g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-abstract-orange\": {\r\n      \"name\": \"abstract_26_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/_pBimGWbiO2Nbb6J7Bfjez6VIWSBKdx./category_backgrounds/abstract_26.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_pBimGWbiO2Nbb6J7Bfjez6VIWSBKdx.\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"burger\": {\r\n      \"name\": \"face_burger_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/l..BIzEFYJNv7_aOrcRH1BnVBT6le3QF/category_food/face_burger.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 341\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"l..BIzEFYJNv7_aOrcRH1BnVBT6le3QF\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"taco\": {\r\n      \"name\": \"face_taco_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/S0AVI7mnOI8nWDxmZ1NPz2lMDRfmhAF3/category_food/face_taco.png\",\r\n      \"frameSize\": {\r\n        \"x\": 399,\r\n        \"y\": 235\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"S0AVI7mnOI8nWDxmZ1NPz2lMDRfmhAF3\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"pizza\": {\r\n      \"name\": \"face_pizza_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/gPFKgB_Let0u1.OCTIhpCP5K5iqadQcn/category_food/face_pizza.png\",\r\n      \"frameSize\": {\r\n        \"x\": 330,\r\n        \"y\": 395\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"gPFKgB_Let0u1.OCTIhpCP5K5iqadQcn\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"fries\": {\r\n      \"name\": \"face_fries_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/Xe0Z0iN1tr7V.TAUyahGQ5rYr2DYFYnG/category_food/face_fries.png\",\r\n      \"frameSize\": {\r\n        \"x\": 307,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Xe0Z0iN1tr7V.TAUyahGQ5rYr2DYFYnG\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"broccoli\": {\r\n      \"name\": \"face_broc_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/ub5g3lhCqabDt4tlhLOEG85lxxCTsCt1/category_food/face_broc.png\",\r\n      \"frameSize\": {\r\n        \"x\": 340,\r\n        \"y\": 396\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ub5g3lhCqabDt4tlhLOEG85lxxCTsCt1\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"apple\": {\r\n      \"name\": \"face_apple_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/D9I677s9Rz4Ww_Znrcm36XWuz8WA0Kh8/category_food/face_apple.png\",\r\n      \"frameSize\": {\r\n        \"x\": 392,\r\n        \"y\": 393\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"D9I677s9Rz4Ww_Znrcm36XWuz8WA0Kh8\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"strawberry\": {\r\n      \"name\": \"face_strawberry_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/2O84JtbnWjil7f2R0oUqvFTRHnFaGCIw/category_food/face_strawberry.png\",\r\n      \"frameSize\": {\r\n        \"x\": 310,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"2O84JtbnWjil7f2R0oUqvFTRHnFaGCIw\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"avocado\": {\r\n      \"name\": \"face_avocado_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/_VMfWvOE.Ev9VIdQq1ihAqS8PBdBDQtS/category_food/face_avocado.png\",\r\n      \"frameSize\": {\r\n        \"x\": 285,\r\n        \"y\": 393\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_VMfWvOE.Ev9VIdQq1ihAqS8PBdBDQtS\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"banana\": {\r\n      \"name\": \"face_banana_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/pWFbbj15zL1DL.xT.w9LmvN_ZdtcMo_W/category_food/face_banana.png\",\r\n      \"frameSize\": {\r\n        \"x\": 264,\r\n        \"y\": 397\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"pWFbbj15zL1DL.xT.w9LmvN_ZdtcMo_W\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"ice-cream-cone\": {\r\n      \"name\": \"face_icecreamcone_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/oqNN9WsJkGcHW.yydcp3dq1f6.P4eSU8/category_food/face_icecreamcone.png\",\r\n      \"frameSize\": {\r\n        \"x\": 224,\r\n        \"y\": 394\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oqNN9WsJkGcHW.yydcp3dq1f6.P4eSU8\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"carrot\": {\r\n      \"name\": \"face_carrot_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/j8_YdWDy2Z8ck2PxCyV0QOTXmI2ot_tN/category_food/face_carrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 123,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"j8_YdWDy2Z8ck2PxCyV0QOTXmI2ot_tN\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"cupcake\": {\r\n      \"name\": \"face_cupcake_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/KHrxG_UKYXBvq5A284g3HbUGHHaHSGMo/category_food/face_cupcake.png\",\r\n      \"frameSize\": {\r\n        \"x\": 285,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"KHrxG_UKYXBvq5A284g3HbUGHHaHSGMo\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "instructions_icon": "soccerball",
+    "start_animations": "\r\n{\"orderedKeys\":[\"86af775d-bab1-4497-9118-53f3aa526b6d\",\"dfc8390d-812a-4d7c-88c3-6adba48ecfb5\",\"fd9972af-6014-427b-b412-83e086fc7b9f\",\"38b7fb59-7b0f-4691-8288-3e9ea97edf7b\",\"ec6d4bbe-46fb-476e-aa91-b462290e9e28\",\"a466f047-65aa-49cf-a638-d242046f6877\",\"d62efcc0-8902-46de-b0a7-f8597acf85d4\",\"1aca84a8-1339-4c63-ad32-53a0a4e4b6b3\",\"f388d5da-2d00-4868-8c9c-2d94d20b3a0a\",\"91d52001-1bee-4b82-8dc5-0adf69b99d6d\",\"eeffb08b-cfa5-4aea-accb-5edee8b07f80\",\"83d13d22-8394-4ee9-bd10-47ad5451876e\",\"d8658450-4926-4010-b1c5-cd8cf03efe42\",\"ea283231-8252-449c-bf16-45d8257d0b55\",\"4d3abbc5-fc3d-4234-b5bf-6ce2ded1a025\",\"ba64c49d-ec90-4853-89b1-89bc293c91e8\",\"d14715fe-e0d0-4ee6-90e5-2325dd1d5c15\",\"ec677855-fa96-4fe3-b0de-f3c19966502d\",\"40dc9201-36f2-43c8-8b0c-4797718e655b\",\"2706a6b2-4609-487d-a85d-ba2f6bc2692b\",\"fd581331-548c-4fcd-8c49-563207b8af4e\",\"531761fb-9575-4cb4-b60a-025ea9476f64\",\"38deccc6-c6de-4454-9131-a27c9e3639d7\",\"0648f533-58d0-4160-a1d5-1a7ef9040e12\"],\"propsByKey\":{\"0648f533-58d0-4160-a1d5-1a7ef9040e12\":{\"name\":\"hw_sky_background\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-29 19:52:15 UTC\",\"pngLastModified\":\"2021-10-29 19:52:13 UTC\",\"version\":\"GGYPrkPBR79yulLEncx_K3IjTPvxksP5\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/GGYPrkPBR79yulLEncx_K3IjTPvxksP5/category_backgrounds/hw_sky_background.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"38deccc6-c6de-4454-9131-a27c9e3639d7\":{\"name\":\"soccer_field\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:52:34 UTC\",\"pngLastModified\":\"2021-01-19 23:52:34 UTC\",\"version\":\"KEhbIcQANdNLcKHCvRni2.Iv0B3yr3oz\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/KEhbIcQANdNLcKHCvRni2.Iv0B3yr3oz/category_backgrounds/soccer_field.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"531761fb-9575-4cb4-b60a-025ea9476f64\":{\"name\":\"soccer_field_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-04 21:18:49 UTC\",\"pngLastModified\":\"2022-10-04 21:18:49 UTC\",\"version\":\"HRTd_iDjIr46lWaQmhMXQVDOtTx52SDO\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/HRTd_iDjIr46lWaQmhMXQVDOtTx52SDO/category_backgrounds/soccer_field_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"fd581331-548c-4fcd-8c49-563207b8af4e\":{\"name\":\"soccer_stadium_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-04 21:19:38 UTC\",\"pngLastModified\":\"2022-10-04 21:19:38 UTC\",\"version\":\"dhO5Fi7NOerK3HgfWJqFS1Uzkf8NlIXf\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/dhO5Fi7NOerK3HgfWJqFS1Uzkf8NlIXf/category_backgrounds/soccer_stadium_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2706a6b2-4609-487d-a85d-ba2f6bc2692b\":{\"name\":\"soccer_field_4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-04 21:19:11 UTC\",\"pngLastModified\":\"2022-10-04 21:19:10 UTC\",\"version\":\"8XV2hcw1Xs2Vm.r11u9BZYe3k9wLI6UE\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/8XV2hcw1Xs2Vm.r11u9BZYe3k9wLI6UE/category_backgrounds/soccer_field_4.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"40dc9201-36f2-43c8-8b0c-4797718e655b\":{\"name\":\"soccer_field_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-04 21:19:01 UTC\",\"pngLastModified\":\"2022-10-04 21:19:01 UTC\",\"version\":\"K.141.3_4KJMNDcEirc5kDKwyUtPhUob\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/K.141.3_4KJMNDcEirc5kDKwyUtPhUob/category_backgrounds/soccer_field_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ec677855-fa96-4fe3-b0de-f3c19966502d\":{\"name\":\"soccer_stadium_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-04 21:19:21 UTC\",\"pngLastModified\":\"2022-10-04 21:19:20 UTC\",\"version\":\"nXGcn6Wrsz5jCsk8RwGTDlluOFaPnvXS\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/nXGcn6Wrsz5jCsk8RwGTDlluOFaPnvXS/category_backgrounds/soccer_stadium_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"d14715fe-e0d0-4ee6-90e5-2325dd1d5c15\":{\"name\":\"soccer_stadium_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-04 21:19:29 UTC\",\"pngLastModified\":\"2022-10-04 21:19:29 UTC\",\"version\":\"vUShbr7ew6tnnOo6B0mSBPY8dJw9XA8y\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/vUShbr7ew6tnnOo6B0mSBPY8dJw9XA8y/category_backgrounds/soccer_stadium_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ba64c49d-ec90-4853-89b1-89bc293c91e8\":{\"name\":\"soccer_field_1b\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-06 22:46:52 UTC\",\"pngLastModified\":\"2022-10-06 22:46:52 UTC\",\"version\":\"7lV7RXWTM9qfDNlThDKskISpui9wTRUB\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/7lV7RXWTM9qfDNlThDKskISpui9wTRUB/category_backgrounds/soccer_field_1b.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"4d3abbc5-fc3d-4234-b5bf-6ce2ded1a025\":{\"name\":\"soccer_fan_foam\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:59:17 UTC\",\"pngLastModified\":\"2022-10-05 01:59:16 UTC\",\"version\":\"5sU3FCflwpjcEsKNhjDDZdgevjvmxtLP\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/5sU3FCflwpjcEsKNhjDDZdgevjvmxtLP/category_sports/soccer_fan_foam.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ea283231-8252-449c-bf16-45d8257d0b55\":{\"name\":\"soccer_fan_flag\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:58:59 UTC\",\"pngLastModified\":\"2022-10-05 01:58:58 UTC\",\"version\":\"YPbnkjfycFwiIqAo.oYE3PurkJIHuzt4\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/YPbnkjfycFwiIqAo.oYE3PurkJIHuzt4/category_sports/soccer_fan_flag.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"d8658450-4926-4010-b1c5-cd8cf03efe42\":{\"name\":\"soccer_fan_airhorn2\",\"frameCount\":1,\"frameSize\":{\"x\":271,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-06 22:47:37 UTC\",\"pngLastModified\":\"2022-10-06 22:47:36 UTC\",\"version\":\"grRZfcVGnzrs7f.iz2h.ZkJ9LR294Xn9\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/grRZfcVGnzrs7f.iz2h.ZkJ9LR294Xn9/category_sports/soccer_fan_airhorn2.png\",\"sourceSize\":{\"x\":271,\"y\":400}},\"83d13d22-8394-4ee9-bd10-47ad5451876e\":{\"name\":\"soccer_whistle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:58:08 UTC\",\"pngLastModified\":\"2022-10-05 01:58:07 UTC\",\"version\":\"D4zA65CeKpAUyU2H59SgHHP.hE84u2DL\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/D4zA65CeKpAUyU2H59SgHHP.hE84u2DL/category_sports/soccer_whistle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"eeffb08b-cfa5-4aea-accb-5edee8b07f80\":{\"name\":\"soccer_trophy\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:55:52 UTC\",\"pngLastModified\":\"2022-10-05 01:55:51 UTC\",\"version\":\"D6gv9H1EUMv3zC.1qarPSuTpjV5xHXN5\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/D6gv9H1EUMv3zC.1qarPSuTpjV5xHXN5/category_sports/soccer_trophy.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"91d52001-1bee-4b82-8dc5-0adf69b99d6d\":{\"name\":\"soccer_ball\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:58:41 UTC\",\"pngLastModified\":\"2022-10-05 01:58:41 UTC\",\"version\":\"FtyDPCdPAUpUJaJb_KJYPf7hTvk70qwv\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/FtyDPCdPAUpUJaJb_KJYPf7hTvk70qwv/category_sports/soccer_ball.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f388d5da-2d00-4868-8c9c-2d94d20b3a0a\":{\"name\":\"soccer_player_ref\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:57:42 UTC\",\"pngLastModified\":\"2022-10-05 01:57:42 UTC\",\"version\":\"WHldeznRezYj0oOnb.KIA0QkP8JfJXl1\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/WHldeznRezYj0oOnb.KIA0QkP8JfJXl1/category_sports/soccer_player_ref.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"1aca84a8-1339-4c63-ad32-53a0a4e4b6b3\":{\"name\":\"soccer_player_8\",\"frameCount\":1,\"frameSize\":{\"x\":239,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-06 22:48:06 UTC\",\"pngLastModified\":\"2022-10-06 22:48:06 UTC\",\"version\":\"u8A6C4fGpyUN5wMoQoKj8Mh6tctBdkw8\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/u8A6C4fGpyUN5wMoQoKj8Mh6tctBdkw8/category_sports/soccer_player_8.png\",\"sourceSize\":{\"x\":239,\"y\":400}},\"d62efcc0-8902-46de-b0a7-f8597acf85d4\":{\"name\":\"soccer_player_5\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:56:14 UTC\",\"pngLastModified\":\"2022-10-05 01:56:13 UTC\",\"version\":\"CMmcD3BNM1O_UV2bxsGm8rBjZmM1GH6O\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/CMmcD3BNM1O_UV2bxsGm8rBjZmM1GH6O/category_sports/soccer_player_5.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a466f047-65aa-49cf-a638-d242046f6877\":{\"name\":\"soccer_player_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:57:25 UTC\",\"pngLastModified\":\"2022-10-05 01:57:24 UTC\",\"version\":\"WVrdWiyVvKgDIFxer4j9dZynKdcvaOV2\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/WVrdWiyVvKgDIFxer4j9dZynKdcvaOV2/category_sports/soccer_player_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ec6d4bbe-46fb-476e-aa91-b462290e9e28\":{\"name\":\"soccer_player_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":306},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:57:07 UTC\",\"pngLastModified\":\"2022-10-05 01:57:07 UTC\",\"version\":\"teA5303yOU_Dt1hAcxaPxiP1iYFa_i82\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/teA5303yOU_Dt1hAcxaPxiP1iYFa_i82/category_sports/soccer_player_2.png\",\"sourceSize\":{\"x\":400,\"y\":306}},\"38b7fb59-7b0f-4691-8288-3e9ea97edf7b\":{\"name\":\"soccer_player_3\",\"frameCount\":1,\"frameSize\":{\"x\":289,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:56:34 UTC\",\"pngLastModified\":\"2022-10-05 01:56:34 UTC\",\"version\":\"iFBtuaDiP3BFX2hP.eFBMwaYfuWDUCH4\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/iFBtuaDiP3BFX2hP.eFBMwaYfuWDUCH4/category_sports/soccer_player_3.png\",\"sourceSize\":{\"x\":289,\"y\":400}},\"fd9972af-6014-427b-b412-83e086fc7b9f\":{\"name\":\"soccer_player_4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-05 01:56:49 UTC\",\"pngLastModified\":\"2022-10-05 01:56:49 UTC\",\"version\":\"8gC4IJlmaANSQ2nC4n6nwspUHroJSWwd\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/8gC4IJlmaANSQ2nC4n6nwspUHroJSWwd/category_sports/soccer_player_4.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"dfc8390d-812a-4d7c-88c3-6adba48ecfb5\":{\"name\":\"soccer_player_7\",\"frameCount\":1,\"frameSize\":{\"x\":394,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-06 22:48:19 UTC\",\"pngLastModified\":\"2022-10-06 22:48:19 UTC\",\"version\":\"XKOSqkBc4G_DuCsSOeqHdnwJDIj28dSt\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/XKOSqkBc4G_DuCsSOeqHdnwJDIj28dSt/category_sports/soccer_player_7.png\",\"sourceSize\":{\"x\":394,\"y\":400}},\"86af775d-bab1-4497-9118-53f3aa526b6d\":{\"name\":\"soccer_player_6\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-06 22:48:36 UTC\",\"pngLastModified\":\"2022-10-06 22:48:36 UTC\",\"version\":\"XRhxuSw4Yp.hxkhLHBDZy0lsD7QZSv96\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/XRhxuSw4Yp.hxkhLHBDZy0lsD7QZSv96/category_sports/soccer_player_6.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_tab\",\r\n  \"callout_text\": \"Click here to add costumes to your project.\",\r\n  \"element_id\": \"[id=\\\"animationMode\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "video_key": "hello_world_congrats",
     "skip_autosave": true,
-    "encrypted_examples": "WNbw/L2bHm21vqyYxd/S1ez3SBbhJEgMIxWCBziMWNsoCGQMTIy11pR5tnZv\nhJqfTadSL4wpavw5BnQd4zA6tw==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-19T19:15:14.000Z",
+  "user_id": 833,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:14.745+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_freeplay\\\"\"],\"cloned_from\":\"helloworld_food_freeplay\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:14.745+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_freeplay\\\"\"],\"cloned_from\":\"helloworld_food_freeplay\"},{\"changed_at\":\"2022-10-06 03:06:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:08:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:11:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:14:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 03:34:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 20:16:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 19:18:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -79,12 +78,12 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <title name="IMG">"hw_plate_background_1"</title>
+            <field name="IMG">"soccer_field_1b"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#33ccff</title>
+                <field name="COLOUR">#33ccff</field>
               </block>
             </value>
           </block>
@@ -93,25 +92,25 @@
               <block type="gamelab_randColor"/>
             </value>
           </block>
-          <block type="gamelab_playSound">
-            <title name="SOUND">Choose</title>
+          <block type="gamelab_playSoundOptionsSoccer">
+            <field name="SOUND">'sound://category_sports/Airhorn_SFX.mp3'</field>
           </block>
           <block type="gamelab_printText">
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
           <block type="gamelab_showTitleScreen">
             <value name="TITLE">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
             <value name="SUBTITLE">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
@@ -119,93 +118,93 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"face_pizza_1"</title>
+            <field name="ANIMATION_NAME">"soccer_player_6"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
-                <title name="LOCATION">{"x":200,"y":200}</title>
+                <field name="LOCATION">{"x":200,"y":200}</field>
               </block>
             </value>
           </block>
           <block type="gamelab_makeNumSprites">
-            <title name="ANIMATION_NAME">"face_pizza_1"</title>
+            <field name="ANIMATION_NAME">"soccer_player_6"</field>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">3</title>
+                <field name="NUM">3</field>
               </block>
             </value>
           </block>
           <block type="gamelab_makeBurst">
-            <title name="EFFECT">"burst"</title>
-            <title name="ANIMATION_NAME">"face_pizza_1"</title>
+            <field name="EFFECT">"burst"</field>
+            <field name="ANIMATION_NAME">"soccer_player_6"</field>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSay">
-            <title name="SPEECH">Hello, world!</title>
+            <field name="SPEECH">Hello, world!</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSayTime">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="TEXT1">
               <block type="text">
-                <title name="TEXT">Hello, world!</title>
+                <field name="TEXT">Hello, world!</field>
               </block>
             </value>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">4</title>
+                <field name="NUM">4</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setProp">
-            <title name="PROPERTY">"scale"</title>
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">50</title>
+                <field name="NUM">50</field>
               </block>
             </value>
           </block>
           <block type="gamelab_changePropBy">
-            <title name="PROPERTY">"scale"</title>
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <title name="ANIMATION">"face_burger_1"</title>
+            <field name="ANIMATION">"soccer_player_6"</field>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_jumpTo">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="LOCATION">
@@ -215,19 +214,19 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#33ccff</title>
+                <field name="COLOUR">#33ccff</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -237,77 +236,77 @@
           <block type="gamelab_removeTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_mirrorSprite">
-            <title name="DIRECTION">"right"</title>
+            <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_destroy">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveInDirection">
-            <title name="DIRECTION">"North"</title>
+            <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <title name="NUM">5</title>
+                <field name="NUM">5</field>
               </block>
             </value>
           </block>
           <block type="gamelab_turn">
-            <title name="DIRECTION">"right"</title>
+            <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="N">
               <block type="math_number">
-                <title name="NUM">45</title>
+                <field name="NUM">45</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <title name="NUM">5</title>
+                <field name="NUM">5</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Locations">
           <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":200,"y":200}</title>
+            <field name="LOCATION">{"x":200,"y":200}</field>
           </block>
           <block type="gamelab_locationAt">
             <value name="X">
               <block type="math_number">
-                <title name="NUM">200</title>
+                <field name="NUM">200</field>
               </block>
             </value>
             <value name="Y">
               <block type="math_number">
-                <title name="NUM">200</title>
+                <field name="NUM">200</field>
               </block>
             </value>
           </block>
@@ -315,140 +314,140 @@
         </category>
         <category name="Events">
           <block type="gamelab_spriteClicked">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_checkTouching">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_burger_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_atTime">
-            <title name="UNIT">"seconds"</title>
+            <field name="UNIT">"seconds"</field>
             <value name="N">
               <block type="math_number" can_disconnect_from_parent="false">
-                <title name="NUM">3</title>
+                <field name="NUM">3</field>
               </block>
             </value>
           </block>
           <block type="gamelab_keyPressed">
-            <title name="CONDITION">"when"</title>
-            <title name="KEY">"up"</title>
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
           </block>
         </category>
         <category name="Behaviors">
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="spinning right">spinning right</title>
+            <field name="VAR" id="spinning right">spinning right</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="spinning left">spinning left</title>
+            <field name="VAR" id="spinning left">spinning left</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="shrinking">shrinking</title>
+            <field name="VAR" id="shrinking">shrinking</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="growing">growing</title>
+            <field name="VAR" id="growing">growing</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="fluttering">fluttering</title>
+            <field name="VAR" id="fluttering">fluttering</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="jittering">jittering</title>
+            <field name="VAR" id="jittering">jittering</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="wobbling">wobbling</title>
+            <field name="VAR" id="wobbling">wobbling</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="wandering">wandering</title>
+            <field name="VAR" id="wandering">wandering</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving north">moving north</title>
+            <field name="VAR" id="moving north">moving north</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving south">moving south</title>
+            <field name="VAR" id="moving south">moving south</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving east">moving east</title>
+            <field name="VAR" id="moving east">moving east</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving west">moving west</title>
+            <field name="VAR" id="moving west">moving west</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving north and looping">moving north and looping</title>
+            <field name="VAR" id="moving north and looping">moving north and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving south and looping">moving south and looping</title>
+            <field name="VAR" id="moving south and looping">moving south and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving east and looping">moving east and looping</title>
+            <field name="VAR" id="moving east and looping">moving east and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving west and looping">moving west and looping</title>
+            <field name="VAR" id="moving west and looping">moving west and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="swimming left and right">swimming left and right</title>
+            <field name="VAR" id="swimming left and right">swimming left and right</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="patrolling">patrolling</title>
+            <field name="VAR" id="patrolling">patrolling</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving with arrow keys">moving with arrow keys</title>
+            <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="driving with arrow keys">driving with arrow keys</title>
+            <field name="VAR" id="driving with arrow keys">driving with arrow keys</field>
           </block>
         </category>
       </xml>

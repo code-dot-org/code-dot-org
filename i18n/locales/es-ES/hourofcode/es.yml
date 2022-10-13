@@ -35,6 +35,11 @@ es:
   africa_campaign_date_full: Del 1 de octubre al 18 de diciembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Del 1 de octubre al 18 de diciembre de 2022
+  hoc2022_header: "¡Explora, Juega, Crea!"
+  social_hoc2022_explore_play_create: Utiliza la informática para explorar, jugar
+    y crear.
+  codeorg_homepage_hoc2022_body: 'Explorar el universo, marcar un gol, crear tu propia
+    coreografía: hay muchas maneras de probar la informática.'
   social_hoc2021_cse: 'Durante la #HourOfCode, estamos celebrando #CSEverywhere. ¡Descubre
     las conexiones!'
   hoc2020_header: Aprende hoy, construye un futuro mejor.
@@ -513,6 +518,26 @@ es:
   front_join_us_n_students_served: "# participantes."
   front_join_us_challenge: "¡Gana una videoconferencia para tu aula con una celebridad!"
   front_join_us_learn_more: Conoce más
+  cta_see_whats_new: Ver las novedades
+  cta_try_more_activities: Prueba más actividades
+  cta_try_an_activity: Prueba una actividad
+  hoc_homepage_join_the_movement_heading: Únete al movimiento
+  hoc_homepage_join_the_movement_description: La Hora del Código está disponible todo
+    el año, pero cada año en diciembre tu clase puede unirse a millones de estudiantes
+    de todo el mundo que celebran la Semana de la Educación en Informática con la
+    Hora del Código. La inscripción para la celebración anual comienza cada año en
+    octubre.
+  hoc_homepage_what_is_hoc_subhead: Tutoriales de una hora en más de 45 idiomas. No
+    se necesita experiencia. Las actividades de la Hora del Código están disponibles
+    de forma gratuita durante todo el año.
+  hoc_homepage_what_is_hoc_description: La Hora del Código es una introducción de
+    una hora a la informática, que utiliza divertidos tutoriales para demostrar que
+    cualquiera puede aprender lo básico. Esta campaña de base cuenta con el apoyo
+    de más de 400 socios y 200.000 educadores en todo el mundo.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lee nuestra guía práctica](%{howto_guide_url})
+    para planificar un evento para tu clase."
+  hoc_homepage_highlights_heading: Lo más destacado de la Hora del Código
+  hoc_homepage_organized_by: La Hora del Código está organizada por [Code.org](%{codeorg_url}).
   signup_closed: La inscripción para la Hora del Código está cerrada. Vuelve a intentarlo
     en octubre cuando abramos la inscripción para la siguiente Hora del Código.
   signup_registration_not_required: "¡No es necesario inscribirse para participar!
@@ -1231,7 +1256,7 @@ es:
   tutorial_bbcphys_name: Programación + física de Bitsbox
   tutorial_bitsbox_name: Crear aplicaciones locas con Bitsbox
   tutorial_tlcemo_name: 'Máquina de emociones: tarjeta de crear una cara'
-  tutorial_crd_name: Condicionales con Cartas
+  tutorial_crd_name: Condicionales con naipes
   tutorial_bbcbio_name: Programación + biología de Bitsbox
   tutorial_ticklebb8_name: BB-8 Swing
   tutorial_grok_name: Aprendizaje de Grok

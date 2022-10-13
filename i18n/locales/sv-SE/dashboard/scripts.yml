@@ -1877,3 +1877,34 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: loopar
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Innehåll
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2

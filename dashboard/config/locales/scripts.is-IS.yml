@@ -2607,6 +2607,7 @@ is:
             cspSurvey2020:
               display_name: Könnun
         aiml-2021:
+          title: Gervigreind og vélanámseining
           lesson_groups:
             lessonGroup-4:
               display_name: Könnun
@@ -3040,6 +3041,8 @@ is:
               display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
             lessonGroup-4:
               display_name: Könnun
+        aiml-2022:
+          title: Gervigreind og vélanámseining
         soccer:
           name: fótbolti
         csa1-validation-pilot-2022:
@@ -3078,3 +3081,34 @@ is:
               display_name: Innihald
             lessonGroup-5:
               display_name: Könnun
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Lykkjur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Könnun
+            lessonGroup-3:
+              display_name: Innihald
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Notendamiðuð hönnun'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Frumgerðir appa'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Kóðun upplýsinga'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Lausn vandamála með gögn'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kafli 1: Myndir og Hreyfing'
+            lessonGroup-3:
+              display_name: 'Kafli 2: Gerð leikja'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'

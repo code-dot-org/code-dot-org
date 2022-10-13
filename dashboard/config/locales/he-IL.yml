@@ -527,6 +527,7 @@ he:
     print_certificate: הדפס תעודה
   certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות
     ללמידה שלך."
+  certificate_hour_of_code: שעת הקוד
   move_students:
     new_section_dne: מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר
       קוד קבוצה אחרת.
@@ -1086,3 +1087,10 @@ he:
   copy: העתק
   confirm: אשר
   teacher_feedback: משוב מורה
+  lesson_lock:
+    error:
+      no_updates: אין עדכונים לבצע
+      missing_params: יש להכניס משתמש, רמה וזיהוי יחידות
+      cannot_view_locked_answers: לא ניתן לצפות בתשובות כאשר נעול
+      forbidden: המשתמש אינו יכול לעדכן מצב נעילה של הסטודנט
+  reset_predict_progress_button: מחק תשובה

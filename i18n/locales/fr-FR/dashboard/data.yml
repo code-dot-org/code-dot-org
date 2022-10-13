@@ -268,7 +268,7 @@ fr:
         if_else: Bloc « Si/Sinon »
         if_else_scrat: Bloc « Si/Sinon »
         function: Fonctions
-        loop_while: Bloc « Tant que »
+        loop_while: Le bloc « tant que »
         loop_for: Bloc « Compteur »
         parameters: Fonctions avec Paramètres
         hoc_wrapup: Conclusion de l'Heure de Code
@@ -307,7 +307,7 @@ fr:
         C2_artist_debugging: Débogage de l’artiste
         C2_bee_loops: Abeilles et boucles
         C2_bee_debugging: Débogage d'Abeilles
-        C2_bee_conditionals: Abeilles et instructions conditionnelles
+        C2_bee_conditionals: Les Conditions avec l'Abeille
         C2_playlab_createstory: Jouer au Labo - Créer une Histoire
         C2_graph_paper: Programmation sur papier quadrillé
         C2_conditionals_with_cards: Instructions conditionnelles
@@ -336,7 +336,7 @@ fr:
         C3_songwriting_with_parameters: Composition de chansons avec des paramètres
         C4_intro: Introduction
         C4_loops_zombie: Boucles
-        C4_bee_conditional: Abeilles et instructions conditionnelles
+        C4_bee_conditional: Les Conditions avec l'Abeille
         C4_variables_artist: Variables - Artiste
         C4_variables_playlab: Variables - Labo de jeux
         C4_for_loops: Les Boucles « Pour »
@@ -429,12 +429,12 @@ fr:
         applab_hoc_onevent: Hour of Code dans le Labo des Applis - onEvent
         applab_hoc_designmode: Hour of Code dans le Labo des Applis - Mode Création
         applab_hoc_share: Hour of Code dans le Labo des Applis - Partager
-        mc_2017_agent_intro: Minecraft Hour of Code - L'Agent
-        mc_2017_repeat: Minecraft Hour of Code - Les Boucles Répéter
+        mc_2017_agent_intro: Heure de Code Minecraft - L'Agent
+        mc_2017_repeat: Heure de Code Minecraft - Les Boucles Répéter
         mc_2017_functions: Minecraft Hour of Code - Les Fonctions
         mc_2017_congratulations: Minecraft Hour of Code - Félicitations
-        mc_2017_puzzle_1: Minecraft Hour of Code - L'Agent
-        mc_2017_puzzle_3: Minecraft Hour of Code - Les Boucles Répéter
+        mc_2017_puzzle_1: Heure de Code Minecraft - L'Agent
+        mc_2017_puzzle_3: Heure de Code Minecraft - Les Boucles Répéter
         mc_2017_puzzle_8: Minecraft Hour of Code - Les Fonctions
         mc_2017_puzzle_12: Minecraft Hour of Code - Jeu Libre
         hint_videos_d_11_3_first: 'Astuces en vidéo : D.11.3 en Premier'
@@ -465,7 +465,7 @@ fr:
         CSF_harvester_loops_K1: Les Boucles avec l'Agricultrice
         CSF_scrat_loops_K1: Les boucles dans l'Âge de Glace
         CSF_scrat_loops_CF: Les boucles dans l'Âge de Glace
-        CSF_if_allskins: Le Bloc Si
+        CSF_if_allskins: Le bloc Si
         CSF_ifelse_allskins: Utiliser les Blocs « Si/Sinon »
         CSF_ifelseifelse_allskins: Utiliser les Blocs « Si/Sinon »
         CSF_loops_AB: Boucles
@@ -479,7 +479,7 @@ fr:
         CSF_StarWars_ProjectIntro: Introduction au Projet Star Wars
         mc_2018_intro: 'Minecraft : Voyage Aquatique - Introduction'
         MC_2018_loops: 'Minecraft : Voyage Aquatique - Répéter jusqu''à'
-        mc_2018_conditionals: 'Minecraft : Voyage Aquatique – Déclarations Conditionnelles'
+        mc_2018_conditionals: 'Minecraft : Voyage Aquatique – Formules Conditionnelles'
         mc_2018_closing: 'Minecraft : Voyage Aquatique - Félicitations'
         hoc_dance_warmup: Soirée Dansante - Échauffement
         hoc_dance_events: Soirée Dansante – Événements
@@ -583,7 +583,7 @@ fr:
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
-        run: Clique sur « Exécuter » pour tester ton programme.
+        run: Clique sur « Démarrer » pour tester ton programme.
         watch_again: Clique ici pour revoir la vidéo
         gray_block_explanation: Les blocs qui sont gris ne peuvent pas être supprimés. Peux-tu résoudre le puzzle de toute façon ?
         show_code_explanation: Clique ici pour voir le code du programme que tu es en train de faire
@@ -652,7 +652,7 @@ fr:
         Infinity_move_collide_callout: Joue un son lorsque cet événement se produit.
         Infinity_repeat_callout: Place les bloc « Déplacer » ici à l'intérieur
         craft_run_button_callout: Clique sur « Exécuter » pour tester ton programme.
-        craft_drag_block_callout: Fais glisser un bloc « Avancer », bloque-le et emboite-le sous l'autre bloc.
+        craft_drag_block_callout: Sors un bloc « avancer » et accroche-le en dessous de l'autre bloc.
         craft_callout_preplaced: Nous avons préparé des blocs pour vous aider à commencer.
         craft_inside_repeat: Répète des actions en plaçant des blocs ici à l'intérieur
         craft_callout_preplaced_house: Ce code va commencer la construction de ta maison. Peux-tu le finir?

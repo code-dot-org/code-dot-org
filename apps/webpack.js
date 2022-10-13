@@ -19,7 +19,6 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
-  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
   path.resolve(__dirname, 'node_modules', 'vmsg'),
@@ -50,6 +49,7 @@ const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
+      events: 'events',
       stream: 'stream-browserify',
       path: 'path-browserify',
       process: 'process/browser',
@@ -58,8 +58,11 @@ const nodePolyfillConfig = {
   ],
   resolve: {
     fallback: {
-      stream: require.resolve('stream-browserify'),
+      buffer: require.resolve('buffer/'),
+      events: require.resolve('events/'),
       path: require.resolve('path-browserify'),
+      'process/browser': require.resolve('process/browser'),
+      stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
       crypto: false
     }
@@ -150,7 +153,6 @@ var baseConfig = {
   },
   module: {
     rules: [
-      {test: /\.exported_json$/, type: 'asset/source'},
       {
         test: /\.ejs$/,
         include: [
@@ -180,7 +182,6 @@ var baseConfig = {
       },
 
       {test: /\.interpreted.js$/, type: 'asset/source'},
-      {test: /\.exported_js$/, type: 'asset/source'},
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         include: [

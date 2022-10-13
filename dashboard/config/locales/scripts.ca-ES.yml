@@ -1179,5 +1179,20 @@ ca:
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
             i creeu el vostre propi art, històries i jocs.
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Extensió de Depuració Asíncrona
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Treball de Mòdul 2 Asíncron
         soccer:
           name: futbol
+          title: Codifiqueu el vostre partir de futbol propi
+          description_short: Feu un partit de futbol
+          description: Feu un partit de futbol
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Bucles

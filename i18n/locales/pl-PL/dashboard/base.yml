@@ -379,6 +379,7 @@ pl:
       about: "O programie"
       legal: "Prywatność i legalność"
       legal_privacy: "Polityka prywatności"
+      legal_cookie_notice: "Informacja o plikach cookie"
       legal_tos: "Regulamin"
     user:
       classroom: 'Domowa strona nauczyciela'
@@ -554,6 +555,7 @@ pl:
     choose_next_course: "Wypróbuj jeden z poniższych kursów w Code Studio"
     print_certificate: "Drukuj Certyfikat"
   certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci sponsorowania Twojej nauki."
+  certificate_hour_of_code: "Godzina Kodowania"
   move_students:
     new_section_dne: "Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź kod innej sekcji."
     section_code_cant_be_current_section: "Bieżąca sekcja nie może być taka sama, jak nowa sekcja."

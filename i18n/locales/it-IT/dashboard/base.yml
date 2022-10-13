@@ -379,6 +379,7 @@ it:
       about: "Informazioni"
       legal: "Privacy & Legale"
       legal_privacy: "Informativa sulla privacy"
+      legal_cookie_notice: "Informativa sui cookie"
       legal_tos: "Termini di servizio"
     user:
       classroom: 'Cruscotto di Controllo dell''insegnante'
@@ -552,6 +553,7 @@ it:
     choose_next_course: "Prova un corso di Code Studio scegliendone uno qui sotto"
     print_certificate: "Stampa l'attestato"
   certificate_sponsor_message: "%{sponsor_name} ha fatto il generoso dono di sponsorizzare il tuo apprendimento."
+  certificate_hour_of_code: "L'Ora del Codice"
   move_students:
     new_section_dne: "Ci dispiace, la classe col codice %{new_section_code} non esiste. Inserisci un codice di classe esistente."
     section_code_cant_be_current_section: "La nuova classe non può essere la stessa."

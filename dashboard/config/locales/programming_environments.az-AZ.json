@@ -4,14 +4,19 @@
       "programming_environments": {
         "weblab": {
           "name": "Veb Laboratoriyası",
+          "description": "Veb əsaslı HTML/CSS redaktoru.",
           "categories": {
             "html_tags": {
               "name": "HTML teqlər"
+            },
+            "css_properties": {
+              "name": "CSS Xüsusiyyətləri"
             }
           }
         },
         "gamelab": {
           "name": "Oyun labaratoriyası",
+          "description": "Game Lab maraqlı oyunlar və animasiyalar edə biləcəyiniz proqramlaşdırma mühitidir. İşləmək üçün simvollarınızı çəkin, bloklarla və ya JavaScript ilə kodlayın, sonra oyununuzu saniyələr ərzində paylaşın.",
           "categories": {
             "game_lab": {
               "name": "Oyun labaratoriyası"
@@ -24,6 +29,9 @@
             },
             "drawing": {
               "name": "Şəkil"
+            },
+            "control": {
+              "name": "Nəzarət"
             },
             "math": {
               "name": "Riyaziyyat"
@@ -40,8 +48,20 @@
           "name": "Proqram Labı",
           "description": "App Lab sadə proqramlar hazırlaya biləcəyiniz proqramlaşdırma mühitidir. Tətbiq dizayn edin, onu işləməsi üçün bloklar və ya JavaScript ilə kodlayın, sonra tətbiqinizi saniyələr ərzində paylaşın.",
           "categories": {
+            "ui_controls": {
+              "name": "UI nəzarətləri"
+            },
+            "canvas": {
+              "name": "Kətan"
+            },
             "data": {
               "name": "məlumat"
+            },
+            "turtle": {
+              "name": "Tısbağa"
+            },
+            "control": {
+              "name": "Nəzarət"
             },
             "math": {
               "name": "Riyaziyyat"
@@ -54,11 +74,15 @@
             },
             "advanced": {
               "name": "Qabaqcıl"
+            },
+            "maker": {
+              "name": "Yaradan"
             }
           }
         },
         "spritelab": {
           "name": "Sprite Laboratoriyası",
+          "description": "Sprite Lab, interaktiv layihələr yarada biləcəyiniz Blockly proqramlaşdırma mühitidir.",
           "categories": {
             "sprites": {
               "name": "Spraytlar"
@@ -102,7 +126,39 @@
           }
         },
         "javalab": {
-          "name": "Java Lab"
+          "name": "Java Lab",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Java Labaratoriyası Qısayolları"
+            },
+            "general": {
+              "name": "Java Əsasları"
+            },
+            "org_code_theater": {
+              "name": "org.kod.teatr\n"
+            },
+            "org_code_media": {
+              "name": "org.kod.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.kod.qonşuluq"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Nəzarət Strukturları"
+            },
+            "data_structures": {
+              "name": "Məlumat Strukturları"
+            }
+          }
         }
       }
     }

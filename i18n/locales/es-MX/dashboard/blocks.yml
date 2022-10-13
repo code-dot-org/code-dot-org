@@ -2,6 +2,8 @@
 es-MX:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: moviendo NESW con las teclas de flecha
       AmysBlocks_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} opciones {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
@@ -1217,6 +1219,8 @@ es-MX:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutGrid:
+        text: diseño de sprites como una cuadrícula
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1417,6 +1421,8 @@ es-MX:
             '100': grande
       gamelab_setPrompt:
         text: solicitar usuario {QUESTION} para la variable {VAR}
+      gamelab_setPromptWith2Choices:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}
       gamelab_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} opciones {A}{B}{C}
       gamelab_setProp:
@@ -2204,6 +2210,11 @@ es-MX:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: cuando {VAR} respondió
       RyanLab_moveForward:

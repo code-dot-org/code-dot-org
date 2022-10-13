@@ -5605,3 +5605,54 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Questionário
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Ciclos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          title: O processo de design
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Computação Física
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'

@@ -465,6 +465,7 @@ fil:
       about: Tungkol sa
       legal: Pagkapribado at Legal
       legal_privacy: Patakaran sa Pagkapribado
+      legal_cookie_notice: Paunawa ng Cookie
       legal_tos: Mga Alituntunin ng Serbisyo
     user:
       classroom: Home Page ng Teacher
@@ -694,6 +695,7 @@ fil:
     print_certificate: Mag-print ng Certificate
   certificate_sponsor_message: Ginawa ni %{sponsor_name} ang malaking regalo upang
     i-sponsor ang iyong pag-aaral.
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: Ipagpaumanhin ninyo, ngunit ang seksiyon na %{new_section_code}
       ay hindi umiiral. Pakilagay ng ibang code ng seksiyon.
