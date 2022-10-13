@@ -85,7 +85,6 @@ module Pd::Application
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
-    before_save :set_total_course_hours, if: -> {form_data_changed?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed?}
 
@@ -136,27 +135,6 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
-    end
-
-    def set_total_course_hours
-      hash = sanitize_form_data_hash
-      minutes = hash[:cs_how_many_minutes]
-      days_per_week = hash[:cs_how_many_days_per_week]
-      weeks_per_year = hash[:cs_how_many_weeks_per_year]
-
-      if minutes && days_per_week && weeks_per_year
-        update_form_data_hash(
-          {
-            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
-          }
-        )
-      else
-        update_form_data_hash(
-          {
-            cs_total_course_hours: nil
-          }
-        )
-      end
     end
 
     def save_partner
@@ -604,6 +582,12 @@ module Pd::Application
           'We will offer both non-AP Java introductory and AP-level courses'
         ],
 
+        enough_course_hours: [
+          YES,
+          NO,
+          "I don't know yet."
+        ],
+
         plan_to_teach: [
           "Yes, I plan to teach this course this year (#{year})",
           "No, I don’t plan to teach this course this year (#{year})",
@@ -688,9 +672,7 @@ module Pd::Application
         previous_yearlong_cdo_pd
 
         program
-        cs_how_many_minutes
-        cs_how_many_days_per_week
-        cs_how_many_weeks_per_year
+        enough_course_hours
         plan_to_teach
         replace_existing
 

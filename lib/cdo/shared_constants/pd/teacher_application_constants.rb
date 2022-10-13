@@ -90,15 +90,7 @@ module Pd
           (select all that apply)"
         ),
         csa_how_offer: 'How will you offer CSA?',
-        cs_how_many_minutes: clean_multiline(
-          'How many minutes per day is one {{CS program}} class section? (Include the
-          number of minutes from start to finish that you see your students per class
-          period. If it varies from day to day, estimate the average number of minutes
-          you meet per class period.)'
-        ),
-        cs_how_many_days_per_week: 'How many days per week will your {{CS program}} class be offered to one section of students?',
-        cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
-        cs_total_course_hours: 'Computed total course hours',
+        enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         plan_to_teach: "Do you plan to personally teach this course in the #{YEAR} school year?",
         replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
         replace_which_course: 'Which existing course or curriculum will {{CS program}} replace? Mark all that apply.'
@@ -142,9 +134,7 @@ module Pd
 
     LABEL_OVERRIDES = {
       program: "Which professional learning program would you like to join for the #{YEAR} school year?",
-      cs_how_many_minutes: 'How many minutes per day is one class section?',
-      cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
-      cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
+      enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
     }.freeze
 
     CSV_LABELS = {
@@ -174,10 +164,7 @@ module Pd
         program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
-        cs_how_many_minutes: 'How many minutes per day is one class section?',
-        cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
-        cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
-        cs_total_course_hours: "Total course hours",
+        enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
@@ -364,10 +351,7 @@ module Pd
         :csd_which_grades,
         :csp_which_grades,
         :csp_how_offer,
-        :cs_how_many_minutes,
-        :cs_how_many_days_per_week,
-        :cs_how_many_weeks_per_year,
-        :cs_total_course_hours,
+        :enough_course_hours,
         :plan_to_teach,
         :replace_existing,
         :replace_which_course,
