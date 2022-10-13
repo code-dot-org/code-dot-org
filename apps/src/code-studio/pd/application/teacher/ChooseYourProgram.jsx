@@ -47,6 +47,17 @@ const CourseHoursLabeledNumberInput = props => {
   );
 };
 
+const TeachingPlansNote = () => {
+  return (
+    <p style={styles.error}>
+      Note: This program is designed to work best for teachers who are teaching
+      this course in the {Year} school year. Scholarship eligibility is
+      dependent on whether or not you will be teaching the course during the{' '}
+      {Year} school year.
+    </p>
+  );
+};
+
 const ChooseYourProgram = props => {
   const {data} = props;
 
@@ -80,8 +91,18 @@ const ChooseYourProgram = props => {
 
   let showTeachingPlansNote = false;
   if (
-    data.planToTeach &&
-    !data.planToTeach.includes('Yes, I plan to teach this course this year')
+    (data.csdWhichGrades &&
+      data.csdWhichGrades.includes(
+        `Not sure yet if my school plans to offer CS Discoveries in the ${Year} school year`
+      )) ||
+    (data.cspWhichGrades &&
+      data.cspWhichGrades.includes(
+        `Not sure yet if my school plans to offer CS Principles in the ${Year} school year`
+      )) ||
+    (data.csaWhichGrades &&
+      data.csaWhichGrades.includes(
+        `Not sure yet if my school plans to offer CSA in the ${Year} school year`
+      ))
   ) {
     showTeachingPlansNote = true;
   }
@@ -109,12 +130,16 @@ const ChooseYourProgram = props => {
           )}
 
           {data.program === PROGRAM_CSD && (
-            <LabeledCheckBoxes name="csdWhichGrades" />
+            <>
+              <LabeledCheckBoxes name="csdWhichGrades" />
+              {showTeachingPlansNote && <TeachingPlansNote />}
+            </>
           )}
 
           {data.program === PROGRAM_CSP && (
             <>
               <LabeledCheckBoxes name="cspWhichGrades" />
+              {showTeachingPlansNote && <TeachingPlansNote />}
               <LabeledRadioButtons name="cspHowOffer" />
             </>
           )}
@@ -144,6 +169,7 @@ const ChooseYourProgram = props => {
                 </p>
               )}
               <LabeledCheckBoxes name="csaWhichGrades" />
+              {showTeachingPlansNote && <TeachingPlansNote />}
               <LabeledRadioButtons name="csaHowOffer" />
             </>
           )}
@@ -206,14 +232,6 @@ const ChooseYourProgram = props => {
               [TextFields.dontKnowIfIWillTeachExplain]: 'other'
             }}
           />
-          {showTeachingPlansNote && (
-            <p style={styles.error}>
-              Note: This program is designed to work best for teachers who are
-              teaching this course in the {Year} school year. Scholarship
-              eligibility is dependent on whether or not you will be teaching
-              the course during the {Year} school year.
-            </p>
-          )}
 
           <LabeledRadioButtonsWithAdditionalTextFields
             name="replaceExisting"
