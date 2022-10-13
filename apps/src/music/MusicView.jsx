@@ -6,6 +6,7 @@ import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
 import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
 import Instructions from './Instructions';
+import SharePlaceholder from './SharePlaceholder';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
@@ -497,21 +498,29 @@ export default class MusicView extends React.Component {
         }}
       >
         {this.state.showInstructions && (
-          <div
-            id="instructions-area"
-            style={{
-              color: 'white',
-              height: 90,
-              backgroundColor: 'black',
-              borderRadius: 4,
-              padding: 0,
-              boxSizing: 'border-box'
-            }}
-          >
-            <Instructions
-              instructions={this.state.instructions}
-              baseUrl={baseUrl}
-            />
+          <div>
+            <div
+              id="instructions-area"
+              style={{
+                float: 'left',
+                color: 'white',
+                width: 'calc(100% - 150px)',
+                height: 90,
+                backgroundColor: 'black',
+                borderRadius: 4,
+                padding: 0,
+                boxSizing: 'border-box',
+                marginRight: 10
+              }}
+            >
+              <Instructions
+                instructions={this.state.instructions}
+                baseUrl={baseUrl}
+              />
+            </div>
+            <div id="share-area" style={{width: 140, float: 'left'}}>
+              <SharePlaceholder />
+            </div>
           </div>
         )}
         <div
