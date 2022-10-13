@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CalloutsTest < ActionDispatch::IntegrationTest
   setup do
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @script = create :script
     @lesson_group = create :lesson_group, script: @script
@@ -14,8 +14,8 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     @script_level = create(:script_level, levels: [@level], lesson: @lesson, script: @script)
     @level_path = "/levels/#{@level.id}"
     @script_level_path = "/s/#{@script.name}/lessons/1/levels/1"
-    Script.script_cache.delete @script.name
-    Script.script_cache.delete @script.id.to_s
+    Unit.script_cache.delete @script.name
+    Unit.script_cache.delete @script.id.to_s
 
     @expected_callouts = [{
       "id" => nil,
@@ -30,7 +30,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
       "localized_text" => "Hit \"Run\" to try your program"
     }]
 
-    Script.clear_cache
+    Unit.clear_cache
   end
 
   def got_callouts(callouts)

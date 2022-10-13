@@ -38,7 +38,7 @@ def find_matching_course_version_and_levels(course_name)
   matching_unit_group = UnitGroup.find_by_name(course_name)
   # if we need to handle pilots, add alternate_unit_groups
   return [matching_unit_group.course_version.id, matching_unit_group.default_units.flat_map(&:all_descendant_levels)] if matching_unit_group
-  matching_standalone_course = Script.find_by_name(course_name)
+  matching_standalone_course = Unit.find_by_name(course_name)
   return [matching_standalone_course.get_course_version.id, matching_standalone_course.all_descendant_levels] if matching_standalone_course
   return [nil, nil]
 end

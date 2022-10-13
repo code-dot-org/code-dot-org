@@ -627,7 +627,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 2, summary[:scripts].length
     assert_equal false, summary[:has_verified_resources]
 
-    # spot check that we have fields that show up in Script.summarize(false)
+    # spot check that we have fields that show up in Unit.summarize(false)
     assert_equal 'unit1', summary[:scripts][0][:name]
     assert_equal 'unit1-description', summary[:scripts][0][:description]
 

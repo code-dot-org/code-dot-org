@@ -25,7 +25,7 @@ module LessonImportHelper
     # course version id should always be present for CSF/CSD/CSP 2020 courses and hoc courses.
     if (['Vocabulary', 'Resource'] & models_to_import).any?
       course_version_id = lesson.script&.get_course_version&.id
-      raise "Script must have course version" unless course_version_id
+      raise "Unit must have course version" unless course_version_id
     end
 
     lesson_levels = lesson.script_levels.to_a
@@ -45,7 +45,7 @@ module LessonImportHelper
         lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
         lesson.save!
 
-        Script.merge_and_write_i18n(lesson.i18n_hash, lesson.script.name)
+        Unit.merge_and_write_i18n(lesson.i18n_hash, lesson.script.name)
       end
       if models_to_import.include?('Objective')
         lesson.objectives = cb_lesson_data['objectives'].map do |o|
