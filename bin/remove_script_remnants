@@ -31,9 +31,9 @@ def get_all_progress(script_id)
   data[:user_levels] = UserLevel.
     where(script_id: script_id).
     where(user_id:
-      data[:user_scripts].map do |user_script|
+      data[:user_scripts].filter_map do |user_script|
         user_script['user_id']
-      end.compact
+      end
     ).
     to_a.
     map(&:serializable_hash)
