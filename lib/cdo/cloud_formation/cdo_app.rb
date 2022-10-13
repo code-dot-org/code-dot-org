@@ -2,6 +2,7 @@ require_relative './stack_template'
 require_relative './vpc'
 
 require 'aws-sdk-acm'
+require 'aws-sdk-route53'
 
 require 'active_support/core_ext/numeric/bytes'
 require 'ostruct'
@@ -29,7 +30,7 @@ module Cdo::CloudFormation
     IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
     INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
-    CHEF_VERSION = '17.6.18'
+    CHEF_VERSION = '15.2.20'
     DOMAIN = 'cdn-code.org'
     SSH_KEY_NAME = 'server_access_key'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
@@ -43,6 +44,7 @@ module Cdo::CloudFormation
     # Struct providing arbitrary configuration options used by the template.
     # @return [OpenStruct]
     attr_reader :options
+
     delegate :commit, :frontends, :database, :load_balancer, :alarms, :cdn_enabled, :branch, :domain,
       to: :options
 
@@ -54,7 +56,7 @@ module Cdo::CloudFormation
 
       # Various option defaults.
       options.frontends     ||= rack_env?(:production)
-      options.database      ||= [:staging, :test, :levelbuilder].include?(rack_env)
+      options.database      ||= [:staging, :test, :levelbuilder, :production].include?(rack_env)
       options.load_balancer ||= !rack_env?(:adhoc) || options.frontends
       options.alarms        ||= !rack_env?(:adhoc)
       options.cdn_enabled   ||= !rack_env?(:adhoc)
@@ -165,7 +167,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
         unless dry_run
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
-              RakeUtils.chef_rbenv_exec('berks', 'package', tmp.path)
+              RakeUtils.bundle_exec 'berks', 'package', tmp.path
               Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
                 key: "#{CHEF_KEY}/#{branch}.tar.gz",

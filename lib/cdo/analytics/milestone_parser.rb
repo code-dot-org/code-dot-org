@@ -33,6 +33,7 @@ class MilestoneParser
   COMPARE_BYTE_LENGTH = 1024
 
   attr_accessor :cache, :s3_client, :s3_resource
+
   cattr_accessor :log_debug
 
   def debug(msg)
@@ -43,9 +44,9 @@ class MilestoneParser
     # Load v2 cache
     cache_file = MILESTONE_CACHE_V2
     FileUtils.cp(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
-    cache = File.file?(cache_file) ? JSON.parse(IO.read(cache_file)) : {}
+    cache = File.file?(cache_file) ? JSON.parse(File.read(cache_file)) : {}
     parser = new(cache, AWS::S3.create_client)
-    parser.count.tap {|_| IO.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
+    parser.count.tap {|_| File.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
   end
 
   def initialize(cache, s3_client)
@@ -84,7 +85,7 @@ class MilestoneParser
     counts = logs.map do |log|
       (cache[log.key] = count_lines_of_code(log))['count']
     end
-    total = counts.reduce(:+)
+    total = counts.sum
     debug "Finished processing (#{(Time.now - start_time).round(2)}s), total count: #{total}"
     total
   end

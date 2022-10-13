@@ -79,25 +79,46 @@ export const fakeProgressForLevels = (
  * @param {number?} lessonId - Lesson to hide (or null if none)
  */
 export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
+  const sectionId = 11;
   return createStore(state => state, {
     lessonLock: {
       lessonsBySectionId: {
-        '11': {}
+        [sectionId]: {}
       },
       lockableAuthorized: false,
-      lockableAuthorizedLoaded: true
+      lockableAuthorizedLoaded: true,
+      lessonsBySectionIdLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {
-      selectedSectionId: '11'
+      sectionIds: [sectionId],
+      sectionsAreLoaded: true,
+      sections: {
+        [sectionId]: {
+          id: 11,
+          name: 'test section',
+          lesson_extras: true,
+          pairing_allowed: true,
+          studentCount: 4,
+          code: 'TQGSJR',
+          providerManaged: false,
+          lessons: {},
+          ttsAutoplayEnabled: false,
+          lessonExtras: false,
+          pairingAllowed: true
+        }
+      },
+      selectedSectionId: sectionId
     },
     hiddenLesson: Immutable.fromJS({
       lessonsBySection: {
-        '11': {[lessonId]: true}
+        [sectionId]: {[lessonId]: true}
       }
     }),
     progress: {
-      showTeacherInfo: false
+      scriptName: 'script-name',
+      scriptId: 17,
+      unitProgressHasLoaded: true
     },
     currentUser: {
       userId: 1
@@ -114,25 +135,27 @@ export const createStoreWithLockedLesson = (
   viewAs,
   lockableAuthorized = false
 ) => {
+  const sectionId = 11;
   return createStore(state => state, {
     lessonLock: {
       lessonsBySectionId: {
-        '11': {}
+        [sectionId]: {}
       },
+      lessonsBySectionIdLoaded: true,
       lockableAuthorized: lockableAuthorized,
       lockableAuthorizedLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {
-      selectedSectionId: '11'
+      selectedSectionId: sectionId
     },
     hiddenLesson: Immutable.fromJS({
       lessonsBySection: {
-        '11': {[lessonId]: true}
+        [sectionId]: {[lessonId]: true}
       }
     }),
     progress: {
-      showTeacherInfo: false
+      unitProgressHasLoaded: true
     },
     currentUser: {
       userId: 1
@@ -156,13 +179,6 @@ export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
     position: position,
     levels: fakeLevels(levelCount),
     ...overrideFields
-  };
-};
-
-export const fakeSection = students => {
-  return {
-    id: randomNumberUpTo100(),
-    students
   };
 };
 
@@ -237,15 +253,19 @@ export const fakeProgressTableReduxInitialState = (
     students
   );
 
+  const sectionId = randomNumberUpTo100();
+
   return {
     progress: {
       lessonGroups: [],
       lessons: lessons,
       focusAreaLessonIds: [],
-      professionalLearningCourse: false
+      deeperLearningCourse: false
     },
-    sectionData: {
-      section: fakeSection(students)
+    teacherSections: {
+      sections: [{id: sectionId}],
+      selectedSectionId: sectionId,
+      selectedStudents: students
     },
     sectionProgress: {
       unitDataByUnit: {[scriptData.id]: scriptData},

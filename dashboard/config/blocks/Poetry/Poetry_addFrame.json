@@ -14,100 +14,80 @@
         "type": "String",
         "options": [
           [
-            "Metal Frame",
-            "\"placeholder\""
+            "bamboo",
+            "\"bamboo\""
           ],
           [
-            "Bold",
-            "\"placeholder\""
+            "beaded",
+            "\"beaded\""
           ],
           [
-            "Shadow Box",
-            "\"placeholder\""
+            "brick",
+            "\"brick\""
           ],
           [
-            "Gilded",
-            "\"placeholder\""
+            "decorative",
+            "\"decorative\""
           ],
           [
-            "Beaded",
-            "\"placeholder\""
+            "donuts",
+            "\"donuts\""
           ],
           [
-            "Beveled",
-            "\"placeholder\""
+            "fire",
+            "\"fire\""
           ],
           [
-            "Wood Frame",
-            "\"placeholder\""
-          ],
-          [
-            "Bamboo",
-            "\"placeholder\""
-          ],
-          [
-            "Decorative",
-            "\"placeholder\""
-          ],
-          [
-            "Donuts",
-            "\"placeholder\""
-          ],
-          [
-            "Ice Cream",
-            "\"placeholder\""
-          ],
-          [
-            "Fire",
-            "\"placeholder\""
-          ],
-          [
-            "Water",
-            "\"placeholder\""
-          ],
-          [
-            "Leaves",
-            "\"placeholder\""
-          ],
-          [
-            "Stars",
-            "\"placeholder\""
-          ],
-          [
-            "Fireworks",
-            "\"placeholder\""
-          ],
-          [
-            "Rainbow",
-            "\"rainbow\""
-          ],
-          [
-            "Hearts",
-            "\"hearts\""
-          ],
-          [
-            "Flowers",
+            "flowers",
             "\"flowers\""
           ],
           [
-            "Zig-Zag",
-            "\"zigzag\""
+            "gilded",
+            "\"gilded\""
           ],
           [
-            "Swirls",
-            "\"swirls\""
+            "hearts",
+            "\"hearts\""
           ],
           [
-            "Paw Prints",
+            "ice cream",
+            "\"iceCream\""
+          ],
+          [
+            "leaves",
+            "\"leaves\""
+          ],
+          [
+            "metal frame",
+            "\"metal\""
+          ],
+          [
+            "paw prints",
             "\"pawPrints\""
           ],
           [
-            "Waves",
+            "rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "stars",
+            "\"stars\""
+          ],
+          [
+            "swirls",
+            "\"swirls\""
+          ],
+          [
+            "waves",
             "\"waves\""
           ],
           [
-            "Brick",
-            "\"brick\""
+            "wood frame",
+            "\"wood\""
+          ],
+          [
+            "zig-zag",
+            "\"zigzag\""
           ]
         ]
       }

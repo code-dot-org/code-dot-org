@@ -7,6 +7,9 @@ import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
 import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
+import React from 'react';
+import {singleton as studioApp} from '../../StudioApp';
+import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -74,7 +77,9 @@ export default class SpriteLab extends P5Lab {
 
   reset() {
     super.reset();
+    getStore().dispatch(closeWorkspaceAlert());
     getStore().dispatch(clearPrompts());
+    this.clearExecutionErrorWorkspaceAlert();
     this.preview();
   }
 
@@ -87,6 +92,37 @@ export default class SpriteLab extends P5Lab {
       this.library.startPause(current);
       Sounds.getSingleton().pauseSounds();
     }
+  }
+
+  /**
+   * If there is an executionError, display a WorkspaceAlert.
+   * We do this because Sprite Lab has no user-facing console.
+   */
+  reactToExecutionError(msg) {
+    if (!msg) {
+      return;
+    }
+
+    this.executionErrorWorkspaceAlert = studioApp().displayWorkspaceAlert(
+      'error',
+      React.createElement(
+        'div',
+        {},
+        this.getMsg().workspaceAlertError({
+          error: msg || ''
+        })
+      ),
+      true /* bottom */
+    );
+  }
+
+  clearExecutionErrorWorkspaceAlert() {
+    if (!this.executionErrorWorkspaceAlert) {
+      return;
+    }
+
+    studioApp().closeAlert(this.executionErrorWorkspaceAlert);
+    this.executionErrorWorkspaceAlert = undefined;
   }
 
   onPromptAnswer(variableName, value) {
@@ -112,5 +148,16 @@ export default class SpriteLab extends P5Lab {
         }
       }
     });
+  }
+
+  /**
+   * Override the string rendered by the feedback dialog, which always displays
+   * another string for final freeplay levels, so this implementation is tightly coupled to
+   * that. See FeedbackUtils.prototype.getFeedbackMessage for implementation details.
+   * @param {boolean} isFinalFreePlayLevel
+   * @returns {string|null}
+   */
+  getReinfFeedbackMsg(isFinalFreePlayLevel) {
+    return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
   }
 }

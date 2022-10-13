@@ -22,12 +22,12 @@ describe('MicroBit Compass', function() {
     expect(desc.get).to.not.be.undefined;
   });
 
-  it(`magnetometer values calculated as expected and rounded to hundredth`, () => {
+  it(`magnetometer values calculated as expected and rounded to integer`, () => {
     // Seed the x, y, z channel with milli-g data
     boardClient.analogChannel[SENSOR_CHANNELS.magX] = 3;
     boardClient.analogChannel[SENSOR_CHANNELS.magY] = 49;
 
-    expect(compass.heading).to.equal(86.49);
+    expect(compass.heading).to.equal(86);
   });
 
   it(`getHeading() returns the heading attribute`, () => {
@@ -35,8 +35,8 @@ describe('MicroBit Compass', function() {
     boardClient.analogChannel[SENSOR_CHANNELS.magX] = 3;
     boardClient.analogChannel[SENSOR_CHANNELS.magY] = 49;
 
-    expect(compass.heading).to.equal(86.49);
-    expect(compass.getHeading()).to.equal(86.49);
+    expect(compass.heading).to.equal(86);
+    expect(compass.getHeading()).to.equal(86);
   });
 
   describe(`start() and stop()`, () => {

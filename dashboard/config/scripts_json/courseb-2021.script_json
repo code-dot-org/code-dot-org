@@ -15,16 +15,35 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "hi-IN",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "zh-TW"
+      ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-11-09 00:33:19 UTC",
+    "serialized_at": "2022-05-16 14:59:10 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -116,7 +135,7 @@
         "creative_commons_license": "Creative Commons BY-NC-ND",
         "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nDoes what you do online always stay online? Students learn that the information they share online leaves a digital footprint or \"trail.\" Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.",
-        "purpose": "Common Sense Education created this lesson to teach students about \"digital footprints\", and what information is OK for them to have in their own.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Digital Footprint & Identity. Students consider the benefits and risks of online sharing and explore how a digital persona can affect one's sense of self, reputation, and relationships.\n",
         "student_overview": "Learn about your digital footprint and how to stay safe when visiting websites. ",
         "unplugged": true
       },
@@ -6453,11 +6472,10 @@
     },
     {
       "name": "How to Make a Class Section on Code.org",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
       "key": "class-section-video",
       "properties": {
-        "audience": "Teacher",
-        "type": "Teacher Video"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "class-section-video"
@@ -6898,12 +6916,12 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://youtu.be/u0WV9shCoak",
+      "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
       "key": "unplugged-video-big-event",
       "properties": {
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4",
-        "type": "Unplugged Video"
+        "download_url": "https://s3.amazonaws.com/videos.code.org/csf/the-big-event.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-big-event"

@@ -161,9 +161,9 @@
                               <next>
                                 <block type="Poetry_setFontColor">
                                   <value name="FILL">
-                                    <block type="colour_picker">
+                                    <shadow type="colour_picker">
                                       <title name="COLOUR">#003300</title>
-                                    </block>
+                                    </shadow>
                                   </value>
                                   <next>
                                     <block type="Poetry_setTextEffect">

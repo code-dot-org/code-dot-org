@@ -9,8 +9,6 @@ Background:
 Scenario: Loading the level
   And element ".match .content2" has text "Match the blocks"
 
-# drag simulation does not work in IE/iOS, so we exclude them for now
-@no_ie
 @no_mobile
 Scenario: Solving puzzle
   And I dismiss the login reminder
@@ -22,7 +20,6 @@ Scenario: Solving puzzle
   Then I wait to see ".modal"
   And element ".modal .dialog-title" contains text "Correct"
 
-@no_ie
 @no_mobile
 @as_student
 Scenario: Submitting an incorrect solution

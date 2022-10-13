@@ -13,13 +13,13 @@ title: آور-آف-کوڈ ایونٹ ھاؤ-ٹو
 ## 1. آپ کے ایونٹ کے لئے تیار کریں
 
 - مقام، تاریخ، اور وقت کا تعین کریں.
-- [ایک خط](https://hourofcode.com/promote/resources#sample-emails) اپنے مقامی میئر کو، رکن کانگریس، گورنر یا با اثر کاروباری شخص بھیجیں اور انہیں بولنے کی دعوت دیتے ہیں ۔ Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- [ایک خط](https://hourofcode.com/promote/resources#sample-emails) اپنے مقامی میئر کو، رکن کانگریس، گورنر یا با اثر کاروباری شخص بھیجیں اور انہیں بولنے کی دعوت دیتے ہیں ۔ کسی منتخب اہلکار کی میزبانی کرنے کے بارے میں مزید معلومات کے لیے ہمارا [ٹول کٹ کا طریقہ کار]({{ localized_files/elected_official }}) چیک کریں۔
+- میڈیا/پریس کو مدعو کریں یعنی مقامی نیوز اسٹیشن، اخبار، ایجوکیشن/ٹیک بلاگرز کو۔ مدد کےلیے ہماری[پریس کٹ]({{ promote/press_kit_url }})دیکھیں.
 
 ## 2. آپ کے ایونٹ کے دوران
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- ہمارے ایک[متاثر کن ویڈیوز]({{ promote/videos }})کے ساتھ اپنے ایونٹ کو شروع کریں۔
+- ان[اعدادوشمار اور انفوگرافکس]({{ promote/stats_url }})کا استعمال کرتے ہوئے کمپیوٹر سائنس کی اہمیت کا جائزہ لیتے ہوئے تعارف کریں۔   
       
     
 - **ایونٹس بنانے کے لئے مزید افکار**: 
@@ -35,28 +35,22 @@ title: آور-آف-کوڈ ایونٹ ھاؤ-ٹو
 
 * * *
 
-## کوڈ آفس کے ساتھ ایک خاندانی کوڈ رات کی میزبانی کریں اور والدین کو شرکت کرنے میں دعوت دیں
+## Example plan for a school assembly or event
 
-K-5 شام کی تقریب کی میزبانی پر غور کریں اور والدین کو مدعو کرنے کے لئے اپنے طالب علموں کو کمپیوٹر سائنس کے ایک گھنٹہ میں شامل ہونے پر دعوت دیں. یہ بڑی برادری میں حصہ لینے اور آپ کے اسکول میں کمپیوٹر سائنس کے لئے والدین کی مدد کی حوصلہ افزائی کرنے کا بہترین طریقہ ہے. خاندانی کوڈ نائٹ میں ہمارا شراکت دار نے منصوبہ بندی کے چیک لسٹ کے ساتھ سبھی میں ایک واقعہ کا کٹ بنا دیا ہے، پیش کرنے والے کی اسکرپٹ، دعوت نامہ ای میلز، پوسٹر، پاور پوائنٹس اور مزید اپنے ایونٹ کو چلانے کے لئے. [ واقعہ کٹ ڈاؤن لوڈ کرنے کے لئے یہاں کلک کریں ](http://www.familycodenight.org/DownloadCodeDotOrg.html).
-
-* * *
-
-## اسکول اسمبلی یا ایونٹ کے لئے مثالی منصوبہ
-
-** واقعہ: </ strong> سکول وسیع کمپیوٹر سائنس تعلیم ہفتہ کک آف اسمبلی</p> 
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-** وقت: </ strong> اسکول کے دن کے دوران. مڈ صبح کی تقریب کو ترجیح دی. تقریبا 1 گھنٹہ.</p> 
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-** مقام: </ strong> اسکول اسمبلی ہال (مثال کے طور پر تھیٹر، جم، کیفیٹیریا)</p> 
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-## دکھائیں چلائیں
+## Run of Show
 
 | وقت               | عمل                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 بجے | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                             |
-| 10:05 - 10:15 بجے | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).          |
+| 10:00 - 10:05 بجے | ہمارے ایک [متاثر کن ویڈیوز]({{ promote/videos }})کے ساتھ آغاز کریں۔                                                                            |
+| 10:05 - 10:15 بجے | ان[اعدادوشمار اور انفوگرافکس]({{ promote/stats_url }})کا استعمال کرتے ہوئے پرنسپل کمپیوٹر سائنس کی اہمیت کا جائزہ لیتے ہوئے تعارف فراہم کریں۔  |
 | 10:15 - 10:30 بجے | ان کے پس منظر اور کس طرح کی ٹیکنالوجی اور کمپیوٹر سائنس ان کی روز مرہ زندگی میں اہم کردار ادا کرتا ہے کے بارے میں بات کرنے کے لئے خصوصی مہمان. |
 | 10:30 - 10:40 بجے | طالب علموں کو اسکول کے لئے کوڈ کا ڈیمو کرنا ہے. تفریح موڑ: کیا وہ پرنسپل، سیاستدان، یا دیگر طلبا کو سکھاتے ہیں!                                |
 | 10:40 - 11 بجے    | طالب علموں کو ایک غیر فعال سرگرمی ڈیمو اور کمپیوٹرز کا استعمال کئے بغیر کمپیوٹر سائنس کیسے سکھایا جا سکتا ہے.                                  |

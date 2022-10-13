@@ -13,7 +13,6 @@ class PegasusSites
     @pegasus_app = Rack::Builder.parse_file(config_ru).first
     pegasus_domains = %w(
       code.org
-      codeprojects.org
       csedweek.org
       hourofcode.com
       advocacy.code.org

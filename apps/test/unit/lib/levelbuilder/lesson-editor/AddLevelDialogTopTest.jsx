@@ -1,9 +1,9 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 import {searchOptions} from './activitiesTestData';
 import sinon from 'sinon';
+import {isolateComponent} from 'isolate-react';
 
 describe('AddLevelDialogTop', () => {
   let defaultProps, addLevel;
@@ -15,10 +15,8 @@ describe('AddLevelDialogTop', () => {
     };
   });
 
-  it('renders default props', () => {
-    const wrapper = shallow(<AddLevelDialogTop {...defaultProps} />);
-
-    wrapper.setState({
+  it('shows filters once finished loading', () => {
+    let returnData = {
       levels: [
         {
           conceptDifficulty: '',
@@ -39,24 +37,34 @@ describe('AddLevelDialogTop', () => {
           videoKey: null
         }
       ],
-      numPages: 1,
-      loadingLevels: false
-    });
+      numPages: 1
+    };
+    let server = sinon.fakeServer.create();
+    server.respondWith('GET', '/levels/get_filtered_levels?page=1', [
+      200,
+      {'Content-Type': 'application/json;charset=UTF-8'},
+      JSON.stringify(returnData)
+    ]);
+    const wrapper = isolateComponent(<AddLevelDialogTop {...defaultProps} />);
+    server.respond();
 
-    expect(wrapper.find('Connect(ToggleGroup)').length).to.equal(1);
-    expect(wrapper.find('Connect(AddLevelFilters)').length).to.equal(1);
-    expect(wrapper.find('AddLevelTable').length).to.equal(1);
-    expect(wrapper.find('.fa-spin').length).to.equal(0); // no spinner
+    expect(wrapper.findOne('Connect(ToggleGroup)'));
+    expect(wrapper.findOne('Connect(AddLevelFilters)'));
+    expect(wrapper.findOne('AddLevelTable'));
+    expect(!wrapper.exists('FontAwesome')); // no spinner
+
+    server.restore();
   });
 
   it('getting level data show spinner', () => {
-    const wrapper = shallow(<AddLevelDialogTop {...defaultProps} />);
+    const wrapper = isolateComponent(<AddLevelDialogTop {...defaultProps} />);
 
-    // Without the setState there is no level data in this test
+    // Without using setLevels this test has no level data
 
-    expect(wrapper.find('ToggleGroup').length).to.equal(0);
-    expect(wrapper.find('Connect(AddLevelFilters)').length).to.equal(0);
-    expect(wrapper.find('AddLevelTable').length).to.equal(0);
-    expect(wrapper.find('.fa-spin').length).to.equal(1);
+    expect(!wrapper.exists('ToggleGroup'));
+    expect(!wrapper.exists('Connect(AddLevelFilters)'));
+    expect(!wrapper.exists('AddLevelTable'));
+    expect(wrapper.exists('FontAwesome'));
+    assert.equal(wrapper.findOne('FontAwesome').props.className, 'fa-spin');
   });
 });

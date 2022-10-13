@@ -2,13 +2,13 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 const msg = require('@cdo/locale');
-import {
-  WarningLabel,
-  UnconnectedAnimationPickerBody as AnimationPickerBody
+import AnimationPickerBody, {
+  WarningLabel
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
 import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
+import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 
 const emptyFunction = function() {};
 
@@ -30,7 +30,8 @@ describe('AnimationPickerBody', function() {
       searchQuery: ''
     },
     selectedAnimations: [],
-    onAnimationSelectionComplete: emptyFunction
+    onAnimationSelectionComplete: emptyFunction,
+    pickerType: PICKER_TYPE.gamelab
   };
 
   describe('upload warning', function() {
@@ -69,7 +70,7 @@ describe('AnimationPickerBody', function() {
     it('fetches next results if scrolled through 90% of content', () => {
       const mockEvent = {
         target: {
-          scrollTop: 30,
+          scrollTop: 450,
           scrollHeight: 500
         }
       };

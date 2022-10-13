@@ -1,6 +1,6 @@
 import MD5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 import trackEvent from '../../util/trackEvent';
@@ -318,7 +318,8 @@ const styles = {
 
   wrapper: {
     marginLeft: '3px',
-    marginRight: '3px'
+    marginRight: '3px',
+    display: 'flex'
   },
 
   button: {
@@ -366,6 +367,6 @@ export default connect(function propsFromStore(state) {
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
-    ttsAutoplayEnabled: state.sectionData.section.ttsAutoplayEnabled
+    ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel
   };
 })(StatelessInlineAudio);

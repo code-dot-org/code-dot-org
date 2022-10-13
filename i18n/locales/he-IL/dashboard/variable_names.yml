@@ -8,10 +8,10 @@ he:
       age: גיל
       answer: "תשובה\n"
       binary: בינארי
-      cats: כל החתולים
+      cats: חתולים
       color: צבע
       counter: סופר
-      dogs: כל הכלבים
+      dogs: כלבים
       height: גובה
       honey: דבש
       i: i
@@ -20,14 +20,16 @@ he:
       level: שלב
       name: שם
       nectar: צוף
+      object: אובייקט
       planet: כוכב לכת
       points: נקודות
       random: אקראי
-      repeat: חזור שוב
+      repeat: חזור
       right: ימינה
-      score: ציון
+      score: ניקוד
       size: גודל
       speed: מהירות
+      type: סוג
       variable: משתנה.
       width: רוחב
       wizard: אשף

@@ -7,7 +7,7 @@ video_player: true
 # О нас
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Наше видение заключается в том, что каждый ученик в каждой школе имеет возможность учить компьютерные науки точно также, как биологию, химию или алгебру. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org поддерживается щедрыми благотворителями, включая Amazon, Facebook, Google, the Infosys Foundation, Microsoft и <a href="/about/donors">многими другими</a>.
+  Code.org® — это некоммерческая организация, занимающаяся расширением доступа к изучению информатики в школах и увеличением участия молодых женщин и учеников из других в недостаточной степени представленных групп. Наше видение заключается в том, что каждый ученик в каждой школе имеет возможность учить компьютерные науки точно также, как биологию, химию или алгебру. Мы предоставляем наиболее широко используемую учебную программу для преподавания информатики в начальной и средней школе, а также организуем ежегодную кампанию <a href="https://hourofcode.com">Час кода</a>, в которой участвуют 10% всех учащихся в мире. Code.org поддерживается щедрыми благотворителями, включая Amazon, Facebook, Google, the Infosys Foundation, Microsoft и <a href="/about/donors">многими другими</a>.
 </div>
 
 [col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## История создания
 
 Code.org был запущен двумя братьями близнецами Хайди и Али Партови в 2013 году. Всё началось с [видео, которое продвигало компьютерные науки](https://www.youtube.com/watch?v=nKIu9yen5nc). Это видео стало №1 на Ютубе за 1 день и 15 000 школ протянули руку, чтобы помочь нам. С тех пор мы выросли от кучки волонтеров до построения целой организации, поддерживаемой международным движением. Мы верим, что качественное образование в области компьютерных наук может быть доступно для каждого ребенка, а не только нескольким счастливчикам.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Что мы делаем
 

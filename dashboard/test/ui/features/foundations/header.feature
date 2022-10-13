@@ -55,7 +55,7 @@ Scenario: Signed out user in Spanish should see 3 header links
 Scenario: Student in Spanish should see 3 header links
   Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/courses/lang/es"
-  Then check that I am on "http://studio.code.org/courses"
+  Then check that I am on "http://studio.code.org/courses?lang=es"
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And element "#header-student-courses" has "es" text from key "nav.header.course_catalog"
@@ -67,7 +67,7 @@ Scenario: Student in Spanish should see 3 header links
 Scenario: Teacher in Spanish should see 5 header links
   Given I create a teacher named "Pabla Profesora"
   Given I am on "http://studio.code.org/home/lang/es"
-  Then check that I am on "http://studio.code.org/home"
+  Then check that I am on "http://studio.code.org/home?lang=es"
   And I wait to see ".headerlinks"
   And I see "#header-teacher-home"
   And element "#header-teacher-home" has "es" text from key "nav.header.my_dashboard"

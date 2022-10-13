@@ -66,7 +66,7 @@ describe('LessonEditor', () => {
       relatedLessons: [],
       initialObjectives: [],
       unitInfo: {
-        isLaunched: false,
+        allowMajorCurriculumChanges: true,
         courseVersionId: 1,
         unitPath: '/s/my-script/',
         isProfessionalLearningCourse: false
@@ -145,7 +145,7 @@ describe('LessonEditor', () => {
 
   it('disables editing of lockable and has lesson plan for visible script', () => {
     let unitInfoCopy = _.cloneDeep(defaultProps.unitInfo);
-    unitInfoCopy.isLaunched = true;
+    unitInfoCopy.allowMajorCurriculumChanges = false;
     const wrapper = createWrapper({unitInfo: unitInfoCopy});
     expect(
       wrapper

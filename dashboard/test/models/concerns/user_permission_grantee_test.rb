@@ -67,11 +67,11 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     refute user.levelbuilder?
   end
 
-  test 'authorized_teacher?' do
+  test 'verified_teacher?' do
     user = create :teacher
-    refute user.authorized_teacher?
+    refute user.verified_teacher?
     user.permission = UserPermission::AUTHORIZED_TEACHER
-    assert user.authorized_teacher?
+    assert user.verified_teacher?
   end
 
   test 'census_reviewer?' do
@@ -86,22 +86,6 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     refute user.facilitator?
     user.permission = UserPermission::FACILITATOR
     assert user.facilitator?
-  end
-
-  test 'hidden_script_access? is false if user is not admin and does not have permission' do
-    user = create :student
-    refute user.hidden_script_access?
-  end
-
-  test 'hidden_script_access? is true if user is admin' do
-    user = create :admin
-    assert user.hidden_script_access?
-  end
-
-  test 'hidden_script_access? is true if user has permission' do
-    user = create :teacher
-    user.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-    assert user.hidden_script_access?
   end
 
   test 'levelbuilder?' do
@@ -223,6 +207,19 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
 
   test 'grant admin permission does not log in test environment' do
     ChatClient.expects(:message).never
+    create :admin
+  end
+
+  test 'grant authorized_teacher permission calls mailer' do
+    user = create :teacher
+    TeacherMailer.expects(:verified_teacher_email).
+      once.
+      returns(stub(deliver_now: nil))
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
+  test 'grant admin permission does not call mailer' do
+    TeacherMailer.expects(:verified_teacher_email).never
     create :admin
   end
 end

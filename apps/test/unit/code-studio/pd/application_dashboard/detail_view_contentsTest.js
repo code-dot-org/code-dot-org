@@ -4,6 +4,7 @@ import {
   ApplicationFinalStatuses,
   ScholarshipStatusRequiredStatuses
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
@@ -72,6 +73,10 @@ describe('DetailViewContents', () => {
     school_stats: {}
   };
 
+  // Nobody is able to set an application status to incomplete from detail view
+  const getApplicationStatusesWithoutIncomplete = (type, addAutoEmail = true) =>
+    _.omit(getApplicationStatuses(type, addAutoEmail), ['incomplete']);
+
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
       ...DEFAULT_APPLICATION_DATA,
@@ -81,7 +86,7 @@ describe('DetailViewContents', () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'facilitator',
+      viewType: defaultApplicationData.application_type.toLowerCase(),
       isWorkshopAdmin: false
     };
 
@@ -137,7 +142,7 @@ describe('DetailViewContents', () => {
       // lock button is disabled for all statuses except "finalized"
       // statuses in the constant are an object {value: label}
       Object.keys(
-        getApplicationStatuses(applicationType.toLowerCase())
+        getApplicationStatusesWithoutIncomplete(applicationType.toLowerCase())
       ).forEach(status => {
         const statusIsFinal = ApplicationFinalStatuses.includes(status);
         detailView
@@ -199,6 +204,35 @@ describe('DetailViewContents', () => {
           .first()
           .text()
       ).to.equal('Lock');
+    });
+  });
+
+  describe('Edit controls in Teacher', () => {
+    it(`cannot make status incomplete from dropdown`, () => {
+      const detailView = mountDetailView('Teacher');
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="incomplete"]')
+      ).to.have.lengthOf(0);
+    });
+
+    it(`incomplete status is in dropdown if teacher application is incomplete`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'incomplete',
+          scholarship_status: null,
+          update_emails_sent_by_system: false
+        }
+      });
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="incomplete"]')
+      ).to.have.lengthOf(1);
     });
   });
 
@@ -348,9 +382,53 @@ describe('DetailViewContents', () => {
     });
   }
 
+  describe('Principal Approvals', () => {
+    it(`Shows principal responses if approval is complete`, () => {
+      const detailView = mountDetailView('Teacher');
+      expect(detailView.text()).to.contain(
+        'Principal Approval and School Information'
+      );
+    });
+    it(`Shows URL to principal approval if sent and incomplete`, () => {
+      const guid = '1020304';
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          application_guid: guid,
+          principal_approval_state: PrincipalApprovalState.inProgress
+        }
+      });
+      expect(
+        detailView.find('#principal-approval-url').props().href
+      ).to.contain(`principal_approval/${guid}`);
+    });
+    it(`Shows button to make principal approval required if not`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: true
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Make required'
+      );
+    });
+    it(`Shows button to make principal approval not required if it is`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: null // principal approval is required
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Make not required'
+      );
+    });
+  });
+
   describe('Regional Partner View', () => {
     it('has delete button', () => {
-      const detailView = mountDetailView(applicationType, {
+      const detailView = mountDetailView('Teacher', {
         isWorkshopAdmin: false
       });
       const deleteButton = detailView.find('button#delete');
@@ -383,13 +461,13 @@ describe('DetailViewContents', () => {
         .last()
         .simulate('click');
 
-      // Dropdown is enabled
+      // Dropdown is still disabled
       // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
       expect(
         getLastRow()
           .find('Select')
           .prop('disabled')
-      ).to.equal(false);
+      ).to.equal(true);
 
       // Click "Save"
       detailView
@@ -445,13 +523,10 @@ describe('DetailViewContents', () => {
       });
     }
 
-    for (const applicationStatus of [
-      'unreviewed',
-      'pending',
-      'waitlisted',
-      'declined',
-      'withdrawn'
-    ]) {
+    for (const applicationStatus of _.difference(
+      Object.keys(getApplicationStatusesWithoutIncomplete('teacher')),
+      ScholarshipStatusRequiredStatuses
+    )) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
         detailView = mountDetailView('Teacher', {
           applicationData: {
@@ -482,7 +557,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatuses('teacher', true)
+        getApplicationStatusesWithoutIncomplete('teacher', true)
       );
       var i = 0;
       options.forEach(option => {
@@ -491,7 +566,7 @@ describe('DetailViewContents', () => {
       });
     });
 
-    it('does not appends auto email text if set to false', () => {
+    it('does not append auto email text if set to false', () => {
       detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
@@ -503,7 +578,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatuses('teacher', false)
+        getApplicationStatusesWithoutIncomplete('teacher', false)
       );
       var i = 0;
       options.forEach(option => {

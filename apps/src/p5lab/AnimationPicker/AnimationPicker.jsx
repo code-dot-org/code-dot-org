@@ -123,6 +123,7 @@ class AnimationPicker extends React.Component {
           hideBackgrounds={this.props.hideBackgrounds}
           canDraw={this.props.canDraw}
           selectedAnimations={this.props.selectedAnimations}
+          pickerType={this.props.pickerType}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -206,8 +207,8 @@ export default connect(
     onPickNewAnimation() {
       dispatch(pickNewAnimation());
     },
-    onPickLibraryAnimation(animation, isMultiSelectEnabled) {
-      dispatch(pickLibraryAnimation(animation, isMultiSelectEnabled));
+    onPickLibraryAnimation(animation) {
+      dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {

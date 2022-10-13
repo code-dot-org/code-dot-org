@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -45,16 +45,44 @@ class Ailab < Level
     )
   end
 
+  def localized_dynamic_instructions
+    default_value = JSONValue.value(properties['dynamic_instructions'].presence)
+    return default_value if default_value.nil?
+
+    parsed_default_value = JSON.parse(default_value)
+    parsed_default_value.keys.each do |prop|
+      parsed_default_value[prop] = I18n.t(
+        prop,
+        scope: [:data, 'dynamic_instructions', name],
+        default: parsed_default_value[prop],
+        smart: true
+      )
+    end
+
+    JSON.dump(parsed_default_value)
+  end
+
+  def get_localized_property(property_name)
+    default_value = JSONValue.value(properties[property_name].presence)
+    return default_value if default_value.nil? || !should_localize?
+
+    # Translate supported properties
+    return localized_dynamic_instructions if property_name == 'dynamic_instructions'
+
+    # Return default value if property is not supported
+    default_value
+  end
+
   # Return an 'appOptions' hash derived from the level contents
   def non_blockly_puzzle_level_options
-    options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
+    options = Rails.cache.fetch("#{cache_key}/#{I18n.locale}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
       properties.keys.each do |dashboard|
         apps_prop_name = dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
-        value = JSONValue.value(properties[dashboard].presence)
+        value = get_localized_property(dashboard)
         level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
       end
 

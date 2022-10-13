@@ -6,6 +6,10 @@ module.exports = function(grunt) {
     var locales = new Set();
     var namespaces = new Set();
 
+    // Tracks all the errors found when processing the I18n content.
+    const errors = [];
+    // Loop through all the I18n content used by "apps" and process it so it is usable to our
+    // javascript code.
     this.files.forEach(function(filePair) {
       filePair.src.forEach(function(src) {
         var locale = path.basename(src, '.json');
@@ -21,6 +25,21 @@ module.exports = function(grunt) {
           }
         });
         var finalData = Object.assign(englishData, localeData);
+
+        // Verify the translated content is formatted correctly.
+        const formatErrors = checkForFormatIssues(
+          locale,
+          namespace,
+          finalData,
+          src
+        );
+        if (formatErrors.length !== 0) {
+          // Format error found, track the error and move on to the next file.
+          const errorMsg = formatErrors.join('\n');
+          errors.push(new Error(errorMsg));
+          return;
+        }
+
         try {
           var formatted = process(locale, namespace, finalData);
           grunt.file.write(filePair.dest, formatted);
@@ -33,16 +52,25 @@ module.exports = function(grunt) {
             let msg = `Error processing Crowdin in-context localization file. Using the in-context translation tool will not work for strings in ${src}: ${e}`;
             grunt.log.debug(msg);
           } else {
-            let errorMsg = `Error processing localization file ${src}: ${e}`;
+            let errorMsg = `Failed to process localization file ${src}: ${e}`;
             if (grunt.option('force')) {
               grunt.log.warn(errorMsg);
             } else {
-              throw new Error(errorMsg);
+              errors.push(new Error(errorMsg));
             }
           }
         }
       });
     });
+    // If an error was found when processing the I18n content, report it and raise an error.
+    if (errors.length !== 0) {
+      const errorMsg = 'All I18n content issues:';
+      const allErrors = errors.reduce(
+        (all, error) => `${all}\n${error.message}`,
+        errorMsg
+      );
+      throw new Error(allErrors);
+    }
 
     /**
      * We want to make sure that we aren't missing any locale files in any
@@ -67,6 +95,37 @@ module.exports = function(grunt) {
     });
   });
 
+  /**
+   * Parses the given JSON for any MessageFormat issues and returns a list of exceptions found.
+   * @param locale The language/region locale code for the given JSON.
+   * @param namespace Some unique ID for the content, usually the file name e.g. 'fish' or 'maze'
+   * @param json {object} A JSON object which has string values inside it.
+   * @returns {array} A list of exceptions found when trying to parse the given JSON.
+   */
+  function checkForFormatIssues(locale, namespace, json, src) {
+    const errors = [];
+    // Process each individual key so we can quickly identify which string is having an issue.
+    Object.keys(json).forEach(function(key) {
+      try {
+        process(locale, namespace, json[key]);
+      } catch (e) {
+        if (locale !== 'in_tl') {
+          // in_tl is a pseudolanguage locale we don't fully support yet so we will ignore it.
+          let errorMsg = `key '${key}' in localization file ${src} has a format issue: ${e}`;
+          errors.push(new Error(errorMsg));
+        }
+      }
+    });
+    return errors;
+  }
+
+  /**
+   * Applies MessageFormat to all the strings found in the given JSON.
+   * @param locale The language/region locale code for the given JSON.
+   * @param namespace Some unique ID for the content, usually the file name e.g. 'fish' or 'maze'
+   * @param json A JSON object which has string values inside it.
+   * @returns {object} The given JSON object but formatted with MessageFormat.
+   */
   function process(locale, namespace, json) {
     var mf;
     try {

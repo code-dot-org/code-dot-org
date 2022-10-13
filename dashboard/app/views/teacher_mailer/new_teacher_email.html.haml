@@ -76,7 +76,7 @@
 
 %p
   (1)
-  - donor = get_random_donor_name_and_twitter
+  - donor = CdoDonor.get_random_donor_name_and_twitter
   - tweet = "I just signed up to teach computer science using Code.org! Thanks #{donor[:twitter]} for supporting @codeorg."
   %a{href: "https://twitter.com/intent/tweet?text=#{tweet}"} Tweet a message of thanks
   to #{donor[:name]}, one of our donors.

@@ -9,17 +9,17 @@ And(/^I confirm correct visibility of view more links$/) do
   hidden_view_more_links = dcdo_flag.nil? ? true : dcdo_flag
   if hidden_view_more_links
     steps %Q{
-      And the project gallery contains 7 view more links
-      And element ".ui-project-app-type-area:eq(2)" contains text "App Lab"
+      And the project gallery contains 8 view more links
+      And element ".ui-project-app-type-area:eq(3)" contains text "App Lab"
+      And element ".ui-project-app-type-area:eq(3)" does not contain text "View more"
+      And element ".ui-project-app-type-area:eq(2)" contains text "Game Lab"
       And element ".ui-project-app-type-area:eq(2)" does not contain text "View more"
-      And element ".ui-project-app-type-area:eq(1)" contains text "Game Lab"
-      And element ".ui-project-app-type-area:eq(1)" does not contain text "View more"
     }
   else
     steps %Q{
-      And the project gallery contains 9 view more links
-      And element ".ui-project-app-type-area:eq(2)" contains text "View more App Lab projects"
-      And element ".ui-project-app-type-area:eq(1)" contains text "View more Game Lab projects"
+      And the project gallery contains 10 view more links
+      And element ".ui-project-app-type-area:eq(3)" contains text "View more App Lab projects"
+      And element ".ui-project-app-type-area:eq(2)" contains text "View more Game Lab projects"
     }
   end
 end
@@ -196,8 +196,8 @@ end
 
 last_shared_url = nil
 Then /^I save the share URL$/ do
-  wait_short_until {@button = @browser.find_element(id: 'sharing-input')}
-  last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
+  wait_short_until {@button = @browser.find_element(id: 'sharing-dialog-copy-button')}
+  last_shared_url = @browser.execute_script("return document.getElementById('sharing-dialog-copy-button').value")
 end
 
 When /^I open the share dialog$/ do

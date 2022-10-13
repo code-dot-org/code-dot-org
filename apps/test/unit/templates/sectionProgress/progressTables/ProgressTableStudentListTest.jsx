@@ -3,7 +3,6 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
 import i18n from '@cdo/locale';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
-import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import {
@@ -57,18 +56,6 @@ describe('ProgressTableStudentList', () => {
     expect(studentRows).to.have.length(2);
     expect(studentRows.includes(STUDENT_ROWS[0])).to.be.true;
     expect(studentRows.includes(STUDENT_ROWS[1])).to.be.true;
-  });
-
-  it('passes prop showSectionProgressDetails to ProgressTableStudentName', () => {
-    const wrapper = mount(
-      <ProgressTableStudentList
-        {...DEFAULT_PROPS}
-        showSectionProgressDetails={true}
-      />
-    );
-    expect(
-      wrapper.first(ProgressTableStudentName).props().showSectionProgressDetails
-    ).to.be.true;
   });
 
   it('displays detail labels if detail rows are passed in', () => {

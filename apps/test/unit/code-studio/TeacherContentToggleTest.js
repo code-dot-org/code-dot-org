@@ -14,7 +14,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 describe('TeacherContentToggle', () => {
   let div, renderElement;
   beforeEach(() => {
-    // add DOM elements that our tecaher content toggle is going to take control
+    // add DOM elements that our teacher content toggle is going to take control
     // over
     div = $(`
       <div style="display: none">
@@ -38,7 +38,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Teacher"
+        viewAs={ViewType.Instructor}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -74,11 +74,11 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.childNodes[0].style.display, '');
   });
 
-  it('shows content immediately when viewAs Teacher', () => {
+  it('shows content immediately when viewAs instructor', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Teacher"
+        viewAs={ViewType.Instructor}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -100,11 +100,11 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
   });
 
-  it('shows content after async calls when Teacher is authorized', () => {
+  it('shows content after async calls when instructor is authorized', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
-        viewAs="Teacher"
+        viewAs={ViewType.Instructor}
         hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenLesson={false}
@@ -126,11 +126,11 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
   });
 
-  it('shows lock message after async calls when Teacher is unauthorized', () => {
+  it('shows lock message after async calls when instructor is unauthorized', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
-        viewAs="Teacher"
+        viewAs={ViewType.Instructor}
         hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenLesson={false}
@@ -152,11 +152,11 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
   });
 
-  it('does not initially show anything when viewAs Student', () => {
+  it('does not initially show anything when viewAs participant', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Participant}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -179,11 +179,11 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
   });
 
-  it('does show hidden lesson message once initialized when viewAs Student', () => {
+  it('does show hidden lesson message once initialized when viewAs participant', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Participant}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -226,11 +226,11 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, '');
   });
 
-  it('does show locked lesson message once initialized when viewAs Student', () => {
+  it('does show locked lesson message once initialized when viewAs participant', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Participant}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -273,11 +273,11 @@ describe('TeacherContentToggle', () => {
     assert.equal(hiddenLessonElement.style.display, 'none');
   });
 
-  it('shows hidden message when viewAs student if locked and hidden', () => {
+  it('shows hidden message when viewAs participant if locked and hidden', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Participant}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -315,7 +315,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Participant}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -357,14 +357,14 @@ describe('TeacherContentToggle', () => {
         hiddenLessonRedux.isLessonHiddenForSection.restore();
     });
 
-    describe('when viewing as student', () => {
+    describe('when viewing as participant', () => {
       const state = {
-        viewAs: ViewType.Student,
+        viewAs: ViewType.Participant,
         selectedSectionId: {},
         progress: {},
         teacherSections: {},
         hiddenLesson: {},
-        verifiedTeacher: {}
+        verifiedInstructor: {}
       };
 
       it('sets locked hidden to true when locked and hidden', () => {
@@ -394,9 +394,9 @@ describe('TeacherContentToggle', () => {
       });
     });
 
-    describe('when viewing as teacher', () => {
+    describe('when viewing as instructor', () => {
       const state = {
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         selectedSectionId: {},
         progress: {
           currentLessonId: 123,
@@ -409,14 +409,14 @@ describe('TeacherContentToggle', () => {
         },
         teacherSections: {},
         hiddenLesson: {},
-        verifiedTeacher: {
+        verifiedInstructor: {
           isVerified: true
         }
       };
 
       const stateUnverified = {
         ...state,
-        verifiedTeacher: {
+        verifiedInstructor: {
           isVerified: false
         }
       };
@@ -439,7 +439,7 @@ describe('TeacherContentToggle', () => {
         );
       });
 
-      it('sets lockable to true for unverified teacher, when lesson is lockable', () => {
+      it('sets lockable to true for unverified instructor, when lesson is lockable', () => {
         const props = mapStateToProps(stateUnverified);
 
         assert.strictEqual(props.isHiddenLesson, false);

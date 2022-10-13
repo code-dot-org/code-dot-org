@@ -2,53 +2,20 @@
 te:
   data:
     script:
-      category:
-        hoc_category_name: అవర్ ఆఫ్ కోడ్
       name:
         events:
           title: ఈవెంట్లు
           description: ఈవెంట్లు
           description_short: ఈవెంట్లు
           student_description: ఈవెంట్లు
-        gradeKinder:
-          lessons:
-            Events:
-              name: ఈవెంట్లు
-        grade1:
-          lessons:
-            Events:
-              name: ఈవెంట్లు
-        k5concepts:
-          lessons:
-            Events:
-              name: ఈవెంట్లు
         dance:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
-        dance--draft:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
-        dance-draft:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
-        dance-low:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
+          name: డాన్స్
+        aquatic:
+          name: జలచర
         coursed-2019:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
-        express-2019:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
         coursec-2019:
           lesson_groups:
             csf_events:
@@ -69,14 +36,6 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
-        k5-onlinepd-2019:
-          lessons:
-            Events:
-              name: ఈవెంట్లు
         time4cs-control-unit-1:
           lesson_groups:
             csf_events:
@@ -101,25 +60,10 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
-        express-2020:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
         pre-express-2020:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
-        code-break:
-          lessons:
-            Events:
-              name: ఈవెంట్లు
-        k5-onlinepd-2020:
-          lessons:
-            Events:
-              name: ఈవెంట్లు
         coursea-2021:
           lesson_groups:
             csf_events:
@@ -133,20 +77,10 @@ te:
             csf_events:
               display_name: ఈవెంట్లు
         coursed-2021:
-          lessons:
-            Dance Party:
-              key: డాన్స్ పార్టీ
-              name: డాన్స్ పార్టీ
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
         express-2021:
-          lessons:
-            Dance Party:
-              key: డాన్స్ పార్టీ
-              name: డాన్స్ పార్టీ
-            lesson-1:
-              name: డాన్స్ పార్టీ
           lesson_groups:
             lessonGroup-9:
               display_name: ఈవెంట్లు
@@ -154,8 +88,49 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
-        k5-onlinepd-2021:
-          lessons:
-            Events:
-              key: ఈవెంట్లు
-              name: ఈవెంట్లు
+        csd-post-survey-2021:
+          name: csd-పోస్ట్-సర్వే-2021
+          description: ఈ యూనిట్‌లో కోర్సు-పూర్వ సర్వే CS అన్వేషణలు ఉన్నాయి. విద్యార్థులు CS అన్వేషణలలో వారికి కేటాయించిన అఖరి యూనిట్ పూర్తి చేసిన తర్వాత ఈ యూనిట్ కేటాయించబడవచ్చు.
+          student_description: ఈ యూనిట్‌లో CS అన్వేషణలను క్లాసు పూర్తి చేసినప్పుడు ఒక సర్వే ఉంది. ఈ సర్వే చేయడానికి సమయం వచ్చినప్పుడు మీ టీచర్ మీకు చెప్తారు.
+        csa-pl-test:
+          name: csa-pl- టెస్ట్
+        csa-pl-module-1-test:
+          name: csa-pl-మాడ్యూ-1-టెస్ట్
+          title: Code.org మరియు CSA పునశ్చరణ
+        csa-pl-module-2-test:
+          name: csa-pl-మాడ్యూల్ -2-టెస్ట్
+          title: Code.org యొక్క టూల్స్‌ను నేవిగేట్ చేయడం
+        csa-pl-module-3-test:
+          name: csa-pl-మాడ్యూల్-3-టెస్ట్
+          title: టెక్స్ట్-ఆధారిత ప్రోగ్రామింగ్‌తో మద్దతు
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: అవర్ ఆఫ్ కోడ్
+        coursea-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: ఈవెంట్లు
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursed-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        csd-post-survey-2022:
+          description: ఈ యూనిట్‌లో కోర్సు-పూర్వ సర్వే CS అన్వేషణలు ఉన్నాయి. విద్యార్థులు CS అన్వేషణలలో వారికి కేటాయించిన అఖరి యూనిట్ పూర్తి చేసిన తర్వాత ఈ యూనిట్ కేటాయించబడవచ్చు.
+          student_description: ఈ యూనిట్‌లో CS అన్వేషణలను క్లాసు పూర్తి చేసినప్పుడు ఒక సర్వే ఉంది. ఈ సర్వే చేయడానికి సమయం వచ్చినప్పుడు మీ టీచర్ మీకు చెప్తారు.

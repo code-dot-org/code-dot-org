@@ -44,6 +44,10 @@ class ScriptName extends React.Component {
     );
   }
 
+  onProjectUpdatedAtContentUpdated = () => {
+    this.setDesiredWidth();
+  };
+
   renderScriptLink() {
     let className = 'header_text';
     if (this.props.smallText) {
@@ -101,7 +105,9 @@ class ScriptName extends React.Component {
           <div style={styles.outerContainer}>
             <div style={styles.containerWithUpdatedAt}>
               {this.renderScriptLink()}
-              <ProjectUpdatedAt />
+              <ProjectUpdatedAt
+                onContentUpdated={this.onProjectUpdatedAtContentUpdated}
+              />
             </div>
           </div>
         </div>
@@ -133,5 +139,5 @@ const styles = {
 };
 
 export default connect(state => ({
-  showProjectUpdatedAt: state.header.showProjectUpdatedAt
+  showProjectUpdatedAt: state.project.showProjectUpdatedAt
 }))(ScriptName);

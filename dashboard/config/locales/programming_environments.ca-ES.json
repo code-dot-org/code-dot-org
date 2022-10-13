@@ -1,0 +1,75 @@
+{
+  "ca-ES": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "name": "Laboratori de jocs",
+          "categories": {
+            "game_lab": {
+              "name": "Laboratori de jocs"
+            },
+            "groups": {
+              "name": "Grups"
+            },
+            "drawing": {
+              "name": "Dibuix"
+            },
+            "math": {
+              "name": "Matemàtiques"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funcions"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratori d'aplicacions",
+          "description": "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons.",
+          "categories": {
+            "math": {
+              "name": "Matemàtiques"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funcions"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laboratori de personatges",
+          "categories": {
+            "actions": {
+              "name": "Accions"
+            },
+            "events": {
+              "name": "Esdeveniments"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Matemàtiques"
+            },
+            "logic": {
+              "name": "Lògic"
+            },
+            "functions": {
+              "name": "Funcions"
+            },
+            "text": {
+              "name": "text"
+            }
+          }
+        }
+      }
+    }
+  }
+}

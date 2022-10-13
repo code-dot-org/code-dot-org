@@ -52,6 +52,7 @@ my-MM:
   learn_back_to_minecraft: Minecraft နှင့် ဆက်လက်သင်ယူပါ
   just_did_hoc_donor: 'ကျွန်ုပ် #HourOfCode အခုဘဲလုပ်လိုက်တယ်။ကြည့်ကြည့်ပါ!( @codeorg
     ကိုပံ့ပိုးတဲ့အတွက် %{donor_twitter} ကိုကျေးဇူးတင်ပါတယ်)'
+  studiobar_flappy_title: ဖလပ်ပီ ကုပ်
   homepage_hero_text_malala: |-
     &ldquo;ကျွန်မနိုင်ငံတစ်နိုင်ငံချင်းစီတိုင်းမှာရှိတဲ့မိန်းကလေးများကို one Hour of Code သင်ဖို့စိန်ခေါ်ပါတယ်&rdquo;
     Malala, Nobel Peace Prize winner
@@ -101,6 +102,7 @@ my-MM:
   homepage_slot_text_frozen: Frozen နှင့်အတူ Anna နဲ့ Elsa
   homepage_slot_text_teacher: ဆရာ့ကျောက်သင်ပုန်း
   homepage_slot_text_studio: ကျွန်ုပ်တို့ရဲ့tutorialများ
+  homepage_slot_text_flappy: ဖလပ်ပီ ကုပ်
   homepage_action_text_hoc: ကျောင်းသားတိုင်းအတွက် Hour of Code
   homepage_action_text_join_us: ကျွန်ပ်တို့နှင့်ပူးပေါင်းပါ
   homepage_action_text_volunteers: နည်းပညာဆိုင်ရာစေတနာ့ထန်ထမ်းများအလိုရှိပါသည်
@@ -216,7 +218,13 @@ my-MM:
   dashboard_students_name: အမည္
   dashboard_login_none: email လိပ္စာ
   learn_more: ဆက်သင်ယူရန်
+  hoc2014_try_frozen: 'Frozen မှ အနုပညာရှင် Anna နှင့် Elsa တို့နှင့်အတူ '
+  codeorg_name: ဂန္တဝင် ဝင်္ကပါ
+  codeintl_name: ဂန္တဝင် ဝင်္ကပါ
   blockly_name: Blockly
+  hourofcode_name: ဂန္တဝင် ဝင်္ကပါ
+  infinity_name: အဆုံးမရှိ ကစားရသည့် စမ်းသပ်ခန်း
+  classicmaze_name: ဂန္တဝင် ဝင်္ကပါ
   lightbot_gradelevel: အသက်အရွယ်အားလုံး
   thinkersmith_gradelevel: အသက်အရွယ်အားလုံး
   lightbotintl_gradelevel: အသက်အရွယ်အားလုံး
@@ -257,6 +265,11 @@ my-MM:
   hoc2018_mc_minecraft_education: Mincraftပညာ​ရေး
   hoc2018_mc_continue_learning: Minecraft နှင့် ဆက်လက်သင်ယူပါ.
   hoc2018_mc_go_to_mc_education: Minecraft ပညာရေးသို့သွားပါ
+  hoc2018_dance_teacher_resources_tile1_button: |2-
+
+    Lesson Plan
+    သင်ခန်းစာ အစီအစဉ်
+  hoc2018_dance_teacher_resources_tile2_button: အန်ပလပ် လှုပ်ရှားမှု
   hoc2018_dance_amazon_about_future_engineer_button: ဆက်သင်ယူရန်
   ai_activity: လှုပ်ရှားမှု
   ai_description: ဖော်ပြချက်

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {SingleCheckbox} from '../form/SingleCheckbox';
-import {defaultOptions} from '../LabeledFormComponent';
+import {useDefaultOptions} from '../LabeledFormComponent';
 
 export const LabeledSingleCheckbox = props => {
+  const defaults = useDefaultOptions(props.name, props.label);
   const passProps = {
-    ...defaultOptions(props.name, props.label),
+    ...defaults,
     ...props
   };
   return <SingleCheckbox {...passProps} />;

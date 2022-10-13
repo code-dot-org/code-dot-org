@@ -4,6 +4,7 @@ nav: about_nav
 video_player: true
 theme: responsive
 ---
+
 <link rel="stylesheet" type="text/css" rel= "stylesheet" href="/css/careers.css" />
 
 <div class="careers__banner careers__teal">
@@ -14,7 +15,7 @@ theme: responsive
 
   <div class="col-50 careers-video">
     <% facebook = {:u=>'https://youtu.be/mTGSiB4kB18'} %>
-    <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+    <% twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{CdoDonor.get_random_donor_twitter} for supporting @codeorg)"} %>
     <%=view :display_video_thumbnail, id: "codeorg_recruiting", video_code: "mTGSiB4kB18", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: "false", download_path: "http://videos.code.org/social/about-codeorg.mp4" %>
   </div>
 
@@ -30,6 +31,9 @@ theme: responsive
 
 <h2 class="careers-header">Our Core Values</h2>
 <%=view :values_tiles %>
+
+<h3>A unifying approach in a divided world</h3>
+<p>Code.org's global role in the K-12 computer science movement is only possible because we use a unifying approach across diverse and often divided stakeholders. At a time of increasing polarization, the idea of increasing opportunity for students unites people from across the political spectrum. Code.org's team members, students, teachers, and supporters have diverse and diverging viewpoints, and they are all welcome in our mission. <a href="/about/unifying">Read more</a>.</p>
 
 <h2 class="careers-header">Balancing Work and Life</h2>
 <div class="careers__section-container">
@@ -66,7 +70,7 @@ theme: responsive
         <img src="../images/careers-at-code/benefits-pd.png" alt=""/>
       </div>
       <div class="careers__benefit__title careers__benefit--purple">
-        Growth and Professionl Learning Opportunities
+        Growth and Professional Learning Opportunities
       </div>
     </div>
 
@@ -81,17 +85,7 @@ theme: responsive
 
 Code.org is based in Seattle, but many of our team members are remote; remote candidates are welcome and encouraged to apply!
 
-<div id='lever-jobs-container'></div>
-<script type='text/javascript'>
-
-  window.leverJobsOptions = {accountName: 'Code.org'};
-
-</script>
-<script type='text/javascript' src='https://andreasmb.github.io/lever-jobs-embed/index.js'></script>
-
-<div class="careers__future">
-  We're always on the lookout for people who want to help make our vision a reality! Even if we don't have a job posted right now that matches your skills, we'd still love to hear from you via <a href="https://jobs.lever.co/code.org/6ca7d2c4-9965-4cf0-960e-de58e3d0d829">this application</a>.
-</div>
+<a href="https://boards.greenhouse.io/codeorg"><button>View open positions</button></a>
 
 <h2 class="careers-header">Get Involved</h2>
 
@@ -107,7 +101,7 @@ Code.org is based in Seattle, but many of our team members are remote; remote ca
 
 _We embrace diverse perspectives, ideas, and backgrounds at Code.org. We are committed to providing an equal opportunity to all employees and applicants. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability (mental and physical) status._
 
-_We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org_ 
+_We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org_
 
 <div class="careers__banner--faq" style="margin-top: 28px">
   <i class="fa fa-question-circle-o"></i>

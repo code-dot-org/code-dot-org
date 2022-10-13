@@ -1,3 +1,6 @@
 {
-  "delete": "بسڕەوە"
+  "create": "ez",
+  "delete": "بسڕەوە",
+  "rename": "ناونانەوە",
+  "submit": "بنێرە"
 }

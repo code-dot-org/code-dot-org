@@ -887,8 +887,6 @@ export function tooltipifyVocabulary() {
   });
 }
 
-export function containsAtLeastOneAlphaNumberic(string) {
-  return /^.*[a-zA-Z0-9èàùìòÈÀÒÙÌéáúíóÉÁÚÍÓëäüïöËÄÜÏÖêâûîôÊÂÛÎÔç'-]+.*$/.test(
-    string
-  );
+export function isBlank(str) {
+  return !!(!str || str.trim() === '');
 }

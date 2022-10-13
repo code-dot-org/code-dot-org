@@ -37,6 +37,7 @@ class FoormEntityEditor extends React.Component {
     this.state = {
       livePreviewStatus: PREVIEW_ON,
       num_facilitators: 2,
+      workshop_id: 1,
       workshop_course: 'CS Principles',
       workshop_subject: '5-day Summer',
       regional_partner_name: 'Regional Partner A',
@@ -117,6 +118,14 @@ class FoormEntityEditor extends React.Component {
       <div style={styles.options}>
         <div>
           <form>
+            <label>
+              workshop_id <br />
+              <input
+                type="text"
+                value={this.state.workshop_id}
+                onChange={e => this.setState({workshop_id: e.target.value})}
+              />
+            </label>
             <label>
               workshop_course <br />
               <input
@@ -244,6 +253,7 @@ class FoormEntityEditor extends React.Component {
                 foormData={{
                   facilitators: this.state.facilitators,
                   num_facilitators: this.state.num_facilitators,
+                  workshop_id: this.state.workshop_id,
                   workshop_course: this.state.workshop_course,
                   workshop_subject: this.state.workshop_subject,
                   regional_partner_name: this.state.regional_partner_name,

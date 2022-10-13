@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "A business in The Neighborhood wants a square painted around the first parking space for VIP customers. Finish the code so that it:\r\n\r\n* Prints `Paint the parking spot blue` if the `Painter` has more than `6` units of paint.\r\n\r\n* Prints `Paint the parking spot yellow` if the `Painter` has `5` units of paint.\r\n\r\n* Otherwise, prints `Not enough paint for the VIP parking spot`.\r\n\r\nBe sure to change the value for the `paintUnits` to test all three conditions.",
+    "long_instructions": "A business in The Neighborhood wants a square painted around the first parking space for VIP customers. Finish the code so that it:\r\n\r\n* Prints `Paint the parking spot blue` if the `Painter` has at least `6` units of paint.\r\n\r\n* Prints `Paint the parking spot yellow` if the `Painter` has `5` units of paint.\r\n\r\n* Otherwise, prints `Not enough paint for the VIP parking spot`.\r\n\r\nBe sure to change the value for the `paintUnits` to test all three conditions.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,10 +16,10 @@
     }
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-09-14T16:56:11.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-09-14 16:56:13 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 20:40:09 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 21:01:17 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 21:02:45 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 21:03:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-14 16:56:13 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 20:40:09 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 21:01:17 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 21:02:45 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 21:03:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-23 17:58:27 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

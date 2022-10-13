@@ -1,7 +1,0 @@
-{
-  "func": "getAnimationLabel",
-  "category": "Sprites",
-  "modeOptionName": "*.getAnimationLabel",
-  "type": "value",
-  "noAutocomplete": true
-}

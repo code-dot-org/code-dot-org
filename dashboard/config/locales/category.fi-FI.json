@@ -1,0 +1,14 @@
+{
+  "fi-FI": {
+    "data": {
+      "category": {
+        "csta2011/CT": {
+          "description": "Laskennallinen ajattelu"
+        },
+        "ccela/L": {
+          "description": "Kieli"
+        }
+      }
+    }
+  }
+}

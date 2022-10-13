@@ -4,28 +4,28 @@ title: Informujte ostatných
 
 {{ signup_button }}
 
-# Zapojte Vašich známych do projektu Hodina Kódu
+# Zapojte do Hodiny kódu svoju komunitu
 
-## 1. Informujte ostatných
+## 1. Šírte povedomie o projekte
 
-Povedzte svojim priateľom o projekte **#HourOfCode**!
+Povedzte o projekte **#HodinaKodu** svojim priateľom!
 
 {{ promote/share_buttons }}
 
-## 2. Požiadajte Vašu školu, aby usporiadala Hodinu Kódu
+## 2. Požiadajte svoju školu, aby usporiadala Hodinu kódu
 
-[Pošlite tento e-mail]({{ promote/sample_emails }}) svojmu vedúcemu a vyzvite všetky triedy vo svojej škole, aby sa zapojili.
+[Pošlite tento e-mail]({{ promote/sample_emails }}) riaditeľovi školy a motivujte všetky triedy na škole, aby sa zapojili.
 
-## 3. Požiadajte Vášho zamestnávateľa, aby sa zapojil
+## 3. Požiadajte svojho zamestnávateľa, aby sa zapojil
 
-[Pošlite tento e-mail]({{ promote/sample_emails }}) svojmu vedúcemu alebo riaditeľovi spoločnosti.
+[Pošlite tento e-mail]({{ promote/sample_emails }}) svojmu nadriadenému alebo riaditeľovi spoločnosti.
 
-## 4. Propagujte Hodinu Kódu vo Vašom okolí
+## 4. Spropagujte Hodinu kódu vo svojom okolí
 
-[Zapojte miestne skupiny]({{ promote/sample_emails }}) – skautské zbory, cirkevné spoločenstvá, univerzity, kluby dôchodcov, odbory alebo aj svojich priateľov. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Využite tieto plagáty, banery, nálepky a videá pri svojom vlastnom podujatí.
+[Zapojte miestne združenie]({{ promote/sample_emails }}) – skautský zbor, cirkevné spoločenstvo, univerzitu, klub dôchodcov, odborovú organizáciu alebo aj svojich priateľov. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Využite tieto [plagáty, banery, nálepky a videá](/promote/resources) pri svojom vlastnom podujatí.
 
-## 5. Oslovte lokálne politické osobnosti, aby podporili Hodinu Kódu
+## 5. Oslovte miestnych politikov, aby podporili Hodinu kódu
 
-Pošlite tento e-mail svojim miestnym zástupcom, mestskej či školskej rade a pozvite na návštevu do svojej školy, kde sa dozvedia viac o Hodine kódu. Môže to podporiť vyučovanie informatiky vo vašom okolí.
+[Pošlite tento e-mail]({{ promote/sample_emails }}) miestnemu zastupiteľstvu či školskej rade a pozvite ich, aby počas Hodiny kódu navštívili vašu školu. Môže to podporiť vyučovanie informatiky vo vašom okolí.
 
 {{ signup_button }}

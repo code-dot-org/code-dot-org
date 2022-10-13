@@ -10,6 +10,7 @@ class UnassignSectionDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     sectionId: PropTypes.number.isRequired,
     onClose: PropTypes.func.isRequired,
+    cancelUnassign: PropTypes.func.isRequired,
     unassignSection: PropTypes.func.isRequired,
     courseName: PropTypes.string,
     sectionName: PropTypes.string
@@ -21,11 +22,11 @@ class UnassignSectionDialog extends Component {
   };
 
   render() {
-    const {isOpen, courseName, sectionName, onClose} = this.props;
+    const {isOpen, courseName, sectionName, cancelUnassign} = this.props;
     return (
       <BaseDialog
         isOpen={isOpen}
-        handleClose={onClose}
+        handleClose={cancelUnassign}
         useUpdatedStyles
         style={styles.dialog}
       >
@@ -34,7 +35,7 @@ class UnassignSectionDialog extends Component {
             courseName: courseName || i18n.thisUnit()
           })}
         </h2>
-        <div style={styles.confirm}>
+        <div id="unassign-dialog-body" style={styles.confirm}>
           {i18n.unassignSectionConfirm({
             sectionName: sectionName,
             courseName: courseName || i18n.thisUnit()
@@ -44,7 +45,7 @@ class UnassignSectionDialog extends Component {
           <Button
             __useDeprecatedTag
             text={i18n.dialogCancel()}
-            onClick={onClose}
+            onClick={cancelUnassign}
             color={Button.ButtonColor.gray}
             className="ui-unassign-cancel-button"
           />

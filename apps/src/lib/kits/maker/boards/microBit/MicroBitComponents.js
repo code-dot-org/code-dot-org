@@ -8,6 +8,8 @@ import MicroBitThermometer from './MicroBitThermometer';
 import Compass from './Compass';
 import LightSensor from './LightSensor';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
+import ExternalButton from './ExternalButton';
+import ExternalLed from './ExternalLed';
 
 /**
  * Initializes a set of components for the currently
@@ -35,7 +37,7 @@ export function createMicroBitComponents(board) {
  *   createMicroBitComponents.  This object will be mutated: Destroyed
  *   components will be removed. Additional members of this object will be
  *   ignored.
- * @param {Object} dynamicComponents - array of dynamic components, from MicroBitBoard
+ * @param {Object} dynamicComponents - dynamic components, from MicroBitBoard
  * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
  *   components, or just reset to their initial state.
  */
@@ -119,5 +121,8 @@ export const componentConstructors = {
   Accelerometer,
   MicroBitThermometer,
   Compass,
-  LightSensor
+  LightSensor,
+  ExternalButton,
+  ExternalLed,
+  CapacitiveTouchSensor
 };

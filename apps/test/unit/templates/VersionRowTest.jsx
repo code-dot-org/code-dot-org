@@ -11,27 +11,70 @@ describe('VersionRow', () => {
     lastModified: new Date()
   };
 
-  it('renders preview and restore buttons for a non-current version', () => {
-    const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={false} />);
+  it('renders preview and restore buttons for a non-latest version', () => {
+    const wrapper = shallow(
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={false}
+        isSelectedVersion={false}
+        isReadOnly={false}
+      />
+    );
+    expect(wrapper).to.not.have.className('highlight');
     expect(wrapper).to.containMatchingElement(
       <a target="_blank">
-        <button type="button" className="version-preview">
-          <i className="fa fa-eye" />
+        <button type="button" className="btn-info">
+          {msg.view()}
         </button>
       </a>
     );
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-info">
-        {msg.restoreThisVersion()}
+      <button type="button" className="img-upload">
+        {msg.restore()}
       </button>
     );
   });
 
-  it('renders a disabled button for the current version', () => {
-    const wrapper = shallow(<VersionRow {...MINIMUM_PROPS} isLatest={true} />);
+  it('renders restore button and disabled view button for selected version', () => {
+    const wrapper = shallow(
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={false}
+        isSelectedVersion={true}
+        isReadOnly={false}
+      />
+    );
+    expect(wrapper).to.have.className('highlight');
     expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-default" disabled="disabled">
-        {msg.currentVersion()}
+      <button type="button" className="btn-default">
+        {msg.view()}
+      </button>
+    );
+    expect(wrapper).to.containMatchingElement(
+      <button type="button" className="btn-info">
+        {msg.restore()}
+      </button>
+    );
+  });
+
+  it('renders a disabled button for the latest version', () => {
+    const wrapper = shallow(
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={true}
+        isSelectedVersion={false}
+        isReadOnly={false}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <button
+        key={'latest-version-message'}
+        type="button"
+        className="btn-default"
+        disabled="disabled"
+        style={{cursor: 'default', background: 'none', border: 'none'}}
+      >
+        {msg.latestVersion()}
       </button>
     );
   });
@@ -39,11 +82,17 @@ describe('VersionRow', () => {
   it('calls onChoose when restore button is clicked', () => {
     const onChoose = sinon.spy();
     const wrapper = shallow(
-      <VersionRow {...MINIMUM_PROPS} isLatest={false} onChoose={onChoose} />
+      <VersionRow
+        {...MINIMUM_PROPS}
+        isLatest={false}
+        isSelectedVersion={false}
+        isReadOnly={false}
+        onChoose={onChoose}
+      />
     );
     expect(onChoose).not.to.have.been.called;
 
-    wrapper.find('.btn-info').simulate('click');
+    wrapper.find('.img-upload').simulate('click');
     expect(onChoose).to.have.been.calledOnce;
   });
 });

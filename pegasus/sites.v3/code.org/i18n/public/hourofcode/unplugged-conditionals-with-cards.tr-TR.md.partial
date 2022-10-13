@@ -1,33 +1,33 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: Öğretmen Kaynakları - Kartlı Koşullar
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Kartlı Koşullar: Bir Kod Saati Öğretici
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## Öğretmen Kaynakları
 
-### Lesson Plans:
+### Ders Planları:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [Kartlı Koşullar](/files/ConditionalsHoC.pdf)
+- Video: [Sınıfınızda Kartlı Koşullar Nasıl Kolaylaştırabilirsiniz?](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Uzatma Faaliyetleri:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Bir Kod Saati Ötesinde](http://code.org/learn/beyond)
+- [Bilgisayar Bilimi Temelleri: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Diğer Öğretmen Kaynakları:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Kod Saati: Eğitimciler için Nasıl Yapılır Kılavuzu](https://hourofcode.com/how-to)
+- [Başarılı Eğitimcilerden En İyi Uygulamalar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Canlı Etkinlik: [Bir Eğitimcinin Kod Saati Kılavuzu](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,12 +35,12 @@ video_player: true
 
 ## Genel Bakış
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Bir kart destesi kullanarak bu "bağlantısız" aktivitede algoritmalar ve koşullu ifadeler hakkında bilgi edinin. Öğrenciler bu aktiviteyi ekipler halinde yaparlar ve ekip başına bir deste karta ihtiyaç duyarlar.
 
-**Recommended Age Range:** 8-12
+**Önerilen Yaş Aralığı:** 8-12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Teknoloji Gereksinimleri:** Yok! Bu, bir kart destesinden başka bir şey olmadan öğretilebilecek "bağlantısız" bir aktivitedir.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>Aktiviteyi indirin</button></a>
 
 [/col-50]

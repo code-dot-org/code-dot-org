@@ -70,15 +70,11 @@ import {
 } from '@cdo/apps/util/performance';
 import MobileControls from './gamelab/MobileControls';
 import Exporter from './gamelab/Exporter';
-import {
-  expoGenerateApk,
-  expoCheckApkBuild,
-  expoCancelApkBuild
-} from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import DCDO from '@cdo/apps/dcdo';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -102,7 +98,13 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 export default class P5Lab {
-  constructor() {
+  constructor(defaultAnimations = []) {
+    if (!!DCDO.get('use-s3-path-for-default-animations', true)) {
+      this.defaultAnimations = defaultAnimations;
+    } else {
+      this.defaultAnimations = defaultSprites;
+    }
+
     this.skin = null;
     this.level = null;
     this.tickIntervalId = 0;
@@ -119,7 +121,6 @@ export default class P5Lab {
     /** @private {JsInterpreterLogger} */
     this.consoleLogger_ = new JsInterpreterLogger(window.console);
 
-    this.generatedProperties = {};
     this.eventHandlers = {};
     this.Globals = {};
     this.currentCmdQueue = null;
@@ -234,7 +235,7 @@ export default class P5Lab {
 
     this.level.softButtons = this.level.softButtons || [];
     if (this.level.useDefaultSprites) {
-      this.startAnimations = defaultSprites;
+      this.startAnimations = this.defaultAnimations;
     } else if (
       this.level.startAnimations &&
       this.level.startAnimations.length > 0
@@ -275,7 +276,7 @@ export default class P5Lab {
       getStore().dispatch(
         setInitialAnimationList(
           this.startAnimations,
-          false /* shouldRunV3Migration */,
+          null /* animationsForV3Migration */,
           this.isBlockly
         )
       );
@@ -429,26 +430,8 @@ export default class P5Lab {
       }
     }
 
-    const setAndroidExportProps = this.setAndroidExportProps.bind(this);
-
     this.studioApp_.setPageConstants(config, {
-      allowExportExpo: experiments.isEnabled('exportExpo'),
       exportApp: this.exportApp.bind(this),
-      expoGenerateApk: expoGenerateApk.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCheckApkBuild: expoCheckApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
-      expoCancelApkBuild: expoCancelApkBuild.bind(
-        null,
-        config.expoSession,
-        setAndroidExportProps
-      ),
       channelId: config.channel,
       nonResponsiveVisualizationColumnWidth: APP_WIDTH,
       showDebugButtons: showDebugButtons,
@@ -479,22 +462,16 @@ export default class P5Lab {
       ? config.initialAnimationList
       : this.startAnimations;
     initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList
+      initialAnimationList,
+      this.defaultAnimations
     );
 
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        this.isBlockly /* shouldRunV3Migration */,
+        this.defaultAnimations /* animationsForV3Migration */,
         this.isBlockly
       )
-    );
-
-    this.generatedProperties = {
-      ...config.initialGeneratedProperties
-    };
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
     );
 
     // Pre-register all audio preloads with our Sounds API, which will load
@@ -535,8 +512,12 @@ export default class P5Lab {
    * the "set background to" block, which needs to have backgrounds in the
    * animation list at the start in order to look not broken.
    * @param {Object} initialAnimationList
+   * @param {Object} defaultAnimations
    */
-  loadAnyMissingDefaultAnimations(initialAnimationList) {
+  loadAnyMissingDefaultAnimations(
+    initialAnimationList,
+    defaultAnimations = {orderedKeys: [], propsByKey: {}}
+  ) {
     if (!this.isBlockly) {
       return initialAnimationList;
     }
@@ -545,24 +526,27 @@ export default class P5Lab {
       const name = initialAnimationList.propsByKey[key].name;
       configDictionary[name] = key;
     });
-    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultAnimations.
     // This is primarily to handle pre existing levels that don't have animations in their list yet
     const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
       const {categories} = initialAnimationList.propsByKey[key];
       return categories && categories.includes('backgrounds');
     });
-    const nameCheck = defaultSprites.orderedKeys.filter(key => {
+    const nameCheck = defaultAnimations.orderedKeys.filter(key => {
       return (
-        defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
-        configDictionary[defaultSprites.propsByKey[key].name]
+        defaultAnimations.propsByKey[key].categories.includes('backgrounds') &&
+        configDictionary[defaultAnimations.propsByKey[key].name]
       );
     });
     const hasBackgrounds = categoryCheck.length > 0 || nameCheck.length > 0;
     if (!hasBackgrounds) {
-      defaultSprites.orderedKeys.forEach(key => {
-        if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+      defaultAnimations.orderedKeys.forEach(key => {
+        if (
+          defaultAnimations.propsByKey[key].categories.includes('backgrounds')
+        ) {
           initialAnimationList.orderedKeys.push(key);
-          initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+          initialAnimationList.propsByKey[key] =
+            defaultAnimations.propsByKey[key];
         }
       });
     }
@@ -570,54 +554,31 @@ export default class P5Lab {
   }
 
   /**
-   * Export the project for web or use within Expo.
-   * @param {Object} expoOpts
+   * Export the project for web.
    */
-  async exportApp(expoOpts) {
+  async exportApp() {
     await this.whenAnimationsAreReady();
     return this.exportAppWithAnimations(
       project.getCurrentName() || 'my-app',
-      getStore().getState().animationList,
-      expoOpts
-    );
-  }
-
-  setAndroidExportProps(props) {
-    // Spread the previous object so changes here will always fail shallow
-    // compare and trigger react prop changes
-    this.generatedProperties.export = {
-      ...this.generatedProperties.export,
-      android: props
-    };
-    project.projectChanged();
-    project.saveIfSourcesChanged();
-    getStore().dispatch(
-      setExportGeneratedProperties(this.generatedProperties.export)
+      getStore().getState().animationList
     );
   }
 
   /**
-   * Export the project for web or use within Expo.
+   * Export the project for web.
    * @param {string} appName
    * @param {Object} animationList - object of {AnimationKey} to {AnimationProps}
-   * @param {Object} expoOpts
    */
-  exportAppWithAnimations(appName, animationList, expoOpts) {
+  exportAppWithAnimations(appName, animationList) {
     const {pauseAnimationsByDefault} = this.level;
     const allAnimationsSingleFrame = allAnimationsSingleFrameSelector(
       getStore().getState()
     );
-    return Exporter.exportApp(
-      appName,
-      this.studioApp_.editor.getValue(),
-      {
-        animationList,
-        allAnimationsSingleFrame,
-        pauseAnimationsByDefault
-      },
-      expoOpts,
-      this.studioApp_.config
-    );
+    return Exporter.exportApp(appName, this.studioApp_.editor.getValue(), {
+      animationList,
+      allAnimationsSingleFrame,
+      pauseAnimationsByDefault
+    });
   }
 
   /**
@@ -671,6 +632,8 @@ export default class P5Lab {
    * Override to change pause behavior.
    */
   onPause() {}
+
+  reactToExecutionError(msg) {}
 
   onIsRunningChange() {
     this.setCrosshairCursorForPlaySpace();
@@ -1184,7 +1147,6 @@ export default class P5Lab {
     if (this.JSInterpreter) {
       if (this.interpreterStarted) {
         this.JSInterpreter.executeInterpreter();
-
         if (this.p5Wrapper.stepSpeed < 1) {
           this.p5Wrapper.drawDebugSpriteColliders();
         }
@@ -1467,6 +1429,11 @@ export default class P5Lab {
         this.eventHandlers.draw.apply(null);
       }
     }
+
+    if (this.JSInterpreter?.executionError) {
+      this.reactToExecutionError(this.JSInterpreter.executionError.message);
+    }
+
     this.completeRedrawIfDrawComplete();
   }
 
@@ -1539,12 +1506,43 @@ export default class P5Lab {
   }
 
   /**
+   * Override to change whether the current app wants to show the
+   * save & publish buttons in the "finish" feedback dialog, shown
+   * by calling this.studioApp_.displayFeedback() in
+   * displayFeedback_(), below.
+   */
+  saveToProjectGallery() {
+    return false;
+  }
+
+  /**
+   * Get the feedback message for the feedback dialog.
+   * Subclasses can override this behavior.
+   * @param {boolean} _isFinalFreePlayLevel Unused by this implementation
+   * @returns {string}
+   */
+  getReinfFeedbackMsg(_isFinalFreePlayLevel) {
+    return this.getMsg().reinfFeedbackMsg();
+  }
+
+  /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
    */
   displayFeedback_() {
     var level = this.level;
     let msg = this.getMsg();
+
+    // Allow P5Labs to decide what string should be rendered in the feedback dialog.
+    const isFinalFreePlayLevel = level.freePlay && level.isLastLevelInLesson;
+    const reinfFeedbackMsg = this.getReinfFeedbackMsg(isFinalFreePlayLevel);
+
+    const isSignedIn =
+      getStore().getState().currentUser.signInState === SignInState.SignedIn;
+
+    // Find out whether the current app (e.g. SpriteLab, GameLab, or Poetry) wants
+    // to show the save & publish buttons in this dialog.
+    const saveToProjectGallery = this.saveToProjectGallery();
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
@@ -1554,10 +1552,12 @@ export default class P5Lab {
       // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
       showingSharing: !level.disableSharing && level.freePlay,
       appStrings: {
-        reinfFeedbackMsg: msg.reinfFeedbackMsg(),
+        reinfFeedbackMsg,
         sharingText: msg.shareGame()
       },
-      hideXButton: true
+      hideXButton: true,
+      saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: !isSignedIn
     });
   }
 
@@ -1574,18 +1574,6 @@ export default class P5Lab {
         );
       })
     );
-  }
-
-  /**
-   * Get the project properties for upload to the sources API.
-   * Bound to appOptions in gamelab/main.js, used in project.js for autosave.
-   */
-  getGeneratedProperties() {
-    // Must return a new object instance each time so the project
-    // system can properly compare currentSources vs newSources
-    return {
-      ...this.generatedProperties
-    };
   }
 
   /**

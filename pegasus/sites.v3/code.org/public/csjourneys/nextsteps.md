@@ -13,16 +13,16 @@ social:
   "og:image:height": 630
 ---
 <a id="top"></a>
-<img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px; margin-top:50px"/>
+<a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px; margin-top:50px"/></a>
 <div class="col-75" style="border-right: 25px solid #ffffff">
 <h1 style="margin-top:0">Next Steps Discussions</h1>
-<p>This series of four live, online discussions will demonstrate a range of opportunities that students can pursue with computer science and demystify next steps they can take. Discussions feature diverse participants, including college students and CS professionals, and cover frequently asked questions about computer science careers, as well as key topics like college alternatives and the importance of making connections and building support networks. Use the list below to navigate to each event description:</p>
+<p>This series of four discussions feature diverse participants, including college students and CS professionals, and cover frequently asked questions about computer science careers, as well as key topics like college alternatives and the importance of making connections and building support networks. Use the list below to navigate to each discussion:</p>
 
 <ul>
     <li><a href="#event-1">FAQ: Your questions about computer science careers, answered!</a></li>
     <li><a href="#event-2">College Project Showcase</a></li>
-    <li><a href="#event-3">Panel: Key Alternatives to the 4-year college degree</a></li>
-    <li><a href="#event-4">Panel: Building Your Network: The Power of Community</a></li>
+    <li><a href="#event-3">Panel: Alternatives to the 4-year college degree</a></li>
+    <li><a href="#event-4">Panel: Making connections and building support networks</a></li>
 </ul>
 </div>
 
@@ -46,8 +46,7 @@ social:
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
-  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, September 29th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>This FAQ session is designed to answer some of the most common questions that students ask about computer science, including what career options are available, how artificial intelligence and big data will shape the job market, and what to expect in college. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
+  <p>In this FAQ session, computer science professionals and students answer some of the most common questions that students ask about computer science, including what career options are available, and what to expect in college.</p>
   <a href="https://code.zoom.us/rec/play/dLwAp7jG2lxKm2TFtunQNXaePZdP7jFuA8Xgp_5KVlEv240HeNz13TZ2A4XRt7j5zKgXCnbAA7GFg7cb.XIYTWIhx90B5Mjzy" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center">
@@ -77,19 +76,16 @@ social:
   <div style="clear: both"></div>
 <br>
   <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
         <li style="color:#ffffff">Encourage students to upvote questions they like on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a>, and post their own questions using the hashtag #CSJourneys</li><br>
-        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (Will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?)</li><br>
     </ul>
   </div>
   <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <h3 style="color:#ffffff; margin-top:0">After you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
         <li style="color:#ffffff">Have students work in pairs or groups to generate follow up questions. Encourage them to post questions on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a></li><br>
-        <li style="color:#ffffff">Have students build a TDL on CareerVillage.</li><br>
         <li style="color:#ffffff">Point students to <a href="https://code.org/beyond" target="_blank" style="color:#ffffff">code.org/beyond</a>, where they can explore opportunities to take the next step on their own CS Journeys.</li>
     </ul>
   </div>
@@ -105,8 +101,7 @@ social:
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
-  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 13th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
+  <p>College students showcase research and projects that computer science contributes to across multiple disciplines. Students will hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue.</p>
   <a href="https://code.zoom.us/rec/play/XfZg54bXBlEGkJnHjdwN-3hQrpFX41qzwvZMC3RX4Rvlb3c4ut9mY1YbIabkwUSwL_pxEyTtKw0YGX0.0XGsrzep-oa-QCv_" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
@@ -144,17 +139,15 @@ social:
   <div style="clear: both"></div>
 <br>
 <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Have students think of which careers/majors they are interested in and write them down. If there’s time, encourage them to do a little research into that major or career.</li><br>
         <li style="color:#ffffff">Give students time in class to brainstorm projects or research they would like to do. What do they want to create? What problem(s) do they want to solve?</li><br>
-        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (Will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?)</li><br>
     </ul>
   </div>
   <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <h3 style="color:#ffffff; margin-top:0">After you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
         <li style="color:#ffffff">Give students time to reflect and discuss: what surprised them? Excited them? What did they find interesting?</li><br>
         <li style="color:#ffffff">Encourage students to post any unanswered questions they have on <a href="https://www.careervillage.org/" target="_blank" style="color:#ffffff">CareerVillage.org</a></li>
     </ul>
@@ -172,8 +165,7 @@ social:
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
-  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 27th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>Students will learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college, apprenticeships, and Google Career Certificates. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
+  <p>Students learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college and apprenticeships.</p>
   <a href="https://code.zoom.us/rec/play/3LinsRk-G4SzCc9upMTn3LwxAMs3qnJfwmovSA1VP9I91pS6sV5YfzDsbMtKEuCVg9YHLfecyISw4sNq.sqU0J6LHIM3GBPXR" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
@@ -203,7 +195,7 @@ social:
   <div style="clear: both"></div>
 <br>
   <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Give students time in class to generate a list of goals for their future. These could be career goals (become an engineer, start a company), and/or personal goals (start a family, buy a house). The more specific their goals, the better.</li><br>
         <li style="color:#ffffff">Have students create a to-do list of steps they need to take in order to achieve their goals. Again, the more specific they are, the better.</li><br>
@@ -211,9 +203,8 @@ social:
     </ul>
   </div>
   <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <h3 style="color:#ffffff; margin-top:0">After you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
         <li style="color:#ffffff">Give students time in class to revisit both their list of goals and their to-do list of steps they need to take to achieve their goals. Does anything change?</li><br>
         <li style="color:#ffffff">Have students research community colleges in your area (city/region/state). What programs are available. How much does it cost? Are there bridge programs between the community college(s) and state universities? What are some of the benefits and drawbacks of going this route?</li><br>
         <li style="color:#ffffff">Give students time to explore other alternative pathways, like <a href="https://grow.google/certificates/#?modal_active=none" target="_blank" style="color:#ffffff">Google Career Certificates</a> and <a href="https://code.org/beyond/internships#apprenticeships" target="_blank" style="color:#ffffff">apprenticeship programs</a>. Again, encourage them to think about benefits and drawbacks.</li>
@@ -228,12 +219,11 @@ social:
 
 <a id="event-4"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Making Connections and Building Support Networks</h2>
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Making connections and building support networks</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
-  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, November 10th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
+  <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks.</p>
   <a href="https://code.zoom.us/rec/play/cIS5zalDnM3RTrvHWYcYIYXCzqr44xdBK5B5WSDysJZKtE61ZFQ1nlGYFD_pWSxy9W7wj_-ugwCDrphN.UeOZUUWcMljYajSC" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
@@ -271,18 +261,16 @@ social:
   <div style="clear: both"></div>
 <br>
   <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <h3 style="color:#ffffff; margin-top:0">Before you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Have students read through the responses to the question posed by another student on CareerVillage.org, “<a href="https://www.careervillage.org/questions/459689/is-it-possible-to-get-a-good-job-in-computer-science-without-a-strong-network" target="_blank" style="color:#ffffff">Is it possible to get a good job in Computer Science without a strong network?</a>” Have them write down some of the key answers that strike them, and then discuss as a class. If there’s time, give students an opportunity to explore more questions about networking on CareerVillage.org.</li><br>
         <li style="color:#ffffff">Give students time in class to map out their web of support. This includes <i>strong ties</i> (family members, friends, and any other relationships defined by high levels of time investment, emotional intimacy, trust, and reciprocity, and <i>weak ties</i> (acquaintances, friends of friends, extended family, coworkers, or any relationship defined by lower levels of time investment and trust).</li><br>
         <li style="color:#ffffff">Spend some time exploring the professional networking site Linkedin with your students. Ask them: what do they notice about it? How do people seem to engage on the site? How is it different from other social networking platforms like Snapchat, TikTok, or Instagram?</li><br>
-        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (Will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?)</li>
     </ul>
   </div>
   <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
-    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <h3 style="color:#ffffff; margin-top:0">After you watch:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
         <li style="color:#ffffff">Have students return to their web of support. After hearing from the panelists, would they change anything? Can they think of anyone else who might be part of their support network?</li><br>
         <li style="color:#ffffff">Point students to <a href="https://code.org/beyond/mentors-and-community" target="_blank" style="color:#ffffff">mentorship and professional networking opportunities</a>. Extracurricular activities like coding clubs are another great way to start building connections; point students to <a href="https://code.org/beyond/extracurricular" target="_blank" style="color:#ffffff">these opportunities</a>, too.</li><br>
         <li style="color:#ffffff">Helping students build strong support networks often requires more than pointing them in the right direction. Use <a href="https://whoyouknow.org/playbook/" target="_blank" style="color:#ffffff">this report from the Christensen Institute</a> to guide your efforts.</li>

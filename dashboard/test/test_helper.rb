@@ -9,16 +9,6 @@ Minitest.load_plugins
 Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
-if ENV['COVERAGE'] || ENV['CIRCLECI'] || ENV['DRONE'] # set this environment variable when running tests if you want to see test coverage
-  require 'simplecov'
-  SimpleCov.start :rails
-  SimpleCov.root(File.expand_path(File.join(File.dirname(__FILE__), '../../')))
-  if ENV['CIRCLECI'] || ENV['DRONE']
-    require 'codecov'
-    SimpleCov.formatter = SimpleCov::Formatter::Codecov
-  end
-end
-
 reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
@@ -29,6 +19,7 @@ Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
 ENV["RACK_ENV"] = "test"
+ENV['TZ'] = 'UTC'
 
 # deal with some ordering issues -- sometimes environment is loaded
 # before test_helper and sometimes after. The CDO stuff uses RACK_ENV,
@@ -68,8 +59,6 @@ class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
   setup do
-    # sponsor message calls PEGASUS_DB, stub it so we don't have to deal with this in test
-    UserHelpers.stubs(:random_donor).returns(name_s: 'Someone')
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
 
@@ -85,13 +74,6 @@ class ActiveSupport::TestCase
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
 
-    # A list of keys used by our shared cache that should be cleared between every test.
-    [
-      ProfanityHelper::PROFANITY_PREFIX,
-      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
-      AzureTextToSpeech::AZURE_TTS_PREFIX
-    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
-
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
 
@@ -104,6 +86,8 @@ class ActiveSupport::TestCase
     # when called from unit tests. See comments on that method for details.
     CDO.stubs(:optimize_webpack_assets).returns(false)
     CDO.stubs(:use_my_apps).returns(true)
+
+    AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
   end
 
   teardown do
@@ -351,8 +335,9 @@ class ActiveSupport::TestCase
 
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
-      'no-cache',
-      'no-store'
+      'no-store',
+      'max-age=0',
+      'must-revalidate'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
@@ -495,7 +480,7 @@ class ActionController::TestCase
   def self.test_user_gets_response_for(action, method: :get, response: :success,
     user: nil, params: {}, name: nil, queries: nil, redirected_to: nil, &block)
 
-    unless name.present?
+    if name.blank?
       raise 'name is required when a block is provided' if block
       user_display_name =
         if user.is_a?(Proc)
@@ -633,38 +618,17 @@ def with_locale(locale)
   end
 end
 
-# Mock StorageApps to generate random tokens
-class StorageApps
-  def initialize(storage_id)
-    @storage_id = storage_id
-  end
-
-  def create(_, _)
-    storage_app_id = SecureRandom.random_number(100000)
-    storage_encrypt_channel_id(@storage_id, storage_app_id)
-  end
-
-  def most_recent(_)
-    create(nil, nil)
-  end
-
-  def get(_)
-    {
-      'name' => "Stubbed test project name",
-      'hidden' => false,
-      'frozen' => false
-    }
-  end
+def stub_storage_id_for_user_id(user_id)
+  storage_id = fake_storage_id_for_user_id(user_id)
+  stubs(:storage_id_for_user_id).with(user_id).returns(storage_id)
 end
 
-# Mock get_storage_id to generate random IDs. Seed with current user so that a user maintains
-# the same id
-def get_storage_id
-  return storage_id_for_user_id(current_user.id) if current_user
-  Random.new.rand(1_000_000)
+def stub_get_storage_id(user_id)
+  fake_storage_id = fake_storage_id_for_user_id(user_id)
+  stubs(:get_storage_id).returns fake_storage_id
 end
 
-def storage_id_for_user_id(user_id)
+def fake_storage_id_for_user_id(user_id)
   Random.new(user_id.to_i).rand(1_000_000)
 end
 

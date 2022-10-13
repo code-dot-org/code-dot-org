@@ -64,6 +64,7 @@ describe('ErrorDialogStack', function() {
             dismissError={() => {}}
             deleteAnimation={() => {}}
             animationList={undefined}
+            isSpriteLab={false}
           />
         );
         expect(dialog.text()).to.contain(
@@ -81,6 +82,7 @@ describe('ErrorDialogStack', function() {
             dismissError={() => {}}
             deleteAnimation={() => {}}
             animationList={undefined}
+            isSpriteLab={false}
           />
         );
         expect(dialog.text()).to.not.contain(

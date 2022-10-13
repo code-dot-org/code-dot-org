@@ -4,15 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:16:36 UTC",
+    "family_name": "k5concepts",
+    "serialized_at": "2022-04-08 15:40:37 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "k5concepts"
     }
@@ -431,6 +433,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -452,6 +457,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Big Event Match 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -473,6 +481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GettingLoopy"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -494,6 +505,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Getting Loopy Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -515,6 +529,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "comingSoon"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -536,6 +553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Conditionals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -557,6 +577,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Conditionals Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -578,6 +601,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "comingSoon"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -599,6 +625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SongwritingParameters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -620,6 +649,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 Songwriting Multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -641,6 +673,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "EnvelopeVariables"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -662,6 +697,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MadGlibs"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -683,6 +721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ForLoopFun"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -704,6 +745,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_bee_for_loops3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -725,6 +769,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_bee_for_loops5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -746,6 +793,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_bee_for_loops9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -767,6 +817,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SongwritingWithParameters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -788,6 +841,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_parameters_triangles3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -809,6 +865,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_parameters_squares2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -830,6 +889,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_functionparameters8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -851,6 +913,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_playlab_variables12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -872,6 +937,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_functionparameters11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -893,6 +961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BinaryBracelets"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -914,6 +985,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Binary Match 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -935,6 +1009,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BinaryImages"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -956,6 +1033,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_pixelation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -977,6 +1057,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_binary5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -998,6 +1081,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_binary4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1019,6 +1105,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_binary8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1040,6 +1129,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_binary9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1061,6 +1153,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade5_artist_binary11"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -4,8 +4,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {ViewType, changeViewType} from '../../viewAsRedux';
-import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the
@@ -19,31 +19,30 @@ class ViewAsToggle extends React.Component {
   };
 
   componentDidMount() {
-    // Upon loading, toggle hide-as-student appropriately (this is so that if we
-    // load a page with ?viewAs=Student we still hide stuff)
-    const {viewAs} = this.props;
-    $('.hide-as-student').toggle(viewAs === ViewType.Teacher);
+    this.toggleHideAsStudent(this.props.viewAs);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.viewAs !== this.props.viewAs) {
+      this.toggleHideAsStudent(nextProps.viewAs);
+    }
+  }
+
+  toggleHideAsStudent = viewAs => {
+    // Toggle hide-as-student appropriately (this is so that if we
+    // load a page with ?viewAs=Participant we still hide teacher-only content)
+    $('.hide-as-student').toggle(viewAs === ViewType.Instructor);
+  };
+
   onChange = viewType => {
-    const {changeViewType} = this.props;
+    const {changeViewType, logToFirehose} = this.props;
 
     updateQueryParam('viewAs', viewType);
 
-    if (viewType === ViewType.Student && queryParams('user_id')) {
-      // In this case, the changeViewType thunk is going to do a reload and we dont
-      // want to change our UI.
-    } else {
-      // Ideally all the things we would want to hide would be redux backed, and
-      // would just update automatically. However, we're not in such a world. Instead,
-      // explicitly hide or show elements with this class name based on new toggle state.
-      $('.hide-as-student').toggle(viewType === ViewType.Teacher);
-    }
-
     changeViewType(viewType);
 
-    if (this.props.logToFirehose) {
-      this.props.logToFirehose('toggle_view', {view_type: viewType});
+    if (logToFirehose) {
+      logToFirehose('toggle_view', {view_type: viewType});
     }
   };
 
@@ -59,14 +58,14 @@ class ViewAsToggle extends React.Component {
             <button
               type="button"
               className="uitest-viewAsStudent"
-              value={ViewType.Student}
+              value={ViewType.Participant}
             >
               {commonMsg.student()}
             </button>
             <button
               type="button"
               className="uitest-viewAsTeacher"
-              value={ViewType.Teacher}
+              value={ViewType.Instructor}
             >
               {commonMsg.teacher()}
             </button>

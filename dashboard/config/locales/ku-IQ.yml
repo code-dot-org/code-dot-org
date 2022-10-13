@@ -326,6 +326,7 @@ ku:
     student_reg_link: قوتابی
     online: سەرهێڵ
     trynow: زیاتر فێرببە
+  certificate_hour_of_code: كاژێری كۆدنووسی
   gender:
     male: نێر
     female: مێ
@@ -384,5 +385,10 @@ ku:
       subjects:
         cs: زانستی كۆمپیوتەر
         math: بیرکاری
+        other: هی تر
+      resources:
+        other: هی تر
+      robotics:
+        other: هی تر
   cookie_banner:
     accept: من ڕازیم

@@ -18,8 +18,8 @@ const DEFAULT_PROPS = {
     lessons: [fakeLesson('lesson1', 1)],
     levelsByLesson: []
   },
-  lessonIsVisible: () => true,
-  viewAs: ViewType.Teacher
+  hasVisibleLesson: true,
+  viewAs: ViewType.Instructor
 };
 
 describe('LessonGroup', () => {
@@ -49,17 +49,17 @@ describe('LessonGroup', () => {
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
   });
-  it('does not render in student view if there are no visible lessons', () => {
+  it('does not render in participant view if there are no visible lessons', () => {
     const props = {
       ...DEFAULT_PROPS,
       isSummaryView: true,
-      lessonIsVisible: () => false,
-      viewAs: ViewType.Student
+      hasVisibleLesson: false,
+      viewAs: ViewType.Participant
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.get(0)).to.be.null;
   });
-  it('does not render in student view if there are no lessons', () => {
+  it('does render in instructor view if there are no lessons', () => {
     const props = {
       ...DEFAULT_PROPS,
       groupedLesson: {
@@ -67,20 +67,7 @@ describe('LessonGroup', () => {
         lessons: []
       },
       isSummaryView: true,
-      viewAs: ViewType.Student
-    };
-    const wrapper = shallow(<LessonGroup {...props} />);
-    expect(wrapper.get(0)).to.be.null;
-  });
-  it('does render in teacher view if there are no lessons', () => {
-    const props = {
-      ...DEFAULT_PROPS,
-      groupedLesson: {
-        ...DEFAULT_PROPS.groupedLesson,
-        lessons: []
-      },
-      isSummaryView: true,
-      viewAs: ViewType.Teacher
+      viewAs: ViewType.Instructor
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.get(0)).to.not.be.null;

@@ -1,35 +1,37 @@
 ---
 title: crwdns2698535:0crwdne2698535:0
-video_player: true
 theme: responsive
-style_min: true
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
 ---
 
 # crwdns2698537:0crwdne2698537:0
 
-crwdns2698539:0crwdne2698539:0 crwdns2698541:0crwdne2698541:0 crwdns2698543:0crwdne2698543:0
+crwdns2710955:0crwdne2710955:0 crwdns2698541:0crwdne2698541:0 crwdns2698543:0crwdne2698543:0
 
-## crwdns2698545:0crwdne2698545:0
-
-crwdns2698547:0crwdne2698547:0 crwdns2698549:0crwdne2698549:0 crwdns2698551:0crwdne2698551:0
 # crwdns2698553:0crwdne2698553:0
 
-crwdns2698555:0crwdne2698555:0
-crwdns2698557:0crwdne2698557:0
-crwdns2698559:0crwdne2698559:0
-crwdns2698561:0crwdne2698561:0
-crwdns2698563:0{{ clearfix }}crwdne2698563:0
+crwdns2715021:0crwdne2715021:0
+crwdns2715023:0crwdne2715023:0
+crwdns2715025:0crwdne2715025:0
+crwdns2715027:0crwdne2715027:0
+crwdns2710965:0{{ clearfix }}crwdne2710965:0
 
-crwdns2698565:0{{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Hello World", description: "Hello World description goes here.", button_text: "Learn more" }}crwdne2698565:0
+crwdns2710967:0crwdne2710967:0 crwdns2715029:0crwdne2715029:0
 
-## crwdns2698567:0crwdne2698567:0
+## crwdns2710971:0crwdne2710971:0
 
-crwdns2698569:0crwdne2698569:0
-crwdns2698571:0crwdne2698571:0
-crwdns2698573:0crwdne2698573:0
-crwdns2698575:0crwdne2698575:0
-crwdns2698577:0crwdne2698577:0
-crwdns2698579:0crwdne2698579:0
-crwdns2698581:0crwdne2698581:0
-crwdns2698583:0crwdne2698583:0
-crwdns2698585:0{{ clearfix }}crwdne2698585:0
+crwdns2866002:0crwdne2866002:0
+crwdns2715033:0crwdne2715033:0
+crwdns2715035:0crwdne2715035:0
+crwdns2715037:0crwdne2715037:0
+crwdns2715039:0{{ clearfix }}crwdne2715039:0

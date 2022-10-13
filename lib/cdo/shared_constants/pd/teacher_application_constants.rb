@@ -7,6 +7,12 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
+    PRINCIPAL_APPROVAL_STATE = {
+      not_required: 'Not required',
+      in_progress: 'Incomplete - Principal email sent on ',
+      complete: 'Complete - '
+    }
+
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     SECTION_HEADERS = {
@@ -74,13 +80,14 @@ module Pd
         csp_how_offer: 'How will you offer CS Principles?',
         csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
         csa_phone_screen: clean_multiline(
-          'Are you able to independently write a function (or procedure) with one or more
-          parameters and that uses conditional logic, loops, and an array (or list)?'
+          'Are you able to independently write and debug an error-free function (or procedure) with
+          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
         ),
         csa_which_grades: clean_multiline(
           "To which grades does your school plan to offer CSA in the #{YEAR} school year?
-          Please note that the CSA Professional Learning Program is not available for grades
-          K-8 nor recommended for grade 9. (select all that apply)"
+          The Code.org CSA curriculum is recommended for those who have successfully completed
+          a first-year high school algebra course AND an introductory programming course.
+          (select all that apply)"
         ),
         csa_how_offer: 'How will you offer CSA?',
         cs_how_many_minutes: clean_multiline(
@@ -135,7 +142,9 @@ module Pd
 
     LABEL_OVERRIDES = {
       program: "Which professional learning program would you like to join for the #{YEAR} school year?",
-      cs_how_many_minutes: 'How many minutes will your class last?'
+      cs_how_many_minutes: 'How many minutes per day is one class section?',
+      cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
+      cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
     }.freeze
 
     CSV_LABELS = {
@@ -165,8 +174,9 @@ module Pd
         program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
-        cs_how_many_minutes: "How many minutes will your CS program class last?",
-        cs_how_many_days_per_week: "How many days per week will your CS program class be offered to one section of students?",
+        cs_how_many_minutes: 'How many minutes per day is one class section?',
+        cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
+        cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
@@ -264,6 +274,7 @@ module Pd
       # Minimum requirements
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
+      csa_which_grades: YES_NO,
       committed: YES_NO,
       plan_to_teach: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
@@ -292,6 +303,15 @@ module Pd
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
+        :committed,
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
+        :replace_existing,
+        :principal_approval,
+        :principal_schedule_confirmed,
+      ],
+      criteria_score_questions_csa: [
+        :csa_which_grades,
         :committed,
         :plan_to_teach,
         :previous_yearlong_cdo_pd,

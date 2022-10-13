@@ -43,9 +43,9 @@ Like local newspapers, TV station or radio stations, or blogs. <br />
 
 #### 為什麼你的學校會參加「一小時玩程式」呢？
 
-我們都知道對於學生們來說學會如何在當今科技飽和的世界中生存是很重要的，但是許多老師並沒有計算機科學相關的教學經驗也不知道從哪裡開始教。 這個活動對我們來說正是一個了解計算機科學的機會。
+我們都知道對於學生們來說學會如何在當今科技飽和的世界中生存是很重要的，但是許多老師並沒有計算機科學相關的教學經驗也不知道從哪裡開始教。 這個活動對我們來說正是一個了解電腦科學的機會。
 
-我們希望它能激發學生們的興趣並堅持學習下去。 研究也表明，孩子們在學會讀寫之前就已經可以學會編程概念。 事實上，就像學習外語一樣，小時候他們的大腦更容易接受計算機語言。 <br /> <br />
+我們希望它能激發學生們的興趣並堅持學習下去。 研究也表明，孩子們在學會讀寫之前就已經可以學會編程概念。 事實上，就像學習外語一樣，小時候他們的大腦更容易接受電腦語言。 <br /> <br />
 
 #### 為什麼這很重要?
 
@@ -73,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-「一小時玩程式的設計目的，在揭開程式碼的神秘面紗，以及表明計算機科學並不是火箭科學，而是任何人都可以學習的基礎知識。」Hadi Partovi，Code.org 創始人兼首席執行長。 「全世界已經有超過 1 億名學生體驗了一小時玩程式課程。 The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+「一小時玩程式的設計目的，在揭開程式碼的神秘面紗，以及表明計算機科學並不是火箭科學，而是任何人都可以學習的基礎知識。」Hadi Partovi，Code.org 創始人兼首席執行長。 「全世界已經有超過 1 億名學生體驗了一小時玩程式課程。 對21世紀電腦科學教育的需求跨越了所有邊界，沒有國界。 <br /> <br />
 
 #### 關於 Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org是一個501c3公共非營利組織，致力於擴大對電腦科學的參與，提高來自其他弱勢群體的年輕女性和學生的參與。 其願景是，每所學校的每個學生都有機會學習電腦程式設計。 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org得到了來自企業、基金會和慷慨個人的慈善捐贈，包括微軟、Facebook、美國印孚瑟斯基金會、亞馬遜等。 For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

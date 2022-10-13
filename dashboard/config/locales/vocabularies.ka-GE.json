@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "ფუნქცია"
         },
+        "code/poem-art/2021": {
+          "word": "კოდი"
+        },
         "debugging/flappy/unversioned": {
           "word": "გამართვა"
         },
@@ -34,6 +37,9 @@
         },
         "debugging/aquatic/unversioned": {
           "word": "გამართვა"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "პირობა"
         },
         "conditionals/aquatic/unversioned": {
           "word": "პირობითი ბრძანებები"
@@ -67,6 +73,141 @@
         },
         "debugging/basketball/unversioned": {
           "word": "გამართვა"
+        },
+        "debugging/coursed/2022": {
+          "word": "გამართვა"
+        },
+        "programming/coursed/2022": {
+          "word": "პროგრამირება"
+        },
+        "conditionals/coursed/2022": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "condition/coursed/2022": {
+          "word": "პირობა"
+        },
+        "sprite/coursef/2022": {
+          "word": "სპრაიტი"
+        },
+        "variable/coursef/2022": {
+          "word": "ცვლადი"
+        },
+        "input/coursef/2022": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "internet/coursef/2022": {
+          "word": "ინტერნეტი"
+        },
+        "url/coursef/2022": {
+          "word": "ბმული"
+        },
+        "define/coursef/2022": {
+          "word": "განსაზღვრეთ"
+        },
+        "sprite/coursee/2022": {
+          "word": "სპრაიტი"
+        },
+        "function/coursee/2022": {
+          "word": "ფუნქცია"
+        },
+        "condition/coursee/2022": {
+          "word": "პირობა"
+        },
+        "conditionals/coursee/2022": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "copyright/coursee/2022": {
+          "word": "საავტორო უფლება"
+        },
+        "define/coursee/2022": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/courseb/2022": {
+          "word": "გამართვა"
+        },
+        "programming/courseb/2022": {
+          "word": "პროგრამირება"
+        },
+        "debugging/express/2022": {
+          "word": "გამართვა"
+        },
+        "programming/express/2022": {
+          "word": "პროგრამირება"
+        },
+        "sprite/express/2022": {
+          "word": "სპრაიტი"
+        },
+        "condition/express/2022": {
+          "word": "პირობა"
+        },
+        "conditionals/express/2022": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "function/express/2022": {
+          "word": "ფუნქცია"
+        },
+        "variable/express/2022": {
+          "word": "ცვლადი"
+        },
+        "define/express/2022": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/pre-express/2022": {
+          "word": "გამართვა"
+        },
+        "programming/pre-express/2022": {
+          "word": "პროგრამირება"
+        },
+        "debugging/coursea/2022": {
+          "word": "გამართვა"
+        },
+        "programming/coursea/2022": {
+          "word": "პროგრამირება"
+        },
+        "debugging/coursec/2022": {
+          "word": "გამართვა"
+        },
+        "programming/coursec/2022": {
+          "word": "პროგრამირება"
+        },
+        "binary/coursec/2022": {
+          "word": "ორობითი"
+        },
+        "input/csd/2022": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "processing/csd/2022": {
+          "word": "დამუშავება"
+        },
+        "debugging/csd/2022": {
+          "word": "გამართვა"
+        },
+        "variable/csd/2022": {
+          "word": "ცვლადი"
+        },
+        "sprite/csd/2022": {
+          "word": "სპრაიტი"
+        },
+        "condition/csd/2022": {
+          "word": "პირობა"
+        },
+        "conditionals/csd/2022": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "abstraction/csd/2022": {
+          "word": "აბსტრაქცია"
+        },
+        "function/csd/2022": {
+          "word": "ფუნქცია"
+        },
+        "digital_footprint/csd/2022": {
+          "word": "ციფრული ნაკვალევი"
+        },
+        "copyright/csd/2022": {
+          "word": "საავტორო უფლება"
+        },
+        "code/poem-art/unversioned": {
+          "word": "კოდი"
         },
         "sprite/coursef/2021": {
           "word": "სპრაიტი"
@@ -116,6 +257,9 @@
         "conditionals/coursed/2021": {
           "word": "პირობითი ბრძანებები"
         },
+        "condition/coursed/2021": {
+          "word": "პირობა"
+        },
         "debugging/express/2021": {
           "word": "გამართვა"
         },
@@ -124,6 +268,9 @@
         },
         "sprite/express/2021": {
           "word": "სპრაიტი"
+        },
+        "condition/express/2021": {
+          "word": "პირობა"
         },
         "conditionals/express/2021": {
           "word": "პირობითი ბრძანებები"
@@ -152,11 +299,47 @@
         "function/coursee/2021": {
           "word": "ფუნქცია"
         },
+        "condition/coursee/2021": {
+          "word": "პირობა"
+        },
         "conditionals/coursee/2021": {
           "word": "პირობითი ბრძანებები"
         },
         "define/coursee/2021": {
           "word": "განსაზღვრეთ"
+        },
+        "debugging/csd/2021": {
+          "word": "გამართვა"
+        },
+        "variable/csd/2021": {
+          "word": "ცვლადი"
+        },
+        "sprite/csd/2021": {
+          "word": "სპრაიტი"
+        },
+        "condition/csd/2021": {
+          "word": "პირობა"
+        },
+        "conditionals/csd/2021": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "abstraction/csd/2021": {
+          "word": "აბსტრაქცია"
+        },
+        "function/csd/2021": {
+          "word": "ფუნქცია"
+        },
+        "input/csd/2021": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "processing/csd/2021": {
+          "word": "დამუშავება"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "ციფრული ნაკვალევი"
+        },
+        "copyright/csd/2021": {
+          "word": "საავტორო უფლება"
         }
       }
     }

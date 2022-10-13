@@ -6,6 +6,7 @@ import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioH
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,
+  isTeacher: false,
   updateSections: () => {},
   updateSectionsResult: () => {}
 };

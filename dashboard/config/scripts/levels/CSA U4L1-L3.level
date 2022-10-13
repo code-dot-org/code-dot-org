@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Find the `String` class in the Java API.\r\n\r\nWith a partner, find the following for the `String` class:\r\n\r\n* Description\r\n\r\n* Constructors\r\n\r\n* Methods\r\n\r\n* The package it is in",
+    "long_instructions": "Look at the `String` class in the [**Java API**](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html).\r\n\r\nWith a partner, find the following for the `String` class:\r\n\r\n* Description\r\n\r\n* Constructors\r\n\r\n* Methods\r\n\r\n* The package it is in",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -12,13 +12,16 @@
         "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String name = \"my name\";\n    String newName = new String(\"my name\");\n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-08-31T16:23:14.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-09-16 19:27:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:40:04 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-16 19:27:21 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:40:04 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-18 15:04:11 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

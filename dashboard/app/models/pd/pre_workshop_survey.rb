@@ -21,8 +21,6 @@ class Pd::PreWorkshopSurvey < ApplicationRecord
   belongs_to :pd_enrollment, class_name: 'Pd::Enrollment'
   has_one :workshop, through: :pd_enrollment
 
-  validates_presence_of :pd_enrollment
-
   # PreWorkshopSurvey has dynamic options based on the workshop
   def dynamic_options
     {

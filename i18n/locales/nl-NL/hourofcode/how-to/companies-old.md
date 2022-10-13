@@ -5,7 +5,7 @@ title: Hoe organiseer je een 'Hour of Code' - Bedrijven
 {{ signup_button }}
 
 # Hoe kunt u CodeUur introduceren in uw bedrijf?
-### Find out how you and your employees can inspire students to try computer science!
+### Ontdek hoe u en uw medewerkers studenten kunnen inspireren om informatica te gaan leren.
 
 ***
 
@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Moedig programmeurs in uw bedrijf aan om een lokale school te bezoeken om daar een CodeUur te leiden en om leerlingen te inspireren om computerwetenschappen te gaan studeren. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Bekijk deze hoe-werkt-het video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Bekijk deze hoe-werkt-het video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

@@ -16,7 +16,7 @@ module Cdo
     end
 
     def method_missing(key, *args)
-      return self[key.to_sym] if args.empty? && defined?(key.to_sym) # accommodate https://bugs.ruby-lang.org/issues/15409#note-9
+      return self[key.to_sym] if args.empty? && @table.key?(key.to_sym) # accommodate https://bugs.ruby-lang.org/issues/15409#note-9
       raise ArgumentError, "Undefined #{self.class} reference: #{key}", caller(1) if @frozen
       super
     end

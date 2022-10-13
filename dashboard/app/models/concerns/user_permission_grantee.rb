@@ -51,11 +51,6 @@ module UserPermissionGrantee
     end
   end
 
-  # Overrides generated permission helper, above.
-  def hidden_script_access?
-    admin? || permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
-  end
-
   # don't log changes to admin permission in development, test, and ad_hoc environments
   def self.should_log?
     return [:staging, :levelbuilder, :production].include? rack_env

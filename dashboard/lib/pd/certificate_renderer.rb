@@ -12,7 +12,7 @@ module Pd
     #
     # @param [Pd::Enrollment] a teacher's workshop enrollment
     def self.render_workshop_certificate(enrollment)
-      create_workshop_certificate_image(
+      CertificateImage.create_workshop_certificate_image(
         dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_generic.png'),
         [
           *teacher_name(enrollment),

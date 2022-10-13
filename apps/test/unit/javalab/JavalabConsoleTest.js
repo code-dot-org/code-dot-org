@@ -10,10 +10,11 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import javalab, {
-  setIsDarkMode,
+  setDisplayTheme,
   closePhotoPrompter,
   openPhotoPrompter
 } from '@cdo/apps/javalab/javalabRedux';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import sinon from 'sinon';
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
 
@@ -61,7 +62,7 @@ describe('Java Lab Console Test', () => {
 
     it('Has dark mode', () => {
       const editor = createWrapper();
-      store.dispatch(setIsDarkMode(true));
+      store.dispatch(setDisplayTheme(DisplayTheme.DARK));
       expect(
         editor
           .find('input')

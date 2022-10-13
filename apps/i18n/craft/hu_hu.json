@@ -187,7 +187,7 @@
   "level3FailureMessage": "Mind a két birka gyapjának begyűjtéséhez sétálj oda hozzájuk és használd a \"nyírás\" parancsot. Ne feledd használni a fordulás parancsot is a birkákhoz vezető úton.",
   "level3TooFewBlocksMessage": "Próbálj meg használni további parancsokat ahhoz, hogy gyapjút gyűjts a birkáktól. Sétálj oda mindegyikhez és használd a \"nyírás\" parancsot.",
   "level4FailureMessage": "A \"blokk megsemmisítése\" parancsot kell használnod mind a három fatörzsön.",
-  "level5FailureMessage": "Fal építéséhez helyezd a blokkokat a körvonalra. A rózsaszín \"ismétlés\" parancs megismétli a bele helyezett olyan parancsokat, mint a \"blokk elhelyezése\" és \"mozgás előre\".",
+  "level5FailureMessage": "Fal építéséhez helyezd a blokkokat a körvonalra. A rózsaszín \"ismétlés\" parancs megismétli a bele helyezett olyan parancsokat, mint a \"blokk elhelyezése\" és \"előrelépni\".",
   "level6FailureMessage": "A kirakós megoldásához helyezz blokkokat a körvonalra a házon kívül.",
   "level7FailureMessage": "Használd a \"ültetés\" parancsot hogy magot helyezz minden egyes felszántott termőföldbe.",
   "level8FailureMessage": "Ha hozzáérsz a creeperhez, az felrobban. Surranj el mellettük és osonj be a házadba.",

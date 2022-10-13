@@ -3,3 +3,8 @@ display_name 'Challenge Levels'
 
 sublevels
 level 'CSD U6 - Accelerometer - CA_2022'
+level 'CSD U6 - Accelerometer - ChalA_2022'
+level 'CSD U6 - Accelerometer - ChalC_2022'
+level 'CSD U6 - Accelerometer - ChalD_2022'
+level 'CSD U6 - Accelerometer - ChalE_2022'
+level 'CSD U6 - Accelerometer - ChalF_2022'

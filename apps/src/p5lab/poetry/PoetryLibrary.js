@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
-import {containsAtLeastOneAlphaNumberic} from '../../utils';
+import {isBlank} from '../../utils';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
@@ -104,6 +104,10 @@ export default class PoetryLibrary extends CoreLibrary {
         spritelabCommands.destroy.call(this, {costume});
       },
 
+      glideTo(costume, location) {
+        spritelabCommands.glideTo.call(this, {costume}, location);
+      },
+
       playMusic(url) {
         if (this.poemState.backgroundMusic) {
           audioCommands.stopSound({url: this.poemState.backgroundMusic});
@@ -188,6 +192,30 @@ export default class PoetryLibrary extends CoreLibrary {
         this.lineEvents[lineNum].push(callback);
       },
 
+      startBehavior(costumeName, behaviorName) {
+        if (behaviors[behaviorName]) {
+          spritelabCommands.addBehaviorSimple.call(
+            this,
+            {costume: costumeName},
+            {func: behaviors[behaviorName].bind(this), name: behaviorName}
+          );
+        }
+      },
+
+      stopBehavior(costumeName, behaviorName) {
+        if (behaviorName === 'all') {
+          spritelabCommands.removeAllBehaviors.call(this, {
+            costume: costumeName
+          });
+        } else if (behaviors[behaviorName]) {
+          spritelabCommands.removeBehaviorSimple.call(
+            this,
+            {costume: costumeName},
+            {func: behaviors[behaviorName].bind(this), name: behaviorName}
+          );
+        }
+      },
+
       getValidationInfo() {
         this.validationInfo.lineEvents = Object.keys(this.lineEvents);
         this.validationInfo.font = {...this.poemState.font};
@@ -228,8 +256,7 @@ export default class PoetryLibrary extends CoreLibrary {
       },
 
       ...backgroundEffects,
-      ...foregroundEffects,
-      ...behaviors
+      ...foregroundEffects
     };
   }
 
@@ -286,14 +313,23 @@ export default class PoetryLibrary extends CoreLibrary {
     this.p5.push();
     this.p5.textFont(font);
     this.p5.textSize(desiredSize);
-    const fullWidth = this.p5.textWidth(text);
+    // Some authors require copyright info that is also included in the author field.
+    const lines = text.split('\n');
+    const longestLine = lines.reduce((a, b) => (a.length > b.length ? a : b));
+    const fullWidth = this.p5.textWidth(longestLine);
     const scaledSize = Math.min(
       desiredSize,
       (desiredSize * (PLAYSPACE_SIZE - OUTER_MARGIN)) / fullWidth
     );
+    // We can also cap the font height.  If it's only a single line of text
+    // (say the title or author) then we cap at 30.  Otherwise, we take
+    // (PLAYSPACE_SIZE / 2) and divide it by the number of lines in the poem;
+    // even in this case, the cap only has an effect on particulary long poems.
+    const maxLineHeight =
+      lines.length === 1 ? 30 : PLAYSPACE_SIZE / 2 / lines.length;
 
     this.p5.pop();
-    return scaledSize;
+    return Math.min(scaledSize, maxLineHeight);
   }
 
   applyTextEffect(renderInfo, effect, frameCount) {
@@ -411,13 +447,8 @@ export default class PoetryLibrary extends CoreLibrary {
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
-    const longestLine = poemState.lines.reduce(
-      (accumulator, current) =>
-        accumulator.length > current.length ? accumulator : current,
-      '' /* default value */
-    );
     const lineSize = this.getScaledFontSize(
-      longestLine,
+      poemState.lines.join('\n'),
       poemState.font.font,
       FONT_SIZE
     );
@@ -427,7 +458,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: lineSize,
-        isPoemBodyLine: containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
+        isPoemBodyLine: !isBlank(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
@@ -447,7 +478,10 @@ export default class PoetryLibrary extends CoreLibrary {
   drawFromRenderInfo(renderInfo) {
     this.p5.textFont(renderInfo.font.font);
     renderInfo.lines.forEach(item => {
-      if (item.isPoemBodyLine && this.poemState.text.highlightColor) {
+      if (
+        this.poemState.text.highlightColor &&
+        !isBlank(item.text) // Don't highlight blank lines
+      ) {
         this.drawTextHighlight(item);
       }
       let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);

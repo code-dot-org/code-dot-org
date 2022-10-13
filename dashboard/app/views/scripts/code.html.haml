@@ -3,7 +3,9 @@
 
 - content_for(:head) do
   %link{href: asset_path('css/rollups.css'), rel: 'stylesheet', type: 'text/css'}
-  %script{ src: webpack_asset_path('js/scripts/code.js'), data: {unit_rollup: data.to_json}}
+  %script{ src: webpack_asset_path('js/scripts/code.js'), data: {unit_rollup: data.to_json, customBlocksConfig: Block.for('GamelabJr').to_json}}
+%script{src: webpack_asset_path('js/blockly.js')}
+%script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 
   = render partial: 'shared/emulate_print_media'
 

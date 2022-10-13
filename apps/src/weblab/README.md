@@ -34,11 +34,11 @@ When Weblab is loaded (via `/projects/weblab/:channel_id` or a curriculum level 
 
 A Weblab project consists of 3 parts:
 
-1. A channel entry, accessed via `/v3/channels/:channel_id`, which is stored in the Pegasus database's `storage_apps` table. This entry contains metadata about the channel -- channel ID, project name, project type, and timestamps.
+1. A channel entry, accessed via `/v3/channels/:channel_id`, which is stored in the Dashboard database's `projects` table. This entry contains metadata about the channel -- channel ID, project name, project type, and timestamps.
 2. A `manifest.json` file that contains metadata about the files in the project -- file names, the current version, the file type, and timestamps. This is stored in the `cdo-v3-files` S3 bucket.
 3. The project files themselves (i.e., HTML/CSS code and image assets), also stored in the `cdo-v3-files` alongside the project's `manifest.json`.
 
-Example: If my project contains an `index.html` file and a `style.css` file, then the `cdo-v3-files` S3 entry for my project would contain 3 files: `manifest.json` (with my project's metadata), `index.html` (with my HTML code), and `style.css` (with my CSS code). There would also be a corresponding record in the Pegasus `storage_apps` table.
+Example: If my project contains an `index.html` file and a `style.css` file, then the `cdo-v3-files` S3 entry for my project would contain 3 files: `manifest.json` (with my project's metadata), `index.html` (with my HTML code), and `style.css` (with my CSS code). There would also be a corresponding record in the Dashboard `projects` table.
 
 All of the pieces above use S3's versioning system, which allows us to use our version history feature to point to any version previously saved in S3.
 

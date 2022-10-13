@@ -68,10 +68,10 @@ end
 
 def sign_up(name)
   wait_proc = proc do
-    opacity = @browser.execute_script <<JS
-field = document.querySelector('#email-block > .error_in_field');
-return field ? parseInt(window.getComputedStyle(field).opacity) : 0;
-JS
+    opacity = @browser.execute_script <<~JS
+      field = document.querySelector('#email-block > .error_in_field');
+      return field ? parseInt(window.getComputedStyle(field).opacity) : 0;
+    JS
     expect(opacity).to eq(0)
   end
   page_load(wait_proc: wait_proc) do
@@ -203,4 +203,12 @@ And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
   user = User.find_by_email_or_hashed_email(@users[name][:email])
   user.permission = UserPermission::AUTHORIZED_TEACHER
   user.save!
+end
+
+And(/^I get universal instructor access$/) do
+  browser_request(url: '/api/test/universal_instructor_access', method: 'POST')
+end
+
+And(/^I get plc reviewer access$/) do
+  browser_request(url: '/api/test/plc_reviewer_access', method: 'POST')
 end

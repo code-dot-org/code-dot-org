@@ -31,10 +31,10 @@ export default class Announcements extends Component {
 
   isVisible = (currentView, element) =>
     element.visibility === VisibilityType.teacherAndStudent ||
-    (currentView === 'Teacher' &&
+    (currentView === ViewType.Instructor &&
       (element.visibility === VisibilityType.teacher ||
         element.visibility === undefined)) ||
-    (currentView === 'Student' &&
+    (currentView === ViewType.Participant &&
       element.visibility === VisibilityType.student);
 
   render() {
@@ -46,9 +46,17 @@ export default class Announcements extends Component {
             type={announcement.type}
             notice={announcement.notice}
             details={announcement.details}
-            buttonText={i18n.learnMore()}
+            buttonText={
+              announcement.buttonText === undefined
+                ? i18n.learnMore()
+                : announcement.buttonText
+            }
             buttonLink={announcement.link}
-            dismissible={true}
+            dismissible={
+              announcement.dismissible === undefined
+                ? true
+                : announcement.dismissible
+            }
             width={this.props.width}
             firehoseAnalyticsData={this.props.firehoseAnalyticsData}
           />

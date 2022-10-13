@@ -2,6 +2,70 @@
   "mt-MT": {
     "data": {
       "resources": {
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": ""
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "",
           "url": ""
@@ -206,6 +270,10 @@
           "name": "",
           "url": ""
         },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "",
+          "url": ""
+        },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "",
           "url": ""
@@ -379,6 +447,10 @@
           "url": ""
         },
         "teacher_forum_1/courseb/2021": {
+          "name": "",
+          "url": ""
+        },
+        "virtual_lesson_modifications/courseb/2021": {
           "name": "",
           "url": ""
         },
@@ -578,6 +650,10 @@
           "name": "",
           "url": ""
         },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "",
+          "url": ""
+        },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "",
           "url": ""
@@ -747,6 +823,10 @@
           "url": ""
         },
         "teacher_forum_1/coursec/2021": {
+          "name": "",
+          "url": ""
+        },
+        "virtual_lesson_modifications/coursec/2021": {
           "name": "",
           "url": ""
         },
@@ -942,6 +1022,10 @@
           "name": "",
           "url": ""
         },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
         "unplugged_maze_blocks/express/2021": {
           "name": "",
           "url": ""
@@ -1095,162 +1179,6 @@
           "url": ""
         },
         "debugging_guide/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "follow_the_algorithm/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common-sense-media-pause-think/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "about_me_planning_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-doc/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-turns-angles-video/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course-cf-blockly-blocks/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "designing_for_accessibility_1/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "types_of_disabilities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "end-of-course-project-guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "rubric-csf-final-projects/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "design-process/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "lesson_type_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "2021_change_log/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
           "name": "",
           "url": ""
         }

@@ -2,14 +2,14 @@ class CreateCourses < ActiveRecord::Migration[5.0]
   # We override the Plc::Course definition to not have name delegated to the ::Course model.
   # The model as defined here represents what this model looked like at the point when
   # this migration was originally run on production.
-  class Plc::Course < ActiveRecord::Base
+  class Plc::Course < ApplicationRecord
     has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', foreign_key: 'plc_course_id', dependent: :destroy
     has_many :plc_course_units, class_name: '::Plc::CourseUnit', foreign_key: 'plc_course_id', dependent: :destroy
-    belongs_to :course, class_name: '::Course', foreign_key: 'course_id', dependent: :destroy, required: true
+    belongs_to :course, class_name: '::Course', dependent: :destroy, optional: false
   end
 
   # Override Course here similar to above, so the more recent name validation won't run and fail during the migration.
-  class Course < ActiveRecord::Base
+  class Course < ApplicationRecord
     has_one :plc_course, class_name: 'Plc::Course'
   end
 

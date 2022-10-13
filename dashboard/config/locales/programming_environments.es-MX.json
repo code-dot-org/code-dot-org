@@ -1,0 +1,169 @@
+{
+  "es-MX": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab",
+          "description": "Editor web de HTML/CSS",
+          "categories": {
+            "html_tags": {
+              "name": "Etiquetas HTML"
+            },
+            "css_properties": {
+              "name": "Propiedad CSS"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Laboratorio de juegos",
+          "description": "El Laboratorio de Juegos es un entorno de programación donde puedes crear emocionantes juegos y animaciones. Dibuja tus propios personajes, programa con bloques o JavaScript para que funcione, y luego comparte tu juego en cuestión de segundos.",
+          "categories": {
+            "game_lab": {
+              "name": "Laboratorio de juegos"
+            },
+            "sprites": {
+              "name": "Sprites"
+            },
+            "groups": {
+              "name": "Grupos"
+            },
+            "drawing": {
+              "name": "Dibujo"
+            },
+            "control": {
+              "name": "Control"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funciones"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratorio de aplicaciones",
+          "description": "El Laboratorio de aplicaciones es un entorno de programación donde puedes crear aplicaciones sencillas. Diseña una aplicación, programa con bloques o JavaScript para que funcione, y luego comparte tu aplicación en cuestión de segundos.",
+          "categories": {
+            "ui_controls": {
+              "name": "Controles de IU"
+            },
+            "canvas": {
+              "name": "Lienzo"
+            },
+            "data": {
+              "name": "Datos"
+            },
+            "turtle": {
+              "name": "Tortuga"
+            },
+            "control": {
+              "name": "Control"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funciones"
+            },
+            "advanced": {
+              "name": "Avanzado"
+            },
+            "maker": {
+              "name": "Creador"
+            },
+            "circuit": {
+              "name": "Circuito"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laboratorio de sprites",
+          "description": "El Laboratorio de Sprite es un entorno de programación basado en Blockly en el que se pueden crear proyectos interactivos.",
+          "categories": {
+            "sprites": {
+              "name": "Sprites"
+            },
+            "world": {
+              "name": "Mundo"
+            },
+            "location": {
+              "name": "Ubicaciones"
+            },
+            "actions": {
+              "name": "Acciones"
+            },
+            "events": {
+              "name": "Eventos"
+            },
+            "behaviors": {
+              "name": "Comportamientos"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "logic": {
+              "name": "Lógica"
+            },
+            "functions": {
+              "name": "Funciones"
+            },
+            "text": {
+              "name": "Texto"
+            },
+            "comments": {
+              "name": "Comentarios"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Laboratorio Java",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Atajos del Laboratorio Java"
+            },
+            "general": {
+              "name": "Fundamentos de Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Estructuras de Control"
+            },
+            "data_structures": {
+              "name": "Estructuras de datos"
+            }
+          }
+        }
+      }
+    }
+  }
+}

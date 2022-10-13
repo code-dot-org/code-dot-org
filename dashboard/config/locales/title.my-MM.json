@@ -1,2 +1,15 @@
 {
+  "my-MM": {
+    "data": {
+      "title": {
+        "courseB_unplugged_MRF": "အန်ပလပ် လှုပ်ရှားမှု",
+        "courseB_unplugged_loopyMRF": "အန်ပလပ် လှုပ်ရှားမှု",
+        "courseC_Unplugged_ScreenOutTheMean": "အန်ပလပ် လှုပ်ရှားမှု",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "အန်ပလပ် လှုပ်ရှားမှု",
+        "courseD_unplugged_digitalCitizenship": "အန်ပလပ် လှုပ်ရှားမှု",
+        "courseD_unplugged_digitalCitizenship_2018": "အန်ပလပ် လှုပ်ရှားမှု",
+        "courseF_unplugged_powerOfWords": "အန်ပလပ် လှုပ်ရှားမှု"
+      }
+    }
+  }
 }

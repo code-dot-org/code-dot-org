@@ -352,6 +352,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/6/levels/4": {
@@ -373,6 +376,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/6/levels/5": {
@@ -391,6 +397,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/6/levels/6": {
@@ -412,6 +421,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/6/levels/8": {
@@ -430,6 +442,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/6/levels/9": {
@@ -465,6 +480,11 @@
       "moving west": "moving west",
       "spinning right": "spinning right",
       "swimming left and right": "swimming left and right"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/7/levels/4": {
@@ -484,6 +504,11 @@
       "moving west": "moving west",
       "spinning right": "spinning right",
       "swimming left and right": "swimming left and right"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/7/levels/5": {
@@ -503,6 +528,11 @@
       "moving west": "moving west",
       "spinning right": "spinning right",
       "swimming left and right": "swimming left and right"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/7/levels/6": {
@@ -522,6 +552,11 @@
       "moving west": "moving west",
       "spinning right": "spinning right",
       "swimming left and right": "swimming left and right"
+    },
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/7/levels/7": {
@@ -540,6 +575,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/7/levels/8": {
@@ -558,6 +596,9 @@
       "moving south": "moving south",
       "moving west": "moving west",
       "spinning right": "spinning right"
+    },
+    "behavior_descriptions": {
+      "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/7/levels/9": {
@@ -572,6 +613,17 @@
   },
   "https://studio.code.org/s/coursee-2019/lessons/9/levels/1": {
     "long_instructions": "[][0] _\"Hello, world! My name is Rikki, and here are some things I'd to share about me!\"_\n\n**Free Play**: Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**.",
+    "placeholder_texts": {
+      "b63151482630edd1589a9ac24d107c49": "That's me! Rikki! I like to code, hangout with Thuy, and eat ice cream!",
+      "810896b14fc6615f0c76628b9b6a727e": "That's my best friend Thuy! She's really good at sports!",
+      "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Ice cream is my favorite treat! But I probably shouldn't eat it on the couch...",
+      "a50ec512bdd98483a7cdcd88cbe11933": "That's my pet rabbit, Ms. Lolipop! I have no idea why I named her that!",
+      "6f97975a0bda0c9219915161149cbb26": "That's my computer! I code on it ALL the time!",
+      "1c6636ce086fef9305c6e3d25e37d5b2": "Here's a secret: Thuy is extremely ticklish!",
+      "fce3b93eaa64a8869c47ba25daa8887f": "Yummy!",
+      "41a18649f969a00ec0b2feba20db997f": "I think I like this color better on you, Ms. Lolipop!",
+      "756afb811df2eb3ec88a9e98f3dcaa8d": "This computer can't handle my mad coding skills!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "moving east": "moving east",
@@ -586,16 +638,18 @@
       "moving west": "moving west",
       "patrolling": "patrolling"
     },
-    "placeholder_texts": {
-      "b63151482630edd1589a9ac24d107c49": "That's me! Rikki! I like to code, hangout with Thuy, and eat ice cream!",
-      "810896b14fc6615f0c76628b9b6a727e": "That's my best friend Thuy! She's really good at sports!",
-      "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Ice cream is my favorite treat! But I probably shouldn't eat it on the couch...",
-      "a50ec512bdd98483a7cdcd88cbe11933": "That's my pet rabbit, Ms. Lolipop! I have no idea why I named her that!",
-      "6f97975a0bda0c9219915161149cbb26": "That's my computer! I code on it ALL the time!",
-      "1c6636ce086fef9305c6e3d25e37d5b2": "Here's a secret: Thuy is extremely ticklish!",
-      "fce3b93eaa64a8869c47ba25daa8887f": "Yummy!",
-      "41a18649f969a00ec0b2feba20db997f": "I think I like this color better on you, Ms. Lolipop!",
-      "756afb811df2eb3ec88a9e98f3dcaa8d": "This computer can't handle my mad coding skills!"
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/9/levels/2": {
@@ -617,11 +671,27 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/9/levels/3": {
     "long_instructions": "[][0] _\"Say something about yourself, and make sure it's SAFE!\"_\n\nUse [blockly block][1] and [blockly block][2] (in the `World` blocks category) to share information about yourself when your sprite is clicked! \n\n**Just be sure the information you share is SAFE.**\n\n* * *\n\n#### Examples of SAFE vs UNSAFE Information\n\n| SAFE                | UNSAFE                |\n| ------------------- | --------------------- |\n| first name          | full name             |\n| favorite things     | home address          |\n| respectful opinions | phone number or email |",
     "teacher_markdown": "This lesson contains a **mini-project** called _Interactive Poster_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "moving east": "moving east",
@@ -636,13 +706,26 @@
       "moving west": "moving west",
       "patrolling": "patrolling"
     },
-    "placeholder_texts": {
-      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/9/levels/4": {
     "long_instructions": "[][0] _\"Add more sprites to your poster! Don't forget to give them costumes!\"_\n\nAdd **at least two** other sprites to your poster. Give each sprite a unique costume!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Interactive Poster_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create at least three sprites.",
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "moving east": "moving east",
@@ -657,13 +740,27 @@
       "moving west": "moving west",
       "patrolling": "patrolling"
     },
-    "placeholder_texts": {
-      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/9/levels/5": {
     "long_instructions": "[][0] _\"Tell the world more about yourself through your new sprites!\"_\n\nMake your other sprites print information when they are clicked. Be sure whatever you share is SAFE!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Interactive Poster_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!",
+      "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "moving east": "moving east",
@@ -678,9 +775,18 @@
       "moving west": "moving west",
       "patrolling": "patrolling"
     },
-    "placeholder_texts": {
-      "ed076287532e86365e841e92bfc50d8c": "Hello World!",
-      "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/9/levels/6": {
@@ -1831,6 +1937,19 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges"
     }
   },
   "https://studio.code.org/s/coursee-2019/lessons/18/levels/3": {

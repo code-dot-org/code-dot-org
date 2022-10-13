@@ -37,7 +37,8 @@ export const scriptLevelShape = PropTypes.shape({
   // other script level options
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
-  challenge: PropTypes.bool
+  challenge: PropTypes.bool,
+  isViewingAsInstructorInTraining: PropTypes.bool
 });
 
 export const tipShape = PropTypes.shape({
@@ -88,6 +89,7 @@ export const lessonShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
+  duration: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,

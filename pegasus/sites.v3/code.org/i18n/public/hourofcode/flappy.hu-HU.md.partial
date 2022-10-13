@@ -1,32 +1,32 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: Források tanároknak - Készíts Flappy játékot
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Készíts Flappy játékot: Kódolás órája bemutató
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## Források tanároknak
 
-### Lesson Plans:
+### Óravázlatok:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Készíts Flappy játékot]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### Tevékenységek kiterjesztése:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [A Kódolás óráján túl](http://code.org/learn/beyond)
+- [Informatikai alapismeretek: 2. kurzus](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Egyéb források tanároknak:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Kódolás órája: Módszertani útmutató oktatóknak](https://hourofcode.com/how-to)
+- [Legjobb gyakorlatok sikeres oktatóktól](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Élő esemény: [Egy oktató útmutatója a Kódolás órájához](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +34,12 @@ video_player: true
 
 ## Áttekintés
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Húzd és ejtsd programozással elkészítheted a saját Flappy Bird játékodat, és testre szabhatod, hogy máshogy nézzen ki (Flappy Shark, Flappy Santa, akármi). Egy kattintással add a játékot a telefonodhoz.
 
-**Recommended Age Range:** 4-104
+**Javasolt korosztály:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Technológiai igények:** Modern böngészők, okostelefonok + tabletek
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>Próbáld ki a bemutatót</button></a>
 
 [/col-50]

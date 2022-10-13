@@ -5,6 +5,7 @@ import sinon from 'sinon';
 import i18n from '@cdo/javalab/locale';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
+import CommitDialogBody from '@cdo/apps/javalab/CommitDialogBody';
 import CommitDialogFileRow from '@cdo/apps/javalab/CommitDialogFileRow';
 
 describe('CommitDialog test', () => {
@@ -12,7 +13,8 @@ describe('CommitDialog test', () => {
     handleCommitSpy,
     backpackSaveFilesSpy,
     backpackGetFileListStub,
-    hasBackpackStub;
+    hasBackpackStub,
+    setCommitSaveStatusSpy;
 
   beforeEach(() => {
     handleCommitSpy = sinon.spy();
@@ -21,6 +23,7 @@ describe('CommitDialog test', () => {
       .stub(BackpackClientApi.prototype, 'getFileList')
       .callsArgWith(1, ['backpackFile.java']);
     hasBackpackStub = sinon.stub().returns(true);
+    setCommitSaveStatusSpy = sinon.spy();
 
     defaultProps = {
       isOpen: true,
@@ -32,7 +35,11 @@ describe('CommitDialog test', () => {
         saveFiles: backpackSaveFilesSpy,
         getFileList: backpackGetFileListStub,
         hasBackpack: hasBackpackStub
-      }
+      },
+      backpackEnabled: true,
+      isCommitSaveInProgress: false,
+      hasCommitSaveError: false,
+      setCommitSaveStatus: setCommitSaveStatusSpy
     };
   });
 
@@ -92,9 +99,12 @@ describe('CommitDialog test', () => {
     wrapper.instance().commitAndSaveToBackpack();
     expect(handleCommitSpy).to.be.called.once;
     expect(backpackSaveFilesSpy).to.be.called.once;
+    expect(setCommitSaveStatusSpy).to.be.calledWith({
+      isCommitSaveInProgress: true,
+      hasCommitSaveError: false
+    });
 
     expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
-    expect(wrapper.instance().state.commitSaveInProgress).to.be.true;
   });
 
   it('dialog closes after save then commit succeeds', () => {
@@ -107,14 +117,22 @@ describe('CommitDialog test', () => {
     wrapper.instance().commitAndSaveToBackpack();
     expect(handleCommitSpy).to.be.called.once;
     expect(backpackSaveFilesSpy).to.be.called.once;
+    expect(setCommitSaveStatusSpy).to.be.calledWith({
+      isCommitSaveInProgress: true,
+      hasCommitSaveError: false
+    });
+    wrapper.setProps({
+      isCommitSaveInProgress: true,
+      hasCommitSaveError: false
+    });
 
     expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
-    expect(wrapper.instance().state.commitSaveInProgress).to.be.true;
     expect(handleCloseSpy.callCount).to.equal(0);
 
     wrapper.instance().handleBackpackSaveSuccess();
     expect(handleCloseSpy.callCount).to.equal(0);
 
+    // Close dialog once both backpack save and commit save have finished
     wrapper.instance().handleCommitSaveSuccess();
     expect(handleCloseSpy.callCount).to.equal(1);
   });
@@ -129,9 +147,12 @@ describe('CommitDialog test', () => {
     wrapper.instance().commitAndSaveToBackpack();
     expect(handleCommitSpy).to.be.called.once;
     expect(backpackSaveFilesSpy).to.be.called.once;
+    expect(setCommitSaveStatusSpy).to.be.calledWith({
+      isCommitSaveInProgress: true,
+      hasCommitSaveError: false
+    });
 
     expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
-    expect(wrapper.instance().state.commitSaveInProgress).to.be.true;
     expect(handleCloseSpy.callCount).to.equal(0);
 
     wrapper.instance().handleCommitSaveSuccess();
@@ -139,5 +160,17 @@ describe('CommitDialog test', () => {
 
     wrapper.instance().handleBackpackSaveSuccess();
     expect(handleCloseSpy.callCount).to.equal(1);
+  });
+
+  it('hides the backpack sesion in the dialog body if backpack disabled', () => {
+    const wrapper = mount(
+      <CommitDialog {...defaultProps} backpackEnabled={false} />
+    );
+    expect(
+      wrapper
+        .find(CommitDialogBody)
+        .first()
+        .props().showSaveToBackpackSection
+    ).to.be.false;
   });
 });

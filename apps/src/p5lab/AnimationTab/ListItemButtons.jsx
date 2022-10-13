@@ -3,7 +3,6 @@ import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import SpeedSlider from '@cdo/apps/templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
 import DeleteAnimationDialog from './DeleteAnimationDialog';
@@ -24,7 +23,8 @@ class ListItemButtons extends React.Component {
     looping: PropTypes.bool.isRequired,
     onFrameDelayChanged: PropTypes.func.isRequired,
     frameDelay: PropTypes.number.isRequired,
-    singleFrameAnimation: PropTypes.bool.isRequired
+    singleFrameAnimation: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   state = {isDeleteDialogOpen: false};
@@ -71,7 +71,7 @@ class ListItemButtons extends React.Component {
               <i
                 key="trash"
                 className="fa fa-trash-o"
-                style={[styles.icon, styles.trash]}
+                style={{...styles.icon, ...styles.trash}}
                 onClick={this.openDeleteDialog}
               />
             </OverlayTrigger>
@@ -93,6 +93,7 @@ class ListItemButtons extends React.Component {
           onDelete={this.onDeleteItem}
           onCancel={this.closeDeleteDialog}
           isOpen={this.state.isDeleteDialogOpen}
+          labType={this.props.labType}
         />
       </div>
     );
@@ -130,4 +131,4 @@ const styles = {
   }
 };
 
-export default Radium(ListItemButtons);
+export default ListItemButtons;

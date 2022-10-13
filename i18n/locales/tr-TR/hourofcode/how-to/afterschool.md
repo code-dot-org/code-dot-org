@@ -16,7 +16,7 @@ Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tan
 
 * * *
 
-## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Bir öğretici içerik seçin
 
@@ -81,7 +81,7 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayarın hayatı
 - Daha önce düzenlenmiş Hour of Code etkinliklerinden, [en iyi uygulamalara](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) göz atın.
 - [Eğitimci Rehberliğinde Hour of Code web seminerimizi](https://youtu.be/EJeMeSW2-Mw) izleyin.
 - Diğer eğitmenlerle fikir alışverişinde bulunmak ve birbirinizi desteklemek için [ Hour of Code Forumu'nu](http://forum.code.org/c/plc/hour-of-code) ziyaret edin.
-- [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin.
+- [ Hour of Code SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) sayfasını gözden geçirin.
 
 ## Hour of Code etkinliğinden sonra ne yapmalı?
 

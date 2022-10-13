@@ -1,6 +1,4 @@
 @no_circle
-# We need "press keys" to type into the React form's fields, but that doesn't work on IE or mobile Safari.
-@no_ie
 @no_mobile
 
 Feature: Using the YourSchool census page

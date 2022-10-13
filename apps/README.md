@@ -30,19 +30,24 @@ yarn start
 ### Seeing your development version of Apps in Dashboard
 
 1. To make your changes show up in dashboard, do the following after the first time you build apps:
-  - Set `use_my_apps: true` to your locals.yml config file.
-  - Run `rake package:apps:symlink` to pick up the configuration change.
-  - If you are currently running dashboard, stop and restart dashboard-server.
+
+- Set `use_my_apps: true` to your locals.yml config file.
+- Run `rake package:apps:symlink` to pick up the configuration change.
+- If you are currently running dashboard, stop and restart dashboard-server.
 
 1. If you find your changes are not showing up within dashboard, you may have accidentally reverted your symlink to point to the pre-built version of apps (e.g. when switching branches or stashing changes). To check your symlink, run:
+
 ```
 > ls -l dashboard/public/blockly
 ```
+
 and look for something like:
+
 ```
 lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps/build/package
 ```
-If the symlink is in place, then as you rebuild apps, your results should show up in Dashboard.  If not, run through step 1 again.
+
+If the symlink is in place, then as you rebuild apps, your results should show up in Dashboard. If not, run through step 1 again.
 
 ### Building during development
 
@@ -54,10 +59,10 @@ To run a full development build (minus localization):
 npm run build
 ```
 
-* `npm run build` builds a 'debug' version with more readable javascript
-* `npm run build -- --app=maze` builds a 'debug' version of only the maze app
-* `npm run build:dist` builds a minified version suitable for production
-* `npm run clean` will clean the build directory
+- `npm run build` builds a 'debug' version with more readable javascript
+- `npm run build -- --app=maze` builds a 'debug' version of only the maze app
+- `npm run build:dist` builds a minified version suitable for production
+- `npm run clean` will clean the build directory
 
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
@@ -66,9 +71,10 @@ See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 ```
 npm test
 ```
-* If you see an error ~like `ReferenceError: Blockly is not defined` or notes~ about missing npm packages, double check that you've run `npm run build` beforehand.
-* ~Right now, the tests require a full/production build to pass.  Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.~
-* These tests will also be run via Circle CI when you create a pull request
+
+- If you see an error ~like `ReferenceError: Blockly is not defined` or notes~ about missing npm packages, double check that you've run `npm run build` beforehand.
+- ~Right now, the tests require a full/production build to pass. Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.~
+- These tests will also be run via Circle CI when you create a pull request
 
 To run an individual test, use the `--entry` option with `npm run test:entry` to target a file:
 
@@ -90,16 +96,18 @@ npm run test:unit -- --grep='TutorialExplorer'
 ```
 
 To run integration tests for a certain level type:
+
 ```
 LEVEL_TYPE=applab npm run test:integration
 ```
 
 You can also use the `--grep` flag with integration tests:
+
 ```
 LEVEL_TYPE=applab npm run test:integration --grep=ec_data_blocks
 ```
 
-##### Rerun Tests Automatically #####
+##### Rerun Tests Automatically
 
 To rerun tests automatically on every file change, set the environment variable
 `WATCH=1`:
@@ -110,7 +118,7 @@ WATCH=1 npm run test:unit
 
 This will work on any of the test commands.
 
-##### Debugging Tests #####
+##### Debugging Tests
 
 To debug tests, your best bet is to run them in Chrome. Keep in mind that there
 can be subtle differences between Chrome and PhantomJS, so after fixing your
@@ -124,9 +132,9 @@ BROWSER=Chrome WATCH=1 npm run test:unit
 A new chrome browser window will open where the tests will be running. You can
 click on the Debug button to open a new tab where you can then open the
 developer console to see everything that is happening. If you don't see the new
-chrome browser window, it may have opened *behind* your other windows.
+chrome browser window, it may have opened _behind_ your other windows.
 
-##### Coverage Reports #####
+##### Coverage Reports
 
 Coverage reports can be generated for any collection of tests by specifying the
 `COVERAGE=1` environment variable. Results will be placed in the `coverage`
@@ -143,9 +151,9 @@ different):
 open coverage/PhantomJS\ 2.1.1\ \(Mac\ OS\ X\ 0.0.0\)/index.html
 ```
 
-##### Writing Tests #####
+##### Writing Tests
 
-You can add new test files as /test/unit/*Tests.js; see
+You can add new test files as /test/unit/\*Tests.js; see
 `/test/unit/feedbackTests.js` as an example of adding a mock Blockly
 instance. Note that each test file in `/test/unit/**` should include tests for
 exactly one file in `src/**` and the test file should have the same file name as
@@ -175,45 +183,11 @@ fetching files served by the test runner, prefix the file path with
 document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
 ```
 
-#### UI Component Style Guide ####
+#### UI Component Style Guide & Tests
 
-We use `react-storybook` to generate a ui component style guide that you can use
+We use Storybook to generate a UI component style guide that you can use
 to discover what components are available to reuse as you build new
-features. You can also use the style guide to more easily develop new components
-without having to run all of code.org.
-
-To view the styleguide run
-
-```
-npm run storybook
-```
-
-and browse to http://localhost:9001/.
-
-You can add new sections to the styleguide (perhaps for a new component you are
-building) by adding the following code:
-
-```javascript
-if (IN_STORYBOOK) {
-  SomeComponent.styleGuideExamples = storybook => {
-    return storybook
-      .storiesOf('SomeComponent', module)
-      .add(
-        'Example #1',
-        () => <Component/>
-      )
-  };
-}
-```
-
-By wrapping your code in a `IN_STORYBOOK` check, you can guarantee that it
-won't appear in production builds. See the
-[react-storybook documentation](https://github.com/kadirahq/react-storybook) for
-more information on how to use the `storybook` api.
-
-##### Static Styleguide #####
-
-A static version of the styleguide is hosted at https://code-dot-org.github.io/cdo-styleguide/
+features. See more in the [apps/.storybook README](./.storybook/README.md).
 
 #### Full build with blockly changes
 
@@ -226,7 +200,6 @@ A static version of the styleguide is hosted at https://code-dot-org.github.io/c
 
 Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
-
 ### Localization
 
 It's especially important to test your changes with localization when modifying layouts. We support
@@ -234,7 +207,7 @@ right-to-left languages and have some special layout tweaks embedded in the CSS 
 
 Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locale is `en_us`
 
-Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem.  See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
+Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem. See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
 #### Forwarding new strings on to CrowdIn
 
@@ -255,12 +228,12 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 
 ### Style Guide
 
-- In general follow Google's javascript style [guide](https://google.github.io/styleguide/jsguide.html).
+- In general, we follow Google's javascript style [guide](https://google.github.io/styleguide/jsguide.html).
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.
-- `npm run lint` should report 0 warnings or errors.
-- See our [project style guide](../STYLEGUIDE.md) for details.
+- `yarn lint` should report 0 warnings or errors.
+- See our [project style guide](../STYLEGUIDE.md) for more details, including CSS/SCSS styling.
 
 ## Other Docs
 

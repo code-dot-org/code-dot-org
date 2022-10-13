@@ -4,6 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Bring AP® Computer Science A to your students next year!",
+          "details": "Empower students with creative projects connected to the real world.  Check out our equity-driven curriculum and find summer professional learning opportunities that will prepare you to teach AP CSA this coming fall.",
+          "link": "https://code.org/educate/csa",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "key": "902b5e93-77c9-4821-a3cb-488fc24935ce"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -12,14 +22,15 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:26 UTC",
+    "serialized_at": "2022-09-28 14:31:40 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -5817,7 +5828,7 @@
       "key": "bw-pixelation-tutorial-1",
       "properties": {
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/pixelation_bw.mp4",
+        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -5939,7 +5950,7 @@
       "key": "how-computers-work-data-and-binary",
       "properties": {
         "audience": "Student",
-        "download_url": "http://videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -6050,7 +6061,7 @@
       "key": "text-compression-widget-tutorial-1",
       "properties": {
         "audience": "Student",
-        "download_url": "https://www.dropbox.com/s/tobaibth28ibd4f/Text-compression-widget_Aloe_small_090815.mp4?dl=0",
+        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4",
         "type": "Video"
       },
       "seeding_key": {

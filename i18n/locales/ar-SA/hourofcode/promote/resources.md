@@ -28,9 +28,9 @@ title: المصادر
 
 ## انشر هذه على مواقع التواصل الاجتماعي
 
-[![صورة](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![صورة](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![صورة](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -40,27 +40,27 @@ title: المصادر
 
 [![صورة]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![صورة]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[يمكنك تنزيل إصدارات عالية الدقة](http://images.code.org/share/hour-of-code-logo.zip)
+[يمكنك تنزيل إصدارات عالية الدقة](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+** "Hour of Code" (ساعة البرمجة) و "Hora del Código" علامتان تجاريتان. لا نريد منع استخدامها، لكننا نريد التأكد من أن الاستخدام يلتزم ببعض الحدود:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. يجب استخدام أي إشارة إلى "Hour of Code" (ساعة البرمجة) أو "Hora del Código" بطريقة لا توحي بأنها اسم علامتك التجارية الخاصة، بل الإشارة إلى "ساعة البرمجة" على أنها مبادرة شعبية.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong>مثال جيد</strong>: "شارك في Hour of Code™ على YOUR-COMPANY.com."
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong>مثال سيء</strong>: "جرب Hour of Code من YOUR-COMPANY."
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+1. استخدم حرف "TM" فوق الخط في أبرز الأماكن التي تذكر فيها "Hour of Code" و "Ⓡ" فوق الخط في أبرز الأماكن التي تذكر فيها "Hora del Código"، سواء على موقع الويب أو في أوصاف التطبيق.
 2. اكتب فقرة في صفحتك أو (أسفل الصفحة)، تتضمن روابط لمواقع الأسبوع العالمي للبرمجة وعلوم الحاسوب وموقع [Code.org]({{ codeorg_link }})، وتنص على ما يلي:
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *"ساعة البرمجة™/Hora del Código®" هي مبادرة على مستوى الدولة برعاية الأسبوع العالمي للبرمجة وعلوم الحاسوب [csedweek.org] وموقع Code.org [code.org] لتعريف ملايين الطلاب بعلوم الحاسوب وبرمجة الحاسوب في أنشطة مدتها ساعة واحدة فقط."*
 
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+3. لا تستخدم "Hour of Code" أو "Hora del Código" في أسماء التطبيقات.
 
 <a id="stickers"></a>
 
@@ -84,7 +84,7 @@ title: المصادر
 
 **سطر الموضوع:** انضم إليَّ وإلى أكثر من 100 طالب للقيام بأنشطة "ساعة من البرمجة" <br />
 
-أجهزة الحاسوب في كل مكان، تعمل على تغيير جميع أنواع الصناعات على كوكب الأرض. But only 47% of all high schools teach computer science. الخبر السار هو أننا في طريقنا لتغيير هذا! إذا سمعت عن "ساعة من البرمجة" من قبل، فقد تعرف أنها صنعت التاريخ. لقد جرَّب أكثر من 100 مليون طالب أنشطة "ساعة من البرمجة".
+أجهزة الحاسوب في كل مكان، تعمل على تغيير جميع أنواع الصناعات على كوكب الأرض. But only 51% of all high schools offer computer science. الخبر السار هو أننا في طريقنا لتغيير هذا! إذا سمعت عن "ساعة من البرمجة" من قبل، فقد تعرف أنها صنعت التاريخ. لقد جرَّب أكثر من 100 مليون طالب أنشطة "ساعة من البرمجة".
 
 مع منصة "ساعة من البرمجة"، أصبحت علوم الحاسوب على الصفحات الرئيسية لكل من Google و MSN و Yahoo! و Disney. هناك أكثر من 100 شريك انضموا لدعم هذه المبادرة. لقد استضاف جميع "متاجر آبل" في العالم أنشطة "ساعة من البرمجة"، وكتب قادة مثل الرئيس أوباما ورئيس الوزراء الكندي جاستن ترودو الأسطر الأولى من كود البرمجة كجزء من الحملة.
 
@@ -92,7 +92,7 @@ title: المصادر
 
 ساعد في نشر الحدث، واستضافة أحداث أخرى. اطلب من مدرسة محلية التسجيل. أو جرِّب أنشطة "ساعة من البرمجة" بنفسك - يمكن للجميع الاستفادة من تعلم الأساسيات.
 
-Get started at http://hourofcode.com/{{ country_language }} <br />
+ابدأ الخطوات الأولى على http://hourofcode.com/{{ country_language }}<br />
 
 * * *
 
@@ -110,7 +110,7 @@ Get started at http://hourofcode.com/{{ country_language }} <br />
 
 سوف يصمِّم الطلاب تطبيقاتهم أو ألعابهم الخاصة التي يمكنهم عرضها على آبائهم، وسنقوم أيضًا بطباعة شهادات "ساعة من البرمجة" التي يمكنهم أخذها معهم إلى المنزل. وهذا أمر رائع! فمن خلال الأنشطة التفاعلية العملية، سيتعلم الطلاب مهارات التفكير الحسابي بطريقة سهلة.
 
-أجهزة الحاسوب في كل مكان، تعمل على تغيير جميع أنواع الصناعات على كوكب الأرض. But only 47% of all high schools teach computer science. الخبر السار هو أننا في طريقنا لتغيير ذلك! إذا سمعت عن منصة "ساعة من البرمجة" من قبل، فربما تعلم أنها صنعت التاريخ؛ لقد جرَّب أكثر من 100 مليون طالب حول العالم أنشطة وبرامج "ساعة من البرمجة". حتى القادة مثل الرئيس أوباما ورئيس الوزراء الكندي جاستن ترودو كتبوا السطور الأولى في البرمجة كجزء من الحملة.
+أجهزة الحاسوب في كل مكان، تعمل على تغيير جميع أنواع الصناعات على كوكب الأرض. But only 51% of all high schools offer computer science. الخبر السار هو أننا في طريقنا لتغيير ذلك! إذا سمعت عن منصة "ساعة من البرمجة" من قبل، فربما تعلم أنها صنعت التاريخ؛ لقد جرَّب أكثر من 100 مليون طالب حول العالم أنشطة وبرامج "ساعة من البرمجة". حتى القادة مثل الرئيس أوباما ورئيس الوزراء الكندي جاستن ترودو كتبوا السطور الأولى في البرمجة كجزء من الحملة.
 
 يمكنك قراءة المزيد عن الحدث على http://hourofcode.com. أو إخبارنا إذا كنت ترغب في تحديد وقت معين للتحدث عن كيفية مشاركة [اسم المدرسة].<br />
 
@@ -126,13 +126,13 @@ Get started at http://hourofcode.com/{{ country_language }} <br />
 
 نحن نعيش في عالم محاط بالتكنولوجيا. ونعلم أنه مهما كان المجال الذي يختار طلابنا التخصص فيه كبالغين، فإن قدرتهم على النجاح تعتمد بشكل متزايد على فهم كيفية عمل التكنولوجيا.
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
 لهذا السبب انضمت مدرستنا بأكملها في أكبر حدث تعليمي في التاريخ: "ساعة من البرمجة"، أثناء أسبوع البرمجة وعلوم الحاسوب ({{ campaign_date/full }}). أكثر من 100 مليون طالب في جميع أنحاء العالم جرَّبوا بالفعل أنشطة وبرامج "ساعة من البرمجة". تعلن "ساعة من البرمجة" أن [SCHOOL NAME] على استعداد لتعليم المهارات الأساسية التي تميِّز القرن الحادي والعشرين. ولمواصلة تقديم أنشطة البرمجة لطلابك، نريد أن نجعل حدث "ساعة من البرمجة" الخاص بنا حدثًا ضخمًا. أشجعك على التطوع والتواصل مع وسائل الإعلام المحلية ومشاركة الأخبار على وسائل التواصل الاجتماعي والتفكير في استضافة أحداث "ساعة من البرمجة" في المجتمع.
 
 هذه فرصة لتغيير مستقبل التعليم في [اسم المدينة / المنطقة].
 
-See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
+يرجى الاطلاع على http://hourofcode.com/{{ country_language }} للحصول على المزيد من التفاصيل، والمساعدة في نشر المبادرة.<br />
 
 * * *
 
@@ -144,11 +144,11 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 **عنوان الموضوع**: المدرسة المحلية تنضم إلى مهمة تعريف الطلاب بعلوم الحاسوب
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. الخبر السار هو أننا في طريقنا لتغيير ذلك.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. الخبر السار هو أننا في طريقنا لتغيير ذلك.
 
 مع منصة "ساعة من البرمجة"، أصبحت علوم الحاسوب على الصفحات الرئيسية لكل من Google و MSN و Yahoo! و Disney. هناك أكثر من 100 شريك انضموا لدعم هذه المبادرة. واستضاف جميع متاجر "آبل" في العالم أحداث وفعاليات "ساعة من البرمجة". حتى الرئيس أوباما كتب السطر الأول من نشاط البرمجة كجزء من الحملة.
 
-هذا هو السبب في أن كل واحد من طلاب [الرقم X ] في [اسم المدرسة] ينضم إلى أكبر حدث تعليمي في التاريخ: "ساعة من البرمجة"، خلال أسبوع البرمجة وعلوم الحاسوب (3-9 ديسمبر).
+هذا هو السبب في أن كل واحد من طلاب [X عدد] في [اسم المدرسة] ينضم إلى أكبر حدث تعليمي في التاريخ: "ساعة من البرمجة"، خلال أسبوع البرمجة وعلوم الحاسوب (6-12 ديسمبر).
 
 أكتب إليكم لدعوتكم لحضور اجتماعنا الافتتاحي ولرؤية الأطفال يبدأون النشاط في [DATE].
 
@@ -172,7 +172,7 @@ Computers are everywhere, changing every industry on the planet, but only 47% of
 
 هل تعلم أن الحوسبة هي المصدر الأول للأجور في الولايات المتحدة؟ هناك أكثر من 500000 وظيفة شاغرة في مجال الحوسبة على مستوى الدولة، ولكن في العام الماضي فقط تخرَّج 42969 من طلاب علوم الحاسوب وانضموا إلى القوى العاملة.
 
-تعد علوم الحاسوب عاملًا أساسيًا في جميع الصناعات اليوم، ومع ذلك، لا يتم تدريسها في معظم المدارس. في [SCHOOL NAME]، نحاول تغيير ذلك.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
 لهذا السبب انضمت مدرستنا بأكملها في أكبر حدث تعليمي في التاريخ: "ساعة من البرمجة"، أثناء أسبوع البرمجة وعلوم الحاسوب ({{ campaign_date/full }}). أكثر من 100 مليون طالب في جميع أنحاء العالم جرَّبوا بالفعل أنشطة وبرامج "ساعة من البرمجة".
 

@@ -4,15 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:11:18 UTC",
+    "family_name": "course4pre",
+    "serialized_at": "2022-04-08 15:40:29 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "Course4pre"
     }
@@ -385,6 +387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -406,6 +411,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -427,6 +435,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -448,6 +459,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -469,6 +483,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -490,6 +507,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -511,6 +531,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -532,6 +555,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -553,6 +579,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Maze 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -574,6 +603,9 @@
       "activity_section_position": 10,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Multi 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -595,6 +627,9 @@
       "activity_section_position": 11,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Maze Match 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -616,6 +651,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 1 new"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -637,6 +675,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 2 new"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -658,6 +699,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 3new"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -679,6 +723,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 3.4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -700,6 +747,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -721,6 +771,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -742,6 +795,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -763,6 +819,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -784,6 +843,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -805,6 +867,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -826,6 +891,9 @@
       "activity_section_position": 11,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -847,6 +915,9 @@
       "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 artist match 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -868,6 +939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -889,6 +963,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -910,6 +987,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Artist 3.5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -931,6 +1011,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Artist 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -952,6 +1035,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -973,6 +1059,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -994,6 +1083,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1015,6 +1107,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1036,6 +1131,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1057,6 +1155,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1078,6 +1179,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1099,6 +1203,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 14"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1120,6 +1227,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Loops New 15"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1141,6 +1251,9 @@
       "activity_section_position": 14,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 artist loops match 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1162,6 +1275,9 @@
       "activity_section_position": 15,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 artist loops multi 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1183,6 +1299,9 @@
       "activity_section_position": 16,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 artist loops multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1204,6 +1323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1225,6 +1347,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1246,6 +1371,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1267,6 +1395,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1288,6 +1419,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1309,6 +1443,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1330,6 +1467,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1351,6 +1491,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1372,6 +1515,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1393,6 +1539,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1414,6 +1563,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 14"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1435,6 +1587,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals 15"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1456,6 +1611,9 @@
       "activity_section_position": 13,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Conditionals Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1477,6 +1635,9 @@
       "activity_section_position": 14,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 bee conditionals multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1498,6 +1659,9 @@
       "activity_section_position": 15,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 bee conditionals multi 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1519,6 +1683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1540,6 +1707,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1561,6 +1731,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1582,6 +1755,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1603,6 +1779,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1624,6 +1803,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1645,6 +1827,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1666,6 +1851,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1687,6 +1875,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1708,6 +1899,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1729,6 +1923,9 @@
       "activity_section_position": 11,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 Nested Loops Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1750,6 +1947,9 @@
       "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 artist loops multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1771,6 +1971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1792,6 +1995,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1813,6 +2019,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1834,6 +2043,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1855,6 +2067,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1876,6 +2091,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1897,6 +2115,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1918,6 +2139,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1939,6 +2163,9 @@
       "activity_section_position": 9,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 While Loops Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1960,6 +2187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1981,6 +2211,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2002,6 +2235,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2023,6 +2259,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2044,6 +2283,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2065,6 +2307,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2086,6 +2331,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2107,6 +2355,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2128,6 +2379,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2149,6 +2403,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops Rows"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2170,6 +2427,9 @@
       "activity_section_position": 11,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 Bee Loops Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2191,6 +2451,9 @@
       "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Nested Loops Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2212,6 +2475,9 @@
       "activity_section_position": 13,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 bee loops multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2233,6 +2499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2254,6 +2523,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2275,6 +2547,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2296,6 +2571,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2317,6 +2595,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2338,6 +2619,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 11.5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2359,6 +2643,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2380,6 +2667,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2401,6 +2691,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2422,6 +2715,9 @@
       "activity_section_position": 10,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "2-3 artist functions multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2443,6 +2739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2464,6 +2763,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2485,6 +2787,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2506,6 +2811,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2527,6 +2835,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2548,6 +2859,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2569,6 +2883,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2590,6 +2907,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2611,6 +2931,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2632,6 +2955,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2653,6 +2979,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2674,6 +3003,9 @@
       "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 Bee Debugging Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2695,6 +3027,9 @@
       "activity_section_position": 13,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "4-5 bee debug multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {

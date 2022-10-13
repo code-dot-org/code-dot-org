@@ -53,7 +53,7 @@ table td {
 }
 
 #donorslider {
-  background-color: #cfc9de;
+  background-color: white;
   margin-top: 20px;
   padding-top: 10px;
   margin-bottom: 0px;
@@ -66,35 +66,139 @@ table td {
   padding-top: 5px;
 }
 
-#donorslider h1 {
+#donorslider h1,
+.homepage-supporters h1 {
   width: 100%;
-  font-size: 20px;
-  margin: 0px;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 12px 0;
   padding: 0px;
   text-align: center;
-  color: white;
-  position: absolute;
-  top: 0px;
+  color: #4d575f;
   font-family: 'Gotham 4r', sans-serif;
 }
 
 #donorslider .donor-slider {
+  text-align: center;
+  font-size: 13px;
+}
+
+#donorslider .donor-button {
   color: white;
   text-align: center;
   font-size: 13px;
 }
 
-#donorlinks {
-  text-align: right;
-  position: absolute;
+#donorslider .donor-slider a {
+  color: #4d575f;
+  font-family: 'Gotham 4r', sans-serif;
+}
+
+#donorslider .donor-button button {
+  margin: 12px 8px;
+}
+
+
+
+/* Styles for the updated Supporters section on the Homepage
+- changed May 2022 */
+.homepage-supporters {
+  padding: 2em 2em 4em;
+  text-align: center;
+}
+.homepage-supporters .donor-button {
+  margin: 0 auto 1.5em;
+}
+
+/* Styles for the updated Supporters page
+- changed May 2022 */
+.clearfix {
+  clear: both;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-flex {
+  display: unset !important;
+}
+
+/* Show on mobile */
+.mobile-show {
+  display: none !important;
+}
+
+section.flex-container {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+  section.flex-container p {
+    margin: 1em 0;
+    font-size: 18px;
+    text-align: center;
+    width: 150px;
+  }
+    section.flex-container img {
+      align-self: center;
+      width: 150px;
+    }
+
+section.lists h3 {
+  background: #00b2c0;
+  color: white;
+  padding: .75em;
+  margin: 2em 0 0;
   width: 100%;
 }
+  section.lists h4 {
+    padding: .75em 1em;
+    margin: 2px 0 0;
+    background: #5b6770;
+    color: white;
+  }
 
-#donorlinks a {
-  color: white;
+
+@media screen and (max-width: 768px) {
+
+  /* Hide on mobile */
+  .mobile-hide {
+    display: none !important;
+  }
+
+  /* Show on mobile */
+  .mobile-show {
+    display: block !important;
+  }
+
+  section.flex-container img,
+  section.flex-container p {
+    margin: 1.5em auto;
+  }
+
+    /* Adjust padding of the Gold Supporters sections */
+    section.flex-container.row-01 {
+      padding-bottom: 0;
+    }
+    section.flex-container.row-02 {
+      padding-top: 0;
+      padding-bottom: 4em
+    }
+
+  h5 {
+    color: #00adbc;
+    font-family: 'Gotham 7r', sans-serif;
+    margin: 1.5em 1em 0;
+    font-size: 1em;
+  }
 }
 
-#donorslider .donor-slider a {
-  color: white; 
-  font-family: 'Gotham 4r', sans-serif;
+@media screen and (max-width: 640px) {
+
+  section.flex-container {
+    flex-direction: column;
+  }
+
 }

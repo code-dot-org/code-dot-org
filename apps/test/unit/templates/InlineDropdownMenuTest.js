@@ -69,4 +69,10 @@ describe('InlineDropdownMenu', () => {
     // dropdown is closed
     expect(wrapper.find('a').length).to.equal(0);
   });
+
+  it('throws an error if neither icon nor selector was supplied', () => {
+    expect(() => {
+      shallow(<InlineDropdownMenu />);
+    }).to.throw('Icon or selector must be supplied.');
+  });
 });

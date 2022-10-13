@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
   WorkshopApplicationStates,
-  WorkshopSearchErrors
+  WorkshopSearchErrors,
+  ActiveCourseWorkshops
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import Notification from '@cdo/apps/templates/Notification';
@@ -58,7 +59,7 @@ class RegionalPartnerSearch extends Component {
     // (versus the regional partner's own application close date)
     $.ajax({
       method: 'GET',
-      url: `/dashboardapi/v1/pd/applications/applications_closed`,
+      url: `/dashboardapi/v1/pd/application/applications_closed`,
       dataType: 'json'
     }).done(data => {
       this.setState({
@@ -136,27 +137,27 @@ class RegionalPartnerSearch extends Component {
 
     let workshopCollections = [
       {
-        heading: 'CS Discoveries Workshops',
+        heading: `${ActiveCourseWorkshops.CSD} Workshops`,
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === 'CS Discoveries'
+            workshop => workshop.course === ActiveCourseWorkshops.CSD
           )
       },
       {
-        heading: 'CS Principles Workshops',
+        heading: `${ActiveCourseWorkshops.CSP} Workshops`,
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === 'CS Principles'
+            workshop => workshop.course === ActiveCourseWorkshops.CSP
           )
       },
       {
-        heading: 'Computer Science A Workshops',
+        heading: `${ActiveCourseWorkshops.CSA} Workshops`,
         workshops:
           partnerInfo &&
           partnerInfo.summer_workshops.filter(
-            workshop => workshop.course === 'Computer Science A'
+            workshop => workshop.course === ActiveCourseWorkshops.CSA
           )
       }
     ];
@@ -303,27 +304,55 @@ class RegionalPartnerSearch extends Component {
                   collection => collection.workshops.length === 0
                 ) && <div>Workshop details coming soon!</div>}
 
-                {workshopCollections.map(
-                  (collection, collectionIndex) =>
-                    collection.workshops.length > 0 && (
-                      <div
-                        key={collectionIndex}
-                        style={{
-                          ...styles.workshopCollection,
-                          ...workshopCollectionStyle
-                        }}
-                      >
-                        <h4>{collection.heading}</h4>
-                        {collection.workshops.map((workshop, index) => (
-                          <div key={index} style={styles.workshop}>
-                            <div>{workshop.workshop_date_range_string}</div>
-                            <div>{workshop.location_name}</div>
-                            <div>{workshop.location_address}</div>
+                {!workshopCollections.every(
+                  collection => collection.workshops.length === 0
+                ) &&
+                  workshopCollections.map((collection, collectionIndex) => {
+                    // If the partner is not offering CSA workshops, we display a different message
+                    if (
+                      collection.workshops.length === 0 &&
+                      collection.heading ===
+                        `${ActiveCourseWorkshops.CSA} Workshops`
+                    ) {
+                      return (
+                        <div
+                          key={collectionIndex}
+                          style={{
+                            ...styles.workshopCollection,
+                            ...workshopCollectionStyle
+                          }}
+                        >
+                          <h4>{collection.heading}</h4>
+                          <div>
+                            This Regional Partner is not offering CSA workshops
+                            at this time, but Code.org has a solution for you!
+                            Please complete the professional learning
+                            application, and a Code.org staff member will be in
+                            touch.
                           </div>
-                        ))}
-                      </div>
-                    )
-                )}
+                        </div>
+                      );
+                    } else if (collection.workshops.length > 0) {
+                      return (
+                        <div
+                          key={collectionIndex}
+                          style={{
+                            ...styles.workshopCollection,
+                            ...workshopCollectionStyle
+                          }}
+                        >
+                          <h4>{collection.heading}</h4>
+                          {collection.workshops.map((workshop, index) => (
+                            <div key={index} style={styles.workshop}>
+                              <div>{workshop.workshop_date_range_string}</div>
+                              <div>{workshop.location_name}</div>
+                              <div>{workshop.location_address}</div>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    }
+                  })}
               </div>
             )}
 
@@ -544,7 +573,7 @@ const StartApplicationButton = ({
   } else {
     notificationHeading =
       'We still have spaces in the Professional Learning Program!';
-    notificationText = 'It’s not too late to sign up.';
+    notificationText = 'It takes just 10-15 minutes to apply.';
   }
 
   const button = (
@@ -582,6 +611,8 @@ StartApplicationButton.propTypes = {
   nominated: PropTypes.bool,
   priorityDeadlineDate: PropTypes.string
 };
+
+export const UnconnectedRegionalPartnerSearch = RegionalPartnerSearch;
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

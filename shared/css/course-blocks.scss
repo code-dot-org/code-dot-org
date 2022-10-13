@@ -1,4 +1,4 @@
-@import 'color';
+@import 'color.scss';
 @import 'font';
 
 /* HEADERS */
@@ -35,17 +35,6 @@
 #landingpage h3 img.logo,
 .course_progress h3 img.logo {
   height: 40px;
-}
-
-/**
- * betatext can be used to style a span directly, or betacontainer can be used
- * on a node containing markdown to apply the beta styling to all **strong**
- * nodes in the markdown
- */
-.betatext, .betacontainer strong {
-  color: $realyellow;
-  background-color: $charcoal;
-  border-radius: 5px;
 }
 
 /**
@@ -146,34 +135,6 @@
     line-height: 30px;
     width: 186px;
     margin: 0;
-  }
-
-  .beta {
-    .heading {
-      padding-right: 0px;
-    }
-
-    .betatitle {
-      line-height: 40px;
-      width: 135px;
-      float: left;
-    }
-
-    .betatext {
-      color: $realyellow;
-      text-align: center;
-      display: block;
-      float: right;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      background-color: $light_gray;
-      font-size: 20px;
-      height: 35px;
-      line-height: 40px;
-      width: 60px;
-      border-radius: 4px;
-    }
   }
 
   .text {
@@ -319,13 +280,6 @@
     html[dir=rtl] & {
       margin: 10px 10px 0 0;
     }
-  }
-
-  .betatext {
-    color: $realyellow;
-    background-color: $light_gray;
-    border-radius: 4px;
-    padding: 0 5px;
   }
 }
 

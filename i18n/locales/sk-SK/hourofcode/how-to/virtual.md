@@ -1,5 +1,5 @@
 ---
-title: Návod na usporiadanie virtuálnych podujatí Hodiny kódu
+title: 'Hodina kódu: návod na usporiadanie virtuálnych podujatí'
 ---
 
 {{ signup_button }}
@@ -10,62 +10,62 @@ title: Návod na usporiadanie virtuálnych podujatí Hodiny kódu
 
 ***
 
-Hodina kódu sa síce tradične vo svete vyučuje v triedach, osobná účasť však nie je pravidlom!  Tieto tipy vám poradia ako usporiadať interaktívnu a inšpiratívnu Hodinu kódu pre vašich žiakov aj na diaľku.   Ak máte ďalšie otázky, pozrite si náš [návod na usporiadanie virtuálnych podujatí]({{ localized_files/participation_guide_virtual }}).
+Hodina kódu sa síce zvyčajne vyučuje v triedach po celom svete, osobná účasť však nie je pravidlom! Tieto tipy vám poradia, ako žiakom usporiadať interaktívnu a inšpiratívnu Hodinu kódu aj na diaľku.  Ak máte ďalšie otázky, pozrite si náš [návod na usporiadanie virtuálnych podujatí]({{ localized_files/participation_guide_virtual }}).
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
 ## Začnite spoločne, aj keď nie ste spolu
-Nadchnite na úvod žiakov spoločným online stretnutím. Odporúčame vám ho usporiadať aj v prípade, že chcete, aby žiaci pracovali na lekciách samostatne.  Začať môžete mnohými zaujímavými spôsobmi: 
+Aj ak chcete, aby žiaci pracovali na aktivitách samostatne, odporúčame vám začať podujatie spoločným virtuálnym stretnutím. Na začiatku podujatia tak budete mať možnosť vzbudiť u účastníkov nadšenie. Podujatie môžete začať mnohými zaujímavými spôsobmi: 
 
 <ul>
-<li><b>Pozvite rečníka</b>: Čakajú na vás dobrovoľníci z rôznych prostredí.  Vyhľadajte ich jednoducho na našej <a href="https://code.org/volunteer/local">mape dobrovoľníkov</a>. Virtuálnu Hodinu kódu neobmedzujú vzdialenosti, a tak môžete vyhľadať aj dobrovoľníkov, ktorí sídlia mimo vášho kraja, ale ponúkajú pomoc online. Po skontaktovaní dobrovoľníka, vám <a href="http://hourofcode.com/us/how-to/volunteers">príručka pre dobrovoľníkov Hodiny kódu</a> môže slúžiť ako pomôcka, napríklad pri vymýšľaní tém, diskusných otázok a mnohých ďalších. </li> 
-<li><b>Prehrajte žiakom inšpiratívne video</b>: Ďalší skvelý spôsob ako začať výučbu je prehrať žiakom jedno z našich <a href="http://hourofcode.com/us/promote/resources#videos">inšpiratívnych videí</a>. Mnohé videá sú kratšie ako päť minút a žiakov v nich povzbudia i inšpirujú známe celebrity.</li> 
-<li><b>Diskutujte o informatike</b>: Zamyslite sa hlbšie nad informatikou a zvážte spoločne vplyv technológie na náš každodenný život. Pýtajte sa žiakov pomocné otázky a premeňte tak online stretnutie na interaktívnu diskusiu. Nápady, ako diskusiu začať nájdete v našich <a href="https://code.org/csforgood#prompts">diskusných otázkach</a>.</li>
+<li><b>Pozvite rečníka</b>: K dispozícii sú pre vás dobrovoľníci z rôznych prostredí. Nájdete ich jednoducho na našej <a href="https://code.org/volunteer/local">mape dobrovoľníkov</a>. Pri virtuálnej Hodine kódu sa nemusíte obmedzovať vzdialenosťami, a tak môžete vyhľadať aj dobrovoľníkov, ktorí sídlia mimo vášho kraja, ale ponúkajú pomoc online. Po kontaktovaní dobrovoľníka vám <a href="http://hourofcode.com/us/how-to/volunteers">návod pre dobrovoľníkov Hodiny kódu</a> môže slúžiť ako pomôcka, napríklad pri vymýšľaní tém, diskusných otázok a ďalších vecí.</li> 
+<li><b>Prehrajte žiakom inšpiratívne video</b>: Ďalší skvelý spôsob, ako začať podujatie, je prehrať žiakom jedno z našich <a href="http://hourofcode.com/us/promote/resources#videos">inšpiratívnych videí</a>. Mnohé videá sú kratšie ako päť minút a žiakov v nich povzbudia i inšpirujú známe celebrity.</li> 
+<li><b>Diskutujte o pozitívnych rozmeroch informatiky</b>: Využite Hodinu kódu na to, aby ste sa nad informatikou zamysleli hlbšie, a porozprávajte sa o tom, aký vplyv majú technológie na náš každodenný život. Pýtajte sa žiakov pomocné otázky a premeňte tak online stretnutie na interaktívnu diskusiu. Nápady, ako rozprúdiť diskusiu, nájdete v našich <a href="https://code.org/csforgood#prompts">diskusných otázkach</a>.</li>
 </ul>
 
 ---
 
-## Ako sa pripraviť
+## Čo si pripraviť vopred
 
-### 1. Rozhodnite sa, na ktorej platforme prebehne videokonferencia
-S platformami ako Cisco Webex, Google Meet, Microsoft Teams, Skype, či Zoom ste sa už pravdepodobne stretli. Použiť môžete ktorúkoľvek. Pred videokonferenciou vám odporúčame sa s vybranou platformou zoznámiť, otestovať ju a vyskúšať si program, ktorý ste si k Hodine kódu pripravili.
+### 1. Vyberte si videokonferenčnú platformu
+S platformami ako Cisco Webex, Google Meet, Microsoft Teams, Skype či Zoom ste sa už pravdepodobne stretli. Použiť môžete ktorúkoľvek. Pred videokonferenciou vám odporúčame sa s vybranou platformou zoznámiť, otestovať ju a vyskúšať si program, ktorý ste si k Hodine kódu pripravili.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
 ### 2. Naplánujte, ako sa zapoja žiaci
-**Samostatná práca na lekciách Hodiny kódu**<br> Nechajte žiakov opustiť videokonferenciu, aby mohli na <a href="https://hourofcode.com/us/learn">lekciách Hodiny kódu</a> pracovať samostatne.  Žiakom dáte priestor zahĺbiť sa do projektov a lepšie pochopiť informatické koncepty. Zároveň znížite ich rozptýlenie a nevzniknú im nepríjemnosti s ponechaným otvoreným oknom videokonferencie.
+**Samostatná práca na aktivitách k Hodine kódu**<br> Odporúčame vám, aby ste po spoločnom úvode dovolili žiakom opustiť videokonferenciu, aby mohli na <a href="https://hourofcode.com/us/learn">aktivitách k Hodine kódu</a> pracovať samostatne. Žiakom tak dáte priestor zahĺbiť sa do svojich projektov a lepšie pochopiť informatické koncepty. Zároveň tým zabezpečíte, aby ich otvorené okno videokonferencie nerozptyľovalo a nekomplikovalo im prácu.
 
-Pripravte si dopredu 1-3 kurzy, z ktorých dáte žiakom na výber. Môžete tak nájsť tie najvhodnejšie lekcie pre daný ročník. Navyše, ak sa s kurzami dopredu oboznámite, budete lepšie pripravený odpovedať žiakom na ich otázky.
+Môže byť užitočné, ak si vopred pripravíte 1 až 3 lekcie, z ktorých dáte žiakom na výber. Takto budete mať priestor nájsť tie najvhodnejšie lekcie pre daný ročník. Navyše, ak sa s lekciami oboznámite vopred, budete vedieť lepšie odpovedať žiakom na ich otázky.
 
-Ak chcete, aby žiaci začali na lekciách pracovať ihneď po úvodnej videokonferencii, môžete ponechať otvorenú virtuálnu konferenčnú miestnosť, chatovaciu miestnosť, alebo sa dohodnúť na inom spôsobe komunikácie, aby sa na vás mohli žiaci v prípade otázok obrátiť.
+Ak chcete, aby žiaci začali na lekciách pracovať ihneď po úvodnej videokonferencii, môžete ponechať otvorenú virtuálnu konferenčnú miestnosť, četovaciu miestnosť alebo sa dohodnúť na inom spôsobe komunikácie, aby sa na vás mohli žiaci v prípade otázok obrátiť.
 
-**Spoločná práca na lekciách Hodiny kódu**<br> Ak chcete, aby žiaci zostali počas celého podujatia pripojení k videokonferencii, musíte vziať do úvahy fakt, že žiaci budú mať počas celej práce otvorené dve okná – jedno na videokonferenciu, druhé na vypracovanie lekcií.
+**Spoločná práca na aktivitách Hodiny kódu**<br> Ak chcete, aby žiaci zostali počas celého podujatia pripojení k videokonferencii, musíte vziať do úvahy fakt, že žiaci budú mať počas celej práce otvorené dve okná – jedno na videokonferenciu, druhé na vypracovanie lekcie.
 
-**Práca s rodičmi**<br> Skúste osloviť rodičov žiakov na prvom stupni základnej školy, aby sa doma spoločne s deťmi zapojili do Hodiny kódu. Môžete im odporučiť kurzy a tiež <a href="https://hourofcode.com/us/how-to/parents">príručku pre rodičov</a>.
+**Práca s rodičmi**<br> Ak pracujete so žiakmi na prvom stupni základnej školy, skúste osloviť ich rodičov, aby sa do Hodiny kódu zapojili spoločne s deťmi z domu. Môžete im odporučiť konkrétne lekcie a nasmerovať ich na náš užitočný <a href="https://hourofcode.com/us/how-to/parents">návod pre rodičov</a>.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
 ### 3. Získajte pomoc dobrovoľníka
-Nájdite dobrovoľníka podľa svojich potrieb na našej <a href="https://code.org/volunteer/local">mape dobrovoľníkov</a>. Mnohí pracujú aj dištančne a radi vám porozprávajú o svojich skúsenostiach v oblasti informatiky, o tom, ako technológia ovplyvňuje ich prácu, alebo vám pomôžu zodpovedať otázky žiakov. Keď si vyberiete dobrovoľníka, dohodnite si s ním vopred stretnutie, aby ste si mohli rozdeliť úlohy, skontrolovať technické požiadavky a dohodnúť sa na podmienkach online stretnutia.
+Nájdite si dobrovoľníka podľa svojich potrieb na našej <a href="https://code.org/volunteer/local">mape dobrovoľníkov</a>. Mnohí z nich sú k dispozícii aj na diaľku a radi vám porozprávajú o svojich skúsenostiach v oblasti informatiky, o tom, ako technológie ovplyvňujú ich prácu, alebo vám môžu pomôcť zodpovedať otázky žiakov. Keď si vyberiete dobrovoľníka, dohodnite si s ním vopred stretnutie, aby ste si mohli rozdeliť úlohy, skontrolovať technické požiadavky a dohodnúť sa na podmienkach online stretnutia.
 
-### 4. Pripravte oslavu
-Nižšie si prečítajte, ako môžete osláviť vašu virtuálnu Hodinu kódu. Niektoré nápady si vyžadujú prípravu, ako napríklad vytvorenie <a href="https://code.org/certificates">certifikátov</a>  pre všetkých účastníkov.
+### 4. Pripravte sa na oslávenie úspechov
+V nasledujúcej sekcii nájdete nápady, ako osláviť úspešný priebeh vašej virtuálnej Hodiny kódu. Niektoré nápady, napríklad vytvorenie <a href="https://code.org/certificates">certifikátov</a> pre všetkých účastníkov, si vyžadujú prípravu vopred.
 
 ---
 
-## Oslávte spoločne Hodinu kódu
+## Oslávte úspešnú Hodinu kódu
 
-Tak, ako ste výučbu spoločne začali, tak spoločne oslávte jej ukončenie. Tu je pár nápadov, ako zorganizovať interaktívnu a jedinečnú virtuálnu oslavu:
+Tak, ako ste podujatie spoločne začali, tak spolu oslávte aj jeho ukončenie! Tu je pár nápadov, ako zorganizovať interaktívnu a jedinečnú virtuálnu oslavu:
 
-- Dovoľte žiakom zdieľať svoje hotové projekty so zvyškom triedy. Ak to konferenčná platforma umožňuje, môžete žiakom navrhnúť, aby si urobili snímku obrazovky svojich hotových projektov a nastavili ich ako virtuálne pozadie.
-- Diskutuje o poznatkoch: Čo sa naučili o informatike a technológii? Čo robili, keď nastal problém? Ako ho riešili?
-- <a href="https://code.org/certificates">Vytvorte certifikáty a zdieľajte ich</a> so žiakmi.
-- Zdieľajte fotky a videá virtuálnej Hodiny kódu na sociálnych sieťach. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Dovoľte žiakom ukázať svoje hotové projekty zvyšku triedy. Ak to konferenčná platforma umožňuje, môžete žiakom navrhnúť, aby si urobili snímku obrazovky svojich hotových projektov a nastavili si ich ako virtuálne pozadie.
+- Diskutuje o získaných poznatkoch: Čo sa žiaci naučili o informatike a technológiách? Čo robili, keď sa vyskytol nejaký problém? Ako ho riešili?
+- <a href="https://code.org/certificates">Vytvorte certifikáty</a> a pošlite ich žiakom.
+- Zdieľajte fotky a videá z vašej virtuálnej Hodiny kódu na sociálnych sieťach. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Ak ste však výučbu nezačali <a href="https://code.org/volunteer/local">pozvaním rečníka</a>,<a href="https://hourofcode.com/us/promote/resources#">inšpiratívnym videom</a>, či <a href="https://code.org/csforgood#prompts">diskusiou</a>, teraz je skvelá príležitosť začleniť do oslavy aj jednu z týchto aktivít.
+Ak sa vaše podujatie nezačalo <a href="https://code.org/volunteer/local">príhovorom rečníka</a>, <a href="https://hourofcode.com/us/promote/resources#">inšpiratívnym videom</a> či <a href="https://code.org/csforgood#prompts">diskusiou</a>, teraz je skvelá príležitosť začleniť do oslavy aj jednu z týchto aktivít.
 
 {{ signup_button }}

@@ -1,7 +1,7 @@
 class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
   attributes(
     :id,
-    :created_at,
+    :date_applied,
     :applicant_name,
     :district_name,
     :school_name,
@@ -14,6 +14,7 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :notes_5,
     :regional_partner_id,
     :principal_approval_state,
+    :principal_approval_not_required,
     :total_score,
     :meets_criteria,
     :meets_scholarship_criteria,
@@ -27,6 +28,10 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
 
   def principal_approval_state
     object.try(:principal_approval_state)
+  end
+
+  def principal_approval_not_required
+    object.try(:principal_approval_not_required)
   end
 
   def meets_criteria

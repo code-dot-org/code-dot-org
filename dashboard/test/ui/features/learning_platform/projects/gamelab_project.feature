@@ -13,7 +13,7 @@ Scenario: Gamelab Flow
   And I type "Code Ninja II: Uncaught Exception" into "input.project_name"
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
-  Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
 
   And I ensure droplet is in text mode
   And I append gamelab code to draw a ninja
@@ -44,45 +44,45 @@ Scenario: Gamelab Flow
   # Test the "View code" button, as the owner goes to /edit
   When I navigate to the share URL
   And I wait to see "#footerDiv"
-  Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
   And I click selector "a:contains('View code')"
   Then I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "pushState"
   And I wait to see "#codeWorkspace"
-  And I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  And I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And selector "#codeWorkspace" doesn't have class "readonly"
 
   # Test the "How it works" link, as the owner goes to /edit
   When I navigate to the last shared URL
   And I wait to see "#footerDiv"
-  Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
   And I press the first "#footerDiv .more-link" element
   And I press a button with xpath "//div[@id = 'footerDiv']//a[text() = 'How it Works (View Code)']"
   Then I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "nothing"
   And I wait to see "#codeWorkspace"
-  And I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  And I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And selector "#codeWorkspace" doesn't have class "readonly"
 
   # Test the "View code" button, as an anonymous user goes to /view
   When I am on "http://studio.code.org/users/sign_out"
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
-  Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
   And I click selector "a:contains('View code')"
   Then I get redirected to "/projects/gamelab/([^\/]*?)/view" via "nothing"
   And I wait to see "#codeWorkspace"
-  And I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  And I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And selector "#codeWorkspace" has class "readonly"
 
   # Test the "How it works" link, as an anonymous user goes to /view
   When I navigate to the last shared URL
   And I wait to see "#footerDiv"
-  Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
+  Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And element "#codeWorkspace" is hidden
   When I make all links open in the current tab
   And I press the first "#footerDiv .more-link" element
@@ -115,12 +115,12 @@ Scenario: Remix project creates and redirects to new channel
   And I type "Code Ninja" into "input.project_name"
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
-  Then I should see title "Code Ninja - Game Lab"
+  Then I should see title includes "Code Ninja - Game Lab - Code.org"
   And I save the URL
 
   Then I click selector ".project_remix" to load a new page
   And I wait for the page to fully load
-  And I should see title "Remix: Code Ninja - Game Lab"
+  And I should see title includes "Remix: Code Ninja - Game Lab - Code.org"
   And check that the URL contains "/edit"
   And check that the URL contains "http://studio.code.org/projects/gamelab"
   And current URL is different from the last saved URL

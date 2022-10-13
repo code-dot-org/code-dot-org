@@ -2,13 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import yaml from 'js-yaml';
 import SetupChecklist from './SetupChecklist';
-import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
 import {
   isCodeOrgBrowser,
-  isChromeOS,
   isOSX,
   isWindows,
   isLinux
@@ -21,6 +19,11 @@ import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
+import experiments from '@cdo/apps/util/experiments';
+import {
+  WEB_SERIAL_FILTERS,
+  shouldUseWebSerial
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -38,7 +41,7 @@ const style = {
 export default class SetupGuide extends React.Component {
   constructor(props) {
     super(props);
-    this.setupChecker = new SetupChecker();
+    this.state = {webSerialPort: null};
   }
 
   render() {
@@ -49,9 +52,30 @@ export default class SetupGuide extends React.Component {
         responsive
       })
     );
+    const {webSerialPort} = this.state;
 
-    if (isCodeOrgBrowser() || isChromeOS()) {
-      return <SetupChecklist setupChecker={this.setupChecker} />;
+    // WebSerial requires user input for user to select port.
+    // Add a button for user interaction before initiated Setup Checklist
+    if (shouldUseWebSerial() && !webSerialPort) {
+      return (
+        <input
+          style={{marginLeft: 9, marginTop: -4}}
+          className="btn"
+          type="button"
+          value={'Connect to Board'}
+          onClick={() => {
+            navigator.serial
+              .requestPort({filters: WEB_SERIAL_FILTERS})
+              .then(port => {
+                this.setState({webSerialPort: port});
+              });
+          }}
+        />
+      );
+    }
+
+    if (isCodeOrgBrowser() || shouldUseWebSerial()) {
+      return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (
       <Provider store={store}>
@@ -312,10 +336,19 @@ const SetupInstructions = () => (
 const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
 
 class ChromebookInstructions extends React.Component {
-  render() {
+  webSerialSetupInstructions() {
     return (
       <div>
-        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
+        {applabI18n.makerSetupChromebook()}
+        <h4>{applabI18n.note()}</h4>
+        {applabI18n.makerSetupChromebookHistoricalNote()}
+      </div>
+    );
+  }
+
+  chromeAppSetupInstructions() {
+    return (
+      <div>
         <SafeMarkdown
           markdown={applabI18n.makerSetupSerialConnector({
             webstoreURL: CHROME_APP_WEBSTORE_URL
@@ -333,6 +366,17 @@ class ChromebookInstructions extends React.Component {
           <li>{applabI18n.makerSetupFollowInstructions()}</li>
           <li>{applabI18n.makerSetupPlugInBoard()}</li>
         </ol>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
+        {experiments.isEnabled('webserial')
+          ? this.webSerialSetupInstructions()
+          : this.chromeAppSetupInstructions()}
       </div>
     );
   }

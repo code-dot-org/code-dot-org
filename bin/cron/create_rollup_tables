@@ -81,7 +81,6 @@ def main
 
   Level.find_each do |level|
     begin
-      next unless level.script_levels.map(&:script).select(&:k5_draft_course?)
     # The RecordNotFound exception happens when a Level does not belong to any ScriptLevel.
     # The NoMethodError exception happens when a ScriptLevel does not have a Script.
     # TODO(asher): Fix the corrupt data on staging, eliminating the need for this rescue clause.

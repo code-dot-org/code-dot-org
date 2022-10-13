@@ -5,8 +5,11 @@
 //   apps/src/color.js during the apps build process.
 
 $black: #000;
+$background_black: #121416;
+$dark_gray: #2D3139;
 $darkest_gray: #272822;
 $dark_slate_gray: #282c34;
+$darkest_slate_gray: #25292d;
 $dark_charcoal: #4d575f;
 $charcoal: #5b6770;
 $light_gray: #949ca2;
@@ -25,6 +28,7 @@ $lightish_teal: #80d6de;
 $lighter_teal: #a6e3e8;
 $lightest_teal: #d9f3f5;
 
+$dark_purple: #5c3f7f;
 $purple: #7665a0;
 $light_purple: #a69bc1;
 $lighter_purple: #cfc9de;
@@ -58,8 +62,8 @@ $goldenrod: #daa520;
 $header_text: $white;
 $bkgnd_color: $teal;
 $inset_color: $lighter_gray;
-$dark_color:  $purple;
-$hdr_color:   $purple;
+$dark_color: $purple;
+$hdr_color: $purple;
 
 // Some extra colors.
 $red: #c00;
@@ -70,9 +74,9 @@ $realyellow: #ff0;
 $mustardyellow: #efcd1c;
 $twitter_blue: #00aced;
 $facebook_blue: #3b5998;
-$google_red: #a5201a;
 $microsoft_blue: #2a5cb2;
 $dark_blue: #00647f;
+$google_red: #a5201a;
 $blockly_flyout_gray: #ddd;
 $default_text: #333;
 $border_gray: #bbb;
@@ -93,8 +97,13 @@ $level_review_accepted: rgb(11, 142, 11); // TODO: $level_passed;
 $assessment: $cyan;
 $workspace_running_background: #e5e5e5;
 
+// Experimental Sprite Lab validation colors.
+$dark_purple: #682A77;
+$bright_green: #0ebe0e;
+$neon_pink: #e9118f;
+
 // Links (used in apps).
-$link_color: #0596CE;
+$link_color: #0596ce;
 
 // Shadow.
 $shadow: rgba(0, 0, 0, 0.3);

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module Pd
-  class DummyForm < ActiveRecord::Base
+  class DummyForm < ApplicationRecord
     include Pd::JotFormBackedForm
 
     # @override

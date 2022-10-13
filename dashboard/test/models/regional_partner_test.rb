@@ -242,21 +242,21 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   end
 
   test 'regional_partner_summer_workshop_open_custom_link' do
-    regional_partner = create :regional_partner_illinois
+    regional_partner = build :regional_partner_illinois
 
     assert_equal WORKSHOP_APPLICATION_STATES[:currently_open], regional_partner.summer_workshops_application_state
     assert_equal "https://code.org/specific-link", regional_partner.link_to_partner_application
   end
 
   test 'regional_partner_summer_workshop_closed' do
-    regional_partner = create :regional_partner_kentucky
+    regional_partner = build :regional_partner_kentucky
 
     assert_equal WORKSHOP_APPLICATION_STATES[:now_closed], regional_partner.summer_workshops_application_state
     assert_nil regional_partner.upcoming_priority_deadline_date
   end
 
   test 'regional_partner_summer_workshop_missing_information' do
-    regional_partner = create :regional_partner_newjersey
+    regional_partner = build :regional_partner_newjersey
 
     assert_nil regional_partner.contact_name
     assert_nil regional_partner.contact_email
@@ -265,13 +265,13 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   end
 
   test 'regional_partner_summer_workshop_opening_on_date' do
-    regional_partner = create :regional_partner_oregon
+    regional_partner = build :regional_partner_oregon
 
     assert_equal WORKSHOP_APPLICATION_STATES[:opening_at], regional_partner.summer_workshops_application_state
   end
 
   test 'regional_partner_summer_workshop_opening_on_date_for_csd_only' do
-    regional_partner = create :regional_partner_wyoming
+    regional_partner = build :regional_partner_wyoming
 
     assert_equal WORKSHOP_APPLICATION_STATES[:opening_at], regional_partner.summer_workshops_application_state
   end

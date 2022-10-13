@@ -9,14 +9,16 @@ es:
       moving east: avanzando al este
       moving east and looping: moviéndose hacia el este y haciendo un bucle
       moving north: avanzando hacia el norte
+      moving north and looping: moviéndose hacia el norte y haciendo un bucle
       moving south: avanzando hacia el sur
+      moving south and looping: moviéndose hacia el sur y haciendo un bucle
       moving west: avanzando hacia el oeste
       moving west and looping: moviéndose hacia el oeste y haciendo un bucle
       moving with arrow keys: moverse con las flechas del teclado
       patrolling: patrullando
-      shrinking: reducción
+      shrinking: reduciendo
       spinning left: girando a la izquierda
       spinning right: girando a la derecha
       swimming left and right: nadando a izquierda y derecha
-      wandering: vagando
+      wandering: deambulando
       wobbling: tambaleándose

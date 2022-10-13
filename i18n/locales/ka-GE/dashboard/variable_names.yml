@@ -1,6 +1,9 @@
 ka:
   data:
     variable_names:
+      Blue: ლურჯი
+      Green: მწვანე
+      Red: წითელი
       actor: პერსონაჟი
       age: ასაკი
       answer: პასუხი
@@ -20,6 +23,7 @@ ka:
       score: ქულა
       size: ზომა
       speed: სიჩქარე
+      type: ტიპი
       variable: ცვლადი
       width: სიგრძე
       wizard: ჯადოქარი

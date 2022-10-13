@@ -1,17 +1,25 @@
 sv:
   data:
     variable_names:
+      "???": "???"
       Blue: Blå
       Green: Grön
       Red: Röd
       actor: aktör
       age: ålder
       answer: svar
+      armlength: armlängd
       binary: binära
+      birds: fåglar
       cats: alla katter
+      choice: val
       color: färg
       counter: räknare
       dogs: alla hundar
+      dragons: drakar
+      energy: energi
+      green1: grön1
+      green2: grön2
       height: höjd
       honey: honung
       i: i
@@ -19,13 +27,17 @@ sv:
       length: längd
       name: namn
       nectar: nektar
+      object: '-objektet'
+      planet: planet
       points: poäng
       random: slumpad
       repeat: upprepa
       right: höger
       score: poäng
+      sides: sidor
       size: storlek
       speed: hastighet
+      type: typ
       variable: variabel
       width: bredd
       wizard: trollkarl

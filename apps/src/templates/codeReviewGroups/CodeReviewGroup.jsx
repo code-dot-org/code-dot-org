@@ -16,7 +16,7 @@ export default function CodeReviewGroup({
     onNameUpdate(droppableId, event.target.value);
   };
   return (
-    <div style={styles.groupContainer}>
+    <div style={styles.groupContainer} className="uitest-code-review-group">
       <div style={styles.headerContainer}>
         <input
           value={name}
@@ -37,6 +37,7 @@ export default function CodeReviewGroup({
         droppableId={droppableId}
         members={members}
         key={droppableId}
+        showEmptyGroupPlaceholder={true}
       />
     </div>
   );
@@ -52,7 +53,8 @@ CodeReviewGroup.propTypes = {
 
 const styles = {
   groupContainer: {
-    paddingBottom: 20
+    paddingBottom: 20,
+    paddingLeft: 5
   },
   headerContainer: {
     display: 'flex',
@@ -64,7 +66,8 @@ const styles = {
   nameInput: {
     padding: '5px 12px',
     borderRadius: 4,
-    border: `1px solid ${color.lighter_gray}`
+    border: `1px solid ${color.lighter_gray}`,
+    width: '210px'
   },
   deleteButtonContainer: {
     display: 'flex',

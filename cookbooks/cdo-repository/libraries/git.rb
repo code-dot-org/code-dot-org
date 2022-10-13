@@ -66,9 +66,9 @@ module Cdo
         cwd = @new_resource.destination
 
         # Skip update if either the exact or wildcard fetch-ref already exists in the config.
-        ref_exists_cmd = <<-BASH
-git config --get remote.#{remote}.fetch '^\\+refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}$' || \
-git config --get remote.#{remote}.fetch '^\\+refs/heads/\*:refs/remotes/#{remote}/\*$'
+        ref_exists_cmd = <<~BASH
+          git config --get remote.#{remote}.fetch '^\\+refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}$' || \
+          git config --get remote.#{remote}.fetch '^\\+refs/heads/\*:refs/remotes/#{remote}/\*$'
         BASH
         ref_exists = shell_out!(ref_exists_cmd, run_options(cwd: cwd, returns: [0, 1])).exitstatus == 0
 

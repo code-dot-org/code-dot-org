@@ -81,7 +81,7 @@ class ApiControllerTest < ActionController::TestCase
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 
-  test "example_solutions should call ScriptLevel get_example_solution" do
+  test "example_solutions should return expected example solutions" do
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
@@ -96,6 +96,39 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal '["https://studio.code.org/projects/dance/example-1/view","https://studio.code.org/projects/dance/example-2/view"]', @response.body
+  end
+
+  test "example_solutions should return expected example solutions when section id is empty" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    teacher = create :authorized_teacher
+    sign_in teacher
+
+    level = create(:level, :blockly, :with_ideal_level_source)
+    script_level = create :script_level, levels: [level]
+
+    get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
+
+    assert_response :success
+    assert_equal "[\"//test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
+  end
+
+  test "example_solutions should return expected example solutions when section id is present" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    teacher = create :authorized_teacher
+    sign_in teacher
+
+    section = create :section
+    level = create(:level, :blockly, :with_ideal_level_source)
+    script_level = create :script_level, levels: [level]
+
+    get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
+
+    assert_response :success
+    assert_equal "[\"//test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
   test "should get text_responses for section with default script" do
@@ -212,7 +245,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
-        'url' => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
@@ -220,7 +253,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
-        'url' => "http://test.host/s/#{script.name}/lessons/2/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => "//test-studio.code.org/s/#{script.name}/lessons/2/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
@@ -228,7 +261,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
-        'url' => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
+        'url' => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
       }
     ]
     assert_equal expected_response, JSON.parse(@response.body)
@@ -254,6 +287,7 @@ class ApiControllerTest < ActionController::TestCase
       script_id: script.id
     }
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
     body = JSON.parse(response.body)
 
     assert_equal [@section.id.to_s, @flappy_section.id.to_s, @allthings_section.id.to_s], body.keys, "entry for each section"
@@ -785,17 +819,17 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user progress" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     create :user_level, user: user, best_result: 100, script: @script, level: @level
 
     get :user_progress, params: {script: @script.name}
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
 
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
-    assert_equal 2, body['linesOfCode']
     level_progress = body['progress'][@level.id.to_s]
     refute_nil level_progress
     assert_equal 'perfect', level_progress['status']
@@ -840,7 +874,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get signed-in user's user app_options" do
-    user = create :user, total_lines: 2
+    user = create :user
     sign_in user
 
     level_source = create :level_source, level: @level, data: 'level source'
@@ -854,8 +888,11 @@ class ApiControllerTest < ActionController::TestCase
       level: @level.id
     }
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
+    assert_equal false, body['isInstructor']
     assert_equal false, body['disableSocialShare']
     assert_equal 'level source', body['lastAttempt']['source']
   end
@@ -877,6 +914,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
+    assert_equal true, body['isInstructor']
     assert_equal false, body['disableSocialShare']
     assert_equal 'level source', body['lastAttempt']['source']
     assert_equal true, body['isStarted']
@@ -957,8 +995,10 @@ class ApiControllerTest < ActionController::TestCase
 
   test "user_app_options should return existing channel if one exists" do
     sign_in @student_1
+    storage_id = fake_storage_id_for_user_id(@student_1.id)
+    ApiController.any_instance.stubs(:get_storage_id).returns(storage_id)
 
-    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(@student_1.id)
+    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id
     expected_channel = channel_token.channel
 
     get :user_app_options, params: {
@@ -1022,8 +1062,9 @@ class ApiControllerTest < ActionController::TestCase
   test "user_app_options should not return channel when param get_channel_id is false" do
     user = @student_1
     sign_in user
+    stub_get_storage_id(user.id)
 
-    create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(user.id)
+    create :channel_token, level: @level, script_id: @script.id, storage_id: fake_storage_id_for_user_id(user.id)
 
     get :user_app_options, params: {
       script: @script.name,
@@ -1109,10 +1150,11 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Script.stubs(:should_cache?).returns true
 
-    assert_queries 8 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
 
     data = JSON.parse(@response.body)
     expected = {
@@ -1200,6 +1242,12 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 1, data['students'].length
+  end
+
+  test 'section_level_progress response should not be cached by the browser' do
+    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
   end
 
   test "should get paginated section level progress" do
@@ -1342,6 +1390,7 @@ class ApiControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
 
     response = JSON.parse(@response.body)
 
@@ -1413,11 +1462,28 @@ class ApiControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    response = JSON.parse(@response.body)
+    assert_match "no-store", response.headers["Cache-Control"]
 
+    response = JSON.parse(@response.body)
     assert_equal @section.id, response["id"]
     assert_equal @teacher.name, response["teacherName"]
     assert_equal 7, response["students"].length
+  end
+
+  test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 visible section" do
+    teacher = create :teacher
+    sign_in teacher
+    section = create(:section, user: teacher, login_type: 'word')
+    create(:section, user: teacher, login_type: 'word', hidden: true)
+
+    get :teacher_panel_section
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal section.id, response["id"]
+    assert_equal teacher.name, response["teacherName"]
+    assert_equal 0, response["students"].length
   end
 
   test "teacher_panel_section returns no_content when passed section id not owned by logged in teacher" do
@@ -1497,6 +1563,15 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_response, response
   end
 
+  test 'user_menu response should not be cached by the browser' do
+    sign_in create(:student)
+
+    get :user_menu
+
+    assert_response :success
+    assert_match "no-store", response.headers["Cache-Control"]
+  end
+
   test "user menu should open pairing dialog if asked to in the session" do
     sign_in create(:student)
 
@@ -1517,16 +1592,6 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_select 'script', /dashboard.pairing.init.*false/
     refute session[:show_pairing_dialog] # should only show once
-  end
-
-  test 'student does not see links to teacher dashboard' do
-    student = create :student
-    sign_in student
-
-    get :user_menu
-
-    assert_response :success
-    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
   end
 
   test 'should show sign in link for signed out user' do
@@ -1566,30 +1631,30 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="http://test.host/pairing"]', false
+    assert_select 'a[href="http://test-studio.code.org/pairing"]', false
   end
 
   test 'api routing' do
     # /dashboardapi urls
     assert_routing(
-      {method: "get", path: "/dashboardapi/user_menu"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/user_menu"},
       {controller: "api", action: "user_menu"}
     )
 
     assert_routing(
-      {method: "get", path: "/dashboardapi/section_progress/2"},
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/section_progress/2"},
       {controller: "api", action: "section_progress", section_id: '2'}
     )
 
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
-      {method: "get", path: "/api/user_menu"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/user_menu"}
     )
 
     assert_recognizes(
       {controller: "api", action: "section_progress", section_id: '2'},
-      {method: "get", path: "/api/section_progress/2"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/section_progress/2"}
     )
   end
 
@@ -1691,18 +1756,18 @@ class ApiControllerTest < ActionController::TestCase
         expected['answer_texts'] == actual['answer_texts'] &&
         equivalent_bags?(expected['results'], actual['results'])
     end
-    assert match, <<MESSAGE
-Mismatched results:
+    assert match, <<~MESSAGE
+      Mismatched results:
 
-Expected:
+      Expected:
 
-#{expected_results.join("\n")}
+      #{expected_results.join("\n")}
 
-Actual:
+      Actual:
 
-#{actual_results.join("\n")}
+      #{actual_results.join("\n")}
 
-MESSAGE
+    MESSAGE
   end
 
   test 'sign_cookies' do

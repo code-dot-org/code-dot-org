@@ -5,7 +5,6 @@ import i18n from '@cdo/locale';
 import {getCurrentUnitData} from './sectionProgressRedux';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
@@ -16,14 +15,14 @@ class ProgressViewHeader extends Component {
     scriptId: PropTypes.number,
     //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
-    section: sectionDataPropType.isRequired,
+    sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType
   };
 
   getLinkToOverview() {
-    const {scriptData, section} = this.props;
-    return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
+    const {scriptData, sectionId} = this.props;
+    return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
   }
 
   navigateToScript = () => {
@@ -33,7 +32,7 @@ class ProgressViewHeader extends Component {
         study_group: 'progress',
         event: 'go_to_script',
         data_json: JSON.stringify({
-          section_id: this.props.section.id,
+          section_id: this.props.sectionId,
           script_id: this.props.scriptId
         })
       },
@@ -62,7 +61,7 @@ class ProgressViewHeader extends Component {
           </a>
         </span>
         {currentView === ViewType.STANDARDS && (
-          <StandardsViewHeaderButtons sectionId={this.props.section.id} />
+          <StandardsViewHeaderButtons sectionId={this.props.sectionId} />
         )}
       </div>
     );
@@ -88,7 +87,7 @@ const styles = {
 export const UnconnectedProgressViewHeader = ProgressViewHeader;
 
 export default connect(state => ({
-  section: state.sectionData.section,
+  sectionId: state.teacherSections.selectedSectionId,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state)

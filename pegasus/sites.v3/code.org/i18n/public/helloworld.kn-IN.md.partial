@@ -1,0 +1,37 @@
+---
+title: ಹಲೋ ವರ್ಲ್ಡ್
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# ಹಲೋ ವರ್ಲ್ಡ್!
+
+ಕಂಪ್ಯೂಟರ್ ಸೇನ್ಸ್ 101 ರಲ್ಲಿ, ಅನೇಕ ವಿದ್ಯಾರ್ಥಿಗಳು ರೂಪಿಸುವ ಮೊದಲ ಪ್ರೋಗ್ರಾಂ ಸರಳವಾಗಿದ್ದು ಈ ವಿಶಿಷ್ಟ ಬರಹದ ಸಾಲನ್ನು ಔಟ್‌ಪುಟ್ ಆಗಿ ನೀಡುತ್ತದೆ: "ಹಲೋ ವರ್ಲ್ಡ್!" ಈ ಪರಿಚಯಾತ್ಮಕ ಚಟುವಟಿಕೆಯೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಜಗತ್ತಿಗೆ ಹಲೋ ಹೇಳಿ ಅದು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಮೂಲಭೂತ ಕೋಡಿಂಗ್ ಕೌಶಲ್ಯ ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ರಚಿಸಲು ಆತ್ಮವಿಶ್ವಾಸವನ್ನು ನೀಡುತ್ತದೆ. ನೀವು ರಚಿಸುವ ಜಗತ್ತಿನಲ್ಲಿ ಸಂವಾದಾತ್ಮಕ ಅಕ್ಷರಗಳನ್ನು ಕೋಡ್ ಮಾಡಲು ನಾಲ್ಕು ಮೋಜಿನ ಥೀಮ್‌ಗಳಿಂದ ಆರಿಸಿಕೊಳ್ಳಿ!
+
+# ನಿಮ್ಮ ಹಲೋವರ್ಲ್ಡ್ ಥೀಮ್ ಆಯ್ಕೆ ಮಾಡಿ
+
+{{ spritelab_module, title: "ಆಹಾರ", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "ಪ್ರಾಣಿಗಳು", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "ರೆಟ್ರೋ", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "ಎಮೋಜಿ", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "ಶಿಕ್ಷಕರ ಮಾಹಿತಿ", ಶೀರ್ಷಿಕೆ: "ಹಲೋ ವರ್ಲ್ಡ್ ನಂತರ ಕಲಿಕೆಯನ್ನು ಮುಂದುವರಿಸುವುದು ಹೇಗೆ", ವಿವರಣೆ: "ನಮ್ಮ ಹೊಸ ಪಠ್ಯಕ್ರಮ, ಸಿಎಸ್ ಕನೆಕ್ಷನ್‌‌ಗಳಲ್ಲಿ ಓಪನ್ ಎಂಡೆಡ್ ಪ್ರಾಜೆಕ್ಟುಗಳನ್ನು ಪ್ರಯತ್ನಿಸುವುದಕ್ಕೂ ಮೊದಲು ತರಗತಿಯ ಕೋಣೆಯಲ್ಲಿ ಹಲೋ ವರ್ಲ್ಡ್ ನಿಖರವಾದ ಮೊದಲ ಹೆಜ್ಜೆಯಾಗಿದೆ! ಕೋಡಿಂಗ್ ಮೂಲಾಂಶಗಳನ್ನು ಕಲಿತ ನಂತರ, ಸಿಎಸ್ ಕನೆಕ್ಷನ್ಸ್‌ ಕ್ರಾಸ್ ಸರ್ಕ್ಯುಲರ್ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳಿಗೆ ವಿದ್ಯಾರ್ಥಿಗಳು ಸಾಗಬಹುದು.", button_text: "ಇನ್ನಷ್ಟು ಕಲಿಯಿರಿ", url: "/educate/csc" }}
+
+## ವಿದ್ಯಾರ್ಥಿ ರಚನೆಗಳನ್ನು ಒಳಗೊಂಡಿದೆ
+
+{{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
+{{ featured_project, title: "ಎಮೋಜಿ", author: "ಡಿ", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "ಪ್ರಾಣಿಗಳು", author: "ಬಿ", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "ರೆಟ್ರೋ", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

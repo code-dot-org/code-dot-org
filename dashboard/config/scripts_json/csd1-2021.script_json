@@ -8,16 +8,18 @@
         {
           "notice": "Supports to Teach CS Discoveries",
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
+          "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "12f743d3-19be-4f6e-be39-e61a9bfac4d6"
         },
         {
           "notice": "Virtual Modifications",
           "details": "If you are teaching in a virtual, hybrid, or socially distanced setting, then you can view recommended modifications to our curricula that can be used in these settings.",
           "link": "https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/edit",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "07719219-e5f5-4ff5-b623-24063a236415"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -30,14 +32,15 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:17 UTC",
+    "serialized_at": "2022-09-28 14:31:34 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -5615,7 +5618,8 @@
       "key": "app-proposal-project",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "app-proposal-project"

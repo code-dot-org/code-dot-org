@@ -8,7 +8,9 @@ zh-TW:
       moving east: 向東移動
       moving east and looping: 向東移動並循環
       moving north: 向北移動
+      moving north and looping: 向北移動並迴圈
       moving south: 向南移動
+      moving south and looping: 向南移動並迴圈
       moving west: 向西移動
       moving west and looping: 向西移動並循環
       moving with arrow keys: 使用方向鍵移動

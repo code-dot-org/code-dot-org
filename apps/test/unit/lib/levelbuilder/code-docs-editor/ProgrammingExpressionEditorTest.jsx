@@ -7,24 +7,39 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 
 describe('ProgrammingExpressionEditor', () => {
-  let defaultProps, fetchSpy;
+  let defaultProps, initialProgrammingExpression, fetchSpy;
 
   beforeEach(() => {
+    initialProgrammingExpression = {
+      id: 1,
+      name: 'Block',
+      key: 'block',
+      shortDescription: 'This is a short description.',
+      externalDocumentation: 'developer.mozilla.org',
+      content: 'This is a longer description of the code.',
+      syntax: 'block()',
+      returnValue: 'none',
+      tips: 'some tips on how to use this block',
+      parameters: [{name: 'id', type: 'string'}],
+      examples: [{name: 'example 1'}]
+    };
     defaultProps = {
-      initialProgrammingExpression: {
-        id: 1,
-        name: 'Block',
-        key: 'block',
-        shortDescription: 'This is a short description.',
-        externalDocumentation: 'developer.mozilla.org',
-        content: 'This is a longer description of the code.',
-        syntax: 'block()',
-        returnValue: 'none',
-        tips: 'some tips on how to use this block',
-        parameters: [{name: 'id', type: 'string'}],
-        examples: [{name: 'example 1'}]
-      },
-      environmentCategories: ['Circuit', 'Variables', 'Canvas']
+      initialProgrammingExpression,
+      environmentCategories: [
+        {key: 'circuit', name: 'Circuit'},
+        {key: 'variables', name: 'Variables'},
+        {key: 'canvas', name: 'Canvas'}
+      ],
+      videoOptions: [
+        {
+          key: 'video1',
+          name: 'Video 1'
+        },
+        {
+          key: 'video2',
+          name: 'Video 2'
+        }
+      ]
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -59,6 +74,23 @@ describe('ProgrammingExpressionEditor', () => {
         .props().readOnly
     ).to.be.true;
 
+    // Category select
+    const categorySelect = wrapper.find('select').at(0);
+    expect(categorySelect.find('option').length).to.equal(4);
+    expect(
+      categorySelect.find('option').map(option => option.props().value)
+    ).to.eql(['', 'circuit', 'variables', 'canvas']);
+
+    // Video select
+    const videoSelect = wrapper.find('select').at(1);
+    expect(videoSelect.find('option').length).to.equal(3);
+    expect(
+      videoSelect.find('option').map(option => option.props().value)
+    ).to.eql(['', 'video1', 'video2']);
+
+    // Image upload
+    expect(wrapper.find('ImageInput').length).to.equal(1);
+
     // short description
     expect(
       wrapper
@@ -75,12 +107,6 @@ describe('ProgrammingExpressionEditor', () => {
         .at(0)
         .props().value
     ).to.equal('developer.mozilla.org');
-    expect(
-      documentationSection
-        .find('select')
-        .at(0)
-        .find('option').length
-    ).to.equal(4);
     expect(
       documentationSection
         .find('TextareaWithMarkdownPreview')
@@ -126,6 +152,21 @@ describe('ProgrammingExpressionEditor', () => {
       'Add Another Example'
     );
     expect(orderableExampleList.props().list.length).to.equal(1);
+  });
+
+  it('shows blockName input if programming environment is blockly based', () => {
+    const wrapper = shallow(
+      <ProgrammingExpressionEditor
+        {...defaultProps}
+        initialProgrammingExpression={{
+          ...initialProgrammingExpression,
+          environmentLanguageType: 'blockly',
+          blockName: 'gamelab_location_picker'
+        }}
+      />
+    );
+    const blockNameInput = wrapper.find('input').at(2);
+    expect(blockNameInput.props().value).to.equal('gamelab_location_picker');
   });
 
   it('attempts to save when save is pressed', () => {

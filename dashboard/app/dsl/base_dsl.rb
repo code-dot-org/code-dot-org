@@ -12,16 +12,12 @@ class BaseDSL
     self.class.to_s.tap {|s| s.slice!('DSL')}.underscore
   end
 
-  def self.parse_file(filename, name=nil)
-    text = File.read(filename)
-    parse(text, filename, name)
-  end
-
   def self.parse(str, filename, name=nil)
     object = new
     object.name(name) if name.present?
-    ascii = str ? str.to_ascii : ''
-    object.instance_eval(ascii, filename)
+    # Use consistent apostrophe symbol, and remove no-break space
+    parsed_string = str ? str.gsub(/‘|’/, "'").gsub(/ /, " ") : ''
+    object.instance_eval(parsed_string, filename)
     [object.parse_output, object.i18n_hash]
   end
 

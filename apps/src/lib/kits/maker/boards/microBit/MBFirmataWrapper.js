@@ -2,7 +2,7 @@ import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 import {SAMPLE_INTERVAL} from './MicroBitConstants';
 import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
-export const ACCEL_EVENT_ID = 27;
+export const ACCEL_EVENT_ID = 13;
 
 export default class MicrobitFirmataWrapper extends MBFirmataClient {
   constructor(SerialPort) {
@@ -15,6 +15,9 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
       .then(() => this.setSerialPort(port))
       .then(() => {
         return this.setAnalogSamplingInterval(SAMPLE_INTERVAL);
+      })
+      .catch(() => {
+        return Promise.reject("Couldn't connect to board");
       });
   }
 

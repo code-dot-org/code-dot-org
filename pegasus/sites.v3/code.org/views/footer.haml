@@ -8,6 +8,9 @@
         - else
           !=I18n.t(:footer_privacy_policy)
       .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"/cookies"}
+        !=I18n.t(:footer_cookie_notice)
+      .dim &nbsp; | &nbsp;
       %a.whitefooterlink{:href=>"/about"}
         !=I18n.t(:footer_about)
       .dim &nbsp; | &nbsp;

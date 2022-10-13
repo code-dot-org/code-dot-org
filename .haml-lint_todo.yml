@@ -35,7 +35,6 @@ linters:
   # Offense count: 17
   UnnecessaryInterpolation:
     exclude:
-      - "dashboard/app/views/admin_reports/pd_progress.html.haml"
       - "dashboard/app/views/levels/_unplug.html.haml"
       - "dashboard/app/views/levels/editors/_craft.html.haml"
       - "dashboard/app/views/ops_mailer/district_contact_added_teachers.html.haml"
@@ -89,5 +88,4 @@ linters:
       - "dashboard/test/ui/test_status.haml"
       - "pegasus/sites.v3/code.org/public/manage-professional-development-workshops/index.haml"
       - "pegasus/sites.v3/code.org/public/teacher-dashboard/index.haml"
-      - "pegasus/sites.v3/code.org/public/teacher-dashboard/section_progress.haml"
       - "pegasus/sites/virtual/curriculum-algebra/index.haml"

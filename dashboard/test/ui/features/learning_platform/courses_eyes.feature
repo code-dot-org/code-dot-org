@@ -28,7 +28,7 @@ Scenario: Teacher courses
 Scenario: Student courses, non-english
   When I open my eyes to test "student courses non-english"
   Given I am on "http://studio.code.org/home/lang/es"
-  Then I wait until I am on "http://studio.code.org/home"
+  Then I wait until I am on "http://studio.code.org/home?lang=es"
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And I press "header-student-courses"

@@ -15,8 +15,8 @@
 #
 
 class PairedUserLevel < ApplicationRecord
-  belongs_to :navigator_user_level, class_name: 'UserLevel'
-  belongs_to :driver_user_level, class_name: 'UserLevel'
+  belongs_to :navigator_user_level, class_name: 'UserLevel', optional: true
+  belongs_to :driver_user_level, class_name: 'UserLevel', optional: true
 
   # These associations return the User object representing the driver and
   # navigator. Note that these associations join across the user_levels and

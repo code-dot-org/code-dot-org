@@ -3,7 +3,7 @@ title: Guía práctica para padres
 ---
 
 # Cómo hacer una Hora de Código con tus hijos
-Probar una Hora del Código es una forma sencilla y divertida de introducir a tus estudiantes en las ciencias de la computación, quizás por primera vez. Además, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">estudios recientes muestran que</a>: los/as niños/as que estudian informática tienen un mejor desempeño en otras asignaturas, sobresalen en resolución de problemas, y tienen <font color="00adbc"><b>un 17% más de probabilidad de ir a la universidad</font></b>.</p> 
+Probar una Hora del Código es una forma sencilla y divertida de introducir a los niños en la informática, posiblemente por primera vez. Además, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">estudios recientes muestran que</a>: los/as niños/as que estudian informática tienen un mejor desempeño en otras asignaturas, sobresalen en resolución de problemas, y tienen <font color="00adbc"><b>un 17% más de probabilidad de ir a la universidad</font></b>.</p> 
 
 <p spaces-before="0">
   Puedes unirte a decenas de millones de estudiantes en todo el mundo en este evento global. Juntos, podemos inspirar a los niños a aprender, romper estereotipos y ayudar a los niños a descubrir un nuevo interés. Lo mejor de todo es que ya tienes todo lo que necesitas para llevar la Hora del Código a tu hogar.
@@ -166,22 +166,22 @@ Por último, cuando tu hijo encuentre dificultades, está bien responder:
 
 
 <h2 spaces-before="0">
-  4) Don’t forget to celebrate!
+  4) ¡No te olvides celebrarlo!
 </h2>
 
 <p spaces-before="0">
-  The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+  La Hora del Código es un acontecimiento mundial, y tu familia merece celebrarlo. Aquí tienes algunas formas de hacer que tu Hora del Código sea muy especial:
 </p>
 
 <ul>
   <li>
-    Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
+    Imprime <a href="https://staging.code.org/certificates">Certificados de la Hora del Código</a> que se conceden cuando los niños completan su actividad
   </li>
   <li>
-    <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
+    <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Imprime las pegatinas</a> en casa o <a href="https://store.code.org/">cómpralas online</a>, como sorpresa añadida.
   </li>
   <li>
-    Share photos and videos of your at-home Hour of Code on social media. ¡Usa #HourOfCode y @codeorg para que también podamos destacar tu éxito!
+    Comparte fotos y vídeos de tu Hora del Código en casa, en las redes sociales. ¡Usa #HourOfCode y @codeorg para que también podamos destacar tu éxito!
   </li>
 </ul>
 
@@ -192,5 +192,5 @@ Por último, cuando tu hijo encuentre dificultades, está bien responder:
 <h2>¿Qué viene después de la Hora de Código?</h2>
 
 <p spaces-before="0">
-  ¡Las ciencias de la computación no tienen que terminar con la Hora del Código! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+  ¡Las ciencias de la computación no tienen que terminar con la Hora del Código! Aunque el 90% de los padres quieren que sus hijos aprendan informática, la mayoría de las escuelas siguen sin enseñarla. Para ayudar, nuestro plan de estudios está basado en la web y es de uso gratuito para siempre. <a href="https://code.org/yourschool" >Aprende cómo</a> llevar la Informática a la escuela de tu hijo hoy mismo.
 </p>

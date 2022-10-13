@@ -42,6 +42,7 @@ import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArti
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import queryString from 'query-string';
+import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 
 const ButtonState = {
   UP: 0,
@@ -614,8 +615,7 @@ Dance.prototype.initInterpreter = function() {
 
   const studentCode = this.studioApp_.getCode();
 
-  let code = require('!!raw-loader!@code-dot-org/dance-party/src/p5.dance.interpreted');
-  code += studentCode;
+  const code = danceCode + studentCode;
 
   const events = {
     runUserSetup: {code: 'runUserSetup();'},
@@ -680,6 +680,12 @@ Dance.prototype.displayFeedback_ = function() {
     artistTwitterHandle +
     ' on @codeorg!';
 
+  const comma = '%2C';
+  const hashtags =
+    artistTwitterHandle === 'Coldplay'
+      ? ['codeplay', 'HourOfCode'].join(comma)
+      : ['HourOfCode'];
+
   let feedbackOptions = {
     feedbackType: this.testResults,
     message: this.message,
@@ -691,8 +697,7 @@ Dance.prototype.displayFeedback_ = function() {
     appStrings: {
       reinfFeedbackMsg: 'TODO: localized feedback message.'
     },
-    disablePrinting: true,
-    twitter: {text: twitterText}
+    twitter: {text: twitterText, hashtag: hashtags}
   };
 
   // Disable social share for users under 13 if we have the cookie set.

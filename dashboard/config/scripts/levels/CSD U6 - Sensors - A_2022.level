@@ -35,7 +35,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
@@ -75,8 +75,8 @@
     "rubric_performance_level_2": "The app displays each sensor value, but it may not be in real-time or the sensors are from 0-1023 instead of 0-10",
     "rubric_performance_level_3": "The app is missing at least one of the sensor values",
     "rubric_performance_level_4": "The app has not been started",
-    "preload_asset_list": null,
-    "encrypted_examples": "mImMxcSV7gUKD/vdSCyU8H7YqxV4foy9c2/HILnItjrDHkW0QVIMCqzVVhij\nKm/9Y0yf0mCv8AXnofI5+zqexA==\n"
+    "encrypted_examples": "mImMxcSV7gUKD/vdSCyU8H7YqxV4foy9c2/HILnItjrDHkW0QVIMCqzVVhij\nKm/9Y0yf0mCv8AXnofI5+zqexA==\n",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -84,7 +84,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-10-04T22:00:59.550+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - A_2022\"},{\"changed_at\":\"2021-10-04 22:03:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:05:33 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:06:29 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:06:39 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:10:22 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"long_instructions\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:20:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-25 17:24:08 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-25 21:09:00 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-10-04T22:00:59.550+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - A_2022\"},{\"changed_at\":\"2021-10-04 22:03:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:05:33 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:06:29 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:06:39 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:10:22 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"long_instructions\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-20 22:20:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-25 17:24:08 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-25 21:09:00 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-08 19:14:59 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -6,17 +6,17 @@ title: Hour of Code How-to Guide for After-school
 
 # Paano magturo ng isang Hour of Code sa after-school na klase at samahan
 
-### Join the movement and introduce your students to computer science with these steps.
+### Sumali sa kilusan at ipakilala ang computer science sa mga mag-aaral mo sa mga hakbang na ito.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Nakakatulong ang computational na pag-iisip sa pagpapalakas ng mga kasanayan sa paglutas ng problema, lohika, at pagkamalikhain. At binabago ng teknolohiya ang bawat industriya sa planeta. Dapat matuto ang mga mag-aaral ngayon kung paano lumikha ng teknolohiya, hindi lang ang paggamit nito. Sa pagsisimula nang maaga, magkakaroon sila ng pundasyon sa tagumpay sa anumang landas sa karera sa ika-21 siglo.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Maaari ding i-host sa malayuan ang Hour of Code! Upang makapagsimula, tingnan ang aming [mga tip sa pagho-host ng virtual na event ng Hour of Code](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Panoorin ang video kung paano <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Panoorin ang video kung paano <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Pumili ng Pagtuturo
 
@@ -65,7 +65,7 @@ I-kick off ang iyong Hour of Code sa pamamagitan ng pagpukaw sa mga kalahok at p
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Sabay nating alamin ito.” - "Hindi laging gumagana ang teknolohiya sa paraang gusto natin." - “Ang matuto ng programa ay parang pag-aaral ng bagong wika; hindi ka agad magiging mahusay.”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

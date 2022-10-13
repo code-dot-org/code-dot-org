@@ -126,7 +126,6 @@ def main(options)
     end
 
     unit.fix_script_level_positions
-    unit.write_script_dsl
     unit.write_script_json
 
     puts "successfully updated unit #{unit.name}"

@@ -1,30 +1,37 @@
 ---
-title: Poetry
-video_player: true
+title: 詩歌程式設計
 theme: responsive
-style_min: true
+set_dir: true
+social:
+  og:title: Coding with Poetry
+  twitter:title: Coding with Poetry
+  og:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  twitter:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  og:image: https://code.org/images/social-media/poetry-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/poetry-og-image-1200x630.png
 ---
 
-# Coding with Poetry
+# 詩歌程式設計
 
-{{ tutorial_promo2, heading: "Coding with Poetry", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "The first lesson of the Coding with Poetry Module, and a great one hour activity that explores the mood of a poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Learn more", right_heading: "Coding with Poetry module", right_description: "Go beyond the first hour with extended poetry content full five lessons.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Learn more" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "詩歌藝術", left_description: "在這個一小時玩程式活動中向經典詩歌添加藝術和動畫！", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "開始", right_heading: "詩歌程式設計", right_description: "在課堂上將電腦科學和詩歌與這一系列課程聯繫起來。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "查看模組" }}
 
-## Learn more about Coding with Poetry
+## 進一步瞭解詩歌程式設計
 
-In the Coding with Poetry module in CS Connections, students will be able to see two subjects—computer science and poetry—in a new way. Over the course of five lessons, 4-8th-grade students build a poem-generating program to recite different versions of a haiku they wrote. Then, students test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle.
+在電腦科學連接課程的《程式設計如寫詩》模組中，學生們將能夠以全新的視角瞭解電腦科學和詩歌這兩個領域。 在五堂課的課程中，4-8年級的學生構建一個詩歌生成程式來朗誦他們所寫詩歌的不同版本。 然後，學生與同學們一起測試他們的程式，並通過在一個詩歌圈分享他們的用戶生成詩歌來完成項目。
 
-By building a poem generator, students learn about how computers take in user input, store it in memory, and output a desired product. By writing their own haikus, students explore elements of poetry like grammar, mood, and word choice.
+通過構建詩歌生成器，學生瞭解電腦如何接收用戶輸入，將其存儲在記憶體中，並輸出所需的產品。 通過寫自己的詩歌，學生探索詩歌的元素，如語法、氣氛和詞語選擇。
 
-Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum.
+<em>《詩歌藝術程式設計一小時》同樣是電腦科學連接課程中《程式設計如寫詩》模組的第一節課。 <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">點擊此處，註冊CodeBytes特別會議</a>，時間：12月7日星期二上午10點 （北美東部時間），太平洋時間上午10點重複上線。 我們將向學生展示如何在《詩歌藝術程式設計一小時》課程中開啟學習之旅。</em>
 
-## Featured Student Creations
+{{ teacher_info, heading: "教師資訊", title: "在詩歌程式設計之後如何繼續學習", description: "在我們新的電腦科學聯繫課程中，探索結合ELA和電腦科學的附加活動，並查看電腦科學與其他學科之間的更多聯繫，如數學、科學和社會研究，你可以將它們帶入你的課堂。", button_text: "瞭解更多", url: "/educate/csc" }}
 
-{{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/poetry/creation0.png", url: "/about" }}
-{{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+## 精選學生作品
+
+{{ featured_project, title: "下午", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "雲", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "星星", author: "B", age: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "唱歌", author: "W", age: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
 {{ clearfix }}

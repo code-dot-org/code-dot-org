@@ -55,6 +55,7 @@
   "notSaved": "Mhux issalvat",
   "online": "online",
   "or": "jew",
+  "participantTypeStudentTitle": "Studenti",
   "password": "Password",
   "passwordConfirmation": "Konfermazzjoni tal-password",
   "printCertificate": "Stampa ic-certifikat",
@@ -67,6 +68,7 @@
   "random": "bl-addoċċ",
   "remix": "Remix",
   "rename": "Ibdel l-isem",
+  "renameThisPromptTitle": "Isem tal-varjabli gdid:",
   "repeat": "Irrepeti",
   "reportAbuse": "Irrapporta l-Abbuż",
   "savedToGallery": "Ssalvat",
@@ -83,8 +85,10 @@
   "teacherTabProjects": "Il-Proġetti",
   "too_young": "Dan il-kontenut għandu restrizzjonijiet ta' bl-età fil-post u m'huwiex disponibbli għall-istudenti żgħar",
   "tos": "It-Termini tas-Servizz",
+  "type": "Tip",
   "unpluggedActivity": "Attivita bla kompjuter",
   "unsubmit": "Unsubmit",
   "update": "Aggorna",
+  "view": "Ara",
   "viewLessonPlan": "Ara l-Pjan tal-Lezzjoni"
 }

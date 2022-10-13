@@ -4,16 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:14:44 UTC",
+    "family_name": "cspoptional",
+    "serialized_at": "2022-04-08 15:40:36 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspoptional"
     }
@@ -310,6 +312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sending Bits Real World Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -331,6 +336,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,6 +360,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 Matching Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,6 +384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Encoding Numbers Real World Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,6 +408,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Free Response Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +432,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Algo MST Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +456,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L06 - Matching: Label the Diagram"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +480,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L06- MC: what is an MST?"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +504,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L06 - MC: Which is an MST?"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -499,6 +528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Algo Shortest Path Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,6 +552,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L07 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,6 +576,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L07 Assessment2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +600,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L07 Assessment3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -583,6 +624,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L07 Assessment4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,6 +648,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L07 Assessment5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -625,6 +672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Algo How Routers Learn Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,6 +696,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L08 Free Response 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -667,6 +720,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L08 Free Response 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,6 +744,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L08 Free Response 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,6 +768,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L08 Assessment 0"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -730,6 +792,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L08 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -751,6 +816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L17 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -772,6 +840,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L17 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -793,6 +864,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L17 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -814,6 +888,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L16 Free Response Assessment 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -835,6 +912,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L17 Free Response Wrap Up"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -856,6 +936,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L18 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -877,6 +960,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L17 Free Response Getting Started"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -898,6 +984,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L17 Free Responses Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -919,6 +1008,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L17 - Vocabulary matching"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -940,6 +1032,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Free Response Getting Started"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -961,6 +1056,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -982,6 +1080,9 @@
       "activity_section_position": 7,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Free Response Wrap Up"
+        ]
       },
       "bonus": false,
       "seeding_key": {

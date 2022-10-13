@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import JavalabDropdown from './components/JavalabDropdown';
+import {DisplayTheme} from './DisplayTheme';
 
 /**
- * A button that drops down to a set of clickable buttons, and closes itself if
+ * A button that drops down to a set of clickable file names, and closes itself if
  * you click on the buttons or outside of the dropdown.
  */
-class JavalabFileExplorerComponent extends Component {
+class JavalabFileExplorer extends Component {
   static propTypes = {
     fileMetadata: PropTypes.object,
     onSelectFile: PropTypes.func.isRequired,
-    isDarkMode: PropTypes.bool.isRequired
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired
   };
 
   state = {
@@ -56,7 +57,7 @@ class JavalabFileExplorerComponent extends Component {
   }
 
   render() {
-    const {isDarkMode} = this.props;
+    const {displayTheme} = this.props;
     const {dropdownOpen} = this.state;
     const files = this.transformFileMetadata();
 
@@ -65,26 +66,28 @@ class JavalabFileExplorerComponent extends Component {
         <button
           type="button"
           onClick={this.toggleDropdown}
-          style={{...styles.button, ...(isDarkMode && styles.darkButton)}}
+          style={{
+            ...styles.button,
+            ...(displayTheme === DisplayTheme.DARK && styles.darkButton)
+          }}
         >
           <FontAwesome icon="folder" />
         </button>
 
         {dropdownOpen && (
-          <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
+          <JavalabDropdown style={styles.dropdown}>
             {files
               .sort((a, b) => (a.filename > b.filename ? 1 : -1))
               .map((file, index) => (
                 <button
-                  type="button"
                   onClick={() => this.onClickFile(file.key)}
                   key={index}
-                  style={styles.anchor}
+                  type="button"
                 >
                   {file.filename}
                 </button>
               ))}
-          </div>
+          </JavalabDropdown>
         )}
       </div>
     );
@@ -99,28 +102,8 @@ const styles = {
     margin: 2
   },
   dropdown: {
-    border: `1px solid ${color.charcoal}`,
-    position: 'absolute',
-    zIndex: 1,
-    maxHeight: 175,
+    maxHeight: 190,
     overflowY: 'scroll'
-  },
-  anchor: {
-    padding: 10,
-    color: color.charcoal,
-    backgroundColor: color.white,
-    display: 'block',
-    textDecoration: 'none',
-    lineHeight: '7px',
-    transition: 'background-color .2s ease-out',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-      cursor: 'pointer'
-    },
-    width: '100%',
-    borderRadius: 0,
-    margin: 0,
-    fontSize: 13
   },
   button: {
     height: '100%',
@@ -135,4 +118,4 @@ const styles = {
   }
 };
 
-export default onClickOutside(Radium(JavalabFileExplorerComponent));
+export default onClickOutside(JavalabFileExplorer);

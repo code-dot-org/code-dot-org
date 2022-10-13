@@ -1,7 +1,0 @@
-{
-  "func": "playing",
-  "category": "Animations",
-  "modeOptionName": "*.playing",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
-}

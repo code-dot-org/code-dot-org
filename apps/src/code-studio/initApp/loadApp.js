@@ -3,12 +3,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore} from '../redux';
-import {
-  setAppLoadStarted,
-  setAppLoaded
-} from '@cdo/apps/code-studio/headerRedux';
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
+import renderProjectNotFound from './renderProjectNotFound';
+import renderVersionNotFound from './renderVersionNotFound';
 var userAgentParser = require('./userAgentParser');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
@@ -24,6 +23,7 @@ import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -44,7 +44,7 @@ export function setupApp(appOptions) {
       // Lock the contained levels if this is a teacher viewing student work:
       lockContainedLevelAnswers();
     }
-    if (!appOptions.level.edit_blocks) {
+    if (!(appOptions.level.edit_blocks || appOptions.level.editBlocks)) {
       // Always mark the workspace as readonly when we have contained levels,
       // unless editing:
       appOptions.readonlyWorkspace = true;
@@ -66,8 +66,14 @@ export function setupApp(appOptions) {
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
-        // Only show Version History button if the user owns this project
-        if (project.isEditable()) {
+        // Only show version history if user is project owner, or teacher viewing student work
+        const isTeacher =
+          getStore().getState().currentUser?.userType === 'teacher';
+        const isViewingStudent = !!queryParams('user_id');
+        if (
+          project.isOwner() ||
+          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+        ) {
           $('#versions-header').show();
         }
       }
@@ -235,26 +241,37 @@ function tryToUploadShareImageToS3({image, level}) {
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
-    project.load().then(() => {
-      if (project.hideBecauseAbusive()) {
-        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
-        return;
-      }
-      if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(project, msg.policyViolation());
-        return;
-      }
-      if (project.getSharingDisabled()) {
-        renderAbusive(
-          project,
-          msg.sharingDisabled({
-            sign_in_url: 'https://studio.code.org/users/sign_in'
-          })
-        );
-        return;
-      }
-      resolve(appOptions);
-    });
+    project
+      .load()
+      .then(() => {
+        if (project.hideBecauseAbusive()) {
+          renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
+          return;
+        }
+        if (project.hideBecausePrivacyViolationOrProfane()) {
+          renderAbusive(project, msg.policyViolation());
+          return;
+        }
+        if (project.getSharingDisabled()) {
+          renderAbusive(
+            project,
+            msg.sharingDisabled({
+              sign_in_url: 'https://studio.code.org/users/sign_in'
+            })
+          );
+          return;
+        }
+        resolve(appOptions);
+      })
+      .catch(() => {
+        if (project.channelNotFound()) {
+          renderProjectNotFound();
+          return;
+        } else if (project.sourceNotFound()) {
+          renderVersionNotFound();
+          return;
+        }
+      });
   });
 }
 
@@ -266,7 +283,6 @@ async function loadAppAsync(appOptions) {
   setupApp(appOptions);
 
   var isViewingSolution = clientState.queryParams('solution') === 'true';
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
   if (
     appOptions.share &&
@@ -282,9 +298,28 @@ async function loadAppAsync(appOptions) {
     return appOptions;
   }
 
-  if (appOptions.channel || isViewingStudentAnswer) {
+  // Special case -- If the level is not cached, not channel-backed, and the
+  // user is signed-out, load source code from session storage.
+  // TODO: Refactor the logic in this function so this isn't a special case
+  // and the code to load last attempt from session storage isn't duplicated.
+  if (!appOptions.publicCaching && !appOptions.channel && !appOptions.userId) {
+    // User is not signed in, load last attempt from session storage.
+    appOptions.level.lastAttempt = clientState.sourceForLevel(
+      appOptions.scriptName,
+      appOptions.serverProjectLevelId || appOptions.serverLevelId
+    );
+  }
+
+  // If this is not a cached page, all appOptions (including user-specific values)
+  // are returned in the page and we can finish loading the app.
+  if (!appOptions.publicCaching) {
     return loadProjectAndCheckAbuse(appOptions);
   }
+
+  // Disable social share by default on publicly-cached pages, because we don't know
+  // if the user is underage until we get data back from /api/user_app_options/ and we
+  // should err on the side of not showing social links
+  appOptions.disableSocialShare = true;
 
   // If the level requires a channel but no channel was passed from the server through app_options,
   // that indicates that the level was cached and the channel id needs to be loaded client-side
@@ -292,13 +327,15 @@ async function loadAppAsync(appOptions) {
   const shouldGetChannelId =
     !!appOptions.levelRequiresChannel && !appOptions.channel;
 
-  if (appOptions.publicCaching) {
-    // Disable social share by default on publicly-cached pages, because we don't know
-    // if the user is underage until we get data back from /api/user_app_options/ and we
-    // should err on the side of not showing social links
-    appOptions.disableSocialShare = true;
-  }
+  const sectionId = clientState.queryParams('section_id') || '';
+  const exampleSolutionsRequest = $.ajax(
+    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
+      appOptions.serverLevelId
+    }?section_id=${sectionId}`
+  );
 
+  // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
+  // are made in parallel
   const userAppOptionsRequest = $.ajax({
     url:
       `/api/user_app_options` +
@@ -312,21 +349,21 @@ async function loadAppAsync(appOptions) {
     }
   });
 
-  const sectionId = clientState.queryParams('section_id') || '';
-  const exampleSolutionsRequest = $.ajax(
-    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
-      appOptions.serverLevelId
-    }?section_id=${sectionId}`
-  );
+  try {
+    const exampleSolutions = await exampleSolutionsRequest;
+
+    if (exampleSolutions) {
+      appOptions.exampleSolutions = exampleSolutions;
+    }
+  } catch (err) {
+    console.error('Could not load example solutions');
+  }
 
   try {
-    const [data, exampleSolutions] = await Promise.all([
-      userAppOptionsRequest,
-      exampleSolutionsRequest
-    ]);
+    const data = await userAppOptionsRequest;
 
-    appOptions.exampleSolutions = exampleSolutions;
     appOptions.disableSocialShare = data.disableSocialShare;
+    appOptions.isInstructor = data.isInstructor;
 
     if (data.isStarted) {
       appOptions.level.isStarted = data.isStarted;
@@ -367,7 +404,7 @@ async function loadAppAsync(appOptions) {
     }
   } catch (err) {
     // TODO: Show an error to the user here? (LP-1815)
-    console.error('Could not load user progress.');
+    console.error('Could not load app options');
     return appOptions;
   }
 }
@@ -423,7 +460,7 @@ const sourceHandler = {
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.mainBlockSpace.isReadOnly()
+        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
           : Blockly.Xml.domToText(
               Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
@@ -449,13 +486,6 @@ const sourceHandler = {
     } else {
       callback({});
     }
-  },
-  setInitialGeneratedProperties(generatedProperties) {
-    getAppOptions().initialGeneratedProperties = generatedProperties;
-  },
-  getGeneratedProperties() {
-    const {getGeneratedProperties} = getAppOptions();
-    return getGeneratedProperties && getGeneratedProperties();
   },
   prepareForRemix() {
     const {prepareForRemix} = getAppOptions();

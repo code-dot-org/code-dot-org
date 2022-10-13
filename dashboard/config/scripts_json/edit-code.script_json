@@ -4,15 +4,17 @@
     "wrapup_video_id": 13,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:11:12 UTC",
+    "family_name": "edit-code-1",
+    "serialized_at": "2022-04-08 15:40:28 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "edit-code"
     }
@@ -233,6 +235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeEC:3_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,6 +259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeEC:3_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,6 +283,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeEC:3_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,6 +307,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeEC:3_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -317,6 +331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Applab:ec_simple"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -338,6 +355,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:ArtistEC:ec_1_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,6 +379,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:ArtistEC:ec_1_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -380,6 +403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:ec_sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -401,6 +427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -422,6 +451,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -443,6 +475,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -464,6 +499,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -485,6 +523,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -506,6 +547,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -527,6 +571,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -548,6 +595,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -569,6 +619,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -590,6 +643,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -611,6 +667,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,6 +691,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -653,6 +715,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -674,6 +739,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -695,6 +763,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -170,7 +171,7 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers, based on selected program (course)
-    def self.filtered_labels(course)
+    def self.filtered_labels(course, status = 'unreviewed')
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
     end
@@ -247,17 +248,17 @@ module Pd::Application
     end
 
     def total_score
-      (response_scores_hash[:bonus_points_scores] || {}).values.map(&:to_i).reduce(:+) || 0
+      (response_scores_hash[:bonus_points_scores] || {}).values.sum(&:to_i) || 0
     end
 
     def all_scores
       bonus_points_scores = response_scores_hash[:bonus_points_scores]
       all_score_hash = {
-        total_score: "#{bonus_points_scores.values.map(&:to_i).reduce(:+) || 0} / #{SCOREABLE_QUESTIONS[:bonus_points].size * 5}"
+        total_score: "#{bonus_points_scores.values.sum(&:to_i) || 0} / #{SCOREABLE_QUESTIONS[:bonus_points].size * 5}"
       }
 
       BONUS_POINT_CATEGORIES.each_pair do |category, keys|
-        all_score_hash[category] = "#{bonus_points_scores.slice(*keys).values.map(&:to_i).reduce(:+) || 0} / #{keys.length * 5}"
+        all_score_hash[category] = "#{bonus_points_scores.slice(*keys).values.sum(&:to_i) || 0} / #{keys.length * 5}"
       end
 
       all_score_hash

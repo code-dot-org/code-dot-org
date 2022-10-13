@@ -19,13 +19,12 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 <!---- Can use http://markdowntable.com/ for reformatting help --->
 
-|                        | ruby lint                 | scss lint                         | haml lint          | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
-|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
-| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `*.js`                 |   
-|                      |                    |                         |                    |                    |                    |
-| circle CI (via github) |                           |                                   |                    | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
-| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
-| test build             |                           |                                   |                    |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|                        | ruby lint                 | scss lint                         | haml lint          | stylelint                | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
+|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
+| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `apps/**/*.scss` / changed `*.js`                 |
+| circle CI (via github) |                           |                                   |                    |                          | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
+| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                          |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
+| test build             |                           |                                   |                    |                          |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## Running tests
 
@@ -68,7 +67,7 @@ To run a test file in either directory, `cd` into it before running the tests.
 
 ```bash
 cd shared
-ruby -Itest ./test/path/to/your/test.rb
+bundle exec ruby -Itest ./test/path/to/your/test.rb
 ``` 
 
 ### Apps Tests
@@ -93,8 +92,8 @@ If you get a bunch of complaints about database, like missing tables or how some
 1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words` to seed the missing data, or
 
 2. recreate your local dashboard test db and reseed the data via:
-    * `RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
-    * `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+    * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
+    * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
 
 If you just want to run a single file of tests, from the dashboard directory you can run
 `bundle exec spring testunit ./path/to/your/test.rb` 
@@ -121,7 +120,7 @@ Or you can just use this shortcut (after you've installed chromedriver):
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
 
-Pegasus tests depend on the `pegasus_test` database.  If you have database-related errors, you can recreate and reseed the test database with `RAILS_ENV=test rake test:reset_dependencies`.  This will take about four minutes.
+Pegasus tests depend on the `pegasus_test` database.  If you have database-related errors, you can recreate and reseed the test database with `RAILS_ENV=test rake test:reset_dependencies`.  This will take about four minutes.  (Note that this must be run from the `pegasus/` directory.  Also note that in some environments, `bundle exec` should be included like this: `RAILS_ENV=test bundle exec rake test:reset_dependencies`.)
 
 Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
 

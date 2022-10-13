@@ -3,11 +3,14 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import ImageInput from './ImageInput';
 
 const APP_DISPLAY_OPTIONS = {
-  directly: 'Embed app with code directly',
-  withCode: 'Display app with code from code field above'
+  embedAppWithCode: 'Embed app with code directly',
+  codeFromCodeField: 'Display app with code from code field above'
 };
+
+const DEFAULT_EMBED_HEIGHT = 310;
 
 export default function ExampleEditor({example, updateExample}) {
   return (
@@ -41,11 +44,15 @@ export default function ExampleEditor({example, updateExample}) {
           style={styles.textInput}
         />
       </label>
+      <ImageInput
+        initialImageUrl={example.image}
+        updateImageUrl={img => updateExample('image', img)}
+      />
       <label>
         Example App Display Type
         <select
-          value={example.appDisplayType || 'directly'}
-          onChange={e => updateExample('appDisplayType', e.target.value)}
+          value={example.app_display_type || 'embedAppWithCode'}
+          onChange={e => updateExample('app_display_type', e.target.value)}
           style={styles.selectInput}
         >
           {Object.keys(APP_DISPLAY_OPTIONS).map(key => (
@@ -65,8 +72,10 @@ export default function ExampleEditor({example, updateExample}) {
           with the "Embed app with code" display type
         </HelpTip>
         <input
-          value={example.appEmbedHeight || ''}
-          onChange={e => updateExample('appEmbedHeight', e.target.value)}
+          value={example.embed_app_with_code_height || DEFAULT_EMBED_HEIGHT}
+          onChange={e =>
+            updateExample('embed_app_with_code_height', e.target.value)
+          }
           style={styles.textInput}
         />{' '}
       </label>

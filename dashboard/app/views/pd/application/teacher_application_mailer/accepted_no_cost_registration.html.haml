@@ -16,7 +16,8 @@
   - else
     %strong at no cost to you or your school!
   Please read on for more details, and then make
-  sure to register using the link below
+  sure to register using
+  = link_to('this link', registration_url)
   %strong within two weeks
   of receiving this message to
   %strong confirm your seat in the program.
@@ -28,7 +29,7 @@
 
 %p
   If you decide to accept your space in the program, you will be joining a
-  year-long professional learning experience managed by
+  yearlong professional learning experience managed by
   - if @application.regional_partner
     = @application.regional_partner_name + ","
     Code.org's Regional Partner in your area.
@@ -49,9 +50,6 @@
     and confirm your seat in this program.
     = link_to('Register Here', registration_url) + '.'
   %li
-    If you want to decline your seat, let me know as soon as possible
-    using the contact information below so we can accommodate another teacher.
-  %li
     %strong Mark your calendar for your summer workshop!
     Details about your workshop can be found at
     = link_to('this registration link', registration_url) + '.'
@@ -65,6 +63,12 @@
     welcome kit complete with recruitment tips and tools. In the meantime,
     please checkout these
     = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+
+%p
+  %em
+    %center
+      If you want to decline your seat, let me know as soon as possible
+      using the contact information below so we can accommodate another teacher.
 
 %p
   Congratulations again! We look forward to receiving your registration

@@ -5,17 +5,30 @@ import {
   SoundExceptionType,
   MediaExceptionType,
   TheaterExceptionType,
-  PlaygroundExceptionType,
-  EXCEPTION_PREFIX
+  CsaViewMode
 } from './constants';
+import {getUnsupportedMiniAppMessage} from './utils';
 
-export function handleException(exceptionDetails, callback) {
-  const type = exceptionDetails.value;
-  const {connectionId, cause, causeMessage} =
+export function handleException(exceptionDetails, callback, miniAppType) {
+  const error = msg.exceptionMessage({
+    message: getExceptionMessage(
+      exceptionDetails,
+      exceptionDetails.value,
+      miniAppType
+    )
+  });
+  callback(error);
+}
+
+export function getExceptionMessage(exceptionDetails, type, miniAppType) {
+  const {connectionId, cause, causeMessage, fallbackMessage} =
     exceptionDetails.detail && exceptionDetails.detail;
   let error;
   switch (type) {
     // User initiated exceptions
+    case JavabuilderExceptionType.NO_FILES_TO_COMPILE:
+      error = msg.errorNoJavaFiles();
+      break;
     case JavabuilderExceptionType.ILLEGAL_METHOD_ACCESS:
       error = msg.illegalMethodAccess({cause: cause});
       break;
@@ -27,6 +40,9 @@ export function handleException(exceptionDetails, callback) {
       break;
     case JavabuilderExceptionType.NO_MAIN_METHOD:
       error = msg.noMainMethod();
+      break;
+    case JavabuilderExceptionType.INVALID_MAIN_METHOD:
+      error = msg.invalidMainMethod();
       break;
     case JavabuilderExceptionType.COMPILER_ERROR:
       error = msg.compilerError();
@@ -46,6 +62,9 @@ export function handleException(exceptionDetails, callback) {
     case JavabuilderExceptionType.MISSING_PROJECT_FILE_NAME:
       error = msg.javabuilderMissingFilenameError();
       break;
+    case JavabuilderExceptionType.INVALID_CLASS:
+      error = msg.javabuilderInvalidClassError({causeMessage});
+      break;
 
     // Internal exceptions
     case JavabuilderExceptionType.INTERNAL_RUNTIME_EXCEPTION:
@@ -61,63 +80,135 @@ export function handleException(exceptionDetails, callback) {
 
     // Neighborhood exceptions
     case NeighborhoodExceptionType.INVALID_GRID:
-      error = msg.errorNeighborhoodInvalidGrid();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.NEIGHBORHOOD,
+        miniAppType,
+        msg.errorNeighborhoodInvalidGrid()
+      );
       break;
     case NeighborhoodExceptionType.INVALID_DIRECTION:
-      error = msg.errorNeighborhoodInvalidDirection();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.NEIGHBORHOOD,
+        miniAppType,
+        msg.errorNeighborhoodInvalidDirection()
+      );
       break;
     case NeighborhoodExceptionType.GET_SQUARE_FAILED:
-      error = msg.errorNeighborhoodGetSquareFailed();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.NEIGHBORHOOD,
+        miniAppType,
+        msg.errorNeighborhoodGetSquareFailed()
+      );
       break;
     case NeighborhoodExceptionType.INVALID_COLOR:
-      error = msg.errorNeighborhoodInvalidColor();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.NEIGHBORHOOD,
+        miniAppType,
+        msg.errorNeighborhoodInvalidColor()
+      );
       break;
     case NeighborhoodExceptionType.INVALID_LOCATION:
-      error = msg.errorNeighborhoodInvalidLocation();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.NEIGHBORHOOD,
+        miniAppType,
+        msg.errorNeighborhoodInvalidLocation()
+      );
       break;
     case NeighborhoodExceptionType.INVALID_MOVE:
-      error = msg.errorNeighborhoodInvalidMove();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.NEIGHBORHOOD,
+        miniAppType,
+        msg.errorNeighborhoodInvalidMove()
+      );
       break;
     case NeighborhoodExceptionType.INVALID_PAINT_LOCATION:
-      error = msg.errorNeighborhoodInvalidPaintLocation();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.NEIGHBORHOOD,
+        miniAppType,
+        msg.errorNeighborhoodInvalidPaintLocation()
+      );
       break;
 
     // Sound exceptions
     case SoundExceptionType.INVALID_AUDIO_FILE_FORMAT:
-      error = msg.errorSoundInvalidAudioFileFormat();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.THEATER,
+        miniAppType,
+        msg.errorSoundInvalidAudioFileFormat()
+      );
       break;
     case SoundExceptionType.MISSING_AUDIO_DATA:
-      error = msg.errorSoundMissingAudioData();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.THEATER,
+        miniAppType,
+        msg.errorSoundMissingAudioData()
+      );
       break;
 
     // Media exceptions
     case MediaExceptionType.IMAGE_LOAD_ERROR:
-      error = msg.errorMediaImageLoadError();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.THEATER,
+        miniAppType,
+        msg.errorMediaImageLoadError()
+      );
       break;
 
     // Theater exceptions
     case TheaterExceptionType.DUPLICATE_PLAY_COMMAND:
-      error = msg.errorTheaterDuplicatePlayCommand();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.THEATER,
+        miniAppType,
+        msg.errorTheaterDuplicatePlayCommand()
+      );
       break;
     case TheaterExceptionType.INVALID_SHAPE:
-      error = msg.errorTheaterInvalidShape();
+      error = getMiniAppErrorMessage(
+        CsaViewMode.THEATER,
+        miniAppType,
+        msg.errorTheaterInvalidShape()
+      );
+      break;
+    case TheaterExceptionType.VIDEO_TOO_LONG:
+      error = getMiniAppErrorMessage(
+        CsaViewMode.THEATER,
+        miniAppType,
+        msg.errorTheaterVideoTooLong()
+      );
+      break;
+    case TheaterExceptionType.VIDEO_TOO_LARGE:
+      error = getMiniAppErrorMessage(
+        CsaViewMode.THEATER,
+        miniAppType,
+        msg.errorTheaterVideoTooLarge()
+      );
       break;
 
-    // Playground exceptions
-    case PlaygroundExceptionType.PLAYGROUND_RUNNING:
-      error = msg.errorPlaygroundRunning();
-      break;
-    case PlaygroundExceptionType.PLAYGROUND_NOT_RUNNING:
-      error = msg.errorPlaygroundNotRunning();
-      break;
-    case PlaygroundExceptionType.INVALID_MESSAGE:
-      error = msg.errorPlaygroundInvalidMessage();
+    // Fatal errors
+    case JavabuilderExceptionType.CONNECTION_POOL_SHUT_DOWN:
+    case JavabuilderExceptionType.LOW_DISK_SPACE:
+    case JavabuilderExceptionType.TEMP_DIRECTORY_CLEANUP_ERROR:
+      error = msg.internalException({connectionId: connectionId});
       break;
 
     default:
-      error = msg.unknownError({type, connectionId});
+      error = fallbackMessage || msg.unknownError({type, connectionId});
       break;
   }
-  error = `${EXCEPTION_PREFIX} ${error}`;
-  callback(error);
+  return error;
+}
+
+/**
+ * Returns the provided mini-app specific error message if the message mini-app type
+ * is the same as the current level's mini-app type. Or else, returns a generic
+ * unsupported mini-app type message.
+ */
+function getMiniAppErrorMessage(
+  messageMiniAppType,
+  levelMiniAppType,
+  miniAppErrorMessage
+) {
+  return messageMiniAppType === levelMiniAppType
+    ? miniAppErrorMessage
+    : getUnsupportedMiniAppMessage(messageMiniAppType);
 }

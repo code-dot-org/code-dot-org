@@ -1,51 +1,49 @@
 ---
-title: Hour of Code How-to Guide
+title: 一小時玩程式指南
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### 參與活動，並用下面的步驟向學生介紹電腦科學。
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+今天的學生應該學習如何創造技術，而不僅僅是使用它。
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+嘗試一小時玩程式是向學生（也許是第一次）介紹電腦科學的簡單而有趣的方式。 找一項適合你的環境的活動，無論是課堂上還是課外，面對面還是虛擬。 如果你在查看以下步驟後仍有問題，看看我們的[參與指南]({{ localized_files/participation_guide }})：
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [觀看一小時玩程式指南視訊](#how-to-video)
+- [探索活動和教程](#explore-activities)
+- [制定一天的計劃](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [如何穩健地開始你的一小時玩程式](#how-to-start)
+- [獲取編碼](#code)
+- [慶祝學生的成功](#celebrate)
 - [給教師的其他一小時玩程式活動資源：](#other-resources)
-
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. 觀看一小時玩程式指引視訊 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. 探索活動和教程
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. 制定一天的計劃
 
 ### Think about your technology needs - computers are optional!
 
@@ -58,13 +56,13 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+在電腦科學教育周（12月5日-11日）期間，世界各地的人們參加一小時玩程式慶祝活動，屆時會發佈最新的教程和活動。 But you can do an Hour of Code any day of the year!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. 推廣你的一小時玩程式
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -74,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+當你[註冊一小時玩程式活動](/#join)時，你將收到有用的電子郵件通訊，其中包括新聞和舉辦成功的一小時玩程式活動的提示。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. 或者為你的班級列印勵志海報！ Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -88,7 +86,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. 如何穩健地開始你的一小時玩程式
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -103,17 +101,17 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - 通過男孩和女孩們都關心的例子，介紹科技如何影響我們的生活（比如拯救生命，幫助人們，連接人們等）
 - 全班一起列出在日常生活中用到程式碼的事情。
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- 在[這裡]({{ urls/girls }})查看幫助年輕女性對電腦科學感興趣的提示。
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. 獲取編碼！
 
 引導學生參與活動
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 當您的學生遭遇困難時，這樣回答也沒關係：
 
@@ -130,7 +128,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. 慶祝學生的成功
 
 [col-33]
 
@@ -140,7 +138,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- 為你的學校[訂購客製化 T 恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 - 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。
 
 * * *
@@ -154,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### Hour of Code之後有什麼？
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

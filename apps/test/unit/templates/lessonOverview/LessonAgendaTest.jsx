@@ -66,7 +66,7 @@ describe('LessonAgenda', () => {
     const wrapper = shallow(<LessonAgenda {...defaultProps} />);
 
     expect(wrapper.text()).to.include('Main Activity (20 minutes)');
-    expect(wrapper.text()).to.include('Making programs (20 minutes)');
+    expect(wrapper.text()).to.include('Making programs');
     expect(wrapper.text()).to.include('Non Programming Progression');
     expect(wrapper.text()).to.include('2nd Activity (30 minutes)');
   });

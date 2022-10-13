@@ -8,6 +8,8 @@ import Announcements from '@cdo/apps/code-studio/components/progress/Announcemen
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {createUuid} from '@cdo/apps/utils';
 
 export default class AnnouncementsEditor extends Component {
   static propTypes = {
@@ -19,11 +21,14 @@ export default class AnnouncementsEditor extends Component {
   add = () => {
     this.props.updateAnnouncements(
       this.props.announcements.concat({
+        key: createUuid(),
         notice: '',
         details: '',
         link: '',
         type: NotificationType.information,
-        visibility: VisibilityType.teacher
+        visibility: VisibilityType.teacher,
+        dismissible: true,
+        buttonText: ''
       })
     );
   };
@@ -76,12 +81,18 @@ export default class AnnouncementsEditor extends Component {
         {announcements.length > 0 && (
           <div>
             <div style={styles.preview}>
-              <div>Teacher Preview:</div>
-              <Announcements announcements={announcements} viewAs={'Teacher'} />
+              <div>Instructor Preview:</div>
+              <Announcements
+                announcements={announcements}
+                viewAs={ViewType.Instructor}
+              />
             </div>
             <div style={styles.preview}>
-              <div>Student Preview:</div>
-              <Announcements announcements={announcements} viewAs={'Student'} />
+              <div>Participant Preview:</div>
+              <Announcements
+                announcements={announcements}
+                viewAs={ViewType.Participant}
+              />
             </div>
           </div>
         )}

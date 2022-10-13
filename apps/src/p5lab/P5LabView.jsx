@@ -24,7 +24,6 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Top-level React wrapper for GameLab
@@ -83,19 +82,11 @@ class P5LabView extends React.Component {
     getManifest(app, locale).then(libraryManifest => {
       this.setState({libraryManifest});
     });
-
-    this.p5labTeacherUploadEnabled_ = experiments.isEnabled(
-      experiments.P5LAB_TEACHER_UPLOAD
-    );
   }
 
   shouldHideAnimationUpload() {
     // Teachers should always be allowed to upload animations.
-    // Currently behind the 'p5labTeacherUpload' experiment flag.
-    if (
-      this.p5labTeacherUploadEnabled_ &&
-      this.props.currentUserType === 'teacher'
-    ) {
+    if (this.props.currentUserType === 'teacher') {
       return false;
     }
 

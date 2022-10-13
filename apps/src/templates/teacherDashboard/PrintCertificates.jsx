@@ -1,17 +1,15 @@
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import $ from 'jquery';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import color from '../../util/color';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
-
-const STANDARD_PADDING = 20;
+import $ from 'jquery';
+import i18n from '@cdo/locale';
+import style from './print-certificates.module.scss';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    assignmentName: PropTypes.string
+    courseVersionName: PropTypes.string
   };
 
   state = {
@@ -31,26 +29,28 @@ class PrintCertificates extends Component {
     this.certForm.submit();
   };
 
+  certificateUrl = () => '/certificates/batch';
+
   render() {
+    const {courseVersionName} = this.props;
+
     return (
       <form
-        style={styles.main}
+        className={style.main}
         ref={element => (this.certForm = element)}
-        action={pegasus('/certificates')}
+        action={this.certificateUrl()}
         method="POST"
       >
-        <input
-          type="hidden"
-          name="script"
-          defaultValue={this.props.assignmentName}
-        />
+        <RailsAuthenticityToken />
+        {courseVersionName && (
+          <input type="hidden" name="course" value={btoa(courseVersionName)} />
+        )}
         {this.state.names.map((name, index) => (
           <input key={index} type="hidden" name="names[]" value={name} />
         ))}
-        <div style={styles.outerStyle}>
+        <div className={style.outerStyle}>
           <div
-            className="uitest-certs-link"
-            style={styles.actionText}
+            className={classNames('uitest-certs-link', style.actionText)}
             onClick={this.onClickPrintCerts}
           >
             {i18n.printCertificates()}
@@ -61,24 +61,4 @@ class PrintCertificates extends Component {
   }
 }
 
-const styles = {
-  main: {
-    margin: 0
-  },
-  outerStyle: {
-    paddingLeft: STANDARD_PADDING,
-    paddingRight: STANDARD_PADDING,
-    paddingTop: STANDARD_PADDING / 4,
-    paddingBottom: STANDARD_PADDING / 4,
-    cursor: 'pointer',
-    ':hover': {
-      backgroundColor: color.lightest_gray
-    }
-  },
-  actionText: {
-    fontSize: 13,
-    color: color.dark_charcoal
-  }
-};
-
-export default Radium(PrintCertificates);
+export default PrintCertificates;

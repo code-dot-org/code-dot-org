@@ -66,7 +66,9 @@ de:
       name: Name
       nectar: Nektar
       nectars: Nektar
+      object: Objekt
       padYOffset: padYOffset
+      planet: Planet
       player_score: player_score
       points: Punkte
       punchLine: punchLine
@@ -84,11 +86,13 @@ de:
       set sides: Festgelegte Seiten
       setupSimScore1: setupSimScore1
       setupSimScore2: setupSimScore2
+      shout: schreien
       sides: Kanten
       size: Größe
       speed: Geschwindigkeit
       startX: startX
       startY: startY
+      type: Art
       variable: Variable
       width: Breite
       wizard: Zauberer

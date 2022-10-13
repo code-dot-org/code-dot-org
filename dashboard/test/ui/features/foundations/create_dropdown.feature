@@ -61,7 +61,7 @@ Scenario: Young Student, Not in Section - Correct Create Links
 
 Scenario: Young Student, In Section - Correct Create Links
   Given I create a teacher named "Ms_Frizzle"
-  And I create a new section
+  And I create a new student section
   Given I create a young student named "Young Student - In Section"
   And I join the section
   And I wait until element ".create_menu" is visible

@@ -50,6 +50,26 @@
           "word": "تابع",
           "definition": ""
         },
+        "code/poem-art/2021": {
+          "word": "کد",
+          "definition": ""
+        },
+        "event/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
         "code/flappy/unversioned": {
           "word": "",
           "definition": ""
@@ -234,6 +254,14 @@
           "word": "",
           "definition": ""
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/sports/unversioned": {
           "word": "",
           "definition": ""
@@ -306,33 +334,817 @@
           "word": "",
           "definition": ""
         },
-        "event/outbreak/unversioned": {
+        "algorithm/coursed/2022": {
+          "word": "الگورینم",
+          "definition": ""
+        },
+        "program/coursed/2022": {
           "word": "",
           "definition": ""
         },
-        "models_and_simulations/outbreak/unversioned": {
+        "bug/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/coursed/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "loop/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/coursed/2022": {
+          "word": "برنامه نویسی",
+          "definition": ""
+        },
+        "frustrated/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "persistence/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "code/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "command/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/coursed/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "pseudocode/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "while_loop/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "until/coursed/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "sprite/coursef/2022": {
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
+        },
+        "user/coursef/2022": {
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
+        },
+        "algorithm/coursef/2022": {
+          "word": "الگورینم",
+          "definition": "لیستی از مراحل برای تکمیل یک کار است"
+        },
+        "behavior/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "program/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/coursef/2022": {
+          "word": "متغیر",
+          "definition": ""
+        },
+        "prompt/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "input/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "dns/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "internet/coursef/2022": {
+          "word": "اینترنت",
+          "definition": ""
+        },
+        "ip_address/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "packets/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "servers/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "url/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "wi_fi/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "define/coursef/2022": {
+          "word": "تعریف کن",
+          "definition": ""
+        },
+        "prepare/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "try/coursef/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "behavior/coursee/2022": {
+          "word": "",
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
+        },
+        "sprite/coursee/2022": {
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
+        },
+        "loop/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "function/coursee/2022": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "call_a_function/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/coursee/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "while_loop/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "copyright/coursee/2022": {
+          "word": "حق کپی برداری و نشر",
+          "definition": ""
+        },
+        "define/coursee/2022": {
+          "word": "تعریف کن",
+          "definition": ""
+        },
+        "prepare/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "try/coursee/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/courseb/2022": {
+          "word": "الگورینم",
+          "definition": ""
+        },
+        "bug/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/courseb/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "click/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "double_click/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "drag/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "drop/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "program/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/courseb/2022": {
+          "word": "برنامه نویسی",
+          "definition": ""
+        },
+        "persistence/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "event/courseb/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/express/2022": {
+          "word": "الگورینم",
+          "definition": ""
+        },
+        "bug/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/express/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "sequencing/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "program/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/express/2022": {
+          "word": "برنامه نویسی",
+          "definition": ""
+        },
+        "behavior/express/2022": {
+          "word": "",
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
+        },
+        "sprite/express/2022": {
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
+        },
+        "event/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "code/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "command/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/express/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "while_loop/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "until/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "function/express/2022": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "prompt/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/express/2022": {
+          "word": "متغیر",
+          "definition": ""
+        },
+        "for_loop/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "define/express/2022": {
+          "word": "تعریف کن",
+          "definition": ""
+        },
+        "prepare/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "reflect/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "try/express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "click/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "double_click/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "drag/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "drop/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/pre-express/2022": {
+          "word": "الگورینم",
+          "definition": ""
+        },
+        "bug/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/pre-express/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/pre-express/2022": {
+          "word": "برنامه نویسی",
+          "definition": ""
+        },
+        "persistence/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "event/pre-express/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/coursea/2022": {
+          "word": "الگورینم",
+          "definition": ""
+        },
+        "debugging/coursea/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "click/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "double_click/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "drag/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "drop/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/coursea/2022": {
+          "word": "برنامه نویسی",
+          "definition": ""
+        },
+        "loop/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursea/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "algorithm/coursec/2022": {
+          "word": "الگورینم",
+          "definition": ""
+        },
+        "bug/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/coursec/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "sequencing/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "persistence/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/coursec/2022": {
+          "word": "برنامه نویسی",
+          "definition": ""
+        },
+        "angle/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "event/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "data/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "graph/coursec/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "binary/coursec/2022": {
+          "word": "دو دویی",
+          "definition": ""
+        },
+        "decode/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "encode/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "ascii/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "binary_system/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bit/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "pixel/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "decrypt/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "encrypt/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "computer/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "input/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "output/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "processing/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "storage/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/csd/2022": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "parameter/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/csd/2022": {
+          "word": "متغیر",
+          "definition": ""
+        },
+        "dot_notation/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "property/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "sprite/csd/2022": {
+          "word": "اسپریت (Sprite)",
+          "definition": ""
+        },
+        "boolean_expression/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/csd/2022": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "abstraction/csd/2022": {
+          "word": "انتزاع",
+          "definition": ""
+        },
+        "function/csd/2022": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "html/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "html_element/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "html_tag/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "website_content/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "website_structure/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "heading/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "digital_footprint/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "css/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "css_selector/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "copyright/csd/2022": {
+          "word": "حق کپی برداری و نشر",
+          "definition": ""
+        },
+        "relevant/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "search_engine/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "trustworthy/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "css_class/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "empathy/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "user/csd/2022": {
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
+        },
+        "usability/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "prototype/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "user_interface/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "feature/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "innovation/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "circuit/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "features/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "label/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "model/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "supervised_learning/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "training/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "categorical_data/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "classification/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "bias/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "numerical_data/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "ethics/csd/2022": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/unversioned": {
+          "word": "کد",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
         },
         "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
         },
         "behavior/coursef/2021": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "program/coursef/2021": {
           "word": "",
           "definition": ""
         },
         "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگورینم",
+          "definition": "لیستی از مراحل برای تکمیل یک کار است"
         },
         "event/coursef/2021": {
           "word": "",
@@ -423,7 +1235,7 @@
           "definition": ""
         },
         "algorithm/courseb/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/courseb/2021": {
@@ -475,7 +1287,7 @@
           "definition": ""
         },
         "algorithm/coursea/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "debugging/coursea/2021": {
@@ -523,7 +1335,7 @@
           "definition": ""
         },
         "algorithm/coursec/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/coursec/2021": {
@@ -563,7 +1375,7 @@
           "definition": ""
         },
         "algorithm/coursed/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "program/coursed/2021": {
@@ -631,7 +1443,7 @@
           "definition": ""
         },
         "algorithm/express/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/express/2021": {
@@ -656,11 +1468,11 @@
         },
         "behavior/express/2021": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "sprite/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/express/2021": {
           "word": "",
@@ -747,7 +1559,7 @@
           "definition": ""
         },
         "algorithm/pre-express/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/pre-express/2021": {
@@ -784,15 +1596,15 @@
         },
         "behavior/coursee/2021": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "algorithm/coursee/2021": {
           "word": "",
           "definition": ""
         },
         "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/coursee/2021": {
           "word": "",
@@ -839,6 +1651,262 @@
           "definition": ""
         },
         "try/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "features/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "label/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "model/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "supervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "training/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "categorical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "classification/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bias/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "numerical_data/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ethics/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "empathy/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "user/csd/2021": {
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
+        },
+        "usability/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "prototype/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "user_interface/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bug/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "feature/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "innovation/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "analog/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "digital/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "array/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "for_loop/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "parameter/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "circuit/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "decode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encode/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "binary_system/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "ascii/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "bit/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "pixel/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "decrypt/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "encrypt/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/csd/2021": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "variable/csd/2021": {
+          "word": "متغیر",
+          "definition": ""
+        },
+        "property/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "sprite/csd/2021": {
+          "word": "اسپریت (Sprite)",
+          "definition": ""
+        },
+        "dot_notation/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/csd/2021": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "boolean_expression/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "abstraction/csd/2021": {
+          "word": "انتزاع",
+          "definition": ""
+        },
+        "function/csd/2021": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "computer/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "input/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "output/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "processing/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "storage/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html_element/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "html_tag/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "website_content/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "website_structure/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "heading/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "digital_footprint/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css_selector/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "copyright/csd/2021": {
+          "word": "حق کپی برداری و نشر",
+          "definition": ""
+        },
+        "relevant/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "trustworthy/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "search_engine/csd/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "css_class/csd/2021": {
           "word": "",
           "definition": ""
         }

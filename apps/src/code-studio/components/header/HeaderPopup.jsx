@@ -11,7 +11,6 @@ export default class HeaderPopup extends Component {
     scriptName: PropTypes.string,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
-    linesOfCodeText: PropTypes.string,
     minimal: PropTypes.bool,
     windowHeight: PropTypes.number
   };
@@ -94,10 +93,7 @@ export default class HeaderPopup extends Component {
               >
                 <div className="header_popup_body">
                   <div className="user-stats-block">
-                    <MiniView
-                      linesOfCodeText={this.props.linesOfCodeText}
-                      minimal={this.props.minimal}
-                    />
+                    <MiniView minimal={this.props.minimal} />
                   </div>
                 </div>
               </div>

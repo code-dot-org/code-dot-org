@@ -24,7 +24,7 @@ title: الدليل الإرشادي للموظفين الحكوميين
 
 ### 1. اقرأ نبذة عنا
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+يمكنك الاطلاع على [أهمية تعليم علوم الحاسوب](/files/hoc-one-pager.pdf) وكيف يمكنك المساعدة في هذا الجهد من خلال دعم منصة "ساعة البرمجة".
 
 ### 2. مشاركة المدارس والمناطق التعليمية المحلية
 

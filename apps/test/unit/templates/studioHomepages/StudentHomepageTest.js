@@ -3,8 +3,9 @@ import {assert} from 'chai';
 import {shallow} from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
 import {courses, topCourse, joinedSections} from './homepagesTestData';
+import Notification from '@cdo/apps/templates/Notification';
+import i18n from '@cdo/locale';
 
 describe('StudentHomepage', () => {
   const TEST_PROPS = {
@@ -13,7 +14,7 @@ describe('StudentHomepage', () => {
     sections: joinedSections,
     codeOrgUrlPrefix: 'http://localhost:3000',
     studentId: 123,
-    isEnglish: true
+    showVerifiedTeacherWarning: false
   };
 
   it('shows a non-extended Header Banner that says My Dashboard', () => {
@@ -47,25 +48,23 @@ describe('StudentHomepage', () => {
     assert(wrapper.find('ProjectWidgetWithData').exists());
   });
 
-  it('shows a StudentSections component', () => {
+  it('shows a JoinSectionArea component', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
-    const studentSections = wrapper.find(StudentSections);
-    assert.deepEqual(studentSections.props(), {
-      initialSections: joinedSections
+    const joinSectionArea = wrapper.find('JoinSectionArea');
+    assert.deepEqual(joinSectionArea.props(), {
+      initialJoinedStudentSections: joinedSections
     });
   });
 
-  it('shows the special announcement for English', () => {
+  it('displays a notification for verified teacher permissions if showVerifiedTeacherWarning is true', () => {
     const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={true} />
+      <StudentHomepage {...TEST_PROPS} showVerifiedTeacherWarning={true} />
     );
-    assert(wrapper.find('SpecialAnnouncement').exists());
-  });
-
-  it('does not show the special announcement for non-English', () => {
-    const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={false} />
+    const notification = wrapper.find(Notification);
+    assert(notification.exists());
+    assert.equal(
+      notification.props().notice,
+      i18n.studentAsVerifiedTeacherWarning()
     );
-    assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
   });
 });

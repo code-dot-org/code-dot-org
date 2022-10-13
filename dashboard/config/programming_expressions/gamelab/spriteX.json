@@ -1,7 +1,0 @@
-{
-  "func": "sprite.x",
-  "category": "Sprites",
-  "modeOptionName": "sprite_position_x",
-  "type": "property",
-  "noAutocomplete": true
-}

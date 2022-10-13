@@ -5,7 +5,7 @@ title: วิธีจัดกิจกรรมชั่วโมงเขี�
 {{ signup_button }}
 
 # วิธีแนะนำ Hour of Code ให้บริษัทของคุณ
-### Find out how you and your employees can inspire students to try computer science!
+### ดูวิธีที่คุณและพนักงานของคุณจะสามารถสร้างแรงบันดาลใจให้นักเรียนในเรื่องวิทยาการคอมพิวเตอร์!
 
 ***
 
@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - แนะนำให้วิศวกรซอฟต์แวร์ที่บริษัทของคุณเยี่ยมชมห้องเรียนท้องถิ่น เพื่อช่วยนำ Hour of Code และสร้างแรงบันดาลใจให้นักเรียนมาเรียนวิชาวิทยาการคอมพิวเตอร์ They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

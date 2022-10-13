@@ -4,15 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-26 22:12:54 UTC",
+    "family_name": "csd-sample-online",
+    "serialized_at": "2022-04-08 15:40:59 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd-sample-online"
     }
@@ -119,6 +121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC L1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +169,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC L2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +193,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD digital Unplugged WIAC video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +217,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC L3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +241,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD digital unplugged WIAC Qs"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP word search"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +289,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP seating"
+        ]
       },
       "bonus": false,
       "seeding_key": {

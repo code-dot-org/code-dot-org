@@ -6,25 +6,32 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
 import StudentGroup from './StudentGroup';
 
-export default function UnassignedStudentsPanel({unassignedGroup}) {
-  // TO DO: implement unassigning students and style
-  // https://codedotorg.atlassian.net/browse/CSA-1028
+export default function UnassignedStudentsPanel({
+  unassignedGroup,
+  onUnassignAllClick
+}) {
   return (
     <div style={styles.unassignedStudentsPanel}>
       <div style={styles.header}>
-        <span>{i18n.unassignedStudents()}</span>
+        <span style={styles.headerTitle}>{i18n.unassignedStudents()}</span>
         <JavalabButton
-          onClick={() => {}}
+          id="uitest-unassign-all-button"
+          onClick={onUnassignAllClick}
           icon={<FontAwesome icon="times" className="fa" />}
           text={i18n.unassignAll()}
-          style={styles.button}
+          inlineStyle={styles.button}
           isHorizontal
         />
       </div>
-      <div style={styles.groupsContainer}>
+      <div
+        id="uitest-code-review-group-unassigned"
+        style={styles.groupsContainer}
+      >
         <StudentGroup
           droppableId={unassignedGroup.droppableId}
           members={unassignedGroup.members}
+          dropAreaStyle={styles.studentGroup}
+          showEmptyGroupPlaceholder={false}
         />
       </div>
     </div>
@@ -32,7 +39,8 @@ export default function UnassignedStudentsPanel({unassignedGroup}) {
 }
 
 UnassignedStudentsPanel.propTypes = {
-  unassignedGroup: PropTypes.object.isRequired
+  unassignedGroup: PropTypes.object.isRequired,
+  onUnassignAllClick: PropTypes.func.isRequired
 };
 
 export const HEADER_STYLE = {
@@ -40,25 +48,32 @@ export const HEADER_STYLE = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '0 5px',
+  padding: '5px 10px',
   border: `1px solid ${color.lighter_gray}`,
-  background: color.lightest_gray
+  background: color.lightest_gray,
+  fontFamily: '"Gotham 5r", sans-serif',
+  fontSize: 14
+};
+
+export const HEADER_TITLE_STYLE = {
+  margin: '5px'
 };
 
 export const BUTTON_STYLE = {
   backgroundColor: color.lightest_gray,
   color: color.dark_charcoal,
   borderRadius: 4,
-  border: `1px solid ${color.dark_charcoal}`
+  border: `1px solid ${color.dark_charcoal}`,
+  fontSize: 14
 };
 
 export const GROUPS_CONTAINER_STYLE = {
   display: 'flex',
   flexDirection: 'column',
   height: 355,
-  overflow: 'scroll',
+  overflow: 'auto',
   border: `1px solid ${color.lightest_gray}`,
-  padding: '20px 10px 0 5px'
+  padding: '10px 4px 0 0'
 };
 
 const styles = {
@@ -66,6 +81,10 @@ const styles = {
     width: 400
   },
   header: HEADER_STYLE,
+  headerTitle: HEADER_TITLE_STYLE,
   button: BUTTON_STYLE,
-  groupsContainer: GROUPS_CONTAINER_STYLE
+  groupsContainer: GROUPS_CONTAINER_STYLE,
+  studentGroup: {
+    height: 355
+  }
 };

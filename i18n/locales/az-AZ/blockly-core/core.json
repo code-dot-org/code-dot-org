@@ -176,7 +176,7 @@
     "LOGIC_NULL_TOOLTIP": "Boş cavab qaytarır.",
     "LOGIC_OPERATION_AND": "və",
     "LOGIC_OPERATION_OR": "və ya",
-    "LOGIC_OPERATION_TOOLTIP_AND": "Hər iki giriş \"doğru\"-dursa, \"doğru\" cavabını qaytarır.",
+    "LOGIC_OPERATION_TOOLTIP_AND": "Hər iki giriş doğru dursa, \"doğru\" cavabını qaytarır.",
     "LOGIC_OPERATION_TOOLTIP_OR": "Girişlərdən heç olmasa biri \"doğru\"-dursa, \"doğru\" cavabını qaytarır.",
     "LOGIC_TERNARY_CONDITION": "yoxla",
     "LOGIC_TERNARY_IF_FALSE": "əgər yalandırsa",

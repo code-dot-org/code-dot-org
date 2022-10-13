@@ -205,10 +205,10 @@ function generateBlankBlock(blockly, skin, name, hsv, width, label) {
   blockly.Blocks[name] = {
     helpUrl: '',
     init: function() {
-      this.setHSV.apply(this, hsv);
+      Blockly.cdoUtils.setHSV(this, ...hsv);
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldImage(skin.blank, width, 54))
-        .appendTitle(
+        .appendField(new blockly.FieldImage(skin.blank, width, 54))
+        .appendField(
           new blockly.FieldLabel(label, {
             fixedSize: {width: width, height: 64},
             fontSize: 32
@@ -242,8 +242,8 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
     blockly.Blocks[blockName] = {
       helpUrl: '',
       init: function() {
-        this.setHSV.apply(this, HSV);
-        this.appendDummyInput().appendTitle(
+        Blockly.cdoUtils.setHSV(this, ...HSV);
+        this.appendDummyInput().appendField(
           new blockly.FieldImage(skin.blank, titleWidth, titleHeight)
         );
         this.setPreviousStatement(blockNum !== 1 || notchedEnds);

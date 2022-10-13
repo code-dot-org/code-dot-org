@@ -5,6 +5,9 @@
         "function/hero/unversioned": {
           "word": "فرمان"
         },
+        "code/poem-art/2021": {
+          "word": "کۆد"
+        },
         "code/artist/unversioned": {
           "word": "کۆد"
         },
@@ -15,6 +18,66 @@
           "word": "گرێکان"
         },
         "code/sports/unversioned": {
+          "word": "کۆد"
+        },
+        "conditionals/coursed/2022": {
+          "word": "مەرجیەکان"
+        },
+        "variable/coursef/2022": {
+          "word": "گۆڕاو"
+        },
+        "input/coursef/2022": {
+          "word": "داخڵکردن"
+        },
+        "define/coursef/2022": {
+          "word": "پێناسە بکە"
+        },
+        "function/coursee/2022": {
+          "word": "فرمان"
+        },
+        "conditionals/coursee/2022": {
+          "word": "مەرجیەکان"
+        },
+        "define/coursee/2022": {
+          "word": "پێناسە بکە"
+        },
+        "drop/courseb/2022": {
+          "word": "درۆپ"
+        },
+        "conditionals/express/2022": {
+          "word": "مەرجیەکان"
+        },
+        "function/express/2022": {
+          "word": "فرمان"
+        },
+        "variable/express/2022": {
+          "word": "گۆڕاو"
+        },
+        "define/express/2022": {
+          "word": "پێناسە بکە"
+        },
+        "drop/pre-express/2022": {
+          "word": "درۆپ"
+        },
+        "drop/coursea/2022": {
+          "word": "درۆپ"
+        },
+        "input/csd/2022": {
+          "word": "داخڵکردن"
+        },
+        "variable/csd/2022": {
+          "word": "گۆڕاو"
+        },
+        "conditionals/csd/2022": {
+          "word": "مەرجیەکان"
+        },
+        "abstraction/csd/2022": {
+          "word": "پوختە"
+        },
+        "function/csd/2022": {
+          "word": "فرمان"
+        },
+        "code/poem-art/unversioned": {
           "word": "کۆد"
         },
         "variable/coursef/2021": {
@@ -58,6 +121,21 @@
         },
         "define/coursee/2021": {
           "word": "پێناسە بکە"
+        },
+        "variable/csd/2021": {
+          "word": "گۆڕاو"
+        },
+        "conditionals/csd/2021": {
+          "word": "مەرجیەکان"
+        },
+        "abstraction/csd/2021": {
+          "word": "پوختە"
+        },
+        "function/csd/2021": {
+          "word": "فرمان"
+        },
+        "input/csd/2021": {
+          "word": "داخڵکردن"
         }
       }
     }

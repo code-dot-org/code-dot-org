@@ -9,12 +9,14 @@ import {
   clearConsoleLogs,
   closePhotoPrompter
 } from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import PhotoSelectionView from './components/PhotoSelectionView';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -47,10 +49,12 @@ class JavalabConsole extends React.Component {
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
     clearConsoleLogs: PropTypes.func,
-    isDarkMode: PropTypes.bool,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isPhotoPrompterOpen: PropTypes.bool,
     closePhotoPrompter: PropTypes.func,
-    photoPrompterPromptText: PropTypes.string
+    photoPrompterPromptText: PropTypes.string,
+    shouldJumpToInput: PropTypes.bool,
+    editorFontSize: PropTypes.number.isRequired
   };
 
   state = {
@@ -82,6 +86,10 @@ class JavalabConsole extends React.Component {
     for (const log of this.props.consoleLogs) {
       if (log.type === 'newline') {
         lines[++currentLine] = '';
+      } else if (log.type === 'markdown') {
+        lines[++currentLine] = (
+          <SafeMarkdown markdown={log.text} openExternalLinksInNewTab={true} />
+        );
       } else {
         const text = log.type === 'input' ? log.text + '\n' : log.text;
         const splitText = text.split(/\r?\n/).entries();
@@ -100,7 +108,7 @@ class JavalabConsole extends React.Component {
 
   // Returns a rendering of the console log.  It includes the input field following the final
   // content, taking up the remaining width of the line.
-  renderConsoleLogs(isDarkMode) {
+  renderConsoleLogs(displayTheme) {
     const lines = this.getConsoleLines();
 
     return lines.map((line, index) => {
@@ -114,7 +122,14 @@ class JavalabConsole extends React.Component {
               spellCheck="false"
               style={{
                 ...styles.input,
-                ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
+                ...(displayTheme === DisplayTheme.DARK
+                  ? styles.darkModeInput
+                  : styles.lightModeInput),
+                // TODO: When converting this component's styles to SCSS,
+                // font size may need to remain an inline style as it is
+                // programmatically assigned, or editor font size logic
+                // should be moved into SCSS.
+                fontSize: this.props.editorFontSize
               }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
@@ -135,14 +150,19 @@ class JavalabConsole extends React.Component {
       photoPrompterPromptText,
       onPhotoPrompterFileSelected,
       closePhotoPrompter,
-      isDarkMode
+      displayTheme
     } = this.props;
 
     if (isPhotoPrompterOpen) {
       return (
         <PhotoSelectionView
           promptText={photoPrompterPromptText}
-          style={styles.photoPrompter}
+          style={{
+            ...styles.photoPrompter,
+            ...(displayTheme === DisplayTheme.DARK
+              ? styles.darkMode
+              : styles.lightMode)
+          }}
           onPhotoSelected={file => {
             onPhotoPrompterFileSelected(file);
             closePhotoPrompter();
@@ -152,7 +172,7 @@ class JavalabConsole extends React.Component {
     } else {
       return (
         <div onClick={this.onLogsClick} style={styles.logs}>
-          {this.renderConsoleLogs(isDarkMode)}
+          {this.renderConsoleLogs(displayTheme)}
         </div>
       );
     }
@@ -180,32 +200,59 @@ class JavalabConsole extends React.Component {
   };
 
   onLogsClick = () => {
-    this.inputRef.focus();
+    // only jump to input if the program is currently in run or test mode.
+    if (this.props.shouldJumpToInput) {
+      this.inputRef.focus();
+    }
   };
 
   render() {
-    const {isDarkMode, style, bottomRow, clearConsoleLogs} = this.props;
+    const {
+      displayTheme,
+      style,
+      bottomRow,
+      clearConsoleLogs,
+      editorFontSize
+    } = this.props;
 
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneButton
-            id="javalab-console-clear"
-            headerHasFocus
-            isRtl={false}
-            onClick={() => {
-              clearConsoleLogs();
-            }}
-            iconClass="fa fa-eraser"
-            label={javalabMsg.clearConsole()}
+          <PaneSection
+            className={'pane-header-section pane-header-section-left'}
           />
-          <PaneSection>{javalabMsg.console()}</PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-center'}
+          >
+            {javalabMsg.console()}
+          </PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-right'}
+          >
+            <PaneButton
+              id="javalab-console-clear"
+              headerHasFocus
+              isRtl={false}
+              onClick={() => {
+                clearConsoleLogs();
+              }}
+              iconClass="fa fa-eraser"
+              label={javalabMsg.clearConsole()}
+            />
+          </PaneSection>
         </PaneHeader>
         <div style={styles.container}>
           <div
             style={{
               ...styles.console,
-              ...(isDarkMode ? styles.darkMode : styles.lightMode)
+              ...(displayTheme === DisplayTheme.DARK
+                ? styles.darkMode
+                : styles.lightMode),
+              // TODO: When converting this component's styles to SCSS,
+              // font size may need to remain an inline style as it is
+              // programmatically assigned, or editor font size logic
+              // should be moved into SCSS.
+              fontSize: editorFontSize
             }}
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
@@ -225,9 +272,11 @@ class JavalabConsole extends React.Component {
 export default connect(
   state => ({
     consoleLogs: state.javalab.consoleLogs,
-    isDarkMode: state.javalab.isDarkMode,
+    displayTheme: state.javalab.displayTheme,
     isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
-    photoPrompterPromptText: state.javalab.photoPrompterPromptText
+    photoPrompterPromptText: state.javalab.photoPrompterPromptText,
+    shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting,
+    editorFontSize: state.javalab.editorFontSize
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),
@@ -284,7 +333,9 @@ const styles = {
     padding: 0,
     fontFamily: 'monospace',
     flexGrow: 1,
-    marginTop: -2
+    marginTop: -2,
+    fontSize: 13,
+    height: '100%'
   },
   spacer: {
     width: 8
@@ -293,7 +344,8 @@ const styles = {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
-    width: '100%'
+    width: '100%',
+    display: 'flex'
   },
   log: {
     padding: 0,

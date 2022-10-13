@@ -5,6 +5,7 @@ import {
   addMultipleChoicePrompt
 } from '../../redux/spritelabInput';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {MAX_NUM_TEXTS} from '../constants';
 
 export const commands = {
   comment(text) {
@@ -24,11 +25,16 @@ export const commands = {
 
   getTime(unit) {
     if (unit === 'seconds') {
-      return this.getAdjustedWorldTime() || 0;
+      return this.getUnpausedWorldTime() - this.timerResetTime.seconds || 0;
     } else if (unit === 'frames') {
-      return this.p5.World.frameCount || 0;
+      return this.p5.World.frameCount - this.timerResetTime.frames || 0;
     }
     return 0;
+  },
+
+  resetTimer() {
+    this.timerResetTime.seconds = this.getUnpausedWorldTime();
+    this.timerResetTime.frames = this.currentFrame();
   },
 
   hideTitleScreen() {
@@ -50,6 +56,10 @@ export const commands = {
 
   printText(text) {
     this.printLog.push(text);
+    // the last MAX_NUM_TEXTS will be printed
+    if (this.printLog.length > MAX_NUM_TEXTS) {
+      this.printLog.shift();
+    }
     getStore().dispatch(addConsoleMessage({text: text}));
   },
 

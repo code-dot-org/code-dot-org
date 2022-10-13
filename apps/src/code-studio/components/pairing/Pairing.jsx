@@ -55,9 +55,10 @@ export default class Pairing extends React.Component {
   };
 
   refreshUserMenu = () => {
+    const showCreateMenu = $('.create_menu').length > 0;
     $.ajax({
       type: 'GET',
-      url: '/dashboardapi/user_menu',
+      url: `/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`,
       success: data => $('#sign_in_or_user').html(data)
     });
   };

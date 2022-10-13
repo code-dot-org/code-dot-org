@@ -14,20 +14,26 @@ export default function locationPicker(state, action) {
   switch (action.type) {
     case REQUEST_LOCATION:
       return {
+        ...state,
         mode: LocationPickerMode.SELECTING,
-        lastSelection: undefined
+        lastSelection: undefined,
+        requestTime: Date.now()
       };
     case CANCEL_LOCATION_SELECTION:
       return {
-        mode: LocationPickerMode.IDLE
+        ...state,
+        mode: LocationPickerMode.IDLE,
+        lastSelection: undefined
       };
     case SELECT_LOCATION:
       return {
+        ...state,
         mode: LocationPickerMode.IDLE,
         lastSelection: action.value
       };
     case UPDATE_LOCATION:
       return {
+        ...state,
         mode: LocationPickerMode.SELECTING,
         lastSelection: action.value
       };
