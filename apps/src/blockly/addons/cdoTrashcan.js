@@ -162,24 +162,16 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         toolboxVisibility = 'hidden';
       }
 
-      /**
-       * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
-       * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
-       */
-      Array.prototype.forEach.call(
-        // query selector for uncategorized toolbox contents
-        document.querySelectorAll('.blocklyFlyout .blocklyWorkspace'),
-        function(x) {
+      // query selector for uncategorized toolbox contents
+      document
+        .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
+        .forEach(x => {
           x.style.visibility = toolboxVisibility;
-        }
-      );
-      Array.prototype.forEach.call(
-        // query selector for categorized toolbox contents
-        document.querySelectorAll('.blocklyToolboxContents'),
-        function(x) {
-          x.style.visibility = toolboxVisibility;
-        }
-      );
+        });
+      // query selector for categorized toolbox contents
+      document.querySelectorAll('.blocklyToolboxContents').forEach(x => {
+        x.style.visibility = toolboxVisibility;
+      });
 
       this.container.style.visibility = trashcanVisibility;
 

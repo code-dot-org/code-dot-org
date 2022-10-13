@@ -27,4 +27,5 @@ suites:
       - recipe[nginx_test]
   - name: https
     run_list:
+      - recipe[cdo-varnish]
       - recipe[nginx_test]

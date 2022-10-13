@@ -43,6 +43,12 @@ class DSLDefined < Level
     "Enter the level definition here.\n"
   end
 
+  def localized_teacher_markdown
+    # Overrides the normal behavior since for DSLDefined levels, the teacher
+    # markdown is part of the dsl.
+    localized_property('teacher_markdown')
+  end
+
   def localized_property(property)
     # We have to manually check for default here rather than just passing
     # self.send(property) directly  because some properties used here (like

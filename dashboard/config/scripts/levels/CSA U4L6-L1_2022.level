@@ -19,13 +19,14 @@
     },
     "encrypted_examples": [
 
-    ]
+    ],
+    "teacher_markdown": "\r\n1. The `getNumMembers()`(#e7e8ea) method signature contains the `static`(#e7e8ea) keyword which allows us to call the method without creating an instance of the `ArtClubMember`(#e7e8ea) class.\r\n\r\n2. If we remove the `static`(#e7e8ea) keyword from the method signature, the code will not compile since we can no longer call this method in the `main`(#e7e8ea) method without first creating an instance of the `ArtClubMember`(#e7e8ea) class.\r\n\r\n3. When the program is run after calling the method on any of the three different instances of the `ArtClubMember`(#e7e8ea) class, we find that the output is the same as if we were to call the method directly from the `ArtClubMember`(#e7e8ea) class.\r\n\r\n4. In this case, the code will not compile. The reason for this is because we cannot modify non-static variables inside of static methods."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-04-07T18:07:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07 18:07:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 23:06:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 23:18:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-18 17:16:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-18 17:17:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-07 18:07:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 23:06:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 23:18:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-18 17:16:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-18 17:17:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 16:38:57 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

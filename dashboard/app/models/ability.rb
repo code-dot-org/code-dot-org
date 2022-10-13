@@ -68,7 +68,7 @@ class Ability
     ]
     cannot :index, Level
 
-    can :show, DataDoc
+    can [:show, :index], DataDoc
 
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
@@ -472,6 +472,7 @@ class Ability
         ScriptLevel,
         UserLevel,
         UserScript,
+        DataDoc,
         :pd_foorm,
         Foorm::Form,
         Foorm::Library,

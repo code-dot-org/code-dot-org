@@ -1,0 +1,88 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "**Next, the guide welcomes us to the tour.**\r\n- Add a `say` block to your program.\r\n- Change the text to a welcome message.\r\n- Press \"Run\" when you are finished.\r\n\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "rikki",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"You can click on the text in the `say` block to change it. \",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/76c11199c2a568c61cf9b8cec48bc3e5/csc_landmarks_location_-usa-map.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Make sure the costumes are matching on the blocks you are using so far.\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/df8ca2ff8b9da59aedaf3ca67a502f8f/csc_landmarks_location_-usa-map.mp3\"}]",
+    "project_template_level_name": "csc_landmarks_template_-usa-map",
+    "name_suffix": "_-usa-map",
+    "preload_asset_list": null
+  },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-30T21:20:14.000Z",
+  "user_id": 1196,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:14.427+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_location\\\"\"],\"cloned_from\":\"csc_landmarks_location\"},{\"changed_at\":\"2022-10-11 17:14:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 17:18:26 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 03:56:37 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 03:59:10 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:00:06 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:01:16 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:02:32 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:05:24 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:06:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"map_old_blank"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number">
+              <field name="NUM">75</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Welcome.</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

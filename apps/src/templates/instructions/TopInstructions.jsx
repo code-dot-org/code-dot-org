@@ -506,7 +506,9 @@ class TopInstructions extends Component {
             ref={ref => this.setInstructionsRef(ref)}
             hidden={tabSelected !== TabType.INSTRUCTIONS}
           />
-          {!this.props.inLessonPlan && <ContainedLevelResetButton />}
+          {!this.props.inLessonPlan && tabSelected === TabType.INSTRUCTIONS && (
+            <ContainedLevelResetButton />
+          )}
         </div>
       );
     } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {

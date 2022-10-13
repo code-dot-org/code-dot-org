@@ -26,7 +26,7 @@ export function getAnimationLibraryFile(filename) {
 
 // Returns the list of default sprites in SpriteLab in English
 export function getDefaultList() {
-  return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
+  return fetch('/api/v1/animation-library/default-spritelab').then(response =>
     response.json()
   );
 }
@@ -236,7 +236,7 @@ export function regenerateDefaultSpriteMetadata(listData) {
  * @param imageData {Blob} sprite image data to upload
  * @returns {Promise} resolves if successful upload, rejects otherwise
  */
-export function uploadSpriteToAnimationLibrary(destination, imageData) {
+export function uploadAnimationToAnimationLibrary(destination, imageData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
@@ -247,7 +247,7 @@ export function uploadSpriteToAnimationLibrary(destination, imageData) {
     .then(response => {
       if (!response.ok) {
         throw new Error(
-          `Sprite Upload Error(${response.status}: ${response.statusText})`
+          `Animation Upload Error(${response.status}: ${response.statusText})`
         );
       }
       return Promise.resolve();
