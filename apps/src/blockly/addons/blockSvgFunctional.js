@@ -93,15 +93,6 @@ export default class BlockSvgFunctional {
     );
 
     this.frameText_.appendChild(document.createTextNode(msg.function()));
-
-    console.log({
-      blockId: this.block_.id,
-      frameGroup_: this.frameGroup_,
-      frameClipRect_: this.frameClipRect_,
-      frameBase_: this.frameBase_,
-      frameHeader_: this.frameHeader_,
-      frameText_: this.frameText_
-    });
   }
 
   getPadding() {

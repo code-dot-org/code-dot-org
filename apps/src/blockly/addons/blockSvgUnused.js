@@ -4,7 +4,6 @@ import color from '@cdo/apps/util/color';
 const FRAME_MARGIN_SIDE = 15;
 const FRAME_MARGIN_TOP = 10;
 const FRAME_MARGIN_BOTTOM = 5;
-
 const FRAME_HEADER_HEIGHT = 25;
 
 export default class BlockSvgUnused {
@@ -22,6 +21,14 @@ export default class BlockSvgUnused {
     this.initChildren();
   }
   initChildren() {
+    // Google Blockly's block ids are randomly generated and can
+    // include invalid characters for element ids. Remove everything
+    // except alphanumeric characters and whitespace, then collapse
+    // multiple adjacent whitespace to single spaces.
+    let blockId = this.block_.id
+      .replace(/[^\w\s\']|_/g, '')
+      .replace(/\s+/g, ' ');
+
     this.frameGroup_ = Blockly.utils.dom.createSvgElement('g', {
       class: 'blocklyUnusedFrame'
     });
@@ -29,7 +36,7 @@ export default class BlockSvgUnused {
     var clip = Blockly.utils.dom.createSvgElement(
       'clipPath',
       {
-        id: `frameClip${this.block_.id}`
+        id: `frameClip${blockId}`
       },
       this.frameGroup_
     );
@@ -64,7 +71,7 @@ export default class BlockSvgUnused {
         fill: color.lighter_gray,
         rx: 15,
         ry: 15,
-        'clip-path': `url(#frameClip${this.block_.id})`
+        'clip-path': `url(#frameClip${blockId})`
       },
       this.frameGroup_
     );
