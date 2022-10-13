@@ -1,10 +1,10 @@
 /** @file Serialport scanning logic for Maker Toolkit */
 /* global SerialPort */ // Maybe provided by the Code.org Browser
+import DCDO from '@cdo/apps/dcdo';
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
 import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -60,7 +60,7 @@ export function findPortWithViableDevice() {
  * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
-  if (!isChromeOS() || experiments.isEnabled('webserial')) {
+  if (!isChromeOS() || !!DCDO.get('webserial-on-chromeos', true)) {
     return Promise.resolve();
   }
 
