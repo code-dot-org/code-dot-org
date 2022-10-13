@@ -3376,6 +3376,17 @@ ro:
               display_name: Conţinut
             lessonGroup-5:
               display_name: Sondaj
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Laboratorul Java
+            lesson-6:
+              name: Bucle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

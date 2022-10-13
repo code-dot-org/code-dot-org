@@ -31,7 +31,7 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :student, class_name: 'User', optional: true
   has_many :user_levels, through: :student
   has_many :student_sections, class_name: 'Section', through: :student, source: 'sections_as_student'
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :level, optional: true
   belongs_to :teacher, class_name: 'User', optional: true
 

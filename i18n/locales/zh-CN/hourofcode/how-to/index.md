@@ -10,7 +10,7 @@ title: 编程一小时指南
 
 今天的学生应该学习如何创造技术，而不仅仅是使用它。
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+尝试编程一小时是向学生（也许是第一次）介绍计算机科学的简单而有趣的方式。 找一项适合你的环境的活动，无论是课堂上还是课外，面对面还是虚拟。 如果你在查看以下步骤后仍有问题，看看我们的[参与指南]({{ localized_files/participation_guide }})：
 
 - [观看编程一小时指南视频](#how-to-video)
 - [探索活动和教程](#explore-activities)
@@ -56,7 +56,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+在计算机科学教育周（12月5日-11日）期间，世界各地的人们参加编程一小时庆祝活动，届时会发布最新的教程和活动。 But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -72,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+当你[注册编程一小时活动](/#join)时，你将收到有用的电子邮件通讯，其中包括新闻和举办成功的编程一小时活动的提示。 It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. 或者为你的班级打印励志海报！ Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 指导学生参与活动
 
-- 将教程链接写在白板上。在参与者数量下面找到[你所选教程的信息]({{ urls/learn }})中列出的链接。
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 当你的学生遇到困难时，你完全可以用这样的方式回答：
 
@@ -138,7 +138,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- 为你的学校[预订定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 - 在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
 
 * * *
@@ -152,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### 编程一小时之后该做什么？
 
-计算机科学不会随编程一小时结束！我们的课程是基于网络的，并且永久免费使用。[学习如何](/beyond)将计算机科学带入你的学校和学生之中。
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

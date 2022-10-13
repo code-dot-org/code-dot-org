@@ -186,7 +186,7 @@ Una dintre cele mai bune modalități prin care poți fi de ajutor este să le s
 
 ### 1. Înregistrează-ți evenimentul
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
+Atunci când vă înscrieți la [evenimentul Hour of Code](/#join), veți primi comunicări folositoare prin email cu știri și sfaturi pentru găzduirea unei Hour of Code reușite. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
 
 ### 2. Postează pe rețelele de socializare
 

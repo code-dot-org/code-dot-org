@@ -29,7 +29,7 @@ class LessonsControllerTest < ActionController::TestCase
       has_lesson_plan: false,
     )
 
-    @script_title = 'Script Display Name'
+    @script_title = 'Unit Display Name'
     @lesson_name = 'Lesson Display Name'
 
     custom_i18n = {

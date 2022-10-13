@@ -6,7 +6,7 @@ require 'test_helper'
 # rejected before attempting to read or write them from the db.
 class CharsetTest < ActionDispatch::IntegrationTest
   def setup
-    Script.stubs(:should_cache?).returns true
+    Unit.stubs(:should_cache?).returns true
   end
 
   test "attempting to log in as user with utf8mb4 chars does not hit the db" do
