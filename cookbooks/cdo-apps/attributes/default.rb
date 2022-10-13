@@ -23,4 +23,4 @@ default['cdo-apps'] = {
   'app_server' => 'puma',
   'jemalloc' => true
 }
-default['omnibus_updater']['version'] = '15.2.20'
+default['omnibus_updater']['version'] = '17.6.18'
