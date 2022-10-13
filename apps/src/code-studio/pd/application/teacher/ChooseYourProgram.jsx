@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Row, Col} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap';
 import {
   PageLabels,
   SectionHeaders,
@@ -14,7 +14,6 @@ import {
 } from './TeacherApplicationConstants';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
-import {LabeledNumberInput} from '../../form_components_func/labeled/LabeledInput';
 import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields
@@ -25,7 +24,7 @@ import {useRegionalPartner} from '../../components/useRegionalPartner';
 const getProgramInfo = program => {
   switch (program) {
     case PROGRAM_CSD:
-      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 50};
+      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 25};
     case PROGRAM_CSP:
       return {name: 'CS Principles', shortName: 'CSP', minCourseHours: 100};
     case PROGRAM_CSA:
@@ -33,18 +32,6 @@ const getProgramInfo = program => {
     default:
       return {name: 'CS Program', shortName: null, minCourseHours: 0};
   }
-};
-
-const CourseHoursLabeledNumberInput = props => {
-  return (
-    <LabeledNumberInput
-      style={styles.numberInput}
-      labelWidth={{md: 8}}
-      controlWidth={{md: 4}}
-      inlineControl={true}
-      {...props}
-    />
-  );
 };
 
 const TeachingPlansNote = () => {
@@ -68,41 +55,17 @@ const ChooseYourProgram = props => {
     programInfo.shortName
   );
 
-  // This should be kept consistent with the calculation logic in
-  // dashboard/app/models/pd/application/teacher_application.rb.
-  const csHowManyMinutes = parseInt(data.csHowManyMinutes, 10);
-  const csHowManyDaysPerWeek = parseInt(data.csHowManyDaysPerWeek, 10);
-  const csHowManyWeeksPerYear = parseInt(data.csHowManyWeeksPerYear, 10);
-  let courseHours = null;
-  if (
-    !isNaN(csHowManyMinutes) &&
-    !isNaN(csHowManyDaysPerWeek) &&
-    !isNaN(csHowManyWeeksPerYear)
-  ) {
-    courseHours =
-      (csHowManyMinutes * csHowManyDaysPerWeek * csHowManyWeeksPerYear) / 60;
-  }
-
-  let belowMinCourseHours = false;
-  let minCourseHours = programInfo.minCourseHours;
-  if (courseHours !== null && courseHours < minCourseHours) {
-    belowMinCourseHours = true;
-  }
-
   let showTeachingPlansNote = false;
+  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${
+    programInfo.name
+  } in the ${Year} school year`;
   if (
     (data.csdWhichGrades &&
-      data.csdWhichGrades.includes(
-        `Not sure yet if my school plans to offer CS Discoveries in the ${Year} school year`
-      )) ||
+      data.csdWhichGrades.includes(notSureTeachPlanOption)) ||
     (data.cspWhichGrades &&
-      data.cspWhichGrades.includes(
-        `Not sure yet if my school plans to offer CS Principles in the ${Year} school year`
-      )) ||
+      data.cspWhichGrades.includes(notSureTeachPlanOption)) ||
     (data.csaWhichGrades &&
-      data.csaWhichGrades.includes(
-        `Not sure yet if my school plans to offer CSA in the ${Year} school year`
-      ))
+      data.csaWhichGrades.includes(notSureTeachPlanOption))
   ) {
     showTeachingPlansNote = true;
   }
@@ -175,56 +138,21 @@ const ChooseYourProgram = props => {
           )}
 
           <p>
-            <strong>Course hours =</strong> (number of minutes of one class){' '}
-            <strong> X </strong> (number of days per week the class will be
-            offered) <strong> X </strong> (number of weeks with the class)
+            We recommend {programInfo.minCourseHours} hours or more of
+            instructional time per {programInfo.name} section. You can calculate
+            your per section hours following formula:
           </p>
           <p>
-            Please provide information about your course implementation plans.
+            <strong>Per section hours =</strong> (number of minutes of one
+            class) <strong> X </strong> (number of days per week the class will
+            be offered) <strong> X </strong> (number of weeks with the class)
           </p>
-          <CourseHoursLabeledNumberInput
-            name="csHowManyMinutes"
-            label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
-              '{{CS program}}',
-              programInfo.name
-            )}
+          <LabeledRadioButtons
+            name="enoughCourseHours"
+            label={PageLabels.chooseYourProgram.enoughCourseHours
+              .replace('{{CS program}}', programInfo.name)
+              .replace('{{min hours}}', programInfo.minCourseHours)}
           />
-          <CourseHoursLabeledNumberInput
-            name="csHowManyDaysPerWeek"
-            label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
-              '{{CS program}}',
-              programInfo.name
-            )}
-          />
-          <CourseHoursLabeledNumberInput
-            name="csHowManyWeeksPerYear"
-            label={PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
-              '{{CS program}}',
-              programInfo.name
-            )}
-          />
-          {courseHours && (
-            <div style={{marginBottom: 30}}>
-              <Row>
-                <Col md={8}>
-                  <div style={{textAlign: 'right'}}>
-                    <strong>Course hours</strong>
-                  </div>
-                </Col>
-                <Col md={4}>
-                  <strong>{courseHours.toFixed(2)}</strong>
-                </Col>
-              </Row>
-            </div>
-          )}
-          {belowMinCourseHours && (
-            <p style={styles.error}>
-              Note: {minCourseHours} or more hours of instruction per{' '}
-              {programInfo.name} section are strongly recommended. We suggest
-              checking with your school administration to see if additional time
-              can be allotted for this course in {Year}.
-            </p>
-          )}
 
           <LabeledRadioButtonsWithAdditionalTextFields
             name="planToTeach"
@@ -311,35 +239,6 @@ ChooseYourProgram.processPageData = data => {
   }
 
   return changes;
-};
-
-ChooseYourProgram.getErrorMessages = data => {
-  let formatErrors = {};
-  if (
-    data.csHowManyMinutes &&
-    (data.csHowManyMinutes < 1 || data.csHowManyMinutes > 480)
-  ) {
-    formatErrors.csHowManyMinutes =
-      'Class section minutes per day must be between 1 and 480';
-  }
-
-  if (
-    data.csHowManyDaysPerWeek &&
-    (data.csHowManyDaysPerWeek < 1 || data.csHowManyDaysPerWeek > 7)
-  ) {
-    formatErrors.csHowManyDaysPerWeek =
-      'Class section days per week must be between 1 and 7';
-  }
-
-  if (
-    data.csHowManyWeeksPerYear &&
-    (data.csHowManyWeeksPerYear < 1 || data.csHowManyWeeksPerYear > 52)
-  ) {
-    formatErrors.csHowManyWeeksPerYear =
-      'Class section weeks per year must be between 1 and 52';
-  }
-
-  return formatErrors;
 };
 
 const styles = {
