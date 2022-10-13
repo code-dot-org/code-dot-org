@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-draft-pl",
-    "serialized_at": "2022-09-01 22:30:24 UTC",
+    "serialized_at": "2022-10-12 15:49:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -62,6 +62,21 @@
         "lesson_group.key": "",
         "script.name": "csa-draft-pl"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Module 4 post-work: FRQs and Unit 5",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
     }
   ],
   "lesson_activities": [
@@ -85,6 +100,18 @@
       "seeding_key": {
         "lesson_activity.key": "a5c8feeb-34b0-4319-b65a-b10578896438",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
+    },
+    {
+      "key": "a9300d58-c3e8-4bdc-abc6-f179e37e4698",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9300d58-c3e8-4bdc-abc6-f179e37e4698",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csa-draft-pl"
       }
@@ -188,6 +215,61 @@
       "seeding_key": {
         "activity_section.key": "78b93010-778a-4bb1-a928-af65c2676f0a",
         "lesson_activity.key": "a5c8feeb-34b0-4319-b65a-b10578896438"
+      }
+    },
+    {
+      "key": "018f8e34-2620-4f55-9f1a-24a07db28c37",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 4 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "018f8e34-2620-4f55-9f1a-24a07db28c37",
+        "lesson_activity.key": "a9300d58-c3e8-4bdc-abc6-f179e37e4698"
+      }
+    },
+    {
+      "key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b",
+      "position": 2,
+      "properties": {
+        "progression_name": "College Board FRQs (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b",
+        "lesson_activity.key": "a9300d58-c3e8-4bdc-abc6-f179e37e4698"
+      }
+    },
+    {
+      "key": "a8d82891-ca29-44bf-affd-fcfa897a0e87",
+      "position": 3,
+      "properties": {
+        "progression_name": "FRQ Day in Code.org's Unit 5 (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8d82891-ca29-44bf-affd-fcfa897a0e87",
+        "lesson_activity.key": "a9300d58-c3e8-4bdc-abc6-f179e37e4698"
+      }
+    },
+    {
+      "key": "2b452576-830f-470a-a98a-abde52e49f85",
+      "position": 4,
+      "properties": {
+        "progression_name": "FRQ Skills (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b452576-830f-470a-a98a-abde52e49f85",
+        "lesson_activity.key": "a9300d58-c3e8-4bdc-abc6-f179e37e4698"
+      }
+    },
+    {
+      "key": "86ba278f-7756-4105-a8d0-6a16f7161c04",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "86ba278f-7756-4105-a8d0-6a16f7161c04",
+        "lesson_activity.key": "a9300d58-c3e8-4bdc-abc6-f179e37e4698"
       }
     }
   ],
@@ -598,6 +680,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-3-reflection"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -620,6 +705,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-3-reflection-project"
+        ],
         "progression": "Reflection (~5 minutes)"
       },
       "bonus": false,
@@ -659,6 +747,160 @@
       },
       "level_keys": [
         "vpl-csa-module-3-wrap-up-2022"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 4 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-4-overview-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "018f8e34-2620-4f55-9f1a-24a07db28c37"
+      },
+      "level_keys": [
+        "vpl-csa-module-4-overview-2022"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "College Board FRQs (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-4-applying the rubric-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b"
+      },
+      "level_keys": [
+        "vpl-csa-module-4-applying the rubric-2022"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "College Board FRQs (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-4-frq-reflection"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-4-frq-reflection"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "College Board FRQs (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-4-additional-FRQ-resources-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b"
+      },
+      "level_keys": [
+        "vpl-csa-module-4-additional-FRQ-resources-2022"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "FRQ Day in Code.org's Unit 5 (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-4-unit-5-frq-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "a8d82891-ca29-44bf-affd-fcfa897a0e87"
+      },
+      "level_keys": [
+        "vpl-csa-module-4-unit-5-frq-2022"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "FRQ Skills (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-4-frq-skills-reflection"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "2b452576-830f-470a-a98a-abde52e49f85"
+      },
+      "level_keys": [
+        "vpl-csa-2022-module-4-frq-skills-reflection"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-4-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "86ba278f-7756-4105-a8d0-6a16f7161c04"
+      },
+      "level_keys": [
+        "vpl-csa-module-4-wrap-up-2022"
       ]
     }
   ],
@@ -889,6 +1131,90 @@
         "lesson_group.key": "",
         "script.name": "csa-draft-pl",
         "activity_section.key": "78b93010-778a-4bb1-a928-af65c2676f0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-4-overview-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-4-overview-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "018f8e34-2620-4f55-9f1a-24a07db28c37"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-4-applying the rubric-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-4-applying the rubric-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-4-frq-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-4-frq-reflection"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-4-additional-FRQ-resources-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-4-additional-FRQ-resources-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "487f4fdc-10d3-44fc-a8d2-caad8d6b478b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-4-unit-5-frq-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-4-unit-5-frq-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "a8d82891-ca29-44bf-affd-fcfa897a0e87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-2022-module-4-frq-skills-reflection",
+        "script_level.level_keys": [
+          "vpl-csa-2022-module-4-frq-skills-reflection"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "2b452576-830f-470a-a98a-abde52e49f85"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-4-wrap-up-2022",
+        "script_level.level_keys": [
+          "vpl-csa-module-4-wrap-up-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl",
+        "activity_section.key": "86ba278f-7756-4105-a8d0-6a16f7161c04"
       }
     }
   ],

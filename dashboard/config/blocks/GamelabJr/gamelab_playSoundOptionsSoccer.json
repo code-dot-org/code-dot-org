@@ -10,23 +10,31 @@
         "options": [
           [
             "airhorn",
-            "'sound://category_sports/Airhorn_SFX_v2.mp3'"
+            "'sound://category_sports/Airhorn_SFX.mp3'"
           ],
           [
             "applause",
-            "'sound://category_sports/Crowd Applause_SFX_v1.mp3'"
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'"
           ],
           [
             "chant",
-            "'sound://category_sports/Crowd Chant_SFX_v1.mp3'"
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'"
           ],
           [
             "cheer",
-            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'"
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'"
           ],
           [
-            "button",
-            "'sound://category_app/app_button_1.mp3'"
+            "kick",
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'"
+          ],
+          [
+            "two whistles",
+            "'sound://category_sports/Double_Whistle_SFX.mp3'"
+          ],
+          [
+            "whistle",
+            "'sound://category_sports/One_Whistle_SFX.mp3'"
           ]
         ]
       }

@@ -43,7 +43,7 @@
   "created_at": "2022-09-30T16:38:11.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:11.429+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_promptanswered\\\"\"],\"cloned_from\":\"csc_bookcover_promptanswered\"},{\"changed_at\":\"2022-09-30 17:58:54 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-30 17:59:33 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:07:38 +0000\",\"changed\":[\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:21:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:40:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:41:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:11.429+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_promptanswered\\\"\"],\"cloned_from\":\"csc_bookcover_promptanswered\"},{\"changed_at\":\"2022-09-30 17:58:54 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-30 17:59:33 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:07:38 +0000\",\"changed\":[\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:21:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:40:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:41:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:22:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:23:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -96,13 +96,6 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_printText">
-          <value name="TEXT">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1">Thanks for answering!</field>
-            </block>
-          </value>
-        </block>
         <block type="gamelab_spriteClicked">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
@@ -134,6 +127,13 @@
           </value>
         </block>
         <block type="gamelab_whenAllPromptsAnswered"/>
+        <block type="gamelab_printText">
+          <value name="TEXT">
+            <block type="text">
+              <field name="TEXT">Thanks for answering!</field>
+            </block>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>

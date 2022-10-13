@@ -281,6 +281,7 @@ th:
       teach: "สอน"
       about: "เกี่ยวกับ"
       legal_privacy: "นโยบายความเป็นส่วนตัว"
+      legal_cookie_notice: "ประกาศเกี่ยวกับคุกกี้"
       legal_tos: "เงื่อนไขการให้บริการ"
     user:
       classroom: 'หน้าแรกของคุณครู'

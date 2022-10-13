@@ -864,7 +864,17 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "Modificaciones de lecciones virtuales"
+          "name": "Modificaciones de lecciones virtuales",
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
+        },
+        "all_resources/courseb/2022": {
+          "url": "/s/coursob-2022/recursos"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/s/coursob-2022/normas"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/coursob-2022/vocab"
         },
         "unplugged_maze_blocks/express/2022": {
           "name": "Bloques Sin conexión para Laberinto/Granjera/Abeja - Cursos 2-5",
@@ -1004,6 +1014,15 @@
           "name": "Foro de profesores",
           "url": "https://forum.code.org/c/csf/",
           "type": "Recurso"
+        },
+        "all_resources/pre-express/2022": {
+          "url": "/s/pre-exprés-2022/recursos"
+        },
+        "all_standards/pre-express/2022": {
+          "url": "/s/pre-exprés-2022/normas"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "url": "/s/pre-exprés-2022/vocab"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Seguridad en mi Barrio en Línea: Diapositivas de la Lección",
@@ -1192,7 +1211,17 @@
           "type": "Recurso"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "Modificaciones de lecciones virtuales"
+          "name": "Modificaciones de lecciones virtuales",
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
+        },
+        "all_resources/coursea/2022": {
+          "url": "/s/coursoa-2022/recursos"
+        },
+        "all_standards/coursea/2022": {
+          "url": "/s/coursoa-2022/normas"
+        },
+        "all_vocabulary/coursea/2022": {
+          "url": "/s/coursoa-2022/vocab"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Poner un STOP a la Maldad en Línea: Diapositivas de la Lección",
@@ -1681,6 +1710,7 @@
         },
         "the_problem_solving_process_1/csd/2022": {
           "name": "El proceso de resolución de problemas",
+          "url": "https://docs.google.com/presentation/d/1vCSb1Q5LCJsoDf9xg2hI7rwKvVot0yX6oEAhT2UQHKY/template/preview",
           "type": "Diapositivas"
         },
         "solving_problems/csd/2022": {
@@ -1720,6 +1750,7 @@
         },
         "what_is_a_computer_1/csd/2022": {
           "name": "¿Qué es un Ordenador?",
+          "url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/template/preview",
           "type": "Diapositivas"
         },
         "input_and_output/csd/2022": {
@@ -1734,6 +1765,7 @@
         },
         "input_and_output_2/csd/2022": {
           "name": "Entrada y salida",
+          "url": "https://docs.google.com/presentation/d/10ew9kAUGnO0gMSr6sW5sFLB0bYfjdwQgiX-cJyzPQ9w/template/preview",
           "type": "Diapositivas"
         },
         "apps_with_processing/csd/2022": {
@@ -1748,6 +1780,7 @@
         },
         "apps_with_processing_2/csd/2022": {
           "name": "Aplicaciones con Procesamiento",
+          "url": "https://docs.google.com/presentation/d/16-FcZlbn-DXr_BcDncQwUJvwAy24mT4JOuxTQAHzDOE/template/preview",
           "type": "Diapositivas"
         },
         "apps_with_storage/csd/2022": {
@@ -1767,6 +1800,7 @@
         },
         "apps_with_storage_2/csd/2022": {
           "name": "Aplicaciones con Almacenamiento",
+          "url": "https://docs.google.com/presentation/d/1YX99Zyb1-Mwgl9TiY5P2DEx9Wb4_xffJUDu05VxTh_I/template/preview",
           "type": "Diapositivas"
         },
         "apps_and_problem_solving/csd/2022": {
@@ -1804,6 +1838,7 @@
         },
         "project_-_propose_an_app/csd/2022": {
           "name": "Proyecto - Propuesta de aplicación",
+          "url": "https://docs.google.com/presentation/d/1wkcHClx2M7iHLvZa4yO0Mj9FuRxZgqA8WyxkFD5wP60/template/preview",
           "type": "Diapositivas"
         },
         "build_a_newspaper_table/csd/2022": {
@@ -1817,6 +1852,7 @@
           "type": "Guía de Actividad"
         },
         "intro_to_problem_solving_newspapers_/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/template/preview",
           "type": "Diapositivas"
         },
         "spaghetti_bridge/csd/2022": {
@@ -1830,6 +1866,7 @@
           "type": "Guía de Actividad"
         },
         "intro_to_problem_solving_spaghetti_/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1v2LAJj8kTaRiuwCREkTpaoEWpw469czx3FaClScE2vQ/template/preview",
           "type": "Diapositivas"
         },
         "code_org_how-to_video_playlist/csd/2022": {
@@ -2278,9 +2315,13 @@
           "type": "Diapositivas"
         },
         "planning_your_platform_game/csd/2022": {
+          "name": "Planificando tu Juego de Plataforma",
+          "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
           "type": "Ejemplo"
         },
         "planning_your_platform_game_1/csd/2022": {
+          "name": "Planificando tu Juego de Plataforma",
+          "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
           "type": "Guía de Actividad"
         },
         "using_the_game_design_process/csd/2022": {
@@ -6841,7 +6882,13 @@
           "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit"
         },
         "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "name": "Planificando tu Juego de Plataforma",
+          "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
           "type": "Ejemplo"
+        },
+        "platform-game-project-guide/csd/2021": {
+          "name": "Planificando tu Juego de Plataforma",
+          "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit"
         },
         "make-your-own-game-exemplar-2020/csd/2021": {
           "type": "Ejemplo"
