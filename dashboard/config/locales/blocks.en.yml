@@ -2,6 +2,8 @@
 en:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: moving NESW with arrow keys
       AmysBlocks_setPromptWithChoices:
         text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
@@ -1447,6 +1449,8 @@ en:
             '25': extra small
       gamelab_setPrompt:
         text: prompt user {QUESTION} for variable {VAR}
+      gamelab_setPromptWith2Choices:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}
       gamelab_setPromptWithChoices:
         text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       gamelab_setProp:
@@ -2282,6 +2286,11 @@ en:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: when {VAR} answered
       RyanLab_moveForward:
@@ -2543,6 +2552,12 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      storylab_clearHeadings:
+        text: clear headings
+      storylab_setHeading:
+        text: set heading {HEADING}
+      storylab_setSubheading:
+        text: set subheading {SUBHEADING}
       validation_validatedBackground:
         text: set background to {IMG}
       validation_validatedSound:

@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
+import _ from 'lodash';
 
 function LessonLockDialog({
   unitId,
@@ -76,7 +77,19 @@ function LessonLockDialog({
     );
   };
 
+  /*
+  Checks that the user is trying to save new information, otherwise closes
+  the dialog without sending to api post method.
+  */
   const handleSave = async () => {
+    if (_.isEqual(serverLockState, clientLockState)) {
+      handleClose();
+    } else {
+      sendSave();
+    }
+  };
+
+  const sendSave = async () => {
     setSaving(true);
     setError(null);
     const csrfToken = $('meta[name="csrf-token"]').attr('content');
@@ -112,9 +125,7 @@ function LessonLockDialog({
   const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
 
   const renderHiddenWarning = () => (
-    <div style={styles.error}>
-      {lessonIsHidden && i18n.hiddenAssessmentWarning()}
-    </div>
+    <div style={styles.hiddenError}>{i18n.hiddenAssessmentWarning()}</div>
   );
 
   const renderInstructionsAndButtons = () => (
@@ -245,12 +256,12 @@ function LessonLockDialog({
             requireSelection={hasSelectedSection}
           />
         </div>
-        {renderHiddenWarning()}
+        {lessonIsHidden && renderHiddenWarning()}
         {renderInstructionsAndButtons()}
         {renderStudentTable()}
       </div>
       <div style={styles.buttonContainer}>
-        {error && <span style={styles.error}>{error}</span>}
+        {error && <span style={styles.saveError}>{error}</span>}
         <button
           type="button"
           style={progressStyles.baseButton}
@@ -328,7 +339,12 @@ const styles = {
   hidden: {
     display: 'none'
   },
-  error: {
+  saveError: {
+    color: color.red,
+    fontStyle: 'italic',
+    marginRight: 10
+  },
+  hiddenError: {
     color: color.red,
     fontStyle: 'italic',
     marginBottom: 10

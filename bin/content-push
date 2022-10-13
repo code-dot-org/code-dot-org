@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'optparse'
-require_relative '../deployment.rb'
+require_relative '../deployment'
 require 'cdo/git_utils'
 require 'cdo/only_one'
 
@@ -42,7 +42,7 @@ end
 
 def disallow_state_pdf
   `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
-    next unless %r{pegasus/sites.v3/code.org/public/advocacy/state-facts/..\.pdf$} =~ line
+    next unless %r{pegasus/sites.v3/code.org/public/advocacy/state-facts/..\.pdf$}.match?(line)
     STDERR.puts "\nAborting because state pdf generation appears to be in progress:\n\n    #{line}\n\n"
     STDERR.puts "Please wait 10 minutes and then try again.\n\n"
     `git reset HEAD`

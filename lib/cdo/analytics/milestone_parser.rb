@@ -85,7 +85,7 @@ class MilestoneParser
     counts = logs.map do |log|
       (cache[log.key] = count_lines_of_code(log))['count']
     end
-    total = counts.reduce(:+)
+    total = counts.sum
     debug "Finished processing (#{(Time.now - start_time).round(2)}s), total count: #{total}"
     total
   end

@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Bashkohuni me lëvizjen dhe prezantojini studentët tuaj në shkencat kompjuterike me këto hapa.
 
-Të menduarit llogaritës ndihmon në rritjen e aftësive për zgjidhjen e problemeve, logjikës dhe krijimtarisë Teknologjia po transformon çdo industri në planet. Studentët sot duhet të mësojnë se si të krijojnë teknologji, jo vetëm ta përdorin atë. Duke filluar herët, ata do të kenë një themel për sukses në çdo rrugë karriere të shekullit 21.
+Studentët sot duhet të mësojnë se si të krijojnë teknologji, jo vetëm ta përdorin atë.
 
-Provimi i një Ore Kodi është një mënyrë e thjeshtë dhe argëtuese për të prezantuar studentët në shkencat kompjuterike, mbase për herë të parë, dhe përshtatet në mënyrë të përsosur si për mjediset në klasë ashtu edhe ato pas shkollës. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Shikoni videon e orës së kodit si](#how-to-video)
 - [Eksploroni aktivitetet dhe udhëzimet](#explore-activities)
@@ -22,8 +22,6 @@ Provimi i një Ore Kodi është një mënyrë e thjeshtë dhe argëtuese për t�
 - [Vazhdo kodo](#code)
 - [Festoni suksesin e studentëve tuaj](#celebrate)
 - [Other Hour of Code resources for educators](#other-resources)
-
-### Një orë kod mund të organizohet gjithashtu në distancë! Për të filluar, shikoni këshillat tona [ për mbajtjen e një ngjarjeje Hour of Code ](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -41,7 +39,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -60,7 +58,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
 
 * * *
 
@@ -76,11 +74,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -115,7 +113,7 @@ Nuk ka problem në qoftë se jeni të rinj në fushën e shkencave kompjuterike.
 
 Direct students to the activity
 
-- Shkruaje në tabelë (dërrasë të zezë) linkun e tutorialit. Poshtë numrit të pjesëmarrësve gjeni të listuar linkun e [të dhëna rreth tutorialit të zgjedhur](http://<%= codeorg_url() %>/learn) nga ju.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 When your students come across difficulties it's okay to respond:
 
@@ -142,7 +140,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Porosit bluza ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)për shkollën tënde.
 - Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 * * *
@@ -156,6 +153,6 @@ What if a student finishes early?
 
 ### Çfarë vjen pas Orës së Kodimit?
 
-Shkenca kompjuterike nuk ka pse të përfundojë me Orën e Kodit! Kurrikula jonë është e bazuar në internet dhe falas për t'u përdorur, përgjithmonë. [ Mësoni si ](/beyond) të sillni CS në shkollën tuaj dhe studentët.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

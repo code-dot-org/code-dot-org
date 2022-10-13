@@ -175,4 +175,10 @@ class TestController < ApplicationController
     level.destroy
     head :ok
   end
+
+  def destroy_data_doc
+    data_doc = DataDoc.find_by(key: params[:key])
+    data_doc.destroy
+    head :ok
+  end
 end

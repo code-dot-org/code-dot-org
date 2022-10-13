@@ -1,7 +1,7 @@
 /** @file Board controller for Adafruit Circuit Playground */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import five from '@code-dot-org/johnny-five';
+import five from '@code-dot-org/johnny-five-deprecated';
 import Playground from 'playground-io';
 import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
@@ -430,9 +430,8 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
           return;
         }
         if (port.queue.length > 512) {
-          throw new Error(
-            'Send queue is full! More than 512 pending messages.'
-          );
+          // Send queue is full.  More than 512 pending messages.
+          return;
         }
 
         const toSend = port.queue.shift();

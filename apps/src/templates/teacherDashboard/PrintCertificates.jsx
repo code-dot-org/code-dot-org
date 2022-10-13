@@ -3,15 +3,13 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import style from './print-certificates.module.scss';
-import experiments from '@cdo/apps/util/experiments';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    assignmentName: PropTypes.string
+    courseVersionName: PropTypes.string
   };
 
   state = {
@@ -31,15 +29,11 @@ class PrintCertificates extends Component {
     this.certForm.submit();
   };
 
-  certificateUrl = () => {
-    if (experiments.isEnabled(experiments.STUDIO_CERTIFICATE)) {
-      return '/certificates/batch';
-    } else {
-      return pegasus('/certificates');
-    }
-  };
+  certificateUrl = () => '/certificates/batch';
 
   render() {
+    const {courseVersionName} = this.props;
+
     return (
       <form
         className={style.main}
@@ -48,11 +42,9 @@ class PrintCertificates extends Component {
         method="POST"
       >
         <RailsAuthenticityToken />
-        <input
-          type="hidden"
-          name="script"
-          defaultValue={this.props.assignmentName}
-        />
+        {courseVersionName && (
+          <input type="hidden" name="course" value={btoa(courseVersionName)} />
+        )}
         {this.state.names.map((name, index) => (
           <input key={index} type="hidden" name="names[]" value={name} />
         ))}
