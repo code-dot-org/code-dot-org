@@ -91,7 +91,6 @@ module Pd
         ),
         csa_how_offer: 'How will you offer CSA?',
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        plan_to_teach: "Do you plan to personally teach this course in the #{YEAR} school year?",
         replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
         replace_which_course: 'Which existing course or curriculum will {{CS program}} replace? Mark all that apply.'
       },
@@ -262,7 +261,6 @@ module Pd
       csp_which_grades: YES_NO,
       csa_which_grades: YES_NO,
       committed: YES_NO,
-      plan_to_teach: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
       replace_existing: YES_NO,
       principal_approval: YES_NO,
@@ -281,7 +279,6 @@ module Pd
       criteria_score_questions_csd: [
         :csd_which_grades,
         :committed,
-        :plan_to_teach,
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
@@ -290,7 +287,6 @@ module Pd
       criteria_score_questions_csp: [
         :csp_which_grades,
         :committed,
-        :plan_to_teach,
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
@@ -299,7 +295,6 @@ module Pd
       criteria_score_questions_csa: [
         :csa_which_grades,
         :committed,
-        :plan_to_teach,
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
@@ -352,7 +347,6 @@ module Pd
         :csp_which_grades,
         :csp_how_offer,
         :enough_course_hours,
-        :plan_to_teach,
         :replace_existing,
         :replace_which_course,
         :previous_yearlong_cdo_pd,

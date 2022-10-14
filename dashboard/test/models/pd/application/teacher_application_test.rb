@@ -322,12 +322,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 93, csv_header_csd.length
+      assert_equal 92, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 95, csv_header_csp.length
+      assert_equal 94, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -496,7 +496,6 @@ module Pd::Application
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
         previous_yearlong_cdo_pd: ['CS Principles'],
-        plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: options[:race].first(2),
@@ -514,7 +513,6 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: YES,
-            plan_to_teach: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -539,7 +537,6 @@ module Pd::Application
         csp_which_grades: ['12'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
-        plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: options[:race].first(2),
@@ -557,7 +554,6 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
-            plan_to_teach: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -581,7 +577,6 @@ module Pd::Application
         csp_which_grades: ['12'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
-        plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: [options[:race].second]
@@ -593,7 +588,6 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
-            plan_to_teach: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -612,7 +606,6 @@ module Pd::Application
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
         previous_yearlong_cdo_pd: ['CS Discoveries'],
-        plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
         race: [options[:race].first],
@@ -654,7 +647,6 @@ module Pd::Application
         csp_which_grades: [options[:csp_which_grades].last],
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
-        plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
         race: [options[:race].first],
@@ -784,7 +776,6 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth,

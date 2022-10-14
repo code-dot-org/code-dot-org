@@ -155,13 +155,6 @@ const ChooseYourProgram = props => {
           />
 
           <LabeledRadioButtonsWithAdditionalTextFields
-            name="planToTeach"
-            textFieldMap={{
-              [TextFields.dontKnowIfIWillTeachExplain]: 'other'
-            }}
-          />
-
-          <LabeledRadioButtonsWithAdditionalTextFields
             name="replaceExisting"
             textFieldMap={{
               [TextFields.iDontKnowExplain]: 'other'
