@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-12 17:00:21 UTC",
+    "serialized_at": "2022-10-13 21:23:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -143,6 +143,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nStudents are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. Students discover that `while` loops can be combined with methods in the `Painter` class to allow them to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. They learn about the problem solving process and how this approach can help them break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java.",
+        "preparation": "* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *While Loops* and *The Problem Solving Process with Zipline* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nIn this lesson, you are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. You discover that `while` loops can be combined with methods in the `Painter` class to allow you to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. You learn about the problem solving process and how this approach can help you break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -541,6 +544,48 @@
       "seeding_key": {
         "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "daf5b2bf-86d1-454b-8135-d55580544898",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "bb157531-e345-4a34-ba10-de35ba3a4120",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-2023"
       }
@@ -1742,6 +1787,284 @@
         "activity_section.key": "33502fb4-3db5-4d8d-ac4d-a5b7161ab021",
         "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864"
       }
+    },
+    {
+      "key": "836e3640-1941-49d8-b99c-8becd66e21b3",
+      "position": 1,
+      "properties": {
+        "description": "We have learned how to give instructions to our `Painter` objects by calling methods from the `Painter` class. When we are trying to get our `Painter` objects to navigate and paint in The Neighborhood, we have to be specific about the order we want the instructions to be executed. The order we give our instructions is one of the components of an algorithm.",
+        "name": "Components of an Algorithm",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "836e3640-1941-49d8-b99c-8becd66e21b3",
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898"
+      }
+    },
+    {
+      "key": "60326121-0dcc-43da-9b56-856fdd603c6a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you know or remember about algorithms?*\n\n**Discussion Goal:** Students recall what they learned about algorithms in Computer Science Principles (CSP), including the components of an algorithm such as sequencing, selection, and iteration. Students identify sequencing as the order that steps are executed and make connections to how they have been using sequencing in The Neighborhood. Students may recall that selection is used to determine a different set of instructions to execute based on a condition and that iteration is used to execute a set of instructions a specific number of times or while a condition is true.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60326121-0dcc-43da-9b56-856fdd603c6a",
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898"
+      }
+    },
+    {
+      "key": "68da7d0f-6295-43af-a7b8-b55c4df7cea3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***algorithm*** and introduce the components of an algorithm."
+      },
+      "seeding_key": {
+        "activity_section.key": "68da7d0f-6295-43af-a7b8-b55c4df7cea3",
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898"
+      }
+    },
+    {
+      "key": "9a83e932-6c1d-40c2-928d-4e25e77c3cde",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "15",
+        "name": "Boolean Values and While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a83e932-6c1d-40c2-928d-4e25e77c3cde",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "d5ea39d7-6038-4fdd-9a06-941323c81dbd",
+      "position": 2,
+      "properties": {
+        "description": "We have learned how to call methods to have our `Painter` objects perform specific tasks in a certain order to achieve a goal. You likely noticed that when we were doing this, we were often repeating the same set of instructions, such as when we wanted to move and paint several times in a row. Let's find out how we can expand our algorithms to use sequencing and iteration so we don't have to write the same lines of code over and over again.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d5ea39d7-6038-4fdd-9a06-941323c81dbd",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "83cc2e18-e548-405c-b11f-a43551ac7d5b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Loops and Boolean Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "83cc2e18-e548-405c-b11f-a43551ac7d5b",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "4c6ae664-819f-4b19-ab09-156f07b3c9d3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students identify the `canMove()`, `isOnBucket()`, and `hasPaint()` methods used in the program and share ideas about what each method does. Students should also notice that these methods are used with `while` loops to determine if the `Painter` object can move or has paint and repeats the instructions as long as the condition is `true`. Students might wonder about the similarities and differences between these methods and those they have used previously or if there are other methods they can use to check other conditions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce `boolean` values and the `Painter` class methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some scenarios that you can think of where you would want to know if something is either true or false? Why might you need to know that?*\n\n**Discussion Goal:** Students share examples from their personal lives and experiences, such as deciding if they needed a jacket based on the weather or if they could hang out with their friends based on whether they had finished their homework or chores.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c6ae664-819f-4b19-ab09-156f07b3c9d3",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "ef371259-73e1-4081-a8cf-edce3e6d90f8",
+      "position": 5,
+      "properties": {
+        "description": "These new methods in the `Painter` class give us useful information about whether a `Painter` object can move or has paint. Unlike the other methods we have used so far, like `move()` and `paint()`, these methods give us either a `true` or `false` value when we call them that we can use to decide whether to repeat a set of instructions. Let's take a closer look at how we can do this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ef371259-73e1-4081-a8cf-edce3e6d90f8",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "d8faa952-a04b-44f5-9b44-999b43c32bf3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *While Loops*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d8faa952-a04b-44f5-9b44-999b43c32bf3",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "82c04af7-f58f-459a-8786-2a545a077dab",
+      "position": 7,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: Loops and Boolean Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "82c04af7-f58f-459a-8786-2a545a077dab",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "f5c52f81-c958-4b6b-98e6-a7e64d0cbac0",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to share what happens when a condition is never `true`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f5c52f81-c958-4b6b-98e6-a7e64d0cbac0",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "a8354d39-d35e-4b7c-9e97-246221f30435",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***."
+      },
+      "seeding_key": {
+        "activity_section.key": "a8354d39-d35e-4b7c-9e97-246221f30435",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "dbfba19f-509c-4eab-84fb-7d4e9caa154e",
+      "position": 10,
+      "properties": {
+        "description": "We now know how to implement two components of algorithms in Java – sequencing and iteration. Software engineers often plan their algorithms in natural language first before writing code. This is an important step that helps us better understand a problem and plan the steps we need to take to develop a solution.",
+        "duration": "20",
+        "name": "Writing Algorithms",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dbfba19f-509c-4eab-84fb-7d4e9caa154e",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "411ae357-79e7-4282-92e1-1b2636f8bd52",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The Problem Solving Process with Zipline*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "411ae357-79e7-4282-92e1-1b2636f8bd52",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "3589f679-1435-4223-977f-47f6e32b995b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem-solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to complete Level 4 to implement their solution for their chosen problem.",
+        "progression_name": "Practice: Using Loops and Boolean Methods",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of vocabulary presented in the lesson and writing algorithms using sequencing and iteration."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "65f0c50a-cc0e-420b-86dd-6972a66c0d67",
+      "position": 1,
+      "properties": {
+        "description": "Software engineers write algorithms every day to solve problems, many of which consist of the same components you just implemented today in your own algorithms. We have expanded our programming skills and knowledge quite a bit today!",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "65f0c50a-cc0e-420b-86dd-6972a66c0d67",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "ea0087b0-766e-4f42-bdee-414b5d6c5820",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ea0087b0-766e-4f42-bdee-414b5d6c5820",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "4d473fb1-171f-4cb4-8946-5b1614c46c62",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d473fb1-171f-4cb4-8946-5b1614c46c62",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "57010643-54d9-439c-9b10-9dd685212428",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "57010643-54d9-439c-9b10-9dd685212428",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "c49f4cfa-b128-4806-a09c-186b95d7307b",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c49f4cfa-b128-4806-a09c-186b95d7307b",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
     }
   ],
   "script_levels": [
@@ -1976,6 +2299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_2023"
+        ],
         "progression": "Predict and Run: Painter Class Methods"
       },
       "bonus": false,
@@ -1998,6 +2324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_2023"
+        ],
         "progression": "Investigate and Modify: Calling Methods"
       },
       "bonus": false,
@@ -2020,6 +2349,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_2023"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -2042,6 +2374,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_2023"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -2064,6 +2399,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2078,6 +2416,116 @@
       },
       "level_keys": [
         "CSA U1L4-L5_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L1_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83cc2e18-e548-405c-b11f-a43551ac7d5b"
+      },
+      "level_keys": [
+        "CSA U1L5-L1_2023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L2_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "82c04af7-f58f-459a-8786-2a545a077dab"
+      },
+      "level_keys": [
+        "CSA U1L5-L2_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Using Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L3_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      },
+      "level_keys": [
+        "CSA U1L5-L3_2023"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Using Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L4_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      },
+      "level_keys": [
+        "CSA U1L5-L4_2023"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L5_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "c49f4cfa-b128-4806-a09c-186b95d7307b"
+      },
+      "level_keys": [
+        "CSA U1L5-L5_2023"
       ]
     }
   ],
@@ -2249,6 +2697,66 @@
         "script.name": "csa1-2023",
         "activity_section.key": "33502fb4-3db5-4d8d-ac4d-a5b7161ab021"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L1_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83cc2e18-e548-405c-b11f-a43551ac7d5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L2_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "82c04af7-f58f-459a-8786-2a545a077dab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L3_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L4_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L5_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L5_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "c49f4cfa-b128-4806-a09c-186b95d7307b"
+      }
     }
   ],
   "resources": [
@@ -2310,6 +2818,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/12mQXp5PRm6HEhMHOwfgadYLFP8etCjdRQbMRrlwrlBc/edit?usp=sharing",
+      "key": "_key_u1l5_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] Writing Algorithms",
+      "url": "https://docs.google.com/document/d/1vC8YSyvjxns_saIvd9TsUdJMX72YalxxC_MIQnwD7R4/edit?usp=sharing",
+      "key": "_key_writing_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_writing_algorithms"
       }
     },
     {
@@ -2386,6 +2918,18 @@
       }
     },
     {
+      "name": "Loops",
+      "url": "https://docs.google.com/presentation/d/1bIR-aVo6alP-Yy6FZSb5TDGIA2zXItjJUVp3ikoHRJo/edit?usp=sharing",
+      "key": "loops",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops"
+      }
+    },
+    {
       "name": "Navigating and Painting",
       "url": "https://docs.google.com/presentation/d/1HsnHYwE8Ue_CJfbgT5KCyUT5vH9zLJh8lJ2BFdyw6d0/edit?usp=sharing",
       "key": "navigating_and_painting",
@@ -2447,6 +2991,18 @@
       }
     },
     {
+      "name": "The Problem Solving Process with Zipline",
+      "url": "https://youtu.be/z7RaFPT3DTE",
+      "key": "the_problem_solving_process_with_zipline",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_with_zipline"
+      }
+    },
+    {
       "name": "U1L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1HpxVlUVskjmYwknNRCaNcOt5GQQ0C0fiHi-MRgkKHrw/edit?usp=sharing",
       "key": "u1l2_extra_practice",
@@ -2485,6 +3041,19 @@
       }
     },
     {
+      "name": "U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1M5AP9LTGywSsUEPKZkarPkXEjmpjNV3IYqr28YbqRJQ/edit?usp=sharing",
+      "key": "u1l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
       "name": "Welcome to CSA",
       "url": "https://docs.google.com/presentation/d/1mP5UFgh1I6po_enlzpo9EMdK4r2LpBHXDt2pQMNxakA/edit?usp=sharing",
       "key": "welcome_to_csa",
@@ -2494,6 +3063,31 @@
       },
       "seeding_key": {
         "resource.key": "welcome_to_csa"
+      }
+    },
+    {
+      "name": "While Loops",
+      "url": "https://youtu.be/qnz0LVpUr88",
+      "key": "while_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "while_loops"
+      }
+    },
+    {
+      "name": "Writing Algorithms",
+      "url": "https://docs.google.com/document/d/1mSMNiQgmUwDa-9O0FbHdGZgftTihecXenOPaOL38BQs/edit?usp=sharing",
+      "key": "writing_algorithms",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_algorithms"
       }
     }
   ],
@@ -2617,6 +3211,48 @@
         "lesson.key": "lesson-5",
         "resource.key": "u1l4_extra_practice"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_writing_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "the_problem_solving_process_with_zipline"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "while_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "writing_algorithms"
+      }
     }
   ],
   "scripts_resources": [
@@ -2626,6 +3262,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "algorithm",
+      "word": "algorithm",
+      "definition": "a finite set of instructions that accomplish a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
     {
       "key": "argument",
       "word": "argument",
@@ -2687,6 +3333,16 @@
       }
     },
     {
+      "key": "condition",
+      "word": "condition",
+      "definition": "determines whether or not to execute a block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
       "key": "constructor",
       "word": "constructor",
       "definition": "a block of code that has the same name as the class and tells the computer how to create a new object",
@@ -2714,6 +3370,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "key": "iteration_statement",
+      "word": "iteration statement",
+      "definition": "a control structure that repeatedly executes a block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration_statement"
       }
     },
     {
@@ -2915,6 +3581,24 @@
         "lesson.key": "lesson-5",
         "vocabulary.key": "string_literal"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "iteration_statement"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -2982,6 +3666,16 @@
       }
     },
     {
+      "key": "838c26b2-8c35-45e0-a822-f55fad060ecd",
+      "properties": {
+        "description": "Explain the purpose and functionality of a `while` loop"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "838c26b2-8c35-45e0-a822-f55fad060ecd"
+      }
+    },
+    {
       "key": "88b80757-d0da-4352-ab5f-fb9b9f32e7d6",
       "properties": {
         "description": "Represent behaviors of an object as methods in a class"
@@ -2992,6 +3686,16 @@
       }
     },
     {
+      "key": "8d10393f-574d-4c9e-bc98-d7ffff150dd7",
+      "properties": {
+        "description": "Apply the problem-solving process to plan an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "8d10393f-574d-4c9e-bc98-d7ffff150dd7"
+      }
+    },
+    {
       "key": "8f28b6d7-6426-4afe-af78-9412583ecfa1",
       "properties": {
         "description": "Relate skills and characteristics of a software engineer to personal skills and identity"
@@ -2999,6 +3703,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "8f28b6d7-6426-4afe-af78-9412583ecfa1"
+      }
+    },
+    {
+      "key": "91e5a7da-78e9-445a-8cb9-8c8ff34f52e3",
+      "properties": {
+        "description": "Write `while` loops to repeat code while a condition is `true`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "91e5a7da-78e9-445a-8cb9-8c8ff34f52e3"
       }
     },
     {
@@ -3070,6 +3784,48 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.1"
       }
     }
   ],
