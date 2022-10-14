@@ -36,5 +36,5 @@
   "return_value": "Boolean true or false\n",
   "short_description": "Tests whether two values are equal.\n",
   "syntax": "___ == ___",
-  "tips": "### Tips\n- = is the assignment operator. == is the boolean check for equivalency operator.\n- JavaScript will automatically perform type conversion for you when comparing two values (e.g. the integer 5 will register as equivalent to the string \"5\").\n- Comparison operators include < <= == > >= !="
+  "tips": "- = is the assignment operator. == is the boolean check for equivalency operator.\n- JavaScript will automatically perform type conversion for you when comparing two values (e.g. the integer 5 will register as equivalent to the string \"5\").\n- Comparison operators include < <= == > >= !="
 }

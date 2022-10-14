@@ -39,37 +39,13 @@
   "created_at": "2022-10-12T21:54:17.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-12T21:54:17.693+00:00\",\"changed\":[\"cloned from \\\"csc_fm_addtwo\\\"\"],\"cloned_from\":\"csc_fm_addtwo\"},{\"changed_at\":\"2022-10-12 21:54:47 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 21:56:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 21:56:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 21:56:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-12T21:54:17.693+00:00\",\"changed\":[\"cloned from \\\"csc_fm_addtwo\\\"\"],\"cloned_from\":\"csc_fm_addtwo\"},{\"changed_at\":\"2022-10-12 21:54:47 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 21:56:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 21:56:26 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 21:56:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-13 17:06:59 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="addTwo">addTwo</field>
-          <statement name="STACK">
-            <block type="variables_set">
-              <field name="VAR">input</field>
-              <value name="VALUE">
-                <block type="math_arithmetic">
-                  <field name="OP">ADD</field>
-                  <value name="A">
-                    <block type="variables_get">
-                      <field name="VAR">input</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">2</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
         <block type="when_run" movable="false">
           <next>
             <block type="gamelab_makeNewSpriteAnon">
@@ -127,6 +103,30 @@
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME" id="addTwo">addTwo</field>
+          <statement name="STACK">
+            <block type="variables_set">
+              <field name="VAR">input</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">ADD</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>

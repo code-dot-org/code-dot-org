@@ -185,7 +185,7 @@ class CourseVersion < ApplicationRecord
   end
 
   def self.unit_group_course_versions_with_units(unit_ids)
-    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.content_root_type == 'UnitGroup'}
+    CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
   end
 
   def self.unit_group_course_versions_with_units_info(unit_ids)
