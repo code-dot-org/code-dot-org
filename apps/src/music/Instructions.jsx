@@ -49,7 +49,9 @@ export default class Instructions extends React.Component {
           backgroundSize: '100% 200%',
           padding: 10,
           boxSizing: 'border-box',
-          position: 'relative'
+          position: 'relative',
+          fontSize: 14,
+          lineHeight: 1.5
         }}
       >
         {instructions?.groups[0].panels.map((panel, index) => {
