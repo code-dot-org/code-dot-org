@@ -60,7 +60,7 @@
 :javascript
   var webServiceLocation = '/promote/state/';
 
-  $(document).ready(function() {
+  $(window).on("load", function() {
     if (#{use_url}) {
       // Check if the URL specifies a specific state. If so, load the state
       if (window.location.pathname.replace("/promote", "") !== "") {
