@@ -58,7 +58,7 @@ export default class BlockSvgFunctional {
         x: frameX,
         y: frameY,
         fill: color.lightest_gray,
-        stroke: color.lighter_gray,
+        stroke: color.light_gray,
         rx: 15,
         ry: 15
       },
@@ -70,7 +70,7 @@ export default class BlockSvgFunctional {
       {
         x: frameX,
         y: frameY,
-        fill: color.lighter_gray,
+        fill: color.light_gray,
         rx: 15,
         ry: 15,
         'clip-path': `url(#frameClip${safeCharBlockId})`
