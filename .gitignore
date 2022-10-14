@@ -13,6 +13,7 @@ dashboard/brakeman_security_report.htm
 .tmputils
 .rakeTasks
 .idea/
+.irb_history
 jsconfig.json
 /bin/i18n/*_credentials.yml
 /bin/i18n/crowdin/*files_to_sync_out.json
