@@ -588,12 +588,6 @@ module Pd::Application
           "I don't know yet."
         ],
 
-        plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year})",
-          "No, I don’t plan to teach this course this year (#{year})",
-          TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
-        ],
-
         pay_fee: [
           'Yes, my school/district would be able to pay the full program fee.',
           TEXT_FIELDS[:no_pay_fee],
@@ -673,7 +667,6 @@ module Pd::Application
 
         program
         enough_course_hours
-        plan_to_teach
         replace_existing
 
         gender_identity
@@ -730,11 +723,9 @@ module Pd::Application
         [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
         [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
         [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:replace_which_course, TEXT_FIELDS[:other_please_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
@@ -1004,10 +995,6 @@ module Pd::Application
       elsif course == 'csa'
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
-      end
-
-      if responses[:plan_to_teach].in? options[:plan_to_teach].first(2)
-        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(1)) ? YES : NO
       end
 
       meets_minimum_criteria_scores[:replace_existing] =
