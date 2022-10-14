@@ -493,7 +493,8 @@ export default class MusicView extends React.Component {
           borderRadius: 4,
           padding: 0,
           boxSizing: 'border-box',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          userSelect: 'none'
         }}
       >
         {this.state.showInstructions && (
