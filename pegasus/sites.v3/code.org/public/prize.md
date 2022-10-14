@@ -22,7 +22,7 @@ theme: responsive
 ## To be eligible a school must commit to:
 
 <ul>
-  <li>Establish a <strong><em>new</em></strong> <a href="/educate/csp" target="_blank" rel="noopener noreferrer">Computer Science Principles</a>, <a href="/educate/csa" target="_blank" rel="noopener noreferrer">Computer Science A</a>, or <a href="/educate/csd" target="_blank" rel="noopener noreferrer">Computer Science Discoveries</a> course using Code.org.</li>
+  <li>Add a <strong><em>new</em></strong> <a href="/educate/csp" target="_blank" rel="noopener noreferrer">Computer Science Principles</a>, <a href="/educate/csa" target="_blank" rel="noopener noreferrer">Computer Science A</a>, or <a href="/educate/csd" target="_blank" rel="noopener noreferrer">Computer Science Discoveries</a> course using Code.org to your course schedule.</li>
   <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
   <li>Provide a short statement of support from district leadership for expanding CS opportunities as a district priority.</li>
   <li>Organize a school-wide <a href="https://hourofcode.com/" target="_blank" rel="noopener noreferrer">Hour of Code</a> or other event/assembly for <a href="https://www.csedweek.org/" target="_blank" rel="noopener noreferrer">CSEdWeek</a> to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
@@ -45,7 +45,7 @@ theme: responsive
   <p>Any public middle or high school in the U.S. is eligible to apply if they make the commitments below. We especially encourage schools in low-income underserved communities to participate, to help advance diversity and equity in computer science.</p>
   <p>To be eligible a school must commit to:</p>
   <ul>
-    <li>Establish a new Computer Science Principles, Computer Science A, or Computer Science Discoveries course using Code.org.</li>
+    <li>Add a new Computer Science Principles, Computer Science A, or Computer Science Discoveries course using Code.org to your course schedule.</li>
     <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
     <li>Provide a short statement of support from district leadership for expanding of CS opportunities as a district priority.</li>
     <li>Organize a school-wide Hour of Code or other event/assembly for CSEdWeek to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
