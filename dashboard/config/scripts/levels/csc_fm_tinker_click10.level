@@ -39,112 +39,11 @@
   "created_at": "2022-10-12T22:08:44.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-12T22:08:44.751+00:00\",\"changed\":[\"cloned from \\\"csc_fm_observe_click10\\\"\"],\"cloned_from\":\"csc_fm_observe_click10\"},{\"changed_at\":\"2022-10-12 22:08:51 +0000\",\"changed\":[\"embed\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:10:11 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:10:41 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:11:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:12:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:12:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:13:42 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:15:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:51 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:18:38 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:19:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:21:31 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:24:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-12T22:08:44.751+00:00\",\"changed\":[\"cloned from \\\"csc_fm_observe_click10\\\"\"],\"cloned_from\":\"csc_fm_observe_click10\"},{\"changed_at\":\"2022-10-12 22:08:51 +0000\",\"changed\":[\"embed\",\"validation_enabled\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:10:11 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:10:41 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:11:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:12:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:12:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:13:42 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:15:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:51 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:16:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:18:38 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:19:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:21:31 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:24:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-13 17:36:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-13 17:36:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run" movable="false">
-          <next>
-            <block type="gamelab_makeNewSpriteAnon">
-              <field name="ANIMATION_NAME">"purple bunny"</field>
-              <value name="LOCATION">
-                <block type="gamelab_location_picker">
-                  <field name="LOCATION">{"x":196,"y":325}</field>
-                </block>
-              </value>
-              <next>
-                <block type="variables_set">
-                  <field name="VAR">input</field>
-                  <value name="VALUE">
-                    <block type="math_number">
-                      <field name="NUM">0</field>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"purple bunny"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSayTime">
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"purple bunny"</field>
-                </block>
-              </value>
-              <value name="TEXT1">
-                <block type="variables_get">
-                  <field name="VAR">input</field>
-                </block>
-              </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">4</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="addTwo">addTwo</field>
-          <statement name="STACK">
-            <block type="variables_set">
-              <field name="VAR">input</field>
-              <value name="VALUE">
-                <block type="math_arithmetic">
-                  <field name="OP">ADD</field>
-                  <value name="A">
-                    <block type="variables_get">
-                      <field name="VAR">input</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">2</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="addFive">addFive</field>
-          <statement name="STACK">
-            <block type="variables_set">
-              <field name="VAR">input</field>
-              <value name="VALUE">
-                <block type="math_arithmetic">
-                  <field name="OP">ADD</field>
-                  <value name="A">
-                    <block type="variables_get">
-                      <field name="VAR">input</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">5</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="procedures_callnoreturn">
