@@ -2317,6 +2317,7 @@ StudioApp.prototype.handleEditCode_ = function(config) {
   dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
   codeTextbox.appendChild(dropletCodeTextbox);
 
+  // DROPLET EDTIOR INIT HERE
   this.editor = new droplet.Editor(dropletCodeTextbox, {
     mode: 'javascript',
     modeOptions: dropletUtils.generateDropletModeOptions(config),

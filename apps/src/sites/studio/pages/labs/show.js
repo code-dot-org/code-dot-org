@@ -1,17 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {getStore} from '../../../../code-studio/redux';
-import LabView from '../../../../labs/LabView';
+// TODO: make this a .ts file to simplify
+// probably need to change checkEntryPoints
 import getScriptData from '../../../../util/getScriptData';
+import init from '@cdo/apps/labs';
 
-$(document).ready(function() {
-  const level = getScriptData('data-level');
-
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <LabView />
-    </Provider>,
-    document.getElementById('lab-container')
-  );
-});
+document.onreadystatechange = event => {
+  if (document.readyState === 'complete') {
+    init(
+      getScriptData('appoptions'),
+      document.querySelector('#lab-container') || document.createElement('div')
+    );
+  }
+};

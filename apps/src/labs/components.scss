@@ -1,0 +1,11 @@
+.panels {
+  display: flex;
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  .panel {
+    flex: 1;
+  }
+}

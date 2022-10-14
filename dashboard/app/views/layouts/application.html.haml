@@ -90,9 +90,8 @@
           .full_container{style: ('padding: 0' if view_options[:no_padding_container])}
             = page
       - else
-        .container.main
-          = show_flashes.html_safe
-          = page
+        = show_flashes.html_safe
+        = page
 
       - if view_options[:responsive_content]
         .responsive-content-desktop-footer

@@ -1,6 +1,11 @@
+:ruby
+  data = {
+    level: @level.to_json,
+    appoptions: app_options.to_json
+  }
 
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/labs/show.js'), data: {level: @level.to_json}}
+  %script{src: webpack_asset_path('js/labs/show.js'), data: data}
 
 #lab-container
   -# populated by react
