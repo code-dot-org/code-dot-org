@@ -6,7 +6,6 @@ import {
   MICROBIT_VID
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
-import DCDO from '@cdo/apps/dcdo';
 import {isChromeOS} from '../util/browserChecks';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -63,10 +62,8 @@ export function isWebSerialPort(port) {
 export function shouldUseWebSerial() {
   let experimentEnabledInChromium =
     experiments.isEnabled('webserial') && 'serial' in navigator;
-  let usingChromeOSAndDCDO =
-    isChromeOS() && !!DCDO.get('webserial-on-chromeos', true);
 
-  return usingChromeOSAndDCDO || experimentEnabledInChromium;
+  return isChromeOS() || experimentEnabledInChromium;
 }
 
 /** @const {number} serial port transfer rate */
