@@ -365,7 +365,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.WorkspaceSvg.prototype.resize = function() {
     googleBlocklyBlocklyResize.call(this);
     if (cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
-      // this.flyout_?.resize();
+      this.flyout_?.resize();
     }
   };
 
@@ -426,7 +426,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           'xmlns:html': 'http://www.w3.org/1999/xhtml',
           'xmlns:xlink': 'http://www.w3.org/1999/xlink',
           version: '1.1',
-          class: 'zelos-renderer modern-theme readOnlyBlockSpace'
+          class: 'geras-renderer modern-theme readOnlyBlockSpace'
         },
         null
       );
