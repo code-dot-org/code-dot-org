@@ -28,9 +28,16 @@ export default class FunctionEditor {
   openWithNewFunction() {}
 }
 
-export function procedureFlyoutCallback(workspace) {
+/**
+ * Constructs the blocks required by the flyout for the procedure category.
+ * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
+ * @param {WorkspaceSvg} workspace The workspace containing procedures.
+ * @returns XML block elements
+ */
+export function procedureFlyoutCategory(workspace) {
   const xmlList = [];
   if (Blockly.Blocks['procedures_defnoreturn']) {
+    // Create a block with the following XML:
     // <block type="procedures_defnoreturn" gap="16">
     //     <field name="NAME">do something</field>
     // </block>
@@ -52,6 +59,7 @@ export function procedureFlyoutCallback(workspace) {
       xmlList[xmlList.length - 1].setAttribute('gap', 24);
     }
 
+    // Find all user-created procedure definitions in the workspace.
     const allProcedureCalls = Blockly.Procedures.allProcedures(workspace)[0];
     for (let i = 0; i < allProcedureCalls.length; i++) {
       const name = allProcedureCalls[i][0];
