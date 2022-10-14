@@ -287,7 +287,6 @@ namespace :seed do
 
   # Seeds the data in callouts
   timed_task callouts: :environment do
-    return
   end
 
   timed_task course_offerings: :environment do
