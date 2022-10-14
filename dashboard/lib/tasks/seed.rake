@@ -287,12 +287,7 @@ namespace :seed do
 
   # Seeds the data in callouts
   timed_task callouts: :environment do
-    Callout.transaction do
-      Callout.reset_db
-      # TODO: If the id of the callout is important, specify it in the tsv
-      # preferably the id of the callout is not important ;)
-      Callout.find_or_create_all_from_tsv!('config/callouts.tsv')
-    end
+    return
   end
 
   timed_task course_offerings: :environment do
