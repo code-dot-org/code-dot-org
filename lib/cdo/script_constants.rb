@@ -9,6 +9,13 @@ module ScriptConstants
   ACCELERATED_NAME = 'accelerated'.freeze
   ALGEBRA_NAME = 'algebra'.freeze
 
+  CSP_UNIT1_NAME = 'cspunit1'.freeze
+  CSP_UNIT2_NAME = 'cspunit2'.freeze
+  CSP_UNIT3_NAME = 'cspunit3'.freeze
+  CSP17_UNIT1_NAME = 'csp1-2017'.freeze
+  CSP17_UNIT2_NAME = 'csp2-2017'.freeze
+  CSP17_UNIT3_NAME = 'csp3-2017'.freeze
+
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
   # a category will be the order in which they appear in the dropdown, and the
