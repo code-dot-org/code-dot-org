@@ -41,6 +41,10 @@ const AdditionalDemographicInformation = props => {
       >
         <FormGroup>
           <h3>Section 4: {SectionHeaders.additionalDemographicInformation}</h3>
+          <p>
+            Demographic information is collected and utilized for data purposes
+            only, and it is not a factor in the application review process.
+          </p>
           <LabeledRadioButtons name="genderIdentity" />
           <LabeledCheckBoxes name="race" />
           <LabeledCheckBoxesWithAdditionalTextFields
