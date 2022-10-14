@@ -1041,7 +1041,6 @@ module Api::V1::Pd
         "How will you offer CS Principles?",
         "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",

@@ -91,8 +91,7 @@ module Pd
         ),
         csa_how_offer: 'How will you offer CSA?',
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
-        replace_which_course: 'Which existing course or curriculum will {{CS program}} replace? Mark all that apply.'
+        replace_existing: 'Will this course replace an existing computer science course in the master schedule?'
       },
       professional_learning_program_requirements:
         {
@@ -165,7 +164,6 @@ module Pd
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
@@ -348,7 +346,6 @@ module Pd
         :csp_how_offer,
         :enough_course_hours,
         :replace_existing,
-        :replace_which_course,
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,
