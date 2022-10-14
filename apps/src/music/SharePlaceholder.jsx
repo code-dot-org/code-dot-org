@@ -1,12 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class SharePlaceholder extends React.Component {
+  static propTypes = {
+    analyticsReporter: PropTypes.any.isRequired
+  };
+
   state = {
     shareShowing: false
   };
 
   shareClicked = () => {
+    if (!this.state.shareShowing) {
+      this.props.analyticsReporter.onButtonClicked('share');
+    }
     this.setState({shareShowing: true});
   };
 
