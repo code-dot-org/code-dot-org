@@ -249,3 +249,7 @@ mk:
           lesson_groups:
             lessonGroup-8:
               display_name: Променливи
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Лупови

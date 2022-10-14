@@ -4064,6 +4064,17 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Survei
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Loop
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survei
+            lessonGroup-3:
+              display_name: Konten
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

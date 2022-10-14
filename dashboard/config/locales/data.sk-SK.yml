@@ -710,7 +710,7 @@ sk:
         CSF_loops_AB: Cykly
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmienkové výroky
-        csd_gamelab_if_else: Podmienkové výroky (if/else)
+        csd_gamelab_if_else: Podmienkové príkazy (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
         CDEF_Video_SpritesInAction: Postavy v akcii

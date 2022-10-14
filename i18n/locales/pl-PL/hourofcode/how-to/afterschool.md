@@ -65,7 +65,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ** Skieruj uczestników na zajęcia ** - Napisz link do samouczka na tablicy. Znajdź link wymieniony [w informacji dla wybranego przez Ciebie samouczka]({{ urls/learn }}) pod liczbą uczestników.
 
-** Gdy ktoś napotka trudności, to w porządku jest odpowiedzieć: ** - „Nie wiem. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest jak nauka nowego języka; nie od razu będziesz biegły. ”
+** Gdy ktoś napotka trudności, to w porządku jest odpowiedzieć: ** - „Nie wiem. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest, jak nauka nowego języka; nie od razu będziesz biegły. ”
 
 ** Co zrobić, jeśli ktoś skończy wcześniej? ** - Zachęć uczestników do wypróbowania kolejnych zajęć w ramach "Godziny kodowania" na [hourofcode.com/learn]({{ urls/learn }}) - Lub poproś tych, którzy skończą wcześniej, aby pomogli innym, którzy mają kłopoty.
 
