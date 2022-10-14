@@ -48,32 +48,6 @@ get '/api/hour/begin_:code.png' do |code|
   launch_tutorial_pixel(tutorial)
 end
 
-get '/v2/hoc/certificate/:filename' do |filename|
-  only_for ['code.org']
-  extname = File.extname(filename)
-  encoded = File.basename(filename, extname)
-  begin
-    data = JSON.parse(Base64.urlsafe_decode64(encoded))
-  rescue ArgumentError, OpenSSL::Cipher::CipherError, JSON::ParserError
-    bad_request
-  end
-
-  extnames = ['.jpg', '.jpeg', '.png']
-  pass unless extnames.include?(extname)
-
-  format = extname[1..-1]
-  begin
-    image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['sponsor'], data['course_title'], default_random_donor: true)
-    image.format = format
-
-    content_type format.to_sym
-    expires 0, :private, :must_revalidate
-    image.to_blob
-  ensure
-    image&.destroy!
-  end
-end
-
 get '/api/hour/certificate64/:course/:filename' do |course, filename|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
   extname = File.extname(filename)
