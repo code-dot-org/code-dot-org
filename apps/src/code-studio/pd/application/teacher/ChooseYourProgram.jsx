@@ -160,18 +160,6 @@ const ChooseYourProgram = props => {
               [TextFields.iDontKnowExplain]: 'other'
             }}
           />
-          {data.replaceExisting === 'Yes' && (
-            <LabeledRadioButtonsWithAdditionalTextFields
-              name="replaceWhichCourse"
-              label={PageLabels.chooseYourProgram.replaceWhichCourse.replace(
-                '{{CS program}}',
-                programInfo.name
-              )}
-              textFieldMap={{
-                [TextFields.otherPleaseExplain]: 'other'
-              }}
-            />
-          )}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
@@ -207,10 +195,6 @@ ChooseYourProgram.getDynamicallyRequiredFields = data => {
     requiredFields.push(...uniqueRequiredFields[data.program]);
   }
 
-  if (data.replaceExisting === 'Yes') {
-    requiredFields.push('replaceWhichCourse');
-  }
-
   return requiredFields;
 };
 
@@ -226,9 +210,6 @@ ChooseYourProgram.processPageData = data => {
         changes[field] = undefined;
       });
     });
-  }
-  if (data.replaceExisting !== 'Yes') {
-    changes.replaceWhichCourse = undefined;
   }
 
   return changes;
