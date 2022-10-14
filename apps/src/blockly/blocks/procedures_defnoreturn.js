@@ -19,7 +19,7 @@ export default function() {
   this.functionalSvg_ = new BlockSvgFunctional(this);
   this.setOnChange(function(changeEvent) {
     if (!this.isInFlyout) {
-      this.functionalSvg_.render(this.svgGroup_);
+      this.functionalSvg_.render(this.svgGroup_, this.RTL);
     }
   });
 }

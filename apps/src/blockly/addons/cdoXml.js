@@ -80,19 +80,20 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     };
 
     const positionBlock = function(block) {
-      const bBox = block.blockly_block.svgGroup_.getBBox();
+      const heightWidth = block.blockly_block.getHeightWidth();
       const hasFrameSvg = block.blockly_block.functionalSvg_ ? true : false;
       const frameSvgSize = hasFrameSvg ? 40 : 0;
       const frameSvgTop = hasFrameSvg ? 35 : 0;
-      const heightWidth = {
-        height: bBox.height,
-        width: bBox.width
-      };
+      const frameSvgMargin = hasFrameSvg ? 16 : 0;
 
       if (isNaN(block.x)) {
-        block.x = cursor.x;
+        block.x = blockSpace.RTL
+          ? cursor.x - frameSvgMargin
+          : cursor.x + frameSvgMargin;
       } else {
-        block.x = blockSpace.RTL ? viewWidth - block.x : block.x;
+        block.x = blockSpace.RTL
+          ? viewWidth - block.x - frameSvgMargin
+          : block.x + frameSvgMargin;
       }
 
       if (isNaN(block.y)) {

@@ -21,11 +21,13 @@ export default class BlockSvgUnused {
     this.initChildren();
   }
   initChildren() {
+    const frameX = -FRAME_MARGIN_SIDE;
+    const frameY = -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT);
     // Google Blockly's block ids are randomly generated and can
     // include invalid characters for element ids. Remove everything
     // except alphanumeric characters and whitespace, then collapse
     // multiple adjacent whitespace to single spaces.
-    let blockId = this.block_.id
+    let safeCharBlockId = this.block_.id
       .replace(/[^\w\s\']|_/g, '')
       .replace(/\s+/g, ' ');
 
@@ -36,15 +38,15 @@ export default class BlockSvgUnused {
     var clip = Blockly.utils.dom.createSvgElement(
       'clipPath',
       {
-        id: `frameClip${blockId}`
+        id: `frameClip${safeCharBlockId}`
       },
       this.frameGroup_
     );
     this.frameClipRect_ = Blockly.utils.dom.createSvgElement(
       'rect',
       {
-        x: -FRAME_MARGIN_SIDE,
-        y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
+        x: frameX,
+        y: frameY,
         height: FRAME_HEADER_HEIGHT
       },
       clip
@@ -53,8 +55,8 @@ export default class BlockSvgUnused {
     this.frameBase_ = Blockly.utils.dom.createSvgElement(
       'rect',
       {
-        x: -FRAME_MARGIN_SIDE,
-        y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
+        x: frameX,
+        y: frameY,
         fill: color.lightest_gray,
         stroke: color.lighter_gray,
         rx: 15,
@@ -66,12 +68,12 @@ export default class BlockSvgUnused {
     this.frameHeader_ = Blockly.utils.dom.createSvgElement(
       'rect',
       {
-        x: -FRAME_MARGIN_SIDE,
-        y: -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT),
+        x: frameX,
+        y: frameY,
         fill: color.lighter_gray,
         rx: 15,
         ry: 15,
-        'clip-path': `url(#frameClip${blockId})`
+        'clip-path': `url(#frameClip${safeCharBlockId})`
       },
       this.frameGroup_
     );
@@ -154,7 +156,7 @@ export default class BlockSvgUnused {
     );
   }
 
-  render(svgGroup) {
+  render(svgGroup, isRtl) {
     // Remove ourselves from the DOM and calculate the size of our
     // container, then insert ourselves into the container.
     // We do this because otherwise, the value returned by
@@ -190,7 +192,7 @@ export default class BlockSvgUnused {
     this.frameHeader_.setAttribute('width', width);
     this.frameHeader_.setAttribute('height', height);
 
-    if (Blockly.RTL) {
+    if (isRtl) {
       this.frameClipRect_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
       this.frameHeader_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
       this.frameBase_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
