@@ -25,7 +25,7 @@
 #map-right.col-33
   #infobox
     %p.info
-      Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
+      Computer science drives innovation throughout the US economy, but it still isn't a core part of our education system.
 
     %strong= hs_access_count
     states have adopted a policy to give all high school students access to CS courses (and of those, only
@@ -60,7 +60,7 @@
 :javascript
   var webServiceLocation = '/promote/state/';
 
-  $(document).ready(function() {
+  $(window).on("load", function() {
     if (#{use_url}) {
       // Check if the URL specifies a specific state. If so, load the state
       if (window.location.pathname.replace("/promote", "") !== "") {
