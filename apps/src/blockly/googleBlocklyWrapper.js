@@ -10,7 +10,7 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldVariable from './addons/cdoFieldVariable';
-import FunctionEditor, {procedureFlyoutCallback} from './addons/functionEditor';
+import FunctionEditor, {procedureFlyoutCategory} from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
@@ -513,7 +513,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     workspace.registerToolboxCategoryCallback(
       'PROCEDURE',
-      procedureFlyoutCallback
+      procedureFlyoutCategory
     );
 
     // Customize function defintion blocks

@@ -10,14 +10,6 @@ export default function() {
   this.appendDummyInput()
     .appendField(nameField, 'NAME')
     .appendField('', 'PARAMS');
-  if (
-    (this.workspace.options.comments ||
-      (this.workspace.options.parentWorkspace &&
-        this.workspace.options.parentWorkspace.options.comments)) &&
-    Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']
-  ) {
-    this.setCommentText(Blockly.Msg['PROCEDURES_DEFNORETURN_COMMENT']);
-  }
   this.setStyle('procedure_blocks');
   this.arguments_ = [];
   this.argumentVarModels_ = [];
