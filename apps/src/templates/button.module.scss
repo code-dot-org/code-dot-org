@@ -1,0 +1,238 @@
+@import "color.scss";
+
+$button-height-default: 34px;
+$button-height-large: 40px;
+$button-height-narrow: 40px;
+$button-height-inline: 20px;
+
+.main {
+  display: inline-block;
+  font-size: 12px;
+  font-family: "Gotham 4r", sans-serif;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $border_gray;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-decoration: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $white;
+    cursor: pointer;
+  }
+}
+
+.updated {
+  line-height: 12px;
+}
+
+.icon {
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+}
+
+.textSpan {
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+}
+
+.button-color- {
+  &orange {
+    color: $white;
+    background-color: $orange;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.63);
+
+    &:hover {
+      color: $orange;
+      border-color: $orange;
+    }
+
+    &:disabled {
+      // This color is in Mikes styleguide, but we dont use it anywhere else;
+      // and it might be changed by Mark soon - so just hard-coding the string.
+      background-color: #ffd27f;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &gray {
+    color: $charcoal;
+    background-color: $lightest_gray;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.73);
+
+    &:disabled {
+      background-color: $lighter_gray;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &blue {
+    color: $white;
+    background-color: $cyan;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $cyan;
+      border-color: $cyan;
+      background-color: $lightest_cyan;
+    }
+
+    &:disabled {
+      color: $lighter_cyan;
+      background-color: $lightest_cyan;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &teal {
+    color: $white;
+    background-color: $teal;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $teal;
+      border-color: $teal;
+      background-color: $lightest_teal;
+    }
+
+    &:disabled {
+      color: $lighter_cyan;
+      background-color: $lightest_cyan;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &white {
+    color: $charcoal;
+    background-color: $white;
+    box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.06);
+
+    &:hover {
+      box-shadow: none;
+      background-color: $lightest_gray;
+    }
+
+    &:disabled {
+      background-color: $lightest_gray;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &red {
+    color: $white;
+    background-color: $red;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $red;
+      border-color: $red;
+    }
+
+    &:disabled {
+      background-color: $lightest_red;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &purple {
+    color: $white;
+    background-color: $purple;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $purple;
+      border-color: $purple;
+      background-color: $lightest_purple;
+    }
+
+    &:disabled {
+      color: $lighter_purple;
+      background-color: $lightest_purple;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+
+  &green {
+    color: $white;
+    background-color: $level_perfect;
+    font-weight: bold;
+    box-shadow: inset 0 2px 0 0 rgba(255 255 255 / 0.4);
+
+    &:hover {
+      box-shadow: none;
+      color: $charcoal;
+      border-color: $lightest_gray;
+      background-color: $lightest_gray;
+    }
+
+    &:disabled {
+      background-color: $lightest_gray;
+      box-shadow: inset 0 2px 0 0 rgba(0 0 0 / 0.1);
+    }
+  }
+}
+
+.button-size- {
+  &default {
+    height: $button-height-default;
+    padding-left: 24px;
+    padding-right: 24px;
+    line-height: 34px;
+  }
+
+  &large {
+    height: $button-height-large;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 40px;
+  }
+
+  &narrow {
+    height: $button-height-narrow;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 40px;
+  }
+
+  &inline {
+    height: $button-height-inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
+    position: relative;
+    top: 4px;
+
+    .icon {
+      font-size: 12px;
+      top: 0;
+    }
+  }
+}
+
+.textButton {
+  color: $teal;
+  border-width: 0;
+  background-color: unset;
+  font-family: "Gotham 5r", sans-serif;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    background-color: unset;
+  }
+}

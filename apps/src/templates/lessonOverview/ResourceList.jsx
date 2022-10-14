@@ -119,7 +119,7 @@ export default class ResourceList extends Component {
       >
         {resource.name}
       </a>
-      {resource.type && ` -  ${resource.type}`}
+      {resource.type && ` -  ${resource.type} `}
       {resource.download_url && (
         <span>
           {' ('}
@@ -133,7 +133,7 @@ export default class ResourceList extends Component {
         </span>
       )}
       {this.isGDocsUrl(resource.url) && (
-        <DropdownButton text="Make a Copy" color="gray">
+        <DropdownButton text="Make a Copy" color="gray" size="inline">
           <a href={this.gDocsPdfUrl(resource.url)}>PDF</a>
           <a href={this.gDocsMsOfficeUrl(resource.url)}>Microsoft Office</a>
           <a href={this.gDocsCopyUrl(resource.url)}>Google Docs</a>
