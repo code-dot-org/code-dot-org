@@ -6,6 +6,7 @@
   "content": "Divides two numbers.\n\nAll programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.\n\n",
   "examples": [
     {
+      "name": "Example: Dividing two numbers",
       "description": "",
       "code": "```\n// Divide two numbers.\nconsole.log(3/5);\nvar x=3;\nvar y=5;\nconsole.log(x/y);\n```"
     }

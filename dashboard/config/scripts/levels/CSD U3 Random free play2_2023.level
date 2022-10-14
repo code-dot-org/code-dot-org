@@ -22,7 +22,6 @@
       "arc": null,
       "line": null,
       "shape": null,
-      "mathRandom": null,
       "point": null,
       "rgb": null
     },
@@ -84,7 +83,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-05T19:51:12.901+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2023\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2023\"},{\"changed_at\":\"2022-10-05 20:03:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 20:05:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 23:39:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 23:46:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-05T19:51:12.901+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2023\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2023\"},{\"changed_at\":\"2022-10-05 20:03:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 20:05:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"bubble_choice_description\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 23:39:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 23:46:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 22:50:00 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

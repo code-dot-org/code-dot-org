@@ -1,0 +1,114 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "encrypted": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "project_template_level_name": "csc_landmarks_template_-usa-map",
+    "long_instructions": "**It’s time tell the stories! Write code so something changes when the guide meets each storyteller.**\r\n- First, drag out a new `when touches` event block anywhere in the workspace.\r\n- Add a `set background` block under the new event. Change the background to match the story.\r\n- Add a `say` block and add text so the storyteller sprite tells about the community.\r\n- Repeat these steps for the second storyteller. \r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 64,
+  "published": true,
+  "created_at": "2022-10-13T17:30:48.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "audit_log": "[{\"changed_at\":\"2022-10-13T17:30:48.553+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_stories_background\\\"\"],\"cloned_from\":\"csc_landmarks_stories_background\"},{\"changed_at\":\"2022-10-13 17:32:18 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:47:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:49:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:27:40 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:32:22 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:37:46 +0000\",\"changed\":[\"hide_animation_mode\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"map_old_blank"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":235,"y":178}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Welcome.</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number">
+              <field name="NUM">75</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_addBehaviorSimple">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get">
+              <mutation/>
+              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"orange_shirt_wave"</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-11 20:38:56 UTC",
+    "serialized_at": "2022-10-14 15:17:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -104,17 +104,16 @@
       }
     },
     {
-      "key": "Unit wrap up",
-      "name": "Unit wrap up",
+      "key": "lesson-5",
+      "name": "This lesson needs a name",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
-        "overview": "**You will:**\n\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
-        "lesson.key": "Unit wrap up",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-physical-computing2"
       }
@@ -170,13 +169,13 @@
       }
     },
     {
-      "key": "ec503358-6747-4a64-b2e3-45db573e18fe",
+      "key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "ec503358-6747-4a64-b2e3-45db573e18fe",
-        "lesson.key": "Unit wrap up",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-physical-computing2"
       }
@@ -304,6 +303,16 @@
       }
     },
     {
+      "key": "6577137a-4a73-421f-85c1-02b0d549d95d",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6577137a-4a73-421f-85c1-02b0d549d95d",
+        "lesson_activity.key": "9f8d3ff9-e14c-45a1-b8d0-74096db9419e"
+      }
+    },
+    {
       "key": "ce3868f9-b84f-4564-b1d9-26931689d533",
       "position": 1,
       "properties": {
@@ -337,36 +346,79 @@
       }
     },
     {
-      "key": "af41b475-2351-4c27-8239-f49eebd4d2a8",
+      "key": "96af82d2-d4e7-41f1-98ed-5a379058f5f6",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "96af82d2-d4e7-41f1-98ed-5a379058f5f6",
+        "lesson_activity.key": "b3dfd22f-1dd1-4adc-aa59-feae4fe9ba06"
+      }
+    },
+    {
+      "key": "831fceb1-88ba-4d2d-816c-d8e9154342d7",
       "position": 1,
       "properties": {
         "progression_name": "Overview"
       },
       "seeding_key": {
-        "activity_section.key": "af41b475-2351-4c27-8239-f49eebd4d2a8",
-        "lesson_activity.key": "ec503358-6747-4a64-b2e3-45db573e18fe"
+        "activity_section.key": "831fceb1-88ba-4d2d-816c-d8e9154342d7",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
       }
     },
     {
-      "key": "2333342d-db35-4853-aca7-358e7b2f87a4",
+      "key": "93ab443a-a2e0-484e-af34-f7903fbbeb99",
       "position": 2,
       "properties": {
-        "progression_name": "Unit Projects"
+        "progression_name": "The role of the teacher"
       },
       "seeding_key": {
-        "activity_section.key": "2333342d-db35-4853-aca7-358e7b2f87a4",
-        "lesson_activity.key": "ec503358-6747-4a64-b2e3-45db573e18fe"
+        "activity_section.key": "93ab443a-a2e0-484e-af34-f7903fbbeb99",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
       }
     },
     {
-      "key": "b568c536-41bb-4458-8d75-9aa9e777d53d",
+      "key": "880132de-abac-4ad5-906f-4d24628d24ef",
       "position": 3,
       "properties": {
-        "progression_name": "Wrap Up"
+        "progression_name": "Teaching and learning strategies"
       },
       "seeding_key": {
-        "activity_section.key": "b568c536-41bb-4458-8d75-9aa9e777d53d",
-        "lesson_activity.key": "ec503358-6747-4a64-b2e3-45db573e18fe"
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
+      }
+    },
+    {
+      "key": "9419ec3c-1a10-469b-8409-c17e9d54e961",
+      "position": 4,
+      "properties": {
+        "progression_name": "Meeting student needs"
+      },
+      "seeding_key": {
+        "activity_section.key": "9419ec3c-1a10-469b-8409-c17e9d54e961",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
+      }
+    },
+    {
+      "key": "4820b1b1-1206-4c46-bd75-c59c145fc5d0",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "4820b1b1-1206-4c46-bd75-c59c145fc5d0",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
+      }
+    },
+    {
+      "key": "07353cff-eca0-4ee8-97da-cf299dfe8392",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "07353cff-eca0-4ee8-97da-cf299dfe8392",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
       }
     }
   ],
@@ -377,6 +429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -399,6 +454,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -421,6 +479,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U6L3_physical-computing"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -443,6 +504,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CS is Changing Everything_physical-computing"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -465,6 +529,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U6L5-good_physical-computing"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -487,6 +554,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L2_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -509,6 +579,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -531,6 +604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp_physical-computing"
+        ],
         "progression": "Set up your Circuit Playground"
       },
       "bonus": false,
@@ -553,6 +629,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-install_physical-computing"
+        ],
         "progression": "Set up your Circuit Playground"
       },
       "bonus": false,
@@ -575,6 +654,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSDU6 Circuit Playground Test_physical-computing"
+        ],
         "progression": "Set up your Circuit Playground"
       },
       "bonus": false,
@@ -597,6 +679,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -619,6 +704,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_physical-computing"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -641,6 +729,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Screen Outputs - SB1_physical-computing"
+        ],
         "progression": "Use the Circuit Playground with App Lab"
       },
       "bonus": false,
@@ -663,6 +754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -685,6 +779,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -707,6 +804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-computing"
+        ],
         "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
@@ -729,6 +829,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_physical-computing"
+        ],
         "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
@@ -751,6 +854,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_physical-computing"
+        ],
         "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
@@ -773,6 +879,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB3_physical-computing"
+        ],
         "progression": "Introduction to inputs and outputs"
       },
       "bonus": false,
@@ -795,6 +904,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_physical-computing"
+        ],
         "progression": "Add complexity to your app"
       },
       "bonus": false,
@@ -817,6 +929,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_physical-computing"
+        ],
         "progression": "Add complexity to your app"
       },
       "bonus": false,
@@ -839,6 +954,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_physical-computing"
+        ],
         "progression": "Add complexity to your app"
       },
       "bonus": false,
@@ -861,6 +979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_physical-computing"
+        ],
         "progression": "Explore additional board events"
       },
       "bonus": false,
@@ -883,6 +1004,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_physical-computing"
+        ],
         "progression": "Explore additional board events"
       },
       "bonus": false,
@@ -905,6 +1029,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_physical-computing"
+        ],
         "progression": "Explore additional board events"
       },
       "bonus": false,
@@ -923,10 +1050,34 @@
     },
     {
       "chapter": 26,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing"
+        ],
+        "lesson.key": "Experiment with inputs and outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "6577137a-4a73-421f-85c1-02b0d549d95d"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -944,11 +1095,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_physical-computing"
+        ],
         "progression": "Use sensors "
       },
       "bonus": false,
@@ -966,11 +1120,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_physical-computing"
+        ],
         "progression": "Use sensors "
       },
       "bonus": false,
@@ -988,11 +1145,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_physical-computing"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1010,11 +1170,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_physical-computing"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1032,11 +1195,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_physical-computing"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1054,11 +1220,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing"
+        ],
         "progression": "Interact with apps and prototypes "
       },
       "bonus": false,
@@ -1076,7 +1245,28 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-computing"
+        ],
+        "lesson.key": "Engage with prototypes",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "96af82d2-d4e7-41f1-98ed-5a379058f5f6"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-computing"
+      ]
+    },
+    {
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1086,81 +1276,323 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U6L5_physical-computing"
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning"
         ],
-        "lesson.key": "Unit wrap up",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "af41b475-2351-4c27-8239-f49eebd4d2a8"
+        "activity_section.key": "831fceb1-88ba-4d2d-816c-d8e9154342d7"
       },
       "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U6L5_physical-computing"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Unit Projects"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing"
-        ],
-        "lesson.key": "Unit wrap up",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "2333342d-db35-4853-aca7-358e7b2f87a4"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Unit Projects"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-computing"
-        ],
-        "lesson.key": "Unit wrap up",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "2333342d-db35-4853-aca7-358e7b2f87a4"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-computing"
+        "SP-VPL-physical-computing-22-Overview-TeachingLearning"
       ]
     },
     {
       "chapter": 36,
-      "position": 4,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Wrap Up"
+        "progression": "The role of the teacher"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "-VPL-CSD-PILOT-summer22-navigation_physical-computing"
+          "SP-VPL-PC-22-LeadLearner"
         ],
-        "lesson.key": "Unit wrap up",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "b568c536-41bb-4458-8d75-9aa9e777d53d"
+        "activity_section.key": "93ab443a-a2e0-484e-af34-f7903fbbeb99"
       },
       "level_keys": [
-        "-VPL-CSD-PILOT-summer22-navigation_physical-computing"
+        "SP-VPL-PC-22-LeadLearner"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The role of the teacher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "93ab443a-a2e0-484e-af34-f7903fbbeb99"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-LeadLearner-vid"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PairProgramming"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-PairProgramming-TipVid"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Resources"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Resources"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Debugging"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Debugging-TipVid"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-teamworkOverview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-teamworkOverview"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting student needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-Inclusion"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "9419ec3c-1a10-469b-8409-c17e9d54e961"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-Inclusion"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting student needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Differentiation"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "9419ec3c-1a10-469b-8409-c17e9d54e961"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Differentiation"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting student needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "9419ec3c-1a10-469b-8409-c17e9d54e961"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-DifferentiationContinued"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Assessment"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "4820b1b1-1206-4c46-bd75-c59c145fc5d0"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Assessment"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "4820b1b1-1206-4c46-bd75-c59c145fc5d0"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-AssessmentPlan"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "07353cff-eca0-4ee8-97da-cf299dfe8392"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-mod2-WrapUp"
       ]
     }
   ],
@@ -1467,6 +1899,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing"
+        ],
+        "lesson.key": "Experiment with inputs and outputs",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "6577137a-4a73-421f-85c1-02b0d549d95d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing"
@@ -1551,50 +1995,194 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U6L5_physical-computing",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-U6L5_physical-computing"
-        ],
-        "lesson.key": "Unit wrap up",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "af41b475-2351-4c27-8239-f49eebd4d2a8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing"
-        ],
-        "lesson.key": "Unit wrap up",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "2333342d-db35-4853-aca7-358e7b2f87a4"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-computing",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-computing"
         ],
-        "lesson.key": "Unit wrap up",
+        "lesson.key": "Engage with prototypes",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "2333342d-db35-4853-aca7-358e7b2f87a4"
+        "activity_section.key": "96af82d2-d4e7-41f1-98ed-5a379058f5f6"
       }
     },
     {
       "seeding_key": {
-        "level.key": "-VPL-CSD-PILOT-summer22-navigation_physical-computing",
+        "level.key": "SP-VPL-physical-computing-22-Overview-TeachingLearning",
         "script_level.level_keys": [
-          "-VPL-CSD-PILOT-summer22-navigation_physical-computing"
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning"
         ],
-        "lesson.key": "Unit wrap up",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-physical-computing2",
-        "activity_section.key": "b568c536-41bb-4458-8d75-9aa9e777d53d"
+        "activity_section.key": "831fceb1-88ba-4d2d-816c-d8e9154342d7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LeadLearner",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "93ab443a-a2e0-484e-af34-f7903fbbeb99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-LeadLearner-vid",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "93ab443a-a2e0-484e-af34-f7903fbbeb99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PairProgramming",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-PairProgramming-TipVid",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Resources",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Resources"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Debugging",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Debugging-TipVid",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-teamworkOverview",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-teamworkOverview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-Inclusion",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-Inclusion"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "9419ec3c-1a10-469b-8409-c17e9d54e961"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Differentiation",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Differentiation"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "9419ec3c-1a10-469b-8409-c17e9d54e961"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-DifferentiationContinued",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "9419ec3c-1a10-469b-8409-c17e9d54e961"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Assessment",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Assessment"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "4820b1b1-1206-4c46-bd75-c59c145fc5d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-AssessmentPlan",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "4820b1b1-1206-4c46-bd75-c59c145fc5d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-mod2-WrapUp",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "07353cff-eca0-4ee8-97da-cf299dfe8392"
       }
     }
   ],
