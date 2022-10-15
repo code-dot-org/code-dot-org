@@ -88,7 +88,7 @@ export default class Instructions extends React.Component {
                   float: 'left',
                   width: 'calc(100% - 290px)',
                   height: 70,
-                  overflow: 'scroll'
+                  overflowY: 'scroll'
                 }}
               >
                 {panel.text}
