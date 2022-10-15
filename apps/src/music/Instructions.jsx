@@ -4,7 +4,8 @@ import React from 'react';
 export default class Instructions extends React.Component {
   static propTypes = {
     instructions: PropTypes.object,
-    baseUrl: PropTypes.string.isRequired
+    baseUrl: PropTypes.string.isRequired,
+    analyticsReporter: PropTypes.object.isRequired
   };
 
   state = {
@@ -33,7 +34,10 @@ export default class Instructions extends React.Component {
   };
 
   render() {
-    const {instructions, baseUrl} = this.props;
+    const {instructions, baseUrl, analyticsReporter} = this.props;
+
+    // Instructions panels are 0-indexed, tracking is 1-based
+    analyticsReporter.onInstructionsVisited(this.state.currentPanel + 1);
 
     const previousPanel = this.getPreviousPanel();
     const nextPanel = this.getNextPanel();

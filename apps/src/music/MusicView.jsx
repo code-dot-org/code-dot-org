@@ -1,6 +1,8 @@
 /** @file Top-level view for Music */
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
+import {Provider, connect} from 'react-redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
@@ -15,6 +17,9 @@ import MusicPlayer from './player/MusicPlayer';
 import InputContext from './InputContext';
 import {Triggers} from './constants';
 import {musicLabDarkTheme} from './blockly/themes';
+import AnalyticsReporter from './analytics/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -28,7 +33,14 @@ const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
 
 var hooks = {};
 
-export default class MusicView extends React.Component {
+class UnconnectedMusicView extends React.Component {
+  static propTypes = {
+    // populated by Redux
+    userId: PropTypes.number,
+    userType: PropTypes.string,
+    signInState: PropTypes.oneOf(Object.values(SignInState))
+  };
+
   callUserGeneratedCode = fn => {
     try {
       fn.call(MusicView, this.player);
@@ -46,6 +58,7 @@ export default class MusicView extends React.Component {
     this.codeAppRef = document.getElementById('codeApp');
     this.player = new MusicPlayer();
     this.inputContext = new InputContext();
+    this.analyticsReporter = new AnalyticsReporter();
 
     // We have seen on Android devices that window.innerHeight will always be the
     // same whether in landscape or portrait orientation.  Given that we tell
@@ -75,6 +88,19 @@ export default class MusicView extends React.Component {
   }
 
   componentDidMount() {
+    this.analyticsReporter.onSessionStart();
+    // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
+    // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
+    // correct approach.
+    window.addEventListener('beforeunload', () =>
+      this.analyticsReporter.onSessionEnd()
+    );
+    this.analyticsReporter.setUserProperties(
+      this.props.userId,
+      this.props.userType,
+      this.props.signInState
+    );
+
     const windowWidth = Math.max(window.innerWidth, window.innerHeight);
     const windowHeight = Math.min(window.innerWidth, window.innerHeight);
 
@@ -110,8 +136,19 @@ export default class MusicView extends React.Component {
     });
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     this.resizeBlockly();
+    if (
+      prevProps.userId !== this.props.userId ||
+      prevProps.userType !== this.props.userType ||
+      prevProps.signInState !== this.props.signInState
+    ) {
+      this.analyticsReporter.setUserProperties(
+        this.props.userId,
+        this.props.userType,
+        this.props.signInState
+      );
+    }
   }
 
   updateTimer = () => {
@@ -243,6 +280,8 @@ export default class MusicView extends React.Component {
     this.executeSong();
 
     console.log('onBlockSpaceChange', Blockly.getWorkspaceCode());
+
+    this.analyticsReporter.onBlocksUpdated(this.workspace.getAllBlocks());
 
     // This is a way to tell React to re-render the scene, notably
     // the timeline.
@@ -517,10 +556,11 @@ export default class MusicView extends React.Component {
               <Instructions
                 instructions={this.state.instructions}
                 baseUrl={baseUrl}
+                analyticsReporter={this.analyticsReporter}
               />
             </div>
             <div id="share-area" style={{width: 140, float: 'left'}}>
-              <SharePlaceholder />
+              <SharePlaceholder analyticsReporter={this.analyticsReporter} />
             </div>
           </div>
         )}
@@ -574,3 +614,19 @@ export default class MusicView extends React.Component {
     );
   }
 }
+
+const MusicView = connect(state => ({
+  userId: state.currentUser.userId,
+  userType: state.currentUser.userType,
+  signInState: state.currentUser.signInState
+}))(UnconnectedMusicView);
+
+const MusicLabView = () => {
+  return (
+    <Provider store={getStore()}>
+      <MusicView />
+    </Provider>
+  );
+};
+
+export default MusicLabView;

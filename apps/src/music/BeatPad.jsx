@@ -79,7 +79,7 @@ BeatPad.propTypes = {
   triggers: PropTypes.array.isRequired,
   playTrigger: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
-  isPlaying: PropTypes.func.bool
+  isPlaying: PropTypes.bool.isRequired
 };
 
 export default BeatPad;
