@@ -3977,6 +3977,17 @@ zh-CN:
               display_name: 内容
             lessonGroup-5:
               display_name: 调查
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java实验室
+            lesson-6:
+              name: 循环
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 调查
+            lessonGroup-3:
+              display_name: 内容
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

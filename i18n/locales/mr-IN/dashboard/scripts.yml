@@ -1646,6 +1646,12 @@ mr:
           title: आपला स्वतःचा सॉकर गेम कोड करा
           description_short: सॉकर गेम बनवा
           description: सॉकर गेम बनवा
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: जावा लॅब
+            lesson-6:
+              name: लूप्स
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

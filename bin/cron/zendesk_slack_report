@@ -37,7 +37,7 @@ MONITORING_GROUPS = {
   'developers' => ['Developers'],
   'cs-discoveries' => ['CSD'],
   'acquisition-products' => ['Acquisition Products'],
-  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Jess', 'EdPop Kristyn', 'EdPop Rosie', 'EdPop Tawny'],
+  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'EdPop Alicia', 'EdPop Danielle'],
   'facilitator-things' => ['PnP Andrea'],
   'foundations' => ['Accounts'],
   'hour-of-code' => ['Hour of Code'],
@@ -68,7 +68,6 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'ed-programs-tools' => ['zendesk-plctools'],
   'outreach_honky-tonk' => ['zendesk-outreach'],
   'pl-team-only' => ['zendesk-pl']
 }

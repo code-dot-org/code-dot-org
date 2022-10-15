@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
@@ -21,7 +20,6 @@ export default class StudentHomepage extends Component {
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
-    isEnglish: PropTypes.bool.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool
   };
 
@@ -38,7 +36,6 @@ export default class StudentHomepage extends Component {
       sections,
       topCourse,
       hasFeedback,
-      isEnglish,
       showVerifiedTeacherWarning
     } = this.props;
     const {canViewAdvancedTools, studentId} = this.props;
@@ -54,7 +51,6 @@ export default class StudentHomepage extends Component {
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
-          {isEnglish && <SpecialAnnouncement isTeacher={false} />}
           {showVerifiedTeacherWarning && (
             <Notification
               type={NotificationType.failure}

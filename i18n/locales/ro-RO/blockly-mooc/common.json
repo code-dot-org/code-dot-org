@@ -812,6 +812,7 @@
   "enterCountry": "Introdu ţara dacă te afli în afara Statelor Unite",
   "enterGroupName": "Introduceți un nume pentru grup",
   "enterSectionCode": "Introdu codul de secţiune",
+  "enterCertificateNames": "Introduceți până la 30 de nume, **unul pe rând**. Va fi generată o pagină personalizată ce poate fi imprimată cu certificatul {courseTitle}.",
   "enrollmentDescription": "Alătură-te clasei profesorului tău introducând mai jos codul secţiunii lui. Profesorii vor putea vedea progresul tău la cursuri, proiectele şi vor reiniţializa parola în cazul în care o uiţi.",
   "equalTo": "Egal cu",
   "errorEmptyFunctionBlockModal": "În interiorul definiției funcției tale trebuie să includem blocuri. Dă clic pe \"editare\" și trage blocuri în interiorul blocului verde.",

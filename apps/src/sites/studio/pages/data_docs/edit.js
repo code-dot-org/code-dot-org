@@ -16,6 +16,6 @@ $(document).ready(() => {
         originalDataDocContent={dataDocContent}
       />
     </Provider>,
-    document.getElementById('view-data-doc')
+    document.getElementById('edit-data-doc')
   );
 });

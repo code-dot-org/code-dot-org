@@ -1192,3 +1192,7 @@ ca:
           title: Codifiqueu el vostre partir de futbol propi
           description_short: Feu un partit de futbol
           description: Feu un partit de futbol
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Bucles

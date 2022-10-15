@@ -76,7 +76,7 @@ The Hour of Codeは、「コード」をわかりやすく説明し、誰もが�
 
 ボランティアになるには、ボランティアマップに頼らなくても大丈夫です！もし学校にあなたがボランティアをできそうなクラスがあれば、直接その学校の教師や管理者にボランティアを申し出てもよいでしょう。
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - 他の学校でのボランティア活動をお考えでしたら、その学校のウェブサイトにアクセスし、学校長、副校長、テクノロジーまたはコンピューターサイエンスのインストラクター、学校のPTSAの連絡先を探して連絡をとってみてください。 このほか、Boys & Girls Clubs of America、Junior Achievement、YMCA支所などイベントを共同主催する組織、団体と連携するという方法もあります。 - Hour of Codeを主催してる学校が見つからない場合は、勤務している会社でのイベントに協力をしてもよいでしょう。 こちらに関心がありアイデアが欲しいと思う方は、[企業向けのハウツーガイド](https://hourofcode.com/us/how-to/companies) をご覧ください。
+ボランティア活動を始めるには: - 親または保護者の方は、Hour of Codeを手伝うお子様の担任教師に直接、[このメール](https://hourofcode.com/us/promote/resources#help-schools) をお送りください。 - 他の学校でのボランティア活動をお考えでしたら、その学校のウェブサイトにアクセスし、学校長、副校長、テクノロジーまたはコンピューターサイエンスのインストラクター、学校のPTSAの連絡先を探して連絡をとってみてください。 このほか、Boys & Girls Clubs of America、Junior Achievement、YMCA支所などイベントを共同主催する組織、団体と連携するという方法もあります。 - Hour of Codeを主催してる学校が見つからない場合は、勤務している会社でのイベントに協力をしてもよいでしょう。 こちらに関心がありアイデアが欲しいと思う方は、[企業向けのハウツーガイド](https://hourofcode.com/us/how-to/companies) をご覧ください。
 
 * * *
 
@@ -126,7 +126,7 @@ Hour of Code を自宅や地元での開催を検討している場合、[保護
 
 #### アジェンダのサンプル:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? 何にまたは誰から影響を受けましたか？ コンピューターサイエンスに関心を持ったきっかけは？ 指導者はいましたか？ 生徒に質問をし、質疑応答の時間も設けます。 | |30-60 minutes | Code! 予定しているイベントが対面方式の場合、生徒の質問に答えたり、ちょっと難しいパズルで生徒を指導したりします。 すぐに答えを伝えないようにして、どこで間違ったのかを自ら発見できるような質問をし、質問があれば、生徒同士で質問し合うよう指示します。 バーチャル方式でボランティア活動を行う場合は、教師と連携してベストな方法を話し合います。 イベントが終了しましたら、生徒がどれだけ進歩したのかイベントを振り返るとさらによいでしょう。 | | |1～3 分 | 感謝の言葉を述べ、互いにさよならの挨拶をする。 会社記念品 ([ステッカー](#celebrate)などは喜ばれます)を配布します。 | | <br />
+|時間 | アジェンダ項目 | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1～5 分 | [アイデアを生むビデオ](https://hourofcode.com/us/promote/resources#videos)を見る |5～10 分 | 自己紹介と生徒のことを知る: 勤務先は？仕事の内容は？仕事で最も気に入っている部分は？ 何にまたは誰から影響を受けましたか？ コンピューターサイエンスに関心を持ったきっかけは？ 指導者はいましたか？ 生徒に質問をし、質疑応答の時間も設けます。 | |30～60分 | コーディング！ 予定しているイベントが対面方式の場合、生徒の質問に答えたり、ちょっと難しいパズルで生徒を指導したりします。 すぐに答えを伝えないようにして、どこで間違ったのかを自ら発見できるような質問をし、質問があれば、生徒同士で質問し合うよう指示します。 バーチャル方式でボランティア活動を行う場合は、教師と連携してベストな方法を話し合います。 イベントが終了しましたら、生徒がどれだけ進歩したのかイベントを振り返るとさらによいでしょう。 | | |1～3 分 | 感謝の言葉を述べ、互いにさよならの挨拶をする。 会社記念品 ([ステッカー](#celebrate)などは喜ばれます)を配布します。 | | <br />
 
 #### イベントに追加すべき他のアイデア
 
@@ -186,7 +186,7 @@ Hour of Code を自宅や地元での開催を検討している場合、[保護
 
 ### 1. イベントを登録する
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. 近所の地元の学校、保護者にイベントが開催されることを知らせる方法なども記載されています。
+[Hour of Codeイベントに登録](/#join)すると、イベントを成功させるためのニュースやヒントをメールでお知らせします。 近所の地元の学校、保護者にイベントが開催されることを知らせる方法なども記載されています。
 
 ### 2. ソーシャルメディアへの投稿
 
@@ -199,7 +199,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 #### データ
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- 米国の学校でコンピューターサイエンスを教えているのはたった53％であることはご存知でしたか？#HourOfCode https://hourofcode.com/で全生徒にコンピューターサイエンスを学べる機会を用意しましょう。
 - 米国では、女性のソフトウェア専門家はたった26%です。#HourOfCode https://hourofcode.com/でより多くの若い女性にコンピューターサイエンスの魅力を知ってもらいましょう。 
 - 米国におけるコンピューター関連職の67％が実はIT分野に属していません。#HourOfCode https://hourofcode.com/でコンピューターサイエンスが学校の標準カリキュラムとして扱われるようサポートしましょう。
 
