@@ -1,18 +1,18 @@
 class Queries::ScriptActivity
   # Retrieve all scripts this user has started but not yet completed
-  # return [Script]
+  # return [Unit]
   def self.working_on_units(user)
     user.scripts.where('user_scripts.completed_at is null').map(&:cached).select(&:launched?)
   end
 
   # Retrieve all scripts this user has started but not yet completed
-  # return [Script]
+  # return [Unit]
   def self.working_on_student_units(user)
     working_on_units(user).select {|s| !s.pl_course?}
   end
 
   # Retrieve all scripts this user has started but not yet completed
-  # return [Script]
+  # return [Unit]
   def self.working_on_pl_units(user)
     working_on_units(user).select(&:pl_course?)
   end

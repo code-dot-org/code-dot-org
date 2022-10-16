@@ -48,14 +48,14 @@ end
 Given(/^I view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
-    And I wait until element ".edit_script" is visible
+    And I wait until element ".edit_unit" is visible
   }
 end
 
 Given(/^I wait for the temp unit edit page to load$/) do
   steps %{
     And I wait until I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
-    And I wait until element ".edit_script" is visible
+    And I wait until element ".edit_unit" is visible
   }
 end
 

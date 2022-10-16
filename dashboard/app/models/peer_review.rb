@@ -41,7 +41,7 @@ class PeerReview < ApplicationRecord
 
   belongs_to :submitter, class_name: 'User', optional: true
   belongs_to :reviewer, class_name: 'User', optional: true
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :level, optional: true
   belongs_to :level_source, optional: true
 
@@ -155,7 +155,7 @@ class PeerReview < ApplicationRecord
       }
 
       # First, create a placeholder Peer Review entry for someone else enrolled in the course to review.
-      # Only create it if this CourseUnit (PLC Courses equivalent of a Script) requires review from peers.
+      # Only create it if this CourseUnit (PLC Courses equivalent of a Unit) requires review from peers.
       create!(base_peer_review_attributes) unless user_level.script&.only_instructor_review_required?
 
       # Always create a Peer Review entry in order for the instructor to provide a review.

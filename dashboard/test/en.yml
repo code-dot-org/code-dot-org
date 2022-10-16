@@ -3,13 +3,13 @@ en:
   data:
     script:
       name:
-        Report Script:
+        Report Unit:
           lessons:
             Report Lesson 1:
               name: report-lesson-1
             Report Lesson 2:
               name: report-lesson-2
-        Milestone Script:
+        Milestone Unit:
           lessons:
             Milestone Lesson 1:
               name: milestone-lesson-1
