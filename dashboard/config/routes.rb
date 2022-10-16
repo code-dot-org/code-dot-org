@@ -70,6 +70,7 @@ Dashboard::Application.routes.draw do
 
     get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+    # [meg] TODO: Update this comment to reflect current redirect strategy
     # We moved code docs off of curriculum builder in spring 2022.
     # In that move, we wanted to preserve the previous /docs routes for these
     # pages. However, there are a lot of other /docs URLs that did not move over
