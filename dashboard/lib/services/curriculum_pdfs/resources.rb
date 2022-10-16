@@ -37,7 +37,7 @@ module Services
         end
 
         # Generate a PDF containing a rollup of all Resources in the given
-        # Script, grouped by Lesson
+        # Unit, grouped by Lesson
         def generate_script_resources_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
