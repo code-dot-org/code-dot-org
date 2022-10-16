@@ -68,7 +68,7 @@ def main
   script_id = get_script_id
 
   # Confirm the script does not exist.
-  script = Script.find_by_id(script_id)
+  script = Unit.find_by_id(script_id)
   if script
     puts "ERROR: Script Found (ID: #{script.id}, name: #{script.name})"
     raise ArgumentError
