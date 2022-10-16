@@ -6,7 +6,7 @@ require 'pdf/conversion'
 module Services
   module CurriculumPdfs
     # Contains all code related to generating "overview" PDFs containing all
-    # Lessons in a given Script.
+    # Lessons in a given Unit.
     module ScriptOverview
       extend ActiveSupport::Concern
       class_methods do
@@ -42,7 +42,7 @@ module Services
           )
         end
 
-        # Generate a PDF containing not only the Script page itself but also
+        # Generate a PDF containing not only the Unit page itself but also
         # all Lesson Plans within the script.
         def generate_script_overview_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script overview PDF for #{script.name.inspect}")
