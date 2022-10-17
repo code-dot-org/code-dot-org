@@ -276,6 +276,7 @@ module Pd
       ],
       criteria_score_questions_csd: [
         :csd_which_grades,
+        :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
         :replace_existing,
@@ -284,6 +285,7 @@ module Pd
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
+        :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
         :replace_existing,
@@ -291,7 +293,9 @@ module Pd
         :principal_schedule_confirmed,
       ],
       criteria_score_questions_csa: [
+        :csa_already_know,
         :csa_which_grades,
+        :enough_course_hours,
         :committed,
         :previous_yearlong_cdo_pd,
         :replace_existing,
