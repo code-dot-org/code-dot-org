@@ -108,6 +108,8 @@ module AWS
     # @param [String] key
     # @return [Boolean]
     def self.cached_exists_in_bucket?(bucket, key)
+      return false unless key.present?
+
       @cached_bucket_contents ||= {}
 
       unless @cached_bucket_contents.key? bucket

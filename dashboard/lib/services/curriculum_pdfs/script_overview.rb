@@ -6,7 +6,7 @@ require 'pdf/conversion'
 module Services
   module CurriculumPdfs
     # Contains all code related to generating "overview" PDFs containing all
-    # Lessons in a given Script.
+    # Lessons in a given Unit.
     module ScriptOverview
       extend ActiveSupport::Concern
       class_methods do
@@ -15,11 +15,10 @@ module Services
         # version
         #
         # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29.pdf>
-        def get_script_overview_pathname(script, as_url = false)
+        def get_script_overview_pathname(script)
           return nil unless script&.seeded_from
           version_number = Time.parse(script.seeded_from).to_s(:number)
-          filename = ActiveStorage::Filename.new(script.localized_title + ".pdf").sanitized
-          filename = CGI.escape(filename) if as_url
+          filename = ActiveStorage::Filename.new(script.localized_title.parameterize(preserve_case: true) + ".pdf").to_s
           return Pathname.new(File.join(script.name, version_number, filename))
         end
 
@@ -29,7 +28,7 @@ module Services
         # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29.pdf
         def get_script_overview_url(script)
           return nil unless Services::CurriculumPdfs.should_generate_overview_pdf?(script)
-          pathname = get_script_overview_pathname(script, true)
+          pathname = get_script_overview_pathname(script)
           return nil if pathname.blank?
           File.join(get_base_url, pathname)
         end
@@ -43,7 +42,7 @@ module Services
           )
         end
 
-        # Generate a PDF containing not only the Script page itself but also
+        # Generate a PDF containing not only the Unit page itself but also
         # all Lesson Plans within the script.
         def generate_script_overview_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script overview PDF for #{script.name.inspect}")
@@ -51,7 +50,7 @@ module Services
           pdfs = []
 
           # Include a PDF of the /s/script.name page itself
-          script_filename = ActiveStorage::Filename.new("script.#{script.name}.pdf").sanitized
+          script_filename = ActiveStorage::Filename.new("script.#{script.name.parameterize}.pdf").to_s
           script_path = File.join(pdfs_dir, script_filename)
           # Make sure to specify
           # 1. 'no_redirect' so we're guaranteed to get the actual script we want

@@ -15,48 +15,3245 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-06 17:18:39 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2022-10-13 21:23:00 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa1-2023"
     }
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Welcome to CSA",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**What does software engineering mean to me?**\n\nBelieving in one's own software engineering identity develops confidence and perseverance. In this lesson, students are introduced to key characteristics and skills of software engineers and explore common perceptions. Students realize that they have many of the same characteristics and skills as software engineers and discover their software engineering identity.",
+        "preparation": "* Gather sticky notes (at least 20 for each student)\n* Print copies of the Software Engineering Skills handout (one half sheet for each student)\n* Preview the *Change the Face of Computer Science* and *Software Engineering: Skills and Characteristics* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What does software engineering mean to me?**\n\nBelieving in one's own software engineering identity develops confidence and perseverance. In this lesson, you are introduced to key characteristics and skills of software engineers and explore common perceptions. You have many of the same characteristics and skills as software engineers, which you realize as you discover your software engineering identity."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Java Lab",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**What are some of the primary components of a Java program?**\n\nStudents are introduced to the Java Lab programming environment and its features. Students encounter their first Java program and explore the structure of a Java source code file. While investigating a simple program, students discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. Students then use their new knowledge of Java syntax to find and fix syntax errors.",
+        "preparation": "* Print copies of the Investigate: Working with Java Files handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What are some of the primary components of a Java program?**\n\nIn this lesson, you are introduced to the Java Lab programming environment and its features. You encounter your first Java program and explore the structure of a Java source code file. While investigating a simple program, you discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. You then use your new knowledge of Java syntax to find and fix syntax errors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "The Neighborhood",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**What is object-oriented programming?**\n\nStudents are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. Students begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. Students explore the syntax for instantiating objects in Java and practice creating `Painter` objects using the `new` keyword.",
+        "preparation": "* Preview the *Object-Oriented Programming* and *Creating Objects* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What is object-oriented programming?**\n\nIn this lesson, you are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. You begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. You explore the syntax for instantiating objects in Java and practice creating `Painter` objects using the `new` keyword."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Navigating and Painting",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**How do I give instructions to an object in Java?**\n\nStudents have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, students explore some of the methods in the `Painter` class and learn the syntax for calling methods in Java. Students learn how method parameters and arguments are used to provide additional information for methods to perform their intended task, such as the `paint()` method in the `Painter` class. While learning about arguments, students are introduced to string literals and how to use these to specify paint colors. Students then practice calling methods with and without arguments to navigate and paint in The Neighborhood.",
+        "preparation": "* Print copies of the Calling Methods handout (one for each pair of students)\n* Preview the *Calling Methods* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How do I give instructions to an object in Java?**\n\nYou have seen examples of programs where a `Painter` object is moving and painting in The Neighborhood. In this lesson, you explore some of the methods in the `Painter` class and learn the syntax for calling methods in Java. You learn how method parameters and arguments are used to provide additional information for methods to perform their intended task, such as the `paint()` method in the `Painter` class. While learning about arguments, you are introduced to string literals and how to use these to specify paint colors. You then practice calling methods with and without arguments to navigate and paint in The Neighborhood."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Loops",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nStudents are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. Students discover that `while` loops can be combined with methods in the `Painter` class to allow them to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. They learn about the problem solving process and how this approach can help them break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java.",
+        "preparation": "* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *While Loops* and *The Problem Solving Process with Zipline* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can the problem-solving process help me plan and implement an algorithm?**\n\nIn this lesson, you are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. You discover that `while` loops can be combined with methods in the `Painter` class to allow you to repeat a block of code as long as a `Painter` object can move forward in the direction it is facing, is on a paint bucket, or has paint. You learn about the problem solving process and how this approach can help you break down a problem into manageable tasks and practice developing and implementing algorithms using sequencing and iteration in Java."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Inheritance",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Writing Methods",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Programming Style and Feedback",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Selection Statements",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Debugging Strategies",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Decomposition and Design",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Two-Way Selection Statements",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Expanding Conditions",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Edge Cases",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Open Source Code",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Asphalt Art Project – Day 1",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Asphalt Art Project – Day 2",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "Asphalt Art Project – Day 3",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "FRQ Practice",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Unit 1 Assessment",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "19f41161-7c8f-42d3-88de-b304ae659af3",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19f41161-7c8f-42d3-88de-b304ae659af3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "8c70b1e3-a0e1-4e5e-ba15-f26d48d468cd",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c70b1e3-a0e1-4e5e-ba15-f26d48d468cd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "7bd6c71a-42af-47e8-86cd-159f6578f016",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7bd6c71a-42af-47e8-86cd-159f6578f016",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "843c2be9-b263-43b8-a1a5-1bdba90a686c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "35a15cf0-8e2f-485c-aec7-d597f5bb1f25",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "35a15cf0-8e2f-485c-aec7-d597f5bb1f25",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "566a7655-35cf-4ebb-b883-232a8abb0885",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "566a7655-35cf-4ebb-b883-232a8abb0885",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "febb644b-775d-4d25-93fd-25cebdbe260e",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "febb644b-775d-4d25-93fd-25cebdbe260e",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "d70183ee-bb88-4e53-818e-0724aa44de6b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "daf5b2bf-86d1-454b-8135-d55580544898",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "bb157531-e345-4a34-ba10-de35ba3a4120",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "41870ad5-9421-4b71-9743-d947ebe20f4b",
+      "position": 1,
+      "properties": {
+        "description": "Welcome to Computer Science A! We will learn a lot about computer science and programming this year. To get started, let's hear about how you can change the face of computer science.",
+        "name": "Changing the Face of CS",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "41870ad5-9421-4b71-9743-d947ebe20f4b",
+        "lesson_activity.key": "19f41161-7c8f-42d3-88de-b304ae659af3"
+      }
+    },
+    {
+      "key": "e4f4c770-62d3-4e38-a6eb-55fd6023ea79",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display: Show the video – *Change the Face of Computer Science*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share their reactions, thoughts, and feelings about the video. Ask students to suggest areas that they think are impacted by or involve computer science and to share ideas about problems that can be solved using computer science.\n\nThis can also be an opportunity for students to share concerns they might have about taking the class. Share your own concerns you had when learning Java to demonstrate sharing vulnerabilities to help students feel comfortable sharing their own. This can also help you learn about your students and their needs so you can determine how best to support them."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e4f4c770-62d3-4e38-a6eb-55fd6023ea79",
+        "lesson_activity.key": "19f41161-7c8f-42d3-88de-b304ae659af3"
+      }
+    },
+    {
+      "key": "a0cde871-7586-487f-88fa-aa05bb2ad006",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "10",
+        "name": "Design Thinking: Group Brainstorm"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0cde871-7586-487f-88fa-aa05bb2ad006",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "51476185-8770-4673-99b4-2003dbf810cd",
+      "position": 2,
+      "properties": {
+        "description": "You won't just explore software engineering in this class – you will be software engineers.\n\nWe will use a common design thinking activity known as group brainstorming to gather some ideas about software engineering.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "51476185-8770-4673-99b4-2003dbf810cd",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "a512b190-269a-421e-9b8d-2f2a196ee0db",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student at least 20 sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a word or phrase on a sticky note in response to the prompt.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to write down as many as they can think of. There are no wrong answers! As students write words or phrases, circulate the room to support their beliefs by:\n* Agreeing with the statements they have written.\n* Affirming the value of a particular idea.\n* Making connections between statements on different students' desks to help them confirm that they are part of a community of people who are not so different from themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a512b190-269a-421e-9b8d-2f2a196ee0db",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "e7dfdf76-cc52-4339-b93f-853a637bbc33",
+      "position": 4,
+      "properties": {
+        "description": "As you wrote down ideas, you were probably more confident about some than others. To help create a collective understanding of how we view software engineering right now, we will create groups of sticky notes. Your goal is to identify themes and similarities that you see when looking at all of your sticky notes together. It’s up to you to decide how to group them!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e7dfdf76-cc52-4339-b93f-853a637bbc33",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "59d376b7-9a17-4b79-984c-95ba8abee13c",
+      "position": 5,
+      "properties": {
+        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to share the ideas they wrote, group sticky notes based on similar themes, and display their notes on designated wall space.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you do not have wall space that you can designate for students to post their notes, you can have students display their notes on a desk or table instead."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "59d376b7-9a17-4b79-984c-95ba8abee13c",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "d4762196-3cc9-4193-99fa-52d9eaaae7f6",
+      "position": 6,
+      "properties": {
+        "description": "Let's take a look at the ideas and themes your classmates identified through a Gallery Walk.",
+        "duration": "10",
+        "name": "Design Thinking: Gallery Walk and Discussion",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d4762196-3cc9-4193-99fa-52d9eaaae7f6",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "7459f2d7-52a3-48d9-bfb9-00e1b344f434",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in a Gallery Walk to view other ideas and groupings. Students write what they notice and wonder on a new sticky note.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A Gallery Walk allows students to view multiple ideas, perspectives, and solutions. Students walk around the classroom to view each other's work, allowing each student to share ideas with the class and giving a voice to students who may be hesitant to share verbally."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7459f2d7-52a3-48d9-bfb9-00e1b344f434",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "03fc1c4e-bbbd-439f-8717-bbf7562a357d",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students identify key ideas and common themes they noticed in other groups. Students may wonder why differences exist across groups and the cause or basis of these ideas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Where do we get our perceptions from? Why?*\n* *What message do we get from these?*\n\n**Discussion Goal:** Students share how popular culture and media influence their perceptions about software engineers. Students share examples of how movies, TV shows, and social media portray software engineers.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might feel hesitant to share their thoughts. You could choose to modify this discussion by:\n* Having small groups write down their thoughts on a student whiteboard.\n* Having students write a response on a scratch sheet of paper, then throw it across the room. Students pick up a piece of paper close to them and read it to themselves. You can choose to call on students to share the response they picked up.\n\nCollect the sticky notes. The ideas students shared will be revisited in Lesson 15. Choose common words and phrases to enter on the indicated slide in Lesson 15."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "03fc1c4e-bbbd-439f-8717-bbf7562a357d",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "2b5c7f09-57e5-4cda-bde6-5b7fc1e42c0f",
+      "position": 9,
+      "properties": {
+        "description": "It's helpful to hear from an expert about something we may not know much about. Let's hear from some software engineers about their work and the skills they use.",
+        "duration": "10",
+        "name": "Skills of a Software Engineer",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2b5c7f09-57e5-4cda-bde6-5b7fc1e42c0f",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "4fedb317-ca62-40b8-a5d8-9902844adb1c",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term ***software engineer***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display: Show the video – *Software Engineering: Skills and Characteristics*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4fedb317-ca62-40b8-a5d8-9902844adb1c",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "69a983aa-e253-4c47-ad70-ea4da1cbab42",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What skills and characteristics do you think are important for software engineering?*\n\n**Discussion Goal:** Students recall skills and characteristics discussed in the video, such as problem-solving, collaboration, creativity, and curiosity. Students share ideas about why these characteristics and skills are important for software engineering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When have you shown these characteristics inside or outside of school? How?*\n\n**Discussion Goal:** Students realize they have already displayed many of the characteristics and skills of a software engineer in school and at home."
+      },
+      "seeding_key": {
+        "activity_section.key": "69a983aa-e253-4c47-ad70-ea4da1cbab42",
+        "lesson_activity.key": "5a14bd0b-9db6-447b-96cd-17f07dfa8e5b"
+      }
+    },
+    {
+      "key": "64a6723c-a147-4a35-808e-04a549ed8551",
+      "position": 1,
+      "properties": {
+        "description": "These characteristics and skills are the most important parts of being a software engineer. You may not realize it yet, but you already have the mindset of a software engineer.",
+        "name": "Developing a Software Engineering Identity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "64a6723c-a147-4a35-808e-04a549ed8551",
+        "lesson_activity.key": "8c70b1e3-a0e1-4e5e-ba15-f26d48d468cd"
+      }
+    },
+    {
+      "key": "765354ba-309c-4385-8d6f-c509302db151",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Software Engineering Characteristics handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one software engineering characteristic or skill that they feel is their strongest and one that they feel they have the most room for growth.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect the Software Engineering Skills handouts.\n\nStudents revisit these in Lesson 15 to reflect on their software engineering identity."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Software Engineering Skills handout can be used as a formative assessment to check that students can identify a software engineer's characteristics and skills and relate them to their own skills and identity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "765354ba-309c-4385-8d6f-c509302db151",
+        "lesson_activity.key": "8c70b1e3-a0e1-4e5e-ba15-f26d48d468cd"
+      }
+    },
+    {
+      "key": "4cc32777-ecea-4650-96ff-3ecb090a50f9",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit Guide that is distributed in the next lesson has space for vocabulary. Students can use this to write down definitions or fill in examples either throughout a lesson or at the end when the Key Vocabulary slide is displayed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4cc32777-ecea-4650-96ff-3ecb090a50f9",
+        "lesson_activity.key": "8c70b1e3-a0e1-4e5e-ba15-f26d48d468cd"
+      }
+    },
+    {
+      "key": "ad072862-bcbc-463d-b4c4-472fc7ea0108",
+      "position": 1,
+      "properties": {
+        "description": "Computing and programming used to have different meanings than they have today. Before electronic computers were invented, a computer was a person who performs mathematical calculations. From the late nineteenth century onwards, people had to perform long, tedious calculations. It was common for women to do this job.",
+        "name": "Human Computers",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ad072862-bcbc-463d-b4c4-472fc7ea0108",
+        "lesson_activity.key": "7bd6c71a-42af-47e8-86cd-159f6578f016"
+      }
+    },
+    {
+      "key": "f5f4c33d-5abd-4de9-ae9c-7de353e39926",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Share the story of the ENIAC project and the female programmers that operated it.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Throughout the curriculum, students are exposed to examples of computer science in different industries or problems that could potentially be solved using computer science. These are intended to contribute to the development of their identities as software engineers and challenge their perceptions about who software engineers are and what they do. As you learn about your students and their personal interests, you can change these scenarios to show examples of computer science connected to their personal interests to make these more meaningful for your classroom."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f5f4c33d-5abd-4de9-ae9c-7de353e39926",
+        "lesson_activity.key": "7bd6c71a-42af-47e8-86cd-159f6578f016"
+      }
+    },
+    {
+      "key": "e80c43ac-daf1-4bae-a117-3c8771db97d7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue.\n\nGive One, Get One encourages students to seek and share ideas and information. Students circulate the classroom and pair up with a partner when prompted by the teacher. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e80c43ac-daf1-4bae-a117-3c8771db97d7",
+        "lesson_activity.key": "7bd6c71a-42af-47e8-86cd-159f6578f016"
+      }
+    },
+    {
+      "key": "b27d7200-fb21-409c-9aac-7b1550aedba2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you learn from each other?*\n* *How did these ideas and thoughts contribute to your identity as a software engineer?*\n\n**Discussion Goal:** Students share the ideas they gathered and identify patterns or common views. Students identify characteristics of a software engineer that programmers on the ENIAC had and how they share or demonstrate these same characteristics in their personal lives."
+      },
+      "seeding_key": {
+        "activity_section.key": "b27d7200-fb21-409c-9aac-7b1550aedba2",
+        "lesson_activity.key": "7bd6c71a-42af-47e8-86cd-159f6578f016"
+      }
+    },
+    {
+      "key": "a2db44a7-e57c-479c-97df-ccb7236b8263",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Direct students to create a Code Studio account and join your class section:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> With a personal email account\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> With a Google Classroom account\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> With a Clever account",
+        "duration": "10",
+        "name": "Adding Students to Your Section",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Only show the slide that matches how your class will login to Code Studio.\n\nCode Studio displays students alphabetically by first name. You can choose to have students enter their names as Last Name, First Name so that they are shown alphabetically by last name.\n\nYou can confirm that a student successfully joined your section in the Teacher Dashboard. Students should also see a small green bar at the top of their page that says, \"You've successfully joined.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2db44a7-e57c-479c-97df-ccb7236b8263",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "0149ece2-91af-443f-8f61-bfe91030734f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to access the Code.org home page and navigate to the course.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose Unit 1 and navigate to Lesson 2.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Adding students to your section may take more time if your students do not already have Code Studio accounts. You may need to modify the pacing for this lesson accordingly."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0149ece2-91af-443f-8f61-bfe91030734f",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "ef33d22a-e3f4-4a09-b76b-69cccd95a749",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Guide.",
+        "duration": "10",
+        "name": "Components of a Java File",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The unit guide provides students with guided notes, syntax, and vocabulary for new concepts introduced in each lesson. You provide the entire unit guide, or you can distribute each section at the start of each lesson. You can choose to have students complete the guided notes during the lesson, or you can choose to incorporate the unit guide differently according to the needs of your classroom and students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ef33d22a-e3f4-4a09-b76b-69cccd95a749",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "c3aa9aa7-ec62-4343-a9b4-c08bd19f83b6",
+      "position": 4,
+      "properties": {
+        "description": "Software engineers use various tools to write and test programs. In this class, we will use Java Lab as our programming tool to write our code. We will explore Java Lab's features and learn how Java files are structured.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c3aa9aa7-ec62-4343-a9b4-c08bd19f83b6",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "ceb3eba4-6cc4-490f-82b4-9765cf9b2270",
+      "position": 5,
+      "properties": {
+        "description": "**Do This:** Introduce Java Lab and identify its features:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce Java Lab\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Editor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Console\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Instructions panel\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Run button\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Test button\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Settings button\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Finish button\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: A Java Program"
+      },
+      "seeding_key": {
+        "activity_section.key": "ceb3eba4-6cc4-490f-82b4-9765cf9b2270",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "59ec9133-61cc-4cd2-9b2a-ee8596880448",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice a `Painter` that moves and turns left in the grid displayed in Java Lab. They identify that the `Painter` performs these actions from commands that are given to the `Painter`, and the program executes these commands in the order given. Students might wonder where the `Painter` comes from or about other commands they can give the `Painter`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***source code***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide provides space for students to write down definitions for vocabulary and include examples, pictures, or code segments. Encourage students to use this space to track the vocabulary they are learning and examples, pictures, or code segments that will help them remember their meanings."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "59ec9133-61cc-4cd2-9b2a-ee8596880448",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "0bfa0e46-0699-45d7-bd86-67a5e5e1097e",
+      "position": 7,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigate: Working with Java Files handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students investigate the program with their partner and complete the Investigate: Working with Java Files handout.",
+        "progression_name": "Investigate and Modify: Working with Java Files",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to focus on understanding how Java code is written rather than the functionality of the programs. Emphasize that they will learn about how the code works throughout the unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0bfa0e46-0699-45d7-bd86-67a5e5e1097e",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "c16d8b06-850b-4829-bd3f-8f961705bad7",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Working with Java Files handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "c16d8b06-850b-4829-bd3f-8f961705bad7",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "85a17625-887b-497e-b129-8c1928182348",
+      "position": 9,
+      "properties": {
+        "description": "A Java program is made up of one or more Java source code files. Each source code file gives instructions to Java to tell it what we want it to do and the order we want the tasks to execute. When we write Java source code files, we have to be sure to follow certain rules so our program runs as expected.",
+        "duration": "10",
+        "name": "Syntax and Syntax Errors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "85a17625-887b-497e-b129-8c1928182348",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "bd6afcac-aeee-4125-8f64-b5a1a485c051",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the Java syntax rules and define ***syntax***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how Java source code files are named.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***class header***.\n\n**Do This:** Explain the syntax and purpose of the `main` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The purpose of the `main` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java looks for the `main` method to determine where to start running the program\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `String[] args` in the `main` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***comment***."
+      },
+      "seeding_key": {
+        "activity_section.key": "bd6afcac-aeee-4125-8f64-b5a1a485c051",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "e37da5ac-b314-41fe-a37d-4e756c76e17d",
+      "position": 11,
+      "properties": {
+        "description": "When we are writing code, we can sometimes encounter errors that prevent our programs from running. This is a normal part of the programming process. In fact, software engineers spend a lot of time finding and fixing errors in their own programs!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e37da5ac-b314-41fe-a37d-4e756c76e17d",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "e7537de1-21c4-4d0e-9682-2b138ceffa27",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think it means for a program to have a syntax error?*\n\n**Discussion Goal:** Students make predictions about the definition of syntax error based on what they know about syntax. Students may share examples that might cause a syntax error, such as forgetting a semicolon or writing the `main` method incorrectly.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e7537de1-21c4-4d0e-9682-2b138ceffa27",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "848d9843-35cc-4d76-807e-c49cc9a2ea67",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***syntax error***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete Check for Understanding on Level 3, then continue to Level 4 to complete a choice level to find and fix the syntax errors in the program.",
+        "progression_name": "Practice: Syntax Errors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Choice levels allow students to choose a problem to complete based on the level of complexity or personal interest. Some choice levels are differentiated by complexity, while others are similar levels of complexity but differentiated by topic. Students only need to complete one level but can complete multiple for additional practice if they choose."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of vocabulary presented in the lesson and Java syntax. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "848d9843-35cc-4d76-807e-c49cc9a2ea67",
+        "lesson_activity.key": "843c2be9-b263-43b8-a1a5-1bdba90a686c"
+      }
+    },
+    {
+      "key": "7e05c565-72a8-4587-8ad0-037441a96ccd",
+      "position": 1,
+      "properties": {
+        "description": "We have learned a lot about Java Lab and how Java source code files are written! Let's recap what we have learned and think about where we go from here.",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7e05c565-72a8-4587-8ad0-037441a96ccd",
+        "lesson_activity.key": "35a15cf0-8e2f-485c-aec7-d597f5bb1f25"
+      }
+    },
+    {
+      "key": "d51eff97-f31f-443c-aee8-f95406e8410e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as syntax, class headers, and the `main` method. Students also identify the features in Java Lab that allow them to write, run, and test their programs. They should realize that the knowledge they gained in this lesson provides them a foundation to build on to develop more complex programs and make predictions about what they might learn next.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d51eff97-f31f-443c-aee8-f95406e8410e",
+        "lesson_activity.key": "35a15cf0-8e2f-485c-aec7-d597f5bb1f25"
+      }
+    },
+    {
+      "key": "9f4ce4c0-2936-4a1f-894b-ec9e1cf965be",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f4ce4c0-2936-4a1f-894b-ec9e1cf965be",
+        "lesson_activity.key": "35a15cf0-8e2f-485c-aec7-d597f5bb1f25"
+      }
+    },
+    {
+      "key": "5d2b4c93-d8f5-4136-a317-dd6bcff5b65f",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d2b4c93-d8f5-4136-a317-dd6bcff5b65f",
+        "lesson_activity.key": "35a15cf0-8e2f-485c-aec7-d597f5bb1f25"
+      }
+    },
+    {
+      "key": "c2a074a9-04de-424f-b8a9-c4d567fe0427",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2a074a9-04de-424f-b8a9-c4d567fe0427",
+        "lesson_activity.key": "35a15cf0-8e2f-485c-aec7-d597f5bb1f25"
+      }
+    },
+    {
+      "key": "6dd7386c-c87b-4504-beae-f2bf720aa051",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to draw a house, then have students share their drawing with a neighbor.",
+        "name": "Defining a Blueprint",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize to students that their drawings should be quick sketches that focus on the core elements of a house. There is space on the Unit 1 Guide for students to create their drawings."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6dd7386c-c87b-4504-beae-f2bf720aa051",
+        "lesson_activity.key": "566a7655-35cf-4ebb-b883-232a8abb0885"
+      }
+    },
+    {
+      "key": "a2d76cea-8e03-4be9-a2ea-50ae165b819e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What elements does everyone's house have in common?*\n\n**Discussion Goal:** Students identify common elements in the drawings, such as having a door, windows, or a roof.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What information might we include if we were to create a blueprint for what all houses should have?*\n\n**Discussion Goal:** Students suggest that a blueprint for all houses might specify a front door, the number of windows, the shape of the building, or the shape of the roof."
+      },
+      "seeding_key": {
+        "activity_section.key": "a2d76cea-8e03-4be9-a2ea-50ae165b819e",
+        "lesson_activity.key": "566a7655-35cf-4ebb-b883-232a8abb0885"
+      }
+    },
+    {
+      "key": "56f45f06-b763-4d06-93fa-2bd8aea6d813",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "15",
+        "name": "Object-Oriented Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "56f45f06-b763-4d06-93fa-2bd8aea6d813",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "d68ddbe3-e750-42e4-ae40-0bf46ed5fbb3",
+      "position": 2,
+      "properties": {
+        "description": "Software engineers have to make decisions similar to the ones you just made to decide what elements are important to represent in a program. When you decide what elements all houses should have, you establish a blueprint for building houses that someone can use to ensure every house they build has these elements. Today we're going to learn how this process works in Java.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d68ddbe3-e750-42e4-ae40-0bf46ed5fbb3",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "594f75e6-06e2-4a35-92be-0d6c684e6872",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Object-Oriented Programming*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou could also ask additional guiding questions to make connections between the content presented in the video and what has been discussed in the lesson so far. For example:\n* *Think about the houses we draw and the common elements we identified that all houses should have. Which would be the class - the blueprint or each house we drew? Which would be the objects?*\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "594f75e6-06e2-4a35-92be-0d6c684e6872",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "99ce59cb-0203-411b-9a7c-bf7a47f3604e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that Java is an object-oriented programming language and define ***object-oriented programming***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***class*** and ***object***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students of the houses they drew at the beginning of the lesson. Identify the blueprint for building a house as an example of a class, and a physical house that is built according to the blueprint as an example of an object."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "99ce59cb-0203-411b-9a7c-bf7a47f3604e",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "9c7ae19b-f913-4d81-a290-db6300adbd68",
+      "position": 5,
+      "properties": {
+        "description": "When we identified elements that all houses should have, we were choosing things that all houses should have. This blueprint would allow someone to create house objects that each have their own versions of these elements.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c7ae19b-f913-4d81-a290-db6300adbd68",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "c82aca94-dd69-4df2-ae19-371974fba077",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce The Neighborhood.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to identify the similarities between the grid in The Neighborhood and grids they may have seen in other classes, such as their math classes. Be sure to point out that the x and y coordinates start at 0 from the top-left corner and that the size of the grid is one more than the last position."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c82aca94-dd69-4df2-ae19-371974fba077",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "57c467e5-5a57-4c37-9148-7459c4eafc86",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Consider your own neighborhood and the things that are in it. If you were to represent your neighborhood as a collection of classes, what classes would your neighborhood consist of?*\n\n**Discussion Goal:** Students make suggestions about how their neighborhood might be represented in a program, such as creating classes to represent a house, a family, a park, and a street light.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "57c467e5-5a57-4c37-9148-7459c4eafc86",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "c8fd6b59-40f2-4353-b2a6-9eb55a5a17f8",
+      "position": 8,
+      "properties": {
+        "description": "With the `Painter` class, or blueprint, we can create `Painter` objects. Since the `Painter` class is part of The Neighborhood, we don't have to tell Java what a `Painter` is every time we want to create a `Painter` object. Software engineers wrote the `Painter` class for us to use, so we don't have to know the details about how it was written to create `Painter` objects. This also means that we can trust that the `Painter` class works as the software engineers who wrote it intended.",
+        "duration": "15",
+        "name": "Investigating the Painter",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c8fd6b59-40f2-4353-b2a6-9eb55a5a17f8",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "2a6e2a65-0689-4c33-acba-b2628e507f37",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating Objects*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2a6e2a65-0689-4c33-acba-b2628e507f37",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "4a347aba-4f85-42ce-945a-a35d2c1bcf09",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `Painter` class and define ***attribute*** and ***behavior***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The UML class diagram shown on the slide is typically used in software engineering to outline the attributes and behaviors of a class. You do not need to spend time explaining the structure of a UML class diagram, but you can point out how this diagram can be useful for providing an overview of the components of a class. Students will learn more about UML class diagrams in the next unit.\n\nPoint out that a `Painter` object has attributes to represent its x and y location on the grid, the direction it is facing, and how much paint it has. Note that a `Painter` object has behaviors that allow it to move, turn left, take paint from a paint bucket, and paint a space in The Neighborhood."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4a347aba-4f85-42ce-945a-a35d2c1bcf09",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "eb36ec30-048a-4125-9bc2-870a390b3b4d",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program and make the changes to the program as prompted.",
+        "progression_name": "Investigate and Modify: Instantiating a Painter Object"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb36ec30-048a-4125-9bc2-870a390b3b4d",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "9e1dbfaf-9d30-4d7d-af1b-632aee67c4b8",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about how a `Painter` object is created?*\n* *What do you wonder about how a `Painter` object is created?*\n\n**Discussion Goal:** Students identify the syntax for creating an object, including specifying the name of the class, a name for the object, the `new` keyword, and the name of the class followed by empty parentheses. Students might wonder about the purpose of the name of the class and empty parentheses after the `new` keyword.\n\n**Do This:** Explain the syntax for creating an object:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the class, or type of object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Give a name for the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `new` keyword\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Call the ***constructor*** to create the object",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Let students know that they will learn what those instructions look like and how to write their own in the next unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9e1dbfaf-9d30-4d7d-af1b-632aee67c4b8",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "b212f190-733b-4612-bbbf-20ec42a0ea26",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instantiate***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the default values for a `Painter` object's attributes when a `Painter` object is instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to Level 3 to instantiate the missing `Painter` object.",
+        "progression_name": "Practice: Instantiate a Painter Object",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of vocabulary presented in the lesson and the syntax for creating an object. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b212f190-733b-4612-bbbf-20ec42a0ea26",
+        "lesson_activity.key": "0685be95-b2a9-45f4-a402-ebe5b2cf41bd"
+      }
+    },
+    {
+      "key": "dd17b644-f8c2-4601-8968-6e560d5ed9b2",
+      "position": 1,
+      "properties": {
+        "description": "We learned a lot about object-oriented programming today! Let's recap some of the key concepts from today's lesson.",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd17b644-f8c2-4601-8968-6e560d5ed9b2",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
+      "key": "5d3a5ce7-c008-44a1-9c9b-319760556304",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between a class and an object?*\n* *What parts of this lesson were similar to things you have encountered in your life?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students explain the difference between a class and an object and connect the house example from the warm up activity. Students suggest examples of things they have encountered similar to a class and objects created from the class. Students share concepts from the lesson that they are confident about and concepts they might be confused about.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Closing the Loop helps students recap concepts and reflect on their learning process. This discussion is also an opportunity to normalize any confusion students are experiencing. Highlight that this is new information for most students and that there will be times when they feel lost or confused. Share your own experience learning Java for the first time. You can also ask students to share strategies for when they are confused, such as consulting additional resources."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5d3a5ce7-c008-44a1-9c9b-319760556304",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
+      "key": "79b97a0e-0462-4f2a-a9b2-16e7e63ac7eb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "79b97a0e-0462-4f2a-a9b2-16e7e63ac7eb",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
+      "key": "96cde168-7a07-4826-b78f-2b1f787152c2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "96cde168-7a07-4826-b78f-2b1f787152c2",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
+      "key": "f1c9dc11-388d-4dce-a001-d90daabf2225",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1c9dc11-388d-4dce-a001-d90daabf2225",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
+      "key": "dda5816d-1372-406c-b74f-7339a906e2b6",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "dda5816d-1372-406c-b74f-7339a906e2b6",
+        "lesson_activity.key": "88bbb7aa-783b-4ef8-a80c-0f764b81cb61"
+      }
+    },
+    {
+      "key": "8bd86e08-3086-4f06-b1f6-936141cb5f21",
+      "position": 1,
+      "properties": {
+        "description": "Besides defining classes and creating objects, software engineers write instructions to tell Java how to complete tasks. When we give instructions, we have to be as clear and concise as possible to ensure that Java completes the task the way we intend. We do this in our day-to-day lives as well.",
+        "name": "Giving Instructions",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8bd86e08-3086-4f06-b1f6-936141cb5f21",
+        "lesson_activity.key": "febb644b-775d-4d25-93fd-25cebdbe260e"
+      }
+    },
+    {
+      "key": "4d5d00cd-796f-4ee3-806f-81a17d21fc9e",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to write instructions that a GPS could use to direct a delivery driver to move from 1st Street and 1st Avenue to the customer located at 5th Street and 5th Avenue.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There is space on the Unit 1 Guide for students to write their instructions.\n\nHave students partner with another group to compare solutions. Call on groups to share their solutions and the similarities and differences they noticed in the different solutions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d5d00cd-796f-4ee3-806f-81a17d21fc9e",
+        "lesson_activity.key": "febb644b-775d-4d25-93fd-25cebdbe260e"
+      }
+    },
+    {
+      "key": "55b26924-817a-4541-a384-cd729fc859a0",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write instructions with their partner that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue."
+      },
+      "seeding_key": {
+        "activity_section.key": "55b26924-817a-4541-a384-cd729fc859a0",
+        "lesson_activity.key": "febb644b-775d-4d25-93fd-25cebdbe260e"
+      }
+    },
+    {
+      "key": "01863dad-c74f-44b3-8b82-e3eedf0ddbf4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "10",
+        "name": "Calling Methods in Java"
+      },
+      "seeding_key": {
+        "activity_section.key": "01863dad-c74f-44b3-8b82-e3eedf0ddbf4",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "d555de69-745d-4392-bcef-5f3de3a96e3c",
+      "position": 2,
+      "properties": {
+        "description": "Giving instructions to direct our delivery driver is similar to giving instructions in a program. We have learned how to create `Painter` objects and seen a few examples of programs where a `Painter` object is moving and painting in The Neighborhood. Let's take a closer look at how we give instructions to a `Painter` object.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d555de69-745d-4392-bcef-5f3de3a96e3c",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "87aab7a1-2611-4c1b-8164-41377ab2d57e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Painter Class Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "87aab7a1-2611-4c1b-8164-41377ab2d57e",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "d42effc2-07f1-4c2b-b7fb-048b16188c80",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students identify the methods used in the program and share ideas about what each method does. Students should also notice that each statement executes in the order written in the program. Students may wonder what might happen if the method calls were rearranged or how they might call other methods."
+      },
+      "seeding_key": {
+        "activity_section.key": "d42effc2-07f1-4c2b-b7fb-048b16188c80",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "749321c2-62a5-4360-8fd7-8c73c83076fe",
+      "position": 5,
+      "properties": {
+        "description": "We have learned that a class is like a blueprint that defines the things that an object should have. We also know that a class contains instructions for how to create an object from this blueprint. A class also defines the things that an object can do.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "749321c2-62a5-4360-8fd7-8c73c83076fe",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "300de526-99be-4c49-b47e-7be4ddd5b39c",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall *behavior* and define ***method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of an object you might represent in a program, like a pet or a song. What behaviors would this object have? What methods would the class have to represent these behaviors?*\n\n**Discussion Goal:** Students share examples of objects and identify things the objects can do as examples of behaviors. Students suggest method names that would be in the class to represent these behaviors.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nExample behaviors for a pet might include barking, playing, or eating. A `Pet` class might then have methods called `bark()`, `play()`, and `eat()` to represent these behaviors."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "300de526-99be-4c49-b47e-7be4ddd5b39c",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "c68bc1a1-07e2-4751-826f-8ea58db5aa8d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Calling Methods*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c68bc1a1-07e2-4751-826f-8ea58db5aa8d",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "6c86b81d-eff4-47b3-9299-3667d99d0770",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Explain how to call a method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the ***dot operator***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the method followed by an empty set of parentheses"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c86b81d-eff4-47b3-9299-3667d99d0770",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "0e056840-de42-4131-829f-1a7e1bd26d69",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Consider our delivery driver from earlier. Before we could give our instructions for how to reach the destination, what information did we need to know first?*\n\n**Discussion Goal:** Students share examples of information needed to perform the task, such as the location the delivery driver needed to reach or where the delivery driver started. Students may also suggest that they needed to know their current location as they were navigating to determine which direction to turn next.",
+        "duration": "10",
+        "name": "Methods That Need Information",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0e056840-de42-4131-829f-1a7e1bd26d69",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "51a67c25-005e-4da6-a9af-758011f5f755",
+      "position": 10,
+      "properties": {
+        "description": "Sometimes methods need additional information before they can perform their intended task. For example, if we want a calculator to add two numbers, we first have to provide the two numbers we want it to add before we can get the result. We have seen an example of this with the `paint()` method in the `Painter class. Let's take a closer look at how we use this method.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "51a67c25-005e-4da6-a9af-758011f5f755",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "e133685e-a590-4eda-8a49-a8234496f59d",
+      "position": 11,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigate: Calling Methods handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program and complete the Investigate: Calling Methods handout.",
+        "progression_name": "Investigate and Modify: Calling Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "e133685e-a590-4eda-8a49-a8234496f59d",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "775982dd-d34f-43e4-8525-af7e6b8b33ae",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Calling Methods handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `paint()` method in the `Painter` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***parameter***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how the `paint()` method is called and define ***argument***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***string literal***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The available colors students can use are listed in the documentation for the `Painter` class. Remind students about the colors they discovered when they explored the Documentation tab in Java Lab during the Investigate activity. Students can also pass a hex value for a color as a `String` to the call to the `paint()` method. For students that want to use custom colors, you can refer them to websites like [**HTML Colors Codes**](https://htmlcolorcodes.com/) to use the color picker and find the hex value of a color."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "775982dd-d34f-43e4-8525-af7e6b8b33ae",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "4bc356c4-5c9c-4218-81f3-6173dacd68d9",
+      "position": 13,
+      "properties": {
+        "description": "With methods, we can give our objects instructions to perform tasks that we want them to do. Now that we have learned about some of the methods in the `Painter` class, let's practice calling methods to navigate and paint around The Neighborhood!",
+        "name": "Using the Painter Class",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4bc356c4-5c9c-4218-81f3-6173dacd68d9",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "539d2381-322c-4739-866b-a21fa4f2766a",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 to complete Levels 3 and 4 on Code Studio. Students complete a Check for Understanding on Level 3, then continue to Level 4 to practice using some of the methods in the `Painter` class.",
+        "progression_name": "Practice: Moving and Painting",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of vocabulary presented in the lesson and the syntax for calling methods with and without parameters."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "539d2381-322c-4739-866b-a21fa4f2766a",
+        "lesson_activity.key": "d70183ee-bb88-4e53-818e-0724aa44de6b"
+      }
+    },
+    {
+      "key": "0cbe5f72-68c6-4863-858d-5dde23b948f9",
+      "position": 1,
+      "properties": {
+        "description": "You all have done a great job today using your knowledge of Java and the methods in the `Painter` class to solve problems in The Neighborhood! You used several software engineering characteristics today as you practiced being a problem solver, creator, collaborator, and learner to expand your skills.",
+        "name": "Glows, Grows, Want-to-Knows",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0cbe5f72-68c6-4863-858d-5dde23b948f9",
+        "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864"
+      }
+    },
+    {
+      "key": "a12a0b8f-b053-4170-b0c1-c3cdca58a397",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or how they solved the problem and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Glows, Grows, Want-to-Knows is a strategy to help students identify their strengths and areas of improvement and share any questions or misconceptions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a12a0b8f-b053-4170-b0c1-c3cdca58a397",
+        "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864"
+      }
+    },
+    {
+      "key": "e2546f96-4bcd-4e6a-aed9-5657fe3d9dcc",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2546f96-4bcd-4e6a-aed9-5657fe3d9dcc",
+        "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864"
+      }
+    },
+    {
+      "key": "ec5eaeba-52fb-4381-8c23-17d79bcb95ff",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec5eaeba-52fb-4381-8c23-17d79bcb95ff",
+        "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864"
+      }
+    },
+    {
+      "key": "fea5b54f-8697-42fa-be54-e1d8c192a639",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "fea5b54f-8697-42fa-be54-e1d8c192a639",
+        "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864"
+      }
+    },
+    {
+      "key": "33502fb4-3db5-4d8d-ac4d-a5b7161ab021",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "33502fb4-3db5-4d8d-ac4d-a5b7161ab021",
+        "lesson_activity.key": "fd550c7c-a2f4-4194-bd1a-693e0fd86864"
+      }
+    },
+    {
+      "key": "836e3640-1941-49d8-b99c-8becd66e21b3",
+      "position": 1,
+      "properties": {
+        "description": "We have learned how to give instructions to our `Painter` objects by calling methods from the `Painter` class. When we are trying to get our `Painter` objects to navigate and paint in The Neighborhood, we have to be specific about the order we want the instructions to be executed. The order we give our instructions is one of the components of an algorithm.",
+        "name": "Components of an Algorithm",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "836e3640-1941-49d8-b99c-8becd66e21b3",
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898"
+      }
+    },
+    {
+      "key": "60326121-0dcc-43da-9b56-856fdd603c6a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you know or remember about algorithms?*\n\n**Discussion Goal:** Students recall what they learned about algorithms in Computer Science Principles (CSP), including the components of an algorithm such as sequencing, selection, and iteration. Students identify sequencing as the order that steps are executed and make connections to how they have been using sequencing in The Neighborhood. Students may recall that selection is used to determine a different set of instructions to execute based on a condition and that iteration is used to execute a set of instructions a specific number of times or while a condition is true.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60326121-0dcc-43da-9b56-856fdd603c6a",
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898"
+      }
+    },
+    {
+      "key": "68da7d0f-6295-43af-a7b8-b55c4df7cea3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***algorithm*** and introduce the components of an algorithm."
+      },
+      "seeding_key": {
+        "activity_section.key": "68da7d0f-6295-43af-a7b8-b55c4df7cea3",
+        "lesson_activity.key": "daf5b2bf-86d1-454b-8135-d55580544898"
+      }
+    },
+    {
+      "key": "9a83e932-6c1d-40c2-928d-4e25e77c3cde",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "15",
+        "name": "Boolean Values and While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a83e932-6c1d-40c2-928d-4e25e77c3cde",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "d5ea39d7-6038-4fdd-9a06-941323c81dbd",
+      "position": 2,
+      "properties": {
+        "description": "We have learned how to call methods to have our `Painter` objects perform specific tasks in a certain order to achieve a goal. You likely noticed that when we were doing this, we were often repeating the same set of instructions, such as when we wanted to move and paint several times in a row. Let's find out how we can expand our algorithms to use sequencing and iteration so we don't have to write the same lines of code over and over again.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d5ea39d7-6038-4fdd-9a06-941323c81dbd",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "83cc2e18-e548-405c-b11f-a43551ac7d5b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Loops and Boolean Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "83cc2e18-e548-405c-b11f-a43551ac7d5b",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "4c6ae664-819f-4b19-ab09-156f07b3c9d3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students identify the `canMove()`, `isOnBucket()`, and `hasPaint()` methods used in the program and share ideas about what each method does. Students should also notice that these methods are used with `while` loops to determine if the `Painter` object can move or has paint and repeats the instructions as long as the condition is `true`. Students might wonder about the similarities and differences between these methods and those they have used previously or if there are other methods they can use to check other conditions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce `boolean` values and the `Painter` class methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some scenarios that you can think of where you would want to know if something is either true or false? Why might you need to know that?*\n\n**Discussion Goal:** Students share examples from their personal lives and experiences, such as deciding if they needed a jacket based on the weather or if they could hang out with their friends based on whether they had finished their homework or chores.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c6ae664-819f-4b19-ab09-156f07b3c9d3",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "ef371259-73e1-4081-a8cf-edce3e6d90f8",
+      "position": 5,
+      "properties": {
+        "description": "These new methods in the `Painter` class give us useful information about whether a `Painter` object can move or has paint. Unlike the other methods we have used so far, like `move()` and `paint()`, these methods give us either a `true` or `false` value when we call them that we can use to decide whether to repeat a set of instructions. Let's take a closer look at how we can do this.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ef371259-73e1-4081-a8cf-edce3e6d90f8",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "d8faa952-a04b-44f5-9b44-999b43c32bf3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *While Loops*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d8faa952-a04b-44f5-9b44-999b43c32bf3",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "82c04af7-f58f-459a-8786-2a545a077dab",
+      "position": 7,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "progression_name": "Investigate and Modify: Loops and Boolean Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "82c04af7-f58f-459a-8786-2a545a077dab",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "f5c52f81-c958-4b6b-98e6-a7e64d0cbac0",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to share what happens when a condition is never `true`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f5c52f81-c958-4b6b-98e6-a7e64d0cbac0",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "a8354d39-d35e-4b7c-9e97-246221f30435",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***."
+      },
+      "seeding_key": {
+        "activity_section.key": "a8354d39-d35e-4b7c-9e97-246221f30435",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "dbfba19f-509c-4eab-84fb-7d4e9caa154e",
+      "position": 10,
+      "properties": {
+        "description": "We now know how to implement two components of algorithms in Java – sequencing and iteration. Software engineers often plan their algorithms in natural language first before writing code. This is an important step that helps us better understand a problem and plan the steps we need to take to develop a solution.",
+        "duration": "20",
+        "name": "Writing Algorithms",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dbfba19f-509c-4eab-84fb-7d4e9caa154e",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "411ae357-79e7-4282-92e1-1b2636f8bd52",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The Problem Solving Process with Zipline*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "411ae357-79e7-4282-92e1-1b2636f8bd52",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "3589f679-1435-4223-977f-47f6e32b995b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem-solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to complete Level 4 to implement their solution for their chosen problem.",
+        "progression_name": "Practice: Using Loops and Boolean Methods",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of vocabulary presented in the lesson and writing algorithms using sequencing and iteration."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b",
+        "lesson_activity.key": "7a161e1b-3055-4644-a3b5-e3820d8e88f7"
+      }
+    },
+    {
+      "key": "65f0c50a-cc0e-420b-86dd-6972a66c0d67",
+      "position": 1,
+      "properties": {
+        "description": "Software engineers write algorithms every day to solve problems, many of which consist of the same components you just implemented today in your own algorithms. We have expanded our programming skills and knowledge quite a bit today!",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "65f0c50a-cc0e-420b-86dd-6972a66c0d67",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "ea0087b0-766e-4f42-bdee-414b5d6c5820",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ea0087b0-766e-4f42-bdee-414b5d6c5820",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "4d473fb1-171f-4cb4-8946-5b1614c46c62",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d473fb1-171f-4cb4-8946-5b1614c46c62",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "57010643-54d9-439c-9b10-9dd685212428",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "57010643-54d9-439c-9b10-9dd685212428",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    },
+    {
+      "key": "c49f4cfa-b128-4806-a09c-186b95d7307b",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c49f4cfa-b128-4806-a09c-186b95d7307b",
+        "lesson_activity.key": "bb157531-e345-4a34-ba10-de35ba3a4120"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L1_2023"
+        ],
+        "progression": "Predict and Run: A Java Program"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L1_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "ceb3eba4-6cc4-490f-82b4-9765cf9b2270"
+      },
+      "level_keys": [
+        "CSA U1L2-L1_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L2_2023"
+        ],
+        "progression": "Investigate and Modify: Working with Java Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L2_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "0bfa0e46-0699-45d7-bd86-67a5e5e1097e"
+      },
+      "level_keys": [
+        "CSA U1L2-L2_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L3_2023"
+        ],
+        "progression": "Practice: Syntax Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L3_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "848d9843-35cc-4d76-807e-c49cc9a2ea67"
+      },
+      "level_keys": [
+        "CSA U1L2-L3_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L4_2023"
+        ],
+        "progression": "Practice: Syntax Errors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L4_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "848d9843-35cc-4d76-807e-c49cc9a2ea67"
+      },
+      "level_keys": [
+        "CSA U1L2-L4_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2-L5_2023"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2-L5_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "c2a074a9-04de-424f-b8a9-c4d567fe0427"
+      },
+      "level_keys": [
+        "CSA U1L2-L5_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L1_2023"
+        ],
+        "progression": "Investigate and Modify: Instantiating a Painter Object"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L1_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "eb36ec30-048a-4125-9bc2-870a390b3b4d"
+      },
+      "level_keys": [
+        "CSA U1L3-L1_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L2_2023"
+        ],
+        "progression": "Practice: Instantiate a Painter Object"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L2_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "b212f190-733b-4612-bbbf-20ec42a0ea26"
+      },
+      "level_keys": [
+        "CSA U1L3-L2_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L3_2023"
+        ],
+        "progression": "Practice: Instantiate a Painter Object"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L3_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "b212f190-733b-4612-bbbf-20ec42a0ea26"
+      },
+      "level_keys": [
+        "CSA U1L3-L3_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3-L4_2023"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3-L4_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "dda5816d-1372-406c-b74f-7339a906e2b6"
+      },
+      "level_keys": [
+        "CSA U1L3-L4_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_2023"
+        ],
+        "progression": "Predict and Run: Painter Class Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L1_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "87aab7a1-2611-4c1b-8164-41377ab2d57e"
+      },
+      "level_keys": [
+        "CSA U1L4-L1_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_2023"
+        ],
+        "progression": "Investigate and Modify: Calling Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L2_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "e133685e-a590-4eda-8a49-a8234496f59d"
+      },
+      "level_keys": [
+        "CSA U1L4-L2_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_2023"
+        ],
+        "progression": "Practice: Moving and Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L3_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "539d2381-322c-4739-866b-a21fa4f2766a"
+      },
+      "level_keys": [
+        "CSA U1L4-L3_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_2023"
+        ],
+        "progression": "Practice: Moving and Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L4_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "539d2381-322c-4739-866b-a21fa4f2766a"
+      },
+      "level_keys": [
+        "CSA U1L4-L4_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_2023"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L5_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "33502fb4-3db5-4d8d-ac4d-a5b7161ab021"
+      },
+      "level_keys": [
+        "CSA U1L4-L5_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L1_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83cc2e18-e548-405c-b11f-a43551ac7d5b"
+      },
+      "level_keys": [
+        "CSA U1L5-L1_2023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L2_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "82c04af7-f58f-459a-8786-2a545a077dab"
+      },
+      "level_keys": [
+        "CSA U1L5-L2_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Using Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L3_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      },
+      "level_keys": [
+        "CSA U1L5-L3_2023"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Using Loops and Boolean Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L4_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      },
+      "level_keys": [
+        "CSA U1L5-L4_2023"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L5-L5_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "c49f4cfa-b128-4806-a09c-186b95d7307b"
+      },
+      "level_keys": [
+        "CSA U1L5-L5_2023"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L2-L1_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "ceb3eba4-6cc4-490f-82b4-9765cf9b2270"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L2-L2_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "0bfa0e46-0699-45d7-bd86-67a5e5e1097e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L2-L3_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "848d9843-35cc-4d76-807e-c49cc9a2ea67"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L2-L4_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "848d9843-35cc-4d76-807e-c49cc9a2ea67"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2-L5_2023",
+        "script_level.level_keys": [
+          "CSA U1L2-L5_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "c2a074a9-04de-424f-b8a9-c4d567fe0427"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L3-L1_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "eb36ec30-048a-4125-9bc2-870a390b3b4d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L3-L2_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "b212f190-733b-4612-bbbf-20ec42a0ea26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L3-L3_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "b212f190-733b-4612-bbbf-20ec42a0ea26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L3-L4_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "dda5816d-1372-406c-b74f-7339a906e2b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L4-L1_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "87aab7a1-2611-4c1b-8164-41377ab2d57e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L4-L2_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "e133685e-a590-4eda-8a49-a8234496f59d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L4-L3_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "539d2381-322c-4739-866b-a21fa4f2766a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L4-L4_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "539d2381-322c-4739-866b-a21fa4f2766a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4-L5_2023",
+        "script_level.level_keys": [
+          "CSA U1L4-L5_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "33502fb4-3db5-4d8d-ac4d-a5b7161ab021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L1_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83cc2e18-e548-405c-b11f-a43551ac7d5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L2_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "82c04af7-f58f-459a-8786-2a545a077dab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L3_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L4_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3589f679-1435-4223-977f-47f6e32b995b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L5-L5_2023",
+        "script_level.level_keys": [
+          "CSA U1L5-L5_2023"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "c49f4cfa-b128-4806-a09c-186b95d7307b"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Investigate: Calling Methods",
+      "url": "https://docs.google.com/document/d/1rgkhIdURxzzHDQV05CAhP7bVIhJfpzUi93lKJRYqzxQ/edit?usp=sharing",
+      "key": "_key_investigate_calling_methods",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "_key_investigate_calling_methods"
+      }
+    },
+    {
+      "name": "[KEY] Investigate: Working with Java Files",
+      "url": "https://docs.google.com/document/d/1iQpSzjnl9GPH1bDudJIu90HGJ16zMxvEyY3IGiTIWnk/edit?usp=sharing",
+      "key": "_key_investigate_working_with_java_files",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_investigate_working_with_java_files"
+      }
+    },
+    {
+      "name": "[KEY] U1L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1eBoNfN-t4UcA1JjfbFcCZEwxG5_HXwfU7FiNH1a1sgc/edit?usp=sharing",
+      "key": "_key_u1l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1qtjD0vTRqT9WX05FzW6MNey6EanhTzuHrucDz4mdNGM/edit?usp=sharing",
+      "key": "_key_u1l3_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1wXoSTa7fRo_TcLj5kAELLdVUjOwfTkXXtPz9p4AHa-0/edit?usp=sharing",
+      "key": "_key_u1l4_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/12mQXp5PRm6HEhMHOwfgadYLFP8etCjdRQbMRrlwrlBc/edit?usp=sharing",
+      "key": "_key_u1l5_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] Writing Algorithms",
+      "url": "https://docs.google.com/document/d/1vC8YSyvjxns_saIvd9TsUdJMX72YalxxC_MIQnwD7R4/edit?usp=sharing",
+      "key": "_key_writing_algorithms",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_writing_algorithms"
+      }
+    },
+    {
+      "name": "Calling Methods",
+      "url": "https://youtu.be/CPE_lYGCw3A",
+      "key": "calling_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "calling_methods"
+      }
+    },
+    {
+      "name": "Change the Face of Computer Science",
+      "url": "https://youtu.be/uhcA6K8rWp0",
+      "key": "change_the_face_of_computer_science",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "change_the_face_of_computer_science"
+      }
+    },
+    {
+      "name": "Creating Objects",
+      "url": "https://youtu.be/C5Ks_u87Ltg",
+      "key": "creating_objects",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_objects"
+      }
+    },
+    {
+      "name": "Investigate: Calling Methods",
+      "url": "https://docs.google.com/document/d/1M3vZABAx7il8ZaWUVb3yNge21ES7_2lwW-kzOQ9K-bg/edit?usp=sharing",
+      "key": "investigate_calling_methods",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "investigate_calling_methods"
+      }
+    },
+    {
+      "name": "Investigate: Working with Java Files",
+      "url": "https://docs.google.com/document/d/18AMG-iEg33DNqeZZj4FnmXRm0VaDUZnxgkxihpVmiWE/edit?usp=sharing",
+      "key": "investigate_working_with_java_files",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "investigate_working_with_java_files"
+      }
+    },
+    {
+      "name": "Java Lab",
+      "url": "https://docs.google.com/presentation/d/1Ld2vwxu3keK9oKxtAPRGUkjXktfaRs9ryxI7TlxVfuo/edit?usp=sharing",
+      "key": "java_lab",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "java_lab"
+      }
+    },
+    {
+      "name": "Loops",
+      "url": "https://docs.google.com/presentation/d/1bIR-aVo6alP-Yy6FZSb5TDGIA2zXItjJUVp3ikoHRJo/edit?usp=sharing",
+      "key": "loops",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops"
+      }
+    },
+    {
+      "name": "Navigating and Painting",
+      "url": "https://docs.google.com/presentation/d/1HsnHYwE8Ue_CJfbgT5KCyUT5vH9zLJh8lJ2BFdyw6d0/edit?usp=sharing",
+      "key": "navigating_and_painting",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "navigating_and_painting"
+      }
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "url": "https://youtu.be/Wok4Xw_5cyY",
+      "key": "object-oriented_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "object-oriented_programming"
+      }
+    },
+    {
+      "name": "Software Engineering Characteristics",
+      "url": "https://docs.google.com/document/d/1dxqXmAFYngaZAuvPI8h8Lbdxorb9ITJVNPHUb6IGnuQ/edit?usp=sharing",
+      "key": "software_engineering_characteristics",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_characteristics"
+      }
+    },
+    {
+      "name": "Software Engineering: Skills and Characteristics",
+      "url": "https://youtu.be/VJFZejhRKjk",
+      "key": "software_engineering_skills_and_characteristics",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_skills_and_characteristics"
+      }
+    },
+    {
+      "name": "The Neighborhood",
+      "url": "https://docs.google.com/presentation/d/1zShEU4odisNrMf1__90VklwFDu16Rjysvh-IzF1nRtY/edit?usp=sharing",
+      "key": "the_neighborhood",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_neighborhood"
+      }
+    },
+    {
+      "name": "The Problem Solving Process with Zipline",
+      "url": "https://youtu.be/z7RaFPT3DTE",
+      "key": "the_problem_solving_process_with_zipline",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_with_zipline"
+      }
+    },
+    {
+      "name": "U1L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1HpxVlUVskjmYwknNRCaNcOt5GQQ0C0fiHi-MRgkKHrw/edit?usp=sharing",
+      "key": "u1l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "name": "U1L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/11R3_wEceG-gYq-_XCbFidqdqpi6rufjZNGjh5WJz9M0/edit?usp=sharing",
+      "key": "u1l3_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "name": "U1L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BdJQ8UcUY9cLr8de6A9TezNRRWd9c2E-gzUKjpZXK4Y/edit?usp=sharing",
+      "key": "u1l4_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l4_extra_practice"
+      }
+    },
+    {
+      "name": "U1L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1M5AP9LTGywSsUEPKZkarPkXEjmpjNV3IYqr28YbqRJQ/edit?usp=sharing",
+      "key": "u1l5_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "name": "Welcome to CSA",
+      "url": "https://docs.google.com/presentation/d/1mP5UFgh1I6po_enlzpo9EMdK4r2LpBHXDt2pQMNxakA/edit?usp=sharing",
+      "key": "welcome_to_csa",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_csa"
+      }
+    },
+    {
+      "name": "While Loops",
+      "url": "https://youtu.be/qnz0LVpUr88",
+      "key": "while_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "while_loops"
+      }
+    },
+    {
+      "name": "Writing Algorithms",
+      "url": "https://docs.google.com/document/d/1mSMNiQgmUwDa-9O0FbHdGZgftTihecXenOPaOL38BQs/edit?usp=sharing",
+      "key": "writing_algorithms",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_algorithms"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "change_the_face_of_computer_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "software_engineering_characteristics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "software_engineering_skills_and_characteristics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "welcome_to_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_investigate_working_with_java_files"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "investigate_working_with_java_files"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "java_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "creating_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "object-oriented_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "the_neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_investigate_calling_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "calling_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "investigate_calling_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "navigating_and_painting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_writing_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "the_problem_solving_process_with_zipline"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "while_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "writing_algorithms"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -65,19 +3262,572 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "algorithm",
+      "word": "algorithm",
+      "definition": "a finite set of instructions that accomplish a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "argument",
+      "word": "argument",
+      "definition": "the specific value provided when a method or constructor is called",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "key": "attribute",
+      "word": "attribute",
+      "definition": "a characteristic of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "behavior",
+      "definition": "an action that an object can perform",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "class",
+      "word": "class",
+      "definition": "a programmer-defined blueprint from which objects are created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "key": "class_header",
+      "word": "class header",
+      "definition": "consists of the class keyword and the name of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class_header"
+      }
+    },
+    {
+      "key": "comment",
+      "word": "comment",
+      "definition": "a text note to explain or annotate the code and is ignored when the program is run",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "comment"
+      }
+    },
+    {
+      "key": "condition",
+      "word": "condition",
+      "definition": "determines whether or not to execute a block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "key": "constructor",
+      "word": "constructor",
+      "definition": "a block of code that has the same name as the class and tells the computer how to create a new object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "key": "dot_operator",
+      "word": "dot operator",
+      "definition": "used to call a method in a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_operator"
+      }
+    },
+    {
+      "key": "instantiate",
+      "word": "instantiate",
+      "definition": "to call the constructor to create an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "key": "iteration_statement",
+      "word": "iteration statement",
+      "definition": "a control structure that repeatedly executes a block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration_statement"
+      }
+    },
+    {
+      "key": "method",
+      "word": "method",
+      "definition": "a named set of instructions to perform a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "key": "object",
+      "word": "object",
+      "definition": "an instance of a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "key": "object_oriented_programming",
+      "word": "object-oriented programming",
+      "definition": "an approach to creating and using models of physical or imagined objects",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object_oriented_programming"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "parameter",
+      "definition": "defines the type of value to receive when a method or constructor is called",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "software_engineer",
+      "word": "software engineer",
+      "definition": "a person who designs, develops, and tests software for home, school, and business use",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "key": "source_code",
+      "word": "source code",
+      "definition": "a collection of programming commands",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "source_code"
+      }
+    },
+    {
+      "key": "string_literal",
+      "word": "string literal",
+      "definition": "a sequence of characters enclosed in quotation marks ( `\" \"` )",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "string_literal"
+      }
+    },
+    {
+      "key": "syntax",
+      "word": "syntax",
+      "definition": "the rules for how a programmer must write code for a computer to understand",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "syntax"
+      }
+    },
+    {
+      "key": "syntax_error",
+      "word": "syntax error",
+      "definition": "a mistake in the code that does not follow a programming language's syntax",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "syntax_error"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "class_header"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "comment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "syntax"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "syntax_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "object_oriented_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "dot_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "string_literal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "iteration_statement"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "2260ea9b-b384-43bd-b2bc-86f288d3d87f",
+      "properties": {
+        "description": "Identify skills and characteristics of a software engineer"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "2260ea9b-b384-43bd-b2bc-86f288d3d87f"
+      }
+    },
+    {
+      "key": "2f257369-703a-458b-8752-5bdd3cfe3feb",
+      "properties": {
+        "description": "Use Java Lab features to run and test program code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "2f257369-703a-458b-8752-5bdd3cfe3feb"
+      }
+    },
+    {
+      "key": "31bdebeb-ad61-461a-840b-ea9b353789ab",
+      "properties": {
+        "description": "Call methods with and without arguments using correct Java syntax"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "31bdebeb-ad61-461a-840b-ea9b353789ab"
+      }
+    },
+    {
+      "key": "561bba08-5b66-4da0-8b4b-6c761d268f9d",
+      "properties": {
+        "description": "Identify and correct syntax errors"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "561bba08-5b66-4da0-8b4b-6c761d268f9d"
+      }
+    },
+    {
+      "key": "62b92964-1343-49b2-bc66-a85501e6f566",
+      "properties": {
+        "description": "Use documentation to get information about a class and its methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "62b92964-1343-49b2-bc66-a85501e6f566"
+      }
+    },
+    {
+      "key": "80ec74cc-2515-4955-923c-694578369701",
+      "properties": {
+        "description": "Explain the relationship between a class and an object"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "80ec74cc-2515-4955-923c-694578369701"
+      }
+    },
+    {
+      "key": "838c26b2-8c35-45e0-a822-f55fad060ecd",
+      "properties": {
+        "description": "Explain the purpose and functionality of a `while` loop"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "838c26b2-8c35-45e0-a822-f55fad060ecd"
+      }
+    },
+    {
+      "key": "88b80757-d0da-4352-ab5f-fb9b9f32e7d6",
+      "properties": {
+        "description": "Represent behaviors of an object as methods in a class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "88b80757-d0da-4352-ab5f-fb9b9f32e7d6"
+      }
+    },
+    {
+      "key": "8d10393f-574d-4c9e-bc98-d7ffff150dd7",
+      "properties": {
+        "description": "Apply the problem-solving process to plan an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "8d10393f-574d-4c9e-bc98-d7ffff150dd7"
+      }
+    },
+    {
+      "key": "8f28b6d7-6426-4afe-af78-9412583ecfa1",
+      "properties": {
+        "description": "Relate skills and characteristics of a software engineer to personal skills and identity"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8f28b6d7-6426-4afe-af78-9412583ecfa1"
+      }
+    },
+    {
+      "key": "91e5a7da-78e9-445a-8cb9-8c8ff34f52e3",
+      "properties": {
+        "description": "Write `while` loops to repeat code while a condition is `true`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "91e5a7da-78e9-445a-8cb9-8c8ff34f52e3"
+      }
+    },
+    {
+      "key": "bc39376a-6e0f-4e0c-8d67-caaee655d3ae",
+      "properties": {
+        "description": "Identify the components of a Java source code file"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "bc39376a-6e0f-4e0c-8d67-caaee655d3ae"
+      }
+    },
+    {
+      "key": "f1f61568-317e-4418-bf8a-bad89cf0caa8",
+      "properties": {
+        "description": "Create an object from an existing class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "f1f61568-317e-4418-bf8a-bad89cf0caa8"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.1"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

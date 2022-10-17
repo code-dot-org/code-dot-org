@@ -1,0 +1,15 @@
+@use "sass:math";
+
+$visualization-width: 800px;
+$visualization-height: 800px;
+$visualization-overlay-scale: 2;
+$visualization-overlay-width: math.div($visualization-width, $visualization-overlay-scale);
+$visualization-overlay-height: math.div($visualization-height, $visualization-overlay-scale);
+
+:export {
+  visualizationWidth: $visualization-width;
+  visualizationHeight: $visualization-height;
+  visualizationOverlayScale: $visualization-overlay-scale;
+  visualizationOverlayWidth: $visualization-overlay-width;
+  visualizationOverlayHeight: $visualization-overlay-height;
+}

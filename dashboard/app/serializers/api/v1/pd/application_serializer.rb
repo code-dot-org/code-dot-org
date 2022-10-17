@@ -186,7 +186,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
     stats = school&.school_stats_by_year&.order(school_year: :desc)&.first
     return {} unless stats
 
-    urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).reduce(:+) || 0
+    urm_total = (stats.slice(:student_am_count, :student_hi_count, :student_bl_count, :student_hp_count).values.compact || []).sum || 0
 
     {
       title_i_status: stats.title_i_status,

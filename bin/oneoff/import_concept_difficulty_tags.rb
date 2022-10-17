@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/properties'
+require_relative '../../pegasus/helpers/properties'
 require 'csv'
 
 # Import level concept difficulty tags from a gsheet (downloaded as a series of

@@ -119,22 +119,22 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   def enrollment_params
     {
-      first_name: params[:first_name],
-      last_name: params[:last_name],
-      email: params[:email],
+      first_name: params[:first_name]&.strip_utf8mb4,
+      last_name: params[:last_name]&.strip_utf8mb4,
+      email: params[:email]&.strip_utf8mb4,
       role: params[:role],
       grades_teaching: params[:grades_teaching],
       attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
       csf_course_experience: params[:csf_course_experience],
-      csf_courses_planned: params[:csf_courses_planned],
+      csf_courses_planned: params[:csf_courses_planned]&.strip_utf8mb4,
       csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide],
       previous_courses: params[:previous_courses],
       replace_existing: params[:replace_existing],
       csf_intro_intent: params[:csf_intro_intent],
       csf_intro_other_factors: params[:csf_intro_other_factors],
       # params only collected in CSP returning teachers workshop
-      years_teaching: params[:years_teaching],
-      years_teaching_cs: params[:years_teaching_cs],
+      years_teaching: params[:years_teaching]&.strip_utf8mb4,
+      years_teaching_cs: params[:years_teaching_cs]&.strip_utf8mb4,
       taught_ap_before: params[:taught_ap_before],
       planning_to_teach_ap: params[:planning_to_teach_ap]
     }
@@ -142,13 +142,13 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
   def school_info_params
     {
-      school_type: params[:school_info][:school_type],
-      school_state: params[:school_info][:school_state],
-      school_zip: params[:school_info][:school_zip],
-      school_district_name: params[:school_info][:school_district_name],
-      school_district_other: params[:school_info][:school_district_other],
+      school_type: params[:school_info][:school_type]&.strip_utf8mb4,
+      school_state: params[:school_info][:school_state]&.strip_utf8mb4,
+      school_zip: params[:school_info][:school_zip]&.strip_utf8mb4,
+      school_district_name: params[:school_info][:school_district_name]&.strip_utf8mb4,
+      school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
       school_id: params[:school_info][:school_id],
-      school_name: params[:school_info][:school_name],
+      school_name: params[:school_info][:school_name]&.strip_utf8mb4,
       country: "US" # we currently only support enrollment in pd for US schools
     }
   end

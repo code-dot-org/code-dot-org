@@ -133,6 +133,12 @@ def get_i18n_strings(level)
       i18n_strings['mini_rubric'].merge! rubric_properties
     end
 
+    # dynamic_instructions
+    if level.dynamic_instructions
+      dynamic_instructions = JSON.parse(level.dynamic_instructions)
+      i18n_strings['dynamic_instructions'] = dynamic_instructions unless dynamic_instructions.empty?
+    end
+
     # parse markdown properties for potential placeholder texts
     documents = []
     %w(
@@ -252,7 +258,7 @@ def get_placeholder_texts(document, block_type, title_names)
 
       # Skip empty or untranslatable string.
       # A translatable string must have at least 3 consecutive alphabetic characters.
-      next unless title&.content =~ /[a-zA-Z]{3,}/
+      next unless /[a-zA-Z]{3,}/.match?(title&.content)
 
       # Use only alphanumeric characters in lower cases as string key
       text_key = Digest::MD5.hexdigest title.content
@@ -305,7 +311,7 @@ def localize_level_content(variable_strings, parameter_strings)
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
   # which relies on running a shell command
   Dir.chdir(Rails.root) do
-    Script.all.each do |script|
+    Unit.all.each do |script|
       next unless ScriptConstants.i18n? script.name
       script_strings = {}
       script.script_levels.each do |script_level|
@@ -340,7 +346,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if Script.unit_in_category?('hoc', script.name)
+        if Unit.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")
@@ -440,7 +446,11 @@ def localize_course_offerings
   CourseOffering.all.sort.each do |co|
     hash[co.key] = co.display_name
   end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.json"), "w+") do |f|
+  write_dashboard_json('course_offerings', hash)
+end
+
+def write_dashboard_json(location, hash)
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), "w+") do |f|
     f.write(JSON.pretty_generate(hash))
   end
 end

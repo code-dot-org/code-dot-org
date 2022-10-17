@@ -16,7 +16,7 @@ class RegionalPartnersController < ApplicationController
   # GET /regional_partners
   def index
     search_term = params[:search_term]
-    if search_term =~ /^\d+$/
+    if /^\d+$/.match?(search_term)
       @regional_partners = RegionalPartner.where(id: search_term)
     elsif search_term
       @regional_partners = RegionalPartner.where("name LIKE :partial_name", {partial_name: "%#{search_term}%"})

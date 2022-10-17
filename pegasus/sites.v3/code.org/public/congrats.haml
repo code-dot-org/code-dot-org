@@ -40,6 +40,9 @@ max_age: 60
 -if company
   %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
+- studio_redirect_url = CDO.studio_url("/congrats")
+%script{type: 'text/javascript', src: webpack_asset_path('js/code.org/public/congrats.js'), 'data': {studio_redirect_url: studio_redirect_url}}
+
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
 
   -if company

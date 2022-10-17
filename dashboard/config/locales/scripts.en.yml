@@ -6548,13 +6548,18 @@ en:
           description: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           student_description: Learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.
         csc-things:
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Scratch Paper
           name: csc-things
           title: 'CSC Brain Dump '
           description_audience: ''
           description_short: ''
           description: 'These are just a work in progress :) '
           student_description: ''
+          lessons:
+            lesson-2:
+              name: book cover
         poetry-hoc2:
           lesson_groups: {}
           name: poetry-hoc2
@@ -7381,8 +7386,11 @@ en:
           title: 'Invasive Species '
           description_audience: ''
           description_short: 'This is a NSF funded research grant for CS4All '
-          description: ''
+          description: 'This integrated Science+CS module invites students to learn about impacts of invasive species on their environment and to consider ways that computers might help. Please review [Lesson 0: Getting Started](https://docs.google.com/document/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit?usp=sharing) to learn about the module.'
           student_description: ''
+          lessons:
+            lesson-21:
+              name: Getting Started
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7903,6 +7911,9 @@ en:
           description_short: For staging updates to lessons or levels between curriculum versions
           description: For staging updates to lessons or levels between curriculum versions
           student_description: ''
+          lessons:
+            lesson-7:
+              name: Intro to Sprites
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
@@ -8492,6 +8503,8 @@ en:
           lessons:
             lesson-2:
               name: 'Module 2 post-work: Understanding Unit 4 content'
+            lesson-4:
+              name: 'Module 4 post-work: 2D Arrays in Unit 5 and FRQs'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8541,6 +8554,8 @@ en:
           lessons:
             lesson-2:
               name: 'Module 3 post-work: The Theater and datasets in Unit 4'
+            lesson-3:
+              name: 'Module 4 post-work: FRQs and Unit 5'
           lesson_groups: {}
           name: csa-draft-pl
           title: ''
@@ -8796,17 +8811,62 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description_audience: ''
         csa1-2023:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+            lesson-3:
+              name: CSA Pre-Survey
+            lesson-2:
+              name: Java Lab
+            lesson-4:
+              name: The Neighborhood
+            lesson-5:
+              name: Navigating and Painting
+            lesson-6:
+              name: Loops
+            lesson-7:
+              name: Inheritance
+            lesson-8:
+              name: Writing Methods
+            lesson-9:
+              name: Programming Style and Feedback
+            lesson-10:
+              name: Selection Statements
+            lesson-11:
+              name: Debugging Strategies
+            lesson-12:
+              name: Decomposition and Design
+            lesson-13:
+              name: Two-Way Selection Statements
+            lesson-14:
+              name: Expanding Conditions
+            lesson-15:
+              name: Edge Cases
+            lesson-16:
+              name: Open Source Code
+            lesson-17:
+              name: Asphalt Art Project – Day 1
+            lesson-18:
+              name: Asphalt Art Project – Day 2
+            lesson-19:
+              name: Asphalt Art Project – Day 3
+            lesson-20:
+              name: FRQ Practice
+            lesson-21:
+              name: Unit 1 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Show What You Know
           name: csa1-2023
           title: Object-Oriented Programming
           description_audience: ''
           description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
           description: |-
             This unit exposes students to object-oriented programming principles as they explore The Neighborhood. Students learn fundamental Java concepts as they navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of their programs. Students practice predicting the outcome of program code and use their `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While students work with the `Painter`, they practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, students learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, students discover their identity as software engineers and use debugging strategies and code reviews to improve their programming skills.
-
-            ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa1-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
 
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) to let the Code.org curriculum team know how the unit went.
@@ -8947,7 +9007,21 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) to let the Code.org curriculum team know how the unit went.
           student_description: In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.
         vpl-csd3-ayw-pilot-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Formative Assessment in CS Discoveries
+            lesson-4:
+              name: Equity and Data
+            lesson-5:
+              name: Closing
+            lesson-6:
+              name: Practicing with Feedback
+            lesson-7:
+              name: Data Inquiry Cycles
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
@@ -8988,7 +9062,7 @@ en:
           name: csa-magpie-lab
           title: AP CSA Magpie Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Magpie Lab explores the basics of natural language processing as students create a chatbot program. Students work with a variety of methods of the String class and practice using if statements to evaluate user input to determine an appropriate response.
           description: |-
             From Eliza in the 1960s to Siri and Watson today, the idea of talking to computers in natural language has fascinated people. (And yes, there have been more than one conversation between Eliza and Siri – search for "chatbot Eliza Siri.") While natural language processing (NLP) is a complicated field, it is fairly easy to create a simple program to respond to English sentences.
 
@@ -9033,7 +9107,7 @@ en:
           name: csa-consumer-review-lab
           title: AP CSA Consumer Review Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Consumer Review lab explores how reviews for products and services are evaluated and sometimes manipulated. Students work with methods in the String class and practice using conditionals and iteration to design and implement algorithms to process text files containing reviews.
           description: |-
             The Consumer Review Lab provides students with the opportunity to work on a larger assignment involving multiple classes early in the course, before they necessarily know how to write their own classes. By focusing on calling methods and using the control structures of selection and iteration, students will have practice that directly relates to the **Methods and Control Structures** free-response question type that they will see on the end-of-year exam. Because students often struggle with methods in the `String` class, this lab specifically focuses on calling these methods and building strings in an interesting and engaging way.
 
@@ -9059,7 +9133,7 @@ en:
           name: csa-data-lab
           title: AP CSA Data Lab
           description_audience: ''
-          description_short: ''
+          description_short: The Data Lab explores data retrieval and analysis techniques. Students practice developing questions, identifying appropriate data sources, and then writing code to read and process data to answer their questions.
           description: |-
             Students are motivated if they feel connected to the material they are studying. One way to make computer science content relevant, meaningful, relatable, and exciting is to incorporate real-world data sets into hands-on programming assignments.
 
@@ -9073,7 +9147,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: hello-world-space-2022
-          title: Hello World Space
+          title: 'Hello World: Space'
           description_audience: ''
           description_short: ''
           description: ''
@@ -9082,7 +9156,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: hello-world-soccer-2022
-          title: Hello World Soccer
+          title: 'Hello World: Soccer'
           description_audience: ''
           description_short: ''
           description: ''
@@ -9150,6 +9224,155 @@ en:
               display_name: 'Chapter 2: Building Games'
           name: csd3-2023
           title: Interactive Animations and Games
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd6-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+          name: csd6-2023
+          title: Physical Computing
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd7-2023:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+          name: csd7-2023
+          title: AI and Machine Learning
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        physcomp-temp:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Inputs and Outputs'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          name: physcomp-temp
+          title: Physical Computing [temp]
+          description_audience: ''
+          description_short: ''
+          description: |-
+            In the Physical Computing unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+
+            **Implementation Guidance for Physical Computing**
+            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the [App Lab Hour of Code](https://studio.code.org/s/applab-intro/reset) before starting this unit.
+            - This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+
+            **Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: 'Book Cover '
+          lesson_groups: {}
+          name: csc-bookcover
+          title: CSC Bookcover
+          description_audience: ''
+          description_short: ''
+          description: 'this is an internal script as the source of truth for this lesson that will be reused in other CSC modules. '
+          student_description: ''
+        csc-landmarks-pilot:
+          lessons:
+            lesson-1:
+              name: U.S. Landmarks
+            lesson-3:
+              name: Local Storytellers
+          lesson_groups: {}
+          name: csc-landmarks-pilot
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: 'Winter 2022 Pilot module - Historical Landmark and Mapping Module '
+          student_description: ''
+        csc-playground:
+          lessons:
+            lesson-1:
+              name: function machines playground
+          lesson_groups: {}
+          name: csc-playground
+          title: CSC Playground
+          description_audience: ''
+          description_short: ''
+          description: 'A place to park CSC stuff '
+          student_description: ''
+        self-paced-pl-physical-computing1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-physical-computing1
+          title: 'Module 1: Getting Started with Code.org'
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+        self-paced-pl-physical-computing2:
+          lessons:
+            lesson-5:
+              name: This lesson needs a name
+          lesson_groups: {}
+          name: self-paced-pl-physical-computing2
+          title: 'Module 2: Preparing to Teach Physical Computing'
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **You will:**
+            * Get an introduction to Physical Computing.
+            * Practice key concepts included in the unit.
+            * Engage with the maker app.
+            * Explore end of chapter projects.
+
+            **Suggested time:** 90 minutes
+          student_description: |-
+            **You will:**
+            * Get an introduction to Physical Computing.
+            * Practice key concepts included in the unit.
+            * Engage with the maker app.
+            * Explore end of chapter projects.
+
+            **Suggested time:** 90 minutes
+        emmas-playground:
+          lessons:
+            lesson-1:
+              name: Emma's Stuff
+          lesson_groups: {}
+          name: emmas-playground
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        amys-playground:
+          lessons:
+            lesson-1:
+              name: Bunch of Stuff
+          lesson_groups: {}
+          name: amys-playground
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: What's That Sound?
+          lesson_groups: {}
+          name: csc-function-machines-pilot
+          title: Function Machines Pilot Module
           description_audience: ''
           description_short: ''
           description: ''

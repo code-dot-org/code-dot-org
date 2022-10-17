@@ -63,7 +63,7 @@ module Rack
       return false unless Gatekeeper.allows('optimize', default: true)
 
       # Skip no-transform or uncacheable responses.
-      return false if headers['Cache-Control'].to_s =~ /\b(no-transform|private|no-store|max-age=0)\b/
+      return false if /\b(no-transform|private|no-store|max-age=0)\b/.match?(headers['Cache-Control'].to_s)
 
       true
     end

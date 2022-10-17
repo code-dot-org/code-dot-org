@@ -425,6 +425,7 @@ sk-SK:
   homepage_banner_40k_teachers_link: Zistiť viac
   homepage_slot_text_title_hoc: Hodina Kódu
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni už dnes!
+  homepage_slot_text_blurb_hoc_2022: Skúmajte, hrajte sa, tvorte!
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
   homepage_slot_text_link_about_hoc: O Hodine Kódu
   homepage_slot_text_link_host: Usporiadaj u vás Hodinu kódu
@@ -451,6 +452,8 @@ sk-SK:
   homepage_slot_text_link_donate: Venuj dar
   homepage_slot_text_link_shop: Tričká, čiapky a ďalšie
   homepage_slot_text_link_administrators: Prines Informatiku na tvoju školu
+  homepage_gallery_header: Viac ako %{project_count} miliónov vytvorených projektov
+    Code.org
   homepage_header_donors: Code.org ďakuje za podporu
   homepage_donors_seall: Zobraziť všetky
   homepage_donors_donate: Prispejte
@@ -1037,7 +1040,7 @@ sk-SK:
   dashboard_grade_other: Ostatné
   dashboard_login_word: Slovo
   dashboard_login_picture: Obrázok
-  dashboard_login_none: Email
+  dashboard_login_none: E-mailová adresa
   dashboard_stage: Úroveň
   dashboard_puzzle: Úloha
   dashboard_question: Otázka

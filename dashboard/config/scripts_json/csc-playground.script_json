@@ -1,0 +1,176 @@
+{
+  "script": {
+    "name": "csc-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-10-06 22:42:59 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csc-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "function machines playground",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "d5626dd2-2f3a-4a9b-8327-aad9bb62cb47",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5626dd2-2f3a-4a9b-8327-aad9bb62cb47",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9b42483e-ebd3-4d97-8963-30602fc1093f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9b42483e-ebd3-4d97-8963-30602fc1093f",
+        "lesson_activity.key": "d5626dd2-2f3a-4a9b-8327-aad9bb62cb47"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "function_machine_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9b42483e-ebd3-4d97-8963-30602fc1093f"
+      },
+      "level_keys": [
+        "function_machine_1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay_-book-recommendation"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9b42483e-ebd3-4d97-8963-30602fc1093f"
+      },
+      "level_keys": [
+        "csc_bookcover_clicksay_-book-recommendation"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "function_machine_1",
+        "script_level.level_keys": [
+          "function_machine_1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9b42483e-ebd3-4d97-8963-30602fc1093f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_clicksay_-book-recommendation",
+        "script_level.level_keys": [
+          "csc_bookcover_clicksay_-book-recommendation"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "9b42483e-ebd3-4d97-8963-30602fc1093f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

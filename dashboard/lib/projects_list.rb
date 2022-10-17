@@ -110,7 +110,7 @@ module ProjectsList
         raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
         return include_featured(limit: limit)
       end
-      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
+      raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.key?(project_group.to_sym)
       fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
