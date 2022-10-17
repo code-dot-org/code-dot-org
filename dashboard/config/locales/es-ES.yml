@@ -451,6 +451,7 @@ es:
       about: Acerca de
       legal: Privacidad y Legalidad
       legal_privacy: Política de Privacidad
+      legal_cookie_notice: Aviso de Cookies
       legal_tos: Términos de uso
     user:
       classroom: Página de inicio del maestro
@@ -1339,6 +1340,8 @@ es:
         not_listed: El término preferido no aparece
         none: Prefiero no contestar
       school_country:
+        barbados: Barbados
+        belize: Belice
         canada: Canadá
         chile: Chile
         colombia: Colombia

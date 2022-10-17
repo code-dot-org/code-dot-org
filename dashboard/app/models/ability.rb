@@ -17,7 +17,7 @@ class Ability
       CourseOffering,
       DataDoc,
       UnitGroup, # see override below
-      Script, # see override below
+      Unit, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
       ProgrammingClass, # see override below
@@ -204,7 +204,7 @@ class Ability
           !user.students.where(id: user_level.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
-        can :view_level_solutions, Script do |script|
+        can :view_level_solutions, Unit do |script|
           !script.old_professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
@@ -295,7 +295,7 @@ class Ability
       unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
-    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Script do |script|
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script|
       script.is_migrated && can?(:read, script)
     end
 
@@ -313,7 +313,7 @@ class Ability
       end
     end
 
-    can :read, Script do |script|
+    can :read, Unit do |script|
       if script.can_be_participant?(user) || script.can_be_instructor?(user)
         if script.in_development?
           user.permission?(UserPermission::LEVELBUILDER)
@@ -394,7 +394,7 @@ class Ability
         CourseOffering,
         UnitGroup,
         Resource,
-        Script,
+        Unit,
         ScriptLevel,
         Video,
         Vocabulary,
@@ -425,7 +425,7 @@ class Ability
         can :index, Level
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
-        can [:edit, :update], Script, editor_experiment: editor_experiment
+        can [:edit, :update], Unit, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
     end
@@ -466,12 +466,13 @@ class Ability
         Level,
         UnitGroup,
         CourseOffering,
-        Script,
+        Unit,
         Lesson,
         ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,
+        DataDoc,
         :pd_foorm,
         Foorm::Form,
         Foorm::Library,

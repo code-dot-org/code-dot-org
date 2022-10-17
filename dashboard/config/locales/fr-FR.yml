@@ -460,6 +460,7 @@ fr:
       about: À propos
       legal: Confidentialité et mentions légales
       legal_privacy: Politique de confidentialité
+      legal_cookie_notice: " Utilisation de cookies"
       legal_tos: Conditions Générales d'Utilisation
     user:
       classroom: Page d'accueil de l'enseignant

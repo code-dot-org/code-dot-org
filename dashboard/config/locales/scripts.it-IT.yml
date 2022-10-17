@@ -3955,6 +3955,17 @@ it:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sondaggio
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Laboratorio di Java
+            lesson-6:
+              name: Cicli
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio
+            lessonGroup-3:
+              display_name: Contenuto
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

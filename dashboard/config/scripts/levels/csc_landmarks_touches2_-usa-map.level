@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-09-30T21:20:16.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -15,15 +11,15 @@
     "helper_libraries": [
       "NativeSpriteLab"
     ],
-    "use_default_sprites": "true",
-    "hide_animation_mode": "true",
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Program the guide to explain the second landmark**\r\n- Add a second `when touches` event block\r\n- Drag a sprite say block under this new event.\r\n- Click run to test your new code.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "**Program the guide to explain the second landmark**\r\n- Add a second `when touches` event block\r\n- Drag a `sprite say` block under this new event and add text to explain the landmark.\r\n- Click run to test your new code.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -41,10 +37,17 @@
     "authored_hints": "[]",
     "project_template_level_name": "csc_landmarks_template_-usa-map",
     "name_suffix": "_-usa-map",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:16.788+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches2\\\"\"],\"cloned_from\":\"csc_landmarks_touches2\"}]",
+  "created_at": "2022-09-30T21:20:16.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:16.788+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches2\\\"\"],\"cloned_from\":\"csc_landmarks_touches2\"},{\"changed_at\":\"2022-10-11 17:47:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 22:37:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:26:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:39:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1495,32 +1498,14 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bear"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bee"</field>
-            </block>
-          </value>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"map_old_blank"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"bear"</field>
+          <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker">
               <field name="LOCATION">{"x":200,"y":200}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteSay">
-          <field name="SPEECH">The Statue of Liberty is a symbol of freedom.</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bear"</field>
             </block>
           </value>
         </block>
@@ -1528,7 +1513,7 @@
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bear"</field>
+              <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
           <value name="VAL">
@@ -1537,16 +1522,37 @@
             </block>
           </value>
         </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Welcome.</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+        </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bear"</field>
+              <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
             <block type="gamelab_behavior_get">
               <mutation/>
               <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
         </block>

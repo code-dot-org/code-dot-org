@@ -967,6 +967,12 @@ ur:
           title: کوڈ سے اپنا ہی فٹ بال گیم بنائیں
           description_short: ایک قٹ بال گیم بنائیں
           description: ایک قٹ بال گیم بنائیں
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: جاوا لیب
+            lesson-6:
+              name: لوپس
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

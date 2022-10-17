@@ -583,22 +583,22 @@
           "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Utilise le bloc ˋen appuyant sur vers la gaucheˋ pour que le robot fasse un mouvement de danse.\n\n_Ce niveau se termine après 7 mesures._"
         },
         "CourseE_HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?"
+          "voyage_aquatic_10a": "Tu vois les **Lanternes Aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment peux-tu utiliser un bloc conditionnel avec celles-ci pour traverser le monument sous-marin ?"
         },
         "CourseE_HOC 2018 Level_10_2020": {
-          "voyage_aquatic_10a": "Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?"
+          "voyage_aquatic_10a": "Tu vois les **Lanternes Aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment peux-tu utiliser un bloc conditionnel avec celles-ci pour traverser le monument sous-marin ?"
         },
         "CourseE_HOC 2018 Level_7a": {
-          "aquatic7": "Tu peux utiliser le bloc si chemin pour t’aider à faire les bons virages."
+          "aquatic7": "Tu peux utiliser le bloc « si chemin » pour t’aider à prendre les bons tournants."
         },
         "CourseE_HOC 2018 Level_7a_2020": {
-          "aquatic7": "Tu peux utiliser le bloc si chemin pour t’aider à faire les bons virages."
+          "aquatic7": "Tu peux utiliser le bloc « si chemin » pour t’aider à prendre les bons tournants."
         },
         "CourseE_HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !"
+          "voyage_aquatic_9a": "Tu vois les blocs de corail rouges et bleus ? Sers-t'en comme poteaux indicateurs pour tourner à droite et à gauche au sein du récif. "
         },
         "CourseE_HOC 2018 Level_9b_2020": {
-          "voyage_aquatic_9a": "Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !"
+          "voyage_aquatic_9a": "Tu vois les blocs de corail rouges et bleus ? Sers-t'en comme poteaux indicateurs pour tourner à droite et à gauche au sein du récif. "
         },
         "Dance_2019_01": {
           "validation": "**Comment est-ce que je réussis ce niveau ?**\n\n-   Assure-toi qu'un danseur apparaît à l'écran.\n\n_Ce niveau se termine après 4 mesures._",
@@ -692,46 +692,46 @@
           "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "HOC 2018 Level_10": {
-          "voyage_aquatic_10a": "Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?"
+          "voyage_aquatic_10a": "Tu vois les **Lanternes Aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment peux-tu utiliser un bloc conditionnel avec celles-ci pour traverser le monument sous-marin ?"
         },
         "HOC 2018 Level_7a": {
-          "aquatic7": "Tu peux utiliser le bloc si chemin pour t’aider à faire les bons virages."
+          "aquatic7": "Tu peux utiliser le bloc « si chemin » pour t’aider à prendre les bons tournants."
         },
         "HOC 2018 Level_9b": {
-          "voyage_aquatic_9a": "Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !"
+          "voyage_aquatic_9a": "Tu vois les blocs de corail rouges et bleus ? Sers-t'en comme poteaux indicateurs pour tourner à droite et à gauche au sein du récif. "
         },
         "MC_HOC_2017_01_RETRY": {
-          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc ˋavancerˋ depuis la boite à outils vers l'espace de travail et place-le en dessous du bloc ˋquand l’exécution commenceˋ.",
+          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc « avancer » de la boite à outils vers l'espace de travail et place-le en dessous du bloc « quand l’exécution commence ».",
           "MC_HOC_2017_01_RETRY_b": "N'oublie pas de cliquer sur « Démarrer » pour que l'Agent exécute le code.",
-          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches directionnelles !"
+          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches fléchées !"
         },
         "MC_HOC_2017_01_RETRY_2019": {
-          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc ˋavancerˋ depuis la boite à outils vers l'espace de travail et place-le en dessous du bloc ˋquand l’exécution commenceˋ.",
+          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc « avancer » de la boite à outils vers l'espace de travail et place-le en dessous du bloc « quand l’exécution commence ».",
           "MC_HOC_2017_01_RETRY_b": "N'oublie pas de cliquer sur « Démarrer » pour que l'Agent exécute le code.",
-          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches directionnelles !"
+          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches fléchées !"
         },
         "MC_HOC_2017_01_RETRY_2020": {
-          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc ˋavancerˋ depuis la boite à outils vers l'espace de travail et place-le en dessous du bloc ˋquand l’exécution commenceˋ.",
+          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc « avancer » de la boite à outils vers l'espace de travail et place-le en dessous du bloc « quand l’exécution commence ».",
           "MC_HOC_2017_01_RETRY_b": "N'oublie pas de cliquer sur « Démarrer » pour que l'Agent exécute le code.",
-          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches directionnelles !"
+          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches fléchées !"
         },
         "MC_HOC_2017_02_Cole": {
-          "MC_HOC_2017_02_Cole_a": "Fais avancer l'Agent de deux cases en avant pour qu'il se tienne sur la plaque de détection. Cela ouvrira la porte pour ton joueur.",
-          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
-          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches directionnelles pour déplacer le joueur sur la carte !",
-          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit le chemin sur la carte !"
+          "MC_HOC_2017_02_Cole_a": "Déplace l'Agent de deux cases vers l'avant pour qu'il se tienne sur la plaque de pression. Cela ouvrira la porte pour ton joueur.",
+          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
+          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches fléchées pour amener le joueur jusqu'à la carte !",
+          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_02_Cole_2019": {
-          "MC_HOC_2017_02_Cole_a": "Fais avancer l'Agent de deux cases en avant pour qu'il se tienne sur la plaque de détection. Cela ouvrira la porte pour ton joueur.",
-          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
-          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches directionnelles pour déplacer le joueur sur la carte !",
-          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit le chemin sur la carte !"
+          "MC_HOC_2017_02_Cole_a": "Déplace l'Agent de deux cases vers l'avant pour qu'il se tienne sur la plaque de pression. Cela ouvrira la porte pour ton joueur.",
+          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
+          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches fléchées pour amener le joueur jusqu'à la carte !",
+          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_02_Cole_2020": {
-          "MC_HOC_2017_02_Cole_a": "Fais avancer l'Agent de deux cases en avant pour qu'il se tienne sur la plaque de détection. Cela ouvrira la porte pour ton joueur.",
-          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
-          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches directionnelles pour déplacer le joueur sur la carte !",
-          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit le chemin sur la carte !"
+          "MC_HOC_2017_02_Cole_a": "Déplace l'Agent de deux cases vers l'avant pour qu'il se tienne sur la plaque de pression. Cela ouvrira la porte pour ton joueur.",
+          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
+          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches fléchées pour amener le joueur jusqu'à la carte !",
+          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
@@ -759,17 +759,17 @@
         },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
-          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_04_Cole_2019": {
           "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
-          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
-          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_05_Cole": {
@@ -824,17 +824,17 @@
           "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_Ali": {
-          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
           "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
         },
         "MC_HOC_2017_Ali_2019": {
-          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
           "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
         },
         "MC_HOC_2017_Ali_2020": {
-          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
           "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
         },
@@ -6105,40 +6105,40 @@
           "courseD_collector_ramp9_b": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
         },
         "courseD_farmer_condLoops1": {
-          "courseD_farmer_condLoops1_a": "Tu devras chercher du maïs 5 fois, en utilisant une boucle de répéter.",
-          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc `si au maïs`, ou tu essaierais alors, peut-être, de ramasser quelque chose qui n'est pas là !"
+          "courseD_farmer_condLoops1_a": "Il va te falloir chercher 5 fois du maïs, en utilisant une boucle répéter.",
+          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc « si au maïs » ou tu risques d'essayer de récolter quelque chose là où il n'y a rien !"
         },
         "courseD_farmer_condLoops1_2018": {
-          "courseD_farmer_condLoops1_a": "Tu devras chercher du maïs 5 fois, en utilisant une boucle de répéter.",
-          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc `si au maïs`, ou tu essaierais alors, peut-être, de ramasser quelque chose qui n'est pas là !"
+          "courseD_farmer_condLoops1_a": "Il va te falloir chercher 5 fois du maïs, en utilisant une boucle répéter.",
+          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc « si au maïs » ou tu risques d'essayer de récolter quelque chose là où il n'y a rien !"
         },
         "courseD_farmer_condLoops1_2019": {
-          "courseD_farmer_condLoops1_a": "Tu devras chercher du maïs 5 fois, en utilisant une boucle de répéter.",
-          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc `si au maïs`, ou tu essaierais alors, peut-être, de ramasser quelque chose qui n'est pas là !"
+          "courseD_farmer_condLoops1_a": "Il va te falloir chercher 5 fois du maïs, en utilisant une boucle répéter.",
+          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc « si au maïs » ou tu risques d'essayer de récolter quelque chose là où il n'y a rien !"
         },
         "courseD_farmer_condLoops1_2020": {
-          "courseD_farmer_condLoops1_a": "Tu devras chercher du maïs 5 fois, en utilisant une boucle de répéter.",
-          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc `si au maïs`, ou tu essaierais alors, peut-être, de ramasser quelque chose qui n'est pas là !"
+          "courseD_farmer_condLoops1_a": "Il va te falloir chercher 5 fois du maïs, en utilisant une boucle répéter.",
+          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc « si au maïs » ou tu risques d'essayer de récolter quelque chose là où il n'y a rien !"
         },
         "courseD_farmer_condLoops2": {
-          "courseD_farmer_condLoops2_a": "La meilleure manière de faire ceci est d’imbriquer des déclarations `si`, en en plaçant une à l’intérieur de l’autre.",
-          "courseD_farmer_condLoops2_b": "Pour cette énigme, tu devrais avoir une déclaration `« Si/Sinon »` et une déclaration simple `« Si »`.",
-          "courseD_farmer_condLoops2_c": "Ta déclaration `si` pourrait de beaucoup ressembler à ceci :\n\n-   si au maïs\n    -   ramasser le maïs\n-   sinon\n    -   si à la laitue\n        -   ramasser la laitue.\n\nS'il n'y a rien, là, tu ne ramasseras rien !"
+          "courseD_farmer_condLoops2_a": "La meilleure manière de ce faire est d’imbriquer des instructions « si », en en plaçant l'une à l’intérieur de l’autre.",
+          "courseD_farmer_condLoops2_b": "Pour ce casse-tête, tu devrais avoir une instruction « si/sinon » et une instruction « si » toute simple.",
+          "courseD_farmer_condLoops2_c": "Ton instruction « si » pourrait ressembler pas mal à ça :\n\n-   si au maïs\n    -   récolter le maïs\n-   sinon\n    -   si à la laitue\n        -   récolter la laitue.\n\nS'il n'y a rien dans l'emplacement, alors tu ne récolteras rien !"
         },
         "courseD_farmer_condLoops2_2018": {
-          "courseD_farmer_condLoops2_a": "La meilleure manière de faire ceci est d’imbriquer des déclarations `si`, en en plaçant une à l’intérieur de l’autre.",
-          "courseD_farmer_condLoops2_b": "Pour cette énigme, tu devrais avoir une déclaration `« Si/Sinon »` et une déclaration simple `« Si »`.",
-          "courseD_farmer_condLoops2_c": "Ta déclaration `si` pourrait de beaucoup ressembler à ceci :\n\n-   si au maïs\n    -   ramasser le maïs\n-   sinon\n    -   si à la laitue\n        -   ramasser la laitue.\n\nS'il n'y a rien, là, tu ne ramasseras rien !"
+          "courseD_farmer_condLoops2_a": "La meilleure manière de ce faire est d’imbriquer des instructions « si », en en plaçant l'une à l’intérieur de l’autre.",
+          "courseD_farmer_condLoops2_b": "Pour ce casse-tête, tu devrais avoir une instruction « si/sinon » et une instruction « si » toute simple.",
+          "courseD_farmer_condLoops2_c": "Ton instruction « si » pourrait ressembler pas mal à ça :\n\n-   si au maïs\n    -   récolter le maïs\n-   sinon\n    -   si à la laitue\n        -   récolter la laitue.\n\nS'il n'y a rien dans l'emplacement, alors tu ne récolteras rien !"
         },
         "courseD_farmer_condLoops2_2019": {
-          "courseD_farmer_condLoops2_a": "La meilleure manière de faire ceci est d’imbriquer des déclarations `si`, en en plaçant une à l’intérieur de l’autre.",
-          "courseD_farmer_condLoops2_b": "Pour cette énigme, tu devrais avoir une déclaration `« Si/Sinon »` et une déclaration simple `« Si »`.",
-          "courseD_farmer_condLoops2_c": "Ta déclaration `si` pourrait de beaucoup ressembler à ceci :\n\n-   si au maïs\n    -   ramasser le maïs\n-   sinon\n    -   si à la laitue\n        -   ramasser la laitue.\n\nS'il n'y a rien, là, tu ne ramasseras rien !"
+          "courseD_farmer_condLoops2_a": "La meilleure manière de ce faire est d’imbriquer des instructions « si », en en plaçant l'une à l’intérieur de l’autre.",
+          "courseD_farmer_condLoops2_b": "Pour ce casse-tête, tu devrais avoir une instruction « si/sinon » et une instruction « si » toute simple.",
+          "courseD_farmer_condLoops2_c": "Ton instruction « si » pourrait ressembler pas mal à ça :\n\n-   si au maïs\n    -   récolter le maïs\n-   sinon\n    -   si à la laitue\n        -   récolter la laitue.\n\nS'il n'y a rien dans l'emplacement, alors tu ne récolteras rien !"
         },
         "courseD_farmer_condLoops2_2020": {
-          "courseD_farmer_condLoops2_a": "La meilleure manière de faire ceci est d’imbriquer des déclarations `si`, en en plaçant une à l’intérieur de l’autre.",
-          "courseD_farmer_condLoops2_b": "Pour cette énigme, tu devrais avoir une déclaration `« Si/Sinon »` et une déclaration simple `« Si »`.",
-          "courseD_farmer_condLoops2_c": "Ta déclaration `si` pourrait de beaucoup ressembler à ceci :\n\n-   si au maïs\n    -   ramasser le maïs\n-   sinon\n    -   si à la laitue\n        -   ramasser la laitue.\n\nS'il n'y a rien, là, tu ne ramasseras rien !"
+          "courseD_farmer_condLoops2_a": "La meilleure manière de ce faire est d’imbriquer des instructions « si », en en plaçant l'une à l’intérieur de l’autre.",
+          "courseD_farmer_condLoops2_b": "Pour ce casse-tête, tu devrais avoir une instruction « si/sinon » et une instruction « si » toute simple.",
+          "courseD_farmer_condLoops2_c": "Ton instruction « si » pourrait ressembler pas mal à ça :\n\n-   si au maïs\n    -   récolter le maïs\n-   sinon\n    -   si à la laitue\n        -   récolter la laitue.\n\nS'il n'y a rien dans l'emplacement, alors tu ne récolteras rien !"
         },
         "courseD_farmer_condLoops3": {
           "courseD_farmer_condLoops3_a": "Pour obtenir tous les produits, essaie d'imbriquer trois niveaux de déclarations `si`. \n\nCela signifie que tu devrais mettre une déclaration `si` à l'intérieur d'une autre, puis mettre une troisième déclaration `si` dans la seconde.",
@@ -6157,40 +6157,40 @@
           "courseD_farmer_condLoops3_b": "Pour cette énigme, tu devrais avoir deux déclarations `« Si/Sinon »` et une déclaration simple `« Si »`."
         },
         "courseD_farmer_condLoops4": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle `tant qu'il y a de la laitue` pour continuer le ramassage jusqu'à ce que chaque tête ait été ramassée.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle `tant que` s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en ramassera aucune, et laissera le code poursuivre son chemin.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle `tant que chemin continue` soit une boucle `répéter` pour parcourir toutes les cultures."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle « tant qu'il y a de la laitue » pour continuer à en récolter jusqu'à ce que chaque tête ait été ramassée.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle « tant que » s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en récoltera pas, et laissera poursuivre son chemin au code.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle « tant que chemin continue vers l'avant » soit une boucle « répéter » pour parcourir toutes les cultures. "
         },
         "courseD_farmer_condLoops4_2018": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle `tant qu'il y a de la laitue` pour continuer le ramassage jusqu'à ce que chaque tête ait été ramassée.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle `tant que` s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en ramassera aucune, et laissera le code poursuivre son chemin.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle `tant que chemin continue` soit une boucle `répéter` pour parcourir toutes les cultures."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle « tant qu'il y a de la laitue » pour continuer à en récolter jusqu'à ce que chaque tête ait été ramassée.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle « tant que » s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en récoltera pas, et laissera poursuivre son chemin au code.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle « tant que chemin continue vers l'avant » soit une boucle « répéter » pour parcourir toutes les cultures. "
         },
         "courseD_farmer_condLoops4_2019": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle `tant qu'il y a de la laitue` pour continuer le ramassage jusqu'à ce que chaque tête ait été ramassée.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle `tant que` s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en ramassera aucune, et laissera le code poursuivre son chemin.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle `tant que chemin continue` soit une boucle `répéter` pour parcourir toutes les cultures."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle « tant qu'il y a de la laitue » pour continuer à en récolter jusqu'à ce que chaque tête ait été ramassée.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle « tant que » s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en récoltera pas, et laissera poursuivre son chemin au code.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle « tant que chemin continue vers l'avant » soit une boucle « répéter » pour parcourir toutes les cultures. "
         },
         "courseD_farmer_condLoops4_2020": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle `tant qu'il y a de la laitue` pour continuer le ramassage jusqu'à ce que chaque tête ait été ramassée.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle `tant que` s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en ramassera aucune, et laissera le code poursuivre son chemin.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle `tant que chemin continue` soit une boucle `répéter` pour parcourir toutes les cultures."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle « tant qu'il y a de la laitue » pour continuer à en récolter jusqu'à ce que chaque tête ait été ramassée.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle « tant que » s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en récoltera pas, et laissera poursuivre son chemin au code.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle « tant que chemin continue vers l'avant » soit une boucle « répéter » pour parcourir toutes les cultures. "
         },
         "courseD_farmer_condLoops5": {
-          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : `répéter jusqu'à la citrouille`. Vois-tu comment l'utiliser dans cette énigme ?",
-          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue, à chaque endroit. Utilise une boucle 'tant que' pour tous les ramasser !"
+          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : « répéter jusqu'à la citrouille ». Vois-tu comment l'utiliser dans ce casse-tête ?",
+          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue à chaque endroit. Utilise une boucle « tant que » pour tous les récolter !"
         },
         "courseD_farmer_condLoops5_2018": {
-          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : `répéter jusqu'à la citrouille`. Vois-tu comment l'utiliser dans cette énigme ?",
-          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue, à chaque endroit. Utilise une boucle 'tant que' pour tous les ramasser !"
+          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : « répéter jusqu'à la citrouille ». Vois-tu comment l'utiliser dans ce casse-tête ?",
+          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue à chaque endroit. Utilise une boucle « tant que » pour tous les récolter !"
         },
         "courseD_farmer_condLoops5_2019": {
           "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle: \"répéter jusqu'aux citrouilles\". Vois-tu comment l'utiliser dans ce puzzle?",
-          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue, à chaque endroit. Utilise une boucle 'tant que' pour tous les ramasser !"
+          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue à chaque endroit. Utilise une boucle « tant que » pour tous les récolter !"
         },
         "courseD_farmer_condLoops5_2020": {
-          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : `répéter jusqu'à la citrouille`. Vois-tu comment l'utiliser dans cette énigme ?",
-          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue, à chaque endroit. Utilise une boucle 'tant que' pour tous les ramasser !"
+          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : « répéter jusqu'à la citrouille ». Vois-tu comment l'utiliser dans ce casse-tête ?",
+          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue à chaque endroit. Utilise une boucle « tant que » pour tous les récolter !"
         },
         "courseD_farmer_condLoops6": {
           "courseD_farmer_condLoops6_a": "Utilise une boucle \\`tant qu'il y a du maïs' pour t' assurer de récolter tout le maïs en cours de route. Ce bloc ne fera rien s'il n'y a pas de maïs à récolter.",
@@ -6198,31 +6198,31 @@
         },
         "courseD_farmer_condLoops6_2018": {
           "courseD_farmer_condLoops6_a": "Utilise une boucle `tant que le chemin continue` ou un bloc `si chemin continue / sinon` pour déplacer la fermière sur chaque morceau de la spirale.",
-          "courseD_farmer_condLoops6_b": "Tu as seulement besoin de vérifier s'il y a du maïs pendant la majeure partie de la récolte.  Ramasse simplement une citrouille à la fin de ton programme."
+          "courseD_farmer_condLoops6_b": "Tu n'as que besoin de vérifier s'il y a du maïs pendant la plupart de la récolte.  Il n'y a qu'une seule citrouille à ramasser à la fin de ton programme."
         },
         "courseD_farmer_condLoops6_2019": {
-          "courseD_farmer_condLoops6_a": "Utilise une boucle `tant que chemin devant` ou un bloc `si chemin devant / sinon` pour déplacer la fermière sur chaque morceau de la spirale.",
-          "courseD_farmer_condLoops6_b": "Tu as seulement besoin de vérifier s'il y a du maïs pendant la majeure partie de la récolte.  Ramasse simplement une citrouille à la fin de ton programme."
+          "courseD_farmer_condLoops6_a": "Utilise une boucle « tant que chemin vers l'avant » ou un bloc « si chemin vers l'avant / sinon » pour faire traverser chaque morceau de la spirale à l'agricultrice.",
+          "courseD_farmer_condLoops6_b": "Tu n'as que besoin de vérifier s'il y a du maïs pendant la plupart de la récolte.  Il n'y a qu'une seule citrouille à ramasser à la fin de ton programme."
         },
         "courseD_farmer_condLoops6_2020": {
-          "courseD_farmer_condLoops6_a": "Utilise une boucle `tant que chemin devant` ou un bloc `si chemin devant / sinon` pour déplacer la fermière sur chaque morceau de la spirale.",
-          "courseD_farmer_condLoops6_b": "Tu as seulement besoin de vérifier s'il y a du maïs pendant la majeure partie de la récolte.  Ramasse simplement une citrouille à la fin de ton programme."
+          "courseD_farmer_condLoops6_a": "Utilise une boucle « tant que chemin vers l'avant » ou un bloc « si chemin vers l'avant / sinon » pour faire traverser chaque morceau de la spirale à l'agricultrice.",
+          "courseD_farmer_condLoops6_b": "Tu n'as que besoin de vérifier s'il y a du maïs pendant la plupart de la récolte.  Il n'y a qu'une seule citrouille à ramasser à la fin de ton programme."
         },
         "courseD_farmer_condLoops7": {
-          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus simple pour accéder à toutes les cultures est toujours en spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
           "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin continue\\` pour que l'Agricultrice avance d’un nombre correct de pas."
         },
         "courseD_farmer_condLoops7_2018": {
-          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus simple pour accéder à toutes les cultures est toujours en spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
           "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin continue\\` pour que l'Agricultrice avance d’un nombre correct de pas."
         },
         "courseD_farmer_condLoops7_2019": {
-          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin devant\\` pour que le moissonneur continue d’avancer le bon nombre de fois."
+          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus simple pour accéder à toutes les cultures est toujours en spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Essaie d’utiliser « tant que chemin vers l'avant » pour que l'agricultrice fasse le bon nombre de pas vers l'avant."
         },
         "courseD_farmer_condLoops7_2020": {
-          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin devant\\` pour que le moissonneur continue d’avancer le bon nombre de fois."
+          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus simple pour accéder à toutes les cultures est toujours en spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Essaie d’utiliser « tant que chemin vers l'avant » pour que l'agricultrice fasse le bon nombre de pas vers l'avant."
         },
         "courseD_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_a": "Le bouton \"Pas\" pourrait être très utile dans ce défi.",
@@ -6792,109 +6792,109 @@
           "courseD_maze_ramp7_c": "Si tu souhaites simplifier ton code, tu peux mettre une boucle dans une autre!\nCela s'appelle une **boucle imbriquée**."
         },
         "courseD_maze_until1": {
-          "courseD_maze_until1_a": "Peux-tu mettre des séquences dans une boucle, pour raccourcir ton code ?",
-          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre cette énigme."
+          "courseD_maze_until1_a": "Y a-t-il des séquences que tu peux mettre en boucle pour raccourcir ton code ?",
+          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre ce casse-tête."
         },
         "courseD_maze_until1_2018": {
-          "courseD_maze_until1_a": "Peux-tu mettre des séquences dans une boucle, pour raccourcir ton code ?",
-          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre cette énigme."
+          "courseD_maze_until1_a": "Y a-t-il des séquences que tu peux mettre en boucle pour raccourcir ton code ?",
+          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre ce casse-tête."
         },
         "courseD_maze_until1_2019": {
-          "courseD_maze_until1_a": "Peux-tu mettre des séquences dans une boucle, pour raccourcir ton code ?",
-          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre cette énigme."
+          "courseD_maze_until1_a": "Y a-t-il des séquences que tu peux mettre en boucle pour raccourcir ton code ?",
+          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre ce casse-tête."
         },
         "courseD_maze_until1_2020": {
-          "courseD_maze_until1_a": "Peux-tu mettre des séquences dans une boucle, pour raccourcir ton code ?",
-          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre cette énigme."
+          "courseD_maze_until1_a": "Y a-t-il des séquences que tu peux mettre en boucle pour raccourcir ton code ?",
+          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre ce casse-tête."
         },
         "courseD_maze_until3": {
-          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça veut dire ?",
-          "courseD_maze_until3_b": "Si tu es bloqué, essaie d'écrire les étapes sur une feuille de papier et de trouver les emplacements où elles se répètent.",
-          "courseD_maze_until3_c": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça t'indique ?",
+          "courseD_maze_until3_b": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de voir où les choses se répètent.",
+          "courseD_maze_until3_c": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until3_2018": {
-          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça veut dire ?",
-          "courseD_maze_until3_b": "Si tu es bloqué, essaie d'écrire les étapes sur une feuille de papier et de trouver les emplacements où elles se répètent.",
-          "courseD_maze_until3_c": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça t'indique ?",
+          "courseD_maze_until3_b": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de voir où les choses se répètent.",
+          "courseD_maze_until3_c": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until3_2019": {
-          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça veut dire ?",
-          "courseD_maze_until3_b": "Si tu es bloqué, essaie d'écrire les étapes sur une feuille de papier et de trouver les emplacements où elles se répètent.",
-          "courseD_maze_until3_c": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça t'indique ?",
+          "courseD_maze_until3_b": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de voir où les choses se répètent.",
+          "courseD_maze_until3_c": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until3_2020": {
-          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça veut dire ?",
-          "courseD_maze_until3_b": "Si tu es bloqué, essaie d'écrire les étapes sur une feuille de papier et de trouver les emplacements où elles se répètent.",
-          "courseD_maze_until3_c": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça t'indique ?",
+          "courseD_maze_until3_b": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de voir où les choses se répètent.",
+          "courseD_maze_until3_c": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until4": {
-          "courseD_maze_until4_a": "Utilise le bouton \"Étape\" pour revoir ton code ligne par ligne.\n\n-   Est-ce que tout fonctionne à la première étape ?\n-   Est-ce que tout fonctionne à la seconde étape ?\n-   Où est-ce que ça ne va pas ?",
-          "courseD_maze_until4_b": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until4_a": "Utilise le bouton « Étape » pour examiner ton code ligne par ligne.\n\n-   Est-ce que tout marche lors de la première étape ?\n-   Est-ce que tout marche lors de la deuxième étape ?\n-   Où est-ce que ça tourne mal ?",
+          "courseD_maze_until4_b": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until4_2018": {
-          "courseD_maze_until4_a": "Utilise le bouton \"Étape\" pour revoir ton code ligne par ligne.\n\n-   Est-ce que tout fonctionne à la première étape ?\n-   Est-ce que tout fonctionne à la seconde étape ?\n-   Où est-ce que ça ne va pas ?",
-          "courseD_maze_until4_b": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until4_a": "Utilise le bouton « Étape » pour examiner ton code ligne par ligne.\n\n-   Est-ce que tout marche lors de la première étape ?\n-   Est-ce que tout marche lors de la deuxième étape ?\n-   Où est-ce que ça tourne mal ?",
+          "courseD_maze_until4_b": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until4_2019": {
-          "courseD_maze_until4_a": "Utilise le bouton \"Étape\" pour revoir ton code ligne par ligne.\n\n-   Est-ce que tout fonctionne à la première étape ?\n-   Est-ce que tout fonctionne à la seconde étape ?\n-   Où est-ce que ça ne va pas ?",
-          "courseD_maze_until4_b": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until4_a": "Utilise le bouton « Étape » pour examiner ton code ligne par ligne.\n\n-   Est-ce que tout marche lors de la première étape ?\n-   Est-ce que tout marche lors de la deuxième étape ?\n-   Où est-ce que ça tourne mal ?",
+          "courseD_maze_until4_b": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until4_2020": {
-          "courseD_maze_until4_a": "Utilise le bouton \"Étape\" pour revoir ton code ligne par ligne.\n\n-   Est-ce que tout fonctionne à la première étape ?\n-   Est-ce que tout fonctionne à la seconde étape ?\n-   Où est-ce que ça ne va pas ?",
-          "courseD_maze_until4_b": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until4_a": "Utilise le bouton « Étape » pour examiner ton code ligne par ligne.\n\n-   Est-ce que tout marche lors de la première étape ?\n-   Est-ce que tout marche lors de la deuxième étape ?\n-   Où est-ce que ça tourne mal ?",
+          "courseD_maze_until4_b": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until5": {
           "courseD_maze_until5_a": "N'oublie pas d'utiliser `si chemin à gauche` pour que le zombie continue de cherche un endroit où tourner.",
-          "courseD_maze_until5_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`.",
+          "courseD_maze_until5_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol ».",
           "courseD_maze_until5_c": "Après chaque étape, le zombie doit vérifier s'il y a un chemin à gauche. Que devrait-il faire s'il en trouve un ?"
         },
         "courseD_maze_until5_2018": {
-          "courseD_maze_until5_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until5_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until5_2019": {
-          "courseD_maze_until5_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until5_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until5_2020": {
-          "courseD_maze_until5_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until5_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until6": {
           "courseD_maze_until6_a": "Cette fois, essaie le bloc `si chemin à droite` pour garder le zombie sur la bonne voie.",
-          "courseD_maze_until6_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`.",
-          "courseD_maze_until6_c": "Même s'il y a plus de tours ici que dans la dernière énigme, ton code peut-être presque identique grâce au bloc `répéter jusqu'à`!"
+          "courseD_maze_until6_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol ».",
+          "courseD_maze_until6_c": "Même s'il y a plus de tournants ici que dans le précédent casse-tête, ton code peut-être presque identique grâce au bloc « répéter jusqu'au » !"
         },
         "courseD_maze_until6_2018": {
-          "courseD_maze_until6_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until6_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until6_2019": {
-          "courseD_maze_until6_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until6_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until6_2020": {
-          "courseD_maze_until6_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until6_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until7": {
-          "courseD_maze_until7_a": "Tu n'as pas besoin que ton code soit plus long que la dernière fois, juste parce que le labyrinthe l'est!",
-          "courseD_maze_until7_b": "Même s'il y a plus de tours ici que dans la dernière énigme, ton code peut-être presque identique grâce au bloc `répéter jusqu'à`!",
+          "courseD_maze_until7_a": "Simplement parce que le labyrinthe est plus long que la dernière fois, ça ne veut pas dire que le code doit l'être aussi !",
+          "courseD_maze_until7_b": "Même s'il y a plus de tournants ici que dans le précédent casse-tête, ton code peut-être presque identique grâce au bloc « répéter jusqu'au » !",
           "courseD_maze_until7_c": "Souviens-toi de chercher les chemins à gauche, parce que tourner à droite t'amènera dans le mauvais chemin !"
         },
         "courseD_maze_until7_2018": {
-          "courseD_maze_until7_a": "Tu n'as pas besoin que ton code soit plus long que la dernière fois, juste parce que le labyrinthe l'est!",
-          "courseD_maze_until7_b": "Même s'il y a plus de tours ici que dans la dernière énigme, ton code peut-être presque identique grâce au bloc `répéter jusqu'à`!"
+          "courseD_maze_until7_a": "Simplement parce que le labyrinthe est plus long que la dernière fois, ça ne veut pas dire que le code doit l'être aussi !",
+          "courseD_maze_until7_b": "Même s'il y a plus de tournants ici que dans le précédent casse-tête, ton code peut-être presque identique grâce au bloc « répéter jusqu'au » !"
         },
         "courseD_maze_until7_2019": {
-          "courseD_maze_until7_a": "Tu n'as pas besoin que ton code soit plus long que la dernière fois, juste parce que le labyrinthe l'est!",
-          "courseD_maze_until7_b": "Même s'il y a plus de tours ici que dans la dernière énigme, ton code peut-être presque identique grâce au bloc `répéter jusqu'à`!"
+          "courseD_maze_until7_a": "Simplement parce que le labyrinthe est plus long que la dernière fois, ça ne veut pas dire que le code doit l'être aussi !",
+          "courseD_maze_until7_b": "Même s'il y a plus de tournants ici que dans le précédent casse-tête, ton code peut-être presque identique grâce au bloc « répéter jusqu'au » !"
         },
         "courseD_maze_until7_2020": {
-          "courseD_maze_until7_a": "Tu n'as pas besoin que ton code soit plus long que la dernière fois, juste parce que le labyrinthe l'est!",
-          "courseD_maze_until7_b": "Même s'il y a plus de tours ici que dans la dernière énigme, ton code peut-être presque identique grâce au bloc `répéter jusqu'à`!"
+          "courseD_maze_until7_a": "Simplement parce que le labyrinthe est plus long que la dernière fois, ça ne veut pas dire que le code doit l'être aussi !",
+          "courseD_maze_until7_b": "Même s'il y a plus de tournants ici que dans le précédent casse-tête, ton code peut-être presque identique grâce au bloc « répéter jusqu'au » !"
         },
         "courseD_maze_until8": {
           "courseD_maze_until8_a": "Assure-toi d'utiliser un bloc `« Si/Sinon »` pour garder le zombie dans la bonne direction.",
@@ -6904,16 +6904,16 @@
         "courseD_maze_until9": {
           "courseD_maze_until8_a": "Tu pourras continuer d'avancer tant que possible en utilisant `si chemin devant`, en t'aidant à manquer les chemins avec des plantes carnivores.",
           "courseD_maze_until8_b": "Dans quelle direction aller s'il n'y a pas de chemin en face ?",
-          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour atteindre le tournesol !"
+          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseD_maze_until9_2018": {
-          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour atteindre le tournesol !"
+          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseD_maze_until9_2019": {
-          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour atteindre le tournesol !"
+          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseD_maze_until9_2020": {
-          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour atteindre le tournesol !"
+          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "Pour résoudre ce défi, attache le bloc `déplacer l'acteur 1 vers le haut` à l'évènement `quand flèche vers le haut`.",
@@ -8785,13 +8785,13 @@
           "alternate": "Le bloc « alterner » est dans la catégorie « Danseurs »."
         },
         "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?"
+          "voyage_aquatic_10a": "Tu vois les **Lanternes Aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment peux-tu utiliser un bloc conditionnel avec celles-ci pour traverser le monument sous-marin ?"
         },
         "CourseE_HOC 2018 Level_7a_2021": {
           "aquatic7": "Vous pouvez utiliser le bloc si chemin pour faire les bons virages."
         },
         "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !"
+          "voyage_aquatic_9a": "Tu vois les blocs de corail rouges et bleus ? Sers-t'en comme poteaux indicateurs pour tourner à droite et à gauche au sein du récif. "
         },
         "CourseF_outbreak1": {
           "step1": "Utilise ces blocs pour créer tes sprites :\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nCe bloc se trouve dans la catégorie **Sprites** de la boîte à outils.",
@@ -8821,15 +8821,15 @@
           "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_01_RETRY_2021": {
-          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc ˋavancerˋ depuis la boite à outils vers l'espace de travail et place-le en dessous du bloc ˋquand l’exécution commenceˋ.",
+          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc « avancer » de la boite à outils vers l'espace de travail et place-le en dessous du bloc « quand l’exécution commence ».",
           "MC_HOC_2017_01_RETRY_b": "N'oublie pas de cliquer sur « Démarrer » pour que l'Agent exécute le code.",
-          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches directionnelles !"
+          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches fléchées !"
         },
         "MC_HOC_2017_02_Cole_2021": {
-          "MC_HOC_2017_02_Cole_a": "Fais avancer l'Agent de deux cases en avant pour qu'il se tienne sur la plaque de détection. Cela ouvrira la porte pour ton joueur.",
-          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
-          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches directionnelles pour déplacer le joueur sur la carte !",
-          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suive bien le chemin sur la carte !"
+          "MC_HOC_2017_02_Cole_a": "Déplace l'Agent de deux cases vers l'avant pour qu'il se tienne sur la plaque de pression. Cela ouvrira la porte pour ton joueur.",
+          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
+          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches fléchées pour amener le joueur jusqu'à la carte !",
+          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
@@ -8862,7 +8862,7 @@
           "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essaies-en quelques-unes !",
           "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
         },
@@ -10136,34 +10136,34 @@
           "courseD_bee_nested_loops_challenge2_d": "**Solution :**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_farmer_condLoops1_2021": {
-          "courseD_farmer_condLoops1_a": "Tu devras chercher du maïs 5 fois, en utilisant une boucle repeat.",
-          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc `si au maïs`, ou tu essaierais alors, peut-être, de ramasser quelque chose qui n'est pas là !"
+          "courseD_farmer_condLoops1_a": "Il va te falloir chercher 5 fois du maïs, en utilisant une boucle répéter.",
+          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc « si au maïs » ou tu risques d'essayer de récolter quelque chose là où il n'y a rien !"
         },
         "courseD_farmer_condLoops2_2021": {
-          "courseD_farmer_condLoops2_a": "La meilleure manière de faire ceci est d’imbriquer des déclarations `si`, en en plaçant une à l’intérieur de l’autre.",
-          "courseD_farmer_condLoops2_b": "Pour cette énigme, tu devrais avoir une déclaration `« Si/Sinon »` et une déclaration simple `« Si »`.",
-          "courseD_farmer_condLoops2_c": "Ta déclaration `si` pourrait de beaucoup ressembler à ceci :\n\n-   si au maïs\n    -   ramasser le maïs\n-   sinon\n    -   si à la laitue\n        -   ramasser la laitue.\n\nS'il n'y a rien, là, tu ne ramasseras rien !"
+          "courseD_farmer_condLoops2_a": "La meilleure manière de ce faire est d’imbriquer des instructions « si », en en plaçant l'une à l’intérieur de l’autre.",
+          "courseD_farmer_condLoops2_b": "Pour ce casse-tête, tu devrais avoir une instruction « si/sinon » et une instruction « si » toute simple.",
+          "courseD_farmer_condLoops2_c": "Ton instruction « si » pourrait ressembler pas mal à ça :\n\n-   si au maïs\n    -   récolter le maïs\n-   sinon\n    -   si à la laitue\n        -   récolter la laitue.\n\nS'il n'y a rien dans l'emplacement, alors tu ne récolteras rien !"
         },
         "courseD_farmer_condLoops3_2021": {
-          "courseD_farmer_condLoops3_a": "Pour obtenir tous les produits, essaie d'imbriquer trois niveaux de déclarations `si`. \n\nCela signifie que tu devras mettre une déclaration `si` à l'intérieur d'une autre, puis mettre une troisième déclaration `si` dans la seconde.",
-          "courseD_farmer_condLoops3_b": "Pour cette énigme, tu devras avoir deux déclarations `« Si/Sinon »` et une déclaration simple `« Si »`."
+          "courseD_farmer_condLoops3_a": "Pour obtenir tous les produits, essaie d'imbriquer trois niveau d'instructions « si ». \n\nCela veut dire qu'il te faudra mettre une déclaration « si » à l'intérieur d'une autre, puis mettre une troisième déclaration « si » au sein de la seconde.",
+          "courseD_farmer_condLoops3_b": "Pour ce casse-tête, tu devrais te retrouver avec deux instructions « si/sinon » et une instruction « si » toute simple."
         },
         "courseD_farmer_condLoops4_2021": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle `tant qu'il y a de la laitue` pour continuer le ramassage jusqu'à ce que chaque tête ait été ramassée.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle `while` s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en ramassera aucune, et laissera le code poursuivre son chemin.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle `tant que chemin continue` soit une boucle `repeat` pour parcourir toutes les cultures."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle « tant qu'il y a de la laitue » pour continuer à en récolter jusqu'à ce que chaque tête ait été ramassée.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle « tant que » s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en récoltera pas, et laissera poursuivre son chemin au code.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle « tant que chemin continue vers l'avant » soit une boucle « répéter » pour parcourir toutes les cultures. "
         },
         "courseD_farmer_condLoops5_2021": {
-          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : `répéter jusqu'à la citrouille`. Vois-tu comment l'utiliser dans cette énigme ?",
+          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : « répéter jusqu'à la citrouille ». Vois-tu comment l'utiliser dans ce casse-tête ?",
           "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue, à chaque endroit. Utilise une boucle 'while' pour tout ramasser !"
         },
         "courseD_farmer_condLoops6_2021": {
-          "courseD_farmer_condLoops6_a": "Utilise une boucle `tant que chemin devant` ou un bloc `si chemin devant / sinon` pour déplacer la fermière sur chaque morceau de la spirale.",
-          "courseD_farmer_condLoops6_b": "Tu as seulement besoin de vérifier s'il y a du maïs pendant la majeure partie de la récolte.  Ramasse simplement une citrouille à la fin de ton programme."
+          "courseD_farmer_condLoops6_a": "Utilise une boucle « tant que chemin vers l'avant » ou un bloc « si chemin vers l'avant / sinon » pour faire traverser chaque morceau de la spirale à l'agricultrice.",
+          "courseD_farmer_condLoops6_b": "Tu n'as que besoin de vérifier s'il y a du maïs pendant la plupart de la récolte.  Il n'y a qu'une seule citrouille à ramasser à la fin de ton programme."
         },
         "courseD_farmer_condLoops7_2021": {
-          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin devant\\` pour que le moissonneur continue d’avancer le bon nombre de fois."
+          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus simple pour accéder à toutes les cultures est toujours en spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Essaie d’utiliser « tant que chemin vers l'avant » pour que l'agricultrice fasse le bon nombre de pas vers l'avant."
         },
         "courseD_farmer_condLoops_challenge1_2021": {
           "courseD_farmer_condLoops_challenge1_a": "Le bouton \"Step\" pourrait être très utile dans ce défi.",
@@ -10310,32 +10310,32 @@
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_until1_2021": {
-          "courseD_maze_until1_a": "Peux-tu mettre des séquences dans une boucle, pour raccourcir ton code ?",
-          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre cette énigme."
+          "courseD_maze_until1_a": "Y a-t-il des séquences que tu peux mettre en boucle pour raccourcir ton code ?",
+          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre ce casse-tête."
         },
         "courseD_maze_until3_2021": {
-          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça veut dire ?",
-          "courseD_maze_until3_b": "Si tu es bloqué, essaie d'écrire les étapes sur une feuille de papier et de trouver les emplacements où elles se répètent.",
-          "courseD_maze_until3_c": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc `repeat until` pour raccourcir ton code."
+          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça t'indique ?",
+          "courseD_maze_until3_b": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de voir où les choses se répètent.",
+          "courseD_maze_until3_c": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until4_2021": {
-          "courseD_maze_until4_a": "Utilise le bouton \"Étape\" pour revoir ton code ligne par ligne.\n\n-   Est-ce que tout fonctionne à la première étape ?\n-   Est-ce que tout fonctionne à la seconde étape ?\n-   Où est-ce que ça ne va pas ?",
-          "courseD_maze_until4_b": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc `repeat until` pour raccourcir ton code."
+          "courseD_maze_until4_a": "Utilise le bouton « Étape » pour examiner ton code ligne par ligne.\n\n-   Est-ce que tout marche lors de la première étape ?\n-   Est-ce que tout marche lors de la deuxième étape ?\n-   Où est-ce que ça tourne mal ?",
+          "courseD_maze_until4_b": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until5_2021": {
-          "courseD_maze_until5_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until5_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until6_2021": {
-          "courseD_maze_until6_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until6_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until7_2021": {
-          "courseD_maze_until7_a": "Tu n'as pas besoin que ton code soit plus long que la dernière fois, juste parce que le labyrinthe l'est !",
-          "courseD_maze_until7_b": "Même s'il y a plus de tours ici que dans la dernière énigme, ton code peut-être presque identique grâce au bloc `repeat until`!"
+          "courseD_maze_until7_a": "Simplement parce que le labyrinthe est plus long que la dernière fois, ça ne veut pas dire que le code doit l'être aussi !",
+          "courseD_maze_until7_b": "Même s'il y a plus de tournants ici que dans le précédent casse-tête, ton code peut-être presque identique grâce au bloc « répéter jusqu'au » !"
         },
         "courseD_maze_until9_2021": {
-          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc `repeat until` pour atteindre le tournesol !"
+          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseE_artist_functions10_2021": {
           "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
@@ -10878,13 +10878,13 @@
           "courseD_bee_nested_loops_challenge2_d": "**Solution :**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseE_HOC 2018 Level_102022": {
-          "voyage_aquatic_10a": "Tu vois les **lanternes aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment les combiner à un bloc conditionnel pour traverser le monument sous-marin ?"
+          "voyage_aquatic_10a": "Tu vois les **Lanternes Aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment peux-tu utiliser un bloc conditionnel avec celles-ci pour traverser le monument sous-marin ?"
         },
         "CourseE_HOC 2018 Level_7a2022": {
-          "aquatic7": "Tu peux utiliser le bloc si chemin pour t’aider à faire les bons virages."
+          "aquatic7": "Tu peux utiliser le bloc « si chemin » pour t’aider à prendre les bons tournants."
         },
         "CourseE_HOC 2018 Level_9b2022": {
-          "voyage_aquatic_9a": "Quel manifique récif de corail ! Si le corail bleu est dans son bon **droit**, le corail rouge n'est pas non plus très **gauche** !"
+          "voyage_aquatic_9a": "Tu vois les blocs de corail rouges et bleus ? Sers-t'en comme poteaux indicateurs pour tourner à droite et à gauche au sein du récif. "
         },
         "CourseF_outbreak1_-2022-2": {
           "step1": "Utilise ces blocs pour créer tes sprites :\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nCe bloc se trouve dans la catégorie **Sprites** de la boîte à outils.",
@@ -10914,15 +10914,15 @@
           "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_01_RETRY2022": {
-          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc ˋavancerˋ depuis la boite à outils vers l'espace de travail et place-le en dessous du bloc ˋquand l’exécution commenceˋ.",
+          "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc « avancer » de la boite à outils vers l'espace de travail et place-le en dessous du bloc « quand l’exécution commence ».",
           "MC_HOC_2017_01_RETRY_b": "N'oublie pas de cliquer sur « Démarrer » pour que l'Agent exécute le code.",
-          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches directionnelles !"
+          "MC_HOC_2017_01_RETRY_c": "Une fois que l'Agent a exécuté tout le code, tu peux déplacer le joueur avec les touches fléchées !"
         },
         "MC_HOC_2017_02_Cole2022": {
-          "MC_HOC_2017_02_Cole_a": "Fais avancer l'Agent de deux cases en avant pour qu'il se tienne sur la plaque de détection. Cela ouvrira la porte pour ton joueur.",
-          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
-          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches directionnelles pour déplacer le joueur sur la carte !",
-          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit le chemin sur la carte !"
+          "MC_HOC_2017_02_Cole_a": "Déplace l'Agent de deux cases vers l'avant pour qu'il se tienne sur la plaque de pression. Cela ouvrira la porte pour ton joueur.",
+          "MC_HOC_2017_02_Cole_b": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
+          "MC_HOC_2017_02_Cole_c": "Une fois que l'Agent a ouvert la porte, utilise les touches fléchées pour amener le joueur jusqu'à la carte !",
+          "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
@@ -10934,7 +10934,7 @@
         },
         "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
-          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_05_Cole2022": {
@@ -10955,7 +10955,7 @@
           "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
+          "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
           "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
           "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
         },
@@ -12151,34 +12151,34 @@
           "courseD_bee_nested_loops_challenge2_d": "**Solution :**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_farmer_condLoops12022": {
-          "courseD_farmer_condLoops1_a": "Tu devras chercher du maïs 5 fois, en utilisant une boucle de répéter.",
-          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc `si au maïs`, ou tu essaierais alors, peut-être, de ramasser quelque chose qui n'est pas là !"
+          "courseD_farmer_condLoops1_a": "Il va te falloir chercher 5 fois du maïs, en utilisant une boucle répéter.",
+          "courseD_farmer_condLoops1_b": "Assure-toi d'utiliser un bloc « si au maïs » ou tu risques d'essayer de récolter quelque chose là où il n'y a rien !"
         },
         "courseD_farmer_condLoops22022": {
-          "courseD_farmer_condLoops2_a": "La meilleure manière de faire ceci est d’imbriquer des déclarations `si`, en en plaçant une à l’intérieur de l’autre.",
-          "courseD_farmer_condLoops2_b": "Pour cette énigme, tu devrais avoir une déclaration `« Si/Sinon »` et une déclaration simple `« Si »`.",
-          "courseD_farmer_condLoops2_c": "Ta déclaration `si` pourrait de beaucoup ressembler à ceci :\n\n-   si au maïs\n    -   ramasser le maïs\n-   sinon\n    -   si à la laitue\n        -   ramasser la laitue.\n\nS'il n'y a rien, là, tu ne ramasseras rien !"
+          "courseD_farmer_condLoops2_a": "La meilleure manière de ce faire est d’imbriquer des instructions « si », en en plaçant l'une à l’intérieur de l’autre.",
+          "courseD_farmer_condLoops2_b": "Pour ce casse-tête, tu devrais avoir une instruction « si/sinon » et une instruction « si » toute simple.",
+          "courseD_farmer_condLoops2_c": "Ton instruction « si » pourrait ressembler pas mal à ça :\n\n-   si au maïs\n    -   récolter le maïs\n-   sinon\n    -   si à la laitue\n        -   récolter la laitue.\n\nS'il n'y a rien dans l'emplacement, alors tu ne récolteras rien !"
         },
         "courseD_farmer_condLoops32022": {
           "courseD_farmer_condLoops3_a": "Pour obtenir tous les produits, essaie d'imbriquer trois niveaux de déclarations `si`. \n\nCela signifie que tu devrais mettre une déclaration `si` à l'intérieur d'une autre, puis mettre une troisième déclaration `si` dans la seconde.",
           "courseD_farmer_condLoops3_b": "Pour cette énigme, tu devrais avoir deux déclarations `« Si/Sinon »` et une déclaration simple `« Si »`."
         },
         "courseD_farmer_condLoops42022": {
-          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle `tant qu'il y a de la laitue` pour continuer le ramassage jusqu'à ce que chaque tête ait été ramassée.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle `tant que` s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en ramassera aucune, et laissera le code poursuivre son chemin.",
-          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle `tant que chemin continue` soit une boucle `répéter` pour parcourir toutes les cultures."
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Personne ne sait combien de têtes de laitue pousseront à partir de chaque germe. \n\nUtilise une boucle « tant qu'il y a de la laitue » pour continuer à en récolter jusqu'à ce que chaque tête ait été ramassée.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "La boucle « tant que » s'occupe également des espaces vides ! Comme il n'y a pas de laitue, elle n'en récoltera pas, et laissera poursuivre son chemin au code.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Tu peux utiliser soit une boucle « tant que chemin continue vers l'avant » soit une boucle « répéter » pour parcourir toutes les cultures. "
         },
         "courseD_farmer_condLoops52022": {
-          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : `répéter jusqu'à la citrouille`. Vois-tu comment l'utiliser dans cette énigme ?",
-          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue, à chaque endroit. Utilise une boucle 'tant que' pour tous les ramasser !"
+          "courseD_farmer_condLoops5_a": "Il y a une nouvelle boucle : « répéter jusqu'à la citrouille ». Vois-tu comment l'utiliser dans ce casse-tête ?",
+          "courseD_farmer_condLoops5_b": "Il pourrait y avoir plus d'un plant de maïs ou de laitue à chaque endroit. Utilise une boucle « tant que » pour tous les récolter !"
         },
         "courseD_farmer_condLoops62022": {
-          "courseD_farmer_condLoops6_a": "Utilise une boucle `tant que chemin devant` ou un bloc `si chemin devant / sinon` pour déplacer la fermière sur chaque morceau de la spirale.",
-          "courseD_farmer_condLoops6_b": "Tu as seulement besoin de vérifier s'il y a du maïs pendant la majeure partie de la récolte.  Ramasse simplement une citrouille à la fin de ton programme."
+          "courseD_farmer_condLoops6_a": "Utilise une boucle « tant que chemin vers l'avant » ou un bloc « si chemin vers l'avant / sinon » pour faire traverser chaque morceau de la spirale à l'agricultrice.",
+          "courseD_farmer_condLoops6_b": "Tu n'as que besoin de vérifier s'il y a du maïs pendant la plupart de la récolte.  Il n'y a qu'une seule citrouille à ramasser à la fin de ton programme."
         },
         "courseD_farmer_condLoops72022": {
-          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin devant\\` pour que le moissonneur continue d’avancer le bon nombre de fois."
+          "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus simple pour accéder à toutes les cultures est toujours en spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_b": "Essaie d’utiliser « tant que chemin vers l'avant » pour que l'agricultrice fasse le bon nombre de pas vers l'avant."
         },
         "courseD_farmer_condLoops_challenge12022": {
           "courseD_farmer_condLoops_challenge1_a": "Le bouton \"Pas\" pourrait être très utile dans ce défi.",
@@ -12325,32 +12325,32 @@
           "courseC_maze_programming5_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseD_maze_until12022": {
-          "courseD_maze_until1_a": "Peux-tu mettre des séquences dans une boucle, pour raccourcir ton code ?",
-          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre cette énigme."
+          "courseD_maze_until1_a": "Y a-t-il des séquences que tu peux mettre en boucle pour raccourcir ton code ?",
+          "courseD_maze_until1_b": "Essaie d'utiliser une boucle imbriquée pour résoudre ce casse-tête."
         },
         "courseD_maze_until32022": {
-          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça veut dire ?",
-          "courseD_maze_until3_b": "Si tu es bloqué, essaie d'écrire les étapes sur une feuille de papier et de trouver les emplacements où elles se répètent.",
-          "courseD_maze_until3_c": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until3_a": "-   Que fait ton code ?\n-   Qu’est-il censé faire ?\n-   Qu’est-ce que ça t'indique ?",
+          "courseD_maze_until3_b": "Si tu te retrouves coincé, essaie d'écrire les étapes sur une feuille de papier et de voir où les choses se répètent.",
+          "courseD_maze_until3_c": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until3_d": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until42022": {
-          "courseD_maze_until4_a": "Utilise le bouton \"Étape\" pour revoir ton code ligne par ligne.\n\n-   Est-ce que tout fonctionne à la première étape ?\n-   Est-ce que tout fonctionne à la seconde étape ?\n-   Où est-ce que ça ne va pas ?",
-          "courseD_maze_until4_b": "Y a-t-il un modèle de marches d'escalier que tu peux suivre, pour cette énigme ?",
-          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour raccourcir ton code."
+          "courseD_maze_until4_a": "Utilise le bouton « Étape » pour examiner ton code ligne par ligne.\n\n-   Est-ce que tout marche lors de la première étape ?\n-   Est-ce que tout marche lors de la deuxième étape ?\n-   Où est-ce que ça tourne mal ?",
+          "courseD_maze_until4_b": "Y a-t-il un schéma récurrent en escalier qui pourrait te servir pour ce casse-tête ?",
+          "courseD_maze_until4_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour raccourcir ton code."
         },
         "courseD_maze_until52022": {
-          "courseD_maze_until5_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until5_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until62022": {
-          "courseD_maze_until6_b": "Pour utiliser seulement un `avancer`, mets-le à l'intérieur d'un bloc `répéter jusqu'au tournesol`."
+          "courseD_maze_until6_b": "Pour n'utiliser qu'un seul bloc « avancer », mets-le à l'intérieur d'un bloc « répéter jusqu'au tournesol »."
         },
         "courseD_maze_until72022": {
-          "courseD_maze_until7_a": "Tu n'as pas besoin que ton code soit plus long que la dernière fois, juste parce que le labyrinthe l'est!",
-          "courseD_maze_until7_b": "Même s'il y a plus de tours ici que dans la dernière énigme, ton code peut-être presque identique grâce au bloc `répéter jusqu'à`!"
+          "courseD_maze_until7_a": "Simplement parce que le labyrinthe est plus long que la dernière fois, ça ne veut pas dire que le code doit l'être aussi !",
+          "courseD_maze_until7_b": "Même s'il y a plus de tournants ici que dans le précédent casse-tête, ton code peut-être presque identique grâce au bloc « répéter jusqu'au » !"
         },
         "courseD_maze_until92022": {
-          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc `répéter jusqu'à` pour atteindre le tournesol !"
+          "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",

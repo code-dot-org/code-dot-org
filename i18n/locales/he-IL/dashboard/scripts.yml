@@ -2311,7 +2311,13 @@ he:
             lessonGroup-5:
               display_name: סקר
         csa9-validation-pilot-2022: {}
-        csa1-2023: {}
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: חזרות
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
         csa2-2023: {}
         csa3-2023: {}
         csa4-2023: {}
@@ -2355,3 +2361,6 @@ he:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
         csc-bookcover: {}
         csc-landmarks-pilot: {}
+        csc-playground: {}
+        self-paced-pl-physical-computing1: {}
+        self-paced-pl-physical-computing2: {}

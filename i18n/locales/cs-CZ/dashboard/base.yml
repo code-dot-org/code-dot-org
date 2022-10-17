@@ -380,6 +380,7 @@ cs:
       about: "O nás"
       legal: "Ochrana osobních údajů a právní"
       legal_privacy: "Zásady ochrany osobních údajů"
+      legal_cookie_notice: "Oznámení o souborech cookie"
       legal_tos: "Podmínky"
     user:
       classroom: 'Učitelská domovská stránka'

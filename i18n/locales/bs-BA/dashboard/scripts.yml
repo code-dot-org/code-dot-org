@@ -1131,6 +1131,10 @@ bs:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.
         soccer:
           name: nogomet
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Petlje
         csd5-2023:
           lesson_groups:
             lessonGroup-3:

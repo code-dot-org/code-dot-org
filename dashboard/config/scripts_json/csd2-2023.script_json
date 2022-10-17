@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2022-10-07 23:47:11 UTC",
+    "serialized_at": "2022-10-11 00:10:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1469,14 +1469,8 @@
       "key": "c9174999-b4dc-4280-aaa8-99156f1412ae",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?",
-        "name": "Journal",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of the discussion is to help students see web development as a form of self-expression and communication, and to set an expectation that they have something valuable to contribute.  While some students may want to share something silly, encourage students to consider that they have something valuable to say and that others can benefit from it.  This discussion should set a positive atmosphere that respects the diversity of perspectives that the group can bring.\r\n"
-          }
-        ]
+        "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?\n\n**Discussion Goal:** The goal of the discussion is to help students see web development as a form of self-expression and communication, and to set an expectation that they have something valuable to contribute. While some students may want to share something silly, encourage students to consider that they have something valuable to say and that others can benefit from it. This discussion should set a positive atmosphere that respects the diversity of perspectives that the group can bring.",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "c9174999-b4dc-4280-aaa8-99156f1412ae",
@@ -1592,7 +1586,7 @@
       "key": "9038a911-9332-4574-b629-868d066b6622",
       "position": 6,
       "properties": {
-        "description": "**Share:** Once everyone has had a chance to brainstorm about their sites, give students a chance to share out their thoughts."
+        "description": "**Share:** Once everyone has had a chance to brainstorm about their sites, give students a chance to share out their thoughts about each site."
       },
       "seeding_key": {
         "activity_section.key": "9038a911-9332-4574-b629-868d066b6622",
@@ -1603,11 +1597,11 @@
       "key": "94c720e9-9316-4464-9243-dc72cac11fa5",
       "position": 7,
       "properties": {
-        "description": "**Discuss:** Give students an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.",
+        "description": "**Discuss:** Give students a chance to share out their responses to the activity guide reflection questions in addition to an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.\n\n**Discussion Goal:** The goal of this discussion is to prepare students to think of themselves as potential website creators.  As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what their motivations might be.  Remind them that they will have an opportunity in this unit to create a website that will be shared with the entire world.",
         "tips": [
           {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to prepare students to think of themselves as potential website creators.  As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what their motivations might be.  Remind them that they will have an opportunity in this unit to create a website that will be shared with the entire world.\r\n"
+            "type": "assessmentOpportunity",
+            "markdown": "The reflection questions on the activity guide may be an opportunity to assess student preparedness to think of themselves as potential website creators. In addition, the questions can be used to assess student understanding of why they might create a site similar to those in the examples, and what their own motivations might be. "
           }
         ]
       },
@@ -1661,13 +1655,7 @@
       "key": "6dd4505c-e59e-433f-85e4-a2e9bf1b2df8",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Once students have written their instructions, have them briefly share their instructions with a neighbor.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Activities like this one are often used in CS courses to help highlight just how much precision is needed to communicate instructions to a computer. In this instance the goal is similar. You want to highlight the challenge of differentiating the actual content on the page and instructions indicating how it should be structured. This demonstration helps justify the creation of HTML in order to tag pieces of content to help the computer understand what they are and hence how they should look.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Once students have written their instructions, have them briefly share their instructions with a neighbor.\n\n**Discussion Goal:** Activities like this one are often used in CS courses to help highlight just how much precision is needed to communicate instructions to a computer. In this instance the goal is similar. You want to highlight the challenge of differentiating the actual content on the page and instructions indicating how it should be structured. This demonstration helps justify the creation of HTML in order to tag pieces of content to help the computer understand what they are and hence how they should look."
       },
       "seeding_key": {
         "activity_section.key": "6dd4505c-e59e-433f-85e4-a2e9bf1b2df8",
@@ -1929,6 +1917,17 @@
       },
       "seeding_key": {
         "activity_section.key": "56319b33-dca5-4f3f-bf34-381802fb6120",
+        "lesson_activity.key": "fedc0007-f214-4ab0-962f-f7e7f5d29a9a"
+      }
+    },
+    {
+      "key": "6de15cb4-b139-4486-9168-602ff6f036ac",
+      "position": 17,
+      "properties": {
+        "description": "**(Optional) Video:** One of the challenge levels invites students to create their own poetry as a webpage, featuring an example poem from Caia Lomeli. Caia is a poet and computer science student who was featured in our Poem Art Hour of Code activity. The lesson [links to a video](https://www.youtube.com/watch?v=vT9imQY8Dsc) of Caia discussing how computer science and poetry are similar, especially \"starting from a blank page\". Even though it's not directly related to webpages and HTML, [you may decide to show this video to students as an inspirational video](https://www.youtube.com/watch?v=vT9imQY8Dsc) on being creative with code, which ties into the projects students will complete in this unit."
+      },
+      "seeding_key": {
+        "activity_section.key": "6de15cb4-b139-4486-9168-602ff6f036ac",
         "lesson_activity.key": "fedc0007-f214-4ab0-962f-f7e7f5d29a9a"
       }
     },
@@ -2907,13 +2906,7 @@
       "key": "8b8de712-b562-4ade-8b94-89e81aa39277",
       "position": 2,
       "properties": {
-        "description": "Allow volunteers to share out aspects of their personal style that they think are important.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion allows students to share ideas for their websites, but it is not necessary for everyone to share if they prefer not to.  The goal of the discussion is to start students thinking about the topic and encourage them to think of websites as a way to express themselves.\r\n  \r\n"
-          }
-        ]
+        "description": "Allow volunteers to share out aspects of their personal style that they think are important.\n\n**Discussion Goal:** This discussion allows students to share ideas for their websites, but it is not necessary for everyone to share if they prefer not to. The goal of the discussion is to start students thinking about the topic and encourage them to think of websites as a way to express themselves."
       },
       "seeding_key": {
         "activity_section.key": "8b8de712-b562-4ade-8b94-89e81aa39277",
@@ -3098,13 +3091,7 @@
       "key": "0fa7df32-c6c4-4eb5-a1bc-ad1cb4041599",
       "position": 2,
       "properties": {
-        "description": "As students share out their ideas, put them on the board or a poster, and try to call out any skills that they will be learning in the next few lessons.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Use this share out to get students excited about the things that they will learn in upcoming lessons. If you create a poster, you may also want to cross off topics as you teach them.  For topics that are not covered in the curriculum, you can point students to similar topics that are covered or, if appropriate, direct them to outside resources that will guide them in learning those skills.\r\n"
-          }
-        ]
+        "description": "As students share out their ideas, put them on the board or a poster, and try to call out any skills that they will be learning in the next few lessons.\n\n**Discussion Goal:** Use this share out to get students excited about the things that they will learn in upcoming lessons. If you create a poster, you may also want to cross off topics as you teach them. For topics that are not covered in the curriculum, you can point students to similar topics that are covered or, if appropriate, direct them to outside resources that will guide them in learning those skills."
       },
       "seeding_key": {
         "activity_section.key": "0fa7df32-c6c4-4eb5-a1bc-ad1cb4041599",
@@ -3156,13 +3143,7 @@
       "key": "50819b3b-88de-45de-9922-6f861286b02b",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Have students journal individually, then share with a neighbor, and finally discuss as a whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion serves to get students thinking about the problem before introducing them to the Creative Commons solution. As students discuss the rules that they would like for their own work, make sure to emphasize and highlight the principles that correspond to the Creative Commons properties that they will explore later in the lesson.\r\n\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students journal individually, then share with a neighbor, and finally discuss as a whole class.\n\n**Discussion Goal:** This discussion serves to get students thinking about the problem before introducing them to the Creative Commons solution. As students discuss the rules that they would like for their own work, make sure to emphasize and highlight the principles that correspond to the Creative Commons properties that they will explore later in the lesson."
       },
       "seeding_key": {
         "activity_section.key": "50819b3b-88de-45de-9922-6f861286b02b",
@@ -3276,13 +3257,7 @@
       "key": "b9130b97-6557-4ba3-b0f3-7286e144c6ab",
       "position": 7,
       "properties": {
-        "description": "**Discuss:** Ask several students to share out their responses to the _Choosing the Right License_ scenarios. Encourage discussion and debate if students identified different licenses for the same scenarios.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** While there may not be a specific \"right\" license for each of these scenarios, encourage students to always consider whether the license they chose is more restrictive than it strictly needs to be. One of the design goals of the Creative Commons license is to increase the amount of creative material available to the general public, promoting the sharing of intellectual property for the common good. With this in mind, we should only be adding the minimal restrictions needed to meet the content creator's wishes.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Ask several students to share out their responses to the _Choosing the Right License_ scenarios. Encourage discussion and debate if students identified different licenses for the same scenarios.\n\n**Discussion Goal:** While there may not be a specific \"right\" license for each of these scenarios, encourage students to always consider whether the license they chose is more restrictive than it strictly needs to be. One of the design goals of the Creative Commons license is to increase the amount of creative material available to the general public, promoting the sharing of intellectual property for the common good. With this in mind, we should only be adding the minimal restrictions needed to meet the content creator's wishes."
       },
       "seeding_key": {
         "activity_section.key": "b9130b97-6557-4ba3-b0f3-7286e144c6ab",
@@ -3368,13 +3343,7 @@
       "key": "bafd3f24-a315-4782-8b6a-6ee1fe8e688e",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** In your journal, think of some guidelines we should keep in mind when using images. How can we make sure that we are safe and respecting the rights of others?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As students come up with their guidelines, you may choose to prompt them by reminding them of the recent activities they have done around sharing personal information and respecting copyright.  Many classes may also want to add in other guidelines, such as defining what is appropriate in a school setting, or making sure that any people depicted in the image are comfortable with the image being posted online.  Regardless, make sure that you are satisfied that the guidelines are sufficient before you move on.\r\n"
-          }
-        ]
+        "description": "**Prompt:** In your journal, think of some guidelines we should keep in mind when using images. How can we make sure that we are safe and respecting the rights of others?\n\n**Discussion Goal:** As students come up with their guidelines, you may choose to prompt them by reminding them of the recent activities they have done around sharing personal information and respecting copyright. Many classes may also want to add in other guidelines, such as defining what is appropriate in a school setting, or making sure that any people depicted in the image are comfortable with the image being posted online. Regardless, make sure that you are satisfied that the guidelines are sufficient before you move on."
       },
       "seeding_key": {
         "activity_section.key": "bafd3f24-a315-4782-8b6a-6ee1fe8e688e",
@@ -3509,13 +3478,7 @@
       "key": "b380dd8e-21e2-4f1b-8505-60f0d650f3ff",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm ideas independently, then share with a neighbor, and finally share with the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This warm-up should generate a list of ways students express their ideas. If they need help getting started, offer them a couple of examples from the list below. The goal of this warm-up is to frame web development as another form of self-expression. \r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should brainstorm ideas independently, then share with a neighbor, and finally share with the whole class.\n\n**Discussion Goal:** This warm-up should generate a list of ways students express their ideas. If they need help getting started, offer them a couple of examples from the list below. The goal of this warm-up is to frame web development as another form of self-expression."
       },
       "seeding_key": {
         "activity_section.key": "b380dd8e-21e2-4f1b-8505-60f0d650f3ff",
@@ -3749,13 +3712,7 @@
       "key": "334270f2-4cb7-4cb8-ab6b-1fc4d689f528",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share different stylings on the page.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion serves as a review of the CSS properties students have already learned and showcases some of the new properties they will be learning in this lesson.  Some of the new properties showcased are:\r\n\r\n* Adding background colors to things\r\n* Being able to move things around on the page (the images to the left of the text)\r\n* Being able to add borders to and round corners of images\r\n\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share different stylings on the page.\n\n**Discussion Goal:** This discussion serves as a review of the CSS properties students have already learned and showcases some of the new properties they will be learning in this lesson. Some of the new properties showcased are:\n\n* Adding background colors to things\n* Being able to move things around on the page (the images to the left of the text)\n* Being able to add borders to and round corners of images"
       },
       "seeding_key": {
         "activity_section.key": "334270f2-4cb7-4cb8-ab6b-1fc4d689f528",
@@ -3901,13 +3858,7 @@
       "key": "6e6f8e53-baae-4cda-af83-d53455b004ce",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share out their ideas and display them at the front of the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This is a chance for students to remind themselves of (and for you to check on) the most important things that they have learned in the unit so far.  While the focus may vary from class to class, most classes should have a few things to say in every category.  Make sure that you are highlighting the differences between structure (HTML) and style (CSS) in your conversations.  If you have noticed particular obstacles for your students, this is a good place to make sure they are prepared to face them.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share out their ideas and display them at the front of the class.\n\n**Discussion Goal:** This is a chance for students to remind themselves of (and for you to check on) the most important things that they have learned in the unit so far. While the focus may vary from class to class, most classes should have a few things to say in every category. Make sure that you are highlighting the differences between structure (HTML) and style (CSS) in your conversations. If you have noticed particular obstacles for your students, this is a good place to make sure they are prepared to face them."
       },
       "seeding_key": {
         "activity_section.key": "6e6f8e53-baae-4cda-af83-d53455b004ce",
@@ -4035,13 +3986,7 @@
       "key": "4ad75514-f13a-4e4a-b406-ccd1779737e7",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** \n- What are the top **3** bugs you have seen so far when making web pages? \n- What are **2** things you can do while coding to make bugs easier to find and fix? \n- What is the **1** piece of advice you'd give someone who has a bug?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The purpose of this discussion is both to normalize debugging and to make sure students start the coding part of the project with some good strategies that will help them to debug.  Common bugs they may have seen might be spelling errors, forgetting to link the style sheet, not properly nesting tags, etc. This will vary from class to class, but most students will have encountered multiple bugs in the chapter. While coding, students should use proper formatting to help them to read their code, code small bits at a time and check as they go, and use good naming conventions. For debugging advice, students may give dispositional advice (\"Don't give up!\", \"Remember that it's normal\"), recommended resources (\"Ask a friend to look at it\", \"look at the map levels\"), process-based advice (\"describe the bug first, then look for it before you change stuff\", \"look at what's messed up and check the spelling in that part\"), or tools based advice (\"look above where the pink is\", \"use the inspector tool\"). Give students time to share their advice, and make sure that they are referencing the Debugging Process.\r\n   \r\n"
-          }
-        ]
+        "description": "**Prompt:** \n- What are the top **3** bugs you have seen so far when making web pages? \n- What are **2** things you can do while coding to make bugs easier to find and fix? \n- What is the **1** piece of advice you'd give someone who has a bug?\n\n**Discussion Goal:** The purpose of this discussion is both to normalize debugging and to make sure students start the coding part of the project with some good strategies that will help them to debug. The following are possible student responses:\n\n* **Common bugs** they may have seen might include:\n  * Spelling errors\n  * Forgetting to link the style sheet\n  * Not properly nesting tags\n  * *This will vary from class to class, but most students will have encountered multiple bugs in the chapter.*\n* Things they can do while coding to **make bugs easier to find and fix** might include:\n  * Use proper formatting to help them to read their code\n  * Code small bits at a time and check as they go\n  * Use good naming conventions\n  * *Again, this will vary from class to class.*\n* For **debugging advice**, students may give the following types of advice:\n  * Dispositional advice (\"Don't give up!\", \"Remember that it's normal\")\n  * Recommended resources (\"Ask a friend to look at it\", \"look at the map levels\")\n  * Process-based advice (\"describe the bug first, then look for it before you change stuff\", \"look at what's messed up and check the spelling in that part\")\n  * Tools based advice (\"look above where the pink is\", \"use the inspector tool\"). \n  * *Give students time to share their advice, and make sure that they are referencing the Debugging Process.*"
       },
       "seeding_key": {
         "activity_section.key": "4ad75514-f13a-4e4a-b406-ccd1779737e7",
@@ -4115,14 +4060,8 @@
       "key": "0b65c931-ec29-410f-b2af-94c3f760a26b",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?",
-        "progression_name": "Video: Publishing Your Website",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal**\n\nThe video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nAs they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?\n\n**Discussion Goal:** The video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nIn addition, as they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written.",
+        "progression_name": "Video: Publishing Your Website"
       },
       "seeding_key": {
         "activity_section.key": "0b65c931-ec29-410f-b2af-94c3f760a26b",
@@ -4227,13 +4166,7 @@
       "key": "cbc4beb2-32b6-4e2a-8f3f-0a6ef794d050",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share out the different skills and practices that they used.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should reflect on the process so far.  If students have trouble thinking of different practices that are helpful, you may want to remind them of the five practices of computer science: problem solving, persistence, creativity, communication, and collaboration.  Students may also mention more specific skills such as using documentation, planning, teamwork, and debugging. Prompt students to explain how these practices helped them as they coded.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share out the different skills and practices that they used.\n\n**Discussion Goal:** Students should reflect on the process so far. If students have trouble thinking of different practices that are helpful, you may want to remind them of the five practices of computer science: problem-solving, persistence, creativity, communication, and collaboration. Students may also mention more specific skills such as using documentation, planning, teamwork, and debugging. Prompt students to explain how these practices helped them as they coded."
       },
       "seeding_key": {
         "activity_section.key": "cbc4beb2-32b6-4e2a-8f3f-0a6ef794d050",
@@ -9226,7 +9159,7 @@
     },
     {
       "name": "Exploring Web Pages",
-      "url": "https://docs.google.com/document/d/1H442FzizijHYbf8mozKacAZNQaMBHNQ2wvXY5qRB8nU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1GA2EgOPfE5_XBcUmehKxE7kOQ_s2rZwxWtDZ8asQBWw/view",
       "key": "exploring_web_pages",
       "properties": {
         "audience": "Verified Teacher",
@@ -9238,7 +9171,7 @@
     },
     {
       "name": "Exploring Web Pages",
-      "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/",
+      "url": "https://docs.google.com/document/d/1GM6hJfEb-78DePB8tISOjc5jy5HRZlTGQCtEy66hMII/view",
       "key": "exploring_web_pages_1",
       "properties": {
         "audience": "Student",

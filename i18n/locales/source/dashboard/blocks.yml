@@ -2280,6 +2280,11 @@ en:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: when [VAR][0] answered
       RyanLab_moveForward:
@@ -2541,6 +2546,12 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      storylab_clearHeadings:
+        text: clear headings
+      storylab_setHeading:
+        text: set heading [HEADING][0]
+      storylab_setSubheading:
+        text: set subheading [SUBHEADING][0]
       validation_validatedBackground:
         text: set background to [IMG][0]
       validation_validatedSound:

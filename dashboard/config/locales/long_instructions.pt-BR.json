@@ -5457,7 +5457,15 @@
         "ramp_artist_loops92022": "Resolva este enigma desenhando um quadrado com lados de 200 pixels.",
         "simconfig_-2022-2": "# Mude e Preveja\n\nEscolha uma das variáveis que controlam essa simulação para modificar e prever como isso irá mudar o resultado.\n\nDepois de ter anotado sua previsão, execute a simulação 5 vezes e anote suas descobertas. Sua previsão foi parecida com o resultado?",
         "simstarter_-2022-2": "# Coletando Dados\n\nExecute a simulação 5 vezes. A cada vez, use o guia de atividade de coleta de dados para registrar:\n\n-   Quantas maçãs o elefante pegou?\n-   Quantas maçãs o hipopótamo pegou?\n-   Quanto tempo levou para que todas as maçãs fossem pegas?",
-        "courseF_apps_pet2022": "Animal de estimação virtual\n\nArraste os objetos para o cachorro e veja como ele reage"
+        "courseF_apps_pet2022": "Animal de estimação virtual\n\nArraste os objetos para o cachorro e veja como ele reage",
+        "CourseF_app_computer2022": "**Monte um Computador**\n\nEncaixe todas as partes e descubra como ligar o computador!",
+        "courseF_apps_aquarium2022": "**Aquário Virtual**\n\nEncha seu próprio aquário a partir de uma variedade de opções, cada um com seu próprio comportamento.",
+        "courseF_apps_card2022": "**Cartão de Aniversário Personalizado**\nEste programa vai te fazer algumas perguntas e então criará uma mensagem de aniversário personalizada para você!",
+        "courseF_apps_chatbot2022": "\\*_Robô Conversador_\n\nEste robô vai te fazer perguntas e se lembrar do que você respondeu! Digite suas respostas e converse com o X-9!",
+        "courseF_apps_collector2022": "**Jogo do Ótimo Coletor**\n\nSão três jogos em um só! Escolha seu personagem, então use as setas para coletar todos os objetos.",
+        "courseF_apps_madlib2022": "\\*_História com Lacunas_\n\nEste programa vai pedir que você insira algumas palavras e então usá-las para te contar uma história maluca!",
+        "courseF_sprites_freeplay_aquatic_-2022-2": "# Jogo Livre - Monte uma Cena\n\nAgora é a sua vez de criar o que quiser!\n\n## Faça isso\n\n-   Adicione figuras. Escolha a aparência e o lugar onde vão ficar.\n-   Escolha o tamanho das suas figuras para que elas fiquem como você deseja.\n-   Dê vida as suas figuras atribuindo comportamentos!",
+        "courseF_variables2_set_-2022-2": "# Contando com Variáveis\n\nVamos aprender a usar **variáveis** com números! Lembre-se que variáveis são rótulos de informação usados em um programa. Este novo bloco permite que você guarde um valor em uma variável sem usar uma caixa de texto. \n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">???</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>\n\n## Faça Isso\n\n-   Arraste um bloco 'atribuir' para a área de trabalho e o conecte abaixo de 'quando executar'.\n-   Mude '???' para 'contador' ou qualquer outro texto.\n-   Faça a figura do coelho 'dizer' o número que foi guardado na variável."
       }
     }
   }

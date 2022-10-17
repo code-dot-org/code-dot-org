@@ -7263,7 +7263,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csd-post-survey-2017-q13_2018:
         answers:
         - {}
@@ -7296,7 +7296,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csd-post-survey-2017-q17_2018:
         answers:
         - {}
@@ -7307,7 +7307,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csd-post-survey-2017-q18_2018:
         answers:
         - {}
@@ -7318,7 +7318,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csd-post-survey-2017-q1_2018:
         answers:
         - {}
@@ -7329,7 +7329,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csd-post-survey-2017-q22_2018:
         answers:
         - {}
@@ -7395,7 +7395,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csd-post-survey-2017-q2_2018:
         answers:
         - {}
@@ -7406,7 +7406,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csd-post-survey-2017-q30_2018:
         answers:
         - {}
@@ -7417,7 +7418,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csd-post-survey-2017-q3_2018:
         answers:
         - {}
@@ -7428,7 +7429,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csd-post-survey-2017-q4_2018:
         answers:
         - {}
@@ -7439,7 +7440,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csd-post-survey-2017-q6_2018:
         answers:
         - {}
@@ -7450,7 +7451,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csd-post-survey-2017-q8_2018:
         answers:
         - {}
@@ -7461,7 +7462,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csd-post-survey-2017-q9_2018:
         answers:
         - {}
@@ -7472,7 +7473,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csd-post-survey-2018-U1-I-learned:
         answers:
         - {}
@@ -7485,10 +7486,10 @@ az-AZ:
       csd-post-survey-2018-U1-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7504,10 +7505,10 @@ az-AZ:
       csd-post-survey-2018-U2-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7523,10 +7524,10 @@ az-AZ:
       csd-post-survey-2018-U3-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7542,10 +7543,10 @@ az-AZ:
       csd-post-survey-2018-U4-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7561,10 +7562,10 @@ az-AZ:
       csd-post-survey-2018-U5-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -7580,10 +7581,10 @@ az-AZ:
       csd-post-survey-2018-U6-I-liked:
         answers:
         - {}
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -10371,7 +10372,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-post-survey-2017-q10_2018:
         answers:
         - {}
@@ -10393,7 +10394,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csp-post-survey-2017-q12_2018:
         answers:
         - {}
@@ -10404,7 +10405,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənmək bacarığım var.
       csp-post-survey-2017-q13:
         answers:
         - {}
@@ -10459,7 +10460,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-post-survey-2017-q17:
         answers:
         - {}
@@ -10470,7 +10471,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-post-survey-2017-q17_2018:
         answers:
         - {}
@@ -10481,7 +10482,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-post-survey-2017-q18:
         answers:
         - {}
@@ -10492,7 +10493,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-post-survey-2017-q18_2018:
         answers:
         - {}
@@ -10503,7 +10504,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-post-survey-2017-q19_2018:
         answers:
         - {}
@@ -10525,7 +10526,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-post-survey-2017-q2:
         answers:
         - {}
@@ -10536,7 +10537,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csp-post-survey-2017-q20_2018:
         answers:
         - {}
@@ -10668,7 +10670,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-post-survey-2017-q29_2018:
         answers:
         - {}
@@ -10679,7 +10681,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-post-survey-2017-q3:
         answers:
         - {}
@@ -10690,7 +10692,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-post-survey-2017-q30:
         answers:
         - {}
@@ -10701,7 +10703,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-post-survey-2017-q33_2018:
         answers:
         - {}
@@ -10715,11 +10717,13 @@ az-AZ:
         - {}
       csp-post-survey-2017-q36-a_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Çox
+        - text: 'Az
+
+'
+        - text: Heçdə
         questions:
-        - {}
+        - text: Riyaziyyatda yaxşı olmadığım üçün narahatam.
       csp-post-survey-2017-q4:
         answers:
         - {}
@@ -10730,7 +10734,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-post-survey-2017-q4_2018:
         answers:
         - {}
@@ -10741,7 +10745,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-post-survey-2017-q6:
         answers:
         - {}
@@ -10752,7 +10756,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csp-post-survey-2017-q8:
         answers:
         - {}
@@ -10763,7 +10767,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csp-post-survey-2017-q9:
         answers:
         - {}
@@ -10774,24 +10778,25 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-post-survey-2018-topics-preamble:
         content1: Burada təsvir edin
       csp-post-survey-2018-unit-feedback-preamble:
         content1: Burada təsvir edin
       csp-post-survey-who-encouraged-csp:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Dost
+        - text: Bir valideyn
+        - text: Başqa bir ailə üzvü
+        - text: Müəllim
+        - text: Məsləhətçi
+        - text: Məktəbdə başqa bir şəxs (məşqçi, direktor, dekan və s.)
+        - text: Siyahıda olmayan başqa bir şəxs
+        - text: Xüsusilə heç kim. Sadəcə götürmək istədim.
+        - text: Mən bu dərsi seçməmişəm.
         questions:
-        - {}
+        - text: Bu dərsi seçməyinizdə kiminsə həvəsləndirilməsi faktoru oldumu? Əgər
+            belədirsə, sizə ən çox kim təsir etdi? (ikiyə qədər seçin).
       csp-post-survey-worry-seem-less-capable:
         answers:
         - {}
@@ -10813,7 +10818,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-pre-survey-2017-q10:
         answers:
         - {}
@@ -10868,7 +10873,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csp-pre-survey-2017-q11_2018:
         answers:
         - {}
@@ -10879,7 +10884,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məncə kompyuter elmləri maraqlıdır.
       csp-pre-survey-2017-q12:
         answers:
         - {}
@@ -10890,7 +10895,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənmək bacarığım var.
       csp-pre-survey-2017-q12_2018:
         answers:
         - {}
@@ -10901,7 +10906,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmlərini öyrənmək bacarığım var.
       csp-pre-survey-2017-q13:
         answers:
         - {}
@@ -10912,7 +10917,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q13_2018:
         answers:
         - {}
@@ -10923,7 +10929,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q13_2021:
         answers:
         - {}
@@ -10934,7 +10941,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q13_2022:
         answers:
         - {}
@@ -10945,7 +10953,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q14:
         answers:
         - {}
@@ -10956,7 +10965,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aydın cavabı olmayan kompüter elmləri problemi ilə qarşılaşdığımda,
+            mən həmişə onu həll etməyin bir yolunu tapa biləcəyəm.
       csp-pre-survey-2017-q14_2018:
         answers:
         - {}
@@ -10967,7 +10977,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aydın cavabı olmayan kompüter elmləri problemi ilə qarşılaşdığımda,
+            mən həmişə onu həll etməyin bir yolunu tapa biləcəyəm.
       csp-pre-survey-2017-q16:
         answers:
         - {}
@@ -10978,7 +10989,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q16_2018:
         answers:
         - {}
@@ -10989,7 +11000,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q16_2021:
         answers:
         - {}
@@ -11000,7 +11011,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q16_2022:
         answers:
         - {}
@@ -11011,7 +11022,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q17:
         answers:
         - {}
@@ -11022,7 +11033,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q17_2018:
         answers:
         - {}
@@ -11033,7 +11044,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q17_2021:
         answers:
         - {}
@@ -11044,7 +11055,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q17_2022:
         answers:
         - {}
@@ -11055,7 +11066,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q18:
         answers:
         - {}
@@ -11066,7 +11077,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-pre-survey-2017-q18_2018:
         answers:
         - {}
@@ -11077,7 +11088,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       csp-pre-survey-2017-q19:
         answers:
         - {}
@@ -11088,7 +11099,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q19_2018:
         answers:
         - {}
@@ -11099,7 +11110,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q19_2021:
         answers:
         - {}
@@ -11110,7 +11121,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q19_2022:
         answers:
         - {}
@@ -11121,7 +11132,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q1_2018:
         answers:
         - {}
@@ -11132,7 +11143,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       csp-pre-survey-2017-q2:
         answers:
         - {}
@@ -11143,7 +11154,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csp-pre-survey-2017-q20:
         answers:
         - {}
@@ -11154,7 +11166,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q20_2018:
         answers:
         - {}
@@ -11165,7 +11177,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q20_2021:
         answers:
         - {}
@@ -11176,7 +11188,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q20_2022:
         answers:
         - {}
@@ -11187,7 +11199,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q21:
         answers:
         - {}
@@ -11198,7 +11210,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində yaxşı qiymət almaq üçün nə etməli olduğumu
+            bilirəm.
       csp-pre-survey-2017-q21_2018:
         answers:
         - {}
@@ -11209,7 +11222,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində yaxşı qiymət almaq üçün nə etməli olduğumu
+            bilirəm.
       csp-pre-survey-2017-q22:
         answers:
         - {}
@@ -11220,7 +11234,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q22_2018:
         answers:
         - {}
@@ -11231,7 +11245,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q22_2021:
         answers:
         - {}
@@ -11242,7 +11256,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q22_2022:
         answers:
         - {}
@@ -11253,7 +11267,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q23:
         answers:
         - {}
@@ -11264,7 +11278,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində digər tələbələr kimi mənə də
+            hörmətlə yanaşacaqlar.
       csp-pre-survey-2017-q23_2018:
         answers:
         - {}
@@ -11275,7 +11290,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində digər tələbələr kimi mənə də
+            hörmətlə yanaşacaqlar.
       csp-pre-survey-2017-q24:
         answers:
         - {}
@@ -11286,7 +11302,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində özümü hiss edəcəm.
       csp-pre-survey-2017-q24_2018:
         answers:
         - {}
@@ -11297,7 +11313,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bu informatika dərsində özümü hiss edəcəm.
       csp-pre-survey-2017-q25:
         answers:
         - {}
@@ -11308,7 +11324,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hesab edirəm ki, bu informatika dərsində fikirlərim ciddi qəbul olunacaq.
       csp-pre-survey-2017-q25_2018:
         answers:
         - {}
@@ -11319,7 +11335,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hesab edirəm ki, bu informatika dərsində fikirlərim ciddi qəbul olunacaq.
       csp-pre-survey-2017-q26:
         answers:
         - {}
@@ -11330,7 +11346,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənə elə gəlir ki, mənim kimi insanlar üçün bu informatika sinfinə
+            qəbul olmaq çətin olacaq.
       csp-pre-survey-2017-q26_2018:
         answers:
         - {}
@@ -11341,7 +11358,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənə elə gəlir ki, mənim kimi insanlar üçün bu informatika sinfinə
+            qəbul olmaq çətin olacaq.
       csp-pre-survey-2017-q27:
         answers:
         - {}
@@ -11352,7 +11370,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Boş vaxtlarımda informatika ilə məşğul oluram.
       csp-pre-survey-2017-q27_2018:
         answers:
         - {}
@@ -11363,7 +11381,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Boş vaxtlarımda informatika ilə məşğul oluram.
       csp-pre-survey-2017-q28:
         answers:
         - {}
@@ -11374,7 +11392,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edəcək.
       csp-pre-survey-2017-q28_2018:
         answers:
         - {}
@@ -11385,7 +11403,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edəcək.
       csp-pre-survey-2017-q29:
         answers:
         - {}
@@ -11396,7 +11414,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-pre-survey-2017-q29_2018:
         answers:
         - {}
@@ -11407,7 +11425,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmi mənim gələcəyim üçün vacibdir.
       csp-pre-survey-2017-q2_2018:
         answers:
         - {}
@@ -11418,7 +11436,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Aşkar bir cavabı olmayan problemlə qarşılaşdığımda, mən həmişə onu
+            həll etmək üçün bir yol tapmağı bacarıram.
       csp-pre-survey-2017-q3:
         answers:
         - {}
@@ -11429,7 +11448,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q30:
         answers:
         - {}
@@ -11440,7 +11459,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q30_2018:
         answers:
         - {}
@@ -11451,7 +11470,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q30_2021:
         answers:
         - {}
@@ -11462,7 +11481,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q30_2022:
         answers:
         - {}
@@ -11473,7 +11492,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q31:
         answers:
         - {}
@@ -11528,7 +11547,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən narahatam ki, bu sinifdəki müəllim və ya tələbələr mənim kompüter
+            elmində digər tələbələr kimi yaxşı olmadığımı düşünə bilərlər.
       csp-pre-survey-2017-q35_2018:
         answers:
         - {}
@@ -11539,45 +11559,56 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən narahatam ki, bu sinifdəki müəllim və ya tələbələr mənim kompüter
+            elmində digər tələbələr kimi yaxşı olmadığımı düşünə bilərlər.
       csp-pre-survey-2017-q36-b:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Çox
+        - text: 'Az
+
+'
+        - text: Heçdə
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı təcrübəm az olduğu üçün narahatam.
       csp-pre-survey-2017-q36-b_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Çox
+        - text: 'Az
+
+'
+        - text: Heçdə
         questions:
-        - {}
+        - text: Kompüter elmləri ilə bağlı təcrübəm az olduğu üçün narahatam.
       csp-pre-survey-2017-q37:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: İndiki informatika dərsinizdən əvvəl məktəbdə başqa informatika dərsləri
+            keçmisinizmi?
       csp-pre-survey-2017-q37_2018:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: İndiki informatika dərsinizdən əvvəl məktəbdə başqa informatika dərsləri
+            keçmisinizmi?
       csp-pre-survey-2017-q39:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Heç məktəb saatlarından kənarda (məsələn, məktəbdən sonrakı proqramda,
+            onlayn və ya düşərgədə və ya yay proqramında) kompüter elmləri fəaliyyətlərində
+            və ya proqramlarında iştirak etmisinizmi?
       csp-pre-survey-2017-q39_2018:
         answers:
         - text: bəli
         - text: xeyr
         questions:
-        - {}
+        - text: Heç məktəb saatlarından kənarda (məsələn, məktəbdən sonrakı proqramda,
+            onlayn və ya düşərgədə və ya yay proqramında) kompüter elmləri fəaliyyətlərində
+            və ya proqramlarında iştirak etmisinizmi?
       csp-pre-survey-2017-q3_2018:
         answers:
         - {}
@@ -11588,7 +11619,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q3_2021:
         answers:
         - {}
@@ -11599,7 +11630,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q3_2022:
         answers:
         - {}
@@ -11610,7 +11641,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q4:
         answers:
         - {}
@@ -11621,27 +11652,33 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q40:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Məktəbimdə məktəbdən sonra proqram
+        - text: Məktəbdən sonra başqa yerdə proqram (məsələn, Oğlanlar və Qızlar Klubu
+            və s.)
+        - text: Onlayn proqram
+        - text: Yay proqramı/kampı
         - text: Digər
-        - {}
+        - text: Məktəbdən kənar heç komputer elmləri ilə məşqul olmamışam.
         questions:
-        - {}
+        - text: Əgər belədirsə, siz əvvəllər məktəb saatlarından kənar kompüter elmləri
+            dərsini və ya proqramı harada keçirmisiniz? Əgər birdən çox proqramda
+            iştirak etmisinizsə, lütfən, vaxtınızın çoxunu keçirdiyiniz proqramı seçin.
       csp-pre-survey-2017-q40_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Məktəbimdə məktəbdən sonra proqram
+        - text: Məktəbdən sonra başqa yerdə proqram (məsələn, Oğlanlar və Qızlar Klubu
+            və s.)
+        - text: Onlayn proqram
+        - text: Yay proqramı/kampı
         - text: Digər
-        - {}
+        - text: Məktəbdən kənar heç komputer elmləri ilə məşqul olmamışam.
         questions:
-        - {}
+        - text: Əgər belədirsə, siz əvvəllər məktəb saatlarından kənar kompüter elmləri
+            dərsini və ya proqramı harada keçirmisiniz? Əgər birdən çox proqramda
+            iştirak etmisinizsə, lütfən, vaxtınızın çoxunu keçirdiyiniz proqramı seçin.
       csp-pre-survey-2017-q4_2018:
         answers:
         - {}
@@ -11652,7 +11689,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q4_2021:
         answers:
         - {}
@@ -11663,7 +11700,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q4_2022:
         answers:
         - {}
@@ -11674,7 +11711,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q5:
         answers:
         - {}
@@ -11685,7 +11722,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki insanlar nəyisə yaxşı bacardığımı görürlər.
       csp-pre-survey-2017-q5_2018:
         answers:
         - {}
@@ -11696,7 +11733,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki insanlar nəyisə yaxşı bacardığımı görürlər.
       csp-pre-survey-2017-q6:
         answers:
         - {}
@@ -11707,7 +11744,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csp-pre-survey-2017-q6_2018:
         answers:
         - {}
@@ -11718,7 +11755,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim kimi insanlar üçün məktəbimə qəbul olmaq çətindir.
       csp-pre-survey-2017-q7:
         answers:
         - {}
@@ -11729,7 +11766,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki digər şagirdlər mənim fikirlərimi ciddi qəbul edirlər.
       csp-pre-survey-2017-q7_2018:
         answers:
         - {}
@@ -11740,7 +11777,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdəki digər şagirdlər mənim fikirlərimi ciddi qəbul edirlər.
       csp-pre-survey-2017-q8:
         answers:
         - {}
@@ -11751,7 +11788,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csp-pre-survey-2017-q8_2018:
         answers:
         - {}
@@ -11762,7 +11799,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbimdə digər şagirdlər kimi mənə də hörmətlə yanaşırlar.
       csp-pre-survey-2017-q9:
         answers:
         - {}
@@ -11773,7 +11810,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-pre-survey-2017-q9_2018:
         answers:
         - {}
@@ -11784,7 +11821,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-pre-survey-2017-q9_2021:
         answers:
         - {}
@@ -11795,7 +11832,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp-pre-survey-2017-q9_2022:
         answers:
         - {}
@@ -11806,7 +11843,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp_unit_assessment_overview:
         content1: Burada təsvir edin
       curriculum-how-challenging:
@@ -11820,10 +11857,10 @@ az-AZ:
         - {}
       curriculum-how-did-you-like-lessons:
         answers:
+        - text: Heçdə
         - {}
         - {}
-        - {}
-        - {}
+        - text: Çox
         - {}
         questions:
         - {}
@@ -12138,7 +12175,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       pre-assessment survey q17:
         answers:
         - {}
@@ -12168,7 +12205,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Düşünürəm ki, bir gün kompüter alimi ola bilərəm.
       pre-assessment survey q2:
         answers:
         - {}
@@ -12188,7 +12225,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Boş vaxtlarımda informatika ilə məşğul oluram.
       pre-assessment survey q21:
         answers:
         - {}
@@ -12224,23 +12261,29 @@ az-AZ:
         - text: Bəli
         - text: Xeyr
         questions:
-        - {}
+        - text: İndiki informatika dərsinizdən əvvəl məktəbdə başqa informatika dərsləri
+            keçmisinizmi?
       pre-assessment survey q26:
         answers:
         - text: Bəli
         - text: Xeyr
         questions:
-        - {}
+        - text: Heç məktəb saatlarından kənarda (məsələn, məktəbdən sonrakı proqramda,
+            onlayn və ya düşərgədə və ya yay proqramında) kompüter elmləri fəaliyyətlərində
+            və ya proqramlarında iştirak etmisinizmi?
       pre-assessment survey q27:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Məktəbimdə məktəbdən sonra proqram
+        - text: Məktəbdən sonra başqa yerdə proqram (məsələn, Oğlanlar və Qızlar Klubu
+            və s.)
+        - text: Onlayn proqram
+        - text: Yay proqramı/kampı
         - text: Digər
         - text: Müvcud deyil
         questions:
-        - {}
+        - text: Əgər belədirsə, siz əvvəllər məktəb saatlarından kənar kompüter elmləri
+            dərsini və ya proqramı harada keçirmisiniz? Əgər birdən çox proqramda
+            iştirak etmisinizsə, lütfən, vaxtınızın çoxunu keçirdiyiniz proqramı seçin.
       pre-assessment survey q28:
         answers:
         - text: '8'
@@ -12268,7 +12311,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən mətəbdə çox yaxşı oxuyuram.
       pre-assessment survey q30:
         answers:
         - {}
@@ -12311,7 +12354,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       pre-assessment survey q7:
         answers:
         - {}
@@ -12344,43 +12387,43 @@ az-AZ:
         - {}
       reasons-took-course:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Onu götürən dostlarım var idi
+        - text: Müəllimi çox bəyənirəm
+        - text: Əyləncəli olacağını düşündüm
+        - text: Kompüter elmləri haqqında daha çox öyrənmək istədim
+        - text: Asan olacağını düşündüm
+        - text: Bunun çətin olacağını düşündüm
+        - text: Sinif mənim məktəbimdə yaxşı nüfuza malikdir
+        - text: Biri məni almağa təşviq etdi
+        - text: Bu, mənim almaq istədiyim başqa bir CS sinfi üçün ilkin şərtdir
+        - text: Tələb olunur, yoxsa mən ona yerləşdirilmişəm.
+        - text: Digər səbəblər qeyd edilməyib
         questions:
-        - {}
+        - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
       reasons-took-course-csd_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Onu götürən dostlarım var idi
+        - text: Müəllimi çox bəyənirəm
+        - text: Əyləncəli olacağını düşündüm
+        - text: Kompüter elmləri haqqında daha çox öyrənmək istədim
+        - text: Asan olacağını düşündüm
+        - text: Bunun çətin olacağını düşündüm
+        - text: Tələb olunur, yoxsa mən ona yerləşdirilmişəm.
+        - text: Digər səbəblər qeyd edilməyib
         questions:
-        - {}
+        - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
       reasons-took-course-csd_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Onu götürən dostlarım var idi
+        - text: Müəllimi çox bəyənirəm
+        - text: Əyləncəli olacağını düşündüm
+        - text: Kompüter elmləri haqqında daha çox öyrənmək istədim
+        - text: Asan olacağını düşündüm
+        - text: Bunun çətin olacağını düşündüm
+        - text: Tələb olunur, yoxsa mən ona yerləşdirilmişəm.
+        - text: Digər səbəblər qeyd edilməyib
         questions:
-        - {}
+        - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
       same-ability:
         answers:
         - {}
@@ -12457,7 +12500,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
       will-be-myself-in-cs_2021:
         answers:
         - {}
@@ -12468,7 +12511,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
       will-be-myself-in-cs_2022:
         answers:
         - {}
@@ -12479,7 +12522,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
       worried-less-capable:
         answers:
         - {}
@@ -12490,7 +12533,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən narahatam ki, başqaları məni kompüter elmində daha az bacarıqlı
+            kimi görəcəklər.
       worried-seen-incapable:
         answers:
         - {}
@@ -12524,8 +12568,12 @@ az-AZ:
         display_name: Sənətçi təcrübəsi
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Sənətçi təcrübəsi
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. Funksiyalar və Rəssamla məşq etməyə davam edin!
       CourseE_Lesson_7_Artist_Practice_2022:
         display_name: Sənətçi təcrübəsi
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. İç-içə döngələr və Rəssamla məşq etməyə davam edin!
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: Burada təsvir edin
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
@@ -12817,14 +12865,24 @@ az-AZ:
         - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Basdığınız pəri daha çox olacaq
+          feedback: Doğru! Basdığınız sprite daha böyük olacaq.
+        - text: Basdığınız sprite daha az olacaq.
+          feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+        - text: Bütün sprites daha çox olacaq.
+          feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+        - text: Bütün qrafik-obyekt az olacaq.
+          feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
         questions:
-        - {}
+        - text: 'Proqnoz verin: Run düyməsini basdıqdan sonra, spritlərdən birinə
+            basdığınız zaman nə olacaq?'
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Sprite Lab Tətbiqləri
+        description: 'Bu layihələrin hamısı Sprite Lab ilə yaradılmışdır. Nəyin mümkün
+          olduğunu görmək üçün onları indi sınayın. Bu kursun sonunda siz bu kimi
+          öz layihələrinizi edə biləcəksiniz... və daha çoxunu!
+
+'
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}
@@ -12865,6 +12923,7 @@ az-AZ:
         - text: Bir təyyarə birinci, digəri isə daha sonra hərəkət edəcək.
           feedback: Səhv. Sprite Lab-də kodun hər bir bloku növbəti dəfə dərhal başlayır.
         - text: Təyyarələr qırılacaq.
+          feedback: Yalnış. Təyyarələr bir-birinə toxunacaq vəziyyətdə yerləşdirilməyib.
         questions:
         - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_text_practice2022_2022_pilot_-2022-2:
@@ -12945,3 +13004,129 @@ az-AZ:
             və bu xətaya səbəb olur.
         questions:
         - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Bu günə qədər böyük iş! Növbəti dərsinizi seçin. Mümkün qədər
+          tamamlayın. Hadisələr və sprites qrupları ilə təcrübə saxlamaq!
+        display_name: Sprites Çox Tətbiq Olunur
+      csp-pre-survey-2017 preamble 1:
+        markdown: |-
+          ### **Bu sorğu anonimdir**
+
+          * Bu sorğu 5 qısa hissədən ibarətdir.
+          * Hər şeyi tamamlamaq **10 dəqiqə və ya daha az** çəkməlidir.
+
+          *Code.org məxfiliyinizə çox ciddi yanaşır.* Buradakı cavablarınız **anonim** saxlanılacaq. Heç kim, hətta müəlliminiz də cavablarınızı bir fərd olaraq sizinlə əlaqələndirə bilməz.
+
+          Biz bunu ona görə edirik ki, sizdən **mümkün qədər açıq və dürüst olmaq** istəyirik. Kursdakı təcrübənizə əhəmiyyət veririk və dediklərinizə əsasən təkmilləşdirmələr edirik.
+
+          ***
+
+          ### 1-ci hissə: Ümumilikdə məktəb
+
+          #### *İlk olaraq sizdən ümumiyyətlə məktəb haqqında fikir və hisslərinizi soruşmaq istəyirik.*
+        teacher_markdown: |-
+          Ən yaxşı təcrübə tələbələrə hər hansı sinif fəaliyyəti ilə məşğul olmamışdan **əvvəl** bu sorğunu doldurmaq imkanı verməkdir. Əksər müəllimlər bunu ilkin sinif texnologiyasının qurulması gününün bir hissəsi kimi edirlər.
+
+          Siz tələbələriniz üçün sorğunun anonim nəticələrini görə biləcəksiniz.
+
+          Bu sorğu niyə buradadır?
+          * CS Discoveries-in əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
+          * Buna görə də, kurs bitdikdən sonra baş verən dəyişikliyin miqdarını ölçə bilməmiz üçün kursdan əvvəl tələbələrin kompüter elmləri ilə bağlı münasibət və inancları haqqında fikir sahibi olmaq çox vacibdir.
+          * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
+
+
+          * Zəhmət olmasa, tələbələrinizin bu mühüm məlumat dəstinə töhfə verməsinə kömək edin. Onların səsləri fərq yaradır!
+      csp-pre-survey-2017 preamble 1_2018:
+        markdown: |-
+          ### **Bu sorğu anonimdir**
+
+          * Bu sorğu 5 qısa hissədən ibarətdir.
+          * Hər şeyi tamamlamaq **10 dəqiqə və ya daha az** çəkməlidir.
+
+          *Code.org məxfiliyinizə çox ciddi yanaşır.* Buradakı cavablarınız **anonim** saxlanılacaq. Heç kim, hətta müəlliminiz də cavablarınızı bir fərd olaraq sizinlə əlaqələndirə bilməz.
+
+          Biz bunu ona görə edirik ki, sizdən **mümkün qədər açıq və dürüst olmaq** istəyirik. Kursdakı təcrübənizə əhəmiyyət veririk və dediklərinizə əsasən təkmilləşdirmələr edirik.
+
+          ***
+
+          ### 1-ci hissə: Ümumilikdə məktəb
+
+          #### *İlk olaraq sizdən ümumiyyətlə məktəb haqqında fikir və hisslərinizi soruşmaq istəyirik.*
+        teacher_markdown: |-
+          Ən yaxşı təcrübə tələbələrə hər hansı sinif fəaliyyəti ilə məşğul olmamışdan **əvvəl** bu sorğunu doldurmaq imkanı verməkdir. Əksər müəllimlər bunu ilkin sinif texnologiyasının qurulması gününün bir hissəsi kimi edirlər.
+
+          Siz tələbələriniz üçün sorğunun anonim nəticələrini görə biləcəksiniz.
+
+          Bu sorğu niyə buradadır?
+          * CS Discoveries-in əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
+          * Buna görə də, kurs bitdikdən sonra baş verən dəyişikliyin miqdarını ölçə bilməmiz üçün kursdan əvvəl tələbələrin kompüter elmləri ilə bağlı münasibət və inancları haqqında fikir sahibi olmaq çox vacibdir.
+          * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
+
+
+          * Zəhmət olmasa, tələbələrinizin bu mühüm məlumat dəstinə töhfə verməsinə kömək edin. Onların səsləri fərq yaradır!
+      csp-pre-survey-2017 preamble 2 cs in general_2018:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, ümumiyyətlə, Kompüter Elmləri haqqında fikir və hisslərinizi soruşmaq istərdik.*
+
+          ***
+      csp-pre-survey-2017 preamble 3 this class:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, kompüter, Kompüter Elmləri haqqında fikir və hiss soruşmaq istəyirik.*
+
+          ***
+      csp-pre-survey-2017 preamble 3 this class_2018:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, kompüter, Kompüter Elmləri haqqında fikir və hiss soruşmaq istəyirik.*
+
+          ***
+      csp-pre-survey-2017 preamble 3 this class_2019:
+        markdown: |-
+          # Ümumilikdə Kompüter Elmləri
+
+          ### *Sonra, kompüter, Kompüter Elmləri haqqında fikir və hiss soruşmaq istəyirik.*
+
+          ***
+      csp-pre-survey-2017 preamble 4 the future:
+        markdown: |-
+          ### 4-cü hissə: Sizin gələcəyiniz və başqaları
+
+          #### *Sonra sizdən gələcək və kompüter elminə başlayanlar haqqında fikir və hisslərinizi soruşuruq*
+
+          ***
+      csp-pre-survey-2017 preamble 4 the future_2018:
+        markdown: |-
+          ### 4-cü hissə: Sizin gələcəyiniz və başqaları
+
+          #### *Sonra sizdən gələcək və kompüter elminə başlayanlar haqqında fikir və hisslərinizi soruşuruq*
+
+          ***
+      csp-pre-survey-2017 preamble 5 demographics:
+        markdown: |-
+          ### 5-ci Hissə: Bitirmə
+
+          #### *Nəhayət, kompüter elmləri ilə bağlı məlumatınız haqqında bir neçə qısa sualımız var*
+
+          ***
+      csp-pre-survey-2017 preamble 5 demographics_2018:
+        markdown: |-
+          ### 5-ci Hissə: Bitirmə
+
+          #### *Nəhayət, kompüter elmləri ilə bağlı məlumatınız haqqında bir neçə qısa sualımız var*
+
+          ***
+      csp-pre-survey-2017-q36-preamble:
+        markdown: |-
+          ***
+
+          #### Əgər kompüter elmində daha az bacarıqlı görünməkdən narahatsınızsa, sizi bu cür hiss edən nədir?
+      csp-pre-survey-2017-q36-preamble_2018:
+        markdown: |-
+          ***
+
+          #### Əgər kompüter elmində daha az bacarıqlı görünməkdən narahatsınızsa, sizi bu cür hiss edən nədir?

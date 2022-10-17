@@ -5472,6 +5472,17 @@ ar:
               display_name: محتوى
             lessonGroup-5:
               display_name: استبيان
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: مختبر Java
+            lesson-6:
+              name: الحلقات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: استبيان
+            lessonGroup-3:
+              display_name: محتوى
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

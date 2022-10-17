@@ -4576,7 +4576,9 @@
         "courseF_groups_touch_-2022-2": "Dale a cada sprite un comportamiento cuando se pulse sobre él.",
         "courseF_variables2_change_-2022-2": "Construye un programa que cambie el valor de una variable con el tiempo. Haz que el sprite diga el nuevo valor cuando cambie.",
         "courseF_variables2_click_-2022-2": "Cambia el valor de una variable cada vez que se pulsa sobre un sprite. Haz que el sprite diga el nuevo valor cada vez que cambie.",
-        "courseF_variables2_set_-2022-2": "Establece una variable con cualquier número y haz que tu sprite diga ese número almacenado."
+        "courseF_variables2_set_-2022-2": "Establece una variable con cualquier número y haz que tu sprite diga ese número almacenado.",
+        "U2L5 NetSim Classroom Internet": "Para esta actividad, conéctate a un router con los demás miembros de tu grupo. El Simulador de Internet ofrece ahora un lugar para que pongas las direcciones \"Para\" y \"De\", para que no tengas que escribir los bits manualmente.",
+        "U2L7 NetSim Need for Packets": "Transfiere tu favicon a un compañero a través de una red en la que cuanto más grande es un paquete, más probable es que se caiga."
       }
     }
   }

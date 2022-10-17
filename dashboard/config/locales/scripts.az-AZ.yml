@@ -3274,6 +3274,8 @@ az:
               display_name: Məzmun
         hello-world-csc:
           title: Salam Dünya
+        csd-playground:
+          name: csd-oyun meydançası
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3328,6 +3330,7 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: 1 -ci hissənin tədrisinə hazırlıq
+          title: AI və Maşın Öyrənməsinin tədrisi
         soccer:
           name: futbol
         csa1-validation-pilot-2022:
@@ -3366,6 +3369,17 @@ az:
               display_name: Məzmun
             lessonGroup-5:
               display_name: Sorğu
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: dövrlər
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sorğu
+            lessonGroup-3:
+              display_name: Məzmun
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3387,6 +3401,7 @@ az:
               display_name: 1-ci Fəsil
             lessonGroup-3:
               display_name: 2-ci Fəsil
+          title: Fiziki Hesablama
         csd7-2023:
           lesson_groups:
             lessonGroup-2:

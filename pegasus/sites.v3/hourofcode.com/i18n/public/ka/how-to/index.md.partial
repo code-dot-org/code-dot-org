@@ -113,7 +113,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 აუხსენით მოსწავლეებს, რა უნდა გააკეთონ
 
-- დაწერეთ ტუტორიალის ბმული დაფაზე. ბმული შეგიძლიათ ნახოთ [ტუტორიალის აღწერაში]({{ urls/learn }}).
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 როცა მოსწავლეები რამე სირთულეს გადააწყდებიან, კარგი იქნება, თუ უპასუხებთ:
 
@@ -140,7 +140,6 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 - [დაბეჭდეთ სერტიფიკატები]({{ urls/certificates }}) თქვენი მოსწავლეებისთვის.
 - [დაბეჭდეთ „მე გავიარე კოდის ერთი საათი!“]({{ urls/promote_stickers }}) სტიკერები თქვენი მოსწავლეებისათვის.
-- [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი სკოლისთვის.
 - გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეოები სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg — ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 * * *
@@ -154,6 +153,6 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 ### რა ხდება კოდის ერთი საათის შემდეგ?
 
-კომპიუტერული მეცნიერება არ მთავრდება კოდის ერთი საათით! ჩვენი კურიკულუმი არის ონლაინ და უფასოა, სამუდამოდ. [გაიგეთ](/beyond), როგორ შეგიძლიათ დანერგოთ კომპიუტერული მეცნიერება თქვენს კლასსა და სკოლაში.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

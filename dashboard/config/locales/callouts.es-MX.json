@@ -2792,10 +2792,13 @@
           "CSDU6L10_rainbow": "Agrega tu código aquí"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "CSD U6L9.7 - if-statement": "Añade tu if-statement aquí"
+          "CSD U6L9.7 - if-statement": "Añade tu if-statement aquí",
+          "CSD U6L9.7 - variable": "Obtén el valor del menú desplegable aquí"
         },
         "CSD U6 - If Variables - A_2222": {
-          "U6L6.4 - If": "Añade tu if-statement aquí"
+          "U6L6.4 - If": "Añade tu if-statement aquí",
+          "U6L6.4 - Variable": "Define tu variable aquí",
+          "U6L6.4 - Counter": "Incrementa tu variable aquí"
         },
         "CSD games sidescroll background_2022": {
           "CSD_U3_L11_S17_C1": "Observa esta sentencia si"
@@ -3278,6 +3281,19 @@
         },
         "courseF_groups_size_-2022-2": {
           "mini-toolbox-blue-button": "Pulsa el botón azul para abrir o cerrar."
+        },
+        "CSD U6 - Color LEDs - CA_2222": {
+          "CSD U6L7.8b - toggle": "Utiliza tu variable aquí",
+          "CSD U6L7.8b - counter": "¡Incrementa tu variable aquí!"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "CSD U6L10.7 - colorVar": "Crea tu variable aquí",
+          "CSD U6L10.7 - brightnessVar": "Crea tu variable aquí",
+          "CSD U6L10.7 - leftIf": "Ilumina el lado izquierdo de la placa",
+          "CSD U6L10.7 - rightIf": "Ilumina el lado derecho de la placa"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "CSD U6L10.2 - add_code": "¡Añade tu código aquí!"
         }
       }
     }

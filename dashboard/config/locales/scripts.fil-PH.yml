@@ -3614,6 +3614,15 @@ fil:
           lesson_groups:
             lessonGroup-5:
               display_name: Pagsisiyasat
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Mga loop
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagsisiyasat
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

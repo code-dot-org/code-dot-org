@@ -5,7 +5,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "storylab"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -35,32 +36,55 @@
     "long_instructions": "**Time to decorate your book cover.** \r\n \r\n##Do This\r\n- Drag a `set background` to block and connect it under when run. \r\n- Choose a background that fits with the theme of your book.",
     "instructions_icon": "bear",
     "name_suffix": "_-wonder",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-09-30T16:38:09.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-30T16:38:09.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:09.420+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_background\\\"\"],\"cloned_from\":\"csc_bookcover_background\"},{\"changed_at\":\"2022-09-30 17:30:11 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-30 17:33:49 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-30 17:35:01 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-30 17:38:22 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-30 17:39:00 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:09.420+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_background\\\"\"],\"cloned_from\":\"csc_bookcover_background\"},{\"changed_at\":\"2022-09-30 17:30:11 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-30 17:33:49 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-30 17:35:01 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-30 17:38:22 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-30 17:39:00 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:06:33 +0000\",\"changed\":[\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:19:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-13 16:50:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-13 16:50:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-13 16:52:26 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-13 16:54:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="storylab_setHeading">
+              <value name="HEADING">
+                <block type="text">
+                  <field name="TEXT">Holes</field>
+                </block>
+              </value>
+              <next>
+                <block type="storylab_setSubheading">
+                  <value name="SUBHEADING">
+                    <block type="text">
+                      <field name="TEXT">Louis Sachar</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_showTitleScreen">
-          <value name="TITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT">Holes</field>
             </block>
           </value>
-          <value name="SUBTITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT">Louis Sachar</field>
             </block>
           </value>
         </block>

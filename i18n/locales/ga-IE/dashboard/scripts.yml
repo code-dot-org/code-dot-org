@@ -2575,6 +2575,15 @@ ga:
               display_name: Ábhar
             lessonGroup-5:
               display_name: Suirbhé
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Lúba
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Suirbhé
+            lessonGroup-3:
+              display_name: Ábhar
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

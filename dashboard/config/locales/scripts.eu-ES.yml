@@ -1072,3 +1072,7 @@ eu:
               display_name: Aldagaiak
         soccer:
           name: futbola
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Itzuliak

@@ -6985,6 +6985,18 @@ pl:
           description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc
             odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
         csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Pętle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ankieta
+            lessonGroup-3:
+              display_name: Treści
+            lessonGroup-4:
+              display_name: Pokaż, co wiesz
           name: csa1-2023
           title: Programowanie obiektowe
         csa2-2023:
@@ -7030,6 +7042,8 @@ pl:
               display_name: Rozdział 1
             lessonGroup-3:
               display_name: Rozdział 2
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
           title: Rozwiązywanie problemów
         csd2-2023:
           lesson_groups:
@@ -7051,6 +7065,7 @@ pl:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
             lessonGroup-3:
               display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          title: Dane i społeczeństwo
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7077,3 +7092,19 @@ pl:
               display_name: 'Rozdział 1: Dane i wyniki'
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          name: physcomp-temp
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: Okładka
+          name: csc-bookcover
+          title: Okładka CSC
+          description: jest to wewnętrzny skrypt jako źródło prawdy dla tej lekcji,
+            który zostanie ponownie wykorzystany w innych modułach CSC.
+        csc-landmarks-pilot:
+          lessons:
+            lesson-1:
+              name: Zabytki USA
+          name: csc-landmarks-pilot
+          description: Moduł pilotażowy zima 2022 r. – Moduł historycznych zabytków
+            i punktów orientacyjnych na mapie

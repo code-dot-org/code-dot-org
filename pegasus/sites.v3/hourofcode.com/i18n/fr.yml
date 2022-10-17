@@ -36,7 +36,7 @@ fr:
   africa_campaign_date_full: Du 1er octobre au 18 décembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
-  hoc2022_header: Explorez, jouez, créez !
+  hoc2022_header: Explores, joues, crées !
   social_hoc2022_explore_play_create: Utilisez l'informatique pour découvrir, jouer
     et créer !
   codeorg_homepage_hoc2022_body: 'Explorez l''univers, marquez un but, bougez : il
@@ -652,7 +652,7 @@ fr:
     all ages.
   map_title: Mappe de l'Heure du Code
   map_header: "# évènements Une Heure de Code dans le monde"
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{event_count} événements enregistrés en %{year}"
   see_all_events: Voir tous les évènements
   map_header_company: "# par les organisateurs de la société"
   map_header_country: "# en %{country}"

@@ -1,11 +1,6 @@
 ---
 title: 'CS Leaders Prize - $1 Million for U.S. Schools'
 theme: responsive
-social:
-  "og:description": "Tell us how your school will expand computer science, and you could win $10,000 to make it happen!"
-  "og:image": "/images/marketing/hoc2022-cs-leaders-prize-opengraph.png"
-  "og:image:width": 1200
-  "og:image:height": 630
 ---
 
 <link href="/css/generated/cs-leaders-prize.css" rel="stylesheet">
@@ -15,7 +10,7 @@ social:
 <header>
   <div>
     <h2>Expand computer science at your school, win $10,000</h2>
-    <p>To help more students access computer science (CS), especially students from underserved communities, we're giving away $1 million in awards — that's right, a MILLION dollars. In partnership with DonorsChoose, this CS Education Week one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
+    <p>To help more students access computer science (CS), especially students from underserved communities, we're partnering with DonorsChoose to award $1 million to U.S. schools — that’s right, a MILLION dollars. This CS Education Week, one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help establish computer science education for their students.</p>
     <a href="#form"><button>Enter to win</button></a>
   </div>
   <div>
@@ -27,15 +22,15 @@ social:
 ## To be eligible a school must commit to:
 
 <ul>
-  <li>Establish a <strong><em>new</em></strong> <a href="/educate/csp">Computer Science Principles</a>, <a href="/educate/csa">Computer Science A</a>, or <a href="/educate/csd">Computer Science Discoveries</a> course using Code.org.</li>
+  <li>Add a <strong><em>new</em></strong> <a href="/educate/csp" target="_blank" rel="noopener noreferrer">Computer Science Principles</a>, <a href="/educate/csa" target="_blank" rel="noopener noreferrer">Computer Science A</a>, or <a href="/educate/csd" target="_blank" rel="noopener noreferrer">Computer Science Discoveries</a> course using Code.org to your course schedule.</li>
   <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
   <li>Provide a short statement of support from district leadership for expanding CS opportunities as a district priority.</li>
-  <li>Organize a school-wide <a href="https://hourofcode.com/">Hour of Code</a> or other event/assembly for <a href="https://www.csedweek.org/">CSEdWeek</a> to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
+  <li>Organize a school-wide <a href="https://hourofcode.com/" target="_blank" rel="noopener noreferrer">Hour of Code</a> or other event/assembly for <a href="https://www.csedweek.org/" target="_blank" rel="noopener noreferrer">CSEdWeek</a> to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
 </ul>
 
-In addition to the $10,000 awarded to the school to fund a project(s) of the school's creation through DonorsChoose, the implementing teacher(s) in each winning school will receive a no-cost scholarship to attend Code.org's [Professional Learning Program](/educate/professional-learning/middle-high).
+<p>In addition to the $10,000 awarded to the school to fund a project(s) of the school's creation through DonorsChoose, the implementing teacher(s) in each winning school will receive a no-cost scholarship to attend Code.org's <a href="/educate/professional-learning/middle-high" target="_blank" rel="noopener noreferrer">Professional Learning Program</a>.</p>
 
-See <a href="/prize-terms">terms and conditions</a>.
+<p>See <a href="/prize-terms" target="_blank" rel="noopener noreferrer">terms and conditions</a>.</p>
 
 <p>Enter your submission before <strong>November 21, 2022</strong> by filling out this form!</p>
 
@@ -50,7 +45,7 @@ See <a href="/prize-terms">terms and conditions</a>.
   <p>Any public middle or high school in the U.S. is eligible to apply if they make the commitments below. We especially encourage schools in low-income underserved communities to participate, to help advance diversity and equity in computer science.</p>
   <p>To be eligible a school must commit to:</p>
   <ul>
-    <li>Establish a new Computer Science Principles, Computer Science A, or Computer Science Discoveries course using Code.org.</li>
+    <li>Add a new Computer Science Principles, Computer Science A, or Computer Science Discoveries course using Code.org to your course schedule.</li>
     <li>Describe how you plan to continue expanding access to CS in your school and/or district.</li>
     <li>Provide a short statement of support from district leadership for expanding of CS opportunities as a district priority.</li>
     <li>Organize a school-wide Hour of Code or other event/assembly for CSEdWeek to inspire students to explore CS and to encourage diverse participation by historically underrepresented groups.</li>
@@ -60,7 +55,7 @@ See <a href="/prize-terms">terms and conditions</a>.
 
 <details>
   <summary>Why is this only available to public schools?</summary>
-  <p>We would love to help teachers in public and private schools alike, but at this time, it comes down to logistics. We have partnered with DonorsChoose to administer classroom funding prizes, which only works with public, US K-12 schools. According to DonorsChoose, the organization is better able to access consistent and accurate data that's available for public schools.</p>
+  <p>We love teachers in public and private schools alike, but for this opportunity it comes down to logistics. We have partnered with DonorsChoose to administer classroom funding prizes, which is currently exclusively focused on serving public, U.S. PreK-12 schools. See full DonorsChoose school eligibility <a href="https://help.donorschoose.org/hc/en-us/articles/202138393-Which-schools-can-use-DonorsChoose-" target="_blank" rel="noopener noreferrer">here</a>.</p>
 </details>
 
 <details>
@@ -90,5 +85,5 @@ See <a href="/prize-terms">terms and conditions</a>.
 
 <details>
   <summary>Are there any restrictions to how my school uses the DonorsChoose gift code?</summary>
-  <p>View <a href="https://help.donorschoose.org/hc/en-us/articles/203895786-Project-eligibility-requirements">project eligibility requirements</a> on <a href="https://donorschoose.org">DonorsChoose</a>.</p>
+  <p>View <a href="https://help.donorschoose.org/hc/en-us/articles/203895786-Project-eligibility-requirements" target="_blank" rel="noopener noreferrer">project eligibility requirements</a> on <a href="https://donorschoose.org" target="_blank" rel="noopener noreferrer">DonorsChoose</a>.</p>
 </details>

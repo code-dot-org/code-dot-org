@@ -377,7 +377,8 @@ tr:
       about: "Hakkında"
       legal: "Gizlilik & Hukuk"
       legal_privacy: "Gizlilik Politikası"
-      legal_tos: "Şartlar"
+      legal_cookie_notice: "Çerez Bildirimi"
+      legal_tos: "Hizmet Şartları"
     user:
       classroom: 'Öğretmen ana sayfa'
       district_dashboard: 'Kontrol Paneli Bölgesi'
@@ -594,7 +595,7 @@ tr:
     support: 'Yardım ve Topluluk'
     support_url: 'http://support.code.org'
     tos_short: 'Koşullar'
-    tos: 'Şartlar'
+    tos: 'Hizmet Şartları'
     privacy: 'Gizlilik Politikası'
     privacy_updated: 'Gizlilik Politikası (güncellendi)'
     secure: 'Güvenli sürüm'
@@ -829,7 +830,7 @@ tr:
     intro_desc: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
     intro_desc_markdown: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: _Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz._ Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
     intro_instructions: "Kod Studio tüm son özelliklerine tam erişim sınıfında 13 yaşın altındaki öğrenciler için bu yeni şartları kabul gerekir.  13 yaşından küçük bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere okul parası için ebeveyn izni olduğundan emin olun istenecektir."
-    tos: "Şartlar"
+    tos: "Hizmet Şartları"
     privacy: "Gizlilik Politikası"
     privacy_notice: "Gizlilik Politikası"
     accept_label: 'Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik politikasını</a> kabul ediyorum'

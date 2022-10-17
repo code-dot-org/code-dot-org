@@ -335,7 +335,7 @@
           "definition": ""
         },
         "algorithm/coursed/2022": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "program/coursed/2022": {
@@ -403,16 +403,16 @@
           "definition": ""
         },
         "sprite/coursef/2022": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "user/coursef/2022": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
         },
         "algorithm/coursef/2022": {
-          "word": "",
-          "definition": ""
+          "word": "الگورینم",
+          "definition": "لیستی از مراحل برای تکمیل یک کار است"
         },
         "behavior/coursef/2022": {
           "word": "",
@@ -500,11 +500,11 @@
         },
         "behavior/coursee/2022": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "sprite/coursee/2022": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "loop/coursee/2022": {
           "word": "",
@@ -559,7 +559,7 @@
           "definition": ""
         },
         "algorithm/courseb/2022": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/courseb/2022": {
@@ -611,7 +611,7 @@
           "definition": ""
         },
         "algorithm/express/2022": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/express/2022": {
@@ -636,11 +636,11 @@
         },
         "behavior/express/2022": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "sprite/express/2022": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/express/2022": {
           "word": "",
@@ -727,7 +727,7 @@
           "definition": ""
         },
         "algorithm/pre-express/2022": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/pre-express/2022": {
@@ -763,7 +763,7 @@
           "definition": ""
         },
         "algorithm/coursea/2022": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "debugging/coursea/2022": {
@@ -811,7 +811,7 @@
           "definition": ""
         },
         "algorithm/coursec/2022": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/coursec/2022": {
@@ -947,7 +947,7 @@
           "definition": ""
         },
         "sprite/csd/2022": {
-          "word": "",
+          "word": "اسپریت (Sprite)",
           "definition": ""
         },
         "boolean_expression/csd/2022": {
@@ -1031,8 +1031,8 @@
           "definition": ""
         },
         "user/csd/2022": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
         },
         "usability/csd/2022": {
           "word": "",
@@ -1127,24 +1127,24 @@
           "definition": ""
         },
         "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
         },
         "behavior/coursef/2021": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "program/coursef/2021": {
           "word": "",
           "definition": ""
         },
         "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "الگورینم",
+          "definition": "لیستی از مراحل برای تکمیل یک کار است"
         },
         "event/coursef/2021": {
           "word": "",
@@ -1235,7 +1235,7 @@
           "definition": ""
         },
         "algorithm/courseb/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/courseb/2021": {
@@ -1287,7 +1287,7 @@
           "definition": ""
         },
         "algorithm/coursea/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "debugging/coursea/2021": {
@@ -1335,7 +1335,7 @@
           "definition": ""
         },
         "algorithm/coursec/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/coursec/2021": {
@@ -1375,7 +1375,7 @@
           "definition": ""
         },
         "algorithm/coursed/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "program/coursed/2021": {
@@ -1443,7 +1443,7 @@
           "definition": ""
         },
         "algorithm/express/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/express/2021": {
@@ -1468,11 +1468,11 @@
         },
         "behavior/express/2021": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "sprite/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/express/2021": {
           "word": "",
@@ -1559,7 +1559,7 @@
           "definition": ""
         },
         "algorithm/pre-express/2021": {
-          "word": "",
+          "word": "الگورینم",
           "definition": ""
         },
         "bug/pre-express/2021": {
@@ -1596,15 +1596,15 @@
         },
         "behavior/coursee/2021": {
           "word": "",
-          "definition": ""
+          "definition": "عملی که یک اسپرابت sprite به طور مداوم انجام می دهد تا زمانی که به آن گفته شود متوقف شود."
         },
         "algorithm/coursee/2021": {
           "word": "",
           "definition": ""
         },
         "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اسپریت (Sprite)",
+          "definition": "یک تصویر گرافیکی روی صفحه نمایش با مکان، اندازه و ظاهر."
         },
         "event/coursee/2021": {
           "word": "",
@@ -1707,8 +1707,8 @@
           "definition": ""
         },
         "user/csd/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کاربر",
+          "definition": "شخصی که از یک شی، از جمله نرم افزار و سخت افزار استفاده می کند."
         },
         "usability/csd/2021": {
           "word": "",
@@ -1807,7 +1807,7 @@
           "definition": ""
         },
         "sprite/csd/2021": {
-          "word": "",
+          "word": "اسپریت (Sprite)",
           "definition": ""
         },
         "dot_notation/csd/2021": {

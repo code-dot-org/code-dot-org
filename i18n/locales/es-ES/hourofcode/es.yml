@@ -38,8 +38,8 @@ es:
   hoc2022_header: "¡Explora, Juega, Crea!"
   social_hoc2022_explore_play_create: Utiliza la informática para explorar, jugar
     y crear.
-  codeorg_homepage_hoc2022_body: 'Explorar el universo, marcar un gol, hacer un movimiento:
-    hay muchas maneras de probar la informática.'
+  codeorg_homepage_hoc2022_body: 'Explorar el universo, marcar un gol, crear tu propia
+    coreografía: hay muchas maneras de probar la informática.'
   social_hoc2021_cse: 'Durante la #HourOfCode, estamos celebrando #CSEverywhere. ¡Descubre
     las conexiones!'
   hoc2020_header: Aprende hoy, construye un futuro mejor.
@@ -1256,7 +1256,7 @@ es:
   tutorial_bbcphys_name: Programación + física de Bitsbox
   tutorial_bitsbox_name: Crear aplicaciones locas con Bitsbox
   tutorial_tlcemo_name: 'Máquina de emociones: tarjeta de crear una cara'
-  tutorial_crd_name: Condicionales con Cartas
+  tutorial_crd_name: Condicionales con naipes
   tutorial_bbcbio_name: Programación + biología de Bitsbox
   tutorial_ticklebb8_name: BB-8 Swing
   tutorial_grok_name: Aprendizaje de Grok

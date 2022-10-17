@@ -16,41 +16,41 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 
 Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
 
-- [លើកទឹកចិត្តបុគ្គលិកឱ្យស្ម័គ្រចិត្តនៅក្នុងថ្នាក់រៀន](#encourage-employees)
-- [ភ្ជាប់ក្រុមហ៊ុនរបស់អ្នកជាមួយសាលារៀន](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [រៀបចំកម្មវិធី Hour of Code ផ្ទាល់ខ្លួនរបស់អ្នក](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
 - [វិធីជាច្រើនទៀតដើម្បីគាំទ្រដល់ Hour of Code](#support-hour-of-code)
 
 * * *
 
+<a id="connect-with-a-school"></a>
+
+## Connect with a local school
+
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
+
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
 <a id="encourage-employees"></a>
 
-## លើកទឹកចិត្តបុគ្គលិកឱ្យស្ម័គ្រចិត្តនៅក្នុងថ្នាក់រៀន
+## Encourage employees to volunteer with a classroom
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
 For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
-
-* * *
-
-<a id="connect-with-a-school"></a>
-
-## ភ្ជាប់ក្រុមហ៊ុនរបស់អ្នកជាមួយសាលារៀន
-
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
-
-[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
-
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
-
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
 
 * * *
 
@@ -83,7 +83,6 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 - ពន្យល់វិធីដែលបច្ចេកវិទ្យាជះឥទ្ធិពលដល់ជីវិតរបស់យើងជាមួយឧទាហរណ៍ដែលសិស្សគ្រប់មជ្ឈដ្ឋាននឹងយកចិត្តទុកដាក់ - និយាយអំពីបច្ចេកវិទ្យាដែលជួយសង្គ្រោះជីវិតជួយមនុស្សនិងការភ្ជាប់ទំនាក់ទំនងមនុស្ស។
 - ប្រសិនបើអ្នកជាក្រុមហ៊ុនបច្ចេកវិទ្យាការបង្ហាញផលិតផលច្នៃប្រឌិតថ្មីបែបសប្បាយៗដែលក្រុមហ៊ុនរបស់អ្នកកំពុងធ្វើការ។ ប្រសិនបើអ្នកមិនមែនជាក្រុមហ៊ុនបច្ចេកវិទ្យាទេចូរពិភាក្សាគ្នាអំពីវិធីដែលក្រុមហ៊ុនរបស់អ្នកប្រើបច្ចេកវិទ្យាដើម្បីដោះស្រាយបញ្ហានិងសម្រេចគោលដៅ។
 - អញ្ជើញ software engineers ពីក្រុមហ៊ុនរបស់អ្នកឱ្យនិយាយអំពីមូលហេតុដែលពួកគេសម្រេចចិត្តសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រនិងគម្រោងដែលពួកគេធ្វើការ។
-- ប្រសិនបើអ្នកមានក្រុមបុគ្គលិកដែលនឹងជួយសម្រួលដល់កម្មវិធី ឬការស្ម័គ្រចិត្តរបស់អ្នកជាមួយសាលារៀនក្នុងតំបន់ សូមពិចារណាក្នុងការបញ្ជាទិញ [អាវយឺត](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) សំរាប់បុគ្គលិករបស់អ្នក។ 
 
 ### 3. រៀបចំផែនការតម្រូវការបច្ចេកវិទ្យារបស់អ្នក 
 
@@ -163,7 +162,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 - បើសិនជាបន្ទាត់កូដដំបូងរបស់អ្នក ផ្លាស់ប្តូរជីវិតរបស់អ្នក សូមជួយកូនសិស្សដែលនៅក្បែរអ្នក សរសេរបន្ទាត់កូដដំបូងរបស់គេផង #HourOfCode https://code.org/volunteer
 - ប្រសិនបើអ្នករៀនសរសេរកូដ—តើរឿងរ៉ាវរបស់អ្នកដូចម្តេចដែរ? ជម្រុញសិស្សដែលនៅក្បែរអ្នក តាមរយៈ #HourOfCode ដំបូងរបស់ពួកគេ https://code.org/volunteer 
 
-<a href="https://hourofcode.com/promote/resources#posters">ស្វែង​យល់​បន្ថែម</a> អំពី ផ្ទាំងរូបភាព វីដេអូ ផ្ទាំងបិទ និងវិធីផ្សេងៗទៀតដើម្បីផ្សព្វផ្សាយកម្មវិធីរបស់អ្នកដល់សហគមន៍របស់អ្នក។ 
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

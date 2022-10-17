@@ -5641,6 +5641,39 @@
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "Pizzaya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\nblok"
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Bir dairənin 360 dərəcəsi var. Növbənizdəki dərəcələri təkrar etdiyiniz sayı ilə çarpın. 360-a bərabərdir?\nBunun işlədiyini görmək üçün təklif olunan fırlanmaları yoxlayın!\n\nBaşlamağınız üçün bəzi nümunələr:\n\n-   6 dəfə 60 dərəcə dönməyə çalışın\n-   8 dəfə 45 dərəcə dönməyə çalışın\n-   12 dəfə 30 dərəcə dönməyə çalışın"
+        },
+        "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Bunu asanlıqla etmək üçün:\n\n- 4 dəfə təkrarlayın\n   - bir dairə düzəldin\n   - 50 piksel irəli atlama\n   - 90 dərəcə sağa dönün"
+        },
+        "courseD_artist_nestedLoops72022": {
+          "courseD_artist_nestedLoops7_b": "Daxili döngənin kvadratın kodu olduğu bir iç-içə döngədən istifadə edin.\n\n- 6 dəfə təkrarlayın\n   - kvadrat düzəldin\n   - **50 piksel** irəli atlayın\n   - dönmək **60 dərəcə**"
+        },
+        "courseD_artist_nestedLoops82022": {
+          "courseD_artist_nestedLoops8_c": "İç-içə döngədən istifadə edin:\n\n   - 8 dəfə təkrarlayın\n     - altıbucaqlı çəkin\n     - 50 piksel irəli atlama\n     - 45 dərəcə sağa dönün"
+        },
+        "courseD_artist_nestedLoops92022": {
+          "courseD_artist_nestedLoops9_c": "İki iç-içə döngədən istifadə edin:\n   - 8 dəfə təkrarlayın\n     - kvadrat çəkin\n     - 50 piksel irəli atlama\n     - 45 dərəcə sağa dönün\n   - 8 dəfə təkrarlayın\n     - üçbucaq çəkin\n     - 50 piksel irəli atlama\n     - 45 dərəcə sağa dönün"
+        },
+        "courseF_groups_behaviors_-2022-2": {
+          "groups_click_hint": "Siz blok hadisələr lazımdır. \"Run\" basaraq sonra sprites basın əmin olun!\"\n\n\\[[Block blok] [0]",
+          "groups_behavior_hint": "\"Sprite başlayır\" blokunun bir blok \"tıklayan\" əlavə edin. Davranış əlavə unutmayın!\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_costume_-2022-2": {
+          "groups_click_hint": "Siz blok hadisələr lazımdır. \"Run\" basaraq sonra sprites basın əmin olun!\"\n\n\\[[Block blok] [0]",
+          "groups_costume_hint": "\"Kostyum\" blokuna \"tıklayan\" bloku əlavə edin. Siz hadisə blok daxilində tapa bilərsiniz!\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_say_-2022-2": {
+          "groups_click_hint": "Siz blok hadisələr lazımdır. \"Run\" basaraq sonra sprites basın əmin olun!\"\n\n\\[[Block blok] [0]",
+          "groups_say_hint": "Blok əlavə et \"demək\" blokuna \"tıkladı\". Siz hadisə blok daxilində tapa bilərsiniz!\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_size_-2022-2": {
+          "expand_click_event": "Hadisələr blokunda ' + ' düyməsini basın. Proqram başa çatdırmaq üçün daxili blok istifadə edin.\n\n\\[[Block blok] [0]"
+        },
+        "courseF_groups_touch_-2022-2": {
+          "groups_touch_hint": "Siz blok hadisələr lazımdır. Sizin sprites \"Run\" basaraq sonra toxunmaq qədər gözləyin!\"\n\n\\[[Block blok] [0]"
         }
       }
     }

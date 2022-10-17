@@ -469,6 +469,7 @@ es-MX:
   homepage_banner_40k_teachers_link: Aprende más
   homepage_slot_text_title_hoc: Hora del Código
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comience hoy mismo
+  homepage_slot_text_blurb_hoc_2022: "¡Explora, Juega, Crea!"
   homepage_slot_text_link_hoc: Prueba la Hora del Código
   homepage_slot_text_link_about_hoc: Acerca de la Hora del Código
   homepage_slot_text_link_host: Sea anfitrión de una hora de código
@@ -853,6 +854,7 @@ es-MX:
   volunteer_engineer_submission_distance_16: 10 kilómetros
   volunteer_engineer_submission_distance_24: 15 kilómetros
   volunteer_engineer_submission_distance_32: 20 millas
+  volunteer_engineer_submission_distance_80: 80 kilómetros
   volunteer_engineer_submission_num_volunteers_5: 5 voluntarios
   volunteer_engineer_submission_num_volunteers_10: 10 voluntarios
   volunteer_engineer_submission_num_volunteers_25: 25 voluntarios

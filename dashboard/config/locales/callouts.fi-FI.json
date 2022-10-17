@@ -672,6 +672,12 @@
         },
         "Underground Iron2022": {
           "craft_what_is_iron": "Louhi tämä rauta!"
+        },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "Käytä \"jos\"-lohkoa päättääksesi pitääkö mehiläisen kerätä nektaria vai tehdä hunajaa"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "Käytä \"jos-muuten\"-lohkoa siten, että mehiläinen kerää mettä kukasta ja tekee hunajaa jos se ei ole kukassa"
         }
       }
     }
