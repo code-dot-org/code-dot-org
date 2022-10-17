@@ -167,7 +167,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options 'level.showEndOfLessonMsgs' is true if script.show_unit_overview_between_lessons? is true" do
-    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns true
+    Unit.any_instance.stubs(:show_unit_overview_between_lessons?).returns true
     @script = create :script
     @lesson = create :lesson
     @level = create :applab
@@ -179,7 +179,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options 'level.showEndOfLessonMsgs' is false if script.show_unit_overview_between_lessons? is false" do
-    Script.any_instance.stubs(:show_unit_overview_between_lessons?).returns false
+    Unit.any_instance.stubs(:show_unit_overview_between_lessons?).returns false
     @script = create :script
     @lesson = create :lesson
     @level = create :applab
