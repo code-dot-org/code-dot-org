@@ -386,6 +386,7 @@ sq:
     no_primary_course: "Provo një kurs të Code Studio"
     choose_next_course: "Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë"
     print_certificate: "Printo Certifikatën"
+  certificate_hour_of_code: "Ora e Kodimit"
   move_students:
     new_section_dne: "Na vjen keq, por seksioni %{new_section_code} nuk ekziston. Ju lutem, jepni një tjetër kod seksioni."
     section_code_cant_be_current_section: "Seksioni aktual nuk mund të jetë i njëjtë me seksionin e ri."

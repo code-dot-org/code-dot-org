@@ -3733,8 +3733,19 @@ sk:
               display_name: Kapitola 1 – Ako funguje strojové učenie
             lessonGroup-3:
               display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Rozšírenie asynchrónneho ladenia
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Asynchrónna práca
         soccer:
           name: futbal
+          title: Nakódujte si svoj vlastný futbalový zápas
+          description_short: Vyrob si futbalový zápas
+          description: Vyrob si futbalový zápas
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -3771,3 +3782,64 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Dotazník
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Cykly
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dotazník
+            lessonGroup-3:
+              display_name: Obsah
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Riešenie problémov
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+          title: Nadizajnuj svoj projekt
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Fyzické výpočty
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Umelá inteligencia a strojové učenie
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'

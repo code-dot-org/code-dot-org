@@ -442,6 +442,7 @@ pt:
       teach: Ensinar
       about: Sobre
       legal_privacy: Política de Privacidade
+      legal_cookie_notice: Aviso sobre Cookies
       legal_tos: Termos de Serviço
     user:
       classroom: Página inicial do professor
@@ -660,6 +661,7 @@ pt:
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
   certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_hour_of_code: Hora do Código
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.

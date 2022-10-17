@@ -7,7 +7,10 @@ import {
   MIN_FONT_SIZE_PX
 } from './editorThemes';
 import {JavalabEditorDialog} from './JavalabEditorDialogManager';
-import {fileMetadataForEditor} from './JavalabFileHelper';
+import {
+  fileMetadataForEditor,
+  updateAllSourceFileOrders
+} from './JavalabFileHelper';
 
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const CLEAR_CONSOLE_LOGS = 'javalab/CLEAR_CONSOLE_LOGS';
@@ -15,6 +18,7 @@ const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
+const SOURCE_FILE_ORDER_UPDATED = 'javalab/SOURCE_FILE_ORDER_UPDATED';
 const SOURCE_TEXT_UPDATED = 'javalab/SOURCE_TEXT_UPDATED';
 const SET_ALL_SOURCES_AND_FILE_METADATA =
   'javalab/SET_ALL_SOURCES_AND_FILE_METADATA';
@@ -58,7 +62,7 @@ const INCREASE_EDITOR_FONT_SIZE = 'javalab/INCREASE_EDITOR_FONT_SIZE';
 const DECREASE_EDITOR_FONT_SIZE = 'javalab/DECREASE_EDITOR_FONT_SIZE';
 
 const initialSources = {
-  'MyClass.java': {text: '', isVisible: true, isValidation: false}
+  'MyClass.java': {text: '', tabOrder: 0, isVisible: true, isValidation: false}
 };
 
 // Exported for test
@@ -147,12 +151,14 @@ export const renameFile = (oldFilename, newFilename) => ({
 export const setSource = (
   filename,
   source,
+  tabOrder,
   isVisible = true,
   isValidation = false
 ) => ({
   type: SET_SOURCE,
   filename,
   source,
+  tabOrder,
   isVisible,
   isValidation
 });
@@ -174,6 +180,10 @@ export const sourceValidationUpdated = (filename, isValidation) => ({
   type: SOURCE_VALIDATION_UPDATED,
   filename,
   isValidation
+});
+
+export const sourceFileOrderUpdated = () => ({
+  type: SOURCE_FILE_ORDER_UPDATED
 });
 
 // Updates the user preferences to reflect change
@@ -268,7 +278,8 @@ export const getSources = state => {
     if (!state.javalab.sources[key].isValidation) {
       sources[key] = {
         text: state.javalab.sources[key].text,
-        isVisible: state.javalab.sources[key].isVisible
+        isVisible: state.javalab.sources[key].isVisible,
+        tabOrder: state.javalab.sources[key].tabOrder
       };
     }
   }
@@ -279,7 +290,10 @@ export const getValidation = state => {
   let validation = {};
   for (let key in state.javalab.sources) {
     if (state.javalab.sources[key].isValidation) {
-      validation[key] = {text: state.javalab.sources[key].text};
+      validation[key] = {
+        text: state.javalab.sources[key].text,
+        tabOrder: state.javalab.sources[key].tabOrder
+      };
     }
   }
   return validation;
@@ -428,6 +442,7 @@ export default function reducer(state = initialState, action) {
     let newSources = {...state.sources};
     newSources[action.filename] = {
       text: action.source,
+      tabOrder: action.tabOrder,
       isVisible: action.isVisible,
       isValidation: action.isValidation
     };
@@ -483,11 +498,40 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
-  if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
+  if (action.type === SOURCE_FILE_ORDER_UPDATED) {
+    let sources = {...state.sources};
+    let orderedTabKeys = state.orderedTabKeys;
+    let fileMetadata = state.fileMetadata;
+    const updatedSources = updateAllSourceFileOrders(
+      sources,
+      fileMetadata,
+      orderedTabKeys
+    );
     return {
       ...state,
-      ...fileMetadataForEditor(action.sources, action.isEditingStartSources),
-      sources: action.sources
+      sources: updatedSources
+    };
+  }
+  if (action.type === SET_ALL_SOURCES_AND_FILE_METADATA) {
+    const {
+      fileMetadata,
+      orderedTabKeys,
+      activeTabKey,
+      lastTabKeyIndex
+    } = fileMetadataForEditor(action.sources, action.isEditingStartSources);
+    const updatedSources = updateAllSourceFileOrders(
+      action.sources,
+      fileMetadata,
+      orderedTabKeys
+    );
+
+    return {
+      ...state,
+      sources: updatedSources,
+      fileMetadata,
+      orderedTabKeys,
+      activeTabKey,
+      lastTabKeyIndex
     };
   }
   if (action.type === SET_ALL_VALIDATION) {

@@ -503,6 +503,7 @@ da:
     no_primary_course: "Prøv et kursusforløb på Code Studio"
     choose_next_course: "Prøv en Code Studio kursus ved at vælge en nedenfor"
     print_certificate: "Udskriv certifikat"
+  certificate_hour_of_code: "Hour of Code"
   move_students:
     new_section_dne: "Beklager, men sektionen %{new_section_code} findes ikke. Indtast venligst en anden sektionskode."
     section_code_cant_be_current_section: "Den nuværende sektion kan ikke blive det samme som den nye sektion."

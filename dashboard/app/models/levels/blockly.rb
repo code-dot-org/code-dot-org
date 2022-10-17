@@ -162,7 +162,7 @@ class Blockly < Level
   end
 
   def self.count_xml_blocks(xml_string)
-    unless xml_string.blank?
+    if xml_string.present?
       xml = Nokogiri::XML(xml_string, &:noblanks)
       # The structure of the XML will be
       # <document>
@@ -286,7 +286,7 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Script.should_cache?) do
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Unit.should_cache?) do
       level_options = blockly_level_options.dup
 
       # For historical reasons, `localized_instructions` and
@@ -809,7 +809,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Unit.should_cache?) do
       SharedBlocklyFunction.where(level_type: shared_function_type).map(&:to_xml_fragment)
     end.join
   end

@@ -2,37 +2,37 @@
 title: Партнеры
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Час кода проводится с участием Наблюдательного комитета Часа кода.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+В [Наблюдательный комитет]({{ urls/review_committee }}) входят 12 текущих и бывших учителей классов K-12, которые оценивают и рекомендуют мероприятия с использованием рубрики, определенной экспертной комиссией. Эти педагоги изучают планы заданий для самостоятельного выполнения и под руководством учителя, предоставленные сотнями партнеров, оценивают образовательную ценность заданий, способность привлечь учащихся и потенциальную привлекательность для различных групп учеников.
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+Работа и самоотверженность комитета способствовали успеху Часа кода и его миссии в расширении доступности знакомства с информатикой для любого ученика.
 
-# Major Partners and Corporate Supporters
+# Основные партнеры и корпоративные спонсоры
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Международные партнеры
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Партнеры по обучающим программам и руководствам
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Партнеры по инфраструктуре и инструментам
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Другие партнеры
 
 {{ partners/additional_partners }}
 

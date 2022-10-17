@@ -343,6 +343,7 @@
   homepage_banner_40k_teachers_link: "Aprende más"
   homepage_slot_text_title_hoc: "Hora del Código"
   homepage_slot_text_blurb_hoc: "Cualquiera puede aprender. Comience hoy mismo"
+  homepage_slot_text_blurb_hoc_2022: "¡Explora, Juega, Crea!"
   homepage_slot_text_link_hoc: "Prueba la Hora del Código"
   homepage_slot_text_link_about_hoc: "Acerca de la Hora del Código"
   homepage_slot_text_link_host: "Sea anfitrión de una hora de código"
@@ -378,6 +379,9 @@
   homepage_below_hero_announcement_link_text: "Aprende más"
   homepage_higher_power_body: "Crea un proyecto con Fiesta de Baile y tendrás la oportunidad de ganar entradas para ver a la banda en vivo."
   homepage_thebadguys_body: "Programa una aventura con Sra. Tarantula, Sr. Wolf, y el resto de Los Tipos Malos!"
+  homepage_csa_subhead: "Un nuevo enfoque para"
+  homepage_csa_title: "AP® Informática A"
+  homepage_csa_body: "Capacitar a los estudiantes con proyectos creativos conectados con el mundo real en nuestro plan de estudios basado en la equidad."
   contact_form_topic_student: "Soy estudiante"
   contact_form_topic_parent: "Soy padre/madre"
   contact_form_topic_teacher: "Soy docente/educador"
@@ -587,6 +591,7 @@
   volunteer_engineer_submission_distance_16: "10 kilómetros"
   volunteer_engineer_submission_distance_24: "15 kilómetros"
   volunteer_engineer_submission_distance_32: "20 millas"
+  volunteer_engineer_submission_distance_80: "80 kilómetros"
   volunteer_engineer_submission_num_volunteers_5: "5 voluntarios"
   volunteer_engineer_submission_num_volunteers_10: "10 voluntarios"
   volunteer_engineer_submission_num_volunteers_25: "25 voluntarios"
@@ -998,6 +1003,7 @@
   express-2021_name: Curso Express (2021)
   pre-express-2021_name: Curso rápido prescolar (2021)
   express-2022_name: Curso Express (2021)
+  pre-express-2022_name: Curso Exprés para Pre-lectores (2022)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: "Curso acelerado"
@@ -1827,6 +1833,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizaje Automático para Niños'
   ai_ecs: 'ECS: Inteligencia Artificial (IA)'
   ai_ecs_description: "Una nueva unidad de plan de estudios alternativo para el plan de estudios de Exploración de Ciencias de la Computación (ECS)."
+  ai_aiedu_intro: 'aiEDU: Introducción a la Inteligencia Artificial'
+  ai_aiedu_intro_description: "Introducción a la Inteligencia Artificial es un plan de estudios gratuito, innovador y culturalmente relevante en el que los alumnos desarrollan conocimientos conceptuales sobre qué es la Inteligencia Artificial y cómo se utiliza en el mundo real."
   ai_elements: "Elementos de Inteligencia Artificial"
   ai_elements_description: "Una serie de cursos gratuitos en línea creados por Reaktor y la Universidad de Helsinki."
   ai_cognimates: "Cognimates"

@@ -35,6 +35,9 @@ ja:
   africa_campaign_date_full: 10月1日～12月18日
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 2022年10月1日～2022年12月18日
+  hoc2022_header: いろいろ見て、プレイして作成！
+  social_hoc2022_explore_play_create: コンピューターサイエンスを使って、いろいろ見て、プレイして作成！
+  codeorg_homepage_hoc2022_body: 宇宙を探検してゴールを決め、ダンスをしましょう。コンピューターサイエンスを試す方法はたくさんあります。
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  今日から学び、明るい明日を築く。  "
@@ -435,6 +438,17 @@ ja:
   front_join_us_n_students_served: "#人が受講しました。"
   front_join_us_challenge: 有名人とのあなたの教室のビデオチャットに勝つ！
   front_join_us_learn_more: もっと詳しく知る
+  cta_see_whats_new: アップデート情報
+  cta_try_more_activities: アクティビティをもっと試す
+  cta_try_an_activity: アクティビティを試す
+  hoc_homepage_join_the_movement_heading: イベントに参加する
+  hoc_homepage_join_the_movement_description: Hour of Codeは1年中利用できますが、毎年12月になると、世界中の何百万人もの学生がHour
+    of Codeと共にコンピュータサイエンス教育週間をお祝いします。この年1回のお祝いの受付は毎年10月から始まります。
+  hoc_homepage_what_is_hoc_subhead: 45以上の言語で利用できる1時間のチュートリアル。経験は不要です。Hour of Codeアクティビティは1年中無料です。
+  hoc_homepage_what_is_hoc_description: Hour of Codeは誰でも基本を学べる楽しいチュートリアルで、コンピュータサイエンスの概要を1時間で提供します。この草の根キャンペーンは、世界中の400以上のパートナーと20万人の教育者がサポートしています。
+  hoc_homepage_what_is_hoc_cta_how_to_guide: クラスのイベントを計画するために[私たちのハウツーガイドを読む](%{howto_guide_url})。
+  hoc_homepage_highlights_heading: Hour of Code のハイライト
+  hoc_homepage_organized_by: Hour of Codeは[Code.org](%{codeorg_url})により組織されています。
   signup_closed: Hour of Codeへの登録は終了しています。10月に次回のHour of Codeのサインアップを再開しますのでまた確認してください。
   signup_registration_not_required: 参加するのに登録はいりません！Hour of Codeのアクティビティは一年中利用可能です。
     <a href='%{hoc_activities_url}'>アクティビティを試したり</a>、<a href='%{howto_guide_url}'>手引き</a>を読んでクラス向けにイベントを計画してください。

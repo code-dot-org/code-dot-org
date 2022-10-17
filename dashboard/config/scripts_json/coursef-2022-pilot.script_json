@@ -10,7 +10,8 @@
           "details": "We need your feedback! Please look for the survey links on this course page and let us know what you think.",
           "link": "",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "f8a7a289-31bb-4126-98d0-ac587b57f0ff"
         }
       ],
       "curriculum_umbrella": "CSF",
@@ -29,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-04-06 16:24:23 UTC",
+    "serialized_at": "2022-09-28 14:32:00 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

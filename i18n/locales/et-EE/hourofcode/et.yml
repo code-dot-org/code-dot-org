@@ -35,6 +35,10 @@ et:
   africa_campaign_date_full: October 1 - December 18
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: October 1, 2022 - December 18, 2022
+  hoc2022_header: Explore, Play, Create!
+  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
+  codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
+    there are so many ways to try computer science.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -488,6 +492,24 @@ et:
   front_join_us_n_students_served: "# osalejat"
   front_join_us_challenge: Võida videovestlus kuulsusega klassiruumis!
   front_join_us_learn_more: Rohkem lugemist
+  cta_see_whats_new: See what's new
+  cta_try_more_activities: Try more activities
+  cta_try_an_activity: Try an activity
+  hoc_homepage_join_the_movement_heading: Join the movement
+  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
+    but every year in December your class can join millions of students around the
+    world celebrating Computer Science Education Week with the Hour of Code. Registration
+    for the annual celebration starts each year in October.
+  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
+    needed. Hour of Code activities are available for free year-round.
+  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    This grassroots campaign is supported by over 400 partners and 200,000 educators
+    worldwide.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
+    to plan an event for your class."
+  hoc_homepage_highlights_heading: Hour of Code highlights
+  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
   signup_closed: Registreerimine KoodiTund üritusele on nüüd suletud. Palun vaadake
     uuesti oktoobris ning registreerige järgmisele KoodiTund üritusele.
   signup_registration_not_required: Osalemiseks ei pea registreerima! KooduTund tegevused

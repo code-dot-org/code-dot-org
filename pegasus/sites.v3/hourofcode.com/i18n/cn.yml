@@ -6,11 +6,11 @@ cn:
   front_title: "%{campaign_date}，加入有史以来最大的学习活动"
   coming_soon: 即将推出
   campaign_date_start_short: 12月5日
-  campaign_date_start_long: 12月6日
+  campaign_date_start_long: 12月5日
   campaign_date_short: 12月5-11日
   campaign_date_full: 12月5-11日
   campaign_date_year: '2022'
-  campaign_date_full_year: 2022年12月5日至11月12日
+  campaign_date_full_year: 2022年12月5日-11日
   nonus_campaign_date_start_short: Oct. 1
   nonus_campaign_date_start_long: October 1
   nonus_campaign_date_short: 10 月 1 日 - 12 月 18 日
@@ -35,6 +35,9 @@ cn:
   africa_campaign_date_full: 10 月 1 日 - 12 月 18 日
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
+  hoc2022_header: 探索，玩耍，创造！
+  social_hoc2022_explore_play_create: 使用计算机科学来探索、玩耍和创造！
+  codeorg_homepage_hoc2022_body: 探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多。
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  马上开始学习，打造更美好的明天。"
@@ -434,6 +437,16 @@ cn:
   front_join_us_n_students_served: 已有#次使用。
   front_join_us_challenge: 为你的班级赢得一次与名人的视频聊天！
   front_join_us_learn_more: 了解更多
+  cta_see_whats_new: 看看有什么新内容
+  cta_try_more_activities: 尝试更多活动
+  cta_try_an_activity: 尝试一个活动
+  hoc_homepage_join_the_movement_heading: 加入运动
+  hoc_homepage_join_the_movement_description: 编程一小时全年都可参与，但每年12月，你的班级可以加入世界各地数百万学生的行列，用编程一小时庆祝计算机科学教育周。一年一度的庆祝活动于每年10月开始注册。
+  hoc_homepage_what_is_hoc_subhead: 一小时的教程，超过45种语言。不需要经验。编程一小时活动全年都可免费参与。
+  hoc_homepage_what_is_hoc_description: 编程一小时是一个小时的计算机科学介绍，使用有趣的教程展示出任何人都可以学习基础知识。这一基层运动得到全球逾400个合作伙伴和20万名教育工作者的支持。
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[阅读我们的操作指南](%{howto_guide_url})为你的班级计划活动。"
+  hoc_homepage_highlights_heading: 编程一小时亮点
+  hoc_homepage_organized_by: 编程一小时由[Code.org](%{codeorg_url})组织。
   signup_closed: 编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。
   signup_registration_not_required: 您无需注册，即可参加全年的编程一小时各项活动！ <a href='%{hoc_activities_url}'>尝试活动</a>
     或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。

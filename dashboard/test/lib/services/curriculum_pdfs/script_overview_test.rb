@@ -34,7 +34,7 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
       Services::CurriculumPdfs.get_script_overview_pathname(script).to_s
   end
 
-  test 'Script Overview PDFs are generated into the given directory' do
+  test 'Unit Overview PDFs are generated into the given directory' do
     script = create(:script, seeded_from: Time.now)
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
@@ -45,11 +45,13 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
     end
   end
 
-  test 'Script Overview PDF includes Lesson Plan PDFs' do
+  test 'Unit Overview PDF includes Lesson Plan PDFs' do
     script = create(:script, seeded_from: Time.now)
     lesson_group = create(:lesson_group, script: script)
 
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
+      FileUtils.stubs(:cp)
+
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 1}
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)
 

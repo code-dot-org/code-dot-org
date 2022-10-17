@@ -2,7 +2,7 @@
 title: Poradnik dla rodziców
 ---
 
-# Spróbuj Godziny Kodowania ze swoim dzieckiem
+# Jak przeprowadzić Godzinę Kodowania ze swoim dzieckiem
 Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprowadzenia swojego dziecka w dziedzinę informatyki, być może po raz pierwszy. Informatyka nie tylko ma znaczenie fundamentalne dla wszystkich dziedzin nauki, ale<a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">>ostatnie badania pokazują</a>, że dzieci, które uczą się informatyki osiągają lepsze wyniki w innych przedmiotach, przodują w rozwiązywaniu problemów i mają <font color="00adbc"><b> o 17% większe szanse dostać się na studia </b></font>.
 
 Możesz dołączyć do dziesiątków milionów uczniów na całym świecie w ramach tego wydarzenia o zasięgu globalnym. Razem możemy zainspirować dzieci do nauki, łamać stereotypy i pomóc dzieciom odkrywać nowo wzbudzone zainteresowanie. Najlepsze jest jednak to, że masz już wszystko, czego potrzebujesz, aby wprowadzić "Godzinę kodowania" do swojego domu!
@@ -140,5 +140,5 @@ Na zakończenie - gdy  Twoje dziecko napotka trudności, można odpowiedzieć:
 
     
     <p spaces-before="0">
-      Informatyka nie musi kończyć się z Godziną Kodowania! Chociaż 90% rodziców chce, aby dziecko uczyło się informatyki, w większości szkół się jej nie wykłada. Nasz program nauczania działa w Internecie i można z niego korzystać bezpłatnie, zawsze, aby nieść pomoc. <<a href="https://code.org/yourschool">Dowiedz się, jak </a> wprowadzić informatykę w szkole Twojego dziecka już dzisiaj.
+      Informatyka nie musi kończyć się z Godziną Kodowania! Chociaż 90% rodziców chce, aby dziecko uczyło się informatyki, w większości szkół się jej nie wykłada. Nasz program nauczania ma charakter sieciowy i można z niego korzystać bezpłatnie, zawsze, aby nieść pomoc. <<a href="https://code.org/yourschool">Dowiedz się, jak </a> wprowadzić informatykę w szkole Twojego dziecka już dzisiaj.
     </p>

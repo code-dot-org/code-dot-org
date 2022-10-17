@@ -2856,8 +2856,129 @@ columns:
     default_function: 
     collation: 
     comment: 
-  code_review_group_members:
+  code_review_comments:
   - &190 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: id
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: bigint(20)
+        type: :integer
+        limit: 8
+        precision: 
+        scale: 
+      extra: auto_increment
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &191 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: code_review_id
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: int(11)
+        type: :integer
+        limit: 4
+        precision: 
+        scale: 
+      extra: ''
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &192 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: commenter_id
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: int(11)
+        type: :integer
+        limit: 4
+        precision: 
+        scale: 
+      extra: ''
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &193 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: is_resolved
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: tinyint(1)
+        type: :boolean
+        limit: 
+        precision: 
+        scale: 
+      extra: ''
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &194 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: comment
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: mediumtext
+        type: :text
+        limit: 16777215
+        precision: 
+        scale: 
+      extra: ''
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_520_ci
+    comment: 
+  - &195 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: deleted_at
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: datetime
+        type: :datetime
+        limit: 
+        precision: 0
+        scale: 
+      extra: ''
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &196 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: created_at
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: datetime(6)
+        type: :datetime
+        limit: 
+        precision: 6
+        scale: 
+      extra: ''
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &197 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: updated_at
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
+      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+        sql_type: datetime(6)
+        type: :datetime
+        limit: 
+        precision: 6
+        scale: 
+      extra: ''
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  code_review_group_members:
+  - &198 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: code_review_group_id
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -2872,7 +2993,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - &191 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &199 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: follower_id
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -2887,7 +3008,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - &192 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &200 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -2902,7 +3023,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - &193 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &201 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: updated_at
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -2918,7 +3039,7 @@ columns:
     collation: 
     comment: 
   code_review_groups:
-  - &194 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &202 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -2933,7 +3054,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - &195 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &203 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: section_id
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -2948,7 +3069,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - &196 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &204 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: name
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
@@ -2963,135 +3084,14 @@ columns:
     default_function: 
     collation: utf8_unicode_ci
     comment: 
-  - &197 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: created_at
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: datetime
-        type: :datetime
-        limit: 
-        precision: 0
-        scale: 
-      extra: ''
-    'null': false
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - &198 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: updated_at
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: datetime
-        type: :datetime
-        limit: 
-        precision: 0
-        scale: 
-      extra: ''
-    'null': false
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  code_review_notes:
-  - &199 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: id
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: bigint(20)
-        type: :integer
-        limit: 8
-        precision: 
-        scale: 
-      extra: auto_increment
-    'null': false
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - &200 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: code_review_request_id
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: int(11)
-        type: :integer
-        limit: 4
-        precision: 
-        scale: 
-      extra: ''
-    'null': false
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - &201 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: commenter_id
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: int(11)
-        type: :integer
-        limit: 4
-        precision: 
-        scale: 
-      extra: ''
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - &202 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: is_resolved
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: tinyint(1)
-        type: :boolean
-        limit: 
-        precision: 
-        scale: 
-      extra: ''
-    'null': false
-    default: 
-    default_function: 
-    collation: 
-    comment: 
-  - &203 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: comment
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: mediumtext
-        type: :text
-        limit: 16777215
-        precision: 
-        scale: 
-      extra: ''
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb4_unicode_520_ci
-    comment: 
-  - &204 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: deleted_at
-    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
-      delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: datetime
-        type: :datetime
-        limit: 
-        precision: 0
-        scale: 
-      extra: ''
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: 
   - &205 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: datetime(6)
+        sql_type: datetime
         type: :datetime
         limit: 
-        precision: 6
+        precision: 0
         scale: 
       extra: ''
     'null': false
@@ -3103,10 +3103,10 @@ columns:
     name: updated_at
     sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::TypeMetadata
       delegate_dc_obj: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
-        sql_type: datetime(6)
+        sql_type: datetime
         type: :datetime
         limit: 
-        precision: 6
+        precision: 0
         scale: 
       extra: ''
     'null': false
@@ -23414,24 +23414,24 @@ columns_hash:
     voided_at: *187
     created_at: *188
     updated_at: *189
+  code_review_comments:
+    id: *190
+    code_review_id: *191
+    commenter_id: *192
+    is_resolved: *193
+    comment: *194
+    deleted_at: *195
+    created_at: *196
+    updated_at: *197
   code_review_group_members:
-    code_review_group_id: *190
-    follower_id: *191
-    created_at: *192
-    updated_at: *193
+    code_review_group_id: *198
+    follower_id: *199
+    created_at: *200
+    updated_at: *201
   code_review_groups:
-    id: *194
-    section_id: *195
-    name: *196
-    created_at: *197
-    updated_at: *198
-  code_review_notes:
-    id: *199
-    code_review_request_id: *200
-    commenter_id: *201
-    is_resolved: *202
-    comment: *203
-    deleted_at: *204
+    id: *202
+    section_id: *203
+    name: *204
     created_at: *205
     updated_at: *206
   code_review_requests:
@@ -24940,9 +24940,9 @@ primary_keys:
   channel_tokens: id
   circuit_playground_discount_applications: id
   circuit_playground_discount_codes: id
+  code_review_comments: id
   code_review_group_members: 
   code_review_groups: id
-  code_review_notes: id
   code_review_requests: id
   code_reviews: id
   concepts: id
@@ -25123,9 +25123,9 @@ data_sources:
   channel_tokens: true
   circuit_playground_discount_applications: true
   circuit_playground_discount_codes: true
+  code_review_comments: true
   code_review_group_members: true
   code_review_groups: true
-  code_review_notes: true
   code_review_requests: true
   code_reviews: true
   concepts: true
@@ -25796,6 +25796,20 @@ indexes:
     using: :btree
     comment: 
   circuit_playground_discount_codes: []
+  code_review_comments:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: code_review_comments
+    name: index_code_review_comments_on_code_review_id
+    unique: false
+    columns:
+    - code_review_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   code_review_group_members:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_group_members
@@ -25830,20 +25844,6 @@ indexes:
     unique: false
     columns:
     - section_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  code_review_notes:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: code_review_notes
-    name: index_code_review_notes_on_code_review_request_id
-    unique: false
-    columns:
-    - code_review_request_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -26125,11 +26125,12 @@ indexes:
   course_versions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_versions
-    name: index_course_versions_on_course_offering_id_and_key
+    name: index_course_versions_on_offering_id_and_key_and_type
     unique: true
     columns:
     - course_offering_id
     - key
+    - content_root_type
     lengths: {}
     orders: {}
     opclasses: {}
@@ -30155,7 +30156,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20220913225915
+version: 20221003141047
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

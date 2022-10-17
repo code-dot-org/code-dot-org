@@ -1238,8 +1238,6 @@ function createStubSourceHandler() {
     getLevelSource: sinon.stub().resolves(),
     setInitialAnimationList: sinon.stub(),
     getAnimationList: sinon.stub().callsFake(cb => cb({})),
-    setInitialGeneratedProperties: sinon.stub(),
-    getGeneratedProperties: sinon.stub(),
     setMakerAPIsEnabled: sinon.stub(),
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),

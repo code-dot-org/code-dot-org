@@ -6,7 +6,7 @@ mr:
   front_title: आजवरच्या सर्वात मोठ्या शिकण्याच्या कार्यक्रमात या, %{campaign_date}
   coming_soon: लवकरच येत आहे
   campaign_date_start_short: 5 डिसेंबर
-  campaign_date_start_long: 6 डिसेंबर
+  campaign_date_start_long: 5 डिसेंबर
   campaign_date_short: 5-11 डिसेंबर
   campaign_date_full: 5-11 डिसेंबर
   campaign_date_year: '2022'
@@ -35,6 +35,11 @@ mr:
   africa_campaign_date_full: 1-31 ऑक्टोबर
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: " 1-31 ऑक्टोबर 2020"
+  hoc2022_header: एक्सप्लोर करा, खेळा, तयार करा!
+  social_hoc2022_explore_play_create: एक्सप्लोर करण्यासाठी, खेळण्यासाठी आणि तयार करण्यासाठी
+    संगणक विज्ञानाचा वापर करा!
+  codeorg_homepage_hoc2022_body: ब्रह्मांड एक्सप्लोर करा, लक्ष्य साध्य करा,  हालचाल
+    करा - संगणक विज्ञान वापरून पाहण्याचे बरेच मार्ग आहेत.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: आज शिका, उद्याचे उज्ज्वल भविष्य घडवा.
@@ -494,6 +499,25 @@ mr:
   front_join_us_challenge: तुमच्या वर्गासाठी एका प्रसिद्ध व्यक्तीसोबत व्हिडिओ चॅटचे
     बक्षीस मिळवा!
   front_join_us_learn_more: अधिक जाणून घ्या
+  cta_see_whats_new: काय नवीन आहे ते पहा
+  cta_try_more_activities: आणखी उपक्रम करून पहा
+  cta_try_an_activity: एखादा उपक्रम करून पहा
+  hoc_homepage_join_the_movement_heading: हालचालीत सहभागी व्हा
+  hoc_homepage_join_the_movement_description: अवर ऑफ कोड वर्षभर उपलब्ध असतो, परंतु
+    दरवर्षी डिसेंबरमध्ये तुमचा वर्ग जगभरातील लाखो विद्यार्थ्यांमध्ये सामील होऊ शकतो
+    ज्यात अवर ऑफ कोडसह कॉम्प्युटर सायंस एज्युकेशन वीक  साजरा केला जातो. वार्षिक उत्सवाची
+    नोंदणी दरवर्षी ऑक्टोबरमध्ये सुरू होते.
+  hoc_homepage_what_is_hoc_subhead: 45 पेक्षा जास्त भाषांमध्ये एक तासाचे ट्यूटोरियल.
+    अनुभवाची गरज नाही. अवर ऑफ कोड उपक्रम वर्षभर मोफत उपलब्ध आहेत.
+  hoc_homepage_what_is_hoc_description: अवर ऑफ कोड  हा संगणक विज्ञानाचा एक तासाचा
+    परिचय आहे, जो मूलभूत गोष्टी कोणीही शिकू शकतो हे दाखवण्यासाठी मजेदार ट्यूटोरियल
+    वापरतो. या तळागाळातील मोहिमेला जगभरातील 400 पेक्षा जास्त भागीदार आणि 200,000 शिक्षकांचा
+    पाठिंबा आहे.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: तुमच्या वर्गासाठी इव्हेंट प्लॅन करण्यासाठी[आमचे  How-to
+    guide वाचा ](%{howto_guide_url})
+  hoc_homepage_highlights_heading: अवर ऑफ कोड चे हायलाइट्स
+  hoc_homepage_organized_by: अवर ऑफ कोड [Code.org](%{codeorg_url}) द्वारे आयोजित केला
+    जातो.
   signup_closed: कोडचा ताससाठी नोंदणी आता बंद झालेली आहे. पुढच्या कोडचा ताससाठी साइन
     अप करण्यासाठी ऑक्टोबर महिन्यात पुन्हा प्रयत्न करा.
   signup_registration_not_required: भाग घेण्यासाठी तुम्हाला नोंदणी करण्याची गरज नाही!
@@ -1009,7 +1033,8 @@ mr:
     प्रवृत्त केले.
   highlights_constant_athletes_short_heading: स्वतःला मेहनत करायला लावा
   footer_copyright_message: कॉपीराइट %{current_year} Code.org सर्वाधिकार सुरक्षित.
-  footer_trademark_message: Hour of Code™ हा Code.org यांचा ट्रेडमार्क आहे.
+  footer_trademark_message: Hour of Code® आणि Hora del Código® हे Code.org चे ट्रेडमार्क
+    आहेत.
   footer_built_on_github: 'मायक्रोसॉफ्टच्या गिटहबवर तयार केलेले '
   footer_menu_partners: भागीदार आणि सल्लागार
   footer_menu_contact: आमच्याशी संपर्क साधा

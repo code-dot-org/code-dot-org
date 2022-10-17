@@ -4112,3 +4112,56 @@ ar:
               display_name: محتوى
             lessonGroup-5:
               display_name: استبيان
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: مختبر Java
+            lesson-6:
+              name: الحلقات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: استبيان
+            lessonGroup-3:
+              display_name: محتوى
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            lessonGroup-3:
+              display_name: 'الفصل 2: نماذج التطبيق'
+          title: عملية التصميم
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: تمثيل المعلومات'
+            lessonGroup-3:
+              display_name: 'الفصل 2: حل مشكلات البيانات'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            lessonGroup-3:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+          title: الحوسبة المادية
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'الفصل 2: بناء نماذج أوليّة مادية'

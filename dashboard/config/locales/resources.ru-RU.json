@@ -728,7 +728,17 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "Изменения виртуального урока"
+          "name": "Изменения виртуального урока",
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
+        },
+        "all_resources/courseb/2022": {
+          "url": "/s/courseb-2022/resources"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/s/courseb-2022/standards"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/courseb-2022/vocab"
         },
         "unplugged_maze_blocks/express/2022": {
           "name": "Офлайн-занятие: блоки в игре \"Лабиринт\"",
@@ -854,6 +864,15 @@
         "teacher_forum/pre-express/2022": {
           "name": "Форум учителей",
           "url": "https://forum.code.org/c/csf/"
+        },
+        "all_resources/pre-express/2022": {
+          "url": "/s/pre-express-2022/resources"
+        },
+        "all_standards/pre-express/2022": {
+          "url": "/s/pre-express-2022/standards"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "url": "/s/pre-express-2022/vocab"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Безопасность в моем интернет-окружении: Слайды урока",
@@ -1015,7 +1034,17 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "Изменения виртуального урока"
+          "name": "Изменения виртуального урока",
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
+        },
+        "all_resources/coursea/2022": {
+          "url": "/s/coursea-2022/resources"
+        },
+        "all_standards/coursea/2022": {
+          "url": "/s/coursea-2022/standards"
+        },
+        "all_vocabulary/coursea/2022": {
+          "url": "/s/coursea-2022/vocab"
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Стоп грубости в Интернете: Слайды урока",

@@ -1307,13 +1307,15 @@
           "url": "/s/csd1-2022/vocab"
         },
         "programming_for_entertainment/csd/2022": {
-          "name": "Programmer pour le Divertissement"
+          "name": "Programmer pour le Divertissement",
+          "url": "https://docs.google.com/presentation/d/1ojnEhKkUISTCWmf6i_Y5eObbOdocNSrtAjhiWYZVSNU/template/preview"
         },
         "drawing_shapes/csd/2022": {
           "name": "Dessiner des formes"
         },
         "plotting_shapes/csd/2022": {
-          "name": "Tracer Des Formes"
+          "name": "Tracer Des Formes",
+          "url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/template/preview"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
           "type": "Vidéo"
@@ -1325,13 +1327,15 @@
           "name": "Dessiner des formes"
         },
         "drawing_in_game_lab/csd/2022": {
-          "name": "Dessiner dans le Labo des Jeux"
+          "name": "Dessiner dans le Labo des Jeux",
+          "url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/template/preview"
         },
         "shapes_and_parameters_1/csd/2022": {
           "name": "Formes et paramètres"
         },
         "shapes_and_parameters_2/csd/2022": {
-          "name": "Formes et paramètres"
+          "name": "Formes et paramètres",
+          "url": "https://docs.google.com/presentation/d/1vulpd2DiwK8IiBHbnNuBh-yCVuVkEA18miL8T5IO-5c/template/preview"
         },
         "introduction_to_variables/csd/2022": {
           "type": "Vidéo"
@@ -1343,13 +1347,15 @@
           "name": "Variables"
         },
         "variables_3/csd/2022": {
-          "name": "Variables"
+          "name": "Variables",
+          "url": "https://docs.google.com/presentation/d/1F8sBblNjZqI-Q7XndJNuvBIWh2KeJF4rqieUMUpGArU/template/preview"
         },
         "random_numbers/csd/2022": {
           "name": "Nombres aléatoires"
         },
         "random_numbers_2/csd/2022": {
-          "name": "Nombres aléatoires"
+          "name": "Nombres aléatoires",
+          "url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/template/preview"
         },
         "introduction_to_sprites/csd/2022": {
           "type": "Vidéo"
@@ -1362,19 +1368,25 @@
           "type": "Vidéo"
         },
         "sprites_1/csd/2022": {
-          "name": "Sprites"
+          "name": "Sprites",
+          "url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/template/preview"
         },
         "sprite_properties/csd/2022": {
           "name": "Propriétés du sprite"
         },
         "sprite_properties_1/csd/2022": {
-          "name": "Propriétés du sprite"
+          "name": "Propriétés du sprite",
+          "url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/template/preview"
         },
         "text/csd/2022": {
-          "name": "Texte"
+          "name": "Texte",
+          "url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/template/preview"
         },
         "captioned_scenes/csd/2022": {
           "type": "Rubrique"
+        },
+        "mini-project_-_captioned_scenes/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/template/preview"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "Vidéo"
@@ -1386,17 +1398,22 @@
           "name": "La Boucle Dessiner"
         },
         "the_draw_loop_1/csd/2022": {
-          "name": "La Boucle Dessiner"
+          "name": "La Boucle Dessiner",
+          "url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/template/preview"
         },
         "sprite_movement/csd/2022": {
           "name": "Le Déplacement du Lutin",
           "type": "Vidéo"
         },
         "sprite_movement_1/csd/2022": {
-          "name": "Le Déplacement du Lutin"
+          "name": "Le Déplacement du Lutin",
+          "url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/template/preview"
         },
         "animated_scene/csd/2022": {
           "type": "Rubrique"
+        },
+        "mini-project_-_animation/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/template/preview"
         },
         "boolean_expressions/csd/2022": {
           "name": "Expressions Booléennes",
@@ -1413,10 +1430,12 @@
           "name": "Instructions « si »"
         },
         "conditionals/csd/2022": {
-          "name": "Instructions conditionnelles"
+          "name": "Instructions conditionnelles",
+          "url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/template/preview"
         },
         "keyboard_input/csd/2022": {
-          "name": "Entrée Au Clavier"
+          "name": "Entrée Au Clavier",
+          "url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/template/preview"
         },
         "if-else_statements/csd/2022": {
           "name": "Instructions « si-alors »"
@@ -1424,6 +1443,9 @@
         "if_else_statements/csd/2022": {
           "name": "Instructions « Si/Sinon »",
           "type": "Vidéo"
+        },
+        "mouse_input/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/template/preview"
         },
         "interactive_card/csd/2022": {
           "name": "Carte interactive"
@@ -1441,7 +1463,8 @@
           "type": "Rubrique"
         },
         "project_-_interactive_card/csd/2022": {
-          "name": "Projet - Carte Interactive"
+          "name": "Projet - Carte Interactive",
+          "url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/template/preview"
         },
         "velocity/csd/2022": {
           "name": "Vitesse",
@@ -1451,7 +1474,8 @@
           "name": "Vitesse"
         },
         "velocity_2/csd/2022": {
-          "name": "Vitesse"
+          "name": "Vitesse",
+          "url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/template/preview"
         },
         "collision_detection/csd/2022": {
           "name": "Détection de collision"
@@ -1460,7 +1484,8 @@
           "name": "Détection de collision"
         },
         "collision_detection_2/csd/2022": {
-          "name": "Détection de collision"
+          "name": "Détection de collision",
+          "url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/template/preview"
         },
         "side_scroller/csd/2022": {
           "type": "Rubrique"
@@ -1468,20 +1493,28 @@
         "side_scroller_1/csd/2022": {
           "type": "Guide projet"
         },
+        "mini-project_-_side_scroller/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/template/preview"
+        },
         "velocity_and_the_counter_pattern/csd/2022": {
           "name": "Vélocité et le contre-modèle"
         },
         "complex_sprite_movement/csd/2022": {
-          "name": "Déplacement Complexe du Lutin"
+          "name": "Déplacement Complexe du Lutin",
+          "url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/template/preview"
         },
         "collisions/csd/2022": {
-          "name": "Collisions"
+          "name": "Collisions",
+          "url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/template/preview"
         },
         "flyer_game/csd/2022": {
           "type": "Rubrique"
         },
         "flyer_game_1/csd/2022": {
           "type": "Guide projet"
+        },
+        "mini-project_-_flyer_game/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/template/preview"
         },
         "functions/csd/2022": {
           "name": "Fonctions",
@@ -1491,13 +1524,16 @@
           "name": "Fonctions"
         },
         "functions_4/csd/2022": {
-          "name": "Fonctions"
+          "name": "Fonctions",
+          "url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/template/preview"
         },
         "the_game_design_process/csd/2022": {
-          "name": "Le Processus de Conception d'un Jeu"
+          "name": "Le Processus de Conception d'un Jeu",
+          "url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/template/preview"
         },
         "using_the_game_design_process/csd/2022": {
-          "name": "Utiliser le Processus de Conception d'un Jeu"
+          "name": "Utiliser le Processus de Conception d'un Jeu",
+          "url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/template/preview"
         },
         "make_your_own_game_1/csd/2022": {
           "type": "Guide projet"
@@ -1509,19 +1545,42 @@
           "type": "Rubrique"
         },
         "project_-_design_a_game/csd/2022": {
-          "name": "Projet - Concevoir un Jeu"
+          "name": "Projet - Concevoir un Jeu",
+          "url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/template/preview"
+        },
+        "all_code_1/csd/2022": {
+          "url": "/s/csd3-2022/code"
+        },
+        "all_resources_1/csd/2022": {
+          "url": "/s/csd3-2022/resources"
+        },
+        "all_standards_1/csd/2022": {
+          "url": "/s/csd3-2022/standards"
+        },
+        "all_vocabulary_1/csd/2022": {
+          "url": "/s/csd3-2022/vocab"
+        },
+        "csd_programming_levels_guide/csd/2022": {
+          "name": "Guide des niveaux de programmation CSD",
+          "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview"
         },
         "exploring_web_pages/csd/2022": {
           "name": "Explorer des Pages Web"
         },
         "exploring_web_pages_1/csd/2022": {
-          "name": "Explorer des Pages Web"
+          "name": "Explorer des Pages Web",
+          "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/"
         },
         "exploring_web_pages_2/csd/2022": {
-          "name": "Explorer des Pages Web"
+          "name": "Explorer des Pages Web",
+          "url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/template/preview"
+        },
+        "exemplar_text_website/csd/2022": {
+          "type": "Site web"
         },
         "html_tags/csd/2022": {
-          "name": "Balises HTML"
+          "name": "Balises HTML",
+          "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view"
         },
         "intro_to_web_lab_part_2/csd/2022": {
           "type": "Vidéo"
@@ -1530,38 +1589,67 @@
           "type": "Vidéo"
         },
         "intro_to_html/csd/2022": {
-          "name": "Initiation au HTML"
+          "name": "Initiation au HTML",
+          "url": "https://docs.google.com/presentation/d/11PRWsqomAx0svoQg7nZIFNHrw0X9LqPS7kACX6kTMZY/template/preview"
         },
         "headings_and_paragraphs/csd/2022": {
-          "name": "Titres et paragraphes"
+          "name": "Titres et paragraphes",
+          "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view"
         },
         "video_debugging/csd/2022": {
+          "name": "Vidéo : Déboguage",
           "type": "Vidéo"
         },
         "video_pair_programming/csd/2022": {
           "name": " Programmation en Binôme",
+          "url": "https://youtu.be/q7d_JtyCq1A",
           "type": "Vidéo"
         },
         "headings/csd/2022": {
-          "name": "Rubriques"
+          "name": "Titres",
+          "url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/template/preview"
         },
         "formatting_html/csd/2022": {
-          "name": "Mise en forme HTML"
+          "name": "Mise en forme HTML",
+          "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view"
         },
         "html_web_page/csd/2022": {
+          "url": "https://docs.google.com/document/d/1__6xm9Bpb8c4lw21YH_Nbu-N1Tx7XoBzFnWw0gB9xKM/edit",
           "type": "Rubrique"
         },
         "html_web_page_2/csd/2022": {
+          "url": "https://docs.google.com/document/d/1IFhjs4IjCM-mKs28FxJTDTADPS4XTa30aoQR1pG1570/",
           "type": "Commentaire par un pair"
         },
         "html_web_page_3/csd/2022": {
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
           "type": "Guide projet"
         },
         "lists/csd/2022": {
-          "name": "Listes"
+          "name": "Listes",
+          "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view"
+        },
+        "peer_review_-_html_web_page/csd/2022": {
+          "url": "https://docs.google.com/document/d/18JNbIAo4rrhAFlYk8qKxLrkYjmGp4k6RXQgXq5uFq2M/view"
+        },
+        "project_guide_-_html_project/csd/2022": {
+          "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view"
+        },
+        "mini-project_html_web_page/csd/2022": {
+          "name": "Mini-projet : Page web HTML",
+          "url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/template/preview"
         },
         "digital_footprint/csd/2022": {
-          "name": "L'Empreinte Numérique"
+          "name": "L'Empreinte Numérique",
+          "url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/template/preview"
+        },
+        "social_sleuth/csd/2022": {
+          "name": "Limier social",
+          "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit"
+        },
+        "social_sleuth_1/csd/2022": {
+          "name": "Limier social",
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
         },
         "intro_to_css_-_part_1/csd/2022": {
           "name": "Introduction à CSS - Partie 1",
@@ -1569,89 +1657,197 @@
         },
         "intro_to_css_-_part_2/csd/2022": {
           "name": "Introduction à CSS - Partie 2",
+          "url": "https://youtu.be/VgBVKlpLqsE",
           "type": "Vidéo"
         },
+        "style_sheets/csd/2022": {
+          "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view"
+        },
+        "text_properties/csd/2022": {
+          "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing"
+        },
         "styling_text_with_css/csd/2022": {
-          "name": "Styliser le texte avec CSS"
+          "name": "Styliser le texte avec CSS",
+          "url": "https://docs.google.com/presentation/d/1BtifQt5gCAdI3wyzMpW0sdNdnA-6hVk3rdcNETG1oP0/template/preview"
+        },
+        "peer_review_-_your_personal_style/csd/2022": {
+          "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view"
+        },
+        "project_guide_-_your_personal_style/csd/2022": {
+          "url": "https://docs.google.com/document/d/14Zlx1BC-QxW01D0vk_C5JTB77PCK80OatVFv1hcClZw/view"
         },
         "your_personal_style/csd/2022": {
+          "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit",
           "type": "Rubrique"
         },
         "your_personal_style_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE",
           "type": "Commentaire par un pair"
         },
         "your_personal_style_2/csd/2022": {
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit",
           "type": "Guide projet"
+        },
+        "mini-project_your_personal_style/csd/2022": {
+          "name": "Mini-projet : Votre style personnel",
+          "url": "https://docs.google.com/presentation/d/1LX6NzOZWylOLKPKoPm-SFKdKj6_raNSvQv6MugarH9k/template/preview"
         },
         "creative_commons_overview/csd/2022": {
           "type": "Vidéo"
         },
+        "licensing_your_work_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
+        },
         "intellectual_property/csd/2022": {
-          "name": "Propriété intellectuelle"
+          "name": "Propriété intellectuelle",
+          "url": "https://docs.google.com/presentation/d/1-pZjNq_Yohai6HgWHZQUydrKU3LwqkENAZwJ-JBiRPM/template/preview"
         },
         "creative_commons_search/csd/2022": {
-          "name": "Recherche sur la licence Creative Commons"
+          "name": "Recherche sur la licence Creative Commons",
+          "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing"
         },
         "images_in_html/csd/2022": {
-          "name": "Les Images dans le HTML"
+          "name": "Les Images dans le HTML",
+          "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view"
+        },
+        "using_images/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1q_u9skUeHGyRM5T9xbXAJBKnbj5-heI-0nsnySZNnEE/template/preview"
+        },
+        "define_your_web_page/csd/2022": {
+          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/"
+        },
+        "websites_for_expression/csd/2022": {
+          "name": "Sites web pour s'exprimer",
+          "url": "https://docs.google.com/presentation/d/1xULQRcqeI288kAZoPX0_oeemk5u5VKHc1G0yAGxo9Ao/template/preview"
+        },
+        "body_styling/csd/2022": {
+          "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view"
         },
         "layout_properties/csd/2022": {
-          "name": "Propriétés de la mise en page"
+          "name": "Propriétés de la mise en page",
+          "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view"
         },
         "styling_elements_with_css/csd/2022": {
-          "name": "Styliser des Éléments avec CSS"
+          "name": "Styliser des Éléments avec CSS",
+          "url": "https://docs.google.com/presentation/d/1zbqMiuqfYAuz21chPD4qt-GceNA0T3wmfyl8SCt4jEs/template/preview"
         },
         "personal_web_page_-_prepare/csd/2022": {
+          "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/",
           "type": "Guide projet"
         },
+        "project_guide_-_personal_web_page_-_prepare/csd/2022": {
+          "url": "https://docs.google.com/document/d/1zpK8MdquwIvu1yM9RsMqFnDN0bN7qRL3Kwz3MUFtLE4/view"
+        },
+        "your_web_page_prepare/csd/2022": {
+          "name": "Votre page web : Préparez",
+          "url": "https://docs.google.com/presentation/d/1jVpNKzVN4kpLRU-QPYWFiYjLmv4GMZVzmXQV_oMLhws/template/preview"
+        },
+        "extra_code_in_challenge_levels/csd/2022": {
+          "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view"
+        },
+        "peer_review_-_personal_website/csd/2022": {
+          "url": "https://docs.google.com/document/d/1HrCgKzgZ4QqMBU4nqLd9NsDBKvjnbSZQxyhpZpSA92k/view"
+        },
         "personal_web_page/csd/2022": {
+          "url": "https://docs.google.com/document/d/1IwOlw4RqqWtpi6qvOZf7BoQt_hpAGSL_p7os8rLOTK0/",
           "type": "Commentaire par un pair"
         },
         "personal_web_page_-_reflect/csd/2022": {
+          "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/",
           "type": "Guide projet"
         },
+        "personal_web_page_-_student_checklist/csd/2022": {
+          "url": "https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view"
+        },
         "personal_web_page_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view",
           "type": "Rubrique"
+        },
+        "practices_reflection/csd/2022": {
+          "url": "https://docs.google.com/document/d/1J7Ghd-A6Y6onQq1zQU-VQ0ic2QV0I06x1ejxohX84RU/view"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2022": {
+          "url": "https://docs.google.com/document/d/177zgnLZgK8EWy2J_ztV7iAKPmi6uhRk5EZ4PocHBG0Y/view"
         },
         "publishing_your_website/csd/2022": {
           "name": "Publiez votre site Web",
+          "url": "https://youtu.be/2qcIlRtdpgE",
           "type": "Vidéo"
         },
+        "project_-_personal_web_page/csd/2022": {
+          "name": "Projet - Page web personnelle",
+          "url": "https://docs.google.com/presentation/d/1RaUMZ1CxWmklck8g70oNcZmzUbqOaYFAkRFGR9JdUF8/template/preview"
+        },
+        "websites_for_a_purpose_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit"
+        },
+        "websites_for_a_purpose_2/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1MIFVttm0GFmNx58oducL80wvbINe9kxoLxzm3eNgw_o/template/preview"
+        },
         "video_managing_disagreement/csd/2022": {
+          "url": "https://youtu.be/6GgrUeVT-xs",
           "type": "Vidéo"
         },
         "video_teamwork/csd/2022": {
+          "url": "https://youtu.be/qkw4pDV5Lec",
           "type": "Vidéo"
         },
+        "website_team_plan_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/"
+        },
         "team_problem_solving/csd/2022": {
-          "name": "La Résolution De Problèmes en Équipe"
+          "name": "La Résolution De Problèmes en Équipe",
+          "url": "https://docs.google.com/presentation/d/1BDdQ3ty6ZQSJHgG8Vrg-YHfghggET9xEOEO4_jT6N5E/template/preview"
+        },
+        "internet_scavenger_hunt/csd/2022": {
+          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit"
+        },
+        "links_and_research/csd/2022": {
+          "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE"
+        },
+        "links_and_research_1/csd/2022": {
+          "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit"
         },
         "video_how_search_works/csd/2022": {
+          "url": "https://youtu.be/LVV_93mBfSU",
           "type": "Vidéo"
         },
         "sources_and_research/csd/2022": {
-          "name": "Les Sources et la Recherche"
+          "name": "Les Sources et la Recherche",
+          "url": "https://docs.google.com/presentation/d/1xEET7femGEeUi-pN8WmfwEkrRe69gsAEXEl-UZyfamE/template/preview"
         },
         "classes/csd/2022": {
-          "name": "Classes"
+          "name": "Classes",
+          "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view"
         },
         "css_classes/csd/2022": {
-          "name": "Les classes CSS"
+          "name": "Les classes CSS",
+          "url": "https://docs.google.com/presentation/d/1dri4RfbdQypp4Lp0xrWCcyv7imvTithrDFcJA_i4RkM/template/preview"
         },
         "plan_a_multi-page_website/csd/2022": {
+          "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw",
           "type": "Guide projet"
+        },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2022": {
+          "url": "https://docs.google.com/document/d/1EgfsYO_XPaTznzucxKttsEmuNPOhBnC_ynxDZ1SkN0w/view"
         },
         "website_for_a_purpose/csd/2022": {
           "type": "Rubrique"
         },
+        "planning_a_multi-page_site/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1BPEWmTePdmhX1kiJnyWDOIf0x6pRllvQiv6cNaGpZCU/template/preview"
+        },
         "hyperlinks/csd/2022": {
-          "name": "Liens hypertexte"
+          "name": "Liens hypertexte",
+          "url": "https://drive.google.com/file/d/1x8rGBJ8EDZ07TasatQlu5wRM8Z7-M5e8/view"
         },
         "linking_pages/csd/2022": {
-          "name": "Relier des Pages"
+          "name": "Relier des Pages",
+          "url": "https://docs.google.com/presentation/d/15R24kMhA1ows-bPCVV3zk-4G-DQUd1gfUbnSly17kiE/template/preview"
         },
         "project_-_website_for_a_purpose/csd/2022": {
-          "name": "Projet - Site Web avec un But"
+          "name": "Projet - Site Web avec un But",
+          "url": "https://docs.google.com/presentation/d/1YdcS3687xoe02HW_582S9Qh3nEj6H7SSrJQt-qSb7KE/template/preview"
         },
         "website_for_a_purpose_-_reflect/csd/2022": {
           "type": "Guide projet"
@@ -1660,32 +1856,62 @@
           "type": "Commentaire par un pair"
         },
         "peer_review_and_final_touches/csd/2022": {
-          "name": "L'Examen par les Pairs et la Touche Finale"
+          "name": "L'Examen par les Pairs et la Touche Finale",
+          "url": "https://docs.google.com/presentation/d/1XouoXPdxXi99eegR5H42vBx_gp9fhx4914QBBPHtHxk/template/preview"
+        },
+        "all_code/csd/2022": {
+          "url": "/s/csd2-2022/code"
+        },
+        "all_resources/csd/2022": {
+          "url": "/s/csd2-2022/resources"
+        },
+        "all_standards/csd/2022": {
+          "url": "/s/csd2-2022/standards"
+        },
+        "all_vocabulary/csd/2022": {
+          "url": "/s/csd2-2022/vocab"
+        },
+        "designing_with_empathy_2/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/template/preview"
         },
         "understanding_your_user/csd/2022": {
-          "name": "Comprendre Votre Utilisateur"
+          "name": "Comprendre Votre Utilisateur",
+          "url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/template/preview"
         },
         "the_design_thinking_process/csd/2022": {
           "type": "Vidéo"
         },
+        "user_centered_design_-_define_and_prepare/csd/2022": {
+          "name": "Conception centrée sur l'utilisateur - Définir et Préparer",
+          "url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/template/preview"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2022": {
+          "name": "Conception centrée sur l'utilisateur - Essayez et réfléchissez",
+          "url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/template/preview"
+        },
         "user_interfaces/csd/2022": {
-          "name": "Les Interfaces Utilisateurs"
+          "name": "Les Interfaces Utilisateurs",
+          "url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/template/preview"
         },
         "feedback_and_testing/csd/2022": {
-          "name": "Commentaires et Tests"
+          "name": "Commentaires et Tests",
+          "url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/template/preview"
         },
         "identifying_user_needs/csd/2022": {
-          "name": "Identifier les Besoins des Utilisateurs"
+          "name": "Identifier les Besoins des Utilisateurs",
+          "url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/template/preview"
         },
         "paper_prototypes/csd/2022": {
           "name": "Prototypes Papier",
           "type": "Rubrique"
         },
         "project_-_paper_prototype/csd/2022": {
-          "name": "Projet - Prototype Papier"
+          "name": "Projet - Prototype Papier",
+          "url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/template/preview"
         },
         "designing_apps_for_good/csd/2022": {
-          "name": "Concevoir des Applications pour de Bon"
+          "name": "Concevoir des Applications pour de Bon",
+          "url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/template/preview"
         },
         "market_research/csd/2022": {
           "name": "Étude de Marché"
@@ -1694,7 +1920,11 @@
           "name": "Étude de Marché"
         },
         "market_research_2/csd/2022": {
-          "name": "Étude de Marché"
+          "name": "Étude de Marché",
+          "url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/template/preview"
+        },
+        "exploring_ui_elements/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/template/preview"
         },
         "design_mode/csd/2022": {
           "name": "Mode création"
@@ -1702,17 +1932,32 @@
         "design_mode_elements/csd/2022": {
           "name": "Éléments en mode création"
         },
+        "build_a_paper_prototype/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/template/preview"
+        },
         "what_s_for_lunch_testing/csd/2022": {
           "type": "Vidéo"
         },
         "prototype_testing/csd/2022": {
-          "name": "Les Essais de Prototype"
+          "name": "Les Essais de Prototype",
+          "url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/template/preview"
         },
         "intro_to_design_mode/csd/2022": {
           "name": "Introduction au mode création",
+          "url": "https://youtu.be/jiX1dST2PCw",
           "type": "Vidéo"
         },
+        "design_mode_in_app_lab/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/template/preview"
+        },
+        "build_a_digital_prototype/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/template/preview"
+        },
+        "events_in_app_lab/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/template/preview"
+        },
         "events_in_app_lab_1/csd/2022": {
+          "url": "https://youtu.be/npa2r4t6y2A",
           "type": "Vidéo"
         },
         "changing_screens/csd/2022": {
@@ -1727,8 +1972,18 @@
         "responding_to_user_input/csd/2022": {
           "name": "Répondre à l’entrée de l’utilisateur"
         },
+        "linking_prototype_screens/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/template/preview"
+        },
         "testing_the_app/csd/2022": {
-          "name": "Tester l'Application"
+          "name": "Tester l'Application",
+          "url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/template/preview"
+        },
+        "bugs_and_features_2/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/template/preview"
+        },
+        "updating_your_prototype_1/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/template/preview"
         },
         "app_presentation/csd/2022": {
           "name": "Présentation de l'Application",
@@ -1738,7 +1993,20 @@
           "name": "Présentation de l'Application"
         },
         "project_-_app_presentation/csd/2022": {
-          "name": "Projet - Présentation de l'Application"
+          "name": "Projet - Présentation de l'Application",
+          "url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/template/preview"
+        },
+        "all_code_2/csd/2022": {
+          "url": "/s/csd4-2022/code"
+        },
+        "all_resources_2/csd/2022": {
+          "url": "/s/csd4-2022/resources"
+        },
+        "all_standards_2/csd/2022": {
+          "url": "/s/csd4-2022/standards"
+        },
+        "all_vocabulary_2/csd/2022": {
+          "url": "/s/csd4-2022/vocab"
         },
         "computer_science_is_changing_everything/csd/2022": {
           "name": "L'informatique est en Train de Tout Changer",
@@ -4115,10 +4383,15 @@
           "name": "Explorer des Pages Web"
         },
         "exploring-web-pages/csd/2021": {
-          "name": "Explorer des Pages Web"
+          "name": "Explorer des Pages Web",
+          "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/"
+        },
+        "exemplar-text-website/csd/2021": {
+          "type": "Site web"
         },
         "html_tags/csd/2021": {
-          "name": "Balises HTML"
+          "name": "Balises HTML",
+          "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "Vidéo"
@@ -4128,31 +4401,53 @@
         },
         "video_pair_programming/csd/2021": {
           "name": " Programmation en Binôme",
+          "url": "https://youtu.be/q7d_JtyCq1A",
           "type": "Vidéo"
         },
         "headings_and_paragraphs/csd/2021": {
-          "name": "Titres et paragraphes"
+          "name": "Titres et paragraphes",
+          "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view"
         },
         "video_debugging/csd/2021": {
+          "name": "Vidéo : Déboguage",
           "type": "Vidéo"
         },
+        "project-guide-html-project-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view"
+        },
+        "peer-review-html-web-page-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/18JNbIAo4rrhAFlYk8qKxLrkYjmGp4k6RXQgXq5uFq2M/view"
+        },
         "html-web-page-1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1__6xm9Bpb8c4lw21YH_Nbu-N1Tx7XoBzFnWw0gB9xKM/edit",
           "type": "Rubrique"
         },
         "html-web-page/csd/2021": {
+          "url": "https://docs.google.com/document/d/1IFhjs4IjCM-mKs28FxJTDTADPS4XTa30aoQR1pG1570/",
           "type": "Commentaire par un pair"
         },
         "html-page/csd/2021": {
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
           "type": "Guide projet"
         },
         "formatting_html/csd/2021": {
-          "name": "Mise en forme HTML"
+          "name": "Mise en forme HTML",
+          "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view"
         },
         "lists/csd/2021": {
-          "name": "Listes"
+          "name": "Listes",
+          "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view"
         },
         "digital-footprint/csd/2021": {
           "name": "L'Empreinte Numérique"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Limier social",
+          "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Limier social",
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Introduction à CSS - Partie 1",
@@ -4160,71 +4455,149 @@
         },
         "intro_to_css_-_part_2/csd/2021": {
           "name": "Introduction à CSS - Partie 2",
+          "url": "https://youtu.be/VgBVKlpLqsE",
           "type": "Vidéo"
         },
+        "style_sheets/csd/2021": {
+          "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view"
+        },
+        "text_properties/csd/2021": {
+          "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing"
+        },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/14Zlx1BC-QxW01D0vk_C5JTB77PCK80OatVFv1hcClZw/view"
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view"
+        },
         "your-personal-style-1-2-3/csd/2021": {
+          "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit",
           "type": "Rubrique"
         },
         "your-personal-style-1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE",
           "type": "Commentaire par un pair"
         },
         "your-personal-style/csd/2021": {
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit",
           "type": "Guide projet"
+        },
+        "licensing-your-work-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
         },
         "creative-commons-video/csd/2021": {
           "type": "Vidéo"
         },
         "creative_commons_search/csd/2021": {
-          "name": "Recherche sur la licence Creative Commons"
+          "name": "Recherche sur la licence Creative Commons",
+          "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing"
         },
         "images_in_html/csd/2021": {
-          "name": "Les Images dans le HTML"
+          "name": "Les Images dans le HTML",
+          "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view"
+        },
+        "define-your-web-page/csd/2021": {
+          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/"
+        },
+        "body-styling/csd/2021": {
+          "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view"
         },
         "layout-properties/csd/2021": {
-          "name": "Propriétés de la mise en page"
+          "name": "Propriétés de la mise en page",
+          "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view"
+        },
+        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1zpK8MdquwIvu1yM9RsMqFnDN0bN7qRL3Kwz3MUFtLE4/view"
         },
         "person-web-page-prepare/csd/2021": {
+          "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/",
           "type": "Guide projet"
         },
+        "practices-reflection-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1J7Ghd-A6Y6onQq1zQU-VQ0ic2QV0I06x1ejxohX84RU/view"
+        },
+        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/177zgnLZgK8EWy2J_ztV7iAKPmi6uhRk5EZ4PocHBG0Y/view"
+        },
+        "peer-review-personal-website-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1HrCgKzgZ4QqMBU4nqLd9NsDBKvjnbSZQxyhpZpSA92k/view"
+        },
         "personal-web-page-1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1IwOlw4RqqWtpi6qvOZf7BoQt_hpAGSL_p7os8rLOTK0/",
           "type": "Commentaire par un pair"
         },
         "person-web-page-reflect/csd/2021": {
+          "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/",
           "type": "Guide projet"
         },
         "personal-web-page/csd/2021": {
+          "url": "https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view",
           "type": "Rubrique"
         },
         "publishing_your_website/csd/2021": {
           "name": "Publiez votre site Web",
+          "url": "https://youtu.be/2qcIlRtdpgE",
           "type": "Vidéo"
         },
+        "personal_web_page_-_student_checklist/csd/2021": {
+          "url": "https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view"
+        },
+        "extra_code_in_challenge_levels/csd/2021": {
+          "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit"
+        },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "url": "https://youtu.be/6GgrUeVT-xs",
           "type": "Vidéo"
         },
         "how-teamwork-works/csd/2021": {
+          "url": "https://youtu.be/qkw4pDV5Lec",
           "type": "Vidéo"
+        },
+        "website-team-plan/csd/2021": {
+          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/"
+        },
+        "links-and-research-1/csd/2021": {
+          "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE"
+        },
+        "links-and-research/csd/2021": {
+          "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit"
         },
         "how-search-works-video/csd/2021": {
+          "url": "https://youtu.be/LVV_93mBfSU",
           "type": "Vidéo"
         },
+        "internet-scavenger-hunt/csd/2021": {
+          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit"
+        },
         "classes/csd/2021": {
-          "name": "Classes"
+          "name": "Classes",
+          "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view"
+        },
+        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1EgfsYO_XPaTznzucxKttsEmuNPOhBnC_ynxDZ1SkN0w/view"
         },
         "website-for-a-purpose-1/csd/2021": {
           "type": "Rubrique"
         },
         "plan-a-multi-page-website/csd/2021": {
+          "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw",
           "type": "Guide projet"
         },
         "hyperlinks/csd/2021": {
-          "name": "Liens hypertexte"
+          "name": "Liens hypertexte",
+          "url": "https://drive.google.com/file/d/1x8rGBJ8EDZ07TasatQlu5wRM8Z7-M5e8/view"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Commentaire par un pair"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Guide projet"
+        },
+        "all_vocabulary_3/csd/2021": {
+          "url": "/s/csd2-2021/vocab"
         },
         "lesson_plans/pre-express/2020": {
           "name": "Plans des Cours"

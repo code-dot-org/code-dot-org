@@ -446,6 +446,7 @@ sv:
     no_primary_course: Prova en kurs på Code Studio
     choose_next_course: Prova en Code Studio kurs genom att välja en nedan
     print_certificate: Skriv ut intyg
+  certificate_hour_of_code: Timmen med Kod
   move_students:
     new_section_dne: Ledsen, men avsnittet %{new_section_code} existerar inte. Ange
       koden för ett annat avsnitt.

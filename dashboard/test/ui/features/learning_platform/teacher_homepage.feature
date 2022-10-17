@@ -184,8 +184,8 @@ Feature: Using the teacher homepage sections feature
     And I sign in as "Teacher_Sally" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
 
-    And I click selector ".uitest-certs-link" once I see it
-    And I wait to see "#uitest-cert-names"
-
-    And check that the URL contains "/certificates"
-    Then element "#uitest-cert-names" contains text "Sally"
+    And I wait until element ".uitest-certs-link" is visible
+    And I press the first ".uitest-certs-link" element to load a new page
+    And I wait until current URL contains "/certificates/batch"
+    And element "#certificate-batch" is visible
+    Then element "#certificate-batch" contains text "Sally"

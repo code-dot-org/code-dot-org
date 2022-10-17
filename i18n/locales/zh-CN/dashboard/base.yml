@@ -379,6 +379,7 @@ zh-CN:
       about: "关于"
       legal: "隐私与法律"
       legal_privacy: "隐私政策"
+      legal_cookie_notice: "Cookie通知"
       legal_tos: "使用条款"
     user:
       classroom: '教师主页'
@@ -554,6 +555,7 @@ zh-CN:
     choose_next_course: "从下面代码工作室的课程中选一个体验"
     print_certificate: "打印证书"
   certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
+  certificate_hour_of_code: "编程一小时"
   move_students:
     new_section_dne: "抱歉，小组 %{new_section_code} 不存在。请输入不同的小组代码。"
     section_code_cant_be_current_section: "当前小组不能与新建小组相同。"
@@ -1147,3 +1149,10 @@ zh-CN:
   unit_prefix: "单位%{n}"
   code_org_logo_alt: "Code.org 首页"
   teacher_feedback: "老师反馈"
+  lesson_lock:
+    error:
+      no_updates: "没有要执行的更新"
+      missing_params: "必须提供用户、级别和单位id"
+      cannot_view_locked_answers: "锁定时无法查看答案"
+      forbidden: "用户无法更新学生的可锁定状态"
+  reset_predict_progress_button: "删除答案"

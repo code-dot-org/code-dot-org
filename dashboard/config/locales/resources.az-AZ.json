@@ -1137,6 +1137,9 @@
           "name": "CSS - yə giriş: 2 ci hissə",
           "type": "Video"
         },
+        "styling_text_with_css/csd/2022": {
+          "url": "https://docs.google.com/presentation/d/1BtifQt5gCAdI3wyzMpW0sdNdnA-6hVk3rdcNETG1oP0/template/preview"
+        },
         "your_personal_style/csd/2022": {
           "type": "sərlövhə"
         },
@@ -1160,6 +1163,9 @@
         },
         "personal_web_page_-_prepare/csd/2022": {
           "type": "Layihə Bələdçisi"
+        },
+        "your_web_page_prepare/csd/2022": {
+          "name": "Sizin Veb Səhifə: Hazırlıq"
         },
         "personal_web_page/csd/2022": {
           "type": "Həmyaşıd rəyi"
@@ -1404,7 +1410,14 @@
         "if-statements_in_app_lab/csd/2022": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar",
           "type": "Video"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
@@ -2779,7 +2792,14 @@
         "if-statements_in_app_lab/csd/2021": {
           "type": "Video"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar",
           "type": "Video"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {

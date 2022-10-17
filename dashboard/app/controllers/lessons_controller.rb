@@ -6,7 +6,7 @@ class LessonsController < ApplicationController
 
   include LevelsHelper
 
-  # Script levels which are not in activity sections will not show up on the
+  # Unit levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
   # script levels to be lost. Prevent this by disallowing editing in this case.
   # This helps avoid losing data from existing scripts by accidentally editing
@@ -18,7 +18,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1
   def show
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated
 
     @lesson = script.lessons.find do |l|
@@ -38,7 +38,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
@@ -53,7 +53,7 @@ class LessonsController < ApplicationController
 
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
   def edit_with_lesson_position
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
@@ -143,7 +143,7 @@ class LessonsController < ApplicationController
   end
 
   def clone
-    destination_script = Script.find_by_name(params[:destinationUnitName])
+    destination_script = Unit.find_by_name(params[:destinationUnitName])
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
     raise 'Destination script and lesson script must be in a course version' unless destination_script.get_course_version && @lesson.script.get_course_version
     raise 'Lessons current unit and destination unit must both use code studio lesson plans' unless !destination_script.use_legacy_lesson_plans && !@lesson.script.use_legacy_lesson_plans

@@ -367,6 +367,7 @@ sl:
     no_primary_course: "Poskusite Code Studio smer"
     choose_next_course: "Poskusi Code Studio tečaj z izbiro enga spodaj"
     print_certificate: "Natisni certifikat"
+  certificate_hour_of_code: "Ura kode"
   move_students:
     new_section_dne: "Žal, oddelek %{new_section_code} ne obstaja. Prosimo vnesite drugo šifro odseka."
     section_code_cant_be_current_section: "Trenutni odsek ne more biti enak kot nov odsek."

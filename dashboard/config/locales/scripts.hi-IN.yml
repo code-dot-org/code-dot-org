@@ -4965,3 +4965,55 @@ hi:
           lesson_groups:
             lessonGroup-5:
               display_name: सर्वेक्षण
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: फंदे
+          lesson_groups:
+            lessonGroup-2:
+              display_name: सर्वेक्षण
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: अध्याय 1
+            lessonGroup-3:
+              display_name: अध्याय 2
+          title: सवाल हल करना
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'अध्याय 1: उपयोगकर्ता केंद्रित डिज़ाइन'
+            lessonGroup-3:
+              display_name: 'अध्याय 2: ऐप का प्रारूप बनाना'
+          title: डिज़ाइन प्रक्रिया
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'अध्याय 1: जानकारी पेश करना'
+            lessonGroup-3:
+              display_name: 'अध्याय 2: डेटा समस्याओं को सुलझाना'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'अध्याय 1: चित्र और एनिमेशंस'
+            lessonGroup-3:
+              display_name: 'अध्याय 2: गेम्स बनाना'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: अध्याय 1
+            lessonGroup-3:
+              display_name: अध्याय 2
+          title: भौतिक कंप्यूटिंग
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: अध्याय 1
+            lessonGroup-3:
+              display_name: अध्याय 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'

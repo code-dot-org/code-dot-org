@@ -5,36 +5,40 @@ he:
   language: עברית
   front_title: הצטרף לאירוע הלמידה הגדול בהסטוריה %{campaign_date}
   coming_soon: בקרוב
-  campaign_date_start_short: רביעי בדצמבר
-  campaign_date_start_long: רביעי בדצמבר
-  campaign_date_short: בין הרביעי ל עשירי בדצמבר
-  campaign_date_full: בין הרביעי לעשירי בדצמבר
+  campaign_date_start_short: 5 בדצמבר
+  campaign_date_start_long: 5 בדצמבר
+  campaign_date_short: 5-11 בדצמבר
+  campaign_date_full: 5-11 בדצמבר
   campaign_date_year: '2022'
-  campaign_date_full_year: 6-12 בדצמבר, 2021
+  campaign_date_full_year: 5-11 בדצמבר, 2022
   nonus_campaign_date_start_short: Oct. 1
   nonus_campaign_date_start_long: October 1
-  nonus_campaign_date_short: Oct. 1 - Dec. 18
+  nonus_campaign_date_short: באוקטובר - 18 בדצמבר
   nonus_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
   nonus_campaign_date_year: '2022'
   nonus_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
+  latam_campaign_date_short: באוקטובר - 18 בדצמבר
   latam_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
   latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
   europe_campaign_date_start_short: Oct. 1
   europe_campaign_date_start_long: October 1
-  europe_campaign_date_short: Oct. 1 - Dec. 18
+  europe_campaign_date_short: באוקטובר - 18 בדצמבר
   europe_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
   europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1 - Dec. 18
+  africa_campaign_date_short: באוקטובר - 18 בדצמבר
   africa_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  hoc2022_header: גלו, שחקו, צרו!
+  social_hoc2022_explore_play_create: השתמשו במדעי המחשב כדי לגלות, לשחק וליצור!
+  codeorg_homepage_hoc2022_body: גלו את היקום, הבקיעו שער, פרצו מהלך - קיימים כל כך
+    הרבה דרכים לנסות את מדעי המחשב.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: למדו היום, צרו מחר מזהיר.
@@ -475,6 +479,22 @@ he:
   front_join_us_n_students_served: "# served."
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Learn more
+  cta_see_whats_new: ראו מה חדש
+  cta_try_more_activities: נסו עוד פעילויות
+  cta_try_an_activity: נסו פעילות
+  hoc_homepage_join_the_movement_heading: הצטרפו לתנועה
+  hoc_homepage_join_the_movement_description: Hour of Code זמינה לאורך כל השנה, אך
+    כל שנה בדצמבר, כיתתכם יכולה להצטרף אל מיליוני תלמידים ברחבי העולם החוגגים את שבוע
+    מדעי המחשב עם Hour of Code. הרשמה לחגיגה השנתית מתחילה כל שנה באוקטובר.
+  hoc_homepage_what_is_hoc_subhead: ערכות לימוד בנות שעה אחת  ביותר מ-45 שפות. אין
+    צורך בניסיון קודם. פעילויות של Hour of Code זמינות בחינם לאורך כל השנה.
+  hoc_homepage_what_is_hoc_description: Hour of Code הינה מבוא של שעה אחת למדעי המחשב,
+    תוך שימוש בערכות לימוד כייפיות כדי להראות שכל אחד יכול ללמוד את הבסיס.  הקמפיין
+    הבסיסי הזה נתמך ע"י יותר מ-400 שותפים ו-200,000 מחנכים ברחבי העולם.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "\\[קראו את המדריך](%\\{howto_guide_url}%)
+    כדי לתכנן אירוע לכיתתכם."
+  hoc_homepage_highlights_heading: עיקרי הדברים של Hour of Code
+  hoc_homepage_organized_by: Hour of Code מאורגנת ע"י \[Code.org](%\{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -936,7 +956,7 @@ he:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: זכויות יוצרים 2015 Code.org. כל הזכויות שמורות.
-  footer_trademark_message: Hour of Code ™ הוא סימן מסחרי של Code.org.
+  footer_trademark_message: Hour of Code ® ו-Hora del Código® הם סימן מסחרי של Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: שותפים
   footer_menu_contact: צור קשר

@@ -628,6 +628,7 @@ uk:
     print_certificate: Друкувати сертифікат
   certificate_sponsor_message: "%{sponsor_name} зробив щедрий подарунок, щоб спонсорувати
     ваше навчання. "
+  certificate_hour_of_code: Година коду
   move_students:
     new_section_dne: Вибачте, але групи %{new_section_code} не існує. Вкажіть інший
       код групи.

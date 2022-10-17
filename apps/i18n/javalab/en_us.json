@@ -107,6 +107,8 @@
   "markComplete": "Mark Complete",
   "markIncomplete": "Mark Incomplete",
   "missingFilenameError": "File name cannot be blank.",
+  "moveLeft": "Move left",
+  "moveRight": "Move right",
   "newFile": "New File",
   "noCodeReviewComments": "Comments from your teacher will appear here.",
   "noCodeReviewUntilStudentEditsCode": "You cannot leave comments until the project owner has modified the default code and clicked the \"Run\" button",

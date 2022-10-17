@@ -529,6 +529,7 @@ ga:
     choose_next_course: "Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos"
     print_certificate: "Priontáil Teastas"
   certificate_sponsor_message: "Is é %{sponsor_name} a rinne urraíocht ar na ceachtanna seo."
+  certificate_hour_of_code: "An Uair Chódála"
   move_students:
     new_section_dne: "Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin eile."
     section_code_cant_be_current_section: "Is ionann iad an rannán reatha agus an rannán nua."

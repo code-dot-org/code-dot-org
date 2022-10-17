@@ -379,6 +379,7 @@ de:
       about: "Über"
       legal: "Privatsphäre und Rechtliches"
       legal_privacy: "Datenschutzerklärung"
+      legal_cookie_notice: "Cookie-Meldung"
       legal_tos: "AGBs"
     user:
       classroom: 'Lehrer-Homepage'
@@ -554,6 +555,7 @@ de:
     choose_next_course: "Wähle einen der Code-Studio-Kurse unten aus"
     print_certificate: "Zertifikat drucken"
   certificate_sponsor_message: "%{sponsor_name} machte das großzügige Geschenk, um dein Lernerfolg zu fördern."
+  certificate_hour_of_code: "Hour of Code"
   move_students:
     new_section_dne: "Entschuldigung, aber die Lerngruppe %{new_section_code} existiert nicht. Bitte geben Sie einen anderen Lerngruppencode ein."
     section_code_cant_be_current_section: "Die derzeitige Lerngruppe kann nicht gleich mit der neuen Lerngruppe sein."
@@ -1150,3 +1152,10 @@ de:
   unit_prefix: "Lektion %{n}"
   code_org_logo_alt: "Code.org Startseite"
   teacher_feedback: "Rückmeldung vom Lehrer"
+  lesson_lock:
+    error:
+      no_updates: "Keine auszuführenden Aktualisierungen"
+      missing_params: "Muss Benutzer-, Ebenen- und Einheits-ID angeben"
+      cannot_view_locked_answers: "Antworten können nicht angezeigt werden, wenn sie gesperrt sind"
+      forbidden: "Benutzer kann den Sperrstatus des Schülers nicht aktualisieren"
+  reset_predict_progress_button: "Antwort löschen"
