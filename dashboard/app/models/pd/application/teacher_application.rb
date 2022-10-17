@@ -679,6 +679,7 @@ module Pd::Application
         elsif hash[:program] == PROGRAMS[:csa]
           required << :csa_which_grades
           required << :csa_how_offer
+          required << :csa_already_know
         end
 
         if hash[:regional_partner_workshop_ids].presence
