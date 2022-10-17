@@ -486,11 +486,11 @@ Dashboard::Application.routes.draw do
 
     get '/beta', to: redirect('/')
 
-    get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
-    get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
+    get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
+    get '/hoc/:chapter', to: 'script_levels#show', script_id: Unit::HOC_NAME, as: 'hoc_chapter', format: false
 
-    get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
-    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
+    get '/flappy/:chapter', to: 'script_levels#show', script_id: Unit::FLAPPY_NAME, as: 'flappy_chapter', format: false
+    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
 
