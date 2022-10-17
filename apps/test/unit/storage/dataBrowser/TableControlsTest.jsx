@@ -11,6 +11,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import {changeView} from '@cdo/apps/storage/redux/data';
@@ -23,6 +24,7 @@ import VisualizerModal, {
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 
 const DEFAULT_PROPS = {
+  isRtl: false,
   clearTable: () => {},
   exportCsv: () => {},
   importCsv: () => {},
@@ -33,7 +35,7 @@ const DEFAULT_PROPS = {
 describe('TableControls', () => {
   beforeEach(() => {
     stubRedux();
-    registerReducers({...commonReducers, ...reducers});
+    registerReducers({...commonReducers, ...reducers, isRtl});
     experiments.setEnabled(experiments.APPLAB_DATASETS, true);
     const store = getStore();
     store.dispatch(changeView(DataView.TABLE), 'tableName');

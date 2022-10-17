@@ -6,6 +6,7 @@ import commonI18n from '@cdo/locale';
 import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
+  isRtl: false,
   tableColumns: [],
   tableName: 'testTable',
   tableListMap: {},
