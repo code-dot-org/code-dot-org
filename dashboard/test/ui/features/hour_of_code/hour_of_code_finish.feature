@@ -40,6 +40,22 @@ Scenario: Flappy customized dashboard certificate pages
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
 
+Scenario: Pegasus share page preserves certificate when redirecting
+  # Set up a customized certificate
+  Given I am on "http://code.org/api/hour/finish/mc"
+  And I wait until current URL contains "/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And I type "Robo Coder" into "#name"
+  And I press "button:contains(Submit)" using jQuery
+  And I wait to see element with ID "uitest-thanks"
+
+  # Verify that the old certificate share url will redirect to the new one,
+  # preserving the custom certificate image
+  When I navigate to the pegasus certificate share page
+  And I wait until current URL contains "http://studio.code.org/certificates"
+  And I wait to see an image "/certificate_images/"
+  And I see custom certificate image with name "Robo Coder" and course "mc"
+
 Scenario: Oceans uncustomized dashboard certificate pages
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
