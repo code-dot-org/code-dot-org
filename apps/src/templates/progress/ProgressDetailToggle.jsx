@@ -89,6 +89,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
             style={styles.icon}
+            alt="Summary View"
           />
         </button>
         <button
@@ -100,6 +101,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.detailInactive : images.detailActive}
             style={styles.icon}
+            alt="Detail View"
           />
         </button>
       </ToggleGroup>
