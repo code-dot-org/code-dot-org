@@ -482,6 +482,7 @@ module Pd::Application
         previous_yearlong_cdo_pd: [
           'CS Discoveries',
           'CS Principles',
+          'Computer Science A (CSA)',
           'Exploring Computer Science',
           'CS in Algebra',
           'CS in Science',
@@ -995,6 +996,9 @@ module Pd::Application
       elsif course == 'csp'
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
           responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
+      elsif course == 'csa'
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
+          responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
       end
 
       # Section 4
