@@ -1364,6 +1364,34 @@ en:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": select
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": quirky bass
             "'sound://category_digital/jump_7.mp3'": jump
+      gamelab_playSoundOptionsSoccer:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": airhorn
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applause
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chant
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": cheer
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kick
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": two whistles
+            "'sound://category_sports/One_Whistle_SFX.mp3'": whistle
+      gamelab_playSoundOptionsSpace:
+        text: play sound [SOUND][0]
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Galactic_center_SFX.mp3'": galactic center
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       gamelab_playSpeech:
         text: play speech [SOUND][0]
       gamelab_playerBehaviors:
@@ -2550,6 +2578,8 @@ en:
         text: clear headings
       storylab_setHeading:
         text: set heading [HEADING][0]
+      storylab_setPromptWithChoice:
+        text: prompt user [QUESTION][0] for variable [VAR][1] with choice [A][2]
       storylab_setSubheading:
         text: set subheading [SUBHEADING][0]
       validation_validatedBackground:
