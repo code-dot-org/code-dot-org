@@ -124,28 +124,6 @@ module Services::I18n::CurriculumSyncUtils
       attribute :description
     end
 
-    class FrameworkCrowdinSerializer < CrowdinSerializer
-      attributes :name
-
-      delegate :crowdin_key, to: :object
-    end
-
-    class StandardCategoryCrowdinSerializer < CrowdinSerializer
-      attributes :description
-
-      delegate :crowdin_key, to: :object
-    end
-
-    class StandardCrowdinSerializer < CrowdinSerializer
-      attributes :description
-
-      belongs_to :framework, serializer: FrameworkCrowdinSerializer, optional: true
-      belongs_to :parent_category, serializer: StandardCategoryCrowdinSerializer, optional: true
-      belongs_to :category, serializer: StandardCategoryCrowdinSerializer, optional: true
-
-      delegate :crowdin_key, to: :object
-    end
-
     class ReferenceGuideCrowdinSerializer < CrowdinSerializer
       attributes :display_name, :content
 
@@ -169,8 +147,6 @@ module Services::I18n::CurriculumSyncUtils
       has_many :objectives, serializer: ObjectiveCrowdinSerializer
       has_many :resources, serializer: ResourceCrowdinSerializer
       has_many :vocabularies, serializer: VocabularyCrowdinSerializer
-      has_many :standards, serializer: StandardCrowdinSerializer
-      has_many :opportunity_standards, serializer: StandardCrowdinSerializer
 
       # override
       def crowdin_key
