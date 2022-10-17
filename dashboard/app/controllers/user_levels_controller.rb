@@ -24,8 +24,8 @@ class UserLevelsController < ApplicationController
   end
 
   def delete_predict_level_progress
-    script = Script.get_from_cache(params[:script_id])
-    return head :not_found, text: 'Script not found' unless script
+    script = Unit.get_from_cache(params[:script_id])
+    return head :not_found, text: 'Unit not found' unless script
     return head :forbidden, text: 'User must be instructor of course' unless script.can_be_instructor?(current_user)
     level = Level.find(params[:level_id])
     return head :not_found, text: 'Level not found' unless level

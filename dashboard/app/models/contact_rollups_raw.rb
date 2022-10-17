@@ -206,7 +206,7 @@ class ContactRollupsRaw < ApplicationRecord
     #
     # @see:
     #   https://code.org/privacy#studentemails
-    #   pegasus/sites.v3/code.org/views/petition_expand.haml
+    #   apps/src/templates/certificates/petition/PetitionForm.jsx
     #   bin/oneoff/wipe_data/opt_out_petition_emails_under_16
     #
     forms_query = <<~SQL

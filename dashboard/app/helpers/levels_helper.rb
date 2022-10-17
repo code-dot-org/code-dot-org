@@ -17,9 +17,9 @@ module LevelsHelper
   include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
-    if script_level.script.name == Script::HOC_NAME
+    if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
-    elsif script_level.script.name == Script::FLAPPY_NAME
+    elsif script_level.script.name == Unit::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
       if script_level.lesson.numbered_lesson?
@@ -604,7 +604,7 @@ module LevelsHelper
     level_options = l.localized_blockly_level_options(@script).dup
     app_options[:level] = level_options
 
-    # Script-dependent option
+    # Unit-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
     app_options[:scriptName] = script.name if script

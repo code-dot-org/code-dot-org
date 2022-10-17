@@ -1388,3 +1388,19 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
     And I join the section
   }
 end
+
+And(/^I navigate to the pegasus certificate share page$/) do
+  query_params = @browser.execute_script("return window.location.search;")
+  session_id = query_params.match(/\?i=([^&]+)/)[1]
+  url = "http://code.org/certificates/#{session_id}"
+  navigate_to replace_hostname(url)
+end
+
+And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/) do |name, course|
+  expect(@browser.execute_script("return $('img[src*=\"/certificate_images/\"]').length")).to eq(1)
+  src = @browser.execute_script("return $('img[src*=\"/certificate_images/\"]').attr('src')")
+  encoded_params = src.match(%r{/certificate_images/(.*)\.jpg})[1]
+  params = JSON.parse(Base64.urlsafe_decode64(encoded_params))
+  expect(params['name']).to eq(name)
+  expect(params['course']).to eq(course)
+end
