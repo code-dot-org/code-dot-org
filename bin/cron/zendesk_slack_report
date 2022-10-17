@@ -42,12 +42,12 @@ MONITORING_GROUPS = {
   'foundations' => ['Accounts'],
   'hour-of-code' => ['Hour of Code'],
   'international' => ['International'],
-  'teacher-tools' => ['Learning Platform'],
   'marketing' => ['Media'],
   'product' => ['Product'],
   'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
-  'student-learning' => ['*Labs', 'CSA Engineering']
+  'student-learning' => ['*Labs', 'CSA Engineering'],
+  'teacher-tools' => ['Teacher Tools']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
@@ -59,7 +59,6 @@ GROUP_FILTERS = {
   'CSP' => '45749787',
   'Developers' => '47222126',
   'International' => '360086130812',
-  'Learning Platform' => '360082967212',
   'Media' => '47756566',
   'PLC Tools' => '114103940251',
   'Product' => '360007773991',
