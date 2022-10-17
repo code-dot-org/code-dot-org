@@ -836,6 +836,13 @@ FactoryGirl.define do
       program Pd::Application::TeacherApplication::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
     end
+
+    trait :csa do
+      program Pd::Application::TeacherApplication::PROGRAMS[:csa]
+      csa_which_grades ['11', '12']
+      csa_how_offer 'As an AP course'
+      csa_already_know 'Yes'
+    end
   end
 
   # default to csp
