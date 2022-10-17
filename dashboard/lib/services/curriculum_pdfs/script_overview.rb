@@ -15,9 +15,9 @@ module Services
         # version
         #
         # For example: <Pathname:csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29.pdf>
-        def get_script_overview_pathname(script)
+        def get_script_overview_pathname(script, versioned: true)
           return nil unless script&.seeded_from
-          version_number = Time.parse(script.seeded_from).to_s(:number)
+          version_number = versioned ? Time.parse(script.seeded_from).to_s(:number) : 'fallback'
           filename = ActiveStorage::Filename.new(script.localized_title.parameterize(preserve_case: true) + ".pdf").to_s
           return Pathname.new(File.join(script.name, version_number, filename))
         end
@@ -28,7 +28,8 @@ module Services
         # For example: https://lesson-plans.code.org/csp1-2021/20210909014219/Digital+Information+%28%2721-%2722%29.pdf
         def get_script_overview_url(script)
           return nil unless Services::CurriculumPdfs.should_generate_overview_pdf?(script)
-          pathname = get_script_overview_pathname(script)
+          versioned = script_overview_pdf_exists_for?(script)
+          pathname = get_script_overview_pathname(script, versioned: versioned)
           return nil if pathname.blank?
           File.join(get_base_url, pathname)
         end
@@ -83,10 +84,15 @@ module Services
 
           # Merge all included PDFs
           pathname = get_script_overview_pathname(script)
+          fallback_pathname = get_script_overview_pathname(script, versioned: false)
           destination = File.join(directory, pathname)
+          fallback_destination = File.join(directory, fallback_pathname)
           FileUtils.mkdir_p(File.dirname(destination))
           PDF.merge_local_pdfs(destination, *pdfs)
           FileUtils.remove_entry_secure(pdfs_dir)
+
+          FileUtils.mkdir_p(File.dirname(fallback_destination))
+          FileUtils.cp(destination, fallback_destination)
 
           return destination
         end
