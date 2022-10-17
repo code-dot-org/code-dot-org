@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2022-10-11 00:10:48 UTC",
+    "serialized_at": "2022-10-14 22:50:34 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4207,13 +4207,7 @@
       "key": "3172dd84-412a-4e50-94bf-e4f3303aed07",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share out the last website they visited. Make sure students share why they went to that website and whether the website provided what they were looking for.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The goal of having this discussion is to pull out that websites share information and that people go to websites for a particular purpose.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share out the last website they visited. Make sure students share why they went to that website and whether the website provided what they were looking for.\n\n**Discussion Goal:** The goal of having this discussion is to pull out that websites share information and that people go to websites for a particular purpose.\n"
       },
       "seeding_key": {
         "activity_section.key": "3172dd84-412a-4e50-94bf-e4f3303aed07",
@@ -4309,13 +4303,7 @@
       "key": "37e46f21-146c-4188-a199-b3d5ffe949f3",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Once everyone has had a chance to brainstorm about their sites, give the class a chance to discuss their thoughts on the sample websites.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to prepare students to think of websites as a tool to solve problems and effect change.  As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what problems they might address with a site.  \r\n"
-          }
-        ]
+        "description": "**Discuss:** Once everyone has had a chance to brainstorm about their sites, give the class a chance to discuss their thoughts on the sample websites.\n\n**Discussion Goal:** The goal of this discussion is to prepare students to think of websites as a tool to solve problems and effect change. As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what problems they might address with a site."
       },
       "seeding_key": {
         "activity_section.key": "37e46f21-146c-4188-a199-b3d5ffe949f3",
@@ -4388,13 +4376,7 @@
       "key": "2368220a-456a-4450-9b40-7fcd4bb7e7ca",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow teams to share out their designs and mottos.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As students share out their mottos or logos, encourage them to explain how their values are reflected in them, highlighting the importance of effective collaboration and a focus on shared goals.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow teams to share out their designs and mottos.\n\n**Discussion Goal:** As students share out their mottos or logos, encourage them to explain how their values are reflected in them, highlighting the importance of effective collaboration and a focus on shared goals."
       },
       "seeding_key": {
         "activity_section.key": "2368220a-456a-4450-9b40-7fcd4bb7e7ca",
@@ -4456,13 +4438,7 @@
       "key": "f13ca252-eff7-4da4-92a1-48a0cdab84e7",
       "position": 5,
       "properties": {
-        "description": "**Share:** Allow students some time to write down their own answers, then have them share with the rest of the class. Highlight characteristics that will be helpful when they are working with their teams on the project.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This game and discussion should prime students to think about strategies for successful teamwork on the project. Feel free to swap out the categories for ones that make more sense for your own classroom. \r\n"
-          }
-        ]
+        "description": "**Share:** Allow students some time to write down their own answers, then have them share with the rest of the class. Highlight characteristics that will be helpful when they are working with their teams on the project.\n\n**Discussion Goal:** This game and discussion should prime students to think about strategies for successful teamwork on the project. Feel free to swap out the categories for ones that make more sense for your own classroom. "
       },
       "seeding_key": {
         "activity_section.key": "f13ca252-eff7-4da4-92a1-48a0cdab84e7",
@@ -4496,13 +4472,7 @@
       "position": 2,
       "properties": {
         "description": "**Questions to Consider with Video:**\n- What are the advantages to working in a team?\n- What are some tips for teams to work well together?",
-        "progression_name": "Video: Teamwork",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this video is to help students come into teamwork with a positive attitude and give them a few suggestions for how to make their teams run more smoothly.\nStudents may have different ideas for the advantages of working on a team, but they should note that people can get more done in a team and that bringing in a diversity of ideas will make a project better.\n\n**Tips mentioned in the video are to:**\n- Have a plan\n- Give everyone a special role\n- Celebrate successes of your teammates\n- Have fun!\n- Figure out everyone's strengths\n- Listen to and respect everyone's ideas\n- Be confident in sharing your ideas"
-          }
-        ]
+        "progression_name": "Video: Teamwork"
       },
       "seeding_key": {
         "activity_section.key": "c96bfef5-3640-4536-999b-02955aef2842",
@@ -4513,7 +4483,13 @@
       "key": "c996d60a-a392-471d-a18f-840999c170c0",
       "position": 3,
       "properties": {
-        "description": "**Distribute:** Hand out the activity guide."
+        "description": "**Discussion Goal:** The goal of this video is to help students come into teamwork with a positive attitude and give them a few suggestions for how to make their teams run more smoothly.\nStudents may have different ideas for the advantages of working on a team, but they should note that people can get more done in a team and that bringing in a diversity of ideas will make a project better.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teamwork Tips:** The video includes several tips on how to work as a team. Consider recording these rules on a poster or a small handout that students can refer back to regularly. The tips mentioned in the video are:\n\n- Have a plan\n- Give everyone a special role\n- Celebrate successes of your teammates\n- Have fun!\n- Figure out everyone's strengths\n- Listen to and respect everyone's ideas\n- Be confident in sharing your ideas"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c996d60a-a392-471d-a18f-840999c170c0",
@@ -4524,7 +4500,7 @@
       "key": "ab8a6760-9975-4fb7-b444-cc8545ef713d",
       "position": 4,
       "properties": {
-        "description": "The teams should already have the topic for their project, but they should check that they are all in agreement about the topic.",
+        "description": "**Distribute:** Hand out the activity guide.\n\nThe teams should already have the topic for their project, but they should check that they are all in agreement about the topic.",
         "name": "Team Goal\r"
       },
       "seeding_key": {
@@ -4590,13 +4566,7 @@
       "position": 9,
       "properties": {
         "description": "**Question to Consider with Video:**\n- What are three tips for dealing with disagreement?",
-        "progression_name": "Video: Managing Disagreement",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should understand that disagreement is a normal part of teamwork and have strategies for constructively dealing with disagreement in their teams.\n\n**Tips in the video are:**\n- Appreciate that your team has lots of ideas, even if you don't agree with all of them.\n- Be curious about the other ideas, and try to understand what is good about them.\n- Compromise with your teammates, taking good parts of lots of ideas and putting them together."
-          }
-        ]
+        "progression_name": "Video: Managing Disagreement"
       },
       "seeding_key": {
         "activity_section.key": "3d7e4979-6638-4c2f-9c26-cd021baec562",
@@ -4607,11 +4577,11 @@
       "key": "75a3986a-f2d5-40c6-b892-ae2316af009d",
       "position": 10,
       "properties": {
-        "description": "Students plan how they will deal with disagreement and come up with strategies for advocating for themselves and their team members.",
+        "description": "**Discussion Goal:** Students should understand that disagreement is a normal part of teamwork and have strategies for constructively dealing with disagreement in their teams.\n\nStudents plan how they will deal with disagreement and come up with strategies for advocating for themselves and their team members.",
         "tips": [
           {
-            "type": "contentCorner",
-            "markdown": "Fostering an inclusive culture and collaborating around computing are core practices in the CS K12 Framework. Students may need guidance on effective strategies for inclusion and collaboration. For example, some students may suggest a \"majority rules\" approach to disagreement. Challenge students to think of how that may exclude valuable perspectives and whether there are better strategies that can incorporate the entire team's voice.\r\n\r\n"
+            "type": "teachingTip",
+            "markdown": "**Collaboration and Inclusivity:** Fostering an inclusive culture and collaborating around computing are core practices in the CS K12 Framework. Students may need guidance on effective strategies for inclusion and collaboration. For example, some students may suggest a \"majority rules\" approach to disagreement. Challenge students to think of how that may exclude valuable perspectives and whether there are better strategies that can incorporate the entire team's voice.\n\n**Tips for Handling Disagreement:** The video includes several tips for handling disagreement. Similar to the last video, consider having a poster or small handout that students can refer to with these tips. Examples include:\n\n- Appreciate that your team has lots of ideas, even if you don't agree with all of them.\n- Be curious about the other ideas, and try to understand what is good about them.\n- Compromise with your teammates, taking good parts of lots of ideas and putting them together."
           }
         ]
       },
@@ -4711,13 +4681,7 @@
       "key": "b14f98fb-6fd8-4a48-8092-847589bf2239",
       "position": 6,
       "properties": {
-        "description": "**Discuss:**  Student pairs share out what they were able to discover during the scavenger hunt and what strategies worked well for finding accurate information.  If possible, use the discussion to introduce the key vocabulary for the lesson.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The first three prompt questions are intended to help students identify any searching techniques that they currently use. If students _don't_ have clear strategies, you may want to spend some time discussing basic search techniques. Keep track of search strategies on the board for reference later.\r\n\r\nAs students discuss the search engines that they used in the process, you may want to challenge them to think about how the search engines are able to give them relevant results.  This can provide a good transition to the video in the next activity.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:**  Student pairs share out what they were able to discover during the scavenger hunt and what strategies worked well for finding accurate information.  If possible, use the discussion to introduce the key vocabulary for the lesson.\n\n**Discussion Goal:** These questions are intended to help students identify any searching techniques that they currently use. If students _don't_ have clear strategies, you may want to spend some time discussing basic search techniques. Keep track of search strategies on the board for reference later.\n\nAs students discuss the search engines that they used in the process, you may want to challenge them to think about how the search engines are able to give them relevant results.  This can provide a good transition to the video in the next activity."
       },
       "seeding_key": {
         "activity_section.key": "b14f98fb-6fd8-4a48-8092-847589bf2239",
@@ -4856,13 +4820,7 @@
       "key": "34dcf9e0-21bf-408c-ac2c-31b1a2ad36ac",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share their answers to the questions.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion serves as a review of the CSS properties students have already learned and prompts them to think about how this page goes beyond that knowledge. Students may not realize it, but this page styles the same types of elements in different ways on different parts of the page. You may want to prompt students to think more deeply about why this is difficult by asking them what the color property of the paragraph element would be in the stylesheet for this page.\r\n\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share their answers to the questions.\n\n**Discussion Goal:** This discussion serves as a review of the CSS properties students have already learned and prompts them to think about how this page goes beyond that knowledge. Students may not realize it, but this page styles the same types of elements in different ways on different parts of the page. You may want to prompt students to think more deeply about why this is difficult by asking them what the color property of the paragraph element would be in the stylesheet for this page.\n"
       },
       "seeding_key": {
         "activity_section.key": "34dcf9e0-21bf-408c-ac2c-31b1a2ad36ac",
@@ -5009,13 +4967,7 @@
       "key": "d6836cba-5faf-460b-b984-76360e9cb1d3",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out some of their favorite features.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to make sure that the various features that students have learned are top of mind when they begin to design their sites. Make sure students are mentioning the features that they have particularly enjoyed in the unit, and review the tags and css properties that create them.\r\n\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out some of their favorite features.\n\n**Discussion Goal:** The goal of this discussion is to make sure that the various features that students have learned are top of mind when they begin to design their sites. Make sure students are mentioning the features that they have particularly enjoyed in the unit, and review the tags and css properties that create them.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d6836cba-5faf-460b-b984-76360e9cb1d3",
@@ -5333,13 +5285,7 @@
       "key": "b0163f30-d8ec-41d1-a428-b0a290821075",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** After students have time to write down their thoughts, allow them to share in small groups before taking ideas from the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students may come up with ideas such as a similar color scheme or styles, or similar content.  They may mention a header at the top of the page or navigation bar.  The most important thing is that they are thinking of the site as a single project that they are all contributing to, rather than a set of individual web pages.\r\n"
-          }
-        ]
+        "description": "**Discuss:** After students have time to write down their thoughts, allow them to share in small groups before taking ideas from the whole class.\n\n**Discussion Goal:** Students may come up with ideas such as a similar color scheme or styles, or similar content.  They may mention a header at the top of the page or navigation bar.  The most important thing is that they are thinking of the site as a single project that they are all contributing to, rather than a set of individual web pages.\n"
       },
       "seeding_key": {
         "activity_section.key": "b0163f30-d8ec-41d1-a428-b0a290821075",
@@ -5512,13 +5458,7 @@
       "key": "a21fe5d7-92c2-4cb7-88ef-5ed1588943e0",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share their responses with the class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This should be a fun time for students to reflect on the great work that they have done, but also recognize that they can always use an outside perspective. This will also prepare them to fill out the creator portion of the peer review guide.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share their responses with the class.\n\n**Discussion Goal:** This should be a fun time for students to reflect on the great work that they have done, but also recognize that they can always use an outside perspective. This will also prepare them to fill out the creator portion of the peer review guide.\n"
       },
       "seeding_key": {
         "activity_section.key": "a21fe5d7-92c2-4cb7-88ef-5ed1588943e0",
