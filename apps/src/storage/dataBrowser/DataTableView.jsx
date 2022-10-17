@@ -23,6 +23,7 @@ const INITIAL_STATE = {
 class DataTableView extends React.Component {
   static propTypes = {
     // from redux state
+    isRtl: PropTypes.bool.isRequired,
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
     tableListMap: PropTypes.object.isRequired,
@@ -97,7 +98,8 @@ class DataTableView extends React.Component {
       tableListMap,
       tableName,
       onViewChange,
-      libraryManifest
+      libraryManifest,
+      isRtl
     } = this.props;
     const visible = DataView.TABLE === view;
     const debugDataStyle = {
@@ -126,7 +128,7 @@ class DataTableView extends React.Component {
               &nbsp;{msg.backToData()}
             </a>
           </span>
-          <span className={style.debugLink}>
+          <span className={isRtl ? style.debugLinkRtl : style.debugLink}>
             <a
               id="uitest-tableDebugLink"
               className={dataStyles.link}
@@ -139,6 +141,7 @@ class DataTableView extends React.Component {
           </span>
         </div>
         <TableControls
+          isRtl={isRtl}
           clearTable={this.clearTable}
           importCsv={this.importCsv}
           exportCsv={this.exportCsv}
@@ -163,6 +166,7 @@ class DataTableView extends React.Component {
 export const UnconnectedDataTableView = DataTableView;
 export default connect(
   state => ({
+    isRtl: state.isRtl,
     view: state.data.view,
     tableColumns: state.data.tableColumns || [],
     tableRecords: state.data.tableRecords || [],

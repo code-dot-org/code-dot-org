@@ -14,6 +14,7 @@ import style from './table-controls.module.scss';
 
 class TableControls extends React.Component {
   static propTypes = {
+    isRtl: PropTypes.bool.isRequired,
     clearTable: PropTypes.func.isRequired,
     exportCsv: PropTypes.func.isRequired,
     importCsv: PropTypes.func.isRequired,
@@ -54,7 +55,8 @@ class TableControls extends React.Component {
             className={classNames(
               style.exportButton,
               dataStyles.button,
-              dataStyles.buttonWhite
+              dataStyles.buttonWhite,
+              this.props.isRtl ? style.exportButtonRtl : {}
             )}
           >
             {msg.exportToCSV()}
