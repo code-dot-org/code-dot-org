@@ -31,13 +31,6 @@ class ProgressBubbleSet extends React.Component {
     isRtl: PropTypes.bool
   };
 
-  bubbleDisabled = level => {
-    const {disabled} = this.props;
-    // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
-    // for the current section.
-    return disabled;
-  };
-
   renderBubble = (level, index, isSublevel) => {
     const {levels, selectedSectionId, selectedStudentId, isRtl} = this.props;
 
@@ -74,7 +67,7 @@ class ProgressBubbleSet extends React.Component {
         <div style={containerStyleProp}>
           <ProgressBubble
             level={level}
-            disabled={this.bubbleDisabled(level)}
+            disabled={this.props.disabled}
             smallBubble={isSublevel}
             selectedSectionId={selectedSectionId}
             selectedStudentId={selectedStudentId}
