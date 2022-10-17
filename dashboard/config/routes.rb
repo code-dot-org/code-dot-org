@@ -93,8 +93,9 @@ Dashboard::Application.routes.draw do
     get 'docs/concepts/data-library', to: 'data_docs#index'
     get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
 
-    # There are still reference guides and curricula that live on curriculum.code.org.
-    # For these, fall back to old proxying logic.
+    # There are still old curricula that live on curriculum.code.org.
+    # There are also old levels that point to docs on curriculum.code.org.
+    # For both, fall back to old proxying logic.
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
