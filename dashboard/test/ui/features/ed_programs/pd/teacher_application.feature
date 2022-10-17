@@ -50,9 +50,8 @@ Scenario: Teacher starts a new application and submits it
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
+  And I press the first "input[name='enoughCourseHours']" element
   And I press the first "input[name='replaceExisting']" element
-  Then I wait until element "input[name='replaceWhichCourse']" is visible
-    And I press the first "input[name='replaceWhichCourse']" element
 
   Then I see no difference for "Section 2: Choose Your Program"
   And I press the first "button#next" element
@@ -180,9 +179,8 @@ Scenario: Teacher saves, re-opens, and submits an application
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
+  And I press the first "input[name='enoughCourseHours']" element
   And I press the first "input[name='replaceExisting']" element
-  Then I wait until element "input[name='replaceWhichCourse']" is visible
-  And I press the first "input[name='replaceWhichCourse']" element
   And I press the first "button#next" element
 
   # Section 3
