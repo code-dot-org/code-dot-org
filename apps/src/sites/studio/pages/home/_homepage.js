@@ -87,7 +87,6 @@ function showHomepage() {
             sections={homepageData.sections}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
-            isEnglish={isEnglish}
             showVerifiedTeacherWarning={
               homepageData.showStudentAsVerifiedTeacherWarning
             }
