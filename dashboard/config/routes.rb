@@ -96,7 +96,7 @@ Dashboard::Application.routes.draw do
     end
 
     get 'docs/concepts/data-library', to: 'data_docs#index'
-    get 'docs/concepts/data-library/:data_docs_key', constraints: {data_docs_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
+    get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
 
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
