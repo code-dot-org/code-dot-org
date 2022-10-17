@@ -10,7 +10,7 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldVariable from './addons/cdoFieldVariable';
-import FunctionEditor, {procedureFlyoutCategory} from './addons/functionEditor';
+import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
@@ -27,7 +27,7 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
-import procedures_defnoreturn from './blocks/procedures_defnoreturn';
+import {FUNCTION_BLOCK, FUNCTION_CATEGORY} from './addons/functionBlocks.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -511,15 +511,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
-    workspace.registerToolboxCategoryCallback(
-      'PROCEDURE',
-      procedureFlyoutCategory
-    );
+    workspace.registerToolboxCategoryCallback('PROCEDURE', FUNCTION_CATEGORY);
 
     // Customize function defintion blocks
-    Blockly.blockly_.Blocks[
-      'procedures_defnoreturn'
-    ].init = procedures_defnoreturn;
+    Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+      FUNCTION_BLOCK.init;
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
