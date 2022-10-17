@@ -1,5 +1,4 @@
 require 'rmagick'
-require 'cdo/script_constants'
 require 'dynamic_config/gatekeeper'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'.freeze
