@@ -49,7 +49,7 @@ const ProfessionalLearningProgramRequirements = props => {
     !hasNotLoadedRegionalPartner && regionalPartner !== null;
 
   const renderAssignedWorkshopList = () => {
-    if (regionalPartner.workshops?.length !== 0) {
+    if (regionalPartner.workshops?.length === 0) {
       return (
         <p style={styles.marginBottom}>
           <strong>

@@ -259,6 +259,7 @@ module Pd
       csp_which_grades: YES_NO,
       csa_which_grades: YES_NO,
       committed: YES_NO,
+      enough_course_hours: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
       replace_existing: YES_NO,
       principal_approval: YES_NO,
