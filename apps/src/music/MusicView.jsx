@@ -231,7 +231,8 @@ class UnconnectedMusicView extends React.Component {
       // Toolbox will be programmatically generated once music manifest is loaded
       toolbox: baseToolbox,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
-      theme: musicLabDarkTheme
+      theme: musicLabDarkTheme,
+      renderer: 'cdo_renderer_zelos'
     });
 
     this.resizeBlockly();
