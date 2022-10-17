@@ -1351,4 +1351,72 @@ class LevelTest < ActiveSupport::TestCase
     assert next_name.length <= 68
     assert next_name.match /_copy1_2020$/
   end
+
+  test 'localized_teacher_markdown reads from top-level locale' do
+    test_locale = :"te-ST"
+    level_name = 'test_localize_teacher_markdown'
+
+    custom_i18n = {
+      'data' => {
+        'teacher_markdown' => {
+          level_name => "translated markdown"
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      properties: {
+        teacher_markdown: "untranslated markdown"
+      }
+    )
+
+    # Falls back to the untranslated version normalized in the level
+    assert_equal level.localized_teacher_markdown, "untranslated markdown"
+
+    # Uses the localized form
+    I18n.locale = test_locale
+    assert_equal level.localized_teacher_markdown, "translated markdown"
+  end
+
+  test 'localized_teacher_markdown reads from dsl locale for DSL-based levels' do
+    test_locale = :"te-ST"
+    level_name = 'test_dsl_localize_teacher_markdown'
+
+    custom_i18n = {
+      'data' => {
+        'teacher_markdown' => {
+          level_name => "bogus translated markdown"
+        },
+        'dsls' => {
+          level_name => {
+            'teacher_markdown' => "actual translated markdown"
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # An "External" level is a prime example of where this will generally get
+    # used in a level. This is used for blocks of text, such as the preliminary
+    # text in pre/post surveys.
+    level = External.create(
+      name: level_name,
+      level_num: 'custom',
+      properties: {
+        teacher_markdown: "untranslated markdown"
+      }
+    )
+
+    # Falls back to the untranslated version normalized in the level
+    assert_equal level.localized_teacher_markdown, "untranslated markdown"
+
+    # Uses the localized form
+    I18n.locale = test_locale
+    assert_equal level.localized_teacher_markdown, "actual translated markdown"
+  end
 end

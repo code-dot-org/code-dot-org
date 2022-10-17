@@ -58,7 +58,6 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -74,7 +73,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import DCDO from '@cdo/apps/dcdo';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -99,11 +97,7 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  */
 export default class P5Lab {
   constructor(defaultAnimations = []) {
-    if (!!DCDO.get('use-s3-path-for-default-animations', true)) {
-      this.defaultAnimations = defaultAnimations;
-    } else {
-      this.defaultAnimations = defaultSprites;
-    }
+    this.defaultAnimations = defaultAnimations;
 
     this.skin = null;
     this.level = null;

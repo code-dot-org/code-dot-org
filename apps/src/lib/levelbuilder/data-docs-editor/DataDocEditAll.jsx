@@ -43,6 +43,7 @@ const DataDocEditAll = props => {
       <div className="page-actions">
         <TextLink
           className="create-btn"
+          id="create_new_data_doc"
           icon={<FontAwesome icon="plus" />}
           iconBefore={true}
           href={'/data_docs/new'}
@@ -71,10 +72,12 @@ const DataDocEditAll = props => {
             <React.Fragment key={`${dataDoc.key}_row`}>
               <div className="actions-box">
                 <TextLink
+                  id={`edit_${dataDoc.key}`}
                   icon={<FontAwesome icon={'pencil-square-o'} title={'edit'} />}
                   href={`/data_docs/${dataDoc.key}/edit`}
                 />
                 <TextLink
+                  id={`delete_${dataDoc.key}`}
                   icon={<FontAwesome icon={'trash'} title={'delete'} />}
                   onClick={() => initiateDeleteDataDoc(dataDoc.key)}
                 />
