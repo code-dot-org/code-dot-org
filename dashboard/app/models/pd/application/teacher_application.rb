@@ -975,6 +975,7 @@ module Pd::Application
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
       elsif course == 'csa'
+        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
       end
