@@ -117,7 +117,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       script_id = params[:script_id]
     else
       course_id = nil
-      script_id = course_version.content_root_id if course_version.content_root_type = 'Script'
+      script_id = course_version.content_root_id if course_version.content_root_type = 'Unit'
     end
 
     sections.each do |section|
@@ -306,11 +306,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
-        @unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
+        @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
         return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      elsif course_version.content_root_type == 'Script'
+      elsif course_version.content_root_type == 'Unit'
         unit_id = course_version.content_root_id
-        @unit = Script.get_from_cache(unit_id)
+        @unit = Unit.get_from_cache(unit_id)
         return head :bad_request unless @unit
         return head :forbidden unless @unit.course_assignable?(current_user)
       end
