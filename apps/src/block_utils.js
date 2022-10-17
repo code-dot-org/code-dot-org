@@ -817,7 +817,7 @@ function getFieldInputChangeHandler(blockly, type) {
  * conditional on the version of blockly we're using and the type of field.
  * @param {Blockly} blockly
  * @param {string} type
- * @returns {?Blockly.Field}
+ * @returns {Blockly.Field}
  */
 function getField(blockly, type) {
   let field;
