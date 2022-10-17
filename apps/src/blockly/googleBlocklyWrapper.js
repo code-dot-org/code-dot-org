@@ -14,6 +14,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
+import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './addons/cdoTheme';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -186,6 +187,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.RENDERER,
     'cdo_renderer',
     CdoRenderer,
+    true /* opt_allowOverrides */
+  );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
+    'cdo_renderer_zelos',
+    CdoRendererZelos,
     true /* opt_allowOverrides */
   );
   registerAllContextMenuItems();
@@ -482,7 +489,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: 'cdo_renderer'
+      renderer: opt_options.renderer || 'cdo_renderer'
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
