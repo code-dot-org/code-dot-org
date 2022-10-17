@@ -311,7 +311,7 @@ def localize_level_content(variable_strings, parameter_strings)
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
   # which relies on running a shell command
   Dir.chdir(Rails.root) do
-    Script.all.each do |script|
+    Unit.all.each do |script|
       next unless ScriptConstants.i18n? script.name
       script_strings = {}
       script.script_levels.each do |script_level|
@@ -346,7 +346,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if Script.unit_in_category?('hoc', script.name)
+        if Unit.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")

@@ -47,6 +47,7 @@ const WebLab = function() {
   this.studioApp_ = null;
 
   consoleApi.setLogMethod(this.log.bind(this));
+  consoleApi.setClearMethod(this.clear.bind(this));
 
   // store reference to singleton
   webLab_ = this;
@@ -58,6 +59,13 @@ const WebLab = function() {
  */
 WebLab.prototype.log = function(object) {
   this.consoleLogger_.log(object);
+};
+
+/**
+ * Clear logs for both logger objects.
+ */
+WebLab.prototype.clear = function() {
+  this.consoleLogger_.clear;
 };
 
 /**
