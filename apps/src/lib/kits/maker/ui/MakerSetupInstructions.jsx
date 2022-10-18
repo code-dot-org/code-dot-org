@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
 import yaml from 'js-yaml';
 import SetupChecklist from './SetupChecklist';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -41,46 +40,10 @@ const style = {
   main: {
     width: '80%',
     maxWidth: '800px'
-  },
-  boardDescriptions: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  descriptionFlexCard: {
-    width: '45%'
-  },
-  circuitPlaygroundImg: {
-    float: 'right',
-    margin: '0 0 15px 10px',
-    borderRadius: '50%'
-  },
-  microbitImg: {
-    float: 'right',
-    margin: '0 0 15px 10px'
   }
 };
 
-const setupGuideContent = {
-  microbit: {
-    class: 'microbit-description',
-    title: applabI18n.makerSetupMicrobitTitle(),
-    href: 'https://microbit.org/',
-    imgSrc: '../assets/maker/microbit-drawing-green.png',
-    description: applabI18n.makerSetupMicrobitDescription(),
-    imgStyle: style.microbitImg
-  },
-  circuitPlayground: {
-    class: 'circuit-playground-description',
-    title: applabI18n.makerSetupCircuitPlaygroundTitle(),
-    href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
-    imgSrc: '../assets/maker/circuit-playground-200.jpg',
-    description: applabI18n.makerSetupCircuitPlaygroundDescription(),
-    imgStyle: style.circuitPlaygroundImg
-  }
-};
-
-export default class SetupGuide extends React.Component {
+export default class MakerSetupInstructions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {webSerialPort: null};
@@ -120,34 +83,13 @@ export default class SetupGuide extends React.Component {
       );
     }
 
-    // Experiment 'microbit' renders additional description. Terniary rendering
-    // implemented to facilitated future changes in the layout of Setup Guide.
-    let isMicrobit = experiments.isEnabled('microbit');
-
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (
-      <div className="maker-setup">
-        <h1>{applabI18n.makerSetupPageTitle()}</h1>
-        {isMicrobit ? (
-          <div style={style.boardDescriptions}>
-            <Description
-              {...setupGuideContent.circuitPlayground}
-              divStyle={style.descriptionFlexCard}
-            />
-            <Description
-              {...setupGuideContent.microbit}
-              divStyle={style.descriptionFlexCard}
-            />
-          </div>
-        ) : (
-          <Description {...setupGuideContent.circuitPlayground} />
-        )}
-        <Provider store={store}>
-          <Downloads />
-        </Provider>
-      </div>
+      <Provider store={store}>
+        <Downloads />
+      </Provider>
     );
   }
 }
@@ -211,9 +153,6 @@ class Downloads extends React.Component {
         {MAC === platform && <MacDownloads />}
         {LINUX === platform && <LinuxDownloads />}
         {CHROMEBOOK === platform && <ChromebookInstructions />}
-        <h2>{i18n.support()}</h2>
-        <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
-        <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
       </div>
     );
   }
@@ -222,30 +161,6 @@ class Downloads extends React.Component {
 const downloadButtonStyle = {
   minWidth: 400,
   textAlign: 'center'
-};
-
-function Description(props) {
-  return (
-    <div className={props.class} style={props.divStyle}>
-      <h2>{props.title}</h2>
-      <center>
-        <a href={props.href}>
-          <img src={props.imgSrc} width={200} style={props.imgStyle} />
-        </a>
-      </center>
-      <SafeMarkdown markdown={props.description} />
-    </div>
-  );
-}
-
-Description.propTypes = {
-  class: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  imgSrc: PropTypes.string.isRequired,
-  imgStyle: PropTypes.object,
-  description: PropTypes.string.isRequired,
-  divStyle: PropTypes.object
 };
 
 class WindowsDownloads extends React.Component {
