@@ -756,6 +756,7 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2022/Virtual Pet with Sprite Lab": {
@@ -4870,6 +4871,7 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
