@@ -609,7 +609,7 @@ export default class EnrollForm extends React.Component {
                 }
                 errorText={this.state.errors.csf_has_physical_curriculum_guide}
                 type="radio"
-                require={true}
+                required={true}
               />
             </FormGroup>
           )}
