@@ -1307,6 +1307,10 @@ sv:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": välj
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": knäpp bas
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playSoundOptionsSoccer:
+        text: spelljud {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: spelljud {SOUND}
       gamelab_playSpeech:
         text: spela tal {SOUND}
       gamelab_playerBehaviors:
