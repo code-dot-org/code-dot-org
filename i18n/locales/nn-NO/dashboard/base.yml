@@ -1057,3 +1057,5 @@ nn:
   copy: 'Kopier'
   confirm: 'Bekreft'
   teacher_feedback: "Tilbakemeldingar frå lærarar"
+  pixelation:
+    binary: "Binær"
