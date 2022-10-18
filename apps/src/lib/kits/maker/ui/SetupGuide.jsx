@@ -9,7 +9,8 @@ import {
   isCodeOrgBrowser,
   isOSX,
   isWindows,
-  isLinux
+  isLinux,
+  isChromeOS
 } from '../util/browserChecks';
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
@@ -88,7 +89,8 @@ export default class SetupGuide extends React.Component {
       }
     }
 
-    if (isCodeOrgBrowser()) {
+    // For Chromebooks and Maker App, skip the download instructions
+    if (isCodeOrgBrowser() || (isChromeOS() && shouldUseWebSerial())) {
       return (
         <SetupChecklist webSerialPort={webSerialPort} displaySupport={true} />
       );
