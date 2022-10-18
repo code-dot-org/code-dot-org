@@ -1135,3 +1135,5 @@ pt:
       cannot_view_locked_answers: "Não é possível visualizar as respostas com o item bloqueado"
       forbidden: "O usuário não pode atualizar o status bloqueável do aluno"
   reset_predict_progress_button: "Excluir resposta"
+  pixelation:
+    binary: "Binário"
