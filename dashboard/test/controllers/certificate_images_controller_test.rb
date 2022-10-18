@@ -32,6 +32,9 @@ class CertificateImagesControllerTest < ActionController::TestCase
   end
 
   test 'can show course1 course name' do
+    course1 = Unit.find_or_create_by!(name: 'course1', is_course: true)
+    create :course_version, content_root: course1
+
     data = {name: 'student', course: 'course1'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
@@ -70,6 +73,13 @@ class CertificateImagesControllerTest < ActionController::TestCase
 
   test 'can show accelerated course' do
     data = {name: 'student', course: 'accelerated'}
+    filename = Base64.urlsafe_encode64(data.to_json)
+    get :show, format: 'jpg', params: {filename: filename}
+    assert_response :success
+  end
+
+  test 'can show mee minecraft course' do
+    data = {name: 'student', course: 'mee_timecraft'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :success
