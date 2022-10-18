@@ -2,7 +2,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
-  before_action :get_course_and_unit, only: [:create, :update]
+  before_action :get_course_and_unit, only: [:create, :update, :multi_update_assignment]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -82,6 +82,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     # TODO: (madelynkasula) refactor to use strong params
+
     fields = {}
     fields[:course_id] = @course&.id
     fields[:script_id] = @unit&.id
@@ -104,25 +105,13 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   end
 
   def multi_update_assignment
-    return render :forbidden unless current_user
+    return head :forbidden unless current_user
     sections = current_user.sections.where(id: params[:section_ids]).compact
-    return render :ok if sections.empty?
-
-    course_offering = CourseOffering.find(params[:course_offering_id])
-    return render :not_found unless course_offering
-    course_version = course_offering.course_versions.find(params[:course_version_id])
-    return render :not_found unless course_version
-    if course_version.content_root_type == 'UnitGroup'
-      course_id = course_version.content_root_id if course_version.content_root_type = 'UnitGroup'
-      script_id = params[:script_id]
-    else
-      course_id = nil
-      script_id = course_version.content_root_id if course_version.content_root_type = 'Unit'
-    end
+    return head :ok if sections.empty?
 
     sections.each do |section|
-      section.course_id = course_id
-      section.script_id = script_id
+      section.course_id = @course&.id
+      section.script_id = @unit&.id
       section.save! if section.changed?
     end
   end
