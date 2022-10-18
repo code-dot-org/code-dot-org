@@ -946,6 +946,63 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_not_nil UserScript.find_by(script: @script, user: student)
   end
 
+  test 'can update multiple sections assignment to unit' do
+    sign_in @teacher
+    section1 = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section2 = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section3 = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+
+    post :multi_update_assignment, params: {
+      section_ids: [section1.id, section3.id],
+      course_version_id: @script.course_version.id
+    }
+
+    section1.reload
+    assert_equal @script.id, section1.script_id
+    section3.reload
+    assert_equal @script.id, section3.script_id
+    section2.reload
+    assert_equal @script_in_preview_state.id, section2.script_id
+  end
+
+  test 'can update multiple sections assignment to unit group and unit' do
+    sign_in @teacher
+    section1 = create(:section, user: @teacher, script_id: @script.id)
+    section2 = create(:section, user: @teacher, script_id: @script.id)
+    section3 = create(:section, user: @teacher, script_id: @script.id)
+
+    post :multi_update_assignment, params: {
+      section_ids: [section1.id, section3.id],
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @csp_script.id
+    }
+
+    section1.reload
+    assert_equal @csp_unit_group.id, section1.course_id
+    assert_equal @csp_script.id, section1.script_id
+    section3.reload
+    assert_equal @csp_unit_group.id, section3.course_id
+    assert_equal @csp_script.id, section3.script_id
+    section2.reload
+    assert_nil section2.course_id
+    assert_equal @script.id, section2.script_id
+  end
+
+  test 'cannot update assignment of unowned section' do
+    sign_in @teacher
+    other_teacher = create :teacher
+    section = create :section, user: other_teacher
+
+    post :multi_update_assignment, params: {
+      section_ids: [section.id],
+      course_version_id: @script.id
+    }
+
+    section.reload
+    assert_nil section.course_id
+    assert_nil section.script_id
+  end
+
   test 'logged out cannot delete a section' do
     delete :destroy, params: {id: @section.id}
     assert_response :forbidden
