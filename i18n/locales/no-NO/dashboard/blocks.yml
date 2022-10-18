@@ -1115,6 +1115,10 @@
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": Hopp
+      gamelab_playSoundOptionsSoccer:
+        text: spillLyd {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: spillLyd {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
