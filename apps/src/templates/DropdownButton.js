@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import onClickOutside from 'react-onclickoutside';
 import classNames from 'classnames';
-import moduleStyles from './dropdown-button.module.scss';
+import style from './dropdown-button.module.scss';
 
 /**
  * A button that drops down to a set of clickable links, and closes itself if
@@ -79,25 +79,25 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
     const {dropdownOpen} = this.state;
 
     return (
-      <div className={moduleStyles.main}>
+      <div className={style.main}>
         <Button
           __useDeprecatedTag
           text={text}
           size={size}
           onClick={this.toggleDropdown}
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
-          iconClassName={moduleStyles.icon}
+          iconClassName={style.icon}
           color={color}
           className={this.props.className}
         >
           {this.props.customText && (
-            <div className={moduleStyles.main}>{this.props.customText}</div>
+            <div className={style.main}>{this.props.customText}</div>
           )}
         </Button>
 
         {dropdownOpen && (
           <div
-            className={moduleStyles.dropdown}
+            className={style.dropdown}
             ref={ref => (this.dropdownList = ref)}
           >
             {this.props.children.map((child, index) => (
@@ -106,8 +106,8 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
                 className={classNames(
-                  moduleStyles.anchor,
-                  index > 0 && moduleStyles.nonFirstAnchor
+                  style.anchor,
+                  index > 0 && style.nonFirstAnchor
                 )}
                 style={{
                   ...child.props.style
