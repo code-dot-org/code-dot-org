@@ -1326,6 +1326,10 @@ hi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": विचित्र
               बास
             "'sound://category_digital/jump_7.mp3'": कूदें
+      gamelab_playSoundOptionsSoccer:
+        text: प्लेसाउंड {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: प्लेसाउंड {SOUND}
       gamelab_playSpeech:
         text: प्ले स्पीच {SOUND}
       gamelab_playerBehaviors:

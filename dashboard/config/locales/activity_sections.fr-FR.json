@@ -208,6 +208,31 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Au-delà d’une Heure de Code"
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Installer la scène",
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "Au cours de cette activité, vous allez vous amuser à créer un monde interactif avec des personnages amusants que l'on appelle des sprites. Vous pourrez les faire parler à l'aide de bulles, comme dans une bande dessinée ou un roman graphique, et vous apprendrez à les faire réagir automatiquement lorsque vous ou quelqu'un d'autre clique sur eux.\n\nAujourd'hui, vous allez vous familiariser avec la programmation en utilisant les \"code\", c'est-à-dire un ensemble d'instructions qu'un ordinateur peut comprendre. Lorsque vous écrivez pour raconter une histoire, vous devez réfléchir soigneusement aux mots que vous utilisez. Lorsque vous programmez avec des codes, vous devez réfléchir soigneusement aux instructions que vous donnez à l'ordinateur.",
+          "tips": [
+            "Il est préférable de consacrer très peu de temps à la phase d'introduction de l'Heure du code. En particulier avec les jeunes apprenants, il est préférable de se lancer aussi vite que possible."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Soutien général",
+          "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Bonjour tout le monde !",
+          "progression_name": "Bonjour tout le monde !"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n-   Quels autres sprites pourriez-vous ajouter à votre projet ?\n-   Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n-   Que pourriez-vous faire dire d'autre à vos sprites ?\n-   Que devraient faire vos sprites lorsqu'on clique dessus ?\n-   Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Réflexion",
+          "description": "#### Résumé\n\nDemandez aux élèves de réfléchir sur les activités de la journée. Qu'ont-ils appris sur le codage ? Les sprites ? Les événements ?\n\nQue pensent-ils de l'informatique et du codage après avoir passé une heure à les explorer ?\n\n#### Prochaines étapes\n\nFaites savoir aux élèves que s'ils ont apprécié l'activité d'aujourd'hui, ils ont de nombreuses possibilités pour continuer à coder. Visitez le site [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la façon d'intégrer l'informatique à d'autres matières ou pour en savoir plus sur nos [offres de cours destinées aux élèves du primaire](https://code.org/educate/curriculum/elementary-school)."
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -564,6 +589,31 @@
           "tips": [
             null
           ]
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Installer la scène",
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "Au cours de cette activité, vous allez vous amuser à créer un monde interactif avec des personnages amusants que l'on appelle des sprites. Vous pourrez les faire parler à l'aide de bulles, comme dans une bande dessinée ou un roman graphique, et vous apprendrez à les faire réagir automatiquement lorsque vous ou quelqu'un d'autre clique sur eux.\n\nAujourd'hui, vous allez vous familiariser avec la programmation en utilisant les \"code\", c'est-à-dire un ensemble d'instructions qu'un ordinateur peut comprendre. Lorsque vous écrivez pour raconter une histoire, vous devez réfléchir soigneusement aux mots que vous utilisez. Lorsque vous programmez avec des codes, vous devez réfléchir soigneusement aux instructions que vous donnez à l'ordinateur.",
+          "tips": [
+            "Il est préférable de consacrer très peu de temps à la phase d'introduction de l'Heure du code. En particulier avec les jeunes apprenants, il est préférable de se lancer aussi vite que possible."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Soutien général",
+          "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Bonjour tout le monde !",
+          "progression_name": "Bonjour tout le monde !"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n-   Quels autres sprites pourriez-vous ajouter à votre projet ?\n-   Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n-   Que pourriez-vous faire dire d'autre à vos sprites ?\n-   Que devraient faire vos sprites lorsqu'on clique dessus ?\n-   Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Réflexion",
+          "description": "#### Résumé\n\nDemandez aux élèves de réfléchir sur les activités de la journée. Qu'ont-ils appris sur le codage ? Les sprites ? Les événements ?\n\nQue pensent-ils de l'informatique et du codage après avoir passé une heure à les explorer ?\n\n#### Prochaines étapes\n\nFaites savoir aux élèves que s'ils ont apprécié l'activité d'aujourd'hui, ils ont de nombreuses possibilités pour continuer à coder. Visitez le site [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la façon d'intégrer l'informatique à d'autres matières ou pour en savoir plus sur nos [offres de cours destinées aux élèves du primaire](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Installer la scène",
@@ -2965,9 +3015,6 @@
           "tips": [
             "Rappelez aux élèves de ne partager leur travail qu'avec leurs amis proches ou leur famille. Pour plus d'informations, regardez ou montrez la vidéo **\\*Faire une Pause et réfléchir en ligne** "
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Nous avons inclus des niveaux de prédiction à choix multiples qui sont difficiles pour les non-lecteurs. Ces niveaux sont facultatifs pour que vous puissiez les revoir avec votre classe pour vous aider à vous préparer aux énigmes à venir. Sinon, on peut aussi les utiliser après avoir terminé l'étape comme révision pour la classe.\n\n**Niveau de prédiction :** - [Cours B, Boucles dans l'artiste](https://studio.code.org/levels/8745) "
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Vidéo : L'Artiste dans Code Studio "

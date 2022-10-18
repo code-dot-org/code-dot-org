@@ -1481,3 +1481,5 @@ es-MX:
       cannot_view_locked_answers: No se pueden ver las respuestas mientras están bloqueadas
       forbidden: El usuario no puede actualizar el estado bloqueable del estudiante
   reset_predict_progress_button: Borrar respuesta
+  pixelation:
+    binary: Binario

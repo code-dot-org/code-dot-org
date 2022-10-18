@@ -937,7 +937,15 @@
         "ml-intro app lab-book recommender 5A-2021": "Настроить Свое Приложение",
         "ml-intro app lab-book recommender 5A_2022": "Настроить Свое Приложение",
         "ml-use model card-choice1": "Настроить Свое Приложение",
-        "ml-use model card-choice1_2022": "Настроить Свое Приложение"
+        "ml-use model card-choice1_2022": "Настроить Свое Приложение",
+        "helloworld_food_backgrounds_soccer-2022": "События при Клике",
+        "helloworld_food_backgrounds_space-2022": "События при Клике",
+        "helloworld_food_costumes_soccer-2022": "Костюмы",
+        "helloworld_food_costumes_space-2022": "Костюмы",
+        "helloworld_food_sizes_soccer-2022": "Размер",
+        "helloworld_food_sizes_space-2022": "Размер",
+        "helloworld_food_sounds_soccer-2022": "Звуки",
+        "helloworld_food_sounds_space-2022": "Звуки"
       }
     }
   }

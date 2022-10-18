@@ -987,6 +987,10 @@ ku:
           SOUND:
             "'sound://category_animals/bear.mp3'": وورچ
             "'sound://category_animals/dolphin.mp3'": دۆلفین
+      gamelab_playSoundOptionsSoccer:
+        text: دەنگ هەڵکەر {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: دەنگ هەڵکەر {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:

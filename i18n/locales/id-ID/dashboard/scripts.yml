@@ -3701,6 +3701,10 @@ id:
               display_name: Konten
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Dapat Dimulai
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3939,6 +3943,9 @@ id:
           description_audience: Penulis Kurikulum
           description_short: Untuk pembaruan tahapan atau level pembelajaran di antara versi kurikulum
           description: Untuk pembaruan tahapan atau level pembelajaran di antara versi kurikulum
+          lessons:
+            lesson-7:
+              name: Pengantar Sprite
         csd1-2022:
           lesson_groups:
             cspSurvey:

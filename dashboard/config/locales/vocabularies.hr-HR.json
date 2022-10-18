@@ -41,11 +41,11 @@
         "debugging/gumball/unversioned": {
           "word": "Otklanjanje pogriješaka"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Otklanjanje pogriješaka"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Uvjeti"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Otklanjanje pogriješaka"
         },
         "loops/aquatic/unversioned": {
           "word": "Petlje"

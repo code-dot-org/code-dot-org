@@ -1242,6 +1242,10 @@ el:
             "'sound://category_animals/dog.mp3'": σκύλος
             "'sound://category_animals/tiger.mp3'": τίγρης
             "'sound://category_digital/jump_7.mp3'": πήδα
+      gamelab_playSoundOptionsSoccer:
+        text: παίξεΉχο {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: παίξεΉχο {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
