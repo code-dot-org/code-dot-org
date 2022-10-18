@@ -1,5 +1,5 @@
 require 'rmagick'
-require 'cdo/graphics/certificate_image'
+require 'cdo/script_constants'
 require 'dynamic_config/gatekeeper'
 
 UNSAMPLED_SESSION_ID = 'HOC_UNSAMPLED'.freeze
