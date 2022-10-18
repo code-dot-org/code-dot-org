@@ -60,8 +60,8 @@ export function isWebSerialPort(port) {
  * in Chromium browsers.
  */
 export function shouldUseWebSerial() {
-  let webSerialAvailableInBrowser = 'serial' in navigator;
-  let usingChromeOSAndDCDO =
+  const webSerialAvailableInBrowser = 'serial' in navigator;
+  const usingChromeOSAndDCDO =
     isChromeOS() && !!DCDO.get('webserial-on-chromeos', true);
 
   return usingChromeOSAndDCDO || webSerialAvailableInBrowser;

@@ -16,15 +16,13 @@ import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
-import {createStore, combineReducers} from 'redux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
 import {
   WEB_SERIAL_FILTERS,
   shouldUseWebSerial
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {getStore} from '@cdo/apps/redux';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -45,62 +43,67 @@ export default class SetupGuide extends React.Component {
     this.state = {webSerialPort: null};
   }
 
-  render() {
-    // Create store for Provider
-    const store = createStore(
-      combineReducers({
-        isRtl,
-        responsive
-      })
+  webSerialButtonRender = () => {
+    // WebSerial requires user input for user to select port.
+    // Add a button for user interaction before initiated Setup Checklist
+    return (
+      <div>
+        <input
+          style={{margin: 15, marginBottom: 25}}
+          className="btn"
+          type="button"
+          value={'Connect to Board'}
+          onClick={() => {
+            navigator.serial
+              .requestPort({filters: WEB_SERIAL_FILTERS})
+              .then(port => {
+                this.setState({webSerialPort: port});
+              });
+          }}
+        />
+      </div>
     );
+  };
+
+  webSerialSetupChecklist = (webSerialPort, shouldDisplaySupport) => {
+    return (
+      <SetupChecklist
+        webSerialPort={webSerialPort}
+        displaySupport={shouldDisplaySupport}
+      />
+    );
+  };
+
+  render() {
     const {webSerialPort} = this.state;
 
-    let webSerialRender;
-
-    // // WebSerial requires user input for user to select port.
-    // // Add a button for user interaction before initiated Setup Checklist
-    if (shouldUseWebSerial()) {
-      if (!webSerialPort) {
-        webSerialRender = (
-          <div>
-            <input
-              style={{margin: 15, marginBottom: 25}}
-              className="btn"
-              type="button"
-              value={'Connect to Board'}
-              onClick={() => {
-                navigator.serial
-                  .requestPort({filters: WEB_SERIAL_FILTERS})
-                  .then(port => {
-                    this.setState({webSerialPort: port});
-                  });
-              }}
-            />
-            <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
-          </div>
-        );
-      } else {
-        webSerialRender = (
-          <SetupChecklist
-            webSerialPort={webSerialPort}
-            displaySupport={false}
-          />
-        );
-      }
+    // Chromebooks, render a webSerial selection button on load
+    if (isChromeOS() && shouldUseWebSerial() && !webSerialPort) {
+      return this.webSerialButtonRender();
     }
 
-    // For Chromebooks and Maker App, skip the download instructions
+    // In the Maker App and in Chromebooks when a webSerial connection has been selected,
+    // skip the download instructions and display y checklist
     if (isCodeOrgBrowser() || (isChromeOS() && shouldUseWebSerial())) {
-      return (
-        <SetupChecklist webSerialPort={webSerialPort} displaySupport={true} />
-      );
+      return this.webSerialSetupChecklist(webSerialPort, true);
     }
+
+    // In Mac/PC browsers, display download instructions and, when webSerial is expected,
+    // the selection button or checklist
+    const webSerialRender = webSerialPort
+      ? this.webSerialSetupChecklist(webSerialPort, false)
+      : this.webSerialButtonRender();
     return (
-      <Provider store={store}>
+      <Provider store={getStore()}>
         <div>
           <Downloads />
-          <p>{i18n.makerConnectExplanation()}</p>
-          {webSerialRender}
+          {shouldUseWebSerial() && (
+            <div>
+              <p>{i18n.makerConnectExplanation()}</p>
+              {webSerialRender}
+            </div>
+          )}
+          <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
         </div>
       </Provider>
     );
