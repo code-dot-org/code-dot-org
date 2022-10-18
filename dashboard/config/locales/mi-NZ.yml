@@ -878,3 +878,5 @@ mi:
         opt_in_yes: Āe
         opt_in_no: Kāore
   copy: Tārua
+  pixelation:
+    binary: Tāhūrua
