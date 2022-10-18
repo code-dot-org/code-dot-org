@@ -24,6 +24,7 @@ def sync_in
   localize_animation_library
   localize_shared_functions
   localize_course_offerings
+  localize_standards
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
@@ -35,6 +36,53 @@ def sync_in
 rescue => e
   puts "Sync in failed from the error: #{e}"
   raise e
+end
+
+# Takes strings describing and naming Framework, StandardCategory, and Standard
+# and places them in the source pool to be sent to crowdin.
+def localize_standards
+  puts "Preparing standards content"
+  standards_content_path = File.join(I18N_SOURCE_DIR, "standards")
+
+  frameworks = {}
+
+  # Localize all frameworks.
+  Framework.all.each do |framework|
+    frameworks[framework.shortcode] = {
+      'name' => framework.name,
+      'categories' => {},
+      'standards' => {}
+    }
+  end
+
+  # Localize all categories.
+  StandardCategory.all.each do |category|
+    framework = category.framework
+
+    categories = frameworks[framework.shortcode]['categories']
+    categories[category.shortcode] = {
+      'description' => category.description
+    }
+  end
+
+  # Localize all standards.
+  Standard.all.each do |standard|
+    framework = standard.framework
+
+    standards = frameworks[framework.shortcode]['standards']
+    standards[standard.shortcode] = {
+      'description' => standard.description
+    }
+  end
+
+  FileUtils.mkdir_p(standards_content_path)
+
+  # Then, for each framework, generate a file for it.
+  frameworks.keys.each do |framework|
+    File.open(File.join(standards_content_path, "#{framework}.json"), "w") do |file|
+      file.write(JSON.pretty_generate(frameworks[framework]))
+    end
+  end
 end
 
 # This function localizes all content in studio.code.org/docs
