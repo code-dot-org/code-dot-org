@@ -292,6 +292,9 @@ class UnconnectedMusicView extends React.Component {
   onResize = () => {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
+
+    // We will likely use this logic, borrowed from other labs, once
+    // we revisit mobile support across many devices.
     //const windowWidth = Math.max(window.innerWidth, window.innerHeight);
     //const windowHeight = Math.min(window.innerWidth, window.innerHeight);
 
@@ -306,28 +309,12 @@ class UnconnectedMusicView extends React.Component {
 
       this.setState({windowWidth, windowHeight, appWidth, appHeight});
     }
-
-    //this.resizeBlockly();
   };
 
   resizeBlockly = () => {
     var blocklyArea = document.getElementById('blockly-area');
     var blocklyDiv = document.getElementById('blockly-div');
 
-    // Compute the absolute coordinates and dimensions of blocklyArea.
-    /*
-    var element = blocklyArea;
-    var x = 0;
-    var y = 0;
-    do {
-      x += element.offsetLeft;
-      y += element.offsetTop;
-      element = element.offsetParent;
-    } while (element);
-    // Position blocklyDiv over blocklyArea.
-    blocklyDiv.style.left = x + 'px';
-    blocklyDiv.style.top = y + 'px';
-    */
     blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
     blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
     Blockly.svgResize(this.workspace);
