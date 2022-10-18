@@ -24,6 +24,7 @@ import {
   WEB_SERIAL_FILTERS,
   shouldUseWebSerial
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import PropTypes from 'prop-types';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -54,32 +55,45 @@ export default class SetupGuide extends React.Component {
     );
     const {webSerialPort} = this.state;
 
-    // WebSerial requires user input for user to select port.
-    // Add a button for user interaction before initiated Setup Checklist
-    if (shouldUseWebSerial() && !webSerialPort) {
-      return (
-        <input
-          style={{marginLeft: 9, marginTop: -4}}
-          className="btn"
-          type="button"
-          value={'Connect to Board'}
-          onClick={() => {
-            navigator.serial
-              .requestPort({filters: WEB_SERIAL_FILTERS})
-              .then(port => {
-                this.setState({webSerialPort: port});
-              });
-          }}
-        />
-      );
+    let webSerialRender;
+
+    // // WebSerial requires user input for user to select port.
+    // // Add a button for user interaction before initiated Setup Checklist
+    if (shouldUseWebSerial()) {
+      if (!webSerialPort) {
+        webSerialRender = (
+          <input
+            style={{margin: 15, marginBottom: 25}}
+            className="btn"
+            type="button"
+            value={'Connect to Board'}
+            onClick={() => {
+              navigator.serial
+                .requestPort({filters: WEB_SERIAL_FILTERS})
+                .then(port => {
+                  this.setState({webSerialPort: port});
+                });
+            }}
+          />
+        );
+      } else {
+        webSerialRender = <SetupChecklist webSerialPort={webSerialPort} />;
+      }
     }
 
-    if (isCodeOrgBrowser() || shouldUseWebSerial()) {
+    webSerialRender = (
+      <div>
+        <p>{i18n.makerConnectExplanation()}</p>
+        {webSerialRender}
+      </div>
+    );
+
+    if (isCodeOrgBrowser()) {
       return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (
       <Provider store={store}>
-        <Downloads />
+        <Downloads webSerialChildren={webSerialRender} />
       </Provider>
     );
   }
@@ -90,6 +104,10 @@ class Downloads extends React.Component {
     super(props);
     this.state = {platform: Downloads.platformFromHash()};
   }
+
+  static propTypes = {
+    webSerialChildren: PropTypes.object
+  };
 
   componentDidMount() {
     window.addEventListener('hashchange', this.onHashChange);
@@ -146,6 +164,7 @@ class Downloads extends React.Component {
         {CHROMEBOOK === platform && <ChromebookInstructions />}
         <h2>{i18n.support()}</h2>
         <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
+        {this.props.webSerialChildren}
         <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
       </div>
     );
