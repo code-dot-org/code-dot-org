@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-16 22:43:33 UTC",
+    "serialized_at": "2022-10-17 20:10:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2814,7 +2814,7 @@
       "position": 15,
       "properties": {
         "description": "**Do This:** Explain how to write a method in a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Must be inside the opening and closing curly braces for the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the method signature then a set of curly braces\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the code the method should execute inside these curly braces\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Since the class is the blueprint for an object, we do not refer to a specific object when calling methods in the current class or a superclass\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3, 4, and 5. Students complete a Check for Understanding on Level 3, then continue to Level 4 to write and use the `turnRight()` method. Students complete a choice level on Level 5 to write an additional method in their `PainterPlus` class.",
-        "progression_name": "Check for Understanding",
+        "progression_name": "Practice: Writing Methods",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3423,7 +3423,7 @@
       "key": "ab46deac-f7a8-4b6e-9069-4c4b0b64a044",
       "position": 16,
       "properties": {
-        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem.",
         "remarks": true
       },
       "seeding_key": {
@@ -3439,7 +3439,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance."
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
           }
         ]
       },
@@ -4144,6 +4144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_2023"
+        ],
         "progression": "Predict and Run: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -4166,6 +4169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_2023"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -4188,6 +4194,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_2023"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -4210,6 +4219,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_2023"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -4232,6 +4244,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4254,6 +4269,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1_2023"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -4276,6 +4294,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2_2023"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -4298,6 +4319,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3_2023"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -4320,6 +4344,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4342,6 +4369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1_2023"
+        ],
         "progression": "Predict and Run: Writing Methods"
       },
       "bonus": false,
@@ -4364,6 +4394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2_2023"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -4386,7 +4419,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "level_keys": [
+          "CSA U1L7-L3_2023"
+        ],
+        "progression": "Practice: Writing Methods"
       },
       "bonus": false,
       "seeding_key": {
@@ -4408,7 +4444,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Check for Understanding"
+        "level_keys": [
+          "CSA U1L7-L4_2023"
+        ],
+        "progression": "Practice: Writing Methods"
       },
       "bonus": false,
       "seeding_key": {
@@ -4430,7 +4469,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Check for Understanding"
+        "level_keys": [
+          "CSA U1L7-L5_2023"
+        ],
+        "progression": "Practice: Writing Methods"
       },
       "bonus": false,
       "seeding_key": {
@@ -4452,6 +4494,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L6_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4474,6 +4519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1_2023"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -4496,6 +4544,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2_2023"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -4518,6 +4569,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3_2023"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -4540,6 +4594,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L4_2023"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -4562,6 +4619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L5_2023"
+        ],
         "progression": "Practice: Conducting a Code Review"
       },
       "bonus": false,
@@ -4584,6 +4644,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L6_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4606,6 +4669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_2023"
+        ],
         "progression": "Predict and Run: Selection Statements"
       },
       "bonus": false,
@@ -4628,6 +4694,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_2023"
+        ],
         "progression": "Investigate and Modify: Selection Statements"
       },
       "bonus": false,
@@ -4650,6 +4719,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3_2023"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -4672,6 +4744,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4_2023"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -4694,6 +4769,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4716,6 +4794,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1_2023"
+        ],
         "progression": "Predict and Run: Variables and Printing"
       },
       "bonus": false,
@@ -4738,6 +4819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2_2023"
+        ],
         "progression": "Investigate and Modify: Debugging"
       },
       "bonus": false,
@@ -4760,6 +4844,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3_2023"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -4782,6 +4869,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4_2023"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -4804,6 +4894,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
