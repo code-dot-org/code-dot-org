@@ -181,19 +181,19 @@ Po ukończeniu przez uczniów lub gości swojej Godziny Kodowania, czas na świ�
 
 ## Rozpowszechnij informacje o Godzinie Kodowania
 
-Jednym z najlepszych sposobów pomocy jest rozpowszechnienie informacji i promowanie "Godziny kodowania".
+Jednym z najlepszych sposobów, by nas wesprzeć, jest rozpowszechnienie informacji i promowanie Godziny Kodowania.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
 ### 1. Zarejestruj swoje wydarzenie.
 
-Gdy [ zarejestrujesz swoją Godzinę Kodowania](/#join), otrzymasz mail z pomocnymi wiadomościami i wskazówkami na temat organizacji udanej Godziny Kodowania. W ten sposób możesz również powiadomić swoje miejscowe szkoły lub rodziców, że będziemy gospodarzem wydarzenia, które wydarzy się w ich okolicy.
+Gdy [ zarejestrujesz swoją Godzinę Kodowania](/#join), otrzymasz mail z pomocnymi wiadomościami i wskazówkami na temat organizacji udanej Godziny Kodowania. W ten sposób możesz również powiadomić swoje miejscowe szkoły lub rodziców, że będziesz gospodarzem wydarzenia w ich okolicy.
 
 ### 2. Publikuj w mediach społecznościowych
 
 Pomóż zwiększyć świadomość ruchu informatycznego przy pomocy przykładowej treści do zamieszczenia w mediach społecznościowych oraz udostępniaj je swoim pracownikom.
 
-#### Ogłoszenie ogólne Godziny Kodowania
+#### Ogłoszenie ogólne o Godzinie Kodowania
 
 - Informatyka zmienia nasz świat. Pomóż uczniom stać się częścią tej zmiany rozpoczynając od jednej #HourOfCode. https://hourofcode.com/
 - Nie używaj technologii tak po prostu - naucz się, jak ją budować. Pomóż komuś zacząć z #HourOfCode. https://hourofcode.com/
@@ -204,7 +204,7 @@ Pomóż zwiększyć świadomość ruchu informatycznego przy pomocy przykładowe
 - W USA zaledwie 26% specjalistów ds. oprogramowania to kobiety. Wprowadź więcej młodych kobiet w dziedzinę informatyki przy pomocy #HourOfCode https://hourofcode.com/
 - 67% prac związanych z komputerami w USA dotyczy sektora innego niż techniczny. Pomóż wprowadzić informatykę do standardowego programu nauczania przy pomocy #HourOfCode https://hourofcode.com/
 
-#### Stwórz swój własny post
+#### Stwórz swój własny
 
 - Jedna #HourOfCode może doprowadzić do [umieść tutaj swoją historię]. https://hourofcode.com/
 - Wspieram #HourOfCode, ponieważ [umieść tutaj swoje przemyślenia]. Dołącz do nas na https://hourofcode.com
@@ -214,7 +214,7 @@ Pomóż zwiększyć świadomość ruchu informatycznego przy pomocy przykładowe
 - Jeśli Twój pierwszy wiersz kodu zmienił Twoje życie, pomóż uczniom w pobliżu napisać ich pierwszą #HourOfCode https://code.org/volunteer
 - Jeśli nauczyłeś się kodować - jaka jest Twoja historia? Zainspiruj ucznia obok Ciebie prowadząc go przez #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Dowiedz się więcej</a> na temat plakatów, filmów wideo, naklejek oraz innych sposobów promowania swojego wydarzenia w sąsiedztwie.
+<a href="https://hourofcode.com/promote/resources#posters">Dowiedz się więcej</a> na temat plakatów, filmów, naklejek oraz innych sposobów promowania swojego wydarzenia w sąsiedztwie.
 
 * * *
 
@@ -231,7 +231,7 @@ Pomóż zwiększyć świadomość ruchu informatycznego przy pomocy przykładowe
 - [Podpisz tę petycję](https://code.org/promote), aby upewnić się, że każdy uczeń ma szansę uczyć się informatyki.
 - [Przekaż darowiznę](https://code.org/donate) na rzecz Code.org tak, aby można było utrzymać bezpłatny charakter oraz dostępność naszych materiałów edukacyjnych dla wszystkich.
 
-Zapraszamy na stronę [Code.org/Help](https://code.org/help), aby uzyskać więcej sugestii na temat sposobu wspierania Code.org i "Godziny kodowania". 
+Zapraszamy na stronę [Code.org/Help](https://code.org/help), aby uzyskać więcej sugestii na temat sposobu wspierania Code.org i Godziny Kodowania. 
 
 * * *
 
@@ -241,17 +241,17 @@ Zapraszamy na stronę [Code.org/Help](https://code.org/help), aby uzyskać więc
 
 ### Nauczyciel jeszcze się ze mną nie kontaktował. Czy i tak mogę się zgłosić jako wolontariusz?
 
-Spróbuj poszukać miejscowych szkół, zadzwoń do dyrektora/nauczyciela/sekretariatu i zapytaj jak możesz pomóc.  
+Spróbuj poszukać miejscowych szkół, zadzwoń do dyrektora/nauczyciela/sekretariatu i zapytaj, jak możesz pomóc.  
 
 
-### Ile trwają wizyty w klasie?
+### Ile długo trwają wizyty w klasie?
 
 Zwykle osobista wizyta w klasie trwa 60-90 minut, a wirtualna wizyta w klasie trwa zazwyczaj 20-30 minut.  
 
 
-### Dla jakiej grupy wiekowej zajęcia "Godzina kodowania" są odpowiednie?
+### Dla jakiej grupy wiekowej zajęcia Godzina Kodowania są odpowiednie?
 
-Code.org i nasi partnerzy projektują wszystkie zajęcia w ramach "Godziny kodowania", aby angażować uczniów wszystkich klas (K-12), ze wszystkich środowisk. Każdy - nawet osoby dorosłe - mogą się dobrze bawić grając!  
+Code.org i nasi partnerzy projektują wszystkie zajęcia w ramach Godziny Kodowania, aby angażować uczniów wszystkich klas (K-12), ze wszystkich środowisk. Każdy - nawet osoby dorosłe - mogą się dobrze bawić grając!  
 
 
 ### Na jakich zasadach mogę zostać wybrany jako wolontariusz ds. technicznych lub jako mówca gościnny?
@@ -259,7 +259,7 @@ Code.org i nasi partnerzy projektują wszystkie zajęcia w ramach "Godziny kodow
 Nauczyciele będą szukać wolontariuszy na naszej [v mapie wolontariuszy ](https://code.org/volunteer/local). Postaraj się, aby Twój profil był możliwie jak najbardziej kompletny - to zwiększa szansę, że nauczyciel wybierze właśnie ciebie. Jeśli masz jakieś preferencje dotyczące tego, w jakiej roli chciałbyś działać jako wolontariusz, na przykład jako mówca gościnny lub pomoc techniczna, prosimy wskazać to w opisie swojego profilu.   
 
 
-Gdy zostaniesz wybrany nauczyciel skontaktuje się z Tobą za pośrednictwem platformy wolontariuszy (nigdy nie udostępnimy Twojego adresu e-mail nauczycielowi). Jeśli otrzymujesz za dużo zapytań od nauczycieli, możesz zawsze uaktualnić swoje preferencje klikając link umieszczony na dole każdej wiadomości od nauczyciela, aby dokonać edycji informacji o sobie lub wstrzymać subskrypcję.   
+Gdy zostaniesz wybrany, nauczyciel skontaktuje się z Tobą za pośrednictwem platformy wolontariuszy (nigdy nie udostępnimy Twojego adresu e-mail nauczycielowi). Jeśli otrzymujesz za dużo zapytań od nauczycieli, możesz zawsze uaktualnić swoje preferencje klikając link umieszczony na dole każdej wiadomości od nauczyciela, aby dokonać edycji informacji o sobie lub wstrzymać subskrypcję.   
 
 
 [<button>Zapisz się jako wolontariusz</button>]({{ urls/volunteer }})
