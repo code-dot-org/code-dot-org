@@ -36,6 +36,12 @@
           "purpose": "Bu ders, basit hata ayıklama tekniklerinin yanı sıra, kodlama ve programlamaya dair (bloklar kullanarak) temel Bilgisayar Bilimi kavramlarını tanıtır.",
           "student_overview": "Bu derste, öğrenciler bilgisayar bilimlerine giriş deneyimi kazanır ve temel blok kodu kullanarak bir oyun yaratır. Bu ders, orta okula giden, 10-16 yaş arası öğrenciler için tasarlandı, ancak sunulan farklılaştırma önerileri kullanılarak yaşı daha büyük veya daha küçük olan öğrenciler için de uyarlanabilir."
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "overview": "Bu derste öğrenciler, Sprite Lab'da programlama yaparak bilgisayar biliminin temellerini öğrenecekler.Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Öğrenciler, olayları kullanarak hareketli grafikler oluşturmayı ve canlandırmayı ve onları etkileşimli hale getirmeyi öğrenecekler.\n\nBu dersin birden fazla versiyonu var. Her versiyonda aynı kavramlar öğretiliyor ancak farklı öğrencilere hitap etmek için farklı görseller kullanılıyor. Daha fazla bilgi için [Merhaba Dünya açılış sayfasını](https://code.org/helloworld) ziyaret edin.",
+          "preparation": "-   Sınıfınız için sorunlu olabilecek alanları bulmak için bulmacaları yapın.\n-   İlk eğitimden sonra bilgisayar bilimini daha fazla öğrenmek için bir plan yapmak üzere [CS Connections](https://code.org/educate/csc) adresindeki kaynakları kullanın.",
+          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin.",
+          "student_overview": "Bu derste, Sprite Lab'de programlama yaparak bilgisayar biliminin temellerini öğreneceksiniz. Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Sprite oluşturmayı ve canlandırmayı ve olayları kullanarak onları etkileşimli hale getirmeyi öğreneceksiniz."
+        },
         "hourofcode/Maze": {
           "name": "Labirent",
           "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır. Bu ders 4-10 yaş arası küçük öğrenciler için tasarlanmıştır, ancak sağlanan farklılaştırma önerileri kullanılarak daha büyük öğrenciler için uyarlanabilir.",
@@ -105,6 +111,12 @@
           "preparation": "-   Widget'ın her iki versiyonunu da inceleyin.",
           "purpose": "\"Şifreleme\", amaçlanan alıcı olmayan bir kişiden mesajın orijinal halini \"saklamak\" amacıyla bir mesajın dönüştürülmesine yönelik bir süreçtir. Şifreleme artık yalnızca askerler veya casuslara yönelik değil. Şifrelemeyi öncelikle ticari işlemler gerçekleştirmek için her gün internette kullanıyoruz, yani şifreleme olmadan ekonomimiz durma noktasına gelebilir. \n\nBu ders, öğrencilere hesaplama araçlarıyla mesajları şifrelemeye dair düşünce biçimine giriş deneyimi sunar. Hesaplama araçları, bilgi şifrelemek için kullandığımız algoritmaların gücünü ve karmaşıklığını büyük ölçüde artırır, ancak bu araçlar aynı zamanda bizim şifre kırma becerimizi de geliştirir. Güçlü bir şifrelemenin geliştirilmesi, bilgisayarların çözemeyeceği kadar \"zor\" olan problemlere dair bilgiye ve mesajları şifrelerken bu bilgilerin kullanılmasına dayanır. Kaynak olarak, _Blown to Bits_'teki 5'inci Bölümün tamamını okuyabilirsiniz. Bu bölüm, sınıfınızda yer vermek isteyebileceğiniz sosyal bağlamı sağlıyor. ",
           "student_overview": "Bu derste, öğrencilere şifreleme ihtiyacı ve gizli mesajları çözmek (veya kırmak) için basit teknikler tanıtılır. Öğrenciler, klasik Sezar şifresi ve ayrıca Rastgele Değişim Şifresi ile kodlanmış bir mesajı kırmak için kendilerini test eder. Öğrenciler, güçlü hesaplama araçlarının olduğu bir çağda, şifreleme tekniklerinin daha karmaşık olması gerektiği fikrini iyi bir şekilde öğrenmelidir. Bu dersin en önemli yönü, şifrelemenin internette her gün hayatımızda nasıl ve neden bir rol oynadığını ve iyi şifreleme yapmanın önemsiz olmadığını anlamaktır. Öğrenciler, onu kırmak için kullanılabilecek güçlü hesaplama araçları karşısında güçlü şifreleme yapmak için göz önünde bulundurulması gereken hususları anlayarak kendilerini ilk kez deneyecekler. İnternet üzerinden bitlerle iletim yaparkenki gizlilik ihtiyacı, İnternet kullanan herkes için önemlidir."
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "overview": "Bu derste öğrenciler, Sprite Lab'da programlama yaparak bilgisayar biliminin temellerini öğrenecekler.Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Öğrenciler, olayları kullanarak hareketli grafikler oluşturmayı ve canlandırmayı ve onları etkileşimli hale getirmeyi öğrenecekler.\n\nBu dersin birden fazla versiyonu var. Her versiyonda aynı kavramlar öğretiliyor ancak farklı öğrencilere hitap etmek için farklı görseller kullanılıyor. Daha fazla bilgi için [Merhaba Dünya açılış sayfasını](https://code.org/helloworld) ziyaret edin.",
+          "preparation": "-   Sınıfınız için sorunlu olabilecek alanları bulmak için bulmacaları yapın.\n-   İlk eğitimden sonra bilgisayar bilimini daha fazla öğrenmek için bir plan yapmak üzere [CS Connections](https://code.org/educate/csc) adresindeki kaynakları kullanın.",
+          "purpose": "Bu dersin amacı, öğrencileri Hareketli Nesne Laboratuvarı'nda basit programlama projeleri oluşturmaya hazırlamaktadır. Bu beceriyle öğrenciler daha sonra, başka bir okul konusu veya kişisel olarak ilgilerini çeken alanlar gibi herhangi bir konuda projeler oluşturabilirler. Bilgisayar biliminin diğer konulara nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin.",
+          "student_overview": "Bu derste, Sprite Lab'de programlama yaparak bilgisayar biliminin temellerini öğreneceksiniz. Sprite Lab, yaratıcı ve eğlenceli projeler oluşturmak için kullanabileceğiniz bir araçtır. Sprite oluşturmayı ve canlandırmayı ve olayları kullanarak onları etkileşimli hale getirmeyi öğreneceksiniz."
         },
         "hello-world-animals-2021/Hello World": {
           "name": "Merhaba Dünya: Hayvanlar",
@@ -244,7 +256,7 @@
           "name": "For Döngüleri"
         },
         "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Kukla Laboratuvarı"
+          "name": "Hareketli Nesne Laboratuvarı"
         },
         "k5-onlinepd-2019/Reviewing your reflections": {
           "name": "Yansımalarınızı Gözden Geçirme"
@@ -4196,7 +4208,7 @@
           "name": "Öğretim programı"
         },
         "allthethings/Sprite Lab": {
-          "name": "Kukla Laboratuvarı"
+          "name": "Hareketli Nesne Laboratuvarı"
         },
         "allthethings/Dance Lab": {
           "name": "Dans Laboratuvarı"
