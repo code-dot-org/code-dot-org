@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Atkļūdošana"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Atkļūdošana"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Sazarojumi"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Atkļūdošana"
         },
         "loops/aquatic/unversioned": {
           "word": "Cikli"
