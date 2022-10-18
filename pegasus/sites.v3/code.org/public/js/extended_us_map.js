@@ -1,3 +1,10 @@
+// This file expects the following JavaScript variables to be defined:
+//   useUrl
+//   fillColor
+//   strokeColor
+//   hoverColor
+//   clickColor
+
 (function ($, document, window, Raphael, undefined) {
   // jQuery Plugin Factory
   function jQueryPluginFactory($, name, methods, getters) {
