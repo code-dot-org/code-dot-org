@@ -588,6 +588,10 @@ kn:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": ಕ್ವಿರ್ಕಿ
               ಬಾಸ್
             "'sound://category_digital/jump_7.mp3'": ಜಂಪ್
+      gamelab_playSoundOptionsSoccer:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
+      gamelab_playSoundOptionsSpace:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playSpeech:
         text: "{SOUND} ಸ್ಪೀಚ್ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playerBehaviors:

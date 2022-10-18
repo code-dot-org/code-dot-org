@@ -265,6 +265,31 @@
           "name": "Hour of Code'un Ötesi",
           "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Hazırlık Aşaması",
+          "description": "Öğrencilerinizi karşılayın ve kısaca günün etkinliğinden bahsedin."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Bu aktivitede, hareketli nesne adı verilen eğlenceli karakterlerle etkileşimli bir dünya yaratırken çok eğleneceksiniz. Çizgi romanlarda olduğu gibi, hareketli nesnelerin konuşma balonlarıyla bir şeyler söylemesini sağlayabileceksiniz ve siz veya bir başkası tıkladığında onlara otomatik olarak yanıt verdirmeyi öğreneceksiniz._\n\n_Bugün, bir bilgisayarın anlayabileceği talimatlar dizisi anlamına gelen \"kodlar\" yazacaksınız. Bir hikaye yazarken, kullandığınız kelimeler hakkında dikkatlice düşünmeniz gerekir. Kod yazarken de bilgisayarınıza vereceğiniz talimatları dikkatlice düşünmeniz gerekecek._",
+          "tips": [
+            "Kod Saatinizi önden yüklemek veya tanıtmak için çok az zaman harcamak isteyeceksiniz. Özellikle küçük öğrencilerde, mümkün olduğunca çabuk başlamak en iyisidir."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Genel Destek",
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Merhaba Dünya",
+          "progression_name": "Merhaba Dünya"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Yansıma",
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Hazırlık Aşaması\n\nÖğrencilerinizi karşılayın ve kısaca günün etkinliğinden bahsedin.\n\n_“Bugün kodlamayı öğrenmek için bir saatlik bir etkinliğimiz olacak. Aranızda daha önce \"kod\" terimini duyan var mı? Bunun anlamı nedir?\"_ gibi sorular yöneltebilirsiniz.\n\nÖğrenciler \"kod\"un gizli bir mesaj gibi olduğunu veya bir şekilde bilgisayarlarla ilgili olduğunu söyleyebilirler."
         },
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Blown to Bits'i Okuyun**\n\n-   [Blown to Bits, Bölüm 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)'te sayfa 165-169'u okuyun.\n-   Okuma kılavuzunda ve çalışma sayfasında [Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) verilen soruları cevaplayın.\n\n**Blown to Bits'de Daha Fazlası**\n\n-   Blown to Bits'in 5'inci Bölümünün ilk kısımları, 11 Eylül sonrasında şifrelemenin önemi ve bunun etrafındaki tartışmalara atıfta bulunuyor. Bu metin, kriptografinin modern hayatın birçok noktasındaki önemi üzerine faydalı bir araç olabilir.\n\n-   Öğrencilerden İnternet tarama geçmişlerine göz atmalarını, \"özel\" varsaydıkları içeriğin kabaca yüzde kaç ettiğini hesaplamalarını isteyin. Bundan emin olmalarının bir yolu var mı? Ziyaret ettikleri, trafiklerinin gizliliğine diğerlerinden daha fazla güvendikleri web siteleri var mı? Bunun bir gerekçesi var mı?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Hazırlık Aşaması",
+          "description": "Öğrencilerinizi karşılayın ve kısaca günün etkinliğinden bahsedin."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Bu aktivitede, hareketli nesne adı verilen eğlenceli karakterlerle etkileşimli bir dünya yaratırken çok eğleneceksiniz. Çizgi romanlarda olduğu gibi, hareketli nesnelerin konuşma balonlarıyla bir şeyler söylemesini sağlayabileceksiniz ve siz veya bir başkası tıkladığında onlara otomatik olarak yanıt verdirmeyi öğreneceksiniz._\n\n_Bugün, bir bilgisayarın anlayabileceği talimatlar dizisi anlamına gelen \"kodlar\" yazacaksınız. Bir hikaye yazarken, kullandığınız kelimeler hakkında dikkatlice düşünmeniz gerekir. Kod yazarken de bilgisayarınıza vereceğiniz talimatları dikkatlice düşünmeniz gerekecek._",
+          "tips": [
+            "Kod Saatinizi önden yüklemek veya tanıtmak için çok az zaman harcamak isteyeceksiniz. Özellikle küçük öğrencilerde, mümkün olduğunca çabuk başlamak en iyisidir."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Genel Destek",
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Merhaba Dünya",
+          "progression_name": "Merhaba Dünya"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Yansıma",
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Hazırlık Aşaması",
@@ -1578,7 +1628,7 @@
           "name": "Yansıtma"
         },
         "835c16c0-8a24-43c1-889b-493814eb50d1": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "d80d3591-db5f-43bb-b3be-3a0eb14690a7": {
           "name": "Giriş"
@@ -1608,7 +1658,7 @@
           "name": "Yansıtma"
         },
         "c10c099e-fd94-4a79-9bd6-bfc55b2b1059": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "6dfc4361-cbe9-45f2-ad11-441b8c3afe5c": {
           "description": "Bu etkinlik, “Grafik Kağıdı Programlama” dan eklenmemiş kavramların öğrencilerin hareket ettikleri çevrimiçi dünyaya getirilmesine yardımcı olacaktır."
@@ -1641,7 +1691,7 @@
           ]
         },
         "5dbc43b8-f734-4c93-99d4-0995393a9f25": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "3ab2b28c-3947-44d9-ae6d-8d8d43320c27": {
           "name": "Giriş",
@@ -1729,7 +1779,7 @@
           ]
         },
         "6c45fccd-0b3b-4db0-9224-2dce4fee891a": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "b7541d65-dbb6-4402-8392-0a1416e131d5": {
           "name": "Giriş"
@@ -1769,7 +1819,7 @@
           "description": "Öğrencileri yaratıcılıklarını ortaya koymak için kullandıkları sanat, dans, müzik, yazı yazma gibi yolları paylaşmaları konusunda teşvik edin."
         },
         "b272663e-4596-4ddd-b25e-b3a5a0c165f7": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "4183cc0f-f87e-4c3b-80e8-9b849d0aba39": {
           "name": "Giriş"
@@ -1935,7 +1985,7 @@
           "name": "Yansıtma"
         },
         "84144ea8-ec9f-40ad-925b-6170d47437ef": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "a8dddc64-bf3e-4023-85b5-e202ec1a0eb6": {
           "name": "Giriş"
@@ -2231,7 +2281,7 @@
           "progression_name": "Serbest Oyun: Bir Sahne Yap"
         },
         "c0f0a327-9419-4966-a5cd-cfe23d312f09": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "7a087d45-10fc-429d-96be-3463e5a67f48": {
           "description": "Bugün Hareketli Nesne Laboratuvarı'nda program oluşturmak için kod yazmayı öğrendiniz.\n\n**Program** - Bir makine tarafından çalıştırılabilen, kodlanmış bir algoritma.\n\n**Algoritma** - Bir görevi tamamlamak için gereken adımların listesi."
@@ -3486,9 +3536,6 @@
             "Öğrencilerin çalışmalarını sadece yakın arkadaşları veya aileleriyle paylaşmalarını hatırlatın. Daha fazla bilgi için sınıfını izleyin veya gösterin **\\\\ \\*Duraklat ve Çevrimiçi Düşün - Video**"
           ]
         },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Okuyucu olmayanlar için zor olan bazı çoklu seçmeli tahmin düzeyleri ekledik. Bu seviyeler, bulmacalara hazırlanmanıza yardımcı olmak için sınıfınızla birlikte gözden geçirmeniz için isteğe bağlıdır. Alternatif olarak, bunlar aşamayı bitirdikten sonra sınıf için bir inceleme olarak kullanılabilir. \n\n\\*\\*Tahmin Seviyesi: \\*\\* - [Ders B, Sanatçının Döngüleri](https://studio.code.org/levels/8745)"
-        },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Code Studio'daki Sanatçı"
         },
@@ -3704,7 +3751,7 @@
           "description": "Öğrencilerden günlük yaşamda çözmeleri gereken sorunları düşünmelerini isteyin.\n\n-   Çalışmayan bir şeyi nasıl düzeltirsin?\n-   Belirli bir dizi adım izliyor musunuz?\n-   Bu birimdeki bulmacalar sizin için zaten çözüldü (yaşasın!) , ama onlar çalışıyor gibi görünmüyor (boo!)\n-   Bu programlardaki sorunları “böcekler” olarak adlandırıyoruz ve bunları “hata ayıklamak” sizin işiniz olacaktır."
         },
         "5b0bad48-bd8f-4217-aef6-6bd8250e1186": {
-          "name": "Kelime Haznesi",
+          "name": "Kelime Dağarcığı",
           "description": "Bu derste üç yeni ve önemli kelime var:\n\n-   **Hata** - _Benimle birlikte söyleyin - Ha-ta._\n\nYanlış giden bir şey. Bir yanlışlık.\n\n-   **Hata ayıklama** - _Benimle birlikte söyleyin: Ha-ta a-yık-la-ma._\n\nHataları bulmak ve düzeltmek.\n\n-   **Israrcılık** - _Benimle birlikte söyleyin: Is-rar-cı-lık._\n\nPes etmemek. Israrcılık, bir şeyleri birçok farklı şekilde, birçok farklı zamanda denediğinizde en iyi sonucu verir.\n\n**Söyleyin:** _**Hata ayıklama** bir süreçtir. Öncelikle, programınızda bir hata olduğunu kabul etmelisiniz. Daha sonra hatayı bulmak için programda adım adım çalışırsınız. İlk adımı deneyin, işe yaradı mı? Sonra ikincisi, peki ya şimdi? Her şeyin satır satır çalıştığından emin olursanız, kodunuzun yapması gerekeni yapmadığı yere geldiğinizde, bir hata bulduğunuzu bilirsiniz. Hatanızı keşfettikten sonra, onu düzeltmeye (veya \"hata ayıklamaya\") çalışabilirsiniz!_\n\nSınıfta heyecan yaratacağını düşünüyorsanız, günün bulmacalarının karakteri olan _\"Buz Devri\"_'nden _Scrat_'ı tanıtabilirsiniz. Öğrenciler _Scrat_'ı tanımıyorlarsa ilginç sincabın başını belaya soktuğu birkaç klip gösterin."
         },
         "5c133834-038c-48e4-819a-cef93780856b": {
@@ -5563,7 +5610,7 @@
           "name": "Yansıtma"
         },
         "9f5921d9-6813-471c-8c16-40e622971021": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "a37ca2d2-fd44-4b34-ad75-d6caf1c8fffa": {
           "name": "Giriş"
@@ -5594,7 +5641,7 @@
           "name": "Yansıtma"
         },
         "f200bbb3-21c5-4805-ae91-c6418a1309b7": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "b5199fed-e3e0-4a59-b01f-e9b40b861d5c": {
           "name": "Giriş"
@@ -5650,7 +5697,7 @@
           "name": "Yansıtma"
         },
         "0d59aa71-1a4e-4fd3-8a95-3f0f23933b47": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "e681233b-1029-4530-a3ef-4842b8254aa6": {
           "name": "Giriş"
@@ -5690,7 +5737,7 @@
           "name": "Yansıtma"
         },
         "7e073b00-f336-4d89-a848-f79ee9a8bc23": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "505c83de-b318-4a7d-9a4b-9da377a5b0d8": {
           "name": "Giriş"
@@ -5730,7 +5777,7 @@
           "name": "Yansıtma"
         },
         "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "9f1508f1-3a4b-42fb-82fb-d31a0aad9576": {
           "name": "Giriş"
@@ -5772,7 +5819,7 @@
           "name": "Yansıtma"
         },
         "bcf1fc52-7c45-4c27-928d-9535649691dc": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "129d2408-3ca5-4a8e-90b1-f5ad3d0e6c48": {
           "name": "Giriş"
@@ -5796,7 +5843,7 @@
           "name": "Yansıtma"
         },
         "25f3c528-ac14-47ff-b254-cd071d8737ff": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "be9470c8-795f-4e1d-83f2-069961c852d2": {
           "name": "Giriş"
@@ -5853,7 +5900,7 @@
           "name": "Yansıtma"
         },
         "3c79c590-2f48-4931-b8fa-736281002766": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "d9c07104-b142-42fc-abf8-4b34d8429b7a": {
           "name": "Döngüler ile Ürünleri Hasat Etme",
@@ -5887,7 +5934,7 @@
           "name": "Yansıtma"
         },
         "305f3738-2a15-46f7-bef1-c405a63b948d": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "f4370643-7030-4064-a1a5-5d5385a91c80": {
           "name": "Giriş"
@@ -5918,7 +5965,7 @@
           "name": "Giriş"
         },
         "b5d0ecce-50d3-4d8f-8143-eb3bcd6a52b0": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "8816065c-5d3c-4cc9-95a3-f96c88edbb62": {
           "name": "Büyük Olay",
@@ -5947,7 +5994,7 @@
           "name": "Yansıtma"
         },
         "4184cd8d-7e62-44ac-91e2-fa4c825a3aa7": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "49e86e55-b607-4af6-bdb6-b912549b69ea": {
           "name": "Giriş"
@@ -5987,7 +6034,7 @@
           "name": "Yansıtma"
         },
         "8f34487c-1c94-4472-80bd-7e53befee5f6": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "e0573e5e-1308-46de-b4aa-d856b692817d": {
           "name": "Giriş"
@@ -6023,7 +6070,7 @@
           "name": "Yansıtma"
         },
         "565fdda1-dbbe-4521-aacf-966c4aa204e3": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "d7a9e0cd-a7e6-46de-910f-3f0e1216f055": {
           "name": "Giriş"
@@ -6044,7 +6091,7 @@
           "name": "Yansıtma"
         },
         "ac8248ed-61d0-4366-876a-0c145094fa03": {
-          "name": "Kelime Haznesi"
+          "name": "Kelime Dağarcığı"
         },
         "04091b34-9c0a-44fa-bce4-dd57c3c8f2b2": {
           "name": "Giriş"
@@ -11674,7 +11721,7 @@
           "progression_name": "Derse Genel Bakış"
         },
         "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
-          "progression_name": "Hata Ayıklama (Debugging)"
+          "progression_name": "Hata Ayıklama"
         },
         "a2d9b8f3-db4f-498e-8863-4166544c053b": {
           "progression_name": "HTML'de Biçimlendirme"
@@ -13643,7 +13690,7 @@
           "progression_name": "Derse Genel Bakış"
         },
         "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
-          "progression_name": "Hata Ayıklama (Debugging)"
+          "progression_name": "Hata Ayıklama"
         },
         "2315317c-9f63-4980-95ac-9e2c25658fef": {
           "progression_name": "HTML'de Biçimlendirme"
@@ -14549,7 +14596,7 @@
           "progression_name": "Derse Genel Bakış"
         },
         "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
-          "progression_name": "Hata Ayıklama (Debugging)"
+          "progression_name": "Hata Ayıklama"
         },
         "5f08ec78-a44e-44bd-9088-19287dba106b": {
           "progression_name": "HTML'de Biçimlendirme"
@@ -17109,7 +17156,7 @@
           "description": "\\*\\*Diyelim ki: \\*\\* \\_Burada bir desen bulabilecek miyiz görelim: \\_\n\n-   _Bir anahtarı çevirdiğinizde, ışıklar açar._\n-   _Bir cihaza dokunduğunuzda, bir uygulama başlar._\n-   \\_Alarm kapandığında yataktan kalkıyorsunuz.\n-   \\_Ne zaman (olay) \\_, \\_ (eylem) \\_.\n\n\\_Bilgisayar bilimlerinde olaylar diğer eylemlerin gerçekleşmesine neden olur. Bugünkü yeni kelime hazinemiz olay. \\_Normalde “olay” kelimesini duyduğumuzda düşünürüz: \\_\n\n-   Saha gezisi\n-   Yarışma\n-   Doğum Günü Partisi\n\n\\_Bugün “olay” kelimesi için yeni bir anlam öğreniyoruz. Diğer eylemlerin gerçekleşmesine neden olan “olaylara” odaklanalım. Bir düğmeye basarak bir düğmeye basarak bir düğmeye basarak bir düğmeye basarak bir düğmeye basalım. \\_"
         },
         "082fb58c-df8c-4ac2-a314-22ecf1c4d14a": {
-          "name": "Kelime Haznesi",
+          "name": "Kelime Dağarcığı",
           "description": "Bu dersin yeni ve önemli bir kelime bilgisi vardır:\n\n**Event** - _Benimle söyle: E-vent._\n\nBir olay, bir şeyin gerçekleşmesine neden olan bir eylemdir."
         },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
@@ -18013,7 +18060,7 @@
           "description": "Öğrencilerden günlük yaşamda çözmeleri gereken sorunları düşünmelerini isteyin.\n\n-   Çalışmayan bir şeyi nasıl düzeltirsin?\n-   Belirli bir dizi adım izliyor musunuz?\n-   Bu birimdeki bulmacalar sizin için zaten çözüldü (yaşasın!) , ama onlar çalışıyor gibi görünmüyor (boo!)\n-   Bu programlardaki sorunları “böcekler” olarak adlandırıyoruz ve bunları “hata ayıklamak” sizin işiniz olacaktır."
         },
         "a03b28fc-fd86-4f3a-ba44-ade5b7437f24": {
-          "name": "Kelime Haznesi",
+          "name": "Kelime Dağarcığı",
           "description": "Bu derste üç yeni ve önemli kelime var:\n\n-   **Hata** - _Benimle birlikte söyleyin - Ha-ta._\n\nYanlış giden bir şey. Bir yanlışlık.\n\n-   **Hata ayıklama** - _Benimle birlikte söyleyin: Ha-ta a-yık-la-ma._\n\nHataları bulmak ve düzeltmek.\n\n-   **Israrcılık** - _Benimle birlikte söyleyin: Is-rar-cı-lık._\n\nPes etmemek. Israrcılık, bir şeyleri birçok farklı şekilde, birçok farklı zamanda denediğinizde en iyi sonucu verir.\n\n**Söyleyin:** _**Hata ayıklama** bir süreçtir. Öncelikle, programınızda bir hata olduğunu kabul etmelisiniz. Daha sonra hatayı bulmak için programda adım adım çalışırsınız. İlk adımı deneyin, işe yaradı mı? Sonra ikincisi, peki ya şimdi? Her şeyin satır satır çalıştığından emin olursanız, kodunuzun yapması gerekeni yapmadığı yere geldiğinizde, bir hata bulduğunuzu bilirsiniz. Hatanızı keşfettikten sonra, onu düzeltmeye (veya \"hata ayıklamaya\") çalışabilirsiniz!_\n\nSınıfta heyecan yaratacağını düşünüyorsanız, günün bulmacalarının karakteri olan _\"Buz Devri\"_'nden _Scrat_'ı tanıtabilirsiniz. Öğrenciler _Scrat_'ı tanımıyorlarsa ilginç sincabın başını belaya soktuğu birkaç klip gösterin."
         },
         "a253c018-c2ce-4147-a5a4-24db47788f78": {

@@ -1320,6 +1320,10 @@ ko:
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": 마법의 주문
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": 별난 베이스
             "'sound://category_digital/jump_7.mp3'": 점프
+      gamelab_playSoundOptionsSoccer:
+        text: Playsound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: Playsound {SOUND}
       gamelab_playSpeech:
         text: 스피치 {SOUND} 재생
       gamelab_playerBehaviors:

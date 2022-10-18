@@ -1510,3 +1510,5 @@ de:
         gesperrt sind
       forbidden: Benutzer kann den Sperrstatus des Schülers nicht aktualisieren
   reset_predict_progress_button: Antwort löschen
+  pixelation:
+    binary: Binärdatei

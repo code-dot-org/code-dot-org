@@ -1160,3 +1160,5 @@ zh-TW:
       cannot_view_locked_answers: "鎖定時無法查看答案"
       forbidden: "用戶無法更新學生的可鎖定狀態"
   reset_predict_progress_button: "刪除答案"
+  pixelation:
+    binary: "二進制（Binary）"

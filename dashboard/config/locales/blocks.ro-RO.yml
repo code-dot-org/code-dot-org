@@ -1325,6 +1325,10 @@ ro:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": selectează
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass neuzual
             "'sound://category_digital/jump_7.mp3'": sari
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playSpeech:
         text: reprodu discursul {SOUND}
       gamelab_playerBehaviors:

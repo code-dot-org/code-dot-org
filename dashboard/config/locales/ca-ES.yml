@@ -744,3 +744,5 @@ ca:
         bloquejat
       forbidden: L'usuari no pot actualitzar l'estat bloquejable de l'alumne
   reset_predict_progress_button: Esborrar resposta
+  pixelation:
+    binary: Binari

@@ -51,7 +51,7 @@ class TestController < ApplicationController
 
   def create_student_section_assigned_to_script
     return unless (user = current_user)
-    script = Script.find_by_name(params.require(:script_name))
+    script = Unit.find_by_name(params.require(:script_name))
 
     Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     head :ok
@@ -59,7 +59,7 @@ class TestController < ApplicationController
 
   def assign_course_and_unit_as_student
     return unless (user = current_user)
-    script = Script.find_by_name(params.require(:script_name))
+    script = Unit.find_by_name(params.require(:script_name))
     course = UnitGroup.find_by_name(params.require(:course_name))
 
     name = "Fake User"
@@ -82,7 +82,7 @@ class TestController < ApplicationController
 
   def assign_script_as_student
     return unless (user = current_user)
-    script = Script.find_by_name(params.require(:script_name))
+    script = Unit.find_by_name(params.require(:script_name))
 
     name = "Fake User"
     email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
@@ -120,7 +120,7 @@ class TestController < ApplicationController
   def create_migrated_script
     script = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
-      Script.create!(name: script_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+      Unit.create!(name: script_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     end
     script.is_migrated = true
     script.save!
@@ -169,12 +169,12 @@ class TestController < ApplicationController
   # invalidate the specified script from the script cache, so that it will be
   # reloaded from the DB the next time it is requested.
   def invalidate_script
-    Script.remove_from_cache(params[:script_name])
+    Unit.remove_from_cache(params[:script_name])
     head :ok
   end
 
   def destroy_script
-    script = Script.find_by!(name: params[:script_name])
+    script = Unit.find_by!(name: params[:script_name])
     script.destroy
     head :ok
   end
@@ -182,12 +182,6 @@ class TestController < ApplicationController
   def destroy_level
     level = Level.find(params[:id])
     level.destroy
-    head :ok
-  end
-
-  def destroy_data_doc
-    data_doc = DataDoc.find_by(key: params[:key])
-    data_doc.destroy
     head :ok
   end
 end

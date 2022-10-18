@@ -7,7 +7,6 @@ import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
 import {
   isCodeOrgBrowser,
-  isChromeOS,
   isOSX,
   isWindows,
   isLinux
@@ -23,7 +22,7 @@ import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
 import {
   WEB_SERIAL_FILTERS,
-  isWebSerialPortAvailable
+  shouldUseWebSerial
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
@@ -59,13 +58,9 @@ export default class MakerSetupInstructions extends React.Component {
     );
     const {webSerialPort} = this.state;
 
-    // Experiment 'webserial' uses the WebSerial protocol and requires no downloads.
-    let isWebSerial =
-      experiments.isEnabled('webserial') && isWebSerialPortAvailable();
-
     // WebSerial requires user input for user to select port.
     // Add a button for user interaction before initiated Setup Checklist
-    if (isWebSerial && !webSerialPort) {
+    if (shouldUseWebSerial() && !webSerialPort) {
       return (
         <input
           style={{marginLeft: 9, marginTop: -4}}
@@ -83,7 +78,7 @@ export default class MakerSetupInstructions extends React.Component {
       );
     }
 
-    if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
+    if (isCodeOrgBrowser() || shouldUseWebSerial()) {
       return <SetupChecklist webSerialPort={webSerialPort} />;
     }
     return (

@@ -8,6 +8,12 @@
         "6da037be-d0be-4f41-a1e5-10b24a247190": {
           "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
         },
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
         "53df251f-a20a-47a9-ae13-ede6e36df59d": {
           "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
         },
@@ -27,6 +33,12 @@
           "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
         },
         "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
           "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {

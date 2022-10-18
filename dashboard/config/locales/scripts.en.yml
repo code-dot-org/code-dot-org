@@ -7386,8 +7386,11 @@ en:
           title: 'Invasive Species '
           description_audience: ''
           description_short: 'This is a NSF funded research grant for CS4All '
-          description: ''
+          description: 'This integrated Science+CS module invites students to learn about impacts of invasive species on their environment and to consider ways that computers might help. Please review [Lesson 0: Getting Started](https://docs.google.com/document/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit?usp=sharing) to learn about the module.'
           student_description: ''
+          lessons:
+            lesson-21:
+              name: Getting Started
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -7908,6 +7911,9 @@ en:
           description_short: For staging updates to lessons or levels between curriculum versions
           description: For staging updates to lessons or levels between curriculum versions
           student_description: ''
+          lessons:
+            lesson-7:
+              name: Intro to Sprites
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
@@ -8497,6 +8503,8 @@ en:
           lessons:
             lesson-2:
               name: 'Module 2 post-work: Understanding Unit 4 content'
+            lesson-4:
+              name: 'Module 4 post-work: 2D Arrays in Unit 5 and FRQs'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8546,6 +8554,8 @@ en:
           lessons:
             lesson-2:
               name: 'Module 3 post-work: The Theater and datasets in Unit 4'
+            lesson-3:
+              name: 'Module 4 post-work: FRQs and Unit 5'
           lesson_groups: {}
           name: csa-draft-pl
           title: ''
@@ -8858,9 +8868,6 @@ en:
           description: |-
             This unit exposes students to object-oriented programming principles as they explore The Neighborhood. Students learn fundamental Java concepts as they navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of their programs. Students practice predicting the outcome of program code and use their `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While students work with the `Painter`, they practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, students learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, students discover their identity as software engineers and use debugging strategies and code reviews to improve their programming skills.
 
-            ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa1-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
-
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) to let the Code.org curriculum team know how the unit went.
           student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
@@ -9000,7 +9007,21 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) to let the Code.org curriculum team know how the unit went.
           student_description: In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.
         vpl-csd3-ayw-pilot-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Formative Assessment in CS Discoveries
+            lesson-4:
+              name: Equity and Data
+            lesson-5:
+              name: Closing
+            lesson-6:
+              name: Practicing with Feedback
+            lesson-7:
+              name: Data Inquiry Cycles
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
@@ -9269,6 +9290,8 @@ en:
           lessons:
             lesson-1:
               name: U.S. Landmarks
+            lesson-3:
+              name: Local Storytellers
           lesson_groups: {}
           name: csc-landmarks-pilot
           title: ''
@@ -9297,7 +9320,9 @@ en:
           description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n"
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-physical-computing2:
-          lessons: {}
+          lessons:
+            lesson-5:
+              name: This lesson needs a name
           lesson_groups: {}
           name: self-paced-pl-physical-computing2
           title: 'Module 2: Preparing to Teach Physical Computing'
@@ -9319,3 +9344,36 @@ en:
             * Explore end of chapter projects.
 
             **Suggested time:** 90 minutes
+        emmas-playground:
+          lessons:
+            lesson-1:
+              name: Emma's Stuff
+          lesson_groups: {}
+          name: emmas-playground
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        amys-playground:
+          lessons:
+            lesson-1:
+              name: Bunch of Stuff
+          lesson_groups: {}
+          name: amys-playground
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: What's That Sound?
+          lesson_groups: {}
+          name: csc-function-machines-pilot
+          title: Function Machines Pilot Module
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

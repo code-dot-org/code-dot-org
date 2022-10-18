@@ -1019,3 +1019,5 @@ fi:
       pysyäksesi ajan tasalla lapsesi edistymisestä ja projekteista!"
     link_your_email: Liitä sähköpostiosoitteesi
     not_now: Ei nyt
+  pixelation:
+    binary: Binääri

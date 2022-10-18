@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Алдааг засах"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Алдааг засах"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Нөхцлүүд"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Алдааг засах"
         },
         "loops/aquatic/unversioned": {
           "word": "Гогцоонууд"

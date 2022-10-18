@@ -927,3 +927,5 @@ et:
     accept: Olen nõus
   page_not_found_title: Lehte ei leitud
   copy: Kopeeri
+  pixelation:
+    binary: Binaarne

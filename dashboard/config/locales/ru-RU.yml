@@ -1475,3 +1475,5 @@ ru:
       cannot_view_locked_answers: Невозможно просмотреть ответы, пока они заблокированы
       forbidden: Пользователь не может обновлять состояние блокировки студента
   reset_predict_progress_button: Удалить ответ
+  pixelation:
+    binary: Двоичный

@@ -10,15 +10,15 @@
     "helper_libraries": [
       "NativeSpriteLab"
     ],
-    "use_default_sprites": "true",
-    "hide_animation_mode": "true",
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**It’s time for the guide to explain the first landmark!**\r\n- Add a `when sprite touches sprite` block.\r\n- Bring a `sprite say` block under this new event and add text to describe the landmark. \r\n- Click run then use the arrow keys to move the guide to the first landmark.\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "**It’s time for the guide to visit and explain the first landmark!**\r\n- Add a `when sprite touches sprite` block anywhere in the workspace.\r\n- Bring a `sprite say` block under this new event and add text to describe the landmark. \r\n- Click run then use the arrow keys to move the guide to the first landmark.\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -33,7 +33,7 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "instructions_icon": "rikki",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Make sure the costume matches on your new sprite block, and set size block.\\n\\n<xml><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"purple bunny\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":241,\\\"y\\\":193}</field></block></value><next><block type=\\\"gamelab_setProp\\\"><field name=\\\"PROPERTY\\\">\\\"scale\\\"</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"purple bunny\\\"</field></block></value><value name=\\\"VAL\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">50</field></block></value></block></next></block></xml>\\n\\n\\n\\n\\n\\n\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bfee5ad2caa9571c16a585974fc029bb/csc_landmarks_place2.mp3\"}]",
+    "authored_hints": "[]",
     "project_template_level_name": "csc_landmarks_template_-usa-map",
     "name_suffix": "_-usa-map",
     "preload_asset_list": null,
@@ -46,26 +46,21 @@
   "created_at": "2022-09-30T21:20:15.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:15.536+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_place2\\\"\"],\"cloned_from\":\"csc_landmarks_place2\"},{\"changed_at\":\"2022-10-11 17:29:04 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 17:35:30 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:15.536+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_place2\\\"\"],\"cloned_from\":\"csc_landmarks_place2\"},{\"changed_at\":\"2022-10-11 17:29:04 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 17:35:30 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:11:11 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:16:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:16:22 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:25:07 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:59:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:39:11 +0000\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"map_old_blank"</field>
+        </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"bear"</field>
+          <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker">
               <field name="LOCATION">{"x":200,"y":200}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteSay">
-          <field name="SPEECH"/>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bear"</field>
             </block>
           </value>
         </block>
@@ -73,12 +68,46 @@
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bear"</field>
+              <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
           <value name="VAL">
             <block type="math_number">
               <field name="NUM">50</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay">
+          <field name="SPEECH">Welcome.</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_addBehaviorSimple">
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_behavior_get">
+              <mutation/>
+              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"red_shirt_wave2"</field>
             </block>
           </value>
         </block>

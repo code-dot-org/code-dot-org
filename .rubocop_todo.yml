@@ -141,10 +141,6 @@ Lint/ScriptPermission:
   Enabled: false
 
 # Offense count: 1
-Lint/SelfAssignment:
-  Enabled: false
-
-# Offense count: 1
 Lint/StructNewOverride:
   Enabled: false
 

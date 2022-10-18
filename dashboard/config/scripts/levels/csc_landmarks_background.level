@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Start with a background**\r\n- Add a `set background` block under `when run`.\r\n- Change the background to an image that can represent the area you're mapping.\r\n- Click run to test your new code.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "**Start with a background**\r\n- Add a `set background` block under `when run`.\r\n- Change the background to an image that can represent the area you're mapping.\r\n- Click run to see the background appear.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -37,17 +37,14 @@
     "authored_hints": "[]",
     "project_template_level_name": "csc_landmarks_template_-usa-map",
     "name_suffix": "_-usa-map",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-10-11T22:51:02.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-10-11T22:51:02.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-11T22:51:02.850+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches2_-usa-map\\\"\"],\"cloned_from\":\"csc_landmarks_touches2_-usa-map\"},{\"changed_at\":\"2022-10-11 22:54:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 22:58:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 22:59:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 23:06:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 23:25:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 23:26:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-10-11T22:51:02.850+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_touches2_-usa-map\\\"\"],\"cloned_from\":\"csc_landmarks_touches2_-usa-map\"},{\"changed_at\":\"2022-10-11 22:54:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 22:58:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 22:59:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 23:06:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 23:25:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-11 23:26:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 03:45:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 03:47:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 03:51:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:13:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:14:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1499,62 +1496,7 @@
     <toolbox_blocks>
       <xml>
         <block type="gamelab_setBackgroundImageAs">
-          <field name="IMG">"grid"</field>
-        </block>
-        <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"grey_shirt_hand_up"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker">
-              <field name="LOCATION">{"x":200,"y":200}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_spriteSay">
-          <field name="SPEECH">Hello, world.</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"grey_shirt_hand_up"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setProp">
-          <field name="PROPERTY">"scale"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"grey_shirt_hand_up"</field>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number">
-              <field name="NUM">50</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_addBehaviorSimple">
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"grey_shirt_hand_up"</field>
-            </block>
-          </value>
-          <value name="BEHAVIOR">
-            <block type="gamelab_behavior_get">
-              <mutation/>
-              <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"grey_shirt_hand_up"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"building_22"</field>
-            </block>
-          </value>
+          <field name="IMG">"map_old_blank"</field>
         </block>
       </xml>
     </toolbox_blocks>

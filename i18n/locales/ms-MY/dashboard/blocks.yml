@@ -1317,6 +1317,10 @@ ms:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": pilih
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass yang unik
             "'sound://category_digital/jump_7.mp3'": lompat
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playSpeech:
         text: bermain ucapan {SOUND}
       gamelab_playerBehaviors:
