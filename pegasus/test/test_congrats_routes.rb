@@ -35,8 +35,10 @@ class CongratsRoutesTest < Minitest::Test
         ScriptConstants::EXPRESS_2022_NAME,
         ScriptConstants::PRE_READER_EXPRESS_2022_NAME
       ].each do |course|
-        @pegasus.get "/congrats/#{course}"
-        assert_equal 200, @pegasus.last_response.status
+        @pegasus.get CDO.code_org_url("/congrats/#{course}")
+        assert_equal 302, @pegasus.last_response.status
+        expected_url = CDO.studio_url("/congrats?s=#{Base64.urlsafe_encode64(course)}", CDO.default_scheme)
+        assert_equal expected_url, @pegasus.last_response['Location'], "for course #{course.inspect}"
       end
     end
 
@@ -46,8 +48,8 @@ class CongratsRoutesTest < Minitest::Test
 
         @pegasus.get "/congrats/#{CGI.escape(course)}"
         assert_equal 302, @pegasus.last_response.status
-        @pegasus.follow_redirect!
-        assert_equal @pegasus.last_request.path, '/congrats'
+        expected_url = CDO.studio_url('/congrats', CDO.default_scheme)
+        assert_equal expected_url, @pegasus.last_response['Location'], "for course #{course.inspect}"
       end
     end
   end
