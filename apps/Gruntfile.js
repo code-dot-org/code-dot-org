@@ -926,7 +926,10 @@ describe('entry tests', () => {
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
             exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
-            sourceMap: envConstants.DEBUG_MINIFIED
+            parallel: true,
+            terserOptions: {
+              sourceMap: envConstants.DEBUG_MINIFIED
+            }
           })
         ],
 
