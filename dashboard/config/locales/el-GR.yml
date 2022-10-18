@@ -1555,3 +1555,5 @@ el:
       forbidden: Ο χρήστης δεν μπορεί να ενημερώσει την κατάσταση κλειδώματος του
         μαθητή
   reset_predict_progress_button: Διαγραφή απάντησης
+  pixelation:
+    binary: Δυαδικό

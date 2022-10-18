@@ -1318,6 +1318,10 @@ hu:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": furcsa
               basszus
             "'sound://category_digital/jump_7.mp3'": Ugorj
+      gamelab_playSoundOptionsSoccer:
+        text: játszd le a {SOUND} hangot
+      gamelab_playSoundOptionsSpace:
+        text: játszd le a {SOUND} hangot
       gamelab_playSpeech:
         text: "{SOUND} beszéd eljátszása"
       gamelab_playerBehaviors:

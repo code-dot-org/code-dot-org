@@ -582,3 +582,5 @@ eu:
   cookie_banner:
     accept: 'Ados'
   copy: 'Kopiatu'
+  pixelation:
+    binary: "Bitarra"

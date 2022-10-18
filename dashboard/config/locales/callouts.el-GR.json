@@ -522,6 +522,26 @@
         },
         "Underground Iron2022": {
           "craft_what_is_iron": "Εξόρυξε αυτόν τον σίδηρο!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
         }
       }
     }

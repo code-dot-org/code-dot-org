@@ -4578,7 +4578,29 @@
         "courseF_variables2_click_-2022-2": "Cambia el valor de una variable cada vez que se pulsa sobre un sprite. Haz que el sprite diga el nuevo valor cada vez que cambie.",
         "courseF_variables2_set_-2022-2": "Establece una variable con cualquier número y haz que tu sprite diga ese número almacenado.",
         "U2L5 NetSim Classroom Internet": "Para esta actividad, conéctate a un router con los demás miembros de tu grupo. El Simulador de Internet ofrece ahora un lugar para que pongas las direcciones \"Para\" y \"De\", para que no tengas que escribir los bits manualmente.",
-        "U2L7 NetSim Need for Packets": "Transfiere tu favicon a un compañero a través de una red en la que cuanto más grande es un paquete, más probable es que se caiga."
+        "U2L7 NetSim Need for Packets": "Transfiere tu favicon a un compañero a través de una red en la que cuanto más grande es un paquete, más probable es que se caiga.",
+        "helloworld_food_backgrounds_soccer-2022": "Añade este bloque de eventos a tu espacio de trabajo.",
+        "helloworld_food_backgrounds_space-2022": "Añade este bloque de eventos a tu espacio de trabajo.",
+        "helloworld_food_behaviors_soccer-2022": "Vamos a aprender a animar sprites utilizando comportamientos. ",
+        "helloworld_food_behaviors_space-2022": "Vamos a aprender a animar sprites utilizando comportamientos. ",
+        "helloworld_food_click_soccer-2022": "¿Qué hace hablar a estos sprites?",
+        "helloworld_food_click_space-2022": "¿Qué hace hablar a estos sprites?",
+        "helloworld_food_costumes_soccer-2022": "Aprendamos a cambiar la apariencia de los sprites.",
+        "helloworld_food_costumes_space-2022": "Aprendamos a cambiar la apariencia de los sprites.",
+        "helloworld_food_events_soccer-2022": "Usa el evento `al pulsar` para hacer que un sprite diga algo.",
+        "helloworld_food_events_space-2022": "Usa el evento `al pulsar` para hacer que un sprite diga algo.",
+        "helloworld_food_freeplay_soccer-2022": "¡Es el momento de crear lo que quieras!",
+        "helloworld_food_freeplay_space-2022": "¡Es el momento de crear lo que quieras!",
+        "helloworld_food_location_soccer-2022": "Dale a cada sprite una ubicación diferente.",
+        "helloworld_food_location_space-2022": "Dale a cada sprite una ubicación diferente.",
+        "helloworld_food_multi_soccer-2022": "Haz que cada uno de tus dos sprites diga algo. ",
+        "helloworld_food_multi_space-2022": "Haz que cada uno de tus dos sprites diga algo. ",
+        "helloworld_food_say_soccer-2022": "¡Utiliza el bloque `decir` para que diga lo que quieras.",
+        "helloworld_food_say_space-2022": "¡Utiliza el bloque `decir` para que diga lo que quieras.",
+        "helloworld_food_sizes_soccer-2022": "Aprendamos a cambiar el tamaño de los sprites.",
+        "helloworld_food_sizes_space-2022": "Aprendamos a cambiar el tamaño de los sprites.",
+        "helloworld_food_sounds_soccer-2022": "Aprendamos a reproducir sonidos.",
+        "helloworld_food_sounds_space-2022": "Aprendamos a reproducir sonidos."
       }
     }
   }

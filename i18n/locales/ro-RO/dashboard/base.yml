@@ -1127,3 +1127,5 @@ ro:
       cannot_view_locked_answers: "Nu se pot vizualiza răspunsurile în timp ce sunt blocate"
       forbidden: "Utilizatorul nu poate actualiza starea de blocare a elevului."
   reset_predict_progress_button: "Șterge Răspunsul"
+  pixelation:
+    binary: "Binar"

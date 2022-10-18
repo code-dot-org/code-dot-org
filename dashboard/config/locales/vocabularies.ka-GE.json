@@ -35,14 +35,14 @@
         "debugging/gumball/unversioned": {
           "word": "გამართვა"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "გამართვა"
-        },
         "condition/aquatic/unversioned": {
           "word": "პირობა"
         },
         "conditionals/aquatic/unversioned": {
           "word": "პირობითი ბრძანებები"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "გამართვა"
         },
         "loops/aquatic/unversioned": {
           "word": "ციკლები"

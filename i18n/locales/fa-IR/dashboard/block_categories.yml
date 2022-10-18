@@ -4,7 +4,10 @@ fa:
       Actions: اقدامات
       Advanced: پیشرفته
       Behaviors: عملکردها
+      'Behaviors ': 'رفتارها'
+      Boolean: بولی
       Brushes: قلم‌ها
+      Category: دسته
       Color: رنگ
       Comment: دیدگاه
       Comments: نظرات
@@ -17,12 +20,19 @@ fa:
       Game/Score: بازی‌/امتیاز
       Games/Score: بازی‌ها/امتیاز
       Groups: گروه ها
+      Input: ورودی
       Location: مکان
       Locations: موقعیت‌های مکانی
       Logic: منطق
       Loops: حلقه‌ها
       Math: ریاضی
+      Number: عدد
       Numbers: اعداد
+      Picker: انتخابگر
+      Prebuilt: پیش‌ساخت
+      Properties: مشخصات
+      Sprites: اسپرایت
+      String: رشته
       Text: متن
       Variables: متغیرها
       'Variables ': 'متغیرها '

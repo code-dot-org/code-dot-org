@@ -5441,6 +5441,9 @@ es:
           name: cs4all-especies-invasoras
           title: 'Especies Invasoras '
           description_short: 'Esta es una beca de investigación financiada por la NSF para CS4All '
+          lessons:
+            lesson-21:
+              name: Primeros pasos
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5735,6 +5738,9 @@ es:
           description_audience: Escritores de planes de estudio
           description_short: Para organizar las actualizaciones de las lecciones o los niveles entre las versiones del plan de estudios
           description: Para organizar las actualizaciones de las lecciones o los niveles entre las versiones del plan de estudios
+          lessons:
+            lesson-7:
+              name: Introducción a los Sprites
         csc-pilot-2022-ecosystems:
           name: csc-piloto-2022-ecosistemas
         csc-pilot-2022-timecapsule:
@@ -6279,6 +6285,13 @@ es:
           description: "En esta unidad, los estudiantes aplican algoritmos de búsqueda y ordenación para trabajar con listas de datos primitivos y de objetos almacenados en arrays 1D y 2D y `ArrayList`s. Los estudiantes analizan la eficiencia de los algoritmos de búsqueda y ordenación y amplían los algoritmos estándar que han desarrollado a lo largo del curso para resolver problemas más complejos. A lo largo de la unidad, los estudiantes aplican sus conocimientos y habilidades de programación para desarrollar un juego que incorpora el diseño orientado a objetos y la eficiencia. Los estudiantes concluyen la unidad y el curso considerando la privacidad y seguridad de sus programas y usuarios.\n\n### Controles de progreso personal del Aula AP\n\nPara asignar preguntas del Banco de Preguntas de AP Classroom que se ajusten a esta unidad, cree un cuestionario personalizado en AP Classroom buscando en el Banco de Preguntas los enunciados de Conocimientos Esenciales en la página [\\*\\*Estándares\\*\\*](https://studio.code.org/s/csa8-pilot-facilitator/standards) de la unidad. Puede encontrar instrucciones y vídeos de demostración para hacerlo en [\\*\\*AP Central\\*\\*](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nLas siguientes comprobaciones de progreso personal en el Aula AP pueden asignarse durante la semana de \"Demuestra lo que sabes\":\n\n-   Control de Progreso Personal 10\n\n**_Nota:_** Algunos de los objetivos de aprendizaje y de los conocimientos esenciales que aparecen en los controles de progreso personal sugeridos se tratan en unidades posteriores.\\_"
           student_description: En esta unidad, ampliarás los algoritmos que has aprendido para explorar enfoques comunes de búsqueda y ordenación de arrays 1D y 2D y `ArrayList`s. En el proceso, analizarás y compararás las eficiencias de estos algoritmos utilizando recuentos de ejecución de sentencias y desarrollarás aún más los conocimientos de resolución de problemas para descomponer problemas complejos. A lo largo de la unidad, aplicas tus conocimientos de programación e ingeniería de software para planificar y desarrollar un proyecto de codificación creativo utilizando la consola que incorpora diseño orientado a objetos, estructuras de datos y pensamiento algorítmico. Con los conocimientos y habilidades adquiridos a lo largo del año, analizas la privacidad y la seguridad de los programas y los usuarios.
         vpl-csd3-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
           lesson_groups:
             lessonGroup-2:
               display_name: 'Parte 1: Sesión Sincrónica'

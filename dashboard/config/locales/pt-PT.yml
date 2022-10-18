@@ -1420,3 +1420,5 @@ pt:
   unit_prefix: 'Unidade: %{n}'
   code_org_logo_alt: Início - Code.org
   teacher_feedback: Feedback do Professor
+  pixelation:
+    binary: Binário

@@ -265,6 +265,31 @@
           "name": "Mở rộng Giờ lập trình",
           "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Bố trí sân khấu",
+          "description": "Chào mừng học sinh đến lớp và giới thiệu thật ngắn gọn về hoạt động trong ngày."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Trong hoạt động này, bạn sẽ vừa giải trí vừa tạo ra một thế giới tương tác với các nhân vật vui nhộn được gọi là nhân vật. Bạn sẽ có thể khiến nhân vật nói chuyện bằng bong bóng thoại như trong truyện tranh hoặc sách ảnh và bạn sẽ học cách làm cho họ tự động phản hồi khi bạn hoặc ai đó nhấp chuột vào._\n\n_Hôm nay bạn sẽ viết “mã lệnh”, nghĩa là một tập hợp các chỉ dẫn mà máy tính có thể hiểu được. Khi bạn viết một câu chuyện, bạn cần phải suy nghĩ cẩn thận về từ ngữ bạn sẽ sử dụng. Khi bạn viết mã lệnh, bạn cần phải suy nghĩ cẩn thận về các chỉ dẫn bạn đang cung cấp cho máy tính của mình._",
+          "tips": [
+            "Bạn sẽ muốn dành một chút thời gian để tải trước hoặc giới thiệu Giờ lập trình của mình. Đặc biệt là với những học viên nhỏ tuổi, tốt nhất bạn nên vào bài học càng nhanh càng tốt."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Hỗ trợ chung",
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Suy nghĩ",
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Bố trí sân khấu\n\nHãy chào mừng học sinh đến lớp và giới thiệu ngắn gọn về hoạt động trong ngày.\n\n_Nói: “Hôm nay chúng ta sẽ dành một giờ để học lập trình. Có ai ở đây đã nghe thuật ngữ “mã lệnh” trước đây chưa? Thuật ngữ đó có nghĩa là gì?”_\n\nHọc sinh có thể đề cập rằng “mã lệnh” giống như một thông điệp bí mật, hoặc liên quan đến máy tính theo một cách nào đó."
         },
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Đọc Blown to Bits**\n\n-   Đọc trang 165-169 của cuốn [Blown to Bits, Chương 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Trả lời các câu hỏi nêu trong bài hướng dẫn đọc và bảng học tập [Bài hướng dẫn đọc về mã hóa](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/).\t\t\n\n**Tìm hiểu thêm về Blown to Bits**\n\n-   Các phần trước Chương 5 của cuốn Blown to Bits đề cập đến tầm quan trọng và những tranh cãi xung quanh mã hóa trong bối cảnh hậu 11/9. Bài đọc này có thể là công cụ hữu ích để giới thiệu thêm về tác động của mật mã đối trong nhiều khía cạnh của cuộc sống hiện đại.\n\n-   Yêu cầu học sinh xem lại lịch sử duyệt Internet của mình và ước lượng tỷ lệ phần trăm họ truy cập với giả định rằng phiên truy cập đó là “riêng tư”. Họ có cách nào để chắc chắn về sự riêng tư đó không? Có trang web nào họ truy cập mà họ cảm thấy tin tưởng vào tính bảo mật của phiên truy cập hơn những trang web khác không? Họ có lý lẽ để biện minh cho kết luận này không?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Bố trí sân khấu",
+          "description": "Chào mừng học sinh đến lớp và giới thiệu thật ngắn gọn về hoạt động trong ngày."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Trong hoạt động này, bạn sẽ vừa giải trí vừa tạo ra một thế giới tương tác với các nhân vật vui nhộn được gọi là nhân vật. Bạn sẽ có thể khiến nhân vật nói chuyện bằng bong bóng thoại như trong truyện tranh hoặc sách ảnh và bạn sẽ học cách làm cho họ tự động phản hồi khi bạn hoặc ai đó nhấp chuột vào._\n\n_Hôm nay bạn sẽ viết “mã lệnh”, nghĩa là một tập hợp các chỉ dẫn mà máy tính có thể hiểu được. Khi bạn viết một câu chuyện, bạn cần phải suy nghĩ cẩn thận về từ ngữ bạn sẽ sử dụng. Khi bạn viết mã lệnh, bạn cần phải suy nghĩ cẩn thận về các chỉ dẫn bạn đang cung cấp cho máy tính của mình._",
+          "tips": [
+            "Bạn sẽ muốn dành một chút thời gian để tải trước hoặc giới thiệu Giờ lập trình của mình. Đặc biệt là với những học viên nhỏ tuổi, tốt nhất bạn nên vào bài học càng nhanh càng tốt."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Hỗ trợ chung",
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Xin chào cả thế giới",
+          "progression_name": "Xin chào cả thế giới"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Suy nghĩ",
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Bố trí sân khấu",
@@ -3482,9 +3532,6 @@
           "tips": [
             "Hãy nhắc học sinh chỉ chia sẻ tác phẩm của mình với bạn thân hoặc gia đình. Để biết thêm thông tin, hãy xem hoặc chiếu **\\*Tạm dừng và suy nghĩ về môi trường trực tuyến – Video** cho cả lớp"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Chúng tôi đã đưa vào một số cấp độ dự đoán trắc nghiệm có thể hơi khó đối với trẻ chưa biết đọc. Các cấp độ này là tùy chọn để bạn ôn lại với cả lớp và giúp chuẩn bị cho các bài tập sắp tới. Ngoài ra, bạn có thể dùng cấp độ này sau khi kết thúc giai đoạn để làm bài ôn tập cho cả lớp.\n\n**Cấp độ dự đoán:** – [Khóa học B, Vòng lặp trong Họa sĩ](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Họa sĩ trong Code Studio"

@@ -153,7 +153,7 @@ Pomóż zwiększyć świadomość ruchu związanego z informatyką przy pomocy p
 - W USA zaledwie 26% specjalistów ds. oprogramowania to kobiety. Wprowadź więcej młodych kobiet w dziedzinę informatyki przy pomocy #HourOfCode https://hourofcode.com/
 - 67% prac związanych z komputerami w USA dotyczy sektora innego niż techniczny. Pomóż wprowadzić informatykę do standardowego programu nauczania przy pomocy #HourOfCode https://hourofcode.com/
 
-#### Stwórz swój własny post
+#### Stwórz swój własny
 
 - Jedna #HourOfCode może doprowadzić do [umieść tutaj swoją historię]. https://hourofcode.com/
 - Wspieram #HourOfCode, ponieważ [umieść tutaj swoje przemyślenia]. Dołącz do nas na https://hourofcode.com
