@@ -4321,6 +4321,10 @@ mn:
           description_short: 'Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны
             танилцуулга: манай цэцэрлэгийн шилдэг анги болон нэгдүгээр ангийн сургалтуудыг
             нэгтгэдэг.'
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Эхлүүлэх
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-7:
