@@ -107,6 +107,7 @@ export default class Instructions extends React.Component {
                           width: '100%',
                           position: 'absolute',
                           border: '10px black solid',
+                          borderRadius: 4,
                           zIndex: 80,
                           cursor: 'pointer'
                         }}
