@@ -1284,6 +1284,10 @@ uk:
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
             "'sound://category_digital/jump_7.mp3'": стрибок
+      gamelab_playSoundOptionsSoccer:
+        text: грати звук {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: грати звук {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
