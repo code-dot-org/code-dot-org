@@ -8,6 +8,7 @@ module ScriptConstants
   JIGSAW_NAME = 'jigsaw'.freeze
   ACCELERATED_NAME = 'accelerated'.freeze
   ALGEBRA_NAME = 'algebra'.freeze
+  AIML_2021_NAME = 'aiml-2021'.freeze
 
   CSP_UNIT1_NAME = 'cspunit1'.freeze
   CSP_UNIT2_NAME = 'cspunit2'.freeze
