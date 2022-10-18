@@ -2513,6 +2513,10 @@ fil:
               display_name: Mga event
           description_audience: 'Mga Edad: 4-8'
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Pagsisimula
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-5:
@@ -2545,6 +2549,10 @@ fil:
               display_name: Pagsisiyasat
         hello-world-csc:
           title: Hello World
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Intro sa Mga Sprite
         csd1-2022:
           lesson_groups:
             cspSurvey:
