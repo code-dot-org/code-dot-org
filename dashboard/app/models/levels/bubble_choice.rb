@@ -240,7 +240,7 @@ class BubbleChoice < DSLDefined
 
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
-  # @param [Script]
+  # @param [Unit]
   # @return [Level]
   def best_result_sublevel(user, script)
     sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}

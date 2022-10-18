@@ -26,7 +26,7 @@
     }
   ],
   "return_value": "No return value. Array variable created in memory and values assigned.",
-  "short_description": "\nDeclare and assign an array to a variable\nCategory: Variables",
+  "short_description": "Declare and assign an array to a variable",
   "syntax": "var list = [1, 2, 3];",
   "tips": "- Your code will be more readable if you give your variables easy to understand variable names.  On the other hand, the longer the variable name, the more you have to type.\n- Because the scope is defined in the place where the variable is created, it is important to be very careful where you create variables.  Most programmers like to create their variables at the top of a block of code (top of the file, top of a function, etc) so they are less likely to get moved around in later edits.\n- Off-by-one errors are very common when referencing array elements. Always pay attention to making sure you start at zero and end one less than the length of the array.\n- It is perfectly valid to have the value of an element in an array be another array.  See the \"Connect the Dots\" example above.\n- In addition to referring to a particular item in an array using its index (list[index]), [length](/docs/applab/length), [appendItem()](/docs/applab/appendItem), [insertItem()](/docs/applab/insertItem), and [removeItem()](/docs/applab/removeItem) are available array functions."
 }
