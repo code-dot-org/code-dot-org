@@ -5,9 +5,6 @@
 //   hoverColor
 //   clickColor
 
-
-var webServiceLocation = "/promote/state/";
-
 function setupMapDrawing($, document, window, Raphael, undefined) {
   // jQuery Plugin Factory
   function jQueryPluginFactory($, name, methods, getters) {
@@ -790,6 +787,7 @@ function setupMapDrawing($, document, window, Raphael, undefined) {
   jQueryPluginFactory($, "usmap", methods, getters);
 }
 
+var webServiceLocation = "/promote/state/";
 
 $(document).ready(function () {
   setupMapDrawing(jQuery, document, window, Raphael);
