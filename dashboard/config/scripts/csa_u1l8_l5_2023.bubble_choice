@@ -1,6 +1,6 @@
 name 'CSA U1L8-L5_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Conducting a Code Review'
+description 'Finish the program, then request a code review from your peers.'
 
 sublevels
 level 'CSA U1L8-L5a CR_2023'
