@@ -9,7 +9,8 @@ export default class Instructions extends React.Component {
   };
 
   state = {
-    currentPanel: 0
+    currentPanel: 0,
+    showBigImage: false
   };
 
   getPreviousPanel = () => {
@@ -29,8 +30,12 @@ export default class Instructions extends React.Component {
       : this.getPreviousPanel();
 
     if (nextPanelIndex !== null) {
-      this.setState({currentPanel: nextPanelIndex});
+      this.setState({currentPanel: nextPanelIndex, showBigImage: false});
     }
+  };
+
+  imageClicked = () => {
+    this.setState({showBigImage: !this.state.showBigImage});
   };
 
   render() {
@@ -71,7 +76,7 @@ export default class Instructions extends React.Component {
               }}
             >
               {panel.imageSrc && (
-                <div style={{float: 'left', width: 140}}>
+                <div style={{float: 'left', width: 140, position: 'relative'}}>
                   <img
                     src={
                       baseUrl +
@@ -79,8 +84,36 @@ export default class Instructions extends React.Component {
                       '/' +
                       panel.imageSrc
                     }
-                    style={{height: 70}}
+                    style={{height: 70, cursor: 'pointer'}}
+                    onClick={() => this.imageClicked()}
                   />
+                  {this.state.showBigImage && (
+                    <div
+                      style={{
+                        position: 'absolute',
+                        width: 440,
+                        top: 0,
+                        left: 0
+                      }}
+                    >
+                      <img
+                        src={
+                          baseUrl +
+                          instructions.groups[0].path +
+                          '/' +
+                          panel.imageSrc
+                        }
+                        style={{
+                          width: '100%',
+                          position: 'absolute',
+                          border: '10px black solid',
+                          zIndex: 80,
+                          cursor: 'pointer'
+                        }}
+                        onClick={() => this.imageClicked()}
+                      />
+                    </div>
+                  )}
                 </div>
               )}
               <div
@@ -88,7 +121,7 @@ export default class Instructions extends React.Component {
                   float: 'left',
                   width: 'calc(100% - 290px)',
                   height: 70,
-                  overflowY: 'scroll'
+                  overflowY: 'auto'
                 }}
               >
                 {panel.text}
