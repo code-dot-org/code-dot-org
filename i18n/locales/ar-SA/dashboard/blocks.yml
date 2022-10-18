@@ -1334,6 +1334,10 @@ ar:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": تحديد
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": باس ملتوي
             "'sound://category_digital/jump_7.mp3'": قفز
+      gamelab_playSoundOptionsSoccer:
+        text: بلاي ساوند {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: بلاي ساوند {SOUND}
       gamelab_playSpeech:
         text: ألعاب النطق {SOUND}
       gamelab_playerBehaviors:
