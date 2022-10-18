@@ -1,19 +1,28 @@
 fa:
   data:
     progressions:
+      Artist Project: پروژه Artist
       'Artist: Variables': 'هنرمند: متغیرها'
+      Assessment: ارزشیابی
       Debugging: اشکال‌زدایی
       Design Mode: حالت طراحی
+      Drawing: ترسیم
       Events: رویدادها
       Example: مثال
       For Loops: حلقه های "برای"
       Free Play: بازی رایگان
       Functions: توابع
       Functions with Parameters: معادله با پارامترها
+      Lesson Extras: موارد اضافه درسی
+      Levels: مراحل
       Lists: فهرست‌ها
       'Minecraft: Hero''s Journey': 'ماینکرافت: سفر قهرمانان'
       Overview: بررسی اجمالی
       Pair Programming: برنامه نویسی دوتایی
+      Properties: مشخصات
+      Review: بازبینی
+      Sprite Lab Project: پروژه آزمایشگاه اسپرایت
       Variables: متغیرها
       Video: ویدیو
+      'Video: Outbreak Simulator: Introduction': 'ویدئو: Outbreak Simulator: مقدمه'
       Wrap-up: خلاصه
