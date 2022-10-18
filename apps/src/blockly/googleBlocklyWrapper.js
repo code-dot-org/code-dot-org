@@ -511,6 +511,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
+    // Customize auto-populated Functions toolbox category
     workspace.registerToolboxCategoryCallback('PROCEDURE', FUNCTION_CATEGORY);
 
     // Customize function defintion blocks
