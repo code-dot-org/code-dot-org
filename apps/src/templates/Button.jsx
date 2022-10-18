@@ -111,7 +111,7 @@ class Button extends React.Component {
 
     const sizeClassNames = __useDeprecatedTag
       ? moduleStyles[`button-size-${size}`]
-      : [moduleStyles[`button-size${size}`], moduleStyles.updated];
+      : [moduleStyles[`button-size-${size}`], moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
     // Unfortunately, we depend on this functionality in a couple of place.
