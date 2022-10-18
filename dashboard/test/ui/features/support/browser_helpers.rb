@@ -19,10 +19,6 @@ module BrowserHelpers
     text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');")
     # Get localized text from server
     response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
-    if response.nil?
-      category, loc_key = loc_key.split('.', 2)
-      response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_js_i18n_t?category=#{category}&key=#{loc_key}&locale=#{language}")).parsed_response
-    end
     text.should eq response
   end
 
@@ -39,10 +35,7 @@ module BrowserHelpers
 
     # Get localized markdown from server.
     response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
-    if response.nil?
-      category, loc_key = loc_key.split('.', 2)
-      response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_js_i18n_t?category=#{category}&key=#{loc_key}&locale=#{language}")).parsed_response
-    end
+
     # Render the markdown and remove whitespace.
     renderer = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(filter_html: true))
     expected_html = renderer.render(response)

@@ -104,16 +104,7 @@ class TestController < ApplicationController
 
   def get_i18n_t
     locale = params[:locale] || request.env['cdo.locale']
-    render plain: I18n.t(params.require(:key), locale: locale, default: '')
-  end
-
-  def get_js_i18n_t
-    category = params[:category] || 'common'
-    locale = params[:locale] || request.env['cdo.locale']
-    locale = locale.to_s.tr('-', '_').downcase
-    fallback = JSON.parse(File.read(Rails.root.join('..', 'apps', 'i18n', category, 'en_us.json')))
-    i18n = JSON.parse(File.read(Rails.root.join('..', 'apps', 'i18n', category, "#{locale}.json")))
-    render plain: i18n[params.require(:key)] || fallback[params.require(:key)] || ''
+    render plain: I18n.t(params.require(:key), locale: locale)
   end
 
   # Create a script containing a single lesson group, lesson and script level that has the is_migrated setting
