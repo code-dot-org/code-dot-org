@@ -15,10 +15,11 @@ module Pd
     }.freeze
 
     PAGE_LABELS = {
-      first_name: 'Principal First Name',
-      last_name: 'Principal Last Name',
-      title: 'Principal Title',
-      email: 'Principal Email Address',
+      first_name: 'Administrator/School Leader First Name',
+      last_name: 'Administrator/School Leader Last Name',
+      title: 'Administrator/School Leader Title',
+      role: 'Administrator/School Leader Role',
+      email: 'Administrator/School Leader Email Address',
       total_student_enrollment: 'Total student enrollment',
       free_lunch_percent: 'Percent of students who are eligible to receive free or reduced lunch',
       white: 'White',

@@ -1053,7 +1053,7 @@ module Api::V1::Pd
         "Home street address",
         "Home city",
         "Home state",
-        "Principal's title (provided by principal)",
+        "Administrator/School Leader's title (provided by principal)",
         "Administrator/School Leader's first name (provided by principal)",
         "Administrator/School Leader's last name (provided by principal)",
         "Administrator/School Leader's email address (provided by principal)",

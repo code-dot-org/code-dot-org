@@ -1133,6 +1133,7 @@ module Pd::Application
         {
           principal_response_first_name: principal_response[:first_name],
           principal_response_last_name: principal_response[:last_name],
+          principal_response_role: principal_response[:role],
           principal_response_email: principal_response[:email],
           principal_school_name: principal_school.try(:name) || principal_response[:school_name],
           principal_school_type: principal_school.try(:school_type),

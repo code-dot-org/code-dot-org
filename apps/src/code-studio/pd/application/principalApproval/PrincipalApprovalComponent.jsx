@@ -337,9 +337,9 @@ const PrincipalApprovalComponent = props => {
             during the {Year} school Year. This program is delivered by our
             local Code.org Regional Partner
             {regionalPartner ? `, ${regionalPartner.name}` : ''}. Participating
-            teachers are asked to commit to Code.org’s Professional Learning
-            Program starting in the summer and concluding in the spring.
-            Workshops can either be held in-person, virtually, or as a
+            teachers are asked to commit to Code.org’s year long Professional
+            Learning Program starting in the summer and concluding the following
+            spring/summer. Workshops can either be held in-person, virtually, or
             combination of both throughout the Year.
           </p>
           <p>
@@ -348,6 +348,11 @@ const PrincipalApprovalComponent = props => {
             learning program and teaching a new course. That’s why your approval
             is required for the teacher's application to be considered.
           </p>
+          <p>
+            Please note that we are not able to consider the teacher for
+            acceptance into the Professional Learning Program until you have
+            submitted this approval form.
+          </p>
           <LabeledSelect
             name="title"
             required={false}
@@ -355,6 +360,7 @@ const PrincipalApprovalComponent = props => {
           />
           <LabeledInput name="firstName" />
           <LabeledInput name="lastName" />
+          <LabeledInput name="role" />
           <LabeledInput name="email" />
           <LabeledRadioButtonsWithAdditionalTextFields
             name="doYouApprove"
