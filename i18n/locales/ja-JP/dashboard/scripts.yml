@@ -3646,6 +3646,10 @@ ja:
               display_name: 内容
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 使用開始
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3745,6 +3749,9 @@ ja:
           description_audience: カリキュラム ライター
           description_short: カリキュラムステージバージョン間でレッスンまたはレベルの更新を実施する場合
           description: カリキュラムステージバージョン間でレッスンまたはレベルの更新を実施する場合
+          lessons:
+            lesson-7:
+              name: スプライト入門
         csd1-2022:
           lesson_groups:
             cspSurvey:
