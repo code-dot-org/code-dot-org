@@ -11,6 +11,7 @@ require 'shared_resources'
 require_relative '../../dashboard/legacy/middleware/net_sim_api'
 require_relative '../../dashboard/legacy/middleware/sound_library_api'
 require_relative '../../dashboard/legacy/middleware/animation_library_api'
+require_relative '../legacy/script_constants'
 
 require 'bootstrap-sass'
 require 'cdo/hash'
