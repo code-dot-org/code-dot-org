@@ -601,8 +601,9 @@ module Pd::Application
           'Regional Partner website',
           'Regional Partner email',
           'Regional Partner event or workshop',
-          'From a teacher',
-          'From an administrator',
+          'Teacher',
+          'District administrator',
+          'Conference',
           TEXT_FIELDS[:other_with_text]
         ],
 
