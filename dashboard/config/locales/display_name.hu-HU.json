@@ -808,7 +808,13 @@
         "courseF_sprites_freeplay_aquatic_-2022-2": "Tengeri",
         "courseF_sprites_properties_-2022-2": "Sprite tulajdonságok",
         "ramp_artist_loops42022": "Csillag",
-        "scrat_loops_C-F_video2022": "Ciklusok a Jégkorszakban Videó"
+        "scrat_loops_C-F_video2022": "Ciklusok a Jégkorszakban Videó",
+        "helloworld_food_costumes_soccer-2022": "Jelmezek",
+        "helloworld_food_costumes_space-2022": "Jelmezek",
+        "helloworld_food_sizes_soccer-2022": "Méret",
+        "helloworld_food_sizes_space-2022": "Méret",
+        "helloworld_food_sounds_soccer-2022": "Hangok",
+        "helloworld_food_sounds_space-2022": "Hangok"
       }
     }
   }

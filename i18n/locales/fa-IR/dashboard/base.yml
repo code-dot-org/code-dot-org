@@ -118,6 +118,7 @@ fa:
     facebook: 'فیس‌بوک'
     windowslive: 'حساب مایکروسافت'
     microsoft_v2_auth: 'حساب مایکروسافت'
+    clever: 'Clever'
     powerschool: 'مدرسه برق'
     forgot_password: 'کلمه عبور خود را فراموش کرده اید؟'
     migration_success: 'موفقیت! شما برای تجربه حساب کاربری جدید ما ، بروز شده اید.'
@@ -216,6 +217,8 @@ fa:
     type:
       word: 'کلمه ی محرمانه'
       email: 'ایمیل'
+      google_classroom: 'کلاس گوگلی'
+      clever: 'Clever'
   follower:
     invite_sent: 'دعوتنامه ارسال شد'
     added_teacher: '%{name} به عنوان معلم شما افزوده شد'
@@ -257,6 +260,7 @@ fa:
       project_gallery: "پروژه ها"
       sections: "بخش‌ها"
       report_bug: "گزارش مشکل"
+      professional_learning: "یادگیری پیشرفته"
       educate_hoc: "ساعت کد نویسی"
       educate_tools: "ابزار‌ها و فیلم‌ها"
       about_us: "درباره ما"
@@ -289,17 +293,28 @@ fa:
       algebra_game: 'جبر'
       applab: 'آزمایشگاه نرم افزار'
       artist: 'هنرمند'
+      artist_k1: 'Artist (بچه هایی که هنوز خواندن را یاد نگرفته اند)'
+      basketball: 'بسکتبال'
       bounce: 'پریدن'
+      calc: 'کالک'
       dance: 'جشن و رقص'
+      eval: 'اِوال'
       flappy: 'فلاپی'
       frozen: 'منجمد'
       gamelab: 'کارگاه بازی سازی'
+      gamelab_jr: 'Game Lab (beta)'
       iceage: 'عصر یخبندان'
       infinity: 'بی نهایت'
+      minecraft_aquatic: 'ماینکرافت دریایی'
       minecraft_designer: 'ماینکرفت'
+      minecraft_hero: 'شخصیت های ماینکرافت'
       playlab: 'آزمایشگاه بازی'
+      playlab_k1: 'آزمایشگاه بازی (کسانی که هنوز خواندن را یاد نگرفته اند)'
+      poetry: 'شعر'
+      sports: 'ورزش'
       starwars: 'جنگ ستارگان'
       loading: 'در حال بارگذاری...'
+      weblab: 'آزمایشگاه شبکه'
     popup:
       progress_for_user: "درصد پیشرفت %{name}"
       progress: 'پیشرفت شما'
@@ -349,6 +364,7 @@ fa:
     parent_guardian_email_label: "ایمیل والدین/سرپرست"
     remove_parent_email_label: "حذف کن"
     none: "هیچکدام"
+    encrypted: "رمزنگاری شده"
   user_level:
     completed: 'انجام شد'
     tried: 'سعی شد'
@@ -523,6 +539,8 @@ fa:
     hero:
       title: "ماینکرفت"
       body: "ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید."
+    sports:
+      title: "ورزش"
     unplugged:
       audience: "سنین بالای 4 سال"
     unplugged_conditionals:
@@ -679,6 +697,8 @@ fa:
       email: 'ایمیل'
       school: 'مدرسه'
       school_name: 'نام مدرسه'
+      school_city: 'شهر مدرسه'
+      colombian_school_city: 'شهر مدرسه'
       colombian_chilean_school_name: 'نام مدرسه'
     form_entries:
       gender:
@@ -704,3 +724,6 @@ fa:
   page_not_found_title: "صفحه پیدا نشد"
   copy: 'رونوشت‌'
   confirm: 'تایید'
+  teacher_feedback: "بازخورد استاد"
+  pixelation:
+    binary: "دو دویی"

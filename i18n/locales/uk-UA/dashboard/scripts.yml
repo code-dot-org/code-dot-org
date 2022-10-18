@@ -2706,6 +2706,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Починаємо
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2755,6 +2759,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Вступ до спрайтів
         csd1-2022:
           lesson_groups:
             cspSurvey:

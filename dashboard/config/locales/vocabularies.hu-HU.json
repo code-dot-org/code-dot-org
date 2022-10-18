@@ -19,13 +19,13 @@
         "debugging/minecraft/unversioned": {
           "word": "Hibakeresés"
         },
-        "program/minecraft/unversioned": {
-          "word": "Program",
-          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
-        },
         "event/minecraft/unversioned": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/hero/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
@@ -33,12 +33,12 @@
         "debugging/hero/unversioned": {
           "word": "Hibakeresés"
         },
+        "function/hero/unversioned": {
+          "word": "Függvény"
+        },
         "program/hero/unversioned": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
-        },
-        "function/hero/unversioned": {
-          "word": "Függvény"
         },
         "code/poem-art/2021": {
           "word": "Kód",
@@ -122,6 +122,9 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
+        "code/dance/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
+        },
         "event/dance/unversioned": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
@@ -130,24 +133,21 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
-        "code/dance/unversioned": {
-          "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
-        },
         "code/aquatic/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Hibakeresés"
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program",
-          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Feltételek"
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Hibakeresés"
+        },
         "loops/aquatic/unversioned": {
           "word": "hurkok"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/starwars/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
@@ -197,15 +197,15 @@
           "word": "Modellek és szimulációk",
           "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
         },
-        "event/sports/unversioned": {
-          "word": "Esemény",
-          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
-        },
         "code/sports/unversioned": {
           "word": "Kód"
         },
         "debugging/sports/unversioned": {
           "word": "Hibakeresés"
+        },
+        "event/sports/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/sports/unversioned": {
           "word": "Program",
@@ -221,15 +221,15 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
-        "event/basketball/unversioned": {
-          "word": "Esemény",
-          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
-        },
         "code/basketball/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/basketball/unversioned": {
           "word": "Hibakeresés"
+        },
+        "event/basketball/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/basketball/unversioned": {
           "word": "Program",

@@ -1484,3 +1484,5 @@ hi:
       cannot_view_locked_answers: लॉक होने पर उत्तर नहीं देख सकते
       forbidden: उपयोगकर्ता छात्र की लॉक करने योग्य स्थिति को अपडेट नहीं कर सकता
   reset_predict_progress_button: उत्तर मिटाएँ
+  pixelation:
+    binary: युग्मक

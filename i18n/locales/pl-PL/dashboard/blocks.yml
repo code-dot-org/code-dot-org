@@ -1358,6 +1358,10 @@ pl:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": dziwaczny bas
             "'sound://category_digital/jump_7.mp3'": skocz
+      gamelab_playSoundOptionsSoccer:
+        text: zagraj {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: zagraj {SOUND}
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
       gamelab_playerBehaviors:
@@ -1489,7 +1493,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
       gamelab_spriteClicked:
@@ -1894,7 +1898,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -2476,6 +2480,10 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
+      storylab_setHeading:
+        text: ustaw tytuł {HEADING}
+      storylab_setSubheading:
+        text: ustaw podtytuł {SUBHEADING}
       validation_validatedBackground:
         text: ustaw tło na {IMG}
       validation_validatedSound:

@@ -860,3 +860,5 @@ sv:
     text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt!"
     link_your_email: "Koppla din e-postadress"
     not_now: "Inte nu"
+  pixelation:
+    binary: "Binära"

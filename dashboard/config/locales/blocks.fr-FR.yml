@@ -1344,6 +1344,10 @@ fr:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": sélectionner
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": basse décalée
             "'sound://category_digital/jump_7.mp3'": sauter
+      gamelab_playSoundOptionsSoccer:
+        text: jouer le son {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: jouer le son {SOUND}
       gamelab_playSpeech:
         text: émettre les paroles {SOUND}
       gamelab_playerBehaviors:
@@ -2343,7 +2347,7 @@ fr:
       binary_drawBinScreen:
         text: |-
           dessiner écran
-          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6][null][7]
+          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6]{B8}
       binary_drawDec:
         text: dessiner décimale {DEC}
       binary_drawPixelHere:

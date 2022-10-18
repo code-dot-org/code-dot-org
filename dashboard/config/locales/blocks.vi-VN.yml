@@ -1324,6 +1324,10 @@ vi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tiếng bass
               vòng
             "'sound://category_digital/jump_7.mp3'": nhảy
+      gamelab_playSoundOptionsSoccer:
+        text: phát âm thanh {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: phát âm thanh {SOUND}
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
       gamelab_playerBehaviors:

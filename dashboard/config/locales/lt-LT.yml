@@ -757,3 +757,5 @@ lt:
     accept: Sutinku
   page_not_found_title: Puslapis nerastas
   copy: Kopijuoti
+  pixelation:
+    binary: Dvejetainis

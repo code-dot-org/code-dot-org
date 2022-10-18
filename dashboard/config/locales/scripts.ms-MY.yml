@@ -2234,6 +2234,9 @@ ms:
           description_short: Untuk mengemas kini pelajaran atau peringkat antara versi
             kurikulum
           description: Untuk mengemas kini pelajaran atau peringkat antara versi kurikulum
+          lessons:
+            lesson-7:
+              name: Pengenalan kepada Sprite
         csd-post-survey-2022:
           title: Kajian Pasca Kursus CS Discoveries
           description: Unit ini mengandungi Tinjauan Pascakursus Penemuan CS. Unit

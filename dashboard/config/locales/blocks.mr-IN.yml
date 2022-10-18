@@ -1244,6 +1244,10 @@ mr:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": क्वर्की
               बास
             "'sound://category_digital/jump_7.mp3'": जंप
+      gamelab_playSoundOptionsSoccer:
+        text: आवाज प्ले करा {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: आवाज प्ले करा {SOUND}
       gamelab_playSpeech:
         text: भाषण प्ले करा {SOUND}
       gamelab_playerBehaviors:

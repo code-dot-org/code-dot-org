@@ -1,9 +1,9 @@
 {
   "key": "forLoop_i_0_4",
-  "name": "For loop",
+  "name": "for loop",
   "category": "Control",
   "category_key": "control",
-  "content": "Executes a block of statements a certain number of times depending on the initialization expression, conditional expression, and increment expression.\n\nInstead of typing a block of statements again and again, you can use a *for loop* around the block of statements. The most common usage of a for loop is simply to use it as a *counting* loop to execute a block of code a certain number of times.\n\nHere is a typical construct for loop used to count from 0 to 3 to execute the block of code 4 times:\n\n```for(var i = 0; i < 4; i++)```\n\n**initialization**  `var i = 0;` is executed once, before anything else. Create an identifier named *i* and initialize it to 0.\n \n**condition** `i < 4;` is checked before each iteration, to see if the block of statements should execute or not. If *i* is less than 4.\n\n**increment** `i++` is executed after every iteration, after the block of statements is executed. Increase (increment) *i* by 1.",
+  "content": "Instead of typing a block of statements again and again, you can use a *for loop* around the block of statements. The most common usage of a for loop is simply to use it as a *counting* loop to execute a block of code a certain number of times.\n\nHere is a typical construct for loop used to count from 0 to 3 to execute the block of code 4 times:\n\n```for(var i = 0; i < 4; i++)```\n\n**initialization**  `var i = 0;` is executed once, before anything else. Create an identifier named *i* and initialize it to 0.\n \n**condition** `i < 4;` is checked before each iteration, to see if the block of statements should execute or not. If *i* is less than 4.\n\n**increment** `i++` is executed after every iteration, after the block of statements is executed. Increase (increment) *i* by 1.",
   "examples": [
     {
       "name": "Basic Example",
@@ -41,22 +41,22 @@
       "name": "initialization",
       "type": "AppLab Expression",
       "required": true,
-      "description": "executed once, before anything else"
+      "description": "Executed once, before anything else."
     },
     {
       "name": "condition",
       "type": "Boolean expression",
       "required": true,
-      "description": "checked before each iteration, to see if the block of statements should execute or not."
+      "description": "Checked before each iteration, to see if the block of statements should execute or not."
     },
     {
       "name": "increment",
       "type": "AppLab Expression",
       "required": true,
-      "description": "executed after every iteration, after the block of statements is executed"
+      "description": "Executed after every iteration, after the block of statements is executed."
     }
   ],
-  "short_description": "\nfor loop\nCategory: Control",
+  "short_description": "Executes a block of statements a certain number of times depending on the initialization expression, conditional expression, and increment expression.",
   "syntax": "for (initialization; condition; increment) {\n  // block of statements\n}",
   "tips": "- You do not need to use *i* in the for loop statement, you can use any declared and initialized identifier.\n- You can start (initialization) and end (condition) the loop at any values. \n- You can use any increment, positive or negative.\n- Be careful not to code an infinite loop where the condition is never false.\n- Be careful not to code a loop that never executes because the condition is never true."
 }
