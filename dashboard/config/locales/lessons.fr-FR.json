@@ -28,6 +28,12 @@
           "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
           "student_overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées."
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
+          "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
+        },
         "hourofcode/Maze": {
           "name": "Labyrinthe",
           "overview": "Ce cours permet aux apprenants de tous âges de s'initier au codage et à la science informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Ce cours a été conçu pour les enfants de 4 à 10 ans. Cependant, il peut être adapté à des apprenants plus âgés, et cela, grâce à des suggestions de personnalisation fournies.",
@@ -80,6 +86,12 @@
           "name": "Cryptage simple",
           "overview": "Durant ce cours, les apprenants découvriront la nécessité du cryptage et les techniques simples pour déchiffrer (ou décrypter) des messages confidentiels. Ils essayeront de décrypter un message codé à l'aide du chiffrement classique de César et d'un chiffrement par substitution aléatoire. Ils devront également comprendre qu'à l'ère des puissants outils informatiques, les techniques de cryptage devront être plus sophistiquées. Le point le plus important de ce cours est de comprendre comment et pourquoi le cryptage joue un rôle dans notre vie de tous les jours lorsque nous utilisons Internet, et qu'il n'est pas facile de mettre au point un cryptage robuste. Les élèves vont aussi comprendre les facteurs qui doivent être pris en compte pour assurer un cryptage solide face aux puissants outils informatiques qui peuvent être utilisés pour le déchiffrer. La nécessité du caractère confidentiel des données envoyées sur l'Internet est importante pour toute personne qui l'utilise.",
           "student_overview": "Durant ce cours, les apprenants découvriront la nécessité du cryptage et les techniques simples pour déchiffrer (ou décrypter) des messages confidentiels. Ils essayeront de décrypter un message codé à l'aide du chiffrement classique de César et d'un chiffrement par substitution aléatoire. Ils devront également comprendre qu'à l'ère des puissants outils informatiques, les techniques de cryptage devront être plus sophistiquées. Le point le plus important de ce cours est de comprendre comment et pourquoi le cryptage joue un rôle dans notre vie de tous les jours lorsque nous utilisons Internet, et qu'il n'est pas facile de mettre au point un cryptage robuste. Les élèves vont aussi comprendre les facteurs qui doivent être pris en compte pour assurer un cryptage solide face aux puissants outils informatiques qui peuvent être utilisés pour le déchiffrer. La nécessité du caractère confidentiel des données envoyées sur l'Internet est importante pour toute personne qui l'utilise."
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
+          "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
@@ -744,7 +756,6 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
-          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2022/Virtual Pet with Sprite Lab": {
@@ -1648,7 +1659,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2018/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2018/Conditionals with Cards": {
           "name": "Instructions conditionnelles avec des cartes"
@@ -1798,7 +1809,7 @@
           "name": "Les Boucles Tant Que avec la Fermière"
         },
         "express-2018/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2018/Conditionals with Cards": {
           "name": "Instructions conditionnelles avec des cartes"
@@ -2476,7 +2487,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2019/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2019/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"
@@ -2647,7 +2658,7 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "express-2019/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2019/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"
@@ -3484,7 +3495,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "express-2017/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2017/Conditionals in Minecraft": {
           "name": "Les Conditions dans l'Abeille"
@@ -4859,7 +4870,6 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
-          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
@@ -5584,7 +5594,7 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "express-2020/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2020/Harvesting with Conditionals": {
           "name": "Récolter avec les Conditions"
@@ -5701,7 +5711,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2020/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2020/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"

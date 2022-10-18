@@ -1320,6 +1320,10 @@ th:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": เลือก
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": เสียงทุ้มนุ่มลึก
             "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
+      gamelab_playSoundOptionsSoccer:
+        text: เล่นเสียง {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: เล่นเสียง {SOUND}
       gamelab_playSpeech:
         text: เล่นเสียงพูด {SOUND}
       gamelab_playerBehaviors:

@@ -1439,3 +1439,5 @@ cs:
       cannot_view_locked_answers: Při uzamčení nelze zobrazit odpovědi
       forbidden: Uživatel nemůže aktualizovat stav uzamykatelnosti studenta
   reset_predict_progress_button: Vymazat odpověď
+  pixelation:
+    binary: Binární

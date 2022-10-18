@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Arazketa"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Arazketa"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Baldintzak"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Arazketa"
         },
         "loops/aquatic/unversioned": {
           "word": "Itzuliak"

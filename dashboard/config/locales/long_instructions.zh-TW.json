@@ -3950,7 +3950,26 @@
         "ramp_artist_loops92022": "畫出一個每邊長 200 像素的正方形以過關。",
         "simconfig_-2022-2": "\"# 修改和預測\n\n選擇一個控制這個模擬的變數進行修改，並預測它將如何改變結果。\n\n在你寫下你的預測後，執行模擬 5 次，並寫下你的預測結果。你的預測是否準確？\"",
         "simcustom_-2022-2": "# 定制\n\n這是另一個版本的模擬。嘗試對精靈圖服裝或下面的代碼做一些更改。盡情定制自己的模擬！",
-        "simstarter_-2022-2": "\"# 收集資料\n\n執行此模擬 5 次。每一次，用收集資料活動指南來記錄：\n\n-   大象收集了多少個蘋果？\n-   河馬收集了多少個蘋果？\n-   所有的蘋果都收集到一共花了多少時間？\""
+        "simstarter_-2022-2": "\"# 收集資料\n\n執行此模擬 5 次。每一次，用收集資料活動指南來記錄：\n\n-   大象收集了多少個蘋果？\n-   河馬收集了多少個蘋果？\n-   所有的蘋果都收集到一共花了多少時間？\"",
+        "helloworld_food_backgrounds_soccer-2022": "_我們還可以用事件做什麼？讓我們學習如何改變背景。_\n\n_你可能已經注意到了這些積木：_ \n<xml><block type=\"gamelab_setBackgroundImageAs\"><title name=\"IMG\">\"gradient_10_1\"</title></block></xml>\n\n<xml><block type=\"gamelab_setBackground\"><value name=\"COLOR\"><block type=\"colour_picker\"><title name=\"COLOUR\">#ffffff</title></block></value></block></xml>\n\n-   在事件下放置另一個`set background`積木，通過點擊精靈圖來改變場景。\n\n_額外挑戰：_通過點擊多個精靈圖，多次改變背景！",
+        "helloworld_food_backgrounds_space-2022": "_我們還可以用事件做什麼？讓我們學習如何改變背景。_\n\n_你可能已經注意到了這些積木：_ \n<xml><block type=\"gamelab_setBackgroundImageAs\"><title name=\"IMG\">\"gradient_10_1\"</title></block></xml>\n\n<xml><block type=\"gamelab_setBackground\"><value name=\"COLOR\"><block type=\"colour_picker\"><title name=\"COLOUR\">#ffffff</title></block></value></block></xml>\n\n-   在事件下放置另一個`set background`積木，通過點擊精靈圖來改變場景。\n\n_額外挑戰：_通過點擊多個精靈圖，多次改變背景！",
+        "helloworld_food_behaviors_soccer-2022": "_讓我們學習用行為來動畫化精靈圖。行為是程式運行時反復發生的動作。_\n\n-   使用工具箱底部的新積木來動畫化其中一個精靈圖。\n\n_挑戰：_使用**事件**使得當精靈圖被點擊時精靈圖開始一個行為。",
+        "helloworld_food_behaviors_space-2022": "_讓我們學習用行為來動畫化精靈圖。行為是程式運行時反復發生的動作。_\n\n-   使用工具箱底部的新積木來動畫化其中一個精靈圖。\n\n_挑戰：_使用**事件**使得當精靈圖被點擊時精靈圖開始一個行為。",
+        "helloworld_food_click_soccer-2022": "_這裡有什麼不同？你能讓這些精靈圖說話嗎？_\n\n-   閱讀代碼。你注意到了什麼？\n-   點擊_\"運行\"_按鈕。\n-   點擊精靈圖。",
+        "helloworld_food_costumes_soccer-2022": "_讓我們學習改變精靈圖的外觀。_\n\n-   使用新的`change costume`積木，當精靈圖被點擊時改變精靈圖的服裝。\n-   記住，當用戶與你的精靈圖互動時，`事件`將導致某些事情發生。\n\n_額外挑戰：_多次改變一個精靈圖的服裝，或改變多個精靈圖的服裝。",
+        "helloworld_food_costumes_space-2022": "_讓我們學習改變精靈圖的外觀。_\n\n-   使用新的`change costume`積木，當精靈圖被點擊時改變精靈圖的服裝。\n-   記住，當用戶與你的精靈圖互動時，`事件`將導致某些事情發生。\n\n_額外挑戰：_多次改變一個精靈圖的服裝，或改變多個精靈圖的服裝。",
+        "helloworld_food_events_soccer-2022": "_讓我們使一個精靈圖在你點擊它的時候說點什麼！_\n\n-   在`when clicked`積木下連接一個`say`積木。\n-   在每個代碼積木中選擇相同的服裝。\n-   按_\"運行\"_按鈕。\n-   點擊精靈圖讓它說點什麼。\n\n_額外挑戰：_使兩個精靈圖在被點擊時都說點什麼！",
+        "helloworld_food_events_space-2022": "_讓我們使一個精靈圖在你點擊它的時候說點什麼！_\n\n-   在`when clicked`積木下連接一個`say`積木。\n-   在每個代碼積木中選擇相同的服裝。\n-   按_\"運行\"_按鈕。\n-   點擊精靈圖讓它說點什麼。\n\n_額外挑戰：_使兩個精靈圖在被點擊時都說點什麼！",
+        "helloworld_food_location_soccer-2022": "_給每個精靈一個不同的位置。_\n\n-   使用定位積木上的針腳移動精靈圖到不同的位置。\n-   完成後按_\"運行\"_。",
+        "helloworld_food_location_space-2022": "_給每個精靈一個不同的位置。_\n\n-   使用定位積木上的針腳移動精靈圖到不同的位置。\n-   完成後按_\"運行\"_。",
+        "helloworld_food_multi_soccer-2022": "_讓我們聊天！讓你的兩個精靈圖都說點什麼。_\n\n-   添加代碼使每個精靈圖都說點什麼。\n-   完成後按_\"運行\"_。",
+        "helloworld_food_multi_space-2022": "_讓我們聊天！讓你的兩個精靈圖都說點什麼。_\n\n-   添加代碼使每個精靈圖都說點什麼。\n-   完成後按_\"運行\"_。",
+        "helloworld_food_say_soccer-2022": "_你好，世界！我是一個精靈。使用“說”積木讓我說任何你喜歡的話_\n\n-   將`make new sprite`積木拖到工作區，並在`when run`下連接它。\n-   連接一個`say`積木 _到_`make new sprite`積木下。\n-   確保在每個代碼積木中選擇相同的_服裝_。\n-   完成後按 _\"運行\"_。",
+        "helloworld_food_say_space-2022": "_你好，世界！我是一個精靈。使用“說”積木讓我說任何你喜歡的話_\n\n-   將`make new sprite`積木拖到工作區，並在`when run`下連接它。\n-   連接一個`say`積木 _到_`make new sprite`積木下。\n-   確保在每個代碼積木中選擇相同的_服裝_。\n-   完成後按 _\"運行\"_。",
+        "helloworld_food_sizes_soccer-2022": "_讓我們學習改變精靈圖的大小。_\n\n-   使用工具箱中的新積木來改變精靈圖的大小。 \n-   確保選擇不是100的尺寸。\n\n_挑戰：_使用**事件**使得當精靈圖被點擊時改變精靈圖的大小。",
+        "helloworld_food_sizes_space-2022": "_讓我們學習改變精靈圖的大小。_\n\n-   使用工具箱中的新積木來改變精靈圖的大小。 \n-   確保選擇不是100的尺寸。\n\n_挑戰：_使用**事件**使得當精靈圖被點擊時改變精靈圖的大小。",
+        "helloworld_food_sounds_soccer-2022": "_讓我們學習如何播放聲音。_\n\n-   使用工具箱中的新積木來播放聲音。\n\n_挑戰：_使用**事件**在精靈圖被點擊時播放聲音。",
+        "helloworld_food_sounds_space-2022": "_讓我們學習如何播放聲音。_\n\n-   使用工具箱中的新積木來播放聲音。\n\n_挑戰：_使用**事件**在精靈圖被點擊時播放聲音。"
       }
     }
   }

@@ -13754,20 +13754,12 @@ pl-PL:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombie przejdzie odpowiednią ścieżką i kończy na tym, że chodzi bez
-            końca tam i z powrotem.
-          correct: true
+        - correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
-          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
-            tym, że chodzi bez końca tam i z powrotem.
         - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
-          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
-            tym, że chodzi bez końca tam i z powrotem.
         - text: Zombie utknie na końcu ścieżki wiodącej do przodu.
-          feedback: W ramach tego kodu Zombie przejdzie odpowiednią ścieżką i kończy
-            na tym, że chodzi bez końca tam i z powrotem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until2_predict12022:

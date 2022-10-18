@@ -22717,20 +22717,12 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
-            y hacia atrás para siempre.
-          correct: true
+        - correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
-            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
-            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie se quedará atascado al final del camino de frente.
-          feedback: En este código, el zombie se pasará del camino correcto y terminará
-            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?

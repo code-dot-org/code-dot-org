@@ -1529,3 +1529,5 @@ fil:
       cannot_view_locked_answers: Hindi matingnan ang mga sagot habang naka-lock
       forbidden: Hindi ma-update ng user ang naka-lock na estado ng mag-aaral
   reset_predict_progress_button: Tanggalin ang Sagot
+  pixelation:
+    binary: Binary

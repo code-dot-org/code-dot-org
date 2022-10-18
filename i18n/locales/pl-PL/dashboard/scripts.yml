@@ -4021,6 +4021,9 @@ pl:
           name: csc-things
           title: CSC Zrzut mózgu
           description: To dopiero prace w toku :)
+          lessons:
+            lesson-2:
+              name: okładka książki
         poetry-hoc2:
           name: poetry-hoc2
           title: Poezja Godziny Kodowania v2
@@ -4498,6 +4501,9 @@ pl:
           name: cs4all-invasive-species
           title: 'Gatunek inwazyjny '
           description_short: To jest grant badawczy finansowany przez NSF dla CS4All
+          lessons:
+            lesson-21:
+              name: Pierwsze kroki
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4690,6 +4696,9 @@ pl:
           title: Witaj świecie
         csd-playground:
           name: csd-playground
+          lessons:
+            lesson-7:
+              name: Wprowadzenie do Duszków
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -4905,6 +4914,8 @@ pl:
               display_name: Laboratorium Magpie
             lessonGroup-3:
               display_name: Laboratorium gwiazd
+            lessonGroup-5:
+              display_name: Data Lab
           name: csa-labs-2022
           title: Laboratoria AP CSA College Board
           lessons:
@@ -4918,6 +4929,10 @@ pl:
               name: Aktywność otwarta
             lesson-16:
               name: Aktywność otwarta
+            lesson-17:
+              name: Dane, dane, dane!
+            lesson-18:
+              name: Projektowanie i implementacja własnej klasy
             lesson-19:
               name: Zbierając to wszystko razem...
             lesson-20:
@@ -5002,10 +5017,30 @@ pl:
           description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
         csa1-2023:
           lessons:
+            lesson-1:
+              name: Witamy w CSP
+            lesson-3:
+              name: Ankieta wstępna CSA
             lesson-2:
               name: Java Lab
             lesson-6:
               name: Pętle
+            lesson-8:
+              name: Metody pisania
+            lesson-11:
+              name: Strategie debugowania
+            lesson-12:
+              name: Dekompozycja i projektowanie
+            lesson-13:
+              name: Dwukierunkowe instrukcje wyboru
+            lesson-15:
+              name: Skrajne przypadki
+            lesson-16:
+              name: Otwarty kod źródłowy
+            lesson-20:
+              name: Praktyka FRQ
+            lesson-21:
+              name: Jednostka 1 - Sprawdzian
           lesson_groups:
             lessonGroup-2:
               display_name: Ankieta
@@ -5042,16 +5077,41 @@ pl:
         vpl-csd4-ayw-pilot-2022:
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 4
+        csa-magpie-lab:
+          lessons:
+            lesson-1:
+              name: Eksperymentuj z istniejącymi chatbotami
+            lesson-2:
+              name: Pracuj z kodem Magpie
+            lesson-3:
+              name: Praca z API dla Magpie i String
+            lesson-4:
+              name: Modyfikuj odpowiedzi
+            lesson-5:
+              name: Użyj tablic, aby uzyskać losowe odpowiedzi
+          title: AP CSA Magpie Lab
+        emma:
+          lessons:
+            lesson-1:
+              name: ćwiczenia
         csa-consumer-review-lab:
           lessons:
             lesson-5:
               name: Aktywność otwarta
         csa-data-lab:
           lessons:
+            lesson-1:
+              name: Dane, dane, dane!
+            lesson-2:
+              name: Projektowanie i implementacja własnej klasy
             lesson-3:
               name: Zbierając to wszystko razem...
             lesson-4:
               name: Aktywność otwarta
+        hello-world-space-2022:
+          title: 'Witaj świecie: kosmos'
+        hello-world-soccer-2022:
+          title: 'Witaj świecie: piłka nożna'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5088,6 +5148,7 @@ pl:
               display_name: 'Rozdział 1: Obrazy i animacje'
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie gier'
+          title: Interaktywne animacje i gry
         csd6-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5122,3 +5183,10 @@ pl:
               name: Zabytki USA
           name: csc-landmarks-pilot
           description: Moduł pilotażowy zima 2022 r. – Moduł historycznych zabytków i punktów orientacyjnych na mapie
+        csc-playground:
+          name: csd-playground
+          title: Plac Zabaw CSP
+        self-paced-pl-physical-computing1:
+          name: self-paced-pl-physical-computing1
+        self-paced-pl-physical-computing2:
+          name: self-paced-pl-physical-computing2
