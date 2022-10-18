@@ -922,9 +922,11 @@ describe('entry tests', () => {
       optimization: {
         minimizer: [
           new TerserPlugin({
+            minify: TerserPlugin.uglifyJsMinify,
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/]
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+            sourceMap: envConstants.DEBUG_MINIFIED
           })
         ],
 
