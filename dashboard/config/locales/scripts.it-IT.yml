@@ -2719,12 +2719,12 @@ it:
         coursea-2021:
           title: Corso A (2021)
           description: 'Il corso A offre un piano di studi di informatica per i bambini
-            che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna.
-            Gli alunni impareranno a programmare usando comandi come cicli ed eventi.
+            che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia.
+            Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi.
             Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare
             in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione
-            dei problemi, persistere di fronte a compiti impegnativi e conoscere le
-            questioni di sicurezza legate a Internet. '
+            dei problemi, perseverare di fronte a compiti impegnativi e conoscere
+            le questioni di sicurezza legate a Internet. '
           description_short: Introduzione all'informatica per bambini che non leggono
             ancora.
           description_audience: 'Età: da 4 a 7 anni'
@@ -2748,7 +2748,7 @@ it:
           description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe
             della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso
             A, ma offre lezioni tradizionali più complesse e una maggiore varietà
-            di esercizi. Gli alunni impareranno le basi della programmazione, tecniche
+            di esercizi. Gli alunni imparano le basi della programmazione, tecniche
             di collaborazione, indagine e pensiero critico, perseveranza di fronte
             alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso
             gli alunni possono condividere con un link il proprio gioco personalizzato
@@ -3375,12 +3375,12 @@ it:
               display_name: Progetto di fine corso
           title: Corso A (2022)
           description: 'Il corso A offre un piano di studi di informatica per i bambini
-            che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna.
-            Gli alunni impareranno a programmare usando comandi come cicli ed eventi.
+            che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia.
+            Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi.
             Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare
             in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione
-            dei problemi, persistere di fronte a compiti impegnativi e conoscere le
-            questioni di sicurezza legate a Internet. '
+            dei problemi, perseverare di fronte a compiti impegnativi e conoscere
+            le questioni di sicurezza legate a Internet. '
           student_description: 'Impara le basi dell''informatica e della sicurezza
             su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
             storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
@@ -3474,7 +3474,7 @@ it:
           description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe
             della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso
             A, ma offre lezioni tradizionali più complesse e una maggiore varietà
-            di esercizi. Gli alunni impareranno le basi della programmazione, tecniche
+            di esercizi. Gli alunni imparano le basi della programmazione, tecniche
             di collaborazione, indagine e pensiero critico, perseveranza di fronte
             alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso
             gli alunni possono condividere con un link il proprio gioco personalizzato
