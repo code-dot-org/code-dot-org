@@ -29,7 +29,6 @@
 #  index_scripts_on_wrapup_video_id       (wrapup_video_id)
 #
 
-require 'cdo/script_constants'
 require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
