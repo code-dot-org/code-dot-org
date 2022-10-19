@@ -130,6 +130,7 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          post 'multi_update_assignment'
         end
       end
     end
