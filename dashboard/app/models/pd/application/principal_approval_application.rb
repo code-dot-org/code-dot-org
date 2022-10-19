@@ -93,6 +93,7 @@ module Pd::Application
     def self.options(year = APPLICATION_CURRENT_YEAR)
       {
         title: COMMON_OPTIONS[:title],
+        can_email_you: [YES, NO],
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
@@ -122,6 +123,7 @@ module Pd::Application
             :first_name,
             :last_name,
             :email,
+            :can_email_you,
             :confirm_principal
           ]
 

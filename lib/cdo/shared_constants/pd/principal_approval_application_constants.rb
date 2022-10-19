@@ -20,6 +20,7 @@ module Pd
       title: 'Administrator/School Leader Title',
       role: 'Administrator/School Leader Role',
       email: 'Administrator/School Leader Email Address',
+      can_email_you: 'Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)',
       total_student_enrollment: 'Total student enrollment',
       free_lunch_percent: 'Percent of students who are eligible to receive free or reduced lunch',
       white: 'White',

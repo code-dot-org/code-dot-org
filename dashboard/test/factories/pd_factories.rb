@@ -873,6 +873,7 @@ FactoryGirl.define do
     first_name 'Albus'
     last_name 'Dumbledore'
     email 'albus@hogwarts.edu'
+    can_email_you 'Yes'
     confirm_principal true
 
     trait :approved_no do

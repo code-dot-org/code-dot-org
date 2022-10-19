@@ -61,6 +61,7 @@ const ALWAYS_REQUIRED_FIELDS = [
   'firstName',
   'lastName',
   'email',
+  'canEmailYou',
   'confirmPrincipal'
 ];
 const COURSE_SUFFIXES = {
@@ -314,6 +315,17 @@ const PrincipalApprovalComponent = props => {
           <LabeledInput name="lastName" />
           <LabeledInput name="role" />
           <LabeledInput name="email" />
+          <LabeledRadioButtons
+            name="canEmailYou"
+            label={
+              <span>
+                {PageLabels.canEmailYou}{' '}
+                <a href={'https://code.org/privacy'}>
+                  (See our privacy policy)
+                </a>
+              </span>
+            }
+          />
           <LabeledRadioButtonsWithAdditionalTextFields
             name="doYouApprove"
             textFieldMap={{
