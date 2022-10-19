@@ -13,6 +13,7 @@ export default class TeacherResources extends Component {
       <ContentContainer heading={i18n.resources()}>
         <div style={styles.container}>
           <ImageResourceCard
+            altText={i18n.teacherCommunityImageDescription()}
             title={i18n.teacherCommunity()}
             description={i18n.teacherCommunityDescription()}
             image="teachercommunity.png"
@@ -20,6 +21,7 @@ export default class TeacherResources extends Component {
             link="https://forum.code.org"
           />
           <ImageResourceCard
+            altText={i18n.professionalLearningImageDescription()}
             title={i18n.professionalLearning()}
             description={i18n.professionalLearningDescription()}
             image="professionallearning.png"
@@ -27,6 +29,7 @@ export default class TeacherResources extends Component {
             link="/my-professional-learning"
           />
           <ImageResourceCard
+            altText={i18n.csJourneysImageDescription()}
             title={i18n.csJourneys()}
             callout={i18n.newExclame()}
             description={i18n.csJourneysDescription()}
@@ -35,6 +38,7 @@ export default class TeacherResources extends Component {
             link={pegasus('/csjourneys')}
           />
           <ImageResourceCard
+            altText={i18n.standardsAndFrameworkImageDescription()}
             title={i18n.standardsAndFramework()}
             description={i18n.standardsAndFrameworkDescription()}
             image="standardsandframework.png"
