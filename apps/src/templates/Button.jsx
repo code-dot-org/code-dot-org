@@ -140,7 +140,7 @@ class Button extends React.Component {
     return (
       <Tag
         className={className}
-        style={style}
+        style={{...style}}
         href={disabled ? '#' : href}
         target={target}
         rel={rel}
