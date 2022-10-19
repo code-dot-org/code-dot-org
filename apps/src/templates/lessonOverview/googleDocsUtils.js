@@ -1,9 +1,9 @@
 const GDOCS_HOST = 'docs.google.com';
-const GDOCS_REGEX = /^https?:\/\/docs\.google\.com\/(document|presentation)\/d\/([\w-]+)\//;
-const GDOCS_SLIDES_REGEX = /\/presentation\/d\/[\w-]+/;
-const GDOCS_DOCS_REGEX = /\/document\/d\/[\w-]+/;
-const GDOCS_EXPORT = '/export?format=';
-const GDOCS_COPY = '/copy';
+const GDOCS_URL_REGEX = /^https?:\/\/docs\.google\.com\/(document|presentation)\/d\/([\w-]+)\//;
+const SLIDES_PATH_REGEX = /\/presentation\/d\/[\w-]+/;
+const DOCS_PATH_REGEX = /\/document\/d\/[\w-]+/;
+const EXPORT_PATH = '/export?format=';
+const COPY_PATH = '/copy';
 
 // Check whether the given string is a Google Docs URL in a format we
 // know how to parse. Note some valid Google Docs URLs may return `false`
@@ -19,8 +19,8 @@ export function isGDocsUrl(s) {
     }
 
     if (
-      GDOCS_SLIDES_REGEX.test(url.pathname) ||
-      GDOCS_DOCS_REGEX.test(url.pathname)
+      SLIDES_PATH_REGEX.test(url.pathname) ||
+      DOCS_PATH_REGEX.test(url.pathname)
     ) {
       // The URL has the correct host, and a path we know how to parse.
       return true;
@@ -36,7 +36,7 @@ export function isGDocsUrl(s) {
 // the more specific functions below. May raise TypeError if the URL has
 // not been checked for validity with isGDocsUrl.
 export function gDocsBaseUrl(url) {
-  const matches = GDOCS_REGEX.exec(url);
+  const matches = GDOCS_URL_REGEX.exec(url);
   const docType = matches[1];
   const docId = matches[2];
 
@@ -45,7 +45,7 @@ export function gDocsBaseUrl(url) {
 
 // Return a PDF download URL for the given Google Docs link.
 export function gDocsPdfUrl(url) {
-  return [gDocsBaseUrl(url), GDOCS_EXPORT, 'pdf'].join('');
+  return [gDocsBaseUrl(url), EXPORT_PATH, 'pdf'].join('');
 }
 
 // Return the appropriate MS Office download URL for the document type.
@@ -53,16 +53,16 @@ export function gDocsPdfUrl(url) {
 // direct the user to a Google error page.
 export function gDocsMsOfficeUrl(url) {
   let format;
-  if (GDOCS_DOCS_REGEX.test(url)) {
+  if (DOCS_PATH_REGEX.test(url)) {
     format = 'doc';
-  } else if (GDOCS_SLIDES_REGEX.test(url)) {
+  } else if (SLIDES_PATH_REGEX.test(url)) {
     format = 'pptx';
   }
 
-  return [gDocsBaseUrl(url), GDOCS_EXPORT, format].join('');
+  return [gDocsBaseUrl(url), EXPORT_PATH, format].join('');
 }
 
 // Return a 'Copy Document' URL for the given Google Docs link.
 export function gDocsCopyUrl(url) {
-  return [gDocsBaseUrl(url), GDOCS_COPY].join('');
+  return [gDocsBaseUrl(url), COPY_PATH].join('');
 }
