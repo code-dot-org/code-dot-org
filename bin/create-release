@@ -21,9 +21,9 @@ def git_generate_changelog
   # command will error out unless the latest commit is a merge
   return nil if status.exitstatus != 0
 
-  # Finds PRs that were either merged or squash-merged
-  merge_commit_pattern = /Merge pull request #(?<pr>\d*) from code-dot-org\/(?<branch>\S*) (?<description>.*)/
-  squash_merge_pattern = /(?<description>.*) \(#(?<pr>\d*)\)/
+  # Finds PRs that were either merged or squash-merged. As of 10/19/22, PR numbers should have at least 5 digits
+  merge_commit_pattern = /Merge pull request #(?<pr>\d\d\d\d\d+) from code-dot-org\/(?<branch>\S*) (?<description>.*)/
+  squash_merge_pattern = /(?<description>.*) \(#(?<pr>\d\d\d\d\d+)\)/
 
   matches = changes.split("\n").map do |change|
     # first, extract the relevant data from the commit message
