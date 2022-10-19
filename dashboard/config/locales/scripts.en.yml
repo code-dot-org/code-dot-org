@@ -7914,6 +7914,8 @@ en:
           lessons:
             lesson-7:
               name: Intro to Sprites
+            lesson-8:
+              name: Physical Computing PSP
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems

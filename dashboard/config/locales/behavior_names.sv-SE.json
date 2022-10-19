@@ -2993,6 +2993,54 @@
           "moving with arrow keys": "flytta med piltangenter",
           "moving west and looping": "flyttar västerut och loopar",
           "moving east and looping": "flyttar österut och loopar"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "moving east": "flyttar öst",
+          "shrinking": "krymper",
+          "growing": "växer",
+          "moving south": "flyttar söderut",
+          "moving north": "flyttar norrut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving east and looping": "flyttar österut och loopar"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "moving east": "flyttar öst",
+          "shrinking": "krymper",
+          "growing": "växer",
+          "moving south": "flyttar söderut",
+          "moving north": "flyttar norrut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving east and looping": "flyttar österut och loopar"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "moving east": "flyttar öst",
+          "shrinking": "krymper",
+          "growing": "växer",
+          "moving south": "flyttar söderut",
+          "moving north": "flyttar norrut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving east and looping": "flyttar österut och loopar"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "moving east": "flyttar öst",
+          "shrinking": "krymper",
+          "growing": "växer",
+          "moving south": "flyttar söderut",
+          "moving north": "flyttar norrut",
+          "moving west": "flyttar väst",
+          "patrolling": "patrullerar",
+          "moving with arrow keys": "flytta med piltangenter",
+          "moving west and looping": "flyttar västerut och loopar",
+          "moving east and looping": "flyttar österut och loopar"
         }
       }
     }

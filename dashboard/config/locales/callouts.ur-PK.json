@@ -492,6 +492,73 @@
         "coursee_helloworld_say": {
           "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
           "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "نیا پس منظر ترتیب دینے کے لیے اس بلاک کا استعمال کریں۔"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "اس بلاک کو ذیل میں سے کسی ایک طرز عمل کے ساتھ استعمال کریں۔"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "کوڈ چلانے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "اس ایونٹ بلاک کو اپنے پروگرام میں شامل کریں۔."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "اپنے پروجیکٹ میں ملبوسات شامل کرنے کے لیے یہاں کلک کریں۔"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "پن"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "نیا بلاک!",
+          "hello_world_new_block": "نیا بلاک!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "نیا بلاک!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "نیا بلاک!"
         }
       }
     }

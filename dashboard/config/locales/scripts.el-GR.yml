@@ -1944,6 +1944,10 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Εισαγωγή στα μοτίβα
         csd1-2022:
           lesson_groups:
             cspSurvey:

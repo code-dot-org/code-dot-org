@@ -12622,6 +12622,58 @@
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "Pour que la pizza puisse parler, connectez les blocs de code comme suit :"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme.",
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme.",
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "Veillez à ce que les costumes soient adaptés à chaque sprite.\n[blockly block] [0]"
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "Veillez à ce que les costumes soient adaptés à chaque sprite.\n[blockly block] [0]"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
         }
       }
     }

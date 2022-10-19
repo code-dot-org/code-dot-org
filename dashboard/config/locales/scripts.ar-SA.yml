@@ -5076,6 +5076,10 @@ ar:
               display_name: محتوى
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: البدء
         csa4-2022:
           lesson_groups:
             lessonGroup-2:

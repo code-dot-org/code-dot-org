@@ -715,3 +715,5 @@ gl:
     accept: 'Acepto'
   page_not_found_title: "Páxina non atopada"
   copy: 'Copiar'
+  pixelation:
+    binary: "Binario"

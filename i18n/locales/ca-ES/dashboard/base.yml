@@ -658,3 +658,5 @@ ca:
       cannot_view_locked_answers: "No es poden visualitzar les respostes mentre està bloquejat"
       forbidden: "L'usuari no pot actualitzar l'estat bloquejable de l'alumne"
   reset_predict_progress_button: "Esborrar resposta"
+  pixelation:
+    binary: "Binari"

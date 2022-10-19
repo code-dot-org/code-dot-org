@@ -12244,19 +12244,12 @@ cs-CZ:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: 'Zombie mine správnou cestu a bude navždy chodit tam a zpět. '
-          correct: true
+        - correct: true
           feedback: Správně!
         - text: Zombie se dostane ke slunečnici.
-          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
-            a zpět. '
         - text: Zombie hned na první cestě odbočí doprava a bude donekonečna bloudit
             v kruhu.
-          feedback: 'Nesprávně. Zombie mine správnou cestu a bude navždy chodit tam
-            a zpět. '
         - text: Zombie se zarazí na konci cesty vpřed.
-          feedback: 'V tomto kódu zombie mine správnou cestu a bude navždy chodit
-            tam a zpět. '
         questions:
         - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_maze_until2_predict12022:

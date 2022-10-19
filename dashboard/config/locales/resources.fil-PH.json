@@ -43,6 +43,18 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "curriculum_guide/coursed/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursed/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
+        },
         "graph_paper_programming/coursed/2022": {
           "name": "Graph Paper Programming"
         },
@@ -108,16 +120,19 @@
         "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
           "type": "Gabay sa Proyekto"
         },
-        "curriculum_guide/coursed/2022": {
+        "curriculum_guide/coursef/2022": {
           "name": "Gabay sa Kurikulum"
         },
-        "implementation_guide/coursed/2022": {
+        "implementation_guide/coursef/2022": {
           "name": "Gabay sa Pagpapatupad"
         },
-        "teacher_forum/coursed/2022": {
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum/coursef/2022": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/coursed/2022": {
+        "virtual_lesson_modifications/coursef/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "the_power_of_words_the_power_of_words/coursef/2022": {
@@ -131,9 +146,6 @@
         },
         "introducing_sprite_lab_1/coursef/2022": {
           "type": "Video"
-        },
-        "sprite_lab_documentation/coursef/2022": {
-          "name": "Dokumentasyon ng Sprite Lab"
         },
         "ai_impact_on_society/coursef/2022": {
           "type": "Video"
@@ -157,20 +169,20 @@
         "cs_fundamentals_final_project/coursef/2022": {
           "type": "Rubric"
         },
-        "curriculum_guide/coursef/2022": {
+        "curriculum_guide/coursee/2022": {
           "name": "Gabay sa Kurikulum"
         },
-        "implementation_guide/coursef/2022": {
+        "implementation_guide/coursee/2022": {
           "name": "Gabay sa Pagpapatupad"
-        },
-        "teacher_forum/coursef/2022": {
-          "name": "Pagtitipon ng Guro"
-        },
-        "virtual_lesson_modifications/coursef/2022": {
-          "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "sprite_lab_documentation/coursee/2022": {
           "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum/coursee/2022": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursee/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "pause_and_think_online/coursee/2022": {
           "type": "Video"
@@ -184,16 +196,16 @@
         "cs_fundamentals_final_project/coursee/2022": {
           "type": "Rubric"
         },
-        "curriculum_guide/coursee/2022": {
+        "curriculum_guide/courseb/2022": {
           "name": "Gabay sa Kurikulum"
         },
-        "implementation_guide/coursee/2022": {
+        "implementation_guide/courseb/2022": {
           "name": "Gabay sa Pagpapatupad"
         },
-        "teacher_forum/coursee/2022": {
+        "teacher_forum/courseb/2022": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/coursee/2022": {
+        "virtual_lesson_modifications/courseb/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "move_it_move_it/courseb/2022": {
@@ -247,17 +259,8 @@
         "the_big_event_2/courseb/2022": {
           "name": "The Big Event"
         },
-        "curriculum_guide/courseb/2022": {
-          "name": "Gabay sa Kurikulum"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "teacher_forum/courseb/2022": {
+        "teacher_forum/express/2022": {
           "name": "Pagtitipon ng Guro"
-        },
-        "virtual_lesson_modifications/courseb/2022": {
-          "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "pair_programming/express/2022": {
           "name": "Pair programming",
@@ -290,7 +293,7 @@
         "csf_express_end_of_course_project_planning_guide/express/2022": {
           "type": "Gabay sa Proyekto"
         },
-        "teacher_forum/express/2022": {
+        "teacher_forum/pre-express/2022": {
           "name": "Pagtitipon ng Guro"
         },
         "20_20_20_rule/pre-express/2022": {
@@ -305,8 +308,17 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Video"
         },
-        "teacher_forum/pre-express/2022": {
+        "curriculum_guide/coursea/2022": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum/coursea/2022": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursea/2022": {
+          "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "type": "Video"
@@ -342,16 +354,16 @@
         "the_big_event_2/coursea/2022": {
           "name": "The Big Event"
         },
-        "curriculum_guide/coursea/2022": {
+        "curriculum_guide/coursec/2022": {
           "name": "Gabay sa Kurikulum"
         },
-        "implementation_guide/coursea/2022": {
+        "implementation_guide/coursec/2022": {
           "name": "Gabay sa Pagpapatupad"
         },
-        "teacher_forum/coursea/2022": {
+        "teacher_forum/coursec/2022": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/coursea/2022": {
+        "virtual_lesson_modifications/coursec/2022": {
           "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "my_robotic_friends/coursec/2022": {
@@ -402,17 +414,8 @@
         "binary_bracelets_4/coursec/2022": {
           "name": "Binary na mga Pulseras"
         },
-        "curriculum_guide/coursec/2022": {
-          "name": "Gabay sa Kurikulum"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "teacher_forum/coursec/2022": {
+        "teacher_forum/csd/2022": {
           "name": "Pagtitipon ng Guro"
-        },
-        "virtual_lesson_modifications/coursec/2022": {
-          "name": "Mga Pagbabago sa Virtual Lesson"
         },
         "representation_matters/csd/2022": {
           "name": "Ang Representasyon ay Mahalaga"
@@ -530,9 +533,6 @@
         },
         "make_a_recommendation_2/csd/2022": {
           "type": "Gabay sa Proyekto"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Pagtitipon ng Guro"
         },
         "intro_to_problem_solving/csd/2022": {
           "name": "Panimula sa Paglutas ng Problema"
@@ -1495,14 +1495,30 @@
         "vocabulary_3/csd/2017": {
           "name": "Bukabularyo"
         },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
         "exploring_apps/coursef/2021": {
+          "name": "Pagtuklas ng mga Apps"
+        },
+        "exploring_apps_1/coursef/2021": {
           "name": "Pagtuklas ng mga Apps"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Video"
-        },
-        "exploring_apps_1/coursef/2021": {
-          "name": "Pagtuklas ng mga Apps"
         },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
@@ -1513,15 +1529,6 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Saya sa For Loop"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Saya sa For Loop"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Saya sa For Loop"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Saya sa For Loop"
         },
@@ -1529,43 +1536,49 @@
           "name": "Saya sa For Loop",
           "type": "Pagtatasa"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Video"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Saya sa For Loop"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Saya sa For Loop"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Video"
         },
         "ai-societal/coursef/2021": {
           "type": "Video"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "The Internet"
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
           "type": "Pagtatasa"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+        "unplugged-video-internet/coursef/2021": {
+          "name": "The Internet"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "type": "Rubric"
         },
-        "implementation_guide/coursef/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide_1/courseb/2021": {
           "name": "Gabay sa Kurikulum"
         },
-        "teacher_forum_1/coursef/2021": {
+        "implementation_guide/courseb/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/courseb/2021": {
           "name": "Pagtitipon ng Guro"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
-        },
-        "virtual_lesson_modifications/coursef/2021": {
+        "virtual_lesson_modifications/courseb/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "Galawin ito, Galawin ito"
@@ -1592,7 +1605,7 @@
           "name": "Hindi Namalayang mga Bugs",
           "type": "Video"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Pagiging Loopy"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -1602,43 +1615,43 @@
           "name": "Pagiging Loopy",
           "type": "Pagtatasa"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Pagiging Loopy"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "The Big Event",
-          "type": "Video"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "The Big Event"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "The Big Event",
           "type": "Pagtatasa"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "The Big Event"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "The Big Event",
+          "type": "Video"
         },
-        "implementation_guide/courseb/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/courseb/2021": {
+        "curriculum_guide_1/coursea/2021": {
           "name": "Gabay sa Kurikulum"
         },
-        "teacher_forum_1/courseb/2021": {
+        "implementation_guide/coursea/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursea/2021": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/courseb/2021": {
+        "virtual_lesson_modifications/coursea/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Video"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Pair programming"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Video"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -1656,36 +1669,30 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Video"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "The Big Event"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "The Big Event",
           "type": "Pagtatasa"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "The Big Event"
         },
-        "implementation_guide/coursea/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursea/2021": {
+        "curriculum_guide_1/coursec/2021": {
           "name": "Gabay sa Kurikulum"
         },
-        "teacher_forum_1/coursea/2021": {
+        "implementation_guide/coursec/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursec/2021": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/coursea/2021": {
+        "virtual_lesson_modifications/coursec/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Ang Robot Kong Mga Kaibigan"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Ang Robot Kong Mga Kaibigan"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -1694,27 +1701,30 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Ang Robot Kong Mga Kaibigan"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Ang Robot Kong Mga Kaibigan"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Pair programming",
           "type": "Video"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "The Big Event"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "The Big Event",
           "type": "Pagtatasa"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "The Big Event"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Video"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Binary na mga Pulseras"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binary na mga Pulseras"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -1724,60 +1734,63 @@
           "name": "Binary na mga Pulseras",
           "type": "Pagtatasa"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Binary na mga Pulseras"
         },
-        "implementation_guide/coursec/2021": {
-          "name": "Gabay sa Pagpapatupad"
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Binary na mga Pulseras"
         },
-        "curriculum_guide_1/coursec/2021": {
+        "curriculum_guide_1/coursed/2021": {
           "name": "Gabay sa Kurikulum"
         },
-        "teacher_forum_1/coursec/2021": {
+        "implementation_guide/coursed/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "teacher_forum_1/coursed/2021": {
           "name": "Pagtitipon ng Guro"
         },
-        "virtual_lesson_modifications/coursec/2021": {
+        "virtual_lesson_modifications/coursed/2021": {
           "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
-        },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Graph Paper Programming"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Graph Paper Programming"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Graph Paper Programming"
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
           "name": "Graph Paper Programming"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Graph Paper Programming",
           "type": "Pagtatasa"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
+        "graph-paper-programming/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Graph Paper Programming"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
           "name": "Graph Paper Programming"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Pair programming"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Relay Programming"
         },
         "relay-assessment/coursed/2021": {
           "name": "Relay Programming"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Relay Programming"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Relay Programming"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Relay Programming"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Relay Programming"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1789,37 +1802,27 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "Video"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Mga Conditional gamit ang mga Card"
         },
-        "lesson-in-action-conditional-cards/coursed/2021": {
+        "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Mga Conditional gamit ang mga Card"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Mga Conditional gamit ang mga Card",
           "type": "Pagtatasa"
         },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
+        "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Mga Conditional gamit ang mga Card"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Mga Conditional gamit ang mga Card"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "type": "Gabay sa Proyekto"
         },
-        "implementation_guide/coursed/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursed/2021": {
-          "name": "Gabay sa Kurikulum"
-        },
-        "teacher_forum_1/coursed/2021": {
+        "teacher_forum_1/express/2021": {
           "name": "Pagtitipon ng Guro"
-        },
-        "virtual_lesson_modifications/coursed/2021": {
-          "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "pair_programming/express/2021": {
           "name": "Pair programming",
@@ -1855,14 +1858,14 @@
         "rubric-csf-final-projects/express/2021": {
           "type": "Rubric"
         },
-        "teacher_forum_1/express/2021": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "Pagtitipon ng Guro"
-        },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Pair programming"
         },
         "20_20_20_rule/pre-express/2021": {
           "type": "Video"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Pair programming"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Video"
@@ -1870,8 +1873,21 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
         },
-        "teacher_forum_1/pre-express/2021": {
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Gabay sa Kurikulum"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Gabay sa Pagpapatupad"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Dokumentasyon ng Sprite Lab"
+        },
+        "teacher_forum_1/coursee/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Mga Pagbabago sa Virtual Lesson",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Dokumentasyon ng Sprite Lab"
@@ -1890,22 +1906,6 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "type": "Rubric"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Gabay sa Pagpapatupad"
-        },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Gabay sa Kurikulum"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "Pagtitipon ng Guro"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Dokumentasyon ng Sprite Lab"
-        },
-        "virtual_lesson_modifications/coursee/2021": {
-          "name": "Mga Pagbabago sa Virtual Lesson",
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Video"
@@ -1953,6 +1953,9 @@
         "design_an_ai_app_1/csd/2021": {
           "type": "Rubric"
         },
+        "teacher_forum/csd/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
         "the-design-thinking-process/csd/2021": {
           "type": "Video"
         },
@@ -1987,9 +1990,6 @@
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Pagpresenta ng App"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Pagtitipon ng Guro"
         },
         "computing-innovations/csd/2021": {
           "name": "Pag-compute na mga Pagbabago"
@@ -2136,6 +2136,9 @@
         "solve-a-data-problem/csd/2021": {
           "type": "Gabay sa Proyekto"
         },
+        "teacher_forum_1/csd/2021": {
+          "name": "Pagtitipon ng Guro"
+        },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "type": "Video"
         },
@@ -2242,9 +2245,6 @@
         },
         "make_your_own_game/csd/2021": {
           "type": "Rubric"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Pagtitipon ng Guro"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "Video"

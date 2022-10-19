@@ -48,6 +48,9 @@
         "ai-training/oceans/unversioned": {
           "type": "Відео"
         },
+        "implementation_guide/coursed/2022": {
+          "name": "Практика впровадження"
+        },
         "graph_paper_programming/coursed/2022": {
           "name": "Програмування по клітинках"
         },
@@ -110,7 +113,7 @@
         "conditionals_with_cards_4/coursed/2022": {
           "name": "Листівки та умови"
         },
-        "implementation_guide/coursed/2022": {
+        "implementation_guide/coursef/2022": {
           "name": "Практика впровадження"
         },
         "the_power_of_words_the_power_of_words/coursef/2022": {
@@ -139,7 +142,7 @@
         "the_internet/coursef/2022": {
           "name": "Інтернет"
         },
-        "implementation_guide/coursef/2022": {
+        "implementation_guide/coursee/2022": {
           "name": "Практика впровадження"
         },
         "pause_and_think_online/coursee/2022": {
@@ -151,7 +154,7 @@
         "digital_sharing_ethics_video_/coursee/2022": {
           "type": "Відео"
         },
-        "implementation_guide/coursee/2022": {
+        "implementation_guide/courseb/2022": {
           "name": "Практика впровадження"
         },
         "move_it_move_it/courseb/2022": {
@@ -205,9 +208,6 @@
         "the_big_event_2/courseb/2022": {
           "name": "Велика подія"
         },
-        "implementation_guide/courseb/2022": {
-          "name": "Практика впровадження"
-        },
         "pair_programming/express/2022": {
           "name": "Парне програмування",
           "type": "Відео"
@@ -244,6 +244,9 @@
         },
         "pause_and_think_online/pre-express/2022": {
           "type": "Відео"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Практика впровадження"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Безпека у Моєму Інтернет-сусідстві: Слайди до уроку",
@@ -295,7 +298,7 @@
         "the_big_event_2/coursea/2022": {
           "name": "Велика подія"
         },
-        "implementation_guide/coursea/2022": {
+        "implementation_guide/coursec/2022": {
           "name": "Практика впровадження"
         },
         "my_robotic_friends/coursec/2022": {
@@ -345,9 +348,6 @@
         },
         "binary_bracelets_4/coursec/2022": {
           "name": "Двійкові браслети"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Практика впровадження"
         },
         "binary_and_data/csd/2022": {
           "type": "Відео"
@@ -853,6 +853,9 @@
         "lesson_plans_3/csd/2017": {
           "name": "Плани уроків"
         },
+        "implementation_guide/coursef/2021": {
+          "name": "Практика впровадження"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Представляємо Лабораторію спрайтів"
         },
@@ -869,15 +872,6 @@
         "pause_and_think_online/coursef/2021": {
           "type": "Відео"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Ігри з циклами"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Ігри з циклами"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Ігри з циклами"
-        },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "Ігри з циклами"
         },
@@ -885,26 +879,35 @@
           "name": "Ігри з циклами",
           "type": "Оцінка"
         },
-        "ai-ml/coursef/2021": {
-          "type": "Відео"
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Ігри з циклами"
         },
-        "ai-training/coursef/2021": {
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Ігри з циклами"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Ігри з циклами"
+        },
+        "ai-ml/coursef/2021": {
           "type": "Відео"
         },
         "ai-societal/coursef/2021": {
           "type": "Відео"
         },
-        "unplugged-video-internet/coursef/2021": {
+        "ai-training/coursef/2021": {
+          "type": "Відео"
+        },
+        "assessment-answer-internet/coursef/2021": {
           "name": "Інтернет"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Інтернет",
           "type": "Оцінка"
         },
-        "assessment-answer-internet/coursef/2021": {
+        "unplugged-video-internet/coursef/2021": {
           "name": "Інтернет"
         },
-        "implementation_guide/coursef/2021": {
+        "implementation_guide/courseb/2021": {
           "name": "Практика впровадження"
         },
         "mimi-activity/courseb/2021": {
@@ -932,7 +935,7 @@
           "name": "Баги",
           "type": "Відео"
         },
-        "unplugged-video-getting-loopy/courseb/2021": {
+        "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Економія на повторах"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
@@ -942,24 +945,24 @@
           "name": "Економія на повторах",
           "type": "Оцінка"
         },
-        "assessment-answer-getting-loopy/courseb/2021": {
+        "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Економія на повторах"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "type": "Відео"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "Велика подія",
-          "type": "Відео"
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Велика подія"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Велика подія",
           "type": "Оцінка"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "Велика подія"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Велика подія",
+          "type": "Відео"
         },
-        "implementation_guide/courseb/2021": {
+        "implementation_guide/coursea/2021": {
           "name": "Практика впровадження"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
@@ -970,21 +973,21 @@
           "name": "Безпека у Моєму Інтернет-сусідстві: Моє Інтернет-сусідство",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
         },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Безпека у Моєму Інтернет-сусідстві: Хвилинка на зупинку",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
           "name": "Безпека у Моєму Інтернет-сусідстві: Безпека рулить!",
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
         },
-        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Хвилинка на зупинку",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "Відео"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Парне програмування"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "type": "Відео"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Відео"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -1002,26 +1005,20 @@
         "common-sense-media-pause-think/coursea/2021": {
           "type": "Відео"
         },
-        "unplugged-video-big-event/coursea/2021": {
+        "assessment-answer-big-event/coursea/2021": {
           "name": "Велика подія"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Велика подія",
           "type": "Оцінка"
         },
-        "assessment-answer-big-event/coursea/2021": {
+        "unplugged-video-big-event/coursea/2021": {
           "name": "Велика подія"
         },
-        "implementation_guide/coursea/2021": {
+        "implementation_guide/coursec/2021": {
           "name": "Практика впровадження"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Мої друзі-роботи"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Мої друзі-роботи"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
           "name": "Мої друзі-роботи"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
@@ -1030,27 +1027,30 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Мої друзі-роботи"
         },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Мої друзі-роботи"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Мої друзі-роботи"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Парне програмування",
           "type": "Відео"
         },
-        "unplugged-video-big-event/coursec/2021": {
+        "assessment-answer-big-event/coursec/2021": {
           "name": "Велика подія"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Велика подія",
           "type": "Оцінка"
         },
-        "assessment-answer-big-event/coursec/2021": {
+        "unplugged-video-big-event/coursec/2021": {
           "name": "Велика подія"
         },
         "pause_and_think_online/coursec/2021": {
           "type": "Відео"
         },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Двійкові браслети"
-        },
-        "lesson-in-action-binary-bracelets/coursec/2021": {
+        "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Двійкові браслети"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
@@ -1060,50 +1060,53 @@
           "name": "Двійкові браслети",
           "type": "Оцінка"
         },
-        "assessment-answer-binary-bracelets/coursec/2021": {
+        "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "Двійкові браслети"
         },
-        "implementation_guide/coursec/2021": {
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Двійкові браслети"
+        },
+        "implementation_guide/coursed/2021": {
           "name": "Практика впровадження"
         },
-        "graph-paper-programming/coursed/2021": {
-          "name": "Програмування по клітинках"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Програмування по клітинках"
-        },
-        "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Програмування по клітинках"
-        },
         "activity-answer-graph-paper/coursed/2021": {
+          "name": "Програмування по клітинках"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
           "name": "Програмування по клітинках"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Програмування по клітинках",
           "type": "Оцінка"
         },
-        "assessment-answer-graph-paper/coursed/2021": {
+        "graph-paper-programming/coursed/2021": {
+          "name": "Програмування по клітинках"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Програмування по клітинках"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
           "name": "Програмування по клітинках"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Парне програмування"
         },
-        "relay-programming-assessment-answer-key/coursed/2021": {
+        "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Естафетне програмування"
         },
         "relay-assessment/coursed/2021": {
           "name": "Естафетне програмування"
         },
-        "relay-programming-teacher-debugging/coursed/2021": {
+        "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Естафетне програмування"
         },
-        "unplugged-video-relay-programming/coursed/2021": {
+        "relay-programming-teacher-debugging/coursed/2021": {
           "name": "Естафетне програмування"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "Естафетне програмування"
         },
-        "csf-relay-programming-activity-packet/coursed/2021": {
+        "unplugged-video-relay-programming/coursed/2021": {
           "name": "Естафетне програмування"
         },
         "pause_and_think_online/coursed/2021": {
@@ -1115,24 +1118,21 @@
         "pause_and_think_online_1/coursed/2021": {
           "type": "Відео"
         },
-        "unplugged-video-conditionals-cards/coursed/2021": {
+        "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Листівки та умови"
         },
-        "lesson-in-action-conditional-cards/coursed/2021": {
+        "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Листівки та умови"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Листівки та умови",
           "type": "Оцінка"
         },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
+        "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Листівки та умови"
         },
-        "assessment-answer-conditionals-cards/coursed/2021": {
+        "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Листівки та умови"
-        },
-        "implementation_guide/coursed/2021": {
-          "name": "Практика впровадження"
         },
         "pair_programming/express/2021": {
           "name": "Парне програмування",
@@ -1159,17 +1159,20 @@
         "variables_video/express/2021": {
           "name": "Змінні"
         },
-        "pair-programming-vid/pre-express/2021": {
-          "name": "Парне програмування"
-        },
         "20_20_20_rule/pre-express/2021": {
           "type": "Відео"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Парне програмування"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "type": "Відео"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Відео"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Практика впровадження"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "type": "Відео"
@@ -1179,9 +1182,6 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "type": "Оцінка"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Практика впровадження"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "Відео"

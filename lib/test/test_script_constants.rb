@@ -2,29 +2,6 @@ require_relative '../../lib/cdo/script_constants'
 require 'minitest/autorun'
 
 class ScriptConstantsTest < Minitest::Test
-  def test_congrats_page
-    %w(
-      coursea-2019
-      courseb-2019
-      coursec-2019
-      coursed-2019
-      coursee-2019
-      coursef-2019
-      express-2019
-      pre-express-2019
-      coursea-2020
-      courseb-2020
-      coursec-2020
-      coursed-2020
-      coursee-2020
-      coursef-2020
-      express-2020
-      pre-express-2020
-    ).each do |script_name|
-      assert ScriptConstants.has_csf_congrats_page?(script_name), "#{script_name} should have congrats page"
-    end
-  end
-
   def test_csf_next_course_recommendation
     {
       "course1" => "course2",

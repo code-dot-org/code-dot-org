@@ -265,6 +265,31 @@
           "name": "Dincolo de o Oră de Cod ",
           "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Pregătirea ",
+          "description": "Urați-le Bun venit elevilor în clasă și prezentați-le pe scurt activitatea propusă pentru ziua respectivă."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_În această activitate, te vei distra creând o lume interactivă cu personaje distractive numite Sprites. Veți putea să-i faceți carecterele să spună lucruri cu bule de vorbire așa cum ați vedea într-o revistă de benzi desenate sau într-un roman grafic și veți învăța să-i faceți să răspundă automat atunci când dvs. sau altcineva face click pe ele._\n\n_Astăzi vei scrie „cod”, ceea ce înseamnă doar un set de instrucțiuni pe care un computer le poate înțelege. Când scrii o poveste, trebuie să te gândești cu atenție la cuvintele pe care le folosești. Când scrieți cod, va trebui să vă gândiți cu atenție la instrucțiunile pe care le dați computerului._",
+          "tips": [
+            "Veți dori să petreceți foarte puțin timp pentru încărcarea paginii sau introducerea Orei de codare. Mai ales în cazul elevilor mici, cel mai bine este să sari cât mai repede posibil peste această etapă."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Suport general",
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Bună Lume",
+          "progression_name": "Bună Lume"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflecţie",
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Pregătirea Orei\n\nUrați-le Bun venit elevilor în clasă și prezentați pe scurt activitatea ce se va desfășura în ziua respectivă.\n\n_Spuneți-le: „Astăzi vom petrece o oră învățând să codăm. A mai auzit cineva de aici de termenul „cod”? Ce înseamnă?\"_\n\nElevii ar putea menționa că un „cod” este ca un mesaj secret sau că are legătură într-un fel cu computerele."
         },
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Citește Blown to Bits**\n\n-   Citiți pag. 165-169 din [Blown to Bits, Capitolul 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Răspundeți la întrebările furnizate în ghidul de lectură și foaia de lucru [Ghid de citire pentru criptare](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Foaia de lucru.\n\n**Mai multe despre Blown to Bits**\n\n-   Secțiunile anterioare ale capitolului 5 din Blown to Bits fac referire la semnificația și controversele legate de criptare după 11 septembrie. Această lectură poate fi un instrument util pentru introducerea în continuare a impactului criptografiei asupra multor aspecte ale vieții moderne.\n\n-   Cereți elevilor să revizuiască istoricul navigării lor pe internet și să calculeze aproximativ ce procentaj consideră ei că întrunește condiția de ”informație privată”. Au vreo modalitate de a fi siguri că așa este? Există site-uri web pe care le vizitează, unde se simt mai încrezători legat de securitatea traficului lor decât altele? Sunt ele justificate în această concluzie?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Pregătirea ",
+          "description": "Urați-le Bun venit elevilor în clasă și prezentați-le pe scurt activitatea propusă pentru ziua respectivă."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_În această activitate, te vei distra creând o lume interactivă cu personaje distractive numite Sprites. Veți putea să-i faceți carecterele să spună lucruri cu bule de vorbire așa cum ați vedea într-o revistă de benzi desenate sau într-un roman grafic și veți învăța să-i faceți să răspundă automat atunci când dvs. sau altcineva face click pe ele._\n\n_Astăzi vei scrie „cod”, ceea ce înseamnă doar un set de instrucțiuni pe care un computer le poate înțelege. Când scrii o poveste, trebuie să te gândești cu atenție la cuvintele pe care le folosești. Când scrieți cod, va trebui să vă gândiți cu atenție la instrucțiunile pe care le dați computerului._",
+          "tips": [
+            "Veți dori să petreceți foarte puțin timp pentru încărcarea paginii sau introducerea Orei de codare. Mai ales în cazul elevilor mici, cel mai bine este să sari cât mai repede posibil peste această etapă."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Suport general",
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Bună Lume",
+          "progression_name": "Bună Lume"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflecţie",
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Pregătirea ",
@@ -2975,9 +3025,6 @@
           "tips": [
             "Reamintiți-le elevilor să partajeze lucrările doar cu prietenii apropiați sau cu familia. Pentru mai multe informații, urmăriți sau arătați-le elevilor clipul video**\\*Pause and Think Online - Clip video**."
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Am inclus câteva niveluri de predicție cu alegere multiplă care sunt dificile pentru elevii care nu știu să citească. Opțional, aceste niveluri pot fi revizuite împreună cu clasa dumneavoastră, pentru a vă ajuta elevii să se pregătească pentru puzzle-urile care vor urma. Alternativ, acestea pot fi folosite după terminarea etapei, ca o recapitulare pentru toți elevii.**Nivelurile de predicție:** - [Curs B, Bucle în Artist](https://studio.code.org/levels/8745)"
         },
         "c9b716a1-6ed8-45b7-81b6-75240df48dae": {
           "progression_name": "Provocare"
