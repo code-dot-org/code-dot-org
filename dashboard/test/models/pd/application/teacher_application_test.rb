@@ -541,7 +541,6 @@ module Pd::Application
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
@@ -582,7 +581,6 @@ module Pd::Application
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
@@ -624,7 +622,6 @@ module Pd::Application
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
@@ -694,7 +691,6 @@ module Pd::Application
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49,
         principal_wont_replace_existing_course: principal_options[:replace_course].first
@@ -735,7 +731,6 @@ module Pd::Application
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49,
         principal_wont_replace_existing_course: principal_options[:replace_course].first
@@ -777,7 +772,6 @@ module Pd::Application
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49,
         principal_wont_replace_existing_course: principal_options[:replace_course].first

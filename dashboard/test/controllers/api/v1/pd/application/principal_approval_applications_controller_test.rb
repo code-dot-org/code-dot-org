@@ -91,8 +91,6 @@ module Api::V1::Pd::Application
           do_you_approve_other: "this is the other for do you approve",
           committed_to_master_schedule: "Other:",
           committed_to_master_schedule_other: "this is the other for master schedule",
-          committed_to_diversity: "Other (Please Explain):",
-          committed_to_diversity_other: "this is the other for diversity",
           replace_course: "I don't know (Please Explain):",
           replace_course_other: "this is the other for replace course"
         )

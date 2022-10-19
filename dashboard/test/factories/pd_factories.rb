@@ -910,7 +910,6 @@ FactoryGirl.define do
       other '10'
       committed_to_master_schedule Pd::Application::PrincipalApprovalApplication.options[:committed_to_master_schedule][0]
       replace_course Pd::Application::PrincipalApprovalApplication.options[:replace_course][1]
-      committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApprovalApplication.options[:pay_fee][0]
     end

@@ -1131,8 +1131,6 @@ module Pd::Application
           principal_schedule_confirmed:
             principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
-          principal_diversity_recruitment:
-            principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
           principal_underrepresented_minority_percent:
