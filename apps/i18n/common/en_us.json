@@ -1278,6 +1278,7 @@
   "loginTypeWordButton": "Use word logins",
   "loginTypeWordDescription": "You will create accounts for your students. Students will log in with a secret pair of words.",
   "mac": "Mac",
+  "makeACopy": "Make a Copy",
   "makeMyOwn": "Make my own",
   "makeNewSounds": "Make new sounds",
   "makerConnectExplanation": "If you're having issues connecting to a Circuit Playground board, click the button below to run some connectivity checks.",
