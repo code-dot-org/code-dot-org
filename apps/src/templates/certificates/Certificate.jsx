@@ -136,7 +136,7 @@ function Certificate(props) {
         </a>
       </div>
       <div style={certificateStyle}>
-        {tutorial && !personalized && (
+        {!personalized && (
           <div>
             <h2>{i18n.congratsCertificatePersonalize()}</h2>
             <input
@@ -155,7 +155,7 @@ function Certificate(props) {
             </button>
           </div>
         )}
-        {tutorial && personalized && (
+        {personalized && (
           <div>
             <h2 id="uitest-thanks">{i18n.congratsCertificateThanks()}</h2>
             <p>{i18n.congratsCertificateContinue()}</p>
