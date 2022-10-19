@@ -136,6 +136,5 @@ module JavalabFilesHelper
     asset_list.each do |asset|
       all_level_files["assetUrls"][asset[:filename]] = generate_asset_url(asset[:filename], channel_id)
     end
-    puts all_level_files
   end
 end

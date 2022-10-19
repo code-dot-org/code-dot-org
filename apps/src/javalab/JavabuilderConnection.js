@@ -80,6 +80,7 @@ export default class JavabuilderConnection {
   connectJavabuilderWithOverrideSources(overrideSources) {
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
+    // we include the channel id so that assets are available
     requestData.channelId = this.channelId;
 
     // When we have override sources, we do not need to check if the project has been edited,

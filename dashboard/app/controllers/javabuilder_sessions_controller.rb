@@ -32,6 +32,7 @@ class JavabuilderSessionsController < ApplicationController
       return render status: :bad_request, json: {}
     end
     override_sources = params[:overrideSources]
+    # channel id is not required but can be included in order to retrieve assets
     channel_id = params[:channelId]
 
     session_id = SecureRandom.uuid
