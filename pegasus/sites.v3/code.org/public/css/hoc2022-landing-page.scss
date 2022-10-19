@@ -8,8 +8,13 @@ html {
   margin-bottom: 0;
 }
 
+// Allows for full-width banner and sections
 .container_responsive {
   width: unset;
+}
+
+h1, h2 {
+  color: $darkest_gray;
 }
 
 header {
@@ -17,10 +22,6 @@ header {
   padding: 4em 1em;
   background: $background_gray;
   color: $darkest_gray;
-
-  h1, h2 {
-    color: $darkest_gray;
-  }
 
   h1 {
     font-size: 4em;
@@ -75,13 +76,18 @@ main {
   aside {
     max-width: 970px;
     background-color: $background_gray;
-    margin: 2em auto;
+    margin: 2em auto 0;
     padding: 2em;
 
   }
 
+  hr {
+    margin: 4em 0;
+    border-top: 1px solid $lighter_gray;
+  }
+
   section {
-    padding: 3em 1em;
+    padding: 6em 1em;
 
     &:nth-of-type(2) {
       background: $background_gray;
@@ -90,8 +96,15 @@ main {
     .wrapper {
       max-width: 970px;
       margin: 0 auto;
+    }
 
-      & > div:first-child {
+    .top-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      & > div {
         text-align: center;
         width: 33%;
 
@@ -110,6 +123,16 @@ main {
           font-size: 1.5em;
         }
       }
+
+      iframe {
+        width: 500px;
+        height: 281px;
+        border: 1px solid $lighter_gray;
+      }
+    }
+
+    .activites {
+      text-align: center;
     }
   }
 }

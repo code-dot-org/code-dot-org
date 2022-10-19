@@ -40,34 +40,44 @@ theme: responsive
   %a{id: 'explore'}
   %section.explore
     .wrapper
-      %div
-        %i{class: "#{icon_rocket}"}
-        %h1
-          =I18n.t(:hoc2022_landing_page_explore_title)
-        %p
-          =I18n.t(:hoc2022_landing_page_explore_description)
-
-      %figure
-        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", width: "560", height:"315"}
-
+      .top-wrapper
+        %div
+          %i{class: "#{icon_rocket}"}
+          %h1=I18n.t(:hoc2022_landing_page_explore_title)
+          %p=I18n.t(:hoc2022_landing_page_explore_description)
+        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0'}
       %hr
+      .activites
+        %h2=I18n.t(:try_an_activity)
+        %a{href: "/learn"}
+          =I18n.t(:see_more_activities)
 
   %a{id: 'play'}
   %section.play
     .wrapper
-      %div
-        %i{class: "#{icon_futbol}"}
-        %h1
-          =I18n.t(:hoc2022_landing_page_play_title)
-        %p
-          =I18n.t(:hoc2022_landing_page_play_description)
+      .top-wrapper
+        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0'}
+        %div
+          %i{class: "#{icon_futbol}"}
+          %h1=I18n.t(:hoc2022_landing_page_play_title)
+          %p=I18n.t(:hoc2022_landing_page_play_description)
+      %hr
+      .activites
+        %h2=I18n.t(:try_an_activity)
+        %a{href: "/learn"}
+          =I18n.t(:see_more_activities)
 
   %a{id: 'create'}
   %section.create
     .wrapper
-      %div
-        %i{class: "#{icon_paint}"}
-        %h1
-          =I18n.t(:hoc2022_landing_page_create_title)
-        %p
-          =I18n.t(:hoc2022_landing_page_create_description)
+      .top-wrapper
+        %div
+          %i{class: "#{icon_paint}"}
+          %h1=I18n.t(:hoc2022_landing_page_create_title)
+          %p=I18n.t(:hoc2022_landing_page_create_description)
+        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0'}
+      %hr
+      .activites
+        %h2=I18n.t(:try_an_activity)
+        %a{href: "/learn"}
+          =I18n.t(:see_more_activities)
