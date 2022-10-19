@@ -16547,20 +16547,12 @@ fr-FR:
             clique sur « Démarrer » ?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Le zombie passera outre le bon chemin et finira par faire des allers-retours
-            sans fin.
-          correct: true
+        - correct: true
           feedback: Correct !
         - text: Le zombie arrivera jusqu'au tournesol.
-          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
-            faire des allers-retours sans fin.
         - text: Le zombie va tourner à droite sur le premier chemin et tourner en
             rond pour toujours.
-          feedback: Incorrect. Le zombie passera outre le bon chemin et finira par
-            faire des allers-retours sans fin.
         - text: Le zombie sera coincé au bout du chemin vers l'avant.
-          feedback: Dans ce code, le zombie passera outre le bon chemin et finira
-            par faire des allers-retours sans fin.
         questions:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
             on clique sur « Démarrer »?

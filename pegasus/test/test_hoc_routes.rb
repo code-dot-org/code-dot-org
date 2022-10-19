@@ -81,15 +81,6 @@ class HocRoutesTest < Minitest::Test
       assert_equal expected_url, @pegasus.last_response['Location'].strip
     end
 
-    it 'serves png, jpg, jpeg certificate images, not others' do
-      cert_id = make_certificate
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpg")
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpeg")
-      assert_successful_png_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.png")
-
-      assert_not_found_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.bmp")
-    end
-
     it 'starts and ends given tutorial, tracking company and tutorial' do
       DB.transaction(rollback: :always) do
         with_test_company 'testcompany'

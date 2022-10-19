@@ -1,5 +1,5 @@
-require_relative '../../test_helper'
-require 'cdo/graphics/certificate_image'
+require_relative '../../../shared/test/common_test_helper'
+require_relative '../certificate_image'
 
 class CertificateImageTest < Minitest::Test
   def test_special_template_courses

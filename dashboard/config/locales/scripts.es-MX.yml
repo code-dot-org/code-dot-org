@@ -9053,6 +9053,9 @@ es-MX:
           title: 'Especies Invasoras '
           description_short: 'Esta es una beca de investigación financiada por la
             NSF para CS4All '
+          lessons:
+            lesson-21:
+              name: Primeros pasos
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9530,6 +9533,9 @@ es-MX:
             los niveles entre las versiones del plan de estudios
           description: Para organizar las actualizaciones de las lecciones o los niveles
             entre las versiones del plan de estudios
+          lessons:
+            lesson-7:
+              name: Introducción a los Sprites
         csc-pilot-2022-ecosystems:
           name: csc-piloto-2022-ecosistemas
         csc-pilot-2022-timecapsule:
@@ -10409,6 +10415,13 @@ es-MX:
             del año, analizas la privacidad y la seguridad de los programas y los
             usuarios.
         vpl-csd3-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
           lesson_groups:
             lessonGroup-2:
               display_name: 'Parte 1: Sesión Sincrónica'
@@ -10597,3 +10610,7 @@ es-MX:
           lessons:
             lesson-1:
               name: Hitos de EE.UU.
+        self-paced-pl-physical-computing2:
+          lessons:
+            lesson-5:
+              name: Necesitas titular esta lección

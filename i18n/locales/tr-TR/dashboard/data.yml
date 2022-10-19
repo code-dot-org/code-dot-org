@@ -39,7 +39,7 @@ tr:
         Custom: Sanatçı
         CustomStudio: Oyun Laboratuvarı
         Gamelab: Oyun Laboratuvarı
-        Spritelab: Kukla Laboratuvarı
+        Spritelab: Hareketli Nesne Laboratuvarı
     trophy:
       name:
         Bronze: Bronz
@@ -359,8 +359,8 @@ tr:
         CSF_collector_repeat_loops: Toplayıcı tekrarlama döngüleri
         CSF_collector_text_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
         CSF_create_functions: Fonksiyonları Oluşturma
-        CSF_debugging_k1_blocks: Hata Ayıklama (Debugging)
-        CSF_debugging_text_blocks: Hata Ayıklama (Debugging)
+        CSF_debugging_k1_blocks: Hata Ayıklama
+        CSF_debugging_text_blocks: Hata Ayıklama
         CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
         CSF_maze_intro_k1_blocks: Kod Stüdyosu tanıtımı
         CSF_maze_intro_text_blocks: Kod Stüdyosu tanıtımı
@@ -512,7 +512,7 @@ tr:
         CSF_SpriteLab_Intro_v2: Hareketli Nesne Laboratuvarı Tanıtımı
         CSF_Spritelab_MakeSprite_v2: Nesne Oluşturma
         CSF_SpriteLab_SpritesInAction_v2: Eylem halindeki Hareketli Nesneler
-        csd_debugging: Hata Ayıklama (Debugging)
+        csd_debugging: Hata Ayıklama
         csd_applab_designmode_short: Uygulama Laboratuvarı Tasarım Modu
         csp-pd-welcome: Aileye Hoşgeldiniz!
         CSF-Teaching-Problem-Solving: CSF Problem Çözme Öğretimi

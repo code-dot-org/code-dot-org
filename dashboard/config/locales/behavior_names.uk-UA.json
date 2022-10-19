@@ -2462,6 +2462,54 @@
           "wobbling": "хитання",
           "moving west and looping": "рух на захід і циклічно",
           "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         }
       }
     }

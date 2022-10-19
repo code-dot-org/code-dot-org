@@ -58,7 +58,7 @@
           }
         },
         "spritelab": {
-          "name": "Kukla Laboratuvarı",
+          "name": "Hareketli Nesne Laboratuvarı",
           "categories": {
             "sprites": {
               "name": "Hareketli Nesneler"

@@ -1156,3 +1156,5 @@ zh-CN:
       cannot_view_locked_answers: "锁定时无法查看答案"
       forbidden: "用户无法更新学生的可锁定状态"
   reset_predict_progress_button: "删除答案"
+  pixelation:
+    binary: "二进制"

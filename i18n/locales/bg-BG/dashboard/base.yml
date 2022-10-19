@@ -1074,3 +1074,5 @@ bg:
     this_sprite: "този спрайт"
   unit_prefix: "Урок %{n}"
   code_org_logo_alt: "Начална страница Code.org"
+  pixelation:
+    binary: "Двоичен код"

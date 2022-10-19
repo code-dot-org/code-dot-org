@@ -1413,3 +1413,5 @@ ar:
       cannot_view_locked_answers: لا يمكن مشاهدة الإجابات أثناء القفل
       forbidden: 'لا يمكن للمستخدم تحديث حالة الطالب القابلة للقفل '
   reset_predict_progress_button: حذف الإجابة
+  pixelation:
+    binary: ثنائي

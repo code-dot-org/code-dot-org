@@ -1339,6 +1339,10 @@ id:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass yang
               unik
             "'sound://category_digital/jump_7.mp3'": lompat
+      gamelab_playSoundOptionsSoccer:
+        text: Playsound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: Playsound {SOUND}
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
       gamelab_playerBehaviors:

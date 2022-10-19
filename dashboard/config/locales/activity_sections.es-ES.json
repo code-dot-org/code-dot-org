@@ -265,6 +265,31 @@
           "name": "Más de una Hora de Code",
           "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en persona.\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Preparando el terreno",
+          "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "\\_En esta actividad, te vas a divertir creando un mundo interactivo con divertidos personajes llamados sprites. Podrás hacer que los sprites digan cosas con viñetas de diálogo como las que verías en un cómic o novela gráfica, y aprenderás a hacer que respondan automáticamente cuando tú u otra persona haga clic sobre ellos.\n\n_Hoy escribirás \"código\", es decir, un conjunto de instrucciones que un ordenador puede entender. Cuando escribes una historia, tienes que pensar cuidadosamente en las palabras que utilizas. Cuando escribas un código, tendrás que pensar cuidadosamente en las instrucciones que le estás dando a tu ordenador._",
+          "tips": [
+            "Conviene dedicar muy poco tiempo a la introducción de la Hora del Código. Especialmente en el caso de los alumnos más jóvenes, lo mejor es empezar lo antes posible."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Apoyo General",
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflexión",
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Preparando el Terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _\"Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar antes del término \"código\"? ¿Qué significa?\"_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "\\*\\*Leer \"Blown to Bits\".\n\n-   Lee las páginas 165-169 de [Blown to Bits, capítulo 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Responde a las preguntas de la guía de lectura y de la hoja de trabajo [Guía de Lectura para el Cifrado](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Hoja de trabajo.\t\t\n\n**Más sobre Blown to Bits**\n\n-   Las primeras secciones del capítulo 5 de Blown to Bits hacen referencia a la importancia y las controversias que rodean a la encriptación tras el 11 de septiembre. Esta lectura puede ser una herramienta útil para seguir introduciendo el impacto de la criptografía en muchos aspectos de la vida moderna.\n\n-   Pide a los alumnos que revisen el historial de su navegación por Internet y calculen aproximadamente qué porcentaje realizan con la suposición de que es \"privada\". ¿Tienen alguna forma de estar seguros de que esto es así? ¿Hay algún sitio web que visiten en el que se sientan más seguros de la confidencialidad de su tráfico que en otros? ¿Están convencidos de ello?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Preparando el terreno",
+          "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "\\_En esta actividad, te vas a divertir creando un mundo interactivo con divertidos personajes llamados sprites. Podrás hacer que los sprites digan cosas con viñetas de diálogo como las que verías en un cómic o novela gráfica, y aprenderás a hacer que respondan automáticamente cuando tú u otra persona haga clic sobre ellos.\n\n_Hoy escribirás \"código\", es decir, un conjunto de instrucciones que un ordenador puede entender. Cuando escribes una historia, tienes que pensar cuidadosamente en las palabras que utilizas. Cuando escribas un código, tendrás que pensar cuidadosamente en las instrucciones que le estás dando a tu ordenador._",
+          "tips": [
+            "Conviene dedicar muy poco tiempo a la introducción de la Hora del Código. Especialmente en el caso de los alumnos más jóvenes, lo mejor es empezar lo antes posible."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Apoyo General",
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflexión",
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Preparando el terreno",
@@ -3533,9 +3583,6 @@
           "tips": [
             "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, visualiza o muestra a la clase el vídeo \"Pausa y Piensa en Línea\"."
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Hemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. Estos niveles son opcionales para que los revises con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase. \n\n**Nivel de Predicción:** - [Curso B, Bucles en Artista](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Vídeo: El Artista en Code Studio"
