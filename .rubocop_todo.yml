@@ -641,11 +641,6 @@ Style/RescueModifier:
 Style/RescueStandardError:
   Enabled: false
 
-# Offense count: 17
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/SingleArgumentDig:
-  Enabled: false
-
 # Offense count: 38
 # This cop supports unsafe auto-correction (--auto-correct-all).
 Style/SlicingWithRange:
