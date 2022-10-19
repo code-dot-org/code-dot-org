@@ -18,3 +18,21 @@ public class ClubMember {
 
 Which of the following correctly implements the subclass `ClubSponsor` with a method called `donate()`?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The syntax for creating a subclass is:
+
+```
+public class SubclassName extends SuperclassName {
+
+}
+```
+
+The syntax for writing a method is:
+
+```
+public returnType methodName() {
+
+}
+```
+MARKDOWN
