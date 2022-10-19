@@ -5,7 +5,7 @@
 //   hoverColor
 //   clickColor
 
-(function ($, document, window, Raphael, undefined) {
+function setupMapDrawing($, document, window, Raphael, undefined) {
   // jQuery Plugin Factory
   function jQueryPluginFactory($, name, methods, getters) {
     getters = getters instanceof Array ? getters : [];
@@ -785,11 +785,13 @@
 
   // Create the plugin
   jQueryPluginFactory($, "usmap", methods, getters);
-})(jQuery, document, window, Raphael);
+}
 
 var webServiceLocation = "/promote/state/";
 
 $(document).ready(function () {
+  setupMapDrawing(jQuery, document, window, Raphael);
+
   if (useUrl) {
     // Check if the URL specifies a specific state. If so, load the state
     if (window.location.pathname.replace("/promote", "") !== "") {
