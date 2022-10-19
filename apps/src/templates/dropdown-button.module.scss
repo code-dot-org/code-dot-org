@@ -20,6 +20,7 @@
 }
 
 .anchor,
+a.anchor,
 a:link.anchor,
 a:visited.anchor {
   padding: 10px;
@@ -34,6 +35,8 @@ a:visited.anchor {
   &:hover {
     background-color: $lightest_gray;
     cursor: pointer;
+    // Overwrite site-wide application.css a:hover.
+    text-decoration: none;
   }
 }
 
