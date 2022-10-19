@@ -1262,6 +1262,7 @@
   "mac": "Mac",
   "makeMyOwn": "Make my own",
   "makeNewSounds": "Make new sounds",
+  "makerConnectExplanation": "If you're having issues connecting to a Circuit Playground board, click the button below to run some connectivity checks.",
   "makerNewProjectButton": "Create a project",
   "makerNewProjectDesc": "Create a new App Lab app with Maker Toolkit enabled",
   "makerNewProjectTitle": "Create a new app",
