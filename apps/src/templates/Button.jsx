@@ -110,8 +110,8 @@ class Button extends React.Component {
     }
 
     const sizeClassNames = __useDeprecatedTag
-      ? moduleStyles[`button-size-${size}`]
-      : [moduleStyles[`button-size-${size}`], moduleStyles.updated];
+      ? moduleStyles[size]
+      : [moduleStyles[size], moduleStyles.updated];
 
     // Opening links in new tabs with 'target=_blank' is inherently insecure.
     // Unfortunately, we depend on this functionality in a couple of place.
@@ -132,7 +132,7 @@ class Button extends React.Component {
       className = classNames(
         this.props.className,
         moduleStyles.main,
-        moduleStyles[`button-color-${color}`],
+        moduleStyles[color],
         sizeClassNames
       );
     }
