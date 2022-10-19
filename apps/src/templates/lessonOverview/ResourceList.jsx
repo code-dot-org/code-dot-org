@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {windowOpen} from '@cdo/apps/utils';
 import DropdownButton from '../DropdownButton';
+import Button from '../Button';
 import {isGDocsUrl, gDocsPdfUrl, gDocsMsOfficeUrl, gDocsCopyUrl} from './utils';
 
 export default class ResourceList extends Component {
@@ -101,7 +102,11 @@ export default class ResourceList extends Component {
         </span>
       )}
       {isGDocsUrl(resource.url) && (
-        <DropdownButton text="Make a Copy" color="gray" size="small">
+        <DropdownButton
+          text="Make a Copy"
+          color={Button.ButtonColor.gray}
+          size={Button.ButtonSize.small}
+        >
           <a href={gDocsPdfUrl(resource.url)}>PDF</a>
           <a href={gDocsMsOfficeUrl(resource.url)}>Microsoft Office</a>
           <a href={gDocsCopyUrl(resource.url)}>Google Docs</a>
