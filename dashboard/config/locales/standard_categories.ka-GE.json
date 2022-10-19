@@ -1,0 +1,17 @@
+{
+  "ka-GE": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "გამოთვლითი აზროვნება"
+        },
+        "L": {
+          "description": "ენა"
+        },
+        "F": {
+          "description": "ფუნქციები"
+        }
+      }
+    }
+  }
+}

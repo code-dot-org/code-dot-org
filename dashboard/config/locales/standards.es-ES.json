@@ -392,9 +392,6 @@
         "1A-AP-15": {
           "description": "Utilizando una terminología correcta, describe los pasos dados y las decisiones tomadas durante el proceso iterativo de desarrollo del programa."
         },
-        "1B-AP-08": {
-          "description": "Compara y perfecciona varios algoritmos para la misma tarea y determina cuál es el más adecuado."
-        },
         "1B-AP-09": {
           "description": "Crea programas que usen variables para almacenar y modificar datos."
         },
@@ -407,17 +404,11 @@
         "1B-AP-12": {
           "description": "Modifica, mezcla o incorpora partes de un programa existente en el propio trabajo, para desarrollar algo nuevo o agregar funciones más avanzadas."
         },
-        "1B-AP-13": {
-          "description": "Utiliza un proceso iterativo para planificar el desarrollo de un programa incluyendo las perspectivas de otros y considerando las preferencias de los usuarios."
-        },
         "1B-AP-14": {
           "description": "Observa los derechos de propiedad intelectual y otorga la atribución adecuada al crear o remezclar programas."
         },
         "1B-AP-15": {
           "description": "Prueba y depura (identifica y corrige errores) un programa o algoritmo para asegurarte de que se ejecuta según lo previsto."
-        },
-        "1B-AP-16": {
-          "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
         },
         "1B-AP-17": {
           "description": "Describe las decisiones tomadas durante el desarrollo del programa mediante comentarios de código, presentaciones y demostraciones."
@@ -433,9 +424,6 @@
         },
         "2-AP-13": {
           "description": "Descomponer los problemas y subproblemas en partes para facilitar el diseño, la ejecución y la revisión de los programas."
-        },
-        "2-AP-14": {
-          "description": "Crear procedimientos con parámetros para organizar el código y facilitar su reutilización."
         },
         "2-AP-15": {
           "description": "Buscar e incorporar los comentarios de los miembros del equipo y de los usuarios para perfeccionar una solución que satisfaga las necesidades de los usuarios."

@@ -1,0 +1,17 @@
+{
+  "hr-HR": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Razmišljati poput računala"
+        },
+        "L": {
+          "description": "Jezik"
+        },
+        "F": {
+          "description": "Funkcije"
+        }
+      }
+    }
+  }
+}
