@@ -3,7 +3,7 @@
 
 require 'honeybadger/ruby'
 require 'rmagick'
-require_relative '../script_constants'
+require_relative '../../lib/cdo/script_constants'
 require 'cdo/pegasus/donor'
 
 # needed for force_8859_to_utf8
