@@ -590,7 +590,7 @@ WebLab.prototype.openFatalErrorDialog = function(
 
   let errorMessage = weblabI18n.fatalError({message});
   if (type === FatalErrorType.LoadFailure) {
-    errorMessage = weblabI18n.loadFailure();
+    errorMessage = weblabI18n.loadFailure({message});
   } else if (type === FatalErrorType.ResetFailure) {
     errorMessage = weblabI18n.resetFailure({message});
   }
