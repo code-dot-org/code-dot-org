@@ -103,7 +103,7 @@ export default class ResourceList extends Component {
       )}
       {isGDocsUrl(resource.url) && (
         <DropdownButton
-          text="Make a Copy"
+          text={i18n.makeACopy()}
           color={Button.ButtonColor.gray}
           size={Button.ButtonSize.small}
         >
