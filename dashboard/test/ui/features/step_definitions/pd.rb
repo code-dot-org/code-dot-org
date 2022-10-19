@@ -44,41 +44,32 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   }
 end
 
-Given(/^I am a program manager with a regional partner and teacher application$/) do
-  require_rails_env
+And(/^I get program manager access$/) do
+  browser_request(url: '/api/test/program_manager_access', method: 'POST')
+end
 
-  @rp_name = "regional-partner-#{Time.now.to_i}-#{rand(1_000_000)}"
-  regional_partner = RegionalPartner.create!(name: @rp_name)
-
-  teacher_name = "teacher#{Time.now.to_i}#{rand(1_000_000)}"
-  teacher_email = "teacher-#{Time.now.to_i}-#{rand(1_000_000)}@test.xx"
-  password = teacher_name + "password"
-  attributes = {
-    name: teacher_name,
-    email: teacher_email,
-    password: password,
-    user_type: "teacher",
-    age: "21+"
+Given(/^I am a program manager$/) do
+  @pm_name = "Program Manager#{Time.now.to_i}_#{rand(1_000_000)}"
+  steps %{
+    Given I create a teacher named "#{@pm_name}"
+    And I get program manager access
   }
-  teacher = User.create!(attributes)
+end
 
-  form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, 'csp'.to_sym, first_name: teacher_name, last_name: 'teacher')
-  FactoryGirl.create(
-    :pd_teacher_application,
-    form_data_hash: form_data_hash,
-    user: teacher,
-    status: 'unreviewed',
-    regional_partner_id: regional_partner.id
+Given(/^I have a regional partner with a teacher application$/) do
+  response = browser_request(url: '/api/test/create_teacher_application', method: 'POST')
+  data = JSON.parse(response)
+  @rp_id = data['rp_id']
+  @teacher_id = data['teacher_id']
+  @application_id = data['application_id']
+end
+
+Given(/^I delete the program manager, regional partner, teacher, and application$/) do
+  browser_request(
+    url: '/api/test/create_teacher_application',
+    method: 'POST',
+    body: {pm_name: @pm_name, rp_id: @rp_id, teacher_id: @teacher_id, application_id: @application_id}
   )
-
-  pm_name = "pm#{Time.now.to_i}#{rand(1_000_000)}"
-  email, password = generate_user(pm_name)
-
-  FactoryGirl.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
-
-  steps %Q{
-    And I sign in as "#{pm_name}"
-  }
 end
 
 Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
