@@ -26,6 +26,12 @@ a:visited {
       background-color: $white;
       cursor: pointer;
     }
+
+    &:disabled,
+    &[disabled] {
+      // Override the cursor:pointer on disabled elements.
+      cursor: auto;
+    }
   }
 
   // Note no "&" on these two, since they'll be on child elements.
