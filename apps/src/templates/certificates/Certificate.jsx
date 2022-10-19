@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -30,13 +30,13 @@ function reEncodeNonLatin1(data) {
 function Certificate(props) {
   const [personalized, setPersonalized] = useState(false);
   const [studentName, setStudentName] = useState();
-  const nameInputRef = useRef(null);
+  const [studentNameInput, setStudentNameInput] = useState('');
 
   const personalizeCertificate = session => {
     if (isHocTutorial && session) {
       personalizeHocCertificate(session);
     } else {
-      setStudentName(nameInputRef.current.value);
+      setStudentName(studentNameInput);
       setPersonalized(true);
     }
   };
@@ -48,7 +48,7 @@ function Certificate(props) {
       dataType: 'json',
       data: {
         session_s: session,
-        name_s: nameInputRef.current.value
+        name_s: studentNameInput
       }
     }).done(response => {
       if (response.certificate_sent) {
@@ -81,6 +81,10 @@ function Certificate(props) {
   const getCertificateSharePath = () => {
     const encoded = getEncodedParams();
     return `/certificates/${encoded}`;
+  };
+
+  const onStudentNameInputChange = event => {
+    setStudentNameInput(event.target.value);
   };
 
   const {
@@ -143,7 +147,8 @@ function Certificate(props) {
               type="text"
               style={styles.nameInput}
               placeholder={i18n.yourName()}
-              ref={nameInputRef}
+              value={studentNameInput}
+              onChange={onStudentNameInputChange}
             />
             <button
               type="button"
