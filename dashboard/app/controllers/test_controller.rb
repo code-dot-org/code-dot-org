@@ -1,5 +1,7 @@
 # Controller actions used only to facilitate UI tests.
 class TestController < ApplicationController
+  include FactoryGirl::Syntax::Methods
+  include Pd::Application::ActiveApplicationModels
   layout false
 
   def levelbuilder_access
@@ -26,6 +28,13 @@ class TestController < ApplicationController
   def facilitator_access
     return unless (user = current_user)
     user.permission = UserPermission::FACILITATOR
+    user.save!
+    head :ok
+  end
+
+  def program_manager_access
+    return unless (user = current_user)
+    user.permission = UserPermission::PROGRAM_MANAGER
     user.save!
     head :ok
   end
@@ -173,6 +182,44 @@ class TestController < ApplicationController
   def destroy_level
     level = Level.find(params[:id])
     level.destroy
+    head :ok
+  end
+
+  def create_teacher_application
+    return unless (user = current_user)
+    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}")
+
+    RegionalPartnerProgramManager.create!(program_manager_id: user.id, regional_partner_id: regional_partner.id)
+
+    teacher_name = "teacher#{Time.now.to_i}-{rand(1_000_000)}"
+    teacher_email = "teacher#{Time.now.to_i}-#{rand(1_000_000)}@test.xx"
+    password = teacher_name + "password"
+    attributes = {
+      name: teacher_name,
+      email: teacher_email,
+      password: password,
+      user_type: "teacher",
+      age: "21+"
+    }
+    teacher = User.create!(attributes)
+
+    form_data = FactoryGirl.build(:pd_teacher_application_hash_common, :csp).to_json
+    application = Pd::Application::TeacherApplication.create!(
+      user: teacher,
+      form_data: form_data,
+      regional_partner_id: regional_partner.id,
+      course: 'csp',
+      status: 'unreviewed'
+    )
+
+    render json: {rp_id: regional_partner.id, teacher_id: teacher.id, application_id: application.id}
+  end
+
+  def delete_rp_pm_teacher_application
+    User.find_by(name: params[:pm_name]).destroy
+    RegionalPartner.find(params[:rp_id]).destroy
+    User.find(params[:teacher_id]).destroy
+    Pd::Application::TeacherApplication.find(params[:application_id]).destroy
     head :ok
   end
 end
