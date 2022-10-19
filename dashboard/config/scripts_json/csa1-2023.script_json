@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-17 20:10:46 UTC",
+    "serialized_at": "2022-10-18 14:18:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -216,7 +216,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can I write algorithms using sequencing, selection, and iteration in Java?**\n\nStudents have learned how to implement algorithms in Java that repeat a set of instructions while a condition is `true`. In this lesson, students explore selection and learn how to write algorithms using sequencing, selection, and iteration. Students discover additional methods in the `Painter` class that they can use in their algorithms to allow their `Painter` objects to make better decisions about which direction to move or turn or whether or not to paint. Students then practice writing algorithms using these components and methods while revisiting inheritance to create a subclass of the `PainterPlus` class.",
-        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the Investigate: Selection Statements handout (one for each pair of students)\n* Preview the *Conditional Statements* video\n* Gather index cards or scrap pieces of paper (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the Investigate: Selection Statements handout (one for each pair of students)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Preview the *Conditional Statements* video\n* Gather index cards or scrap pieces of paper (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I write algorithms using sequencing, selection, and iteration in Java?**\n\nYou have learned how to implement algorithms in Java that repeat a set of instructions while a condition is `true`. In this lesson, you explore selection and learn how to write algorithms using sequencing, selection, and iteration. You discover additional methods in the `Painter` class that you can use in your algorithms to allow your `Painter` objects to make better decisions about which direction to move or turn or whether or not to paint. You then practice writing algorithms using these components and methods while revisiting inheritance to create a subclass of the `PainterPlus` class."
       },
       "seeding_key": {
@@ -5626,6 +5626,18 @@
       }
     },
     {
+      "name": "[KEY] Writing Algorithms",
+      "url": "https://docs.google.com/document/d/1uCOCQOXlHaE6L1wZlSxRJTCqpo0fegaU-X8_740ATEY/edit?usp=sharing",
+      "key": "_key_writing_algorithms_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_writing_algorithms_1"
+      }
+    },
+    {
       "name": "Calling Methods",
       "url": "https://youtu.be/CPE_lYGCw3A",
       "key": "calling_methods",
@@ -6096,6 +6108,19 @@
       }
     },
     {
+      "name": "Writing Algorithms",
+      "url": "https://docs.google.com/document/d/144ApH6Rzo78GDtLtLIzHJj50EZZiz4JUsRgUdI95qrs/edit?usp=sharing",
+      "key": "writing_algorithms_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "writing_algorithms_1"
+      }
+    },
+    {
       "name": "Writing Methods",
       "url": "https://docs.google.com/presentation/d/1yST_x1sNq2yOtlmWqqXYT80-WxABrUsuu_S_w12VSWM/edit?usp=sharing",
       "key": "writing_methods",
@@ -6148,6 +6173,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
+        "resource.key": "_key_writing_algorithms_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "conditional_statements"
       }
     },
@@ -6167,6 +6198,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "writing_algorithms_1"
       }
     },
     {
