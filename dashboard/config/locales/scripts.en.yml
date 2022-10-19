@@ -8346,12 +8346,13 @@ en:
           lessons: {}
         dlp-csd-mod3-2022:
           title: 2022 CS Discoveries Deeper Learning Module B
-          description: "##This module will be published by October 3, 2022."
+          description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
           lesson_groups: {}
           name: dlp-csd-mod3-2022
+          lessons: {}
         dlp-csd-mod4-2022:
           title: 2022 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description: ''
@@ -8379,12 +8380,13 @@ en:
           lessons: {}
         dlp-csp-mod3-2022:
           title: 2022 CS Principles Deeper Learning Module B
-          description: "##This module will be published by October 3, 2022."
+          description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
           lesson_groups: {}
           name: dlp-csp-mod3-2022
+          lessons: {}
         dlp-csp-mod4-2022:
           title: 2022 CS Principles Deeper Learning Module 4  for Workshop 4
           description: ''
