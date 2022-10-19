@@ -29,7 +29,7 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const baseUrl = 'https://cdo-dev-music-prototype.s3.amazonaws.com/';
+const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
 var hooks = {};
 
