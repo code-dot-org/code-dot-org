@@ -938,8 +938,12 @@ fa:
               display_name: دروس
         spelling-bee:
           title: زنبور عسل هجی کن
+        csd-post-survey-2021:
+          title: پرسشنامه پسادوره یافته های cs
         ai-ethics-2021:
           description_audience: رده سنی ۶-۱۲
+        explore-data-1-2021:
+          title: به تصویر در آوردن داده ها
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -1050,6 +1054,8 @@ fa:
               display_name: اسپرایت
             lessonGroup-8:
               display_name: متغیرها
+        csd-post-survey-2022:
+          title: پرسشنامه پسادوره یافته های cs
         soccer:
           name: فوتبال
         csa1-2023:
