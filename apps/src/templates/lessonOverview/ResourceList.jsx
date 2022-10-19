@@ -5,7 +5,12 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {windowOpen} from '@cdo/apps/utils';
 import DropdownButton from '../DropdownButton';
 import Button from '../Button';
-import {isGDocsUrl, gDocsPdfUrl, gDocsMsOfficeUrl, gDocsCopyUrl} from './utils';
+import {
+  isGDocsUrl,
+  gDocsPdfUrl,
+  gDocsMsOfficeUrl,
+  gDocsCopyUrl
+} from './googleDocsUtils';
 
 export default class ResourceList extends Component {
   static propTypes = {
