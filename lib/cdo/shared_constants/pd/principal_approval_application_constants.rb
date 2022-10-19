@@ -34,7 +34,7 @@ module Pd
       pay_fee: 'If there is a fee for the program, would your school be able to pay for the fee?',
       contact_invoicing: "Contact name for invoicing (if applicable)",
       contact_invoicing_detail: "Contact email or phone number for invoicing (if applicable)",
-      confirm_principal: 'By submitting this application, I confirm that I am the principal of this school and agree to share my contact info, school info, and this application with [regional partner].',
+      confirm_principal: 'By submitting this application, I confirm that I am an Administrator/School Leader of this school and agree to share my contact info, school info, and this application with [regional partner].',
 
       school: 'School',
       school_name: 'School Name',

@@ -197,7 +197,8 @@ const PrincipalApprovalComponent = props => {
 
         <p style={styles.questionText}>
           {regionalPartner ? regionalPartner.name : 'Your regional partner'} may
-          have scholarships available to cover the cost of the program.{' '}
+          have scholarships available to cover some or all costs associated with
+          the program.{' '}
           <a
             href={
               'https://code.org/educate/professional-learning/program-information' +
