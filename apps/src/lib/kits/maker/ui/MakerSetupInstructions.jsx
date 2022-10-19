@@ -35,10 +35,6 @@ const style = {
   icon: {
     float: 'left',
     padding: '5px'
-  },
-  main: {
-    width: '80%',
-    maxWidth: '800px'
   }
 };
 
