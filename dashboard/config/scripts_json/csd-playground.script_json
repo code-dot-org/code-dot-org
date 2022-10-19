@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-10-14 20:33:06 UTC",
+    "serialized_at": "2022-10-18 22:43:56 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -146,6 +146,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Physical Computing PSP",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -2713,6 +2728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_test2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -2735,6 +2753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Temp Markdown Video"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -2757,6 +2778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2779,6 +2803,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2801,6 +2828,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2823,6 +2853,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2845,6 +2878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2867,6 +2903,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2889,6 +2928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_test2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2911,6 +2953,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_test2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2933,6 +2978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_test2023"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
