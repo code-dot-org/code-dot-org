@@ -108,63 +108,6 @@ module Pd::Application
           'No, computer science is new to my school',
           TEXT_FIELDS[:dont_know_explain]
         ],
-        replace_which_course_csp: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csd:  [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csa: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
         committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
           'Yes, my school would be able to pay the full program fee.',
@@ -200,16 +143,6 @@ module Pd::Application
               :understand_fee,
               :pay_fee
             ]
-
-            if hash[:replace_course] == self.class.options(year)[:replace_course][0]
-              if teacher_application&.course == 'csd'
-                required << :replace_which_course_csd
-              elsif teacher_application&.course == 'csp'
-                required << :replace_which_course_csp
-              elsif teacher_application&.course == 'csa'
-                required << :replace_which_course_csa
-              end
-            end
           end
         end
       end
@@ -224,9 +157,6 @@ module Pd::Application
         [:committed_to_master_schedule],
         [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
         [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
-        [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
-        [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
-        [:replace_which_course_csa, TEXT_FIELDS[:other_please_explain], :replace_which_course_csa_other],
         [:do_you_approve],
         [:contact_invoicing],
         [:contact_invoicing_detail]

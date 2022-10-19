@@ -881,12 +881,10 @@ FactoryGirl.define do
 
     trait :replace_course_yes_csp do
       replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
     end
 
     trait :replace_course_yes_csd do
       replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
     end
 
     trait :approved_yes do

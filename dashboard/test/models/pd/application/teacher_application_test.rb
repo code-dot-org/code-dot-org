@@ -843,8 +843,7 @@ module Pd::Application
         },
         {
           principal_answers: {
-            replace_course: principal_options[:replace_course].first,
-            replace_which_course_csp: principal_options[:replace_which_course_csp].first
+            replace_course: principal_options[:replace_course].first
           },
           meet_requirement: NO
         },

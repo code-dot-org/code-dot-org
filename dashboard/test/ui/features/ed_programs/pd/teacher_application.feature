@@ -110,7 +110,6 @@ Scenario: Teacher starts a new application and submits it
 
   Then I press the first "input[name='committedToMasterSchedule']" element
   Then I press the first "input[name='replaceCourse']" element
-  Then I press the first "input[name='replaceWhichCourseCsd']" element
 
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
