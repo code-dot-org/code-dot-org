@@ -21,7 +21,6 @@
 #  index_unit_groups_on_published_state       (published_state)
 #
 
-require 'cdo/script_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
