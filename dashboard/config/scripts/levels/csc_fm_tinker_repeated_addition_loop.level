@@ -18,7 +18,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "##Tinkerer\r\n**Geez, this is getting tedious. We could use a loop!**\r\n\r\nA loop block will repeat the code inside of it as many times as you tell it to.\r\n\r\n- Putting our code in a `repeat 1 time` loop is the same as multiplying by 1. \r\n- If we want to get an output of 4, how many times should we repeat the `addTwo` function? ",
+    "long_instructions": "##Tinkerer\r\n- How would you rewrite the code so that the `plusTwo` function is repeated 5 times in a loop?\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -36,10 +36,10 @@
   },
   "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-10-12T22:22:29.000Z",
+  "created_at": "2022-10-19T19:33:42.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-12T22:22:29.298+00:00\",\"changed\":[\"cloned from \\\"csc_fm_tinker_click10\\\"\"],\"cloned_from\":\"csc_fm_tinker_click10\"},{\"changed_at\":\"2022-10-12 22:22:49 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:23:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:23:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-19 19:22:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:37:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:45:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:45:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-19T19:33:42.713+00:00\",\"changed\":[\"cloned from \\\"csc_fm_tinker_repeated_addition\\\"\"],\"cloned_from\":\"csc_fm_tinker_repeated_addition\"},{\"changed_at\":\"2022-10-19 19:33:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:34:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:48:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:48:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:52:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -97,8 +97,8 @@
           <next>
             <block type="controls_repeat_ext">
               <value name="TIMES">
-                <block type="math_number">
-                  <field name="NUM">1</field>
+                <block type="gamelab_int10">
+                  <field name="VALUE">1</field>
                 </block>
               </value>
               <statement name="DO">

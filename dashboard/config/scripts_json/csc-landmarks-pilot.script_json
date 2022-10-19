@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-landmarks-pilot",
-    "serialized_at": "2022-10-13 21:35:44 UTC",
+    "serialized_at": "2022-10-19 18:51:21 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -49,12 +49,27 @@
       }
     },
     {
-      "key": "US Landmarks",
-      "name": "Local Landmarks",
+      "key": "lesson-4",
+      "name": "Local Landmarks - Unplugged",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-landmarks-pilot"
+      }
+    },
+    {
+      "key": "US Landmarks",
+      "name": "Local Landmarks - Coding Your Project",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -66,10 +81,10 @@
     {
       "key": "lesson-3",
       "name": "Local Storytellers",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -180,6 +195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_demo_usa_map"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -705,6 +723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_demo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -726,6 +747,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_predict"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -747,6 +771,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_background"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -768,6 +795,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_tell2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -789,6 +819,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_sotires_debug"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -810,6 +843,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_details"
+        ]
       },
       "bonus": false,
       "seeding_key": {
