@@ -101,7 +101,7 @@ export default class ResourceList extends Component {
         </span>
       )}
       {isGDocsUrl(resource.url) && (
-        <DropdownButton text="Make a Copy" color="gray" size="inline">
+        <DropdownButton text="Make a Copy" color="gray" size="small">
           <a href={gDocsPdfUrl(resource.url)}>PDF</a>
           <a href={gDocsMsOfficeUrl(resource.url)}>Microsoft Office</a>
           <a href={gDocsCopyUrl(resource.url)}>Google Docs</a>
