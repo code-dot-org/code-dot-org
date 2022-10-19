@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import experiments from '@cdo/apps/util/experiments';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import MakerSetupInstructions from '@cdo/apps/lib/kits/maker/ui/MakerSetupInstructions';
+import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import applabI18n from '@cdo/applab/locale';
 import i18n from '@cdo/locale';
 
@@ -49,7 +49,7 @@ const setupGuideContent = {
   }
 };
 
-export default class MakerSetupGuide extends React.Component {
+export default class SetupGuide extends React.Component {
   render() {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
     let isMicrobit = experiments.isEnabled('microbit');
@@ -71,7 +71,7 @@ export default class MakerSetupGuide extends React.Component {
           <DescriptionCard {...setupGuideContent.circuitPlayground} />
         )}
         <div id="setup-status-mount">
-          <MakerSetupInstructions />
+          <SetupInstructions />
         </div>
         <div className="setup-support">
           <h2>{i18n.support()}</h2>

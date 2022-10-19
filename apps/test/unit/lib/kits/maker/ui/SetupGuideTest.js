@@ -15,14 +15,15 @@ describe('MakerSetupGuide', () => {
       description = wrapper.findWhere(
         n => n.prop('class') === 'circuit-playground-description'
       );
+      markdown = description.shallow().find('SafeMarkdown');
       expect(description.prop('title')).to.contain(
         applabI18n.makerSetupCircuitPlaygroundTitle()
       );
-      markdown = description.shallow().find('SafeMarkdown');
       expect(markdown.prop('markdown')).to.contain(
         applabI18n.makerSetupCircuitPlaygroundDescription()
       );
     });
+
     it('does not render microbit description', () => {
       const wrapper = shallow(<MakerSetupGuide />);
       description = wrapper.findWhere(
@@ -31,24 +32,28 @@ describe('MakerSetupGuide', () => {
       expect(description.isEmpty()).to.equal(true);
     });
   });
+
   describe('Microbit experiment is enabled', () => {
     let description;
     let markdown;
+
     before(() => experiments.setEnabled('microbit', true));
     after(() => experiments.setEnabled('microbit', false));
+
     it('renders circuit playground description', () => {
       const wrapper = shallow(<MakerSetupGuide />);
       description = wrapper.findWhere(
         n => n.prop('class') === 'circuit-playground-description'
       );
+      markdown = description.shallow().find('SafeMarkdown');
       expect(description.prop('title')).to.contain(
         applabI18n.makerSetupCircuitPlaygroundTitle()
       );
-      markdown = description.shallow().find('SafeMarkdown');
       expect(markdown.prop('markdown')).to.contain(
         applabI18n.makerSetupCircuitPlaygroundDescription()
       );
     });
+
     it('renders microbit description description', () => {
       const wrapper = shallow(<MakerSetupGuide />);
       description = wrapper.findWhere(
