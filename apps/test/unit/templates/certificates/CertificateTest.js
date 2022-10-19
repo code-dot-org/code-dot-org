@@ -49,7 +49,7 @@ describe('Certificate', () => {
       server.restore();
     });
 
-    it('renders code studio image urls', () => {
+    it('renders code studio image urls with tutorial and session id', () => {
       const data = {
         certificate_sent: true,
         name: 'Student'
@@ -94,6 +94,35 @@ describe('Certificate', () => {
       const expectedFilename = btoa(JSON.stringify(expectedData));
       const expectedSrc = `/certificate_images/${expectedFilename}.jpg`;
       expect(image.prop('src')).to.equal(expectedSrc);
+    });
+
+    it('renders code studio image urls without tutorial or session id', () => {
+      const initialCertificateImageUrl =
+        'https://code.org/images/placeholder-hoc-image.jpg';
+      const wrapper = wrapperWithParams({
+        initialCertificateImageUrl,
+        isHocTutorial: true
+      });
+      let image = wrapper.find('#uitest-certificate img');
+      expect(image.prop('src')).to.equal(initialCertificateImageUrl);
+
+      const input = wrapper.find('input#name');
+      input.simulate('change', {target: {value: 'Student'}});
+      const submitButton = wrapper
+        .find('button')
+        .filterWhere(button => button.text() === 'Submit');
+      submitButton.simulate('click');
+      server.respond();
+
+      wrapper.update();
+      image = wrapper.find('#uitest-certificate img');
+      const expectedJson = JSON.stringify({name: 'Student'});
+
+      const src = image.prop('src');
+      const encoded = src.match(/^\/certificate_images\/([^.]+)\.jpg$/)[1];
+      const actualJson = atob(encoded);
+
+      expect(actualJson).to.equal(expectedJson);
     });
   });
 });
