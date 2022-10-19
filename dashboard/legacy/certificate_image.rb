@@ -214,26 +214,24 @@ class CertificateImage
   end
 
   def self.certificate_template_for(course)
-    if hoc_course?(course)
-      if ScriptConstants.unit_in_category?(:minecraft, course)
-        if course == ScriptConstants::MINECRAFT_HERO_NAME
-          'MC_Hour_Of_Code_Certificate_Hero.png'
-        elsif course == ScriptConstants::MINECRAFT_AQUATIC_NAME
-          'MC_Hour_Of_Code_Certificate_Aquatic.png'
-        else
-          'MC_Hour_Of_Code_Certificate.png'
-        end
-      elsif course == 'mee'
-        'MC_Hour_Of_Code_Certificate_mee.png'
-      elsif course == 'mee_empathy'
-        'MC_Hour_Of_Code_Certificate_mee_empathy.png'
-      elsif course == 'mee_timecraft'
-        'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
-      elsif course == ScriptConstants::OCEANS_NAME
-        'oceans_hoc_certificate.png'
+    if ScriptConstants.unit_in_category?(:minecraft, course)
+      if course == ScriptConstants::MINECRAFT_HERO_NAME
+        'MC_Hour_Of_Code_Certificate_Hero.png'
+      elsif course == ScriptConstants::MINECRAFT_AQUATIC_NAME
+        'MC_Hour_Of_Code_Certificate_Aquatic.png'
       else
-        'hour_of_code_certificate.jpg'
+        'MC_Hour_Of_Code_Certificate.png'
       end
+    elsif course == 'mee'
+      'MC_Hour_Of_Code_Certificate_mee.png'
+    elsif course == 'mee_empathy'
+      'MC_Hour_Of_Code_Certificate_mee_empathy.png'
+    elsif course == 'mee_timecraft'
+      'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
+    elsif course == ScriptConstants::OCEANS_NAME
+      'oceans_hoc_certificate.png'
+    elsif hoc_course?(course)
+      'hour_of_code_certificate.jpg'
     elsif ScriptConstants.unit_in_category?(:twenty_hour, course) || course == ScriptConstants::ACCELERATED_NAME
       # The 20-hour course is referred to as "accelerated" throughout the
       # congrats and certificate pages (see csf_finish_url).
