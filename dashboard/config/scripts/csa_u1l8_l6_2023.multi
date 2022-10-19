@@ -21,3 +21,7 @@ a.move();
 }
 ```
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Students should consider TAG and guidelines for helpful feedback discussed during the lesson.
+MARKDOWN
