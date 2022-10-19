@@ -26,14 +26,14 @@ const ButtonSize = {
   default: 'default',
   large: 'large',
   narrow: 'narrow',
-  inline: 'inline'
+  small: 'small'
 };
 
 const ButtonHeight = {
   default: 34,
   large: 40,
   narrow: 40,
-  inline: 20
+  small: 20
 };
 
 class Button extends React.Component {

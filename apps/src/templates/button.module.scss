@@ -4,7 +4,7 @@
 $button-height-default: 34px;
 $button-height-large: 40px;
 $button-height-narrow: 40px;
-$button-height-inline: 20px;
+$button-height-small: 20px;
 
 div,
 button,
@@ -205,8 +205,8 @@ a:visited {
     line-height: 40px;
   }
 
-  &.inline {
-    height: $button-height-inline;
+  &.small {
+    height: $button-height-small;
     padding-left: 5px;
     padding-right: 5px;
     line-height: 20px;
