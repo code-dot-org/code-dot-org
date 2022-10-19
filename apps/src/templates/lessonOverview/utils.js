@@ -33,7 +33,8 @@ export function isGDocsUrl(s) {
 }
 
 // Return a Google Docs URL in the expected format, to be appended to by
-// the more specific functions below.
+// the more specific functions below. May raise TypeError if the URL has
+// not been checked for validity with isGDocsUrl.
 export function gDocsBaseUrl(url) {
   const matches = GDOCS_REGEX.exec(url);
   const docType = matches[1];
