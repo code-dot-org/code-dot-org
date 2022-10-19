@@ -1,10 +1,10 @@
 @no_mobile
-@dashboard_db_access
 
 Feature: Teacher Application Detail View
 
   Scenario: Regional Partner can set Principal Approval as Not Required and Required
-    Given I am a program manager with a regional partner and teacher application
+    Given I am a program manager
+    And I have a regional partner with a teacher application
     And I am on "http://studio.code.org/pd/application_dashboard/summary"
     Then I wait until element "table#summary-csp-teachers" is visible
 
@@ -21,3 +21,5 @@ Feature: Teacher Application Detail View
     Then I scroll the "#change-principal-approval-requirement" element into view
     Then I click selector "button:contains('Make required')"
     And I wait until element "button:contains('Make not required')" is visible
+
+    And I delete the program manager, regional partner, teacher, and application
