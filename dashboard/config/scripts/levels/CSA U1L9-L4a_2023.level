@@ -5,7 +5,550 @@
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
+    "csa_view_mode": "neighborhood",
+    "display_name": "The TrafficPainter",
+    "long_instructions": "**The `Painter`(#e7e8ea) has a new job, and they need help painting lines on each side of the taxis to help manage the traffic in The Neighborhood.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Write the `TrafficPainter`(#e7e8ea) class and the method `paintLines()`(#e7e8ea) to paint lines next to a taxi.\r\n\r\n1. Write the `TrafficPainter`(#e7e8ea) class to be a subclass of the `PainterPlus`(#e7e8ea) class.\r\n\r\n2. Write the method `paintLines()`(#e7e8ea) with the parameter `String color`(#e7e8ea) to have a `Painter`(#e7e8ea) object paint a line if it is next to a taxi.\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\nHere is one approach to solving this problem.\r\n\r\n```\r\nwhile the Painter has paint\r\n   if the Painter can move east\r\n      move\r\n   \r\n   paint with the color\r\n   \r\n   if the Painter can move forward\r\n      move\r\n```\r\n:::\r\n&nbsp;\r\n\r\n3. In `NeighborhoodRunner.java`(#e7e8ea), create a `TrafficPainter`(#e7e8ea) object and use your `paintLines()`(#e7e8ea) method to paint lines on both sides of each taxi.\r\n\r\n📝 Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/eada3fab28a27c9472d67a443649574c-image-1666027147493.gif)\r\n\r\n::: details [**📖 Show Me How**]\r\n###Selection Statements\r\n\r\nAn `if`(#e7e8ea) statement is written using the following syntax:\r\n\r\n```\r\nif (condition) {\r\n   // code to execute\r\n}\r\n```\r\n\r\n###Writing a Subclass\r\n\r\nUse the `extends`(#e7e8ea) keyword to indicate that the class is a subclass and the superclass it inherits from.\r\n\r\n```\r\npublic class NameOfSubclass extends NameOfSuperclass {\r\n\r\n}\r\n```\r\n\r\nBe sure to replace `NameOfSubclass`(#e7e8ea) with the name of the class you are creating as the subclass and `NameOfSuperclass`(#e7e8ea) with the name of the superclass this class should inherit from.\r\n:::",
+    "bubble_choice_description": "The Painter has a new job, and they need help painting lines on each side of the taxis to help manage the traffic in The Neighborhood.",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 6,
+          "assetId": 303
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 47
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 1
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 50
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 2
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 3
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 302
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 301
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 4
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 5
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 300
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 299
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 123
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 124
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 125
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 298
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 297
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 129
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 130
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 131
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 47
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 1
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 135
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 136
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 137
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 2
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 3
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 302
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 301
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 143
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 144
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 145
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 4
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 5
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 300
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 299
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 97
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 151
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 152
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 153
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 6,
+          "assetId": 303
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 298
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 297
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 98
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 76
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 51
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "start_sources": {
+      "NeighborhoodRunner.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    // Creates a TrafficPainter object\n    TrafficPainter mika = new TrafficPainter();\n\n    // Moves forward while TrafficPainter can move\n    while (mika.canMove()) {\n      mika.move();\n    }\n\n    // Takes all the paint from the paint bucket\n    while (mika.isOnBucket()) {\n      mika.takePaint();\n    }\n\n    // Turns right\n    mika.turnRight();\n\n    // Paints the first line next to the taxis\n    mika.paintRow(\"white\");\n\n    // Turns left\n    mika.turnLeft();\n\n    // Moves forward while TrafficPainter can move\n    while(mika.canMove()) {\n      mika.move();\n    }\n\n    // Takes all the paint from the paint bucket\n    while (mika.isOnBucket()) {\n      mika.takePaint();\n    }\n\n    // Turns left\n    mika.turnLeft();\n\n    // Paints the second line next to the taxis\n    mika.paintRow(\"white\");\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "TrafficPainter.java": {
+        "text": "import org.code.neighborhood.*;\n\n/*\n * TrafficPainter is a subclass of PainterPlus.\n * The TrafficPainter paints lines next to a taxi.\n */\npublic class TrafficPainter extends PainterPlus {\n\n  /*\n   * Paints a line while TrafficPainter has paint\n   * and there is not a space between the taxis\n   */\n  public void paintLines(String color) {\n    while (hasPaint()) {\n      if (canMove(\"east\")) {\n        move();\n      }\n\n      paint(color);\n\n      if (canMove()) {\n        move();\n      }\n    }\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "PainterPlus.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class PainterPlus extends Painter {\n\n  // Turns the Painter to the right\n  public void turnRight() {\n    turnLeft();\n    turnLeft();\n    turnLeft();\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "encrypted_exemplar_sources": "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\nJrd4r27w7JU=\n",
     "encrypted_examples": [
 
     ]
@@ -15,6 +558,6 @@
   "created_at": "2022-10-14T22:05:22.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-10-14T22:05:22.058+00:00\",\"changed\":[\"cloned from \\\"CSA U1L9-L2_2023\\\"\"],\"cloned_from\":\"CSA U1L9-L2_2023\"},{\"changed_at\":\"2022-10-14 22:05:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-14T22:05:22.058+00:00\",\"changed\":[\"cloned from \\\"CSA U1L9-L2_2023\\\"\"],\"cloned_from\":\"CSA U1L9-L2_2023\"},{\"changed_at\":\"2022-10-14 22:05:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 15:47:37 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 16:49:41 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 16:51:04 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 18:46:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 18:54:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 19:23:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 19:58:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 19:58:11 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:08:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:08:38 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:13:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:21:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:21:35 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:22:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:24:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:24:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:25:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:25:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:26:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:26:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:28:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:28:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 20:41:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 21:03:53 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 21:05:51 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 21:07:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 21:07:28 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-18 21:08:13 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
