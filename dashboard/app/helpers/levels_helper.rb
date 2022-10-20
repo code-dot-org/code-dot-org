@@ -260,7 +260,7 @@ module LevelsHelper
     end
 
     if @script
-      view_options(script_name: @script.name)
+      view_options(script_name: @script.name, script_year: @script.get_course_version.key)
     end
 
     unless params[:share]

@@ -6,6 +6,7 @@ import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import i18n from '@cdo/locale';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -45,7 +46,8 @@ export default class SmallFooter extends React.Component {
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
     fullWidth: PropTypes.bool,
-    channel: PropTypes.string
+    channel: PropTypes.string,
+    scriptYear: PropTypes.string
   };
 
   state = {
@@ -193,6 +195,11 @@ export default class SmallFooter extends React.Component {
         >
           {this.renderI18nDropdown()}
           {this.renderCopyright()}
+          {!!this.props.scriptYear && (
+            <p>
+              {i18n.version()}: {this.props.scriptYear}
+            </p>
+          )}
           {this.renderMoreMenuButton()}
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
