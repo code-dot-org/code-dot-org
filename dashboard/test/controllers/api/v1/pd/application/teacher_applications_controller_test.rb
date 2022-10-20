@@ -155,7 +155,10 @@ module Api::V1::Pd::Application
     end
 
     test 'updates course hours, autoscores, and queues email once application is submitted' do
-      application_hash = build :pd_teacher_application_hash_common, :csp
+      application_hash = build :pd_teacher_application_hash_common, :csp,
+                               cs_how_many_minutes: 45,
+                               cs_how_many_days_per_week: 5,
+                               cs_how_many_weeks_per_year: 30
       application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
 
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
@@ -167,6 +170,7 @@ module Api::V1::Pd::Application
 
       sign_in @applicant
       put :update, params: {id: application.id, form_data: application_hash, status: 'unreviewed'}
+      assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
