@@ -795,18 +795,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(document).ready(function () {
-  init();
+  initExtendedMap();
 });
 
-function init() {
+function initExtendedMap() {
   if (Raphael) {
-    initMap();
+    renderMap();
   } else {
-    setTimeout(init, 100);
+    setTimeout(initExtendedMap, 100);
   }
 };
 
-function initMap() {
+function renderMap() {
   setupMapDrawing(jQuery, document, window, Raphael);
 
   if (useUrl) {
