@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import JobBoard from './JobBoardComponent';
+import JobBoard from '@cdo/apps/templates/jobBoard/JobBoard';
 
 $(document).ready(showJobBoard);
 
@@ -14,6 +14,17 @@ function showJobBoard() {
     url: 'https://boards-api.greenhouse.io/v1/boards/codeorg/jobs?content=true'
   })
     .done(result => {
+      // Reshape into an object with jobs by department. Shape:
+      // {
+      //   departmentName: "Engineering",
+      //   jobs: [
+      //           {
+      //             jobTitle: "Software Engineer"
+      //             location: "Seattle",
+      //             applicationUrl: "https://boards.greenhouse.io/codeorg/jobs/4098667005"
+      //           },...
+      //   ]
+      // }
       result.jobs.forEach(job => {
         const departmentName = job.departments[0].name;
         if (!departmentName) {
