@@ -30,7 +30,7 @@ export const FUNCTION_BLOCK = {
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns XML block elements
  */
-export function FUNCTION_CATEGORY(workspace) {
+export function FUNCTION_CATEGORY(workspace, testProcedures) {
   const xmlList = [];
   // Create a block with the following XML:
   // <block type="procedures_defnoreturn" gap="16">
@@ -47,15 +47,15 @@ export function FUNCTION_CATEGORY(workspace) {
     )
   );
   block.appendChild(nameField);
+  // Add slightly larger gap between system blocks and user calls.
+  block.setAttribute('gap', 24);
   xmlList.push(block);
 
-  if (xmlList.length) {
-    // Add slightly larger gap between system blocks and user calls.
-    xmlList[xmlList.length - 1].setAttribute('gap', 24);
-  }
-
   // Find all user-created procedure definitions in the workspace.
-  const allProcedureCalls = Blockly.Procedures.allProcedures(workspace)[0];
+  // allProcedures returns a pair of arrays, but we only need the first.
+  const allProcedureCalls = workspace
+    ? Blockly.Procedures.allProcedures(workspace)[0]
+    : testProcedures;
   for (let i = 0; i < allProcedureCalls.length; i++) {
     const name = allProcedureCalls[i][0];
     const args = allProcedureCalls[i][1];
