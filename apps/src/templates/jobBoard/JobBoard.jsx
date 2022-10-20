@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// rename this file
 export default function JobBoard({jobsByDepartment}) {
   const renderDepartment = department => {
     return (
@@ -24,7 +23,11 @@ export default function JobBoard({jobsByDepartment}) {
   };
 
   if (Object.keys(jobsByDepartment).length === 0) {
-    return <div>No jobs are available at this time. Check back soon!</div>;
+    return (
+      <div>
+        We currently do not have any openings. Please check back another time!
+      </div>
+    );
   }
   return <div>{Object.values(jobsByDepartment).map(renderDepartment)}</div>;
 }
