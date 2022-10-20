@@ -21,8 +21,13 @@ function TeacherSectionSelectorMenuItem({
   unassignSection
 }) {
   const [isHovering, setIsHovering] = useState(false);
+  const [isPending, setIsPending] = useState(false);
 
   const getIcon = () => {
+    if (isPending) {
+      return <FontAwesome icon="spinner" style={{marginRight: 5}} />;
+    }
+
     if (section.isAssigned && isHovering) {
       return (
         <FontAwesome icon="times" style={{marginRight: 5, color: color.red}} />
@@ -43,8 +48,9 @@ function TeacherSectionSelectorMenuItem({
     e.preventDefault();
     e.stopPropagation();
     console.log(section);
+    setIsPending(true);
     if (section.isAssigned) {
-      unassignSection(section.id);
+      unassignSection(section.id).then(() => setIsPending(false));
     } else {
       assignToSection(
         section.id,
@@ -52,16 +58,24 @@ function TeacherSectionSelectorMenuItem({
         courseOfferingId,
         courseVersionId,
         scriptId
-      ).then(() => console.log('finished!'));
+      ).then(() => setIsPending(false));
+    }
+  };
+
+  const onKeyDown = e => {
+    if (e.key === 'Enter') {
+      onAssignClick(e);
     }
   };
 
   return (
-    <PopUpMenu.Item onClick={onClick} style={styles.item}>
+    <PopUpMenu.Item onClick={onClick} style={styles.item} tabIndex="0">
       <span
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        onClick={onAssignClick}
+        onClick={!isPending && onAssignClick}
+        onKeyDown={!isPending && onKeyDown}
+        tabIndex="0"
       >
         {getIcon()}
       </span>
