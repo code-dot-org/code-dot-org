@@ -14723,15 +14723,11 @@ ja-JP:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: ゾンビは行ったり来たりをくり返します。
-          correct: true
+        - correct: true
           feedback: せいかい！
         - text: ゾンビは、ひまわりに たどり着ける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: ゾンビは、右に曲がったら、その一角を回りつづける。
-          feedback: 不正解、ゾンビは行ったり来たりをくり返します。
         - text: ゾンビは道のおわりから前に進めなくなる。
-          feedback: このプログラムでは、ゾンビは行ったり来たりをくり返します。
         questions:
         - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
       courseD_multi_maze_until2_predict12022:

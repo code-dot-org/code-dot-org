@@ -3379,6 +3379,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Boshlash
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3429,6 +3433,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Spraytlarga kirish
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3532,3 +3540,37 @@ uz:
               display_name: Kontent
             lessonGroup-5:
               display_name: Survey
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Sikllar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Kontent
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          title: The Design Process
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+        csd6-2023:
+          title: Jismoniy hisoblash
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'

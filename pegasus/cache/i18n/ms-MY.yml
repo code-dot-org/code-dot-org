@@ -470,6 +470,7 @@ ms-MY:
   homepage_banner_40k_teachers_link: Ketahui lebih lanjut
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Sesiapa pun boleh belajar. Mulakan hari ini
+  homepage_slot_text_blurb_hoc_2022: Meneroka, Bermain, Mencipta!
   homepage_slot_text_link_hoc: Cuba Hour of Code
   homepage_slot_text_link_about_hoc: Tentang Hour of Code
   homepage_slot_text_link_host: Hos Hour of Code
@@ -2748,3 +2749,5 @@ ms-MY:
   minecraft_tile_alt: Dua watak Minecraft, Steve dan Alex, dengan latar belakang yang
     menunjukkan adegan Minecraft akuatik dengan batu karang, ikan lumba-lumba, dan
     kelpa
+  hoc2022_landing_page_create_title: Buat
+  try_it_yourself: Cubalah sendiri!

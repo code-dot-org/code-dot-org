@@ -482,6 +482,7 @@ it-IT:
   homepage_banner_40k_teachers_link: Ulteriori informazioni
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
+  homepage_slot_text_blurb_hoc_2022: Esplora, gioca, crea!
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
   homepage_slot_text_link_about_hoc: Informazioni sull'Ora del Codice
   homepage_slot_text_link_host: Organizza un'Ora del Codice
@@ -2810,3 +2811,5 @@ it-IT:
   outbreak_tile_subtitle: Un virus ha infettato Monster Town! Codifica un simulatore
     di epidemia e fai previsioni su ciò che accadrà ai vicini di Monster Town.
   footer_cookie_notice: Informativa sui cookie
+  hoc2022_landing_page_create_title: Crea
+  try_it_yourself: Prova da solo!

@@ -976,7 +976,29 @@ es:
         CSA-PL-two-way-selection: Selección bidireccional
         CSA-PL-Printing-in-Java: Impresión en Java
         CSA-PL-multi-selection-statements: Sentencias de Selección Múltiple
+        PL_CSP_TeacherTips_Advice: 'Consejos para Docentes: Asesoramiento a Nuevos
+          Profesores de Informática'
+        PL_CSP_TeacherTips_IntroToCSP: 'Consejos para Docentes: Introducción a los
+          Principios de Informática'
+        PL_CSP_TeacherTips_Debugging: 'Consejos para Docentes: Ayuda con la Depuración'
+        PL_CSP_TeacherTips_LeadLearner: 'Consejos para Docentes: Cómo ser un Alumno
+          Aventajado'
+        PL_CSP_TeacherTips_APExam: 'Consejos para Docentes: Preparación para el Examen
+          AP'
+        PL_CSP_TeacherTips_EIPM: 'Consejos para Docentes: El proceso de EIPM'
+        PL_CSD_CircuitPlayground_Overview: Circuit Playground - Vista Previa
+        CSA-PL-debugging-22: Depuración en el Laboratorio Java
+        CSD_Unit6_InteractiveArtExemplar: Arte Interactivo - Ejemplo
         CS_Changing_Everything: Las Ciencias de la Computación están cambiando todo
+        csa-alias-video: Igualdades y Alias
+        csa-equals-video: El método igualdad()
+        csa-user-stories: Historias de Usuario en Ingeniería de Software
+        csa-pl-vpl-m1-unit-3: Ingeniería de Software en la Unidad 3
+        csa-pl-intro-to-equality: Introducción a la Igualdad
+        csa-pl-intro-to-equals-method: Introducción al método .equals()
+        csa-pl-equals-book: Escribir el método equals() para la clase Libro
+        csa-multi-select-pl: Sentencias de selección múltiple en Java
+        csc_timecapsule_intro: Introducción a la Cápsula del Tiempo
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

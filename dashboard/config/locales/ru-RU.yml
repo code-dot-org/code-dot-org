@@ -446,6 +446,7 @@ ru:
       about: О разработчике
       legal: Правовая информация
       legal_privacy: Политика конфиденциальности
+      legal_cookie_notice: Уведомление о cookie
       legal_tos: Условия предоставления услуг
     user:
       classroom: Домашняя страница преподавателя
@@ -663,6 +664,7 @@ ru:
     print_certificate: Распечатать сертификат
   certificate_sponsor_message: "%{sponsor_name} сделал щедрый подарок, чтобы спонсировать
     ваше обучение."
+  certificate_hour_of_code: Час Кода
   move_students:
     new_section_dne: Извините, но группа %{new_section_code} не существует. Пожалуйста,
       введите код другой группы.
@@ -1329,6 +1331,8 @@ ru:
         not_listed: Предпочитаемый термин не указан
         none: Предпочитаю не отвечать
       school_country:
+        barbados: Барбадос
+        belize: Белиз
         canada: Канада
         chile: Чили
         colombia: Колумбия
@@ -1470,4 +1474,6 @@ ru:
       missing_params: Необходимо указать идентификаторы пользователя, уровня и модуля
       cannot_view_locked_answers: Невозможно просмотреть ответы, пока они заблокированы
       forbidden: Пользователь не может обновлять состояние блокировки студента
-  reset_predict_progress_button: Удалить Ответ
+  reset_predict_progress_button: Удалить ответ
+  pixelation:
+    binary: Двоичный

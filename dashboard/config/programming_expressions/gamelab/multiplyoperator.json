@@ -3,8 +3,29 @@
   "name": "Multiply operator",
   "category": "Math",
   "category_key": "math",
-  "content": "[name]\n\n## Multiply operator\n\n[/name]\n\n[category]\n\nCategory: Math\n\n[/category]\n\n[description]\n\n[short_description]\n\nMultiplies two numbers.\n\n[/short_description]\n\nAll programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// Multiply two numbers.\nconsole.log(3*5);\nvar x=3;\nvar y=5;\nconsole.log(x*y);\n```\n\n[/example]\n\n____________________________________________________\n\n[syntax]\n\n### Syntax\n\n```\n___ * ___\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| ___ | any | Yes | The operands can be a number, or a variable containing a number, or the number returned by a function, or the numeric result of the evaluation of an expression. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nThe product of two numbers.\n\n[/returns]\n\n[tips]\n\n### Tips\n\n- Operator precedence is the same as standard arithmetic - Expressions within a parentheses have the highest precedence, then multiplcation and division, then addition and subtraction.\n\n[/tips]\n\n",
+  "content": "All programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.",
+  "examples": [
+    {
+      "name": "Example: Multiply two numbers",
+      "code": "```\nconsole.log(3*5);\nvar x=3;\nvar y=5;\nconsole.log(x*y);\n```"
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "num1",
+      "type": "any",
+      "required": true,
+      "description": "The operands can be a number, or a variable containing a number, or the number returned by a function, or the numeric result of the evaluation of an expression."
+    },
+    {
+      "name": "num2",
+      "type": "any",
+      "required": true,
+      "description": "Same as `num1` but serves as the multiplicand of the expression."
+    }
+  ],
   "return_value": "A number, the result of multiplying two numbers.",
-  "short_description": "\nMultiply operator\nCategory: Math",
-  "syntax": "num1 * num2;"
+  "short_description": "Multiplies two numbers.",
+  "syntax": "num1 * num2;",
+  "tips": "- Operator precedence is the same as standard arithmetic - Expressions within a parentheses have the highest precedence, then multiplcation and division, then addition and subtraction."
 }

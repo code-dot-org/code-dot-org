@@ -5,13 +5,14 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "storylab"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
@@ -20,7 +21,7 @@
     "instructions_important": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "false",
@@ -35,6 +36,7 @@
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Connect a `say` block under a `when clicked` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_spriteSay\\\">\\n        <title name=\\\"SPEECH\\\">Hello, world!</title>\\n        <value name=\\\"SPRITE\\\">\\n          <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n            <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n          </block>\\n        </value>\\n      </block>\\n    </next>\\n  </block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2af7f87efd6904b9f252ee3d7187a0af/csc_bookcover_clicksay.mp3\"}]",
     "long_instructions": "**Let’s make your sprites say something when you click on them!**\r\n- Connect a `say` block under a `when clicked` block.\r\n- Select the same costume in each block of code.\r\n- Press the \"Run\" button.\r\n- Click or tap the sprite to have it say something.\r\n\r\n*Extra Challenge: Make both sprites say something when they are clicked!*\r\n\r\n\r\n\r\n",
     "instructions_icon": "bear",
+    "video_key": "hello_world_events",
     "preload_asset_list": null
   },
   "level_num": "custom",
@@ -42,7 +44,7 @@
   "created_at": "2022-09-27T23:21:36.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-27T23:21:36.734+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_prop\\\"\"],\"cloned_from\":\"csc_bookcover_prop\"},{\"changed_at\":\"2022-09-27 23:23:31 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-27 23:24:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-28 20:36:15 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-28 20:38:21 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-28 20:39:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-27T23:21:36.734+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_prop\\\"\"],\"cloned_from\":\"csc_bookcover_prop\"},{\"changed_at\":\"2022-09-27 23:23:31 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-27 23:24:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-28 20:36:15 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-28 20:38:21 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-28 20:39:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-29 23:24:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:32:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-30 17:21:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:09:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:16:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:18:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:27:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:34:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:38:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -62,23 +64,25 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_showTitleScreen">
-          <value name="TITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT"/>
             </block>
           </value>
-          <value name="SUBTITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT"/>
             </block>
           </value>
         </block>
         <block type="gamelab_setBackgroundImageAs">
-          <field name="IMG">"sci_fi"</field>
+          <field name="IMG">"front_of_house"</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"video_game_controller"</field>
+          <field name="ANIMATION_NAME">"green_shirt_wave2"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <field name="LOCATION">{"x":200,"y":200}</field>
@@ -89,7 +93,7 @@
           <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"video_game_controller"</field>
+              <field name="ANIMATION">"green_shirt_wave2"</field>
             </block>
           </value>
         </block>
@@ -97,12 +101,12 @@
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"video_game_controller"</field>
+              <field name="ANIMATION">"green_shirt_wave2"</field>
             </block>
           </value>
           <value name="VAL">
             <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">50</field>
+              <field name="NUM">200</field>
             </block>
           </value>
         </block>
@@ -110,7 +114,7 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <field name="ANIMATION">"video_game_controller"</field>
+              <field name="ANIMATION">"green_shirt_wave2"</field>
             </block>
           </value>
         </block>

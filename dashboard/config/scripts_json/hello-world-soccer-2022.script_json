@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": "hello-world-soccer",
-    "serialized_at": "2022-09-19 19:15:36 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-10-18 17:52:50 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "Hello World: Food",
-      "name": "Hello World: Food",
+      "name": "Hello World: Soccer",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -184,6 +184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_say_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -206,6 +209,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -228,6 +234,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_multi_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -250,6 +259,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -272,6 +284,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_events_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -294,6 +309,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -316,6 +334,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -338,6 +359,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -360,6 +384,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -382,6 +409,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -404,6 +434,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_freeplay_soccer-2022"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,

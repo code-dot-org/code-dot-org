@@ -1281,6 +1281,10 @@ nl:
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": toverspreuk
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": Eigenzinnige bass
             "'sound://category_digital/jump_7.mp3'": spring
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playSpeech:
         text: Spraak afspelen {SOUND}
       gamelab_playerBehaviors:
@@ -1998,6 +2002,11 @@ nl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: als {VAR} is beantwoord
       RyanLab_moveForward:

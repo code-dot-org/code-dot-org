@@ -2,37 +2,37 @@
 title: パートナー
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+Hour of Codeは、Hour of Codeにより推進されています。
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[審査委員会]({{ urls/review_committee }}) は、K-12の各学年の現役および元教育者12名で構成されており、諮問委員会により設定された基準で活動を評価および推奨しています。 これらの教育者たちは、アクティビティーパートナーから提出される何百もの学生主導のアクティビティーや先生主導のレッスンプランをレビューし、アクティビティーの教育的価値や学習者を引き込む能力、多様な生徒たちへの潜在的な魅力を評価します。
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+この委員会の献身的な働きは、Hour of Codeの成功と、すべての生徒にコンピューターサイエンス入門を提供するというビジョンを支えています。
 
-# Major Partners and Corporate Supporters
+# 主要なパートナーおよび協賛企業
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# 国際パートナー
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# カリキュラムとチュートリアルパートナー
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# インフラパートナーとツール
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# その他のパートナー
 
 {{ partners/additional_partners }}
 

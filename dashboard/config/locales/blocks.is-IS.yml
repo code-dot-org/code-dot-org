@@ -1265,6 +1265,10 @@ is:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": harpa
             "'sound://category_retro/retro_game_ui_select_6.mp3'": velja
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playSoundOptionsSoccer:
+        text: spilaHljóð {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: spilaHljóð {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1853,6 +1857,11 @@ is:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: þegar {VAR} er svarað
       RyanLab_moveForward:

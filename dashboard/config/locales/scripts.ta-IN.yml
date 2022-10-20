@@ -1998,6 +1998,9 @@ ta:
             புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
           description: பாடத்திட்ட பதிப்புகளுக்கு இடையே பாடங்கள் அல்லது நிலைகளுக்கான
             புதுப்பிப்புகளை நிலைநிறுத்துவதற்கு
+          lessons:
+            lesson-7:
+              name: ஸ்ப்ரிட்ஸ் அறிமுகம்
         csd-post-survey-2022:
           title: CS டிஸ்கவரிஸ் போஸ்ட்-கோர்ஸ் சர்வே
           description: இந்தத் தொகுதியில் CS கண்டுபிடிப்புகள் பயிற்சிவகுப்புக்குப்
@@ -2025,3 +2028,30 @@ ta:
           title: உங்கள் சொந்த கால்பந்து விளையாட்டை குறியிடவும்
           description_short: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
           description: ஒரு கால்பந்து விளையாட்டை உருவாக்குங்கள்
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ஜாவா லேப்
+            lesson-6:
+              name: சுழற்சிகள்
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+          title: பிரச்சனை தீர்வு
+        csd4-2023:
+          title: வடிவமைப்பு செயல்முறை
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2

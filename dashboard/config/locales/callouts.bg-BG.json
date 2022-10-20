@@ -829,6 +829,26 @@
         },
         "courseD_bee_conditionals22022": {
           "4_5_Bee_Conditionals_2_1": "Не забравяйте, проверете дали зад всеки облак има цвете. Вие не трябва да проверявате за медни пити."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Нов блок!",
+          "hello_world_new_block": "Нов блок!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Нов блок!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Нов блок!"
         }
       }
     }

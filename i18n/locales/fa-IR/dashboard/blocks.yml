@@ -19,6 +19,8 @@ fa:
             '3.00': extra large
       Dancelab_alternateMoves:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           MOVE1:
             MOVES.Rest: هیچکدام
           MOVE2:
@@ -29,6 +31,8 @@ fa:
             '"seconds"': ثانیه
       Dancelab_changeMoveEachLR:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           MOVE:
             MOVES.Rest: هیچکدام
       Dancelab_changeMoveLR:
@@ -42,11 +46,15 @@ fa:
             '"height"': ارتفاع
       Dancelab_changePropEachBy:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
       Dancelab_doMoveEachLR:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           MOVE:
             MOVES.Rest: هیچکدام
       Dancelab_doMoveLR:
@@ -82,19 +90,25 @@ fa:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           LOCATION:
             "{x: 100, y: 200}": سمت چپ
             "{x: 300, y: 200}": سمت راست
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": در هم
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           FORMAT:
             '"diamond"': الماس
+            '"grid"': شبکه
             '"row"': کلاس
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
+            '"BEAR"': خرس
             '"CAT"': گربه
             '"DOG"': سگ
             '"DUCK"': اردک
@@ -105,6 +119,7 @@ fa:
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
+            '"BEAR"': خرس
             '"CAT"': گربه
             '"DOG"': سگ
             '"DUCK"': اردک
@@ -114,8 +129,11 @@ fa:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          COSTUME:
+            '"ALIEN"': فضایی ها
           LAYOUT:
             '"diamond"': الماس
+            '"grid"': شبکه
             '"row"': کلاس
             '"random"': در هم
       Dancelab_randomColor:
@@ -138,6 +156,8 @@ fa:
             '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           SPEED:
             '1': normal
             '2': سریع
@@ -159,6 +179,8 @@ fa:
             '"height"': ارتفاع
       Dancelab_setPropEach:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
@@ -169,15 +191,27 @@ fa:
             '"height"': ارتفاع
       Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"ALIEN"': فضایی ها
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"ALIEN"': فضایی ها
       Dancelab_setVisible:
         options:
           VISIBILITY:
             'true': نمایان
       Dancelab_setVisibleEach:
         options:
+          THIS:
+            '"ALIEN"': فضایی ها
           VISIBILITY:
             'true': نمایان
       Dancelab_startMapping:
@@ -187,6 +221,8 @@ fa:
             '"height"': ارتفاع
       Dancelab_startMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
@@ -197,6 +233,8 @@ fa:
             '"height"': ارتفاع
       Dancelab_stopMappingEach:
         options:
+          GROUP:
+            '"ALIEN"': فضایی ها
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
@@ -205,6 +243,7 @@ fa:
           STRING:
             '"diamond"': الماس
             '"x"': طول (x)
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -214,6 +253,7 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
+            '"y"': 'y'
       gamelab_addTarget:
         options:
           OPT:
@@ -241,6 +281,10 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"speed"': سرعت
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': سایر
       gamelab_getTime:
         options:
           UNIT:
@@ -254,6 +298,7 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -266,6 +311,11 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
+            '"y"': 'y'
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': انفجار
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -287,13 +337,23 @@ fa:
       gamelab_playSoundOptions:
         options:
           SOUND:
+            "'sound://category_app/app_button_1.mp3'": دکمه
             "'sound://category_collect/clicky_crunch.mp3'": خرد شدن
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": حباب
+            "'sound://category_animals/bear.mp3'": خرس
             "'sound://category_animals/cat.mp3'": گربه
             "'sound://category_animals/cow.mp3'": گاو
             "'sound://category_animals/sheep.mp3'": گوسفند
             "'sound://category_animals/chicken.mp3'": مرغ
+            "'sound://category_animals/elephant.mp3'": فیل
+            "'sound://category_animals/chick.mp3'": جوجه
             "'sound://category_animals/dog.mp3'": سگ
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": ساز چنگ
             "'sound://category_digital/jump_7.mp3'": پرش
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": شیپور
       gamelab_randColor:
         text: رنگ تصادفی
       gamelab_randomColor:
@@ -305,7 +365,9 @@ fa:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': غار
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': شهر
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': دادگاه
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': بیابان
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': شبکه
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': رنگین کمان
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': زیر آب
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': زمستان
@@ -489,15 +551,24 @@ fa:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': آجر
+            '"fire"': آتش
             '"hearts"': قلب
             '"rainbow"': رنگین کمان
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': انفجار
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپ
             '"sound://category_nature/summer_night_loop.mp3"': شب
       Poetry_playSound:
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': زنگ
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': حباب
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': پرش
       Poetry_setBackgroundEffect:
         options:
@@ -524,6 +595,7 @@ fa:
       aalab_layoutSprites:
         options:
           FORMAT:
+            '"grid"': شبکه
             '"row"': کلاس
             '"random"': در هم
       binary_move:

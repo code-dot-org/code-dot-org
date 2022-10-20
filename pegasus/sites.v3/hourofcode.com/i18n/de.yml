@@ -7,20 +7,20 @@ de:
     2015
   coming_soon: Demnächst
   campaign_date_start_short: 5. Dez.
-  campaign_date_start_long: 6. Dezember
+  campaign_date_start_long: 5. Dezember
   campaign_date_short: 5.-11. Dez.
   campaign_date_full: 5.-11. Dezember
   campaign_date_year: '2022'
   campaign_date_full_year: 5. - 11. Dezember 2022
   nonus_campaign_date_start_short: 1 Okt
   nonus_campaign_date_start_long: 1. Oktober
-  nonus_campaign_date_short: 1. Okt - 18. Dec
+  nonus_campaign_date_short: 1. Okt - 18. Dez.
   nonus_campaign_date_full: '1. Oktober - 18. Dezember '
   nonus_campaign_date_year: '2022'
   nonus_campaign_date_full_year: 1. Oktober 2022 - 18. Dezember 2022
   latam_campaign_date_start_short: 1 Okt
   latam_campaign_date_start_long: 1. Oktober
-  latam_campaign_date_short: 1. Okt - 18. Dec
+  latam_campaign_date_short: 1. Okt - 18. Dez.
   latam_campaign_date_full: '1. Oktober - 18. Dezember '
   latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1. Oktober 2022 - 18. Dezember 2022
@@ -36,6 +36,13 @@ de:
   africa_campaign_date_full: 1. - 31. Oktober
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. - 31. Oktober 2020
+  hoc2022_header: Entdecken, spielen und erschaffen!
+  social_hoc2022_explore_play_create: Mit Informatik entdecken, spielen und erschaffen!
+  codeorg_homepage_hoc2022_body: Das Universum erforschen, Tore erzielen und loslegen,
+    es gibt viele Möglichkeiten, Informatik auszuprobieren.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  Lerne heute, und baue dir eine bessere Zukunft.  "
@@ -510,6 +517,25 @@ de:
   front_join_us_n_students_served: "# geholfen"
   front_join_us_challenge: Gewinne ein Videochat mit einer Berühmtheit für dein Klassenzimmer!
   front_join_us_learn_more: Erfahre mehr
+  cta_see_whats_new: Das ist neu
+  cta_try_more_activities: Mehr Aktivitäten
+  cta_try_an_activity: Aktivität
+  hoc_homepage_join_the_movement_heading: Werde Teil der Bewegung
+  hoc_homepage_join_the_movement_description: Sie können das ganze Jahr bei Hour of
+    Code mitmachen und sich im Dezember Millionen Schülern überall auf der Welt anschließen,
+    wenn Hour of Code die Woche der Informatikbildung feiert. Jedes Jahr im Oktober
+    beginnt die Anmeldung der Klassen für die jährliche Feier.
+  hoc_homepage_what_is_hoc_subhead: Einstündige Tutorials in mehr als 45 Sprachen.
+    Keine Vorkenntnisse erforderlich. Die Aktivitäten von Hour of Code können das
+    ganze Jahr über kostenlos genutzt werden.
+  hoc_homepage_what_is_hoc_description: Die Hour of Code ist eine einführende Informatikstunde
+    mit unterhaltsamen Tutorials. Sie zeigt, dass jeder die Grundlagen der Informatik
+    lernen kann. Diese Basis-Kampagne wird von 400 Partnern und 200.000 Pädagogen
+    weltweit unterstützt.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url}),
+    um eine Veranstaltung für Ihre Klasse zu planen."
+  hoc_homepage_highlights_heading: Highlights von Hour of Code
+  hoc_homepage_organized_by: Die Hour of Code wird organisiert von [Code.org](%{codeorg_url}).
   signup_closed: Die Anmeldung für die Hour of Code ist nun geschlossen. Einschreibungen
     für die nächste Hour of Code im Oktober.
   signup_registration_not_required: Sie müssen sich nicht registrieren, um teilzunehmen!

@@ -2243,6 +2243,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Въведение в Спрайтове
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2309,3 +2313,18 @@ bg:
               display_name: Съдържание
             lessonGroup-5:
               display_name: Проучване
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-6:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Проучване
+            lessonGroup-3:
+              display_name: Съдържание
+        csd1-2023:
+          title: Разрешаване на Проблеми
+        csd7-2023:
+          title: AI и Машинно Обучение

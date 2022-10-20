@@ -36,6 +36,14 @@ ta:
   africa_campaign_date_full: அக்டோபர் 1-31
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: அக்டோபர் 1-31, 2020
+  hoc2022_header: ஆராயுங்கள், விளையாடுங்கள், உருவாக்குங்கள்!
+  social_hoc2022_explore_play_create: ஆராயவும், விளையாடவும், உருவாக்கவும் கணினி அறிவியலைப்
+    பயன்படுத்தவும்!
+  codeorg_homepage_hoc2022_body: பிரபஞ்சத்தை ஆராயுங்கள், ஒரு இலக்கை அடிக்கவும், ஒரு
+    நகர்வை முறியடிக்கவும் - கணினி அறிவியலை முயற்சிக்க பல வழிகள் உள்ளன.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: இன்று கற்றுக் கொள்ளுங்கள், நாளை பிரகாசமாக உருவாக்குங்கள்.
@@ -521,6 +529,24 @@ ta:
   front_join_us_challenge: ஒரு பிரபலத்துடன் உங்களது வகுப்பறை அமைவதற்கான ஒரு வீடியோ
     சாட்டை வெல்லுங்கள்!
   front_join_us_learn_more: மேலும் அறிக
+  cta_see_whats_new: புதியதைப் பார்க்கவும்
+  cta_try_more_activities: மேலும் செயல்பாடுகளை முயற்சிக்கவும்
+  cta_try_an_activity: ஒரு செயலை முயற்சிக்கவும்
+  hoc_homepage_join_the_movement_heading: இயக்கத்தில் சேருங்கள்
+  hoc_homepage_join_the_movement_description: ஹவர் ஆஃப் கோட் ஆண்டு முழுவதும் கிடைக்கும்,
+    ஆனால் ஒவ்வொரு ஆண்டும் டிசம்பரில் உங்கள் வகுப்பில் உலகெங்கிலும் உள்ள மில்லியன்
+    கணக்கான மாணவர்களுடன் கணினி அறிவியல் கல்வி வாரத்தை ஹவர் ஆஃப் கோட் மூலம் கொண்டாட
+    முடியும். வருடாந்திர கொண்டாட்டத்திற்கான பதிவு ஒவ்வொரு ஆண்டும் அக்டோபரில் தொடங்குகிறது.
+  hoc_homepage_what_is_hoc_subhead: 45க்கும் மேற்பட்ட மொழிகளில் ஒரு மணி நேர பயிற்சி.
+    அனுபவம் தேவையில்லை. ஹவர் ஆஃப் கோட் செயல்பாடுகள் ஆண்டு முழுவதும் இலவசமாகக் கிடைக்கும்.
+  hoc_homepage_what_is_hoc_description: ஹவர் ஆஃப் கோட் என்பது கணினி அறிவியலுக்கான
+    ஒரு மணிநேர அறிமுகமாகும், அடிப்படைகளை எவரும் கற்றுக்கொள்ள முடியும் என்பதைக் காட்ட
+    வேடிக்கையான பயிற்சிகளைப் பயன்படுத்துகிறது. இந்த அடிமட்ட பிரச்சாரத்தை உலகளவில்
+    400க்கும் மேற்பட்ட கூட்டாளர்கள் மற்றும் 200,000 கல்வியாளர்கள் ஆதரிக்கின்றனர்.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: உங்கள் வகுப்பிற்கான நிகழ்வைத் திட்டமிட,
+    [எங்கள் வழிகாட்டியைப் படிக்கவும்](%{howto_guide_url})
+  hoc_homepage_highlights_heading: Hour of Code சிறப்பும்சங்கள்
+  hoc_homepage_organized_by: ஹவர் ஆஃப் கோட் [Code.org](%{codeorg_url}) ஆல் ஒழுங்கமைக்கப்பட்டது.
   signup_closed: Hour of Code-க்கான பதிவு இப்போது முடிவுற்றது. அடுத்த Hour of Code-ல்
     பதிவு செய்ய மீண்டும் அக்டோபரில் பாருங்கள்.
   signup_registration_not_required: பங்கேற்க நீங்கள் பதிவு செய்ய வேண்டிய தேவை இல்லை!

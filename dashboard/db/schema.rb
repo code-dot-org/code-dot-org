@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_27_184247) do
+ActiveRecord::Schema.define(version: 2022_10_03_141047) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -447,7 +447,7 @@ ActiveRecord::Schema.define(version: 2022_09_27_184247) do
     t.integer "course_offering_id"
     t.string "published_state", default: "in_development"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
-    t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true
+    t.index ["course_offering_id", "key", "content_root_type"], name: "index_course_versions_on_offering_id_and_key_and_type", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
   end
 

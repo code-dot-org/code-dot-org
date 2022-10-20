@@ -2230,7 +2230,7 @@ it:
               display_name: Sondaggio
         coursea-2021:
           title: Corso A (2021)
-          description: 'Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna. Gli alunni impareranno a programmare usando comandi come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, persistere di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet. '
+          description: 'Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia. Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, perseverare di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet. '
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
           lesson_groups:
@@ -2247,7 +2247,7 @@ it:
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         courseb-2021:
           title: Corso B (2021)
-          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni impareranno le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
+          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni imparano le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: Da 5 a 8 anni
           lesson_groups:
@@ -2785,7 +2785,7 @@ it:
             lessonGroup-5:
               display_name: Progetto di fine corso
           title: Corso A (2022)
-          description: 'Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola materna. Gli alunni impareranno a programmare usando comandi come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, persistere di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet. '
+          description: 'Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell''infanzia. Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, perseverare di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet. '
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per bambini che non leggono ancora.
           description_audience: 'Età: da 4 a 7 anni'
@@ -2862,7 +2862,7 @@ it:
             lessonGroup-6:
               display_name: Progetto di fine corso
           title: Corso B (2022)
-          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni impareranno le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
+          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni imparano le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
           description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
           description_audience: Da 5 a 8 anni
@@ -2907,6 +2907,7 @@ it:
               display_name: Princìpi dell'Informatica - Unità 9
             lessonGroup-2:
               display_name: Sondaggio Post-corso
+          title: Dati ('22-'23)
         csp10-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2994,6 +2995,10 @@ it:
               display_name: Contenuto
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Introduzione
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3097,6 +3102,9 @@ it:
           description_audience: Scrittori di curriculum
           description_short: Per allestire gli aggiornamenti nelle lezioni o nei livelli tra le versioni del curriculum
           description: Per allestire gli aggiornamenti nelle lezioni o nei livelli tra le versioni del curriculum
+          lessons:
+            lesson-7:
+              name: Introduzione agli Sprite
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3135,6 +3143,7 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          title: Dati e Società ('22-'23)
         csd7-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3199,3 +3208,55 @@ it:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sondaggio
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Laboratorio di Java
+            lesson-6:
+              name: Cicli
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaggio
+            lessonGroup-3:
+              display_name: Contenuto
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Capitolo 2
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Prototipazione di App'
+          title: Il Processo di Progettazione
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Capitolo 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Capitolo 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Input Hardware'

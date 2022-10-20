@@ -49,6 +49,7 @@ const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
+      events: 'events',
       stream: 'stream-browserify',
       path: 'path-browserify',
       process: 'process/browser',
@@ -57,8 +58,11 @@ const nodePolyfillConfig = {
   ],
   resolve: {
     fallback: {
-      stream: require.resolve('stream-browserify'),
+      buffer: require.resolve('buffer/'),
+      events: require.resolve('events/'),
       path: require.resolve('path-browserify'),
+      'process/browser': require.resolve('process/browser'),
+      stream: require.resolve('stream-browserify'),
       timers: require.resolve('timers-browserify'),
       crypto: false
     }

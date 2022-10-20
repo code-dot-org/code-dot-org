@@ -4587,6 +4587,10 @@ zh-TW:
               display_name: 內容
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 新手上路
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4708,6 +4712,9 @@ zh-TW:
           description_audience: 課程作者
           description_short: 用於課程版本之間的課程或級別分階段更新
           description: 用於課程版本之間的課程或級別分階段更新
+          lessons:
+            lesson-7:
+              name: 精靈圖介紹
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4794,8 +4801,19 @@ zh-TW:
               display_name: 歡迎
         dlp-csp-mod1-2022:
           title: 電腦科學原理深入學習 模組 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 異步調試擴展
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 模組2異步工作
         soccer:
           name: 足球
+          title: 編寫你自己的足球遊戲
+          description_short: 製作足球遊戲
+          description: 製作足球遊戲
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -4832,3 +4850,64 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 問卷
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java 實驗室
+            lesson-6:
+              name: 迴圈
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 問卷
+            lessonGroup-3:
+              display_name: 內容
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 問題解決
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+          title: Web 開發
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：用戶為中心的設計
+            lessonGroup-3:
+              display_name: 第 2 章︰ 應用程式原型
+          title: 設計流程
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+            lessonGroup-3:
+              display_name: 第 2 章：解決數據問題
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：圖像和動畫
+            lessonGroup-3:
+              display_name: 第 2 章：創建遊戲
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 實體運算
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 第 2 章：建立物理原型

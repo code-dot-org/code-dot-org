@@ -1344,6 +1344,10 @@ fr:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": sélectionner
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": basse décalée
             "'sound://category_digital/jump_7.mp3'": sauter
+      gamelab_playSoundOptionsSoccer:
+        text: jouer le son {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: jouer le son {SOUND}
       gamelab_playSpeech:
         text: émettre les paroles {SOUND}
       gamelab_playerBehaviors:
@@ -2204,6 +2208,11 @@ fr:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: lorsque {VAR} est saisi
       RyanLab_moveForward:
@@ -2338,7 +2347,7 @@ fr:
       binary_drawBinScreen:
         text: |-
           dessiner écran
-          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6][null][7]
+          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6]{B8}
       binary_drawDec:
         text: dessiner décimale {DEC}
       binary_drawPixelHere:
@@ -2381,11 +2390,11 @@ fr:
         text: si chemin {DIR}{STATEMENT}
         options:
           DIR:
-            "'ahead'": devant
+            "'ahead'": vers l'avant
             "'right'": à droite
             "'left'": à gauche
       craft_ifStandingOn:
-        text: si debout sur {TYPE}{STATEMENT}
+        text: si se tient sur {TYPE}{STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": corail bleu
@@ -2395,7 +2404,7 @@ fr:
             "'planksOak'": planches en chêne
             "'seaLantern'": lanterne aquatique
       craft_ifStandingOnLimit:
-        text: si debout sur {TYPE}{STATEMENT}
+        text: si se tient sur {TYPE}{STATEMENT}
         options:
           TYPE:
             "'sand'": sable
@@ -2409,11 +2418,11 @@ fr:
         text: placer {blockType}
         options:
           blockType:
-            '"strippedOak"': chêne écorcé
-            '"strippedDarkOak"': chêne noir écorcé
+            '"strippedOak"': chêne décapé
+            '"strippedDarkOak"': chêne foncé décapé
             '"stoneBricks"': briques de pierre
             '"mossyStoneBricks"': briques de pierre moussues
-            '"crackedStoneBricks"': briques de pierre craquelées
+            '"crackedStoneBricks"': briques de pierre fissurées
             '"chiseledStoneBricks"': briques de pierre décoratives
             '"blueCoralBlock"': bloc de corail bleu
             '"pinkCoralBlock"': bloc de corail rose
@@ -2432,28 +2441,28 @@ fr:
             '"blueIce"': glace bleue
             '"blackConcrete"': béton noir
             '"seaGrass"': herbe marine
-            '"kelp"': varech
+            '"kelp"': algue
             '"polishedGranite"': granite poli
       craft_placePrismarine:
         text: placer prismarine
       craft_placeTorch:
         text: placer la torche
       craft_repeatUntilConduit:
-        text: répéter jusqu'à ce que le tuyau soit terminé{STATEMENT}
+        text: répéter jusqu'à ce que le tuyau soit terminé {STATEMENT}
       craft_repeatUntilGoal:
-        text: répéter jusqu'au but{STATEMENT}
+        text: répéter jusqu'au but {STATEMENT}
       craft_spawnEntity:
-        text: œuf {ENTITY}
+        text: pondre {ENTITY}
         options:
           ENTITY:
             '"cod"': morue
             '"dolphin"': dauphin
             '"salmon"': saumon
             '"seaTurtle"': tortue de mer
-            '"squid"': poulpe
+            '"squid"': calamar
             '"tropicalFish"': poisson tropical
       craft_turn:
-        text: tourner {DIR}
+        text: tourner à {DIR}
         options:
           DIR:
             right: droite ↻

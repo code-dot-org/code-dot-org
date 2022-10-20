@@ -36,6 +36,14 @@ fr:
   africa_campaign_date_full: Du 1er octobre au 18 décembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Du 1er octobre  2022 au 12 décembre 2022
+  hoc2022_header: Explores, joues, crées !
+  social_hoc2022_explore_play_create: Utilisez l'informatique pour découvrir, jouer
+    et créer !
+  codeorg_homepage_hoc2022_body: 'Explorez l''univers, marquez des buts, bougez :
+    il y a tant de manières d''utiliser l''informatique.'
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'Au cours de #HourOfCode, nous célébrons #CSEverywhere. Découvrez
     les connexions !'
   hoc2020_header: Apprenez aujourd'hui, construisez un avenir meilleur.
@@ -528,6 +536,26 @@ fr:
   front_join_us_challenge: Gagnez un chat vidéo pour votre salle de classe avec une
     célébrité !
   front_join_us_learn_more: En savoir plus
+  cta_see_whats_new: Découvrir les nouveautés
+  cta_try_more_activities: Essayez davantage d'activités
+  cta_try_an_activity: Essayez une d'activité
+  hoc_homepage_join_the_movement_heading: Rejoignez le mouvement
+  hoc_homepage_join_the_movement_description: Heure de Code est disponible toute l'année.
+    Toutefois, chaque année, en décembre, votre classe peut rejoindre des millions
+    d'apprenants du monde entier pour célébrer la semaine de l'enseignement de l'informatique
+    avec Heure de Code. L'inscription à la célébration annuelle commence chaque année
+    en octobre.
+  hoc_homepage_what_is_hoc_subhead: Plusieurs tutoriels d'une heure sont disponibles
+    dans plus de 45 langues. Aucune expérience n'est requise. Les activités de l'Heure
+    du Code sont disponibles gratuitement toute l'année.
+  hoc_homepage_what_is_hoc_description: L'heure du code est une initiation d'une heure
+    à l'informatique, à l'aide de tutoriels amusants, qui montre que tout le monde
+    peut apprendre les bases. Cette campagne populaire est soutenue par plus de 400
+    partenaires et 200 000 éducateurs du monde entier.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lisez notre guide pratique] (%{howto_guide_url})
+    pour organiser un événement pour votre classe."
+  hoc_homepage_highlights_heading: Points importants de l'Heure du Code
+  hoc_homepage_organized_by: L'Heure du Code est organisée par [Code.org](%{codeorg_url}).
   signup_closed: L’inscription à l’heure du Code est maintenant fermée. S’il vous
     plaît vérifier à nouveau en octobre pour vous inscrire pour la prochaine heure
     de Code.
@@ -627,7 +655,7 @@ fr:
     all ages.
   map_title: Mappe de l'Heure du Code
   map_header: "# évènements Une Heure de Code dans le monde"
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{event_count} événements enregistrés en %{year}"
   see_all_events: Voir tous les évènements
   map_header_company: "# par les organisateurs de la société"
   map_header_country: "# en %{country}"

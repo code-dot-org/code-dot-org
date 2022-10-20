@@ -437,6 +437,7 @@ cs:
       about: O nás
       legal: Ochrana osobních údajů a právní
       legal_privacy: Zásady ochrany osobních údajů
+      legal_cookie_notice: Oznámení o souborech cookie
       legal_tos: Podmínky
     user:
       classroom: Učitelská domovská stránka
@@ -652,6 +653,7 @@ cs:
     print_certificate: Vytisknout certifikát
   certificate_sponsor_message: "%{sponsor_name} udělal štědrý dar sponzorovat vaše
     učení."
+  certificate_hour_of_code: Hodina kódu
   move_students:
     new_section_dne: Je nám líto, ale sekce %{new_section_code} neexistuje. Zadej
       jiný kód sekce.
@@ -1437,3 +1439,5 @@ cs:
       cannot_view_locked_answers: Při uzamčení nelze zobrazit odpovědi
       forbidden: Uživatel nemůže aktualizovat stav uzamykatelnosti studenta
   reset_predict_progress_button: Vymazat odpověď
+  pixelation:
+    binary: Binární

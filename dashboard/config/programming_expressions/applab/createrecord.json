@@ -45,8 +45,8 @@
     "record",
     "callback"
   ],
-  "return_value": "When *createRecord()* is finished executing, the callback function is automatically called and is returned as a parameter the created record object as a parameter.",
+  "return_value": "When createRecord() is finished executing, the callback function is automatically called and is returned as a parameter the created record object as a parameter.",
   "short_description": "\nUsing App Lab's table data storage, creates a *record* with a unique id in the *table* name provided, and calls the *callback* function when the action is finished.",
-  "syntax": "```\ncreateRecord(table, record, function(record){\n    //callback function code goes here\n  });\n```",
+  "syntax": "createRecord(table, record, function(record){\n    //callback function code goes here\n  });",
   "tips": "- The javascript object properties must match the App Lab table column names. Both are case sensitive.\n- Duplicate records are allowed in a table but will have different id values assigned automatically.\n- *createRecord()* has a callback because it is accessing the remote data storage service and therefore will not finish immediately.\n- The callback function can be inline, or separately defined in your app and called from *createRecord()*.\n- Do not put functions inside a loop that contain asynchronous code, like *createRecord()*. The loop will not wait for the callback function to complete.\n- Use with [readRecords()](/docs/applab/readRecords/), [deleteRecord()](/docs/applab/deleteRecord/), and [updateRecord()](/docs/applab/updateRecord/) records to view, delete, and update records in a table.\n"
 }

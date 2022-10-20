@@ -461,6 +461,7 @@ id-ID:
   homepage_banner_40k_teachers_link: Pelajari lebih lanjut
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
+  homepage_slot_text_blurb_hoc_2022: Menjelajah, Bermain, Berkreasi!
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
   homepage_slot_text_link_about_hoc: Tentang Hour of Code
   homepage_slot_text_link_host: Selenggarakan Hour of Code
@@ -488,7 +489,7 @@ id-ID:
   homepage_slot_text_link_shop: Kaos, topi, & banyak lagi
   homepage_slot_text_link_thebadguys: Buat Kode dengan The Bad Guys
   homepage_slot_text_link_administrators: Bawa CS ke sekolah mu
-  homepage_gallery_header: Lebih dari %{project_count} juta proyek Code.org telah
+  homepage_gallery_header: Lebih dari %{project_count} juta proyek Code.org yang telah
     dibuat
   homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
   homepage_donors_seall: Lihat semua
@@ -2749,3 +2750,5 @@ id-ID:
     biru
   minecraft_tile_alt: Dua karakter Minecraft, Steve dan Alex, dengan latar belakang
     yang menunjukkan adegan Minecraft air dengan karang, lumba-lumba, dan rumput laut
+  hoc2022_landing_page_create_title: Buat
+  try_it_yourself: Cobalah sendiri!

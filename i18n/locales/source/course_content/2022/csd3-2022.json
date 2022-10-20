@@ -696,7 +696,7 @@
       "CSD U3 properties alpha_2022": {
         "display_name": "New Block : Alpha",
         "bubble_choice_description": "Adjust the sprite's transparency with alpha.",
-        "long_instructions": "# Alpha\r\n\r\nAlpha is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- 0.5 would be 50% visible (partially transparent, like it's see-through)\r\n- 1 would be 100% visible (completely visible)\r\n- 0 would be 0% visible (completely transparent)\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the alpha property and see how it works and how it changes on different sprites!"
+        "long_instructions": "# Alpha\r\n\r\nAlpha is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- 0.5 would be 50% visible (partially transparent, like it's see-through)\r\n- 1 would be 100% visible (not transparent at all - it will look like a normal sprite)\r\n- 0 would be 0% visible (completely transparent - it will look invisible!)\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the alpha property and see how it works and how it changes on different sprites!"
       }
     }
   },

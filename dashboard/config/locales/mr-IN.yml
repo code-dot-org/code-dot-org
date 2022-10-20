@@ -450,6 +450,7 @@ mr:
       about: या बद्दल
       legal: गोपनीयता आणि कायदेशीर
       legal_privacy: गोपनीयता धोरण
+      legal_cookie_notice: 'कुकी सूचना '
       legal_tos: सेवेच्या अटी
     user:
       classroom: शिक्षक होम पेज
@@ -668,6 +669,7 @@ mr:
     print_certificate: सर्टिफिकेट प्रिंट करा
   certificate_sponsor_message: "%{sponsor_name} ने तुमच्या शिक्षणाला प्रायोजित करण्यासाठी
     उदार भेट दिली आहे."
+  certificate_hour_of_code: अवर ऑफ कोड
   move_students:
     new_section_dne: क्षमस्व, परंतु %{new_section_code} विभाग अस्तित्वात नाही. कृपया
       वेगळा विभाग कोड प्रविष्ट करा.
@@ -1461,3 +1463,10 @@ mr:
   unit_prefix: युनिट %{n}
   code_org_logo_alt: Code.org होम
   teacher_feedback: शिक्षकांचा अभिप्राय
+  lesson_lock:
+    error:
+      no_updates: प्रदर्शित करण्यासाठी कोणतेही अपडेट  नाही
+      missing_params: युजर, स्तर आणि युनिट आयडी देणे आवश्यक आहे
+      cannot_view_locked_answers: लॉक असताना उत्तरे पाहू शकत नाहीत
+      forbidden: युजर विद्यार्थ्याची लॉक करण्यायोग्य स्थिती अपडेट करू शकत नाही
+  reset_predict_progress_button: उत्तर काढून टाका

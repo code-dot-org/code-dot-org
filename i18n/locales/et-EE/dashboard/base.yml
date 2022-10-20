@@ -378,6 +378,7 @@ et:
     no_primary_course: "Proovige Code Studio kursust"
     choose_next_course: "Proovige Code Studio kursuseid. Selleks valige üks altpoolt"
     print_certificate: "Prindi tunnistus"
+  certificate_hour_of_code: "KoodiTund"
   move_students:
     new_section_dne: "Vabandame, kuid seda sektsiooni ei ole olemas %{new_section_code} Palun lisa teine sektsiooni kood."
     section_code_cant_be_current_section: "Käesolev sektsioon ei saa olla sama kui uus sektsioon."
@@ -798,3 +799,5 @@ et:
     accept: 'Olen nõus'
   page_not_found_title: "Lehte ei leitud"
   copy: 'Kopeeri'
+  pixelation:
+    binary: "Binaarne"

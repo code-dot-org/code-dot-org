@@ -13344,15 +13344,11 @@ ko-KR:
         - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
-          correct: true
+        - correct: true
           feedback: 맞습니다!
         - text: 좀비는 해바라기로 갈 것입니다.
-          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
-          feedback: 틀렸습니다. 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         - text: 좀비는 앞으로 가는 경로의 끝에서 갇히게 될 것입니다.
-          feedback: 이 코드에서 좀비는 올바른 경로를 통과하여 영원히 왔다 갔다하는 것으로 끝날 것입니다.
         questions:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_maze_until2_predict12022:

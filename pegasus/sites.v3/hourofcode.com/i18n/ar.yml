@@ -35,6 +35,13 @@ ar:
   africa_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
+  hoc2022_header: استكشف، العب، ابتكِر!
+  social_hoc2022_explore_play_create: استخدم علم الكمبيوتر للاستكشاف واللعب والابتكار!
+  codeorg_homepage_hoc2022_body: استكشف الكون، وسجل هدفًا، وقم بإيقاف الحركة - هناك
+    العديد من الطرق لتجربة علوم الكمبيوتر.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: نتعلم اليوم، لنبني غداً مشرقاً
@@ -488,6 +495,24 @@ ar:
   front_join_us_n_students_served: "# تم تقديم خدماتنا إلى"
   front_join_us_challenge: اربح دردشة فيديو لصفك الدراسي مع أحد المشاهير!
   front_join_us_learn_more: اعرف المزيد
+  cta_see_whats_new: شاهد ما هو جديد
+  cta_try_more_activities: جرب أنشطة أكثر
+  cta_try_an_activity: جرب نشاطًا
+  hoc_homepage_join_the_movement_heading: انضم إلى الحراك
+  hoc_homepage_join_the_movement_description: '"ساعة البرمجة" متوفر على مدار العام،
+    ولكن في ديسمبر من كل عام يمكن لصفك الانضمام إلى ملايين الطلاب حول العالم للاحتفال
+    بأسبوع تدريس علوم الكمبيوتر بالتعاون مع "ساعة البرمجة". يبدأ التسجيل للاحفتال
+    السنوي في أكتوبر من كل عام.'
+  hoc_homepage_what_is_hoc_subhead: دروس تعليمية مدتها ساعة بأكثر من 45 لغة. لا حاجة
+    للخبرة. تتوفر أنشطة ساعة البرمجة مجانًا على مدار العام.
+  hoc_homepage_what_is_hoc_description: ساعة البرمجة هي مقدمة مدتها ساعة واحدة لعلوم
+    الكمبيوتر، تستخدم دروسًا تعليمية ممتعة لإظهار أنه يمكن لأي شخص تعلم الأساسيات.
+    يتم دعم هذه الحملة الشعبية من قبل أكثر من 400 شريك و 200000 معلم في جميع أنحاء
+    العالم.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[اقرأ دليلنا الإرشادي](%{howto_guide_url})
+    لتخطيط فعالية لصفك الدراسي."
+  hoc_homepage_highlights_heading: الأخبار الهامة في ساعة البرمجة
+  hoc_homepage_organized_by: ساعة البرمجة منظمة من قِبل [Code.org](%{codeorg_url}).
   signup_closed: التسجيل في حدث ساعة البرمجة مغلق الآن. يرجى الرجوع مرة أخرى في أكتوبر
     للتسجيل في نشاط ساعة من البرمجة التالي.
   signup_registration_not_required: لست بحاجة للتسجيل من أجل المشاركة! أنشطة ساعة

@@ -248,6 +248,7 @@ ur-PK:
   homepage_banner_40k_teachers_link: مزید سیکھے
   homepage_slot_text_title_hoc: آور-آف-کوڈ
   homepage_slot_text_blurb_hoc: کوئی بھی سیکھ سکتا ہے، آج شروع کریں۔
+  homepage_slot_text_blurb_hoc_2022: کھوجیں، کھیلیں، بنائیں!
   homepage_slot_text_link_hoc: آور-آف-کوڈ پر کوشش کریں۔
   homepage_slot_text_link_host: Hour of Code منعقد کریں
   homepage_slot_text_link_hocserved: "# خدمات سر انجام دیں"
@@ -271,6 +272,8 @@ ur-PK:
   homepage_slot_text_link_buy: شامل ہو جایئے
   homepage_slot_text_link_donate: عطیہ کریں
   homepage_slot_text_link_shop: ٹی شرٹس، ٹوپیاں اور بہت کچھ
+  homepage_gallery_header: "%{project_count} ملین سے زیادہ Code.org پراجیکٹ بنائے
+    جا چکے ہیں"
   homepage_header_donors: Code.org کے حمایتیوں کا شکریہ
   homepage_donors_seall: سبھی دیکھیں
   homepage_donors_donate: عطیہ کریں
@@ -813,3 +816,4 @@ ur-PK:
   outbreak_tile_subtitle: ایک وائرس نے مونسٹر ٹاؤن کو متاثر کیا ہے! ایک وبا پھیلنے
     کا سمیولیٹر کوڈ کریں اور اس بارے میں پیشین گوئیاں کریں کہ مونسٹر ٹاؤن کے پڑوسیوں
     کے ساتھ کیا ہوگا۔
+  hoc2022_landing_page_create_title: بنائیں
