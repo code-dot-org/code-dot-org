@@ -13,15 +13,15 @@ html {
   width: unset;
 }
 
-h1, h2 {
-  color: $darkest_gray;
-}
-
 header {
   text-align: center;
   padding: 4em 1em;
   background: $background_gray;
   color: $darkest_gray;
+
+  h1, h2 {
+    color: $darkest_gray;
+  }
 
   h1 {
     font-size: 4em;
@@ -40,13 +40,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 500px;
+    max-width: 380px;
     margin: 0 auto;
 
     li {
       list-style: none;
       display: inline-flex;
-      font-size: 1.75em;
+      font-size: 1.5em;
 
       &:before {
         display: none;
@@ -76,9 +76,8 @@ main {
   aside {
     max-width: 970px;
     background-color: $background_gray;
-    margin: 2em auto 0;
+    margin: 4em auto 0;
     padding: 2em;
-
   }
 
   hr {
@@ -110,12 +109,11 @@ main {
 
         i {
           font-size: 3em;
-          color: $darkest_gray;
+          color: $purple;
         }
 
         h1 {
           margin: .5em auto;
-          color: $darkest_gray;
           font-size: 3em;
         }
 
@@ -127,12 +125,20 @@ main {
       iframe {
         width: 500px;
         height: 281px;
-        border: 1px solid $lighter_gray;
+
+        &.has-border {
+          border: 1px solid $lighter_gray;
+        }
       }
     }
 
-    .activites {
+    .activities {
       text-align: center;
+
+      .hoc-tiles-container {
+        text-align: left;
+        margin: 0 auto 3em;
+      }
     }
   }
 }

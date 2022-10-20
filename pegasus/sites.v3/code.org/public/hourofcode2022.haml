@@ -4,6 +4,12 @@ theme: responsive
 ---
 
 %link{href: "/css/generated/hoc2022-landing-page.css", rel: "stylesheet"}
+%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
+
+-# Import HoC activities for each section
+%script{type: "text/javascript", src: "/js/hoc2022-explore-activities.js"}
+%script{type: "text/javascript", src: "/js/hoc2022-play-activities.js"}
+%script{type: "text/javascript", src: "/js/hoc2022-create-activities.js"}
 
 -# Import FontAwesome Pro
 %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
@@ -33,11 +39,10 @@ theme: responsive
           =I18n.t(:hoc2022_landing_page_create_title)
 
 %main
-
   %aside
     NASA skinny banner
 
-  %a{id: 'explore'}
+  %a{id: "explore"}
   %section.explore
     .wrapper
       .top-wrapper
@@ -45,14 +50,15 @@ theme: responsive
           %i{class: "#{icon_rocket}"}
           %h1=I18n.t(:hoc2022_landing_page_explore_title)
           %p=I18n.t(:hoc2022_landing_page_explore_description)
-        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0'}
+        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0', class: "has-border"}
       %hr
-      .activites
+      .activities
         %h2=I18n.t(:try_an_activity)
+        .hoc-tiles-container.explore
         %a{href: "/learn"}
           =I18n.t(:see_more_activities)
 
-  %a{id: 'play'}
+  %a{id: "play"}
   %section.play
     .wrapper
       .top-wrapper
@@ -62,12 +68,13 @@ theme: responsive
           %h1=I18n.t(:hoc2022_landing_page_play_title)
           %p=I18n.t(:hoc2022_landing_page_play_description)
       %hr
-      .activites
+      .activities
         %h2=I18n.t(:try_an_activity)
+        .hoc-tiles-container.play
         %a{href: "/learn"}
           =I18n.t(:see_more_activities)
 
-  %a{id: 'create'}
+  %a{id: "create"}
   %section.create
     .wrapper
       .top-wrapper
@@ -75,9 +82,10 @@ theme: responsive
           %i{class: "#{icon_paint}"}
           %h1=I18n.t(:hoc2022_landing_page_create_title)
           %p=I18n.t(:hoc2022_landing_page_create_description)
-        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0'}
+        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0', class: "has-border"}
       %hr
-      .activites
+      .activities
         %h2=I18n.t(:try_an_activity)
+        .hoc-tiles-container.create
         %a{href: "/learn"}
           =I18n.t(:see_more_activities)

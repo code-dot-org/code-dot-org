@@ -31,6 +31,9 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
     get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
     get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
+    get '/dashboardapi/hoc2022-explore-activities', to: "home#hoc2022_explore_activities"
+    get '/dashboardapi/hoc2022-play-activities', to: "home#hoc2022_play_activities"
+    get '/dashboardapi/hoc2022-create-activities', to: "home#hoc2022_create_activities"
 
     get "/home", to: "home#home"
 
