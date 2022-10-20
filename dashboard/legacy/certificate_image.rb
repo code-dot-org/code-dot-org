@@ -166,7 +166,7 @@ class CertificateImage
     end
 
     if default_random_donor && !donor_name
-      donor = PegasusCdoDonor.get_random_donor_by_weight
+      donor = DashboardCdoDonor.get_random_donor_by_weight
       donor_name = donor[:name_s]
     end
 
