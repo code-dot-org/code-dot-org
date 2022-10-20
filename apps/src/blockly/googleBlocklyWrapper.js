@@ -196,6 +196,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
       return this.blockly_.mainWorkspace;
     }
   });
+  // can't quite get this to do what I want it to do
+  // Object.defineProperty(blocklyWrapper.mainBlockSpace, 'getBlockCount', {
+  //   get: function() {
+  //     return this.blockly_.mainWorkspace.getAllBlocks().length;
+  //   }
+  // });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function() {
       return this.blockly_.mainWorkspace;

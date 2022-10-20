@@ -812,6 +812,7 @@ function getFieldInputChangeHandler(blockly, type) {
   }
 }
 
+// Exported for tests.
 /**
  * Returns a new Field object,
  * conditional on the version of blockly we're using and the type of field.
@@ -819,7 +820,7 @@ function getFieldInputChangeHandler(blockly, type) {
  * @param {string} type
  * @returns {Blockly.Field}
  */
-function getField(blockly, type) {
+export function getField(blockly, type) {
   let field;
   if (blockly.version === BlocklyVersion.GOOGLE) {
     if (type === 'Number') {
@@ -864,6 +865,7 @@ const groupInputsByRow = function(inputs, inputTypes = STANDARD_INPUT_TYPES) {
   }
   return inputRows;
 };
+// Exported for tests
 exports.groupInputsByRow = groupInputsByRow;
 
 /**
