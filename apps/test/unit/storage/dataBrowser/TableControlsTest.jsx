@@ -2,6 +2,8 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
+import commonI18n from '@cdo/locale';
+import sinon from 'sinon';
 
 import {
   getStore,
@@ -9,6 +11,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import {changeView} from '@cdo/apps/storage/redux/data';
@@ -21,6 +24,7 @@ import VisualizerModal, {
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 
 const DEFAULT_PROPS = {
+  isRtl: false,
   clearTable: () => {},
   exportCsv: () => {},
   importCsv: () => {},
@@ -31,7 +35,7 @@ const DEFAULT_PROPS = {
 describe('TableControls', () => {
   beforeEach(() => {
     stubRedux();
-    registerReducers({...commonReducers, ...reducers});
+    registerReducers({...commonReducers, ...reducers, isRtl});
     experiments.setEnabled(experiments.APPLAB_DATASETS, true);
     const store = getStore();
     store.dispatch(changeView(DataView.TABLE), 'tableName');
@@ -84,4 +88,25 @@ describe('TableControls', () => {
       children: React.cloneElement(wrapper.props().children, newProps)
     });
   }
+
+  describe('localization', () => {
+    afterEach(() => {
+      sinon.restore();
+    });
+
+    it('should render a localized string for "Clear Table"', () => {
+      sinon.stub(commonI18n, 'clearTable').returns('i18n-clear-table');
+
+      const store = getStore();
+      const wrapper = mount(
+        <Provider store={store}>
+          <TableControls {...DEFAULT_PROPS} />
+        </Provider>
+      );
+
+      let clearButton = wrapper.find('ConfirmDeleteButton');
+      expect(clearButton.text()).to.contain('i18n-clear-table');
+      expect(clearButton.prop('title')).to.contain('i18n-clear-table');
+    });
+  });
 });
