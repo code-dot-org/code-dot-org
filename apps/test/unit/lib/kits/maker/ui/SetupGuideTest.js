@@ -2,20 +2,16 @@
 import React from 'react';
 import {expect} from '../../../../../util/deprecatedChai';
 import {shallow} from 'enzyme';
-import MakerSetupGuide from '@cdo/apps/lib/kits/maker/ui/MakerSetupGuide';
+import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
 import applabI18n from '@cdo/applab/locale';
 import experiments from '@cdo/apps/util/experiments';
 
 describe('MakerSetupGuide', () => {
   describe('Microbit experiment is not enabled', () => {
-    let description;
-    let markdown;
     it('renders circuit playground description', () => {
-      const wrapper = shallow(<MakerSetupGuide />);
-      description = wrapper.findWhere(
-        n => n.prop('class') === 'circuit-playground-description'
+      let [description, markdown] = getGuideContent(
+        '#circuit-playground-description'
       );
-      markdown = description.shallow().find('SafeMarkdown');
       expect(description.prop('title')).to.contain(
         applabI18n.makerSetupCircuitPlaygroundTitle()
       );
@@ -23,29 +19,20 @@ describe('MakerSetupGuide', () => {
         applabI18n.makerSetupCircuitPlaygroundDescription()
       );
     });
-
     it('does not render microbit description', () => {
-      const wrapper = shallow(<MakerSetupGuide />);
-      description = wrapper.findWhere(
-        n => n.prop('class') === 'microbit-description'
-      );
-      expect(description.isEmpty()).to.equal(true);
+      let [description, markdown] = getGuideContent('#microbit-description');
+      expect(description.exists()).to.equal(false);
+      expect(markdown).to.equal(null);
     });
   });
-
   describe('Microbit experiment is enabled', () => {
-    let description;
-    let markdown;
-
     before(() => experiments.setEnabled('microbit', true));
     after(() => experiments.setEnabled('microbit', false));
 
     it('renders circuit playground description', () => {
-      const wrapper = shallow(<MakerSetupGuide />);
-      description = wrapper.findWhere(
-        n => n.prop('class') === 'circuit-playground-description'
+      let [description, markdown] = getGuideContent(
+        '#circuit-playground-description'
       );
-      markdown = description.shallow().find('SafeMarkdown');
       expect(description.prop('title')).to.contain(
         applabI18n.makerSetupCircuitPlaygroundTitle()
       );
@@ -55,11 +42,7 @@ describe('MakerSetupGuide', () => {
     });
 
     it('renders microbit description description', () => {
-      const wrapper = shallow(<MakerSetupGuide />);
-      description = wrapper.findWhere(
-        n => n.prop('class') === 'microbit-description'
-      );
-      markdown = description.shallow().find('SafeMarkdown');
+      let [description, markdown] = getGuideContent('#microbit-description');
       expect(description.prop('title')).to.contain(
         applabI18n.makerSetupMicrobitTitle()
       );
@@ -68,4 +51,18 @@ describe('MakerSetupGuide', () => {
       );
     });
   });
+
+  /**
+   * Finds description and markdown wrappers from SetupGuide by elementId
+   * @param {string} elementId
+   * @returns if nothing is monitoring the given analog pin
+   */
+  function getGuideContent(elementId) {
+    const wrapper = shallow(<SetupGuide />);
+    const description = wrapper.find(elementId).first();
+    const markdown = description.exists()
+      ? description.shallow().find('SafeMarkdown')
+      : null;
+    return [description, markdown];
+  }
 });

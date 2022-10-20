@@ -32,7 +32,7 @@ const style = {
 
 const setupGuideContent = {
   microbit: {
-    class: 'microbit-description',
+    id: 'microbit-description',
     title: applabI18n.makerSetupMicrobitTitle(),
     href: 'https://microbit.org/',
     imgSrc: '../assets/maker/microbit-drawing-green.png',
@@ -40,7 +40,7 @@ const setupGuideContent = {
     imgStyle: style.microbitImg
   },
   circuitPlayground: {
-    class: 'circuit-playground-description',
+    id: 'circuit-playground-description',
     title: applabI18n.makerSetupCircuitPlaygroundTitle(),
     href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
     imgSrc: '../assets/maker/circuit-playground-200.jpg',
@@ -85,7 +85,7 @@ export default class SetupGuide extends React.Component {
 
 function DescriptionCard(props) {
   return (
-    <div className={props.class} style={props.divStyle}>
+    <div id={props.id} style={props.divStyle}>
       <h2>{props.title}</h2>
       <center>
         <a href={props.href}>
@@ -99,7 +99,7 @@ function DescriptionCard(props) {
   );
 }
 DescriptionCard.propTypes = {
-  class: PropTypes.string,
+  id: PropTypes.string,
   title: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   imgSrc: PropTypes.string.isRequired,
