@@ -778,7 +778,6 @@ FactoryGirl.define do
     state 'Washington'
     add_attribute :zip_code, '98101'
     association :school
-    principal_role 'Headmaster'
     principal_first_name 'Albus'
     principal_last_name 'Dumbledore'
     principal_title 'Dr.'
@@ -786,6 +785,7 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
+    previous_used_curriculum ['Neither']
     previous_yearlong_cdo_pd ['CS in Science']
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
@@ -822,8 +822,11 @@ FactoryGirl.define do
     end
 
     pay_fee Pd::Application::TeacherApplication.options[:pay_fee].first
-    enough_course_hours Pd::Application::TeacherApplication.options[:enough_course_hours].first
+    plan_to_teach Pd::Application::TeacherApplication.options[:plan_to_teach].first
     completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes '45'
+    cs_how_many_days_per_week '5'
+    cs_how_many_weeks_per_year '20'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
 
     trait :csp do
@@ -835,13 +838,6 @@ FactoryGirl.define do
     trait :csd do
       program Pd::Application::TeacherApplication::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
-    end
-
-    trait :csa do
-      program Pd::Application::TeacherApplication::PROGRAMS[:csa]
-      csa_which_grades ['11', '12']
-      csa_how_offer 'As an AP course'
-      csa_already_know 'Yes'
     end
   end
 

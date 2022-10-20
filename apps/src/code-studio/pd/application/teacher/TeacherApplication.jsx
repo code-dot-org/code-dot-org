@@ -20,6 +20,7 @@ const pageComponents = [
   AdditionalDemographicInformation
 ];
 const autoComputedFields = [
+  'cs_total_course_hours',
   'regionalPartnerGroup',
   'regionalPartnerId',
   'regionalPartnerWorkshopIds'
