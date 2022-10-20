@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-10-19 18:56:51 UTC",
+    "serialized_at": "2022-10-19 21:56:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1236,7 +1236,8 @@
       "key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b",
       "position": 2,
       "properties": {
-        "description": "The second problem will be more collaborative with students bouncing ideas off of one another during the prepare and reflect steps."
+        "description": "The second problem will be more collaborative with students bouncing ideas off of one another during the prepare step.",
+        "progression_name": "The Clicker Game Problem"
       },
       "seeding_key": {
         "activity_section.key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b",
@@ -1247,7 +1248,8 @@
       "key": "910739ed-74c4-49b7-b640-3286ab03d06e",
       "position": 3,
       "properties": {
-        "description": "The last problem could be used as an assessment of student's understanding of how to use the PSP as it will be more independent (though students can still collaborate if they choose)."
+        "description": "The last problem could be used as an assessment of student's understanding of how to use the PSP as it will be more independent (though students can still collaborate if they choose).",
+        "progression_name": "The Trivia Game Problem"
       },
       "seeding_key": {
         "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e",
@@ -3133,6 +3135,50 @@
       "level_keys": [
         "CSD U6 - ProbSolvProc_ChallA1_2023"
       ]
+    },
+    {
+      "chapter": 77,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Clicker Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallB_2023"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Trivia Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallC_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4046,6 +4092,30 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallB_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallC_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
       }
     }
   ],
