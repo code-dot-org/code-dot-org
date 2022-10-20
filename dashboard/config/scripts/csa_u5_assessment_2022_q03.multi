@@ -42,7 +42,7 @@ for (int[] j : arr) {
 II.
 ```
 for (int[] j : arr) {
-  for (int i = 0; i < j.length; j++) {
+  for (int i = 0; i < j.length; i++) {
     System.out.print(j[i] + " ");
   }
 }

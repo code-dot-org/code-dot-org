@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcover",
-    "serialized_at": "2022-10-18 20:59:23 UTC",
+    "serialized_at": "2022-10-19 22:35:56 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -919,6 +919,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_predict_wonder"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b"
+      },
+      "level_keys": [
+        "csc_bookcover_predict_wonder"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "csc_bookcover_clicksay_-wonder"
         ],
@@ -939,9 +961,9 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 2,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -964,9 +986,9 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 3,
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -989,9 +1011,9 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 4,
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1014,8 +1036,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
+      "chapter": 16,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1039,7 +1061,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1064,7 +1086,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1089,7 +1111,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1114,7 +1136,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1139,7 +1161,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1164,7 +1186,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1189,7 +1211,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -1214,7 +1236,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -1239,7 +1261,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1383,6 +1405,18 @@
         "lesson_group.key": "",
         "script.name": "csc-bookcover",
         "activity_section.key": "d094d6c6-d018-44a7-8491-7c242a9ee7e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_bookcover_predict_wonder",
+        "script_level.level_keys": [
+          "csc_bookcover_predict_wonder"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b"
       }
     },
     {
