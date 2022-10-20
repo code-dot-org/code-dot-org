@@ -70,42 +70,42 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-13T21:07:16.023+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_stories_predict\\\"\"],\"cloned_from\":\"csc_landmarks_stories_predict\"},{\"changed_at\":\"2022-10-13 21:07:37 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:15:26 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:18:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-13T21:07:16.023+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_stories_predict\\\"\"],\"cloned_from\":\"csc_landmarks_stories_predict\"},{\"changed_at\":\"2022-10-13 21:07:37 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:15:26 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:17:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:18:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-19 18:35:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" uservisible="false">
+        <block type="when_run">
           <next>
-            <block type="gamelab_setBackgroundImageAs" uservisible="false">
+            <block type="gamelab_setBackgroundImageAs">
               <field name="IMG">"map_usa-01"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" uservisible="false">
+                <block type="gamelab_makeNewSpriteAnon">
                   <field name="ANIMATION_NAME">"pink_shirt_wave3"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker" uservisible="false">
+                    <block type="gamelab_location_picker">
                       <field name="LOCATION">{"x":141,"y":336}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon" uservisible="false">
+                    <block type="gamelab_makeNewSpriteAnon">
                       <field name="ANIMATION_NAME">"kidportrait_12"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" uservisible="false">
+                        <block type="gamelab_location_picker">
                           <field name="LOCATION">{"x":46,"y":159}</field>
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_addBehaviorSimple" uservisible="false">
+                        <block type="gamelab_addBehaviorSimple">
                           <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation" uservisible="false">
+                            <block type="gamelab_allSpritesWithAnimation">
                               <field name="ANIMATION">"pink_shirt_wave3"</field>
                             </block>
                           </value>
                           <value name="BEHAVIOR">
-                            <block type="gamelab_behavior_get" uservisible="false">
+                            <block type="gamelab_behavior_get">
                               <mutation/>
                               <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
                             </block>

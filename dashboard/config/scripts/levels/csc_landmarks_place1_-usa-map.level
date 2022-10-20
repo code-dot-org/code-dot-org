@@ -37,6 +37,12 @@
     "project_template_level_name": "csc_landmarks_template_-usa-map",
     "name_suffix": "_-usa-map",
     "preload_asset_list": null,
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
     "encrypted_examples": [
 
     ]
@@ -46,7 +52,7 @@
   "created_at": "2022-09-30T21:20:15.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:15.335+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_place1\\\"\"],\"cloned_from\":\"csc_landmarks_place1\"},{\"changed_at\":\"2022-10-11 17:24:49 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:09:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:09:22 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:14:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:56:17 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:58:32 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:59:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:38:52 +0000\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-30T21:20:15.335+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_place1\\\"\"],\"cloned_from\":\"csc_landmarks_place1\"},{\"changed_at\":\"2022-10-11 17:24:49 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:09:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:09:22 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 04:14:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:56:17 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:58:32 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 17:59:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 21:38:52 +0000\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-19 17:44:36 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
