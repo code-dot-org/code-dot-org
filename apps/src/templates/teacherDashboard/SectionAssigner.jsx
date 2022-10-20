@@ -57,6 +57,7 @@ class SectionAssigner extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             unitId={scriptId}
+            courseId={courseId}
           />
           {selectedSection && selectedSection.isAssigned && (
             <UnassignSectionButton
