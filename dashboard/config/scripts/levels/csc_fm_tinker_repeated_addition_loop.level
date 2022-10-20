@@ -1,0 +1,206 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "##Tinkerer\r\n- How would you rewrite the code so that the `plusTwo` function is repeated 5 times in a loop?\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "true",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "preload_asset_list": null
+  },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-10-19T19:33:42.000Z",
+  "user_id": 1196,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-10-19T19:33:42.713+00:00\",\"changed\":[\"cloned from \\\"csc_fm_tinker_repeated_addition\\\"\"],\"cloned_from\":\"csc_fm_tinker_repeated_addition\"},{\"changed_at\":\"2022-10-19 19:33:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:34:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:48:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:48:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 19:52:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="gamelab_makeNewSpriteAnon">
+              <field name="ANIMATION_NAME">"purple bunny"</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <field name="LOCATION">{"x":196,"y":325}</field>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR">input</field>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_spriteSayTime">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"purple bunny"</field>
+                        </block>
+                      </value>
+                      <value name="TEXT1">
+                        <block type="variables_get">
+                          <field name="VAR">input</field>
+                        </block>
+                      </value>
+                      <value name="NUM">
+                        <block type="math_number">
+                          <field name="NUM">4</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"purple bunny"</field>
+            </block>
+          </value>
+          <next>
+            <block type="controls_repeat_ext">
+              <value name="TIMES">
+                <block type="gamelab_int10">
+                  <field name="VALUE">1</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="addTwo"/>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_spriteSayTime">
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"purple bunny"</field>
+                    </block>
+                  </value>
+                  <value name="TEXT1">
+                    <block type="variables_get">
+                      <field name="VAR">output</field>
+                    </block>
+                  </value>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">4</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME" id="addTwo">addTwo</field>
+          <statement name="STACK">
+            <block type="variables_set">
+              <field name="VAR">input</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">ADD</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR">output</field>
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME" id="addFive">addFive</field>
+          <statement name="STACK">
+            <block type="variables_set">
+              <field name="VAR">input</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">ADD</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">5</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <block type="math_number">
+              <field name="NUM">1</field>
+            </block>
+          </value>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="addTwo"/>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
