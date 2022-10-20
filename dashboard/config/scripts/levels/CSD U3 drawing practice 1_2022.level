@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:38:27.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -76,11 +72,15 @@
     "display_name": "Debug a car",
     "thumbnail_url": "https://images.code.org/61e8a1e3ce6beb6447fe625c2b6716b2-image-1561055007822.22.54 AM.png",
     "bubble_choice_description": "Debug this code so that the wheels appear.",
-    "map_reference": "/docs/concepts/game-lab/drawing-shapes/",
+    "map_reference": "/courses/csd-2022/guides/drawing-shapes",
     "encrypted_examples": "pcpOX5+wTt0nYYQ7SvoO3wXeaVrNdk+cQ0i+ZCQ4lFHQ0tJpEk0pRDmjB7CT\nxf9UFLQnPlxDzXEjnhvfb1cNfQ==\n",
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:38:27.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:38:27.716+00:00\",\"changed\":[\"cloned from \\\"CSD U3 drawing practice 1_2021\\\"\"],\"cloned_from\":\"CSD U3 drawing practice 1_2021\"}]"

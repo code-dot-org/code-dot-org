@@ -4218,6 +4218,8 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 샌드박스
+        ai-ethics-2021:
+          description_audience: 6-12 학년
         poem-art-2021:
           title: 시학
         explore-data-1-2021:
@@ -4504,6 +4506,10 @@ ko:
               display_name: 컨텐츠
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 시작하기
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4642,6 +4648,9 @@ ko:
           description_audience: 커리큘럼 작성자
           description_short: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
           description: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
+          lessons:
+            lesson-7:
+              name: 스프라이트 소개
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4733,3 +4742,112 @@ ko:
               display_name: 환영합니다
         dlp-csp-mod1-2022:
           title: CS 원리 심화 학습 모듈 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 비동기 디버깅 확장
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 모듈 2 비동기 작업
+        soccer:
+          name: 축구
+          title: 축구 게임 코딩
+          description_short: 축구 게임 만들기
+          description: 축구 게임 만들기
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: 설문조사
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 설문조사
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java 연구소
+            lesson-6:
+              name: 반복
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 설문조사
+            lessonGroup-3:
+              display_name: 컨텐츠
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
+          title: 문제해결
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 웹페이지 만들기'
+            lessonGroup-3:
+              display_name: '챕터 2: 멀티 페이지 웹페이지 '
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 사용자 중심 설계'
+            lessonGroup-3:
+              display_name: '챕터 2: 앱 프로토타입'
+          title: 설계 프로세스
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터1: 정보 표현하기'
+            lessonGroup-3:
+              display_name: '챕터 2: 데이터 문제 해결하기'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '챕터 1: 이미지와 애니메이션'
+            lessonGroup-3:
+              display_name: '챕터 2: 게임 만들기'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
+          title: 물리적 컴퓨팅
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '챕터 2: 물리적 프로토타입 만들기'

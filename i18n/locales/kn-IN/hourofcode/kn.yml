@@ -5,30 +5,46 @@ kn:
   language: English
   front_title: Join the largest learning event in history, %{campaign_date}
   coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 6
-  campaign_date_start_long: December 6
-  campaign_date_short: Dec. 6-12
-  campaign_date_full: December 6-12
-  campaign_date_year: '2021'
-  campaign_date_full_year: December 6-12, 2021
+  campaign_date_start_short: ಡಿ. 5
+  campaign_date_start_long: ಡಿಸೆಂಬರ್ 5
+  campaign_date_short: ಡಿ. 5-11
+  campaign_date_full: ಡಿಸೆಂಬರ್ 5-11
+  campaign_date_year: '2022'
+  campaign_date_full_year: 'ಡಿಸೆಂಬರ್ 5-11, 2022
+
+'
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  nonus_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Dec. 6
-  europe_campaign_date_start_long: December 6
-  europe_campaign_date_short: Dec. 6-12
-  europe_campaign_date_full: December 6-12
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: December 6-12, 2021
-  africa_campaign_date_start_short: Dec. 6
-  africa_campaign_date_start_long: December 6
-  africa_campaign_date_short: Dec. 6-12
-  africa_campaign_date_full: December 6-12
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: December 6-12, 2021
+  latam_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  latam_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  europe_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  africa_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
+  hoc2022_header: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
+  social_hoc2022_explore_play_create: ಅನ್ವೇಷಿಸಲು, ಪ್ಲೇ ಮಾಡಲು ಮತ್ತು ರಚಿಸಲು ಕಂಪ್ಯೂಟರ್
+    ಸೈನ್ಸ್‌ ಬಳಸಿ!
+  codeorg_homepage_hoc2022_body: ಬ್ರಹ್ಮಾಂಡವನ್ನು ಅನ್ವೇಷಿಸಿ, ಗೋಲ್ ಮಾಡಿ, ನಡೆಯನ್ನು ವಿಜ್ರಂಭಿಸಿ
+    - ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅನ್ನು ಪ್ರಯೋಗಿಸಲು ಹಲವು ವಿಧಾನಗಳಿವೆ.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: ಇಂದು ಕಲಿಯಿರಿ, ಪ್ರಖರ ಭವಿಷ್ಯವನ್ನು ರೂಪಿಸಿ.
@@ -488,6 +504,24 @@ kn:
   front_join_us_n_students_served: "# ಒದಗಿಸಲಾಗಿದೆ."
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Learn more
+  cta_see_whats_new: ಹೊಸದೇನಿದೆ ಎಂದು ನೋಡಿ
+  cta_try_more_activities: ಇನ್ನಷ್ಟು ಚಟುವಟಿಕೆಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  cta_try_an_activity: ಒಂದು ಚಟುವಟಿಕೆಯನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  hoc_homepage_join_the_movement_heading: ಚಳವಳಿಗೆ ಸೇರಿಕೊಳ್ಳಿ
+  hoc_homepage_join_the_movement_description: ಅವರ್ ಆಫ್ ಕೋಡ್ ಇಡೀ ವರ್ಷ ಲಭ್ಯವಿರುತ್ತದೆ.
+    ಆದರೆ, ಪ್ರತಿ ವರ್ಷ ಡಿಸೆಂಬರ್‌ನಲ್ಲಿ ನಿಮ್ಮ ತರಗತಿಗೆ ವಿಶ್ವಾದ್ಯಂತ ಮಿಲಿಯನ್‌ಗಟ್ಟಲೆ ವಿದ್ಯಾರ್ಥಿಗಳು
+    ಸೇರಿ ಅವರ್ ಆಫ್ ಕೋಡ್ ಜೊತೆಗೆ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಎಜುಕೇಶನ್ ಸಪ್ತಾಹವನ್ನು ಸಂಭ್ರಮಿಸಬಹುದು.
+    ವಾರ್ಷಿಕ ಸಂಭ್ರಮಾಚರಣೆಗೆ ನೋಂದಣಿಯು ಪ್ರತಿ ವರ್ಷ ಅಕ್ಟೋಬರ್‌ನಲ್ಲಿ ಆರಂಭವಾಗುತ್ತದೆ.
+  hoc_homepage_what_is_hoc_subhead: ಒಂದು ಗಂಟೆ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳು 45 ಕ್ಕೂ ಹೆಚ್ಚು ಭಾಷೆಗಳಲ್ಲಿ
+    ಲಭ್ಯವಿದೆ. ಯಾವುದೇ ಅನುಭವ ಅಗತ್ಯವಿಲ್ಲ. ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳು ಇಡೀ ವರ್ಷ ಲಭ್ಯವಿದೆ.
+  hoc_homepage_what_is_hoc_description: ಅವರ್ ಆಫ್ ಕೋಡ್ ಎಂಬುದು ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು
+    ಗಂಟೆಯ ಪರಿಚಯವಾಗಿದೆ. ಯಾರು ಬೇಕಾದರೂ ಬೇಸಿಕ್ಸ್ ಅನ್ನು ಕಲಿಯಬಹುದು ಎಂಬುದನ್ನು ತಿಳಿಸಲು ಇದು
+    ತಮಾಷೆಯ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳನ್ನು ಬಳಸುತ್ತದೆ. ಈ ಬೇರುಮಟ್ಟದ ಕ್ಯಾಂಪೇನ್‌ಗೆ 400 ಪಾಲುದಾರರು ಮತ್ತು
+    200,000 ಶಿಕ್ಷಣ ತಜ್ಞರು ಬೆಂಬಲಿಸುತ್ತಾರೆ.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[ನಮ್ಮ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ಓದಿ](%{howto_guide_url})
+    ನಿಮ್ಮ ತರಗತಿಗೆ ಒಂದು ಈವೆಂಟ್ ಯೋಜನೆ ಮಾಡಿ."
+  hoc_homepage_highlights_heading: ಅವರ್ ಆಫ್ ಕೋಡ್ ಮುಖ್ಯಾಂಶಗಳು
+  hoc_homepage_organized_by: ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಆಯೋಜಿಸಿದವರು [Code.org](%{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: ಭಾಗವಹಿಸಲು ನೀವು ನೋಂದಣಿ ಮಾಡಬೇಕಿಲ್ಲ! ಅವರ್ ಆಫ್ ಕೋಡ್
@@ -534,8 +568,6 @@ kn:
   signup_multiple_event_warning: We will put your school name and city on the map
     when you register. If you're hosting multiple events, please submit a unique name
     or email for each one. We only count one event per name and email combination.
-  signup_registration_deadline: Registration for the Hour of Code closes December
-    13.
   signup_name_placeholder: Your Name
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: For example, Lincoln High School
@@ -1012,9 +1044,9 @@ kn:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
-  footer_trademark_message: Hour of Code™ and Hora del Código® are trademarks of Code.org.
+  footer_trademark_message: Hour of Code® and Hora del Código® are trademarks of Code.org.
   footer_built_on_github: ಮೈಕ್ರೋಸಾಫ್ಟ್‌ನ ಗಿಟ್‌ಹಬ್‌ನಲ್ಲಿ ನಿರ್ಮಿಸಲಾಗಿದೆ
-  footer_menu_partners: Partners and Advisors
+  footer_menu_partners: Partners
   footer_menu_contact: Contact us
   footer_menu_support: Support
   footer_menu_terms: Terms

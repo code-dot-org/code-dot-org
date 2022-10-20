@@ -7,6 +7,7 @@ import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
 
 const DEFAULT_MARGIN = 7;
 
@@ -115,7 +116,9 @@ export default class ModelManagerDialog extends React.Component {
     }).then(response => {
       if (response.status === 'failure') {
         this.setState({
-          deletionStatus: `Model with id ${response.id} could not be deleted.`,
+          deletionStatus: i18n.aiTrainedModelsDeleteModelFailed({
+            id: response.id
+          }),
           isDeletePending: false
         });
       } else {
@@ -140,7 +143,7 @@ export default class ModelManagerDialog extends React.Component {
           useUpdatedStyles
           style={styles.dialog}
         >
-          <h1 style={styles.header}>AI Trained Models</h1>
+          <h1 style={styles.header}>{i18n.aiTrainedModels()}</h1>
           {this.state.isModelListPending && (
             <div style={styles.spinner}>
               <Spinner />
@@ -163,21 +166,21 @@ export default class ModelManagerDialog extends React.Component {
                 </select>
                 {noModels && (
                   <div style={styles.message}>
-                    You have not trained any AI models yet.
+                    {i18n.aiTrainedModelsNoModels()}
                   </div>
                 )}
                 <br />
                 <Button
-                  text={'Import'}
+                  text={i18n.import()}
                   color={Button.ButtonColor.orange}
                   onClick={this.importMLModel}
                   disabled={noModels}
                   isPending={this.state.isImportPending}
-                  pendingText={'Importing...'}
+                  pendingText={i18n.importingWithEllipsis()}
                 />
                 {showDeleteButton && (
                   <Button
-                    text={'Delete'}
+                    text={i18n.delete()}
                     color={Button.ButtonColor.red}
                     onClick={this.showDeleteConfirmation}
                     disabled={noModels}
@@ -199,26 +202,25 @@ export default class ModelManagerDialog extends React.Component {
           style={styles.dialog}
         >
           <h1 style={styles.header}>
-            Are you sure you would like to delete this model?
+            {i18n.aiTrainedModelsDeleteModelConfirm()}
           </h1>
           <div style={styles.left}>
             <p style={styles.message}>
-              This model will be permanently deleted, and you will not be able
-              to use this model in any App Lab projects.
+              {i18n.aiTrainedModelsDeleteModelMessage()}
             </p>
             <div>
               <Button
-                text={'No'}
+                text={i18n.no()}
                 color={Button.ButtonColor.orange}
                 onClick={this.closeConfirmDialog}
               />
               <Button
-                text={'Delete'}
+                text={i18n.delete()}
                 color={Button.ButtonColor.red}
                 onClick={this.deleteModel}
                 icon={'trash'}
                 iconClassName={'fa-trash'}
-                pendingText={'Deleting...'}
+                pendingText={i18n.deletingWithEllipsis()}
                 isPending={this.state.isDeletePending}
               />
             </div>

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:52.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -81,10 +77,10 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/analog-sensors/",
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/board-events/",
-      "/docs/concepts/maker-toolkit/data-and-change-events/"
+      "/courses/csd-2022/guides/analog-sensors",
+      "/courses/csd-2022/guides/the-accelerometer",
+      "/courses/csd-2022/guides/board-events",
+      "/courses/csd-2022/guides/data-and-change-events"
     ],
     "rubric_key_concept": "Use the accelerometer in an event and with data to create an app",
     "rubric_performance_level_1": "The app matches the description, using an onBoardEvent to detect accelerometer movement and uses variables and getOrientation blocks to make changes to the x and y positions",
@@ -105,6 +101,10 @@
     "encrypted_examples": "kRZaCVcjDU9mI0TDYRygtCXesrlh4WTE5+nbLYhQMrptDwSUy4FJ9iHLCZHv\n1p6ACkNCyjnKB8Y671te4D8c8Q==\n",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:52.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:52.969+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - A_2022\"}]"

@@ -31,7 +31,7 @@ Code.org, teknoloji alanındaki kariyer deneyimlerini paylaşmaları ve bu aland
 - Kendi [Hour of Code'unuzu]({{ urls/promote }}) tanıtın ve başkalarını da kendi etkinliklerini düzenlemeleri için teşvik edin.
 - Şirketinizdeki yazılım mühendislerini bölgedeki bir okulun öğrencileri ziyaret ederek Hour of Code etkinliğine yardım etmeleri ve bilgisayar biliminde ilerleme konusunda ilham vermeleri için yönlendirin. Yazılım mühendisleri buradan [kaydolarak]({{ urls/volunteer_engineer }}) sınıflara bağlanabilir.
 
-## 2. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Bir aktivite seçin
 Çeşitli ortaklarımız tarafından her yaştan katılımcılar için hazırlanmış[eğlenceli, saatlik çeşitli aktivitelere]({{ urls/learn }}) ev sahipliği yapıyoruz. [Bunları deneyin!]({{ urls/learn }})

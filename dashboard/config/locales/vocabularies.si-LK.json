@@ -74,6 +74,87 @@
         "code/dance-2019/unversioned": {
           "word": "කේතය"
         },
+        "programming/coursed/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "code/coursed/2022": {
+          "word": "කේතය"
+        },
+        "conditionals/coursed/2022": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "variable/coursef/2022": {
+          "word": "විචල්‍යය"
+        },
+        "internet/coursef/2022": {
+          "word": "අන්තර්ජාලය"
+        },
+        "define/coursef/2022": {
+          "word": "අර්ථ දක්වන්න"
+        },
+        "function/coursee/2022": {
+          "word": "ශ්‍රිතය"
+        },
+        "conditionals/coursee/2022": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "copyright/coursee/2022": {
+          "word": "ප්‍රකාශන හිමිකම"
+        },
+        "define/coursee/2022": {
+          "word": "අර්ථ දක්වන්න"
+        },
+        "programming/courseb/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "programming/express/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "code/express/2022": {
+          "word": "කේතය"
+        },
+        "conditionals/express/2022": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "function/express/2022": {
+          "word": "ශ්‍රිතය"
+        },
+        "variable/express/2022": {
+          "word": "විචල්‍යය"
+        },
+        "define/express/2022": {
+          "word": "අර්ථ දක්වන්න"
+        },
+        "programming/pre-express/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "programming/coursea/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "programming/coursec/2022": {
+          "word": "ක්‍රමලේඛනය"
+        },
+        "data/coursec/2022": {
+          "word": "දත්ත"
+        },
+        "binary/coursec/2022": {
+          "word": "ද්විමය"
+        },
+        "variable/csd/2022": {
+          "word": "විචල්‍යය"
+        },
+        "conditionals/csd/2022": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "abstraction/csd/2022": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්"
+        },
+        "function/csd/2022": {
+          "word": "ශ්‍රිතය"
+        },
+        "copyright/csd/2022": {
+          "word": "ප්‍රකාශන හිමිකම"
+        },
         "code/poem-art/unversioned": {
           "word": "කේතය"
         },

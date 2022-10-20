@@ -2,6 +2,9 @@
 hu:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: felhasználó megadja {QUESTION} kérdésre a {VAR} változót a {A}{B}{C}
+          lehetőségek közül
       BadGuys_makeNewBadGuysSprite:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       BadGuys_setSizeAll_dropdown:
@@ -1315,6 +1318,10 @@ hu:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": furcsa
               basszus
             "'sound://category_digital/jump_7.mp3'": Ugorj
+      gamelab_playSoundOptionsSoccer:
+        text: játszd le a {SOUND} hangot
+      gamelab_playSoundOptionsSpace:
+        text: játszd le a {SOUND} hangot
       gamelab_playSpeech:
         text: "{SOUND} beszéd eljátszása"
       gamelab_playerBehaviors:
@@ -1469,15 +1476,6 @@ hu:
         text: "{SPRITE} gondolkozik {SPEECH} beszédről"
       gamelab_spriteThinkTime:
         text: "{SPRITE} gondolkozik {TEXT1} szövegről {NUM} másodpercig"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Én is éhes vagyok.
-            '"I only want the biggest goat."': A legnagyobb kecskét akarom.
-            '"I''m a green troll."': Én egy zöld troll vagyok.
-            '"No one will cross my bridge."': Senki nem megy át a hídamon.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} gondolkodik {THOUGHT} gondolaton"
         options:
@@ -2131,6 +2129,11 @@ hu:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: ha {VAR} a válasz
       RyanLab_moveForward:

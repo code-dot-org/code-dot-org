@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_03_162830) do
+ActiveRecord::Schema.define(version: 2022_10_03_141047) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -275,21 +275,15 @@ ActiveRecord::Schema.define(version: 2022_08_03_162830) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
-    t.integer "storage_app_id", null: false
-    t.string "project_version"
-    t.integer "script_id"
-    t.integer "level_id"
-    t.integer "commenter_id", null: false
+  create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
+    t.integer "code_review_id", null: false
+    t.integer "commenter_id"
+    t.boolean "is_resolved", null: false
     t.text "comment", size: :medium
-    t.integer "project_owner_id"
-    t.integer "section_id"
-    t.boolean "is_from_teacher"
-    t.boolean "is_resolved"
-    t.timestamp "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["storage_app_id", "project_version"], name: "index_code_review_comments_on_storage_app_id_and_version"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["code_review_id"], name: "index_code_review_comments_on_code_review_id"
   end
 
   create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -307,17 +301,6 @@ ActiveRecord::Schema.define(version: 2022_08_03_162830) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["section_id"], name: "index_code_review_groups_on_section_id"
-  end
-
-  create_table "code_review_notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
-    t.integer "code_review_request_id", null: false
-    t.integer "commenter_id"
-    t.boolean "is_resolved", null: false
-    t.text "comment", size: :medium
-    t.datetime "deleted_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
   end
 
   create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -464,7 +447,7 @@ ActiveRecord::Schema.define(version: 2022_08_03_162830) do
     t.integer "course_offering_id"
     t.string "published_state", default: "in_development"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
-    t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true
+    t.index ["course_offering_id", "key", "content_root_type"], name: "index_course_versions_on_offering_id_and_key_and_type", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
   end
 
@@ -1575,16 +1558,6 @@ ActiveRecord::Schema.define(version: 2022_08_03_162830) do
     t.integer "course_version_id", null: false
     t.index ["course_version_id", "key"], name: "index_resources_on_course_version_id_and_key", unique: true
     t.index ["name", "url"], name: "index_resources_on_name_and_url", type: :fulltext
-  end
-
-  create_table "reviewable_projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.integer "storage_app_id", null: false
-    t.integer "user_id", null: false
-    t.integer "level_id"
-    t.integer "script_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id", "script_id", "level_id", "storage_app_id"], name: "index_reviewable_projects_on_user_script_level_storage_app"
   end
 
   create_table "school_districts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

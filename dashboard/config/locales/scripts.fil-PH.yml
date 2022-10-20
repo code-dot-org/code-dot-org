@@ -3294,6 +3294,8 @@ fil:
           lesson_groups:
             lessonGroup-5:
               display_name: Kahon ng buhangin
+        ai-ethics-2021:
+          description_audience: Baitang 6-12
         poem-art-2021:
           title: Sining ng Tula
         explore-data-1-2021:
@@ -3473,6 +3475,10 @@ fil:
           description_short: 'Isang introduksyon sa computer science para sa mga hindi
             marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at
             unang baitang na mga kurso.'
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Pagsisimula
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-5:
@@ -3506,6 +3512,10 @@ fil:
               display_name: Pagsisiyasat
         hello-world-csc:
           title: Hello World
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Intro sa Mga Sprite
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3591,3 +3601,75 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Maligayang Pagdating
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Asynchronous na Debugging Extension
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Module 2 Asynchronous na Gawain
+        soccer:
+          name: soccer
+          title: I-code ang sarili mong laro ng soccer
+          description_short: Gumawa ng soccer game
+          description: Gumawa ng soccer game
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Pagsisiyasat
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Pagsisiyasat
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Mga loop
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pagsisiyasat
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kabanata 1
+            lessonGroup-3:
+              display_name: Kabanata 2
+          title: Paglutas ng Problema
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kabanata 1: Disenyo na Naka-sentro sa Gumagamit'
+            lessonGroup-3:
+              display_name: 'Kabanata 2: Pag-Prototype ng App'
+          title: Ang Proseso ng Pag-Disenyo
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
+            lessonGroup-3:
+              display_name: 'Kabanata 2: Paglutas ng mga Problema sa Datos'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kabanata 1: Mga Larawan at Animation'
+            lessonGroup-3:
+              display_name: 'Kabanata 2: Paggawa ng mga Laro'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kabanata 1
+            lessonGroup-3:
+              display_name: Kabanata 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kabanata 1
+            lessonGroup-3:
+              display_name: Kabanata 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kabanata 2: Input ng Hardware'

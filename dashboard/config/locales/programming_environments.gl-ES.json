@@ -1,0 +1,88 @@
+{
+  "gl-ES": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "Etiquetas HTML"
+            }
+          }
+        },
+        "gamelab": {
+          "categories": {
+            "groups": {
+              "name": "Grupos"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funcións"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratorio de aplicacións",
+          "categories": {
+            "math": {
+              "name": "Matemáticas"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "functions": {
+              "name": "Funcións"
+            },
+            "advanced": {
+              "name": "Avanzado"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "world": {
+              "name": "Mundo"
+            },
+            "location": {
+              "name": "Localizacións"
+            },
+            "actions": {
+              "name": "Accións"
+            },
+            "events": {
+              "name": "Eventos"
+            },
+            "behaviors": {
+              "name": "Comportamentos"
+            },
+            "loops": {
+              "name": "Bucles"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "math": {
+              "name": "Matemáticas"
+            },
+            "logic": {
+              "name": "Lóxica"
+            },
+            "functions": {
+              "name": "Funcións"
+            },
+            "text": {
+              "name": "Texto"
+            },
+            "comments": {
+              "name": "Comentarios"
+            }
+          }
+        }
+      }
+    }
+  }
+}

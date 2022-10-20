@@ -1,4 +1,4 @@
-import five from '@code-dot-org/johnny-five';
+import five from '@code-dot-org/johnny-five-deprecated';
 import Playground from 'playground-io';
 
 export function makeStubBoard() {

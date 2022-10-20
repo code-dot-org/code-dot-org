@@ -21,6 +21,7 @@ uz:
       level: daraja
       name: ism
       nectar: nektar
+      object: obyekt
       planet: sayyora
       points: ballar
       random: tasodifiy
@@ -30,6 +31,7 @@ uz:
       sides: tomonlar
       size: kattalik
       speed: tezlik
+      type: tur
       variable: o‘zgaruvchi
       width: kenglik
       wizard: sehrgar

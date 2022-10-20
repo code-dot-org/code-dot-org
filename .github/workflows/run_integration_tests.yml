@@ -1,8 +1,7 @@
 name: Run integration tests
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 jobs:
-  run-ui-tests:
+  run-integration-tests:
     runs-on: ubuntu-latest
     env:        
       CI: true
@@ -10,7 +9,8 @@ jobs:
       RACK_ENV: test
       DISABLE_SPRING: 1   
       SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-      SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}
+      SAUCE_ACCESS_KEY:  ${{ secrets.SAUCE_ACCESS_KEY }}      
+      LD_LIBRARY_PATH: "/usr/local/lib"
     steps:    
       - name: Get actions code
         uses: actions/checkout@v3    
@@ -29,4 +29,4 @@ jobs:
       - name: Install rake dependencies 
         uses: ./.github/actions/install-rake-dependencies
       - name: Rake run integration tests
-        run: bundle exec rake test:all --trace
+        run:  bundle exec rake test:changed --trace

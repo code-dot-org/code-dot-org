@@ -49,10 +49,10 @@
         "pixelation": "Pikselleşme",
         "playlab": "Oyun Laboratuvarı",
         "sports": "Kendi Spor Oyununu Kodla",
+        "starwars": "Star Wars: Galaksiyi Kod ile Yapmak (Javascript)",
+        "starwarsblocks": "Star Wars: Galaksiyi Kod ile Yapmak (Blockly)",
         "text-compression": "Metin Sıkıştırma",
         "csa-self-paced-pl": "BBA Pilot Öğretmenleri için Code.org'da Gezinme",
-        "counting-csc": "Laurel ile Sayma",
-        "explore-data-1": "Kutu Grafiklerini ve Histogramları Keşfetmek",
         "outbreak-csc": "Salgın",
         "poem-art": "Şiir Sanatı",
         "vpl-csp": "Bilgisayar Bilimi İlkeleri Sanal Profesyonel Öğrenim",
@@ -69,7 +69,9 @@
         "halloween": "cadılar bayramı",
         "step": "adım",
         "coursee-ramp": "kursiyer-hızlan",
-        "csa5-exemplars": "bba5-örnekler"
+        "frozen-2018-test-b": "frozen-2018-test-b",
+        "csa5-exemplars": "bba5-örnekler",
+        "soccer": "futbol"
       }
     }
   }

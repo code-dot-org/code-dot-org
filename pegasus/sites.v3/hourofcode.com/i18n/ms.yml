@@ -5,30 +5,44 @@ ms:
   language: Bahasa Inggeris
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
-  campaign_date_start_short: 6 Dis.
-  campaign_date_start_long: 6 Disember
-  campaign_date_short: 7-13 Dis.
-  campaign_date_full: 6-12 Disember
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 Disember 2021
+  campaign_date_start_short: 5 Disember
+  campaign_date_start_long: 5 Disember
+  campaign_date_short: 5-11 Disember
+  campaign_date_full: 5-11 Disember
+  campaign_date_year: '2020'
+  campaign_date_full_year: 5-11 Disember 2022
+  nonus_campaign_date_start_short: 1 Okt.
+  nonus_campaign_date_start_long: 1 Oktober
+  nonus_campaign_date_short: 1 Oktober - 18 Disember
+  nonus_campaign_date_full: 1 Oktober - 18 Disember
+  nonus_campaign_date_year: '2020'
+  nonus_campaign_date_full_year: 1 Oktober 2022 - 18 Disember 2022
   latam_campaign_date_start_short: 1 Okt.
   latam_campaign_date_start_long: 1 Oktober
-  latam_campaign_date_short: 1 Okt. - 18 Dis.
+  latam_campaign_date_short: 1 Oktober - 18 Disember
   latam_campaign_date_full: 1 Oktober - 18 Disember
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1 Oktober 2020 - 18 Disember 2020
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: 1 Oktober 2022 - 18 Disember 2022
   europe_campaign_date_start_short: 10 Okt.
   europe_campaign_date_start_long: 10 Oktober
   europe_campaign_date_short: 10-25 Okt.
   europe_campaign_date_full: 10-25 Oktober
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: 10-25 Oktober 2020
-  africa_campaign_date_start_short: 6 Dis.
-  africa_campaign_date_start_long: 6 Disember
+  africa_campaign_date_start_short: 1 Okt.
+  africa_campaign_date_start_long: 1 Oktober
   africa_campaign_date_short: 1-31 Okt.
   africa_campaign_date_full: 1-31 Oktober
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 Oktober 2020
+  hoc2022_header: Meneroka, Bermain, Mencipta!
+  social_hoc2022_explore_play_create: Gunakan sains komputer untuk meneroka, bermain
+    dan mencipta!
+  codeorg_homepage_hoc2022_body: Terokai alam semesta, mencapai kejayaan, bertindak
+    — terdapat banyak cara untuk mencuba sains komputer.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 'Belajar hari ini, untuk membina masa depan lebih cerah.  '
@@ -511,6 +525,25 @@ ms:
   front_join_us_challenge: Menang suatu sembangan video dengan seorang selebriti untuk
     kelas anda!
   front_join_us_learn_more: Ketahui lebih lanjut
+  cta_see_whats_new: Lihat yang terbaharu
+  cta_try_more_activities: Cuba lebih banyak aktiviti
+  cta_try_an_activity: Cuba satu aktiviti
+  hoc_homepage_join_the_movement_heading: Sertai tindakan
+  hoc_homepage_join_the_movement_description: Hour of Code tersedia sepanjang tahun,
+    tetapi pada bulan Disember setiap tahun,  kelas anda boleh menyertai berjuta-juta
+    pelajar di seluruh dunia meraikan Minggu Pendidikan Sains Komputer dengan Hour
+    of Code. Pendaftaran untuk sambutan tahunan bermula setiap tahun pada bulan Oktober.
+  hoc_homepage_what_is_hoc_subhead: Tutorial satu jam dalam lebih 45 bahasa. Tiada
+    pengalaman diperlukan. Aktiviti Hour of Code tersedia secara percuma sepanjang
+    tahun.
+  hoc_homepage_what_is_hoc_description: Hour of Code ialah pengenalan tentang sains
+    komputer selama satu jam, menggunakan tutorial yang menyeronokkan untuk menunjukkan
+    bahawa sesiapa sahaja boleh mempelajari asasnya. Kempen akar umbi ini disokong
+    oleh lebih 400 rakan kongsi dan 200,000 pendidik di seluruh dunia.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Baca Panduan kami](%{howto_guide_url})
+    untuk merancang acara bagi kelas anda."
+  hoc_homepage_highlights_heading: Sorotan acara Hour of Code
+  hoc_homepage_organized_by: Hour of Code dianjurkan oleh [Code.org](%{codeorg_url}).
   signup_closed: Pendaftaran untuk Hour of Code kini telah ditutup. Sila semak semula
     pada bulan Oktober untuk mendaftarkan diri dalam Hour of Code yang akan datang.
   signup_registration_not_required: Anda tidak perlu mendaftar untuk menyertainya!
@@ -560,8 +593,6 @@ ms:
     di dalam peta apabila anda telah berdaftar. Jikalau anda akan menganjurkan beberapa
     acara, sila kemukakan suatu nama unik atau e-mel untuk setiap satu acara. Kami
     hanya akan mengambil kira satu acara dengan satu kombinasi nama dengan e-mel.
-  signup_registration_deadline: Pendaftaran untuk Hour of Code akan tutup pada 11
-    Disember.
   signup_name_placeholder: Nama anda
   signup_email_placeholder: Anda@contoh.com
   signup_organization_name_placeholder: Sebagai contoh, Lincoln High School
@@ -1050,7 +1081,8 @@ ms:
     pelajar untuk mendorong diri mereka.
   highlights_constant_athletes_short_heading: Mendorong diri sendiri
   footer_copyright_message: Hak Cipta 2015 Code.org. Semua hak terpelihara.
-  footer_trademark_message: Hour of Code™ adalah tanda perniagaan bagi Code.org.
+  footer_trademark_message: Hour of Code® dan Hora del Código® ialah tanda dagangan
+    Code.org.
   footer_built_on_github: Dibina di atas GitHub daripada Microsoft
   footer_menu_partners: Rakan kongsi
   footer_menu_contact: Hubungi kami

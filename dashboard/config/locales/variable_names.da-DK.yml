@@ -27,6 +27,7 @@ da:
       score: score
       size: størrelse
       speed: hastighed
+      type: type
       variable: variabel
       width: bredde
       wizard: troldmand

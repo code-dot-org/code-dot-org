@@ -4,7 +4,7 @@ import {mount} from 'enzyme';
 
 import {expect} from '../../../../util/reconfiguredChai';
 
-import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/headerRedux';
+import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
 
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from '@cdo/apps/code-studio/components/header/RetryProjectSaveDialog';
 

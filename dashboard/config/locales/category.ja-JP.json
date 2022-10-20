@@ -2,6 +2,9 @@
   "ja-JP": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "文学を読む"
+        },
         "ccela/SL": {
           "description": "スピーキングとリスニング"
         },
@@ -20,11 +23,29 @@
         "iste/4": {
           "description": "生徒は適切なデジタルツールとリソースを使用することにより、批判的思考スキルを用いてリサーチの計画を立て、それを実行し、プロジェクトを管理し、問題を解決し、情報に基づいた意思決定を行えるようになります。"
         },
+        "iste/6": {
+          "description": "生徒は、テクノロジーの概念、システム、および運用について十分に理解できるようになります。 "
+        },
         "ccela/L": {
           "description": "言語"
         },
         "ccela/RI": {
           "description": "情報を読む"
+        },
+        "ccmath/OA": {
+          "description": "演算と代数的思考"
+        },
+        "csta2011/CD": {
+          "description": "コンピュータと通信機器"
+        },
+        "csta2011/CI": {
+          "description": "コミュニティ、グローバル、および倫理における影響"
+        },
+        "ccmath/NBT": {
+          "description": "10進法における数字と計算"
+        },
+        "ccmath/G": {
+          "description": "かたち"
         },
         "ccela/W": {
           "description": "ライティング"
@@ -37,6 +58,15 @@
         },
         "csta/IC": {
           "description": "コンピューティングの影響"
+        },
+        "csp2021/IOC-2.B": {
+          "description": "コンピューティングリソースの保護方法とどのように悪用されうるのかを説明します。"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "データ圧縮アルゴリズムを比較して、コンテキストで最適なものを判断します。"
+        },
+        "csta/DA": {
+          "description": "データ&分析"
         }
       }
     }

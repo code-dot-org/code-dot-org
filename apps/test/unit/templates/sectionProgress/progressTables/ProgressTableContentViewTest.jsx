@@ -3,7 +3,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import ProgressTableLessonNumber from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
-import progressTableStyles from '@cdo/apps/templates/sectionProgress/progressTables/progressTableStyles.scss';
+import progressTableStyleConstants from '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss';
 import * as Virtualized from 'reactabular-virtualized';
 import {
   fakeLevel,
@@ -137,10 +137,10 @@ describe('ProgressTableContentView', () => {
     expect(headers.at(0).props().style?.minWidth).to.be.undefined;
     expect(headers.at(0).props().style?.maxWidth).to.be.undefined;
     expect(headers.at(3).props().style.minWidth).to.equal(
-      parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
+      parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH)
     );
     expect(headers.at(3).props().style.maxWidth).to.equal(
-      parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
+      parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH)
     );
   });
 });

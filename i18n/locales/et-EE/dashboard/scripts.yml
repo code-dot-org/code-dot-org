@@ -1477,6 +1477,8 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        ai-ethics-2021:
+          description_audience: 6.-12. klassid
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1679,3 +1681,50 @@ et:
           lesson_groups:
             lessonGroup-4:
               display_name: Uuring
+        soccer:
+          name: jalgpall
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+            lessonGroup-2:
+              display_name: Sisu
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Tsüklid
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+            lessonGroup-3:
+              display_name: Sisu

@@ -33,11 +33,11 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Native American students</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="aises" href="http://www.aises.org/" target="_blank">
+<a class="linktag" id="aises" href="https://www.aises.org/students" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/aises.png" alt="AISES logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="aises" href="http://www.aises.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>American Indian Science & Engineering Society</strong></h3></a>
+  <a class="linktag" id="aises" href="https://www.aises.org/students" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>American Indian Science & Engineering Society</strong></h3></a>
   <p>Membership includes networking and career development opportunities, events, internship and scholarship opportunities, exclusive job board access, and a national conference. Membership is free for pre-college and college students.</p>
   <p><i>Application period: Join anytime</i></p>
 </div>
@@ -84,11 +84,11 @@ social:
 <div style="clear:both"></div>
 <br>
 
-<a class="linktag" id="blackgirlscode" href="https://www.blackgirlscode.com/" target="_blank">
+<a class="linktag" id="blackgirlscode" href="https://wearebgc.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="blackgirlscode" href="https://www.blackgirlscode.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls CODE</strong></h3></a>
+  <a class="linktag" id="blackgirlscode" href="https://wearebgc.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls CODE</strong></h3></a>
   <p>Workshops and after-school programs for young girls of color. Operates in select states.</p>
   <p><i>Application period: Join anytime</i></p>
 </div>
@@ -137,7 +137,7 @@ social:
 <div style="width: 85%; float: left">
   <a class="linktag" id="builtbygirls" href="https://www.builtbygirls.com/about-wave" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Built By Girls WAVE</strong></h3></a>
   <p>During this three-month mentorship, each Advisee receives personal support from a dedicated professional who will show you the career possibilities and help you develop the valuable skills needed to land your first job or internship.</p>
-  <p><i>Application period: Rolling</i></p>
+  <p><i>Application period: Paused</i></p>
 </div>
 <div style="clear:both"></div>
 <br>

@@ -1,201 +1,173 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 import Notification from './Notification';
 import {action} from '@storybook/addon-actions';
 
-const information = {
-  notice: 'Did you know Clark Kent grew up in Kansas?',
-  details:
-    "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
-  dismissible: true
+export default {
+  title: 'Notification',
+  component: Notification
 };
 
-const success = {
+const informationDetails =
+  "Seriously, Kansas. Earth's greatest hero is from a tiny town called Smallville, if you can believe it. ";
+
+//
+// TEMPLATE
+//
+
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <Notification {...args} />
+  </Provider>
+);
+
+//
+// STORIES
+//
+
+export const Information = Template.bind({});
+Information.args = {
+  type: 'bullhorn',
+  notice: 'Here is some news',
+  details: 'Here are the details of the news.',
+  dismissible: false
+};
+
+export const InfoCallToActionButton = Template.bind({});
+InfoCallToActionButton.args = {
+  ...Information.args,
+  buttonText: 'Call to Action',
+  buttonLink: 'to a new page',
+  dismissible: false
+};
+InfoCallToActionButton.storyName = 'Information - call-to-action button';
+
+export const InfoCallToActionButtonAndDismissible = Template.bind({});
+InfoCallToActionButtonAndDismissible.args = {
+  ...Information.args,
+  buttonText: 'Call to Action',
+  buttonLink: 'to a new page',
+  dismissible: true
+};
+InfoCallToActionButtonAndDismissible.storyName =
+  'Information - call-to-action button, dismissible';
+
+export const InfoNonDefaultWidth = Template.bind({});
+InfoNonDefaultWidth.args = {
+  ...Information.args,
+  width: 800
+};
+InfoNonDefaultWidth.storyName = 'Information - non-default width';
+
+export const InfoLongDetails = Template.bind({});
+InfoLongDetails.args = {
+  ...Information.args,
+  details:
+    informationDetails +
+    informationDetails +
+    informationDetails +
+    informationDetails
+};
+InfoLongDetails.storyName = 'Information - long details';
+
+export const InfoMobileWidth = args => (
+  <Provider store={reduxStore()}>
+    <div style={{width: 400}}>
+      <Notification {...args} />
+    </div>
+  </Provider>
+);
+InfoMobileWidth.args = {
+  ...Information.args,
+  notice: 'LongUnbreakingWord',
+  details:
+    "Because our notice can't break, we should see our button wrap to below",
+  buttonText: 'Call to Action',
+  buttonLink: 'to a new page',
+  dismissible: false,
+  width: '100%'
+};
+InfoMobileWidth.storyName = 'Information - mobile width';
+
+export const Success = Template.bind({});
+Success.args = {
+  type: 'success',
   notice: 'Wonder Woman Saved the Day',
   details:
     "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
   dismissible: true
 };
 
-const failure = {
+export const Failure = Template.bind({});
+Failure.args = {
+  type: 'failure',
   notice: 'Lex Luther Attacked Metropolis',
   details:
     "If you're in the Metropolis area, get to saftey as quickly as possible",
   dismissible: false
 };
 
-const warning = {
+export const Warning = Template.bind({});
+Warning.args = {
+  type: 'warning',
   notice: 'Batman is on Vacation in the Bahamas',
   details:
     'Now is probably not the best time to be in Gotham City. Watch your back.',
   dismissible: true
 };
 
-const findCourse = {
+export const FindACourse = Template.bind({});
+FindACourse.args = {
+  type: 'course',
   notice: 'Find a course',
   details: 'Try new courses to add them to your homepage.',
-  dismissible: false
+  dismissible: false,
+  buttonText: 'Find a course',
+  buttonLink: '/courses'
 };
 
-const announcement = {
+export const Announcement = Template.bind({});
+Announcement.args = {
+  type: 'bullhorn',
   notice: 'Here is some news',
   details: 'Here are the details of the news.',
   dismissible: false
 };
 
-const firehoseAnalyticsData = {
-  user_id: 1,
-  important_data_point: 2
+export const AnnouncementWithButton = Template.bind({});
+AnnouncementWithButton.args = {
+  ...Announcement.args,
+  buttonText: 'Learn more',
+  buttonLink: '/',
+  newWindow: true,
+  firehoseAnalyticsData: {
+    user_id: 1,
+    important_data_point: 2
+  },
+  googleAnalyticsId: 'sample_announcement'
 };
+AnnouncementWithButton.storyName = 'Announcement - with button';
 
-export default storybook => {
-  return storybook
-    .storiesOf('Notification', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Information - no button',
-        description: `Notification box that displays information`,
-        story: () => <Notification type="information" {...information} />
-      },
-      {
-        name: 'Information - call to action button',
-        description: `Notification box that displays information and a call to action button`,
-        story: () => (
-          <Notification
-            type="information"
-            {...information}
-            buttonText="Call to Action"
-            buttonLink="to a new page"
-            dismissible={false}
-          />
-        )
-      },
-      {
-        name: 'Information - call to action button and dismissable',
-        description: `Notification box that displays information and a call to action button`,
-        story: () => (
-          <Notification
-            type="information"
-            {...information}
-            buttonText="Call to Action"
-            buttonLink="to a new page"
-            dismissible={true}
-          />
-        )
-      },
-      {
-        name: 'Information - no button - nondefaultwidth',
-        description: `Notification box that displays information`,
-        story: () => (
-          <Notification type="information" {...information} width={1100} />
-        )
-      },
-      {
-        name: 'Information - Lots of content',
-        description: 'Should expand vertically',
-        story: () => (
-          <Notification
-            type="information"
-            {...information}
-            details={
-              information.details +
-              information.details +
-              information.details +
-              information.details
-            }
-          />
-        )
-      },
-
-      {
-        name: 'Information - Fake mobile with width overriden',
-        description: 'Should expand vertically',
-        story: () => (
-          <div style={{width: 400}}>
-            <Notification
-              type="information"
-              notice="LongUnbreakingWord"
-              details="Because our notice can't break, we should see our button wrap to below"
-              buttonText="Call to Action"
-              buttonLink="to a new page"
-              dismissible={false}
-              width="100%"
-            />
-          </div>
-        )
-      },
-      {
-        name: 'Success',
-        description: `Notification box that displays when there is a success`,
-        story: () => <Notification type="success" {...success} />
-      },
-      {
-        name: 'Failure',
-        description: `Notification box that displays when there is a failure`,
-        story: () => <Notification type="failure" {...failure} />
-      },
-      {
-        name: 'Warning',
-        description: `Notification box that displays when there is a warning`,
-        story: () => <Notification type="warning" {...warning} />
-      },
-      {
-        name: 'Find a Course',
-        description: `Notification box that displays when there is a warning`,
-        story: () => (
-          <Notification
-            type="course"
-            {...findCourse}
-            buttonText="Find a course"
-            buttonLink="/courses"
-          />
-        )
-      },
-      {
-        name: 'Announcement - with button',
-        description: `Notification box that displays when there is an announcement`,
-        story: () => (
-          <Notification
-            type="bullhorn"
-            {...announcement}
-            buttonText="Learn more"
-            buttonLink="/"
-            newWindow={true}
-            firehoseAnalyticsData={firehoseAnalyticsData}
-            googleAnalyticsId="sample_announcement"
-          />
-        )
-      },
-      {
-        name: 'Announcement - no button',
-        description: `Notification box that displays when there is an announcement but with no button to learn more because no link`,
-        story: () => <Notification type="bullhorn" {...announcement} />
-      },
-      {
-        name: 'Two buttons and a link',
-        description: `Notification box that contains two buttons and a link`,
-        story: () => (
-          <Notification
-            type="bullhorn"
-            {...announcement}
-            detailsLinkText="And here's an extra link."
-            detailsLink="/"
-            buttons={[
-              {
-                text: 'Learn more',
-                link: '/more',
-                newWindow: true,
-                onClick: action('onClickPopupMore')
-              },
-              {
-                text: 'Learn less',
-                link: '/less',
-                newWindow: true,
-                onClick: action('onClickPopupLess')
-              }
-            ]}
-          />
-        )
-      }
-    ]);
+export const AnnouncementTwoButtonsAndALink = Template.bind({});
+AnnouncementTwoButtonsAndALink.args = {
+  ...Announcement.args,
+  detailsLinkText: "And here's an extra link.",
+  detailsLink: '/',
+  buttons: [
+    {
+      text: 'Learn more',
+      link: '/more',
+      newWindow: true,
+      onClick: action('onClickPopupMore')
+    },
+    {
+      text: 'Learn less',
+      link: '/less',
+      newWindow: true,
+      onClick: action('onClickPopupLess')
+    }
+  ]
 };
+AnnouncementTwoButtonsAndALink.storyName =
+  'Announcement - two buttons and a link';

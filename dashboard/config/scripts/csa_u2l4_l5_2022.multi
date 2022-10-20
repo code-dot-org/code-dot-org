@@ -8,7 +8,7 @@ right '![](https://images.code.org/227d540c6af5c455cf48b4702f03c273-image-164795
 wrong '![](https://images.code.org/e08e414e402142779dc2808d29bf7075-image-1647956049574.png)'
 
 markdown <<MARKDOWN
-The `Customer` class will contain a `String` attribute for the customer's name and an int attribute for the number of reward points the customer has. The class will also contain a constructor.
+The `Customer` class will contain a `String` attribute for the customer's name and an `int` attribute for the number of reward points the customer has. The class will also contain a constructor.
 
 ```
 public class Customer

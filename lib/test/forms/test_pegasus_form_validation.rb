@@ -79,7 +79,7 @@ class PegasusFormValidationTest < Minitest::Test
 
   def test_uploaded_file
     mock_file = mock
-    FormValidationMethods.expects(:open).with('temp-filename').returns(mock_file).once
+    File.expects(:open).with('temp-filename').returns(mock_file).once
     AWS::S3.expects(:upload_to_bucket).with('cdo-form-uploads', 's3-filename', mock_file).once
     FormValidationMethods.uploaded_file({filename: 's3-filename', tempfile: 'temp-filename'})
 

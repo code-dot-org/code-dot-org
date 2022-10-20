@@ -2,6 +2,8 @@
 kn:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} ಆಯ್ಕೆಗಳೊಂದಿಗೆ {VAR} ವೇರಿಯಬಲ್‌ಗೆ {QUESTION} ಬಳಕೆದಾರರನ್ನು ಪ್ರಾಂಪ್ಟ್ ಮಾಡಿ"
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       BadGuys_setSizeAll_dropdown:
@@ -573,6 +575,10 @@ kn:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": ಆಯ್ದ
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": ಕ್ವಿರ್ಕಿ ಬಾಸ್
             "'sound://category_digital/jump_7.mp3'": ಜಂಪ್
+      gamelab_playSoundOptionsSoccer:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
+      gamelab_playSoundOptionsSpace:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playSpeech:
         text: "{SOUND} ಸ್ಪೀಚ್ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playerBehaviors:
@@ -716,15 +722,6 @@ kn:
         text: "{SPRITE} ಯೋಚಿಸಿ {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}ಯೋಚಿಸಿ{TEXT1}{NUM}ಸೆಕೆಂಡುಗಳಿಗೆ"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': ಹಂ...
-            '"I am hungry, too."': ನನಗೂ ಹಸಿವಾಗಿದೆ.
-            '"I only want the biggest goat."': ನನಗೆ ದೊಡ್ಡ ಮೇಕೆ ಮಾತ್ರ ಬೇಕು.
-            '"I''m a green troll."': ನಾನೊಬ್ಬ ಹಸಿರು ಟ್ರೋಲ್.
-            '"No one will cross my bridge."': No one will cross my bridge.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} ಯೋಚಿಸಿ {THOUGHT}"
         options:
@@ -1230,6 +1227,11 @@ kn:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} ಉತ್ತರಿಸಿದಾಗ"
       RyanLab_moveForward:

@@ -45,6 +45,7 @@ pt:
         personal_email_markdown: "E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})"
         username: 'Nome de utilizador'
         password: 'Palavra-passe'
+        verified_teacher: 'Professor verificado'
         password_confirmation: 'Confirmação da palavra-passe'
         current_password: 'Palavra-passe atual'
         locale: 'Idioma'
@@ -542,6 +543,7 @@ pt:
     choose_next_course: "Experimenta um dos seguintes cursos do Code Studio"
     print_certificate: "Imprimir certificado"
   certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_hour_of_code: "Hora do Código"
   move_students:
     new_section_dne: "Lamentamos, mas a secção %{new_section_code} não existe. Por favor insere um código de secção diferente."
     section_code_cant_be_current_section: "A secção atual não pode ser a mesma que a nova secção."
@@ -1110,4 +1112,8 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
+  unit_prefix: "Unidade: %{n}"
+  code_org_logo_alt: "Início - Code.org"
   teacher_feedback: "Feedback do Professor"
+  pixelation:
+    binary: "Binário"

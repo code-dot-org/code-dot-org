@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:40:51.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -89,15 +85,15 @@
     "parent_level_id": 23065,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/if-else-statements/",
-      "/docs/concepts/game-lab/the-counter-pattern/",
-      "/docs/concepts/game-lab/the-draw-loop/",
-      "/docs/concepts/game-lab/sprites/sprite-properties/",
-      "/docs/concepts/game-lab/animation-tab/multi-frame-animations/"
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/if-else-statements",
+      "/courses/csd-2022/guides/the-counter-pattern-2",
+      "/courses/csd-2022/guides/the-draw-loop",
+      "/courses/csd-2022/guides/sprite-properties",
+      "/courses/csd-2022/guides/multi-frame-animations"
     ],
-    "map_reference": "/docs/concepts/game-lab/sprites/velocity/",
+    "map_reference": "/courses/csd-2022/guides/velocity",
     "video_key": "csd_gamelab_velocity",
     "mini_rubric": "false",
     "encrypted": "false",
@@ -106,6 +102,10 @@
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"62ea5383-7196-46c5-8fe5-21446bce274e\",\r\n    \"ed46a0c0-9e90-48bd-abd1-b067a14348b8\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"62ea5383-7196-46c5-8fe5-21446bce274e\": {\r\n      \"name\": \"field\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/IMVhpJ7DFSNGFqXB3d71gf6CyWortR5Z/category_backgrounds/soccer_field.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"IMVhpJ7DFSNGFqXB3d71gf6CyWortR5Z\"\r\n    },\r\n    \"ed46a0c0-9e90-48bd-abd1-b067a14348b8\": {\r\n      \"name\": \"ball\",\r\n      \"sourceUrl\": \"https://studio.code.org/v3/animations/48FpYR4M5s5bUC5cclpI7UsiPhMtaInJ7MNpp4_PHFA/ed46a0c0-9e90-48bd-abd1-b067a14348b8.png?version=WR7hLm7mF1NPfDE2Lunj34fBuUNO_LTz\",\r\n      \"frameSize\": {\r\n        \"x\": 240,\r\n        \"y\": 240\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 4,\r\n      \"version\": \"WR7hLm7mF1NPfDE2Lunj34fBuUNO_LTz\"\r\n    }\r\n  }\r\n}",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:40:51.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:40:51.746+00:00\",\"changed\":[\"cloned from \\\"CSD games velocity tennis_2021\\\"\"],\"cloned_from\":\"CSD games velocity tennis_2021\"}]"

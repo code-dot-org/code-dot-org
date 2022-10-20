@@ -4,6 +4,7 @@ import ToggleGroup from '../ToggleGroup';
 import color from '@cdo/apps/util/color';
 import {setIsSummaryView, hasGroups} from '@cdo/apps/code-studio/progressRedux';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 
 import summaryActive from './images/toggleSummaryActive.png';
 import summaryInactive from './images/toggleSummaryInactive.png';
@@ -89,6 +90,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
             style={styles.icon}
+            alt={i18n.summaryView()}
           />
         </button>
         <button
@@ -100,6 +102,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.detailInactive : images.detailActive}
             style={styles.icon}
+            alt={i18n.detailView()}
           />
         </button>
       </ToggleGroup>
@@ -128,7 +131,7 @@ export const UnconnectedProgressDetailToggle = ProgressDetailToggle;
 
 export default connect(
   state => ({
-    isPlc: !!state.progress.professionalLearningCourse,
+    isPlc: !!state.progress.deeperLearningCourse,
     isSummaryView: state.progress.isSummaryView,
     hasGroups: hasGroups(state.progress)
   }),

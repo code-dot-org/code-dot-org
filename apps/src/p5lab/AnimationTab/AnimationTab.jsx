@@ -11,6 +11,7 @@ import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
 import {P5LabType} from '@cdo/apps/p5lab/constants';
+import i18n from '@cdo/locale';
 
 /**
  * Root of the animation editor interface mode for GameLab
@@ -53,9 +54,7 @@ class AnimationTab extends React.Component {
           <div style={styles.editorColumn}>
             <PiskelEditor style={styles.piskelEl} />
             <div style={{...hidePiskelStyle, ...styles.emptyPiskelEl}}>
-              <div style={styles.helpText}>
-                Add a new animation on the left to begin
-              </div>
+              <div style={styles.helpText}> {i18n.addNewAnimation()} </div>
             </div>
           </div>
         </ResizablePanes>

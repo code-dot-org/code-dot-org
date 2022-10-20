@@ -2,6 +2,8 @@
 it:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1324,6 +1326,10 @@ it:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": seleziona
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": basso stravagante
             "'sound://category_digital/jump_7.mp3'": salta
+      gamelab_playSoundOptionsSoccer:
+        text: riproduci il suono {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: riproduci il suono {SOUND}
       gamelab_playSpeech:
         text: riproduci discorso {SOUND}
       gamelab_playerBehaviors:
@@ -2110,6 +2116,11 @@ it:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: quando {VAR} ha risposto
       RyanLab_moveForward:

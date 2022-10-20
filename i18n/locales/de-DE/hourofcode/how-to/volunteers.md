@@ -10,7 +10,7 @@ title: Hour of  Code - So können Sie als Freiwillige(r) mitmachen
 
 * * *
 
-Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Die Technologie verändert alle Branchen auf unserem Planeten. Die SchülerInnen von heute müssen lernen, man Technologie schafft und nicht nur, wie man sie verwendet.
+Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Die Technologie verändert alle Branchen auf unserem Planeten. Die SchülerInnen von heute müssen lernen, wie man Technologie schafft und nicht nur, wie man sie verwendet.
 
 Die "Hour of Code" ist eine einstündige Einführung in die Informatik mit dem Ziel, das „Codieren“ zu entmystifizieren, zu zeigen, dass jeder die Grundlagen erlernen kann, und mehr SchülerInnen zum Mitmachen im Bereich Informatik zu motivieren. Sie können dazu beitragen, das Interesse an der Informatik zu stärken, und sich dafür einsetzen, mehr SchülerInnen für dieses Fach zu begeistern, insbesondere junge Frauen und SchülerInnen aus historisch ausgegrenzten oder benachteiligten ethnischen Gruppen.
 
@@ -48,9 +48,9 @@ Die Informatik ist das fortschrittsorientierte Fachgebiet des 21. Jahrhunderts, 
 
 Sehen Sie sich einige Erfahrungsberichte von früheren Freiwilligen an:
 
-- "Das Beste an meiner Erfahrung war, dass die gesamte Klasse aus Frauen und farbigen Menschen bestand. Es ist ein gutes Vorzeichen für die Zukunft unserer Branche, wenn wir die Chance haben, diese jungen Menschen zu erreichen und zu begeistern" 
-- "Ich fand es toll, junge Mädchen und Frauen für Technologie zu begeistern. Ich hatte das Gefühl, dass ich der nächsten Generation in meiner Gegend helfen konnte.“ 
-- "Ich FAND ES TOLL zu sehen, wie begeistert die Kinder waren. Eine erstaunliche Erfahrung war, dass die LehrerInnen bemerkten, dass einige der SchülerInnen, die akademisch nicht herausragend waren, ungewöhnlich gut darin waren, wie ein Entwickler zu denken und anderen zu helfen - sie waren plötzlich in einem Bereich, wo sie sich selbstbewusst fühlten" 
+- "Das Beste an meiner Erfahrung war, dass die gesamte Klasse aus Frauen und farbigen Menschen bestand. Es ist ein gutes Vorzeichen für die Zukunft unserer Branche, wenn wir die Chance haben, diese jungen Menschen zu erreichen und zu begeistern"
+- "Ich fand es toll, junge Mädchen und Frauen für Technologie zu begeistern. Ich hatte das Gefühl, dass ich der nächsten Generation in meiner Gegend helfen konnte.“
+- "MIR HAT GEFALLEN, wie begeistert die Kinder waren. Eine erstaunliche Erfahrung war, dass die LehrerInnen bemerkten, dass einige der SchülerInnen, die akademisch nicht herausragend waren, ungewöhnlich gut darin waren, wie ein Entwickler zu denken und anderen zu helfen - sie waren plötzlich in einem Bereich, wo sie sich selbstbewusst fühlten"
 
 [<button>Registrieren Sie sich als Freiwille(r)</button>]({{ urls/volunteer }})
 
@@ -76,7 +76,7 @@ Wenn Sie zu viele Anfragen von LehrerInnen erhalten, können Sie jederzeit Ihre 
 
 Sie brauchen unsere Unterstützerkarte nicht zu verwenden, um sich als Freiwillige(r) zu melden! Wir empfehlen Ihnen sogar, sich direkt an LehrerInnen und VerwaltungsmitarbeiterInnen zu wenden, wenn es eine Klasse gibt, in der Sie sich als Freiwillige(r) engagieren möchten.
 
-"Machen Sie den ersten Schritt : - Wenn Sie Elternteil oder Erziehungsberechtigte(r) sind, senden Sie [diese E-Mail](https://hourofcode.com/us/promote/resources#help-schools) an den/die LehrerIn Ihres Kindes und bieten Sie Ihre Hilfe bei der Durchführung einer ""Hour of Code"" an." - Wenn Sie eine andere Schule im Auge haben, besuchen Sie ihre Website, um geeignete Kontakte zu finden, z.B. einen Schulleiter oder stellvertretenden Schulleiter, Technologie- oder InformatiklehrerInnen oder sogar die Eltern- oder Schülervertretung der Schule. Sie könnten auch eine Partnerschaft mit Organisationen wie den Boys & Girls Clubs of America, Junior Achievement, einem YMCA-Zweig und anderen eingehen, um bei einer Veranstaltung mitzuhelfen. - Wenn Sie keine Schule finden, die eine "Hour of Code" anbietet, können Sie als Freiwillige(r) helfen, eine eigene Veranstaltung mit Ihrem Unternehmen durchzuführen. Sehen Sie sich unseren [Leitfaden für Unternehmen](https://hourofcode.com/us/how-to/companies) an, um mehr zu erfahren und sich inspirieren zu lassen.
+Gehen Sie den ersten Schritt : - Senden Sie als Elternteil oder Erziehungsberechtigte [diese E-Mail](https://hourofcode.com/us/promote/resources#help-schools) an die Lehrerin oder den Lehrer Ihres Kindes und bieten Sie an, bei einer Hour of Code mitzuhelfen". - Wenn Sie eine andere Schule im Auge haben, besuchen Sie ihre Website, um geeignete Kontakte zu finden, z.B. einen Schulleiter oder stellvertretenden Schulleiter, Technologie- oder InformatiklehrerInnen oder sogar die Eltern- oder Schülervertretung der Schule. Sie könnten auch eine Partnerschaft mit Organisationen wie den Boys & Girls Clubs of America, Junior Achievement, einem YMCA-Zweig und anderen eingehen, um bei einer Veranstaltung mitzuhelfen. - Wenn Sie keine Schule finden, die eine "Hour of Code" anbietet, können Sie als Freiwillige(r) helfen, eine eigene Veranstaltung mit Ihrem Unternehmen durchzuführen. Sehen Sie sich unseren [Leitfaden für Unternehmen](https://hourofcode.com/us/how-to/companies) an, um mehr zu erfahren und sich inspirieren zu lassen.
 
 * * *
 
@@ -92,16 +92,16 @@ Unabhängig davon, ob Sie virtuell oder persönlich an einer Hour of Code-Verans
 
 Wenn Sie als Freiwillige(r) in einer Klasse arbeiten, besprechen Sie diese Abläufe im Voraus mit dem Lehrer/der Lehrerin:
 
-- Ihre Rolle bei der Veranstaltung. Wenn Sie im Bereich Technologie arbeiten, werden Sie vielleicht gebeten, aus persönlichen Erfahrungen zu berichten oder Ihre eigene Story zu erzählen: Wie sind Sie zu einer beruflichen Laufbahn im Bereich Technologie gekommen? Warum ist die Informatik für Sie wichtig? Was sind einige Dinge, zu Ihrem Arbeitsalltag gehören, und wie hängt diese mit dem Bereich Technologie zusammen? 
-- Wenn Sie persönlich als Frewillige(r) tätig sein werden wollen, informieren Sie sich genau über die örtlichen und schulischen Gesundheits- und Sicherheitsrichtlinien. Es kann Sein, dass Sie aufgrund bestimmter Abläufe etwas früher anreisen müssen. 
-- Wenn Sie sich virtuell oder persönlich engagieren, kann sich das darauf auswirken, zu welchen Zeiten und in welcher Eigenschaft Ihre Anwesenheit erforderlich ist. 
-- Wenn Sie virtuell teilnehmen, arbeiten Sie mit dem Lehrer/der Lehrerin zusammen, um die beste Videokonferenzplattform zu bestimmen. Versuchen Sie, gemeinsam einen Probelauf für die Veranstaltung durchzuführen. 
-- Wenn der/die LehrerIn bereits Hour of Code-Aktivitäten für die Veranstaltung bestimmt hat, können Sie sich bereits im Vorfeld darauf [vorbereiten](https://hourofcode.com/us/learn). 
+- Ihre Rolle bei der Veranstaltung. Wenn Sie im Bereich Technologie arbeiten, werden Sie vielleicht gebeten, aus persönlichen Erfahrungen zu berichten oder Ihre eigene Story zu erzählen: Wie sind Sie zu einer beruflichen Laufbahn im Bereich Technologie gekommen? Warum ist die Informatik für Sie wichtig? Was sind einige Dinge, zu Ihrem Arbeitsalltag gehören, und wie hängt diese mit dem Bereich Technologie zusammen?
+- Wenn Sie persönlich als Frewillige(r) tätig sein werden wollen, informieren Sie sich genau über die örtlichen und schulischen Gesundheits- und Sicherheitsrichtlinien. Es kann Sein, dass Sie aufgrund bestimmter Abläufe etwas früher anreisen müssen.
+- Wenn Sie sich virtuell oder persönlich engagieren, kann sich das darauf auswirken, zu welchen Zeiten und in welcher Eigenschaft Ihre Anwesenheit erforderlich ist.
+- Wenn Sie virtuell teilnehmen, arbeiten Sie mit dem Lehrer/der Lehrerin zusammen, um die beste Videokonferenzplattform zu bestimmen. Versuchen Sie, gemeinsam einen Probelauf für die Veranstaltung durchzuführen.
+- Wenn der/die LehrerIn bereits Hour of Code-Aktivitäten für die Veranstaltung bestimmt hat, können Sie sich bereits im Vorfeld darauf [vorbereiten](https://hourofcode.com/us/learn).
 
 ### Überlegen Sie sich, wer die Teilnehmer an Ihrer Veranstaltung sind
 
-- Machen Sie sich Geadnken darüber, mit welchen SchülerInnen Sie sprechen werden und was bei ihnen gut ankommen könnte. Als Freiwilliger können Sie ihnen helfen, zu erkennen, dass es überall IT gibt und auch sie Informatiker werden können. Berücksichtigen Sie ihr Alter, ihren Hintergrund und ihre Geschlechtsidentitäten und bereiten Sie Themen vor, die sie interessieren könnten. Hier finden Sie zusätzliche Hinweise, wie Sie [junge Frauen](http://code.org/girls) zur Teilnahme motivieren können. 
-- Begeistern Sie die SchülerInnen! Suchen Sie gemeinsam mit dem Lehrer/der Lehrerin ein [interessantes Video](https://hourofcode.com/us/promote/resources#videos) aus, mit der Sie die Aufmerksamkeit der Klasse gewinnen und sie für eine "Hour of Code" begeistern können. 
+- Machen Sie sich Geadnken darüber, mit welchen SchülerInnen Sie sprechen werden und was bei ihnen gut ankommen könnte. Als Freiwilliger können Sie ihnen helfen, zu erkennen, dass es überall IT gibt und auch sie Informatiker werden können. Berücksichtigen Sie ihr Alter, ihren Hintergrund und ihre Geschlechtsidentitäten und bereiten Sie Themen vor, die sie interessieren könnten. Hier finden Sie zusätzliche Hinweise, wie Sie [junge Frauen](http://code.org/girls) zur Teilnahme motivieren können.
+- Begeistern Sie die SchülerInnen! Suchen Sie gemeinsam mit dem Lehrer/der Lehrerin ein [interessantes Video](https://hourofcode.com/us/promote/resources#videos) aus, mit der Sie die Aufmerksamkeit der Klasse gewinnen und sie für eine "Hour of Code" begeistern können.
 - Wenn Sie als virtuelle(r) Freiwillige(r) mitmachen, sollten Sie eventuell ein paar Folien für einen Teil Ihrer Präsentation erstellen, damit die SchülerInnen aufmerksam dabeibleiben.
 
 Benötigen Sie zusätzliche Ressourcen? [Lesen Sie sich diese weiteren Tipps](https://code.org/files/CSTT_Volunteers.pdf).
@@ -126,13 +126,11 @@ Besprechen Sie mit der Schule oder dem Lehrer/der Lehrerin, was am sinnvollsten 
 
 #### Mustervorlage für den Ablauf einer Veranstaltung:
 
-|Uhrzeit | Punkt der Tagesordnung | | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\---\---\---\---\----- | | |1-5 Minuten |[Motivierendes Video](https://hourofcode.com/us/promote/resources#videos) zeigen|  
-|5-10 Minuten | Vorstellen und mehr über die SchülerInnen erfahren: Wo arbeiten Sie, was tun Sie, und was gefällt Ihnen an Ihrer Arbeit am besten? Wer oder was hat Sie inspiriert? Wie kam es, dass Sie sich für Informatik interessiert haben? Hatten Sie einen Mentor? Stellen den SchülerInnen Fragen und nehmen Sie sich Zeit für Fragen und Antworten. |  
-|30 bis 60 Minuten | Code! Wenn Ihre Veranstaltung persönlich durchgeführt wird, ist das der richtige Zeitpunkt, um Fragen zu beantworten und den SchülerInnen bei schwierigeren Aufgaben zu helfen. Versuchen Sie, ihnen die Lösung nicht direkt zu verraten. Stellen Sie ihnen stattdessen Fragen, damit sie selbst sagen können, was nicht geklappt hat, und ermutigen Sie sie zu Kommunikation untereinander, wenn sie Fragen haben. Wenn Sie als virtuelle(r) Freiwillige(r) mithelfen, arbeiten Sie gemeinsam mit dem Lehrer/der Lehrerin an der besten Methode für Ihre Veranstaltung. Es kann sinnvoller sein, am Ende der Veranstaltung zurückzukommen, um zu sehen, welche Fortschritte die SchülerInnen gemacht haben. | ||1 bis 3 Minuten | Bei allen bedanken und Abschiedsworte mit einer inspirierenden Botschaft. Witzige Artikel von Ihrem Unternehmen verteilen ([Sticker](#celebrate) sind immer gut)! | | <br />
+|Zeit | Tagesordnungspunkt | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1 bis 5 Minuten | Zeigen Sie ein [inspirierendes Video](https://hourofcode.com/us/promote/resources#videos)| |5 bis 10 Minuten | Beginnen Sie mit einer Veranstaltungsrunde, bei der Sie und die SchülerInnen sich vorstellen. Wo arbeiten Sie, was machen Sie, und was lieben Sie an Ihrer Arbeit? Wer oder was hat Sie inspiriert? Wie kam es, dass Sie sich für Informatik interessiert haben? Hatten Sie einen Mentor? Stellen den SchülerInnen Fragen und nehmen Sie sich Zeit für Fragen und Antworten. | |30 bis 60 Minuten | Code! Wenn Ihre Veranstaltung persönlich durchgeführt wird, ist das der richtige Zeitpunkt, um Fragen zu beantworten und den SchülerInnen bei schwierigeren Aufgaben zu helfen. Versuchen Sie, ihnen die Lösung nicht direkt zu verraten. Stellen Sie ihnen stattdessen Fragen, damit sie selbst sagen können, was nicht geklappt hat, und ermutigen Sie sie zu Kommunikation untereinander, wenn sie Fragen haben. Wenn Sie als virtuelle(r) Freiwillige(r) mithelfen, arbeiten Sie gemeinsam mit dem Lehrer/der Lehrerin an der besten Methode für Ihre Veranstaltung. Es kann sinnvoller sein, am Ende der Veranstaltung zurückzukommen, um zu sehen, welche Fortschritte die SchülerInnen gemacht haben. | ||1 bis 3 Minuten | Bei allen bedanken und Abschiedsworte mit einer inspirierenden Botschaft. Witzige Artikel von Ihrem Unternehmen verteilen ([Sticker](#celebrate) sind immer gut)! | | <br />
 
 #### Andere Ideen für Ihre Veranstaltung
 
-- Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die SchülerInnen mit unterschiedlichem Hintergrund interessieren (beschreiben Sie Technologien, die Leben retten, Menschen helfen, Menschen verbinden usw.). 
+- Beschreiben Sie, wie Technologien unser Leben beeinflussen, mit Beispielen, die SchülerInnen mit unterschiedlichem Hintergrund interessieren (beschreiben Sie Technologien, die Leben retten, Menschen helfen, Menschen verbinden usw.).
 - Wenn Sie bei einem Technologieunternehmen tätig sind, zeigen Sie interessante, innovative Produkte, an denen Ihr Unternehmen arbeitet. Wenn Sie nicht bei einem Technologieunternehmen tätig sind, sprechen Sie darüber, wie Ihr Unternehmen Technologie einsetzt, um Probleme zu lösen und Ziele zu erreichen.
 - Bitten Sie Programmierer aus Ihrem Unternehmen, etwas darüber erzählen, warum sie Informatik studiert haben und an welcher Art von Projekten sie arbeiten. 
 - Wenn es eine Gruppe von Mitarbeitern gibt, die Ihre Veranstaltung moderieren oder als Freiwillige mit einer örtlichen Schule zusammenarbeiten, könnten Sie die[speziellen T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für sie bestellen.
@@ -160,7 +158,7 @@ Wir bieten eine Vielzahl unterhaltsamer, von Schülern angeleiteten Tutorials f�
 
 <a href="https://hourofcode.com/us/learn">Sehen Sie sich die Aktivitäten an </a>und entscheiden Sie bereits im Vorfeld, ob Sie ein einziges Tutorial für alle SchülerInnen wählen möchten oder jedes Kind ein eigenes Tutorial wählen lassen. **Alle Hour of Code Aktivitäten** erfordern sehr wenig Vorbereitungszeit und sind selbstgesteuert - so können die TeilnehmerInnen in ihrem eigenen Tempo und auf ihrem eigenen Kenntnisniveau arbeiten.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 Sobald Sie eine solide Planung für Ihre Veranstaltung haben, können Sie damit beginnen, SchülerInnen, eine Schule oder eine allgemeinere Gemeinschaft einzuladen. Wir empfehlen, mit einer örtlichen Schule zu beginnen, zu der Sie bereits Kontakt haben, oder [unsere Karte ](https://hourofcode.com/us/map) der Hour of Code Veranstaltungen durchzublättern.
 
@@ -173,7 +171,7 @@ Sobald Sie eine solide Planung für Ihre Veranstaltung haben, können Sie damit 
 Wenn die SchülerInnen oder Gäste ihre Hour of Code abgeschlossen haben, ist es Zeit, ihren Erfolg zu feiern. Hier sind einige Ideen, wie Sie Ihre Veranstaltung noch unterhaltsamer gestalten können:
 
 - Geben Sie [Zertifikate]({{ urls/certificates }}) an die Teilnehmer und SchülerInnen aus.
-- [Drucken Sie "Ich habe an einer Hour of Code teilgenommen! Sticker"aus ]({{{ promote/resources_stickers }}) oder suchen Sie andere Belohnungen und witzige Artikel im [Code.org Amazon Store](https://code.org/shop). 
+- [Drucken Sie "Ich habe an einer Hour of Code teilgenommen! Sticker"aus ]({{{ promote/resources_stickers }}) oder suchen Sie andere Belohnungen und witzige Artikel im [Code.org Amazon Store](https://code.org/shop).
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
 * * *
@@ -188,7 +186,7 @@ Eine der besten Möglichkeiten, zu helfen, sind das Verbreiten der Informationen
 
 ### 1. Registrieren Sie Ihre Veranstaltung
 
-Wenn Sie sich für Ihre Hour of Code Veranstaltung registrieren, erhalten Sie hilfreiche E-Mails mit aktuellen Informationen und Tipps für die Moderation einer erfolgreichen Hour of Code. Auf diese Weise können Sie auch Schulen oder Eltern in Ihrer Gegend wissen lassen, dass Sie eine Veranstaltung in ihrer Nähe organisieren.
+Wenn Sie [Ihre Hour of Code-Veranstaltung registrieren](/), erhalten Sie E-Mails mit aktuellen Informationen und Tipps für eine erfolgreiche Hour of Code. Auf diese Weise können Sie auch Schulen oder Eltern in Ihrer Gegend wissen lassen, dass Sie eine Veranstaltung in ihrer Nähe organisieren.
 
 ### 2. Beiträge in den sozialen Medien
 
@@ -196,23 +194,23 @@ Helfen Sie mit, das Interesse an der Informatikbewegung zu stärken, indem Sie d
 
 #### Allgemeine Ankündigung der Hour of Code
 
-- Die Informatik verändert unsere Welt. Unterstützen Sie die SchülerInnen dabei, Teil dieser Veränderung zu sein - mit einem Start bei #HourOfCode. https://hourofcode.com/ 
-- Technologie nicht nur verwenden, sondern lernen, wie man sie baut. Helfen Sie jemandem beim Start mit einer #HourOfCode. https://hourofcode.com/ 
+- Die Informatik verändert unsere Welt. Unterstützen Sie die SchülerInnen dabei, Teil dieser Veränderung zu sein - mit einem Start bei #HourOfCode. https://hourofcode.com/
+- Technologie nicht nur verwenden, sondern lernen, wie man sie baut. Helfen Sie jemandem beim Start mit einer #HourOfCode. https://hourofcode.com/
 
 #### Statistiken
 
-- Wussten Sie, dass an nur 45 % der amerikanischen Schulen Informatik unterrichtet wird? Geben Sie allen SchülerInnen die Chance, bei einer #HourOfCode zu lernen https://hourofcode.com/ 
-- In den USA sind nur 26 % der Software-Fachkräfte Frauen. Interessieren Sie mit #HourOfCode https://hourofcode.com/ mehr junge Frauen für die Informatik heran 
-- 67 % der Computerarbeitsplätze in den USA sind nicht in der Technologie-Branche angesiedelt. Helfen Sie mit, die Informatik mit Unterstützung von #HourOfCode https://hourofcode.com/ Teil des Standardlehrplans zu machen 
+- Wussten Sie, dass nur an 53 % der amerikanischen Schulen Informatik unterrichtet wird? Geben Sie allen SchülerInnen die Chance, bei einer #HourOfCode zu lernen https://hourofcode.com/
+- In den USA sind nur 26 % der Software-Fachkräfte Frauen. Interessieren Sie mit #HourOfCode https://hourofcode.com/ mehr junge Frauen für die Informatik heran
+- 67 % der Computerarbeitsplätze in den USA sind nicht in der Technologie-Branche angesiedelt. Helfen Sie mit, die Informatik mit Unterstützung von #HourOfCode https://hourofcode.com/ Teil des Standardlehrplans zu machen
 
 #### Selbst mitmachen
 
-- Eine #HourOfCode kann [Ihre Story eintragen] bewirken. https://hourofcode.com/ 
-- Ich unterstütze #HourOfCode, weil [tragen Sie Ihre Gedanken ein]. Machen auch Sie mit https://hourofcode.com 
+- Eine #HourOfCode kann [Ihre Story eintragen] bewirken. https://hourofcode.com/
+- Ich unterstütze #HourOfCode, weil [tragen Sie Ihre Gedanken ein]. Machen auch Sie mit https://hourofcode.com
 
 #### Speziell für Informatiker
 
-- Wenn die allererste Code-Zeile, die Sie geschrieben haben, Ihr Leben verändert hat, helfen Sie SchülerInnen in Ihrer Gegend dabei, ihren ersten #HourOfCode zu schreiben https://code.org/volunteer 
+- Wenn die allererste Code-Zeile, die Sie geschrieben haben, Ihr Leben verändert hat, helfen Sie SchülerInnen in Ihrer Gegend dabei, ihren ersten #HourOfCode zu schreiben https://code.org/volunteer
 - Wenn Sie gelernt haben, wie man Code schreibt - was ist Ihre Geschichte? Begeistern Sie einen Schüler/eine Schülerin in Ihrer Nähe während seiner/ihrer ersten #HourOfCode https://code.org/volunteer
 
 <a href="https://hourofcode.com/promote/resources#posters">Erfahren Sie mehr</a> über Poster, Videos, Sticker und andere Möglichkeiten, wie Sie Ihre Veranstaltung in Ihrer Gemeinde bekannt machen können.
@@ -226,11 +224,11 @@ Helfen Sie mit, das Interesse an der Informatikbewegung zu stärken, indem Sie d
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
 - Werben Sie für die Bewegung, indem Sie Artikel von <a href="https://store.code.org/> Code.org tragen </>(alle Erlöse werden verwendet, um mehr SchülerInnen den Zugang zur Informatikausbildung zu ermöglichen).
-- Unterstützen Sie Code.org, wenn Sie auf <a href="https://code.org/donate/amazonsmile> AmazonSmile einkaufen</>. 
+- Unterstützen Sie Code.org, wenn Sie auf <a href="https://code.org/donate/amazonsmile> AmazonSmile einkaufen</>.
 - Bitten Sie Ihren CEO, eine unternehmensweite E-Mail zu versenden, in der die Bedeutung der Informatik betont und die MitarbeiterInnen ermutigt werden, die Informationen dazu zu verbreiten.
 - Veranstalten Sie eine tolle [Spendenkampagne](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-in-to-a-fundraiser-for- code-org-1952b197faa2) mit Ihren KollegInnen.
-- [Unterzeichnen Sie diese Petition](https://code.org/promote), um sicherzustellen, damit alle SchülerInnen die Chance haben, Informatik zu lernen. 
-- [Spenden](https://code.org/donate) Sie an Code.org, damit wir auch weiterhin unsere Bildungsressourcen frei und für alle zugänglich zur Verfügung stellen können. 
+- [Unterzeichnen Sie diese Petition](https://code.org/promote), um sicherzustellen, damit alle SchülerInnen die Chance haben, Informatik zu lernen.
+- [Spenden](https://code.org/donate) Sie an Code.org, damit wir auch weiterhin unsere Bildungsressourcen frei und für alle zugänglich zur Verfügung stellen können.
 
 Weitere Vorschläge zur Unterstützung von Code.org und der Hour of Code finden Sie unter [Code.org/Hilfe](https://code.org/help)
 

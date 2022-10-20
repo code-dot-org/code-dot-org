@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:32.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html> \\r\\n \\t<head>\\r\\n    <link rel=\\\"stylesheet\\\" href=\\\"amphibian.css\\\">\\r\\n\\t<\\/head>\\r\\n\\t<body>\\r\\n\\t\\t<h1>My Favorite Amphibians!<\\/h1>\\r\\n\\t<\\/body>\\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"kani bushfrog.jpg\",\r\n      \"url\": \"https://images.code.org/3328b7816e876d31a4e78d58e20d9977-image-1568067324295.jpg\"\r\n    },\r\n{\r\n      \"name\": \"Paratype-of-a-Paedophryne-amauensis-smallest-vertabrate.png\",\r\n      \"url\": \"https://images.code.org/d938aeafa570623d6b4ab2fb15e69a5e-image-1568067453926.png\"\r\n    },\r\n{\r\n      \"name\": \"1565124851451.jpg\",\r\n      \"url\": \"https://images.code.org/51fbb7f1847a3c3a65acdfe538ebe1d3-image-1568067495627.jpg\"\r\n    },\r\n{\r\n      \"name\": \"fire-salamander!.jpg\",\r\n      \"url\": \"https://images.code.org/f4c2dbf73837366d05cbe2da8e169b95-image-1568067529588.jpg\"\r\n    },\r\n{\r\n      \"name\": \"axolotl(walking-fish).jpg\",\r\n      \"url\": \"https://images.code.org/471c6610a7e37e7d312832299d2256e6-image-1568067566246.jpg\"\r\n    },\r\n{\r\n      \"name\": \"amphibian.css\",\r\n      \"data\": \"p {\\r\\n  color: black;\\r\\n}\\r\\nh1 {\\r\\n  color: green;\\r\\n  font-family: courior, monospace;\\r\\n}\"\r\n}\r\n ]\r\n}",
     "instructions_important": "false",
@@ -13,20 +9,24 @@
     "parent_level_id": 20034,
     "name_suffix": "_2022",
     "reference_links": [
-      "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/html/images-in-html/",
+    "map_reference": "/courses/csd-2022/guides/images-in-html",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "true",
     "encrypted_examples": "CDznsQmmXJWvnxQ2lemsApLGdB8hE5uRTIjGfWuy5VM8ORx6mD6qqhVorBvW\ndYRCepHtaUMBhjYrwYWGlb+pvg==\n"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:32.000Z",
+  "user_id": 155,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:32.560+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image choose name_2021\\\"\"],\"cloned_from\":\"CSD U2 Image choose name_2021\"}]"

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T16:53:44.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -65,10 +61,10 @@
     "parent_level_id": 20418,
     "name_suffix": "_2222",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/circuit-playground/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/circuit-playground",
+      "/courses/csd-2022/guides/board-events"
     ],
-    "map_reference": "/docs/concepts/maker-toolkit/physical-input/",
+    "map_reference": "/courses/csd-2022/guides/physical-input",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",
@@ -79,6 +75,10 @@
     "palette_category_at_start": "Circuit",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T16:53:44.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T16:53:44.465+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - SB4_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - SB4_2022\"}]"

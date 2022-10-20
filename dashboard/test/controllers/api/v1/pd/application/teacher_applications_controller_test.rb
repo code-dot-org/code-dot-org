@@ -48,6 +48,18 @@ module Api::V1::Pd::Application
       params: -> {{id: @application.id}},
       response: :success
 
+    test_user_gets_response_for :change_principal_approval_requirement,
+                                name: 'program managers can set change_principal_approval_requirement for applications they own',
+                                user: -> {@program_manager},
+                                params: -> {{id: @application.id, principal_approval_not_required: true}},
+                                response: :success
+
+    test_user_gets_response_for :change_principal_approval_requirement,
+                                name: 'program managers cannot set change_principal_approval_requirement for applications they do not own',
+                                user: :program_manager,
+                                params: -> {{id: @application.id}},
+                                response: :forbidden
+
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
@@ -185,6 +197,24 @@ module Api::V1::Pd::Application
       assert_nil application.form_data_hash[:cs_total_course_hours]
       assert_equal original_school_info, @applicant.school_info
       assert_response :ok
+    end
+
+    test 'change_principal_approval_requirement can set principal_approval_not_required to true' do
+      sign_in @program_manager
+      refute @application.principal_approval_not_required
+
+      post :change_principal_approval_requirement, params: {id: @application.id, principal_approval_not_required: true}
+      assert @application.reload.principal_approval_not_required
+    end
+
+    test 'change_principal_approval_requirement can set principal_approval_not_required to false' do
+      application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
+      sign_in @program_manager
+      application.update!(principal_approval_not_required: true)
+
+      assert_equal true, application.principal_approval_not_required
+      post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: false}
+      refute application.reload.principal_approval_not_required
     end
 
     test 'send_principal_approval queues up an email if none exist' do

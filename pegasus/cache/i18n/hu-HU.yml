@@ -457,6 +457,7 @@ hu-HU:
   homepage_banner_40k_teachers_link: Tudj meg többet
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
+  homepage_slot_text_blurb_hoc_2022: Fedezd fel, játssz és alkoss!
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
   homepage_slot_text_link_about_hoc: A Kódolás Órájáról
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
@@ -2597,7 +2598,7 @@ hu-HU:
   footer_partners: Partnerek
   footer_blog: Blog
   footer_donate: Adományozz
-  footer_store: Store
+  footer_store: Áruház
   footer_support: Segítség
   footer_terms: Felhasználási feltételek
   ai_for_oceans: AI óceánok
@@ -2679,3 +2680,4 @@ hu-HU:
     táblagéphez ér, csillagokat és fénysugarakat bocsát ki kék háttér előtt.
   minecraft_tile_alt: Két Minecraft karakter, Steve és Alex, egy Minecraft vizes jelenetet
     ábrázoló háttér előtt, korallokkal, delfinekkel és hínárral.
+  hoc2022_landing_page_create_title: Létrehoz

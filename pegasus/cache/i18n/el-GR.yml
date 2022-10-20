@@ -473,6 +473,7 @@ el-GR:
   homepage_banner_40k_teachers_link: Μάθετε περισσότερα
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
+  homepage_slot_text_blurb_hoc_2022: Εξερευνήστε, Παίξτε, Δημιουργήστε!
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
   homepage_slot_text_link_about_hoc: Σχετικά με την Ώρα του Κώδικα
   homepage_slot_text_link_host: Φιλοξενήστε μια ώρα του κώδικα
@@ -500,8 +501,8 @@ el-GR:
   homepage_slot_text_link_shop: Μπλουζάκια, καπέλα, & περισσότερα
   homepage_slot_text_link_thebadguys: Γράψτε κώδικα με Τα Κακά Παιδιά
   homepage_slot_text_link_administrators: Φέρτε το CS στο σχολείο σας
-  homepage_gallery_header: Πάνω από %{project_count} εκατομμύρια έργα Code.org έχουν
-    δημιουργηθεί
+  homepage_gallery_header: 'Έχουν δημιουργηθεί πάνω από %{project_count} εκατομμύρια
+    έργα Code.org '
   homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
   homepage_donors_seall: Εμφάνιση όλων
   homepage_donors_donate: Κάντε μια δωρεά
@@ -2865,3 +2866,4 @@ el-GR:
   minecraft_tile_alt: 'Δύο χαρακτήρες από τον Ναρκαλιευτή , ο Στιβ και ο Άλεξ, ενάντια
     σε ένα φόντο που δείχνει ένα θαλάσσιο σκηνικό Ναρκαλιευτή με κοράλλια, δελφίνια
     και κέλπιες (φύκη). '
+  hoc2022_landing_page_create_title: Δημιουργία

@@ -1750,6 +1750,8 @@ he:
           title: תחרות איות
         outbreak-csc:
           title: התפרצות
+        ai-ethics-2021:
+          description_audience: כיתות ו-י"ב
         poem-art-2021:
           title: אומנות השירה
         hello-world-food-2021:
@@ -1956,3 +1958,53 @@ he:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
             lessonGroup-4:
               display_name: סקר
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: הרחבת איתור באגים אסינכרונית
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: מודולה 2 עבודה אסינכרונית
+        soccer:
+          name: כדורגל
+          title: קודד את משחק הכדורגל שלך
+          description_short: צור משחק כדורגל
+          description: צור משחק כדורגל
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: סקר
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: חזרות
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'

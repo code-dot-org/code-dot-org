@@ -5,30 +5,44 @@ la:
   language: Inglés
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 6 Dic.
+  campaign_date_start_short: 5 Dic.
   campaign_date_start_long: 6 de diciembre
-  campaign_date_short: 7-13 dic.
-  campaign_date_full: Del 6 al 12 de diciembre
-  campaign_date_year: '2021'
-  campaign_date_full_year: Del 6 al 12 de diciembre de 2021
+  campaign_date_short: 5-11 dic.
+  campaign_date_full: Del 5 al 11 de diciembre
+  campaign_date_year: '2022'
+  campaign_date_full_year: Del 5 al 11 de diciembre de 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: Octubre 1
+  nonus_campaign_date_short: Oct. 1 - Dic. 18
+  nonus_campaign_date_full: Octubre 1 - Diciembre 18
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: Octubre 1, 2022 - Diciembre 18, 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: Octubre 1
   latam_campaign_date_short: Oct. 1 - Dic. 18
   latam_campaign_date_full: Octubre 1 - Diciembre 18
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: Octubre 1, 2020 - Diciembre 18, 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: Octubre 1, 2022 - Diciembre 18, 2022
   europe_campaign_date_start_short: Oct. 10
   europe_campaign_date_start_long: Octubre 10
   europe_campaign_date_short: Oct. 10-25
   europe_campaign_date_full: Octubre 10-25
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: Octubre 10-25, 2020
-  africa_campaign_date_start_short: 6 Dic.
-  africa_campaign_date_start_long: 6 de diciembre
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: Octubre 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: Octubre 1-31
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Octubre 1-31, 2020
+  hoc2022_header: "¡Explora, juega y crea!"
+  social_hoc2022_explore_play_create: "¡Utiliza las ciencias de la computación para
+    explorar, jugar y crear!"
+  codeorg_homepage_hoc2022_body: 'Explora el universo, anota un gol, crea tu propia
+    coreografía: hay muchas maneras de probar las ciencias de la computación.'
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'Durante la #HourOfCode, estamos celebrando #CSEverywhere. ¡Descubre
     las conexiones!'
   hoc2020_header: Aprende hoy y construye un mejor futuro.
@@ -169,11 +183,11 @@ la:
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
-  hoc_danceparty_alt_text: Animated characters dancing to music underneath the text
-    'Code your own dance party'
-  hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
-    a scanner on the bottom, and an LED face
-  hoc_banner_alt_text: Hour of Code banner
+  hoc_danceparty_alt_text: Personajes animados bailando al ritmo de la música bajo
+    el texto "Codifica tu propia fiesta de baile".
+  hoc_ai_alt_text: Un personaje flotante de inteligencia artificial, de color blanco,
+    con una antena, un escáner en la parte inferior y una cara LED
+  hoc_banner_alt_text: Cartel de la Hora del Código
   ai_video_title_what_is_ai: "¿Qué es IA?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"
@@ -506,6 +520,25 @@ la:
   front_join_us_n_students_served: "# participantes."
   front_join_us_challenge: "¡Gana una videoconferencia para tu aula con una celebridad!"
   front_join_us_learn_more: Conoce más
+  cta_see_whats_new: Mira las novedades
+  cta_try_more_activities: Prueba más actividades
+  cta_try_an_activity: Prueba una actividad
+  hoc_homepage_join_the_movement_heading: Únete al movimiento
+  hoc_homepage_join_the_movement_description: La Hora del Código está disponible todo
+    el año, pero en diciembre tu clase puede unirse a millones de estudiantes de todo
+    el mundo que celebran la Semana de la Educación en Ciencias de la Computación
+    con la Hora del Código. La inscripción para la celebración anual comienza en octubre.
+  hoc_homepage_what_is_hoc_subhead: Tutoriales de una hora en más de 45 idiomas. No
+    se necesita experiencia. Las actividades de la Hora del Código están disponibles
+    de forma gratuita durante todo el año.
+  hoc_homepage_what_is_hoc_description: La Hora del Código es una introducción de
+    una hora a las ciencias de la computación, que utiliza divertidos tutoriales para
+    demostrar que cualquiera puede aprender los conceptos básicos. Esta campaña comunitaria
+    cuenta con el apoyo de más de 400 socios y 200,000 educadores de todo el mundo.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lee nuestra guía práctica](%{howto_guide_url})
+    para planificar un evento para tu clase."
+  hoc_homepage_highlights_heading: Lo más destacado de la Hora del Código
+  hoc_homepage_organized_by: La Hora del Código es organizada por [Code.org](%{codeorg_url}).
   signup_closed: La inscripción para la Hora del Código está cerrada. Vuelve a intentarlo
     en octubre cuando abramos la inscripción para la siguiente Hora del Código.
   signup_registration_not_required: "¡No es necesario inscribirse para participar!
@@ -556,8 +589,6 @@ la:
     mapa cuando te inscribas. Si organizas varios eventos, envía un nombre o correo
     electrónico para cada uno. Solo podemos contar un evento por combinación de nombre
     y correo electrónico.
-  signup_registration_deadline: La inscripción para la Hora del Código cierra el 11
-    de diciembre.
   signup_name_placeholder: Tu nombre
   signup_email_placeholder: tu@ejemplo.com
   signup_organization_name_placeholder: Por ejemplo, escuela Lincoln
@@ -11148,166 +11179,166 @@ la:
   dont_know: No sé
   language_label: Idioma
   language_code:
-    ar: Arabic
-    az: Azerbaijani
-    bg: Bulgarian
-    bn: Bengali
-    br: Breton
-    bs: Bosnian
-    ca: Catalan
-    co: Corsican
-    cs: Czech
-    da: Danish
-    de: German
+    ar: Árabe
+    az: Azerí
+    bg: Búlgaro
+    bn: Bengalí
+    br: Bretón
+    bs: Bosnio
+    ca: Catalán
+    co: Corso
+    cs: Checo
+    da: Danés
+    de: Alemán
     dv: Dhivehi
-    el: Greek
+    el: Griego
     en: Inglés
-    es: Spanish
-    et: Estonian
-    eu: Basque
-    fa: Persian
-    fi: Finnish
-    fil: Filipino
-    fr: French
-    ga: Irish
-    gl: Galician
-    haw: Hawaiian
-    he: Hebrew
+    es: Español
+    et: Estonio
+    eu: Vasco
+    fa: Persa
+    fi: Finlandés
+    fil: Tagalo
+    fr: Francés
+    ga: Irlandés
+    gl: Gallego
+    haw: Hawaiano
+    he: Hebreo
     hi: Hindi
-    hr: Croatian
-    hu: Hungarian
-    hy: Armenian
-    ia: Interlingua (International Auxiliary Language Association)
-    id: Indonesian
-    is: Icelandic
-    it: Italian
-    ja: Japanese
-    ka: Georgian
-    kk: Kazakh
-    km: Khmer
-    kn: Kannada
-    ko: Korean
-    ku: Kurdish
-    ky: Kyrgyz
-    lt: Lithuanian
-    lv: Latvian
+    hr: Croata
+    hu: Húngaro
+    hy: Armenio
+    ia: Interlingua (Asociación Internacional de Lenguas Auxiliares)
+    id: indonesio
+    is: Islandés
+    it: Italiano
+    ja: Japonés
+    ka: Georgiano
+    kk: Kazajo
+    km: Jemer
+    kn: Canarés
+    ko: Coreano
+    ku: Kurdo
+    ky: Kirguís
+    lt: Lituano
+    lv: Letón
     mi: Maori
-    mk: Macedonian
-    mn: Mongolian
-    mr: Marathi
-    ms: Malay
-    mt: Maltese
-    my: Burmese
-    ne: Nepali
-    nl: Dutch
-    nn: Norwegian (Nynorsk)
-    false: Norwegian (Bokmål)
-    pl: Polish
-    ps: Pashto
-    pt: Portuguese
-    ro: Romanian
-    ru: Russian
-    se: Northern Sami
-    si: Sinhalese
-    sk: Slovak
-    sl: Slovenian
-    sq: Albanian
-    sr: Serbian
-    sv: Swedish
-    sw: Kiswahili
+    mk: Macedonio
+    mn: Mongol
+    mr: Maratí
+    ms: Malayo
+    mt: Maltés
+    my: Birmano
+    ne: Nepalí
+    nl: Holandés
+    nn: Noruego (Nynorsk)
+    false: Noruego (Bokmål)
+    pl: Polaco
+    ps: Pastún
+    pt: Portugués
+    ro: Rumano
+    ru: Ruso
+    se: Sami del Norte
+    si: Cingalés
+    sk: Eslovaco
+    sl: Esloveno
+    sq: Albanés
+    sr: Serbio
+    sv: Sueco
+    sw: Swahili
     ta: Tamil
-    te: Telugu
-    tg: Tajik
-    th: Thai
-    tl: Tagalog
-    tr: Turkish
-    uk: Ukrainian
+    te: Télugu
+    tg: Tayiko
+    th: Tailandés
+    tl: Tagalo
+    tr: Turco
+    uk: Ucraniano
     ur: Urdu
-    uz: Uzbek
-    vi: Vietnamese
-    zh: Chinese (Simplified)
-    zu: Zulu
+    uz: Uzbeko
+    vi: Vietnamita
+    zh: Chino (Simplificado)
+    zu: Zulú
   locale_code:
-    ar-sa: Arabic
-    az-az: Azerbaijani
-    bg-bg: Bulgarian
-    bn-bd: Bengali
-    bs-ba: Bosnian
-    ca-es: Catalan
-    co-co: Corsican
-    cs-cz: Czech
-    da-dk: Danish
-    de-de: German
+    ar-sa: Árabe
+    az-az: Azerí
+    bg-bg: Búlgaro
+    bn-bd: Bengalí
+    bs-ba: Bosnio
+    ca-es: Catalán
+    co-co: Corso
+    cs-cz: Checo
+    da-dk: Danés
+    de-de: Alemán
     dv-mv: Dhivehi
-    el-gr: Greek
-    en-gb: English (United Kingdom)
+    el-gr: Griego
+    en-gb: Inglés (Reino Unido)
     en-us: Inglés
-    es-es: Spanish (Spain)
+    es-es: Español (España)
     es-mx: Español (México)
-    et-ee: Estonian
-    eu-es: Basque
-    fa-af: Dari
-    fa-ir: Persian
-    fi-fi: Finnish
-    fil-ph: Filipino
-    fr-fr: French
-    ga-ie: Irish
-    gl-es: Galician
-    haw-hi: Hawaiian
-    he-il: Hebrew
+    et-ee: Estonio
+    eu-es: Vasco
+    fa-af: Darí
+    fa-ir: Persa
+    fi-fi: Finlandés
+    fil-ph: Tagalo
+    fr-fr: Francés
+    ga-ie: Irlandés
+    gl-es: Gallego
+    haw-hi: Hawaiano
+    he-il: Hebreo
     hi-in: Hindi
-    hr-hr: Croatian
-    hu-hu: Hungarian
-    hy-am: Armenian
-    id-id: Indonesian
-    is-is: Icelandic
-    it-it: Italian
-    ja-jp: Japanese
-    ka-ge: Georgian
-    kk-kz: Kazakh
-    km-kh: Khmer
-    kn-in: Kannada
-    ko-kr: Korean
-    ku-iq: Kurdish
-    ky-kg: Kyrgyz
-    lt-lt: Lithuanian
-    lv-lv: Latvian
+    hr-hr: Croata
+    hu-hu: Húngaro
+    hy-am: Armenio
+    id-id: indonesio
+    is-is: Islandés
+    it-it: Italiano
+    ja-jp: Japonés
+    ka-ge: Georgiano
+    kk-kz: Kazajo
+    km-kh: Jemer
+    kn-in: Canarés
+    ko-kr: Coreano
+    ku-iq: Kurdo
+    ky-kg: Kirguís
+    lt-lt: Lituano
+    lv-lv: Letón
     mi-nz: Maori
-    mk-mk: Macedonian
-    mn-mn: Mongolian
-    mr-in: Marathi
-    ms-my: Malay
-    mt-mt: Maltese
-    my-mm: Burmese
-    ne-np: Nepali
-    nl-nl: Dutch
-    nn-no: Norwegian (Nynorsk)
-    no-no: Norwegian (Bokmål)
-    pl-pl: Polish
-    ps-af: Pashto
-    pt-br: Portuguese (Brazil)
-    pt-pt: Portuguese (Portugal)
-    ro-ro: Romanian
-    ru-ru: Russian
-    se-fi: Northern Sami
-    si-lk: Sinhalese
-    sk-sk: Slovak
-    sl-si: Slovenian
-    sq-al: Albanian
-    sr-sp: Serbian
-    sv-se: Swedish
+    mk-mk: Macedonio
+    mn-mn: Mongol
+    mr-in: Maratí
+    ms-my: Malayo
+    mt-mt: Maltés
+    my-mm: Birmano
+    ne-np: Nepalí
+    nl-nl: Holandés
+    nn-no: Noruego (Nynorsk)
+    no-no: Noruego (Bokmål)
+    pl-pl: Polaco
+    ps-af: Pastún
+    pt-br: Portugués (Brasil)
+    pt-pt: Portugués (Portugal)
+    ro-ro: Rumano
+    ru-ru: Ruso
+    se-fi: Sami del Norte
+    si-lk: Cingalés
+    sk-sk: Eslovaco
+    sl-si: Esloveno
+    sq-al: Albanés
+    sr-sp: Serbio
+    sv-se: Sueco
     ta-in: Tamil
-    te-in: Telugu
-    tg-tj: Tajik
-    th-th: Thai
-    tr-tr: Turkish
-    uk-ua: Ukrainian
-    ur-in: Urdu (India)
-    ur-pk: Urdu (Pakistan)
-    uz-uz: Uzbek
-    vi-vn: Vietnamese
-    zh-cn: Chinese (Simplified)
-    zh-hans: Chinese (Simplified)
-    zh-hant: Chinese (Traditional)
-    zh-tw: Chinese (Traditional)
-    zu-za: Zulu
+    te-in: Télugu
+    tg-tj: Tayiko
+    th-th: Tailandés
+    tr-tr: Turco
+    uk-ua: Ucraniano
+    ur-in: Urdú (India)
+    ur-pk: Urdú (Pakistán)
+    uz-uz: Uzbeko
+    vi-vn: Vietnamita
+    zh-cn: Chino (Simplificado)
+    zh-hans: Chino (Simplificado)
+    zh-hant: Chino (Tradicional)
+    zh-tw: Chino (Tradicional)
+    zu-za: Zulú

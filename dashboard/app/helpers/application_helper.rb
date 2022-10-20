@@ -1,7 +1,7 @@
 require 'client_state'
 require 'nokogiri'
 require 'cdo/user_agent_parser'
-require 'cdo/graphics/certificate_image'
+require_relative '../../legacy/certificate_image'
 require 'dynamic_config/gatekeeper'
 require 'cdo/shared_constants'
 require 'cdo/asset_helper'

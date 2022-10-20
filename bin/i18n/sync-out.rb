@@ -88,7 +88,7 @@ def file_changed?(locale, file)
     JSON.parse File.read(project_options[:files_to_sync_out_json])
   end
 
-  crowdin_code = Languages.get_code_by_locale(locale)
+  crowdin_code = PegasusLanguages.get_code_by_locale(locale)
   return @change_datas.any? do |change_data|
     change_data.dig(locale, file) || change_data.dig(crowdin_code, file)
   end
@@ -99,7 +99,7 @@ end
 def rename_from_crowdin_name_to_locale
   # Move directories like `i18n/locales/Italian` to `i18n/locales/it-it` for
   # all languages in our system
-  Languages.get_crowdin_name_and_locale.each do |prop|
+  PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
     next unless File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
 
     # copy and remove rather than moving so we can easily and recursively deal
@@ -121,7 +121,7 @@ def find_malformed_links_images(locale, file_path)
   is_json = File.extname(file_path) == '.json'
   data =
     if is_json
-      JSON.parse(File.read(file_path, 'r'))
+      JSON.parse(File.read(file_path))
     else
       YAML.load_file(file_path)
     end
@@ -132,7 +132,7 @@ def find_malformed_links_images(locale, file_path)
 end
 
 def restore_redacted_files
-  locales = Languages.get_locale
+  locales = PegasusLanguages.get_locale
   original_dir = "i18n/locales/original"
   original_files = Dir.glob("#{original_dir}/**/*.*").to_a
   if original_files.empty?
@@ -344,7 +344,7 @@ end
 # Distribute downloaded translations from i18n/locales
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
-  locales = Languages.get_locale
+  locales = PegasusLanguages.get_locale
   puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
   Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
@@ -435,6 +435,70 @@ def distribute_translations(upload_manifests)
       FileUtils.mv(loc_file, destination)
     end
 
+    ### Docs
+    Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      basename = File.basename(loc_file, '.json')
+      destination = "dashboard/config/locales/#{basename}.#{locale}.json"
+
+      # JSON files in this directory need the root key to be set to the locale
+      loc_data = JSON.parse(File.read(loc_file))
+      loc_data = wrap_with_locale(loc_data, locale, basename)
+      sanitize_data_and_write(loc_data, destination)
+    end
+
+    ### Standards
+    Dir.glob("i18n/locales/#{locale}/standards/*.json") do |loc_file|
+      # For every framework, we place the frameworks and categories in their
+      # respective places.
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      # These JSON files contain the framework name, a set of categories, and a
+      # set of standards.
+      loc_data = JSON.parse(File.read(loc_file))
+      framework = File.basename(loc_file, '.json')
+
+      # Frameworks
+      destination = "dashboard/config/locales/frameworks.#{locale}.json"
+      framework_data = File.exist?(destination) ?
+        parse_file(destination).dig(locale, "data", "frameworks") || {} :
+        {}
+      framework_data[framework] = {
+        "name" => loc_data["name"]
+      }
+      framework_data = wrap_with_locale(framework_data, locale, "frameworks")
+      sanitize_data_and_write(framework_data, destination)
+
+      # Standard Categories
+      destination = "dashboard/config/locales/standard_categories.#{locale}.json"
+      category_data = File.exist?(destination) ?
+        parse_file(destination).dig(locale, "data", "standard_categories") || {} :
+        {}
+      (loc_data["categories"] || {}).keys.each do |category|
+        category_data[category] = {
+          "description" => loc_data["categories"][category]["description"]
+        }
+      end
+      category_data = wrap_with_locale(category_data, locale, "standard_categories")
+      sanitize_data_and_write(category_data, destination)
+
+      # Standards
+      destination = "dashboard/config/locales/standards.#{locale}.json"
+      standard_data = File.exist?(destination) ?
+        parse_file(destination).dig(locale, "data", "standards") || {} :
+        {}
+      (loc_data["standards"] || {}).keys.each do |standard|
+        standard_data[standard] = {
+          "description" => loc_data["standards"][standard]["description"]
+        }
+      end
+      standard_data = wrap_with_locale(standard_data, locale, "standards")
+      sanitize_data_and_write(standard_data, destination)
+    end
+
     ### Pegasus
     loc_file = "#{locale_dir}/pegasus/mobile.yml"
     destination = "pegasus/cache/i18n/#{locale}.yml"
@@ -448,7 +512,7 @@ end
 def copy_untranslated_apps
   untranslated_apps = %w(applab calc eval gamelab netsim weblab)
 
-  Languages.get_locale.each do |prop|
+  PegasusLanguages.get_locale.each do |prop|
     next unless prop[:locale_s] != 'en-US'
     untranslated_apps.each do |app|
       app_locale = prop[:locale_s].tr('-', '_').downcase!

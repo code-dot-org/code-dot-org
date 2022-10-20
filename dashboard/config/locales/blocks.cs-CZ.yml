@@ -2,6 +2,8 @@
 cs:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: vyzvat uživatele {QUESTION} s proměnnou {VAR} a možnostmi {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1321,6 +1323,10 @@ cs:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bizarní
               basy
             "'sound://category_digital/jump_7.mp3'": skoč
+      gamelab_playSoundOptionsSoccer:
+        text: přehraj zvuk {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: přehraj zvuk {SOUND}
       gamelab_playSpeech:
         text: přehrát řeč {SOUND}
       gamelab_playerBehaviors:
@@ -1480,15 +1486,6 @@ cs:
         text: "{SPRITE} si myslí {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE} si myslí {TEXT1} po dobu {NUM} sekund"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} si myslí {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Taky mám hlad.
-            '"I only want the biggest goat."': Chci jen tu největší kozu.
-            '"I''m a green troll."': Jsem zelený trol.
-            '"No one will cross my bridge."': Přes můj most nikdo nepřejde.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} si myslí {THOUGHT}"
         options:
@@ -2173,6 +2170,11 @@ cs:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: po zodpovězení výzvy {VAR}
       RyanLab_moveForward:

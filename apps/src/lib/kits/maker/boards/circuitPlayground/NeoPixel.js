@@ -1,5 +1,5 @@
 /** @file Wrapper around Johnny-Five NeoPixel component */
-import five from '@code-dot-org/johnny-five';
+import five from '@code-dot-org/johnny-five-deprecated';
 
 export default class NeoPixel extends five.Led.RGB {
   on() {

@@ -367,6 +367,7 @@ lt:
     no_primary_course: "Išmėgink „Code Studio“ kursą"
     choose_next_course: "Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau"
     print_certificate: "Atsispausdinti sertifikatą"
+  certificate_hour_of_code: "„Programavimo valanda“"
   share:
     title: "Mokytis su „Code Studio“"
     description: "Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles ir piešinius programuodamas."
@@ -689,3 +690,5 @@ lt:
     accept: 'Sutinku'
   page_not_found_title: "Puslapis nerastas"
   copy: 'Kopijuoti'
+  pixelation:
+    binary: "Dvejetainis"

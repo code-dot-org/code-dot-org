@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:50.000Z",
-  "level_num": "custom",
-  "user_id": 568,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -60,7 +56,7 @@
     "encrypted_examples": "h7vak1zzSQbSyDzA+CaX1qpaQ8dZUocZXHLduHE417vf/6K8AF+apPk59Gi/\npUuiMMGcgPkCQRkeAtATh8l8dg==\n",
     "parent_level_id": 20558,
     "name_suffix": "_2222",
-    "map_reference": "/docs/concepts/maker-toolkit/the-accelerometer/",
+    "map_reference": "/courses/csd-2022/guides/the-accelerometer",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
@@ -72,6 +68,10 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L12.3 - turn_off\",\r\n  \"callout_text\": \"Add code to turn OFF the LEDS here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"turn_off\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//1\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L12.3 - turn_on\",\r\n  \"callout_text\": \"Add code to turn ON the LEDS here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"turn_on\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//2\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:50.000Z",
+  "user_id": 568,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:50.636+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - SB2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - SB2_2022\"}]"

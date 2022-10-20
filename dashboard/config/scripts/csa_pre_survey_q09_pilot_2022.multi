@@ -1,0 +1,10 @@
+name 'CSA Pre-Survey q09_pilot-2022'
+question 'I believe there is a place for me in the computer science industry.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'

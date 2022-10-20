@@ -409,6 +409,7 @@ nl:
       about: Over
       legal: Privacy & juridisch
       legal_privacy: Privacybeleid
+      legal_cookie_notice: Cookiebeleid
       legal_tos: Gebruiksvoorwaarden
     user:
       classroom: Startpagina voor de leerkracht
@@ -608,6 +609,7 @@ nl:
     print_certificate: print certificaat
   certificate_sponsor_message: "%{sponsor_name} gaf het gulle geschenk om je leren
     te sponsoren."
+  certificate_hour_of_code: Uur Code
   move_students:
     new_section_dne: Sorry, maar de groep %{new_section_code} bestaat niet. Vul een
       andere groepscode in.
@@ -1119,3 +1121,5 @@ nl:
     this_sprite: deze sprite
   unit_prefix: Unit %{n}
   teacher_feedback: Docenten feedback
+  pixelation:
+    binary: Binaire

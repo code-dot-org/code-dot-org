@@ -3,7 +3,7 @@
   "name": "Math.random",
   "category": "Math",
   "category_key": "math",
-  "content": "You will find many opportunities in your apps to utilize random numbers. You could ",
+  "content": "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)\n\nYou will find many opportunities in your apps to utilize random numbers. You could use it to simulate something like the roll of a dice or you could use it to make something occur randomly in your programs like a sound or an image appearing on the screen.",
   "examples": [
     {
       "name": "Print a random number between values",
@@ -17,5 +17,6 @@
   ],
   "external_documentation": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random",
   "short_description": "Returns a random number ranging from 0 (inclusive) up to but not including 1 (exclusive)\n\nFound a bug in the documentation? Let us know at documentation@code.org",
-  "syntax": "Math.random()"
+  "syntax": "Math.random()",
+  "tips": "Check out [this Khan Academy resource](https://www.khanacademy.org/computing/ap-computer-science-principles/x2d2f703b37b450a3:simulations/x2d2f703b37b450a3:simulating-randomness/a/generating-random-numbers) for more uses of Math.random()"
 }

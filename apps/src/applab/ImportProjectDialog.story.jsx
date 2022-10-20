@@ -2,29 +2,23 @@ import React from 'react';
 import {ImportProjectDialog} from './ImportProjectDialog';
 import {action} from '@storybook/addon-actions';
 
-export default storybook => {
-  storybook.storiesOf('ImportProjectDialog', module).addStoryTable([
-    {
-      name: 'On open',
-      story: () => (
-        <ImportProjectDialog hideBackdrop onImport={action('onImport')} />
-      )
-    },
-    {
-      name: 'While fetching',
-      story: () => (
-        <ImportProjectDialog
-          hideBackdrop
-          isFetching
-          onImport={action('onImport')}
-        />
-      )
-    },
-    {
-      name: 'Error Fetching',
-      story: () => (
-        <ImportProjectDialog hideBackdrop error onImport={action('onImport')} />
-      )
-    }
-  ]);
+export default {
+  title: 'ImportProjectDialog',
+  component: ImportProjectDialog
+};
+
+const Template = args => (
+  <ImportProjectDialog hideBackdrop onImport={action('onImport')} {...args} />
+);
+
+export const OnOpen = Template.bind({});
+
+export const WhileFetching = Template.bind({});
+WhileFetching.args = {
+  isFetching: true
+};
+
+export const ErrorFetching = Template.bind({});
+ErrorFetching.args = {
+  error: true
 };

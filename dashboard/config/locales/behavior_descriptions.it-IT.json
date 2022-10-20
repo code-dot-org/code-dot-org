@@ -29,6 +29,38 @@
         "courseF_apps_collector": {
           "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Sposta un personaggio a sinistra attraverso lo schermo. Se esce dal lato sinistro dello schermo, si sposta sul lato destro dello schermo!",
           "randomly move the sprite up or down": "fai muovere casualmente il personaggio verso l'alto o verso il basso"
+        },
+        "CourseF_outbreak1_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "CourseF_outbreak3_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "CourseF_outbreak4_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "CourseF_outbreak5_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "CourseF_outbreak6_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "CourseF_outbreak8_-2022-2": {
+          "gradually recover from sickness": "guarire a poco a poco dalla malattia"
+        },
+        "courseF_apps_collector2022": {
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Sposta un personaggio a sinistra attraverso lo schermo. Se esce dal lato sinistro dello schermo, si sposta sul lato destro dello schermo!",
+          "randomly move the sprite up or down": "fai muovere casualmente il personaggio verso l'alto o verso il basso"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Sposta un personaggio a sinistra attraverso lo schermo. Se esce dal lato sinistro dello schermo, si sposta sul lato destro dello schermo!",
+          "randomly move the sprite up or down": "fai muovere casualmente il personaggio verso l'alto o verso il basso"
         }
       }
     }

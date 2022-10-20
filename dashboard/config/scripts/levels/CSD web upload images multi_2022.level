@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:33:22.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "project_template_level_name": "CSD Web Multi-page Template_2022",
@@ -13,12 +9,16 @@
     "name_suffix": "_2022",
     "long_instructions": "# Upload Images\r\n\r\nUpload all of your team's images into your project.\r\n\r\n# Do This\r\n  * Upload all of the images listed in your team's web site plan into your project.\r\n  * Double check that each image file name uses good naming conventions.\r\n  * Double check that everyone on the team has the exact same images with the exact same names.\r\n",
     "reference_links": [
-      "/docs/concepts/other/creative-commons-search/"
+      "/courses/csd-2022/guides/creative-commons-search"
     ],
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "false"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:33:22.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:33:22.495+00:00\",\"changed\":[\"cloned from \\\"CSD web upload images multi_2021\\\"\"],\"cloned_from\":\"CSD web upload images multi_2021\"}]"

@@ -312,6 +312,7 @@ kk:
     no_primary_course: Код Студиясы курсын байқап көру
     choose_next_course: Төмендегі Код Студиясы курсының біреуін байқап көріңіз
     print_certificate: Сертификатты басып шығару
+  certificate_hour_of_code: Код жазу Сағаты
   move_students:
     student_not_found: Бір немесе одан көбірек оқушы табылмады.
   share:
@@ -667,3 +668,5 @@ kk:
   cookie_banner:
     accept: Мен келісемін
   copy: Көшіру
+  pixelation:
+    binary: Бинарлы

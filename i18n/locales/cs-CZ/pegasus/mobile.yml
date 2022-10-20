@@ -354,6 +354,7 @@
   homepage_banner_40k_teachers_link: "Zjisti více"
   homepage_slot_text_title_hoc: "Hodina kódu"
   homepage_slot_text_blurb_hoc: "Každý se to může naučit. Začni dnes"
+  homepage_slot_text_blurb_hoc_2022: "Bádejte, hrajte, vytvářejte!"
   homepage_slot_text_link_hoc: "Vyzkoušej Hodinu Programování"
   homepage_slot_text_link_about_hoc: "O Hodině kódu"
   homepage_slot_text_link_host: "Uspořádejte Hodinu kódu"
@@ -1812,3 +1813,5 @@
   footer_cookie_notice: "Oznámení o souborech cookie"
   top_hoc_tutorial_applab_alt_text: "Hnědá ruka, která se ukazováčkem dotýká tabletu s dotykovou obrazovkou, ze které vychází hvězdy a paprsky světla proti modrému pozadí"
   minecraft_tile_alt: "Dvě postavičky z Minecraftu, Steve a Alex. Na pozadí se zobrazuje vodní scéna z Minecraftu s korály, delfíny a chaluhami."
+  hoc2022_landing_page_create_title: "Vytvořit"
+  try_it_yourself: "Vyzkoušejte to sami!"

@@ -851,3 +851,9 @@ bn:
           lesson_groups:
             lessonGroup-8:
               display_name: চলকগুলো
+        soccer:
+          name: ফুটবল খেলা
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: চক্র

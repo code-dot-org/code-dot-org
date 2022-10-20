@@ -67,7 +67,7 @@ module Pd::Application
           :pacific_islander,
           :american_indian
         ].include? k
-      end.values.map(&:to_f).reduce(:+)
+      end.values.sum(&:to_f)
     end
 
     def placeholder?

@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:09.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -18,11 +14,15 @@
     "thumbnail_url": "https://images.code.org/6993179dc3d4e3a88ab1109d0117462d-image-1585676432991.png",
     "encrypted_examples": "1JOpUGtrg4/eafqi9lA0tRE6y5IwCGRi8xKK0dFVTV/RdVWNfrtyNGtV3ZIt\nBw9lp3y4Dyh8lw4q8i55mUCUsA==\n",
     "reference_links": [
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
     "name_suffix": "_2022"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:09.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:09.887+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level headings 2_2021\\\"\"],\"cloned_from\":\"CSD Web Dev choice level headings 2_2021\"}]"

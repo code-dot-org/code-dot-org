@@ -8,9 +8,9 @@ title: Guía de la Hora del Código
 
 ### Únete al movimiento e inicia a tu alumnado en el desarrollo del Pensamiento Computacional con estos pasos.
 
-El pensamiento computacional ayuda a desarrollar habilidades de resolución de problemas, lógica y creatividad. La tecnología está transformando todas las industrias del planeta. Los estudiantes deben aprender no a usar la tecnología sino también a cómo crearla. Al comenzar tempranamente, adquirirán una base para el éxito de cualquier carrera del S.XXI.
+Los estudiantes deben aprender no solo como usar la tecnología sino también cómo crearla.
 
-Probar con la hora de código es una manera sencilla y divertida de introducir a los estudiantes a la informática, tal vez por primera vez, aprendiendo a adaptarse perfectamente tanto en clase como fuera del centro. Consulta nuestra [guía de participación]({{ localized_files/participation_guide }}) si aún tienes preguntas.
+Probar una Hora del Código es una forma sencilla y divertida de introducir a los alumnos en la informática, quizá por primera vez. Encuentra una actividad que se adapte a tu entorno, ya sea en clase o después de la escuela, en persona o virtual. Echa un vistazo a nuestra [guía de participación si aún tienes dudas]({{ localized_files/participation_guide }}) después de comprobar los pasos siguientes:
 
 - [Echa un vistazo al vídeo sobre la Hora del Código.](#how-to-video)
 - [Explora actividades y tutoriales.](#explore-activities)
@@ -21,13 +21,11 @@ Probar con la hora de código es una manera sencilla y divertida de introducir a
 - [Celebra el éxito de tu alumnado.](#celebrate)
 - [Otros recursos de la Hora del Código para docentes.](#other-resources)
 
-### La hora del Código también se puede seguir de forma remota. Para empezar, echa un vistazo  Consejos para seguir el evento virtual de la Hora del Código.</h3> 
-
 * * *
 
 <a id="how-to-video"></a>
 
-## Mira el vídeo de la Hora del Código. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## Mira el vídeo de la Hora del Código. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -39,7 +37,7 @@ Ofrecemos divertidos [tutoriales guiados para estudiantes]({{ urls/learn }}) par
 
 Explora las actividades y decide con anticipación si deseas elegir un solo tutorial para todos tus estudiantes, o que cada niño elija el suyo.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -47,7 +45,7 @@ Explora las actividades y decide con anticipación si deseas elegir un solo tuto
 
 ## Crea tu plan para el día.
 
-### Considera tus necesidades tecnológicas. ¡Los ordenadores son opcionales!
+### Considera tus necesidades tecnológicas. ¡Las computadoras son opcionales!
 
 - Para tener una mejor experiencia con la Hora del Código, se recomienda contar con dispositivos con conexión a Internet. No necesitas un dispositivo para cada niño; incluso, puedes desarrollar la Hora del Código sin ordenador. Para las [actividades sin conexión](/learn), solo tienes que filtrar la sección Tecnología en el aula para mostrar las opciones para “Sin ordenadores o dispositivos”.
 - Asegúrate de probar los tutoriales en los ordenadores o los dispositivos de los estudiantes para garantizar que el sonido y el video funcionen bien en los navegadores. ¿Tienes banda ancha limitada? Muestra los videos a toda la clase para que los estudiantes no tengan que descargarlos. También puedes probar los tutoriales sin conexión.
@@ -58,7 +56,7 @@ Explora las actividades y decide con anticipación si deseas elegir un solo tuto
 
 ### Elige día y horario
 
-Personas de todo el mundo se suman a la celebración de la Hora del Código durante la Semana por la Educación en Ciencias de la Computación (9-13 de diciembre) cuando se lanzan los últimos tutoriales y actividades. ¡Puedes practicar la Hora de Código cualquier día del año!
+Personas de todo el mundo se unen a la celebración de la Hora del Código durante la Semana de la Educación en Informática (del 5 al 11 de diciembre), cuando se publican los últimos tutoriales y actividades. ¡Puedes practicar la Hora de Código cualquier día del año!
 
 * * *
 
@@ -74,11 +72,11 @@ Ahora que has planificado tu evento, ¡es hora de comenzar a difundirlo!
 
 ### Informa a los voluntarios cuando se registren a tu evento
 
-Cuando [registres tu evento de la Hora del Código](/), recibirás comunicaciones útiles por correo electrónico con noticias y consejos para organizar una Hora del Código exitosa. También es la forma en que puedes informar a los voluntarios locales de que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre Ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
+Cuando [inscribas tu evento de la Hora del Código](/#join), recibirás útiles comunicaciones por correo electrónico con noticias y consejos para organizar con éxito la Hora del Código. También es la forma en que puedes informar a los voluntarios locales de que tu escuela está participando. Los voluntarios son un gran recurso y pueden venir a hablar con tu clase sobre Ciencias de la computación o simplemente ayudar a tus estudiantes con las actividades de la Hora del Código.
 
-### Genera entusiasmo en tus estudiantes
+### ¡Genera entusiasmo entre tus estudiantes!
 
-Prepárate para el evento compartiendo [videos inspiradores](/promote/resources) con diversas personas y formas creativas en que se pueden usar las ciencias de la computación. ¡También puedes pedir carteles inspiradores para tu aula! Los estudiantes tienen más ganas de participar en un tema cuando personas que se parecen a ellos les animan a hacerlo.
+Prepárate para el evento compartiendo [videos inspiradores](/promote/resources) con diversas personas y formas creativas en que se pueden usar las ciencias de la computación. ¡O imprime carteles inspiradores para tu aula! Los estudiantes tienen más ganas de participar en un tema cuando personas que se parecen a ellos les animan a hacerlo.
 
 {{ promote_new_posters }}
 
@@ -113,7 +111,7 @@ No hay ningún problema si tanto tú como tus estudiantes sois nuevos en la Cien
 
 Involucra a los estudiantes en la actividad
 
-- Escribe el enlace al tutorial en una pizarra. Encuentra el enlace en [ con información ]({{ urls/learn }}) y ten en cuenta el número de participantes.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Si los estudiantes encuentran dificultades, está bien responder:
 
@@ -140,8 +138,7 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 - [Imprime certificados]({{ urls/certificates }}) para tus estudiantes.
 - [Imprime etiquetas adhesivas de "¡Yo participé en la Hora del Código!"]({{ urls/promote_stickers }}) para tus estudiantes.
-- [Pide camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para tu escuela.
-- Comparte fotos y vídeos de la Hora del Código en las redes sociales. ¡Usa #HoraDelCódigo y @codeorg para que podamos destacar tu éxito!
+- Comparte fotos y videos de la Hora del Código en las redes sociales. ¡Usa #HoraDelCódigo y @codeorg para que podamos destacar tu éxito!
 
 * * *
 
@@ -154,6 +151,6 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 ### ¿Qué viene después de la Hora de Código?
 
-La Ciencia Computacional no acaba con el fin de la Hora del Código. Nuestro plan de acción está colgado en la Web y puedes usarlo libremente siempre que quieras. [ Aprende cómo ](/beyond) para traer el Pensamiento Computacional a tu centro y a sus estudiantes.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

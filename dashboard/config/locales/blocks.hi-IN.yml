@@ -2,6 +2,9 @@
 hi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: उपयोगकर्ता को {QUESTION} वेरिएबल {VAR} के लिए विकल्पों {A}{B}{C} के
+          साथ सुझाव दें
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       BadGuys_setSizeAll_dropdown:
@@ -1033,7 +1036,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
       gamelab_clickedOn:
         text: जब {SPRITE} पर क्लिक किया
       gamelab_clickedSpritePointer:
@@ -1171,7 +1174,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
           KEY:
             '"up"': ऊपर
             '"down"': नीचे
@@ -1323,6 +1326,10 @@ hi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": विचित्र
               बास
             "'sound://category_digital/jump_7.mp3'": कूदें
+      gamelab_playSoundOptionsSoccer:
+        text: प्लेसाउंड {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: प्लेसाउंड {SOUND}
       gamelab_playSpeech:
         text: प्ले स्पीच {SOUND}
       gamelab_playerBehaviors:
@@ -1480,7 +1487,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
       gamelab_spriteSay:
         text: "{SPRITE} {SPEECH} बोलता है"
       gamelab_spriteSayTime:
@@ -1489,15 +1496,6 @@ hi:
         text: "{SPRITE} सोचें {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}सोचें{TEXT1}के लिए{NUM}सेकंड्स"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} सोचें {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': हम्म...
-            '"I am hungry, too."': मुझे भी भूख लगी है।
-            '"I only want the biggest goat."': मुझे केवल सबसे बड़ी बकरी चाहिए।
-            '"I''m a green troll."': मैं एक हरा ट्रोल हूँ।
-            '"No one will cross my bridge."': कोई मेरे पुल को पार नहीं करेगा।
       gamelab_spriteThink_fables2:
         text: "{SPRITE} सोचें {THOUGHT}"
         options:
@@ -2213,6 +2211,11 @@ hi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: जब {VAR} जवाब दिया गया हो
       RyanLab_moveForward:

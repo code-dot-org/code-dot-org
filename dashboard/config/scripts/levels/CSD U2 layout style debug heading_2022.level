@@ -1,9 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:32:45.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -12,17 +8,17 @@
     "submittable": "false",
     "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n\r\n\r\n::: details [**What does `head` do?**]\r\n\r\nThe `<head></head>` tags contain information, called metadata, about your web page. Metadata is not displayed on your web page and content you want on your actual page should not go here.\r\n:::\r\n\r\n\r\n::: details [**What does `body` do?**]\r\n\r\nBetween the `<body></body>` tags is where you want to be the content of your web page. It should contain the body of the web page, including all text, media, links, etc. that you want people to see on your page.\r\n\r\n:::\r\n\r\n</div>\r\n\r\n# Debug the Headings\r\n\r\nThe preview for this page looks fine and all of the HTML and CSS elements are being displayed correctly. But if you look in the code, something isn't quite right that could cause problems later on. Can you spot what code is in the wrong area and fix it?\r\n\r\n*Note: Fixing the code won't cause any changes in the preview, but your code will be better organized*\r\n",
     "reference_links": [
-      "/docs/concepts/css/body-styling/",
-      "/docs/concepts/html/images-in-html/",
-      "/docs/concepts/other/creative-commons-search/",
-      "/docs/concepts/css/style-sheets/",
-      "/docs/concepts/css/text-properties/",
-      "/docs/concepts/html/formatting-html/",
-      "/docs/concepts/html/lists/",
-      "/docs/concepts/html/headings-and-paragraphs/",
-      "/docs/concepts/html/html-tags/"
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
     ],
-    "map_reference": "/docs/concepts/css/layout-properties/",
+    "map_reference": "/courses/csd-2022/guides/layout-properties",
     "encrypted": "false",
     "mini_rubric": "false",
     "display_name": "Debug the Heading",
@@ -32,6 +28,10 @@
     "encrypted_examples": "6P9KVb4/Hrxng/9iCHtke2LJ7HU0y4SFOV9n351dPAN4hupvpvhbbufIr/kg\nwpeFzR1cJ78Id3s6NcuoA45gbw==\n",
     "validation_enabled": "false"
   },
+  "level_num": "custom",
+  "game_id": 58,
+  "created_at": "2022-03-30T23:32:45.000Z",
+  "user_id": 324,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:45.592+00:00\",\"changed\":[\"cloned from \\\"CSD U2 layout style debug heading_2021\\\"\"],\"cloned_from\":\"CSD U2 layout style debug heading_2021\"}]"

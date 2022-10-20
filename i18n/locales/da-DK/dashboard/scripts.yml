@@ -965,6 +965,8 @@ da:
           title: Stave-bien
         outbreak-csc:
           title: Udbrud
+        ai-ethics-2021:
+          description_audience: 6.  klasse til gymnasium
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -1073,3 +1075,9 @@ da:
               display_name: figure
             lessonGroup-8:
               display_name: Variabler
+        soccer:
+          name: fodbold
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Løkker

@@ -1127,6 +1127,7 @@ sk:
               display_name: Sprajty
         csd1-2019:
           title: CSD Lekcia 1 - Riešenie problémov a výpočtová technika ('19-'20)
+          description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -1134,6 +1135,7 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         andrea-test:
           title: andrea-test
           description_short: toto je na otestovanie mojich schopností vytvoriť kurz
@@ -1474,6 +1476,7 @@ sk:
             content:
               display_name: Obsah
         csd1-pilot:
+          description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -1481,6 +1484,7 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -1707,6 +1711,7 @@ sk:
               display_name: Hodnotenie kurzu
         csd2-2020:
           title: CSD Lekcia 2 - Vývoj webových stránok ('20-'21)
+          description: 'V tematickom celku č. 2 sa naučíš, ako vytvárať a zdieľať obsah na svojich vlastných webových stránkach. Keď sa rozhodneš, aký obsah chceš so svetom zdieľať, pomocou jazykov HTML a CSS sa naučíš dodať svojim stránkam štruktúru a štýl. Okrem toho si precvičíš cenné programovacie zručnosti, napríklad ladenie, využívanie externých zdrojov či tímovú prácu.  '
           lesson_groups:
             csd2_1:
               display_name: 'Kapitola 1: Obsah webu a HTML'
@@ -1714,8 +1719,14 @@ sk:
               display_name: 'Kapitola 2: Dizajn a CSS'
             cspSurvey:
               display_name: Dotazník
+            csd2_1v2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            csd2_2v2:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+          student_description: 'V tematickom celku č. 2 sa naučíš, ako vytvárať a zdieľať obsah na svojich vlastných webových stránkach. Keď sa rozhodneš, aký obsah chceš so svetom zdieľať, pomocou jazykov HTML a CSS sa naučíš dodať svojim stránkam štruktúru a štýl. Okrem toho si precvičíš cenné programovacie zručnosti, napríklad ladenie, využívanie externých zdrojov či tímovú prácu.  '
         csd1-2020:
           title: CSD Lekcia 1 - Riešenie Problémov a Výpočtová Technika ('20-'21)
+          description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -1723,6 +1734,9 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            csd1_3:
+              display_name: Alternatívne lekcie
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -2028,6 +2042,14 @@ sk:
               display_name: Ladenie
         csd1-2021:
           title: Riešenie problémov a výpočtová technika (2021/2022)
+          description: |-
+            Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
+
+            **Pokyny k 1. tematickému celku**
+
+            -   Kým začnete robiť hociktorý iný tematický celok z kurzu Objavujeme informatiku, spravte 1. kapitolu v 1. tematickom celku.
+            -   K niektorým lekciám z 1. tematického celku sú k dispozícii aj alternatívne lekcie (na využitie v závislosti od kontextu vašej triedy).
+            -   Viac informácií o tomto tematickom celku nájdete v [Príručke k osnovám](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) a [Implementačnej príručke](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -2035,13 +2057,23 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            csd1_3:
+              display_name: Alternatívne lekcie
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         csd2-2021:
+          title: Vývoj webových stránok ('21 – '22)
+          description: " V tematickom celku č. 2 sa naučíš, ako vytvárať a zdieľať obsah na svojich vlastných webových stránkach. Keď sa rozhodneš, aký obsah chceš so svetom zdieľať, pomocou jazykov HTML a CSS sa naučíš dodať svojim stránkam štruktúru a štýl. Okrem toho si precvičíš cenné programovacie zručnosti, napríklad ladenie, využívanie externých zdrojov či tímovú prácu.   \n\n**Pokyny k 2. tematickému celku**\n\n-   Kým začnete robiť tento tematický celok, spravte 1. kapitolu v 1. tematickom celku.\n-   Pokyny, ako žiakom poskytovať podporu pri riešení programovacích úrovní a ako im prispôsobiť náročnosť jednotlivých úloh, nájdete v [Sprievodcovi ladením](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) a v [Diferenciačnej príručke](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview).\n-   Viac informácií o tomto tematickom celku nájdete v [Príručke k osnovám](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) a [Implementačnej príručke](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)."
           lesson_groups:
+            csd2_1v2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            csd2_2v2:
+              display_name: 'Kapitola 2: Viacstránkové weby'
             cspSurvey:
               display_name: Dotazník
+          student_description: 'V tematickom celku č. 2 sa naučíš, ako vytvárať a zdieľať obsah na svojich vlastných webových stránkach. Keď sa rozhodneš, aký obsah chceš so svetom zdieľať, pomocou jazykov HTML a CSS sa naučíš dodať svojim stránkam štruktúru a štýl. Okrem toho si precvičíš cenné programovacie zručnosti, napríklad ladenie, využívanie externých zdrojov či tímovú prácu.  '
         csd3-2021:
           title: Interaktívne animácie a hry (2021 – 2022)
-          description: "V 3. tematickom celku budeš stavať na svojich skúsenostiach s programovaním tak, že budeš v prostredí Game Lab programovať animácie, interaktívne umenie a hry. Tematický celok sa začína vytváraním jednoduchých tvarov a postupne prejde k prepracovaným hrám, ktoré využívajú sprajty. Na ich vytváranie sa pri tom využívajú rovnaký proces dizajnovania a rovnaké programovacie koncepty, aké každodenne využívajú reálni programátori. V záverečnom projekte si vytvoríš svoj vlastný interaktívny program.\n\n**Pokyny k 3. tematickému celku**\n\n-   Kým začnete robiť tento tematický celok, spravte 1. kapitolu v 1. tematickom celku\n-   1. kapitola v tomto tematickom celku je nevyhnutnou podmienkou pred začatím 6. tematického celku \n-   Pokyny, ako žiakom poskytovať podporu pri riešení programovacích úrovní a ako im prispôsobiť náročnosť jednotlivých úloh, nájdete v [Sprevodcovi ladením](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) a v [Diferenciačnej príručke](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   Viac informácií o tomto tematickom celku nájdete v [Príručke k osnovám](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) a [Implementačnej príručke](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)."
+          description: "V 3. tematickom celku budeš stavať na svojich skúsenostiach s programovaním tak, že budeš v prostredí Game Lab programovať animácie, interaktívne umenie a hry. Tematický celok sa začína vytváraním jednoduchých tvarov a postupne prejde k prepracovaným hrám, ktoré využívajú sprajty. Na ich vytváranie sa pri tom využívajú rovnaký proces dizajnovania a rovnaké programovacie koncepty, aké každodenne využívajú reálni programátori. V záverečnom projekte si vytvoríš svoj vlastný interaktívny program.\n\n**Pokyny k 3. tematickému celku**\n\n-   Kým začnete robiť tento tematický celok, spravte 1. kapitolu v 1. tematickom celku\n-   1. kapitola v tomto tematickom celku je nevyhnutnou podmienkou pred začatím 6. tematického celku \n-   Pokyny, ako žiakom poskytovať podporu pri riešení programovacích úrovní a ako im prispôsobiť náročnosť jednotlivých úloh, nájdete v [Sprievodcovi ladením](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) a v [Diferenciačnej príručke](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   Viac informácií o tomto tematickom celku nájdete v [Príručke k osnovám](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) a [Implementačnej príručke](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)."
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animácie'
@@ -2402,13 +2434,22 @@ sk:
               display_name: Dotazník
         aiml-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
             lessonGroup-4:
               display_name: Dotazník
         csd7-2021:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
             lessonGroup-4:
               display_name: Dotazník
           title: Umelá inteligencia a strojové učenie
+          description: "7.  tematický celok je praktickým úvodom do vytvárania modelov strojového učenia pomocou tabuľkových údajov. Žiaci zistia, ako sa počítače na základe údajov učia robiť rozhodnutia, a následne budú pracovať na vlastných projektoch strojového učenia, pri ktorých sa budú využívať údaje z reálneho sveta. Na záver tohto tematického celku si vytvoria vlastnú aplikáciu tak, aby pomocou strojového učenia riešila problém, ktorý je pre nich osobne relevantný.\n\n**Pokyny k 7. tematickému celku**\n\n-   Kým začnete robiť tento tematický celok, spravte 1. kapitolu v 1. tematickom celku.\n-   V tomto tematickom celku sa predpokladá, že žiaci už poznajú App Lab, konkrétne vedia využívať dizajnovací režim na vytváranie používateľského rozhrania a vedia využívať udalosti na to, aby sa po kliknutí na tlačidlo zmenila obrazovka. [Kliknite sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview), ak chcete získať viac odporúčaní, ako žiakom predstaviť App Lab pred začatím tohto tematického celku.\n-   Toto je voliteľný tematický celok, ktorým môžete nahradiť iný tematický celok z kurzu Objavujeme informatiku. Viac informácií nájdete v [Implementačnej príručke](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview).\n-   Viac informácií o tomto tematickom celku nájdete v [Príručke k osnovám](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) \n\n**Profesijný rozvoj:** Ak máte záujem vyučovať tento kurz, odporúčame najprv si prejsť bezplatný [Samostatný modul zameraný na profesijný rozvoj v oblasti umelej inteligencie a strojového učenia](https://studio.code.org/s/self-paced-pl-csd5-2021). Modul je navrhnutý tak, aby jeho absolvovanie zabralo iba 2 hodiny. Nevyžadujú sa v ňom žiadne predchádzajúce skúsenosti s programovaním ani umelou inteligenciou."
           student_description: 7. tematický celok je praktickým úvodom do vytvárania modelov strojového učenia pomocou tabuľkových údajov. Zistíš, ako sa počítače na základe údajov učia robiť rozhodnutia, a následne budeš pracovať na vlastných projektoch strojového učenia, pri ktorých sa budú využívať údaje z reálneho sveta. Na záver tohto tematického celku si vytvoríš vlastnú aplikáciu tak, aby pomocou strojového učenia riešila problém, ktorý je pre teba osobne relevantný.
         outbreak-module:
           title: Nákaza
@@ -2609,6 +2650,8 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Ročníky 6-9
         poem-art-2021:
           title: Básnické umenie
         hello-world-food-2021:
@@ -2868,6 +2911,10 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Začíname
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3105,6 +3152,9 @@ sk:
           description_audience: Autori osnov
           description_short: Na prípravu aktualizácií hodín alebo úrovní medzi verziami učebných osnov
           description: Na prípravu aktualizácií hodín alebo úrovní medzi verziami učebných osnov
+          lessons:
+            lesson-7:
+              name: Predstavenie "sprite" objektov
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3113,8 +3163,15 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             csd1_2:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            csd1_3:
+              display_name: Alternatívne lekcie
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“ je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš, ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa svojho výberu.
         csd2-2022:
           lesson_groups:
+            csd2_1v2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            csd2_2v2:
+              display_name: 'Kapitola 2: Viacstránkové weby'
             cspSurvey:
               display_name: Dotazník
         csd3-2022:
@@ -3143,6 +3200,10 @@ sk:
               display_name: Dotazník
         csd7-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
             lessonGroup-4:
               display_name: Dotazník
         csd6-2022:
@@ -3155,3 +3216,119 @@ sk:
           title: 'Objavujeme informatiku: Záverečný dotazník'
           description: Tento modul obsahuje Prieskum po kurze CS Discoveries. Tento model môže byť priradený potom, čo žiaci dokončia záverečný modul kurzu CS Discoveries.
           student_description: Tento modul  obsahuje prieskum po dokončení tvojej vyučovacej hodiny modulov CS Discoveries. Tvoj učiteľ ti povie, kedy je čas vyplniť tento prieskum.
+        aiml-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1 – Ako funguje strojové učenie
+            lessonGroup-3:
+              display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Rozšírenie asynchrónneho ladenia
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Asynchrónna práca
+        soccer:
+          name: futbal
+          title: Nakódujte si svoj vlastný futbalový zápas
+          description_short: Vyrob si futbalový zápas
+          description: Vyrob si futbalový zápas
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Dotazník
+            lessonGroup-2:
+              display_name: Obsah
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Dotazník
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Cykly
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dotazník
+            lessonGroup-3:
+              display_name: Obsah
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Riešenie problémov
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
+          title: Nadizajnuj svoj projekt
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Fyzické výpočty
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Umelá inteligencia a strojové učenie
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'

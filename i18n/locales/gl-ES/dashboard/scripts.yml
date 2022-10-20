@@ -950,3 +950,9 @@ gl:
               display_name: Cidadanía dixital
             lessonGroup-8:
               display_name: Variables
+        soccer:
+          name: fútbol
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Bucles

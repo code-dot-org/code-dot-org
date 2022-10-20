@@ -282,7 +282,7 @@ zh-CN:
         algebraPD3c:
           title: 代数中的计算机科学
         csp1-2017:
-          title: 计算机科学原理单元 1 ：互联网('17-'18)
+          title: 计算机科学原理单元 1 ：互联网（2017-2018）
           description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
           description_short: 探讨将信息表示为比特以及传输比特的挑战。
           lesson_groups:
@@ -294,7 +294,7 @@ zh-CN:
               display_name: 第二章：发明互联网
           student_description: 本单元探讨了在计算机上表示数字信息和在人与计算设备之间传输数据所产生的技术挑战和问题。然后，探讨了互联网的结构和设计以及这些设计决定的影响。
         csp2-2017:
-          title: 计算机科学原理单元2 - 数字信息('17-'18)
+          title: 计算机科学原理单元2 - 数字信息（2017-2018）
           description: 本单元进一步探讨了数字信息如何被编码、表示和操作的。能够数字化的操作数据，可视化它，并找到规律、趋势以及可能的含义，这是计算机科学家非常重要的实践技能，每天都要用到。本单元要讨论的主要技能包括：理解数据来自何处，通过直觉从中学习或提取信息，能够使用计算工具来操作数据和通讯。
           description_short: 通过计算和可视化来探索数字信息的表示和操作有多复杂。
           lesson_groups:
@@ -306,7 +306,7 @@ zh-CN:
               display_name: 调查
           student_description: 本单元进一步探讨了数字信息如何被编码、表示和操作的。能够数字化的操作数据，可视化它，并找到规律、趋势以及可能的含义，这是计算机科学家非常重要的实践技能，每天都要用到。本单元要讨论的主要技能包括：理解数据来自何处，通过直觉从中学习或提取信息，能够使用计算工具来操作数据和通讯。
         csp3-2017:
-          title: 计算机科学原理单元3 - 编程介绍('17-'18)
+          title: 计算机科学原理单元3 - 编程介绍（2017-2018）
           description_short: 通过使用自上而下的设计方法，来学习JavaScript编程的基础知识，并画出经典的海龟图形。
           lesson_groups:
             csp3_1:
@@ -316,7 +316,7 @@ zh-CN:
             cspSurvey:
               display_name: 调查
         csp4-2017:
-          title: 计算机科学原理单元4 - 大数据和隐私('17-'18)
+          title: 计算机科学原理单元4 - 大数据和隐私（2017-2018）
           description_short: 探索我们生活的数据丰富的世界，以及数据如何影响公共政策，个人隐私，安全，法律和道德。
           lesson_groups:
             csp4_1:
@@ -3479,6 +3479,8 @@ zh-CN:
               display_name: 内容
             lessonGroup-5:
               display_name: 沙盒
+        ai-ethics-2021:
+          description_audience: 6-12年级
         poem-art-2021:
           title: 诗歌艺术
         explore-data-1-2021:
@@ -3749,6 +3751,10 @@ zh-CN:
               display_name: 内容
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 开始
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3848,6 +3854,9 @@ zh-CN:
           description_audience: 课程作者
           description_short: 用于课程版本之间的课程或级别分阶段更新
           description: 用于课程版本之间的课程或级别分阶段更新
+          lessons:
+            lesson-7:
+              name: 精灵介绍
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3926,3 +3935,112 @@ zh-CN:
               display_name: 欢迎
         dlp-csp-mod1-2022:
           title: 计算机科学原理进一步学习模块 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 异步调试扩展
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: 模块2异步工作
+        soccer:
+          name: 足球
+          title: 编写你自己的足球游戏
+          description_short: 制作足球游戏
+          description: 制作足球游戏
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: 调查
+            lessonGroup-2:
+              display_name: 内容
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+            lessonGroup-5:
+              display_name: 调查
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java实验室
+            lesson-6:
+              name: 循环
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 调查
+            lessonGroup-3:
+              display_name: 内容
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 解决问题
+        csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一单元：创造网页
+            lessonGroup-3:
+              display_name: 第二章：多界面网站
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 用户为中心的设计
+            lessonGroup-3:
+              display_name: 第 2 章︰ 应用程序原型
+          title: 设计过程
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰ 表达信息
+            lessonGroup-3:
+              display_name: 第 2 章︰ 解决数据问题
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章︰图像和动画
+            lessonGroup-3:
+              display_name: 第 2 章︰ 创建游戏
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+          title: 物理计算
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 第 2 章︰ 创建物理原型

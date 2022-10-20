@@ -67,12 +67,12 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
   end
 
-  test 'exit survey emails are skipped for academic year workshops' do
+  test 'exit survey emails are not skipped for academic year workshops' do
     workshop = create :csp_academic_year_workshop, :ended
     enrollment = create :pd_enrollment, workshop: workshop
     Pd::Enrollment.any_instance.expects(:exit_survey_url).returns('a url')
 
-    assert_emails 0 do
+    assert_emails 1 do
       Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
     end
   end

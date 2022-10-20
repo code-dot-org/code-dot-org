@@ -162,7 +162,7 @@ class Blockly < Level
   end
 
   def self.count_xml_blocks(xml_string)
-    unless xml_string.blank?
+    if xml_string.present?
       xml = Nokogiri::XML(xml_string, &:noblanks)
       # The structure of the XML will be
       # <document>
@@ -286,7 +286,7 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Script.should_cache?) do
+    options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Unit.should_cache?) do
       level_options = blockly_level_options.dup
 
       # For historical reasons, `localized_instructions` and
@@ -319,6 +319,7 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_placeholder_text_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_loop_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -685,6 +686,27 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
+  # Localizing variable names in "controls_for" block types
+  def localized_loop_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
+    block_xml.xpath("//block[@type=\"controls_for\"]").each do |controls_for_block|
+      controls_for_name = controls_for_block.at_xpath("./#{tag}[@name=\"VAR\"]")
+      next unless controls_for_name
+      localized_name = I18n.t(
+        controls_for_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      controls_for_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
   # Localizes all supported types of the given placeholder text blockly
   # blocks in the given XML document string.
   # @param blocks [String] an XML doc to be localized.
@@ -787,7 +809,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Unit.should_cache?) do
       SharedBlocklyFunction.where(level_type: shared_function_type).map(&:to_xml_fragment)
     end.join
   end

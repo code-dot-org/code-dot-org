@@ -20,6 +20,48 @@
         "code/sports/unversioned": {
           "word": "Код жазуу"
         },
+        "conditionals/coursed/2022": {
+          "word": "Шартуулар"
+        },
+        "variable/coursef/2022": {
+          "word": "Өзгөрмө"
+        },
+        "define/coursef/2022": {
+          "word": "Аныктоо"
+        },
+        "function/coursee/2022": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Шартуулар"
+        },
+        "define/coursee/2022": {
+          "word": "Аныктоо"
+        },
+        "conditionals/express/2022": {
+          "word": "Шартуулар"
+        },
+        "function/express/2022": {
+          "word": "Функция"
+        },
+        "variable/express/2022": {
+          "word": "Өзгөрмө"
+        },
+        "define/express/2022": {
+          "word": "Аныктоо"
+        },
+        "variable/csd/2022": {
+          "word": "Өзгөрмө"
+        },
+        "conditionals/csd/2022": {
+          "word": "Шартуулар"
+        },
+        "abstraction/csd/2022": {
+          "word": "Абстракция"
+        },
+        "function/csd/2022": {
+          "word": "Функция"
+        },
         "code/poem-art/unversioned": {
           "word": "Код жазуу"
         },

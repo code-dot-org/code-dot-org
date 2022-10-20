@@ -1,4 +1,5 @@
-@import 'color.scss';
+@use "sass:math";
+@import "color.scss";
 
 $standard-padding: 20px;
 
@@ -9,8 +10,8 @@ $standard-padding: 20px;
 .outerStyle {
   padding-left: $standard-padding;
   padding-right: $standard-padding;
-  padding-top: $standard-padding / 4;
-  padding-bottom: $standard-padding / 4;
+  padding-top: math.div($standard-padding, 4);
+  padding-bottom: math.div($standard-padding, 4);
   cursor: pointer;
 
   &:hover {

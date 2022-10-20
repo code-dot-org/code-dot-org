@@ -31,8 +31,8 @@ module WebPurify
       "&format=json"
     result = JSON.
       parse(
-        URI.open(
-          url,
+        URI.parse(url).
+        open(
           open_timeout: DCDO.get('webpurify_tcp_connect_timeout', 5),
           read_timeout: DCDO.get('webpurify_http_read_timeout', 10)
         ).

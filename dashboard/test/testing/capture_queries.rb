@@ -36,11 +36,11 @@ module CaptureQueries
   end
 
   IGNORE_FILTERS = [
-    # Script/course-cache related queries don't count.
-    /(script|unit_group)\.rb.*get_from_cache/,
-    /(script|unit_group)\.rb.*all_(scripts|courses)/,
+    # Unit/course-cache related queries don't count.
+    /(unit|unit_group)\.rb.*get_from_cache/,
+    /(unit|unit_group)\.rb.*all_(scripts|courses)/,
     # Level-cache queries don't count.
-    /script\.rb.*cache_find_(script_level|level)/,
+    /unit\.rb.*cache_find_(script_level|level)/,
     # Ignore random updates to experiment cache.
     /experiment\.rb.*update_cache/
   ]

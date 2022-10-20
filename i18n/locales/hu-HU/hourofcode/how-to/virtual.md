@@ -62,7 +62,7 @@ Hasonlóan ahhoz, ahogyan elindítottad az eseményt, találkozzatok utána is, 
 - Engedd meg a tanulóknak, hogy megosszák a befejezett projektjeiket az osztály többi tagjával. Ha konferenciahívásra használt platform lehetővé teszi, akár arra is ösztönözheted őket, hogy készítsenek egy képernyőképet a projektjükről, és állítsák be azt virtuális háttérként!
 - Beszéljétek meg a tanulságokat: Mit tanultak a számítástechnikáról és a technológiáról? Mit tettek, amikor problémába ütköztek, hogyan oldották meg?
 - <a href="https://code.org/certificates">Tanúsítványok készítése és szétosztása</a> a résztvevőknek
-- Oszd meg a Kódolás óráján készült fotóidat, videóidat a közösségi hálón. Használd #HourOfCode-t és a @codeorg-ot így kiemelhetjük a sikeredet!
+- Oszd meg a Kódolás óráján készült fotóidat, videóidat a közösségi hálón. Használd #HourOfCode és a @codeorg kifejezéseket így mi is írunk a sikereidről!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 

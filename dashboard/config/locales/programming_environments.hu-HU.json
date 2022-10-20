@@ -1,0 +1,110 @@
+{
+  "hu-HU": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web-Lab",
+          "categories": {
+            "html_tags": {
+              "name": "HTML-címkék"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Játék Labor",
+          "categories": {
+            "game_lab": {
+              "name": "Játék Labor"
+            },
+            "sprites": {
+              "name": "sprite-ok"
+            },
+            "groups": {
+              "name": "Csoportok"
+            },
+            "drawing": {
+              "name": "Rajz"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "változók"
+            },
+            "functions": {
+              "name": "funkciók"
+            }
+          }
+        },
+        "applab": {
+          "name": "App Lab",
+          "description": "Az App Lab egy programozási környezet egyszerű alkalmazásokra. Tervezd meg, kódolj blokkokkal vagy JavaScript-el, hogy működjön, majd oszd meg másodpercek alatt.",
+          "categories": {
+            "data": {
+              "name": "Adat"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "variables": {
+              "name": "változók"
+            },
+            "functions": {
+              "name": "funkciók"
+            },
+            "advanced": {
+              "name": "Haladó"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Sprite labor",
+          "categories": {
+            "sprites": {
+              "name": "sprite-ok"
+            },
+            "world": {
+              "name": "Világ"
+            },
+            "location": {
+              "name": "Helyek"
+            },
+            "actions": {
+              "name": "Műveletek"
+            },
+            "events": {
+              "name": "Események"
+            },
+            "behaviors": {
+              "name": "Viselkedések"
+            },
+            "loops": {
+              "name": "hurkok"
+            },
+            "variables": {
+              "name": "változók"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "functions": {
+              "name": "funkciók"
+            },
+            "text": {
+              "name": "szöveg"
+            },
+            "comments": {
+              "name": "Megjegyzések"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java laboratórium"
+        }
+      }
+    }
+  }
+}

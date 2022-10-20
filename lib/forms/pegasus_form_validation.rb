@@ -74,7 +74,7 @@ module PegasusFormValidation
   def uploaded_file(value)
     return value if value.class == FieldError
     return nil if value.blank?
-    AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], open(value[:tempfile]))
+    AWS::S3.upload_to_bucket('cdo-form-uploads', value[:filename], File.open(value[:tempfile]))
   end
 
   def email_address(value)

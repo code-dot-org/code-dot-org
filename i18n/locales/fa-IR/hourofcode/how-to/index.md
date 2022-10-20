@@ -8,9 +8,9 @@ title: Hour of Code How-to Guide
 
 ### Join the movement and introduce your students to computer science with these steps.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Students today should learn how to create technology, not just use it.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. نگاهی به [راهنمای مشارکت اگر هنوز سوالی دارید]({{ localized_files/participation_guide }}) به ما بیندازید.
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Watch the Hour of Code how-to video](#how-to-video)
 - [Explore activities and tutorials](#explore-activities)
@@ -21,13 +21,11 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - [Celebrate your students' success](#celebrate)
 - [سایر منابع ساعت کدنویسی برای مدرسان](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
-
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -39,7 +37,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 در فعالیت ها بگردید و از پیش تصمیم بگیرید که آیا می خواهید که یک آموزش را برای تمام دانش آموزانتان انتخاب کنید یا به بچه ها اجازه دهید که آموزشان را خودشان انتخاب کنند.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -58,7 +56,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ### یک روز و ساعت را انتخاب کنید
 
-مردم در سراسر جهان به جشن «ساعت کدنویسی» در هفته ی آموزش علوم کامپیوتر(9 الی 13 دسامبر) می پیوندند. زمانی که آخرین آموزش ها و فعالیت ها منتشر می شوند. اما شما میتوانید در هر روز سال یک «ساعت کدنویسی» داشته باشید.
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. اما شما میتوانید در هر روز سال یک «ساعت کدنویسی» داشته باشید.
 
 * * *
 
@@ -74,11 +72,11 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ### Let Volunteers Know by Registering Your Event
 
-زمانی که شما [ثبت نام رویداد ساعت کدنویسی تان](/) را انجام میدهید، یک ایمیل مفیذ دریافت می کنید که شامل اخبار و نکاتی برای میزبانی موفقیت آمیز یک ساعت کدنویسی است. همیچنین، این راهی است که به داوطلبان اطرافتان خبر برسانید که مدرسه ی شما در این رویداد شرکت میکند. داوطلبان یک منبع خوب هستند و که میتوانند به کلاس شما بیایند و درباره ی علوم کامپیوتر صحبت کنند و به دانش آموزانتان در فعالیت های «ساعت کدنویسی کمک کنند».
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. همیچنین، این راهی است که به داوطلبان اطرافتان خبر برسانید که مدرسه ی شما در این رویداد شرکت میکند. داوطلبان یک منبع خوب هستند و که میتوانند به کلاس شما بیایند و درباره ی علوم کامپیوتر صحبت کنند و به دانش آموزانتان در فعالیت های «ساعت کدنویسی کمک کنند».
 
 ### دانش آموزانتان را هیجان زده کنید 
 
-رویداد را با اشتراک گذاری [ویدیو های الهام بخش ](/promote/resources)که افراد متنوع و راه های خلاقی که علوم کامپیوتر میتواند در آنها استفاده شود را برجسته می کنند. یا پوستر های الهام بخش برای کلاستان سفارش دهید. دانش آموزان بیشتربرای شرکت در یک موضوع هیجان خواهند داشت اگر که ببینند افرادی وجود خواهد داشت که آن ها را تشویق کنند.
+رویداد را با اشتراک گذاری [ویدیو های الهام بخش ](/promote/resources)که افراد متنوع و راه های خلاقی که علوم کامپیوتر میتواند در آنها استفاده شود را برجسته می کنند. Or print inspirational posters for your classroom! دانش آموزان بیشتربرای شرکت در یک موضوع هیجان خواهند داشت اگر که ببینند افرادی وجود خواهد داشت که آن ها را تشویق کنند.
 
 {{ promote_new_posters }}
 
@@ -113,7 +111,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 دانش آموزان را به فعالیت هدایت کنید
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 اگر در حین آموزش سوالی برای کسی پیش آمد ایرادی ندارد اگر پاسخ دهید:
 
@@ -140,7 +138,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - گواهینامه ها را برای دانش آموزانتان [ چاپ کنید](%= resolve_url('https://code.org/certificates') %).
 - استیکر «من یک ساعت کدنویسی انجام دادم» را برای دانش آموزانتان چاپ کنید.
-- [سفارش تی شرت مخصوص](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) برای کارمندان.
 - عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
 
 * * *
@@ -154,6 +151,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ### مرحله بعد از ساعت كدنويسي چيست؟
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

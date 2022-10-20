@@ -2790,6 +2790,8 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        ai-ethics-2021:
+          description_audience: Класи 6-12
         explore-data-1-2021:
           title: Візуалізація даних
         csa6-exemplars:
@@ -3000,6 +3002,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Починаємо
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3049,6 +3055,10 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Вступ до спрайтів
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3121,3 +3131,74 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
+        soccer:
+          name: футбол
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Опитування
+            lessonGroup-2:
+              display_name: Зміст
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+            lessonGroup-5:
+              display_name: Опитування
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Цикли
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
+            lessonGroup-3:
+              display_name: Зміст
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: |-
+                Глава 1: Використуйте
+                Центрований дизайн
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипування додатків'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представлення інформації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Вирішення проблем із даними'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Зображення та анімації'
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова ігор'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Побудова фізичних прототипів'

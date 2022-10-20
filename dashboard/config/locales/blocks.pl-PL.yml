@@ -2,6 +2,10 @@
 pl:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: przesuwanie NESW za pomocą klawiszy strzałek
+      AmysBlocks_setPromptWithChoices:
+        text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1363,6 +1367,10 @@ pl:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": dziwaczny
               bas
             "'sound://category_digital/jump_7.mp3'": skocz
+      gamelab_playSoundOptionsSoccer:
+        text: zagraj {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: zagraj {SOUND}
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
       gamelab_playerBehaviors:
@@ -1459,6 +1467,8 @@ pl:
             '100': duży
       gamelab_setPrompt:
         text: poproś użytkownika {QUESTION} o zmienne {VAR}
+      gamelab_setPromptWith2Choices:
+        text: poproś użytkownika {QUESTION} o zmienną {VAR} z wyborami {A}{B}
       gamelab_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       gamelab_setProp:
@@ -1522,15 +1532,6 @@ pl:
         text: "{SPRITE} myśl {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}myśl{TEXT1}przez{NUM}sekundy"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} myśl {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Jestem również głodny.
-            '"I only want the biggest goat."': Chcę tylko największej kozy.
-            '"I''m a green troll."': Jestem zielonym trollem.
-            '"No one will cross my bridge."': Nikt nie przekroczy mojego mostu.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} myśl {THOUGHT}"
         options:
@@ -2258,6 +2259,11 @@ pl:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: gdy {VAR} uzyskała odpowiedź
       RyanLab_moveForward:
@@ -2529,6 +2535,10 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
+      storylab_setHeading:
+        text: ustaw tytuł {HEADING}
+      storylab_setSubheading:
+        text: ustaw podtytuł {SUBHEADING}
       validation_validatedBackground:
         text: ustaw tło na {IMG}
       validation_validatedSound:

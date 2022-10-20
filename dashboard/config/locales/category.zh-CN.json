@@ -2,6 +2,9 @@
   "zh-CN": {
     "data": {
       "category": {
+        "ccela/RL": {
+          "description": "阅读文献"
+        },
         "csta/AP": {
           "description": "算法与编程"
         },
@@ -23,14 +26,32 @@
         "iste/4": {
           "description": "学生们运用批判性思维能力来计划和研究、管理项目、解决问题，并利用适当的数字工具和资源做出明智的决定。"
         },
+        "iste/6": {
+          "description": "学生展现出对技术概念、系统和运行的良好理解。 "
+        },
         "ccela/L": {
           "description": "语言"
         },
         "ccela/RI": {
           "description": "阅读信息类文本"
         },
+        "ccmath/OA": {
+          "description": "运算和代数思维"
+        },
+        "csta2011/CD": {
+          "description": "计算机与通信设备"
+        },
+        "csta2011/CI": {
+          "description": "社区、全球与伦理影响"
+        },
         "ccmath/MD": {
           "description": "利用概率做决定"
+        },
+        "ccmath/NBT": {
+          "description": "数字和十进制运算"
+        },
+        "ccmath/G": {
+          "description": "几何"
         },
         "ccela/W": {
           "description": "写作"
@@ -44,8 +65,17 @@
         "csta/IC": {
           "description": "计算的影响"
         },
+        "csp2021/IOC-2.B": {
+          "description": "解释计算资源如何被保护和如何被滥用。"
+        },
         "csta/NI": {
           "description": "网络与互联网"
+        },
+        "csp2021/DAT-1.D": {
+          "description": "比较数据压缩算法，以确定在特定背景中哪种算法最佳。"
+        },
+        "csta/DA": {
+          "description": "数据和分析"
         },
         "csta/CS": {
           "description": "计算系统"

@@ -30,7 +30,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     assert_equal Pd::Workshop::COURSE_CSF, response[:last_workshop_survey_course]
   end
 
-  test 'Admin workshops may show up as pending exit surveys' do
+  test 'Admin workshops do not show up as pending exit surveys' do
     # Fake Admin workshop, which should produce an exit survey
     admin_workshop = create :admin_workshop, :ended
 
@@ -41,11 +41,10 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
     # When the teacher loads the PL landing page
     load_pl_landing teacher
 
-    # They see a prompt to take the Admin workshop exit survey
+    # They do not see a prompt to take the Admin workshop exit survey
     response = assigns(:landing_page_data)
-    enrollment = admin_workshop.enrollments.first
-    assert_equal enrollment.exit_survey_url, response[:last_workshop_survey_url]
-    assert_equal admin_workshop.course, response[:last_workshop_survey_course]
+    refute response[:last_workshop_survey_url]
+    refute response[:last_workshop_survey_course]
   end
 
   test 'FiT workshops do not show up as pending exit surveys' do

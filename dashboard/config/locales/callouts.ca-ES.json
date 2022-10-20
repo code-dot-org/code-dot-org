@@ -318,6 +318,57 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Nou bloc!",
           "poetry_remove_sprite": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Afegir aquest bloc al teu programa!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Nou bloc!",
+          "new_block_4": "Nou bloc!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Hem posat alguns blocs aquí per a que puguis començar"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Fes clic a \"Executa\" per provar el teu programa"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Aquest ferro és meu!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Nou bloc!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Nou bloc!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Nou bloc!",
+          "hello_world_new_block": "Nou bloc!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Nou bloc!",
+          "hello_world_new_block": "Nou bloc!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Nou bloc!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Nou bloc!"
         }
       }
     }

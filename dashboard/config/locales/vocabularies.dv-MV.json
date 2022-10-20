@@ -2,6 +2,21 @@
   "dv-MV": {
     "data": {
       "vocabularies": {
+        "copyright/coursee/2022": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/courseb/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/pre-express/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/coursea/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/csd/2022": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
         "drop/courseb/2021": {
           "word": "ޑްރޮޕް"
         },

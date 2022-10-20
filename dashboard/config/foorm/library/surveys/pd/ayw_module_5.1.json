@@ -6,6 +6,7 @@
         {
           "type": "panel",
           "name": "module_5_panel",
+          "visibleIf": "{workshop_agenda}='module5'",
           "elements": [
             {
               "type": "html",

@@ -2,6 +2,8 @@
 sk:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1329,6 +1331,10 @@ sk:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": svojrázna
               basa
             "'sound://category_digital/jump_7.mp3'": skoč
+      gamelab_playSoundOptionsSoccer:
+        text: playSound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: playSound {SOUND}
       gamelab_playSpeech:
         text: prehrať reč {SOUND}
       gamelab_playerBehaviors:
@@ -2099,6 +2105,11 @@ sk:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: keď {VAR} zodpovedaná
       RyanLab_moveForward:

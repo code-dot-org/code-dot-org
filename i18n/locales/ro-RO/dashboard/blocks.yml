@@ -2,6 +2,8 @@
 ro:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: solicită utilizatorului {QUESTION} pentru variabila [VAR][VAR] cu variantele {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1318,6 +1320,10 @@ ro:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": selectează
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass neuzual
             "'sound://category_digital/jump_7.mp3'": sari
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playSpeech:
         text: reprodu discursul {SOUND}
       gamelab_playerBehaviors:
@@ -2077,6 +2083,11 @@ ro:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: când se răspunde la {VAR}
       RyanLab_moveForward:

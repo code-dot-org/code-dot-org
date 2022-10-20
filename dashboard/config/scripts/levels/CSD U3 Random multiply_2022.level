@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-03-30T23:39:09.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -78,15 +74,19 @@
     "encrypted_examples": "o5wPemUM+9yPyLYhbFw6u0P/wuHCKrxzd+rEzrYy/H/9CzOkMPTR++Cch4fw\nmEuaN+jftTd96vKl9nrYcjnRGk+XiNZo+BwAWVgH5dFwEGHqS0C8ugjlUYQG\nfEdbvoXOCs3HIZUv4n0vXauXs9XIUA==\n",
     "libraries_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/javascript/naming-variables/",
-      "/docs/concepts/game-lab/drawing-shapes/",
-      "/docs/concepts/game-lab/shapes-and-parameters/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/naming-variables",
+      "/courses/csd-2022/guides/drawing-shapes",
+      "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "map_reference": "/docs/concepts/javascript/random-numbers/",
+    "map_reference": "/courses/csd-2022/guides/random-numbers",
     "bubble_choice_description": "Randomize the width of the tree, but make sure the leaves are always big enough.",
     "preload_asset_list": null
   },
+  "level_num": "custom",
+  "game_id": 50,
+  "created_at": "2022-03-30T23:39:09.000Z",
+  "user_id": 1,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:09.468+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random multiply_2021\\\"\"],\"cloned_from\":\"CSD U3 Random multiply_2021\"}]"

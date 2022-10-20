@@ -335,16 +335,16 @@ const styles = {
     paddingBottom: 4
   },
   tutorialDetailPublisher: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 16
   },
   tutorialDetailSub: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
     paddingBottom: 20
   },
   tutorialDetailDescription: {
-    fontFamily: '"Gotham 3r", sans-serif',
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14
   },
   tutorialDetailDisabled: {

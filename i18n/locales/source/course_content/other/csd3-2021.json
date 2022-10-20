@@ -104,6 +104,13 @@
     "callouts": {
       "CSD_U3_rect_c1": "Here is the code",
       "CSD_U3_rect_c2": "Drag this block into the code area."
+    },
+    "mini_rubric": {
+      "rubric_key_concept": "Use a coordinate system to place elements on a screen, accounting for object size and overlay.",
+      "rubric_performance_level_1": "The programmatic drawing is identical to the example and in contained within the seven lines of code.",
+      "rubric_performance_level_2": "The programmatic drawing is mostly the same as the drawing, but there may be some slight positioning errors, and there may be extra lines of code.",
+      "rubric_performance_level_3": "The square has been moved, is purple, and appears in front of the circles.",
+      "rubric_performance_level_4": "The picture is either the same, or any changes appear to be unrelated to the assignment."
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/3/levels/10": {
@@ -209,7 +216,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/4/levels/7": {
-    "long_instructions": "<img src=\"https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png\" style=\"float:right;height:150px\">\n\n# Debug - Using 4 Parameters\n\nNow that the grass is working, let's add a cloud to the sky. Unfortunately, it looks a little funny right now.\n\n# Do This\n\n-   Debug this program to make the cloud wider than it is tall, like in the image.\n-   Hint: You'll need to change two parameters. Which ones set your cloud's width and height?"
+    "long_instructions": "<img src=\"https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png\" style=\"float:right;height:150px\">\n\n# Debug - Using 4 Parameters\n\nNow that the grass is working, let's add a cloud to the sky. Unfortunately, it looks a little funny right now.\n\n# Do This\n\n-   Debug this program to make the cloud wider than it is tall, like in the image.\n-   Hint: You'll need to change two parameters. Which ones set your cloud's width and height?",
+    "mini_rubric": {
+      "rubric_key_concept": "Use parameters to change the way a method or command runs. ",
+      "rubric_performance_level_1": "The programmatic drawing appears exactly as it does in the example.",
+      "rubric_performance_level_2": "The programmatic drawing is approximately the same as that in the picture, and the cloud's width and height have been changed.",
+      "rubric_performance_level_3": "The cloud's height, width, or position has been changed, but it may not be wider than it is tall, or it may be moved to somewhere else on the screen.",
+      "rubric_performance_level_4": "No changes have been made to the code, or the changes are unrelated to the instructions."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/4/levels/8": {
     "dsls": {
@@ -326,7 +340,14 @@
   },
   "https://studio.code.org/s/csd3-2021/lessons/5/levels/7": {
     "short_instructions": "Change the program to use a variable for the size of the two eyes, and run it a few times with different values assigned to the variable, as in the sample image.",
-    "long_instructions": "<img src=\"https://images.code.org/ac772ebf1fe670e3792a898e387b9e65-image-1589486509676.png\" style=\"float:right;height:150px\">\n\n# Using Variables\n\nThis program currently draws a face, but the eyes are two different sizes.  Change the program to use the variable for the size of both eyes, and run the code to make sure both eyes are drawn at the same size.\n\n# Do This\n\n-   **Run the program** to see how it works.\n-   **Change the program** to use the `eyeSize` variable.\n-   **Run the program** with different values for `eyeSize` and choose your favorite size."
+    "long_instructions": "<img src=\"https://images.code.org/ac772ebf1fe670e3792a898e387b9e65-image-1589486509676.png\" style=\"float:right;height:150px\">\n\n# Using Variables\n\nThis program currently draws a face, but the eyes are two different sizes.  Change the program to use the variable for the size of both eyes, and run the code to make sure both eyes are drawn at the same size.\n\n# Do This\n\n-   **Run the program** to see how it works.\n-   **Change the program** to use the `eyeSize` variable.\n-   **Run the program** with different values for `eyeSize` and choose your favorite size.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use variables to store and update information",
+      "rubric_performance_level_1": "The eyeSize variable is used such that the two eyes have the same size as defined by eyeSize, with no other unexpected changes. The program is free of syntax errors.",
+      "rubric_performance_level_2": "The eyeSize variable is used such that the two eyes have the same size as defined by eyeSize. Other changes to the code may have introduced other unexpected behaviors, or there may be minor syntax errors that do not prevent the code from running.",
+      "rubric_performance_level_3": "The eyeSize variable has been used somewhere in the program, but not such that it runs as instructed.",
+      "rubric_performance_level_4": "There are no changes to the code, or the changes appear unrelated to variables, or variables are used in a way that prevents the program from running."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/5/levels/8": {
     "dsls": {
@@ -388,7 +409,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/6/levels/6": {
-    "long_instructions": "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png\" style=\"float:right;height:150px\">\n\n# Rainbow Snake\n\nThis program draws a rainbow snake. To make the snake draw differently every time you'll need to use random numbers.\n\n# Do This\n\n-   Run the program several times to see how the starter code works.\n-   Add at least three new different colored circles to your rainbow snake.\n-   Use `randomNumber()` to make the rest of the snake's body move up and down like the first three.\n\n_Challenge: Can you make the size of some of the circles random, too?_"
+    "long_instructions": "<img src=\"https://images.code.org/6af643f712b042e5b076f06cc2f902e2-image-1520404404645.32.58 PM.png\" style=\"float:right;height:150px\">\n\n# Rainbow Snake\n\nThis program draws a rainbow snake. To make the snake draw differently every time you'll need to use random numbers.\n\n# Do This\n\n-   Run the program several times to see how the starter code works.\n-   Add at least three new different colored circles to your rainbow snake.\n-   Use `randomNumber()` to make the rest of the snake's body move up and down like the first three.\n\n_Challenge: Can you make the size of some of the circles random, too?_",
+    "mini_rubric": {
+      "rubric_key_concept": "Generate and use random numbers in a program, use arguments to change the way a method or command runs.",
+      "rubric_performance_level_1": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions, and some circles have a random size.",
+      "rubric_performance_level_2": "All circles have reasonable horizontal positions, different colors, and appear at random vertical positions",
+      "rubric_performance_level_3": "At least one student-created circle has a new color, appears at a random vertical position, and has a different horizontal position than any others.",
+      "rubric_performance_level_4": "No student produced circles, or any new circles share a color or horizontal position with circles produced by the original code."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/6/levels/7": {
     "dsls": {
@@ -536,7 +564,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/7/levels/10": {
-    "long_instructions": "# Create your own sprites\n\n<img src=\"https://images.code.org/d823ca4327740a53df3600a0d9bc55b8-image-1566234132679.59.40 AM.png\" style=\"float: right; width: 150px;\">\n\nUse what you've learned to create your own sprites.  The example is just one way to complete the level.  Decide for yourself what you want your sprites to look like.\n\n# Do This\n\n-   Go to the animation tab and add at least two animations to your project.\n-   In the code tab, create at least two sprites in two different places on the screen.\n-   Assign each sprite a different animation.\n-   Draw your sprites to the screen."
+    "long_instructions": "# Create your own sprites\n\n<img src=\"https://images.code.org/d823ca4327740a53df3600a0d9bc55b8-image-1566234132679.59.40 AM.png\" style=\"float: right; width: 150px;\">\n\nUse what you've learned to create your own sprites.  The example is just one way to complete the level.  Decide for yourself what you want your sprites to look like.\n\n# Do This\n\n-   Go to the animation tab and add at least two animations to your project.\n-   In the code tab, create at least two sprites in two different places on the screen.\n-   Assign each sprite a different animation.\n-   Draw your sprites to the screen.",
+    "mini_rubric": {
+      "rubric_key_concept": "Create and use sprites.",
+      "rubric_performance_level_1": "More than two sprites have been created with different animations that are drawn to the canvas at different locations. Each sprite has a unique and meaningful label.",
+      "rubric_performance_level_2": "At least two sprites have been created with different animations that are drawn to the canvas at different locations.",
+      "rubric_performance_level_3": "At least one sprite has been created with an animation that is drawn to the canvas.",
+      "rubric_performance_level_4": "No sprites were created or were created without an animation - shown by a gray square."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/7/levels/11": {
     "dsls": {
@@ -625,7 +660,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/8/levels/5": {
-    "long_instructions": "# Make it Fit!\n\n<img src=\"https://images.code.org/3cc33de83a1dee34a3ce07f4d6c24c45-image-1566239215417.25.23 AM.png\" style=\"float: right; width: 150px;\">\n\nThe food is way too big to fit on the plate.  Use your knowledge of sprite properties to make it fit.\n\n# Do this\n\n-   Run the program to see how big the food is.\n-   Use sprite properties to scale all of the food sprites down so they fit on the plate."
+    "long_instructions": "# Make it Fit!\n\n<img src=\"https://images.code.org/3cc33de83a1dee34a3ce07f4d6c24c45-image-1566239215417.25.23 AM.png\" style=\"float: right; width: 150px;\">\n\nThe food is way too big to fit on the plate.  Use your knowledge of sprite properties to make it fit.\n\n# Do this\n\n-   Run the program to see how big the food is.\n-   Use sprite properties to scale all of the food sprites down so they fit on the plate.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use dot notation to update a sprite's properties.",
+      "rubric_performance_level_1": "The arrangement of sprites is identical to the example provided in the instructions.",
+      "rubric_performance_level_2": "The sprites have been resized to fit inside the circle. There may be some slight differences between the student's work and the provided example.",
+      "rubric_performance_level_3": "The sprites have been resized, but are still too large to fit inside the circle.",
+      "rubric_performance_level_4": "The code is either the same or has been changed in ways unrelated the assignment."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/8/levels/6": {
     "dsls": {
@@ -695,7 +737,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/9/levels/5": {
-    "long_instructions": "# Add Text\n\nHere is a scene, but it needs text.\n\n# Do this\n\n-   Add two pieces of text to the following scene.  \n-   Make the two pieces of text different sizes."
+    "long_instructions": "# Add Text\n\nHere is a scene, but it needs text.\n\n# Do this\n\n-   Add two pieces of text to the following scene.  \n-   Make the two pieces of text different sizes.",
+    "mini_rubric": {
+      "rubric_key_concept": "Place text on the screen using a coordinate plane, use arguments to change the appearance of text.",
+      "rubric_performance_level_1": "Two pieces of text appear on the screen in reasonable places, and the text pieces are different sizes.",
+      "rubric_performance_level_2": "The text block is used, and it appears on the screen in a reasonable place.",
+      "rubric_performance_level_3": "The text block is used, but the text does not appear completely on the screen.",
+      "rubric_performance_level_4": "No text blocks are used, or it contains so many errors that the program cannot run."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/9/levels/6": {
     "dsls": {
@@ -798,6 +847,13 @@
     "long_instructions": "<img src=\"https://images.code.org/1e22fb89bcdf99168aee6324d17137ee-image-1493138232702.gif\" style=\"float:right;height:150px\">\n\n# Updating Properties\n\nThis level is very similar to the last, but this time, you'll add in the draw loop yourself.\n\n# Do This\n\n-   Add the draw loop block to the bottom of this program.\n-   Move any blocks that need to be inside the draw loop.\n-   Move on when your program looks like the picture to the right.",
     "callouts": {
       "": ""
+    },
+    "mini_rubric": {
+      "rubric_key_concept": "Use loops to repeat behavior within a program.",
+      "rubric_performance_level_1": "The sprite animates as described in the instructions.  Other set up, such as creating the sprite, happen outside of the draw loop, and there are no extra blocks.",
+      "rubric_performance_level_2": "The sprite animates, but there may be small problems with the scene, such as creating sprites inside the draw loop or having extra calls to `drawSprites` or other extra code.",
+      "rubric_performance_level_3": "The sprite animates, but there are major problems, such as leaving a \"trails\" of previous locations behind or other parts of the scene disappearing.",
+      "rubric_performance_level_4": "The sprite does not animate."
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/11/levels/9": {
@@ -809,7 +865,14 @@
       "CSD U3 Draw Loop Plugged update your scene_2021": {
         "display_name": "Challenge: Extend Your Scene",
         "bubble_choice_description": "Use the draw loop to make your sprite from last lesson move.",
-        "long_instructions": "# Extend Your Scene\r\n\r\nThis is the sprite scene you made in the last lesson. You'll now be updating it a little bit to use the draw loop and sprite properties.\r\n\r\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\r\n\r\n# Do This\r\n\r\n* Add a draw loop to your program (you should only have one).\r\n* Use the lasso selector (click, hold and drag) to select the code that will be updated each time and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\r\n* Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that they move. You'll need to update them with `randomNumber()`.\r\n"
+        "long_instructions": "# Extend Your Scene\r\n\r\nThis is the sprite scene you made in the last lesson. You'll now be updating it a little bit to use the draw loop and sprite properties.\r\n\r\n<img src=\"https://images.code.org/ce257c4d91da460c9c2add1733873769-image-1492209174198.32.29 PM.png\" style=\"float:right;height:100px\">\r\n\r\n# Do This\r\n\r\n* Add a draw loop to your program (you should only have one).\r\n* Use the lasso selector (click, hold and drag) to select the code that will be updated each time and place it inside your draw loop. Ctrl-Z will let you undo any mistakes you make.\r\n* Add code to your program that updates your sprites' `sprite.x`, `sprite.y`, or `sprite.rotation` properties so that they move. You'll need to update them with `randomNumber()`.\r\n",
+        "mini_rubric": {
+          "rubric_key_concept": "Use loops to repeat behavior within a program.",
+          "rubric_performance_level_1": "The sprite animates as described in the instructions.  Other set up, such as creating the sprite, happen outside of the draw loop, and there are no extra blocks.",
+          "rubric_performance_level_2": "The sprite animates, but there may be small problems with the scene, such the wrong sprite or text being in front.  There may be other errors, such as creating sprites inside the draw loop or having extra calls to `drawSprites` or other extra code.",
+          "rubric_performance_level_3": "The sprite animates, but there are major problems, such as leaving a \"trails\" of previous locations behind or text or other parts of the scene disappearing.",
+          "rubric_performance_level_4": "The sprite does not animate."
+        }
       },
       "CSD U3 L7 Freeplay_2021": {
         "display_name": "Free Play",
@@ -896,7 +959,14 @@
   "https://studio.code.org/s/csd3-2021/lessons/12/levels/8": {
     "display_name": "Fish Animation",
     "bubble_choice_description": "Make the fish move at different speeds using the counter pattern.",
-    "long_instructions": "<img src=\"https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif\" style=\"float: right; margin-left: 20px;\">\n\n# Fish Animation\n\nUsing the counter pattern, make all three of the fish move as in the image to the right. The blue fish should move the fastest, and the green fish should move the slowest."
+    "long_instructions": "<img src=\"https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif\" style=\"float: right; margin-left: 20px;\">\n\n# Fish Animation\n\nUsing the counter pattern, make all three of the fish move as in the image to the right. The blue fish should move the fastest, and the green fish should move the slowest.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use the counter pattern to increment or decrement sprite properties.",
+      "rubric_performance_level_1": "The student's animation is identical to the example provided in the instructions.",
+      "rubric_performance_level_2": "The fish all move across the screen in the order indicated by the instructions.",
+      "rubric_performance_level_3": "The counter pattern is used inside the draw loop to decrement the x position of the blue and green fish. The fish all move left across the screen, but not necessarily at the instructed speeds.",
+      "rubric_performance_level_4": "The counter pattern has been used outside the draw loop, or not at all."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/12/levels/9": {
     "dsls": {
@@ -1045,7 +1115,14 @@
     "teacher_markdown": "## Discussion Goals\n\nThe broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations.  Encourage students to think of particular situations in which this would be the case.  For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level.  Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item."
   },
   "https://studio.code.org/s/csd3-2021/lessons/14/levels/7": {
-    "long_instructions": "# Changing Fruit\n\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\n\n# Do This\n\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\"."
+    "long_instructions": "# Changing Fruit\n\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\n\n# Do This\n\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".",
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program.",
+      "rubric_performance_level_1": "The sprite's image changes from an apple to a pear when the sprite's scale reaches 2.",
+      "rubric_performance_level_2": "There is a conditional in the draw loop that checks whether the sprite's scale has reached 2.",
+      "rubric_performance_level_3": "There is a conditional in the draw loop that checks the value of a Boolean statement.",
+      "rubric_performance_level_4": "There are no conditionals in the draw loop."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/14/levels/8": {
     "dsls": {
@@ -1074,7 +1151,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/14/levels/9": {
-    "long_instructions": "# Magic Dinosaur\n\nMake the dinosaur turn into a pterodactyl when it reaches the sky.\n\n# Do This\n\n-   Run the code to see how it works.\n-   Add a conditional that will change the dinosaur's animation to a pterodactyl when it reaches the sky."
+    "long_instructions": "# Magic Dinosaur\n\nMake the dinosaur turn into a pterodactyl when it reaches the sky.\n\n# Do This\n\n-   Run the code to see how it works.\n-   Add a conditional that will change the dinosaur's animation to a pterodactyl when it reaches the sky.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program.",
+      "rubric_performance_level_1": "The sprite's image changes from an T-rex to a pterodactyl when the sprite reaches the sky.",
+      "rubric_performance_level_2": "There is a conditional in the draw loop that checks whether the sprite has reached the sky.",
+      "rubric_performance_level_3": "There is a conditional in the draw loop that checks the value of a Boolean expression.",
+      "rubric_performance_level_4": "There are no conditionals in the draw loop."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/14/levels/10": {
     "dsls": {
@@ -1140,7 +1224,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/15/levels/6": {
-    "long_instructions": "# Move in All Directions\n\nYou can make a simple game that moves a sprite around the screen.\n\n# Do This\n\n-   Add four separate conditional statements that make the wing bot move in every direction."
+    "long_instructions": "# Move in All Directions\n\nYou can make a simple game that moves a sprite around the screen.\n\n# Do This\n\n-   Add four separate conditional statements that make the wing bot move in every direction.",
+    "mini_rubric": {
+      "rubric_key_concept": "Detect and respond to user input from the keyboard.",
+      "rubric_performance_level_1": "The sprite moves correctly in response to all four arrow keys.  There are no extra `if` statements.",
+      "rubric_performance_level_2": "The sprite moves in response to multiple arrow keys, but may have some errors.",
+      "rubric_performance_level_3": "The program uses an `if` statement to detect user input.",
+      "rubric_performance_level_4": "The program does not detect user input."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/15/levels/7": {
     "dsls": {
@@ -1179,11 +1270,25 @@
     "teacher_markdown": "## Discussion Goals\n\nMake sure students are thinking of situations in which they want two different things to happen, depending on the situation.  For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right.  Challenge the students to think about when they would just use an `if` block, and when an `if/else` block is necessary.  "
   },
   "https://studio.code.org/s/csd3-2021/lessons/16/levels/3": {
-    "long_instructions": "# Reverse the Gears\n\nThese gears already spin one direction when you press the space bar, now you'll want them to spin the other direction when the space bar isn't pressed.\n\n# Do This\n\n-   Make the gears spin the opposite way when the space bar is **not** being pressed."
+    "long_instructions": "# Reverse the Gears\n\nThese gears already spin one direction when you press the space bar, now you'll want them to spin the other direction when the space bar isn't pressed.\n\n# Do This\n\n-   Make the gears spin the opposite way when the space bar is **not** being pressed.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program; detect and respond to user input.",
+      "rubric_performance_level_1": "The gears spin in the opposite direction when the space bar is not being pressed, and the teeth of the gears line up properly.",
+      "rubric_performance_level_2": "At least one gear spins in the opposite direction when the space bar is not being pressed, but there may be minor errors in the program that keep all the gears from spinning.",
+      "rubric_performance_level_3": "There is an else clause used, but there are major errors in the program that keep the gears from spinning.",
+      "rubric_performance_level_4": "There is no else clause."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/16/levels/4": {
     "long_instructions": "# Control the Gears\n\nHere is the same program, but with one small difference.\n\n# Do This\n\n-   Read the program carefully, especially Line 13, to figure out how to control the gears.\n-   Run the program and test whether you were correct.\n-   Make the gears spin the opposite way when there is no user input.",
-    "teacher_markdown": "This is the first time that students have seen mouse input.  Athough they have not seen the block before, they may be able to predict from Line 13 that the gears will spin when the mouse is pressed.  This level is almost exactly the same as the previous level, so you may also use it as a review of the if/else construct."
+    "teacher_markdown": "This is the first time that students have seen mouse input.  Athough they have not seen the block before, they may be able to predict from Line 13 that the gears will spin when the mouse is pressed.  This level is almost exactly the same as the previous level, so you may also use it as a review of the if/else construct.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program; detect and respond to user input.",
+      "rubric_performance_level_1": "The gears spin in the opposite direction when the space bar is not being pressed, and the teeth of the gears line up properly.",
+      "rubric_performance_level_2": "At least one gear spins in the opposite direction when the space bar is not being pressed, but there may be minor errors in the program that keep all the gears from spinning.",
+      "rubric_performance_level_3": "There is an else clause used, but there are major errors in the program that keep the gears from spinning.",
+      "rubric_performance_level_4": "There is no else clause."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/16/levels/5": {
     "long_instructions": "# Mouse Clicks\n\nHere's a program that drops a balloon down the screen.  Make the balloon go up and down according to whether the user is pressing the mouse.\n\n# Do This\n\n-   Add code that checks whether the mouse is being pressed.\n-   Move the balloon up if the mouse is down. Otherwise, move the balloon down."
@@ -1211,7 +1316,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/16/levels/8": {
-    "long_instructions": "# Fix the Program\n\nThis program should only shake the creature when the mouse is pressed, and only show directions when the mouse is **not** pressed.\n\n# Do This\n\n-   Change the code so that the creature only shakes when the mouse is pressed.\n-   Change the code so the directions (\"Press the mouse to shake the creature.\") **only show** when the user is **not** pressing the mouse."
+    "long_instructions": "# Fix the Program\n\nThis program should only shake the creature when the mouse is pressed, and only show directions when the mouse is **not** pressed.\n\n# Do This\n\n-   Change the code so that the creature only shakes when the mouse is pressed.\n-   Change the code so the directions (\"Press the mouse to shake the creature.\") **only show** when the user is **not** pressing the mouse.",
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program; detect and respond to user input.",
+      "rubric_performance_level_1": "The creature only shakes when the user presses the mouse, and the text only appears when the user is not pressing the mouse.  Only one conditional block is used, and the program is error-free.",
+      "rubric_performance_level_2": "The creature only shakes when the user presses the mouse, and the text only appears when the user is not pressing the mouse, but there may be small errors, such as problems with the size of the text or positioning of the creature.",
+      "rubric_performance_level_3": "There is an else clause used, but there are major errors in the program that keep the program from running properly.",
+      "rubric_performance_level_4": "There is no else clause."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/16/levels/9": {
     "dsls": {
@@ -1274,6 +1386,208 @@
   "https://studio.code.org/s/csd3-2021/lessons/17/levels/8": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019_pilot_2021": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/18/levels/1": {
@@ -1348,6 +1662,13 @@
     "long_instructions": "# Swimming Right and Left\n\nThe code below should make the fish start moving right once you press the right-arrow, and then it should continually swim back and forth. You should use conditional statements and the `.velocity` block to make the fish swim.\n\n# Do This\n\n-   Look at the three `if` statements inside the draw loop.\n\n-   Use a `sprite.velocityX` block inside each `if` statement to make the three following movements:\n    -   If the user presses the right arrow key, move the fish to the right.\n    -   If the fish gets to the right-hand side of the screen, move the fish to the left.\n    -   If the fish gets to the left-hand side of the screen, move the fish to the right.\n\n-   The fish should always be facing the same direction it's moving, so you will need to update the fish's animation to either `fishL` or `fishR` based on the direction it's facing",
     "callouts": {
       "CSD_U3_L11_S5_C1": "Look at this code."
+    },
+    "mini_rubric": {
+      "rubric_key_concept": "Use conditionals to control the flow of a program; model two dimensional movement on a coordinate plane.",
+      "rubric_performance_level_1": "The fish swims to the right side of the screen, turns and swims to the left side of the screen, then repeats.  The sprite appears to face the appropriate direction at all times. There are no extra blocks in the program, and the counter pattern is not used.",
+      "rubric_performance_level_2": "The fish swims to the right side of the screen, turns and swims to the left side of the screen, but perhaps does not face the right direction while moving. The counter pattern is not used.",
+      "rubric_performance_level_3": "The fish swims to the right side of the screen, turns and swims to the left side of the screen, but does not repeat. The student only changed its velocity by using the provided first conditional statement. ",
+      "rubric_performance_level_4": "The fish just moves right across the screen, then disappears."
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/18/levels/10": {
@@ -1413,7 +1734,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/19/levels/7": {
-    "long_instructions": "# Rainbow Horse\n\nWhen the rainbow touches the horse, it should turn into a unicorn.\n\n# Do This\n\n-   Add code that changes the horse sprite's appearance into a unicorn when the rainbow touches it."
+    "long_instructions": "# Rainbow Horse\n\nWhen the rainbow touches the horse, it should turn into a unicorn.\n\n# Do This\n\n-   Add code that changes the horse sprite's appearance into a unicorn when the rainbow touches it.",
+    "mini_rubric": {
+      "rubric_key_concept": "Create and modify objects (sprites) to manage the complexity of on-screen elements. ",
+      "rubric_performance_level_1": "The horse turns into a unicorn when the rainbow touches it.  There are no extra blocks in the program.",
+      "rubric_performance_level_2": "The program reacts in some way when the rainbow touches the horse.",
+      "rubric_performance_level_3": "The program uses a conditional and detects when the rainbow touches the horse, but there are enough errors that it does not react in any way.",
+      "rubric_performance_level_4": "The program does not detect when the rainbow touches the horse, or there is no conditional in the program."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/19/levels/8": {
     "dsls": {
@@ -1518,7 +1846,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/21/levels/6": {
-    "long_instructions": "# Looks like Gravity\n\nThe rock is thrown in the air but it never falls back down.\n\n# Do This\n\n-   Use the code you've practiced to make the rock slow down and then fall.\n-   Try different numbers in your counter pattern to see what you like the best."
+    "long_instructions": "# Looks like Gravity\n\nThe rock is thrown in the air but it never falls back down.\n\n# Do This\n\n-   Use the code you've practiced to make the rock slow down and then fall.\n-   Try different numbers in your counter pattern to see what you like the best.",
+    "mini_rubric": {
+      "rubric_key_concept": "Model complex movement on a coordinate plane",
+      "rubric_performance_level_1": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.  The rock reaches a reasonable height, and there are no extra blocks of code.",
+      "rubric_performance_level_2": "The rock sprite slows as it goes up the screen, then starts to fall back down, speeding up at is falls.",
+      "rubric_performance_level_3": "The rock starts to move up the screen, and its velocity continually changes in some way as the program is being run.",
+      "rubric_performance_level_4": "There is no change to the rock's velocity as the program is run."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/21/levels/7": {
     "dsls": {
@@ -1602,7 +1937,14 @@
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/22/levels/7": {
-    "long_instructions": "<img src=\"https://images.code.org/da47c7825bb2cf05125f5b0467895846-image-1585722435633.gif\" style=\"float:right\">\n\n# Sprite Interactions\n\nYou've now seen four different types of sprite interactions.  You'll need them all for this challenge.\n\n# Do this\n\n-   For each pair of animals, choose the sprite interaction that matches the target image on the right."
+    "long_instructions": "<img src=\"https://images.code.org/da47c7825bb2cf05125f5b0467895846-image-1585722435633.gif\" style=\"float:right\">\n\n# Sprite Interactions\n\nYou've now seen four different types of sprite interactions.  You'll need them all for this challenge.\n\n# Do this\n\n-   For each pair of animals, choose the sprite interaction that matches the target image on the right.",
+    "mini_rubric": {
+      "rubric_key_concept": "Model complex movement on a coordinate plane.",
+      "rubric_performance_level_1": "The program runs exactly as in the target image, with all sprite interactions shown, and there are no errors in the code.",
+      "rubric_performance_level_2": "Multiple sprite interactions are included in the program, and at least two are as shown in the target image.",
+      "rubric_performance_level_3": "There is at least one sprite interaction, but it may not be as shown in the target image.",
+      "rubric_performance_level_4": "No sprite interactions are in the program."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/22/levels/8": {
     "dsls": {
@@ -1743,7 +2085,14 @@
     "long_instructions": "# Catch the Coin, Increase the Score\n\nLet's make that score change now, too, to complete the game. You'll need to be able to tell when the bunny is touching the coin and then reset it.\n\n# Do This\n\n-   Use an **if-statement** and the **isTouching** block to increase the score when the bunny catches the coin.\n-   Make sure you're **calling your function** to reset the coin once it's been caught.\n-   Play the game and **randomize the velocity of the coin** to a range that you think is fun."
   },
   "https://studio.code.org/s/csd3-2021/lessons/24/levels/9": {
-    "long_instructions": "# Change the Background with the Score\n\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\n\n# Do This\n\n-   Use an **if-statement** and two separate functions to draw your backgrounds.\n-   Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"silly\" background are. Have fun with it!"
+    "long_instructions": "# Change the Background with the Score\n\nOnce you've caught 10 coins it's time to celebrate. You should change the background to be something fun.\n\n# Do This\n\n-   Use an **if-statement** and two separate functions to draw your backgrounds.\n-   Then go write your functions outside your draw loop. You get to decide what a \"simple\" or \"silly\" background are. Have fun with it!",
+    "mini_rubric": {
+      "rubric_key_concept": "Define and call functions to organize code and make it easier to reuse.",
+      "rubric_performance_level_1": "The two functions are defined and called within the if statement as instructed, so that different backgrounds display according to the current score.  Code is correctly organized inside and outside the draw loop, and there are no extra blocks.",
+      "rubric_performance_level_2": "At least one new background function is defined and called successfully inside the program, but may not work exactly as instructed.  Code is correctly organized inside and outside the draw loop.",
+      "rubric_performance_level_3": "A function is both defined and called inside the program, but there may be major errors that prevent it from running successfully, or code has been incorrectly placed in the draw loop.",
+      "rubric_performance_level_4": "There are no new functions in the program."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/24/levels/10": {
     "dsls": {
@@ -1901,7 +2250,14 @@
   },
   "https://studio.code.org/s/csd3-2021/lessons/26/levels/17": {
     "display_name": "Improve Your Game",
-    "long_instructions": "# Review Your Game\n\nLook over your project guide, and play your game a few times to make sure you have completed everything.\n\n-   Does the player sprite move the way it should?\n-   Do all of your interactions work?\n-   Are the platforms moving correctly?\n-   Does the scoreboard work?"
+    "long_instructions": "# Review Your Game\n\nLook over your project guide, and play your game a few times to make sure you have completed everything.\n\n-   Does the player sprite move the way it should?\n-   Do all of your interactions work?\n-   Are the platforms moving correctly?\n-   Does the scoreboard work?",
+    "mini_rubric": {
+      "rubric_key_concept": "Using a structured process to plan and develop a program",
+      "rubric_performance_level_1": "The project guide accurately reflects the program, both as shown in the example and as coded by the student.  Relevant functions, variables, and sprites are consistent between the project guide and actual project, with very few exceptions.",
+      "rubric_performance_level_2": "The project guide is generally consistent with the sample project and student project, with main functions and sprites included.  There may be some inconsistencies.",
+      "rubric_performance_level_3": "The project guide mentions some features of the program and associated functions and sprites, but there are major parts of the program missing from the guide.",
+      "rubric_performance_level_4": "The project guide is incomplete or does not seem to describe the program."
+    }
   },
   "https://studio.code.org/s/csd3-2021/lessons/26/levels/18": {
     "display_name": "Plane Jumper",
@@ -1992,11 +2348,421 @@
   "https://studio.code.org/s/csd3-2021/lessons/27/levels/12": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
+    },
+    "sublevels": {
+      "csd-pulse-check-survey-preamble_2019_pilot_2021": {
+        "dsls": {
+          "markdown": "### Please take a moment to respond to these **five quick questions**.\n\n<small>\n<em>Code.org takes your privacy seriously.</em> Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n</small>\n"
+        }
+      },
+      "csd-pulse-check-survey-1-q1 U3Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q2 U3Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I have the ability to learn computer science."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q3 U3Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I like this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q4 U3Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I feel comfortable in this computer science class."
+            }
+          ]
+        }
+      },
+      "csd-pulse-check-survey-1-q5 U3Ch2_2019_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly agree",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Slightly agree",
+              "correct": true
+            },
+            {
+              "text": "Neither",
+              "correct": true
+            },
+            {
+              "text": "Slightly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
+            }
+          ]
+        }
+      }
     }
   },
   "https://studio.code.org/s/csd3-2021/lockable/1/levels/1": {
     "dsls": {
       "title": "Interactive Animations and Games Post-Project Test"
+    },
+    "sublevels": {
+      "CSD U3 Test clean code_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Use the counter pattern to increase the score",
+              "correct": false
+            },
+            {
+              "text": "Include descriptive comments in the program",
+              "correct": true
+            },
+            {
+              "text": "Use watchers to keep track of variable and sprite property values",
+              "correct": false
+            },
+            {
+              "text": "Give variables and functions names that make sense",
+              "correct": true
+            },
+            {
+              "text": "Declare variables outside of the draw loop, but update them inside the draw loop",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "A team of friends is creating a game together.  They want to make sure that everyone can understand the code that the others write.  Which of the following will make it easier for them to read each other's code? (Choose TWO)"
+            }
+          ],
+          "title": "Question 1"
+        }
+      },
+      "CSD U3 Test functions_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "They keep the code organized and easy to understand.",
+              "correct": true
+            },
+            {
+              "text": "They are a good way to store user input to use later in the program.",
+              "correct": false
+            },
+            {
+              "text": "They make the program run faster.",
+              "correct": false
+            },
+            {
+              "text": "They are necessary for any program to run.",
+              "correct": false
+            },
+            {
+              "text": "They let you use the same code in different places in the program without having to rewrite it.",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "Why do programmers like to use functions? (Choose TWO)"
+            }
+          ],
+          "title": "Question 2"
+        }
+      },
+      "CSD U3 Test variables_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "20",
+              "correct": false
+            },
+            {
+              "text": "90",
+              "correct": true
+            },
+            {
+              "text": "110",
+              "correct": false
+            },
+            {
+              "text": "There will be two apples in two different positions.",
+              "correct": false
+            },
+            {
+              "text": "None, because the program will have an error.",
+              "correct": false
+            }
+          ],
+          "markdown": "Consider the following program (blocks and text)\n\n<img style=\"display:inline-block;width:300px\" src=\"https://images.code.org/39742e261b25c859daa8a62ddf9749a9-image-1552415157293.24.38 AM.png\"><pre style=\"display:inline-block;\">apple.x = 20;\nbanana.x = 60;\napple.x = banana.x + 30;\nbanana.x = 80;</pre>\n",
+          "questions": [
+            {
+              "text": "What is the apple's x position at the end of this program?"
+            }
+          ],
+          "title": "Question 3"
+        }
+      },
+      "CSD U3 Test planning_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The general purpose and design of the program.",
+              "correct": false
+            },
+            {
+              "text": "What kinds of variables and functions you will need to make it work.",
+              "correct": false
+            },
+            {
+              "text": "How the user will interact with the program.",
+              "correct": false
+            },
+            {
+              "text": "How many lines of code you want to write.",
+              "correct": true
+            },
+            {
+              "text": "What types of media, such as pictures or sounds, you will need.",
+              "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Which of the following is NOT best to decide before beginning to write code for a program?"
+            }
+          ],
+          "title": "Question 4"
+        }
+      },
+      "CSD U3 Test debugging_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "3 only",
+              "correct": false
+            },
+            {
+              "text": "1 and 2",
+              "correct": false
+            },
+            {
+              "text": "1 and 3",
+              "correct": false
+            },
+            {
+              "text": "2 and 3",
+              "correct": true
+            },
+            {
+              "text": "1, 2, and 3",
+              "correct": false
+            }
+          ],
+          "markdown": "A team is making a platform jumper game.  The background and platforms are working, but the main character won't appear.  What might be the problem?\n\n1. They forgot to call `drawSprites` in the draw loop.\n1. The character sprite is drawn behind the background sprite.\n1. The character sprite is drawn off the screen.\n",
+          "title": "Question 5"
+        }
+      },
+      "CSD U3 Test comment_pilot_2021": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Give the bubble an outline"
+            },
+            {
+              "text": "Jump up"
+            },
+            {
+              "text": "Fall down"
+            },
+            {
+              "text": "Float up"
+            },
+            {
+              "text": "Shake back and forth"
+            }
+          ],
+          "markdown": "Look at the following code, and match the comments to where they should go in the program.\n\n<img src=\"https://images.code.org/df3e8343eae473fd5af62370579f66e9-image-1552419576823.52.17 PM.png\" style=\"width:400px;\">\n",
+          "questions": [
+            {
+              "text": "Line 5"
+            },
+            {
+              "text": "Line 11"
+            },
+            {
+              "text": "Line 14"
+            },
+            {
+              "text": "Line 17"
+            },
+            {
+              "text": "Line 19"
+            }
+          ],
+          "title": "Question 6"
+        }
+      },
+      "CSD U3 Test debug FR_2021": {
+        "long_instructions": "Think about one difficult bug that you needed to fix in your program.  What was your process for finding and fixing the bug?"
+      },
+      "CSD U3 Test parameter FR_2021": {
+        "long_instructions": "Blocks such as `rect` and `velocityX` have parameters that let you give specific information about what they can do.  Choose a function from your program that could be improved with a parameter and explain how."
+      },
+      "CSD U3 Test collaboration FR_2021": {
+        "long_instructions": "How did you and your partner decide how to divide up the work to make this program?"
+      }
     }
   },
   "https://studio.code.org/s/csd3-2021/lessons/28/levels/1": {

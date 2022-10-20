@@ -5,7 +5,7 @@ title: כיצד לבצע שעת תכנות - לחברות
 {{ signup_button }}
 
 # כיצד להביא את "שעה של קוד" לחברה שלך
-### Find out how you and your employees can inspire students to try computer science!
+### גלו כיצד אתם ועובדיכם יכולים לעורר השראה אצל תלמידים לנסות מדעי מחשב!
 
 ***
 
@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. צפו בסרטון ההדרכה הזה <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. צפו בסרטון ההדרכה הזה <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})

@@ -44,8 +44,6 @@
   "sports": "Coder ton propre jeu de sports",
   "text-compression": "Compression de texte",
   "csa-self-paced-pl": "Comment les enseignants du cours CSA pilot peuvent naviguer sur Code.org",
-  "counting-csc": "Compter avec Laurel",
-  "explore-data-1": "Exploration des boîtes à moustaches et des histogrammes",
   "outbreak-csc": "Épidémie",
   "poem-art": "Art du poème",
   "edit-code": "Modifier le Code",
@@ -62,5 +60,6 @@
   "halloween": "halloween",
   "step": "étape",
   "coursee-ramp": "cours - accéléré",
-  "csa5-exemplars": "csa5-exemplars"
+  "csa5-exemplars": "csa5-exemplars",
+  "soccer": "foot"
 }

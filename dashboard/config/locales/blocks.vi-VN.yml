@@ -2,6 +2,8 @@
 vi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1322,6 +1324,10 @@ vi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tiếng bass
               vòng
             "'sound://category_digital/jump_7.mp3'": nhảy
+      gamelab_playSoundOptionsSoccer:
+        text: phát âm thanh {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: phát âm thanh {SOUND}
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
       gamelab_playerBehaviors:
@@ -1488,16 +1494,6 @@ vi:
         text: "{SPRITE} nghĩ {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE} nghĩ {TEXT1} trong {NUM} giây"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} nghĩ {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hừm...
-            '"I am hungry, too."': Ta cũng đang đói.
-            '"I only want the biggest goat."': Ta chỉ cần con dê mập nhất.
-            '"I''m a green troll."': Ta là người khổng lồ xanh lá.
-            '"No one will cross my bridge."': Không ai có thể băng qua cây cầu của
-              ta.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} nghĩ {THOUGHT}"
         options:
@@ -2171,6 +2167,11 @@ vi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: khi đã trả lời {VAR}
       RyanLab_moveForward:

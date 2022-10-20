@@ -57,16 +57,13 @@
       "setProperty": null,
       "declareAssign_x": null
     },
-    "encrypted_examples": [
-
-    ],
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-03-31T22:39:47.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-03-31T22:39:47.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-03-31T22:39:47.126+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB2.1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB2.1_2022\"},{\"changed_at\":\"2022-03-31 22:40:19 +0000\",\"changed\":[\"long_instructions\",\"validation_enabled\",\"map_reference\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-31 22:49:02 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

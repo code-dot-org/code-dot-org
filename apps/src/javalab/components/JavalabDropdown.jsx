@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import style from './javalab-dropdown.module.scss';
 
 /**
@@ -25,7 +26,10 @@ export default class JavalabDropdown extends Component {
 
   render() {
     return (
-      <div className={style.dropdown} style={this.props.style}>
+      <div
+        className={classNames(style.dropdown, this.props.className)}
+        style={this.props.style}
+      >
         {this.props.children.map((child, index) => (
           <button
             type="button"

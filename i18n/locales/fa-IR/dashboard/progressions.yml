@@ -1,19 +1,158 @@
 fa:
   data:
     progressions:
+      '"If/Else" with the Bee': '*اگر/در غیر این صورت* با the Bee'
+      8-Bit Binary Number Widget: ویجت 8 بیتی عدد دودویی
+      AI Lab and Isaac's Data: آزمایشگاه هوش مصنوعی و داده های Isaac
+      AI Lab and Kim's Data: آزمایشگاه هوش مصنوعی و داده های Kim
+      AI Machine Learning - Video: یادگیری ماشینی هوش مصنوعی - فیلم
+      'AI for Oceans: Fish vs Not Fish': 'هوش مصنوعی برای Oceans: با ماهی و بدون ماهی'
+      'AI for Oceans: Types of Fish': 'هوش مصنوعی برای Oceans: انواع ماهی'
+      'AI: Impact on Society - Video': 'هوش مصنوعی: اثر بر جامعه - فیلم'
+      'AI: Training Data & Bias - Video': 'هوش مصنوعی: پرورش داده و بیاس - فیلم'
+      Accelerometer Events: حوادث شتاب سنج
+      Add Content and HTML: افزودن محتوا و زبان نشانه گذاری فوق متن (HTML)
+      Add Content and Structure to Your Page: افزودن محتوا و ساختار به صفحه خود
+      Add Movement: افزودن حرکت
+      Add Sprites: افزودن اسپرایت
+      Add Style: افزودن سبک
+      Add Style to Your Page: افزودن سبک به صفحه خود
+      Add Text: افزودن متن
+      Add a Welcome Screen: افزودن صفحه خوشامدگویی
+      Adding Images: در حال افزودن تصویر
+      Adding New Screens: در حال افزودن صفحه نمایش جدید
+      Adding Pages: در حال افزودن صفحه
+      Adding Screens: در حال افزودن صفحه نمایش
+      Alternative Datasets: مجموعه جایگزین داده
+      Animate Your Scene: پویاندن صحنه خود
+      App Lab Intro - Video: معرفی App Lab - فیلم
+      'App Project: Screen Design': 'پروژه برنامه ای: طراحی صفحه نمایش'
+      'App: Choose a Kid''s Movie': 'برنامه: انتخاب فیلم ویژه کودکان'
+      'App: Friend Finder': 'برنامه: دوست یاب'
+      'App: Guess the Number': 'برنامه: حدس زدن شماره'
+      'App: How Many Countries': 'برنامه: چند کشور'
+      'App: Improved Pet App': 'برنامه: Pet App ارتقا یافته'
+      'App: Is It Your Birthday?': 'برنامه: آیا امروز روز تولدتان است؟'
+      'App: My Famous Birthday': 'برنامه: جشن تولد مشهور من'
+      'App: National Parks': 'برنامه: پارکهای ملی'
+      'App: Outfit Picker': 'برنامه: انتخاب پوشاک'
+      'App: Pet Chooser': 'برنامه: انتخاب حیوان خانگی'
+      'App: Stamp Notebook': 'برنامه: دفتر تمبر'
+      'App: Story Creator': 'برنامه: خالق ماجرا'
+      'App: The Fastest Finger': 'برنامه: سریع ترین انگشت'
+      'App: Where Should I Live?': 'برنامه: کجا باید زندگی کنم؟'
+      Artist Intro with JR Hildebrand: معرفی Artist با JR Hildebrand
+      Artist Intro with JR Hildebrande: معرفی Artist با JR Hildebrande
+      Artist Project: پروژه Artist
       'Artist: Variables': 'هنرمند: متغیرها'
+      Assessment: ارزشیابی
+      Attribution: نسبت دادن
+      Basic Conditionals: شرطی های پایه
+      Be a Super Digital Citizen: شهروند فوق دیجیتال باشید
+      Begin planning your project: طرح ریزی پروژه خود را آغاز نمایید
+      Begin planning your project_2018: طرح ریزی پروژه-2018 خود را آغاز نمایید
+      Binary Bracelets - Unplugged Activity: دستبندهای دوتایی - فعالیت بدون کار با رایانه
+      Binary Number Widget: ویجت عددی دودویی
+      Binary Numbers: اعداد دوتایی
+      Board Events: حوادث بورد
+      Board Input and Output: ورودی و خروجی بورد
+      Book Recommender App: برنامه پیشنهاد کتاب
+      Book Recommender Model Card: نمونه کارت پیشنهاد کتاب
+      Boolean Comparison: مقایسه بولی
+      Build a Platform Jumper: ساخت اتصال دهنده بسترها
+      Build a Screen: ساخت صفحه نمایش
+      Building a UI with Design Mode: در حال ساخت رابط کاربری (ui) با حالت طراحی
+      Building an App: در حال ساخت برنامه
+      Button Circuits: مدارهای دکمه ای
+      CS Discoveries Post-Course Survey: پرسشنامه پسادوره یافته های cs
+      CS Discoveries Post-course Survey: پرسشنامه پسادوره یافته های cs
+      CSD U3 Interactive Card Exemplar: نمونه کارت تعاملی CSD U3
+      CSD U3 platform intro: معرفی بستر CSD U3
+      'CSD: For Loop': 'CSD: برای حلقه'
+      Cake Defender: پدافند قالب
+      Cake Survey: پرسشنامه قالب
+      Challenge: چالش
+      Challenge Levels: سطوح چالش
+      Challenge/Practice: چالش/تمرین
+      'Challenge: Lists': 'چالش: فهرست ها'
+      'Challenge: RGB Colors': 'چالش: رنگهای سبز و قرمز و آبی'
+      Challenges: چالشها
+      Change: تغییر
+      Check Your Work: بازرسی کار خود
+      Check-In Survey: پرسشنامه ورود
+      Checking for a Winner: در جستجوی برنده
+      'Choice Levels: Customize Your App': 'سطوح انتخابی: سفارشی سازی برنامه خود'
+      Choose Your Own Adventure: انتخاب ماجراجویی خود
+      Choosing Good IDs: در حال انتخاب شناسه (id) های خوب
+      Club Datasets: مجموعه داده های کلوب
+      Code Prediction: پیشبینی کد
+      Code Your Own Flappy Game: کدنویسی بازی فلاپی خود
+      Code Your Page: کدنویسی صفحه خود
+      Collector Game: بازی گردآورنده
+      Collisions: تلاقی ها
+      Collisions in Games: تلاقی ها در بازی
+      Color LEDs: چراغهای رنگی led
+      Combining Projects: پروژه های ترکیبی
+      Combining Representations: بازنمایی های ترکیبی
+      Conditionals with Cards - Unplugged Activity: شرطی های دارای کارت - فعالیت بدون کار با رایانه
+      'Conditionals: If Statements': 'شرطی ها: گزاره های اگر'
+      'Conditionals: If and If/Else Statements': 'شرطی ها: گزاره های اگر و اگر/در غیر این صورت'
+      Control Your Player: کنترل بازیکن خود
+      'Course E: Play Lab Project': 'دوره کلاسی E: پروژه Play Lab'
+      'Course F: Artist Project': 'دوره کلاسی F: پروژه Artist'
+      'Course F: Artist Project - Revise': 'دوره کلاسی F: پروژه Artist - اصلاح'
+      'Course F: Play Lab Project': 'دوره کلاسی F: پروژه Play Lab'
+      'Course F: Play Lab Project - Revise': 'دوره کلاسی F: پروژه Play Lab - اصلاح'
+      Crack Random Substitution: بررسی جایگزینی تصادفی
+      Crack a Caesar Cipher: یافتن رمز سزار
+      Create Your Own Animation: تولید پویانمایی خود
+      Create Your Sprites: تولید اسپرایت خود
+      Create a Background: ایجاد پس زمینه
+      Create a Google Form: ایجاد فرم گوگلی
+      Create a Story: خلق داستان
+      Create an App in App Lab: ساخت برنامه در App Lab
+      Create your project: ایجاد پروژه خود
+      Customize: سفارشی ‎سازی
+      Customize Your App: سفارشی سازی برنامه خود
+      Customizing Your App: در حال سفارشی سازی برنامه خود
+      Data Visualization: به تصویر در آوردن داده ها
+      De-bugging with the Step Button: اشکال زدایی با دکمه Step
       Debugging: اشکال‌زدایی
+      Debugging with the Step Button: اشکال زدایی با دکمه Step
+      'Demo App: Interactive Card': 'نمونه نمایشی برنامه: کارت تعاملی'
+      Demo Apps: نمونه نمایشی برنامه ها
       Design Mode: حالت طراحی
+      Design Your Game: طراحی بازی خود
+      Design Your Prototype: طراحی نمونه اولیه خود
+      Design a Screen for your App: طراحی صفحه نمایش برنامه خود
+      Design an AI App - AI Lab: طراحی برنامه هوش مصنوعی - AI Lab
+      Design an AI App - App Lab: طراحی برنامه هوش مصنوعی - App Lab
+      Designing for Accessibility: در حال طراحی برای دستیابی پذیری
+      Digital Sharing - Unplugged Activity: به صورت دیجیتال در اختیار دیگران قرار دادن - فعالیت بدون کار با رایانه
+      Draw Your Background: ترسیم پس زمینه خود
+      Draw a Background: ترسیم پس زمینه
+      Drawing: ترسیم
+      Driver Alert System: سامانه هشدار درایور
+      End-Of-Unit Survey: پرسشنامه پایان واحدی
+      End-of-Unit Survey: پیمایش پایان واحدی
+      Escape Room Example: نمونه اتاق گریز
       Events: رویدادها
+      Events and Linking Screens: صفحه نمایشهای پیوند و حوادث
       Example: مثال
       For Loops: حلقه های "برای"
       Free Play: بازی رایگان
       Functions: توابع
       Functions with Parameters: معادله با پارامترها
+      Lesson Extras: موارد اضافه درسی
+      Levels: مراحل
       Lists: فهرست‌ها
       'Minecraft: Hero''s Journey': 'ماینکرافت: سفر قهرمانان'
       Overview: بررسی اجمالی
       Pair Programming: برنامه نویسی دوتایی
+      Properties: مشخصات
+      Review: بازبینی
+      Sprite Lab Project: پروژه آزمایشگاه اسپرایت
       Variables: متغیرها
       Video: ویدیو
+      'Video: Outbreak Simulator: Introduction': 'ویدئو: Outbreak Simulator: مقدمه'
       Wrap-up: خلاصه

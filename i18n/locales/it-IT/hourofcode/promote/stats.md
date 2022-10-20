@@ -16,7 +16,7 @@ title: Statistiche Utili
 
 #### Porta l'informatica nella tua scuola. Inizia con un'Ora del Codice!
 
-Con la tecnologia ogni industria del pianeta sta cambiando e le conoscenze informatiche sono diventate parte integrante delle competenze necessarie in ogni ambito. But just half of all schools offer computer science! La buona notizia è che intendiamo cambiare rotta. Se l'anno scorso hai sentito parlare dell'Ora del Codice, potresti già sapere che ha fatto storia. 100 milioni gli studenti hanno scoperto come può essere accessibile e divertente l'informatica effettuando una sola Ora del Codice.
+Con la tecnologia ogni industria del pianeta sta cambiando e le conoscenze informatiche sono diventate parte integrante delle competenze necessarie in ogni ambito. But just half of all schools offer computer science! La buona notizia è che intendiamo cambiare rotta. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 L'Ora del Codice è un'introduzione di un'ora all'informatica, progettata per sollevare il velo di mistero che avvolge la programmazione e dimostrare che chiunque può impararne le basi. Visita [HourofCode.com](https://hourofcode.com/it) e <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">www.ProgrammailFuturo.it</a> per ulteriori informazioni, prova un'ora tu stesso o fai ospitare un evento dell'Ora del Codice per introdurre gli altri nel mondo dell'informatica!
 
@@ -30,7 +30,7 @@ Speriamo che stimoli l'interesse degli studenti a continuare ad imparare. Le ric
 
 #### Perché è importante tutto questo?
 
-La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di posti di lavoro vacanti, tra cui arte e design, richiedevano competenze di programmazione. But 49 percent of schools in the U.S. don't offer computer science. È ora di superare questo divario e prendere il treno del XXI secolo. Sappiamo che, indipendentemente da ciò che i nostri studenti faranno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o delle arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi necessaria e delle competenze fondamentali per avere successo nel loro campo. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Sappiamo che, indipendentemente da ciò che i nostri studenti faranno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o delle arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi necessaria e delle competenze fondamentali per avere successo nel loro campo. <br /> <br />
 
 #### Una citazione che puoi utilizzare nei tuoi messaggi
 

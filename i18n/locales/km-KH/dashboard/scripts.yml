@@ -738,6 +738,8 @@ km:
           lesson_groups:
             lessonGroup-2:
               description: សាក​ល្បង
+        ai-ethics-2021:
+          description_audience: ថ្នាក់ទី ៦ដល់ទី១២
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -825,3 +827,9 @@ km:
             lessonGroup-8:
               display_name: អ​ថេរ
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        soccer:
+          name: បាល់ទាត់
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: រង្វិល​ជុំ

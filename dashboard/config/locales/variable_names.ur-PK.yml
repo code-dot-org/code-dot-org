@@ -19,6 +19,7 @@ ur:
       length: لمبائی
       name: نام
       nectar: امرت
+      object: اعتراض
       planet: سیارہ
       points: نقاط
       random: بےترتیب
@@ -28,6 +29,7 @@ ur:
       shout: چلانا
       size: سائز
       speed: رفتار
+      type: ٹائپ کریں
       variable: متغیر
       width: چوڑائی
       wizard: جادوگر

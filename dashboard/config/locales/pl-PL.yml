@@ -451,6 +451,7 @@ pl:
       about: O programie
       legal: Prywatność i legalność
       legal_privacy: Polityka prywatności
+      legal_cookie_notice: Informacja o plikach cookie
       legal_tos: Regulamin
     user:
       classroom: Domowa strona nauczyciela
@@ -668,6 +669,7 @@ pl:
     print_certificate: Drukuj Certyfikat
   certificate_sponsor_message: "%{sponsor_name} podarował szczodry prezent w postaci
     sponsorowania Twojej nauki."
+  certificate_hour_of_code: Godzina Kodowania
   move_students:
     new_section_dne: Przepraszamy, ale sekcja %{new_section_code} nie istnieje. Wprowadź
       kod innej sekcji.
@@ -1334,6 +1336,8 @@ pl:
         not_listed: Preferowanego terminu nie ma na liście
         none: Wolę nie odpowiadać
       school_country:
+        barbados: Barbados
+        belize: Belize
         canada: Kanada
         chile: Chile
         colombia: Kolumbia
@@ -1470,3 +1474,16 @@ pl:
   unit_prefix: Jednostka %{n}
   code_org_logo_alt: Strona domowa Code.org
   teacher_feedback: Opinie nauczycieli
+  lesson_lock:
+    error:
+      no_updates: Brak aktualizacji do wykonania
+      missing_params: Należy podać iużytkownika, poziom i identyfikator jednostki
+      cannot_view_locked_answers: Nie można wyświetlić odpowiedzi, gdy jest zablokowany
+      forbidden: Użytkownik nie może zaktualizować stanu blokady ucznia
+  reset_predict_progress_button: Usuń odpowiedź
+  pixelation:
+    save_image: Zapisz obraz
+    image_width: Szerokość obrazu
+    image_height: Wysokość obrazu
+    binary: Binarny
+    hexadecimal: Szesnastkowy

@@ -54,8 +54,7 @@ social:
   .clear
 
   - hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
-  - hoc_cse_enable_svg = DCDO.get("hoc_cse_enable_svg", false)
-  - hoc_image = ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
+  - hoc_image = ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode) ? "/images/hoc2022-banner.png" : "/images/hoc-cse-banner.png"
 
   .full-resource-block{style: "position: relative"}
     %a{href: CDO.hourofcode_url('/learn')}

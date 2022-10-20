@@ -146,19 +146,19 @@ fr:
         text: Amuse-toi en utilisant ton nouveau bloc « Répéter »!
     loop_until:
       1:
-        text: Salut, je suis Chris. Avant de rejoindre le Heat de Miami, je suis allé
-          à Georgia Tech pour étudier l'informatique. Essayons notre nouveau bloc,
-          le bloc «Répéter jusqu'à».
+        text: Salut, moi, c'est Chris. Avant de rejoindre le Heat de Miami, j'ai étudié
+          l'informatique à la fac de Georgia Tech. Viens, on essaie notre nouveau
+          bloc, le bloc « répéter jusqu'à ».
       2:
-        text: Et si on ne sait pas de quelle distance l'oiseau doit se déplacer pour
-          arriver au cochon?
+        text: Et si on ne savait pas de combien l'oiseau devait se déplacer pour arriver
+          jusqu'au cochon ?
       3:
-        text: Si nous mettons un bloc « Avancer » à l'intérieur d'un bloc «Répéter
-          jusqu'à», l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il
-          se cogne contre un mur).
+        text: Si on met un bloc « avancer » au sein d'un bloc « répéter jusqu'à »,
+          l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne
+          contre un mur).
       4:
-        text: 'Et ceci est important: comme avant, on peut mettre plusieurs blocs
-          à l''intérieur du bloc « Répéter jusqu’à », et ils seront tous répétés.'
+        text: 'Et c''est important : tout comme avant, on peut mettre plusieurs blocs
+          à l''intérieur du bloc « répéter jusqu’à », et ils seront tous répétés.'
     if:
       1:
         text: 'Salut, je suis Bill ! Nous allons apprendre un nouveau concept fondamental
@@ -462,8 +462,8 @@ fr:
           dit à ton programme d’écouter lorsque quelque chose se passe. Lorsque cette
           chose se passe, il effectue une action.
       2:
-        text: 'Quelques exemples d''évènements sont: l''écoute des clics de souris,
-          l’activation d’une touche fléchée du clavier ou un tapotement de l''écran.'
+        text: 'Quelques exemples d''évènements : guetter un clic de la souris, une
+          touche fléchée ou une tape sur l''écran.'
       3:
         text: Ici, nous allons faire en sorte que le robot venu de l’espace salue
           les terriens lorsqu'un joueur clique sur lui. Nous allons utiliser le bloc
@@ -856,29 +856,30 @@ fr:
           tourner à gauche, ce qu’il fera cinq fois. Amuse-toi bien!
     C2_artist_intro:
       1:
-        text: Tu ne serais même pas qualifié pour la course si tu n'avais pas les
-          gens compétents en informatique - à cause de la quantité de données recueillies
-          par les voitures et de la nécessité d'avoir des gens capable d'écrire des
-          programmes afin de savoir comment continuer à être performant.
+        text: On ne serait même pas qualifié pour la course si on n'avait pas des
+          gens compétents en informatique, à cause de la quantité de données recueillies
+          par les voitures et du besoin d'avoir des gens capables d'écrire des programmes
+          qui nous permettent de voir comment être de plus en plus performant.
       2:
-        text: Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner
-          différentes formes. Partout où va ton artiste, il dessinera une ligne derrière
-          lui.
+        text: Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour
+          dessiner différentes formes. Partout où va ton artiste, il dessinera une
+          ligne derrière lui.
       3:
-        text: Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici,
-          le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur
-          « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant
-          de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de
-          tous petits carrés sur ton écran.
+        text: Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici,
+          le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter
+          », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit
+          d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés
+          sur ton écran.
       4:
-        text: L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de
-          90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un
-          certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner
-          l’artiste comme tu veux. C’est un virage à 90 degrés.
+        text: L'autre bloc que nous avons dans ce casse-tête fait tourner à droite
+          de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre
+          artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour
+          voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de
+          90 degrés.
       5:
-        text: Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
-          en cliquant sur les flèches qui se trouvent à côté des chiffres pour les
-          pixels et les degrés. Amuse-toi à dessiner avec ton artiste !
+        text: Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
+          en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et
+          de degrés. Amuse-toi bien en dessinant avec ton artiste !
     C2_bee_conditionals:
       1:
         text: Il s'agit d’un bloc conditionnel. Il dit que SI il y a du nectar ou
@@ -1208,29 +1209,30 @@ fr:
           Nous avons ajouté cette notion dans notre langage de programmation.
     C3_artist_intro:
       1:
-        text: Tu ne serais même pas qualifié pour la course si tu n'avais pas les
-          gens compétents en informatique - à cause de la quantité de données recueillies
-          par les voitures et de la nécessité d'avoir des gens capable d'écrire des
-          programmes afin de savoir comment continuer à être performant.
+        text: On ne serait même pas qualifié pour la course si on n'avait pas des
+          gens compétents en informatique, à cause de la quantité de données recueillies
+          par les voitures et du besoin d'avoir des gens capables d'écrire des programmes
+          qui nous permettent de voir comment être de plus en plus performant.
       2:
-        text: Dans ces puzzles, tu seras un artiste qui utilise un crayon pour dessiner
-          différentes formes. Partout où va ton artiste, il dessinera une ligne derrière
-          lui.
+        text: Dans ces casse-têtes, tu seras un artiste qui utilise un crayon pour
+          dessiner différentes formes. Partout où va ton artiste, il dessinera une
+          ligne derrière lui.
       3:
-        text: Pour te déplacer dans la toile, tu utiliseras le bloc « Avancer ». Ici,
-          le bloc « Avancer » dit d’avancer de 100 pixels. Lorsque nous appuyons sur
-          « Exécuter », que se passe-t-il ? L'artiste avance d’un certain montant
-          de pixels et ce montant est de 100 pixels. Les pixels sont en réalité de
-          tous petits carrés sur ton écran.
+        text: Pour te déplacer sur la toile, tu utiliseras le bloc « Avancer ». Ici,
+          le bloc « Avancer » fait avancer de 100 pixels. Lorsqu'on appuie sur « Exécuter
+          », que se passe-t-il ? L'artiste parcourt une certaine distance, et il s'agit
+          d'une distance de 100 pixels. Les pixels sont en fait de tous petits carrés
+          sur ton écran.
       4:
-        text: L'autre bloc que nous avons dans ce puzzle dit « Tourner à droite de
-          90 degrés. » Et quand nous le faisons glisser, notre artiste tourne d’un
-          certain nombre de degrés. Tu peux jouer avec ce bloc pour faire tourner
-          l’artiste comme tu veux. C’est un virage à 90 degrés.
+        text: L'autre bloc que nous avons dans ce casse-tête fait tourner à droite
+          de 90 degrés. Et quand on le fait glisser dans l'espace de travail, notre
+          artiste tourne d’un certain nombre de degrés. Tu peux t'amuser avec pour
+          voir jusqu'où tu veux faire tourner l’artiste. Il s'agit d'un virage de
+          90 degrés.
       5:
-        text: Et c’est un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
-          en cliquant sur les flèches qui se trouvent à côté des chiffres pour les
-          pixels et les degrés. Amuse-toi à dessiner avec ton artiste !
+        text: Et voici un virage à 120 degrés. N'oublie pas, tu peux changer ces valeurs
+          en cliquant sur les flèches qui se trouvent à côté du nombre de pixels et
+          de degrés. Amuse-toi bien en dessinant avec ton artiste !
     C3_artist_nested_loops:
       1:
         text: Quand tu mets une boucle à l'intérieur d'une autre boucle, on appelle
@@ -1298,11 +1300,11 @@ fr:
           de fonction verts peuvent faire.
     C3_bee_nested_loops:
       1:
-        text: Maintenant nous allons utiliser les boucles imbriquées avec l'abeille.
-          On nous a donné un code de démarrage qui dit à l'abeille d’avancer et d’obtenir
-          le nectar trois fois et puis de tourner à droite. Prenons ce morceau entier
-          de code et imbriquons-le à l'intérieur d’un autre bloc « Répéter » et réglons
-          la répétition à trois fois. Fait !
+        text: Maintenant, on va se servir de boucles imbriquées avec l'abeille. On
+          commence d'emblée avec du code qui indique à l'abeille d’avancer et de recueillir
+          trois fois le nectar, puis de tourner à droite. On va prendre tout ce bout
+          de code et l'imbriquer dans un autre bloc « répéter », et régler à trois
+          fois la répétition. Voilà, c'est fait !
     C3_bounce:
       1:
         text: Tu vas maintenant créer ton propre jeu de casse-brique à rebond, que
@@ -2611,60 +2613,60 @@ fr:
           Amuse-toi bien!
     mc_intro:
       1:
-        text: Mon nom est Jens Bergensten, mais je suis mieux connu sous le nom de
+        text: Je m'appelle Jens Bergensten, mais je suis mieux connu sous le nom de
           Jeb. Je suis le développeur en chef de Minecraft, ici chez Mojang à Stockholm.
           Je pense que j'avais onze ou douze ans quand j'ai commencé à programmer
           parce que je voulais faire des jeux. Un ami de mon père m'a dit que pour
-          faire des jeux, je devais apprendre à programmer. Voilà comment j'ai commencé.
-          J'aime concevoir et imaginer l'architecture des jeux. C'est ce que j'aime
-          vraiment à propos de Minecraft.
+          faire des jeux, je devais apprendre à programmer. C'est comme ça que j'ai
+          commencé. J'aime concevoir et imaginer l'architecture des jeux. C'est ce
+          que j'aime vraiment avec Minecraft.
       2:
-        text: Pendant l'heure qui vient, tu vas apprendre les bases de l'informatique
-          en programmant les déplacements d'Alex ou de Steve dans un endroit simulé
-          du monde de Minecraft.
+        text: Au cours de l'heure qui vient, tu vas apprendre les bases de l'informatique
+          en programmant les déplacements d'Alex ou de Steve dans un bout simulé du
+          monde de Minecraft.
       3:
         text: La programmation se fait traditionnellement avec du texte, mais aujourd'hui
-          nous allons utiliser Blockly qui utilise des blocs visuels que tu peux glisser
-          et déposer pour écrire des programmes. Mais en fait, tu crées du code Javascript.
+          on va se servir de Blockly, un système qui utilise des blocs visuels que
+          tu peux faire glisser et déposer pour écrire des programmes. Mais sous l'envers
+          du décor, tu crées du code Javascript.
       4:
-        text: Les concepts que tu vas apprendre sont ceux que les programmeurs utilisent
-          chaque jour et sont les fondamentaux de l'informatique. Chez Mojang, nous
-          utilisons ces mêmes concepts pour faire fonctionner Minecraft.
+        text: Les notions que tu vas apprendre sont celles que les programmeurs utilisent
+          chaque jour et forment les bases de l'informatique. Chez Mojang, on utilise
+          ces mêmes notions pour faire fonctionner Minecraft.
       5:
         text: Avant de commencer, tu vas choisir ton personnage. Je vais choisir Alex.
-          Construisons du code pour un programme qui lui permettra de se déplacer
-          partout sur l'écran.
+          On va construire du code pour un programme qui lui permettra de se déplacer
+          autour de l'écran.
       6:
         text: Ton écran est divisé en trois parties principales. Sur la gauche, il
           y a l'espace de jeu Minecraft où ton programme s'exécutera. Les instructions
-          pour chaque niveau sont écrites ci-dessous.
+          pour chaque niveau sont écrites en dessous.
       7:
-        text: 'Au milieu, la boîte à outils : chacun de ces blocs est une commande
-          qui dirige les actions d''Alex.'
+        text: 'Au milieu se trouve la boîte à outils : chacun de ces blocs est une
+          commande qui va dicter les actions d''Alex.'
       8:
         text: La zone blanche à droite s’appelle l'espace de travail, et c'est ici
-          que nous allons construire notre programme.
+          qu'on va construire notre programme.
       9:
-        text: Si nous glissons le bloc « Avancer ();» dans l'espace de travail et
-          cliquons sur »Exécuter», que se passe-t-il ? Alex avance d'un espace sur
-          la grille.
+        text: Si on glisse le bloc « Avancer(); » vers l'espace de travail et clique
+          sur « Démarrer », que se passe-t-il ? Alex avance d'un espace sur la grille.
       10:
-        text: Et que se passe-t-il si nous voulons faire quelque chose après qu'elle
-          a avancé d'un espace ? Nous pouvons ajouter un autre bloc à notre programme.
-          Je vais choisir le bloc « Tourner à droite de 90 degrés();» et je vais le
-          faire glisser sous mon bloc « Avancer ();» jusqu'à ce que cette ligne orange
-          apparaisse. Puis je le dépose et les deux blocs s’emboîteront. Lorsque nous
-          appuyons à nouveau sur « Exécuter », Alex effectuera les commandes qui sont
-          empilées du haut vers le bas sur notre espace de travail.
+        text: Et que se passe-t-il si on veut faire quelque chose une fois qu'elle
+          a avancé d'un espace ? On peut ajouter un autre bloc à notre programme.
+          Je vais choisir le bloc « Tourner à droite de 90 degrés();»  et je vais
+          le faire glisser sous mon bloc « Avancer (); » jusqu'à ce que cette ligne
+          orange apparaisse. Puis je vais le déposer et les deux blocs s’emboîteront.
+          Lorsqu'on appuie à nouveau sur « Démarrer », Alex va exécuter les commandes
+          qui sont empilées du haut vers le bas dans notre espace de travail.
       11:
         text: Si jamais tu veux supprimer un bloc, il te suffit de le refaire glisser
           de la pile vers la boîte à outils.
       12:
-        text: 'Pour annuler tes modifications et revenir à la façon dont le niveau
-          a démarré, utilise le bouton Recommencer dans le coin supérieur droit de
-          l''espace de travail. Une dernière chose : tu vois le petit triangle sur
-          les blocs «Tourner» ? Chaque fois que tu vois ces triangles, cela signifie
-          que tu peux choisir une option différente. Commençons à coder !'
+        text: 'Pour annuler tes modifications et revenir à la version de base du niveau,
+          utilise le bouton « Recommencer » dans le coin en haut à droite de l''espace
+          de travail. Une dernière chose : tu vois le petit triangle sur les blocs
+          « Tourner » ? Chaque fois que tu vois ces triangles, cela veut dire que
+          tu peux choisir parmi différentes options. Allez, on se met à coder !'
     mc_repeat:
       1:
         text: Je suis Lydia Winters, directrice de la marque Mojang, et nous avons
@@ -2856,7 +2858,7 @@ fr:
           un morceau de code.
       6:
         text: La zone blanche à droite s’appelle l'espace de travail, et c'est ici
-          que nous allons construire notre programme.
+          qu'on va construire notre programme.
       7:
         text: Pour commencer, tu devras lier tes blocs au bloc orange « Lors du lancement
           ». Tu peux lier plusieurs blocs en les glissant jusqu'à ce que tu voies
@@ -2928,8 +2930,8 @@ fr:
         text: '3) À droite, l''espace de travail : c''est là que nous allons créer
           notre programme.'
       6:
-        text: Si vous oubliez quoi faire, les instructions de chaque niveau sont en
-          haut.
+        text: Si tu oublies ce qu'il faut faire, les instructions pour chaque niveau
+          se trouvent en haut.
       7:
         text: Commençons par programmer un poulet. On glisse la commande « avancer »
           dans l'espace de travail. Quand je choisis « Exécuter », le poulet avance
@@ -3225,108 +3227,107 @@ fr:
           et continue à créer des applications avec le labo des applis !
     mc_2017_agent_intro:
       1:
-        text: 'Stacy : Stampy, Lizzy, Preston - merci d’être avec moi. Ce que je veux
-          vous montrer est juste au dessus de ce plateau. Je pense que vous allez
-          adorer !'
+        text: 'Stacy : Stampy, Lizzy, Preston – merci d’être venu avec moi. Le truc
+          que je veux vous montrer est juste au-delà de ce plateau. Je crois que vous
+          allez adorer !'
       2:
-        text: Attendez une minute - il y a un trou sur la voie! (Aaaahhhhh)
+        text: Ouh là, attendez – il y a un trou dans les rails ! (cris)
       3:
-        text: 'Tout le monde va bien? Stampy: Ah, je vois le problème. Regarde! Il
-          y avait un trou dans la voie. Stacy: Vraiment Stampy? Lizzy: Peut-être qu''on
-          doit assembler des blocs pour la réparer. Preston: Faisons-en une course.
-          Le premier arrivé en haut gagne. Stacy: D''accord, à vos marques, prêts,
-          partez! Ok, je vais juste prendre un peu de cette terre cuite. Attendez.
-          Les amis, je ne peux pas creuser! Preston: Pareil. Lizzy: Je ne peux pas
-          non plus. Stacy: Ok, c''est vraiment bizarre. Stampy, est-ce que tu peux
-          creuser? Stampy: Je n''y arrive pas! Stacy: Ok, tout le monde reste calme.
-          Stampy: Est-ce que le jeu est cassé? Stacy: Si c''est le cas, comment allons-nous
-          le réparer? Lizzy: Aucune idée. Stampy: Est-ce que quelqu''un sait écrire
-          du code pour Minecraft?'
+        text: 'Tout le monde va bien ? Stampy : Ah, je vois le problème. Regardez !
+          Il y avait un trou dans les rails. Stacy : Non, sérieux, Stampy ? Lizzy :
+          Peut-être qu''on devrait rassembler des blocs pour les réparer. Preston :
+          On en fait une course ? Le premier arrivé en haut gagne. Stacy : D''accord,
+          à vos marques, prêts, PARTEZ ! Bon, je vais juste ramasser un peu de cette
+          terre cuite. Attendez. Les amis, je n''arrive pas à l''extraire ! Preston :
+          Pareil. Lizzy : Je ne peux pas non plus. Stacy : Ok, c''est vraiment bizarre.
+          Stampy, est-ce que tu arrives à creuser, toi ? Stampy : Non, j''y arrive
+          pas! Stacy : Ok, pas de panique. Stampy : Est-ce que le jeu est cassé ?
+          Stacy : S''il l''est comment est-ce qu''on le répare ? Lizzy : Aucune idée.
+          Stampy : Est-ce que quelqu''un sait écrire du code pour Minecraft ?'
       4:
         image: notes/mc_2017_agent_intro_4.png
-        text: "(pouf) Preston: Qu'est-ce que c'est que ça? Stampy: Je n'en ai jamais
-          vu avant. Lizzy: C'est trop mignon! Stacy: Est-ce que... est-ce qu'on peut
-          l'apprivoiser? Preston: Ok, qu'est-ce qui se passe? Quelqu'un doit retourner
-          dans le monde réel et réparer. Tous: Pas ça! Stacy: Pas moi (pfffff) Ok,
-          j'y vais."
+        text: "(pouf) Preston : C'est quoi, ça ? Stampy : Je n'en ai jamais vu un.
+          Lizzy : C'est trop mignon! Stacy : Est-ce que... est-ce qu'on peut l'apprivoiser ?
+          Preston : Bon, qu'est-ce qui se passe, là ? Quelqu'un doit retourner au
+          monde réel et réparer tout ça. Tous : Pas moi ! Stacy : Pas mo– (soupire).
+          Bon ok, j'y vais."
       5:
         image: notes/mc_2017_agent_intro_5.png
-        text: Oh, d'accord, donc je suis maintenant dans le monde réel. Je vais voir
+        text: Ah, d'accord, salut, donc je suis dans le monde réel, là. Je vais voir
           si je peux trouver les bureaux de Minecraft.
       6:
         image: notes/mc_2017_agent_intro_6.png
-        text: Mais je vais avoir besoin de votre aide. Commencez par suivre le tutoriel,
-          commencer à apprendre à coder, et je vous retrouve après quelques niveaux,
-          d'accord? Souhaitez-moi bonne chance! Je pense que c'est par là. Aie! Un
-          cactus! Je vais bien!
+        text: Mais je vais avoir besoin de ton aide. Commence par faire le tutoriel,
+          commence à apprendre à coder, et on se retrouve dans quelques niveaux, d'accord ?
+          Souhaite-moi bonne chance ! Je pense que c'est par là. Aïe ! Un cactus !
+          Tout va bien !
       7:
         image: notes/mc_2017_agent_intro_7.png
-        text: Pour terminer le défi de l'Heure de Code, vous allez devoir coder pour
-          programmer l'agent. Vous allez travailler avec l'Agent pour supprimer les
-          obstacles sur votre chemin, de manière à récolter les objets nécessaires
-          à votre voyage. Seul l'Agent peut placer et casser des blocs, et vous seul
-          pouvez récolter des objets. L'écran est divisé en trois parties principales.
-          À gauche, vous trouvez Minecraft.
+        text: Pour terminer le défi de l'Heure de Code, tu vas devoir écrire du code
+          qui programmera l'Agent. Tu vas travailler avec l'Agent pour enlever les
+          obstacles de ton chemin, pour que tu puisses récolter les objets nécessaires
+          pour ton voyage. Seul l'Agent peut placer et casser des blocs, et toi tu
+          es le seul à pouvoir récolter des objets. L'écran va se diviser en trois
+          parties principales. Sur la gauche se trouve Minecraft.
       8:
         image: notes/mc_2017_agent_intro_8.png
-        text: La zone centrale est la boîte à outils avec les commandes que l'Agent
-          peut comprendre.
+        text: La zone centrale, c'est la boîte à outils, qui contient des commandes
+          que l'Agent peut comprendre.
       9:
         image: notes/mc_2017_agent_intro_9.png
-        text: Et sur la droite se trouve l'espace de travail. C'est à cet endroit
-          que vous allez empiler les commandes pour construire le programme contrôlant
-          l'Agent.
+        text: Et sur la droite se trouve l'espace de travail. C'est là que tu vas
+          empiler des commandes pour construire le programme qui contrôlera l'Agent.
       10:
         image: notes/mc_2017_agent_intro_10.png
-        text: L'Agent peut avancer, tourner et activer des plaques par pression. Il
+        text: L'Agent peut avancer, tourner et activer des plaques de pression. Il
           peut aussi détruire des blocs et placer des blocs. Quand il place un bloc
-          comme des rails de wagonnet, il les place en dessous de lui.
+          comme ces rails de wagonnet, il les place en dessous de lui.
       11:
         image: notes/mc_2017_agent_intro_11.png
-        text: Si vous oubliez quoi faire, les instructions de chaque niveau sont en
-          haut.
+        text: Si tu oublies ce qu'il faut faire, les instructions pour chaque niveau
+          se trouvent en haut.
       12:
         image: notes/mc_2017_agent_intro_12.png
-        text: Si vous voulez recommencer, vous pouvez appuyer sur le bouton bleu réinitialiser
-          pour tout remettre comme au début. Et si vous voulez supprimer un bloc de
-          code, glissez-le de l'espace de travail vers la boîte à outils. N'oubliez
-          pas d'appuyer sur démarrer pour que l'Agent se déplace. Alors allez-y et
-          essayez ces quelques premiers niveaux. Bonne chance!
+        text: Si tu veux recommencer, tu peux appuyer sur le bouton bleu réinitialiser
+          pour remettre tout en place comme au début. Et si tu veux supprimer un bloc
+          de code, glisse-le de l'espace de travail vers la boîte à outils. N'oublie
+          pas d'appuyer sur démarrer pour que l'Agent se mette en route. Allez, vas-y,
+          essaie ces quelques premiers niveaux. Bonne chance !
     mc_2017_repeat:
       1:
         image: notes/mc_2017_repeat_1.png
-        text: 'Stampy: Je me demande ce que fait Stacy?'
+        text: 'Stampy : Je me demande ce que fait Stacy ?'
       2:
         image: notes/mc_2017_repeat_2.png
-        text: 'Stacy: Ouaah, je pense que je suis au bon endroit. C''est impressionnant!'
+        text: 'Stacy: Ouaah, je pense que je suis au bon endroit. C''est incroyable !'
       3:
         image: notes/mc_2017_repeat_3.png
-        text: C'est comme si j'étais de nouveau dans Minecraft! Bonjour. Comment vas-tu?
-          Bonjour?
+        text: J'ai l'impression d'être de retour dans Minecraft ! Bonjour, comment
+          ça va ? Allô ?
       4:
         image: notes/mc_2017_repeat_4.png
-        text: 'Oh, il y a une plante grimpante. Tu ne fais rien, n''est-ce pas? Katie:
-          Stacy? Stacy: Bonjour, Katie? Katie: Oui, bienvenue chez Minecraft!'
+        text: 'Oh, il y a un creeper. Tu ne fais rien, si ? Katie : Stacy ? Stacy :
+          Bonjour, Katie ? Katie : Oui, bienvenue chez Minecraft !'
       5:
         image: notes/mc_2017_repeat_5.png
-        text: 'Stacy: C''est incroyable. Donc tu travailles ici tous les jours comme
-          développeur. Katie: Oui, c''est assez impressionnant. Je suis développeur
-          dans l''équipe qui s''occupe de la place du marché de Minecraft. Stacy:
-          Combien connais-tu de langages de programmation? Katie: Dans ma carrière,
-          j''ai probablement travaillé avec plus d''une douzaine. Stacy: Une douzaine?
-          Katie: Oui. Stacy: Donc maintenant, est-ce que tu connaîtrais des choses
-          sur ce petit golem qui se fait appelé l''Agent? Katie: Nous utilisons l''Agent
-          pour faire des choses que Steve et Alex ne peuvent pas faire, comme survoler
-          la lave. Stacy: Super, je veux apprendre à coder, et ils veulent aussi apprendre
-          à coder, alors quelle est l''une des premières choses à connaître quand
-          on apprend?'
+        text: 'Stacy : C''est incroyable. Donc tu travailles ici tous les jours en
+          tant que développeuse. Katie : Oui, c''est assez génial. Je suis développeuse
+          dans l''équipe qui s''occupe de la place du marché de Minecraft. Stacy :
+          Combien connais-tu de langages de programmation ? Katie : Au cours de ma
+          carrière, j''ai probablement travaillé avec plus d''une douzaine. Stacy :
+          Une douzaine ? Katie : Oui. Stacy : Alors, maintenant, est-ce que tu sais
+          quelque chose au sujet de ce petit golem qui se fait appelé l''Agent ? Katie :
+          Nous utilisons l''Agent pour faire des choses que Steve et Alex ne peuvent
+          pas faire, comme traverser de la lave. Stacy : Eh bien, moi je veux apprendre
+          à coder, et eux ils veulent aussi apprendre à coder, alors qu''est-ce qu''une
+          des premières choses à savoir quand on apprend ?'
       6:
         image: notes/mc_2017_repeat_6.png
-        text: 'Katie: Et bien, vous devez apprendre comment utiliser les boucles.
-          Une boucle est ce que les développeurs écrivent pour donner des ordres à
-          un ordinateur qui peuvent être exécuter encore et encore. Stacy: Compris,
-          donc je pense que les niveaux suivant vont aborder le sujet, alors continuez
-          et essayez les boucles.'
+        text: 'Katie : Eh bien, il faut apprendre à utiliser les boucles. Une boucle
+          est ce que les développeurs écrivent pour donner des ordres à un ordinateur
+          qui peuvent être exécuter encore et encore. Stacy : Compris, alors je pense
+          que les niveaux suivant vont aborder ce sujet, alors on y va, on va essayer
+          les boucles.'
       7:
         image: notes/mc_2017_repeat_7.png
         text: Dans le prochain niveau, vous pouvez utiliser une boucle pour déplacer
@@ -3878,8 +3879,8 @@ fr:
       1:
         text: 'Heure de Code | Soirée Dansante : Échauffement'
       2:
-        text: Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels
-          et créateur d'iLuminate.
+        text: Salut ! Je m'appelle Miral Kotb et je suis danseuse, développeuse informatique
+          et la créatrice d'iLuminate.
       3:
         text: L'informatique est liée à la créativité, de plein de manières différentes,
           de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel,
@@ -3888,41 +3889,40 @@ fr:
           fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment
           infinies.
       4:
-        text: Au cours de la prochaine heure, vous allez commencer avec l'informatique
-          en programmant votre propre soirée dansante ! Nous avons sélectionné de
-          la musique branchée et une équipe de grands danseurs avec lesquels vous
-          pourrez jouer.
+        text: Au cours de l'heure qui vient, tu vas te mettre à l'informatique en
+          programmant ta propre soirée dansante ! On a sélectionné de la musique branchée
+          et une super équipe de danseurs avec lesquels tu vas pouvoir t'amuser.
       5:
-        text: Vous utiliserez des blocs de code pour choisir différents danseurs,
-          modifier leurs mouvements de danse, les faire répondre à la musique et les
-          rendre interactifs.
+        text: Tu vas te servir de blocs de code pour choisir différents danseurs,
+          modifier leurs pas de danse, les faire réagir à la musique et les rendre
+          interactifs.
       6:
-        text: Vous verrez que votre écran est divisé en 3 parties principales. Sur
-          la gauche se trouve l'espace de jeu où vos danseurs se présenteront.
+        text: 'Tu verras que ton écran se divise en 3 parties principales. Sur la
+          gauche se trouve l''espace de jeu. C''est là que tes danseurs apparaîtront. '
       7:
         text: La zone centrale est une boîte à outils. De nouveaux blocs de code seront
           disponibles dans cet espace au fur et à mesure des cours.
       8:
-        text: À droite, vous avez l’espace de travail. Vous pouvez faire glisser des
-          blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire
-          votre programme.
+        text: À droite, tu as l’espace de travail. Tu peux faire glisser des blocs
+          depuis la boîte à outils jusque dans l'espace de travail pour construire
+          ton programme.
       9:
         text: Les instructions pour chaque niveau seront affichées en haut de l'écran.
-          Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule.
+          Si tu as besoin d'un indice, il te suffit de cliquer sur l'ampoule.
       10:
         text: Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le
           d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc
           de configuration orange. Ce danseur là est un chat et il s'appelle "my_first_dancer".
           Vous pouvez changer le nom en cliquant ici.
       11:
-        text: Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de
-          jeu, avec ça.
+        text: Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace
+          de jeu, avec ça.
       12:
         text: Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner
-          de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous
-          à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton
-          Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme
-          apparaissent dans l'espace de lecture et la musique démarre.
+          de la musique. Il y a un très gros choix de chansons, alors amuse-toi à
+          trouver tes préférées. En dessous de l'espace de jeu, il y a le bouton « Démarrer
+          ». Lorsque tu appuies dessus, les danseurs de ton programme vont apparaître
+          dans l'espace de jeu et la musique va démarrer.
       13:
         text: Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave,
           vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez
@@ -3932,10 +3932,10 @@ fr:
       1:
         text: 'Heure de Code | Soirée Dansante : Événements'
       2:
-        text: Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète.
-          Je pense qu’il est crucial d’avoir des connaissances en informatique, car
-          c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie,
-          car elle contrôle littéralement nos vies.
+        text: Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète
+          et artiste. Je pense que c'est très important d’avoir des connaissances
+          en informatique, parce que c'est l'avenir. Je crois qu'il faut être à même
+          de contrôler la technologie qui contrôle littéralement nos vies.
       3:
         text: Pour générer différents mouvements de danse au bon moment avec la musique,
           vous pouvez utiliser les Évènements. Un événement demande à votre programme
@@ -3952,43 +3952,42 @@ fr:
         text: En musique, une mesure fait référence à un certain nombre de temps.
           En général, dans les chansons, une mesure dure 4 temps.
       7:
-        text: Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement
-          vert. Ce bloc Évènement dit « après 4 mesures ».
+        text: 'Pour faire se déchaîner tes danseurs, tu vas avoir besoin d''un bloc
+          événement vert. Ce bloc évènement indique : « après 4 mesures ».'
       8:
-        text: Si vous faites glisser un bloc violet « Faire pour toujours », vous
-          pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc
-          d'événements « après 4 mesures », votre danseur attendra 4 mesures de la
-          chanson, avant de commencer sa danse.
+        text: Si tu sors un bloc violet « faire pour toujours », tu peux choisir une
+          danse pour ton danseur. Parce que tu vas le mettre en dessous du bloc événement
+          « après 4 mesures », ton danseur va attendre que 4 mesures de la chanson
+          passent avant de se mettre à danser.
       9:
-        text: Surveillez bien le compteur de mesures situé en haut de la zone d'affichage.
+        text: Garde un œil sur le compteur de mesures situé en haut de la zone d'affichage.
       10:
-        text: Recherchez et écoutez l'événement qui déclenchera le code de danse.
-          Et juste au bon moment, le danseur commencera.
+        text: Observe et guette l'événement qui va déclencher le code de danse. Hop,
+          pile au bon moment, notre danseur s'y met.
     hoc_dance_properties:
       1:
         text: 'Heure de Code | Soirée Dansante : Propriétés'
       2:
         text: Je m'appelle Maria, je suis étudiante à l'Université de Washington et
-          une Amazon Future Ingénieure.
+          une Future Ingénieure Amazon.
       3:
-        text: J'adore l'informatique car ça allie résolution de problèmes et pensée
-          critique, et après des heures de travail, on a quelque chose de vraiment
-          cool et gratifiant.
+        text: J'adore l'informatique parce que ça demande de la débrouillardise et
+          un esprit critique, et que quand on investit des heures de travail, on peut
+          obtenir quelque chose de vraiment cool et d'enrichissant.
       4:
         text: Jusque-là, vous avez pu jouer avec différents types de danseurs, que
           vous avez programmés pour différents types de mouvements de danse. Mais
           comment fonctionnent ces mouvements ?
       5:
-        text: Chaque mouvement de danse est constitué d’une série d’images appelées
-          Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand
-          votre programme s'exécute, votre ordinateur affiche un cadre après l'autre.
-          Ils s'affichent tellement vite que cela donne l'impression que la danseuse
-          bouge. C’est là le secret derrière chaque animation.
+        text: 'Chaque pas de danse est composé d’une série d’images qu''on appel les
+          photogrammes. Chaque photogramme est légèrement différent de celui qui le
+          précède. Quand ton programme s''exécute, ton ordinateur affiche un photogramme
+          après l''autre. Ils s''affichent tellement rapidement qu''on a l''impression
+          que le danseur bouge. C''est ça le secret de tout dessin animé. '
       6:
-        text: Non seulement vous pouvez changer les mouvements d'un danseur, mais
-          aussi ses propriétés qui décrivent des choses comme la position du danseur
-          à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur,
-          vous utiliserez le bloc Définir.
+        text: 'Tu peux non seulement changer les pas de ton danseur, mais aussi ses
+          propriétés. Les propriétés décrivent des choses comme l''emplacement du
+          danseur sur l''écran, sa taille et sa couleur. '
       7:
         text: Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir.
           Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser
@@ -4012,133 +4011,136 @@ fr:
       1:
         text: 'Heure de Code | Soirée Dansante : C’est la fête !'
       2:
-        text: Félicitations ! Vous venez d'apprendre les bases de l'informatique.
-          Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante
-          avec votre propre design à partager avec vos amis.
+        text: Félicitations ! Tu viens d'apprendre les bases de l'informatique. Maintenant,
+          tu peux utiliser ces blocs pour créer une soirée dansante que tu auras conçue
+          toi-même et que tu pourras montrer à tes amis.
       3:
-        text: Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux
-          blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser
-          le bloc Disposition pour organiser les danseurs de différentes façons à
-          l'écran.
+        text: Si tu regardes dans la boîte à outils, tu trouveras de tout nouveaux
+          blocs que tu n'as pas encore vus. Tu peux, par exemple, utiliser le bloc
+          disposition pour arranger les danseurs de différentes manières à l'écran.
       4:
-        text: Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités.
-          Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré
-          ?
+        text: Jette un coup d'œil à tout ça et fais des essais avec ces nouveaux blocs
+          et fonctionnalités. Peux-tu créer une danse dont la chorégraphie précise
+          colle bien avec ton morceau préféré ?
       5:
-        text: Ou bien une chorégraphie avec vos amis ?
+        text: Ou bien faire un battle de danse avec tes amis ?
       6:
-        text: Ou encore autre chose qui regrouperait tout ?
+        text: 'Ou quelque chose de tout autre encore ? '
       7:
-        text: À la fin du didacticiel, vous pouvez partager un lien vers votre création
-          avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien
-          !
+        text: À la fin du tutoriel, tu recevras un lien avec lequel tu pourras partager
+          ta création avec tes amis. Laisse libre cours à ton imagination et amuse-toi
+          bien !
     mc_2018_intro:
       1:
-        text: Salut! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je suis
-          sur le point de me lancer dans une quête pour trouver un trésor sous-marin
-          caché et je suis très heureux d'avoir ton aide. Qui sait ce que nous allons
-          rencontrer le long de ces mystérieux cours d'eau ? Nous sommes censés rencontrer
-          notre premier guide quelque part sur ce quai.
+        text: Salut ! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je
+          suis sur le point de me lancer dans une quête pour trouver un trésor sous-marin
+          caché et je suis très heureux d'avoir ton aide. Qui sait ce qu'on va rencontrer
+          le long de ces mystérieux cours d'eau ? On est censé retrouver notre premier
+          guide sur ce quai quelque part.
       2:
-        text: Bienvenue, aventuriers ! Pour terminer le Voyage Aquatique, vous devrez
-          résoudre une série d'énigmes en utilisant le code. Voici comment cela fonctionne.
-          Votre écran est divisé en trois parties principales.
+        text: Bienvenue, aventuriers ! Pour terminer le Voyage Aquatique, il va falloir
+          résoudre une série de casse-têtes avec du code. Voilà comment ça marche.
+          L'écran est divisé en trois zones principales.
       3:
-        text: Sur la gauche, vous verrez le monde de Minecraft.
+        text: Sur la gauche se trouvera le monde de Minecraft.
       4:
-        text: La zone du milieu est ta boîte à outils où tu peux trouver des commandes
+        text: La zone du milieu, c'est la boîte à outils, où l'on trouvera des commandes
           de codage.
       5:
-        text: Et la grande surface à droite est ton espace de travail. C'est là que
-          tu peux empiler des commandes pour construire ton programme et contrôler
-          tes mouvements.
+        text: Et la grande zone à droite, c'est l'espace de travail. C'est là qu'on
+          peut empiler les commandes pour construire un programme et contrôler ses
+          mouvements.
       6:
-        text: Les instructions de chaque niveau sont en haut de la page. Clique sur
-          le signe plus pour changer entre les instructions longues et courtes.
+        text: Les instructions pour chaque niveau se trouvent en haut de la page.
+          Clique sur le signe plus pour voir plutôt les instructions en version longue
+          ou courte.
       7:
-        text: Essaye de glisser des blocs de la boîte à outils dans l'espace de travail,
-          de les empiler, puis clique sur le bouton exécuter pour exécuter tes commandes.
+        text: Essaye de glisser des blocs de la boîte à outils vers l'espace de travail,
+          de les empiler, puis clique sur le bouton « démarrer » pour exécuter tes
+          commandes.
       8:
-        text: Tu devras peut-être essayer plusieurs fois pour bien faire les choses,
-          et certaines des énigmes ont plus d'une solution. Alors expérimente pour
-          voir ce qui fonctionne.
+        text: Tu auras peut-être besoin d'essayer plusieurs fois pour y arriver, et
+          certains casse-têtes ont plus d'une solution. Alors fais des tests pour
+          voir ce qui marche.
       9:
-        text: Si tu souhaites réessayer, clique sur le bouton réinitialiser pour revenir
-          à l'endroit où tu as commencé.
+        text: Si tu veux réessayer, clique sur le bouton réinitialiser pour revenir
+          là où tu as commencé.
       10:
-        text: Si tu dois supprimer une commande, glisse simplement le bloc de ton
-          espace de travail dans la boîte à outils. Rappelle-toi de cliquer sur «
-          Exécuter » pour voir à quoi ressemble ton code en action.
+        text: Si tu as besoin de supprimer une commande, glisse simplement le bloc
+          de ton espace de travail à la boîte à outils. N'oublie pas de cliquer sur
+          « Démarrer » pour voir ce à quoi ressemble ton code en action.
       11:
-        text: OK, fini les bêtises, camarade aventurier. Commençons à coder pour trouver
-          un trésor sous-marin.
+        text: Allez, trêve de plaisanteries, camarade aventurier. On va se mettre
+          à coder pour trouver du trésor sous-marin.
     MC_2018_loops:
       1:
-        text: Très bien! Nous avons attrapé une morue ! Savais-tu que si tu donnes
-          une morue à manger à un dauphin, le dauphin te guidera vers une épave où
-          il peut y avoir un trésor ? Nous devons nous approcher. La prochaine série
-          d'énigmes seront certainement plus délicates, donc nous ferions mieux de
-          gagner d'avantage de compétences en codage. Qu'est-ce ? Une grotte ?
+        text: Super ! On a attrapé une morue ! Savais-tu que si tu donnes une morue
+          à manger à un dauphin, le dauphin te guidera vers une épave de navire où
+          il pourrait y avoir un trésor ? On doit être en train de se rapprocher !
+          La prochaine série de casse-têtes sera sûrement plus corsée, donc on a intérêt
+          à développer nos compétences en codage. Attends, qu'est-ce que c'est ? Une
+          grotte ?
       2:
-        text: Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous
-          utilisiez le même ensemble de commandes à plusieurs reprises dans certains
-          des derniers casse-tête. Ça a dû être un peu fatiguant. N’avez-vous jamais
-          souhaité pouvoir faire encore et encore quelque chose comme, vous savez,
-          laver la vaisselle ou vous brosser les dents sans vous fatiguer ou vous
-          ennuyer ? Ce serait bien.
+        text: Bienvenue, aventurier ! Je m'appelle Calamar. J'ai remarqué que tu utilisais
+          le même ensemble de commandes à plusieurs reprises dans certains des derniers
+          casse-têtes. Ça a dû être un peu fatiguant. N’as-tu jamais voulu pouvoir
+          faire quelque chose qu'il faut faire encore et encore, du genre laver la
+          vaisselle ou se brosser les dents, sans t'en fatiguer ou t'ennuyer ? Ça
+          serait sympa.
       3:
-        text: Les ordinateurs sont vraiment bons à faire la même chose encore et encore
-          en utilisant des boucles de codage. Lorsque tu veux que ton programme fasse
-          les mêmes instructions plusieurs fois, tu peux utiliser une boucle !
+        text: Les ordinateurs sont vraiment doués pour faire la même chose encore
+          et encore en utilisant des boucles de codage. Quand tu veux que ton programme
+          exécute les mêmes instructions plusieurs fois, tu peux utiliser une boucle
+          !
       4:
-        text: Le bloc de boucle contient des instructions qui sont répétées jusqu'à
+        text: Le bloc « boucle » contient des instructions qui se répètent jusqu'à
           ce que l'objectif soit atteint. Une fois que ton programme démarre une boucle
-          « Répéter jusqu'à l'objectif », il continuera à répéter les instructions
-          à l'intérieur jusqu'à ce qu'il atteigne l'objectif.
+          « Répéter jusqu'à l'objectif », il continuera à répéter les instructions
+          qui sont dedans jusqu'à ce qu'il atteigne cet objectif.
       5:
-        text: Essaye ceci pour toi-même ! Place les commandes que tu souhaites répéter
-          à l'intérieur du bloc « Répéter jusqu'à l'objectif », clique sur "Exécuter"
-          et regarde-le partir !
+        text: Essaie ça toi-même ! Mets les commandes que tu veux répéter à l'intérieur
+          du bloc « Répéter jusqu'à l'objectif », clique sur « Démarrer » et regarde
+          les choses se faire !
       6:
-        text: Eh bien, c'était un peu bizarre. Qui aurait cru que les calmars pouvaient
-          coder ? Je ne pensais même pas qu'ils avaient des doigts. Alors, maintenant,
-          nous connaissons les boucles. Utilisons-les pour nous emparer d'un autre
-          trésor.
+        text: Bon, c'était un peu bizarre, ça. Qui aurait cru que les calamars pouvaient
+          coder ? Je ne pensais même pas qu'ils avaient des doigts. Bref, maintenant,
+          on en sait plus sur les boucles. Viens, on va s'en servir pour s'emparer
+          de plus de trésor.
     mc_2018_conditionals:
       1:
-        text: Ça alors ! Trois nouvelles énigmes résolues ! Et nous avons attrapé...
-          un saumon. Pas aussi excitant que des tas d'or, mais nous prendrons ce que
-          nous pouvons obtenir. Et j'ai le sentiment que la coquille de nautile sera
-          utile plus tard. Je me demande ce qui se cache dans ces ruines. Peut-être
-          un autre indice ! Jetons un coup d'oeil à l'intérieur.
+        text: Ça alors ! Trois nouveaux casse-têtes de résolus ! Et puis on a attrapé...
+          un saumon. Certes, ce n'est pas aussi palpitant que des montagnes d'or,
+          mais on va faire avec. Et j'ai comme l'impression que ce coquillage de nautile
+          va nous être utile plus tard. Je me demande ce qui se cache dans ces ruines.
+          Peut-être un autre indice ! Allez, on jette un coup d'oeil à l'intérieur.
       2:
-        text: Je m'appelle Netty et bienvenue dans mes ruines. Nous prenons des décisions
-          tout le temps, en fonction des conditions. Si ça ressemble à de la pluie,
-          alors nous prendrons un parapluie. Si nous avons faim, alors nous mangerons
-          une collation.
+        text: Je m'appelle Netty, bienvenue dans mes ruines. On prend tout le temps
+          des décisions, en fonction des conditions. Si on dirait qu'il va pleuvoir,
+          on prendra un parapluie. Si on a faim, on mangera un casse-croûte.
       3:
-        text: Si nous voyons une plante grimpante, alors nous courons dans la direction
-          opposée. Les ordinateurs prennent ces types de décisions aussi. Ils peuvent
-          réellement répondre aux conditions en utilisant du code.
+        text: Si on voit un type louche, on courra dans l'autre sens. Les ordinateurs
+          prennent ces types de décisions aussi. Ils peuvent vraiment répondre aux
+          conditions en utilisant du code.
       4:
-        text: Pour programmer une réponse comme celle-ci, à l'aide de te commandes
-          de code, sélectionnez un bloc de chemin si.
+        text: Pour programmer une réaction de ce type à l'aide de tes commandes de
+          code, sélectionne un bloc « si chemin ».
       5:
-        text: Sélectionne la liste déroulante pour créer la commande.
+        text: Clique sur le menu déroulant pour créer la commande.
       6:
-        text: Par exemple, si tu écris la commande "si chemin vers la droite" et places
-          tourner à droite à l'intérieur de la condition, alors, quand Steve atteint
-          un chemin ouvert vers la droite, il tournera toujours à droite. S'il n'y
-          a pas d'ouverture vers la droite, il ne tournera pas à droite. Ces commandes
-          conditionnelles si sont utiles lorsque tu exécutes du code dans des situations
-          imprévisibles, telles que des ruines mystérieuses dans des grottes sous-marines.
+        text: Par exemple, si tu sélectionnes la commande « si chemin vers la droite »
+          et places « tourner à droite » à l'intérieur de l'instruction conditionnelle,
+          alors, quand Steve rencontre un chemin ouvert sur la droite, il tournera
+          toujours à droite. S'il n'y a pas d'ouverture vers la droite, il ne tournera
+          pas à droite. Ces commandes conditionnelles « si » sont utiles quand tu
+          exécutes du code dans des situations imprévisibles, comme dans des ruines
+          mystérieuses dans des grottes sous-marines.
       7:
-        text: Essaye d'utiliser les blocs « Si » et prends ton code pour un tour.
+        text: Essaye d'utiliser les blocs « si » et va faire un tour avec ton code.
       8:
-        text: Ça alors ! Les ruines de Netty étaient géniales. Je dois vraiment quitter
-          la maison de mes parents. Alors, qu'en penses-tu ? Est-ce que les conditions
-          sont bonnes pour que nous réalisions les énigmes finales ? Nous allons lui
-          donner un aller.
+        text: Waouh ! Les ruines de Netty étaient géniales. Il faut vraiment que j'arrête
+          d'habiter chez mes parents. Bon, qu'en penses-tu ? Est-ce que les conditions
+          sont bonnes pour qu'on termine les derniers casse-têtes ? Allez viens, on
+          tente.
     mc_2018_closing:
       1:
         text: 'Amy Lee33 : Félicitations ! Tu l''as fait !'
@@ -4149,25 +4151,25 @@ fr:
       4:
         text: 'Tomohawk : Félicitations !'
       5:
-        text: Quelle formidable journée ! Toute la chasse au trésor nous a amenés
-          à construire un conduit Minecraft, à trouver des coquilles de Nautile et
-          à découvrir des coffres au trésor. J'adore la couleur de prismarine. Nous
-          avons également appris à coder avec des boucles et des conditions.
+        text: Quelle super journée ! Toute cette chasse au trésor nous a amené à construire
+          un conduit Minecraft, à trouver des coquillages de nautile et à découvrir
+          des coffres de trésor. J'adore la couleur de la prismarine. On a aussi appris
+          à coder avec des boucles et des instructions conditionnelles.
       6:
-        text: En parlant de codage, il y a un niveau de plus à cette quête. Êtes-vous
-          prêts, aventuriers ?
+        text: En parlant de codage, il y a encore un niveau dans cette quête. Alors,
+          tu te sens prêt, aventurier ?
       7:
-        text: C'est un niveau de jeu gratuit et tu peux mettre tes compétences de
-          codage à profit et construire quelque chose d'incroyable.
+        text: C'est un niveau en jeu libre et tu peux mettre en pratique tes compétences
+          de codage et construire quelque chose de formidable.
       8:
-        text: Hmmm... un endroit pour cacher votre trésor, un monument sous-marin,
-          un château de corail? Ahhh... tant d'idées. Essaye d'utiliser des boucles
-          pour créer une action répétée, et des conditions pour te préparer à tous
-          ces scénarios imprévisibles.
+        text: Hmmm... une planque pour ton trésor, un monument sous-marin, un château
+          de corail ? Ahhh... tellement d'idées ! Essaye d'utiliser des boucles pour
+          créer une action qui se répète, et des instructions conditionnelles pour
+          te préparer à tous ces scénarios imprévisibles.
       9:
-        text: Tu as certainement déjà fait tes preuves, en tant que codeur intrépide,
-          et je suis impatient de voir ce que tu construis. Et j'espère que tes aventures
-          avec le code ne s'arrêtent pas là. Bon Voyage !
+        text: En tout cas, tu as déjà bien démontré que tu étais un codeur intrépide,
+          et j'ai hâte de voir ce que tu vas construire. Et j'espère que ton aventure
+          avec le code ne s'arrêtera pas là. Bon voyage !
     teaching_csf_how_it_works:
       1:
         image: notes/teaching_cs_fundamentals_1.png
@@ -4275,210 +4277,210 @@ fr:
       1:
         text: 'Heure de Code | Soirée Dansante : Échauffement'
       2:
-        text: Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels
-          et créateur d'iLuminate.
+        text: Salut ! Je m'appelle Miral Kotb et je suis danseuse, développeuse informatique
+          et la créatrice d'iLuminate.
       3:
-        text: L'informatique est liée à la créativité, de plein de manières différentes,
-          de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel,
-          vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je
-          fais avec des costumes au lumière. On peut faire tellement de choses, une
-          fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment
-          infinies.
+        text: L'informatique est liée à la créativité de tout un tas de façons. De
+          manière presque illimitée, en fait. Une fois qu'on est capable d'écrire
+          un logiciel, tu peux infuser tout ce que tu veux avec tes idées. Moi, je
+          le fais avec des costumes lumineux. On peut faire tellement de choses, une
+          fois qu’on a les outils pour rédiger des logiciels. Les possibilités sont
+          vraiment infinies.
       4:
-        text: Au cours de la prochaine heure, vous allez commencer avec l'informatique
-          en programmant votre propre soirée dansante ! Nous avons sélectionné de
-          la musique branchée et une équipe de grands danseurs avec lesquels vous
-          pourrez jouer.
+        text: Au cours de l'heure qui vient, tu vas te mettre à l'informatique en
+          programmant ta propre soirée dansante ! On a sélectionné de la musique branchée
+          et une super équipe de danseurs avec lesquels tu vas pouvoir t'amuser.
       5:
         image: notes/hoc_dance_warmup_2019_5.png
-        text: Vous utiliserez des blocs de code pour choisir différents danseurs,
-          modifier leurs mouvements de danse, les faire répondre à la musique et les
-          rendre interactifs.
+        text: Tu vas te servir de blocs de code pour choisir différents danseurs,
+          modifier leurs pas de danse, les faire réagir à la musique et les rendre
+          interactifs.
       6:
         image: notes/hoc_dance_warmup_2019_6.png
-        text: Vous verrez que votre écran est divisé en 3 parties principales. Sur
-          la gauche se trouve l'espace de jeu où vos danseurs se présenteront.
+        text: 'Tu verras que ton écran se divise en 3 parties principales. Sur la
+          gauche se trouve l''espace de jeu. C''est là que tes danseurs apparaîtront. '
       7:
         image: notes/hoc_dance_warmup_2019_7.png
-        text: La zone centrale est une boîte à outils. De nouveaux blocs de code seront
-          disponibles dans cet espace, au fur et à mesure des cours.
+        text: La zone centrale, c'est la boîte à outils. De nouveaux blocs de code
+          deviendront disponibles dans cet espace, au fur et à mesure qu'on avance
+          avec les leçons.
       8:
         image: notes/hoc_dance_warmup_2019_8.png
-        text: À droite, vous avez l’espace de travail. Vous pouvez faire glisser des
-          blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire
-          votre programme.
+        text: À droite, tu as l’espace de travail. Tu peux faire glisser des blocs
+          depuis la boîte à outils jusque dans l'espace de travail pour construire
+          ton programme.
       9:
         image: notes/hoc_dance_warmup_2019_9.png
         text: Les instructions pour chaque niveau seront affichées en haut de l'écran.
-          Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule.
+          Si tu as besoin d'un indice, il te suffit de cliquer sur l'ampoule.
       10:
         image: notes/hoc_dance_warmup_2019_10.png
-        text: Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le
-          d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc
-          de configuration orange. Ce danseur là est un chat.
+        text: Pour commencer, on va faire un nouveau danseur avec ce bloc rouge. Fais-le
+          d’abord glisser en dehors de la boîte à outils et accroche-le au bas du
+          bloc orange « configuration ». Ce danseur-ci est un chat.
       11:
         image: notes/hoc_dance_warmup_2019_11.png
-        text: Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de
-          jeu, avec ça.
+        text: Tu peux aussi changer l'endroit où le danceur apparaît dans l'espace
+          de jeu, avec ça.
       12:
         image: notes/hoc_dance_warmup_2019_12.png
         text: Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner
-          de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous
-          à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton
-          Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme
-          apparaissent dans l'espace de lecture et la musique démarre.
+          de la musique. Il y a un très gros choix de chansons, alors amuse-toi à
+          trouver tes préférées. En dessous de l'espace de jeu, il y a le bouton « Démarrer
+          ». Lorsque tu appuies dessus, les danseurs de ton programme vont apparaître
+          dans l'espace de jeu et la musique va démarrer.
       13:
-        text: Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave,
-          vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez
-          compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va?
+        text: Essaie toi-même ! Et si tu te sens coincé, ne t'inquiètes pas, il suffit
+          de se lever et de se lancer sur la piste ! Avant même de t'en rendre compte,
+          tu auras déjà créé ta propre soirée dansante. Alors, on y va ?
     hoc_dance_events_2019:
       1:
         text: 'Heure de Code | Soirée Dansante : Événements'
       2:
         image: notes/hoc_dance_events_2019_2.png
-        text: Je m’appelle Erin et je suis un ingénieur en logiciel chez code.org.
-          J’ai contribué à l’élaboration de Dance Party !
+        text: Je m’appelle Erin, je suis ingénieure logiciel ici chez Code.org et
+          j’ai participé à l'élaboration de Soirée Dansante !
       3:
         image: notes/hoc_dance_events_2019_3.png
-        text: Pour générer différents mouvements de danse au bon moment avec la musique,
-          vous pouvez utiliser les Évènements. Un événement demande à votre programme
-          d’écouter quelque chose, puis d’y réagir tout de suite.
+        text: Pour générer différents pas de danse au rythme de la musique, on va
+          utiliser ce qu'on appelle les événements. Un événement demande à ton programme
+          de « guetter » et puis de réagir tout de suite quand il se passe quelque
+          chose.
       4:
         image: notes/hoc_dance_events_2019_4.png
-        text: 'Quelques exemples d''évènements sont: l''écoute des clics de souris,
-          l’activation d’une touche fléchée du clavier ou un tapotement de l''écran.'
+        text: 'Quelques exemples d''évènements : guetter un clic de la souris, une
+          touche fléchée ou une tape sur l''écran.'
       5:
         image: notes/hoc_dance_events_2019_5.png
-        text: Là vous allez programmer un danseur pour faire un mouvement lorsque
-          vous appuyez sur les boutons fléchés de votre écran, ou sur les touches
-          de votre clavier.
+        text: Ici, on va programmer un danseur pour lui faire faire un mouvement quand
+          tu appuies sur les boutons fléchés sur l'écran ou sur les touches de ton
+          clavier.
       6:
         image: notes/hoc_dance_events_2019_6.png
-        text: Vous pouvez utiliser le bloc d’événements « quand flèche du haut » et
-          le connecter à un bloc « faire une fois ». Lorsque vous appuyez sur la flèche
-          du haut, le code associé au bloc de flèche « quand en haut » s’exécute.
-          Quelle danse allez-vous choisir ?
+        text: Tu peux utiliser le bloc événement « quand flèche du haut » et y connecter
+          un bloc « faire une fois ». Lorsqu'on appuie sur la flèche du haut, le code
+          rattaché au bloc « quand flèche du haut » s’exécutera. Quel pas de danse
+          vas-tu choisir ?
       7:
         image: notes/hoc_dance_events_2019_7.png
-        text: Veillez à ce que le type de danseur que vous choisissez corresponde
-          bien à l'un des danseurs que vous avez créés dans le bloc de configuration,
-          sinon il ne se passera rien.
+        text: Veille à ce que le type de danseur que tu choisis corresponde bien à
+          l'un des danseurs que tu as créés dans le bloc de configuration, ou il risque
+          de ne rien se passer.
       8:
         image: notes/hoc_dance_events_2019_8.png
-        text: Pour finir, vous pouvez créer plus d'événements comme celui-ci, pour
-          que vos danseurs effectuent des mouvements différents avec chaque touche.
-          Essayez-le et avec les quelques lignes de code, vous pourrez créer votre
-          propre danse interactive !
+        text: À terme, tu vas pouvoir créer plus d'événements comme celui-ci pour
+          faire faire différents pas de danse à tes danseurs avec chaque touche. Vas-y,
+          essaie, et avec quelques lignes de code, tu pourras créer ta propre danse
+          interactive !
     hoc_dance_measures_2019:
       1:
         image: notes/hoc_dance_measures_2019_1.png
         text: 'Heure de Code | Soirée Dansante : Temps'
       2:
         image: notes/hoc_dance_measures_2019_2.png
-        text: Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète.
-          Je pense qu’il est crucial d’avoir des connaissances en informatique, car
-          c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie,
-          car elle contrôle littéralement nos vies.
+        text: Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète
+          et artiste. Je pense que c'est très important d’avoir des connaissances
+          en informatique, parce que c'est l'avenir. Je crois qu'il faut être à même
+          de contrôler la technologie qui contrôle littéralement nos vies.
       3:
         image: notes/hoc_dance_measures_2019_3.png
-        text: L’événement que nous allons utiliser maintenant va écouter les variations
-          dans le morceau. Cette variation incitera votre danseur à faire une nouvelle
-          danse.
+        text: L’événement qu'on va maintenant utiliser va guetter un changement au
+          sein de la chanson. Ce changement va déclencher nouvelle danse chez ton
+          danseur.
       4:
         image: notes/hoc_dance_measures_2019_4.png
-        text: Les danseurs professionnels font leur chorégraphie en comptant les temps
-          de la chanson. En musique, une mesure fait référence à un certain nombre
-          de temps. En général, dans les chansons, une mesure dure 4temps.
+        text: Les danseurs professionnels répètent leur chorégraphie en comptant les
+          temps d'une chanson. En musique, une mesure contient un certain nombre de
+          temps. Dans la plupart des chansons qu'on apprécie, une mesure dure quatre
+          temps.
       5:
         image: notes/hoc_dance_measures_2019_5.png
-        text: Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement
-          vert. Ce bloc Évènement dit « après 4 mesures ».
+        text: 'Pour faire se déchaîner tes danseurs, tu vas avoir besoin d''un bloc
+          événement vert. Ce bloc évènement indique : « après 4 mesures ».'
       6:
         image: notes/hoc_dance_measures_2019_6.png
-        text: Si vous faites glisser un bloc violet « Faire pour toujours », vous
-          pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc
-          d'événements « après 4 mesures », votre danseur attendra 4 mesures de la
-          chanson, avant de commencer sa danse.
+        text: Si tu sors un bloc violet « faire pour toujours », tu peux choisir une
+          danse pour ton danseur. Parce que tu vas le mettre en dessous du bloc événement
+          « après 4 mesures », ton danseur va attendre que 4 mesures de la chanson
+          passent avant de se mettre à danser.
       7:
         image: notes/hoc_dance_measures_2019_7.png
-        text: Surveillez bien le compteur de mesures situé en haut de la zone d'affichage.
+        text: Garde un œil sur le compteur de mesures situé en haut de la zone d'affichage.
       8:
         image: notes/hoc_dance_measures_2019_8.png
-        text: Recherchez et écoutez l'événement qui déclenchera le code de danse.
-          Et juste au bon moment, le danseur commencera.
+        text: Observe et guette l'événement qui va déclencher le code de danse. Hop,
+          pile au bon moment, notre danseur s'y met.
     hoc_dance_properties_2019:
       1:
         text: 'Heure de Code | Soirée Dansante : Propriétés'
       2:
         text: Je m'appelle Maria, je suis étudiante à l'Université de Washington et
-          une Amazon Future Ingénieure.
+          une Future Ingénieure Amazon.
       3:
-        text: J'adore l'informatique car ça allie résolution de problèmes et pensée
-          critique, et après des heures de travail, on a quelque chose de vraiment
-          cool et gratifiant.
+        text: J'adore l'informatique parce que ça demande de la débrouillardise et
+          un esprit critique, et que quand on investit des heures de travail, on peut
+          obtenir quelque chose de vraiment cool et d'enrichissant.
       4:
-        text: Jusque-là, vous avez pu jouer avec différents types de danseurs, que
-          vous avez programmés pour différents types de mouvements de danse. Mais
-          comment fonctionnent ces mouvements ?
+        text: Jusque-là, tu as pu jouer avec différents types de danseurs, que tu
+          as programmés pour faire différents types de pas de danse. Mais comment
+          ça marche en fait, ces pas ?
       5:
-        text: Chaque mouvement de danse est constitué d’une série d’images appelées
-          Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand
-          votre programme s'exécute, votre ordinateur affiche un cadre après l'autre.
-          Ils s'affichent tellement vite que cela donne l'impression que la danseuse
-          bouge. C’est là le secret derrière chaque animation.
+        text: 'Chaque pas de danse est composé d’une série d’images qu''on appel les
+          photogrammes. Chaque photogramme est légèrement différent de celui qui le
+          précède. Quand ton programme s''exécute, ton ordinateur affiche un photogramme
+          après l''autre. Ils s''affichent tellement rapidement qu''on a l''impression
+          que le danseur bouge. C''est ça le secret de tout dessin animé. '
       6:
-        text: Non seulement vous pouvez changer les mouvements d'un danseur, mais
-          aussi ses propriétés qui décrivent des choses comme la position du danseur
-          à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur,
-          vous utiliserez le bloc Définir.
+        text: 'Tu peux non seulement changer les pas de ton danseur, mais aussi ses
+          propriétés. Les propriétés décrivent des choses comme l''emplacement du
+          danseur sur l''écran, sa taille et sa couleur. '
       7:
         image: notes/hoc_dance_properties_2019_7.png
-        text: Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir.
-          Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser
-          le bloc Définir dans votre programme.
+        text: Pour modifier les propriétés d'un danseur, tu vas utiliser un bloc « définir
+          ». On va utiliser un bloc définir pour rendre nos danseurs plus petits.
+          Fais d’abord glisser le bloc définir dans ton programme.
       8:
         image: notes/hoc_dance_properties_2019_8.png
-        text: Choisissez ensuite le danseur que vous voulez modifier et tapez la taille
-          que vous voulez qu'ils aient à l'écran. La taille normale est 100. Si vous
-          choisissez un nombre inférieur, cela réduira la taille des danseurs. Plus
-          le danseur est petit, plus il semble éloigné.
+        text: Ensuite, sélectionne le danseur que tu veux modifier et saisis la taille
+          que tu veux qu'il ait à l'écran. La taille normale est de 100. Si tu choisis
+          un nombre inférieur, ça va rétrécir le danseur. Plus le danseur est petit,
+          plus il va sembler éloigné.
       9:
         image: notes/hoc_dance_properties_2019_9.png
-        text: À l'aide du bloc Définir, vous pouvez également modifier les dimensions,
-          la rotation, la position et la couleur d'un danseur. En jouant avec ces
-          propriétés, vous pouvez faire plein de modifications, et les relier à différentes
-          parties de la chanson.
+        text: En te servant du bloc définir, tu peux aussi modifier les dimensions,
+          l'angle, la position et la couleur d'un danseur. En jouant avec ces propriétés,
+          tu peux faire plein de changements, et les relier à différents morceaux
+          de la chanson.
       10:
         image: notes/hoc_dance_properties_2019_10.png
-        text: N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur
-          déjà existant. Veillez à ce que votre bloc Définir soit après celuiCréer
-          un nouveau danseur. N'hésitez pas à faire des expériences, à être créatifet
-          à vous amuser !
+        text: N'oublie pas que tu ne peux définir que les propriétés d'un danseur
+          qui existe déjà. Veille à ce que ton bloc définir vienne bien à la suite
+          du bloc « Créer un nouveau danseur ». N'hésite pas à faire des essais, à
+          faire preuve d'inventivité, et à t'amuser !
     hoc_dance_congrats_2019:
       1:
         text: 'Heure de Code | Soirée Dansante : C’est la fête !'
       2:
-        text: Félicitations ! Vous venez d'apprendre les bases de l'informatique.
-          Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante
-          avec votre propre design à partager avec vos amis.
+        text: Félicitations ! Tu viens d'apprendre les bases de l'informatique. Maintenant,
+          tu peux utiliser ces blocs pour créer une soirée dansante que tu auras conçue
+          toi-même et que tu pourras montrer à tes amis.
       3:
-        text: Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux
-          blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser
-          le bloc Disposition pour organiser les danseurs de différentes façons à
-          l'écran.
+        text: Si tu regardes dans la boîte à outils, tu trouveras de tout nouveaux
+          blocs que tu n'as pas encore vus. Tu peux, par exemple, utiliser le bloc
+          disposition pour arranger les danseurs de différentes manières à l'écran.
       4:
-        text: Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités.
-          Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré
-          ?
+        text: Jette un coup d'œil à tout ça et fais des essais avec ces nouveaux blocs
+          et fonctionnalités. Peux-tu créer une danse dont la chorégraphie précise
+          colle bien avec ton morceau préféré ?
       5:
-        text: Ou bien une chorégraphie avec vos amis ?
+        text: Ou bien faire un battle de danse avec tes amis ?
       6:
-        text: Ou encore autre chose qui regrouperait tout ?
+        text: 'Ou quelque chose de tout autre encore ? '
       7:
         image: notes/hoc_dance_congrats_7.png
-        text: À la fin du didacticiel, vous pouvez partager un lien vers votre création
-          avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien
-          !
+        text: À la fin du tutoriel, tu recevras un lien avec lequel tu pourras partager
+          ta création avec tes amis. Laisse libre cours à ton imagination et amuse-toi
+          bien !
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg

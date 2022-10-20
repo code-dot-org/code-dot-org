@@ -2,6 +2,7 @@
 
 let registeredGetResult = null;
 let answerChangedFn = null;
+let authenticityToken = null;
 
 let levelGroup = {};
 
@@ -102,7 +103,7 @@ export function getLevelIds() {
 }
 
 /**
- * Lock the answer fo the contained level
+ * Lock the answer for the contained level
  */
 export function lockContainedLevelAnswers() {
   const levelIds = getLevelIds();
@@ -143,4 +144,49 @@ export function getContainedLevelResult() {
  */
 export function hasValidContainedLevelResult() {
   return getContainedLevelResult().result.valid;
+}
+
+function getAuthenticityToken() {
+  if (authenticityToken) {
+    return Promise.resolve();
+  } else {
+    return fetch('/user_levels/get_token', {
+      headers: {credentials: 'same-origin'}
+    }).then(response => {
+      if (response.ok) {
+        authenticityToken = response.headers.get('csrf-token');
+      }
+    });
+  }
+}
+
+export function resetContainedLevel() {
+  const levelIds = getLevelIds();
+  if (levelIds.length !== 1) {
+    throw new Error(
+      `Expected exactly one contained level. Got ${levelIds.length}`
+    );
+  }
+  return getAuthenticityToken().then(() => {
+    return fetch('/delete_predict_level_progress', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': authenticityToken
+      },
+      body: JSON.stringify({
+        script_id: appOptions.serverScriptId,
+        level_id: levelIds[0]
+      })
+    }).then(response => {
+      if (response.ok) {
+        getLevel(levelIds[0]).resetAnswers();
+        const runButton = $('#runButton');
+        runButton.prop('disabled', true);
+      } else {
+        throw `Error resetting answer with status code ${response.status}`;
+      }
+    });
+  });
 }

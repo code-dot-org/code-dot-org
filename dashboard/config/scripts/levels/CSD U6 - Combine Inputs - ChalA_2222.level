@@ -83,15 +83,15 @@
     "widget_mode": "false",
     "ai_enabled": "false",
     "reference_links": [
-      "/docs/concepts/javascript/variables/",
-      "/docs/concepts/app-lab/taking-input-with-getproperty/",
-      "/docs/concepts/app-lab/designing-screens-with-code/",
-      "/docs/concepts/javascript/if-statements/",
-      "/docs/concepts/javascript/booleans-and-comparison-operators/",
-      "/docs/concepts/maker-toolkit/circuit-playground/",
-      "/docs/concepts/maker-toolkit/color-lights/",
-      "/docs/concepts/maker-toolkit/producing-output/",
-      "/docs/concepts/maker-toolkit/board-events/"
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/taking-input-with-getproperty",
+      "/courses/csd-2022/guides/designing-screens-with-code",
+      "/courses/csd-2022/guides/if-statements",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/circuit-playground",
+      "/courses/csd-2022/guides/color-lights",
+      "/courses/csd-2022/guides/producing-output",
+      "/courses/csd-2022/guides/board-events"
     ],
     "display_name": "LED Mood Ring",
     "thumbnail_url": "https://images.code.org/614397ffb356db0b0df85b7dcf77e020-image-1650060225659.png",
@@ -101,11 +101,11 @@
     "encrypted_examples": "vcZPYGWO76DTmGInqrS2RBYDiqa/DG41O2ZX+W0GKNmqv1vazypkZ2REw8cX\nuuR93Hv5GxcFY81ySLCd7eA7nw==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-04-08T17:04:04.000Z",
   "level_num": "custom",
+  "game_id": 41,
+  "created_at": "2022-04-08T17:04:04.000Z",
   "user_id": 1,
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-04-08T17:04:04.402+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2022\"},{\"changed_at\":\"2022-04-15 22:03:57 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>

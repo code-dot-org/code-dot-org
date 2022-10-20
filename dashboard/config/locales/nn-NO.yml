@@ -593,6 +593,7 @@ nn:
     no_primary_course: Prøv eit kurs frå Code Studio
     choose_next_course: Prøv eit kurs frå Code Studio ved å velje eit nedanfor
     print_certificate: Skriv ut sertifikat
+  certificate_hour_of_code: Kodetimen
   move_students:
     new_section_dne: Beklagar, men seksjon %{new_section_code} finns ikkje. Legg inn
       ein annan seksjonskode.
@@ -1293,3 +1294,5 @@ nn:
   copy: Kopier
   confirm: Bekreft
   teacher_feedback: Tilbakemeldingar frå lærarar
+  pixelation:
+    binary: Binær

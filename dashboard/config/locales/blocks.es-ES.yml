@@ -2,6 +2,10 @@
 es:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: moviendo NESW con las teclas de flecha
+      AmysBlocks_setPromptWithChoices:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1219,6 +1223,8 @@ es:
             '"x"': x
             '"y"': y
             '"z"': z
+      gamelab_layoutGrid:
+        text: diseño de sprites como una cuadrícula
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1338,6 +1344,10 @@ es:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bajo peculiar
             "'sound://category_digital/jump_7.mp3'": salta
+      gamelab_playSoundOptionsSoccer:
+        text: reproducirSonido {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: reproducirSonido {SOUND}
       gamelab_playSpeech:
         text: reproducir grabación {SOUND}
       gamelab_playerBehaviors:
@@ -1438,6 +1448,8 @@ es:
             '100': grande
       gamelab_setPrompt:
         text: solicitar usuario {QUESTION} para la variable {VAR}
+      gamelab_setPromptWith2Choices:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}
       gamelab_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       gamelab_setProp:
@@ -1503,15 +1515,6 @@ es:
         text: "{SPRITE} piensa {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}piensa{TEXT1}en{NUM}segundos"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} piensa {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Yo también tengo hambre.
-            '"I only want the biggest goat."': Sólo quiero la cabra más grande.
-            '"I''m a green troll."': Soy un troll verde.
-            '"No one will cross my bridge."': Nadie cruzará mi puente.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} piensa {THOUGHT}"
         options:
@@ -2249,6 +2252,11 @@ es:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: cuando {VAR} respondió
       RyanLab_moveForward:

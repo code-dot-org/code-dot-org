@@ -2,6 +2,8 @@
 ko:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: 선택항목 {A}{B}{C}으로 변수 {VAR}를 위한 사용자 {QUESTION} 유도
       BadGuys_makeNewBadGuysSprite:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1317,6 +1319,10 @@ ko:
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": 마법의 주문
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": 별난 베이스
             "'sound://category_digital/jump_7.mp3'": 점프
+      gamelab_playSoundOptionsSoccer:
+        text: Playsound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: Playsound {SOUND}
       gamelab_playSpeech:
         text: 스피치 {SOUND} 재생
       gamelab_playerBehaviors:
@@ -1463,15 +1469,6 @@ ko:
         text: "{SPRITE}이(가) {SPEECH}을(를) 생각합니다"
       gamelab_spriteThinkTime:
         text: "{SPRITE}이(가) {TEXT1}을(를) {NUM}초 동안 생각합니다"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
-        options:
-          THOUGHT:
-            '"Hmm..."': 흠……
-            '"I am hungry, too."': 나도 배고파요.
-            '"I only want the biggest goat."': 가장 큰 염소만을 원해요.
-            '"I''m a green troll."': 나는 녹색 트롤입니다.
-            '"No one will cross my bridge."': 아무도 내 다리를 건너가질 못합니다.
       gamelab_spriteThink_fables2:
         text: "{SPRITE}이(가) {THOUGHT}을(를) 생각합니다"
         options:
@@ -2105,6 +2102,11 @@ ko:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR}이란 답이 나올 때"
       RyanLab_moveForward:

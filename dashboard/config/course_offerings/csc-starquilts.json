@@ -1,7 +1,7 @@
 {
   "key": "csc-starquilts",
-  "display_name": "csc-starquilts",
-  "category": "other",
-  "is_featured": false,
+  "display_name": "Star Quilts Module",
+  "category": "csc",
+  "is_featured": true,
   "assignable": true
 }

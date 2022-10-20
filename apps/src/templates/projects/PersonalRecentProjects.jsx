@@ -60,7 +60,7 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
-    fontFamily: 'Gotham 3r',
+    fontFamily: 'Gotham 4r',
     zIndex: 2,
     color: color.charcoal,
     width: 940,

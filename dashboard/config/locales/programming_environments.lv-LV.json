@@ -1,0 +1,66 @@
+{
+  "lv-LV": {
+    "data": {
+      "programming_environments": {
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "name": "Zīmējums"
+            },
+            "math": {
+              "name": "Matemātika"
+            },
+            "variables": {
+              "name": "Mainīgie"
+            },
+            "functions": {
+              "name": "Funkcijas"
+            }
+          }
+        },
+        "applab": {
+          "name": "Aplikāciju laborotorija",
+          "categories": {
+            "math": {
+              "name": "Matemātika"
+            },
+            "variables": {
+              "name": "Mainīgie"
+            },
+            "functions": {
+              "name": "Funkcijas"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Darbības"
+            },
+            "events": {
+              "name": "Pasākumi"
+            },
+            "loops": {
+              "name": "Cikli"
+            },
+            "variables": {
+              "name": "Mainīgie"
+            },
+            "math": {
+              "name": "Matemātika"
+            },
+            "logic": {
+              "name": "Loģika"
+            },
+            "functions": {
+              "name": "Funkcijas"
+            },
+            "text": {
+              "name": "Teksts"
+            }
+          }
+        }
+      }
+    }
+  }
+}

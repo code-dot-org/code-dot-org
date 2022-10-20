@@ -5,30 +5,44 @@ pt:
   language: Português (Brasil)
   front_title: Junte-se ao maior evento de aprendizagem da história, %{campaign_date}
   coming_soon: Em breve
-  campaign_date_start_short: 6 de dez.
-  campaign_date_start_long: 6 de dezembro
-  campaign_date_short: 7-13 de dezembro
-  campaign_date_full: 6 a 12 de dezembro
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 de dezembro de 2021
+  campaign_date_start_short: 5 de dez.
+  campaign_date_start_long: '5 de dezembro '
+  campaign_date_short: 5 a 11 de dezembro
+  campaign_date_full: 5 a 11 de dezembro
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5 a 11 de dezembro de 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1º de outubro a 18 de dezembro
+  nonus_campaign_date_full: 1º de outubro - 18 de dezembro
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6 de dez.
-  europe_campaign_date_start_long: 6 de dezembro
-  europe_campaign_date_short: 7-13 de dezembro
-  europe_campaign_date_full: 6 a 12 de dezembro
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 de dezembro de 2021
-  africa_campaign_date_start_short: 6 de dez.
-  africa_campaign_date_start_long: 6 de dezembro
-  africa_campaign_date_short: 7-13 de dezembro
-  africa_campaign_date_full: 6 a 12 de dezembro
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 de dezembro de 2021
+  latam_campaign_date_short: 1º de outubro a 18 de dezembro
+  latam_campaign_date_full: 1º de outubro - 18 de dezembro
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1º de outubro a 18 de dezembro
+  europe_campaign_date_full: 1º de outubro - 18 de dezembro
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1º de outubro a 18 de dezembro
+  africa_campaign_date_full: 1º de outubro - 18 de dezembro
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  hoc2022_header: Explore, jogue, crie!
+  social_hoc2022_explore_play_create: Use a ciência da computação para explorar, jogar
+    e criar!
+  codeorg_homepage_hoc2022_body: Explore o universo, marque um gol, faça um movimento
+    – existem incontáveis maneiras de experimentar a ciência da computação.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -491,6 +505,25 @@ pt:
   front_join_us_challenge: Ganhe uma chamada de vídeo para sua sala de aula com uma
     celebridade!
   front_join_us_learn_more: Saiba mais
+  cta_see_whats_new: Veja o que há de novo
+  cta_try_more_activities: Experimente mais atividades
+  cta_try_an_activity: Experimentar uma atividade
+  hoc_homepage_join_the_movement_heading: Junte-se ao movimento
+  hoc_homepage_join_the_movement_description: O Hour of Code está disponível o ano
+    todo, mas a cada ano, no mês de dezembro, sua turma pode se juntar a milhões de
+    alunos em todo o mundo para celebrar a Semana da formação em ciência da computação
+    com o Hour of Code. As inscrições para a celebração anual começam no mês de outubro.
+  hoc_homepage_what_is_hoc_subhead: Tutoriais de uma hora em mais de 45 idiomas. Não
+    requer experiência. As atividades do Hour of Code estão disponíveis gratuitamente
+    o ano todo.
+  hoc_homepage_what_is_hoc_description: O Hour of Code é uma introdução de uma hora
+    à ciência da computação, utilizando tutoriais divertidos para mostrar que qualquer
+    pessoa pode aprender os fundamentos. Esta campanha popular tem o apoio de mais
+    de 400 parceiros e 200.000 educadores em todo o mundo.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Leia nosso Guia de instruções](%{howto_guide_url})
+    para planejar um evento para sua classe."
+  hoc_homepage_highlights_heading: Destaques do Hour of Code
+  hoc_homepage_organized_by: O Hour of Code é organizado pela [Code.org](%{codeorg_url}).
   signup_closed: Estão encerradas as inscrições para a Hora do Código. Por favor,
     verifique novamente em outubro para se inscrever para a próxima Hora do Código.
   signup_registration_not_required: Você não precisa se registrar para participar!
@@ -539,8 +572,6 @@ pt:
   signup_multiple_event_warning: Se você está sediando vários eventos, envie um nome
     único ou um e-mail para cada evento. Contamos apenas um evento por nome e por
     combinação de e-mail.
-  signup_registration_deadline: As inscrições para a Hora do Código encerram-se no
-    dia 11 de dezembro.
   signup_name_placeholder: Seu nome
   signup_email_placeholder: voce@exemplo.com
   signup_organization_name_placeholder: Por exemplo, Escola São Luís
@@ -1033,7 +1064,7 @@ pt:
   highlights_constant_athletes_short_heading: Esforce-se
   footer_copyright_message: Copyright %{current_year} Code.org. Todos os direitos
     reservados.
-  footer_trademark_message: Hour of Code™ é uma marca registrada de Code.org.
+  footer_trademark_message: 'Hour of Code™ é uma marca registrada da Code.org. '
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Parceiros e conselheiros
   footer_menu_contact: Fale conosco

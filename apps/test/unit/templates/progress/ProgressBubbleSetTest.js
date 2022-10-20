@@ -42,19 +42,4 @@ describe('ProgressBubbleSet', () => {
     const progressBubble = wrapper.find('ProgressBubble').at(0);
     assert.equal(progressBubble.prop('disabled'), false);
   });
-
-  it('renders a disabled ProgressBubble if this.props.lessonExtrasEnabled is false and level is bonus', () => {
-    let bonusLevel = fakeLevels(1)[0];
-    bonusLevel.bonus = true;
-    const additionalProps = {
-      levels: [bonusLevel],
-      lessonExtrasEnabled: false
-    };
-    const wrapper = shallow(
-      <ProgressBubbleSet {...defaultProps} {...additionalProps} />
-    );
-    assert.equal(wrapper.find('ProgressBubble').length, 1);
-    const progressBubble = wrapper.find('ProgressBubble').at(0);
-    assert.equal(progressBubble.prop('disabled'), true);
-  });
 });

@@ -32,7 +32,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       }
     elsif !current_user
       render :logged_out
-    elsif current_user.teacher? && !current_user.email.present?
+    elsif current_user.teacher? && current_user.email.blank?
       render '/pd/application/teacher_application/no_teacher_email'
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop

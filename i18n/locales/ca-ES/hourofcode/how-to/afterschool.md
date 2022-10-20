@@ -6,9 +6,9 @@ title: Hour of Code How-to Guide for After-school
 
 # Com ensenyar una Hora del Codi en extraescolars i entitats
 
-### Join the movement and introduce your students to computer science with these steps.
+### Uniu-vos al moviment i presenteu les ciències informàtiques als vostres alumnes amb aquests passos.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+El pensament computacional ajuda a nodrir els coneixements de resolució de problemes, lògica i creativitat. I la tecnologia està transformant cada indústria del planeta. Els alumnes d'avui haurien d'aprendre a crear tecnologia, no només utilitzar-la. En començar aviat, tindran la base per l'èxit en qualsevol trajectòria professional del segle XXI. 
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
@@ -16,7 +16,8 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k
+" frameborder="0" allowfullscreen></iframe> 
 
 ## 2. Escull un tutorial
 
@@ -65,7 +66,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 **Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Esbrinem-ho junts.” - “La tecnologia no sempre funciona de la forma que volem” - “Aprendre un programa és com aprendre un nou idioma; no el parlareu amb fluïdesa immediatament.”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

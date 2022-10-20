@@ -285,6 +285,7 @@ en:
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
+    verified_teacher_subject: 'Code.org Teacher Verification - Success'
   section:
     your_section:
       one: 'Your section:'
@@ -394,6 +395,7 @@ en:
       about: "About"
       legal: "Privacy & Legal"
       legal_privacy: "Privacy Policy"
+      legal_cookie_notice: "Cookie Notice"
       legal_tos: "Terms of Service"
 
     user:
@@ -571,6 +573,7 @@ en:
     choose_next_course: "Try a Code Studio course by choosing one below"
     print_certificate: "Print Certificate"
   certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
+  certificate_hour_of_code: "Hour of Code"
   move_students:
     new_section_dne: "Sorry, but section %{new_section_code} does not exist. Please enter a different section code."
     section_code_cant_be_current_section: "The current section cannot be the same as the new section."
@@ -1109,6 +1112,8 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belize'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
@@ -1216,3 +1221,29 @@ en:
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Teacher Feedback"
+  lesson_lock:
+    error:
+      no_updates: "No updates to perform"
+      missing_params: "Must provide user, level, and unit ids"
+      cannot_view_locked_answers: "Cannot view answers while locked"
+      forbidden: "User cannot update student's lockable state"
+  reset_predict_progress_button: "Delete Answer"
+  pixelation:
+    raw_format: "Raw Format"
+    raw_format_alt: "View bits without any formatting"
+    readable_format: "Readable Format"
+    readable_format_alt: "View bits separated by pixel"
+    save_image: "Save Image"
+    actual_size: "Actual Size"
+    image_file_format_header: "Image File Format"
+    image_file_format_width: "Width: 1 byte"
+    image_file_format_height: "Height: 1 byte"
+    image_file_format_bits_per_pixel: "Bits per Pixel: 1 byte"
+    image_file_format_data_a: "n bits of pixel data"
+    image_file_format_data_b: "n = Width * Height * Bits per Pixel"
+    image_width: "Image Width"
+    image_height: "Image Height"
+    bits_per_pixel_header: "Bits Per Pixel"
+    binary: "Binary"
+    hexadecimal: "Hexadecimal"
+    pixel_format_header: "Pixel Format"

@@ -1526,6 +1526,8 @@ fi:
               description: ehto
         spelling-bee:
           title: Kirjurimehiläinen
+        ai-ethics-2021:
+          description_audience: Luokat 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -1682,3 +1684,42 @@ fi:
               display_name: 'Luku 2: Laitteiston syöte'
             lessonGroup-4:
               display_name: Kysely
+        soccer:
+          name: Jalkapallo
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Silmukat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'

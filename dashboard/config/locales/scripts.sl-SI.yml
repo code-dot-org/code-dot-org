@@ -1225,3 +1225,44 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        soccer:
+          name: nogomet
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Zanke
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vsebina

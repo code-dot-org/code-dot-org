@@ -2,6 +2,8 @@
 ja:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: ユーザーに変数 {VAR} について選択肢 {A}{B}{C} を使って {QUESTION} をプロンプト表示する
       BadGuys_makeNewBadGuysSprite:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1330,6 +1332,10 @@ ja:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": ピーン
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": SF
             "'sound://category_digital/jump_7.mp3'": ジャンプする
+      gamelab_playSoundOptionsSoccer:
+        text: Playsound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: Playsound {SOUND}
       gamelab_playSpeech:
         text: ピーチを再生する {SOUND}
       gamelab_playerBehaviors:
@@ -1479,15 +1485,6 @@ ja:
         text: "{SPRITE} が {SPEECH} と考える"
       gamelab_spriteThinkTime:
         text: "{SPRITE}が{NUM}秒間、{TEXT1}と考える"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} が {THOUGHT} と考える"
-        options:
-          THOUGHT:
-            '"Hmm..."': まあいい……話してみろ。
-            '"I am hungry, too."': 私もお腹が空いています。
-            '"I only want the biggest goat."': 私はただ一番大きいヤギがほしいです。
-            '"I''m a green troll."': 私は緑のトロルです。
-            '"No one will cross my bridge."': 誰も私の橋を渡ることはありません。
       gamelab_spriteThink_fables2:
         text: "{SPRITE} が {THOUGHT} と考える"
         options:
@@ -2184,6 +2181,11 @@ ja:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} に応答があったとき"
       RyanLab_moveForward:

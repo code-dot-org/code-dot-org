@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Rregullimi"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Rregullimi"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Kushtet"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Rregullimi"
         },
         "loops/aquatic/unversioned": {
           "word": "cikle "
@@ -67,6 +67,93 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Rregullimi"
+        },
+        "debugging/coursed/2022": {
+          "word": "Rregullimi"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Kushtet"
+        },
+        "behavior/coursef/2022": {
+          "word": "Sjellja"
+        },
+        "variable/coursef/2022": {
+          "word": "Variabël"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Përcakto"
+        },
+        "behavior/coursee/2022": {
+          "word": "Sjellja"
+        },
+        "function/coursee/2022": {
+          "word": "Funksion"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Kushtet"
+        },
+        "copyright/coursee/2022": {
+          "word": "E drejta e autorit"
+        },
+        "define/coursee/2022": {
+          "word": "Përcakto"
+        },
+        "debugging/courseb/2022": {
+          "word": "Rregullimi"
+        },
+        "debugging/express/2022": {
+          "word": "Rregullimi"
+        },
+        "behavior/express/2022": {
+          "word": "Sjellja"
+        },
+        "conditionals/express/2022": {
+          "word": "Kushtet"
+        },
+        "function/express/2022": {
+          "word": "Funksion"
+        },
+        "variable/express/2022": {
+          "word": "Variabël"
+        },
+        "define/express/2022": {
+          "word": "Përcakto"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursea/2022": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursec/2022": {
+          "word": "Rregullimi"
+        },
+        "data/coursec/2022": {
+          "word": "të dhëna"
+        },
+        "binary/coursec/2022": {
+          "word": "Binare"
+        },
+        "debugging/csd/2022": {
+          "word": "Rregullimi"
+        },
+        "variable/csd/2022": {
+          "word": "Variabël"
+        },
+        "conditionals/csd/2022": {
+          "word": "Kushtet"
+        },
+        "abstraction/csd/2022": {
+          "word": "Abstraksioni"
+        },
+        "function/csd/2022": {
+          "word": "Funksion"
+        },
+        "copyright/csd/2022": {
+          "word": "E drejta e autorit"
         },
         "code/poem-art/unversioned": {
           "word": "Kod"

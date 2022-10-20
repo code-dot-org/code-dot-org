@@ -2,6 +2,8 @@
 ta:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} விருப்பங்களுடன் {VAR} மாறிக்கான பயனர் {QUESTION} ஐத் தூண்டவும்"
       BadGuys_makeNewBadGuysSprite:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1269,6 +1271,10 @@ ta:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": தேர்ந்தெடுப்பு
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": நகைச்சுவையான பாஸ்
             "'sound://category_digital/jump_7.mp3'": குதி
+      gamelab_playSoundOptionsSoccer:
+        text: ஒலி விளையாட்டு {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: ஒலி விளையாட்டு {SOUND}
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
       gamelab_playerBehaviors:
@@ -1417,15 +1423,6 @@ ta:
         text: "{SPRITE}நினைக்கிறார்கள்{SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}நினைக்கிறார்கள்{TEXT1}க்கான{NUM}வினாடிகள்"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE}நினைக்கிறார்கள்{THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': ம்ம்ம்...
-            '"I am hungry, too."': எனக்கும் பசிக்கிறது.
-            '"I only want the biggest goat."': எனக்கு மிகப்பெரிய ஆடு மட்டுமே வேண்டும்.
-            '"I''m a green troll."': நான் ஒரு பச்சை பூதம்.
-            '"No one will cross my bridge."': என் பாலத்தை யாரும் கடக்க மாட்டார்கள்.
       gamelab_spriteThink_fables2:
         text: "{SPRITE}நினைக்கிறார்கள்{THOUGHT}"
         options:
@@ -2031,6 +2028,11 @@ ta:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} பதிலளித்த போது "
       RyanLab_moveForward:

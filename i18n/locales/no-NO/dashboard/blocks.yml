@@ -1115,6 +1115,10 @@
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": Hopp
+      gamelab_playSoundOptionsSoccer:
+        text: spillLyd {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: spillLyd {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1419,6 +1423,7 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+            '"space"': mellomrom
             '"w"': V
             '"a"': A
             '"s"': S
@@ -1430,6 +1435,7 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+            '"space"': mellomrom
             '"w"': V
             '"a"': A
             '"s"': S
@@ -1447,6 +1453,7 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+            '"space"': mellomrom
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1506,6 +1513,11 @@
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:

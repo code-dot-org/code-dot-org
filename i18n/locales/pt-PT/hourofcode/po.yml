@@ -6,30 +6,43 @@ po:
   front_title: Junte-se ao maior evento de aprendizagem em história, 7-13 de dezembro
     de 2015
   coming_soon: Brevemente
-  campaign_date_start_short: 6/dez
+  campaign_date_start_short: 5 Dez.
   campaign_date_start_long: 6 de dezembro
-  campaign_date_short: 7-13/dez
-  campaign_date_full: 6 a 12 de dezembro
-  campaign_date_year: '2021'
-  campaign_date_full_year: De 6 a 12 de dezembro de 2021
+  campaign_date_short: 5-11 dez.
+  campaign_date_full: 5 a 11 de dezembro
+  campaign_date_year: '2022'
+  campaign_date_full_year: De 5 a 11 de dezembro de 2022
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1 de outubro a 18 de dezembro
+  nonus_campaign_date_full: 1º de outubro de 2022 - 18 de dezembro de 2022
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6/dez
-  europe_campaign_date_start_long: 6 de dezembro
-  europe_campaign_date_short: 7-13/dez
-  europe_campaign_date_full: 6 a 12 de dezembro
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: De 6 a 12 de dezembro de 2021
-  africa_campaign_date_start_short: 6/dez
-  africa_campaign_date_start_long: 6 de dezembro
-  africa_campaign_date_short: 7-13/dez
-  africa_campaign_date_full: 6 a 12 de dezembro
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: De 6 a 12 de dezembro de 2021
+  latam_campaign_date_short: 1 de outubro a 18 de dezembro
+  latam_campaign_date_full: 1º de outubro de 2022 - 18 de dezembro de 2022
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1 de outubro a 18 de dezembro
+  europe_campaign_date_full: 1º de outubro de 2022 - 18 de dezembro de 2022
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1 de outubro a 18 de dezembro
+  africa_campaign_date_full: 1º de outubro de 2022 - 18 de dezembro de 2022
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1º de outubro de 2022 - 18 de dezembro de 2022
+  hoc2022_header: Explore, Play, Create!
+  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
+  codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
+    there are so many ways to try computer science.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -490,6 +503,24 @@ po:
   front_join_us_n_students_served: "# servido"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Learn more
+  cta_see_whats_new: See what's new
+  cta_try_more_activities: Try more activities
+  cta_try_an_activity: Try an activity
+  hoc_homepage_join_the_movement_heading: Join the movement
+  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
+    but every year in December your class can join millions of students around the
+    world celebrating Computer Science Education Week with the Hour of Code. Registration
+    for the annual celebration starts each year in October.
+  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
+    needed. Hour of Code activities are available for free year-round.
+  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    This grassroots campaign is supported by over 400 partners and 200,000 educators
+    worldwide.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
+    to plan an event for your class."
+  hoc_homepage_highlights_heading: Hour of Code highlights
+  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -535,8 +566,6 @@ po:
   signup_multiple_event_warning: Se estiver a organizar vários eventos, forneça um
     único nome ou endereço electrónico para cada evento. Nós só consideramos um evento
     por cada combinação de nome e endereço electrónico.
-  signup_registration_deadline: As inscrições para a Hora do Código encerram no dia
-    11 de dezembro.
   signup_name_placeholder: O teu nome
   signup_email_placeholder: você@exemplo.com
   signup_organization_name_placeholder: Por exemplo, a escola secundária Marquês de
@@ -679,11 +708,11 @@ po:
     Paralelamente, foi também formada uma <a href='http://code.org/about/partners'>coligação
     de parceiros sem precedentes</a> afim de promover a Hora de Código &mdash; na
     qual se incluem a Microsoft, Apple, Amazon, entre outras.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
+    by the Hour of Code Review Committee as well as an unprecedented coalition of
+    [partners](%{partner_url}) that have come together to support the Hour of Code
+    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
+    College Board.
   hoc_faq_host_q: Não sei nada acerca de programação. Posso apresentar um evento à
     mesma?
   hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have

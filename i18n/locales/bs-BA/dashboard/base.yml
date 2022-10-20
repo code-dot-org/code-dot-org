@@ -349,6 +349,7 @@ bs:
     no_primary_course: "Probajte Code Studio kurs"
     choose_next_course: "Probajte Code Studio kurs odabirom sljedećih opcija dole"
     print_certificate: "Ispiši Diplomu"
+  certificate_hour_of_code: "Sat Kodiranja"
   move_students:
     all_students_must_be_in_current_section: "Svi učenici trenutno moraju biti upisani u vaše odjeljenje."
     already_enrolled_in_new_section: "Ne možete premjestiti ove učenike zato što su oni već u novom odjeljenju."
@@ -647,3 +648,5 @@ bs:
   cookie_banner:
     accept: 'Slažem se'
   copy: 'Kopiraj'
+  pixelation:
+    binary: "Binarno"

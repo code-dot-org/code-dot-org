@@ -6,7 +6,7 @@ import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-st
 import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
-import commonMsg from '@cdo/locale';
+import i18n from '@cdo/locale';
 
 // This * import allows us to stub out the SectionSelector component
 import * as SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
@@ -42,6 +42,18 @@ describe('LessonLockDialog with stubbed section selector', () => {
     const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper).not.to.be.null;
     expect(wrapper.text()).not.to.be.empty;
+  });
+
+  it('does not display hidden warning if lesson not hidden', () => {
+    const wrapper = mount(<LessonLockDialog {...MINIMUM_PROPS} />);
+    expect(wrapper.text()).not.to.include(i18n.hiddenAssessmentWarning());
+  });
+
+  it('displays hidden warning if lesson is hidden', () => {
+    const wrapper = mount(
+      <LessonLockDialog {...MINIMUM_PROPS} lessonIsHidden={true} />
+    );
+    expect(wrapper.text().includes(i18n.hiddenAssessmentWarning()));
   });
 
   it('renders student row with name and lock status', () => {
@@ -203,7 +215,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     lessonLockDataApi.saveLockState.restore();
   });
 
-  it('handleSave shows error if failed', async () => {
+  it('handleSave shows default error if failed with no message', async () => {
     const initialLockStatus = [
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
       {name: 'fakeName2', lockStatus: LockStatus.Editable}
@@ -214,7 +226,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     });
     const lessonLockSaveStub = sinon
       .stub(lessonLockDataApi, 'saveLockState')
-      .returns(new Promise(resolve => resolve({ok: false})));
+      .returns(Promise.resolve({ok: false, json: () => Promise.resolve({})}));
     const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));
     const handleCloseSpy = sinon.spy();
 
@@ -238,9 +250,58 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
     await setTimeout(() => {}, 50);
     expect(lessonLockSaveStub).to.have.been.called;
+    await setTimeout(() => {}, 50);
 
-    expect(wrapper.text().includes(commonMsg.errorSavingLockStatus())).to.be
-      .true;
+    expect(wrapper.text().includes(i18n.errorSavingLockStatus())).to.be.true;
+    expect(handleCloseSpy).to.not.be.called;
+
+    lessonLockDataApi.useGetLockState.restore();
+    lessonLockDataApi.saveLockState.restore();
+  });
+
+  it('handleSave shows error message from server if provided', async () => {
+    const initialLockStatus = [
+      {name: 'fakeName1', lockStatus: LockStatus.Editable},
+      {name: 'fakeName2', lockStatus: LockStatus.Editable}
+    ];
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
+      loading: false,
+      serverLockState: initialLockStatus
+    });
+    const lessonLockSaveStub = sinon
+      .stub(lessonLockDataApi, 'saveLockState')
+      .returns(
+        Promise.resolve({
+          ok: false,
+          json: () => Promise.resolve({error: 'Error message from server'})
+        })
+      );
+    const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));
+    const handleCloseSpy = sinon.spy();
+
+    const wrapper = mount(
+      <LessonLockDialog
+        {...MINIMUM_PROPS}
+        refetchSectionLockStatus={refetchStub}
+        handleClose={handleCloseSpy}
+      />
+    );
+
+    const lockLessonButton = wrapper.find('button').at(1);
+    expect(lockLessonButton.text() === 'Lock lesson');
+    lockLessonButton.simulate('click');
+    wrapper.update();
+
+    const saveButton = wrapper.find('button').at(6);
+    expect(saveButton.text() === 'Save');
+    saveButton.simulate('click');
+    wrapper.update();
+
+    await setTimeout(() => {}, 50);
+    expect(lessonLockSaveStub).to.have.been.called;
+    await setTimeout(() => {}, 50);
+
+    expect(wrapper.text().includes('Error message from server')).to.be.true;
     expect(handleCloseSpy).to.not.be.called;
 
     lessonLockDataApi.useGetLockState.restore();

@@ -297,114 +297,67 @@ const harvesterMap = [
   ]
 ];
 
-export default storybook => {
-  storybook.storiesOf('MazeThumbnail', module).addStoryTable([
-    {
-      name: 'Angry Birds',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: sampleMap,
-            level: {startDirection: 1},
-            skin: 'birds'
-          }}
-        />
-      )
-    },
-    {
-      name: 'Plants vs. Zombies',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: sampleMap,
-            level: {startDirection: 1},
-            skin: 'pvz'
-          }}
-        />
-      )
-    },
-    {
-      name: 'Scrat',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: sampleMap,
-            level: {startDirection: 1},
-            skin: 'scrat'
-          }}
-        />
-      )
-    },
-    {
-      name: 'Farmer',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: sampleMap,
-            level: {startDirection: 1},
-            skin: 'farmer'
-          }}
-        />
-      )
-    },
-    {
-      name: 'Farmer Night',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: sampleMap,
-            level: {startDirection: 1},
-            skin: 'farmer_night'
-          }}
-        />
-      )
-    },
-    {
-      name: 'Bee',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: beeMap,
-            level: {
-              startDirection: 1,
-              flowerType: 'redWithNectar'
-            },
-            skin: 'bee'
-          }}
-        />
-      )
-    },
-    {
-      name: 'Harvester',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: harvesterMap,
-            level: {startDirection: 1},
-            skin: 'harvester'
-          }}
-        />
-      )
-    },
-    {
-      name: 'Collector',
-      description: 'This is the MazeThumbnail component.',
-      story: () => (
-        <MazeThumbnail
-          mazeSummary={{
-            map: collectorMap,
-            level: {startDirection: 1},
-            skin: 'collector'
-          }}
-        />
-      )
-    }
-  ]);
+export default {
+  title: 'MazeThumbnail',
+  component: MazeThumbnail
+};
+
+// Template
+const Template = args => <MazeThumbnail {...args} />;
+
+// Stories
+export const AngryBirds = Template.bind({});
+AngryBirds.args = {
+  mazeSummary: {map: sampleMap, level: {startDirection: 1}, skin: 'birds'}
+};
+
+export const PlantsVsZombies = Template.bind({});
+PlantsVsZombies.args = {
+  mazeSummary: {map: sampleMap, level: {startDirection: 1}, skin: 'pvz'}
+};
+
+export const Scrat = Template.bind({});
+Scrat.args = {
+  mazeSummary: {map: sampleMap, level: {startDirection: 1}, skin: 'scrat'}
+};
+
+export const Farmer = Template.bind({});
+Farmer.args = {
+  mazeSummary: {map: sampleMap, level: {startDirection: 1}, skin: 'farmer'}
+};
+
+export const FarmerNight = Template.bind({});
+FarmerNight.args = {
+  mazeSummary: {
+    map: sampleMap,
+    level: {startDirection: 1},
+    skin: 'farmer_night'
+  }
+};
+
+export const Bee = Template.bind({});
+Bee.args = {
+  mazeSummary: {
+    map: beeMap,
+    level: {startDirection: 1, flowerType: 'redWithNectar'},
+    skin: 'bee'
+  }
+};
+
+export const Harvester = Template.bind({});
+Harvester.args = {
+  mazeSummary: {
+    map: harvesterMap,
+    level: {startDirection: 1},
+    skin: 'harvester'
+  }
+};
+
+export const Collector = Template.bind({});
+Collector.args = {
+  mazeSummary: {
+    map: collectorMap,
+    level: {startDirection: 1},
+    skin: 'collector'
+  }
 };

@@ -957,3 +957,9 @@ lv:
               display_name: Digitālā pilsonība
             lessonGroup-8:
               display_name: Mainīgie
+        soccer:
+          name: futbols
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Cikli

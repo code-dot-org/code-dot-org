@@ -1,0 +1,104 @@
+{
+  "bg-BG": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Web Lab"
+        },
+        "gamelab": {
+          "name": "Играта лаборатория",
+          "categories": {
+            "game_lab": {
+              "name": "Играта лаборатория"
+            },
+            "sprites": {
+              "name": "Спрайт"
+            },
+            "groups": {
+              "name": "Групи"
+            },
+            "drawing": {
+              "name": "Рисуване"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променливи"
+            },
+            "functions": {
+              "name": "Функции"
+            }
+          }
+        },
+        "applab": {
+          "name": "Лаборатория за приложения",
+          "description": "App Lab е програмна среда, в която създавате прости приложения. Създайте дизайн, програмирайте с блокове или JavaScript приложението си, а след това го споделете за секунди.",
+          "categories": {
+            "data": {
+              "name": "Данни"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променливи"
+            },
+            "functions": {
+              "name": "Функции"
+            },
+            "advanced": {
+              "name": "Разширено"
+            }
+          }
+        },
+        "spritelab": {
+          "categories": {
+            "sprites": {
+              "name": "Спрайт"
+            },
+            "world": {
+              "name": "Свят"
+            },
+            "location": {
+              "name": "Места"
+            },
+            "actions": {
+              "name": "Действия"
+            },
+            "events": {
+              "name": "Събития"
+            },
+            "behaviors": {
+              "name": "Поведения"
+            },
+            "loops": {
+              "name": "Повторения"
+            },
+            "variables": {
+              "name": "Променливи"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "functions": {
+              "name": "Функции"
+            },
+            "text": {
+              "name": "Текст"
+            },
+            "comments": {
+              "name": "Коментари"
+            }
+          }
+        },
+        "javalab": {
+          "name": "Java (Джава) Практически Урок"
+        }
+      }
+    }
+  }
+}

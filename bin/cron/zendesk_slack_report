@@ -31,22 +31,23 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
-  'ap-csa-dev' => ['CSA Engineering'],
   'ap-csa-pilot' => ['CSA Curric.'],
   'csf' => ['CSF'],
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
-  'disco-party' => ['CSD'],
-  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Jess', 'EdPop Kristyn', 'EdPop Rosie', 'EdPop Tawny'],
+  'cs-discoveries' => ['CSD'],
+  'acquisition-products' => ['Acquisition Products'],
+  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'EdPop Alicia', 'EdPop Danielle'],
   'facilitator-things' => ['PnP Andrea'],
   'foundations' => ['Accounts'],
+  'hour-of-code' => ['Hour of Code'],
   'international' => ['International'],
-  'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],
   'product' => ['Product'],
   'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
-  'star-labs' => ['*Labs']
+  'student-learning' => ['*Labs', 'CSA Engineering'],
+  'teacher-tools' => ['Teacher Tools']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
@@ -58,7 +59,6 @@ GROUP_FILTERS = {
   'CSP' => '45749787',
   'Developers' => '47222126',
   'International' => '360086130812',
-  'Learning Platform' => '360082967212',
   'Media' => '47756566',
   'PLC Tools' => '114103940251',
   'Product' => '360007773991',
@@ -67,7 +67,6 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'ed-programs-tools' => ['zendesk-plctools'],
   'outreach_honky-tonk' => ['zendesk-outreach'],
   'pl-team-only' => ['zendesk-pl']
 }

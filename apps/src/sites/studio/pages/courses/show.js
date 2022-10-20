@@ -73,15 +73,7 @@ function showCourseOverview() {
   if (announcements) {
     registerReducers({announcements: announcementReducer});
     announcements.forEach(announcement =>
-      store.dispatch(
-        addAnnouncement(
-          announcement.notice,
-          announcement.details,
-          announcement.link,
-          announcement.type,
-          announcement.visibility
-        )
-      )
+      store.dispatch(addAnnouncement(announcement))
     );
   }
 

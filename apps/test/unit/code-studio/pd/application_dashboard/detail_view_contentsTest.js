@@ -4,6 +4,7 @@ import {
   ApplicationFinalStatuses,
   ScholarshipStatusRequiredStatuses
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import React from 'react';
 import _ from 'lodash';
 import sinon from 'sinon';
@@ -206,6 +207,35 @@ describe('DetailViewContents', () => {
     });
   });
 
+  describe('Edit controls in Teacher', () => {
+    it(`cannot make status incomplete from dropdown`, () => {
+      const detailView = mountDetailView('Teacher');
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="incomplete"]')
+      ).to.have.lengthOf(0);
+    });
+
+    it(`incomplete status is in dropdown if teacher application is incomplete`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'incomplete',
+          scholarship_status: null,
+          update_emails_sent_by_system: false
+        }
+      });
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="incomplete"]')
+      ).to.have.lengthOf(1);
+    });
+  });
+
   const expectedTestData = ['Teacher', 'Facilitator'];
 
   for (const applicationType of expectedTestData) {
@@ -349,35 +379,52 @@ describe('DetailViewContents', () => {
         expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
         expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
       });
-
-      it(`cannot make status incomplete from dropdown in ${applicationType}`, () => {
-        const detailView = mountDetailView(applicationType);
-        expect(
-          detailView
-            .find('#DetailViewHeader select')
-            .find('option')
-            .find('[value="incomplete"]')
-        ).to.have.lengthOf(0);
-      });
-
-      it(`incomplete status is in dropdown if ${applicationType} application is incomplete`, () => {
-        const detailView = mountDetailView('Teacher', {
-          applicationData: {
-            ...DEFAULT_APPLICATION_DATA,
-            status: 'incomplete',
-            scholarship_status: null,
-            update_emails_sent_by_system: false
-          }
-        });
-        expect(
-          detailView
-            .find('#DetailViewHeader select')
-            .find('option')
-            .find('[value="incomplete"]')
-        ).to.have.lengthOf(1);
-      });
     });
   }
+
+  describe('Principal Approvals', () => {
+    it(`Shows principal responses if approval is complete`, () => {
+      const detailView = mountDetailView('Teacher');
+      expect(detailView.text()).to.contain(
+        'Principal Approval and School Information'
+      );
+    });
+    it(`Shows URL to principal approval if sent and incomplete`, () => {
+      const guid = '1020304';
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          application_guid: guid,
+          principal_approval_state: PrincipalApprovalState.inProgress
+        }
+      });
+      expect(
+        detailView.find('#principal-approval-url').props().href
+      ).to.contain(`principal_approval/${guid}`);
+    });
+    it(`Shows button to make principal approval required if not`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: true
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Make required'
+      );
+    });
+    it(`Shows button to make principal approval not required if it is`, () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: null // principal approval is required
+        }
+      });
+      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
+        'Make not required'
+      );
+    });
+  });
 
   describe('Regional Partner View', () => {
     it('has delete button', () => {
@@ -414,13 +461,13 @@ describe('DetailViewContents', () => {
         .last()
         .simulate('click');
 
-      // Dropdown is enabled
+      // Dropdown is still disabled
       // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
       expect(
         getLastRow()
           .find('Select')
           .prop('disabled')
-      ).to.equal(false);
+      ).to.equal(true);
 
       // Click "Save"
       detailView

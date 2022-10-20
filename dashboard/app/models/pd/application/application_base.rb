@@ -326,7 +326,10 @@ module Pd::Application
       numeric_scores = response_scores_hash.values.select do |score|
         score.is_a?(Numeric) || score =~ /^\d+$/
       end
-      numeric_scores.map(&:to_i).reduce(:+)
+
+      return nil if numeric_scores.empty?
+
+      numeric_scores.sum(&:to_i)
     end
 
     def course_name
@@ -355,7 +358,7 @@ module Pd::Application
     end
 
     def formatted_partner_contact_email
-      return nil unless regional_partner&.contact_email_with_backup.present?
+      return nil if regional_partner&.contact_email_with_backup.blank?
 
       if regional_partner.contact_name.present? && regional_partner.contact_email.present?
         "\"#{regional_partner.contact_name}\" <#{regional_partner.contact_email}>"

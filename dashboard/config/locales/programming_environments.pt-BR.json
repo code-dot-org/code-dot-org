@@ -1,0 +1,107 @@
+{
+  "pt-BR": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "name": "Laboratório Web",
+          "categories": {
+            "html_tags": {
+              "name": "Tags HTML"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Laboratório de Jogos",
+          "categories": {
+            "game_lab": {
+              "name": "Laboratório de Jogos"
+            },
+            "sprites": {
+              "name": "Sprite"
+            },
+            "groups": {
+              "name": "Grupos"
+            },
+            "drawing": {
+              "name": "Desenho"
+            },
+            "math": {
+              "name": "Matemática"
+            },
+            "variables": {
+              "name": "variáveis"
+            },
+            "functions": {
+              "name": "funções"
+            }
+          }
+        },
+        "applab": {
+          "name": "Laboratório de Aplicativo",
+          "description": "O App Lab é um ambiente de programação onde você pode criar aplicativos simples. Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos.",
+          "categories": {
+            "data": {
+              "name": "Dados"
+            },
+            "math": {
+              "name": "Matemática"
+            },
+            "variables": {
+              "name": "variáveis"
+            },
+            "functions": {
+              "name": "funções"
+            },
+            "advanced": {
+              "name": "Avançado"
+            }
+          }
+        },
+        "spritelab": {
+          "name": "Laboratório de Sprite",
+          "categories": {
+            "sprites": {
+              "name": "Sprite"
+            },
+            "world": {
+              "name": "Mundo"
+            },
+            "location": {
+              "name": "Localizações"
+            },
+            "actions": {
+              "name": "Ações"
+            },
+            "events": {
+              "name": "Eventos"
+            },
+            "behaviors": {
+              "name": "Comportamentos"
+            },
+            "loops": {
+              "name": "laços"
+            },
+            "variables": {
+              "name": "variáveis"
+            },
+            "math": {
+              "name": "Matemática"
+            },
+            "logic": {
+              "name": "Lógica"
+            },
+            "functions": {
+              "name": "funções"
+            },
+            "text": {
+              "name": "Texto"
+            },
+            "comments": {
+              "name": "Comentários"
+            }
+          }
+        }
+      }
+    }
+  }
+}

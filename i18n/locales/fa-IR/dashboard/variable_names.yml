@@ -8,6 +8,7 @@ fa:
       age: سن
       answer: پاسخ
       binary: دو دویی
+      birds: پرنده ها
       color: رنگ
       counter: شمارشگر
       height: ارتفاع
@@ -22,5 +23,6 @@ fa:
       score: امتیاز
       size: اندازه
       speed: سرعت
+      type: نوع
       variable: متغیر
       x: طول (x)

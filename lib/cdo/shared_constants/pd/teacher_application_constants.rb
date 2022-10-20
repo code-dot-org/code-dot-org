@@ -7,6 +7,12 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
+    PRINCIPAL_APPROVAL_STATE = {
+      not_required: 'Not required',
+      in_progress: 'Incomplete - Principal email sent on ',
+      complete: 'Complete - '
+    }
+
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     SECTION_HEADERS = {

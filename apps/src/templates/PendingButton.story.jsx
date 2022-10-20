@@ -1,6 +1,7 @@
 import React from 'react';
 import PendingButton from './PendingButton';
-import * as dataStyles from '../storage/dataBrowser/dataStyles';
+import dataStyles from '../storage/dataBrowser/data-styles.module.scss';
+import classNames from 'classnames';
 
 export default storybook => {
   storybook.storiesOf('Buttons/PendingButton', module).addStoryTable([
@@ -11,7 +12,7 @@ export default storybook => {
           isPending={false}
           onClick={() => console.log('click')}
           pendingText="Adding"
-          style={dataStyles.blueButton}
+          className={classNames(dataStyles.button, dataStyles.buttonBlue)}
           text="Add pair"
         />
       )
@@ -23,7 +24,7 @@ export default storybook => {
           isPending={true}
           onClick={() => console.log('click')}
           pendingText="Adding"
-          style={dataStyles.blueButton}
+          className={classNames(dataStyles.button, dataStyles.buttonBlue)}
           text="Add pair"
         />
       )

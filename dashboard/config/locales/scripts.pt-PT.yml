@@ -4993,6 +4993,9 @@ pt:
               display_name: Conteúdo
             lessonGroup-5:
               display_name: Área restrita
+        ai-ethics-2021:
+          description_audience: Entre sexto ano do fundamental e terceiro do ensino
+            médio
         poem-art-2021:
           title: Arte poética
         explore-data-1-2021:
@@ -5251,6 +5254,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Iniciando
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5470,6 +5477,9 @@ pt:
             versões de currículo
           description: Para organizar atualizações de aulas ou níveis entre versões
             de currículo
+          lessons:
+            lesson-7:
+              name: Introdução a Sprites
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -5564,3 +5574,92 @@ pt:
               display_name: Bem-vindo
         dlp-csp-mod1-2022:
           title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
+        soccer:
+          name: futebol
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Questionário
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Questionário
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Ciclos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Questionário
+            lessonGroup-3:
+              display_name: Conteúdo
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          title: O processo de design
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Computação Física
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'

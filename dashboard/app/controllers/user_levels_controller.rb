@@ -23,9 +23,27 @@ class UserLevelsController < ApplicationController
     head :no_content
   end
 
+  def delete_predict_level_progress
+    script = Unit.get_from_cache(params[:script_id])
+    return head :not_found, text: 'Unit not found' unless script
+    return head :forbidden, text: 'User must be instructor of course' unless script.can_be_instructor?(current_user)
+    level = Level.find(params[:level_id])
+    return head :not_found, text: 'Level not found' unless level
+    return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported" unless ['Multi', 'FreeResponse'].include?(level.type)
+    UserLevel.where(user_id: current_user.id, script_id: script.id, level: level.id).destroy_all
+    return head :ok
+  end
+
+  # GET /user_levels/get_token
+  def get_token
+    headers['csrf-token'] = form_authenticity_token
+    return head :ok
+  end
+
   private
 
   def set_user_level
+    return unless params[:id]
     @user_level = UserLevel.find(params[:id])
   end
 

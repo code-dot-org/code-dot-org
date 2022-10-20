@@ -5,6 +5,9 @@
         "ccela/RL": {
           "description": "Leggere"
         },
+        "csta/AP": {
+          "description": "Algoritmi e programmazione"
+        },
         "ccela/SL": {
           "description": "Parlare e ascoltare"
         },
@@ -38,6 +41,9 @@
         "csta2011/CI": {
           "description": "Impatti a livello comunitario, globale ed etico"
         },
+        "ccmath/MD": {
+          "description": "Usare la probabilità per prendere decisioni"
+        },
         "ccmath/NBT": {
           "description": "Numeri e operazioni a base dieci"
         },
@@ -56,8 +62,17 @@
         "csta/IC": {
           "description": "Impatti dell'informatica"
         },
+        "csta/NI": {
+          "description": "Reti e Internet"
+        },
         "csta/DA": {
           "description": "Dati e Analisi"
+        },
+        "csta/CS": {
+          "description": "Sistemi informatici"
+        },
+        "ngss/ETS1": {
+          "description": "Progettazione"
         }
       }
     }

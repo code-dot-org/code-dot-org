@@ -536,6 +536,84 @@
           "do something": {
             "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
           }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "ထပ်မံ ပြုလုပ်ပါ"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "parameters": {
+              "x": "×"
+            }
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "do something": {
+            "name": "တစ်ခုခုကို ပြုလုပ်ပါ"
+          }
         }
       }
     }

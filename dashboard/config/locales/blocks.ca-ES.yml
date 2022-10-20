@@ -793,6 +793,11 @@ ca:
             "'sound://category_animals/dolphin.mp3'": Dofí
             "'sound://category_animals/dog.mp3'": gos
             "'sound://category_digital/jump_7.mp3'": salt
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": botzina d'aire
+            "'sound://category_sports/One_Whistle_SFX.mp3'": xiulet
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -1160,3 +1165,7 @@ ca:
           DIR:
             right: dreta ↻
             left: esquerra ↺
+      storylab_setHeading:
+        text: establir encapçalament {HEADING}
+      storylab_setSubheading:
+        text: establir encapçalament {SUBHEADING}

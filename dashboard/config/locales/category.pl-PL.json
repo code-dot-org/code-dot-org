@@ -5,6 +5,9 @@
         "ccela/RL": {
           "description": "Czytanie literatury"
         },
+        "csta/AP": {
+          "description": "Algorytmy i Programowanie"
+        },
         "ccela/SL": {
           "description": "Mówienie i słuchanie"
         },
@@ -38,6 +41,9 @@
         "csta2011/CD": {
           "description": "Komputery i urządzenia komunikacyjne"
         },
+        "csta2011/CI": {
+          "description": "Społeczność, wymiar globalny i czynniki etyczne"
+        },
         "ccmath/MD": {
           "description": "Stosowanie prawdopodobieństwa do podejmowania decyzji"
         },
@@ -59,11 +65,20 @@
         "csta/IC": {
           "description": "Wplywy informatyki"
         },
+        "csp2021/IOC-2.B": {
+          "description": "Wyjaśnij, w jaki sposób można chronić zasoby komputerowe i jak można z nich korzystać w niewłaściwy sposób."
+        },
         "csta/NI": {
           "description": "Sieci i Internet"
         },
+        "csp2021/DAT-1.D": {
+          "description": "Porównaj algorytmy kompresji danych w celu stwierdzenia, który jest najlepszy w określonym kontekście."
+        },
         "csta/DA": {
           "description": "Dane i Analiza"
+        },
+        "csta/CS": {
+          "description": "Systemy obliczeniowe"
         },
         "ngss/ETS1": {
           "description": "Projektowanie inżynierskie"

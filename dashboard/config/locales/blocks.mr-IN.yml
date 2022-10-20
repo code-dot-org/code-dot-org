@@ -2,6 +2,9 @@
 mr:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} पर्यायांसह व्हेरिएबल {VAR} साठी वापरकर्ता {QUESTION} प्रॉम्प्ट
+          करा"
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       BadGuys_setSizeAll_dropdown:
@@ -1241,6 +1244,10 @@ mr:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": क्वर्की
               बास
             "'sound://category_digital/jump_7.mp3'": जंप
+      gamelab_playSoundOptionsSoccer:
+        text: आवाज प्ले करा {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: आवाज प्ले करा {SOUND}
       gamelab_playSpeech:
         text: भाषण प्ले करा {SOUND}
       gamelab_playerBehaviors:
@@ -1404,15 +1411,6 @@ mr:
         text: "{SPRITE} विचार करा {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}विचार करा{TEXT1}काही{NUM}सेकंदांसाठी"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} विचार करा {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': हम्म...
-            '"I am hungry, too."': मला सुद्धा भूक लागली आहे.
-            '"I only want the biggest goat."': मलाच सर्वात मोठी बकरी हवी आहे.
-            '"I''m a green troll."': मी ग्रीन ट्रोल आहे.
-            '"No one will cross my bridge."': कोणीही माझा पूल ओलांडणार नाही.
       gamelab_spriteThink_fables2:
         text: "{SPRITE} विचार करा {THOUGHT}"
         options:
@@ -2002,6 +2000,11 @@ mr:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: जेव्हा {VAR} ने उत्तर दिले
       RyanLab_moveForward:

@@ -9,7 +9,8 @@ import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';
 import {ChartType} from '../dataUtils';
-import * as dataStyles from '../dataStyles';
+import dataStyles from '../data-styles.module.scss';
+import classNames from 'classnames';
 import {CROSS_TAB_CHART_AREA, GOOGLE_CHART_AREA} from './constants';
 
 const PLACEHOLDER_IMAGE = require('./placeholder.png');
@@ -122,7 +123,7 @@ class Snapshot extends React.Component {
       <div>
         <button
           type="button"
-          style={dataStyles.grayButton}
+          className={classNames(dataStyles.button, dataStyles.buttonGray)}
           onClick={this.handleOpen}
         >
           {msg.dataVisualizerViewSnapshot()}
@@ -149,14 +150,14 @@ class Snapshot extends React.Component {
             isPending={this.state.isCopyPending}
             onClick={this.copy}
             pendingText="Please Wait"
-            style={dataStyles.blueButton}
+            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
             text="Copy"
           />
           <PendingButton
             isPending={this.state.isSavePending}
             onClick={this.save}
             pendingText="Please Wait"
-            style={dataStyles.blueButton}
+            className={classNames(dataStyles.button, dataStyles.buttonBlue)}
             text="Save"
           />
         </BaseDialog>
@@ -167,5 +168,5 @@ class Snapshot extends React.Component {
 
 export default connect(state => ({
   tableName: state.data.tableName || '',
-  projectName: state.header.projectName || ''
+  projectName: state.project.projectName || ''
 }))(Snapshot);

@@ -1,0 +1,116 @@
+{
+  "mk-MK": {
+    "data": {
+      "programming_environments": {
+        "weblab": {
+          "description": "Веб-базиран HTML/CSS eдитор.",
+          "categories": {
+            "css_properties": {
+              "name": "Својства во CSS"
+            }
+          }
+        },
+        "gamelab": {
+          "name": "Работилница за апликации",
+          "description": "Game Lab е програмерска средина каде можете да создадете возбудливи игри и анимации. Дизајнирајте ги вашите ликови, кодирајте со Blocks или JavaScript и споделете ја вашата игра за неколку секунди.",
+          "categories": {
+            "game_lab": {
+              "name": "Работилница за апликации"
+            },
+            "control": {
+              "name": "Контрола"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променливи"
+            }
+          }
+        },
+        "applab": {
+          "categories": {
+            "ui_controls": {
+              "name": "UI контроли"
+            },
+            "canvas": {
+              "name": "Canvas"
+            },
+            "turtle": {
+              "name": "Turtle (Желка)"
+            },
+            "control": {
+              "name": "Контрола"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "variables": {
+              "name": "Променливи"
+            },
+            "maker": {
+              "name": "Maker"
+            }
+          }
+        },
+        "spritelab": {
+          "description": "Sprite Lab е Blocky програмска средина каде можете да создадете интерактивни проекти.",
+          "categories": {
+            "actions": {
+              "name": "Акции"
+            },
+            "loops": {
+              "name": "Лупови"
+            },
+            "variables": {
+              "name": "Променливи"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "text": {
+              "name": "Текст"
+            }
+          }
+        },
+        "javalab": {
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Java Lab Кратенки"
+            },
+            "general": {
+              "name": "Основи во Јava"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.core.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Контролни Структури"
+            },
+            "data_structures": {
+              "name": "Дата Структури"
+            }
+          }
+        }
+      }
+    }
+  }
+}

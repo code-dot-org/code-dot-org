@@ -5,30 +5,44 @@ tr:
   language: İngilizce
   front_title: Tarihteki ben büyük eğitim etkinliğine katıl, %{campaign_date}
   coming_soon: Çok Yakında
-  campaign_date_start_short: 6 Ara.
-  campaign_date_start_long: 6 Aralık
-  campaign_date_short: 7-13 Aralık
-  campaign_date_full: 6-12 Aralık
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 Aralık, 2021
+  campaign_date_start_short: 5 Ara.
+  campaign_date_start_long: 5 Aralık
+  campaign_date_short: 5-11 Aralık
+  campaign_date_full: 5-11 Aralık
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 Aralık, 2022
+  nonus_campaign_date_start_short: 1 Eki.
+  nonus_campaign_date_start_long: 1 Ekim
+  nonus_campaign_date_short: 1 Eki. - 18 Ara.
+  nonus_campaign_date_full: 1 Ekim - 18 Aralık
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
   latam_campaign_date_start_short: 1 Eki.
   latam_campaign_date_start_long: 1 Ekim
   latam_campaign_date_short: 1 Eki. - 18 Ara.
   latam_campaign_date_full: 1 Ekim - 18 Aralık
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
   europe_campaign_date_start_short: 10 Eki.
   europe_campaign_date_start_long: 10 Ekim
   europe_campaign_date_short: 10-25 Eki.
   europe_campaign_date_full: 10-25 Ekim
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10-25 Ekim 2020
-  africa_campaign_date_start_short: 6 Ara.
-  africa_campaign_date_start_long: 6 Aralık
+  africa_campaign_date_start_short: 1 Eki.
+  africa_campaign_date_start_long: 1 Ekim
   africa_campaign_date_short: 1-31 Eki.
   africa_campaign_date_full: 1-31 Ekim
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1-31 Ekim 2020
+  hoc2022_header: Keşfet, Oyna, Yarat!
+  social_hoc2022_explore_play_create: Keşfetmek, oynamak ve yaratmak için bilgisayar
+    bilimini kullanın!
+  codeorg_homepage_hoc2022_body: 'Evreni keşfedin, bir gol atın, bir hamle yapın:
+    Bilgisayar bilimini denemenin pek çok yolu var.'
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: "#HourOfCode sırasında #CSEverywhere'i kutluyoruz. Bağlantıları
     keşfedin!"
   hoc2020_header: Bugün öğrenin, daha parlak bir gelecek inşa edin
@@ -499,6 +513,24 @@ tr:
   front_join_us_n_students_served: "#hizmet"
   front_join_us_challenge: Bir ünlü ile sınıf içinde bir video sohbet kazanın!
   front_join_us_learn_more: Daha fazla bilgi edinin
+  cta_see_whats_new: Yeniliklere bakın
+  cta_try_more_activities: Daha fazla aktivite deneyin
+  cta_try_an_activity: Bir aktivite deneyin
+  hoc_homepage_join_the_movement_heading: Harekete katılın
+  hoc_homepage_join_the_movement_description: Hour of Code yıl boyunca kullanılabilir
+    ancak her yıl aralık ayında sınıfınız, Hour of Code ile Bilgisayar Bilimleri Eğitim
+    Haftasını kutlayan dünya çapında milyonlarca öğrenciye katılabilir. Yıllık kutlama
+    için kayıtlar her yıl ekim ayında başlar.
+  hoc_homepage_what_is_hoc_subhead: 45'ten fazla dilde bir saatlik eğitimler. Deneyim
+    gerekmez. Hour of Code aktiviteleri yıl boyunca ücretsiz olarak sunulur.
+  hoc_homepage_what_is_hoc_description: Hour of Code, herkesin temel bilgileri öğrenebileceğini
+    göstermek için eğlenceli öğreticilerin kullanıldığı, bilgisayar bilimine bir saatlik
+    bir giriştir. Bu yaygın kampanya, dünya çapında 400'den fazla ortak ve 200.000
+    eğitimci tarafından desteklenmektedir.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: Sınıfınız için bir etkinlik planlamak
+    üzere [Nasıl yapılır rehberimizi okuyun](%{howto_guide_url}).
+  hoc_homepage_highlights_heading: Hour of Code önemli noktaları
+  hoc_homepage_organized_by: Hour of Code, [Code.org](%{codeorg_url}) tarafından düzenlenmektedir.
   signup_closed: Hour of Code kayıtları kapandı. Bir sonraki etkinlik kayıtları Ekim
     ayında.
   signup_registration_not_required: Katılmak için kaydolmanıza gerek yoktur! Hour
@@ -544,7 +576,6 @@ tr:
   signup_email_preference_error: E-posta tercihi gereklidir
   signup_multiple_event_warning: Eğer birden fazla etkinliğe ev sahipliği ediyorsan,
     lütfen isim veya mail adresinden birini gönder. Bir e-mail için bir etkinlik ayarlanır.
-  signup_registration_deadline: Hour of Code kaydı 13 Aralık'ta kapanır.
   signup_name_placeholder: İsminiz
   signup_email_placeholder: ornek@hotmail.com
   signup_organization_name_placeholder: Örnek, Bursa Hocailyas Ortakulu

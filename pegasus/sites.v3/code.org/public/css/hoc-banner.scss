@@ -1,0 +1,116 @@
+@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+
+// Code.org HoC homepage banner
+.hoc-banner.homepage {
+  text-align: center;
+  color: $darkest_gray;
+  padding: 7em 0;
+  line-height: 1.4;
+
+  @media (min-width: $width-xl) and (max-width: $width-xxl)  {
+    padding: 9em 0;
+  }
+
+  @media screen and (max-width: $width-lg)  {
+    padding: 7em 0 6em;
+  }
+
+  @media screen and (max-width: $width-md)  {
+    padding: 5em 0 4.5em;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 5em 1em 6em;
+  }
+
+  h1 {
+    font-size: 4.5em;
+    font-family: $gotham-extra-bold;
+    margin: 0 auto 0.5em;
+    color: $darkest_gray;
+
+    @media screen and (max-width: $width-lg) {
+      font-size: 3.75em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 2.75em;
+    }
+  }
+
+  // The Hour of Code is coming/here text
+  p {
+    font-size: 2em;
+    font-family: $gotham-bold;
+
+    @media screen and (max-width: $width-sm) {
+      font-size: 1.35em;
+    }
+  }
+}
+
+// Code.org HoC /learn page banner
+#fullwidth.hoc-banner {
+  background: url('/images/hoc2022-codeorg-hero-banner-01.svg') no-repeat center center;
+  background-size: cover;
+
+  @media screen and (max-width: $width-sm) {
+    background: url('/images/hoc2022-codeorg-hero-banner-mobile-01.svg') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+section.banner {
+  text-align: center;
+  color: $darkest_gray;
+
+  h1, h2 {
+    color: $darkest_gray;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3em;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 2.5em;
+    }
+  }
+
+  h2 {
+    font-family: $gotham-regular;
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin: 1em auto 2em;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 1em;
+    }
+  }
+
+  .wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5.75em 0 6.5em;
+
+    @media screen and (max-width: $width-md) {
+      padding: 6em 0 6.5em;
+      width: 80%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      padding: 4.5em 1em 6em;
+      width: 88%;
+    }
+  }
+
+  a {
+    color: $darkest_gray;
+    text-decoration: underline;
+    font-family: $gotham-bold;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

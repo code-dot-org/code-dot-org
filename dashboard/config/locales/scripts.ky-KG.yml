@@ -466,6 +466,8 @@ ky:
               description: текшерүү
         spelling-bee:
           title: Spelling Bee
+        ai-ethics-2021:
+          description_audience: 6-12-класстар
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -546,3 +548,9 @@ ky:
           lesson_groups:
             lessonGroup-8:
               display_name: Өзгөрмөлөр
+        soccer:
+          name: футбол
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Циклдер

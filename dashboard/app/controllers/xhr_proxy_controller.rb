@@ -78,6 +78,7 @@ class XhrProxyController < ApplicationController
     deckofcardsapi.com
     distanza.org
     dweet.io
+    githubusercontent.com
     googleapis.com
     grobchess.com
     hubblesite.org

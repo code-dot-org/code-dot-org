@@ -38,6 +38,7 @@ ru:
           нет электронной почты)](%{url})
         username: имя пользователя
         password: Пароль
+        verified_teacher: Проверенный Преподаватель
         password_confirmation: Подтверждение пароля
         current_password: Текущий пароль
         locale: Язык
@@ -66,6 +67,7 @@ ru:
   previous_page: Предыдущая страница
   next_page: Следующая страница
   next_resource: Следующий ресурс
+  done_with_module: Закончено с этим Учебным Модулем
   cancel: Отменить
   okay: Хорошо
   or: или
@@ -425,6 +427,7 @@ ru:
       educate_beyond: За пределами Code.org
       educate_inspire: Вдохновите студентов
       educate_community: Онлайн сообщество
+      educate_requirements: Технические Требования
       educate_tools: Инструменты и видео
       about_us: О нас
       about_leadership: Руководство
@@ -443,6 +446,7 @@ ru:
       about: О разработчике
       legal: Правовая информация
       legal_privacy: Политика конфиденциальности
+      legal_cookie_notice: Уведомление о cookie
       legal_tos: Условия предоставления услуг
     user:
       classroom: Домашняя страница преподавателя
@@ -484,12 +488,14 @@ ru:
       minecraft_hero: Герой Minecraft
       playlab: Лаборатория игр
       playlab_k1: Лаборатория игр (для дошкольников)
+      poetry: Поэзия
       scratch: Scratch
       sports: Виды спорта
       spritelab: Лаборатория Спрайтов
       starwars: Звездные войны
       starwarsblocks: Звездные войны (блоки)
       starwarsblocks_hour: Звездные войны (блоки)
+      thebadguys: Плохие Парни
       loading: ЗАГРУЗКА...
       weblab: Веб-лаборатория
       view_all: Смотреть все проекты...
@@ -658,6 +664,7 @@ ru:
     print_certificate: Распечатать сертификат
   certificate_sponsor_message: "%{sponsor_name} сделал щедрый подарок, чтобы спонсировать
     ваше обучение."
+  certificate_hour_of_code: Час Кода
   move_students:
     new_section_dne: Извините, но группа %{new_section_code} не существует. Пожалуйста,
       введите код другой группы.
@@ -719,6 +726,7 @@ ru:
       <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Создано с помощью Amazon Web Services
+    built_on_github: Построен на GitHub от Microsoft
     google_copyright: С разрешения &copy; Google Inc. Google Classroom является торговой
       маркой Google Inc.
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, логотип CODE и Час
@@ -732,13 +740,16 @@ ru:
     tos_short: Условия использования
     tos: Условия предоставления услуг
     privacy: Политика конфиденциальности
+    privacy_updated: Политика Конфиденциальности (обновлена)
     secure: Защищенная версия
     report_abuse: Сообщить о нарушении
     built_on_code_studio: Создать в студии кода
     make_my_own_app: Создать своё собственное приложение
     how_it_works: Как это работает
     try_hour_of_code: Попробуйте Час кода!
+    store: Магазин
     cookie_notice: Уведомление о cookie
+    view_code: Смотреть Код
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -822,6 +833,10 @@ ru:
       title: Танцевальная вечеринка
     hello-world:
       title: Привет, мир
+      body: Выберите одну из четырех забавных тем для программирования интерактивных
+        персонажей в создаваемом вами мире.
+    poem-art:
+      body: Проявите себя! Используйте код для создания анимированных стихотворений.
     hoc:
       title: Классический лабиринт
       body: Постигайте азы программирования. Миллионы людей воспользовались этим шансом.
@@ -1252,6 +1267,17 @@ ru:
   no_script_access_teacher: У вас нет доступа к этому устройству. Если вы считаете,
     что у вас должен быть доступ к этому устройству, пожалуйста, напишите support@code.org
     чтобы мы могли исправить ситуацию.
+  no_level_access_student: У вас нет доступа к этому уровню. Пожалуйста, спросите
+    своего преподавателя, на каком уровне вы должны быть.
+  no_level_access_teacher: У вас нет доступа к этому уровню. Если вы считаете, что
+    у вас должен быть доступ к этому уровню, пожалуйста, напишите по адресу support@code.org
+    чтобы мы могли исправить ситуацию.
+  no_exemplar: Для этого уровня нет примера.
+  no_exemplar_access_student: Студенты не могут получить доступ к примеру кода. Пожалуйста,
+    спросите своего преподавателя, на каком уровне вы должны быть.
+  no_exemplar_access_teacher: Только проверенные преподаватели могут получить доступ
+    к примеру кода. Если вы хотите стать проверенным преподавателем, пожалуйста, напишите
+    по адресу support@code.org .
   return_unit_overview: Перейти к обзору темы
   return_course_overview: Перейти к обзору темы
   view_all_units: Посмотреть все темы
@@ -1305,12 +1331,15 @@ ru:
         not_listed: Предпочитаемый термин не указан
         none: Предпочитаю не отвечать
       school_country:
+        barbados: Барбадос
+        belize: Белиз
         canada: Канада
         chile: Чили
         colombia: Колумбия
         israel: Израиль
         malaysia: Малайзия
         mexico: Мексика
+        paraguay: Парагвай
         thailand: Таиланд
         uzbekistan: Узбекистан
       ages:
@@ -1439,3 +1468,12 @@ ru:
   unit_prefix: Блок %{n}
   code_org_logo_alt: Code.org Home
   teacher_feedback: Оценки учителя
+  lesson_lock:
+    error:
+      no_updates: Нет обновлений для исполнения
+      missing_params: Необходимо указать идентификаторы пользователя, уровня и модуля
+      cannot_view_locked_answers: Невозможно просмотреть ответы, пока они заблокированы
+      forbidden: Пользователь не может обновлять состояние блокировки студента
+  reset_predict_progress_button: Удалить ответ
+  pixelation:
+    binary: Двоичный

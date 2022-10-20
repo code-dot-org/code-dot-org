@@ -2,6 +2,8 @@
 ar:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: مستخدم فوري {QUESTION} للمتغير {VAR} مع خيارات {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -385,6 +387,7 @@ ar:
             '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
+            '"spiral"': لولبي
             '"infinity"': خط لانهائي
             '"random"': عشوائي
       Dancelab_makeAnonymousDanceSprite:
@@ -515,6 +518,7 @@ ar:
             '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
+            '"spiral"': لولبي
             '"infinity"': خط لانهائي
             '"random"': عشوائي
       Dancelab_mixColors:
@@ -1241,6 +1245,7 @@ ar:
             '"burst"': تدفق
             '"pop"': منبثقة
             '"rain"': مطر
+            '"spiral"': لولبي
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       gamelab_makeNumSprites:
@@ -1318,6 +1323,7 @@ ar:
             "'sound://category_nature/thunderstorm_1.mp3'": عاصفة رعدية
             "'sound://category_animals/chick.mp3'": فرخ
             "'sound://category_animals/dog.mp3'": كلب
+            "'sound://category_animals/tiger.mp3'": نمر
             "'sound://category_collect/trill_stings.mp3'": ارتعاش
             "'sound://category_instrumental/harpe_pluck_1.mp3'": قيثارة
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": نقر
@@ -1332,6 +1338,10 @@ ar:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": تحديد
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": باس ملتوي
             "'sound://category_digital/jump_7.mp3'": قفز
+      gamelab_playSoundOptionsSoccer:
+        text: بلاي ساوند {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: بلاي ساوند {SOUND}
       gamelab_playSpeech:
         text: ألعاب النطق {SOUND}
       gamelab_playerBehaviors:
@@ -1404,7 +1414,9 @@ ar:
               العلمي
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': ملعب
               كرة القدم
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحلة
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': نجوم
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': نفق
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': الشمس
               وقوس قزح
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': شروق
@@ -1413,6 +1425,8 @@ ar:
               التنس
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': جزيرة
               أشجار
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': تحت
+              الأرض
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': تحت
               الماء
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': الشتاء
@@ -1828,6 +1842,8 @@ ar:
               الصنوبر
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': ملعب
               كرة القدم
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحلة
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': نفق
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': الشمس
               وقوس قزح
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': شروق
@@ -1836,6 +1852,8 @@ ar:
               التنس
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': جزيرة
               أشجار
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': تحت
+              الأرض
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1946,6 +1964,7 @@ ar:
             '"burst"': تدفق
             '"pop"': منبثقة
             '"rain"': مطر
+            '"spiral"': لولبي
       Poetry_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       Poetry_makeNumSprites:
@@ -1961,7 +1980,9 @@ ar:
             '"sound://category_background/inside_plane.mp3"': دندنة
             '"sound://category_loops/red_flag_loop1.mp3"': المهمة
             '"sound://category_nature/summer_night_loop.mp3"': ليل
+            '"sound://category_background/ocean_waves.mp3"': محيط
             '"sound://category_background/repitition.mp3"': ركوب
+            '"sound://category_background/wavering_wind.mp3"': نائم
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': بطيء
       Poetry_playSound:
         text: بلاي ساوند {SOUND}
@@ -2009,6 +2030,7 @@ ar:
             '"sunrise"': الفجر
             '"sunset"': الغسق
             '"grayscale"': رمادي
+            '"ocean"': محيط
             '"rainbow"': قوس قزح
             '"roses"': الورود
             '"sky"': سماوي
@@ -2072,6 +2094,7 @@ ar:
             '"shrinking"': الانقباض
             '"spinning_left"': الدوران ناحية اليسار
             '"spinning_right"': الدوران ناحية اليمين
+            '"swimming_left_and_right"': السباحة
             '"wandering"': التحرك
       Poetry_stopBehavior:
         text: 'النقش المتحرك {ANIMATION_NAME} يتوقف {BEHAVIOR} '
@@ -2082,6 +2105,7 @@ ar:
             '"shrinking"': الانقباض
             '"spinning_left"': الدوران ناحية اليسار
             '"spinning_right"': الدوران ناحية اليمين
+            '"swimming_left_and_right"': السباحة
             '"wandering"': التحرك
             '"all"': "--جميع السلوكيات--"
       Poetry_stringValue:
@@ -2105,6 +2129,11 @@ ar:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: عند الإجابة على {VAR}
       RyanLab_moveForward:

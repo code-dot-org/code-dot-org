@@ -19,7 +19,6 @@
     "embed": "false",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Make sure to select the same costume in each block of code.\",\"hint_id\":\"costume_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/66c389f62548bd08ada874fdce72b468/csc_ecosystems_ocean_fish.mp3\"}]",
     "instructions_important": "false",
-    "short_instructions": "In this level you need to add the fish into this simulation and give them a realistic size and movement.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -39,14 +38,17 @@
     "contained_level_names": [
       "ecosystem_unbalanced_predict"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-08-09T19:17:19.000Z",
-  "user_id": 18528,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-08-09T19:17:19.535+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_fish_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_fish_2022\"},{\"changed_at\":\"2022-08-09 19:18:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 19:24:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 19:45:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 19:47:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "created_at": "2022-08-09T19:17:19.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-08-09T19:17:19.535+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_fish_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_fish_2022\"},{\"changed_at\":\"2022-08-09 19:18:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 19:24:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 19:45:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-09 19:47:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-10 18:37:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-08-10 21:42:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

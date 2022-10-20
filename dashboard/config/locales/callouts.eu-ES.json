@@ -223,6 +223,36 @@
         },
         "courseD_bee_conditionals2_2021": {
           "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Erauzi burdina!"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         }
       }
     }

@@ -36,6 +36,7 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import ContainedLevelResetButton from './ContainedLevelResetButton';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -114,12 +115,14 @@ class TopInstructions extends Component {
     standalone: PropTypes.bool,
     // Use this if the caller wants to set an explicit height for the instructions rather
     // than allowing this component to manage its own height.
-    explicitHeight: PropTypes.number
+    explicitHeight: PropTypes.number,
+    inLessonPlan: PropTypes.bool
   };
 
   static defaultProps = {
     resizable: true,
-    collapsible: true
+    collapsible: true,
+    inLessonPlan: false
   };
 
   constructor(props) {
@@ -503,6 +506,9 @@ class TopInstructions extends Component {
             ref={ref => this.setInstructionsRef(ref)}
             hidden={tabSelected !== TabType.INSTRUCTIONS}
           />
+          {!this.props.inLessonPlan && tabSelected === TabType.INSTRUCTIONS && (
+            <ContainedLevelResetButton />
+          )}
         </div>
       );
     } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {

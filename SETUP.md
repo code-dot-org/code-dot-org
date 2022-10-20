@@ -12,7 +12,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 2.6.6
+     ruby --version  # --> ruby 2.7.5
      node --version  # --> v14.17.1
      yarn --version  # --> 1.22.5
      ```
@@ -21,7 +21,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `cd code-dot-org`
 
-1. `gem install bundler -v 1.17.3`
+1. `gem install bundler -v 2.3.22`
 
 1. `rbenv rehash`
 
@@ -448,6 +448,10 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 
 We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
 
+### SCSS
+
+We use [Stylelint](https://stylelint.io/) to lint our SCSS in the `apps` directory. There are plugins available for both [VS Code](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) and [JetBrains](https://www.jetbrains.com/help/idea/using-stylelint-code-quality-tool.html#ws_stylelint_configure).
+
 ## More Information
 Please also see our other documentation, including our:
 * [Main README](./README.md)
@@ -487,7 +491,7 @@ mini_racer (0.4.0)
 Then run the following commands to successfully complete a bundle install:
 
 ```sh
-gem install bundler -v 1.17.3
+gem install bundler -v 2.3.22
 rbenv rehash
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl/lib/
 bundle install

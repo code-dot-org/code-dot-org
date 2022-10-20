@@ -20,6 +20,7 @@ fi:
       length: pituus
       name: nimi
       nectar: mesi
+      object: objekti
       points: pisteet
       random: satunnainen
       repeat: toista
@@ -28,6 +29,7 @@ fi:
       sides: sivut
       size: koko
       speed: nopeus
+      type: tyyppi
       variable: muuttuja
       width: leveys
       wizard: velho

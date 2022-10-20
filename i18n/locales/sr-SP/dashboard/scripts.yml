@@ -835,6 +835,8 @@ sr:
               description: тест
         spelling-bee:
           title: Пчелица словарица
+        ai-ethics-2021:
+          description_audience: Разреди 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -931,3 +933,9 @@ sr:
               display_name: Дигитално држављанство
             lessonGroup-8:
               display_name: Променљиве
+        soccer:
+          name: Фудбал
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Петље

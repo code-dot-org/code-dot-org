@@ -3,7 +3,7 @@ name 'CSA U1 Assessment 2022 q15'
 wrong 'The `Painter` object was facing east.'
 wrong 'The `Painter` object had paint.'
 right 'The `Painter` object could move forward.'
-wrong 'The `Painter` object started on paint.'
+wrong 'The `Painter` object does not have any paint.'
 wrong 'The `Painter` object started on paint.'
 
 markdown <<MARKDOWN

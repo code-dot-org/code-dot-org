@@ -17,8 +17,10 @@ export const userAlreadyReportedAbuse = function(channelId) {
  */
 export const getChannelIdFromUrl = function(abuseUrl) {
   let match;
-  if (abuseUrl.indexOf('codeprojects') >= 0) {
+  if (abuseUrl.indexOf('codeprojects') >= 0 && abuseUrl.indexOf('weblab') < 0) {
     match = /.*codeprojects.*[^\/]+\/([^\/]+)/.exec(abuseUrl);
+  } else if (abuseUrl.indexOf('channelId=') >= 0) {
+    match = /\?channelId=(.*)/.exec(abuseUrl);
   } else {
     match = /.*\/projects\/[^\/]+\/([^\/]+)/.exec(abuseUrl);
   }

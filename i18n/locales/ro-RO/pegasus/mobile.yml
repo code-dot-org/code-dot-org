@@ -350,6 +350,7 @@
   homepage_banner_40k_teachers_link: "Află mai mult"
   homepage_slot_text_title_hoc: "Oră de Programare"
   homepage_slot_text_blurb_hoc: "Oricine poate învăța. Începe astăzi"
+  homepage_slot_text_blurb_hoc_2022: "Explorează, Joacă-Te, Creează!"
   homepage_slot_text_link_hoc: "Încearcă Ora de Programare"
   homepage_slot_text_link_about_hoc: "Despre Ora de Cod"
   homepage_slot_text_link_host: "Găzduiește o Oră de Cod"
@@ -375,6 +376,7 @@
   homepage_slot_text_link_buy: "Implică-te"
   homepage_slot_text_link_donate: "Fă o donație"
   homepage_slot_text_link_shop: "Tricouri, palarii & mai mult"
+  homepage_slot_text_link_thebadguys: "Programați cu Băieții răi (The Bad Guys)"
   homepage_slot_text_link_administrators: "Aduceți Informatica în școala dvs."
   homepage_gallery_header: "Peste %{project_count} milioane de proiecte Code.org create"
   homepage_header_donors: "Code.org mulţumește suporterilor săi"
@@ -382,6 +384,10 @@
   homepage_donors_donate: "Donează"
   homepage_below_hero_announcement_text: "Pentru noi este importantă confidențialitatea dumneavoastră și facem unele actualizări la politica noastră de confidențialitate, care vor intra în vigoare începând cu 25 mai."
   homepage_below_hero_announcement_link_text: "Află mai mult"
+  homepage_higher_power_body: "Creați cu Dance Party, aveți șansa să vedeți trupa live."
+  homepage_thebadguys_body: "Programați o aventură cu doamna Tarantulă, domnul Lup și restul personajelor din film, **The Bad Guys(Băieții răi)**!\n\n\n\n"
+  homepage_csa_subhead: "O nouă abordare a"
+  homepage_csa_body: "Încurajați studenții cu proiecte creative conectate la lumea reală din curriculum-ul nostru bazat pe echitate."
   contact_form_topic_student: "Sunt student"
   contact_form_topic_parent: "Sunt părinte"
   contact_form_topic_teacher: "Sunt profesor/educator"
@@ -513,6 +519,8 @@
   video_title_marco_belinelli: "Oră de cod cu Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh despre Informatică"
   video_title_my_name_is_aracely: "Numele meu este Aracely"
+  video_title_change_face_of_cs: "Schimbați fața informaticii"
+  video_title_latam_hoc: "Lo Que Falta En Nuestras Escuelas (Ce lipsește din școlile noastre)"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -988,6 +996,7 @@
   express-2020_name: Curs Expres (2020)
   pre-express-2020_name: Curs expres pentru preșcolari 2020)
   pre-express-2021_name: Curs Expres pentru preșcolari (2021)
+  pre-express-2022_name: Curs expres pentru preșcolari (2022)
   csd2_name: 'Cap. 2: Dezvoltare Web'
   csd3_name: 'Cap 3: Animație și jocuri'
   accelerated_name: "Curs intensiv"
@@ -1482,6 +1491,7 @@
   header_educate_beyond: "Dincolo de Code.org"
   header_educate_inspire: "Inspirați un Student"
   header_educate_community: "Comunitate online"
+  header_educate_requirements: "Cerințe tehnice"
   header_educate_tools: "Instrumente şi clipuri video"
   header_about_us: "Despre noi"
   header_about_leadership: "Conducere"
@@ -1583,6 +1593,10 @@
   hoc2018_creativity_create: "Crează"
   hoc2018_creativity_hoc_coming: "Hour of Code este aproape…"
   hoc2018_creativity_what_will_you_create: "Ce vei creea?"
+  hoc2018_creativity_homepage: "Dați zbor imaginației și naștere inovației. Începeți cu o oră de cod și propriul brand de creativitate, oricare ar fi acesta. Vizionați videoclipul nostru."
+  hoc2018_creativity_hoc_about: 'Anul acesta, Ora de Cod (Hour of Code) se referă la creativitate. '
+  hoc2018_creativity_social_media: '#HourOfCode (#OraDeCod) din acest an este despre creativitate. Eu particip! Tu?'
+  hoc2018_creativity_social_media_2: '#HourOfCode (#OraDeCod) din acest an este despre creativitate. Tu ce vei crea?'
   hoc2018_creativity_courses_link: "Mergeți mai departe cu <a href=\"https://studio.code.org/courses\">cursurile Code.org</a>"
   hoc2018_mc_page_title: "Tutoriale Hour of Code Minecraft"
   hoc2018_mc_details: "Mai multe limbi | Browsere moderne și tablete | Clasele 2+"
@@ -1693,3 +1707,4 @@
   ai_description: "Descriere"
   outbreak_tile_title: "Epidemie"
   outbreak_tile_subtitle: "Un virus a infectat Orașul Monștrilor! Programați un simulator de epidemie și faceți predicții despre ce se va întâmpla cu vecinii din Orașul Monștrilor."
+  hoc2022_landing_page_create_title: "Crează"

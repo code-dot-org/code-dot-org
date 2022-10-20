@@ -1,6 +1,5 @@
 require_relative './test_helper'
 require_relative '../router'
-require 'helpers/auth_helpers'
 require 'cdo/rack/request'
 require 'shared_resources'
 require 'parallel'
@@ -77,7 +76,7 @@ class PegasusTest < Minitest::Test
   def test_render_pegasus_documents
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
-      page[:uri].end_with?('/splat') ||
+      page[:uri].end_with?('/splat', '/splat.fetch') ||
       # Private routes not yet handled.
       page[:uri].start_with?('/private')
     end

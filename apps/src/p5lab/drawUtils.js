@@ -173,21 +173,17 @@ export function validationBar(
   p5,
   width,
   state,
-  {x = 0, y = APP_HEIGHT - 10, height = 10} = {}
+  {barHeight = 10, x = 0, y = APP_HEIGHT - barHeight} = {}
 ) {
-  let color = colors.black;
-  switch (state) {
-    case 'fail':
-      color = colors.purple;
-      break;
-    case 'pass':
-    case 'bonus':
-      color = colors.teal;
-      break;
-  }
+  const barColors = {
+    fail: colors['dark_purple'],
+    pass: colors['bright_green'],
+    bonus: colors['neon_pink']
+  };
   p5.push();
-  p5.noStroke();
-  p5.fill(color);
-  p5.rect(x, y, width, height);
+  p5.fill(barColors[state]);
+  p5.stroke(colors.white);
+  p5.strokeWeight(1);
+  p5.rect(x, y, width, barHeight);
   p5.pop();
 }

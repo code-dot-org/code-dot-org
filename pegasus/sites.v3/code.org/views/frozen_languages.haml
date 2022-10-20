@@ -3,6 +3,6 @@
   %a{href: CDO.studio_url('/s/frozen')} Frozen 
   tutorial is supported in the following languages
 %ul
-  - Languages.get_frozen_languages.each do |properties|
+  - PegasusLanguages.get_frozen_languages.each do |properties|
     - if properties[:frozen_b]
       %li= properties[:crowdin_name_s]

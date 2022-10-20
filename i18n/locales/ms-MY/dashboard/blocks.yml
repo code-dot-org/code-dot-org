@@ -2,6 +2,8 @@
 ms:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: pengguna prom {QUESTION} untuk pembolehubah {VAR} dengan pilihan {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1315,6 +1317,10 @@ ms:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": pilih
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass yang unik
             "'sound://category_digital/jump_7.mp3'": lompat
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playSpeech:
         text: bermain ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -1466,15 +1472,6 @@ ms:
         text: "{SPRITE} fikir {SPEECH}"
       gamelab_spriteThinkTime:
         text: "{SPRITE}fikir{TEXT1}selama{NUM}saat"
-      gamelab_spriteThink_fables1:
-        text: "{SPRITE} fikir {THOUGHT}"
-        options:
-          THOUGHT:
-            '"Hmm..."': Hmm...
-            '"I am hungry, too."': Saya juga lapar.
-            '"I only want the biggest goat."': Saya hanya mahu kambing yang paling besar.
-            '"I''m a green troll."': Saya troll hijau.
-            '"No one will cross my bridge."': Tiada siapa yang akan menyeberangi jambatan saya
       gamelab_spriteThink_fables2:
         text: "{SPRITE} fikir {THOUGHT}"
         options:
@@ -2122,6 +2119,11 @@ ms:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: apabila {VAR} dijawab
       RyanLab_moveForward:

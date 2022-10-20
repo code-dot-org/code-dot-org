@@ -4,11 +4,6 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  setup do
-    # stub properties so we don't try to hit pegasus db
-    Properties.stubs(:get).returns nil
-  end
-
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create :teacher
     sign_in teacher

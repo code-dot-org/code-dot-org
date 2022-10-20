@@ -4874,6 +4874,8 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Kelas 6-12
         poem-art-2021:
           title: Seni Puisi
         explore-data-1-2021:
@@ -5175,6 +5177,10 @@ id:
               display_name: Konten
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Dapat Dimulai
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5416,6 +5422,9 @@ id:
             versi kurikulum
           description: Untuk pembaruan tahapan atau level pembelajaran di antara versi
             kurikulum
+          lessons:
+            lesson-7:
+              name: Pengantar Sprite
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -5522,5 +5531,108 @@ id:
               display_name: Selamat Datang
         dlp-csp-mod1-2022:
           title: CS Principles Deeper Learning Modul 1
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Ekstensi Debugging Tidak Sinkron
         self-paced-pl-csd5-2022:
           title: self-paced-pl-csd5
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Tugas Tidak Sinkron
+        soccer:
+          name: sepak bola
+          title: Buat kode game sepakbolamu sendiri
+          description_short: Buat game sepak bola
+          description: Buat game sepak bola
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Survei
+            lessonGroup-2:
+              display_name: Konten
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Survei
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Loop
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survei
+            lessonGroup-3:
+              display_name: Konten
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+          title: Pemecahan Masalah
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+          title: Proses Desain
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Bangunan Permainan'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+          title: Komputasi Fisik
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'

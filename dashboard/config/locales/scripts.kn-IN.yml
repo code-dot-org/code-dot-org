@@ -1120,6 +1120,8 @@ kn:
           lesson_groups:
             lessonGroup-5:
               display_name: ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್
+        ai-ethics-2021:
+          description_audience: ಗ್ರೇಡ್‌ 6-12
         poem-art-2021:
           title: ಕವನ ಕಲೆ
         counting-csc-2021:
@@ -1418,3 +1420,42 @@ kn:
         aiml-2022:
           name: aiml-2022
           description_short: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆಯ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ಅಸಿಂಕ್ರೊನಸ್‌ ಡಿಬಗ್ಗಿಂಗ್‌ ವಿಸ್ತರಣೆ
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: ಮಾಡ್ಯೂಲ್‌ 2 ಅಸಿಂಕ್ರನಸ್ ವರ್ಕ್
+        soccer:
+          name: ಸಾಕರ್
+          title: ನಿಮ್ಮದೇ ಸಾಕರ್ ಗೇಮ್ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ
+          description_short: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
+          description: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-6:
+              name: ಲೂಪ್‌ಗಳು
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
+        csd4-2023:
+          title: ಡಿಸೈನ್ ಪ್ರಕ್ರಿಯೆ
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ಅಧ್ಯಾಯ 1
+            lessonGroup-3:
+              display_name: ಅಧ್ಯಾಯ 2

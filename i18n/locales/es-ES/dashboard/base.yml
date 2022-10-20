@@ -374,6 +374,7 @@ es:
       about: "Acerca de"
       legal: "Privacidad y Legalidad"
       legal_privacy: "Política de Privacidad"
+      legal_cookie_notice: "Aviso de Cookies"
       legal_tos: "Términos de uso"
     user:
       classroom: 'Página de inicio del maestro'
@@ -549,6 +550,7 @@ es:
     choose_next_course: "Prueba un curso de Código Studio eligiendo uno a continuación"
     print_certificate: "Imprimir Certificado"
   certificate_sponsor_message: "%{sponsor_name} hizo el generoso gesto de patrocinar tu aprendizaje."
+  certificate_hour_of_code: "Hora del Código"
   move_students:
     new_section_dne: "Lo sentimos, pero no existe la sección %{new_section_code}. Ingresa un código de sección diferente."
     section_code_cant_be_current_section: "La sección actual no puede ser igual a la nueva sección."
@@ -601,6 +603,7 @@ es:
     try_hour_of_code: '¡Prueba una Hora de Code!'
     store: 'Tienda'
     cookie_notice: 'Aviso de Cookies'
+    view_code: 'Ver Código'
   reference_area:
     title: '¿Necesitas ayuda?'
     subtitle: 'Ver estos vídeos y sugerencias'
@@ -1038,6 +1041,8 @@ es:
         not_listed: 'El término preferido no aparece'
         none: 'Prefiero no contestar'
       school_country:
+        barbados: 'Barbados'
+        belize: 'Belice'
         canada: 'Canadá'
         chile: 'Chile'
         colombia: 'Colombia'
@@ -1145,3 +1150,12 @@ es:
   unit_prefix: "Unidad %{n}"
   code_org_logo_alt: "Inicio de Code.org"
   teacher_feedback: "Retroalimentación del docente"
+  lesson_lock:
+    error:
+      no_updates: "No hay actualizaciones disponibles"
+      missing_params: "Debe proporcionar los ID de usuario, nivel y unidad"
+      cannot_view_locked_answers: "No se pueden ver las respuestas mientras están bloqueadas"
+      forbidden: "El usuario no puede actualizar el estado bloqueable del estudiante"
+  reset_predict_progress_button: "Borrar respuesta"
+  pixelation:
+    binary: "Binario"
