@@ -691,6 +691,7 @@ module Pd::Application
         principal_phone_number
         completing_on_behalf_of_someone_else
         current_role
+        previous_used_curriculum
         previous_yearlong_cdo_pd
 
         program
@@ -761,7 +762,9 @@ module Pd::Application
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:replace_which_course, TEXT_FIELDS[:other_please_explain]],
-        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain]]
+        [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
+        [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
+        [:how_heard, TEXT_FIELDS[:other_with_text]]
       ]
     end
 
