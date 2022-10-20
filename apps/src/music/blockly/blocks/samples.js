@@ -20,10 +20,11 @@ export const playSound = {
       {
         type: 'field_image',
         src: 'https://code.org/shared/images/play-button.png',
-        width: 15,
-        height: 20,
+        width: 18,
+        height: 23,
         alt: '*',
-        flipRtl: false
+        flipRtl: false,
+        name: 'image'
       },
       {
         type: 'input_dummy',
@@ -40,7 +41,11 @@ export const playSound = {
     colour: 230,
     tooltip: 'play sound',
     helpUrl: '',
-    extensions: ['dynamic_menu_extension']
+    extensions: [
+      'dynamic_menu_extension',
+      'preview_extension',
+      'clear_preview_on_change_extension'
+    ]
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +

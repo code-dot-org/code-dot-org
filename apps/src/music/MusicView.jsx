@@ -215,6 +215,45 @@ class UnconnectedMusicView extends React.Component {
       }
     );
 
+    Blockly.blockly_.Extensions.register('preview_extension', function() {
+      this.getField('image').setOnClickHandler(function() {
+        if (self.state.isPlaying) {
+          return;
+        }
+        const id = this.getSourceBlock()
+          .getField('sound')
+          .getValue();
+
+        // TODO: Replace image URLs with font-awesome icons,
+        // or something else not from the shared directory
+        if (self.player.isPreviewPlaying(id)) {
+          self.player.stopAndCancelPreviews();
+          this.setValue('https://code.org/shared/images/play-button.png');
+        } else {
+          this.setValue('https://code.org/shared/images/stop-button.png');
+          self.player.previewSound(id, () => {
+            this.setValue('https://code.org/shared/images/play-button.png');
+          });
+        }
+      });
+    });
+
+    Blockly.blockly_.Extensions.register(
+      'clear_preview_on_change_extension',
+      function() {
+        this.setOnChange(function(event) {
+          if (
+            event.blockId === this.id &&
+            event.type === Blockly.blockly_.Events.BLOCK_CHANGE &&
+            event.name === 'sound' &&
+            self.player.isPreviewPlaying(event.oldValue)
+          ) {
+            self.player.stopAndCancelPreviews();
+          }
+        });
+      }
+    );
+
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
         init: function() {
@@ -265,6 +304,7 @@ class UnconnectedMusicView extends React.Component {
     // usable then.
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.blockly_.Events.BLOCK_DRAG) {
+      this.player.stopAndCancelPreviews();
       return;
     }
 
