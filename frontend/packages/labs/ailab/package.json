@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/ml-playground",
-  "version": "0.0.39",
+  "version": "0.0.40",
   "main": "dist/main.js",
   "repository": {
     "type": "git",
@@ -70,7 +70,8 @@
   },
   "files": [
     "dist/**/!(mainDev.js)",
-    "i18n/ailab.json"
+    "i18n/ailab.json",
+    "public/datasets/*.json"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
