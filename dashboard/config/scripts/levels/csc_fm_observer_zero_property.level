@@ -1,0 +1,206 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "true",
+    "instructions_important": "false",
+    "long_instructions": "##Observer\r\n\r\n**Our new function is missing a label. Help us figure out what it does!**\r\n\r\nClick the different inputs to figure out what multiplication function this is.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "preload_asset_list": null
+  },
+  "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-10-19T20:06:59.000Z",
+  "user_id": 1196,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-10-19T20:06:59.179+00:00\",\"changed\":[\"cloned from \\\"csc_fm_tinker_addition_to_multiplication\\\"\"],\"cloned_from\":\"csc_fm_tinker_addition_to_multiplication\"},{\"changed_at\":\"2022-10-19 20:07:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:10:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:12:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:12:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:13:53 +0000\",\"changed\":[\"start_blocks\",\"embed\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:23:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:24:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:24:47 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:35:50 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:35:50 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:36:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:36:17 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:38:39 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:38:44 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:38:49 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:38:53 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 20:38:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 21:28:17 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 21:28:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-19 21:29:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME" id="timesZero">timesZero</field>
+          <statement name="STACK">
+            <block type="variables_set">
+              <field name="VAR">input</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">MULTIPLY</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">0</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR">output</field>
+                  <value name="VALUE">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="gamelab_makeNewSpriteAnon">
+              <field name="ANIMATION_NAME">"purple bunny"</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <field name="LOCATION">{"x":198,"y":176}</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_setPromptWithChoices">
+                  <value name="QUESTION">
+                    <block type="text">
+                      <field name="TEXT">Set input to:</field>
+                    </block>
+                  </value>
+                  <value name="VAR">
+                    <block type="variables_get" movable="false">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                  <value name="A">
+                    <block type="text">
+                      <field name="TEXT">1</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="text">
+                      <field name="TEXT">2</field>
+                    </block>
+                  </value>
+                  <value name="C">
+                    <block type="text">
+                      <field name="TEXT">3</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenPromptAnswered">
+          <value name="VAR">
+            <block type="variables_get">
+              <field name="VAR">input</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_spriteSayTime">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"purple bunny"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="variables_get">
+                  <field name="VAR">input</field>
+                </block>
+              </value>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">4</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_setPromptWithChoices">
+                  <value name="QUESTION">
+                    <block type="text">
+                      <field name="TEXT">Show output</field>
+                    </block>
+                  </value>
+                  <value name="VAR">
+                    <block type="variables_get" movable="false">
+                      <field name="VAR">output</field>
+                    </block>
+                  </value>
+                  <value name="A">
+                    <block type="text">
+                      <field name="TEXT">Show output</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenPromptAnswered">
+          <value name="VAR">
+            <block type="variables_get">
+              <field name="VAR">output</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="timesZero"/>
+              <next>
+                <block type="gamelab_spriteSayTime">
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"purple bunny"</field>
+                    </block>
+                  </value>
+                  <value name="TEXT1">
+                    <block type="variables_get">
+                      <field name="VAR">output</field>
+                    </block>
+                  </value>
+                  <value name="NUM">
+                    <block type="math_number">
+                      <field name="NUM">4</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
