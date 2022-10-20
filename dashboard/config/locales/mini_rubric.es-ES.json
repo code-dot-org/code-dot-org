@@ -919,7 +919,10 @@
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "rubric_key_concept": "Combinando los elementos de entrada y salida del Circuit Playground y de la pantalla para crear una aplicación",
-          "rubric_performance_level_1": "La aplicación funciona como se describe, con variables que se utilizan para obtener los valores de la pantalla y para encender los LEDs del Circuit Playground en la dirección correcta."
+          "rubric_performance_level_1": "La aplicación funciona como se describe, con variables que se utilizan para obtener los valores de la pantalla y para encender los LEDs del Circuit Playground en la dirección correcta.",
+          "rubric_performance_level_2": "La aplicación puede encender los LEDs, pero una de las entradas (dirección, color o brillo) no está funcionando correctamente",
+          "rubric_performance_level_3": "Los LEDs se encienden, pero no reaccionan a los valores que el usuario introduce. Las variables no se utilizan correctamente en el programa.",
+          "rubric_performance_level_4": "La aplicación no se ha modificado."
         },
         "CSD U6 - If Variables - A_2222": {
           "rubric_key_concept": "Utiliza variables y sentencias `if` para crear una aplicación que utilice el Circuit Playground",
