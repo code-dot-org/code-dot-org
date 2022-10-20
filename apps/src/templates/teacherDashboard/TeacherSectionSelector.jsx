@@ -21,6 +21,7 @@ export default class TeacherSectionSelector extends Component {
     courseOfferingId: PropTypes.number,
     courseOfferingParticipantType: PropTypes.string,
     courseVersionId: PropTypes.number,
+    courseId: PropTypes.number,
     unitId: PropTypes.number
   };
 
@@ -116,6 +117,10 @@ export default class TeacherSectionSelector extends Component {
                 section={section}
                 onClick={() => this.chooseMenuItem(section)}
                 key={section.id}
+                courseId={this.props.courseId}
+                scriptId={this.props.scriptId}
+                courseOfferingId={this.props.courseOfferingId}
+                courseVersionId={this.props.courseVersionId}
               />
             ))}
           <div style={styles.addNewSection}>
