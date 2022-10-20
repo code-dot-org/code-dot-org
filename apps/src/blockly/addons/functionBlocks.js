@@ -1,3 +1,5 @@
+import BlockSvgFunctional from './blockSvgFunctional.js';
+
 /**
  * Used to customize function definition blocks for Google Blockly labs.
  * Derived from core Google Blockly:
@@ -19,6 +21,12 @@ export const FUNCTION_BLOCK = {
     this.argumentVarModels_ = [];
     this.setStatements_(true);
     this.statementConnection_ = null;
+    this.functionalSvg_ = new BlockSvgFunctional(this);
+    this.setOnChange(function(changeEvent) {
+      if (!this.isInFlyout) {
+        this.functionalSvg_.render(this.svgGroup_, this.RTL);
+      }
+    });
   }
 };
 
