@@ -106,6 +106,7 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
                 className={classNames(
+                  child.props.className,
                   style.anchor,
                   index > 0 && style.nonFirstAnchor
                 )}
