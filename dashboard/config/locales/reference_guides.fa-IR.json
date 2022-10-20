@@ -3,7 +3,7 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "",
+          "display_name": "حوادث شتاب سنج",
           "content": ""
         },
         "csd-2022/accuracy-in-ai-lab": {
@@ -34,7 +34,7 @@
           "content": ""
         },
         "csd-2022/board-events": {
-          "display_name": "",
+          "display_name": "حوادث بورد",
           "content": ""
         },
         "csd-2022/body-styling": {

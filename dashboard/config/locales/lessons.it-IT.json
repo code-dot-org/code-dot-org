@@ -628,92 +628,92 @@
           "student_overview": "Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!"
         },
         "courseb-2022/Digital Trails": {
-          "name": "Tracce digitali",
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nQuello che fai online rimane sempre online? Gli alunni imparano che le informazioni che condividono online lasciano un'impronta digitale o «traccia». A seconda di come lo gestiscono, questo percorso può essere grande o piccolo e dannoso o utile. Gli alunni confrontano percorsi diversi e pensano in modo critico al tipo di informazioni che vogliono lasciarsi alle spalle.buon",
+          "name": "Segui le tracce digitali",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nQuello che fai online rimane sempre online? Gli alunni imparano che le informazioni che condividono online lasciano un'orma digitale o «traccia». A seconda di come lo gestiscono, queste tracce possono essere grandi o piccole, dannose o utili. Gli alunni confrontano percorsi diversi e pensano in modo critico al tipo di informazioni che vogliono lasciarsi alle spalle.",
           "preparation": "-   Esaminare il materiale didattico.\n-   Stampare gli le schede per ciascun alunno.",
           "purpose": "Il Curriculum \"Cittadinanza digitale\" di Common Sense affronta sei argomenti chiave, basati sulle ultime ricerche su bambini, media e tecnologia. Questa lezione si concentra sull' \"Impronta e identità digitale\". Gli alunni considerano i vantaggi e i rischi della condivisione online ed esplorano come la personalità digitale può influenzare il senso di sé, la reputazione e le relazioni.",
           "student_overview": "Impara quali sono le tue tracce digitalil e i modi per stare al sicuro quando visiti i siti web. "
         },
         "courseb-2022/Move It, Move It": {
           "name": "Muovilo, muovilo",
-          "overview": "In questa lezione di **contestualizzazione**, gli alunni programmeranno attentamente il movimento dei propri compagni di classe attorno a una grande griglia sul pavimento.",
+          "overview": "In questa lezione di **contestualizzazione**, gli alunni programmano attentamente il movimento dei propri compagni di classe attorno a una grande griglia sul pavimento.",
           "preparation": "-   Guarda **\\*Video per gli insegnanti**\n-   Stampa (o altrimenti preparati a visualizzare) un documento con le **\\*Soluzioni del foglio di lavoro**\n-   Stampa una **\\*Mappa attività** e un **\\*Foglio di lavoro** per gruppo di 2-3 alunni\n-   Prepara documenti vuoti per compilare il resto della tabella di marcia (4-7 necessari per gruppo)",
           "purpose": "Utilizzando il movimento fisico per programmare i loro compagni di classe, gli alunni incontreranno problemi ed emozioni simili a ciò che proveranno quando inizieranno a programmare su un computer. Incontrare questi stress in un ambiente giocoso e aperto aiuterà ad alleviare l'intensità e permetterà agli alunni di mettere in pratica le abilità necessarie prima che incontrino problemi da soli.",
           "student_overview": "\"Programma\" i tuoi compagni di classe in modo che si spostino con attenzione da un posto all'altro."
         },
         "courseb-2022/Sequencing with Angry Birds": {
           "name": "Sequenze di istruzioni con Angry Birds",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino al maialino nell'altro lato. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino alla posizione del maialino. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
           "preparation": "-   Se trascinare e rilasciare sono attività nuove per i tuoi alunni, valuta la possibilità di assegnare loro **\\*Esercizi di trascinamento e rilascio** prima di iniziare questa lezione.\n-   Guarda la sezione **\\*Come creare una classe su Code.org** - Video dell'insegnante. Crea la tua classe su Code.org e assicurati che ogni studente abbia una carta con il proprio codice.\n-   Chiedi ai responsabili IT della scuola di aggiungere un link rapido per la sezione della tua classe sul desktop del computer.\n-   Assicurati che ogni alunno abbia un diario.",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Aiuta l'uccellino di Angry Bird a seguire il percorso fino al maialino cattivo."
         },
         "courseb-2022/Programming with Angry Birds": {
           "name": "Programmare con Angry Birds",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continueranno a sviluppare algoritmi sequenziali.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano a sviluppare algoritmi sequenziali.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Individua o ristampa i materiali per **\\*Mappe felici**.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni.\n-   Ritaglia una quantità sufficiente di blocchi dalle **\\*Schede da ritagliare** per ogni direzione (N, S, E, O), in modo da darne due kit ad ogni coppia di alunni (se scegli l'Opzione ponte n. #1)",
           "purpose": "In questa lezione, gli alunni svilupperanno competenze di programmazione su una piattaforma informatica. Il formato di questi esercizi, basato su blocchi, aiuta gli studenti ad apprendere la sequenza e i concetti, senza doversi preoccupare di perfezionare la sintassi.",
           "student_overview": "Crea programmi per aiutare l'uccellino a muoversi nel labirinto."
         },
         "courseb-2022/Programming with Harvester": {
           "name": "Programmare con la contadina",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni applicheranno i concetti di programmazione che hanno appreso all'ambiente della contadina. Gli alunni continueranno a sviluppare abilità di algoritmo sequenziale e inizieranno a utilizzare il processo di correzione degli errori (debugging).",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni applicano all'ambiente della contadina i concetti di programmazione precedentemente appresi. Gli alunni continuano ad approfondire il concetto di algoritmo sequenziale e iniziano ad usare il processo di correzione degli errori (debugging).",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità nella correzione dei problemi e continueranno a sviluppare le loro capacità di programmazione.",
           "student_overview": "Aiuta la contadina a raccogliere le verdure lungo il percorso."
         },
         "courseb-2022/Getting Loopy": {
           "name": "Diventare ripetitivi",
-          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni impareranno a usare i cicli per comunicare più facilmente le istruzioni osservando gli schemi ripetuti di una danza.",
+          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni imparano a usare le istruzioni di ripetizione (cicli) per comunicare più facilmente le istruzioni osservando gli schemi ripetuti di una danza.",
           "preparation": "-   Preparati a mostrare il **\\*Foglio di lavoro** agli alunni.\n-   Stampa una scheda di **\\*Valutazione** per ogni alunno.\n-   Fai in modo che ogni alunno disponga di un diario per le proprie riflessioni.",
           "purpose": "A questo punto del corso, gli alunni dovrebbero aver acquisito familiarità con la programmazione di una sequenza lineare di istruzioni. Spesso la sequenza lineare di istruzioni include schemi che vengono ripetuti più volte e poiché gli alunni vogliono scrivere programmi più complessi e interessanti, la duplicazione manuale di quel codice diventa ingombrante ed inefficiente. Per premettere di scrivere programmi più potenti, dovremo fare affidamento su strutture che esulano da quell'unico elenco lineare. I cicli consentono agli alunni di strutturare il proprio codice con delle ripetizioni. In questa lezione, ci concentreremo sull'identificazione di schemi nel movimento fisico prima di tornare al computer per cercare schemi nel nostro programma.",
           "student_overview": "In questa lezione animeremo una festa con dei balli realizzati utilizzando i cicli!"
         },
         "courseb-2022/Loops with Harvester": {
           "name": "Cicli con la contadina",
-          "overview": "Questa lezione è una **palestra delle competenze**, gli alunni aiuteranno la contadina a cogliere il raccolto utilizzando i cicli.",
+          "overview": "Questa lezione è una **palestra delle competenze**, gli alunni aiutano la contadina a raccogliere gli ortaggi usando le istruzioni di ripetizione (cicli).",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni\n-   (Facoltativo) Scegli un paio di puzzle da fare in gruppo con la tua classe.\n-   (Facoltativo) Se non l'hai già fatto, stampa e ritaglia i blocchi dalle **\\*Schede da ritagliare**  per prepararti a una delle attività ponte di questa lezione.",
           "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con i blocchi Blockly. L'uso dei cicli è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che si ripetono e che devono essere ricondotti ad un ciclo.",
           "student_overview": "Aiuta la contadina a raccogliere ancora di più, usando i cicli!"
         },
         "courseb-2022/Loops with Laurel": {
           "name": "Cicli con la collezionista",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laurel l'avventuriera usa i cicli per raccogliere tesori all'interno delle grotte. ",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa le istruzioni di ripetizione per raccogliere diamanti all'interno delle grotte. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni",
           "purpose": "Questa lezione offre agli alunni una maggiore pratica con i cicli e li incoraggia a inserire più blocchi all'interno di un ciclo `ripeti` mentre cercano di raccogliere più diamanti possibile.",
           "student_overview": "Aiuta la contadina a raccogliere ancora di più, usando i cicli!"
         },
         "courseb-2022/Drawing Gardens with Loops": {
           "name": "Disegnare giardini con i cicli",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini riproducendo in sequenza semplici sequenze di istruzioni. Qui, gli alunni usano i cicli per creare schemi. ",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini riproducendo in sequenza semplici sequenze di istruzioni. Qui, gli alunni usano le istruzioni di ripetizione (cicli) per creare schemi. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione offre una diversa prospettiva su come possono essere usati i cicli nella programmazione. Gli alunni metteranno alla prova le loro capacità di pensiero critico, valutando il codice fornito e determinando cosa bisogna aggiungere per risolvere un certo esercizio. Gli alunni qui possono riflettere anche sull'inefficienza della programmazione senza cicli `ripeti`, valutando quanti blocchi richiederebbe il programma senza l'aiuto di questa fondamentale istruzione.",
           "student_overview": "Utilizza schemi e cicli per completare l'immagine"
         },
         "courseb-2022/The Right App": {
-          "name": "L'App Giusta",
-          "overview": "In questa lezione **esplorativa**, gli alunni entrano in empatia con diversi utenti fittizi di smartphone per aiutarli a trovare la \"app giusta\" che soddisfi le rispettive esigenze.",
+          "name": "L'app giusta",
+          "overview": "In questa lezione **esplorativa**, gli alunni entrano in empatia con diversi utenti fittizi di smartphone per aiutarli a trovare la \"app giusta\" che soddisfi le loro esigenze.",
           "preparation": "-   Leggere le note per il relatore nella presentazione delle **\\*diapositive**. \n-   Prepara abbastanza materiale per schizzi e disegni per tutti gli alunni.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Oggi, l'informatica è più accessibile che mai. Persone di ogni estrazione sociale utilizzano il software su molti dispositivi diversi, in particolare smartphone, per l'informazione, la comunicazione e l'intrattenimento. Poiché le persone hanno esperienze e bisogni così diversi, è importante per gli informatici in erba entrare in empatia con le persone e identificare soluzioni pensando a loro. ",
           "student_overview": "Abbozza la tua app per smartphone."
         },
         "courseb-2022/The Big Event Jr": {
           "name": "Il grande evento (per i più piccoli)",
-          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenterà il concetto di eventi attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti su un telecomando gigante.",
+          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenta il concetto di evento attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti di un telecomando gigante.",
           "preparation": "-   Prepararsi al progetto **\\*Controllore di immagini**.\n-   Stampa una **\\*Valutazione** per alunno.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Oggi gli alunni impareranno a distinguere gli eventi dalle azioni. Gli alunni vedranno che certe attività si interrompono a causa della pressione di un \"pulsante\" su un telecomando cartaceo. All'accadere di questo evento, la classe reagirà con un'unica azione. Gli eventi sono ampiamente utilizzati nella programmazione e, dopo questa lezione, dovrebbero essere facilmente riconoscibili.",
           "student_overview": "Muoviti o fai un urlo quando i tuoi insegnanti premono i pulsanti su un telecomando gigante."
         },
         "courseb-2022/Mini-Project: A Royal Battle with Events": {
-          "name": "Mini-progetto: una Battaglia Reale con gli eventi",
-          "overview": "In questo **mini progetto**, gli alunni avranno l'opportunità di imparare a usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
+          "name": "Mini-progetto - Una battaglia con gli eventi",
+          "overview": "In questo **mini progetto**, gli alunni hanno l'opportunità di imparare ad usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni.",
           "purpose": "In questa attività online, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
           "student_overview": "Usa gli eventi per creare una storia o realizzare un gioco interattivo."
         },
         "courseb-2022/End of Course Project": {
           "name": "Progetto di fine corso",
-          "overview": "Questa è una lezione **progetto**: gli alunni mettono in pratica in un progetto aperto ciò che hanno appreso sulle sequenze e sugli eventi con il Laboratorio.",
+          "overview": "Questa è una **lezione-progetto**: gli alunni mettono in pratica in un progetto aperto ciò che hanno appreso nel Laboratorio sulle sequenze e sugli eventi.",
           "preparation": "-   Programma in anticipo i tuoi progetti del laboratorio per orientare gli alunni!",
           "purpose": "Questa lezione offre agli alunni un'ultima opportunità per utilizzare in modo creativo le loro nuove competenze informatiche.",
           "student_overview": "Crea la tua storia o il tuo gioco."
@@ -915,21 +915,21 @@
         },
         "pre-express-2022/Learn to Drag and Drop": {
           "name": "Impara come trascinare i blocchi",
-          "overview": "Questa lezione è una **palestra delle competenze** che darà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
+          "overview": "Questa lezione è una **palestra delle competenze** che dà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
           "preparation": "-   Guarda la sezione **\\*Come creare una classe su Code.org** - Video dell'insegnante. Crea la tua classe su Code.org e assicurati che ogni studente abbia una carta con il proprio **passcode**.\n-   Assicurati che gli alunni siano in grado di accedere alla Lezione 2 dai propri dispositivi. Valuta se vuoi nascondere le lezioni future per impedire agli studenti di andare avanti troppo velocemente.\n-   Chiedi ai responsabili IT della scuola di aggiungere un link rapido per la sezione della tua classe sul desktop del computer.\n-   Consulta il sito Web Common Sense Education per ulteriori contenuti sulla sicurezza online.",
           "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi.",
           "student_overview": "Clicca e trascina per completare l'esercizio"
         },
         "pre-express-2022/Sequencing with Scrat": {
           "name": "Sequenze di istruzioni con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino al maialino nell'altro lato. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino alla posizione del maialino. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
           "preparation": "-   Assicurati che ogni studente abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Programma Scrat per fargli raggiungere la ghianda."
         },
         "pre-express-2022/Programming with Angry Birds": {
           "name": "Programmare con Angry Birds",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continueranno a sviluppare algoritmi sequenziali.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano a sviluppare algoritmi sequenziali.",
           "preparation": "-   Segui la lezione per trovare eventuali aree problematiche per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
         },
@@ -982,98 +982,98 @@
         },
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Una battaglia reale con eventi",
-          "overview": "In questo **mini progetto**, gli alunni avranno l'opportunità di imparare a usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
+          "overview": "In questo **mini progetto**, gli alunni hanno l'opportunità di imparare ad usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa attività online, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
           "student_overview": "Usa gli eventi per creare una storia o realizzare un gioco interattivo."
         },
         "coursea-2022/Safety in My Online Neighborhood": {
-          "name": "Sicurezza nel mio quartiere digitale",
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLa potenza di Internet consente agli alunni di sperimentare e visitare luoghi che potrebbero non essere in grado di vedere di persona. Ma, proprio come viaggiare nel mondo reale, è importante essere sicuri quando si viaggia online. In questa gita virtuale, i bambini possono esercitarsi a stare al sicuro nelle avventure online.",
+          "name": "Il mio quartiere digitale",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLa potenza di Internet consente agli alunni di sperimentare e visitare luoghi che potrebbero non essere in grado di vedere di persona. Ma, proprio come viaggiare nel mondo materiale, è importante essere sicuri quando si viaggia online. In questa gita in Internet, i bambini possono esercitarsi su come stare al sicuro nelle loro avventure online.",
           "preparation": "-   Esaminare il materiale didattico.\n-   Stampare le schede per ogni studente.\n-   (Facoltativo) Stampa un cartellone di poesie per la visualizzazione in classe.",
           "purpose": "Il Digital Citizenship Curriculum di Common Sense affronta sei argomenti chiave, basati sulle ultime ricerche su bambini, media e tecnologia. Questa lezione si concentra sulla privacy e la sicurezza. Gli alunni imparano come proteggere le informazioni personali e acquisire una comprensione più profonda dei loro diritti sulla privacy dei dati in modo da poter difendere se stessi e gli altri.",
           "student_overview": "Scopri come andare in luoghi sicuri quando sei online."
         },
         "coursea-2022/Learn to Drag and Drop": {
           "name": "Impara come trascinare i blocchi",
-          "overview": "Questa lezione è una **palestra delle competenze** che darà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
+          "overview": "Questa lezione è una **palestra delle competenze** che dà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
           "preparation": "-   Guarda la sezione **\\*Come creare una classe su Code.org** - Video dell'insegnante. Crea la tua classe su Code.org e assicurati che ogni studente abbia una carta con il proprio codice.\n-   Assicurati che gli alunni siano in grado di accedere alla Lezione 2 dai propri dispositivi. Valuta se vuoi nascondere le lezioni future per impedire agli studenti di andare avanti troppo velocemente.\n-   Chiedi ai responsabili IT della scuola di aggiungere un link rapido per la sezione della tua classe sul desktop del computer.\n-   Consulta il sito Web Common Sense Education per ulteriori contenuti sulla sicurezza online.",
           "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi.",
           "student_overview": "Clicca e trascina per completare l'esercizio"
         },
         "coursea-2022/Happy Maps": {
           "name": "Mappe felici",
-          "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
+          "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
         "coursea-2022/Sequencing with Scrat": {
           "name": "Sequenze di istruzioni con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino al maialino nell'altro lato. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino alla posizione del maialino. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
           "preparation": "-   Ritaglia i blocchi direzionali da **\\*Schede da ritagliare** da utilizzare con l'attività ponte di Mappe felici.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni..",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Programma Scrat per fargli raggiungere la ghianda."
         },
         "coursea-2022/Programming with Scrat": {
           "name": "Programmare con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continueranno a sviluppare algoritmi sequenziali.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano a sviluppare algoritmi sequenziali.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Scrivi un programma per far raggiungere a Scrat la ghianda."
         },
         "coursea-2022/Programming with Rey and BB-8": {
           "name": "Programmare con Rey e BB-8",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni metteranno in pratica, in modi più complessi, le competenze appena acquisite nella programmazione, per affrontare insieme a _BB-8_ un percorso impegnativo..",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni mettono in pratica, in modi più complessi, le competenze appena acquisite nella programmazione, per affrontare insieme a _BB-8_ un percorso impegnativo.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Sempre allo scopo di trasferire le conoscenze, in questa lezione viene fornito agli alunni un nuovo ambiente per far pratica con le abilità che stanno acquisendo. I fan di Star Wars salteranno di gioia quando vedranno questi esercizi. Ogni esercizio di questa serie è stato aggiunto per approfondire i concetti di base che utilizzeranno per il resto del corso.",
           "student_overview": "Aiuta BB-8 a recuperare i rottami metallici."
         },
         "coursea-2022/Happy Loops": {
           "name": "Cicli felici",
-          "overview": "Questa è una lezione di **contestualizzazione** che rivisita Happy Maps. Questa volta, gli studenti utilizzeranno i cicli per risolvere esercizi più impegnativi e più lunghi con il loro programma.",
+          "overview": "Questa è una lezione di **contestualizzazione** che rivisita Mappe felici. Questa volta, gli studenti usano le istruzioni di ripetizione (cicli) per risolvere esercizi più lunghi e impegnativi.",
           "preparation": "-   Stampa un **\\*Foglio di lavoro** da visualizzare per la classe\n-   Per ogni gruppo di 2-3, stampane uno di ciascuno: **\\*Pezzi del gioco, \\*Foglio di lavoro XL e \\*Manipolativi dei pacchetti bonus**.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Con questa lezione vengono introdotte le istruzioni di ripetizione (cicli). I cicli permettono agli alunni di semplificare i programmi raggruppando le istruzioni che devono essere ripetute. Gli alunni svilupperanno il pensiero critico, notando la ripetizione nei movimenti dei loro compagni di classe e determinando quante volte ripetere le istruzioni. Vedendo di nuovo \"Mappe Felici\", gli alunni avranno la possibilità di mettere in relazione concetti vecchi come le sequenze di istruzioni con il nuovo concetto delle istruzioni di ripetizione.",
           "student_overview": "Aiuta il Flurb a risolvere problemi più complessi usando i loop."
         },
         "coursea-2022/Loops with Scrat": {
           "name": "Cicli con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni si eserciteranno in esercizi sui cicli di programmazione, nei quali l'obiettivo è aiutare lo scoiattolo a raggiungere la ghianda.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni si esercitano in esercizi sulle istruzioni di ripetizione (cicli), nei quali l'obiettivo è aiutare lo scoiattolo a raggiungere la ghianda.",
           "preparation": "-   Ripassa la precedente lezione tradizionale e poni domande per ricordare agli alunni perché si usano i cicli.\n-   (Facoltativo) Scegli un paio di esercizi da fare con la tua classe.\n-   Raccogli i materiali della precedente lezione \"Cicli felici\" per riutilizzarli nell'introduzione\n-   Assicurati che ogni alunni abbia un diario per le proprie riflessioni.",
           "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con i blocchi Blockly. L'uso dei _cicli_ è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che devono essere ripetuti.",
           "student_overview": "Aiuta Scrat a coprire con più terra usando i cicli."
         },
         "coursea-2022/Loops with Laurel": {
           "name": "Cicli con la collezionista",
-          "overview": "Questa lezione è una **Palestra delle competenze**: gli alunni continueranno a imparare il concetto di istruzione di ripetizione (ciclo). Qui utilizzeranno i cicli per raccogliere dei diamanti nelle cavità.",
+          "overview": "Questa lezione è una **Palestra delle competenze**: gli alunni continuano ad imparare il concetto di istruzione di ripetizione (ciclo). Qui utilizzano i cicli per raccogliere dei diamanti nelle cavità.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione offre agli alunni più pratica con i cicli e introduce un nuovo blocco, `prendi il tesoro`. Il blocco funziona esattamente come \"raccogli il mais\" nella Contadina. Questi esercizi sono più aperti e offrono agli alunni maggiore flessibilità per le loro soluzioni finali.",
           "student_overview": "Aiuta Laura l'avventuriera a raccogliere il tesoro sepolto."
         },
         "coursea-2022/Ocean Scene with Loops": {
           "name": "Al mare con i cicli",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini riproducendo con i cicli semplici sequenze di istruzioni. Qui, le istruzioni di ripetizione vengno sfruttate per riprodurre degli schemi. Alla fine di questa lezione, gli alunni creano le proprie immagini.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Qui, le istruzioni di ripetizione vengno sfruttate per riprodurre degli schemi. Alla fine di questa lezione, gli alunni creano le proprie immagini.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione offre nuove prospettive di utilizzo creativo dei cicli nella programmazione. Qui gli alunni possono riflettere ulteriormente sull'inefficienza della programmazione senza cicli e rendersi conto di quanti blocchi richiederebbe il programma senza l'aiuto del ciclo `ripeti`.",
           "student_overview": "Utilizza cicli e schemi per completare le immagini"
         },
         "coursea-2022/The Big Event Jr": {
           "name": "Il grande evento (per i più piccoli)",
-          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenterà il concetto di eventi attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti su un telecomando gigante.",
+          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenta il concetto di evento attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti di un telecomando gigante.",
           "preparation": "-   Stampa o visualizza il file **\\*Controllore di immagini**.\n-   Stampa una **\\*valutazione** per ogni alunno.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Oggi gli alunni impareranno a distinguere gli eventi dalle azioni. Gli alunni vedranno che certe attività si interrompono a causa della pressione di un \"pulsante\" su un telecomando cartaceo. All'accadere di questo evento, la classe reagirà con un'unica azione. Gli eventi sono ampiamente utilizzati nella programmazione e, dopo questa lezione, dovrebbero essere facilmente riconoscibili.",
           "student_overview": "Muoviti e fai un urlo quando i tuoi insegnanti premono i pulsanti su un telecomando gigante."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
           "name": "Mini progetto - In movimento con il laboratorio",
-          "overview": "In questo \"mini progetto\", gli alunni avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di mettere in pratica tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
+          "overview": "In questo \"mini progetto\", gli alunni hanno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di mettere in pratica tutte le competenze di programmazione apprese per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente.",
           "student_overview": "Crea il tuo gioco o la tua storia."
         },
         "coursea-2022/End of Course Project": {
           "name": "Progetto di fine corso",
-          "overview": "Questa è una lezione **progetto**: gli alunni applicano ciò che hanno imparato sulle sequenze e sui cicli con l'artista.",
+          "overview": "Questa è una lezione **progetto**: gli alunni applicano all'ambiente dell'artista ciò che hanno imparato sulle sequenze e sulle istruzioni di ripetizione (cicli).",
           "preparation": "-   Scrivi e programma in anticipo la tua storia per l'Artista così da orientare gli alunni!",
           "purpose": "Questa lezione offre agli alunni un'ultima opportunità per utilizzare in modo creativo le loro nuove competenze informatiche.",
           "student_overview": "Racconta una storia con l'Artista!"
@@ -1885,7 +1885,7 @@
           "name": "Disegnare giardini con i cicli"
         },
         "courseb-2019/The Right App": {
-          "name": "L'App Giusta"
+          "name": "L'app giusta"
         },
         "courseb-2019/Events: The Big Event": {
           "name": "Il grande evento (per i più piccoli)"
@@ -3322,183 +3322,183 @@
           "student_overview": "Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!"
         },
         "courseb-2021/Digital Trails": {
-          "name": "Tracce digitali",
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nQuello che fai online rimane sempre online? Gli alunni imparano che le informazioni che condividono online lasciano un'impronta digitale o «traccia». A seconda di come lo gestiscono, questo percorso può essere grande o piccolo e dannoso o utile. Gli alunni confrontano percorsi diversi e pensano in modo critico al tipo di informazioni che vogliono lasciarsi alle spalle.buon",
+          "name": "Segui le tracce digitali",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nQuello che fai online rimane sempre online? Gli alunni imparano che le informazioni che condividono online lasciano un'orma digitale o «traccia». A seconda di come lo gestiscono, queste tracce possono essere grandi o piccole, dannose o utili. Gli alunni confrontano percorsi diversi e pensano in modo critico al tipo di informazioni che vogliono lasciarsi alle spalle.",
           "preparation": "-   Esaminare il materiale didattico.\n-   Stampare gli le schede per ciascun alunno.",
           "purpose": "Il Curriculum \"Cittadinanza digitale\" di Common Sense affronta sei argomenti chiave, basati sulle ultime ricerche su bambini, media e tecnologia. Questa lezione si concentra sull' \"Impronta e identità digitale\". Gli alunni considerano i vantaggi e i rischi della condivisione online ed esplorano come la personalità digitale può influenzare il senso di sé, la reputazione e le relazioni.",
           "student_overview": "Impara quali sono le tue tracce digitalil e i modi per stare al sicuro quando visiti i siti web. "
         },
         "courseb-2021/Move It, Move It": {
           "name": "Muovilo, muovilo",
-          "overview": "In questa lezione di **contestualizzazione**, gli alunni programmeranno attentamente il movimento dei propri compagni di classe attorno a una grande griglia sul pavimento.",
+          "overview": "In questa lezione di **contestualizzazione**, gli alunni programmano attentamente il movimento dei propri compagni di classe attorno a una grande griglia sul pavimento.",
           "preparation": "-   Guarda **\\*Video per gli insegnanti**\n-   Stampa (o altrimenti preparati a visualizzare) un documento con le **\\*Soluzioni del foglio di lavoro**\n-   Stampa una **\\*Mappa attività** e un **\\*Foglio di lavoro** per gruppo di 2-3 alunni\n-   Prepara documenti vuoti per compilare il resto della tabella di marcia (4-7 necessari per gruppo)",
           "purpose": "Utilizzando il movimento fisico per programmare i loro compagni di classe, gli alunni incontreranno problemi ed emozioni simili a ciò che proveranno quando inizieranno a programmare su un computer. Incontrare questi stress in un ambiente giocoso e aperto aiuterà ad alleviare l'intensità e permetterà agli alunni di mettere in pratica le abilità necessarie prima che incontrino problemi da soli.",
           "student_overview": "\"Programma\" i tuoi compagni di classe in modo che si spostino con attenzione da un posto all'altro."
         },
         "courseb-2021/Sequencing in Maze": {
           "name": "Sequenze di istruzioni con Angry Birds",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino al maialino nell'altro lato. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino alla posizione del maialino. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
           "preparation": "-   Se trascinare e rilasciare sono attività nuove per i tuoi alunni, valuta la possibilità di assegnare loro **\\*Esercizi di trascinamento e rilascio** prima di iniziare questa lezione.\n-   Guarda la sezione **\\*Come creare una classe su Code.org** - Video dell'insegnante. Crea la tua classe su Code.org e assicurati che ogni studente abbia una carta con il proprio codice.\n-   Chiedi ai responsabili IT della scuola di aggiungere un link rapido per la sezione della tua classe sul desktop del computer.\n-   Assicurati che ogni alunno abbia un diario.",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Aiuta l'uccellino di Angry Bird a seguire il percorso fino al maialino cattivo."
         },
         "courseb-2021/Programming in Maze": {
           "name": "Programmare con Angry Birds",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continueranno a sviluppare algoritmi sequenziali.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano a sviluppare algoritmi sequenziali.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Individua o ristampa i materiali per **\\*Mappe felici**.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni.\n-   Ritaglia una quantità sufficiente di blocchi dalle **\\*Schede da ritagliare** per ogni direzione (N, S, E, O), in modo da darne due kit ad ogni coppia di alunni (se scegli l'Opzione ponte n. #1)",
           "purpose": "In questa lezione, gli alunni svilupperanno competenze di programmazione su una piattaforma informatica. Il formato di questi esercizi, basato su blocchi, aiuta gli studenti ad apprendere la sequenza e i concetti, senza doversi preoccupare di perfezionare la sintassi.",
           "student_overview": "Crea programmi per aiutare l'uccellino a muoversi nel labirinto."
         },
         "courseb-2021/Programming in Harvester": {
           "name": "Programmare con la contadina",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni applicheranno i concetti di programmazione che hanno appreso all'ambiente della contadina. Gli alunni continueranno a sviluppare abilità di algoritmo sequenziale e inizieranno a utilizzare il processo di correzione degli errori (debugging).",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni applicano all'ambiente della contadina i concetti di programmazione precedentemente appresi. Gli alunni continuano ad approfondire il concetto di algoritmo sequenziale e iniziano ad usare il processo di correzione degli errori (debugging).",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità nella correzione dei problemi e continueranno a sviluppare le loro capacità di programmazione.",
           "student_overview": "Aiuta la contadina a raccogliere le verdure lungo il percorso."
         },
         "courseb-2021/Loops: Getting Loopy": {
           "name": "Diventare ripetitivi",
-          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni impareranno a usare i cicli per comunicare più facilmente le istruzioni osservando gli schemi ripetuti di una danza.",
+          "overview": "Questa è una lezione di **contestualizzazione**: gli alunni imparano a usare le istruzioni di ripetizione (cicli) per comunicare più facilmente le istruzioni osservando gli schemi ripetuti di una danza.",
           "preparation": "-   Preparati a mostrare il **\\*Foglio di lavoro** agli alunni.\n-   Stampa una scheda di **\\*Valutazione** per ogni alunno.\n-   Fai in modo che ogni alunno disponga di un diario per le proprie riflessioni.",
           "purpose": "A questo punto del corso, gli alunni dovrebbero aver acquisito familiarità con la programmazione di una sequenza lineare di istruzioni. Spesso la sequenza lineare di istruzioni include schemi che vengono ripetuti più volte e poiché gli alunni vogliono scrivere programmi più complessi e interessanti, la duplicazione manuale di quel codice diventa ingombrante ed inefficiente. Per premettere di scrivere programmi più potenti, dovremo fare affidamento su strutture che esulano da quell'unico elenco lineare. I cicli consentono agli alunni di strutturare il proprio codice con delle ripetizioni. In questa lezione, ci concentreremo sull'identificazione di schemi nel movimento fisico prima di tornare al computer per cercare schemi nel nostro programma.",
           "student_overview": "In questa lezione animeremo una festa con dei balli realizzati utilizzando i cicli!"
         },
         "courseb-2021/Loops in Harvester": {
           "name": "Cicli con la contadina",
-          "overview": "Questa lezione è una **palestra delle competenze**, gli alunni aiuteranno la contadina a cogliere il raccolto utilizzando i cicli.",
+          "overview": "Questa lezione è una **palestra delle competenze**, gli alunni aiutano la contadina a raccogliere gli ortaggi usando le istruzioni di ripetizione (cicli).",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni\n-   (Facoltativo) Scegli un paio di puzzle da fare in gruppo con la tua classe.\n-   (Facoltativo) Se non l'hai già fatto, stampa e ritaglia i blocchi dalle **\\*Schede da ritagliare**  per prepararti a una delle attività ponte di questa lezione.",
           "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con i blocchi Blockly. L'uso dei cicli è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che si ripetono e che devono essere ricondotti ad un ciclo.",
           "student_overview": "Aiuta la contadina a raccogliere ancora di più, usando i cicli!"
         },
         "courseb-2021/Loops in Collector": {
           "name": "Cicli con la collezionista",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laurel l'avventuriera usa i cicli per raccogliere tesori all'interno delle grotte. ",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa le istruzioni di ripetizione per raccogliere diamanti all'interno delle grotte. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni",
           "purpose": "Questa lezione offre agli alunni una maggiore pratica con i cicli e li incoraggia a inserire più blocchi all'interno di un ciclo `ripeti` mentre cercano di raccogliere più diamanti possibile.",
           "student_overview": "Aiuta la contadina a raccogliere ancora di più, usando i cicli!"
         },
         "courseb-2021/Loops in Artist": {
           "name": "Disegnare giardini con i cicli",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini riproducendo in sequenza semplici sequenze di istruzioni. Qui, gli alunni usano i cicli per creare schemi. ",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini riproducendo in sequenza semplici sequenze di istruzioni. Qui, gli alunni usano le istruzioni di ripetizione (cicli) per creare schemi. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione offre una diversa prospettiva su come possono essere usati i cicli nella programmazione. Gli alunni metteranno alla prova le loro capacità di pensiero critico, valutando il codice fornito e determinando cosa bisogna aggiungere per risolvere un certo esercizio. Gli alunni qui possono riflettere anche sull'inefficienza della programmazione senza cicli `ripeti`, valutando quanti blocchi richiederebbe il programma senza l'aiuto di questa fondamentale istruzione.",
           "student_overview": "Utilizza schemi e cicli per completare l'immagine"
         },
         "courseb-2021/The Right App": {
-          "name": "L'App Giusta",
-          "overview": "In questa lezione **esplorativa**, gli alunni entrano in empatia con diversi utenti fittizi di smartphone per aiutarli a trovare la \"app giusta\" che soddisfi le rispettive esigenze.",
+          "name": "L'app giusta",
+          "overview": "In questa lezione **esplorativa**, gli alunni entrano in empatia con diversi utenti fittizi di smartphone per aiutarli a trovare la \"app giusta\" che soddisfi le loro esigenze.",
           "preparation": "-   Leggere le note per il relatore nella presentazione delle **\\*diapositive**. \n-   Prepara abbastanza materiale per schizzi e disegni per tutti gli alunni.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Oggi, l'informatica è più accessibile che mai. Persone di ogni estrazione sociale utilizzano il software su molti dispositivi diversi, in particolare smartphone, per l'informazione, la comunicazione e l'intrattenimento. Poiché le persone hanno esperienze e bisogni così diversi, è importante per gli informatici in erba entrare in empatia con le persone e identificare soluzioni pensando a loro. ",
           "student_overview": "Abbozza la tua app per smartphone."
         },
         "courseb-2021/Events: The Big Event": {
           "name": "Il grande evento (per i più piccoli)",
-          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenterà il concetto di eventi attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti su un telecomando gigante.",
+          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenta il concetto di evento attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti di un telecomando gigante.",
           "preparation": "-   Prepararsi al progetto **\\*Controllore di immagini**.\n-   Stampa una **\\*Valutazione** per alunno.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Oggi gli alunni impareranno a distinguere gli eventi dalle azioni. Gli alunni vedranno che certe attività si interrompono a causa della pressione di un \"pulsante\" su un telecomando cartaceo. All'accadere di questo evento, la classe reagirà con un'unica azione. Gli eventi sono ampiamente utilizzati nella programmazione e, dopo questa lezione, dovrebbero essere facilmente riconoscibili.",
           "student_overview": "Muoviti o fai un urlo quando i tuoi insegnanti premono i pulsanti su un telecomando gigante."
         },
         "courseb-2021/Events in Play Lab": {
-          "name": "Mini-progetto: una Battaglia Reale con gli eventi",
-          "overview": "In questo **mini progetto**, gli alunni avranno l'opportunità di imparare a usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
+          "name": "Mini-progetto - Una battaglia con gli eventi",
+          "overview": "In questo **mini progetto**, gli alunni hanno l'opportunità di imparare ad usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario con le proprie riflessioni.",
           "purpose": "In questa attività online, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
           "student_overview": "Usa gli eventi per creare una storia o realizzare un gioco interattivo."
         },
         "courseb-2021/lesson-1": {
           "name": "Progetto di fine corso",
-          "overview": "Questa è una lezione **progetto**: gli alunni mettono in pratica in un progetto aperto ciò che hanno appreso sulle sequenze e sugli eventi con il Laboratorio.",
+          "overview": "Questa è una **lezione-progetto**: gli alunni mettono in pratica in un progetto aperto ciò che hanno appreso nel Laboratorio sulle sequenze e sugli eventi.",
           "preparation": "-   Programma in anticipo i tuoi progetti del laboratorio per orientare gli alunni!",
           "purpose": "Questa lezione offre agli alunni un'ultima opportunità per utilizzare in modo creativo le loro nuove competenze informatiche.",
           "student_overview": "Crea la tua storia o il tuo gioco."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "name": "Sicurezza nel mio quartiere digitale",
-          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLa potenza di Internet consente agli alunni di sperimentare e visitare luoghi che potrebbero non essere in grado di vedere di persona. Ma, proprio come viaggiare nel mondo reale, è importante essere sicuri quando si viaggia online. In questa gita virtuale, i bambini possono esercitarsi a stare al sicuro nelle avventure online.",
+          "name": "Il mio quartiere digitale",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nQuesta lezione è stata originariamente creata da Common Sense Education. [Scopri di più.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLa potenza di Internet consente agli alunni di sperimentare e visitare luoghi che potrebbero non essere in grado di vedere di persona. Ma, proprio come viaggiare nel mondo materiale, è importante essere sicuri quando si viaggia online. In questa gita in Internet, i bambini possono esercitarsi su come stare al sicuro nelle loro avventure online.",
           "preparation": "-   Esaminare il materiale didattico.\n-   Stampare le schede per ogni studente.\n-   (Facoltativo) Stampa un cartellone di poesie per la visualizzazione in classe.",
           "purpose": "Il Digital Citizenship Curriculum di Common Sense affronta sei argomenti chiave, basati sulle ultime ricerche su bambini, media e tecnologia. Questa lezione si concentra sulla privacy e la sicurezza. Gli alunni imparano come proteggere le informazioni personali e acquisire una comprensione più profonda dei loro diritti sulla privacy dei dati in modo da poter difendere se stessi e gli altri.",
           "student_overview": "Scopri come andare in luoghi sicuri quando sei online."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "name": "Impara come trascinare i blocchi",
-          "overview": "Questa lezione è una **palestra delle competenze** che darà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
+          "overview": "Questa lezione è una **palestra delle competenze** che dà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
           "preparation": "-   Guarda la sezione **\\*Come creare una classe su Code.org** - Video dell'insegnante. Crea la tua classe su Code.org e assicurati che ogni studente abbia una carta con il proprio codice.\n-   Assicurati che gli alunni siano in grado di accedere alla Lezione 2 dai propri dispositivi. Valuta se vuoi nascondere le lezioni future per impedire agli studenti di andare avanti troppo velocemente.\n-   Chiedi ai responsabili IT della scuola di aggiungere un link rapido per la sezione della tua classe sul desktop del computer.\n-   Consulta il sito Web Common Sense Education per ulteriori contenuti sulla sicurezza online.",
           "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi.",
           "student_overview": "Clicca e trascina per completare l'esercizio"
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Mappe felici",
-          "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
+          "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
         "coursea-2021/Sequencing with Scrat": {
           "name": "Sequenze di istruzioni con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino al maialino nell'altro lato. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino alla posizione del maialino. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
           "preparation": "-   Ritaglia i blocchi direzionali da **\\*Schede da ritagliare** da utilizzare con l'attività ponte di Mappe felici.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni..",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Programma Scrat per fargli raggiungere la ghianda."
         },
         "coursea-2021/Programming in Ice Age": {
           "name": "Programmare con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continueranno a sviluppare algoritmi sequenziali.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano a sviluppare algoritmi sequenziali.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Scrivi un programma per far raggiungere a Scrat la ghianda."
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "name": "Programmare con Rey e BB-8",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni metteranno in pratica, in modi più complessi, le competenze appena acquisite nella programmazione, per affrontare insieme a _BB-8_ un percorso impegnativo..",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni mettono in pratica, in modi più complessi, le competenze appena acquisite nella programmazione, per affrontare insieme a _BB-8_ un percorso impegnativo.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Suggerimenti per le principali attività dei corsi di Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Sempre allo scopo di trasferire le conoscenze, in questa lezione viene fornito agli alunni un nuovo ambiente per far pratica con le abilità che stanno acquisendo. I fan di Star Wars salteranno di gioia quando vedranno questi esercizi. Ogni esercizio di questa serie è stato aggiunto per approfondire i concetti di base che utilizzeranno per il resto del corso.",
           "student_overview": "Aiuta BB-8 a recuperare i rottami metallici."
         },
         "coursea-2021/Loops: Happy Loops": {
           "name": "Cicli felici",
-          "overview": "Questa è una lezione di **contestualizzazione** che rivisita Happy Maps. Questa volta, gli studenti utilizzeranno i cicli per risolvere esercizi più impegnativi e più lunghi con il loro programma.",
+          "overview": "Questa è una lezione di **contestualizzazione** che rivisita Mappe felici. Questa volta, gli studenti usano le istruzioni di ripetizione (cicli) per risolvere esercizi più lunghi e impegnativi.",
           "preparation": "-   Stampa un **\\*Foglio di lavoro** da visualizzare per la classe\n-   Per ogni gruppo di 2-3, stampane uno di ciascuno: **\\*Pezzi del gioco, \\*Foglio di lavoro XL e \\*Manipolativi dei pacchetti bonus**.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Con questa lezione vengono introdotte le istruzioni di ripetizione (cicli). I cicli permettono agli alunni di semplificare i programmi raggruppando le istruzioni che devono essere ripetute. Gli alunni svilupperanno il pensiero critico, notando la ripetizione nei movimenti dei loro compagni di classe e determinando quante volte ripetere le istruzioni. Vedendo di nuovo \"Mappe Felici\", gli alunni avranno la possibilità di mettere in relazione concetti vecchi come le sequenze di istruzioni con il nuovo concetto delle istruzioni di ripetizione.",
           "student_overview": "Aiuta il Flurb a risolvere problemi più complessi usando i loop."
         },
         "coursea-2021/Loops in Ice Age": {
           "name": "Cicli con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni si eserciteranno in esercizi sui cicli di programmazione, nei quali l'obiettivo è aiutare lo scoiattolo a raggiungere la ghianda.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni si esercitano in esercizi sulle istruzioni di ripetizione (cicli), nei quali l'obiettivo è aiutare lo scoiattolo a raggiungere la ghianda.",
           "preparation": "-   Ripassa la precedente lezione tradizionale e poni domande per ricordare agli alunni perché si usano i cicli.\n-   (Facoltativo) Scegli un paio di esercizi da fare con la tua classe.\n-   Raccogli i materiali della precedente lezione \"Cicli felici\" per riutilizzarli nell'introduzione\n-   Assicurati che ogni alunni abbia un diario per le proprie riflessioni.",
           "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con i blocchi Blockly. L'uso dei _cicli_ è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che devono essere ripetuti.",
           "student_overview": "Aiuta Scrat a coprire con più terra usando i cicli."
         },
         "coursea-2021/Loops in Collector": {
           "name": "Cicli con la collezionista",
-          "overview": "Questa lezione è una **Palestra delle competenze**: gli alunni continueranno a imparare il concetto di istruzione di ripetizione (ciclo). Qui utilizzeranno i cicli per raccogliere dei diamanti nelle cavità.",
+          "overview": "Questa lezione è una **Palestra delle competenze**: gli alunni continuano ad imparare il concetto di istruzione di ripetizione (ciclo). Qui utilizzano i cicli per raccogliere dei diamanti nelle cavità.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione offre agli alunni più pratica con i cicli e introduce un nuovo blocco, `prendi il tesoro`. Il blocco funziona esattamente come \"raccogli il mais\" nella Contadina. Questi esercizi sono più aperti e offrono agli alunni maggiore flessibilità per le loro soluzioni finali.",
           "student_overview": "Aiuta Laura l'avventuriera a raccogliere il tesoro sepolto."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "name": "Al mare con i cicli",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini riproducendo con i cicli semplici sequenze di istruzioni. Qui, le istruzioni di ripetizione vengno sfruttate per riprodurre degli schemi. Alla fine di questa lezione, gli alunni creano le proprie immagini.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Qui, le istruzioni di ripetizione vengno sfruttate per riprodurre degli schemi. Alla fine di questa lezione, gli alunni creano le proprie immagini.",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Ripassa i \\*_\\\\_Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Questa lezione offre nuove prospettive di utilizzo creativo dei cicli nella programmazione. Qui gli alunni possono riflettere ulteriormente sull'inefficienza della programmazione senza cicli e rendersi conto di quanti blocchi richiederebbe il programma senza l'aiuto del ciclo `ripeti`.",
           "student_overview": "Utilizza cicli e schemi per completare le immagini"
         },
         "coursea-2021/Events: The Big Event": {
           "name": "Il grande evento (per i più piccoli)",
-          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenterà il concetto di eventi attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti su un telecomando gigante.",
+          "overview": "Questa è una lezione di **contestualizzazione**: la classe sperimenta il concetto di evento attraverso un gioco in cui i ragazzi si muovono o gridano quando si premono i pulsanti di un telecomando gigante.",
           "preparation": "-   Stampa o visualizza il file **\\*Controllore di immagini**.\n-   Stampa una **\\*valutazione** per ogni alunno.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Oggi gli alunni impareranno a distinguere gli eventi dalle azioni. Gli alunni vedranno che certe attività si interrompono a causa della pressione di un \"pulsante\" su un telecomando cartaceo. All'accadere di questo evento, la classe reagirà con un'unica azione. Gli eventi sono ampiamente utilizzati nella programmazione e, dopo questa lezione, dovrebbero essere facilmente riconoscibili.",
           "student_overview": "Muoviti e fai un urlo quando i tuoi insegnanti premono i pulsanti su un telecomando gigante."
         },
         "coursea-2021/Events in Play Lab": {
           "name": "Mini progetto - In movimento con il laboratorio",
-          "overview": "In questo \"mini progetto\", gli alunni avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di mettere in pratica tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
+          "overview": "In questo \"mini progetto\", gli alunni hanno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di mettere in pratica tutte le competenze di programmazione apprese per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Ripassa i \\*_\\\\_Fondamenti di informatica - Raccomandazioni per le lezioni\\*.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente.",
           "student_overview": "Crea il tuo gioco o la tua storia."
         },
         "coursea-2021/lesson-1": {
           "name": "Progetto di fine corso",
-          "overview": "Questa è una lezione **progetto**: gli alunni applicano ciò che hanno imparato sulle sequenze e sui cicli con l'artista.",
+          "overview": "Questa è una lezione **progetto**: gli alunni applicano all'ambiente dell'artista ciò che hanno imparato sulle sequenze e sulle istruzioni di ripetizione (cicli).",
           "preparation": "-   Scrivi e programma in anticipo la tua storia per l'Artista così da orientare gli alunni!",
           "purpose": "Questa lezione offre agli alunni un'ultima opportunità per utilizzare in modo creativo le loro nuove competenze informatiche.",
           "student_overview": "Racconta una storia con l'Artista!"
@@ -3932,21 +3932,21 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "Impara come trascinare i blocchi",
-          "overview": "Questa lezione è una **palestra delle competenze** che darà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
+          "overview": "Questa lezione è una **palestra delle competenze** che dà agli alunni un'idea di cosa aspettarsi quando andranno in aula computer. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli alunni inizieranno ad utilizzare un computer per completare degli esercizi online.",
           "preparation": "-   Guarda la sezione **\\*Come creare una classe su Code.org** - Video dell'insegnante. Crea la tua classe su Code.org e assicurati che ogni studente abbia una carta con il proprio **passcode**.\n-   Assicurati che gli alunni siano in grado di accedere alla Lezione 2 dai propri dispositivi. Valuta se vuoi nascondere le lezioni future per impedire agli studenti di andare avanti troppo velocemente.\n-   Chiedi ai responsabili IT della scuola di aggiungere un link rapido per la sezione della tua classe sul desktop del computer.\n-   Consulta il sito Web Common Sense Education per ulteriori contenuti sulla sicurezza online.",
           "purpose": "Il traguardo di questa lezione è di introdurre gli alunni alle funzionalità di base dell'utilizzo dei computer, come fare clic con il mouse e trascinare e rilasciare gli oggetti sullo schermo. In questo modo si cerca di livellare le differenze di esperienza dei vari alunni, in vista degli esercizi futuri. Questa lezione offre anche una grande opportunità per introdurre la terminologia hardware di base del computer, che potenzialmente include \"mouse\", \"trackpad\" o \"touchscreen\", a seconda dei dispositivi.",
           "student_overview": "Clicca e trascina per completare l'esercizio"
         },
         "pre-express-2021/Sequencing with Scrat": {
           "name": "Sequenze di istruzioni con Scrat",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino al maialino nell'altro lato. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni sviluppano algoritmi sequenziali per spostare un uccellino da un lato di un labirinto e farlo arrivare fino alla posizione del maialino. Per fare ciò impilano insieme i blocchi di codice in una sequenza lineare.",
           "preparation": "-   Assicurati che ogni studente abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi.",
           "student_overview": "Programma Scrat per fargli raggiungere la ghianda."
         },
         "pre-express-2021/Programming in with Angry Birds": {
           "name": "Programmare con Angry Birds",
-          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continueranno a sviluppare algoritmi sequenziali.",
+          "overview": "Questa lezione è una **palestra delle competenze**: gli alunni continuano a sviluppare algoritmi sequenziali.",
           "preparation": "-   Segui la lezione per trovare eventuali aree problematiche per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e correzione di errori (debugging) su una piattaforma informatica. Il formato di questi esercizi in cui il codice è rappresentato da blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
         },
@@ -3999,7 +3999,7 @@
         },
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Una battaglia reale con eventi",
-          "overview": "In questo **mini progetto**, gli alunni avranno l'opportunità di imparare a usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
+          "overview": "In questo **mini progetto**, gli alunni hanno l'opportunità di imparare ad usare gli eventi nel Laboratorio e mettere in pratica tutte le abilità di programmazione che hanno imparato per realizzare un gioco animato. ",
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa attività online, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
           "student_overview": "Usa gli eventi per creare una storia o realizzare un gioco interattivo."
@@ -4293,7 +4293,7 @@
           "name": "Progetto di fine corso"
         },
         "courseb-2020/Digital Trails": {
-          "name": "Tracce digitali"
+          "name": "Segui le tracce digitali"
         },
         "courseb-2020/Move It, Move It": {
           "name": "Muovilo, muovilo"
@@ -4320,7 +4320,7 @@
           "name": "Disegnare giardini con i cicli"
         },
         "courseb-2020/The Right App": {
-          "name": "L'App Giusta"
+          "name": "L'app giusta"
         },
         "courseb-2020/Events: The Big Event": {
           "name": "Il grande evento (per i più piccoli)"
@@ -4491,7 +4491,7 @@
           "name": "Progetto di fine corso"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
-          "name": "Sicurezza nel mio quartiere digitale"
+          "name": "Il mio quartiere digitale"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "Impara come trascinare i blocchi"
