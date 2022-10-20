@@ -1,9 +1,8 @@
 import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from '../../../../../../util/reconfiguredChai';
-import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
-import five from '@code-dot-org/johnny-five-deprecated';
+import five from '@code-dot-org/johnny-five';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import {
   SONG_CHARGE,
@@ -313,13 +312,6 @@ describe('CircuitPlaygroundBoard', () => {
         return playground;
       });
 
-    // Our sensors and thermometer block initialization until they receive data
-    // over the wire.  That's not great for unit tests, so here we stub waiting
-    // for data to resolve immediately.
-    sinon.stub(EventEmitter.prototype, 'once');
-    EventEmitter.prototype.once.withArgs('data').callsArg(1);
-    EventEmitter.prototype.once.callThrough();
-
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
@@ -330,7 +322,6 @@ describe('CircuitPlaygroundBoard', () => {
     playground = undefined;
     board = undefined;
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
-    EventEmitter.prototype.once.restore();
     ChromeSerialPort.stub.reset();
     circuitPlaygroundBoardTeardown();
   });
@@ -569,7 +560,30 @@ describe('CircuitPlaygroundBoard', () => {
       // give ourselves a real `setTimeout(cb, 0)` function that will let any
       // promise chains run as far as they can before entering the callback.
       const realSetTimeout = window.setTimeout;
+      const INITIAL_ANALOG_VALUE = 235;
       yieldToPromiseChain = cb => realSetTimeout(cb, 0);
+
+      // When the board connects, the playground components will be initialized.
+      // Our sensors and thermometer block initialization until they receive data
+      // over the wire.  That's not great for unit tests, so here we stub waiting
+      // for data to resolve immediately.
+      sinon.stub(five.Sensor.prototype, 'once');
+      five.Sensor.prototype.once
+        .withArgs('data')
+        .callsFake(function(_, callback) {
+          // Pretend we got a real analog value back on the component's pin.
+          setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
+          callback();
+        });
+      five.Sensor.prototype.once.callThrough();
+      sinon.stub(five.Thermometer.prototype, 'once');
+      five.Thermometer.prototype.once
+        .withArgs('data')
+        .callsFake(function(_, callback) {
+          // Pretend we got a real analog value back on the component's pin.
+          setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
+          callback();
+        });
 
       // Now use fake timers so we can test exactly when the different commands
       // are sent to the board
@@ -578,6 +592,8 @@ describe('CircuitPlaygroundBoard', () => {
 
     afterEach(() => {
       clock.restore();
+      five.Sensor.prototype.once.restore();
+      five.Thermometer.prototype.once.restore();
     });
 
     it('plays a song and animates lights', done => {
@@ -841,4 +857,18 @@ describe('CircuitPlaygroundBoard', () => {
       }
     });
   });
+
+  /**
+   * Simulate a raw value coming back from the board on the given component's pin.
+   * @param {five.Sensor|five.Thermometer} component
+   * @param {number} rawValue - usually in range 0-1023.
+   * @throws if nothing is monitoring the given analog pin
+   */
+  function setSensorAnalogValue(component, rawValue) {
+    const {board, pin} = component;
+    const readCallback = board.io.analogRead.args.find(
+      callArgs => callArgs[0] === pin
+    )[1];
+    readCallback(rawValue);
+  }
 });
