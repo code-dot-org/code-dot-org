@@ -13,6 +13,6 @@
     .row
       .col-md-6
         =view :signup_form
-      .col-md-6
-        -if showAnnouncements && hoc_mode != "pre-hoc"
+      -if showAnnouncements && @country == "us" && hoc_mode != "pre-hoc"
+        .col-md-6
           =view :announcements

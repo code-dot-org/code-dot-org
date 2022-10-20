@@ -97,9 +97,14 @@ section.join-us {
   }
 
   .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
     & > div:first-child {
       margin: 0 auto;
+      float: none;
 
       h2 {
         margin: 0 0 1em;
