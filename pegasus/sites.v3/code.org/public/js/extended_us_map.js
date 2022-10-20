@@ -789,7 +789,24 @@ function setupMapDrawing($, document, window, Raphael, undefined) {
 
 var webServiceLocation = "/promote/state/";
 
+// Just adding this handler to assist with debugging on production.
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("DOMContentLoaded");
+});
+
 $(document).ready(function () {
+  init();
+});
+
+function init() {
+  if (Raphael) {
+    initMap();
+  } else {
+    setTimeout(init, 100);
+  }
+};
+
+function initMap() {
   setupMapDrawing(jQuery, document, window, Raphael);
 
   if (useUrl) {
@@ -877,7 +894,7 @@ $(document).ready(function () {
       $("#" + state.toUpperCase()).click();
     }
   }
-});
+}
 
 // When the user uses the "back" button, load previous data into infobox and URL bar
 window.onpopstate = function (event) {
