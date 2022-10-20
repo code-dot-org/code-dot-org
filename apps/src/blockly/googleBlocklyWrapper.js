@@ -269,7 +269,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     if (!this.unusedSvg_) {
       this.unusedSvg_ = new BlockSvgUnused(this, helpClickFunc);
     }
-    this.unusedSvg_.render(this.svgGroup_);
+    this.unusedSvg_.render(this.svgGroup_, this.RTL);
   };
 
   const googleBlocklyRender = blocklyWrapper.BlockSvg.prototype.render;

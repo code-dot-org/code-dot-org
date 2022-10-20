@@ -4,19 +4,18 @@ import color from '@cdo/apps/util/color';
 const FRAME_MARGIN_SIDE = 15;
 const FRAME_MARGIN_TOP = 10;
 const FRAME_MARGIN_BOTTOM = 5;
+
 const FRAME_HEADER_HEIGHT = 25;
 
-export default class BlockSvgUnused {
-  constructor(block, helpClickFunc) {
+export default class BlockSvgFunctional {
+  constructor(block) {
     this.block_ = block;
-    this.helpClickFunc_ = helpClickFunc;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
     this.frameBase_ = undefined;
     this.frameHeader_ = undefined;
     this.frameText_ = undefined;
-    this.frameHelp_ = undefined;
 
     this.initChildren();
   }
@@ -32,7 +31,7 @@ export default class BlockSvgUnused {
       .replace(/\s+/g, ' ');
 
     this.frameGroup_ = Blockly.utils.dom.createSvgElement('g', {
-      class: 'blocklyUnusedFrame'
+      class: 'blocklyFunctionalFrame'
     });
 
     var clip = Blockly.utils.dom.createSvgElement(
@@ -42,6 +41,7 @@ export default class BlockSvgUnused {
       },
       this.frameGroup_
     );
+
     this.frameClipRect_ = Blockly.utils.dom.createSvgElement(
       'rect',
       {
@@ -58,7 +58,7 @@ export default class BlockSvgUnused {
         x: frameX,
         y: frameY,
         fill: color.lightest_gray,
-        stroke: color.lighter_gray,
+        stroke: color.light_gray,
         rx: 15,
         ry: 15
       },
@@ -70,7 +70,7 @@ export default class BlockSvgUnused {
       {
         x: frameX,
         y: frameY,
-        fill: color.lighter_gray,
+        fill: color.light_gray,
         rx: 15,
         ry: 15,
         'clip-path': `url(#frameClip${safeCharBlockId})`
@@ -87,39 +87,14 @@ export default class BlockSvgUnused {
       'text',
       {
         class: 'blocklyText',
-        style: `font-size: 12pt;fill: ${color.black}`,
+        style: `font-size: 12pt;fill: ${color.white}`,
         y: frameTextVerticalPosition,
         'dominant-baseline': 'central'
       },
       this.frameGroup_
     );
-    this.frameText_.appendChild(document.createTextNode(msg.unusedCode()));
 
-    this.frameHelp_ = Blockly.utils.dom.createSvgElement(
-      'g',
-      {
-        class: 'blocklyHelp'
-      },
-      this.frameGroup_
-    );
-    Blockly.utils.dom.createSvgElement(
-      'circle',
-      {
-        fill: '#7665a0',
-        r: FRAME_HEADER_HEIGHT * 0.75 * 0.5
-      },
-      this.frameHelp_
-    );
-    Blockly.utils.dom
-      .createSvgElement(
-        'text',
-        {
-          class: 'blocklyText',
-          y: Blockly.utils.userAgent.IE ? 4 : 0 // again, offset text manually in IE
-        },
-        this.frameHelp_
-      )
-      .appendChild(document.createTextNode('?'));
+    this.frameText_.appendChild(document.createTextNode(msg.function()));
   }
 
   getPadding() {
@@ -129,31 +104,6 @@ export default class BlockSvgUnused {
       bottom: FRAME_MARGIN_BOTTOM,
       left: FRAME_MARGIN_SIDE
     };
-  }
-
-  bindClickEvent() {
-    if (this.isbound_) {
-      return;
-    }
-    this.isbound_ = true;
-
-    // We bind to mousedown rather than click so we can interrupt the drag
-    // that would otherwise be initiated.
-    Blockly.cdoUtils.bindBrowserEvent(
-      this.frameHelp_,
-      'mousedown',
-      this,
-      function(e) {
-        if (Blockly.utils.isRightButton(e)) {
-          // Right-click.
-          return;
-        }
-
-        this.helpClickFunc_(e);
-        e.stopPropagation();
-        e.preventDefault();
-      }
-    );
   }
 
   render(svgGroup, isRtl) {
@@ -173,11 +123,7 @@ export default class BlockSvgUnused {
       Blockly.utils.dom.removeClass(frameGroup, 'hidden');
     }, 0);
 
-    this.bindClickEvent();
-
-    var minWidth =
-      this.frameText_.getBoundingClientRect().width +
-      this.frameHelp_.getBoundingClientRect().width;
+    var minWidth = this.frameText_.getBoundingClientRect().width;
 
     var width = Math.max(groupRect.width, minWidth) + 2 * FRAME_MARGIN_SIDE;
     var height =
@@ -198,24 +144,5 @@ export default class BlockSvgUnused {
       this.frameBase_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
       this.frameText_.setAttribute('x', -width + 2 * FRAME_MARGIN_SIDE);
     }
-
-    this.frameHelp_.setAttribute(
-      'transform',
-      'translate(' +
-        (width - 2 * FRAME_MARGIN_SIDE) +
-        ',' +
-        -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT / 2) +
-        ')'
-    );
-  }
-
-  dispose() {
-    this.frameGroup_.remove();
-    this.frameGroup_ = undefined;
-    this.frameClipRect_ = undefined;
-    this.frameBase_ = undefined;
-    this.frameHeader_ = undefined;
-    this.frameText_ = undefined;
-    this.frameHelp_ = undefined;
   }
 }
