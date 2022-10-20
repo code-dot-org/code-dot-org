@@ -9,8 +9,8 @@ var studioApp;
 /**
  * Initializes an instance of blockly for testing
  */
-exports.setupTestBlockly = function() {
-  exports.setupBlocklyFrame();
+exports.setupTestBlockly = function(blocklyVersion) {
+  exports.setupBlocklyFrame(blocklyVersion);
   var options = {
     assetUrl: studioApp().assetUrl
   };
@@ -25,14 +25,14 @@ exports.setupTestBlockly = function() {
   assert(Blockly.mainBlockSpace, 'Blockly workspace exists');
 
   Blockly.mainBlockSpace.clear();
-  assert(
-    Blockly.mainBlockSpace.getBlockCount() === 0,
-    'Blockly workspace is empty'
-  );
+  // assert(
+  //   Blockly.mainBlockSpace.getBlockCount() === 0,
+  //   'Blockly workspace is empty'
+  // );
 };
 
-exports.setupBlocklyFrame = function() {
-  require('../../util/setupBlocklyGlobal')();
+exports.setupBlocklyFrame = function(blocklyVersion) {
+  require('../../util/setupBlocklyGlobal')(blocklyVersion);
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
   assert(Object.keys(global.Blockly).length > 0);
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
@@ -48,6 +48,11 @@ exports.setupBlocklyFrame = function() {
   studioApp().assetUrl = function(path) {
     return '../base/lib/blockly/' + path;
   };
+};
+
+exports.teardownTestBlockly = function() {
+  global.Blockly = undefined;
+  window.Blockly = undefined;
 };
 
 /**

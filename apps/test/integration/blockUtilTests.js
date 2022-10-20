@@ -1,6 +1,7 @@
 import {assert} from '../util/reconfiguredChai';
-import {setupTestBlockly} from './util/testBlockly';
+import {setupTestBlockly, teardownTestBlockly} from './util/testBlockly';
 import {parseElement} from '@cdo/apps/xml';
+import {BlocklyVersion} from '@cdo/apps/constants';
 
 var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 var blockUtils = require('@cdo/apps/block_utils');
@@ -28,6 +29,68 @@ describe('blockUtils', function() {
     assert(Blockly.mainBlockSpace.getBlockCount() === 1);
     newBlock.dispose();
     assert(Blockly.mainBlockSpace.getBlockCount() === 0);
+  });
+
+  it('getField returns a FieldTextInput', () => {
+    assert(
+      blockUtils.getField(Blockly, 'String') instanceof Blockly.FieldTextInput
+    );
+  });
+});
+
+// having issues with setup/teardown
+// only works if we comment out all cdo blockly tests
+describe('blockUtils (Google Blockly)', function() {
+  describe('getField', function() {
+    before(function() {
+      setupTestBlockly(BlocklyVersion.GOOGLE);
+    });
+
+    after(function() {
+      teardownTestBlockly();
+    });
+
+    it('returns a FieldNumber for number fields', () => {
+      const unboundedFieldNumber = blockUtils.getField(Blockly, 'Number');
+      assert(unboundedFieldNumber instanceof Blockly.FieldNumber);
+      assert.equal(unboundedFieldNumber.getMin(), -Infinity);
+      assert.equal(unboundedFieldNumber.getMax(), Infinity);
+    });
+
+    it('returns a FieldNumber with min and max attributes for number fields', () => {
+      const fieldNumberWithMax = blockUtils.getField(
+        Blockly,
+        'ClampedNumber(,5)'
+      );
+      assert(fieldNumberWithMax instanceof Blockly.FieldNumber);
+      assert.equal(fieldNumberWithMax.getMin(), -Infinity);
+      assert.equal(fieldNumberWithMax.getMax(), 5);
+    });
+
+    it('returns a FieldNumber with min and max attributes for number fields', () => {
+      const fieldNumberWithMax = blockUtils.getField(
+        Blockly,
+        'ClampedNumber(1,)'
+      );
+      assert(fieldNumberWithMax instanceof Blockly.FieldNumber);
+      assert.equal(fieldNumberWithMax.getMin(), 1);
+      assert.equal(fieldNumberWithMax.getMax(), Infinity);
+    });
+
+    it('returns a FieldNumber with min and max attributes for number fields', () => {
+      const fieldNumberWithMinAndMax = blockUtils.getField(
+        Blockly,
+        'ClampedNumber(1,5)'
+      );
+      assert(fieldNumberWithMinAndMax instanceof Blockly.FieldNumber);
+      assert.equal(fieldNumberWithMinAndMax.getMin(), 1);
+      assert.equal(fieldNumberWithMinAndMax.getMax(), 5);
+    });
+
+    it('returns a FieldTextInput for non-number fields', () => {
+      const fieldNumberWithMinAndMax = blockUtils.getField(Blockly, 'String');
+      assert(fieldNumberWithMinAndMax instanceof Blockly.FieldTextInput);
+    });
   });
 });
 
