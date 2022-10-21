@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-14 15:17:11 UTC",
+    "serialized_at": "2022-10-20 20:04:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1054,6 +1054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-computing"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1250,6 +1253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-computing"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1271,6 +1277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1293,6 +1302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner"
+        ],
         "progression": "The role of the teacher"
       },
       "bonus": false,
@@ -1315,6 +1327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid"
+        ],
         "progression": "The role of the teacher"
       },
       "bonus": false,
@@ -1337,6 +1352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming"
+        ],
         "progression": "Teaching and learning strategies"
       },
       "bonus": false,
@@ -1359,6 +1377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid"
+        ],
         "progression": "Teaching and learning strategies"
       },
       "bonus": false,
@@ -1381,6 +1402,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Resources"
+        ],
         "progression": "Teaching and learning strategies"
       },
       "bonus": false,
@@ -1403,6 +1427,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging"
+        ],
         "progression": "Teaching and learning strategies"
       },
       "bonus": false,
@@ -1425,6 +1452,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid"
+        ],
         "progression": "Teaching and learning strategies"
       },
       "bonus": false,
@@ -1447,6 +1477,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-teamworkOverview"
+        ],
         "progression": "Teaching and learning strategies"
       },
       "bonus": false,
@@ -1466,9 +1499,34 @@
     {
       "chapter": 44,
       "position": 10,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-CP-22-ProgrammingLevelsOverview"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-Inclusion"
+        ],
         "progression": "Meeting student needs"
       },
       "bonus": false,
@@ -1486,11 +1544,14 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 11,
+      "chapter": 46,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Differentiation"
+        ],
         "progression": "Meeting student needs"
       },
       "bonus": false,
@@ -1508,11 +1569,14 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 12,
+      "chapter": 47,
+      "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued"
+        ],
         "progression": "Meeting student needs"
       },
       "bonus": false,
@@ -1530,11 +1594,14 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 13,
+      "chapter": 48,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Assessment"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1552,11 +1619,14 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 14,
+      "chapter": 49,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1574,11 +1644,14 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 15,
+      "chapter": 50,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -2106,6 +2179,18 @@
         "level.key": "SP-VPL-CP-22-teamworkOverview",
         "script_level.level_keys": [
           "SP-VPL-CP-22-teamworkOverview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CP-22-ProgrammingLevelsOverview",
+        "script_level.level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
