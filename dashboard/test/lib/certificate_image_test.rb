@@ -104,6 +104,25 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal '\\\\', CertificateImage.escape_image_magick_string('\\')
   end
 
+  def test_hoc_course
+    coursea = create :script, name: "coursea-2021", is_course: true
+    create :course_version, content_root: coursea
+
+    csp = create :unit_group, name: 'csp-2021'
+    create :course_version, content_root: csp
+
+    assert CertificateImage.hoc_course?('flappy')
+    assert CertificateImage.hoc_course?('oceans')
+    assert CertificateImage.hoc_course?('mc')
+    assert CertificateImage.hoc_course?('mee')
+    assert CertificateImage.hoc_course?('kodable')
+
+    # course1 is created by dashboard test fixtures
+    refute CertificateImage.hoc_course?('course1')
+    refute CertificateImage.hoc_course?('coursea-2021')
+    refute CertificateImage.hoc_course?('csp-2021')
+  end
+
   private
 
   def assert_image(image, width, height, format)

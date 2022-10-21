@@ -184,7 +184,8 @@ class CertificateImage
   # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course)
     return true if ScriptConstants.unit_in_category?(:hoc, course)
-    return false if CurriculumHelper.find_matching_course_version(name)
+    return false if [ScriptConstants::ACCELERATED_NAME, ScriptConstants::TWENTY_HOUR_NAME].include?(course)
+    return false if CurriculumHelper.find_matching_course_version(course)
     true
   end
 
