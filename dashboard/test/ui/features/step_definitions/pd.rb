@@ -1,5 +1,4 @@
 Given(/^I am a workshop administrator with some applications of each type and status$/) do
-  require_rails_env
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
@@ -247,40 +246,7 @@ And(/^I complete Section 7 of the teacher PD application$/) do
 end
 
 And(/^I create some fake applications of each type and status$/) do
-  require_rails_env
-  time_start = Time.now
-
-  %w(csd csp).each do |course|
-    (Pd::Application::TeacherApplication.statuses).each do |status|
-      teacher_email = "#{course}_#{status}@code.org"
-      teacher = User.find_or_create_teacher(
-        {name: "#{course} #{status}", email: teacher_email}, nil, nil
-      )
-      next if Pd::Application::TeacherApplication.find_by(
-        application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR,
-        user_id: teacher.id
-      )
-      form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: course, last_name: status)
-      if status == 'incomplete'
-        FactoryGirl.create(
-          :pd_teacher_application,
-          form_data_hash: form_data_hash,
-          user: teacher,
-          status: 'incomplete'
-        )
-      else
-        application = FactoryGirl.create(
-          :pd_teacher_application,
-          form_data_hash: form_data_hash,
-          user: teacher,
-          status: 'unreviewed'
-        )
-        application.update!(status: status)
-      end
-    end
-  end
-  time_end = Time.now
-  puts "Creating applications took #{time_end - time_start} seconds"
+  browser_request(url: '/api/test/create_applications', method: 'POST')
 end
 
 And(/^I am viewing a workshop with fake survey results$/) do
