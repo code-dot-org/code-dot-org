@@ -93,10 +93,10 @@
       - extra_images = Homepage.get_outer_column_images(request)
       #actions{style: "padding: 0px"}
         #bars{style: "display: flex; max-width: 1680px; margin: 0 auto;"}
-          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:left_image]}); background-position: 100% 100%; background-size: contain; background-repeat: no-repeat"}
-          .col-33{style: "z-index: 1; padding-top: 0px; padding-bottom: 40px"}
+          .col-33.tablet-feature{style: "background: url(#{extra_images[:left_image]}) no-repeat left bottom; background-size: contain"}
+          .col-65{style: "z-index: 1; padding-top: 0px; padding-bottom: 40px"}
             = main_actions
-          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:right_image]}); background-position: 0% 100%; background-size: contain; background-repeat: no-repeat"}
+          .col-33.tablet-feature{style: "background: url(#{extra_images[:right_image]}) no-repeat right bottom; background-size: contain"}
     - else
       #actions
         = main_actions
