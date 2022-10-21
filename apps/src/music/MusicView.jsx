@@ -15,11 +15,12 @@ import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
 import InputContext from './InputContext';
-import {Triggers} from './constants';
+import {PLAY_ICON, STOP_ICON, Triggers} from './constants';
 import {musicLabDarkTheme} from './blockly/themes';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {getStaticFilePath} from '@cdo/apps/music/utils';
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -228,11 +229,11 @@ class UnconnectedMusicView extends React.Component {
         // or something else not from the shared directory
         if (self.player.isPreviewPlaying(id)) {
           self.player.stopAndCancelPreviews();
-          this.setValue('https://code.org/shared/images/play-button.png');
+          this.setValue(getStaticFilePath(PLAY_ICON));
         } else {
-          this.setValue('https://code.org/shared/images/stop-button.png');
+          this.setValue(getStaticFilePath(STOP_ICON));
           self.player.previewSound(id, () => {
-            this.setValue('https://code.org/shared/images/play-button.png');
+            this.setValue(getStaticFilePath(PLAY_ICON));
           });
         }
       });

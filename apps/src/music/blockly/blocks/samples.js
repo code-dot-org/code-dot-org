@@ -1,4 +1,6 @@
 import {BlockTypes} from '../blockTypes';
+import {getStaticFilePath} from '@cdo/apps/music/utils';
+import {PLAY_ICON} from '@cdo/apps/music/constants';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -19,7 +21,7 @@ export const playSound = {
     args0: [
       {
         type: 'field_image',
-        src: 'https://code.org/shared/images/play-button.png',
+        src: getStaticFilePath(PLAY_ICON),
         width: 18,
         height: 23,
         alt: '*',
