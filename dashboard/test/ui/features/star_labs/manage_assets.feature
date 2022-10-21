@@ -1,7 +1,7 @@
 @no_mobile
 Feature: Manage Assets
 
-  #  Chrome thinks it can record audio on saucelabs as well (like Safari test below).Scenario:
+  #  Chrome thinks it can record audio on saucelabs as well (like Safari test below).
   #  Can we switch Chrome onto the Safari scenario below (and re-enable it)?
   #  Skipping to unblock DTT.
   #  Tracked here: https://codedotorg.atlassian.net/browse/SL-325
