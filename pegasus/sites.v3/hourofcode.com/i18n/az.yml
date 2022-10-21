@@ -517,10 +517,11 @@ az:
     öyrənə biləcəyini göstərmək üçün hazırlanmış əyləncəli dərsliklər vasitəsilə informatikaya
     bir saatlıq giriş kursudur. Bu ictimai kampaniya bütün dünyada 400-dən çox tərəfdaş
     və 200000 təhsil insanı tərəfindən dəstəklənir.
-  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
-    to plan an event for your class."
+  hoc_homepage_what_is_hoc_cta_how_to_guide: Sinfinizdə bir tədbir planlaşdırmaq üçün
+    [Təlimatımızı oxuyun](%{howto_guide_url}).
   hoc_homepage_highlights_heading: Hour of Code highlights
-  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  hoc_homepage_organized_by: Kod Saatı "[Code.org](%{codeorg_url})" tərəfindən təşkil
+    olunur.
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -626,8 +627,8 @@ az:
   map_legend_cs_tech_jam: Xüsusi tədbir
   map_warning: Tədbirlərin tam siyahısına <a href='%{events_url}'>tərbirlər səhifəsi</a>ndə
     baxmaq olar.
-  map_warning_markdown: Tədbirlərin tam siyahısına [tərbirlər səhifəsi]ndə baxmaq
-    olar.(%{events_url})
+  map_warning_markdown: Tədbirlərin tam siyahısına [tərbirlər səhifəsi](%{events_url})ndə
+    baxmaq olar.
   meta_tag_og_title: Kod Saatı gəlir
   meta_tag_og_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla
     şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.

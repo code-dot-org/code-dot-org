@@ -9,7 +9,7 @@
         "list_of_poems/poem-art/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "poem_art_celebration/poem-art/2021": {
           "name": "",
@@ -136,12 +136,12 @@
         "common_core_and_ngss_guidance/coursed/2022": {
           "name": "Common Core و NGSS Guidance",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursed/2022": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide/coursed/2022": {
           "name": "راهنمای برنامه درسی",
@@ -150,22 +150,22 @@
         "debugging_guide/coursed/2022": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursed/2022": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursed/2022": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum/coursed/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursed/2022": {
           "name": "اصلاحات درس مجازی",
@@ -174,42 +174,42 @@
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "جزوه"
         },
         "password_power-up_if_then_scenarios_1/coursed/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "password_power-up_lesson_quiz_1/coursed/2022": {
           "name": "",
-          "url": "",
-          "type": ""
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
+          "type": "کلید پاسخ"
         },
         "password_power-up_lesson_slides/coursed/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Password Power-Up: اسلایدهای درس",
+          "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit",
+          "type": "اسلایدها"
         },
         "password_power-up_power-up_your_password/coursed/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Password Power-Up: رمز عبور خود را تقویت کنید.",
+          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit",
+          "type": "جزوه"
         },
         "password_power-up_power-up_your_password_1/coursed/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Password Power-Up: رمز عبور خود را تقویت کنید.",
+          "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
+          "type": "کلید پاسخ"
         },
         "csf_-_course_d_-_slides_2022-2023/coursed/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "graph_paper_programming/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
@@ -282,9 +282,9 @@
           "type": ""
         },
         "open-ended_programming_levels/coursed/2022": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursed/2022": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -292,14 +292,14 @@
           "type": "ویدیو"
         },
         "open-ended_programming_levels_1/coursed/2022": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "sample_level_solutions/coursed/2022": {
-          "name": "",
+          "name": "نمونه راه حل‌های مرحله",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "dance_party_project_guide/coursed/2022": {
           "name": "",
@@ -309,12 +309,12 @@
         "dance_party_unplugged/coursed/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "open-ended_programming_levels_2/coursed/2022": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/coursed/2022": {
           "name": "",
@@ -379,27 +379,27 @@
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursef/2022": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide/coursef/2022": {
           "name": "راهنمای برنامه درسی",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/coursef/2022": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursef/2022": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursef/2022": {
           "name": "راهنمای نوع درس",
@@ -408,12 +408,12 @@
         "sprite_lab_documentation/coursef/2022": {
           "name": "",
           "url": "https://studio.code.org/docs/spritelab/",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum/coursef/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursef/2022": {
           "name": "اصلاحات درس مجازی",
@@ -422,17 +422,17 @@
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "قدرت کلمات: امتحان درس",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
-          "type": ""
+          "type": "منبع"
         },
         "the_power_of_words_lesson_quiz_1/coursef/2022": {
           "name": "قدرت کلمات: امتحان درس",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "the_power_of_words_lesson_slides/coursef/2022": {
           "name": "قدرت کلمات: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1PWkHDKfgazvxCk5tv_8v9EatkV-LikF0qgOXxzPtQQw/edit?usp=sharing",
-          "type": ""
+          "type": "اسلایدها"
         },
         "the_power_of_words_the_power_of_words/coursef/2022": {
           "name": "قدرت کلمات: قدرت کلمات",
@@ -442,22 +442,22 @@
         "the_power_of_words_words_can_hurt/coursef/2022": {
           "name": "قدرت کلمات: کلمات میتوانند آسیب برسانند",
           "url": "https://docs.google.com/document/d/1cHW8UOcHZTLtEjsp029miGPXGUcfn3GyCPg_0H0EdpM/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "exploring_apps/coursef/2022": {
           "name": "کاوش در اپلیکیشن ها",
           "url": "https://docs.google.com/document/d/141nblqhokVNBaaZwjZNrkyPefk-D9eZvmUsdUCqQ-kk/edit?usp=sharing",
-          "type": ""
+          "type": "منبع"
         },
         "exploring_apps_1/coursef/2022": {
           "name": "کاوش در اپلیکیشن ها",
           "url": "https://docs.google.com/document/d/1x5vSImoOlzai1PzwJkKptODhooNH3lmog9uqt40AjFY/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "introducing_sprite_lab_1/coursef/2022": {
           "name": "",
@@ -467,7 +467,7 @@
         "making_sprites/coursef/2022": {
           "name": "ساختن اسپرایت‌ها",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
-          "type": ""
+          "type": "اسلایدها"
         },
         "blank_space_stories/coursef/2022": {
           "name": "داستانهای فضای خالی",
@@ -477,22 +477,22 @@
         "blank_space_stories_1/coursef/2022": {
           "name": "داستانهای فضای خالی",
           "url": "https://docs.google.com/document/d/1b8-7kzqTcnRHCGKnxFEY1SsbUIzz8qL6v6FSzV6JvQs/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "mini_project_user_input_programs/coursef/2022": {
           "name": "پروژه کوچک: برنامه‌های ورودی کاربر",
           "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68",
-          "type": ""
+          "type": "اسلایدها"
         },
         "mini_project_user_input_programs_1/coursef/2022": {
           "name": "پروژه کوچک: برنامه‌های ورودی کاربر",
           "url": "https://docs.google.com/document/d/1hbNGuqLaytxqjulle6lpjLq3sq5jrbAT3P3kf4Q_bXM/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "teacher_sandbox_level/coursef/2022": {
           "name": "مرحله جعبه شنی معلم",
           "url": "https://studio.code.org/levels/27300",
-          "type": ""
+          "type": "منبع"
         },
         "user_input_programs/coursef/2022": {
           "name": "‌برنامه‌های ورودی کاربر",
@@ -522,7 +522,7 @@
         "get-site-ip-com/coursef/2022": {
           "name": "get-site-ip-com",
           "url": "http://get-site-ip.com/",
-          "type": ""
+          "type": "منبع"
         },
         "internet/coursef/2022": {
           "name": "اینترنت",
@@ -573,12 +573,12 @@
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Common Core و NGSS Guidance",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursee/2022": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide/coursee/2022": {
           "name": "راهنمای برنامه درسی",
@@ -587,27 +587,27 @@
         "debugging_guide/coursee/2022": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursee/2022": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursee/2022": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "sprite_lab_documentation/coursee/2022": {
           "name": "",
           "url": "https://studio.code.org/docs/spritelab/",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum/coursee/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursee/2022": {
           "name": "اصلاحات درس مجازی",
@@ -634,7 +634,7 @@
         "private_and_personal_information_lesson_quiz_1/coursee/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "private_and_personal_information_lesson_slides/coursee/2022": {
           "name": "",
@@ -649,7 +649,7 @@
         "csf_-_course_e_-_slides_2022-2023/coursee/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
           "name": "",
@@ -659,12 +659,12 @@
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "about_me_planning_guide/coursee/2022": {
           "name": "",
           "url": "https://docs.google.com/document/d/1eKTBvBxS_T_MNvdj_lXJGnRDAo8zJRuz6gLvWKNk2y4/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "pause_and_think_online/coursee/2022": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -673,7 +673,7 @@
         },
         "turns_angles/coursee/2022": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
           "type": ""
         },
         "turns_angles_1/coursee/2022": {
@@ -714,7 +714,7 @@
         "types_of_disabilities/coursee/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "digital_sharing_ethics_video_/coursee/2022": {
           "name": "",
@@ -723,8 +723,8 @@
         },
         "digital_sharing_lesson_plan/coursee/2022": {
           "name": "",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1emDu9jf0aNnXqGfgS1rQ5Klf1iqDdhXSy87OveesqWE/edit?usp=sharing",
+          "type": "منبع"
         },
         "cs_fundamentals_final_project/coursee/2022": {
           "name": "پروژه نهایی CS Fundamentals",
@@ -755,12 +755,12 @@
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/courseb/2022": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide/courseb/2022": {
           "name": "راهنمای برنامه درسی",
@@ -769,22 +769,22 @@
         "debugging_guide/courseb/2022": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/courseb/2022": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/courseb/2022": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum/courseb/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/courseb/2022": {
           "name": "اصلاحات درس مجازی",
@@ -813,7 +813,7 @@
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "تصویر احساسی چهره‌ها",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "move_it_move_it/courseb/2022": {
           "name": "حرکت کن، حرکت کن",
@@ -838,7 +838,7 @@
         "20_20_20_rule/courseb/2022": {
           "name": "قانون ۲۰/۲۰/۲۰",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": ""
+          "type": "منبع"
         },
         "drag_and_drop_practice/courseb/2022": {
           "name": "تمرین کشیدن و رها کردن",
@@ -872,12 +872,12 @@
         "compass_rose/courseb/2022": {
           "name": "Compass Rose",
           "url": "https://docs.google.com/document/d/1-WoXBHxuUHUZBpSiBwSslFlv4SWE94oDaWzzzZVmblc/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "feeling_faces_-_emotion_image/courseb/2022": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "happy_map_game_pieces/courseb/2022": {
           "name": "قسمت‌های بازی Happy Map",
@@ -887,7 +887,7 @@
         "stevie_and_the_big_project/courseb/2022": {
           "name": "",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
-          "type": ""
+          "type": "منبع"
         },
         "unspotted_bugs/courseb/2022": {
           "name": "",
@@ -906,7 +906,7 @@
         },
         "getting_loopy_2/courseb/2022": {
           "name": "سر گیجه گرفتن",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "url": "https://docs.google.com/document/d/1isI7s7symwSF5bcwbaf9VJVJx_xofZQS-ryU-LfgmJM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "getting_loopy_3/courseb/2022": {
@@ -917,7 +917,7 @@
         "cs_fundamentals_main_activity_tips/courseb/2022": {
           "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "توصیه‌های درس"
         },
         "pause_and_think_online/courseb/2022": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -951,12 +951,12 @@
         "play_lab_project_planning_guide/courseb/2022": {
           "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
           "url": "https://docs.google.com/document/d/1lSnWU30yuU6ePl5fFB1Rxlki8Br8ALzMghrJTsy4YZQ/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "play_lab_project_planning_guide_1/courseb/2022": {
           "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
           "url": "https://docs.google.com/document/d/1X26GO7mEDRhDCqvpv8exfVjt6oa_TbZK8wkWGUEGyPE/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "all_resources/express/2022": {
           "name": "",
@@ -975,14 +975,14 @@
           "url": ""
         },
         "teacher_forum/express/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "unplugged_maze_blocks/express/2022": {
-          "name": "",
+          "name": "بلوک‌های ماز بدون کامپیوتر",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "pair_programming/express/2022": {
           "name": "برنامه نویسی دوتایی",
@@ -1005,13 +1005,13 @@
         },
         "turns_angles_1/express/2022": {
           "name": "",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "جزوه"
         },
         "sprite_lab_documentation/express/2022": {
           "name": "",
           "url": "https://studio.code.org/docs/spritelab/",
-          "type": ""
+          "type": "منبع"
         },
         "swimming_fish_teacher_sandbox/express/2022": {
           "name": "",
@@ -1020,7 +1020,7 @@
         "sprites_in_action/express/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "pause_and_think_online/express/2022": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -1033,9 +1033,9 @@
           "type": ""
         },
         "open-ended_programming_levels/express/2022": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/express/2022": {
           "name": "",
@@ -1053,7 +1053,7 @@
         "text_and_prompts/express/2022": {
           "name": "متن و انگیزش",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
-          "type": ""
+          "type": "اسلایدها"
         },
         "variables/express/2022": {
           "name": "متغیرها",
@@ -1067,7 +1067,7 @@
         },
         "csf_express_end_of_course_project_planning_guide/express/2022": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1geOnapIZcQHcJmKMTAe7WmAXbIi9xVQju-hIdBhTi-A/edit?usp=sharing",
           "type": ""
         },
         "all_resources/pre-express/2022": {
@@ -1087,9 +1087,9 @@
           "url": ""
         },
         "teacher_forum/pre-express/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "20_20_20_rule/pre-express/2022": {
           "name": "قانون ۲۰/۲۰/۲۰",
@@ -1140,12 +1140,12 @@
         "common_core_and_ngss_guidance/coursea/2022": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursea/2022": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide/coursea/2022": {
           "name": "راهنمای برنامه درسی",
@@ -1154,22 +1154,22 @@
         "debugging_guide/coursea/2022": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursea/2022": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursea/2022": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum/coursea/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursea/2022": {
           "name": "اصلاحات درس مجازی",
@@ -1198,7 +1198,7 @@
         "20_20_20_rule/coursea/2022": {
           "name": "قانون ۲۰/۲۰/۲۰",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": ""
+          "type": "منبع"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
           "name": "شروع کار - ایجاد یک بخش کلاس",
@@ -1218,7 +1218,7 @@
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
-          "type": ""
+          "type": "منبع"
         },
         "happy_map_cards/coursea/2022": {
           "name": "کارت‌های Happy Map",
@@ -1258,12 +1258,12 @@
         "feeling_faces_emotion_image/coursea/2022": {
           "name": "تصویر احساسی چهره‌ها",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "کارت‌های Happy Map XL",
@@ -1281,14 +1281,14 @@
           "type": ""
         },
         "pair-programming/coursea/2022": {
-          "name": "",
+          "name": "برنامه نویسی اشتراکی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویدیو"
         },
         "csf_lesson_recommendations/coursea/2022": {
-          "name": "",
+          "name": "توصیه های درس CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "منبع"
         },
         "pause_and_think_online/coursea/2022": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -1322,12 +1322,12 @@
         "artist_project_planning_guide/coursea/2022": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
           "url": "https://docs.google.com/document/d/1hLNKsUkqCzRKH9fYsbiOeSipAAr6re1M4yF3Na42s8g/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "artist_project_planning_guide_1/coursea/2022": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
           "url": "https://docs.google.com/document/d/13FEhzjfZq1ITunIdxyJ-ZSXyiqeaBVkQxXFirWj2iC4/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "2022_change_log/coursec/2022": {
           "name": "",
@@ -1348,12 +1348,12 @@
         "common_core_and_ngss_guidance/coursec/2022": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursec/2022": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide/coursec/2022": {
           "name": "راهنمای برنامه درسی",
@@ -1362,22 +1362,22 @@
         "debugging_guide_1/coursec/2022": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursec/2022": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursec/2022": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum/coursec/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursec/2022": {
           "name": "اصلاحات درس مجازی",
@@ -1396,7 +1396,7 @@
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "my_robotic_friends/coursec/2022": {
           "name": "دوستان رباتی من",
@@ -1405,12 +1405,12 @@
         },
         "my_robotic_friends_1/coursec/2022": {
           "name": "دوستان رباتی من",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "type": "کلید نماد"
         },
         "my_robotic_friends_2/coursec/2022": {
           "name": "دوستان رباتی من",
-          "url": "",
+          "url": "https://youtu.be/xaW3PAzHxCU",
           "type": ""
         },
         "my_robotic_friends_3/coursec/2022": {
@@ -1421,26 +1421,26 @@
         "my_robotic_friends_4/coursec/2022": {
           "name": "دوستان رباتی من",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
-          "type": ""
+          "type": "الگوی ذوزنقه‌ای کاغذی"
         },
         "maze_bridging_page/coursec/2022": {
-          "name": "",
-          "url": ""
+          "name": "صفحه پل‌زنی پر پیچ و خم",
+          "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
         },
         "unplugged_maze_blocks/coursec/2022": {
-          "name": "",
-          "url": "",
+          "name": "بلوک‌های ماز بدون کامپیوتر",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
           "type": ""
         },
         "cs_fundamentals_main_activity_tips/coursec/2022": {
           "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "توصیه‌های درس"
         },
         "debugging_guide/coursec/2022": {
           "name": "راهنمای رفع اشکال",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
+          "type": "منبع"
         },
         "pair_programming/coursec/2022": {
           "name": "برنامه نویسی دوتایی",
@@ -1464,7 +1464,7 @@
         },
         "turns_angles_1/coursec/2022": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
           "type": ""
         },
         "the_big_event/coursec/2022": {
@@ -1483,19 +1483,19 @@
           "type": ""
         },
         "the_big_event_course_c_/coursec/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "The Big Event (دوره C)",
+          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "type": "کنترل کننده رویداد"
         },
         "level_solutions/coursec/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "نمونه راه حل‌های مرحله",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/template/preview",
+          "type": "کلید پاسخ"
         },
         "open-ended_programming_levels/coursec/2022": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursec/2022": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -1503,9 +1503,9 @@
           "type": "ویدیو"
         },
         "open-ended_programming_levels_1/coursec/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "مراحل برنامه نویسی بی‌انتها",
+          "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
+          "type": "کلید پاسخ"
         },
         "graphing_data_from_play_lab/coursec/2022": {
           "name": "",
@@ -1561,7 +1561,7 @@
           "url": ""
         },
         "teacher_forum/csd/2022": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "all_resources_3/csd/2022": {
@@ -1587,7 +1587,7 @@
         "meals_data/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "representation_matters/csd/2022": {
           "name": "",
@@ -1602,7 +1602,7 @@
         "representation_matters_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "animal_shapes/csd/2022": {
           "name": "",
@@ -1626,7 +1626,7 @@
         "patterns_and_representation/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "ascii/csd/2022": {
           "name": "",
@@ -1641,22 +1641,22 @@
         "ascii_challenges_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "ascii_text/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "ascii_and_binary_representation/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "representing_images/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "binary_and_data/csd/2022": {
           "name": "",
@@ -1686,7 +1686,7 @@
         "representing_numbers_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "activity_guide_-_pet_records/csd/2022": {
           "name": "",
@@ -1704,9 +1704,9 @@
           "type": ""
         },
         "combining_representations/csd/2022": {
-          "name": "",
+          "name": "بازنمایی های ترکیبی",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "medical_records/csd/2022": {
           "name": "",
@@ -1716,7 +1716,7 @@
         "medical_records_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "secret_messages_2021/csd/2022": {
           "name": "",
@@ -1726,7 +1726,7 @@
         "keeping_data_secret_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "computer_science_practices/csd/2022": {
           "name": "",
@@ -1759,7 +1759,7 @@
         "create_a_representation_3/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "problem_solving_with_data/csd/2022": {
           "name": "",
@@ -1774,7 +1774,7 @@
         "problem_solving_and_data/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "structuring_data/csd/2022": {
           "name": "",
@@ -1789,7 +1789,7 @@
         "structuring_data_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "interpreting_data/csd/2022": {
           "name": "",
@@ -1804,12 +1804,12 @@
         "interpreting_data_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "interpreting_data_3/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "making_decisions_with_data/csd/2022": {
           "name": "",
@@ -1824,12 +1824,12 @@
         "problem_solving_process_with_data/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "making_decisions_with_data_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "automating_data_decisions/csd/2022": {
           "name": "",
@@ -1839,7 +1839,7 @@
         "automating_data_decisions_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "automating_data_decisions_2/csd/2022": {
           "name": "",
@@ -1849,7 +1849,7 @@
         "automating_data_decisions_3/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "amazon_and_data/csd/2022": {
           "name": "",
@@ -1879,7 +1879,7 @@
         "problem_solving_with_big_data/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "video_impact_on_society/csd/2022": {
           "name": "",
@@ -1899,7 +1899,7 @@
         "data_and_machine_learning/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "make_a_recommendation/csd/2022": {
           "name": "",
@@ -1943,7 +1943,7 @@
         "project_-_make_a_recommendation/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "all_resources_5/csd/2022": {
           "name": "",
@@ -1974,7 +1974,7 @@
         "intro_to_problem_solving/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "problem_solving_process/csd/2022": {
           "name": "",
@@ -1998,12 +1998,12 @@
         "the_problem_solving_process_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "solving_problems/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "solving_problems_1/csd/2022": {
           "name": "",
@@ -2013,7 +2013,7 @@
         "exploring_problem_solving/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "what_is_a_computer/csd/2022": {
           "name": "",
@@ -2038,7 +2038,7 @@
         "what_is_a_computer_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "input_and_output/csd/2022": {
           "name": "",
@@ -2053,7 +2053,7 @@
         "input_and_output_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "apps_with_processing/csd/2022": {
           "name": "",
@@ -2068,7 +2068,7 @@
         "apps_with_processing_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "apps_with_storage/csd/2022": {
           "name": "",
@@ -2088,7 +2088,7 @@
         "apps_with_storage_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "apps_and_problem_solving/csd/2022": {
           "name": "",
@@ -2098,7 +2098,7 @@
         "apps_and_problem_solving_-_student_checklist/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "apps_and_problem_solving_1/csd/2022": {
           "name": "",
@@ -2128,7 +2128,7 @@
         "project_-_propose_an_app/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "build_a_newspaper_table/csd/2022": {
           "name": "",
@@ -2143,7 +2143,7 @@
         "intro_to_problem_solving_newspapers_/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "spaghetti_bridge/csd/2022": {
           "name": "",
@@ -2158,7 +2158,7 @@
         "intro_to_problem_solving_spaghetti_/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "code_org_how-to_video_playlist/csd/2022": {
           "name": "",
@@ -2177,7 +2177,7 @@
         "intro_to_problem_solving_paper_towels_/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "exploring_problem_solving_-_animal_theme/csd/2022": {
           "name": "",
@@ -2192,12 +2192,12 @@
         "tangrams/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "exploring_problem_solving_animals_/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "exploring_problem_solving_-_games_theme/csd/2022": {
           "name": "",
@@ -2212,7 +2212,7 @@
         "exploring_problem_solving_games_/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "csd_guide_to_debugging/csd/2022": {
           "name": "",
@@ -2255,7 +2255,7 @@
         "programming_for_entertainment/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "drawing_shapes/csd/2022": {
           "name": "",
@@ -2280,7 +2280,7 @@
         "plotting_shapes/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
           "name": "",
@@ -2295,22 +2295,22 @@
         "drawing_shapes_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "drawing_in_game_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "shapes_and_parameters_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "shapes_and_parameters_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "introduction_to_variables/csd/2022": {
           "name": "",
@@ -2320,32 +2320,32 @@
         "naming_variables/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "variables/csd/2022": {
           "name": "متغیرها",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "variables_3/csd/2022": {
           "name": "متغیرها",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "random_numbers/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "random_numbers_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "animation_tab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "introduction_to_sprites/csd/2022": {
           "name": "",
@@ -2355,7 +2355,7 @@
         "sprites/csd/2022": {
           "name": "اسپرایت",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "the_animation_tab/csd/2022": {
           "name": "",
@@ -2365,22 +2365,22 @@
         "sprites_1/csd/2022": {
           "name": "اسپرایت",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "sprite_properties/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "sprite_properties_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "text/csd/2022": {
           "name": "متن",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "captioned_scenes/csd/2022": {
           "name": "",
@@ -2400,7 +2400,7 @@
         "mini-project_-_captioned_scenes/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
           "name": "",
@@ -2423,12 +2423,12 @@
         "the_draw_loop/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "the_draw_loop_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "sprite_movement/csd/2022": {
           "name": "",
@@ -2438,12 +2438,12 @@
         "the_counter_pattern/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "sprite_movement_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "animated_scene/csd/2022": {
           "name": "",
@@ -2463,7 +2463,7 @@
         "mini-project_-_animation/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "boolean_expressions/csd/2022": {
           "name": "",
@@ -2473,7 +2473,7 @@
         "booleans_and_comparison_operators/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "conditional_statements/csd/2022": {
           "name": "",
@@ -2483,22 +2483,22 @@
         "if_statements/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "conditionals/csd/2022": {
           "name": "شرطی ها",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "keyboard_input/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "if-else_statements/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if_else_statements/csd/2022": {
           "name": "",
@@ -2508,12 +2508,12 @@
         "mouse_input/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "extra_code_in_challenge_levels_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "interactive_card/csd/2022": {
           "name": "",
@@ -2547,7 +2547,7 @@
         "project_-_interactive_card/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "velocity/csd/2022": {
           "name": "",
@@ -2557,12 +2557,12 @@
         "velocity_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "velocity_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "collision_detection/csd/2022": {
           "name": "",
@@ -2572,7 +2572,7 @@
         "collision_detection_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "collision_detection_version_a_/csd/2022": {
           "name": "",
@@ -2587,7 +2587,7 @@
         "collision_detection_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "mini-project_guide_-_side_scroller/csd/2022": {
           "name": "",
@@ -2607,22 +2607,22 @@
         "mini-project_-_side_scroller/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "complex_sprite_movement/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "collisions/csd/2022": {
-          "name": "",
+          "name": "تلاقی ها",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "flyer_game/csd/2022": {
           "name": "",
@@ -2642,7 +2642,7 @@
         "mini-project_-_flyer_game/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "functions/csd/2022": {
           "name": "توابع",
@@ -2652,12 +2652,12 @@
         "functions_1/csd/2022": {
           "name": "توابع",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "functions_4/csd/2022": {
           "name": "توابع",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "defender_game/csd/2022": {
           "name": "",
@@ -2666,7 +2666,7 @@
         "the_game_design_process/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "planning_your_platform_game/csd/2022": {
           "name": "",
@@ -2681,7 +2681,7 @@
         "using_the_game_design_process/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "make_your_own_game/csd/2022": {
           "name": "",
@@ -2715,7 +2715,7 @@
         "project_-_design_a_game/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "all_code/csd/2022": {
           "name": "",
@@ -2746,7 +2746,7 @@
         "exploring_web_pages_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "exemplar_text_website/csd/2022": {
           "name": "",
@@ -2756,7 +2756,7 @@
         "html_tags/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "intro_to_web_lab_part_2/csd/2022": {
           "name": "",
@@ -2771,12 +2771,12 @@
         "intro_to_html/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "headings_and_paragraphs/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "video_debugging/csd/2022": {
           "name": "",
@@ -2791,12 +2791,12 @@
         "headings/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "formatting_html/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "html_web_page/csd/2022": {
           "name": "",
@@ -2816,7 +2816,7 @@
         "lists/csd/2022": {
           "name": "فهرست‌ها",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "peer_review_-_html_web_page/csd/2022": {
           "name": "",
@@ -2831,12 +2831,12 @@
         "mini-project_html_web_page/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "digital_footprint/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "social_sleuth/csd/2022": {
           "name": "",
@@ -2861,17 +2861,17 @@
         "style_sheets/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "text_properties/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "styling_text_with_css/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "peer_review_-_your_personal_style/csd/2022": {
           "name": "",
@@ -2901,7 +2901,7 @@
         "mini-project_your_personal_style/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "creative_commons_overview/csd/2022": {
           "name": "",
@@ -2921,22 +2921,22 @@
         "intellectual_property/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "creative_commons_search/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "images_in_html/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "using_images/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "define_your_web_page/csd/2022": {
           "name": "",
@@ -2951,7 +2951,7 @@
         "websites_for_expression/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "body_styling/csd/2022": {
           "name": "",
@@ -2966,7 +2966,7 @@
         "styling_elements_with_css/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "personal_web_page_-_prepare/csd/2022": {
           "name": "",
@@ -2981,12 +2981,12 @@
         "your_web_page_prepare/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "extra_code_in_challenge_levels/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "peer_review_-_personal_website/csd/2022": {
           "name": "",
@@ -3006,7 +3006,7 @@
         "personal_web_page_-_student_checklist/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "personal_web_page_1/csd/2022": {
           "name": "",
@@ -3031,7 +3031,7 @@
         "project_-_personal_web_page/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "websites_for_a_purpose/csd/2022": {
           "name": "",
@@ -3046,7 +3046,7 @@
         "websites_for_a_purpose_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "video_managing_disagreement/csd/2022": {
           "name": "",
@@ -3071,7 +3071,7 @@
         "team_problem_solving/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "internet_scavenger_hunt/csd/2022": {
           "name": "",
@@ -3096,17 +3096,17 @@
         "sources_and_research/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "classes/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "css_classes/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "plan_a_multi-page_website/csd/2022": {
           "name": "",
@@ -3130,22 +3130,22 @@
         "planning_a_multi-page_site/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "hyperlinks/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "linking_pages/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "project_-_website_for_a_purpose/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "peer_review_-_final_personal_website/csd/2022": {
           "name": "",
@@ -3175,7 +3175,7 @@
         "peer_review_and_final_touches/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "all_code_2/csd/2022": {
           "name": "",
@@ -3211,7 +3211,7 @@
         "designing_with_empathy_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "profile_1/csd/2022": {
           "name": "",
@@ -3261,7 +3261,7 @@
         "understanding_your_user/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "the_design_thinking_process/csd/2022": {
           "name": "",
@@ -3281,7 +3281,7 @@
         "user_centered_design_-_define_and_prepare/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "user_centered_design_try_reflect_/csd/2022": {
           "name": "",
@@ -3296,12 +3296,12 @@
         "user_centered_design_-_try_and_reflect/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "user_interface_screens/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "user_testing_computer_/csd/2022": {
           "name": "",
@@ -3316,7 +3316,7 @@
         "user_interfaces/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "improve_a_screen/csd/2022": {
           "name": "",
@@ -3331,17 +3331,17 @@
         "prototype_feedback/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "feedback_and_testing/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "example_user_interviews/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "user_interviews/csd/2022": {
           "name": "",
@@ -3351,7 +3351,7 @@
         "identifying_user_needs/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "paper_prototype_-_student_checklist/csd/2022": {
           "name": "",
@@ -3374,7 +3374,7 @@
         "project_-_paper_prototype/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "app_design_kickoff/csd/2022": {
           "name": "",
@@ -3393,7 +3393,7 @@
         "designing_apps_for_good/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "market_research/csd/2022": {
           "name": "",
@@ -3408,7 +3408,7 @@
         "market_research_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "explore_ui_elements/csd/2022": {
           "name": "",
@@ -3423,17 +3423,17 @@
         "exploring_ui_elements/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "design_mode/csd/2022": {
           "name": "حالت طراحی",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "design_mode_elements/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "paper_prototype_planning/csd/2022": {
           "name": "",
@@ -3452,7 +3452,7 @@
         "build_a_paper_prototype/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "paper_prototype_user_testing/csd/2022": {
           "name": "",
@@ -3482,7 +3482,7 @@
         "prototype_testing/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "intro_to_design_mode/csd/2022": {
           "name": "",
@@ -3492,7 +3492,7 @@
         "model_screen_design/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "screen_design_2021_/csd/2022": {
           "name": "",
@@ -3507,17 +3507,17 @@
         "design_mode_in_app_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "build_a_digital_prototype/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "events_in_app_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "events_in_app_lab_1/csd/2022": {
           "name": "",
@@ -3527,27 +3527,27 @@
         "changing_screens/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "importing_screens/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "multi-screen_apps/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "responding_to_user_input/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "linking_prototype_screens/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "digital_prototype_user_testing/csd/2022": {
           "name": "",
@@ -3557,7 +3557,7 @@
         "testing_the_app/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "bugs_and_features/csd/2022": {
           "name": "",
@@ -3572,7 +3572,7 @@
         "bugs_and_features_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "updating_your_prototype/csd/2022": {
           "name": "",
@@ -3582,7 +3582,7 @@
         "updating_your_prototype_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "app_presentation/csd/2022": {
           "name": "",
@@ -3621,7 +3621,7 @@
         "project_-_app_presentation/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "all_code_4/csd/2022": {
           "name": "",
@@ -3652,12 +3652,12 @@
         "computing_innovations_research_areas/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "innovations_in_computing/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "the_internet_of_things/csd/2022": {
           "name": "",
@@ -3672,52 +3672,52 @@
         "circuit_playground/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "physical_output/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "the_circuit_playground/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "designing_screens_with_code/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "random_numbers_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "updating_screen_elements/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "board_events/csd/2022": {
-          "name": "",
+          "name": "حوادث بورد",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "board_events_1/csd/2022": {
-          "name": "",
+          "name": "حوادث بورد",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "physical_input/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if_statements_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if_statements_2/csd/2022": {
           "name": "",
@@ -3732,12 +3732,12 @@
         "the_counter_pattern_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "variables_1/csd/2022": {
           "name": "متغیرها",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "variables_2/csd/2022": {
           "name": "متغیرها",
@@ -3747,7 +3747,7 @@
         "variables_and_if_statements/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "exemplar_1_-_loose_papers_app/csd/2022": {
           "name": "",
@@ -3767,7 +3767,7 @@
         "mini-project_on-the-go_app/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "project_guide_-_on-the-go_app/csd/2022": {
           "name": "",
@@ -3780,29 +3780,29 @@
           "type": "سرفصل"
         },
         "color_leds/csd/2022": {
-          "name": "",
+          "name": "چراغهای رنگی led",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "color_lights/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "getting_screen_inputs/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "taking_input_with_getproperty/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "combining_inputs_and_outputs/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "input_output_devices/csd/2022": {
           "name": "",
@@ -3827,7 +3827,7 @@
         "peer_review_-_human_device_interaction/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "project_guide_-_human_device_interaction/csd/2022": {
           "name": "",
@@ -3837,7 +3837,7 @@
         "project_human_device_interaction/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "rubric_-_human_device_interaction/csd/2022": {
           "name": "",
@@ -3851,37 +3851,37 @@
         "analog_sensors/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "board_sensors/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "changing_sensor_scale/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "date_and_change_events/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "accelerometer/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "accelerometer_events/csd/2022": {
-          "name": "",
+          "name": "حوادث شتاب سنج",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "the_accelerometer/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "introduction_to_arrays/csd/2022": {
           "name": "",
@@ -3891,32 +3891,32 @@
         "making_music/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "playing_notes/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "producing_output/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "arrays/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "modifying_arrays/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "functions_2/csd/2022": {
           "name": "توابع",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "functions_3/csd/2022": {
           "name": "توابع",
@@ -3931,7 +3931,7 @@
         "functions_5/csd/2022": {
           "name": "توابع",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "exemplar_1_-_city_silhouette/csd/2022": {
           "name": "",
@@ -3951,7 +3951,7 @@
         "mini-project_interactive_art/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "project_guide_-_interactive_art/csd/2022": {
           "name": "",
@@ -3966,27 +3966,27 @@
         "student_example_projects/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "circuits_and_leds/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "physical_outputs_and_leds/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "circuits_and_buttons/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "physical_inputs_and_buttons/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "peer_review_-_prototype_an_innovation/csd/2022": {
           "name": "",
@@ -3995,7 +3995,7 @@
         "project_prototype_an_innovation/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "prototype_an_innovation/csd/2022": {
           "name": "",
@@ -4055,12 +4055,12 @@
         "introduction_to_machine_learning/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "types_of_machine_learning/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "types_of_machine_learning_1/csd/2022": {
           "name": "",
@@ -4070,12 +4070,12 @@
         "types_of_machine_learning_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "innovations_in_ai/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "innovations_in_ai_-_activity_guide/csd/2022": {
           "name": "",
@@ -4093,7 +4093,7 @@
         "_key_patterns_in_data/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "finding_patterns_in_data/csd/2022": {
           "name": "",
@@ -4103,7 +4103,7 @@
         "patterns_in_data/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "patterns_in_data_1/csd/2022": {
           "name": "",
@@ -4113,12 +4113,12 @@
         "shoe_survey/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "_key_classification_models/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "classification_models/csd/2022": {
           "name": "",
@@ -4128,27 +4128,27 @@
         "classification_models_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "fruit_veggie_cards/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "_key_training_a_model_in_ai_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "accuracy_in_ai_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "introduction_to_ai_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "introduction_to_ai_lab_1/csd/2022": {
           "name": "",
@@ -4158,7 +4158,7 @@
         "selecting_features/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "training_a_model_in_ai_lab/csd/2022": {
           "name": "",
@@ -4173,17 +4173,17 @@
         "using_data_with_categorical_features/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "importing_a_model_in_app_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "importing_models_in_app_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "ai_training_data_bias/csd/2022": {
           "name": "",
@@ -4193,7 +4193,7 @@
         "model_cards/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "model_cards_1/csd/2022": {
           "name": "",
@@ -4203,7 +4203,7 @@
         "_key_zoo_models/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "model_cards_in_ai_lab/csd/2022": {
           "name": "",
@@ -4213,12 +4213,12 @@
         "saving_models_in_ai_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "selecting_a_label/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "zoo_models/csd/2022": {
           "name": "",
@@ -4233,22 +4233,22 @@
         "model_cards_in_app_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "printable_model_cards/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "_key_numerical_accuracy/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "_key_zombie_prediction/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "numerical_accuracy/csd/2022": {
           "name": "",
@@ -4258,7 +4258,7 @@
         "numerical_models/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "zombie_prediction/csd/2022": {
           "name": "",
@@ -4268,12 +4268,12 @@
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "numerical_data_in_ai_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
           "name": "",
@@ -4288,17 +4288,17 @@
         "using_data_with_numerical_features/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "customizing_apps/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "ai_code_of_ethics/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "ai_ethics_research_areas/csd/2022": {
           "name": "",
@@ -4317,7 +4317,7 @@
         "our_ai_code_of_ethics_template_/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "create_an_ml_app/csd/2022": {
           "name": "",
@@ -4331,7 +4331,7 @@
         "make_a_machine_learning_app/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "5_why_s_-_activity_guide/csd/2022": {
           "name": "",
@@ -4344,17 +4344,17 @@
         "issue_statements/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "creating_a_survey/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "survey_planning/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "survey_planning_-_activity_guide/csd/2022": {
           "name": "",
@@ -4385,7 +4385,7 @@
         "survey_data_in_ai_lab/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "view_and_download_survey_data/csd/2022": {
           "name": "",
@@ -4395,7 +4395,7 @@
         "troubleshooting_models/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "troubleshooting_models_-_activity_guide/csd/2022": {
           "name": "",
@@ -4404,17 +4404,17 @@
         "creating_an_app/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "_template_5_why_s/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "design_an_ai_app/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "design_an_ai_app_-_project_guide/csd/2022": {
           "name": "",
@@ -4440,12 +4440,12 @@
         "model_card_-_digital_template/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "model_card_-_printable_template/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_plans/courseb/2018": {
           "name": "برنامه های درسی",
@@ -4456,11 +4456,11 @@
           "url": ""
         },
         "teacher_forum/courseb/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/courseb/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/coursea/2018": {
@@ -4472,11 +4472,11 @@
           "url": ""
         },
         "teacher_forum/coursea/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursea/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/coursed/2018": {
@@ -4488,11 +4488,11 @@
           "url": ""
         },
         "teacher_forum/coursed/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursed/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/coursef/2018": {
@@ -4504,11 +4504,11 @@
           "url": ""
         },
         "teacher_forum/coursef/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursef/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/express/2018": {
@@ -4520,11 +4520,11 @@
           "url": ""
         },
         "teacher_forum/express/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/express/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/coursee/2018": {
@@ -4536,11 +4536,11 @@
           "url": ""
         },
         "teacher_forum/coursee/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursee/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/coursec/2018": {
@@ -4552,11 +4552,11 @@
           "url": ""
         },
         "teacher_forum/coursec/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursec/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_1/csd/2018": {
@@ -4572,11 +4572,11 @@
           "url": ""
         },
         "teacher_forum_2/csd/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_2/csd/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_3/csd/2018": {
@@ -4592,11 +4592,11 @@
           "url": ""
         },
         "teacher_forum_5/csd/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_5/csd/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans_4/csd/2018": {
@@ -4608,11 +4608,11 @@
           "url": ""
         },
         "teacher_forum_4/csd/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_4/csd/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_2/csd/2018": {
@@ -4628,11 +4628,11 @@
           "url": ""
         },
         "teacher_forum_3/csd/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_3/csd/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced/csd/2018": {
@@ -4648,11 +4648,11 @@
           "url": ""
         },
         "teacher_forum_1/csd/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_1/csd/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/csd/2018": {
@@ -4664,11 +4664,11 @@
           "url": ""
         },
         "teacher_forum/csd/2018": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/csd/2018": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursea/2019": {
@@ -4684,11 +4684,11 @@
           "url": ""
         },
         "teacher_forum/coursea/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursea/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/courseb/2019": {
@@ -4704,11 +4704,11 @@
           "url": ""
         },
         "teacher_forum/courseb/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/courseb/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursed/2019": {
@@ -4724,11 +4724,11 @@
           "url": ""
         },
         "teacher_forum/coursed/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursed/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursef/2019": {
@@ -4744,11 +4744,11 @@
           "url": ""
         },
         "teacher_forum/coursef/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursef/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursee/2019": {
@@ -4764,11 +4764,11 @@
           "url": ""
         },
         "teacher_forum/coursee/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursee/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/express/2019": {
@@ -4780,11 +4780,11 @@
           "url": ""
         },
         "teacher_forum/express/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/express/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursec/2019": {
@@ -4800,15 +4800,15 @@
           "url": ""
         },
         "teacher_forum/coursec/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursec/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "teacher_forum/csd/2019": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "code_introduced_1/csd/2019": {
@@ -4824,7 +4824,7 @@
           "url": ""
         },
         "vocabulary_2/csd/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_3/csd/2019": {
@@ -4840,7 +4840,7 @@
           "url": ""
         },
         "vocabulary_5/csd/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_2/csd/2019": {
@@ -4856,7 +4856,7 @@
           "url": ""
         },
         "vocabulary_3/csd/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans_4/csd/2019": {
@@ -4868,7 +4868,7 @@
           "url": ""
         },
         "vocabulary_4/csd/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/csd/2019": {
@@ -4880,7 +4880,7 @@
           "url": ""
         },
         "vocabulary/csd/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced/csd/2019": {
@@ -4896,7 +4896,7 @@
           "url": ""
         },
         "vocabulary_1/csd/2019": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_1/csd/2017": {
@@ -4912,11 +4912,11 @@
           "url": ""
         },
         "teacher_forum_2/csd/2017": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_2/csd/2017": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_3/csd/2017": {
@@ -4932,11 +4932,11 @@
           "url": ""
         },
         "teacher_forum_5/csd/2017": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_5/csd/2017": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced/csd/2017": {
@@ -4952,11 +4952,11 @@
           "url": ""
         },
         "teacher_forum_1/csd/2017": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_1/csd/2017": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/csd/2017": {
@@ -4968,11 +4968,11 @@
           "url": ""
         },
         "teacher_forum/csd/2017": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/csd/2017": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans_4/csd/2017": {
@@ -4984,11 +4984,11 @@
           "url": ""
         },
         "teacher_forum_4/csd/2017": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_4/csd/2017": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "code_introduced_2/csd/2017": {
@@ -5004,77 +5004,77 @@
           "url": ""
         },
         "teacher_forum_3/csd/2017": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary_3/csd/2017": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "2021_change_log/coursef/2021": {
           "name": "2021Change Log",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-          "type": ""
+          "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
-          "type": ""
+          "type": "منبع"
         },
         "course_vocabulary/coursef/2021": {
           "name": "واژگان دوره",
           "url": "https://studio.code.org/s/coursef-2021/vocab",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "https://studio.code.org/s/coursef-2021/standards",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide_1/coursef/2021": {
           "name": "راهنمای برنامه درسی",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/coursef/2021": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursef/2021": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursef/2021": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "مستندات/مدارک آزمایشگاه Sprite (Sprite Lab)",
           "url": "https://studio.code.org/docs/spritelab/",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum_1/coursef/2021": {
           "name": "انجمن معلمان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursef/2021": {
           "name": "اصلاحات درس مجازی",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
-          "type": ""
+          "type": "منبع"
         },
         "exploring_apps/coursef/2021": {
           "name": "کاوش در اپلیکیشن‌ها",
@@ -5084,7 +5084,7 @@
         "exploring_apps_1/coursef/2021": {
           "name": "کاوش در اپلیکیشن‌ها",
           "url": "https://docs.google.com/document/d/1x5vSImoOlzai1PzwJkKptODhooNH3lmog9uqt40AjFY/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "",
@@ -5109,22 +5109,22 @@
         "sprites_in_action/coursef/2021": {
           "name": "",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
-          "type": ""
+          "type": "اسلایدها"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
           "name": "قدرت کلمات: امتحان درس",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
-          "type": ""
+          "type": "منبع"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
           "name": "قدرت کلمات: امتحان درس",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
           "name": "قدرت کلمات: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1PWkHDKfgazvxCk5tv_8v9EatkV-LikF0qgOXxzPtQQw/edit?usp=sharing",
-          "type": ""
+          "type": "اسلایدها"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "قدرت کلمات: قدرت کلمات",
@@ -5134,12 +5134,12 @@
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "قدرت کلمات: کلمات میتوانند آسیب برسانند",
           "url": "https://docs.google.com/document/d/1cHW8UOcHZTLtEjsp029miGPXGUcfn3GyCPg_0H0EdpM/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "blank_space_stories/coursef/2021": {
           "name": "داستانهای فضای خالی",
           "url": "https://docs.google.com/document/d/1b8-7kzqTcnRHCGKnxFEY1SsbUIzz8qL6v6FSzV6JvQs/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "داستانهای فضای خالی",
@@ -5149,27 +5149,27 @@
         "variables_blank_space_stories/coursef/2021": {
           "name": "متغیرها: داستانهای فضای خالی",
           "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview",
-          "type": ""
+          "type": "اسلایدها"
         },
         "text_and_prompts/coursef/2021": {
           "name": "متن و انگیزش",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
-          "type": ""
+          "type": "اسلایدها"
         },
         "mini_project_user_input_programs/coursef/2021": {
           "name": "پروژه کوچک: برنامه‌های ورودی کاربر",
           "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68",
-          "type": ""
+          "type": "اسلایدها"
         },
         "mini_project_user_input_programs_1/coursef/2021": {
           "name": "پروژه کوچک: برنامه‌های ورودی کاربر",
           "url": "https://docs.google.com/document/d/1hbNGuqLaytxqjulle6lpjLq3sq5jrbAT3P3kf4Q_bXM/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "teacher_sandbox_level/coursef/2021": {
           "name": "مرحله جعبه شنی معلم",
           "url": "https://studio.code.org/levels/27300",
-          "type": ""
+          "type": "منبع"
         },
         "user_input_programs/coursef/2021": {
           "name": "‌برنامه‌های ورودی کاربر",
@@ -5183,22 +5183,22 @@
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "برای تفریح حلقه ای",
-          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit",
+          "url": "https://docs.google.com/document/d/1t6Qd3pstlpZ6WzMWDBxLTXhKX_01VCjbDoPQZkml5V8/edit?usp=sharing",
           "type": ""
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "برای تفریح حلقه ای",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "url": "https://docs.google.com/document/d/1vQuxqQhhbnmhwJVx78W8az9PqDo_wflU1242X0VflWg/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
           "name": "برای تفریح حلقه ای",
-          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit",
+          "url": "https://docs.google.com/document/d/1FFTwAslLj3jkF5ESxJybh_yRyxgrZHsoJLBxtWyrZYM/edit?usp=sharing",
           "type": ""
         },
         "flf-assessment-teacher-key/coursef/2021": {
           "name": "سرگرمی حلقه for - کلید ارزیابی",
-          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit",
+          "url": "https://docs.google.com/document/d/1xFWw0WjHu6RDWu-npFPYHwwpsW-LsCkHaAAdXja-suo/edit?usp=sharing",
           "type": "کلید معلم"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
@@ -5254,7 +5254,7 @@
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
           "url": "http://get-site-ip.com/",
-          "type": ""
+          "type": "منبع"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "اینترنت",
@@ -5279,57 +5279,57 @@
         "2021_change_log/courseb/2021": {
           "name": "2021Change Log",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-          "type": ""
+          "type": "منبع"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
-          "type": ""
+          "type": "منبع"
         },
         "course_vocabulary/courseb/2021": {
           "name": "واژگان دوره",
           "url": "https://studio.code.org/s/courseb-2021/vocab",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/courseb/2021": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/courseb/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "https://studio.code.org/s/courseb-2021/standards",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "راهنمای برنامه درسی",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/courseb/2021": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/courseb/2021": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/courseb/2021": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "انجمن معلمان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/courseb/2021": {
           "name": "اصلاحات درس مجازی",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
-          "type": ""
+          "type": "منبع"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "مسیرهای دیجیتالی: مسیرهای حیوانات",
@@ -5354,7 +5354,7 @@
         "feeling_faces_emotion_image/courseb/2021": {
           "name": "تصویر احساسی چهره‌ها",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "mimi-activity/courseb/2021": {
           "name": "حرکت کن، حرکت کن",
@@ -5379,7 +5379,7 @@
         "20_20_20_rule/courseb/2021": {
           "name": "قانون ۲۰/۲۰/۲۰",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": ""
+          "type": "منبع"
         },
         "class-section-video/courseb/2021": {
           "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
@@ -5412,12 +5412,12 @@
         "compass-rose/courseb/2021": {
           "name": "Compass Rose",
           "url": "https://docs.google.com/document/d/1-WoXBHxuUHUZBpSiBwSslFlv4SWE94oDaWzzzZVmblc/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "قسمت‌های بازی Happy Map",
@@ -5427,7 +5427,7 @@
         "stevie_and_the_big_project/courseb/2021": {
           "name": "",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
-          "type": ""
+          "type": "منبع"
         },
         "unspotted_bugs/courseb/2021": {
           "name": "",
@@ -5446,7 +5446,7 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "سر گیجه گرفتن",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "url": "https://docs.google.com/document/d/1isI7s7symwSF5bcwbaf9VJVJx_xofZQS-ryU-LfgmJM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
@@ -5457,7 +5457,7 @@
         "csf-lesson-recommend/courseb/2021": {
           "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "توصیه‌های درس"
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -5492,67 +5492,67 @@
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
           "url": "https://docs.google.com/document/d/1lSnWU30yuU6ePl5fFB1Rxlki8Br8ALzMghrJTsy4YZQ/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
           "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
           "url": "https://docs.google.com/document/d/1X26GO7mEDRhDCqvpv8exfVjt6oa_TbZK8wkWGUEGyPE/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "2021_change_log/coursea/2021": {
           "name": "2021Change Log",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-          "type": ""
+          "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
-          "type": ""
+          "type": "منبع"
         },
         "course_vocabulary/coursea/2021": {
           "name": "واژگان دوره",
           "url": "https://studio.code.org/s/coursea-2021/vocab",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursea/2021": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "https://studio.code.org/s/coursea-2021/standards",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "راهنمای برنامه درسی",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/coursea/2021": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursea/2021": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursea/2021": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "انجمن مدرسان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursea/2021": {
           "name": "اصلاحات درس مجازی",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
-          "type": ""
+          "type": "منبع"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "ایمنی در محله برخط من: اسلایدهای درس",
@@ -5577,7 +5577,7 @@
         "20_20_20_rule/coursea/2021": {
           "name": "قانون ۲۰/۲۰/۲۰",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": ""
+          "type": "منبع"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "شروع کار - ایجاد یک بخش کلاس",
@@ -5602,7 +5602,7 @@
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
-          "type": ""
+          "type": "منبع"
         },
         "happy-map-cards/coursea/2021": {
           "name": "کارت‌های Happy Map",
@@ -5622,7 +5622,7 @@
         "20_20_20_rule_1/coursea/2021": {
           "name": "قانون ۲۰/۲۰/۲۰",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": ""
+          "type": "منبع"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "طراحی بدون کامپیوتر",
@@ -5642,17 +5642,17 @@
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "تصویر احساسی چهره‌ها",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
           "name": "تصویر احساسی چهره‌ها",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "happy-map-cards-xl/coursea/2021": {
           "name": "کارت‌های Happy Map XL",
@@ -5670,19 +5670,19 @@
           "type": ""
         },
         "pair-programming/coursea/2021": {
-          "name": "",
+          "name": "برنامه نویسی اشتراکی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویدیو"
         },
         "csf_lesson_recommendations/coursea/2021": {
-          "name": "",
+          "name": "توصیه های درس CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "منبع"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "تصویر احساسی چهره‌ها",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -5690,14 +5690,14 @@
           "type": "ویدیو"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
-          "name": "",
+          "name": "توصیه های درس CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "منبع"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "تصویر احساسی چهره‌ها",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "رویداد بزرگ",
@@ -5712,7 +5712,7 @@
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "The Big Event (دوره‌های A,B)",
@@ -5729,79 +5729,79 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
-          "name": "",
+          "name": "توصیه های درس CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "منبع"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
           "name": "چهره‌های احساسی - تصویر احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-          "type": ""
+          "type": "منبع"
         },
         "artist_project_planning_guide/coursea/2021": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
           "url": "https://docs.google.com/document/d/1hLNKsUkqCzRKH9fYsbiOeSipAAr6re1M4yF3Na42s8g/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "artist_project_planning_guide_1/coursea/2021": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
           "url": "https://docs.google.com/document/d/13FEhzjfZq1ITunIdxyJ-ZSXyiqeaBVkQxXFirWj2iC4/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "2021_change_log/coursec/2021": {
           "name": "2021Change Log",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-          "type": ""
+          "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
           "name": "Common Core و NGSS Guidance",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
-          "type": ""
+          "type": "منبع"
         },
         "course_vocabulary/coursec/2021": {
           "name": "واژگان دوره",
           "url": "https://studio.code.org/s/coursec-2021/vocab",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursec/2021": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/coursec/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "https://studio.code.org/s/coursec-2021/standards",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "راهنمای برنامه درسی",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide_1/coursec/2021": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursec/2021": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursec/2021": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "انجمن معلمان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursec/2021": {
           "name": "اصلاحات درس مجازی",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
-          "type": ""
+          "type": "منبع"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "قرار دادن توقفی برای پستی برخط: اسلایدهای درس",
@@ -5826,36 +5826,36 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "دوستان رباتی من",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
-          "type": ""
+          "type": "الگوی ذوزنقه‌ای کاغذی"
         },
         "csf-mrf-symbol-key/coursec/2021": {
           "name": "دوستان رباتی من",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "type": "کلید نماد"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
           "name": "دوستان رباتی من",
-          "url": "",
+          "url": "https://youtu.be/xaW3PAzHxCU",
           "type": ""
         },
         "c2-maze-bridge/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "صفحه پل‌زنی پر پیچ و خم",
+          "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
         },
         "unplugged-maze-blocks/coursec/2021": {
-          "name": "",
-          "url": "",
+          "name": "بلوک‌های ماز بدون کامپیوتر",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
           "type": ""
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-          "type": ""
+          "type": "توصیه‌های درس"
         },
         "debugging_guide/coursec/2021": {
           "name": "راهنمای رفع اشکال",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
+          "type": "منبع"
         },
         "pair-programming-vid/coursec/2021": {
           "name": "برنامه نویسی دوتایی",
@@ -5874,7 +5874,7 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
           "type": ""
         },
         "csf-turns-angles-video/coursec/2021": {
@@ -5884,8 +5884,8 @@
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "تصویر احساسی چهره‌ها",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
+          "type": "منبع"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "رویداد بزرگ",
@@ -5898,9 +5898,9 @@
           "type": "ارزشیابی"
         },
         "the_big_event_course_c_/coursec/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "The Big Event (دوره C)",
+          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "type": "کنترل کننده رویداد"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "رویداد بزرگ",
@@ -5908,9 +5908,9 @@
           "type": ""
         },
         "open-ended_programming_levels/coursec/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "نمونه راه حل‌های مرحله",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/template/preview",
+          "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursec/2021": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -5918,9 +5918,9 @@
           "type": "ویدیو"
         },
         "open-ended_programming_levels_1/coursec/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "مراحل برنامه نویسی بی‌انتها",
+          "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
+          "type": "کلید پاسخ"
         },
         "right-app-scenarios/coursec/2021": {
           "name": "",
@@ -5970,92 +5970,92 @@
         "2021_change_log/coursed/2021": {
           "name": "2021Change Log",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-          "type": ""
+          "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
           "name": "Common Core و NGSS Guidance",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "course_vocabulary/coursed/2021": {
           "name": "واژگان دوره",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursed/2021": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "راهنمای برنامه درسی",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/coursed/2021": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursed/2021": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursed/2021": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursed/2021": {
           "name": "اصلاحات درس مجازی",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "جزوه"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
           "name": "",
-          "url": "",
-          "type": ""
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
+          "type": "کلید پاسخ"
         },
         "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Password Power-Up: اسلایدهای درس",
+          "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit",
+          "type": "اسلایدها"
         },
         "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Password Power-Up: رمز عبور خود را تقویت کنید.",
+          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit",
+          "type": "جزوه"
         },
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Password Power-Up: رمز عبور خود را تقویت کنید.",
+          "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
+          "type": "کلید پاسخ"
         },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
@@ -6132,9 +6132,9 @@
           "url": ""
         },
         "open-ended_programming_levels/coursed/2021": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -6142,9 +6142,9 @@
           "type": "ویدیو"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
+          "name": "نمونه راه حل‌های مرحله",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "dance-party-playlist/coursed/2021": {
           "name": "",
@@ -6158,12 +6158,12 @@
         "dance_party_unplugged/coursed/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "feeling-faces-image/coursed/2021": {
           "name": "چهره‌های احساسی",
@@ -6213,26 +6213,26 @@
         "course_vocabulary_1/express/2021": {
           "name": "واژگان دوره",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/express/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/express/2021": {
           "name": "راهنمای رفع اشکال",
           "url": ""
         },
         "teacher_forum_1/express/2021": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "",
+          "name": "بلوک‌های ماز بدون کامپیوتر",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "pair_programming/express/2021": {
           "name": "برنامه نویسی دوتایی",
@@ -6255,13 +6255,13 @@
         },
         "turns_angles_1/express/2021": {
           "name": "",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "جزوه"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "",
           "url": "https://studio.code.org/docs/spritelab/",
-          "type": ""
+          "type": "منبع"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
           "name": "",
@@ -6270,17 +6270,17 @@
         "making_sprites/express/2021": {
           "name": "ساختن اسپرایت‌ها",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "",
           "url": "https://studio.code.org/docs/spritelab/",
-          "type": ""
+          "type": "منبع"
         },
         "sprites_in_action/express/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "pause_and_think_online/express/2021": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -6297,9 +6297,9 @@
           "type": ""
         },
         "open-ended_programming_levels/express/2021": {
-          "name": "",
+          "name": "مراحل برنامه نویسی بی‌انتها",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "pair_programming_video/express/2021": {
           "name": "",
@@ -6329,7 +6329,7 @@
         "text_and_prompts/express/2021": {
           "name": "متن و انگیزش",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
-          "type": ""
+          "type": "اسلایدها"
         },
         "variables_video/express/2021": {
           "name": "متغیرها",
@@ -6338,7 +6338,7 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1geOnapIZcQHcJmKMTAe7WmAXbIi9xVQju-hIdBhTi-A/edit?usp=sharing",
           "type": ""
         },
         "rubric-csf-final-projects/express/2021": {
@@ -6349,21 +6349,21 @@
         "course_vocabulary/pre-express/2021": {
           "name": "واژگان دوره",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/pre-express/2021": {
           "name": "راهنمای رفع اشکال",
           "url": ""
         },
         "teacher_forum_1/pre-express/2021": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "قانون ۲۰/۲۰/۲۰",
@@ -6398,71 +6398,71 @@
         "2021_change_log/coursee/2021": {
           "name": "2021Change Log",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-          "type": ""
+          "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
           "name": "Common Core و NGSS Guidance",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "course_vocabulary/coursee/2021": {
           "name": "واژگان دوره",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "cross-curricular_extension_activities/coursee/2021": {
           "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": ""
+          "type": "منبع"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "راهنمای برنامه درسی",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-          "type": ""
+          "type": "منبع"
         },
         "debugging_guide/coursee/2021": {
           "name": "راهنمای رفع اشکال",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
-          "type": ""
+          "type": "منبع"
         },
         "implementation_guide/coursee/2021": {
           "name": "راهنمای پیاده سازی",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
-          "type": ""
+          "type": "منبع"
         },
         "lesson_type_guide/coursee/2021": {
           "name": "راهنمای نوع درس",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
-          "type": ""
+          "type": "منبع"
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursee/2021": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": "https://forum.code.org/c/csf/",
-          "type": ""
+          "type": "منبع"
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "اصلاحات درس مجازی",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "الگوریتم را دنبال کنید",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "",
           "url": "https://studio.code.org/docs/spritelab/",
-          "type": ""
+          "type": "منبع"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "",
@@ -6490,7 +6490,7 @@
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
           "name": "",
@@ -6505,7 +6505,7 @@
         "about_me_planning_guide/coursee/2021": {
           "name": "",
           "url": "https://docs.google.com/document/d/1eKTBvBxS_T_MNvdj_lXJGnRDAo8zJRuz6gLvWKNk2y4/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
@@ -6514,8 +6514,8 @@
         },
         "digital-sharing-lesson/coursee/2021": {
           "name": "",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1emDu9jf0aNnXqGfgS1rQ5Klf1iqDdhXSy87OveesqWE/edit?usp=sharing",
+          "type": "منبع"
         },
         "digital-sharing-video/coursee/2021": {
           "name": "",
@@ -6524,7 +6524,7 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
           "type": ""
         },
         "csf-turns-angles-video/coursee/2021": {
@@ -6563,19 +6563,19 @@
           "type": ""
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "",
+          "name": "در حال طراحی برای دستیابی پذیری",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "types_of_disabilities/coursee/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "design-process/coursee/2021": {
           "name": "روند طراحی",
@@ -6595,12 +6595,12 @@
         "csd_curriculum_guide/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "csd_implementation_guide/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "csd_guide_to_debugging/csd/2021": {
           "name": "",
@@ -6634,7 +6634,7 @@
         "introduction_to_machine_learning/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "name": "",
@@ -6644,7 +6644,7 @@
         "types_of_machine_learning/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "types_of_machine_learning_1/csd/2021": {
           "name": "",
@@ -6654,12 +6654,12 @@
         "types_of_machine_learning_2/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "innovations_in_ai/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "innovations_in_ai_-_activity_guide/csd/2021": {
           "name": "",
@@ -6682,7 +6682,7 @@
         "patterns_in_data/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "patterns_in_data_1/csd/2021": {
           "name": "",
@@ -6692,17 +6692,17 @@
         "shoe_survey/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "patterns_in_data_3/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "_key_classification_models/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "classification_models/csd/2021": {
           "name": "",
@@ -6712,17 +6712,17 @@
         "classification_models_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "fruit_veggie_cards/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "introduction_to_ai_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "introduction_to_ai_lab_1/csd/2021": {
           "name": "",
@@ -6742,32 +6742,32 @@
         "_key_training_a_model_in_ai_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "accuracy_in_ai_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "selecting_features/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "using_data_with_categorical_features/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "importing_models_in_app_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "importing_a_model_in_app_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "ai_training_data_bias/csd/2021": {
           "name": "",
@@ -6777,7 +6777,7 @@
         "model_cards/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "model_cards_1/csd/2021": {
           "name": "",
@@ -6792,7 +6792,7 @@
         "saving_models_in_ai_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "zoo_models/csd/2021": {
           "name": "",
@@ -6802,12 +6802,12 @@
         "_key_zoo_models/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "selecting_a_label/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if-statements_in_app_lab/csd/2021": {
           "name": "",
@@ -6817,7 +6817,7 @@
         "model_cards_in_app_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "numerical_accuracy_-_activity_guide/csd/2021": {
           "name": "",
@@ -6827,7 +6827,7 @@
         "numerical_models/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "zombie_prediction_-_activity_guide/csd/2021": {
           "name": "",
@@ -6837,17 +6837,17 @@
         "zombie_prediction_-_answer_key/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "_key_numerical_accuracy/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "numerical_data_in_ai_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
           "name": "",
@@ -6862,22 +6862,22 @@
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "using_data_with_numerical_features/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "customizing_apps/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "ai_code_of_ethics/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "ai_ethics_research_areas/csd/2021": {
           "name": "",
@@ -6896,7 +6896,7 @@
         "our_ai_code_of_ethics_template_/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "create_an_ml_app_-_project_guide/csd/2021": {
           "name": "",
@@ -6905,7 +6905,7 @@
         "make_a_machine_learning_app/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "create_an_ml_app/csd/2021": {
           "name": "",
@@ -6923,12 +6923,12 @@
         "issue_statements/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "survey_planning/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "survey_planning_-_activity_guide/csd/2021": {
           "name": "",
@@ -6941,7 +6941,7 @@
         "creating_a_survey/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "isaac_s_survey_data_-_student_resource/csd/2021": {
           "name": "",
@@ -6954,7 +6954,7 @@
         "survey_data_in_ai_lab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "cleaning_survey_data/csd/2021": {
           "name": "",
@@ -6969,7 +6969,7 @@
         "troubleshooting_models/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "troubleshooting_models_-_activity_guide/csd/2021": {
           "name": "",
@@ -6978,17 +6978,17 @@
         "creating_an_app/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "_template_5_why_s/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "design_an_ai_app/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "design_an_ai_app_-_project_guide/csd/2021": {
           "name": "",
@@ -7009,12 +7009,12 @@
         "model_card_-_digital_template/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "model_card_-_printable_template/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "design_an_ai_app_1/csd/2021": {
           "name": "",
@@ -7022,7 +7022,7 @@
           "type": "سرفصل"
         },
         "teacher_forum/csd/2021": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "all_code_3/csd/2021": {
@@ -7044,7 +7044,7 @@
         "unit-4-the-design-process/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "pspe-image/csd/2021": {
           "name": "",
@@ -7134,7 +7134,7 @@
         "user-interface-screens/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "user-experience-computer/csd/2021": {
           "name": "",
@@ -7154,7 +7154,7 @@
         "paper-prototype-sample-feedback/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "improve-a-screen/csd/2021": {
           "name": "",
@@ -7169,7 +7169,7 @@
         "user-interviews/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "computer-science-practices/csd/2021": {
           "name": "",
@@ -7240,12 +7240,12 @@
         "design_mode/csd/2021": {
           "name": "حالت طراحی",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "design_mode_elements/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "paper_prototype_planning/csd/2021": {
           "name": "",
@@ -7290,7 +7290,7 @@
         "model-screen-design/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "intro_to_design_mode/csd/2021": {
           "name": "",
@@ -7300,32 +7300,32 @@
         "design_mode_1/csd/2021": {
           "name": "حالت طراحی",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "design_mode_elements_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "changing_screens/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "importing_screens/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "multi-screen_apps/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "responding_to_user_input/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "digital-prototype-user-testing/csd/2021": {
           "name": "",
@@ -7404,7 +7404,7 @@
         "circuit_playground_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "computing-innovations/csd/2021": {
           "name": "",
@@ -7424,22 +7424,22 @@
         "csd_unit_6_-_physical_computing/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "random_numbers_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "responding_to_user_input_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "",
@@ -7449,7 +7449,7 @@
         "circuit_playground/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "input-and-events/csd/2021": {
           "name": "",
@@ -7457,24 +7457,24 @@
           "type": ""
         },
         "board_events/csd/2021": {
-          "name": "",
+          "name": "حوادث بورد",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "physical_input/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "physical_output/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "taking_input_with_getproperty/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "analog-digital-video/csd/2021": {
           "name": "",
@@ -7484,17 +7484,17 @@
         "analog_sensors/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "changing_sensor_scale/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "date_and_change_events/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "emoji-race-guide/csd/2021": {
           "name": "",
@@ -7504,17 +7504,17 @@
         "booleans_and_comparison_operators_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "functions_2/csd/2021": {
           "name": "توابع",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if_statements_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "make-game-guide/csd/2021": {
           "name": "",
@@ -7543,27 +7543,27 @@
         "arrays/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "circuits_and_leds/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "color_lights/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "playing_notes/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "producing_output/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "loops_in_app_lab/csd/2021": {
           "name": "حلقه های \"برای\"",
@@ -7573,22 +7573,22 @@
         "for_loops/csd/2021": {
           "name": "حلقه های \"برای\"",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "modifying_arrays/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "accelerometer_events/csd/2021": {
-          "name": "",
+          "name": "حوادث شتاب سنج",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "the_accelerometer/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "circuits-logic-video/csd/2021": {
           "name": "",
@@ -7603,7 +7603,7 @@
         "circuits_and_buttons/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "prototype-an-innovation-1/csd/2021": {
           "name": "",
@@ -7649,7 +7649,7 @@
         "unit-5-data-society/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "representation-matters-exemplar-2019/csd/2021": {
           "name": "",
@@ -7659,7 +7659,7 @@
         "meals-data-resource-2019/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "representation-matters/csd/2021": {
           "name": "",
@@ -7693,7 +7693,7 @@
         "ascii-text/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "ascii-challenges/csd/2021": {
           "name": "",
@@ -7703,7 +7703,7 @@
         "ascii_challenges/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "how-computers-work-data-and-binary/csd/2021": {
           "name": "",
@@ -7753,7 +7753,7 @@
         "unit_5_data_society/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "secret_messages_2021/csd/2021": {
           "name": "",
@@ -7763,7 +7763,7 @@
         "medical_records/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "create-a-representation-exemplar-2019/csd/2021": {
           "name": "",
@@ -7777,7 +7777,7 @@
         "unit_5_data_society_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "create_a_representation/csd/2021": {
           "name": "",
@@ -7826,7 +7826,7 @@
         "interpreting-data-1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "making-decisions-with-data-exemplar-2019/csd/2021": {
           "name": "",
@@ -7841,7 +7841,7 @@
         "problem-solving-process-with-data/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "automating-data-decisions-exemplar-2019/csd/2021": {
           "name": "",
@@ -7851,7 +7851,7 @@
         "data-decisions-resource/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "automating-data-decisions-1/csd/2021": {
           "name": "",
@@ -7931,7 +7931,7 @@
         "unit_5_data_society_2/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "make_a_recommendation_-_student_checklist/csd/2021": {
           "name": "",
@@ -7943,7 +7943,7 @@
           "type": ""
         },
         "teacher_forum_1/csd/2021": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "all_code_1/csd/2021": {
@@ -7975,7 +7975,7 @@
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "",
@@ -8010,17 +8010,17 @@
         "drawing_shapes/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "shapes_and_parameters_-_map_level/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "shapes_and_parameters/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "introduction-to-variables/csd/2021": {
           "name": "",
@@ -8030,17 +8030,17 @@
         "naming_variables/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "variables_1/csd/2021": {
           "name": "متغیرها",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "random_numbers/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "introduction_to_sprites/csd/2021": {
           "name": "",
@@ -8055,17 +8055,17 @@
         "animation_tab/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "sprites_1/csd/2021": {
           "name": "اسپرایت",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "sprite_properties/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "mini-project-captioned-scenes-2020/csd/2021": {
           "name": "",
@@ -8103,7 +8103,7 @@
         "the_draw_loop/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "animating-sprites/csd/2021": {
           "name": "",
@@ -8113,7 +8113,7 @@
         "the_counter_pattern/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "animated-scene-planning-exemplar-2020/csd/2021": {
           "name": "",
@@ -8143,17 +8143,17 @@
         "booleans_and_comparison_operators/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if_statements/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if-else_statements_-_map_level_pdf_/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "if_else_statements/csd/2021": {
           "name": "",
@@ -8192,7 +8192,7 @@
         "extra_code_in_challenge_levels_1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "velocity_1/csd/2021": {
           "name": "",
@@ -8202,7 +8202,7 @@
         "velocity_2/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "",
@@ -8222,7 +8222,7 @@
         "collision_detection/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
           "name": "",
@@ -8242,7 +8242,7 @@
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "flyer-game-project-guide-exemplar/csd/2021": {
           "name": "",
@@ -8267,7 +8267,7 @@
         "functions_1/csd/2021": {
           "name": "توابع",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "project-guide-defender-game/csd/2021": {
           "name": "",
@@ -8340,7 +8340,7 @@
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "problem-solving-process-exemplar-2020/csd/2021": {
           "name": "",
@@ -8364,7 +8364,7 @@
         "solving-problems-exemplar-2020/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "کلید پاسخ"
         },
         "solving-problems-activity-guide-2020/csd/2021": {
           "name": "",
@@ -8459,7 +8459,7 @@
         "apps_and_problem_solving_-_student_checklist/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
           "name": "",
@@ -8502,7 +8502,7 @@
         "solving-problems-tangrams-2020/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "solving-problems-activity-guide-animal-2020/csd/2021": {
           "name": "",
@@ -8548,7 +8548,7 @@
         "csd_unit_2_-_web_development/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "exemplar-text-website/csd/2021": {
           "name": "",
@@ -8558,7 +8558,7 @@
         "html_tags/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "name": "",
@@ -8578,7 +8578,7 @@
         "headings_and_paragraphs/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "video_debugging/csd/2021": {
           "name": "",
@@ -8603,7 +8603,7 @@
         "mini-project-html-page/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "html-web-page/csd/2021": {
           "name": "",
@@ -8618,17 +8618,17 @@
         "formatting_html/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "lists/csd/2021": {
           "name": "فهرست‌ها",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "digital-footprint/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلایدها"
         },
         "social-sleuth-exemplar-2020/csd/2021": {
           "name": "",
@@ -8653,12 +8653,12 @@
         "style_sheets/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "text_properties/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "project-guide-your-personal-style-exemplar-2020/csd/2021": {
           "name": "",
@@ -8703,12 +8703,12 @@
         "creative_commons_search/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "images_in_html/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "define-your-webpage-2020/csd/2021": {
           "name": "",
@@ -8778,12 +8778,12 @@
         "personal_web_page_-_student_checklist/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "extra_code_in_challenge_levels/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "websites-for-a-purpose-2020/csd/2021": {
           "name": "",
@@ -8838,7 +8838,7 @@
         "classes/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
           "name": "",
@@ -8862,7 +8862,7 @@
         "hyperlinks/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "منبع"
         },
         "practices-reflection-l21-exemplar-2020/csd/2021": {
           "name": "",
@@ -8898,11 +8898,11 @@
           "url": ""
         },
         "teacher_forum/pre-express/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/pre-express/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "lesson_plans/express/2020": {
@@ -8914,11 +8914,11 @@
           "url": ""
         },
         "teacher_forum/express/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/express/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/courseb/2020": {
@@ -8934,11 +8934,11 @@
           "url": ""
         },
         "teacher_forum/courseb/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/courseb/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursed/2020": {
@@ -8954,11 +8954,11 @@
           "url": ""
         },
         "teacher_forum/coursed/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursed/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursec/2020": {
@@ -8974,11 +8974,11 @@
           "url": ""
         },
         "teacher_forum/coursec/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursec/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursee/2020": {
@@ -8994,11 +8994,11 @@
           "url": ""
         },
         "teacher_forum/coursee/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursee/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursea/2020": {
@@ -9014,11 +9014,11 @@
           "url": ""
         },
         "teacher_forum/coursea/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursea/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         },
         "curriculum_guide/coursef/2020": {
@@ -9034,11 +9034,11 @@
           "url": ""
         },
         "teacher_forum/coursef/2020": {
-          "name": "",
+          "name": "انجمن استادان",
           "url": ""
         },
         "vocabulary/coursef/2020": {
-          "name": "",
+          "name": "واژه نامه",
           "url": ""
         }
       }

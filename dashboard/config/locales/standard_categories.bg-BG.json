@@ -1,0 +1,17 @@
+{
+  "bg-BG": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Изчислително мислене"
+        },
+        "L": {
+          "description": "Език"
+        },
+        "F": {
+          "description": "Функции"
+        }
+      }
+    }
+  }
+}
