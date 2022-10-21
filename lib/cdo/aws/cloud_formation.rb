@@ -45,7 +45,7 @@ module AWS
       metadata_service_request.open_timeout = metadata_service_request.read_timeout = 3
       ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
       ec2_client = Aws::EC2::Client.new
-      stack_id = ec2_client.
+      ec2_client.
         describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
         tags.
         select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
@@ -54,6 +54,7 @@ module AWS
     rescue Net::OpenTimeout
       raise "Cannot return current Stack Name. This code is not executing on an AWS EC2 Instance."
     end
+
     # @param [Cdo::CloudFormation::StackTemplate] stack
     # @param [Logger] log
     def initialize(stack:, log: Logger.new(STDOUT), **options)
