@@ -44,6 +44,34 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   }
 end
 
+And(/^I get program manager access$/) do
+  browser_request(url: '/api/test/program_manager_access', method: 'POST')
+end
+
+Given(/^I am a program manager$/) do
+  @pm_name = "Program Manager#{Time.now.to_i}_#{rand(1_000_000)}"
+  steps %{
+    Given I create a teacher named "#{@pm_name}"
+    And I get program manager access
+  }
+end
+
+Given(/^I have a regional partner with a teacher application$/) do
+  response = browser_request(url: '/api/test/create_teacher_application', method: 'POST')
+  data = JSON.parse(response)
+  @rp_id = data['rp_id']
+  @teacher_id = data['teacher_id']
+  @application_id = data['application_id']
+end
+
+Given(/^I delete the program manager, regional partner, teacher, and application$/) do
+  browser_request(
+    url: '/api/test/create_teacher_application',
+    method: 'POST',
+    body: {pm_name: @pm_name, rp_id: @rp_id, teacher_id: @teacher_id, application_id: @application_id}
+  )
+end
+
 Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
   require_rails_env
 
@@ -162,7 +190,10 @@ And(/^I create some fake applications of each type and status$/) do
       teacher = User.find_or_create_teacher(
         {name: "#{course} #{status}", email: teacher_email}, nil, nil
       )
-      next if Pd::Application::TeacherApplication.find_by(user_id: teacher.id)
+      next if Pd::Application::TeacherApplication.find_by(
+        application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR,
+        user_id: teacher.id
+      )
       form_data_hash = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: course, last_name: status)
       if status == 'incomplete'
         FactoryGirl.create(
