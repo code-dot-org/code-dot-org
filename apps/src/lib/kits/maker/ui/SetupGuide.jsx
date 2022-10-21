@@ -30,26 +30,30 @@ const style = {
   }
 };
 
-const setupGuideContent = {
-  microbit: {
-    id: 'microbit-description',
-    title: applabI18n.makerSetupMicrobitTitle(),
-    href: 'https://microbit.org/',
-    imgSrc: '../assets/maker/microbit-drawing-green.png',
-    description: applabI18n.makerSetupMicrobitDescription(),
-    imgStyle: style.microbitImg
-  },
-  circuitPlayground: {
-    id: 'circuit-playground-description',
-    title: applabI18n.makerSetupCircuitPlaygroundTitle(),
-    href: 'https://learn.adafruit.com/introducing-circuit-playground/overview',
-    imgSrc: '../assets/maker/circuit-playground-200.jpg',
-    description: applabI18n.makerSetupCircuitPlaygroundDescription(),
-    imgStyle: style.circuitPlaygroundImg
-  }
-};
-
 export default class SetupGuide extends React.Component {
+  setupGuideContent = content => {
+    switch (content) {
+      case 'microbit':
+        return {
+          id: 'microbit-description',
+          title: applabI18n.makerSetupMicrobitTitle(),
+          href: 'https://microbit.org/',
+          imgSrc: '../assets/maker/microbit-drawing-green.png',
+          description: applabI18n.makerSetupMicrobitDescription(),
+          imgStyle: style.microbitImg
+        };
+      case 'circuitPlayground':
+        return {
+          id: 'circuit-playground-description',
+          title: applabI18n.makerSetupCircuitPlaygroundTitle(),
+          href:
+            'https://learn.adafruit.com/introducing-circuit-playground/overview',
+          imgSrc: '../assets/maker/circuit-playground-200.jpg',
+          description: applabI18n.makerSetupCircuitPlaygroundDescription(),
+          imgStyle: style.circuitPlaygroundImg
+        };
+    }
+  };
   render() {
     // Experiment 'microbit', displays Circuit Playground and Micro:Bit descriptions.
     let isMicrobit = experiments.isEnabled('microbit');
@@ -59,16 +63,16 @@ export default class SetupGuide extends React.Component {
         {isMicrobit ? (
           <div style={style.twoColumns}>
             <DescriptionCard
-              {...setupGuideContent.circuitPlayground}
+              {...this.setupGuideContent('circuitPlayground')}
               divStyle={style.descriptionFlexCard}
             />
             <DescriptionCard
-              {...setupGuideContent.microbit}
+              {...this.setupGuideContent('microbit')}
               divStyle={style.descriptionFlexCard}
             />
           </div>
         ) : (
-          <DescriptionCard {...setupGuideContent.circuitPlayground} />
+          <DescriptionCard {...this.setupGuideContent('circuitPlayground')} />
         )}
         <div id="setup-status-mount">
           <SetupInstructions />
