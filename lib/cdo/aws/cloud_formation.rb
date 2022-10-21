@@ -35,6 +35,25 @@ module AWS
     # Max size of template body you can pass in an S3 object with a template URL.
     TEMPLATE_S3_MAX = 460_800
 
+    EC2_METADATA_SERVICE_URL = URI('http://169.254.169.254/latest/meta-data/instance-id')
+
+    # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
+    # @return [String]
+    def self.current_stack_name
+      metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_URL.host, EC2_METADATA_SERVICE_URL.port)
+      # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
+      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 3
+      ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
+      ec2_client = Aws::EC2::Client.new
+      stack_id = ec2_client.
+        describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
+        tags.
+        select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
+        first.
+        value
+    rescue Net::OpenTimeout
+      raise "Cannot return current Stack Name. This code is not executing on an AWS EC2 Instance."
+    end
     # @param [Cdo::CloudFormation::StackTemplate] stack
     # @param [Logger] log
     def initialize(stack:, log: Logger.new(STDOUT), **options)
