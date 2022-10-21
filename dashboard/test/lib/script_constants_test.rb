@@ -1,4 +1,3 @@
-require_relative '../script_constants'
 require 'minitest/autorun'
 
 class ScriptConstantsTest < Minitest::Test
