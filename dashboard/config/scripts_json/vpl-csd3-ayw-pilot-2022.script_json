@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-13 05:18:09 UTC",
+    "serialized_at": "2022-10-20 21:56:48 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -131,6 +131,21 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ayw-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Module 3 Asynchronous Work",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "vpl-csd3-ayw-pilot-2022"
       }
     }
@@ -256,13 +271,43 @@
 
   ],
   "resources": [
-
+    {
+      "name": "CSD 2022 M3 Pilot Slides",
+      "url": "https://docs.google.com/presentation/d/1kXeXVJRodVDJxyJdS3QPrFcG6ughmNG5TDfOiuipVQ4/edit?usp=sharing",
+      "key": "csd_2022_m3_pilot_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_2022_m3_pilot_slides"
+      }
+    },
+    {
+      "name": "CSD 2022 M3 Pilot Agenda",
+      "url": "https://docs.google.com/document/d/1TctttIoUFmLU3u3H3dfYSgZf33JS4fevCp4d8fHeLb4/edit?usp=sharing",
+      "key": "csd_22_m3_pilot_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_22_m3_pilot_agenda"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_2022_m3_pilot_slides",
+        "script.name": "vpl-csd3-ayw-pilot-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_22_m3_pilot_agenda",
+        "script.name": "vpl-csd3-ayw-pilot-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 

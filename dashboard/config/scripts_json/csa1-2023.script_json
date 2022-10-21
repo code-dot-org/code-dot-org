@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-18 14:18:34 UTC",
+    "serialized_at": "2022-10-20 22:06:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3713,6 +3713,10 @@
           {
             "type": "assessmentOpportunity",
             "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of variables and applying the problem solving process to debug a program."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "If students get stuck, have them write down the steps in the problem solving process. Have them note the problem, the steps they want to try to solve the problem, and the results of the changes they make. You can also have students work with a partner to explain their ideas and reasoning to help them work through the process."
           }
         ]
       },
