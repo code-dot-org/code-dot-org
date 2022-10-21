@@ -23,7 +23,9 @@ class CertificateImagesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid donor name'}
     end
 
-    course_name = valid_course_name?(data['course']) ? data['course'] : 'hourofcode'
+    # if we do not recognize the course name, assume it is a 3rd party hour of
+    # code tutorial.
+    course_name = recognized_course_name?(data['course']) ? data['course'] : 'hourofcode'
 
     course_version = CurriculumHelper.find_matching_course_version(course_name)
     course_title = course_version&.localized_title
@@ -39,7 +41,7 @@ class CertificateImagesController < ApplicationController
 
   private
 
-  def valid_course_name?(name)
+  def recognized_course_name?(name)
     name.nil? ||
       name == ScriptConstants::ACCELERATED_NAME ||
       CertificateImage.prefilled_title_course?(name) ||
