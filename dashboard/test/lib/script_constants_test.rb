@@ -1,6 +1,6 @@
-require 'minitest/autorun'
+require 'test_helper'
 
-class ScriptConstantsTest < Minitest::Test
+class ScriptConstantsTest < ActiveSupport::TestCase
   def test_csf_next_course_recommendation
     {
       "course1" => "course2",
