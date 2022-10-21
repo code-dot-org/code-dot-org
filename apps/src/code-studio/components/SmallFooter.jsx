@@ -47,7 +47,7 @@ export default class SmallFooter extends React.Component {
     rowHeight: PropTypes.number,
     fullWidth: PropTypes.bool,
     channel: PropTypes.string,
-    scriptYear: PropTypes.string
+    unitYear: PropTypes.string
   };
 
   state = {
@@ -185,9 +185,9 @@ export default class SmallFooter extends React.Component {
       ...(this.props.fullWidth && styles.baseFullWidth)
     };
 
-    // Possible edge cases include scriptYear with value 'unversioned'.
+    // Possible edge cases include unitYear with value 'unversioned'.
     // Filter for year ('20XX') all-numeral format.
-    const yearIsNumeric = /^[0-9]+$/.test(this.props.scriptYear);
+    const yearIsNumeric = /^[0-9]+$/.test(this.props.unitYear);
 
     return (
       <div className={this.props.className} style={styles.smallFooter}>
@@ -199,9 +199,9 @@ export default class SmallFooter extends React.Component {
         >
           {this.renderI18nDropdown()}
           {this.renderCopyright()}
-          {!!this.props.scriptYear && yearIsNumeric && (
+          {!!this.props.unitYear && yearIsNumeric && (
             <p>
-              {i18n.version()}: {this.props.scriptYear}
+              {i18n.version()}: {this.props.unitYear}
             </p>
           )}
           {this.renderMoreMenuButton()}
