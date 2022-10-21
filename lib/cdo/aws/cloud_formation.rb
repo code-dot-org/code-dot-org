@@ -2,11 +2,14 @@ require 'active_support/core_ext/string/inflections'
 require 'active_support/core_ext/numeric/time'
 require 'aws-sdk-cloudformation'
 require 'aws-sdk-s3'
+require 'aws-sdk-ec2'
 require 'json'
 require 'yaml'
 require 'erb'
 require 'digest'
 require 'highline'
+require 'net/http'
+require 'uri'
 
 module AWS
   # Manages configuration and deployment of AWS CloudFormation stacks.
@@ -34,6 +37,27 @@ module AWS
     TEMPLATE_MAX = 51_200
     # Max size of template body you can pass in an S3 object with a template URL.
     TEMPLATE_S3_MAX = 460_800
+
+    EC2_METADATA_SERVICE_URL = URI('http://169.254.169.254/latest/meta-data/instance-id')
+
+    # Find the CloudFormation Stack that the EC2 Instance this code is executing on belongs to and return
+    # the Stack Parameters (including their values).
+    # @return [Aws::CloudFormation::Types::Stack:Array<Types::Parameter>]
+    def self.stack_parameters
+      metadata_service_request = Net::HTTP.new(EC2_METADATA_SERVICE_URL.host, EC2_METADATA_SERVICE_URL.port)
+      # Set a short timeout so that when not executing on an EC2 Instance we fail fast.
+      metadata_service_request.open_timeout = metadata_service_request.read_timeout = 3
+      ec2_instance_id = metadata_service_request.request_get(EC2_METADATA_SERVICE_URL.path).body
+      ec2_client = Aws::EC2::Client.new
+      stack_id = ec2_client.
+        describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
+        tags.
+        select {|tag| tag.key == 'aws:cloudformation:stack-id'}.
+        first.
+        value
+      cloudformation_client = Aws::CloudFormation::Client.new
+      cloudformation_client.describe_stacks(stack_name: stack_id).stacks.first.parameters
+    end
 
     # @param [Cdo::CloudFormation::StackTemplate] stack
     # @param [Logger] log
