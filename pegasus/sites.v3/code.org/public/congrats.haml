@@ -1,2 +1,3 @@
 :ruby
-  redirect CDO.studio_url('/congrats', CDO.default_scheme)
+  suffix = request.query_string.present? ? "?#{request.query_string}" : ''
+  redirect CDO.studio_url("/congrats#{suffix}", CDO.default_scheme)
