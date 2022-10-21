@@ -225,8 +225,6 @@ class UnconnectedMusicView extends React.Component {
           .getField('sound')
           .getValue();
 
-        // TODO: Replace image URLs with font-awesome icons,
-        // or something else not from the shared directory
         if (self.player.isPreviewPlaying(id)) {
           self.player.stopAndCancelPreviews();
           this.setValue(getStaticFilePath(PLAY_ICON));
