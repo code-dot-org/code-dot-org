@@ -181,8 +181,11 @@ class CertificateImage
     image
   end
 
+  # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course)
-    ScriptConstants.unit_in_category?(:hoc, course)
+    return true if ScriptConstants.unit_in_category?(:hoc, course)
+    return false if CurriculumHelper.find_matching_course_version(name)
+    true
   end
 
   def self.prefilled_title_course?(course)
