@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-10-19 21:56:31 UTC",
+    "serialized_at": "2022-10-20 19:13:00 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3098,6 +3098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA_2023"
+        ],
         "progression": "The Blink Rate Problem"
       },
       "bonus": false,
@@ -3120,6 +3123,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA1_2023"
+        ],
         "progression": "The Blink Rate Problem"
       },
       "bonus": false,
@@ -3142,6 +3148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
         "progression": "The Clicker Game Problem"
       },
       "bonus": false,
@@ -3164,6 +3173,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
         "progression": "The Trivia Game Problem"
       },
       "bonus": false,
@@ -4249,7 +4261,7 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/17NZka1bi5RNcvguFHHgVSwaWC8BKPsA1Cm4CwHUgBLk/view",
+      "url": "https://docs.google.com/document/d/15XGBsO_8flWsXo6iiq3NdI5iS2YB8SddAV9N1lx_5X4/view",
       "key": "the_problem_solving_process",
       "properties": {
         "audience": "Student",
@@ -4257,6 +4269,18 @@
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "name": "The Problem Solving Process Handout",
+      "url": "https://docs.google.com/document/d/1JxUYKFQWHSrp-UROJt31xQLUwZPOKQYcsxiHpu5K0hA/view",
+      "key": "the_problem_solving_process_handout",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_handout"
       }
     }
   ],
@@ -4325,6 +4349,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "the_problem_solving_process_handout"
       }
     }
   ],
