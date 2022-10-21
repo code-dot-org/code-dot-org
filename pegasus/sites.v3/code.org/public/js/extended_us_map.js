@@ -798,11 +798,23 @@ $(document).ready(function () {
   initExtendedMap();
 });
 
+// NOTE: This is not a good pattern to replicate, but is a workaround
+// for an issue with loading Raphael before attempting to render the map.
+// A better implementation would move this code to /apps/src.
+
+let initAttemptsRemaining = 10;
+
 function initExtendedMap() {
-  if (Raphael) {
+  if (initAttemptsRemaining === 0) {
+    return;
+  }
+
+  initAttemptsRemaining --;
+
+  if (typeof Raphael !== 'undefined') {
     renderMap();
   } else {
-    setTimeout(initExtendedMap, 100);
+    setTimeout(initExtendedMap, 1000);
   }
 };
 
