@@ -671,7 +671,9 @@
         "helloworld_food_sizes_soccer-2022": "Aprende a cambiar el tamaño de los sprites.",
         "helloworld_food_sizes_space-2022": "Aprende a cambiar el tamaño de los sprites.",
         "helloworld_food_sounds_soccer-2022": "Aprende a reproducir sonidos.",
-        "helloworld_food_sounds_space-2022": "Aprende a reproducir sonidos."
+        "helloworld_food_sounds_space-2022": "Aprende a reproducir sonidos.",
+        "CSD U6 - Combine Inputs - ChalA_2222": "Crear un prototipo de app que simule un Anillo de Estado de Ánimo, que cambie los colores de los LEDs en función del estado de ánimo del usuario.",
+        "CSD U6 - Combine Inputs - ChalB_2222": "Crear una aplicación que mueva una moto a la izquierda y a la derecha de la pantalla utilizando los botones del Circuit Playground"
       }
     }
   }
