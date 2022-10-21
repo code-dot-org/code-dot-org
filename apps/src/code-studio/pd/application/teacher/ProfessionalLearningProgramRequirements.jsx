@@ -6,7 +6,12 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
-import {styles as defaultStyles} from './TeacherApplicationConstants';
+import {
+  PROGRAM_CSD,
+  PROGRAM_CSP,
+  PROGRAM_CSA,
+  styles as defaultStyles
+} from './TeacherApplicationConstants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -20,6 +25,19 @@ import {
 import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {FormContext} from '../../form_components_func/FormComponent';
+
+const getProgramName = program => {
+  switch (program) {
+    case PROGRAM_CSD:
+      return 'CS Discoveries';
+    case PROGRAM_CSP:
+      return 'CS Principles';
+    case PROGRAM_CSA:
+      return 'CSA';
+    default:
+      return 'CS Program';
+  }
+};
 
 const ProfessionalLearningProgramRequirements = props => {
   const {data} = props;
@@ -35,7 +53,7 @@ const ProfessionalLearningProgramRequirements = props => {
       return (
         <p style={styles.marginBottom}>
           <strong>
-            Summer Workshop dates have not yet been finalized for your region.{' '}
+            Workshop dates have not yet been finalized for your region.{' '}
             {regionalPartner.name} will be in touch once workshop details are
             known.
           </strong>
@@ -72,8 +90,8 @@ const ProfessionalLearningProgramRequirements = props => {
     if (hasRegionalPartner) {
       return (
         <label>
-          {regionalPartner.name} may have scholarships available to cover the
-          cost of the program.{' '}
+          {regionalPartner.name} may have scholarships available to cover some
+          or all costs associated with the program.{' '}
           <a
             href={
               pegasus('/educate/professional-learning/program-information') +
@@ -92,20 +110,31 @@ const ProfessionalLearningProgramRequirements = props => {
       return (
         <label>
           When you are matched with a partner, they may have scholarships
-          available to cover the cost of the program. Let us know if your school
-          or district would be able to pay the fee or if you need to be
-          considered for a scholarship.
+          available to cover some or all costs associated with the program. Let
+          us know if your school or district would be able to pay the fee or if
+          you need to be considered for a scholarship.
         </label>
       );
     }
   };
 
   const renderProgramRequirements = () => {
+    const programConclusion =
+      data.program === PROGRAM_CSA
+        ? 'The program concludes the following summer with a Capstone experience that ' +
+          'serves as an opportunity to prepare for the coming year and further connects ' +
+          'you with the CS Education Community.'
+        : 'The program will conclude in the spring.';
     return (
       <div>
         <p>
-          Code.org’s Professional Learning Program is a yearlong program
-          starting in the summer and concluding in the spring. Workshops can be
+          Code.org’s Professional Learning Program for{' '}
+          {getProgramName(data.program)} is a yearlong program, meant to support
+          you throughout your first year teaching the course. Starting in the
+          summer, the program begins with a week-long workshop to prepare you to
+          start the year. During the school year, Academic Year Workshops will
+          reinforce your skills and provide a community to discuss questions you
+          have during the year. {programConclusion} Workshops will either be
           held in-person, virtually, or as a combination of both throughout the
           year.
           {hasRegionalPartner && (
@@ -123,7 +152,8 @@ const ProfessionalLearningProgramRequirements = props => {
               >
                 landing page
               </a>{' '}
-              for more information about the schedule and delivery model.
+              for more information about the schedule and delivery model in your
+              region.
             </span>
           )}
         </p>
