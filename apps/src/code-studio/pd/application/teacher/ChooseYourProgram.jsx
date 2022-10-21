@@ -47,15 +47,24 @@ const CourseHoursLabeledNumberInput = props => {
   );
 };
 
-const TeachingPlansNote = () => {
+const WhichGradesSelector = props => {
   return (
-    <p style={styles.error}>
-      Note: This program is designed to work best for teachers who are teaching
-      this course in the {Year} school year. Scholarship eligibility is
-      dependent on whether or not you will be teaching the course during the{' '}
-      {Year} school year.
-    </p>
+    <>
+      <LabeledCheckBoxes name={props.courseName} />
+      {props.showScholarshipWarning && (
+        <p style={styles.error}>
+          Note: This program is designed to work best for teachers who are
+          teaching this course in the {Year} school year. Scholarship
+          eligibility is often dependent on whether or not you will be teaching
+          the course during the {Year} school year.
+        </p>
+      )}
+    </>
   );
+};
+WhichGradesSelector.propTypes = {
+  courseName: PropTypes.string,
+  showScholarshipWarning: PropTypes.bool
 };
 
 const ChooseYourProgram = props => {
@@ -86,16 +95,19 @@ const ChooseYourProgram = props => {
   const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${
     programInfo.name
   } in the ${Year} school year`;
-  let showTeachingPlansNote = false;
+  let showScholarshipEligibilityWarning = false;
   if (
-    (data.csdWhichGrades &&
+    (data.program === PROGRAM_CSD &&
+      data.csdWhichGrades &&
       data.csdWhichGrades.includes(notSureTeachPlanOption)) ||
-    (data.cspWhichGrades &&
+    (data.program === PROGRAM_CSP &&
+      data.cspWhichGrades &&
       data.cspWhichGrades.includes(notSureTeachPlanOption)) ||
-    (data.csaWhichGrades &&
+    (data.program === PROGRAM_CSA &&
+      data.csaWhichGrades &&
       data.csaWhichGrades.includes(notSureTeachPlanOption))
   ) {
-    showTeachingPlansNote = true;
+    showScholarshipEligibilityWarning = true;
   }
 
   return (
@@ -121,16 +133,18 @@ const ChooseYourProgram = props => {
           )}
 
           {data.program === PROGRAM_CSD && (
-            <>
-              <LabeledCheckBoxes name="csdWhichGrades" />
-              {showTeachingPlansNote && <TeachingPlansNote />}
-            </>
+            <WhichGradesSelector
+              courseName="csdWhichGrades"
+              showScholarshipWarning={showScholarshipEligibilityWarning}
+            />
           )}
 
           {data.program === PROGRAM_CSP && (
             <>
-              <LabeledCheckBoxes name="cspWhichGrades" />
-              {showTeachingPlansNote && <TeachingPlansNote />}
+              <WhichGradesSelector
+                courseName="cspWhichGrades"
+                showScholarshipWarning={showScholarshipEligibilityWarning}
+              />
               <LabeledRadioButtons name="cspHowOffer" />
             </>
           )}
@@ -159,8 +173,10 @@ const ChooseYourProgram = props => {
                   program.
                 </p>
               )}
-              <LabeledCheckBoxes name="csaWhichGrades" />
-              {showTeachingPlansNote && <TeachingPlansNote />}
+              <WhichGradesSelector
+                courseName="csaWhichGrades"
+                showScholarshipWarning={showScholarshipEligibilityWarning}
+              />
               <LabeledRadioButtons name="csaHowOffer" />
             </>
           )}
