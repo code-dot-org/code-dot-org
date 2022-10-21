@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcover",
-    "serialized_at": "2022-10-19 22:35:56 UTC",
+    "serialized_at": "2022-10-20 13:58:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -371,10 +371,28 @@
       }
     },
     {
-      "key": "8eb09aa7-4007-4876-a268-07c2b3be8ffa",
+      "key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11-14 - Skill Building” slide\n",
+        "name": "Wonder",
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The _Wonder_ Book Cover in Level 11 is a repeat of Level 1. However, this time the workspace blocks are visible to students and they have a space to type in what they notice about the code. Have students check out the new `when clicked`, `prompt user`, and `when prompt answered` blocks. This is a good place for students to pause and understand what those blocks do before adding them to their own code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a",
+        "lesson_activity.key": "c209c7c2-d241-4402-b9e8-9817f27c32d9"
+      }
+    },
+    {
+      "key": "8eb09aa7-4007-4876-a268-07c2b3be8ffa",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-15 - Skill Building” slide\n",
         "name": "Front Desk",
         "progression_name": "Skill Building"
       },
@@ -385,7 +403,7 @@
     },
     {
       "key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b",
-      "position": 11,
+      "position": 12,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -396,9 +414,9 @@
     },
     {
       "key": "b15b4141-45c5-45dc-b9a7-d449622765ba",
-      "position": 12,
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 15 - Free Play” slide\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16 - Free Play” slide\n\n\n",
         "name": "Free Play",
         "progression_name": "Free Play"
       },
@@ -409,7 +427,7 @@
     },
     {
       "key": "b3f859ac-76ed-4d8a-a8fe-bb2ede1df723",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "If a group or individual finishes early, encourage them to continue building a book cover project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your book cover?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- Invite students to share ideas and to learn from each other. ",
         "tips": [
@@ -919,7 +937,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
@@ -929,7 +947,7 @@
         "lesson.key": "Book Cover ",
         "lesson_group.key": "",
         "script.name": "csc-bookcover",
-        "activity_section.key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b"
+        "activity_section.key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a"
       },
       "level_keys": [
         "csc_bookcover_predict_wonder"
@@ -938,7 +956,7 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -963,7 +981,7 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -988,7 +1006,7 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1013,7 +1031,7 @@
     {
       "chapter": 15,
       "position": 15,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1416,7 +1434,7 @@
         "lesson.key": "Book Cover ",
         "lesson_group.key": "",
         "script.name": "csc-bookcover",
-        "activity_section.key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b"
+        "activity_section.key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a"
       }
     },
     {

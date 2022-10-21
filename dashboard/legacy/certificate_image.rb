@@ -227,6 +227,8 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_empathy.png'
     elsif course == 'mee_timecraft'
       'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
+    elsif course == 'mee_estate'
+      'MC_Hour_Of_Code_Certificate_mee_estate.png'
     elsif course == ScriptConstants::OCEANS_NAME
       'oceans_hoc_certificate.png'
     elsif hoc_course?(course)
