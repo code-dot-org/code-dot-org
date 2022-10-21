@@ -215,6 +215,41 @@ class TestController < ApplicationController
     render json: {rp_id: regional_partner.id, teacher_id: teacher.id, application_id: application.id}
   end
 
+  def create_applications
+    %w(csd csp).each do |course|
+      (Pd::Application::TeacherApplication.statuses).each do |status|
+        teacher_email = "#{course}_#{status}@code.org"
+        teacher = User.find_or_create_teacher(
+          {name: "#{course} #{status}", email: teacher_email}, nil, nil
+        )
+        next if Pd::Application::TeacherApplication.find_by(
+          application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR,
+          user_id: teacher.id
+        )
+
+        form_data = FactoryGirl.build(:pd_teacher_application_hash_common, course.to_sym, first_name: course, last_name: status).to_json
+
+        if status == 'incomplete'
+          Pd::Application::TeacherApplication.create!(
+            form_data: form_data,
+            user: teacher,
+            course: course,
+            status: 'incomplete'
+          )
+        else
+          application = Pd::Application::TeacherApplication.create!(
+            form_data: form_data,
+            user: teacher,
+            course: course,
+            status: 'unreviewed'
+          )
+          application.update!(status: status)
+        end
+      end
+    end
+    head :ok
+  end
+
   def delete_rp_pm_teacher_application
     User.find_by(name: params[:pm_name]).destroy
     RegionalPartner.find(params[:rp_id]).destroy
