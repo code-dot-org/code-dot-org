@@ -182,9 +182,7 @@ class CertificateImage
   end
 
   def self.hoc_course?(course)
-    hoc_course = ScriptConstants.unit_in_category?(:hoc, course)
-    hoc_course ||= tutorial_codes.any?(course)
-    hoc_course
+    ScriptConstants.unit_in_category?(:hoc, course)
   end
 
   def self.prefilled_title_course?(course)
@@ -219,9 +217,5 @@ class CertificateImage
     else
       'blank_certificate.png'
     end
-  end
-
-  def self.tutorial_codes
-    @@tutorial_codes ||= PEGASUS_DB[:tutorials].all.map {|t| t[:code]}
   end
 end
