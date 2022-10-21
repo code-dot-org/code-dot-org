@@ -3,7 +3,7 @@
 // Code.org HoC homepage banner
 .hoc-banner.homepage {
   text-align: center;
-  color: $darkest_gray;
+  color: $white;
   padding: 7em 0;
   line-height: 1.4;
 
@@ -23,11 +23,14 @@
     padding: 5em 1em 6em;
   }
 
+  h1, h2 {
+    color: $white
+  }
+
   h1 {
     font-size: 4.5em;
     font-family: $gotham-extra-bold;
     margin: 0 auto 0.5em;
-    color: $darkest_gray;
 
     @media screen and (max-width: $width-lg) {
       font-size: 3.75em;
@@ -36,6 +39,10 @@
     @media screen and (max-width: $width-sm) {
       font-size: 2.75em;
     }
+  }
+
+  h2 {
+    margin-top: 0;
   }
 
   // The Hour of Code is coming/here text

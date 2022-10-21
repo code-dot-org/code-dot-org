@@ -47,6 +47,9 @@
       - elsif entry[:type] == "heading"
         %h1{dir: "auto"}
           = I18n.t(entry[:text])
+      - elsif entry[:type] == "heading-two"
+        %h2{dir: "auto"}
+          = I18n.t(entry[:text])
       - elsif entry[:type] == "image"
         %img.image{src: entry[:url]}
       - elsif entry[:type] == "cta_link_white"
