@@ -26,7 +26,8 @@ function showJobBoard() {
       //   ]
       // }
       result.jobs.forEach(job => {
-        const departmentName = job.departments[0].name;
+        // Jobs should always have a department, but optional chaining just in case.
+        const departmentName = job?.departments[0]?.name;
         if (!departmentName) {
           return;
         }
