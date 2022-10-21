@@ -57,6 +57,8 @@ module AWS
         value
       cloudformation_client = Aws::CloudFormation::Client.new
       cloudformation_client.describe_stacks(stack_name: stack_id).stacks.first.parameters
+    rescue Net::OpenTimeout
+      raise "Cannot return CloudFormation Stack Parameters. This code is not executing on an AWS EC2 Instance."
     end
 
     # @param [Cdo::CloudFormation::StackTemplate] stack
