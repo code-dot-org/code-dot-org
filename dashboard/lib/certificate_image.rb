@@ -157,8 +157,6 @@ class CertificateImage
       vertical_offset = course == '20-hour' ? -125 : -120
       image = create_certificate_image2(path, name, y: vertical_offset)
     else # all other courses use a certificate image where the course name is also blank
-      course_title ||= fallback_course_title_for(course)
-
       image = Magick::Image.read(path).first
       apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
       # The area in pixels which will display the course title.
@@ -191,25 +189,6 @@ class CertificateImage
 
   def self.prefilled_title_course?(course)
     certificate_template_for(course) != 'blank_certificate.png'
-  end
-
-  # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
-  # 2015 this fallback mapping is only ever hit on bulk /certificates pages.
-  def self.fallback_course_title_for(course)
-    case course
-    when ScriptConstants::ARTIST_NAME
-      'Artist'
-    when ScriptConstants::COURSE1_NAME
-      'Course 1'
-    when ScriptConstants::COURSE2_NAME
-      'Course 2'
-    when ScriptConstants::COURSE3_NAME
-      'Course 3'
-    when ScriptConstants::COURSE4_NAME
-      'Course 4'
-    else
-      course
-    end
   end
 
   def self.certificate_template_for(course)

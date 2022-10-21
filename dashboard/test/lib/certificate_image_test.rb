@@ -34,13 +34,6 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course4')
   end
 
-  def test_course_fallback_titles
-    assert_equal 'Course 1', CertificateImage.fallback_course_title_for('course1')
-    assert_equal 'Course 2', CertificateImage.fallback_course_title_for('course2')
-    assert_equal 'Course 3', CertificateImage.fallback_course_title_for('course3')
-    assert_equal 'Course 4', CertificateImage.fallback_course_title_for('course4')
-  end
-
   def test_image_generation
     mc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'mc')
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
