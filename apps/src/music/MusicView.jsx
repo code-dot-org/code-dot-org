@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {Provider, connect} from 'react-redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
 import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
 import Instructions from './Instructions';
@@ -121,14 +120,12 @@ class UnconnectedMusicView extends React.Component {
 
     document.body.addEventListener('keyup', this.handleKeyUp);
 
-    this.initBlockly();
-
-    setInterval(this.updateTimer, 1000 / 30);
-
     this.loadLibrary().then(library => {
       this.setState({library});
+      this.initBlockly();
       this.workspace.updateToolbox(createMusicToolbox(library, 'dropdown'));
       this.player.initialize(library);
+      setInterval(this.updateTimer, 1000 / 30);
     });
 
     this.loadInstructions().then(instructions => {
@@ -237,14 +234,17 @@ class UnconnectedMusicView extends React.Component {
 
     this.resizeBlockly();
 
-    const xml = parseXmlElement(
-      `<xml><block type="${
-        BlockTypes.WHEN_RUN
-      }" deletable="false" x="30" y="30"></block><block type="${
-        BlockTypes.TRIGGERED_AT
-      }" deletable="false" x="500" y="30"></block></xml>`
-    );
-    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+    // Set initial blocks.
+    const existingCode = this.loadCode();
+    if (existingCode) {
+      const exitingCodeJson = JSON.parse(existingCode);
+      Blockly.blockly_.serialization.workspaces.load(
+        exitingCodeJson,
+        this.workspace
+      );
+    } else {
+      this.clearCode();
+    }
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
 
@@ -255,6 +255,35 @@ class UnconnectedMusicView extends React.Component {
         null
       );
     });
+  };
+
+  clearCode = () => {
+    // Default code.
+    const defaultCode = {
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          {type: 'when_run', x: 30, y: 30},
+          {
+            type: 'triggered_at',
+            x: 500,
+            y: 30,
+            fields: {
+              trigger: 'trigger1'
+            }
+          }
+        ]
+      },
+      variables: [{name: 'currentTime'}]
+    };
+
+    Blockly.blockly_.serialization.workspaces.load(defaultCode, this.workspace);
+
+    this.setPlaying(false);
+
+    this.player.clearAllSoundEvents();
+
+    this.saveCode();
   };
 
   onBlockSpaceChange = e => {
@@ -287,6 +316,19 @@ class UnconnectedMusicView extends React.Component {
     // This is a way to tell React to re-render the scene, notably
     // the timeline.
     this.setState({updateNumber: this.state.updateNumber + 1});
+
+    // Save the code to local storage.
+    this.saveCode();
+  };
+
+  saveCode = () => {
+    const code = Blockly.blockly_.serialization.workspaces.save(this.workspace);
+    const codeJson = JSON.stringify(code);
+    localStorage.setItem('musicLabSavedCode', codeJson);
+  };
+
+  loadCode = () => {
+    return localStorage.getItem('musicLabSavedCode');
   };
 
   onResize = () => {
@@ -312,6 +354,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   resizeBlockly = () => {
+    if (!this.workspace) {
+      return;
+    }
+
     var blocklyArea = document.getElementById('blockly-area');
     var blocklyDiv = document.getElementById('blockly-div');
 
@@ -586,6 +632,7 @@ class UnconnectedMusicView extends React.Component {
             setPlaying={this.setPlaying}
             playTrigger={this.playTrigger}
             top={this.state.timelineAtTop}
+            startOverClicked={this.clearCode}
           />
           <Timeline
             isPlaying={this.state.isPlaying}
