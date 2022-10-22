@@ -235,16 +235,7 @@ class UnconnectedMusicView extends React.Component {
     this.resizeBlockly();
 
     // Set initial blocks.
-    const existingCode = this.loadCode();
-    if (existingCode) {
-      const exitingCodeJson = JSON.parse(existingCode);
-      Blockly.blockly_.serialization.workspaces.load(
-        exitingCodeJson,
-        this.workspace
-      );
-    } else {
-      this.clearCode();
-    }
+    this.loadCode();
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
 
@@ -317,7 +308,6 @@ class UnconnectedMusicView extends React.Component {
     // the timeline.
     this.setState({updateNumber: this.state.updateNumber + 1});
 
-    // Save the code to local storage.
     this.saveCode();
   };
 
@@ -328,7 +318,16 @@ class UnconnectedMusicView extends React.Component {
   };
 
   loadCode = () => {
-    return localStorage.getItem('musicLabSavedCode');
+    const existingCode = localStorage.getItem('musicLabSavedCode');
+    if (existingCode) {
+      const exitingCodeJson = JSON.parse(existingCode);
+      Blockly.blockly_.serialization.workspaces.load(
+        exitingCodeJson,
+        this.workspace
+      );
+    } else {
+      this.clearCode();
+    }
   };
 
   onResize = () => {
