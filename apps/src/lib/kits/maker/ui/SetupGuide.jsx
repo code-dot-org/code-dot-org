@@ -4,7 +4,6 @@ import experiments from '@cdo/apps/util/experiments';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import applabI18n from '@cdo/applab/locale';
-import i18n from '@cdo/locale';
 
 const style = {
   main: {
@@ -76,11 +75,6 @@ export default class SetupGuide extends React.Component {
         )}
         <div id="setup-status-mount">
           <SetupInstructions />
-        </div>
-        <div className="setup-support">
-          <h2>{i18n.support()}</h2>
-          <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
-          <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
         </div>
       </div>
     );
