@@ -1,5 +1,3 @@
-require 'cdo/script_constants'
-
 class MakerController < ApplicationController
   authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code, :confirm_login]
 

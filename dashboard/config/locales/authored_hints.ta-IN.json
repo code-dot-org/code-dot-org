@@ -10662,7 +10662,7 @@
           "location_pin_hint": "ஸ்பிரைட்டின் இருப்பிடத்தை மாற்ற, இருப்பிடத் தொகுதியில் உள்ள பின்னைக் கிளிக் செய்து, அது எங்கு செல்ல வேண்டும் என்பதைக் கிளிக் செய்யவும். \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif) "
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "ஆடைகள் ஒவ்வொரு மனிதனுக்கும் பொருந்துவதை உறுதிசெய்க. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml> "
+          "storyboard_costume": "ஆடைகள் ஒவ்வொரு மனிதனுக்கும் பொருந்துவதை உறுதிசெய்க. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer\\_ball\"</title>\n        </block>\n      </value>\n    </block></xml> "
         },
         "helloworld_food_multi_space-2022": {
           "storyboard_costume": "ஆடைகள் ஒவ்வொரு மனிதனுக்கும் பொருந்துவதை உறுதிசெய்க. \n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml> "

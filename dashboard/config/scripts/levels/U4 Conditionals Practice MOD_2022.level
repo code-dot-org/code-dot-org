@@ -28,7 +28,8 @@
       "getProperty": null,
       "andOperator": null,
       "orOperator": null,
-      "notOperator": null
+      "notOperator": null,
+      "moduloOperator": null
     },
     "embed": "false",
     "instructions_important": "false",
@@ -51,7 +52,6 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "true",
-    "makerlab_enabled": "false",
     "long_instructions": "# Do This\r\n\r\nThis is the MOD operator: %\r\n\r\n**Reminder:** Here's how it works. Divide the first number by the second number. You are left with the remainder.\r\n\r\nFor example: `11%2` - 11 divided by 2 is 5 with a remainder of 1. The answer is **1**. \r\n\r\n**Do This:**\r\n* Read the code below. Look at the first example.\r\n* Using each number from this list exactly once (1, 2, 2, 2, 3, 4, 7, 10), put a MOD statement in the first console.log statement of each set that will result in the same number as the second console.log statement. \r\n* Run the program to check your answers. ",
     "parent_level_id": 19873,
     "mini_rubric": "false",
@@ -62,8 +62,8 @@
     "libraries_enabled": "false",
     "encrypted_examples": "VdMTZ2y2Hdifz9FazyoIHQFAIBmw8IIG05dCXRRK3now4w0imoY4cFuoNL2R\nujLB+D8tNWxXN1AnwVpveap6qg==\n",
     "name_suffix": "_2021",
-    "preload_asset_list": null,
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -71,7 +71,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-20T21:51:44.264+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice MOD_2021\\\"\"],\"cloned_from\":\"U7 Param Return Practice MOD_2021\"},{\"changed_at\":\"2022-04-20 22:09:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"map_reference\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-20T21:51:44.264+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice MOD_2021\\\"\"],\"cloned_from\":\"U7 Param Return Practice MOD_2021\"},{\"changed_at\":\"2022-04-20 22:09:36 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"map_reference\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-10-18 18:39:11 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
