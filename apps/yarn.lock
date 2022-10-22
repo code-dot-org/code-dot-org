@@ -1341,14 +1341,16 @@
   dependencies:
     chalk "2.1.0"
     color-convert "~1.2.2"
+    ease-component latest
+    es6-shim latest
     lodash.clonedeep "^4.3.0"
     lodash.debounce "^4.0.3"
     nanotimer "0.3.10"
     temporal latest
   optionalDependencies:
     browser-serialport latest
-    firmata "^2.2.0"
-    serialport "^8.0.5"
+    firmata latest
+    serialport "^4.0.0"
 
 "@code-dot-org/js-interpreter-tyrant@0.2.2":
   version "0.2.2"
