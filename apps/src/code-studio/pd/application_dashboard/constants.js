@@ -59,7 +59,7 @@ export const StatusColors = {
 export const ApplicationFinalStatuses = [
   'accepted',
   'declined',
-  'waitlisted',
+  'pending_space_availability',
   'withdrawn'
 ];
 
@@ -71,13 +71,7 @@ export const ApplicationTypes = {
 /**
  * Application statuses for which we require a scholarship status
  */
-export const ScholarshipStatusRequiredStatuses = [
-  'accepted_not_notified',
-  'accepted_notified_by_partner',
-  'accepted_no_cost_registration',
-  'registration_sent',
-  'paid'
-];
+export const ScholarshipStatusRequiredStatuses = ['accepted'];
 
 /**
  * Valid statuses for this year's applications.
@@ -89,16 +83,11 @@ export function getApplicationStatuses(type, addAutoEmail = true) {
       unreviewed: 'Unreviewed',
       incomplete: 'Incomplete',
       reopened: 'Reopened',
+      awaiting_admin_approval: 'Awaiting Admin Approval',
       pending: 'Pending',
-      waitlisted: `Waitlisted${autoEmailText(addAutoEmail)}`,
+      pending_space_availability: `Pending Space Availability`,
       declined: `Declined${autoEmailText(addAutoEmail)}`,
-      accepted_not_notified: 'Accepted - Not notified',
-      accepted_notified_by_partner: 'Accepted - Notified by partner',
-      accepted_no_cost_registration: `Accepted - No cost registration${autoEmailText(
-        addAutoEmail
-      )}`,
-      registration_sent: `Registration Sent${autoEmailText(addAutoEmail)}`,
-      paid: 'Paid',
+      accepted: 'Accepted',
       withdrawn: 'Withdrawn'
     };
   } else if (type === 'facilitator') {
