@@ -986,12 +986,12 @@ module Pd::Application
       application.update!(status: 'pending')
       assert application.allow_sending_principal_email?
 
-      # If we are waitlisted, we can send.
+      # If we are pending_space_availability, we can send.
       application = create :pd_teacher_application
-      application.update!(status: 'waitlisted')
+      application.update!(status: 'pending_space_availability')
       assert application.allow_sending_principal_email?
 
-      # If we're no longer unreviewed/pending/waitlisted, we can't send.
+      # If we're no longer unreviewed/pending/pending_space_availability, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'accepted')
       refute application.allow_sending_principal_email?
