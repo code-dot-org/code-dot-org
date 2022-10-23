@@ -7987,14 +7987,6 @@ firmata-io@^2.3.0:
   resolved "https://registry.yarnpkg.com/firmata-io/-/firmata-io-2.3.0.tgz#6811563e75af4e876a789285b30d6d8a803c45c8"
   integrity sha512-OQ1Q0TInQ23ogI61kVwf3WJUD+viPbDI6uLN99yGLe6GioN3EbRSDSZVn1gEXyQLNjD2ZFVKnTbpiQ2t3VoecA==
 
-firmata@0.16.0, firmata@>=0.11.3, firmata@latest:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/firmata/-/firmata-0.16.0.tgz#6f2a759b1a98de234ced010fa3d4d9534d62b2e7"
-  dependencies:
-    browser-serialport latest
-    es6-shim latest
-    serialport "^4.0.0"
-
 firmata@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/firmata/-/firmata-2.3.0.tgz#9e3ea3c00db73c1c670502389b43e2377b244640"
