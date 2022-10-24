@@ -6,13 +6,6 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
-  remote: https://github.com/code-dot-org/newrelic-ruby-agent.git
-  revision: 5a46cdf3f3f144018bca2edce6b008d464da18fa
-  ref: PR-359_prevent_reconnect_attempts_during_shutdowns
-  specs:
-    newrelic_rpm (6.12.0)
-
-GIT
   remote: https://github.com/code-dot-org/petit.git
   revision: bbe411d61d3f78fff59d9fa79d21c14b1c635750
   specs:
@@ -578,6 +571,7 @@ GEM
     net-ssh (5.2.0)
     net_http_ssl_fix (0.0.10)
     netrc (0.11.0)
+    newrelic_rpm (6.14.0)
     nio4r (2.5.8)
     nokogiri (1.12.4)
       mini_portile2 (~> 2.6.1)
@@ -1000,7 +994,7 @@ DEPENDENCIES
   net-http-persistent
   net-scp
   net-ssh
-  newrelic_rpm!
+  newrelic_rpm (~> 6.14.0)
   nokogiri (>= 1.10.0)
   octokit
   oj
