@@ -112,7 +112,7 @@
     "firebase": "^2.4.2",
     "firebase-bolt": "^0.8.0",
     "firebase-mock": "^1.0.5",
-    "firmata": "2.2.0",
+    "firmata": "0.16.0",
     "glob": "5.0.14",
     "grunt": "^1.4.1",
     "grunt-cli": "1.4.3",
