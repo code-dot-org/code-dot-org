@@ -163,7 +163,6 @@ export default class MusicPlayer {
     );
   }
 
-
   clearAllSoundEvents() {
     this.soundEvents = [];
   }
