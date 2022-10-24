@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-20 22:06:30 UTC",
+    "serialized_at": "2022-10-23 13:26:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -251,6 +251,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**How can I write efficient code?**\n\nStudents build on their knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. Students are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and consider how they can plan and organize their solutions to be more efficient. Students then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass.",
+        "preparation": "* Print copies of the Decomposition handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I write efficient code?**\n\nIn this lesson, you build on your knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. You are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and develop algorithms for these tasks and consider how you can plan and organize their solutions to be more efficient. You then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -811,6 +814,48 @@
       "seeding_key": {
         "lesson_activity.key": "faae582e-d390-4cee-9892-f14e0e1d68e2",
         "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "0d2a5533-139a-41d1-b46a-2025a154dd9b",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d2a5533-139a-41d1-b46a-2025a154dd9b",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "f1a94a8f-596e-42b0-a777-66edcbda43ff",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff",
+        "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-2023"
       }
@@ -3789,6 +3834,376 @@
         "activity_section.key": "c037c4d7-9ba2-4da2-aea9-e61147dd8611",
         "lesson_activity.key": "faae582e-d390-4cee-9892-f14e0e1d68e2"
       }
+    },
+    {
+      "key": "fca5aee0-cdab-4d17-bab7-3ee3ed190e13",
+      "position": 1,
+      "properties": {
+        "description": "Computer science is all about problem-solving. Solving problems is a core component of a software engineer's work, and we have learned about ways to create and improve solutions in The Neighborhood. Let's consider how we solve problems in our daily lives.",
+        "name": "Solving Problems",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fca5aee0-cdab-4d17-bab7-3ee3ed190e13",
+        "lesson_activity.key": "0d2a5533-139a-41d1-b46a-2025a154dd9b"
+      }
+    },
+    {
+      "key": "17c866b9-97d3-453d-a42c-1989df3b85cc",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their groups to write an algorithm for the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What process did you take to decide on your algorithm?*\n\n**Discussion Goal:** Students share the approaches they took to develop their algorithm. Students discuss how they broke the problem down into smaller tasks, such as sorting the colors into piles and then counting the number of M&M's in each pile.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to identify the steps they took to solve the problem and consider how these steps are related to smaller chunks of the larger problem."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "17c866b9-97d3-453d-a42c-1989df3b85cc",
+        "lesson_activity.key": "0d2a5533-139a-41d1-b46a-2025a154dd9b"
+      }
+    },
+    {
+      "key": "1d34fdca-1e36-4e8e-948f-3924e179a959",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "10",
+        "name": "Developing Efficient Solutions"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d34fdca-1e36-4e8e-948f-3924e179a959",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "aa8cafec-8096-46a6-89aa-3229c8ac32ce",
+      "position": 2,
+      "properties": {
+        "description": "Sometimes, problems are so big that we need to break them down into manageable tasks first. This process is called decomposition, and we will learn how to use this approach to break down problems.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aa8cafec-8096-46a6-89aa-3229c8ac32ce",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "16ba5ec0-3fe8-462c-a4cd-ccb0b1ba2846",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***decomposition***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Revisit the scenario from the warm up or an example of a personal interest or daily activity. Briefly discuss how the scenario would be broken down into specific tasks or steps."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16ba5ec0-3fe8-462c-a4cd-ccb0b1ba2846",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "11f1f9ed-9c67-4b4d-9d13-3c43afc6da1e",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program by making modifications to the program as prompted and observing the results.",
+        "progression_name": "Investigate and Modify: Decomposition"
+      },
+      "seeding_key": {
+        "activity_section.key": "11f1f9ed-9c67-4b4d-9d13-3c43afc6da1e",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "d6a81e86-36b9-445e-bc51-465c28b6b2b0",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "d6a81e86-36b9-445e-bc51-465c28b6b2b0",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "0d2961cb-8a8e-477e-809f-853625f2b248",
+      "position": 6,
+      "properties": {
+        "description": "When software engineers develop solutions, they try to account for potential errors and different ways a user might use the program. However, they have to be careful about being redundant to keep their programs efficient.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0d2961cb-8a8e-477e-809f-853625f2b248",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "352eecdf-e557-4e82-b43e-206f47349c51",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does it mean to you for something to be efficient?*\n\n**Discussion Goal:** Students suggest definitions and examples, such as being fast or organized. Students might share examples from their personal lives, such as something being energy-efficient or having tools and resources to make chores or work more efficient.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nPrompt students to consider examples where the lack of organization or resources cause a task to be inefficient. For example, you could ask students to compare washing dishes by hand and using a dishwasher. Have students share reasons why one approach to completing the task is more efficient than the other, such as the amount of time and energy it takes to complete the task."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "352eecdf-e557-4e82-b43e-206f47349c51",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "3fc1c210-2655-4ab3-b512-fd4a040c2451",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***redundant code*** and ***efficient***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to make connections between efficiency in daily tasks and efficiency in writing code. Have students consider why efficiency in programs would be important and guide them to realize how this helps with development, maintainability, and the overall speed of the program."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3fc1c210-2655-4ab3-b512-fd4a040c2451",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "b890e822-771e-45c7-a9b9-67fd4fe2798a",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we make sure we are writing efficient code?*\n\n**Discussion Goal:** Students suggest eliminating redundant code by writing methods for repetitive tasks. They may also suggest writing methods that perform only one task and calling these from other methods that represent larger tasks.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nPrompt students to consider the code they saw in the Investigate level and what structures were implemented to make writing and editing the code more efficient."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b890e822-771e-45c7-a9b9-67fd4fe2798a",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "ae7c9915-ebb6-4470-a5b2-1ef393b7face",
+      "position": 10,
+      "properties": {
+        "description": "You have used the problem solving process to break down problems and plan your algorithms. When we do this, it can help us identify any repetitive tasks that we can write methods for. These methods then represent a smaller task as part of the larger solution and consist of their own algorithms. To plan algorithms for a problem or a method, you have actually been using a tool that software engineers often use to plan their own algorithms.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ae7c9915-ebb6-4470-a5b2-1ef393b7face",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "159a2cbb-c4a8-4069-a6b0-b1500555e08c",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***pseudocode***."
+      },
+      "seeding_key": {
+        "activity_section.key": "159a2cbb-c4a8-4069-a6b0-b1500555e08c",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "58994bb6-a312-4b77-bd1a-15375ee19508",
+      "position": 12,
+      "properties": {
+        "description": "As you work through these problems, use the problem solving process and decomposition strategies to break them down into manageable tasks. Write your algorithms in pseudocode so you can easily implement and refine them in Java.",
+        "duration": "20",
+        "name": "Decomposing a Problem",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "58994bb6-a312-4b77-bd1a-15375ee19508",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "30046898-2866-4512-aa9e-8ae631c561b6",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Decomposition handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution and write pseudocode for their algorithms.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize the use of natural language when writing pseudocode. Allow students to write their pseudocode in whichever language they are most comfortable to support the focus on planning their algorithms rather than focusing on specific structures or languages."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "30046898-2866-4512-aa9e-8ae631c561b6",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "e2cda752-f979-4793-876d-289ba4e0e1a0",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to Level 3 to create a subclass of the `PainterPlus` class and implement their algorithm for their chosen problem.",
+        "progression_name": "Practice: Decomposing a Problem",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of planning and using decomposition, the problem solving process, and pseudocode to plan and implement algorithms."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2cda752-f979-4793-876d-289ba4e0e1a0",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "25d3640a-588a-447a-a428-5b5db6f6d4d6",
+      "position": 15,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new `PainterPlus` subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit our work in case we need to go back to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "25d3640a-588a-447a-a428-5b5db6f6d4d6",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "7ecfe32e-8b42-4f52-968d-249294ad61b1",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7ecfe32e-8b42-4f52-968d-249294ad61b1",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "aadeed2b-037b-44b0-8f83-998902434dc4",
+      "position": 17,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aadeed2b-037b-44b0-8f83-998902434dc4",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "dd37e085-4b40-4302-ad8b-441c995af329",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dd37e085-4b40-4302-ad8b-441c995af329",
+        "lesson_activity.key": "9f4020b5-8562-4493-97d0-5eaf14ca7eb1"
+      }
+    },
+    {
+      "key": "94b05f96-7550-4978-a94e-932ab64414ce",
+      "position": 1,
+      "properties": {
+        "description": "You have made a lot of progress developing your software engineering skills. Let's take a moment to reflect on our progress and growth.",
+        "name": "Software Engineering Skills",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "94b05f96-7550-4978-a94e-932ab64414ce",
+        "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff"
+      }
+    },
+    {
+      "key": "5ceaa10f-e9eb-4e1a-89f8-4d776c6797d8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How have you grown as a software engineer so far?*\n\n**Discussion Goal:** Students share the growth and progress they have made and identify specific characteristics where they feel they have improved.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can also prompt students to set goals for what they want to improve next or work on over the next few lessons. Ask students to consider how they will focus on these goals and characteristics or how they will know they have made progress in these areas."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5ceaa10f-e9eb-4e1a-89f8-4d776c6797d8",
+        "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff"
+      }
+    },
+    {
+      "key": "60d39b77-33c4-4138-92bb-25a2a8908899",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60d39b77-33c4-4138-92bb-25a2a8908899",
+        "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff"
+      }
+    },
+    {
+      "key": "b9c1772c-7d4c-4fc8-b452-0516bfad19bd",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9c1772c-7d4c-4fc8-b452-0516bfad19bd",
+        "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff"
+      }
+    },
+    {
+      "key": "bafae5f0-bec2-45d9-a82c-39733b5c3da3",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "bafae5f0-bec2-45d9-a82c-39733b5c3da3",
+        "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff"
+      }
+    },
+    {
+      "key": "aa43f47f-f253-4037-9ff1-3acd90ac87b1",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa43f47f-f253-4037-9ff1-3acd90ac87b1",
+        "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff"
+      }
     }
   ],
   "script_levels": [
@@ -4916,6 +5331,94 @@
       "level_keys": [
         "CSA U1L10-L5_2023"
       ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Decomposition"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L11-L1_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "11f1f9ed-9c67-4b4d-9d13-3c43afc6da1e"
+      },
+      "level_keys": [
+        "CSA U1L11-L1_2023"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Decomposing a Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L11-L2_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "e2cda752-f979-4793-876d-289ba4e0e1a0"
+      },
+      "level_keys": [
+        "CSA U1L11-L2_2023"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Decomposing a Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L11-L3_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "e2cda752-f979-4793-876d-289ba4e0e1a0"
+      },
+      "level_keys": [
+        "CSA U1L11-L3_2023"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L11-L4_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "aa43f47f-f253-4037-9ff1-3acd90ac87b1"
+      },
+      "level_keys": [
+        "CSA U1L11-L4_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5458,9 +5961,69 @@
         "script.name": "csa1-2023",
         "activity_section.key": "c037c4d7-9ba2-4da2-aea9-e61147dd8611"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L11-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L11-L1_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "11f1f9ed-9c67-4b4d-9d13-3c43afc6da1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L11-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L11-L2_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "e2cda752-f979-4793-876d-289ba4e0e1a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L11-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L11-L3_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "e2cda752-f979-4793-876d-289ba4e0e1a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L11-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L11-L4_2023"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "aa43f47f-f253-4037-9ff1-3acd90ac87b1"
+      }
     }
   ],
   "resources": [
+    {
+      "name": "[KEY] Decomposition",
+      "url": "https://docs.google.com/document/d/1cFr0Wp8FlWJf4dNnuRKjDT0U2bFEGavtpUtcPqF2hh0/edit?usp=sharing",
+      "key": "_key_decomposition",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_decomposition"
+      }
+    },
     {
       "name": "[KEY] Investigate: Calling Methods",
       "url": "https://docs.google.com/document/d/1rgkhIdURxzzHDQV05CAhP7bVIhJfpzUi93lKJRYqzxQ/edit?usp=sharing",
@@ -5519,6 +6082,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1EnN-3Ay0627h5hN3_aL6boSz4GFvnQEQLOZeQ2VO64E/edit?usp=sharing",
+      "key": "_key_u1l11_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l11_extra_practice"
       }
     },
     {
@@ -5711,6 +6286,31 @@
       },
       "seeding_key": {
         "resource.key": "debugging_strategies"
+      }
+    },
+    {
+      "name": "Decomposition",
+      "url": "https://docs.google.com/document/d/1bOkgY4Sw2XaZJXYNueID-5L4XcCi9w4FsFRuBTwCLzg/edit?usp=sharing",
+      "key": "decomposition",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "decomposition"
+      }
+    },
+    {
+      "name": "Decomposition and Design",
+      "url": "https://docs.google.com/presentation/d/1U1NEkrq_f3vRhxg77wvFko4AIVDUCy8xS7HitLJbors/edit?usp=sharing",
+      "key": "decomposition_and_design",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "decomposition_and_design"
       }
     },
     {
@@ -5957,6 +6557,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "name": "U1L11 Extra Practice",
+      "url": "https://docs.google.com/document/d/1nY2D9IekbYVEmqK_2apXHBV9e68vCvRbpbxttt3ExcY/edit?usp=sharing",
+      "key": "u1l11_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l11_extra_practice"
       }
     },
     {
@@ -6244,6 +6857,36 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_key_decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "decomposition_and_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "u1l11_extra_practice"
       }
     },
     {
@@ -6607,6 +7250,16 @@
       }
     },
     {
+      "key": "decomposition",
+      "word": "decomposition",
+      "definition": "the process of breaking a problem down into smaller parts to write methods for each part",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decomposition"
+      }
+    },
+    {
       "key": "documentation",
       "word": "documentation",
       "definition": "written descriptions of the purpose and functionality of code",
@@ -6624,6 +7277,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "dot_operator"
+      }
+    },
+    {
+      "key": "efficient",
+      "word": "efficient",
+      "definition": "getting the best outcome with the least amount of waste",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficient"
       }
     },
     {
@@ -6714,6 +7377,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "programming_style"
+      }
+    },
+    {
+      "key": "redundant",
+      "word": "redundant",
+      "definition": "code that is unnecessary",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "redundant"
       }
     },
     {
@@ -6876,6 +7549,24 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "efficient"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "redundant"
       }
     },
     {
@@ -7116,6 +7807,16 @@
       }
     },
     {
+      "key": "247b5bc1-a01e-4174-b195-c1dcef67f883",
+      "properties": {
+        "description": "Apply the problem solving process and decomposition strategies to plan solutions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "247b5bc1-a01e-4174-b195-c1dcef67f883"
+      }
+    },
+    {
       "key": "28c9ad12-57f9-4c7a-af6c-9078172c7201",
       "properties": {
         "description": "Identify use cases for creating subclasses of an existing class"
@@ -7143,6 +7844,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "31bdebeb-ad61-461a-840b-ea9b353789ab"
+      }
+    },
+    {
+      "key": "51d689da-7fca-441d-bd14-540ee42a4fb8",
+      "properties": {
+        "description": "Identify strategies for writing efficient code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "51d689da-7fca-441d-bd14-540ee42a4fb8"
       }
     },
     {
@@ -7326,6 +8037,16 @@
       }
     },
     {
+      "key": "e9594582-1a10-4597-af36-bbd6e1ff3d20",
+      "properties": {
+        "description": "Write pseudocode to plan an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "e9594582-1a10-4597-af36-bbd6e1ff3d20"
+      }
+    },
+    {
       "key": "f1f61568-317e-4418-bf8a-bad89cf0caa8",
       "properties": {
         "description": "Create an object from an existing class"
@@ -7404,6 +8125,13 @@
         "lesson.key": "lesson-11",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.4"
       }
     },
     {

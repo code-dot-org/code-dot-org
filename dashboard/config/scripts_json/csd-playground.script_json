@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-10-20 19:13:00 UTC",
+    "serialized_at": "2022-10-21 23:36:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -468,6 +468,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "151461c0-13e4-4dd3-b36a-f27d3595d5b0",
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885",
+      "position": 4,
+      "properties": {
+        "name": "Delete Later"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885",
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground"
@@ -1094,8 +1107,19 @@
       }
     },
     {
-      "key": "3277e18b-36c4-496a-b791-bc83fb14bbb0",
+      "key": "7665729b-4d3c-4d09-9bac-85f280ff79a6",
       "position": 5,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "7665729b-4d3c-4d09-9bac-85f280ff79a6",
+        "lesson_activity.key": "de298556-12b3-4d64-a858-c3584776e448"
+      }
+    },
+    {
+      "key": "3277e18b-36c4-496a-b791-bc83fb14bbb0",
+      "position": 6,
       "properties": {
         "progression_name": "Video: The Animation Tab",
         "tips": [
@@ -1112,7 +1136,7 @@
     },
     {
       "key": "ecc3381d-71d5-41f5-a8c6-3742b4545243",
-      "position": 6,
+      "position": 7,
       "properties": {
         "name": "Skill Building",
         "progression_name": "Skill Building"
@@ -1123,8 +1147,19 @@
       }
     },
     {
+      "key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2",
+      "position": 8,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2",
+        "lesson_activity.key": "de298556-12b3-4d64-a858-c3584776e448"
+      }
+    },
+    {
       "key": "dcab4160-65fd-41d0-bbc3-6faa2904bf7d",
-      "position": 7,
+      "position": 9,
       "properties": {
         "name": "Practice",
         "progression_name": "Practice"
@@ -1136,7 +1171,7 @@
     },
     {
       "key": "cacc0409-8250-4f30-9149-0b8141dd673e",
-      "position": 8,
+      "position": 10,
       "properties": {
         "name": "Assessment",
         "progression_name": "Assessment",
@@ -1154,7 +1189,7 @@
     },
     {
       "key": "41db2bdf-8eea-45a4-a2df-c92f3b9c7d27",
-      "position": 9,
+      "position": 11,
       "properties": {
         "name": "Challenges",
         "progression_name": "Challenges",
@@ -1208,6 +1243,17 @@
       "seeding_key": {
         "activity_section.key": "f52ed5fb-871b-4dce-8265-2b40c76cabed",
         "lesson_activity.key": "151461c0-13e4-4dd3-b36a-f27d3595d5b0"
+      }
+    },
+    {
+      "key": "7827b0c1-39d6-49dd-b97b-ad2e50392868",
+      "position": 1,
+      "properties": {
+        "progression_name": "Not Used Anymore"
+      },
+      "seeding_key": {
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868",
+        "lesson_activity.key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885"
       }
     },
     {
@@ -2823,9 +2869,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3L7 - Predict_test2023"
-        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -2873,15 +2916,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites Exploration_test2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_test2023"
+          "CSD U3 Sprites intro sprites_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
@@ -2889,7 +2929,7 @@
         "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
       },
       "level_keys": [
-        "CSD U3 Sprites Exploration_test2023"
+        "CSD U3 Sprites intro sprites_2023"
       ]
     },
     {
@@ -2898,15 +2938,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
+          "CSD U3 Sprites intro debug_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
@@ -2914,18 +2951,59 @@
         "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
       },
       "level_keys": [
-        "CSD U3 Sprites intro debug_test2023"
+        "CSD U3 Sprites intro debug_2023"
       ]
     },
     {
       "chapter": 68,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites intro sprites_test2023"
+        "progression": "Video: The Animation Tab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Animation Tab_2023"
         ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3277e18b-36c4-496a-b791-bc83fb14bbb0"
+      },
+      "level_keys": [
+        "CSD: Animation Tab_2023"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+      },
+      "level_keys": [
+        "CSD U3 Sprites Exploration_test2023"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2936,21 +3014,18 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       },
       "level_keys": [
         "CSD U3 Sprites intro sprites_test2023"
       ]
     },
     {
-      "chapter": 69,
-      "position": 6,
-      "activity_section_position": 4,
+      "chapter": 71,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites anitab 1_test2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2961,16 +3036,16 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       },
       "level_keys": [
         "CSD U3 Sprites anitab 1_test2023"
       ]
     },
     {
-      "chapter": 70,
-      "position": 7,
-      "activity_section_position": 1,
+      "chapter": 72,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2993,15 +3068,12 @@
       ]
     },
     {
-      "chapter": 71,
-      "position": 8,
-      "activity_section_position": 2,
+      "chapter": 73,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawSprites placement match_test2023"
-        ],
-        "progression": "Skill Building"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -3011,15 +3083,15 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2"
       },
       "level_keys": [
         "CSD U3 drawSprites placement match_test2023"
       ]
     },
     {
-      "chapter": 72,
-      "position": 9,
+      "chapter": 74,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3043,8 +3115,8 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 10,
+      "chapter": 75,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3068,8 +3140,8 @@
       ]
     },
     {
-      "chapter": 74,
-      "position": 11,
+      "chapter": 76,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3093,7 +3165,29 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Not Used Anymore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L7 - Predictv2_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868"
+      },
+      "level_keys": [
+        "CSD U3L7 - Predictv2_test2023"
+      ]
+    },
+    {
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3118,7 +3212,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3143,7 +3237,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3168,7 +3262,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3976,9 +4070,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "level.key": "CSD U3 Sprites intro sprites_2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_test2023"
+          "CSD U3 Sprites intro sprites_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
@@ -3988,14 +4082,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro debug_test2023",
+        "level.key": "CSD U3 Sprites intro debug_2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
+          "CSD U3 Sprites intro debug_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Animation Tab_2023",
+        "script_level.level_keys": [
+          "CSD: Animation Tab_2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3277e18b-36c4-496a-b791-bc83fb14bbb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -4007,7 +4125,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -4019,7 +4137,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -4043,7 +4161,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2"
       }
     },
     {
@@ -4080,6 +4198,18 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "41db2bdf-8eea-45a4-a2df-c92f3b9c7d27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L7 - Predictv2_test2023",
+        "script_level.level_keys": [
+          "CSD U3L7 - Predictv2_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868"
       }
     },
     {
