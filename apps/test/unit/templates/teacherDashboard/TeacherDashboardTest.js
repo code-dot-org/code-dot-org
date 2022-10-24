@@ -41,7 +41,7 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.instance().props.location.pathname).to.equal('/progress');
+    expect(wrapper.instance().location.pathname).to.equal('/progress');
   });
 
   it('defaults to progress tab if incorrect tab provided in route', () => {
@@ -49,7 +49,7 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.instance().props.location.pathname).to.equal('/progress');
+    expect(wrapper.instance().location.pathname).to.equal('/progress');
   });
 
   it('defaults to manage students tab if no tab provided in route and section has 0 students', () => {
@@ -61,9 +61,7 @@ describe('TeacherDashboard', () => {
         studentCount={0}
       />
     );
-    expect(wrapper.instance().props.location.pathname).to.equal(
-      '/manage_students'
-    );
+    expect(wrapper.instance().location.pathname).to.equal('/manage_students');
   });
 
   it('defaults to manage students tab if incorrect tab provided in route and section has 0 students', () => {
@@ -75,8 +73,6 @@ describe('TeacherDashboard', () => {
         studentCount={0}
       />
     );
-    expect(wrapper.instance().props.location.pathname).to.equal(
-      '/manage_students'
-    );
+    expect(wrapper.instance().location.pathname).to.equal('/manage_students');
   });
 });
