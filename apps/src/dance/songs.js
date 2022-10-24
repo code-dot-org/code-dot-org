@@ -78,14 +78,15 @@ export function getSelectedSong(songManifest, config) {
  * @param songData {Object<Object>} Song data containing urls of songs.
  * @param onPreloadError {function} Error callback with status code.
  */
+// replace forceHTML5 with experiment flag
 export function loadSong(songId, songData, onPreloadError, onLoad, forceHTML5) {
   const url = songData[songId].url;
   const options = {
     id: url,
     mp3: url,
     onPreloadError,
-    forceHTML5: forceHTML5,
-    allowHTML5Mobile: forceHTML5
+    forceHTML5: true,
+    allowHTML5Mobile: true
   };
 
   const sound = Sounds.getSingleton().register(options);

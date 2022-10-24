@@ -43,7 +43,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import queryString from 'query-string';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
-import DCDO from '@cdo/apps/dcdo';
 
 const ButtonState = {
   UP: 0,
@@ -80,8 +79,6 @@ var Dance = function() {
     // Time between last run click and last time the song actually started playing
     lastRunButtonDelay: null
   };
-
-  this.enableRunButton = this.enableRunButton.bind(this);
 };
 
 module.exports = Dance;
@@ -114,7 +111,10 @@ Dance.prototype.init = function(config) {
     this.studioAppInitPromiseResolve = resolve;
   });
   this.danceReadyPromise = new Promise(resolve => {
-    this.danceReadyPromiseResolve = resolve;
+    this.danceReadyPromiseResolve = () => {
+      this.registerSetupEvent('danceReady');
+      return resolve();
+    };
   });
   this.studioApp_.labUserId = config.labUserId;
   this.level.softButtons = this.level.softButtons || {};
@@ -140,7 +140,7 @@ Dance.prototype.init = function(config) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(true));
     }
 
-    this.isUsingIOSDevice() && this.disableRunButton();
+    this.disableRunButton();
   };
 
   const showFinishButton =
@@ -152,21 +152,23 @@ Dance.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel
   });
 
-  this.initSongsPromise = this.initSongs(config);
+  this.initSongsPromise = this.initSongs(config).then(() =>
+    this.registerSetupEvent('songsInitialized')
+  );
 
-  // On iOS devices, load sprites as students add new characters
+  // To support synchronous audio on iOS devices,
+  // load sprites as students add new characters
   // to their programs. Block the run button until all characters have loaded.
   // maybe add check that all sprite have loaded too before run button enabled?
-  if (this.isUsingIOSDevice()) {
-    const computeCharactersReferenced = () =>
-      this.computeCharactersReferenced(this.studioApp_.getCode());
-    this.studioApp_.addChangeHandler(() => {
-      this.disableRunButton();
-      this.nativeAPI
-        ?.ensureSpritesAreLoaded(computeCharactersReferenced())
-        .then(this.enableRunButton);
-    });
-  }
+  const computeCharactersReferenced = () =>
+    this.computeCharactersReferenced(this.studioApp_.getCode());
+  this.studioApp_.addChangeHandler(() => {
+    // this.disableRunButton();
+    this.unregisterSetupEvent('spritesReady');
+    this.nativeAPI
+      ?.ensureSpritesAreLoaded(computeCharactersReferenced())
+      .then(() => this.registerSetupEvent('spritesReady'));
+  });
 
   this.awaitTimingMetrics();
 
@@ -216,12 +218,7 @@ Dance.prototype.initSongs = async function(config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
-  const onLoadSongCallback = () => {
-    this.onLoadSong();
-    this.enableRunButton();
-  };
-
-  this.isUsingIOSDevice() && this.disableRunButton();
+  this.disableRunButton();
   loadSong(
     selectedSong,
     songData,
@@ -241,16 +238,12 @@ Dance.prototype.initSongs = async function(config) {
         );
       }
     },
-    this.isUsingIOSDevice() && onLoadSongCallback,
-    this.isUsingIOSDevice()
+    () => this.registerSetupEvent('songLoaded'),
+    true
   );
 
-  const onLoadMetadataCallback = () => {
-    this.onLoadMetadata();
-    this.enableRunButton();
-  };
   this.updateSongMetadata(selectedSong);
-  this.songMetadataPromise.then(onLoadMetadataCallback);
+  // this.songMetadataPromise.then(onLoadMetadataCallback);
 
   if (config.channel) {
     // Ensure that the selected song will be stored in the project the first
@@ -271,7 +264,8 @@ Dance.prototype.setSongCallback = function(songId) {
 
   getStore().dispatch(setSelectedSong(songId));
 
-  this.isUsingIOSDevice() && this.disableRunButton();
+  this.unregisterSetupEvent('songLoaded');
+  this.disableRunButton();
   unloadSong(lastSongId, songData);
   loadSong(
     songId,
@@ -299,8 +293,8 @@ Dance.prototype.setSongCallback = function(songId) {
         );
       }
     },
-    this.isUsingIOSDevice() && this.enableRunButton,
-    this.isUsingIOSDevice()
+    () => this.registerSetupEvent('songLoaded'),
+    true
   );
 
   this.updateSongMetadata(songId);
@@ -580,6 +574,7 @@ Dance.prototype.runButtonClick = async function() {
   const divDanceLoading = document.getElementById('divDanceLoading');
   divDanceLoading.style.display = 'flex';
   getStore().dispatch(setRunIsStarting(true));
+  // (done) AWAIT
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
@@ -589,6 +584,7 @@ Dance.prototype.runButtonClick = async function() {
   this.studioApp_.attempts++;
 
   try {
+    // AWAIT
     await this.execute();
   } finally {
     this.studioApp_.toggleRunReset('reset');
@@ -622,6 +618,8 @@ Dance.prototype.execute = async function() {
 
   const charactersReferenced = this.initInterpreter();
 
+  // AWAIT
+  // can i just remove this?
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
@@ -641,8 +639,10 @@ Dance.prototype.execute = async function() {
   // it has not yet been initiated. Therefore we must first wait for song init
   // to complete before awaiting songMetadataPromise.
   // pretty sure this will load...
+  // AWAIT
   await this.initSongsPromise;
 
+  // AWAIT
   const songMetadata = await this.songMetadataPromise;
   return new Promise((resolve, reject) => {
     this.nativeAPI.play(songMetadata, success => {
@@ -697,7 +697,10 @@ Dance.prototype.shouldShowSharing = function() {
 };
 
 Dance.prototype.updateSongMetadata = function(id) {
-  this.songMetadataPromise = loadSongMetadata(id);
+  this.songMetadataPromise = loadSongMetadata(id).then(metadata => {
+    this.registerSetupEvent('updatedSongMetadata');
+    return metadata;
+  });
 };
 
 /**
@@ -772,18 +775,35 @@ Dance.prototype.captureThumbnailImage = function() {
   }
 };
 
-Dance.prototype.enableRunButton = function() {
-  if (
-    this.getAssetsLoaded().includes('metadata') &&
-    this.getAssetsLoaded().includes('song')
-  ) {
-    this.getRunButton().disabled = false;
+Dance.prototype.registerSetupEvent = function(event) {
+  if (!this.setupEvents) {
+    this.setupEvents = [event];
+  } else {
+    this.setupEvents.push(event);
   }
-  // this.getRunButton().disabled = false;
+
+  this.setRunButtonState();
 };
 
-Dance.prototype.disableRunButton = function() {
-  this.getRunButton().disabled = true;
+// unregister on song change
+Dance.prototype.unregisterSetupEvent = function(event) {
+  const index = this.setupEvents?.indexOf(event);
+  if (index > -1) {
+    // only splice array when item is found
+    this.setupEvents.splice(index, 1); // 2nd parameter means remove one item only
+  }
+
+  this.setRunButtonState();
+};
+
+Dance.prototype.setRunButtonState = function() {
+  this.getRunButton().disabled = !(
+    this.setupEvents.includes('danceReady') &&
+    this.setupEvents.includes('songsInitialized') &&
+    this.setupEvents.includes('songLoaded') &&
+    this.setupEvents.includes('updatedSongMetadata') &&
+    this.setupEvents.includes('spritesReady')
+  );
 };
 
 Dance.prototype.getRunButton = function() {
@@ -793,26 +813,7 @@ Dance.prototype.getRunButton = function() {
   return this.runButton;
 };
 
-Dance.prototype.isUsingIOSDevice = function() {
-  if (this.usingIOSDevice) {
-    return this.usingIOSDevice;
-  }
-  this.usingIOSDevice = dom.isIOS();
-  // Temporarily allow turning of differentiation for iOS via flag
-  return this.usingIOSDevice && !!DCDO.get('use-html5-audio-dance-party', true);
-};
-
-Dance.prototype.onLoadMetadata = function() {
-  this.getAssetsLoaded().push('metadata');
-};
-Dance.prototype.onLoadSong = function() {
-  this.getAssetsLoaded().push('song');
-};
-
-Dance.prototype.getAssetsLoaded = function() {
-  if (!this.assetsLoaded) {
-    this.assetsLoaded = [];
-  }
-
-  return this.assetsLoaded;
+Dance.prototype.disableRunButton = function() {
+  this.getRunButton().disabled = true;
+  this.setRunButtonState();
 };
