@@ -1,4 +1,4 @@
-module CachedScriptHelper
+module CachedUnitHelper
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
   DEFAULT_PUBLIC_PROXY_MAX_AGE = 3.minutes

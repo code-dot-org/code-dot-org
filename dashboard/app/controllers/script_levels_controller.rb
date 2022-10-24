@@ -6,7 +6,7 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
   include VersionRedirectOverrider
-  include CachedScriptHelper
+  include CachedUnitHelper
 
   before_action :disable_session_for_cached_pages
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
