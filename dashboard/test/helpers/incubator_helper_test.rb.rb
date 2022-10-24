@@ -10,7 +10,6 @@ class IncubatorHelperTest < ActionView::TestCase
 
   setup do
     @teacher_yes = create(:teacher, id: 80)
-    @teacher_no = create(:teacher, id: 81)
     @student = create(:student)
   end
 
@@ -23,12 +22,6 @@ class IncubatorHelperTest < ActionView::TestCase
   test 'non en teacher who can not see incubator' do
     sign_in @teacher_yes
     stubs(:language).returns "fr"
-    refute show_incubator_banner?
-  end
-
-  test 'teacher who can not see incubator' do
-    sign_in @teacher_no
-    stubs(:language).returns "en"
     refute show_incubator_banner?
   end
 
