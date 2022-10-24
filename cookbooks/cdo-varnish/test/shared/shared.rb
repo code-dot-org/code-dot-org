@@ -1,6 +1,6 @@
 # Chef proxy-cache integration test implementation.
 # The tests below are shared by both the Varnish-only (`default`) and the
-# CloudFront + Varnish (`cloudfront`) integration test suites.
+# CloudFront integration test suites.
 # This allows testing common proxy-cache behavior without duplication.
 
 require 'minitest/unit'
