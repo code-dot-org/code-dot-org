@@ -6,6 +6,7 @@ import PopUpMenu from '../../lib/ui/PopUpMenu';
 import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 import {sectionForDropdownShape} from './shapes';
 import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
+import FontAwesome from './../FontAwesome';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {reload} from '../../utils';
 import queryString from 'query-string';
@@ -13,7 +14,6 @@ import queryString from 'query-string';
 export default class TeacherSectionSelector extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectedSection: PropTypes.object,
     onChangeSection: PropTypes.func.isRequired,
     // We need to reload on section change on the script overview page to get
     // accurate information about students in the selected section.
@@ -39,11 +39,6 @@ export default class TeacherSectionSelector extends Component {
     if (!this.state.isMenuOpen) {
       this.openMenu();
     }
-  };
-
-  handleNativeDropdownChange = event => {
-    const selectedSectionId = parseInt(event.target.value);
-    this.props.onChangeSection(selectedSectionId);
   };
 
   openMenu() {
@@ -77,34 +72,35 @@ export default class TeacherSectionSelector extends Component {
       selectedSection,
       courseOfferingId,
       courseVersionId,
+      courseId,
       unitId
     } = this.props;
     const menuOffset = {x: 0, y: 0};
-    const value = selectedSection ? selectedSection.id : '';
     const queryParams = queryString.stringify({
       courseOfferingId,
       courseVersionId,
       unitId
     });
 
+    const numAssigned = sections.filter(section => section.isAssigned).length;
+    const dropdownText =
+      numAssigned === 0
+        ? 'Choose sections'
+        : `Assigned to ${numAssigned} sections`;
+
     return (
       <div>
-        <select
-          value={value}
-          onChange={this.props.onChangeSection}
-          ref={select => (this.select = select)}
+        <div
           onClick={this.handleClick}
-          onMouseDown={this.handleMouseDown}
-          style={styles.select}
+          onKeyDown={this.handleClick}
+          ref={div => (this.select = div)}
+          style={styles.dropdown}
+          tabIndex="0"
+          ariaRole="button"
         >
-          <option value="">{i18n.selectSectionOption()}</option>
-          {sections &&
-            sections.map(section => (
-              <option key={section.id} value={section.id}>
-                {section.name}
-              </option>
-            ))}
-        </select>
+          <span>{dropdownText}</span>
+          <FontAwesome style={{marginTop: 3}} icon="caret-down" />
+        </div>
         <PopUpMenu
           isOpen={this.state.isMenuOpen}
           targetPoint={this.state.targetPoint}
@@ -148,5 +144,13 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 12,
     width: 268
+  },
+  dropdown: {
+    width: 300,
+    border: `1px solid ${color.lighter_gray}`,
+    borderRadius: 5,
+    padding: 7,
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 };

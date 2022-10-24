@@ -25,16 +25,16 @@ function TeacherSectionSelectorMenuItem({
 
   const getIcon = () => {
     if (isPending) {
-      return <FontAwesome icon="spinner" style={{marginRight: 5}} />;
+      return <FontAwesome icon="spinner" style={styles.icon} />;
     }
 
     if (section.isAssigned && isHovering) {
       return (
-        <FontAwesome icon="times" style={{marginRight: 5, color: color.red}} />
+        <FontAwesome icon="times" style={{...styles.icon, color: color.red}} />
       );
     }
     if (!section.isAssigned && !isHovering) {
-      return <FontAwesome style={{marginRight: 5}} icon="square-o" />;
+      return <FontAwesome style={styles.icon} icon="square-o" />;
     }
     return (
       <FontAwesome
@@ -69,13 +69,19 @@ function TeacherSectionSelectorMenuItem({
   };
 
   return (
-    <PopUpMenu.Item onClick={onClick} style={styles.item} tabIndex="0">
+    <PopUpMenu.Item onClick={onClick} style={styles.item}>
       <span
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
         onClick={!isPending && onAssignClick}
         onKeyDown={!isPending && onKeyDown}
         tabIndex="0"
+        ariaRole="button"
+        ariaLabel={
+          section.isAssigned
+            ? `Unassign course from ${section.name}`
+            : `Assign course to ${section.name}`
+        }
       >
         {getIcon()}
       </span>
@@ -107,6 +113,10 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     paddingLeft: 10
+  },
+  icon: {
+    marginRight: 5,
+    width: 11
   }
 };
 
