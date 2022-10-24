@@ -1,41 +1,4 @@
-:css
-  .bannerContent .title {
-    font-family: "Gotham 7r", sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 32px;
-    line-height: 40px;
-  }
+#incubator-container
 
-  .bannerContent .description {
-    font-family: "Gotham 4r", sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    line-height: 21px;
-    margin-top: 16px;
-  }
-
-#header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg");'}
-  .bannerContentContainer{style: "min-height: 140px; max-width: 970px;"}
-    .bannerContent
-      .title Incubator
-      .description Try an experiment!
-
-
-.container.main
-  %p
-    At Code.org, we’re always trying new ways to make cool things with computer science.
-
-  %p
-    Code.org Incubator is where we try out new ideas.  These are experiments so they could go away at any time, your work could get lost, and there may be bugs!
-
-  %p
-    Still want to explore? Try out a project!
-
-
-  %p
-    %h2 Music Lab
-    Make music with code! Try mixing and matching beats, bass, and other sounds to make your own songs.
-    %div
-      %a{href: "/musiclab"}
-        %button
-          Try it out!
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/incubator/index.js')}
