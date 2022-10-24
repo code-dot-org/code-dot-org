@@ -409,6 +409,7 @@ nl:
       about: Over
       legal: Privacy & juridisch
       legal_privacy: Privacybeleid
+      legal_cookie_notice: Cookiebeleid
       legal_tos: Gebruiksvoorwaarden
     user:
       classroom: Startpagina voor de leerkracht
@@ -1120,3 +1121,5 @@ nl:
     this_sprite: deze sprite
   unit_prefix: Unit %{n}
   teacher_feedback: Docenten feedback
+  pixelation:
+    binary: Binaire

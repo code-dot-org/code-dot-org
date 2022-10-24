@@ -18488,23 +18488,15 @@ de-DE:
             klickst?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Der Zombie wird den richtigen Weg gehen und am Ende für immer hin
-            und her gehen.
-          correct: true
+        - correct: true
           feedback: Richtig!
         - text: Der Zombie wird es bis zur Sonnenblume schaffen.
           correct: true
-          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
-            immer hin und her gehen.
         - text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
             im Kreis herumlaufen.
           correct: true
-          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
-            immer hin und her gehen.
         - text: Der Zombie bleibt am Ende des Weges vor ihm stecken.
           correct: true
-          feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
-            Ende für immer hin und her gehen.
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
             "Ausführen" klickst?

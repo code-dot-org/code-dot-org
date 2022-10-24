@@ -215,11 +215,13 @@ Resources:
       ManagedPolicyArns:
         - !Ref DataAnalystPolicy
         - !Ref DataAnalystDmsReadOnlyPolicy
+        - !Ref DataAnalystRedshiftPolicy
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
       Tags:
         - Key: sqlworkbench-team
           Value: red-team
+
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -232,6 +234,7 @@ Resources:
             Effect: Allow
             Action:
               - 's3:ListAllMyBuckets'
+              - 'cloudwatch:GetMetricData'
             Resource: '*'
           - Sid: DataAnalystS3ImportExportBucket
             Effect: Allow
@@ -255,30 +258,49 @@ Resources:
         Statement:
           - Effect: Allow
             Action:
-              - dms:DescribeOrderableReplicationInstances
-              - dms:ListTagsForResource
-              - dms:DescribeEndpointSettings
-              - dms:DescribeConnections
-              - dms:DescribeReplicationInstances
-              - dms:DescribeApplicableIndividualAssessments
-              - dms:TestConnection
-              - dms:DescribeEndpoints
-              - dms:DescribeReplicationInstanceTaskLogs
-              - dms:DescribeSchemas
-              - dms:DescribeReplicationSubnetGroups
-              - dms:DescribeReplicationTasks
-              - dms:DescribeReplicationTaskAssessmentResults
-              - dms:DescribeAccountAttributes
-              - dms:DescribeRefreshSchemasStatus
-              - dms:DescribeReplicationTaskIndividualAssessments
-              - dms:DescribeCertificates
-              - dms:DescribeEvents
-              - dms:DescribeEventSubscriptions
-              - dms:DescribeEndpointTypes
-              - dms:DescribeEventCategories
-              - dms:DescribeReplicationTaskAssessmentRuns
-              - dms:DescribeTableStatistics
+              - 'dms:DescribeOrderableReplicationInstances'
+              - 'dms:ListTagsForResource'
+              - 'dms:DescribeEndpointSettings'
+              - 'dms:DescribeConnections'
+              - 'dms:DescribeReplicationInstances'
+              - 'dms:DescribeApplicableIndividualAssessments'
+              - 'dms:TestConnection'
+              - 'dms:DescribeEndpoints'
+              - 'dms:DescribeReplicationInstanceTaskLogs'
+              - 'dms:DescribeSchemas'
+              - 'dms:DescribeReplicationSubnetGroups'
+              - 'dms:DescribeReplicationTasks'
+              - 'dms:DescribeReplicationTaskAssessmentResults'
+              - 'dms:DescribeAccountAttributes'
+              - 'dms:DescribeRefreshSchemasStatus'
+              - 'dms:DescribeReplicationTaskIndividualAssessments'
+              - 'dms:DescribeCertificates'
+              - 'dms:DescribeEvents'
+              - 'dms:DescribeEventSubscriptions'
+              - 'dms:DescribeEndpointTypes'
+              - 'dms:DescribeEventCategories'
+              - 'dms:DescribeReplicationTaskAssessmentRuns'
+              - 'dms:DescribeTableStatistics'
             Resource: "*"
+
+  DataAnalystRedshiftPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DataAnalystRedshiftPolicy
+      Path: /dataanalyst/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: DataAnalystTools
+            Effect: Allow
+            Action:
+              - 'redshift:DescribeReservedNodes'
+              - 'redshift:DescribeEvents'
+              - 'redshift:DescribeUsageLimits'
+              - 'redshift:DescribeClusterDbRevisions'
+              - 'redshift:DescribeClusterSnapshots'
+              - 'redshift:DescribeClusterSubnetGroups'
+            Resource: '*'
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack

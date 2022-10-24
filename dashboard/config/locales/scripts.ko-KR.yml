@@ -4506,6 +4506,10 @@ ko:
               display_name: 컨텐츠
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 시작하기
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4644,6 +4648,9 @@ ko:
           description_audience: 커리큘럼 작성자
           description_short: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
           description: 커리큘럼 버전 사이에 레슨 또는 레벨에 대한 스테이징 업데이트용
+          lessons:
+            lesson-7:
+              name: 스프라이트 소개
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4784,6 +4791,17 @@ ko:
               display_name: 컨텐츠
             lessonGroup-5:
               display_name: 설문조사
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java 연구소
+            lesson-6:
+              name: 반복
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 설문조사
+            lessonGroup-3:
+              display_name: 컨텐츠
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

@@ -1248,6 +1248,10 @@ tr:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": seç
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tuhaf bas
             "'sound://category_digital/jump_7.mp3'": zıpla
+      gamelab_playSoundOptionsSoccer:
+        text: playSound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: playSound {SOUND}
       gamelab_playSpeech:
         text: konuşmayı çal {SOUND}
       gamelab_playerBehaviors:
@@ -2080,6 +2084,11 @@ tr:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} cevaplandığında"
       RyanLab_moveForward:

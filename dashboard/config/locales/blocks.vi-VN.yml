@@ -1324,6 +1324,10 @@ vi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tiếng bass
               vòng
             "'sound://category_digital/jump_7.mp3'": nhảy
+      gamelab_playSoundOptionsSoccer:
+        text: phát âm thanh {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: phát âm thanh {SOUND}
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
       gamelab_playerBehaviors:
@@ -2163,6 +2167,11 @@ vi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: khi đã trả lời {VAR}
       RyanLab_moveForward:

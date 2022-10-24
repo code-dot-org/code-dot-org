@@ -1077,3 +1077,7 @@ da:
               display_name: Variabler
         soccer:
           name: fodbold
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Løkker

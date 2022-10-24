@@ -1323,6 +1323,10 @@ cs:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bizarní
               basy
             "'sound://category_digital/jump_7.mp3'": skoč
+      gamelab_playSoundOptionsSoccer:
+        text: přehraj zvuk {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: přehraj zvuk {SOUND}
       gamelab_playSpeech:
         text: přehrát řeč {SOUND}
       gamelab_playerBehaviors:
@@ -2166,6 +2170,11 @@ cs:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: po zodpovězení výzvy {VAR}
       RyanLab_moveForward:

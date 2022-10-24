@@ -14,13 +14,13 @@ az:
   nonus_campaign_date_start_short: 1 Okt.
   nonus_campaign_date_start_long: 1 Oktyabr
   nonus_campaign_date_short: 1 Okt. - 18 Dek.
-  nonus_campaign_date_full: 1 Oktyabr - 18 Dekabr
+  nonus_campaign_date_full: 1 oktyabr - 18 dekabr
   nonus_campaign_date_year: '2021'
   nonus_campaign_date_full_year: 1 Oktyabr, 2020 - 18 Dekabr, 2020
   latam_campaign_date_start_short: 1 Okt.
   latam_campaign_date_start_long: 1 Oktyabr
   latam_campaign_date_short: 1 Okt. - 18 Dek.
-  latam_campaign_date_full: 1 Oktyabr - 18 Dekabr
+  latam_campaign_date_full: 1 oktyabr - 18 dekabr
   latam_campaign_date_year: '2021'
   latam_campaign_date_full_year: 1 Oktyabr, 2020 - 18 Dekabr, 2020
   europe_campaign_date_start_short: 10 Okt.
@@ -35,10 +35,14 @@ az:
   africa_campaign_date_full: 1-31 Oktyabr
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1-31 Oktyabr, 2020
-  hoc2022_header: Explore, Play, Create!
-  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
+  hoc2022_header: Kəşf et, oyna, yarat!
+  social_hoc2022_explore_play_create: İnformatikanı kəşf etmək, oynamaq və yaratmaq
+    üçün istifadə edin!
   codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
     there are so many ways to try computer science.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Bu gün öyrənin, sabah daha parlaq gələcək qurun.
@@ -500,22 +504,24 @@ az:
   front_join_us_learn_more: Daha ətraflı
   cta_see_whats_new: See what's new
   cta_try_more_activities: Try more activities
-  cta_try_an_activity: Try an activity
+  cta_try_an_activity: Bir fəaliyyəti sınaqdan keçirin
   hoc_homepage_join_the_movement_heading: Join the movement
-  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
-    but every year in December your class can join millions of students around the
-    world celebrating Computer Science Education Week with the Hour of Code. Registration
-    for the annual celebration starts each year in October.
-  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
-    needed. Hour of Code activities are available for free year-round.
-  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    This grassroots campaign is supported by over 400 partners and 200,000 educators
-    worldwide.
-  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
-    to plan an event for your class."
+  hoc_homepage_join_the_movement_description: Kod Saatı il boyu istifadəyə açıqdır,
+    lakin hər dekabr sizin sinfiniz bütün dünyada İnformatika Təhsili Həftəsini bayram
+    edən milyonlarla şagirdə öz Kod Saatı ilə qoşula bilər. Hər il keçirilən şənliklər
+    üçün qeydiyyat oktyabrda başlayır.
+  hoc_homepage_what_is_hoc_subhead: 45-dən çox dildə birsaatlıq dərsliklər. Heç bir
+    ilkin təcrübə tələb olunmur. Kod Saatı fəaliyyətləri il boyu hər kəsə ödənişsiz
+    açıqdır.
+  hoc_homepage_what_is_hoc_description: Kod Saatı hər kəsin proqramlaşdırmanın əsaslarını
+    öyrənə biləcəyini göstərmək üçün hazırlanmış əyləncəli dərsliklər vasitəsilə informatikaya
+    bir saatlıq giriş kursudur. Bu ictimai kampaniya bütün dünyada 400-dən çox tərəfdaş
+    və 200000 təhsil insanı tərəfindən dəstəklənir.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: Sinfinizdə bir tədbir planlaşdırmaq üçün
+    [Təlimatımızı oxuyun](%{howto_guide_url}).
   hoc_homepage_highlights_heading: Hour of Code highlights
-  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  hoc_homepage_organized_by: Kod Saatı "[Code.org](%{codeorg_url})" tərəfindən təşkil
+    olunur.
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -542,7 +548,7 @@ az:
   signup_event_entire_school_label: Mənim bütün məktəbim iştirak edir
   signup_event_location_label: Tədbirin keçiriləcəyi yer (mühüm deyil)
   signup_event_location_error: Event location is required.
-  signup_special_event_flag_label: Mənim tədbirimi işıqlandır
+  signup_special_event_flag_label: Mənim tədbirimi işıqlandırın
   signup_special_event_details_label: Özəl hadisə detalları
   signup_send_posters_flag_label: Mənim məktəbimə və ya təşkilatıma <a href= "/resources#posters">afişa</a>
     göndərin
@@ -558,9 +564,10 @@ az:
   signup_email_preference_yes: Bəli
   signup_email_preference_no: Xeyr
   signup_email_preference_error: Email preference is required
-  signup_multiple_event_warning: We will put your school name and city on the map
-    when you register. If you're hosting multiple events, please submit a unique name
-    or email for each one. We only count one event per name and email combination.
+  signup_multiple_event_warning: 'Siz qeydiyyatdan keçərkən biz məktəbinizin adı və
+    şəhərini xəritədə yerləşdirəcəyik. Bir neçə tədbir keçirirsinizsə, hər biri üçün
+    fərqli ad və ya e-poçt ünvanı daxil edin. Biz hər ad və e-poçt kombinasiyası üçün
+    yalnız bir tədbiri hesaba alırıq. '
   signup_name_placeholder: Adınız
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Məsələn, Linkoln litseyi
@@ -608,7 +615,7 @@ az:
     all ages.
   map_title: Kod Saatı xəritəsi
   map_header: 'Bütün dünyada # Kod Saatı tədbiri'
-  map_header_count_year: "%{year} üçün %{event_count} tədbir qeydiyyata salınıb"
+  map_header_count_year: "%{year} üçün %{event_count} tədbir qeydiyyata alınıb"
   see_all_events: Bütün tədbirləri nəzərdən keçirin
   map_header_company: "# şirkətlər tərəfindən"
   map_header_country: 'ölkənizdə (%{country}) # tədbir'
@@ -620,7 +627,8 @@ az:
   map_legend_cs_tech_jam: Xüsusi tədbir
   map_warning: Tədbirlərin tam siyahısına <a href='%{events_url}'>tərbirlər səhifəsi</a>ndə
     baxmaq olar.
-  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_warning_markdown: Tədbirlərin tam siyahısına [tərbirlər səhifəsi](%{events_url})ndə
+    baxmaq olar.
   meta_tag_og_title: Kod Saatı gəlir
   meta_tag_og_description: Kod Saatı 180-dən çox ölkədə və 30-dan çox dildə on milyonlarla
     şagirdi əhatə edən qlobal bir hərəkatdır. 4 yaşlıdan tutmuş 104 yaşlıya qədər.
@@ -976,7 +984,7 @@ az:
   event: tədbir
   events: tədbir
   highlights_title: Əsas məqamlar
-  highlights_header: Hour of Code Highlights
+  highlights_header: Kod Saatının əsas məqamları
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
   highlights_previous: Highlights from previous years
   highlights_see_more: See more highlights

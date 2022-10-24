@@ -350,6 +350,7 @@
   homepage_banner_40k_teachers_link: "Află mai mult"
   homepage_slot_text_title_hoc: "Oră de Programare"
   homepage_slot_text_blurb_hoc: "Oricine poate învăța. Începe astăzi"
+  homepage_slot_text_blurb_hoc_2022: "Explorează, Joacă-Te, Creează!"
   homepage_slot_text_link_hoc: "Încearcă Ora de Programare"
   homepage_slot_text_link_about_hoc: "Despre Ora de Cod"
   homepage_slot_text_link_host: "Găzduiește o Oră de Cod"
@@ -1706,3 +1707,4 @@
   ai_description: "Descriere"
   outbreak_tile_title: "Epidemie"
   outbreak_tile_subtitle: "Un virus a infectat Orașul Monștrilor! Programați un simulator de epidemie și faceți predicții despre ce se va întâmpla cu vecinii din Orașul Monștrilor."
+  hoc2022_landing_page_create_title: "Crează"

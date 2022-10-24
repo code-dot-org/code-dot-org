@@ -453,6 +453,7 @@ pl-PL:
   homepage_banner_40k_teachers_link: Dowiedz się więcej
   homepage_slot_text_title_hoc: Godzina Kodowania
   homepage_slot_text_blurb_hoc: Każdy może się nauczyć . Zacznij dzisiaj
+  homepage_slot_text_blurb_hoc_2022: Badaj, baw się i twórz!
   homepage_slot_text_link_hoc: Weź udział w Godzinie Kodowania (the Hour of Code)
   homepage_slot_text_link_about_hoc: O Godzinie Kodowania
   homepage_slot_text_link_host: Zorganizuj Godzinę Kodowania
@@ -813,6 +814,7 @@ pl-PL:
   volunteer_engineer_submission_distance_16: 10 mil
   volunteer_engineer_submission_distance_24: 15 mil
   volunteer_engineer_submission_distance_32: 20 mil
+  volunteer_engineer_submission_distance_80: 50 mil
   volunteer_engineer_submission_num_volunteers_5: 5 ochotników
   volunteer_engineer_submission_num_volunteers_10: 10 ochotników
   volunteer_engineer_submission_num_volunteers_25: 25 ochotników
@@ -2744,3 +2746,11 @@ pl-PL:
     z ekranem dotykowym emitującego gwiazdy i promienie światła na niebieskim tle
   minecraft_tile_alt: Dwie postacie Minecrafta, Steve i Alex na tle przedstawiającym
     wodną scenę Minecrafta z koralami, delfinami i wodorostami
+  hoc2022_banner_title: Odkrywaj, graj, twórz!
+  hoc2022_banner_description: Eksploruj wszechświat, strzel gola, wykonaj ruch — jest
+    tak wiele sposobów wykorzystania informatyki!
+  hoc2022_cta_primary: Zobacz, co nowego
+  hoc2022_cta_secondary: Wypróbuj więcej zajęć
+  hoc2022_landing_page_create_title: Utwórz
+  try_it_yourself: Wypróbuj to sam!
+  try_an_activity: Wypróbuj zajęcia

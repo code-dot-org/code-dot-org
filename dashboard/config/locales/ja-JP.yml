@@ -379,6 +379,7 @@ ja:
       about: 概要
       legal: プライバシーと法的事項
       legal_privacy: プライバシー ポリシー
+      legal_cookie_notice: クッキーについての通知
       legal_tos: 利用規約
     user:
       classroom: 先生用ホームページ
@@ -1223,3 +1224,5 @@ ja:
       cannot_view_locked_answers: ロックの間は回答を表示できません
       forbidden: ユーザーは生徒のロック可能ステータスを更新できません
   reset_predict_progress_button: 回答を削除
+  pixelation:
+    binary: ２しんすう

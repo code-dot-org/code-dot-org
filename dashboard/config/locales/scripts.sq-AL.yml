@@ -1482,3 +1482,18 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: cikle
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përmbajtja
+        csc-bookcover:
+          lessons:
+            lesson-1:
+              name: Okładka
+          name: csc-bookcover
+          title: Okładka CSC
+          description: jest to wewnętrzny skrypt jako źródło prawdy dla tej lekcji,
+            który zostanie ponownie wykorzystany w innych modułach CSC.

@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Odpravljanje napak"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Odpravljanje napak"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Pogoji"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Odpravljanje napak"
         },
         "loops/aquatic/unversioned": {
           "word": "Zanke"

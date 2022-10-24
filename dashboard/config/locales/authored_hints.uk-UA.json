@@ -3131,6 +3131,12 @@
         },
         "coursea_maze_ramp12022": {
           "courseC_maze_programming1_b": "Не бійся помилятися! Спробуйте щось, і якщо він не працює, спробуйте щось інше!"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Клацайте на спрайтах поки виконується програма"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Клацайте на спрайтах поки виконується програма"
         }
       }
     }

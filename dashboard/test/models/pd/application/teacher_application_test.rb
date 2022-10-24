@@ -50,19 +50,19 @@ module Pd::Application
     test 'meets criteria says an application meets criteria when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher_application, course: 'csd',
                                   response_scores: {
-                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].map {|x| [x, 'Yes']}.to_h
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csd].index_with('Yes')
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher_application, course: 'csp',
                                   response_scores: {
-                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].map {|x| [x, 'Yes']}.to_h
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].index_with('Yes')
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
 
       teacher_application = build :pd_teacher_application, course: 'csa',
                                   response_scores: {
-                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csa].map {|x| [x, 'Yes']}.to_h
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csa].index_with('Yes')
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
     end
@@ -344,11 +344,11 @@ module Pd::Application
       refute csv_header_csp.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
       assert_equal 93, csv_header_csp.length
 
-      # csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
-      # refute csv_header_csa.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
-      # refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      # assert csv_header_csa.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
-      # assert_equal 94, csv_header_csa.length
+      csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
+      refute csv_header_csa.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
+      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert csv_header_csa.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert_equal 95, csv_header_csa.length
     end
 
     test 'school cache' do
@@ -393,7 +393,7 @@ module Pd::Application
       filtered_labels_csd = TeacherApplication.filtered_labels('csd')
       assert filtered_labels_csd.include? :csd_which_grades
       refute filtered_labels_csd.include? :csp_which_grades
-      refute filtered_labels_csd.include? :csp_which_grades
+      refute filtered_labels_csd.include? :csa_which_grades
       assert_equal ['csd'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csp = TeacherApplication.filtered_labels('csp')

@@ -456,6 +456,7 @@ mr-IN:
   homepage_banner_40k_teachers_link: अधिक जाणून घ्या
   homepage_slot_text_title_hoc: अवर ऑफ कोड
   homepage_slot_text_blurb_hoc: कोणीही शिकू शकतो. आजपासूनच सुरुवात करा
+  homepage_slot_text_blurb_hoc_2022: एक्सप्लोर करा, खेळा, तयार करा!
   homepage_slot_text_link_hoc: अवर ऑफ कोड करून पहा
   homepage_slot_text_link_about_hoc: 'अवर ऑफ कोड बद्दल '
   homepage_slot_text_link_host: कोडचा एक तास होस्ट करा
@@ -2669,3 +2670,5 @@ mr-IN:
     स्पर्श करत आहे जो निळ्या पार्श्वभूमीवर तारे आणि प्रकाश किरण उत्सर्जित करतो
   minecraft_tile_alt: दोन माइन क्राफ्ट पात्र, स्टीव्ह आणि अॅलेक्स, पार्श्वभूमीवर कोरल,
     डॉल्फिन आणि केल्पसह जलीय माइन क्राफ्ट दृश्य दर्शवित आहेत
+  hoc2022_landing_page_create_title: बनवा
+  try_it_yourself: 'हे स्वत: करून पहा!'

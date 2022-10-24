@@ -1346,6 +1346,14 @@ ru:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": причудливый
               бас
             "'sound://category_digital/jump_7.mp3'": прыгнуть
+      gamelab_playSoundOptionsSoccer:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": рожок
+            "'sound://category_sports/One_Whistle_SFX.mp3'": свистите
+      gamelab_playSoundOptionsSpace:
+        text: playSound {SOUND}
       gamelab_playSpeech:
         text: воспроизвести речь {SOUND}
       gamelab_playerBehaviors:
@@ -2251,6 +2259,11 @@ ru:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: когда на {VAR} получен ответ
       RyanLab_moveForward:

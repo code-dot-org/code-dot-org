@@ -3751,6 +3751,10 @@ ar:
               display_name: محتوى
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: البدء
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4112,6 +4116,17 @@ ar:
               display_name: محتوى
             lessonGroup-5:
               display_name: استبيان
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: مختبر Java
+            lesson-6:
+              name: الحلقات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: استبيان
+            lessonGroup-3:
+              display_name: محتوى
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

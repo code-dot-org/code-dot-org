@@ -35,14 +35,14 @@
         "debugging/gumball/unversioned": {
           "word": "Virheen etsintä"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Virheen etsintä"
-        },
         "condition/aquatic/unversioned": {
           "word": "Ehtolause"
         },
         "conditionals/aquatic/unversioned": {
           "word": "Ehtolausekkeet"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Virheen etsintä"
         },
         "loops/aquatic/unversioned": {
           "word": "Silmukat"

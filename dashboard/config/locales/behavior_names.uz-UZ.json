@@ -4429,6 +4429,66 @@
           "jittering": "titrash",
           "moving west": "g'arbga yurish",
           "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         }
       }
     }

@@ -3209,7 +3209,17 @@ ro:
             lessonGroup-5:
               display_name: Sondaj
         csa9-validation-pilot-2022: {}
-        csa1-2023: {}
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Laboratorul Java
+            lesson-6:
+              name: Bucle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
+            lessonGroup-3:
+              display_name: Conţinut
         csa2-2023: {}
         csa3-2023: {}
         csa4-2023: {}
@@ -3266,3 +3276,9 @@ ro:
         physcomp-temp: {}
         csc-bookcover: {}
         csc-landmarks-pilot: {}
+        csc-playground: {}
+        self-paced-pl-physical-computing1: {}
+        self-paced-pl-physical-computing2: {}
+        emmas-playground: {}
+        amys-playground: {}
+        csc-function-machines-pilot: {}

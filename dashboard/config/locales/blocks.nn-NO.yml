@@ -1180,6 +1180,10 @@ nn:
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": hopp
+      gamelab_playSoundOptionsSoccer:
+        text: spillLyd {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: spillLyd {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1631,6 +1635,11 @@ nn:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: gå framover
       RyanLab_turnLeft:

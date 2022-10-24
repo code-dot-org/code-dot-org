@@ -926,3 +926,5 @@ da:
     not_now: "Ikke nu"
   behaviors:
     this_sprite: "denne figur"
+  pixelation:
+    binary: "Binære"

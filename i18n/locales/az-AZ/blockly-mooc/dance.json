@@ -1,8 +1,8 @@
 {
-  "danceFeedbackNeedNewDancer": "Rəqqas düzəltməyiniz istənilir. ",
+  "danceFeedbackNeedNewDancer": "Rəqqas düzəltməyə ehtiyacınız var. ",
   "danceFeedbackNoDancers": "Sizin rəqqasınız yoxdur. ",
-  "danceFeedbackNoBackground": "Arxa fon effekti əlavə eləməlisiniz.",
-  "danceFeedbackTooManyDancers": "Diqqətli olun!  əgər  `every 2 measures` içərisinə  `make a new`  blokunu əlavə etsəniz 2 rəqqas yaratmış olacaqsınız.",
+  "danceFeedbackNoBackground": "Siz arxa fon effekti əlavə etməlisiniz.",
+  "danceFeedbackTooManyDancers": "Diqqətli olun!  Əgər siz `hər iki ölçüdə` içərisinə  `yenisini yarat`  blokunu əlavə etsəniz çoxlu rəqqas yaratmış olacaqsınız.",
   "danceFeedbackUseSetSize": "O rəqqası kiçiltmək üçün  `set backup_dancer2 size` komandasını istifadə et.",
   "danceFeedbackUseSetTint": "Bir rəqqasənin rəngini dəyişdirmək üçün `set tint` blokundan istifadə edin.",
   "danceFeedbackUseStartMapping": "Calishin <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> kodunu oz programinizda tətbiq edin.",
