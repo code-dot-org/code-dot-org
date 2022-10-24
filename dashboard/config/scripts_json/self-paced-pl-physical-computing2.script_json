@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-20 20:04:39 UTC",
+    "serialized_at": "2022-10-21 18:48:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1507,6 +1507,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-Strategies-StudentVideos"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 11,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview"
+        ],
+        "progression": "Teaching and learning strategies"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "SP-VPL-CP-22-ProgrammingLevelsOverview"
         ],
         "lesson.key": "lesson-5",
@@ -1519,8 +1544,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 11,
+      "chapter": 46,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1544,8 +1569,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 12,
+      "chapter": 47,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1569,8 +1594,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 13,
+      "chapter": 48,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1594,8 +1619,8 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 14,
+      "chapter": 49,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1619,8 +1644,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 15,
+      "chapter": 50,
+      "position": 16,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1644,8 +1669,8 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 16,
+      "chapter": 51,
+      "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2179,6 +2204,18 @@
         "level.key": "SP-VPL-CP-22-teamworkOverview",
         "script_level.level_keys": [
           "SP-VPL-CP-22-teamworkOverview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "880132de-abac-4ad5-906f-4d24628d24ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-PC-22-Strategies-StudentVideos",
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
