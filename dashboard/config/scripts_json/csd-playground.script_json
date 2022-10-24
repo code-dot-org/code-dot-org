@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-10-14 20:33:06 UTC",
+    "serialized_at": "2022-10-21 23:36:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -146,6 +146,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Physical Computing PSP",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -454,6 +469,58 @@
       "seeding_key": {
         "lesson_activity.key": "151461c0-13e4-4dd3-b36a-f27d3595d5b0",
         "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885",
+      "position": 4,
+      "properties": {
+        "name": "Delete Later"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885",
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "afcb50a4-f4ab-42f6-8a11-cf6eeff6e941",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "afcb50a4-f4ab-42f6-8a11-cf6eeff6e941",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "1e5d0764-1d22-4713-a4de-3a3da309de50",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e5d0764-1d22-4713-a4de-3a3da309de50",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "38b1bc55-cbb2-434f-bbe1-0fa5df1aa189",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38b1bc55-cbb2-434f-bbe1-0fa5df1aa189",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1040,8 +1107,19 @@
       }
     },
     {
-      "key": "3277e18b-36c4-496a-b791-bc83fb14bbb0",
+      "key": "7665729b-4d3c-4d09-9bac-85f280ff79a6",
       "position": 5,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "7665729b-4d3c-4d09-9bac-85f280ff79a6",
+        "lesson_activity.key": "de298556-12b3-4d64-a858-c3584776e448"
+      }
+    },
+    {
+      "key": "3277e18b-36c4-496a-b791-bc83fb14bbb0",
+      "position": 6,
       "properties": {
         "progression_name": "Video: The Animation Tab",
         "tips": [
@@ -1058,7 +1136,7 @@
     },
     {
       "key": "ecc3381d-71d5-41f5-a8c6-3742b4545243",
-      "position": 6,
+      "position": 7,
       "properties": {
         "name": "Skill Building",
         "progression_name": "Skill Building"
@@ -1069,8 +1147,19 @@
       }
     },
     {
+      "key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2",
+      "position": 8,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2",
+        "lesson_activity.key": "de298556-12b3-4d64-a858-c3584776e448"
+      }
+    },
+    {
       "key": "dcab4160-65fd-41d0-bbc3-6faa2904bf7d",
-      "position": 7,
+      "position": 9,
       "properties": {
         "name": "Practice",
         "progression_name": "Practice"
@@ -1082,7 +1171,7 @@
     },
     {
       "key": "cacc0409-8250-4f30-9149-0b8141dd673e",
-      "position": 8,
+      "position": 10,
       "properties": {
         "name": "Assessment",
         "progression_name": "Assessment",
@@ -1100,7 +1189,7 @@
     },
     {
       "key": "41db2bdf-8eea-45a4-a2df-c92f3b9c7d27",
-      "position": 9,
+      "position": 11,
       "properties": {
         "name": "Challenges",
         "progression_name": "Challenges",
@@ -1154,6 +1243,73 @@
       "seeding_key": {
         "activity_section.key": "f52ed5fb-871b-4dce-8265-2b40c76cabed",
         "lesson_activity.key": "151461c0-13e4-4dd3-b36a-f27d3595d5b0"
+      }
+    },
+    {
+      "key": "7827b0c1-39d6-49dd-b97b-ad2e50392868",
+      "position": 1,
+      "properties": {
+        "progression_name": "Not Used Anymore"
+      },
+      "seeding_key": {
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868",
+        "lesson_activity.key": "1d04bbc0-ab2d-4d40-816e-81fd6113b885"
+      }
+    },
+    {
+      "key": "bca97b3f-1554-4da7-9135-641101c9278d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bca97b3f-1554-4da7-9135-641101c9278d",
+        "lesson_activity.key": "afcb50a4-f4ab-42f6-8a11-cf6eeff6e941"
+      }
+    },
+    {
+      "key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025",
+      "position": 1,
+      "properties": {
+        "description": "This first problem will be guided by the teacher with probing questions to help students complete each step in Part 1 of the activity guide.",
+        "progression_name": "The Blink Rate Problem"
+      },
+      "seeding_key": {
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025",
+        "lesson_activity.key": "1e5d0764-1d22-4713-a4de-3a3da309de50"
+      }
+    },
+    {
+      "key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b",
+      "position": 2,
+      "properties": {
+        "description": "The second problem will be more collaborative with students bouncing ideas off of one another during the prepare step.",
+        "progression_name": "The Clicker Game Problem"
+      },
+      "seeding_key": {
+        "activity_section.key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b",
+        "lesson_activity.key": "1e5d0764-1d22-4713-a4de-3a3da309de50"
+      }
+    },
+    {
+      "key": "910739ed-74c4-49b7-b640-3286ab03d06e",
+      "position": 3,
+      "properties": {
+        "description": "The last problem could be used as an assessment of student's understanding of how to use the PSP as it will be more independent (though students can still collaborate if they choose).",
+        "progression_name": "The Trivia Game Problem"
+      },
+      "seeding_key": {
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e",
+        "lesson_activity.key": "1e5d0764-1d22-4713-a4de-3a3da309de50"
+      }
+    },
+    {
+      "key": "74dffe62-0725-4f9c-a51d-4c87c6829b61",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "74dffe62-0725-4f9c-a51d-4c87c6829b61",
+        "lesson_activity.key": "38b1bc55-cbb2-434f-bbe1-0fa5df1aa189"
       }
     }
   ],
@@ -2735,6 +2891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Temp Markdown Video"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -2762,7 +2921,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_test2023"
+          "CSD U3 Sprites intro sprites_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
@@ -2770,7 +2929,7 @@
         "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
       },
       "level_keys": [
-        "CSD U3 Sprites Exploration_test2023"
+        "CSD U3 Sprites intro sprites_2023"
       ]
     },
     {
@@ -2784,7 +2943,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
+          "CSD U3 Sprites intro debug_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
@@ -2792,13 +2951,57 @@
         "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
       },
       "level_keys": [
-        "CSD U3 Sprites intro debug_test2023"
+        "CSD U3 Sprites intro debug_2023"
       ]
     },
     {
       "chapter": 68,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: The Animation Tab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Animation Tab_2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3277e18b-36c4-496a-b791-bc83fb14bbb0"
+      },
+      "level_keys": [
+        "CSD: Animation Tab_2023"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+      },
+      "level_keys": [
+        "CSD U3 Sprites Exploration_test2023"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 7,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Skill Building"
@@ -2811,16 +3014,16 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       },
       "level_keys": [
         "CSD U3 Sprites intro sprites_test2023"
       ]
     },
     {
-      "chapter": 69,
-      "position": 6,
-      "activity_section_position": 4,
+      "chapter": 71,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Skill Building"
@@ -2833,18 +3036,21 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       },
       "level_keys": [
         "CSD U3 Sprites anitab 1_test2023"
       ]
     },
     {
-      "chapter": 70,
-      "position": 7,
-      "activity_section_position": 1,
+      "chapter": 72,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_test2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2862,12 +3068,12 @@
       ]
     },
     {
-      "chapter": 71,
-      "position": 8,
-      "activity_section_position": 2,
+      "chapter": 73,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -2877,18 +3083,21 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2"
       },
       "level_keys": [
         "CSD U3 drawSprites placement match_test2023"
       ]
     },
     {
-      "chapter": 72,
-      "position": 9,
+      "chapter": 74,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_test2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2906,11 +3115,14 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 10,
+      "chapter": 75,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_test2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2928,11 +3140,14 @@
       ]
     },
     {
-      "chapter": 74,
-      "position": 11,
+      "chapter": 76,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_test2023"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2947,6 +3162,128 @@
       },
       "level_keys": [
         "CSD Games Sprites Challenges_test2023"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Not Used Anymore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L7 - Predictv2_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868"
+      },
+      "level_keys": [
+        "CSD U3L7 - Predictv2_test2023"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA_2023"
+        ],
+        "progression": "The Blink Rate Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallA_2023"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA1_2023"
+        ],
+        "progression": "The Blink Rate Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA1_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallA1_2023"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "progression": "The Clicker Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallB_2023"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "progression": "The Trivia Game Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
+      },
+      "level_keys": [
+        "CSD U6 - ProbSolvProc_ChallC_2023"
       ]
     }
   ],
@@ -3733,9 +4070,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "level.key": "CSD U3 Sprites intro sprites_2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_test2023"
+          "CSD U3 Sprites intro sprites_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
@@ -3745,14 +4082,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro debug_test2023",
+        "level.key": "CSD U3 Sprites intro debug_2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro debug_test2023"
+          "CSD U3 Sprites intro debug_2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Animation Tab_2023",
+        "script_level.level_keys": [
+          "CSD: Animation Tab_2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3277e18b-36c4-496a-b791-bc83fb14bbb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -3764,7 +4125,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -3776,7 +4137,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "f30ed5ee-edd5-4805-8532-c8022faae722"
+        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
       }
     },
     {
@@ -3800,7 +4161,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "",
         "script.name": "csd-playground",
-        "activity_section.key": "ecc3381d-71d5-41f5-a8c6-3742b4545243"
+        "activity_section.key": "f1e4dfdf-52f1-4294-9b43-2bee0ced06a2"
       }
     },
     {
@@ -3837,6 +4198,66 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "41db2bdf-8eea-45a4-a2df-c92f3b9c7d27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L7 - Predictv2_test2023",
+        "script_level.level_keys": [
+          "CSD U3L7 - Predictv2_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7827b0c1-39d6-49dd-b97b-ad2e50392868"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallA_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallA1_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallA1_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "c855369f-c7b2-4a3f-99ea-5b5abd8e3025"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallB_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallB_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d70b2aee-d118-4a49-9fdb-5e78e4f8a42b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - ProbSolvProc_ChallC_2023",
+        "script_level.level_keys": [
+          "CSD U6 - ProbSolvProc_ChallC_2023"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "910739ed-74c4-49b7-b640-3286ab03d06e"
       }
     }
   ],
@@ -3967,6 +4388,30 @@
       "seeding_key": {
         "resource.key": "the_internet_of_things"
       }
+    },
+    {
+      "name": "The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/15XGBsO_8flWsXo6iiq3NdI5iS2YB8SddAV9N1lx_5X4/view",
+      "key": "the_problem_solving_process",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "name": "The Problem Solving Process Handout",
+      "url": "https://docs.google.com/document/d/1JxUYKFQWHSrp-UROJt31xQLUwZPOKQYcsxiHpu5K0hA/view",
+      "key": "the_problem_solving_process_handout",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_handout"
+      }
     }
   ],
   "lessons_resources": [
@@ -4028,6 +4473,18 @@
       "seeding_key": {
         "lesson.key": "Sprites",
         "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "the_problem_solving_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "the_problem_solving_process_handout"
       }
     }
   ],

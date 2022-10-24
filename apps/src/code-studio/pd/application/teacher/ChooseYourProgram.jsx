@@ -47,6 +47,26 @@ const CourseHoursLabeledNumberInput = props => {
   );
 };
 
+const WhichGradesSelector = props => {
+  return (
+    <>
+      <LabeledCheckBoxes name={props.courseName} />
+      {props.showScholarshipWarning && (
+        <p style={styles.error}>
+          Note: This program is designed to work best for teachers who are
+          teaching this course in the {Year} school year. Scholarship
+          eligibility is often dependent on whether or not you will be teaching
+          the course during the {Year} school year.
+        </p>
+      )}
+    </>
+  );
+};
+WhichGradesSelector.propTypes = {
+  courseName: PropTypes.string,
+  showScholarshipWarning: PropTypes.bool
+};
+
 const ChooseYourProgram = props => {
   const {data} = props;
 
@@ -72,18 +92,22 @@ const ChooseYourProgram = props => {
       (csHowManyMinutes * csHowManyDaysPerWeek * csHowManyWeeksPerYear) / 60;
   }
 
-  let belowMinCourseHours = false;
-  let minCourseHours = programInfo.minCourseHours;
-  if (courseHours !== null && courseHours < minCourseHours) {
-    belowMinCourseHours = true;
-  }
-
-  let showTeachingPlansNote = false;
+  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${
+    programInfo.name
+  } in the ${Year} school year`;
+  let showScholarshipEligibilityWarning = false;
   if (
-    data.planToTeach &&
-    !data.planToTeach.includes('Yes, I plan to teach this course this year')
+    (data.program === PROGRAM_CSD &&
+      data.csdWhichGrades &&
+      data.csdWhichGrades.includes(notSureTeachPlanOption)) ||
+    (data.program === PROGRAM_CSP &&
+      data.cspWhichGrades &&
+      data.cspWhichGrades.includes(notSureTeachPlanOption)) ||
+    (data.program === PROGRAM_CSA &&
+      data.csaWhichGrades &&
+      data.csaWhichGrades.includes(notSureTeachPlanOption))
   ) {
-    showTeachingPlansNote = true;
+    showScholarshipEligibilityWarning = true;
   }
 
   return (
@@ -109,12 +133,18 @@ const ChooseYourProgram = props => {
           )}
 
           {data.program === PROGRAM_CSD && (
-            <LabeledCheckBoxes name="csdWhichGrades" />
+            <WhichGradesSelector
+              courseName="csdWhichGrades"
+              showScholarshipWarning={showScholarshipEligibilityWarning}
+            />
           )}
 
           {data.program === PROGRAM_CSP && (
             <>
-              <LabeledCheckBoxes name="cspWhichGrades" />
+              <WhichGradesSelector
+                courseName="cspWhichGrades"
+                showScholarshipWarning={showScholarshipEligibilityWarning}
+              />
               <LabeledRadioButtons name="cspHowOffer" />
             </>
           )}
@@ -143,18 +173,23 @@ const ChooseYourProgram = props => {
                   program.
                 </p>
               )}
-              <LabeledCheckBoxes name="csaWhichGrades" />
+              <WhichGradesSelector
+                courseName="csaWhichGrades"
+                showScholarshipWarning={showScholarshipEligibilityWarning}
+              />
               <LabeledRadioButtons name="csaHowOffer" />
             </>
           )}
 
           <p>
-            <strong>Course hours =</strong> (number of minutes of one class){' '}
-            <strong> X </strong> (number of days per week the class will be
-            offered) <strong> X </strong> (number of weeks with the class)
+            We recommend {programInfo.minCourseHours} hours or more of
+            instructional time per {programInfo.name} section. You can calculate
+            your per section hours following formula:
           </p>
           <p>
-            Please provide information about your course implementation plans.
+            <strong>Per section hours =</strong> (number of minutes of one
+            class) <strong> X </strong> (number of days per week the class will
+            be offered) <strong> X </strong> (number of weeks with the class)
           </p>
           <CourseHoursLabeledNumberInput
             name="csHowManyMinutes"
@@ -191,14 +226,6 @@ const ChooseYourProgram = props => {
               </Row>
             </div>
           )}
-          {belowMinCourseHours && (
-            <p style={styles.error}>
-              Note: {minCourseHours} or more hours of instruction per{' '}
-              {programInfo.name} section are strongly recommended. We suggest
-              checking with your school administration to see if additional time
-              can be allotted for this course in {Year}.
-            </p>
-          )}
 
           <LabeledRadioButtonsWithAdditionalTextFields
             name="planToTeach"
@@ -206,14 +233,6 @@ const ChooseYourProgram = props => {
               [TextFields.dontKnowIfIWillTeachExplain]: 'other'
             }}
           />
-          {showTeachingPlansNote && (
-            <p style={styles.error}>
-              Note: This program is designed to work best for teachers who are
-              teaching this course in the {Year} school year. Scholarship
-              eligibility is dependent on whether or not you will be teaching
-              the course during the {Year} school year.
-            </p>
-          )}
 
           <LabeledRadioButtonsWithAdditionalTextFields
             name="replaceExisting"

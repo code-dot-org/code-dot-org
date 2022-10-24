@@ -14,6 +14,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
+import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './addons/cdoTheme';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -114,6 +115,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
+  blocklyWrapper.wrapReadOnlyProperty('zelos');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
@@ -185,6 +187,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.RENDERER,
     'cdo_renderer',
     CdoRenderer,
+    true /* opt_allowOverrides */
+  );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
+    'cdo_renderer_zelos',
+    CdoRendererZelos,
     true /* opt_allowOverrides */
   );
   registerAllContextMenuItems();
@@ -467,7 +475,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: CdoTheme,
+      theme: opt_options.theme || CdoTheme,
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -481,7 +489,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: 'cdo_renderer'
+      renderer: opt_options.renderer || 'cdo_renderer'
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
@@ -512,6 +520,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
+
+    return workspace;
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcover",
-    "serialized_at": "2022-10-14 14:54:29 UTC",
+    "serialized_at": "2022-10-20 13:58:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -71,7 +71,7 @@
     },
     {
       "key": "Sharing My Time Capsule (beta)",
-      "name": "Sharing My Book Cover",
+      "name": "Share Your Book Cover",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -326,7 +326,7 @@
       "key": "76772f68-9581-462a-8965-3c4921adf3d6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-10 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-9 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level.\n",
         "name": "Holes",
         "progression_name": "Skill Building"
       },
@@ -362,7 +362,7 @@
       "key": "d094d6c6-d018-44a7-8491-7c242a9ee7e5",
       "position": 9,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Programming with Events” video\n",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Programming with Events” video\n",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -371,10 +371,28 @@
       }
     },
     {
-      "key": "8eb09aa7-4007-4876-a268-07c2b3be8ffa",
+      "key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-14 - Skill Building” slide\n",
+        "name": "Wonder",
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The _Wonder_ Book Cover in Level 11 is a repeat of Level 1. However, this time the workspace blocks are visible to students and they have a space to type in what they notice about the code. Have students check out the new `when clicked`, `prompt user`, and `when prompt answered` blocks. This is a good place for students to pause and understand what those blocks do before adding them to their own code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a",
+        "lesson_activity.key": "c209c7c2-d241-4402-b9e8-9817f27c32d9"
+      }
+    },
+    {
+      "key": "8eb09aa7-4007-4876-a268-07c2b3be8ffa",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-15 - Skill Building” slide\n",
         "name": "Front Desk",
         "progression_name": "Skill Building"
       },
@@ -385,7 +403,7 @@
     },
     {
       "key": "b4551d6d-7b2a-41e5-80ba-2b43fe548a1b",
-      "position": 11,
+      "position": 12,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -396,9 +414,9 @@
     },
     {
       "key": "b15b4141-45c5-45dc-b9a7-d449622765ba",
-      "position": 12,
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 15 - Free Play” slide\n\nIf a group or individual finishes early, encourage them to continue building a book cover project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your book cover?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- Invite students to share ideas and to learn from each other. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16 - Free Play” slide\n\n\n",
         "name": "Free Play",
         "progression_name": "Free Play"
       },
@@ -409,8 +427,9 @@
     },
     {
       "key": "b3f859ac-76ed-4d8a-a8fe-bb2ede1df723",
-      "position": 13,
+      "position": 14,
       "properties": {
+        "description": "If a group or individual finishes early, encourage them to continue building a book cover project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your book cover?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- Invite students to share ideas and to learn from each other. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -522,7 +541,7 @@
       "key": "834fe113-8e28-494b-9c49-2ec5af92cb3a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-9” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. Students should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-8” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. Students should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level."
       },
       "seeding_key": {
         "activity_section.key": "834fe113-8e28-494b-9c49-2ec5af92cb3a",
@@ -544,7 +563,7 @@
       "key": "f3886a91-78c8-4dc8-99e5-2dd41c23c21d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 10” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 9” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -611,7 +630,7 @@
       "key": "695828e4-e1e0-4445-b98c-486caefcb0af",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _ Now it is time to show off our hard work! As you look at your classmates’ book covers, think about the sprites and dialogue they used. Did any of your classmates choose the same book that you did? How did their choices compare to yours?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *I liked your decision to ____!*\n- *I liked that your code included ____.*\n- *I want to read the book you chose because ____.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ book covers, think about the sprites and dialogue they used. Did any of your classmates choose the same book that you did? How did their choices compare to yours?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *I liked your decision to ____!*\n- *I liked that your code included ____.*\n- *I want to read the book you chose because ____.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
       },
       "seeding_key": {
         "activity_section.key": "695828e4-e1e0-4445-b98c-486caefcb0af",
@@ -843,6 +862,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_prop_-wonder"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -915,6 +937,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_bookcover_predict_wonder"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a"
+      },
+      "level_keys": [
+        "csc_bookcover_predict_wonder"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "csc_bookcover_clicksay_-wonder"
         ],
@@ -935,11 +979,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_print_-wonder"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -957,8 +1004,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -982,8 +1029,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
+      "chapter": 15,
+      "position": 15,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1007,8 +1054,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
+      "chapter": 16,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1032,7 +1079,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1057,7 +1104,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1082,7 +1129,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1107,7 +1154,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1132,7 +1179,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1157,34 +1204,9 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_bookcover_print"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_bookcover_print"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      },
-      "level_keys": [
-        "csc_bookcover_print"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 7,
-      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1208,8 +1230,8 @@
     },
     {
       "chapter": 23,
-      "position": 8,
-      "activity_section_position": 8,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1233,8 +1255,8 @@
     },
     {
       "chapter": 24,
-      "position": 9,
-      "activity_section_position": 9,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1258,7 +1280,7 @@
     },
     {
       "chapter": 25,
-      "position": 10,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1405,6 +1427,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_bookcover_predict_wonder",
+        "script_level.level_keys": [
+          "csc_bookcover_predict_wonder"
+        ],
+        "lesson.key": "Book Cover ",
+        "lesson_group.key": "",
+        "script.name": "csc-bookcover",
+        "activity_section.key": "b61034bb-4a9f-4e63-a1aa-dc62e85d0f1a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_bookcover_clicksay_-wonder",
         "script_level.level_keys": [
           "csc_bookcover_clicksay_-wonder"
@@ -1516,18 +1550,6 @@
         "level.key": "csc_bookcover_prop",
         "script_level.level_keys": [
           "csc_bookcover_prop"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "csc-bookcover",
-        "activity_section.key": "4370f514-0009-466e-bef0-dffccbcb861e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_bookcover_print",
-        "script_level.level_keys": [
-          "csc_bookcover_print"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1842,6 +1864,16 @@
       }
     },
     {
+      "key": "2268a973-f0d4-494e-a34f-155c4a869920",
+      "properties": {
+        "description": "Present their work to their classmates."
+      },
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "objective.key": "2268a973-f0d4-494e-a34f-155c4a869920"
+      }
+    },
+    {
       "key": "5815d049-d45c-49ba-a0ec-ebe64a75ed04",
       "properties": {
         "description": "Animate their Book Cover using blocks that set background, text, sprites, and events."
@@ -1862,6 +1894,16 @@
       }
     },
     {
+      "key": "65f7f30e-6bb4-44a1-abc3-a9ac2f23f225",
+      "properties": {
+        "description": "Describe choices that they made while coding their projects."
+      },
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "objective.key": "65f7f30e-6bb4-44a1-abc3-a9ac2f23f225"
+      }
+    },
+    {
       "key": "80afb233-698e-47d4-b251-93ea53c6ba47",
       "properties": {
         "description": "Use events and the Sprite “say” block to depict character dialogue between two main characters in their book"
@@ -1874,11 +1916,21 @@
     {
       "key": "f5dff979-23d7-47b6-ab99-126ae45426f7",
       "properties": {
-        "description": "Reflect on the design process"
+        "description": "Reflect on the design process."
       },
       "seeding_key": {
         "lesson.key": "Sharing My Time Capsule (beta)",
         "objective.key": "f5dff979-23d7-47b6-ab99-126ae45426f7"
+      }
+    },
+    {
+      "key": "fb9caff6-5ecb-4373-bcfc-dc128df6957f",
+      "properties": {
+        "description": "Represent a pivotal moment of the book’s plot using Sprite Lab."
+      },
+      "seeding_key": {
+        "lesson.key": "Sharing My Time Capsule (beta)",
+        "objective.key": "fb9caff6-5ecb-4373-bcfc-dc128df6957f"
       }
     }
   ],
