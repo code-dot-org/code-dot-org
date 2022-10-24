@@ -1,4 +1,5 @@
 /** @file Board controller for BBC micro:bit */
+/* global SerialPort */ // Maybe provided by the Code.org Browser
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   createMicroBitComponents,
@@ -10,9 +11,10 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import {isChromeOS} from '../../util/browserChecks';
 import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -31,10 +33,8 @@ export default class MicroBitBoard extends EventEmitter {
 
     this.chromeOS = isChromeOS();
 
-    let portType = serialPortType(true);
-
     /** @private {MicrobitFirmataClient} serial port controller */
-    this.boardClient_ = new MBFirmataWrapper(portType);
+    this.boardClient_ = new MBFirmataWrapper(SerialPort);
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -58,32 +58,8 @@ export default class MicroBitBoard extends EventEmitter {
    */
   openSerialPort() {
     const portName = this.port ? this.port.comName : undefined;
-    const SerialPortType = serialPortType(false);
-
-    /** @const {number} serial port transfer rate */
-    const SERIAL_BAUD = 57600;
-
-    let serialPort;
-    if (!this.chromeOS) {
-      serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
-      return Promise.resolve(serialPort);
-    } else {
-      // Chrome-serialport uses callback to relay when serialport initialization is complete.
-      // Wrapping construction function to call promise resolution as callback.
-      let constructorFunction = callback => {
-        serialPort = new SerialPortType(
-          portName,
-          {
-            baudRate: SERIAL_BAUD
-          },
-          true,
-          callback
-        );
-      };
-      return new Promise(resolve => constructorFunction(resolve)).then(() =>
-        Promise.resolve(serialPort)
-      );
-    }
+    let serialPort = new SerialPort(portName, {baudRate: SERIAL_BAUD});
+    return Promise.resolve(serialPort);
   }
 
   /**

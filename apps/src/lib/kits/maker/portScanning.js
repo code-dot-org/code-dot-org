@@ -1,9 +1,7 @@
 /** @file Serialport scanning logic for Maker Toolkit */
 /* global SerialPort */ // Maybe provided by the Code.org Browser
-import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
-import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -35,7 +33,7 @@ export const MICROBIT_PID = 0x0204;
  */
 export function findPortWithViableDevice() {
   return Promise.resolve()
-    .then(listSerialDevices)
+    .then(SerialPort.list())
     .then(list => {
       const bestOption = getPreferredPort(list);
       if (bestOption) {
@@ -48,25 +46,6 @@ export function findPortWithViableDevice() {
         );
       }
     });
-}
-
-/**
- * Ask the serial port bridge extension for a list of connected devices.
- * @returns {Promise.<Array.<SerialPortInfo>>}
- */
-function listSerialDevices() {
-  let SerialPortType;
-  if (!isChromeOS()) {
-    SerialPortType = SerialPort;
-    return SerialPortType.list();
-  } else {
-    SerialPortType = ChromeSerialPort;
-    return new Promise((resolve, reject) => {
-      SerialPortType.list((error, list) =>
-        error ? reject(error) : resolve(list)
-      );
-    });
-  }
 }
 
 /**
