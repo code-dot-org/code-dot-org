@@ -1,4 +1,5 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import {CLAMPED_NUMBER_REGEX} from './constants';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -70,20 +71,10 @@ function strip(code) {
 /**
  * Given a type string for a field input, returns an appropriate change handler function
  * for that type, which customizes the input field and provides validation on blur.
- * @param {Blockly} blockly
  * @param {string} type
  * @returns {?function}
  */
 function getFieldInputChangeHandler(type) {
-  // Used for custom field type ClampedNumber(,)
-  // Captures two optional arguments from the type string
-  // Allows:
-  //   ClampedNumber(x,y)
-  //   ClampedNumber( x , y )
-  //   ClampedNumber(,y)
-  //   ClampedNumber(x,)
-  //   ClampedNumber(,)
-  const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
   const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
   if (clampedNumberMatch) {
     const min = parseFloat(clampedNumberMatch[1]);
@@ -95,6 +86,7 @@ function getFieldInputChangeHandler(type) {
     return undefined;
   }
 }
+
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
