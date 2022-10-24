@@ -1,5 +1,6 @@
 require 'cdo/config'
 require 'cdo/lazy'
+require 'cdo/aws/cloud_formation'
 
 module Cdo
   # Prepend this module to a Cdo::Config to process lazy-loaded secrets contained in special tags.
@@ -7,8 +8,16 @@ module Cdo
     BASE_ENVS = [:staging, :test, :levelbuilder, :production]
 
     # Generate a standard secret path from prefix and key.
+    # These secrets are specific to an environment type (adhoc, staging, development, etc.) and could potentially
+    # be shared across multiple deployments that have the same environment type (such as 2 different adhocs).
     def self.secret_path(prefix, key)
       "#{prefix}/cdo/#{key}"
+    end
+
+    # Generate path to a Secret that was provisioned for a specific CloudFormation Stack. This enables
+    # configuration settings to have different values for different deployments that have the same environment type.
+    def self.stack_specific_secret_path(key)
+      "CfnStack/#{AWS::CloudFormation.current_stack_name}/#{key}"
     end
 
     # Load a secrets-config hash from specified file.
