@@ -23,12 +23,12 @@ export default class SpecialAnnouncement extends Component {
       ? isTeacher
         ? i18n.teacherAnnouncementSpecialWinter2021Heading()
         : i18n.studentAnnouncementSpecial2022HocHeading()
-      : i18n.intlAnnouncementSpecial2020Heading();
+      : i18n.studentAnnouncementSpecial2022HocHeading(); // replaces International string
     const descriptionText = isEnglish
       ? isTeacher
         ? i18n.teacherAnnouncementSpecialWinter2021Body()
         : i18n.studentAnnouncementSpecial2022HocBody()
-      : i18n.intlAnnouncementSpecial2020Body();
+      : i18n.studentAnnouncementSpecial2022HocBody(); // replaces International string
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special_winter2021'
       : 'student_homepage_announcement_special2020';
