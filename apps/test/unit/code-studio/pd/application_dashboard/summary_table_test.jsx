@@ -20,7 +20,7 @@ describe('SummaryTable', () => {
     assert(
       wrapper.containsMatchingElement(
         <tr>
-          <td>Accepted</td>
+          <td>Accepted (auto-email)</td>
           <td>{9}</td>
         </tr>
       ),
