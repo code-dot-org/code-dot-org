@@ -19,10 +19,6 @@
         "debugging/minecraft/unversioned": {
           "word": "Felsökning"
         },
-        "program/minecraft/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
         "event/minecraft/unversioned": {
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
@@ -30,18 +26,22 @@
         "loop/minecraft/unversioned": {
           "word": "Loop"
         },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
         "code/hero/unversioned": {
           "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/hero/unversioned": {
           "word": "Felsökning"
         },
+        "function/hero/unversioned": {
+          "word": "Funktion"
+        },
         "program/hero/unversioned": {
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "function/hero/unversioned": {
-          "word": "Funktion"
         },
         "code/poem-art/2021": {
           "word": "Kod",
@@ -125,6 +125,9 @@
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
+        "code/dance/unversioned": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
         "event/dance/unversioned": {
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
@@ -133,24 +136,21 @@
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
-        "code/dance/unversioned": {
-          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
         "code/aquatic/unversioned": {
           "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Felsökning"
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program",
-          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Villkor"
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Felsökning"
+        },
         "loops/aquatic/unversioned": {
           "word": "loopar"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
         "encryption/hoc-encryption/unversioned": {
           "word": "Kryptering"
@@ -199,15 +199,15 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
-        "event/sports/unversioned": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
         "code/sports/unversioned": {
           "word": "Kod"
         },
         "debugging/sports/unversioned": {
           "word": "Felsökning"
+        },
+        "event/sports/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "program/sports/unversioned": {
           "word": "Program",
@@ -223,15 +223,15 @@
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
         },
-        "event/basketball/unversioned": {
-          "word": "Händelse",
-          "definition": "En handling som gör att något händer."
-        },
         "code/basketball/unversioned": {
           "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
         "debugging/basketball/unversioned": {
           "word": "Felsökning"
+        },
+        "event/basketball/unversioned": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
         },
         "program/basketball/unversioned": {
           "word": "Program",
@@ -606,15 +606,15 @@
         "user/coursef/2021": {
           "word": "Användare"
         },
+        "algorithm/coursef/2021": {
+          "word": "Algoritm"
+        },
         "behavior/coursef/2021": {
           "word": "Beteende"
         },
         "program/coursef/2021": {
           "word": "Program",
           "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
-        },
-        "algorithm/coursef/2021": {
-          "word": "Algoritm"
         },
         "event/coursef/2021": {
           "word": "Händelse",
@@ -632,14 +632,14 @@
         "internet/coursef/2021": {
           "word": "Internet"
         },
+        "ip_address/coursef/2021": {
+          "word": "IP-adress"
+        },
         "servers/coursef/2021": {
           "word": "Servrar"
         },
         "url/coursef/2021": {
           "word": "URL"
-        },
-        "ip_address/coursef/2021": {
-          "word": "IP-adress"
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi"
@@ -662,11 +662,11 @@
         "click/courseb/2021": {
           "word": "Klick"
         },
-        "drop/courseb/2021": {
-          "word": "Släpp"
-        },
         "double_click/courseb/2021": {
           "word": "Dubbelklicka"
+        },
+        "drop/courseb/2021": {
+          "word": "Släpp"
         },
         "program/courseb/2021": {
           "word": "Program",
@@ -692,11 +692,11 @@
         "click/coursea/2021": {
           "word": "Klick"
         },
-        "drop/coursea/2021": {
-          "word": "Släpp"
-        },
         "double_click/coursea/2021": {
           "word": "Dubbelklicka"
+        },
+        "drop/coursea/2021": {
+          "word": "Släpp"
         },
         "bug/coursea/2021": {
           "word": "Bugg"
@@ -804,11 +804,11 @@
         "click/pre-express/2021": {
           "word": "Klick"
         },
-        "drop/pre-express/2021": {
-          "word": "Släpp"
-        },
         "double_click/pre-express/2021": {
           "word": "Dubbelklicka"
+        },
+        "drop/pre-express/2021": {
+          "word": "Släpp"
         },
         "algorithm/pre-express/2021": {
           "word": "Algoritm"
@@ -830,11 +830,11 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
-        "behavior/coursee/2021": {
-          "word": "Beteende"
-        },
         "algorithm/coursee/2021": {
           "word": "algoritm"
+        },
+        "behavior/coursee/2021": {
+          "word": "Beteende"
         },
         "event/coursee/2021": {
           "word": "Händelse",

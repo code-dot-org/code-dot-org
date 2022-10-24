@@ -266,3 +266,7 @@ my:
           lesson_groups:
             lessonGroup-8:
               display_name: Variables
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Loops

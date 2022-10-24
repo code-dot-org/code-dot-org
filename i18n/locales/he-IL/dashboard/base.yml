@@ -963,3 +963,5 @@ he:
       cannot_view_locked_answers: "לא ניתן לצפות בתשובות כאשר נעול"
       forbidden: "המשתמש אינו יכול לעדכן מצב נעילה של הסטודנט"
   reset_predict_progress_button: "מחק תשובה"
+  pixelation:
+    binary: "בינארי"

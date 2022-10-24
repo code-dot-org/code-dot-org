@@ -12,7 +12,7 @@ nav: how_to_nav
 
 ينبغي للطلاب اليوم أن يتعلَّموا كيفية تصميم التقنية، وليس استخدامها فحسب.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+تجربة أحد أنشطة "ساعة من البرمجة" طريقة بسيطة ومرحة لتعريف الطلاب بمجال علوم الحاسوب، ربما للمرة الأولى في حياتهم. ابحث عن نشاط يناسب محيطك، سواء في الفصل أو خارج المدرسة، شخصيًا أو افتراضيًا. الق نظرة على [دليل المشاركة إذا كان لا يزال لديك أسئلة]({{ localized_files/participation_guide }}) بعد التحقق من الخطوات أدناه:
 
 - [شاهد الفيديو "ساعة من البرمجة" الإرشادي](#how-to-video)
 - [استكشِف الأنشطة والبرامج التعليمية](#explore-activities)
@@ -58,7 +58,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ### اختر اليوم والوقت
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. ولكن يمكنك إجراء أحد أنشطة "ساعة من البرمجة" في أي يوم على مدار العام!
+يشارك الناس من جميع أنحاء العالم في احتفالية "ساعة من البرمجة" في أثناء أسبوع تعليم علوم الحاسوب (5-11 ديسمبر) عندما يتم إصدار أحدث البرامج التعليمية والأنشطة. ولكن يمكنك إجراء أحد أنشطة "ساعة من البرمجة" في أي يوم على مدار العام!
 
 * * *
 
@@ -74,11 +74,11 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ### أخبر المتطوعين عن طريق التسجيل في فعاليتك
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. إنها أيضًا الطريقة التي يمكنك من خلالها السماح للمتطوعين المحليين بمعرفة أن مدرستك تشارك. يعد المتطوعون مصدرًا رائعًا ويمكنهم القدوم للتحدث إلى فصلك عن علوم الحاسوب أو ببساطة مساعدة طلابك في أنشطة ساعة من البرمجة.
+عندما [تسجِّل اشتراكك في إحدى فعاليات "ساعة من البرمجة"](/#join)، فستحصل على رسائل بريد إلكترونية مفيدة، تتضمن الأخبار والنصائح لتضيِّف فعالية ناجحة من "ساعة من البرمجة". إنها أيضًا الطريقة التي يمكنك من خلالها السماح للمتطوعين المحليين بمعرفة أن مدرستك تشارك. يعد المتطوعون مصدرًا رائعًا ويمكنهم القدوم للتحدث إلى فصلك عن علوم الحاسوب أو ببساطة مساعدة طلابك في أنشطة ساعة من البرمجة.
 
 ### اجعل طلابك متحمسين
 
-ابدأ الفعالية من خلال مشاركة [ مقاطع فيديو ملهمة ](/promote/resources) تسلط الضوء على أشخاص مختلفين والطرق الإبداعية التي يمكن من خلالها استخدام علوم الحاسوب. Or print inspirational posters for your classroom! يصبح الطلاب أكثر حماسًا للمشاركة في أي موضوع عندما يرون تشجيعًا من الأشخاص الذين يشبهونهم.
+ابدأ الفعالية من خلال مشاركة [ مقاطع فيديو ملهمة ](/promote/resources) تسلط الضوء على أشخاص مختلفين والطرق الإبداعية التي يمكن من خلالها استخدام علوم الحاسوب. أو اطبع ملصقات ملهمة لقاعتك الدراسية! يصبح الطلاب أكثر حماسًا للمشاركة في أي موضوع عندما يرون تشجيعًا من الأشخاص الذين يشبهونهم.
 
 {{ promote_new_posters }} 
 
@@ -113,7 +113,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 وجِّه الطلاب إلى النشاط 
 
-- اكتب رابط البرنامج التعليمي على سبورة بيضاء. وابحث عن الرابط المذكور في <a href="[">معلومات عن برنامجك التعليمي المختار]({{ urls/learn }}) تحت عدد المشاركين.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 عندما يواجه الطلاب صعوبات، فليس هناك مشكلة في الرد عليهم بما يلي: 
 
@@ -140,7 +140,6 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 - [اطبع الشهادات]({{ urls/certificates }}) لطلابك.
 - [اطبع ملصقات مكتوب عليها "أنجزت نشاط "ساعة البرمجة"]({{ urls/promote_stickers }})لطلابك. 
-- [اطلب قمصانًا خاصة](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) لمدرستك.
 - شارك الصور ومقاطع الفيديو الخاصة بحدث "ساعة من البرمجة" على وسائل التواصل الاجتماعي. استخدم هاشتاج #HourOfCode و @codeorg حتى نتمكن من إبراز نجاحك أيضًا!
 
 * * *
@@ -154,6 +153,6 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 ### ماذا بعد "ساعة من البرمجة"؟
 
-لا يجب أن تتوقف مسيرة علوم الحاسوب عند فعالية "ساعة من البرمجة"! فمقررنا الدراسي معتمد على الإنترنت ومجاني الاستخدام إلى الأبد. [تعلَّم كيفية](/beyond) تعريف مدرستك وطلابك بمجال علوم الحاسوب.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

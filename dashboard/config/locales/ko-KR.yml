@@ -401,6 +401,7 @@ ko:
       about: 소개
       legal: 개인정보 보호 및 법률
       legal_privacy: 개인정보보호 정책
+      legal_cookie_notice: 쿠키 방침
       legal_tos: 이용 약관
     user:
       classroom: 선생님 홈페이지
@@ -1285,3 +1286,5 @@ ko:
       cannot_view_locked_answers: 잠겨있는 동안에는 답을 볼 수 없습니다
       forbidden: 사용자는 학생의 잠금 상태를 업데이트할 수 없습니다
   reset_predict_progress_button: 답 삭제
+  pixelation:
+    binary: 2진

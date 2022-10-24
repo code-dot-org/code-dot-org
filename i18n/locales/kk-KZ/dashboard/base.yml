@@ -616,3 +616,5 @@ kk:
   cookie_banner:
     accept: 'Мен келісемін'
   copy: 'Көшіру'
+  pixelation:
+    binary: "Бинарлы"

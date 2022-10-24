@@ -1037,3 +1037,7 @@ gl:
               display_name: Variables
         soccer:
           name: fútbol
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Bucles

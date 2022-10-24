@@ -42,10 +42,6 @@ const DataDocFormEditor = props => {
     <div>
       <RailsAuthenticityToken />
       <h1>Edit Data Doc</h1>
-      <h2>
-        This feature is in progress. It is not ready for use on Levelbuilder
-        yet.
-      </h2>
       <label style={styles.label}>
         Slug
         <input

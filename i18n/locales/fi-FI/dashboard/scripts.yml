@@ -1607,6 +1607,13 @@ fi:
           lesson_groups:
             lessonGroup-5:
               display_name: Kysely
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Silmukat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

@@ -2824,7 +2824,7 @@ tr:
             outbreak:
               display_name: Salgın Simülatörü
             debugging:
-              display_name: Hata Ayıklama (Debugging)
+              display_name: Hata Ayıklama
           description_audience: Dahili
           description_short: Dahili
         csd1-2021:
@@ -3739,6 +3739,10 @@ tr:
               display_name: İçerik
         tessplayground:
           name: tessoyunalanı
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: İlk adım
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3976,6 +3980,9 @@ tr:
           description_audience: Mufredat Yazarları
           description_short: Müfredat sürümleri değişirken derslerin veya seviyelerin güncellemelerini hazırlamak için
           description: Müfredat sürümleri değişirken derslerin veya seviyelerin güncellemelerini hazırlamak için
+          lessons:
+            lesson-7:
+              name: Spritese Giriş
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4101,6 +4108,17 @@ tr:
               display_name: İçerik
             lessonGroup-5:
               display_name: Anket
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Laboratuvarı
+            lesson-6:
+              name: Döngüler
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Anket
+            lessonGroup-3:
+              display_name: İçerik
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

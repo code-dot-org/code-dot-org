@@ -28,6 +28,12 @@
           "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
           "student_overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées."
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
+          "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
+        },
         "hourofcode/Maze": {
           "name": "Labyrinthe",
           "overview": "Ce cours permet aux apprenants de tous âges de s'initier au codage et à la science informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Ce cours a été conçu pour les enfants de 4 à 10 ans. Cependant, il peut être adapté à des apprenants plus âgés, et cela, grâce à des suggestions de personnalisation fournies.",
@@ -80,6 +86,12 @@
           "name": "Cryptage simple",
           "overview": "Durant ce cours, les apprenants découvriront la nécessité du cryptage et les techniques simples pour déchiffrer (ou décrypter) des messages confidentiels. Ils essayeront de décrypter un message codé à l'aide du chiffrement classique de César et d'un chiffrement par substitution aléatoire. Ils devront également comprendre qu'à l'ère des puissants outils informatiques, les techniques de cryptage devront être plus sophistiquées. Le point le plus important de ce cours est de comprendre comment et pourquoi le cryptage joue un rôle dans notre vie de tous les jours lorsque nous utilisons Internet, et qu'il n'est pas facile de mettre au point un cryptage robuste. Les élèves vont aussi comprendre les facteurs qui doivent être pris en compte pour assurer un cryptage solide face aux puissants outils informatiques qui peuvent être utilisés pour le déchiffrer. La nécessité du caractère confidentiel des données envoyées sur l'Internet est importante pour toute personne qui l'utilise.",
           "student_overview": "Durant ce cours, les apprenants découvriront la nécessité du cryptage et les techniques simples pour déchiffrer (ou décrypter) des messages confidentiels. Ils essayeront de décrypter un message codé à l'aide du chiffrement classique de César et d'un chiffrement par substitution aléatoire. Ils devront également comprendre qu'à l'ère des puissants outils informatiques, les techniques de cryptage devront être plus sophistiquées. Le point le plus important de ce cours est de comprendre comment et pourquoi le cryptage joue un rôle dans notre vie de tous les jours lorsque nous utilisons Internet, et qu'il n'est pas facile de mettre au point un cryptage robuste. Les élèves vont aussi comprendre les facteurs qui doivent être pris en compte pour assurer un cryptage solide face aux puissants outils informatiques qui peuvent être utilisés pour le déchiffrer. La nécessité du caractère confidentiel des données envoyées sur l'Internet est importante pour toute personne qui l'utilise."
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
+          "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
@@ -157,6 +169,7 @@
         "oceans/Oceans": {
           "name": "IA pour les Océans",
           "overview": "Grâce à ce cours, les apprenants de tous âges pourront s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Tout d'abord, ils classeront les objets dans les catégories \"poisson\" ou \"pas poisson\" pour tenter d'éliminer les déchets présents dans l'océan. Ensuite, ils devront enrichir leur base de données d'entraînement pour y ajouter d'autres créatures marines qui doivent rester dans l'eau. Pour la deuxième partie du cours, ils choisiront leurs propres étiquettes qu'ils associeront à des images de poissons générées de manière aléatoire. Ces données d'entraînement sont utilisées pour un modèle d'apprentissage automatique qui devrait ensuite être en mesure d'associer lui-même des étiquettes à de nouvelles images.",
+          "purpose": "Ce tutoriel est conçu pour initier rapidement les étudiants à l'**apprentissage automatique**, un type d'**intelligence artificielle**. Les étudiants exploreront comment les **données de formation** sont utilisées pour permettre à un modèle d'apprentissage automatique de classer de nouvelles données. Les étudiants devraient avoir une expérience positive pendant le tutoriel et, plus important encore, devraient être motivés pour continuer à apprendre l'informatique. ",
           "student_overview": "Résumé du Tutoriel : Tout d'abord, les élèves classent les objets en tant que \"poisson\" ou \"pas poisson\" pour tenter d'éliminer les déchets de l'océan. Ensuite, les élèves élargiront leur ensemble de données d'entraînement pour inclure d'autres créatures marines. Dans la deuxième partie de l'activité, les élèves choisiront leurs propres étiquettes à appliquer aux images de poissons générés aléatoirement. Ces données de formation sont utilisées pour un modèle d'apprentissage automatique qui devrait ensuite être capable d'étiqueter de nouvelles images par ses propres moyens."
         },
         "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
@@ -418,7 +431,7 @@
           "student_overview": "Les boucles sont tellement utiles dans le codage. Dans cette leçon, tu vas te familiariser avec un nouveau type de boucle : les boucles « tant que » !"
         },
         "coursed-2022/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe",
           "overview": "Dans cette leçon, les élèves découvriront les boucles `jusqu'à ce que`. Les étudiants construiront des programmes qui feront répéter des actions au personnage principal `jusqu'à ce qu'`'il atteigne le point d'arrêt désiré.",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les connaissances des boucles, en y ajoutant la condition \"until\" (tant que). En jumelant ces concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs.",
           "student_overview": "Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !"
@@ -565,9 +578,9 @@
         },
         "coursee-2022/Functions in Minecraft": {
           "name": "Les Fonctions dans Minecraft",
-          "overview": "Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves commenceront à comprendre l'utilité des fonctions !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?"
+          "student_overview": "Est-ce que tu peux apprendre à maîtriser les fonctions pour avoir le code le plus efficace que possible ?"
         },
         "coursee-2022/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
@@ -743,7 +756,6 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
-          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2022/Virtual Pet with Sprite Lab": {
@@ -816,22 +828,22 @@
           "student_overview": "Ici, tu vas utiliser des conditions dans le monde de Minecraft."
         },
         "express-2022/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
-          "overview": "Dans cette leçon, les élèves découvriront les boucles `jusqu'à ce que`. Les étudiants construiront des programmes qui feront répéter des actions au personnage principal `jusqu'à ce qu'`'il atteigne le point d'arrêt désiré.",
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves découvriront les boucles « jusqu'à ». Les élèves construiront des programmes qui feront répéter des actions au personnage principal jusqu'à ce qu'il parvienne au point d'arrêt souhaité.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !"
+          "student_overview": "On peut faire des choses incroyables en utilisant les boucles « jusqu'à ce que » !"
         },
         "express-2022/Harvesting with Conditionals": {
           "name": "Récolter avec les Conditions",
-          "overview": "Les étudiants pratiqueront les boucles `tant que`, les boucles `jusqu'à ce que` et les déclarations `si / sinon`. Tous ces blocs utilisent des conditions. En pratiquant les trois, les élèves apprendront à écrire du code complexe et flexible.",
+          "overview": "Les élèves travailleront avec les boucles « tant que », les boucles « jusqu'à » et les indications « si / sinon ». Tous ces blocs utilisent des formules conditionnelles. En s'entraînant avec les trois, les élèves apprendront à écrire du code complexe et flexible.",
           "purpose": "Mettre en pratique les conditions dans différents scénarios aide à développer la compréhension de l'élève de ce que les conditions peuvent faire. Dans la leçon précédente, les élèves utilisaient uniquement des conditionnels pour se déplacer dans un labyrinthe. Dans cette leçon, les élèves utiliseront des conditions pour aider la Fermière à savoir quand effectuer les récoltes. De nouveaux modèles apparaîtront et les élèves useront de créativité et de pensée logique pour déterminer les conditions dans lesquelles le code doit être exécuté et répété.",
-          "student_overview": "Il n'est pas toujours clair quand utiliser chaque conditionn. Cette leçon t'aidera à t'entraîner à décider quoi faire."
+          "student_overview": "Il n'est pas toujours clair quand utiliser une conditionnelle plutôt qu'une autre. Cette leçon t'entraînera à savoir mieux faire des choix."
         },
         "express-2022/Functions in Minecraft": {
           "name": "Les Fonctions dans Minecraft",
-          "overview": "Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves commenceront à comprendre l'utilité des fonctions !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?"
+          "student_overview": "Est-ce que tu peux apprendre à maîtriser les fonctions pour avoir le code le plus efficace que possible ?"
         },
         "express-2022/Functions with Harvester": {
           "name": "Les Fonctions avec l'Agricultrice",
@@ -1174,49 +1186,74 @@
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introduction à la Résolution de Problèmes",
-          "preparation": "**Pour chaque groupe**\n\n-   2 feuilles de papier d'aluminium de 5 à 5 pouces de longueur chacune\n-   1 récipient pouvant contenir 3 à 5 pouces d'eau \n-   Plusieurs serviettes en papier ou chiffons qui peuvent être placés sous le récipient \n-   15 pièces de monnaie\n-   Un exemplaire du guide d'activité\n\n\\*\\*Pour l'enseignant\n\n-   1 récipient pouvant contenir de 5 à 10 cm d'eau \n-   50 pièces de monnaie \n-   Des serviettes en papier ou des chiffons supplémentaires \n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez à distance, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe?**\n\nDans cette leçon, les élèves travaillent en groupes pour concevoir des bateaux en papier d'aluminium qui supporteront autant de pièces de monnaie que possible. Les groupes ont deux tours pour travailler sur leurs bateaux, avec pour objectif d'essayer de contenir plus de pièces qu'au premier tour. La structure de l'activité préfigure différentes étapes du processus de résolution de problèmes que les élèves découvriront plus en détail dans la leçon suivante. À la fin de la leçon, les élèves réfléchissent à leur expérience de l'activité et établissent des liens avec les types de résolution de problèmes qu'ils feront pendant le reste du cours.\n\n\\*\\*D'autres versions de cette leçon sont également disponibles. \n\n-   [Table de journaux](/s/csd1-2022/lessons/9/)\n-   [Pont en spaghetti](/s/csd1-2022/lessons/10/)\n-   [Tour de papier](/s/csd1-2022/lessons/11/)",
+          "preparation": "**Pour chaque groupe**\n\n-   2 feuilles de papier d'aluminium de 5 à 5 pouces de longueur chacune\n-   1 récipient pouvant contenir 3 à 5 pouces d'eau \n-   Plusieurs serviettes en papier ou chiffons qui peuvent être placés sous le récipient \n-   15 pièces de monnaie\n-   Un exemplaire du guide d'activité\n\n\\*\\*Pour l'enseignant\n\n-   1 récipient pouvant contenir de 5 à 10 cm d'eau \n-   50 pièces de monnaie \n-   Des serviettes en papier ou des chiffons supplémentaires \n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez à distance, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe ?**\n\nVous allez travailler avec un groupe pour concevoir et tester un bateau en papier d'aluminium qui supportera le plus grand nombre possible de pièces de monnaie. "
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "Le Processus de Résolution de Problèmes",
-          "preparation": "Pour chaque élève \n\n-   Imprimez une copie du Guide d'activité\n\nPour la classe\n\n-   Papier pour affiches\n-   Marqueurs/crayons de couleur\n\nPour l'enseignant\n\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "overview": "\\*\\*Question du jour : Quelles sont les étapes communes que nous pouvons utiliser pour résoudre différents types de problèmes ?\n\nCette leçon présente le processus formel de résolution de problèmes que les élèves utiliseront au cours de l'année : Définir - Préparer - Essayer - Réfléchir. La leçon commence par demander aux élèves de réfléchir à tous les différents types de problèmes qu'ils rencontrent dans la vie quotidienne. On leur montre ensuite les quatre étapes du processus de résolution de problèmes et ils travaillent ensemble pour relier ces étapes abstraites à leurs expériences réelles de résolution de problèmes. Les élèves établissent d'abord un lien entre ces étapes et les activités de résolution de problèmes de la leçon précédente, puis un problème qu'ils savent bien résoudre et enfin un problème qu'ils veulent améliorer. À la fin de la leçon, la classe rassemble une liste de stratégies généralement utiles pour chaque étape du processus afin de les placer sur des affiches qui seront utilisées tout au long de l'unité et de l'année.",
+          "preparation": "Pour chaque élève \n\n-   Imprimez une copie du Guide d'activité\n\nPour la classe\n\n-   Papier pour affiches\n-   Marqueurs/crayons de couleur\n\nPour l'enseignant\n\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "\\*\\*Question du jour : Quelles sont les étapes communes que nous pouvons utiliser pour résoudre différents types de problèmes ?\n\nVous découvrirez le processus de résolution de problèmes que nous utilisons en informatique et vous plongerez dans quelques stratégies pour mettre en œuvre chaque étape. "
         },
         "csd1-2022/Exploring Problem Solving": {
           "name": "Explorer la Résolution de Problèmes",
-          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la fête d'anniversaire.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "overview": "\\*\\*Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à différents types de problèmes ?\n\nDans cette leçon, les élèves appliquent le processus de résolution de problèmes à trois problèmes différents afin de mieux comprendre la valeur de chaque étape. Ils résoudront un mot caché, organiseront les sièges pour une fête d'anniversaire et réaménageront une salle de classe. Les problèmes deviennent de plus en plus complexes et mal définis afin de mettre en évidence l'utilité du processus de résolution de problèmes pour s'attaquer à ce type de problèmes. La leçon se termine par une réflexion des élèves sur leur expérience du processus de résolution de problèmes. Ils justifieront l'inclusion de chaque étape et réfléchiront aux questions ou aux stratégies qui peuvent les aider à mieux définir les problèmes ouverts, car il s'agit souvent de l'étape la plus critique.\n\nCette leçon nécessitera probablement deux périodes de cours ou plus. Les deux premiers problèmes peuvent être résolus en une seule période de cours, mais le troisième devra être reporté à un autre jour.\n\n\\*\\*D'autres versions de cette leçon sont également disponibles. \n\n-   [Thème des animaux](/s/csd1-2022/lessons/12/)\n-   [Thème des jeux](/s/csd1-2022/lessons/13/)",
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la fête d'anniversaire.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "**Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à de nombreux types de problèmes différents ?**\n\nAujourd'hui, vous allez appliquer le processus de résolution de problèmes à trois problèmes différents qui deviendront de plus en plus complexes !"
         },
         "csd1-2022/What is a Computer?": {
           "name": "Qu'est ce qu'un Ordinateur ?",
-          "preparation": "**Pour chaque groupe** \n\n-   Imprimez des copies du guide d'activité. Notez qu'il y a deux séries d'images, mais que chaque groupe n'a besoin que d'une seule série.\n-   Ciseaux (si vous n'avez pas le temps de découper les images avant le cours) \n-   Papier pour affiches\n-   Marqueurs ou crayons de couleur \n-   Colle ou ruban adhésif pour fixer les images \n\n\\*\\*Pour l'enseignant\n\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "overview": "\\*\\*Question du jour : Qu'est-ce qu'un ordinateur ?\n\nDans cette leçon, les élèves élaborent une définition préliminaire d'un ordinateur. Pour commencer, la classe effectue un remue-méninges pour trouver des définitions possibles d'un ordinateur et inscrit les résultats de ce remue-méninges au tableau. Ensuite, les élèves travaillent en groupes pour classer les images dans les catégories \"est un ordinateur\" ou \"n'est pas un ordinateur\" sur des affiches. Les groupes placent leurs affiches dans la salle et expliquent brièvement les raisons pour lesquelles ils ont choisi certaines de leurs catégorisations les plus difficiles.  L'enseignant présentera ensuite une définition de l'ordinateur et permettra aux élèves de réviser leurs affiches en fonction de la nouvelle définition.",
+          "preparation": "**Pour chaque groupe** \n\n-   Imprimez des copies du guide d'activité. Notez qu'il y a deux séries d'images, mais que chaque groupe n'a besoin que d'une seule série.\n-   Ciseaux (si vous n'avez pas le temps de découper les images avant le cours) \n-   Papier pour affiches\n-   Marqueurs ou crayons de couleur \n-   Colle ou ruban adhésif pour fixer les images \n\n\\*\\*Pour l'enseignant\n\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "\\*\\*Question du jour : Qu'est-ce qu'un ordinateur ?\n\nDans cette leçon, vous travaillerez avec un groupe pour déterminer ce qui fait qu'un ordinateur est un ordinateur !"
         },
         "csd1-2022/Input and Output": {
           "name": "Entrée et Sortie",
-          "preparation": "-   Préparez des copies du guide d'activité\n-   Consultez le forum [\"Salle de profs\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "overview": "\\*\\*Question du jour : Comment les ordinateurs utilisent-ils les entrées et les sorties pour obtenir et donner les informations dont ils ont besoin pour résoudre les problèmes ?\n\nDans cette leçon, les élèves étudient comment les ordinateurs obtiennent et donnent des informations à l'utilisateur par le biais des entrées et des sorties.  Ils réfléchissent d'abord aux informations dont ils auraient besoin pour résoudre un \"problème de réflexion\", puis utilisent ces informations pour formuler une recommandation.  Ils identifient ensuite les entrées et les sorties de ce processus.  Ensuite, les élèves considèrent une application qui s'engage dans le même processus et déterminent comment cette application entre et sort les informations.  Enfin, ils examinent d'autres types d'entrées et de sorties que les ordinateurs peuvent utiliser pour aider à résoudre des problèmes.",
+          "preparation": "-   Préparez des copies du guide d'activité\n-   Consultez le forum [\"Salle de profs\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "\\*\\*Question du jour : Comment les ordinateurs utilisent-ils les entrées et les sorties pour obtenir et donner les informations dont ils ont besoin pour résoudre les problèmes ?\n\nDans cette leçon, vous découvrirez comment les ordinateurs obtiennent et donnent des informations à l'utilisateur par le biais de diverses entrées et sorties. "
         },
         "csd1-2022/Processing": {
-          "name": "Le Traitement"
+          "name": "Le Traitement",
+          "overview": "\\*\\*Question du jour : Quelles sont les différentes façons dont les ordinateurs peuvent traiter l'information ?\n\nCette leçon présente aux élèves quatre types de traitement courants : si/alors (conditionnel), recherche de correspondance, comptage et comparaison.  Les élèves sont d'abord initiés aux types de traitement par le biais de plusieurs exemples d'applications.  Ils étudient ensuite d'autres applications pour déterminer les types de traitement utilisés par chacune d'elles.  Ils imaginent ensuite leur propre application et décident des types de traitement dont elle aurait besoin pour fonctionner.  Enfin, ils réfléchissent à d'autres types de traitement qui pourraient être utiles mais qui n'ont pas été abordés dans la leçon principale.",
+          "student_overview": "\\*\\*Question du jour : Quelles sont les différentes façons dont les ordinateurs peuvent traiter l'information ?\n\nDans cette leçon, vous allez découvrir les quatre types de traitement que les ordinateurs peuvent utiliser pour transformer les entrées en sorties.  "
         },
         "csd1-2022/Storage": {
           "name": "Le Stockage",
-          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "overview": "\\*\\*Question du jour : Pourquoi le stockage est-il un élément important du processus en informatique ?\n\nCette leçon présente le dernier élément du modèle informatique de l'unité : le stockage.  Après avoir essayé une application de \"sélection de vêtements\", les élèves discutent des informations qui devraient être stockées dans l'application ou saisies à chaque fois que l'application est lancée.  Ils regardent ensuite une série d'applications et utilisent leurs décisions sur ce qui doit être stocké pour créer des directives pour décider quelles informations stocker.  Ils passent ensuite en revue les quatre composantes du modèle informatique de ce chapitre : entrée, sortie, stockage et traitement.  Ensuite, ils ont une dernière occasion de revoir leurs décisions concernant les éléments à classer dans la catégorie des \"ordinateurs\", prises plus tôt dans le chapitre.  La leçon se termine par une réflexion sur leurs propres idées d'applications et sur la manière dont le stockage pourrait être utilisé.",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "\\*\\*Question du jour : Pourquoi le stockage est-il un élément important du processus en informatique ?\n\nDans cette leçon, vous découvrez le dernier élément qui fait d'un ordinateur un ordinateur : le stockage !"
         },
         "csd1-2022/Project - Propose an App": {
           "name": "Projet - Propose une Application",
+          "overview": "**Question du jour :  Comment le modèle IOSP peut-il nous aider à concevoir une application qui résout un problème ?**\n\nPour conclure leur étude du processus de résolution de problèmes et du modèle entrée/sortie/magasin/processus d'un ordinateur, les élèves proposeront une application conçue pour résoudre un problème du monde réel. Ce projet sera réalisé sur plusieurs jours et les élèves créeront une affiche soulignant les caractéristiques de leur application qu'ils présenteront à leurs camarades de classe. Un guide de projet fournit des instructions étape par étape aux élèves et les aide à organiser leurs pensées. Le projet est conçu pour être réalisé en binôme, mais il peut être réalisé individuellement.",
           "preparation": "-   Imprimez une copie de [r apps_and_problem_solving/csd/2022] pour chaque paire d'élèves.\n-   Papier pour affiches, stylos, marqueurs et autres matériels pour la réalisation des affiches.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
-          "preparation": "**Pour chaque groupe**\n\n-   2 journaux complets pour chaque groupe d'élèves\n-   1 rouleau de ruban adhésif pour chaque groupe d'élèves\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de poids similaire.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "name": "Introduction à la résolution de problèmes - Table à journaux (Alternative à la leçon 1)",
+          "preparation": "**Pour chaque groupe**\n\n-   2 journaux complets pour chaque groupe d'élèves\n-   1 rouleau de ruban adhésif pour chaque groupe d'élèves\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de poids similaire.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe ?**\n\nPour cette leçon, vous allez travailler en groupe pour concevoir, construire, tester et réfléchir à une table à journaux qui supportera le plus grand nombre de livres possible. "
         },
         "csd1-2022/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
-          "preparation": "**Pour chaque groupe**\n\n-   1 lb de nouilles spaghetti sèches (environ 1 boîte)\n-   1 pistolet à colle\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de taille et de poids similaires\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "name": "Introduction à la résolution de problèmes - Pont de spaghetti (Alternative à la leçon 1)",
+          "preparation": "**Pour chaque groupe**\n\n-   1 lb de nouilles spaghetti sèches (environ 1 boîte)\n-   1 pistolet à colle\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de taille et de poids similaires\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe ?**\n\nPour cette leçon, vous travaillerez avec un groupe pour concevoir, construire, tester et réfléchir à un pont spaghetti qui supportera autant de livres que possible. "
         },
         "csd1-2022/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
-          "preparation": "**Pour chaque groupe**\n\n-   20 feuilles de papier, 8,5 x 11 pouces\n-   Espace pour construire leur tour\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   Papier supplémentaire \n-   Chronomètre\n-   Règle\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "name": "Introduction à la résolution de problèmes - Tour de papier (Alternative à la leçon 1)",
+          "preparation": "**Pour chaque groupe**\n\n-   20 feuilles de papier, 8,5 x 11 pouces\n-   Espace pour construire leur tour\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   Papier supplémentaire \n-   Chronomètre\n-   Règle\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe?**\n\nPour cette leçon, vous allez travailler avec un groupe pour concevoir, construire, tester et réfléchir à une tour en papier que vous allez essayer de rendre la plus haute possible. "
         },
         "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
-          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Préparez des tangrams pour les élèves, ou imprimez une feuille de tangram et prenez des ciseaux pour chaque groupe.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "name": "Explorer la résolution de problèmes - Thème des animaux (Alternative à la leçon 3)",
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Préparez des tangrams pour les élèves, ou imprimez une feuille de tangram et prenez des ciseaux pour chaque groupe.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "\\*\\*Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à différents types de problèmes ?\n\nPour cette leçon, vous allez appliquer le processus de résolution de problèmes à plusieurs problèmes différents, chacun devenant de plus en plus complexe ! "
         },
         "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
-          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la course à relais entre partenaires.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+          "name": "Explorer la résolution de problèmes - Thème des jeux (Alternative à la leçon 3)",
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la course à relais entre partenaires.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview).",
+          "student_overview": "\\*\\*Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à différents types de problèmes ?\n\nPour cette leçon, vous allez appliquer le processus de résolution de problèmes à plusieurs problèmes différents, chacun devenant de plus en plus complexe ! "
         },
         "csd3-2022/Programming for Entertainment": {
           "name": "Programmer pour le Divertissement",
@@ -1301,45 +1338,78 @@
         },
         "csd2-2022/Exploring Web Pages": {
           "name": "Explorer des Pages Web",
-          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "overview": "\\*\\*Question du jour :  Pourquoi les gens créent-ils des pages Web ?  \n\nChaque site web a un but, une raison pour laquelle quelqu'un l'a créé et d'autres l'utilisent. Dans cette leçon, les élèves commencent à réfléchir aux objectifs d'un site Web, tant pour les utilisateurs que pour les créateurs. Ils explorent quelques exemples de sites web et discutent de l'utilité de ces sites pour leurs créateurs. Ils sont ensuite invités à réfléchir aux raisons pour lesquelles quelqu'un pourrait vouloir créer des sites web.",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour :  Pourquoi les gens créent-ils des pages web ?**\n\nDans cette leçon, vous allez explorer les différents objectifs des pages web pour les utilisateurs et les créateurs. "
         },
         "csd2-2022/Intro to HTML": {
           "name": "Initiation au HTML",
-          "preparation": "-   Regardez les niveaux de Code Studio\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "overview": "\\*\\*Question du jour : Comment dire à l'ordinateur à la fois _ce qu'il_ doit mettre sur la page web et _comment_ l'organiser ?\n\nDans cette leçon, les élèves découvrent le HTML comme solution au problème de la communication du contenu et de la structure d'un site Web à un ordinateur. La leçon commence par une brève activité débranchée démontrant les difficultés à communiquer efficacement la structure d'une page web. Les élèves regardent ensuite une page HTML exemplaire dans le Labo Web et discutent avec leurs camarades de classe de la manière dont les balises HTML aident à résoudre ce problème. Les élèves écrivent ensuite leur premier HTML. Une discussion de synthèse permet de consolider la compréhension du contenu par rapport à la structure qui a été développée tout au long de la leçon.",
+          "preparation": "-   Regardez les niveaux de Code Studio\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment dire à l'ordinateur à la fois _ce qu'il_ doit mettre sur la page Web et _comment_ l'organiser ?**\n\nVous allez regarder une page HTML dans le laboratoire Web et utiliser le HTML pour écrire votre première page web de l'unité."
         },
         "csd2-2022/Headings": {
-          "name": "Rubriques",
-          "preparation": "-   Préparez les journaux des élèves pour les rendre.\n-   Si vous souhaitez utiliser un tableau d'ancrage, préparez du papier d'affiche pour le faire avec toute la classe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "name": "Titres",
+          "overview": "\\*\\*Question du jour : Comment pouvons-nous travailler ensemble pour résoudre les problèmes de nos sites web ?\n\nDans cette leçon, les élèves continuent d'utiliser le langage HTML pour structurer le texte des pages web, cette fois en binôme, en mettant l'accent sur le travail en commun et le débogage des problèmes de leurs sites.  Les élèves apprennent comment les différents éléments de titre sont affichés par défaut et s'exercent à les utiliser pour créer des titres de page et de section.  ",
+          "preparation": "-   Préparez les journaux des élèves pour les rendre.\n-   Si vous souhaitez utiliser un tableau d'ancrage, préparez du papier d'affiche pour le faire avec toute la classe.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment pouvons-nous travailler ensemble pour résoudre les problèmes de nos sites web ?**\n\nDans cette leçon, vous allez découvrir les titres HTML et comment les utiliser pour créer des titres de pages et de sections pour les pages web. "
         },
         "csd2-2022/Mini-Project: HTML Web Page": {
-          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "name": "Mini-projet : Page web HTML",
+          "overview": "\\*\\*Question du jour : Comment puis-je utiliser le HTML pour exprimer une valeur personnelle ?\n\nDans ce mini-projet facultatif, les élèves utilisent ce qu'ils ont appris pour créer leur propre page web personnelle sur un sujet de leur choix.  La leçon commence par une révision du langage HTML que les élèves ont appris.  Ils commencent ensuite leur projet en concevant une page web et en identifiant les balises qu'ils utiliseront pour la mettre en œuvre.  Ils créent ensuite leurs pages web dans Web Lab et les partagent avec la classe. En option, après s'être engagés dans un processus de feedback formel, ils peuvent apporter des modifications finales à leurs sites web avant de réfléchir à leur processus.  Ce projet peut être réalisé en une journée ou s'étendre sur plusieurs jours, en fonction des besoins de la classe.",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment puis-je utiliser le langage HTML pour exprimer une valeur personnelle ?**\n\nDans cette leçon, vous allez créer une page web personnelle simple sur un sujet de votre choix. "
         },
         "csd2-2022/Digital Footprint": {
           "name": "L'Empreinte Numérique",
-          "preparation": "-   Imprimez des copies de \"Social Sleuth\" pour chaque élève (ou une pour chaque groupe si vous regroupez les élèves).\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "overview": "\\*\\*Question du jour : Comment pouvez-vous vous assurer que vos informations privées restent privées ?\n\nCette leçon prend du recul par rapport au travail des élèves sur les pages Web pour les aider à définir les informations personnelles qu'ils choisissent de partager numériquement et avec qui. Elle renforce également l'idée que la plupart des informations qu'ils choisissent de partager sous forme numérique échappent en grande partie à leur contrôle au moment où elles sont publiées.  \n\nLes élèves consultent plusieurs pages de médias sociaux pour déterminer le type d'informations que les gens partagent sur eux-mêmes ou sur d'autres personnes. Enfin, les élèves réfléchissent aux directives qu'ils jugent appropriées pour la publication d'informations en ligne.\n\nLe but ultime de cette leçon n'est pas d'effrayer les élèves, mais plutôt de leur faire prendre conscience par l'expérience qu'ils n'ont aucun contrôle sur les informations diffusées en ligne.",
+          "preparation": "-   Imprimez des copies de \"Social Sleuth\" pour chaque élève (ou une pour chaque groupe si vous regroupez les élèves).\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment pouvez-vous vous assurer que vos informations privées restent privées ?**\n\nDans cette leçon, vous allez réfléchir aux informations personnelles que vous choisissez de partager numériquement sur divers sites web, applications et médias sociaux. "
         },
         "csd2-2022/Styling Text with CSS": {
           "name": "Styliser le texte avec CSS",
-          "preparation": "-   Créez une nouvelle affiche intitulée **Propriétés CSS** si vos élèves n'ont pas l'intention de suivre les nouvelles propriétés CSS dans leurs journaux.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "overview": "**Question du jour : Comment changer le style du texte sur une page web?**\n\nCette leçon présente le CSS comme un moyen de styliser les éléments d'une page. Les élèves apprennent la syntaxe de base des ensembles de règles CSS, puis explorent les propriétés qui ont un impact sur les éléments de texte HTML. Ils travaillent sur une page HTML consacrée aux détenteurs de records mondiaux Guinness, en ajoutant leur propre style à la page fournie. ",
+          "preparation": "-   Créez une nouvelle affiche intitulée **Propriétés CSS** si vos élèves n'ont pas l'intention de suivre les nouvelles propriétés CSS dans leurs journaux.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment modifier le style du texte d'une page web ?**\n\nDans cette leçon, vous apprendrez à utiliser le langage CSS pour donner un style aux éléments HTML de votre page web. "
         },
         "csd2-2022/Mini-Project: Your Personal Style": {
-          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "name": "Mini-projet : Votre style personnel",
+          "overview": "**Comment pouvez-vous exprimer votre style personnel sur une page web ?**\n\nDans ce mini-projet facultatif, les élèves utilisent ce qu'ils ont appris pour créer leur propre page web stylisée sur un sujet de leur choix. La leçon commence par une révision du CSS que les élèves ont appris. Ils commencent ensuite leur projet en concevant une page web et en identifiant les propriétés qu'ils utiliseront pour la mettre en œuvre. Ils créent leurs pages web dans Web Lab et les partagent avec la classe.  Après s'être engagés dans un processus de feedback formel, ils apportent les dernières modifications à leurs sites web avant de réfléchir à leur processus.  Ce projet peut être réalisé en une journée ou s'étendre sur plusieurs jours, en fonction des besoins de la classe.",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment pouvez-vous exprimer votre style personnel sur une page web ?**\n\nDans cette leçon, vous allez créer votre propre page web stylisée !"
         },
         "csd2-2022/Intellectual Property": {
           "name": "Propriété intellectuelle",
-          "preparation": "-   Aperçu de Creative Commons - Vidéo. Vous devrez peut-être la télécharger avant le cours si YouTube est bloqué.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "overview": "**Question du jour : Quel type de règles protège les droits de chacun lorsque nous utilisons le contenu d'autrui ?**\n\nEn commençant par une discussion sur leurs opinions personnelles sur la façon dont les autres devraient être autorisés à utiliser leur travail, la classe explore l'objectif et le rôle du droit d'auteur pour les créateurs et les utilisateurs de contenu créatif. Ils passent ensuite à une activité explorant les différentes licences Creative Commons comme solution à la difficulté de traiter le droit d'auteur. ",
+          "preparation": "-   Aperçu de Creative Commons - Vidéo. Vous devrez peut-être la télécharger avant le cours si YouTube est bloqué.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "\\*\\*Question du jour : Quel type de règles protège les droits de chacun lorsque nous utilisons le contenu des autres ?\n\nDans cette leçon, vous allez explorer les différentes licences Creative Commons. "
+        },
+        "csd2-2022/Using Images": {
+          "overview": "**Question du jour : Comment ajouter des images sur nos sites web tout en respectant les droits de chacun ?**\n\nLes élèves commencent le cours en réfléchissant aux implications éthiques de l'utilisation d'images sur leurs sites web, notamment en termes de propriété intellectuelle. Ils apprennent ensuite à ajouter des images à leurs pages web à l'aide de la balise \\<img> et à citer les sources des images de manière appropriée.",
+          "student_overview": "**Question du jour : Comment ajouter des images sur nos sites Web, tout en veillant à respecter les droits de chacun ?**\n\nDans cette leçon, vous apprendrez à ajouter des images à vos pages web en respectant les droits d'auteur et les licences Creative Commons. "
         },
         "csd2-2022/Websites for Expression": {
-          "preparation": "-   Préparez des journaux ou, éventuellement, imprimez des copies du guide d'activités.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "name": "Sites web pour s'exprimer",
+          "overview": "**Question du jour : Comment pouvons-nous utiliser les sites web pour nous exprimer ?**\n\nDans cette leçon, les élèves étudient les façons d'utiliser les sites web comme moyen d'expression personnelle et dressent une liste de sujets et d'intérêts qu'ils voudraient inclure sur un site web personnel. Les élèves commencent par un remue-méninges sur les différentes façons dont les gens expriment et partagent leurs intérêts et leurs idées. Ils consultent ensuite quelques sites web exemplaires pour identifier les façons dont ils expriment leurs idées. Enfin, les élèves réfléchissent et partagent une liste de sujets et d'intérêts qu'ils pourraient vouloir inclure dans un site web personnel ; ils se référeront à cette liste tout au long de l'unité.",
+          "preparation": "-   Préparez des journaux ou, éventuellement, imprimez des copies du guide d'activités.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment pouvons-nous utiliser les sites web pour nous exprimer ?**\n\nDans cette leçon, vous allez explorer et réfléchir à différents intérêts et idées que les gens peuvent exprimer et partager en utilisant des sites web. "
         },
         "csd2-2022/Styling Elements with CSS": {
-          "name": "Styliser des Éléments avec CSS"
+          "name": "Styliser des Éléments avec CSS",
+          "overview": "**Question du jour : Comment donner du style aux images et aux mises en page de nos pages ?**\n\nCette leçon poursuit l'introduction aux propriétés de style CSS, en se concentrant cette fois sur les éléments non textuels. Les élèves commencent par examiner un site web sur les desserts du monde. Ils étudient et modifient les nouveaux styles CSS de ce site web, en ajoutant leurs propres styles à la page. Après avoir travaillé sur la page des desserts, les élèves appliquent leurs connaissances des nouvelles propriétés CSS à leurs sites web personnels.",
+          "student_overview": "\\*\\*Question du jour : Comment donner un style aux images et aux mises en page de nos pages ?\n\nDans cette leçon, vous apprendrez d'autres propriétés de style CSS, en vous concentrant cette fois sur les éléments non textuels."
         },
         "csd2-2022/Your Web Page - Prepare": {
-          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "name": "Votre site web - Préparer",
+          "overview": "**Question du jour : Que devons-nous faire pour nous préparer à créer nos pages web ?**\n\nDans cette leçon, les élèves s'engagent dans l'étape de « préparation » du processus de résolution de problèmes, en décidant des éléments et du style de leur page web. Ils commencent par passer en revue les différentes directives HTML, CSS et de citoyenneté numérique dont ils auront besoin pour construire leurs pages web. Ils décrivent et dessinent ensuite leurs pages, en énumérant les balises et les styles qu'ils utiliseront pour obtenir la mise en page et le design qu'ils ont choisis. Ils se rendent ensuite en ligne pour trouver et télécharger les images dont ils auront besoin pour leurs pages. Ensuite, ils réfléchissent à la manière dont leur plan garantira que le site web fait ce pour quoi il a été conçu.",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Que devons-nous faire pour nous préparer à construire nos pages web?\\*\\***\n\nDans cette leçon, vous allez travailler sur l'étape de « préparation » du processus de résolution de problèmes pour décider des éléments et du style de votre page web. "
         },
         "csd2-2022/Project - Personal Web Page": {
-          "preparation": "-   Assurez-vous que les élèves ont accès au guide de projet de la dernière leçon.\n-   Imprimez des copies des documents de réflexion et de rétroaction par les pairs.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+          "name": "Projet - Page web personnelle",
+          "overview": "**Question du jour : Quelles compétences et pratiques sont utiles lorsque nous codons des pages web ?**\n\nAprès avoir passé rapidement en revue leur processus de débogage, les élèves vont en ligne pour créer les pages qu'ils ont planifiées dans les leçons précédentes, avec les guides de projet comme référence. Une fois qu'ils ont terminé leurs pages, ils réfléchissent brièvement au processus, à ce dont ils sont le plus fiers et à ce sur quoi ils aimeraient avoir un retour. Ils s'engagent ensuite dans un processus structuré de feedback par les pairs avant d'apporter les dernières modifications à leurs pages. Ensuite, ils réfléchissent aux compétences et aux pratiques qui les ont aidés à réussir.",
+          "preparation": "-   Assurez-vous que les élèves ont accès au guide de projet de la dernière leçon.\n-   Imprimez des copies des documents de réflexion et de rétroaction par les pairs.\n-   Consultez le forum [\" Salle des profs \"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Quelles compétences et pratiques sont utiles lorsque nous codons des pages web ?**\n\nDans cette leçon, vous allez travailler à la création des pages web que vous avez planifiées dans les leçons précédentes. "
         },
         "csd2-2022/Team Problem Solving": {
           "name": "La Résolution De Problèmes en Équipe"
@@ -1589,7 +1659,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2018/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2018/Conditionals with Cards": {
           "name": "Instructions conditionnelles avec des cartes"
@@ -1739,7 +1809,7 @@
           "name": "Les Boucles Tant Que avec la Fermière"
         },
         "express-2018/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2018/Conditionals with Cards": {
           "name": "Instructions conditionnelles avec des cartes"
@@ -2249,7 +2319,7 @@
           "name": "Initiation au HTML"
         },
         "csd2-2018/Headings": {
-          "name": "Rubriques"
+          "name": "Titres"
         },
         "csd2-2018/Digital Footprint": {
           "name": "L'Empreinte Numérique"
@@ -2417,7 +2487,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2019/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2019/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"
@@ -2588,7 +2658,7 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "express-2019/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2019/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"
@@ -2963,7 +3033,7 @@
           "name": "Initiation au HTML"
         },
         "csd2-2019/Headings": {
-          "name": "Rubriques"
+          "name": "Titres"
         },
         "csd2-2019/Digital Footprint": {
           "name": "L'Empreinte Numérique"
@@ -3425,7 +3495,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "express-2017/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2017/Conditionals in Minecraft": {
           "name": "Les Conditions dans l'Abeille"
@@ -3602,7 +3672,7 @@
           "name": "Initiation au HTML"
         },
         "csd2-2017/Headings": {
-          "name": "Rubriques"
+          "name": "Titres"
         },
         "csd2-2017/Digital Footprint": {
           "name": "L'Empreinte Numérique"
@@ -4742,7 +4812,7 @@
           "student_overview": "Les boucles sont tellement utiles dans le codage. Dans cette leçon, tu vas te familiariser avec un nouveau type de boucle : les boucles « tant que » !"
         },
         "coursed-2021/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe",
           "overview": "Dans cette leçon, les élèves découvriront les boucles `jusqu'à ce que`. Les étudiants construiront des programmes qui feront répéter des actions au personnage principal `jusqu'à ce qu'`'il atteigne le point d'arrêt désiré.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les connaissances des boucles, en y ajoutant la condition \"until\" (tant que). En jumelant ces concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs.",
@@ -4800,7 +4870,6 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
-          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
@@ -4874,22 +4943,22 @@
           "student_overview": "Ici, tu vas utiliser des conditions dans le monde de Minecraft."
         },
         "express-2021/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
-          "overview": "Dans cette leçon, les élèves découvriront les boucles `jusqu'à ce que`. Les étudiants construiront des programmes qui feront répéter des actions au personnage principal `jusqu'à ce qu'`'il atteigne le point d'arrêt désiré.",
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves découvriront les boucles « jusqu'à ». Les élèves construiront des programmes qui feront répéter des actions au personnage principal jusqu'à ce qu'il parvienne au point d'arrêt souhaité.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !"
+          "student_overview": "On peut faire des choses incroyables en utilisant les boucles « jusqu'à ce que » !"
         },
         "express-2021/Harvesting with Conditionals": {
           "name": "Récolter avec les Conditions",
-          "overview": "Les étudiants pratiqueront les boucles `tant que`, les boucles `jusqu'à ce que` et les déclarations `si / sinon`. Tous ces blocs utilisent des conditions. En pratiquant les trois, les élèves apprendront à écrire du code complexe et flexible.",
+          "overview": "Les élèves travailleront avec les boucles « tant que », les boucles « jusqu'à » et les indications « si / sinon ». Tous ces blocs utilisent des formules conditionnelles. En s'entraînant avec les trois, les élèves apprendront à écrire du code complexe et flexible.",
           "purpose": "Mettre en pratique les conditions dans différents scénarios aide à développer la compréhension de l'élève de ce que les conditions peuvent faire. Dans la leçon précédente, les élèves utilisaient uniquement des conditionnels pour se déplacer dans un labyrinthe. Dans cette leçon, les élèves utiliseront des conditions pour aider la Fermière à savoir quand effectuer les récoltes. De nouveaux modèles apparaîtront et les élèves useront de créativité et de pensée logique pour déterminer les conditions dans lesquelles le code doit être exécuté et répété.",
-          "student_overview": "Il n'est pas toujours clair quand utiliser chaque conditionn. Cette leçon t'aidera à t'entraîner à décider quoi faire."
+          "student_overview": "Il n'est pas toujours clair quand utiliser une conditionnelle plutôt qu'une autre. Cette leçon t'entraînera à savoir mieux faire des choix."
         },
         "express-2021/Functions in Minecraft": {
           "name": "Les Fonctions dans Minecraft",
-          "overview": "Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves commenceront à comprendre l'utilité des fonctions !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?"
+          "student_overview": "Est-ce que tu peux apprendre à maîtriser les fonctions pour avoir le code le plus efficace que possible ?"
         },
         "express-2021/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
@@ -5063,9 +5132,9 @@
         },
         "coursee-2021/Functions in Minecraft": {
           "name": "Les Fonctions dans Minecraft",
-          "overview": "Les étudiants commenceront à comprendre comment les fonctions peuvent être utiles dans cette aventure amusante et interactive de Minecraft !",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves commenceront à comprendre l'utilité des fonctions !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Peux-tu-vous déterminer comment utiliser des fonctions pour le code le plus efficace ?"
+          "student_overview": "Est-ce que tu peux apprendre à maîtriser les fonctions pour avoir le code le plus efficace que possible ?"
         },
         "coursee-2021/Functions in Artist": {
           "name": "Les Fonctions avec L'Artiste",
@@ -5315,49 +5384,127 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "csd1-2021/Intro to Problem Solving": {
-          "name": "Introduction à la Résolution de Problèmes"
+          "name": "Introduction à la Résolution de Problèmes",
+          "overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe?**\n\nDans cette leçon, les élèves travaillent en groupes pour concevoir des bateaux en papier d'aluminium qui supporteront autant de pièces de monnaie que possible. Les groupes ont deux tours pour travailler sur leurs bateaux, avec pour objectif d'essayer de contenir plus de pièces qu'au premier tour. La structure de l'activité préfigure différentes étapes du processus de résolution de problèmes que les élèves découvriront plus en détail dans la leçon suivante. À la fin de la leçon, les élèves réfléchissent à leur expérience de l'activité et établissent des liens avec les types de résolution de problèmes qu'ils feront pendant le reste du cours.\n\n\\*\\*D'autres versions de cette leçon sont également disponibles. \n\n-   [Table de journaux](/s/csd1-2021/lessons/9/)\n-   [Pont en spaghetti](/s/csd1-2021/lessons/10/)\n-   [Tour de papier](/s/csd1-2021/lessons/11/)",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe ?**\n\nVous allez travailler avec un groupe pour concevoir et tester un bateau en papier d'aluminium qui supportera le plus grand nombre possible de pièces de monnaie. "
         },
         "csd1-2021/The Problem Solving Process": {
-          "name": "Le Processus de Résolution de Problèmes"
+          "name": "Le Processus de Résolution de Problèmes",
+          "overview": "\\*\\*Question du jour : Quelles sont les étapes communes que nous pouvons utiliser pour résoudre différents types de problèmes ?\n\nCette leçon présente le processus formel de résolution de problèmes que les élèves utiliseront au cours de l'année : Définir - Préparer - Essayer - Réfléchir. La leçon commence par demander aux élèves de réfléchir à tous les différents types de problèmes qu'ils rencontrent dans la vie quotidienne. On leur montre ensuite les quatre étapes du processus de résolution de problèmes et ils travaillent ensemble pour relier ces étapes abstraites à leurs expériences réelles de résolution de problèmes. Les élèves établissent d'abord un lien entre ces étapes et les activités de résolution de problèmes de la leçon précédente, puis un problème qu'ils savent bien résoudre et enfin un problème qu'ils veulent améliorer. À la fin de la leçon, la classe rassemble une liste de stratégies généralement utiles pour chaque étape du processus afin de les placer sur des affiches qui seront utilisées tout au long de l'unité et de l'année.",
+          "student_overview": "\\*\\*Question du jour : Quelles sont les étapes communes que nous pouvons utiliser pour résoudre différents types de problèmes ?\n\nVous découvrirez le processus de résolution de problèmes que nous utilisons en informatique et vous plongerez dans quelques stratégies pour mettre en œuvre chaque étape. "
         },
         "csd1-2021/Exploring Problem Solving": {
-          "name": "Explorer la Résolution de Problèmes"
+          "name": "Explorer la Résolution de Problèmes",
+          "overview": "\\*\\*Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à différents types de problèmes ?\n\nDans cette leçon, les élèves appliquent le processus de résolution de problèmes à trois problèmes différents afin de mieux comprendre la valeur de chaque étape. Ils résoudront un mot caché, organiseront les sièges pour une fête d'anniversaire et réaménageront une salle de classe. Les problèmes deviennent de plus en plus complexes et mal définis afin de mettre en évidence l'utilité du processus de résolution de problèmes pour s'attaquer à ce type de problèmes. La leçon se termine par une réflexion des élèves sur leur expérience du processus de résolution de problèmes. Ils justifieront l'inclusion de chaque étape et réfléchiront aux questions ou aux stratégies qui peuvent les aider à mieux définir les problèmes ouverts, car il s'agit souvent de l'étape la plus critique.\n\nCette leçon nécessitera probablement deux périodes de cours ou plus. Les deux premiers problèmes peuvent être résolus en une seule période de cours, mais le troisième devra être reporté à un autre jour.\n\n\\*\\*D'autres versions de cette leçon sont également disponibles. \n\n-   [Thème des animaux](/s/csd1-2021/lessons/12/)\n-   [Thème des jeux](/s/csd1-2021/lessons/13/)",
+          "student_overview": "**Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à de nombreux types de problèmes différents ?**\n\nAujourd'hui, vous allez appliquer le processus de résolution de problèmes à trois problèmes différents qui deviendront de plus en plus complexes !"
         },
         "csd1-2021/What is a Computer?": {
-          "name": "Qu'est ce qu'un Ordinateur ?"
+          "name": "Qu'est ce qu'un Ordinateur ?",
+          "overview": "\\*\\*Question du jour : Qu'est-ce qu'un ordinateur ?\n\nDans cette leçon, les élèves élaborent une définition préliminaire d'un ordinateur. Pour commencer, la classe effectue un remue-méninges pour trouver des définitions possibles d'un ordinateur et inscrit les résultats de ce remue-méninges au tableau. Ensuite, les élèves travaillent en groupes pour classer les images dans les catégories \"est un ordinateur\" ou \"n'est pas un ordinateur\" sur des affiches. Les groupes placent leurs affiches dans la salle et expliquent brièvement les raisons pour lesquelles ils ont choisi certaines de leurs catégorisations les plus difficiles.  L'enseignant présentera ensuite une définition de l'ordinateur et permettra aux élèves de réviser leurs affiches en fonction de la nouvelle définition.",
+          "student_overview": "\\*\\*Question du jour : Qu'est-ce qu'un ordinateur ?\n\nDans cette leçon, vous travaillerez avec un groupe pour déterminer ce qui fait qu'un ordinateur est un ordinateur !"
         },
         "csd1-2021/Input and Output": {
-          "name": "Entrée et Sortie"
+          "name": "Entrée et Sortie",
+          "overview": "\\*\\*Question du jour : Comment les ordinateurs utilisent-ils les entrées et les sorties pour obtenir et donner les informations dont ils ont besoin pour résoudre les problèmes ?\n\nDans cette leçon, les élèves étudient comment les ordinateurs obtiennent et donnent des informations à l'utilisateur par le biais des entrées et des sorties.  Ils réfléchissent d'abord aux informations dont ils auraient besoin pour résoudre un \"problème de réflexion\", puis utilisent ces informations pour formuler une recommandation.  Ils identifient ensuite les entrées et les sorties de ce processus.  Ensuite, les élèves considèrent une application qui s'engage dans le même processus et déterminent comment cette application entre et sort les informations.  Enfin, ils examinent d'autres types d'entrées et de sorties que les ordinateurs peuvent utiliser pour aider à résoudre des problèmes.",
+          "student_overview": "\\*\\*Question du jour : Comment les ordinateurs utilisent-ils les entrées et les sorties pour obtenir et donner les informations dont ils ont besoin pour résoudre les problèmes ?\n\nDans cette leçon, vous découvrirez comment les ordinateurs obtiennent et donnent des informations à l'utilisateur par le biais de diverses entrées et sorties. "
         },
         "csd1-2021/Processing": {
-          "name": "Le Traitement"
+          "name": "Le Traitement",
+          "overview": "\\*\\*Question du jour : Quelles sont les différentes façons dont les ordinateurs peuvent traiter l'information ?\n\nCette leçon présente aux élèves quatre types de traitement courants : si/alors (conditionnel), recherche de correspondance, comptage et comparaison.  Les élèves sont d'abord initiés aux types de traitement par le biais de plusieurs exemples d'applications.  Ils étudient ensuite d'autres applications pour déterminer les types de traitement utilisés par chacune d'elles.  Ils imaginent ensuite leur propre application et décident des types de traitement dont elle aurait besoin pour fonctionner.  Enfin, ils réfléchissent à d'autres types de traitement qui pourraient être utiles mais qui n'ont pas été abordés dans la leçon principale.",
+          "student_overview": "\\*\\*Question du jour : Quelles sont les différentes façons dont les ordinateurs peuvent traiter l'information ?\n\nDans cette leçon, vous allez découvrir les quatre types de traitement que les ordinateurs peuvent utiliser pour transformer les entrées en sorties.  "
         },
         "csd1-2021/Storage": {
-          "name": "Le Stockage"
+          "name": "Le Stockage",
+          "overview": "\\*\\*Question du jour : Pourquoi le stockage est-il un élément important du processus en informatique ?\n\nCette leçon présente le dernier élément du modèle informatique de l'unité : le stockage.  Après avoir essayé une application de \"sélection de vêtements\", les élèves discutent des informations qui devraient être stockées dans l'application ou saisies à chaque fois que l'application est lancée.  Ils regardent ensuite une série d'applications et utilisent leurs décisions sur ce qui doit être stocké pour créer des directives pour décider quelles informations stocker.  Ils passent ensuite en revue les quatre composantes du modèle informatique de ce chapitre : entrée, sortie, stockage et traitement.  Ensuite, ils ont une dernière occasion de revoir leurs décisions concernant les éléments à classer dans la catégorie des \"ordinateurs\", prises plus tôt dans le chapitre.  La leçon se termine par une réflexion sur leurs propres idées d'applications et sur la manière dont le stockage pourrait être utilisé.",
+          "student_overview": "\\*\\*Question du jour : Pourquoi le stockage est-il un élément important du processus en informatique ?\n\nDans cette leçon, vous découvrez le dernier élément qui fait d'un ordinateur un ordinateur : le stockage !"
         },
         "csd1-2021/Project - Propose an App": {
-          "name": "Projet - Propose une Application"
+          "name": "Projet - Propose une Application",
+          "overview": "**Question du jour :  Comment le modèle IOSP peut-il nous aider à concevoir une application qui résout un problème ?**\n\nPour conclure leur étude du processus de résolution de problèmes et du modèle entrée/sortie/magasin/processus d'un ordinateur, les élèves proposeront une application conçue pour résoudre un problème du monde réel. Ce projet sera réalisé sur plusieurs jours et les élèves créeront une affiche soulignant les caractéristiques de leur application qu'ils présenteront à leurs camarades de classe. Un guide de projet fournit des instructions étape par étape aux élèves et les aide à organiser leurs pensées. Le projet est conçu pour être réalisé en binôme, mais il peut être réalisé individuellement."
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Introduction à la résolution de problèmes - Table à journaux (Alternative à la leçon 1)",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe ?**\n\nPour cette leçon, vous allez travailler en groupe pour concevoir, construire, tester et réfléchir à une table à journaux qui supportera le plus grand nombre de livres possible. "
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Introduction à la résolution de problèmes - Pont de spaghetti (Alternative à la leçon 1)",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe ?**\n\nPour cette leçon, vous travaillerez avec un groupe pour concevoir, construire, tester et réfléchir à un pont spaghetti qui supportera autant de livres que possible. "
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Introduction à la résolution de problèmes - Tour de papier (Alternative à la leçon 1)",
+          "student_overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe?**\n\nPour cette leçon, vous allez travailler avec un groupe pour concevoir, construire, tester et réfléchir à une tour en papier que vous allez essayer de rendre la plus haute possible. "
+        },
+        "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Explorer la résolution de problèmes - Thème des animaux (Alternative à la leçon 3)",
+          "student_overview": "\\*\\*Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à différents types de problèmes ?\n\nPour cette leçon, vous allez appliquer le processus de résolution de problèmes à plusieurs problèmes différents, chacun devenant de plus en plus complexe ! "
+        },
+        "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Explorer la résolution de problèmes - Thème des jeux (Alternative à la leçon 3)",
+          "student_overview": "\\*\\*Question du jour : Comment pouvons-nous appliquer le processus de résolution de problèmes à différents types de problèmes ?\n\nPour cette leçon, vous allez appliquer le processus de résolution de problèmes à plusieurs problèmes différents, chacun devenant de plus en plus complexe ! "
         },
         "csd2-2021/Exploring Web Pages": {
-          "name": "Explorer des Pages Web"
+          "name": "Explorer des Pages Web",
+          "overview": "\\*\\*Question du jour :  Pourquoi les gens créent-ils des pages Web ?  \n\nChaque site web a un but, une raison pour laquelle quelqu'un l'a créé et d'autres l'utilisent. Dans cette leçon, les élèves commencent à réfléchir aux objectifs d'un site Web, tant pour les utilisateurs que pour les créateurs. Ils explorent quelques exemples de sites web et discutent de l'utilité de ces sites pour leurs créateurs. Ils sont ensuite invités à réfléchir aux raisons pour lesquelles quelqu'un pourrait vouloir créer des sites web.",
+          "student_overview": "**Question du jour :  Pourquoi les gens créent-ils des pages web ?**\n\nDans cette leçon, vous allez explorer les différents objectifs des pages web pour les utilisateurs et les créateurs. "
         },
         "csd2-2021/Intro to HTML": {
-          "name": "Initiation au HTML"
+          "name": "Initiation au HTML",
+          "overview": "\\*\\*Question du jour : Comment dire à l'ordinateur à la fois _ce qu'il_ doit mettre sur la page web et _comment_ l'organiser ?\n\nDans cette leçon, les élèves découvrent le HTML comme solution au problème de la communication du contenu et de la structure d'un site Web à un ordinateur. La leçon commence par une brève activité débranchée démontrant les difficultés à communiquer efficacement la structure d'une page web. Les élèves regardent ensuite une page HTML exemplaire dans le Labo Web et discutent avec leurs camarades de classe de la manière dont les balises HTML aident à résoudre ce problème. Les élèves écrivent ensuite leur premier HTML. Une discussion de synthèse permet de consolider la compréhension du contenu par rapport à la structure qui a été développée tout au long de la leçon.",
+          "student_overview": "**Question du jour : Comment dire à l'ordinateur à la fois _ce qu'il_ doit mettre sur la page Web et _comment_ l'organiser ?**\n\nVous allez regarder une page HTML dans le laboratoire Web et utiliser le HTML pour écrire votre première page web de l'unité."
         },
         "csd2-2021/Headings": {
-          "name": "Rubriques"
+          "name": "Titres",
+          "overview": "\\*\\*Question du jour : Comment pouvons-nous travailler ensemble pour résoudre les problèmes de nos sites web ?\n\nDans cette leçon, les élèves continuent d'utiliser le langage HTML pour structurer le texte des pages web, cette fois en binôme, en mettant l'accent sur le travail en commun et le débogage des problèmes de leurs sites.  Les élèves apprennent comment les différents éléments de titre sont affichés par défaut et s'exercent à les utiliser pour créer des titres de page et de section.  ",
+          "student_overview": "**Question du jour : Comment pouvons-nous travailler ensemble pour résoudre les problèmes de nos sites web ?**\n\nDans cette leçon, vous allez découvrir les titres HTML et comment les utiliser pour créer des titres de pages et de sections pour les pages web. "
+        },
+        "csd2-2021/Mini-Project: HTML Web Page": {
+          "name": "Mini-projet : Page web HTML",
+          "overview": "\\*\\*Question du jour : Comment puis-je utiliser le HTML pour exprimer une valeur personnelle ?\n\nDans ce mini-projet facultatif, les élèves utilisent ce qu'ils ont appris pour créer leur propre page web personnelle sur un sujet de leur choix.  La leçon commence par une révision du langage HTML que les élèves ont appris.  Ils commencent ensuite leur projet en concevant une page web et en identifiant les balises qu'ils utiliseront pour la mettre en œuvre.  Ils créent ensuite leurs pages web dans Web Lab et les partagent avec la classe. En option, après s'être engagés dans un processus de feedback formel, ils peuvent apporter des modifications finales à leurs sites web avant de réfléchir à leur processus.  Ce projet peut être réalisé en une journée ou s'étendre sur plusieurs jours, en fonction des besoins de la classe.",
+          "student_overview": "**Question du jour : Comment puis-je utiliser le langage HTML pour exprimer une valeur personnelle ?**\n\nDans cette leçon, vous allez créer une page web personnelle simple sur un sujet de votre choix. "
         },
         "csd2-2021/Digital Footprint": {
-          "name": "L'Empreinte Numérique"
+          "name": "L'Empreinte Numérique",
+          "overview": "\\*\\*Question du jour : Comment pouvez-vous vous assurer que vos informations privées restent privées ?\n\nCette leçon prend du recul par rapport au travail des élèves sur les pages Web pour les aider à définir les informations personnelles qu'ils choisissent de partager numériquement et avec qui. Elle renforce également l'idée que la plupart des informations qu'ils choisissent de partager sous forme numérique échappent en grande partie à leur contrôle au moment où elles sont publiées.  \n\nLes élèves consultent plusieurs pages de médias sociaux pour déterminer le type d'informations que les gens partagent sur eux-mêmes ou sur d'autres personnes. Enfin, les élèves réfléchissent aux directives qu'ils jugent appropriées pour la publication d'informations en ligne.\n\nLe but ultime de cette leçon n'est pas d'effrayer les élèves, mais plutôt de leur faire prendre conscience par l'expérience qu'ils n'ont aucun contrôle sur les informations diffusées en ligne.",
+          "student_overview": "**Question du jour : Comment pouvez-vous vous assurer que vos informations privées restent privées ?**\n\nDans cette leçon, vous allez réfléchir aux informations personnelles que vous choisissez de partager numériquement sur divers sites web, applications et médias sociaux. "
         },
         "csd2-2021/Styling Text with CSS": {
-          "name": "Styliser le texte avec CSS"
+          "name": "Styliser le texte avec CSS",
+          "overview": "**Question du jour : Comment changer le style du texte sur une page web?**\n\nCette leçon présente le CSS comme un moyen de styliser les éléments d'une page. Les élèves apprennent la syntaxe de base des ensembles de règles CSS, puis explorent les propriétés qui ont un impact sur les éléments de texte HTML. Ils travaillent sur une page HTML consacrée aux détenteurs de records mondiaux Guinness, en ajoutant leur propre style à la page fournie. ",
+          "student_overview": "**Question du jour : Comment modifier le style du texte d'une page web ?**\n\nDans cette leçon, vous apprendrez à utiliser le langage CSS pour donner un style aux éléments HTML de votre page web. "
+        },
+        "csd2-2021/Mini-Project: Your Personal Style": {
+          "name": "Mini-projet : Votre style personnel",
+          "overview": "**Comment pouvez-vous exprimer votre style personnel sur une page web ?**\n\nDans ce mini-projet facultatif, les élèves utilisent ce qu'ils ont appris pour créer leur propre page web stylisée sur un sujet de leur choix. La leçon commence par une révision du CSS que les élèves ont appris. Ils commencent ensuite leur projet en concevant une page web et en identifiant les propriétés qu'ils utiliseront pour la mettre en œuvre. Ils créent leurs pages web dans Web Lab et les partagent avec la classe.  Après s'être engagés dans un processus de feedback formel, ils apportent les dernières modifications à leurs sites web avant de réfléchir à leur processus.  Ce projet peut être réalisé en une journée ou s'étendre sur plusieurs jours, en fonction des besoins de la classe.",
+          "student_overview": "**Question du jour : Comment pouvez-vous exprimer votre style personnel sur une page web ?**\n\nDans cette leçon, vous allez créer votre propre page web stylisée !"
         },
         "csd2-2021/Intellectual Property": {
-          "name": "Propriété intellectuelle"
+          "name": "Propriété intellectuelle",
+          "overview": "**Question du jour : Quel type de règles protège les droits de chacun lorsque nous utilisons le contenu d'autrui ?**\n\nEn commençant par une discussion sur leurs opinions personnelles sur la façon dont les autres devraient être autorisés à utiliser leur travail, la classe explore l'objectif et le rôle du droit d'auteur pour les créateurs et les utilisateurs de contenu créatif. Ils passent ensuite à une activité explorant les différentes licences Creative Commons comme solution à la difficulté de traiter le droit d'auteur. ",
+          "student_overview": "\\*\\*Question du jour : Quel type de règles protège les droits de chacun lorsque nous utilisons le contenu des autres ?\n\nDans cette leçon, vous allez explorer les différentes licences Creative Commons. "
+        },
+        "csd2-2021/Using Images": {
+          "overview": "**Question du jour : Comment ajouter des images sur nos sites web tout en respectant les droits de chacun ?**\n\nLes élèves commencent le cours en réfléchissant aux implications éthiques de l'utilisation d'images sur leurs sites web, notamment en termes de propriété intellectuelle. Ils apprennent ensuite à ajouter des images à leurs pages web à l'aide de la balise \\<img> et à citer les sources des images de manière appropriée.",
+          "student_overview": "**Question du jour : Comment ajouter des images sur nos sites Web, tout en veillant à respecter les droits de chacun ?**\n\nDans cette leçon, vous apprendrez à ajouter des images à vos pages web en respectant les droits d'auteur et les licences Creative Commons. "
+        },
+        "csd2-2021/Websites for Expression ": {
+          "name": "Sites web pour s'exprimer",
+          "overview": "**Question du jour : Comment pouvons-nous utiliser les sites web pour nous exprimer ?**\n\nDans cette leçon, les élèves étudient les façons d'utiliser les sites web comme moyen d'expression personnelle et dressent une liste de sujets et d'intérêts qu'ils voudraient inclure sur un site web personnel. Les élèves commencent par un remue-méninges sur les différentes façons dont les gens expriment et partagent leurs intérêts et leurs idées. Ils consultent ensuite quelques sites web exemplaires pour identifier les façons dont ils expriment leurs idées. Enfin, les élèves réfléchissent et partagent une liste de sujets et d'intérêts qu'ils pourraient vouloir inclure dans un site web personnel ; ils se référeront à cette liste tout au long de l'unité.",
+          "student_overview": "**Question du jour : Comment pouvons-nous utiliser les sites web pour nous exprimer ?**\n\nDans cette leçon, vous allez explorer et réfléchir à différents intérêts et idées que les gens peuvent exprimer et partager en utilisant des sites web. "
         },
         "csd2-2021/Styling Elements with CSS": {
-          "name": "Styliser des Éléments avec CSS"
+          "name": "Styliser des Éléments avec CSS",
+          "overview": "**Question du jour : Comment donner du style aux images et aux mises en page de nos pages ?**\n\nCette leçon poursuit l'introduction aux propriétés de style CSS, en se concentrant cette fois sur les éléments non textuels. Les élèves commencent par examiner un site web sur les desserts du monde. Ils étudient et modifient les nouveaux styles CSS de ce site web, en ajoutant leurs propres styles à la page. Après avoir travaillé sur la page des desserts, les élèves appliquent leurs connaissances des nouvelles propriétés CSS à leurs sites web personnels.",
+          "student_overview": "\\*\\*Question du jour : Comment donner un style aux images et aux mises en page de nos pages ?\n\nDans cette leçon, vous apprendrez d'autres propriétés de style CSS, en vous concentrant cette fois sur les éléments non textuels."
+        },
+        "csd2-2021/Your Web Page - Prepare": {
+          "name": "Votre site web - Préparer",
+          "overview": "**Question du jour : Que devons-nous faire pour nous préparer à créer nos pages web ?**\n\nDans cette leçon, les élèves s'engagent dans l'étape de « préparation » du processus de résolution de problèmes, en décidant des éléments et du style de leur page web. Ils commencent par passer en revue les différentes directives HTML, CSS et de citoyenneté numérique dont ils auront besoin pour construire leurs pages web. Ils décrivent et dessinent ensuite leurs pages, en énumérant les balises et les styles qu'ils utiliseront pour obtenir la mise en page et le design qu'ils ont choisis. Ils se rendent ensuite en ligne pour trouver et télécharger les images dont ils auront besoin pour leurs pages. Ensuite, ils réfléchissent à la manière dont leur plan garantira que le site web fait ce pour quoi il a été conçu.",
+          "student_overview": "**Question du jour : Que devons-nous faire pour nous préparer à construire nos pages web?\\*\\***\n\nDans cette leçon, vous allez travailler sur l'étape de « préparation » du processus de résolution de problèmes pour décider des éléments et du style de votre page web. "
+        },
+        "csd2-2021/Project - Personal Web Page": {
+          "name": "Projet - Page web personnelle",
+          "overview": "**Question du jour : Quelles compétences et pratiques sont utiles lorsque nous codons des pages web ?**\n\nAprès avoir passé rapidement en revue leur processus de débogage, les élèves vont en ligne pour créer les pages qu'ils ont planifiées dans les leçons précédentes, avec les guides de projet comme référence. Une fois qu'ils ont terminé leurs pages, ils réfléchissent brièvement au processus, à ce dont ils sont le plus fiers et à ce sur quoi ils aimeraient avoir un retour. Ils s'engagent ensuite dans un processus structuré de feedback par les pairs avant d'apporter les dernières modifications à leurs pages. Ensuite, ils réfléchissent aux compétences et aux pratiques qui les ont aidés à réussir.",
+          "student_overview": "**Question du jour : Quelles compétences et pratiques sont utiles lorsque nous codons des pages web ?**\n\nDans cette leçon, vous allez travailler à la création des pages web que vous avez planifiées dans les leçons précédentes. "
         },
         "csd2-2021/Team Problem Solving": {
           "name": "La Résolution De Problèmes en Équipe"
@@ -5447,7 +5594,7 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "express-2020/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2020/Harvesting with Conditionals": {
           "name": "Récolter avec les Conditions"
@@ -5564,7 +5711,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2020/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2020/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"

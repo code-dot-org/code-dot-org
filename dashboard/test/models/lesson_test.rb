@@ -900,8 +900,8 @@ class LessonTest < ActiveSupport::TestCase
 
   class LessonCopyTests < ActiveSupport::TestCase
     setup do
-      Script.any_instance.stubs(:write_script_json)
-      Script.stubs(:merge_and_write_i18n)
+      Unit.any_instance.stubs(:write_script_json)
+      Unit.stubs(:merge_and_write_i18n)
 
       @original_script = create :script, is_migrated: true
       @original_script.expects(:write_script_json).never
@@ -1281,7 +1281,7 @@ class LessonTest < ActiveSupport::TestCase
       @destination_script.lesson_groups = []
 
       @destination_script.expects(:write_script_json).once
-      Script.expects(:merge_and_write_i18n).once
+      Unit.expects(:merge_and_write_i18n).once
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal 1, @destination_script.lesson_groups.count
       assert_equal 1, @destination_script.lessons.count

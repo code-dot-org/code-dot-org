@@ -1301,6 +1301,73 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Használd ezt a blokkot egy új háttér beállításához."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Használd ezt a blokkot egy új háttér beállításához."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Használd ezt a blokkot az alábbi viselkedések egyikével."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Használd ezt a blokkot az alábbi viselkedések egyikével."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "A kód futtatásához kattints ide."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Add hozzá ezt az eseményblokkot a munkaterülethez."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Add hozzá ezt az eseményblokkot a munkaterülethez."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Kattints ide, hogy jelmezeket adhass a projektedhez."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Kattints ide, hogy jelmezeket adhass a projektedhez."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "tű"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "tű"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "tű"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "tű"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Használd ezt a blokkot, hogy a sprite-ok beszélni tudjanak.",
+          "hello_world_make_sprite": "Használd ezt a blokkot egy sprite létrehozásához."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Használd ezt a blokkot, hogy a sprite-ok beszélni tudjanak.",
+          "hello_world_make_sprite": "Használd ezt a blokkot egy sprite létrehozásához."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Új blokk!",
+          "hello_world_new_block": "Új blokk!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Új blokk!",
+          "hello_world_new_block": "Új blokk!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Új blokk!"
         }
       }
     }

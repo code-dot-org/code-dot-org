@@ -1798,3 +1798,12 @@ et:
               display_name: Sisu
             lessonGroup-5:
               display_name: Uuring
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Tsüklid
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+            lessonGroup-3:
+              display_name: Sisu

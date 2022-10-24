@@ -1036,7 +1036,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
       gamelab_clickedOn:
         text: जब {SPRITE} पर क्लिक किया
       gamelab_clickedSpritePointer:
@@ -1174,7 +1174,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
           KEY:
             '"up"': ऊपर
             '"down"': नीचे
@@ -1326,6 +1326,10 @@ hi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": विचित्र
               बास
             "'sound://category_digital/jump_7.mp3'": कूदें
+      gamelab_playSoundOptionsSoccer:
+        text: प्लेसाउंड {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: प्लेसाउंड {SOUND}
       gamelab_playSpeech:
         text: प्ले स्पीच {SOUND}
       gamelab_playerBehaviors:
@@ -1483,7 +1487,7 @@ hi:
         options:
           CONDITION:
             '"when"': कब
-            '"while"': जबकि
+            '"while"': जब तक
       gamelab_spriteSay:
         text: "{SPRITE} {SPEECH} बोलता है"
       gamelab_spriteSayTime:
@@ -2207,6 +2211,11 @@ hi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: जब {VAR} जवाब दिया गया हो
       RyanLab_moveForward:

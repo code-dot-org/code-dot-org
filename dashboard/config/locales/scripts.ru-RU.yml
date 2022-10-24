@@ -3607,6 +3607,10 @@ ru:
               display_name: Содержимое
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Приступить к работе
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3788,6 +3792,9 @@ ru:
             учебной программы
           description: Для поэтапныъ обновлений в уроках или уровней между версиями
             учебной программы
+          lessons:
+            lesson-7:
+              name: Введение в спрайты
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -3899,6 +3906,17 @@ ru:
               display_name: Содержимое
             lessonGroup-5:
               display_name: Опрос
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Циклы
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опрос
+            lessonGroup-3:
+              display_name: Содержимое
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

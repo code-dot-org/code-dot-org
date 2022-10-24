@@ -462,6 +462,7 @@ fr-FR:
   homepage_banner_40k_teachers_link: En savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
+  homepage_slot_text_blurb_hoc_2022: Explores, joues, crées !
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
   homepage_slot_text_link_about_hoc: À propos de l'Heure de Code
   homepage_slot_text_link_host: Héberger une Heure de Code
@@ -2810,3 +2811,5 @@ fr-FR:
   outbreak_tile_subtitle: Un virus a infecté Monster Town ! Codez un simulateur d'épidémie
     et faites des prédictions sur ce qui arrivera aux voisins de Monster Town.
   footer_cookie_notice: " Utilisation de cookies"
+  hoc2022_landing_page_create_title: Créer
+  try_it_yourself: Essaie toi-même !

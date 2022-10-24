@@ -3261,32 +3261,32 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_script creates UserScript if necessary' do
     assert_creates(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
+      user_script = @student.assign_script(Unit.first)
+      assert_equal Unit.first.id, user_script.script_id
       refute_nil user_script.assigned_at
     end
   end
 
   test 'assign_script reuses UserScript if available' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Script.first)
+      UserScript.create!(user: @student, script: Unit.first)
     end
     assert_does_not_create(UserScript) do
-      user_script = @student.assign_script(Script.first)
-      assert_equal Script.first.id, user_script.script_id
+      user_script = @student.assign_script(Unit.first)
+      assert_equal Unit.first.id, user_script.script_id
       refute_nil user_script.assigned_at
     end
   end
 
   test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Script.first, assigned_at: DateTime.now)
+      UserScript.create!(user: @student, script: Unit.first, assigned_at: DateTime.now)
     end
 
     Timecop.travel(2018, 3, 4, 12, 0, 0) do
       assert_does_not_create(UserScript) do
-        user_script = @student.assign_script(Script.first)
-        assert_equal Script.first.id, user_script.script_id
+        user_script = @student.assign_script(Unit.first)
+        assert_equal Unit.first.id, user_script.script_id
         assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
       end
     end
@@ -3379,11 +3379,11 @@ class UserTest < ActiveSupport::TestCase
           'script' => {
             'name' => {
               'other' => {
-                'title': 'Script Other',
+                'title': 'Unit Other',
                 'description_short' => 'other-description'
               },
               'pl-other' => {
-                'title': 'PL Script Other',
+                'title': 'PL Unit Other',
                 'description_short' => 'pl-other-description'
               }
             }
@@ -3428,7 +3428,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal '/courses/csd', courses_and_scripts[0][:link]
 
       assert_equal 'other', courses_and_scripts[1][:name]
-      assert_equal 'Script Other', courses_and_scripts[1][:title]
+      assert_equal 'Unit Other', courses_and_scripts[1][:title]
       assert_equal 'other-description', courses_and_scripts[1][:description]
       assert_equal '/s/other', courses_and_scripts[1][:link]
     end
@@ -3443,29 +3443,29 @@ class UserTest < ActiveSupport::TestCase
       assert_equal '/courses/pl-csd', courses_and_scripts[0][:link]
 
       assert_equal 'pl-other', courses_and_scripts[1][:name]
-      assert_equal 'PL Script Other', courses_and_scripts[1][:title]
+      assert_equal 'PL Unit Other', courses_and_scripts[1][:title]
       assert_equal 'pl-other-description', courses_and_scripts[1][:description]
       assert_equal '/s/pl-other', courses_and_scripts[1][:link]
     end
 
     test "it does not return student scripts that are in returned student courses" do
-      script = Script.find_by_name('csd1')
+      script = Unit.find_by_name('csd1')
       @student.assign_script(script)
 
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
-      script = Script.find_by_name('pl-csd1')
+      script = Unit.find_by_name('pl-csd1')
       @teacher.assign_script(script)
 
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries PL Course', 'PL Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
 
     test "it optionally does not return primary course in returned student courses" do

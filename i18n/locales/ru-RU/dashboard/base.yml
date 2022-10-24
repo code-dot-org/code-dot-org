@@ -380,6 +380,7 @@ ru:
       about: "О разработчике"
       legal: "Правовая информация"
       legal_privacy: "Политика конфиденциальности"
+      legal_cookie_notice: "Уведомление о cookie"
       legal_tos: "Условия предоставления услуг"
     user:
       classroom: 'Домашняя страница преподавателя'
@@ -1159,3 +1160,5 @@ ru:
       cannot_view_locked_answers: "Невозможно просмотреть ответы, пока они заблокированы"
       forbidden: "Пользователь не может обновлять состояние блокировки студента"
   reset_predict_progress_button: "Удалить ответ"
+  pixelation:
+    binary: "Двоичный"

@@ -217,6 +217,243 @@
         },
         "csta/1B-DA-07": {
           "description": "Use os dados para realçar ou propor relações de  causa  e efeito, prever resultados ou comunicar uma ideia."
+        },
+        "1B-DA-07": {
+          "description": "Use os dados para realçar ou propor relações de  causa  e efeito, prever resultados ou comunicar uma ideia."
+        },
+        "1B-IC-18": {
+          "description": "Conversar sobre tecnologias computacionais que mudaram o mundo e expressar como essas tecnologias influenciam e são influenciadas por práticas culturais."
+        },
+        "3A-DA-10": {
+          "description": "Avalie as alternativas conscientes em relação à organização dos elementos e o local de armazenamento dos dados."
+        },
+        "3A-NI-06": {
+          "description": "Recomende medidas de segurança para lidar com diversos cenários, com base em fatores como eficiência, viabilidade e impactos éticos."
+        },
+        "3A-NI-07": {
+          "description": "Compare várias medidas de segurança, considerando o custo de oportunidade entre a usabilidade e a segurança de um sistema computadorizado."
+        },
+        "3B-NI-04": {
+          "description": "Compare os métodos que os desenvolvedores de software utilizam para proteger dispositivos e informações contra acessos não autorizados."
+        },
+        "DAT-1.D.1": {
+          "description": "A compactação de dados pode reduzir o tamanho (número de bits) de dados transmitidos ou armazenados."
+        },
+        "DAT-1.D.2": {
+          "description": "Menos bits não significam necessariamente menos informação."
+        },
+        "DAT-1.D.3": {
+          "description": "O valor da redução no tamanho por compactação depende tanto do volume de redundâncias na representação dos dados originais quanto do algoritmo de compactação utilizado."
+        },
+        "DAT-1.D.4": {
+          "description": "Os algoritmos de compactação de dados sem perdas geralmente podem reduzir o número de bits armazenados ou transmitidos, ao mesmo tempo assegurando a reconstrução integral dos dados originais."
+        },
+        "IOC-2.B.5": {
+          "description": "A criptografia é o processo de codificação de dados para evitar acessos não autorizados. A descriptografia é o processo de decodificação dos dados. Duas abordagens comuns à criptografia são:\n ●      A criptografia com chaves simétricas envolve uma mesma chave para a criptografia e a descriptografia? \n●       A criptografia com de chaves públicas pareia uma chave pública para criptografia e uma chave privada para descriptografia. O remetente não precisa da chave privada do destinatário para criptografar uma mensagem, mas a chave privada do destinatário é necessária para descriptografar a mensagem. DECLARAÇÃO DE EXCLUSÃO (EKIOC-2.B.5): Procedimentos matemáticos específicos de criptografia e descriptografia vão além do escopo deste curso e do Exame AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Usar dispositivos com entradas e saídas padrão para operar com sucesso computadores e tecnologias relacionadas."
+        },
+        "CI.L1:3-01": {
+          "description": "Praticar a cidadania digital responsável (comportamentos éticos e legais) no uso de software e sistemas de tecnologia."
+        },
+        "CL.L1:6-02": {
+          "description": "Usar recursos on-line (por exemplo: e-mails, discussões on-line e ambientes colaborativos na web) para participar de atividades colaborativas de solução de problemas com o propósito de desenvolver soluções ou produtos."
+        },
+        "CPP.L1:3-01": {
+          "description": "Usar recursos tecnológicos para fazer pesquisas adequadas à idade."
+        },
+        "CPP.L1:3-02": {
+          "description": "Usar recursos de multimídia adequados ao desenvolvimento (por exemplo: livros interativos e software educativo) para auxiliar o aprendizado em todo o currículo."
+        },
+        "CPP.L1:3-04": {
+          "description": "Construir um conjunto de afirmações a serem representadas para realizar uma tarefa simples (por exemplo: instruções para uma tartaruga)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Usar recursos tecnológicos (por exemplo: calculadoras, sondas de coleta de dados, dispositivos móveis, vídeos, software educativo e ferramentas da web) para resolução de problemas e aprendizado autônomo."
+        },
+        "CPP.L1:6-06": {
+          "description": "Implementar soluções de problemas usando uma linguagem de programação visual baseada em blocos."
+        },
+        "CPP.L2:3": {
+          "description": "Criar, desenvolver, publicar e apresentar produtos (por exemplo: páginas web, aplicativos móveis ou animações) usando recursos tecnológicos que demonstrem e comuniquem conceitos do currículo."
+        },
+        "CT.L2:1": {
+          "description": "Usar os passos básicos da solução de problemas algorítmicos para criar soluções (por exemplo: declaração e investigação do problema, análise de instâncias de amostra, design, implementação de uma solução, testes e avaliação)."
+        },
+        "CT.L2:12": {
+          "description": "Usar a abstração para decompor um problema em subproblemas."
+        },
+        "CT.L2:6": {
+          "description": "Descrever e analisar uma sequência de instruções sendo seguidas (por exemplo: descrever o comportamento de um personagem em um jogo, conforme acionado por regras e algoritmos)."
+        },
+        "CT.L2:7": {
+          "description": "Representar dados de diversas maneiras, incluindo textos, sons, imagens e números."
+        },
+        "CT.L2:8": {
+          "description": "Usar representações visuais de estados, estruturas e dados de problemas (por exemplo: gráficos, tabelas, diagramas de rede e fluxogramas)."
+        },
+        "1.L.6": {
+          "description": "Usar palavras e frases adquiridas por meio de conversas, ler e ouvir outras pessoas lendo e responder a textos, incluindo o uso de conjunções comuns para indicar relações simples (ex.: porque)."
+        },
+        "11-12.L.6": {
+          "description": "Adquirir e usar com precisão palavras e frases acadêmicas gerais e específicas de domínios, suficientes para ler, escrever, falar e ouvir no nível de preparação para a faculdade e a carreira; demonstrar independência na obtenção de conhecimentos de vocabulário ao considerar"
+        },
+        "2.L.6": {
+          "description": "Usar palavras e frases adquiridas por meio de conversas, ler e ouvir outras pessoas lendo e responder a textos, incluindo o uso de adjetivos e advérbios para fazer descrições (por exemplo: quando outras crianças estão felizes, isso me deixa feliz)."
+        },
+        "3.L.6": {
+          "description": "Adquirir e usar com precisão palavras e frases conversacionais acadêmicas gerais e específicas de domínios, adequadas ao ano de escolaridade, incluindo as que sinalizam relações espaciais e temporais (por exemplo: depois do jantar naquela noite, fomos procurá-los)."
+        },
+        "4.L.6": {
+          "description": "Adquirir e usar com precisão palavras e frases acadêmicas gerais e específicas de domínios, adequadas ao ano de escolaridade, incluindo as que indicam ações, emoções ou estados precisos (por exemplo: interrogado, lamentoso, balbuciante) e que são básicas em um determinado tema (por exemplo"
+        },
+        "5.L.6": {
+          "description": "Adquirir e usar com precisão palavras e frases acadêmicas gerais e específicas de domínios, adequadas ao ano de escolaridade, incluindo as que indicam relações de contraste, adição e outras relações lógicas (por exemplo: no entanto, embora, entretanto, do mesmo modo, inclusive, além disso)."
+        },
+        "9-10.L.6": {
+          "description": "Adquirir e usar com precisão palavras e frases acadêmicas gerais e específicas de domínios, suficientes para ler, escrever, falar e ouvir no nível de preparação para a faculdade e a carreira; demonstrar independência na obtenção de conhecimentos de vocabulário ao considerar"
+        },
+        "11-12.RI.4": {
+          "description": "Determinar o significado de palavras e frases conforme elas são usadas em um texto, inclusive em sentido figurado, conotativo e técnico; analisar como um autor usa e refina o significado de um ou mais termos-chave ao longo de um texto (por exemplo: como Madison define"
+        },
+        "3.RL.4": {
+          "description": "Determine o significado das palavras e frases conforme utilizadas no texto, fazendo a distinção entre linguagem literal e não literal."
+        },
+        "4.RL.7": {
+          "description": "Faça as conexões entre o texto de uma estória ou de uma peça de teatro, bem como uma apresentação visual ou oral do texto, identificando onde cada versão reflete descrições e instruções específicas do texto."
+        },
+        "5.RL.4": {
+          "description": "Determine o significado das palavras e frases conforme utilizadas no texto, incluindo linguagem figurativa, como metáforas e símiles."
+        },
+        "5.RL.7": {
+          "description": "Analise como os elementos visuais e de multimídia contribuem para o significado, o tom ou a beleza de um texto (p. ex., romance em quadrinhos, apresentação de ficção em multimídia, lendas do folclore, mitos, poemas)."
+        },
+        "1.SL.1": {
+          "description": "Participar de conversas colaborativas com diversos parceiros sobre temas e textos do 1.º ano, com colegas e adultos, em grupos pequenos e maiores."
+        },
+        "2.SL.1": {
+          "description": "Participar de conversas colaborativas com diversos parceiros sobre temas e textos do 2.º ano, com colegas e adultos, em grupos pequenos e maiores."
+        },
+        "3.SL.1": {
+          "description": "Participar com eficácia de uma série de discussões colaborativas (individuais, em grupos e conduzidas por professores) com diversos parceiros sobre temas e textos do 3.º ano, dando continuidade às ideias dos outros e expressando suas próprias ideias com clareza."
+        },
+        "6.SL.1": {
+          "description": "Participar com eficácia de uma série de discussões colaborativas (individuais, em grupos e conduzidas por professores) com diversos parceiros sobre temas, textos e problemas do 6.º ano, dando continuidade às ideias dos outros e expressando suas próprias ideias com clareza."
+        },
+        "7.SL.1": {
+          "description": "Participar com eficácia de uma série de discussões colaborativas (individuais, em grupos e conduzidas por professores) com diversos parceiros sobre temas, textos e problemas do 7.º ano, dando continuidade às ideias dos outros e expressando suas próprias ideias com clareza."
+        },
+        "11-12.W.6": {
+          "description": "Usar tecnologias, inclusive a internet, para produzir, publicar e atualizar produtos de escrita individuais ou compartilhados em resposta a feedback contínuo, incluindo novos argumentos ou informações."
+        },
+        "3.W.3": {
+          "description": "Escrever narrativas para desenvolver experiências ou eventos reais ou imaginários usando técnicas eficazes, detalhes descritivos e sequências claras de eventos."
+        },
+        "4.W.3": {
+          "description": "Escrever narrativas para desenvolver experiências ou eventos reais ou imaginários usando técnicas eficazes, detalhes descritivos e sequências claras de eventos."
+        },
+        "5.W.3": {
+          "description": "Escrever narrativas para desenvolver experiências ou eventos reais ou imaginários usando técnicas eficazes, detalhes descritivos e sequências claras de eventos."
+        },
+        "6.W.3": {
+          "description": "Escrever narrativas para desenvolver experiências ou eventos reais ou imaginários usando técnicas eficazes, detalhes relevantes e descritivos e sequências bem estruturadas de eventos."
+        },
+        "6.W.6": {
+          "description": "Usar tecnologias, inclusive a internet, para produzir e publicar textos, bem como interagir e colaborar com outras pessoas; demonstrar um domínio suficiente de habilidades com o teclado, digitando no mínimo três páginas em uma única sessão."
+        },
+        "7.W.3": {
+          "description": "Escrever narrativas para desenvolver experiências ou eventos reais ou imaginários usando técnicas eficazes, detalhes relevantes e descritivos e sequências bem estruturadas de eventos."
+        },
+        "7.W.6": {
+          "description": "Usar tecnologias, inclusive a internet, para produzir e publicar textos, citando e colocando links para fontes, além de interagir e colaborar com outras pessoas, incluindo a disponibilização de links e citações de fontes."
+        },
+        "8.W.3": {
+          "description": "Escrever narrativas para desenvolver experiências ou eventos reais ou imaginários usando técnicas eficazes, detalhes relevantes e descritivos e sequências bem estruturadas de eventos."
+        },
+        "8.W.6": {
+          "description": "Usar tecnologias, inclusive a internet, para produzir e publicar textos e apresentar as relações entre informações e ideias com eficiência, além de interagir e colaborar com outras pessoas."
+        },
+        "9-10.W.6": {
+          "description": "Usar tecnologias, inclusive a internet, para produzir, publicar e atualizar produtos de escrita individuais ou compartilhados, aproveitando a capacidade da tecnologia de se vincular a outras informações e exibir informações com flexibilidade e dinamismo."
+        },
+        "11-12.WHST.6": {
+          "description": "Usar tecnologias, inclusive a internet, para produzir, publicar e atualizar produtos de escrita individuais ou compartilhados em resposta a feedback contínuo, incluindo novos argumentos ou informações."
+        },
+        "9-10.WHST.6": {
+          "description": "Usar tecnologias, inclusive a internet, para produzir, publicar e atualizar produtos de escrita individuais ou compartilhados, aproveitando a capacidade da tecnologia de se vincular a outras informações e exibir informações com flexibilidade e dinamismo."
+        },
+        "7.G.2": {
+          "description": "Desenhar (à mão livre, com régua e transferidor e com tecnologias) formas geométricas com determinadas condições. Concentrar-se na construção de triângulos a partir de três medidas de ângulos ou lados, observando quando as condições determinam um triângulo único, mais de um triângulo"
+        },
+        "4.MD.6": {
+          "description": "Medir ângulos em graus com números inteiros usando um transferidor. Traçar ângulos com uma medida especificada."
+        },
+        "MP.1": {
+          "description": "Compreender problemas e ter perseverança para resolvê-los"
+        },
+        "MP.2": {
+          "description": "Raciocinar de maneira abstrata e quantitativa"
+        },
+        "MP.4": {
+          "description": "Modelar com a matemática"
+        },
+        "MP.5": {
+          "description": "Usar ferramentas adequadas de forma estratégica"
+        },
+        "MP.6": {
+          "description": "Dar atenção à precisão"
+        },
+        "MP.7": {
+          "description": "Buscar e fazer uso da estrutura"
+        },
+        "MP.8": {
+          "description": "Procurar e expressar regularidade em raciocínios repetidos"
+        },
+        "4.NBT.4": {
+          "description": "Somar e subtrair com facilidade números inteiros de vários dígitos usando o algoritmo padrão."
+        },
+        "4.NBT.5": {
+          "description": "Multiplicar um número inteiro de até quatro dígitos por um número inteiro de um dígito e multiplicar dois números de dois dígitos, usando estratégias baseadas no valor da posição e nas propriedades das operações. Ilustrar e explicar o cálculo usando equações"
+        },
+        "1.OA.1": {
+          "description": "Usar soma e subtração até 20 para resolver problemas matemáticos que envolvam somar, retirar, combinar, separar e comparar, com incógnitas em todas as posições, utilizando, por exemplo, objetos, desenhos e equações com um símbolo no"
+        },
+        "2.OA.1": {
+          "description": "Usar soma e subtração até 100 para resolver problemas matemáticos com uma e duas etapas que envolvam somar, retirar, combinar, separar e comparar, com incógnitas em todas as posições, utilizando, por exemplo, desenhos e equações com um sí"
+        },
+        "3.OA.3": {
+          "description": "Usar multiplicação e divisão até 100 para resolver problemas matemáticos em situações que envolvam grupos iguais, matrizes e quantidades medidas, utilizando, por exemplo, desenhos e equações com um símbolo no lugar do número desconhecido para representar o problema"
+        },
+        "1.a": {
+          "description": "Aplicar os conhecimento atuais para gerar novas ideias, produtos ou processos."
+        },
+        "1.b": {
+          "description": "Criar trabalhos originais como forma de expressão pessoal ou do grupo."
+        },
+        "1.c": {
+          "description": "Usar modelos e simulações para investigar sistemas e problemas complexos."
+        },
+        "2.a": {
+          "description": "Interagir, colaborar e publicar com colegas, especialistas ou outros, utilizando uma variedade de ambientes e meios digitais."
+        },
+        "2.b": {
+          "description": "Comunicar informações e ideias de modo eficaz a vários públicos, usando uma variedade de meios e formatos."
+        },
+        "4.b": {
+          "description": "Planejar e gerenciar atividades para desenvolver uma solução ou concluir um projeto."
+        },
+        "4.d": {
+          "description": "Usar vários processos e diversas perspectivas para investigar soluções alternativas."
+        },
+        "6.a": {
+          "description": "Compreender e usar sistemas de tecnologia."
+        },
+        "6.c": {
+          "description": "Solucionar problemas em sistemas e aplicativos."
+        },
+        "6.d": {
+          "description": "Transferir os conhecimentos atuais para o aprendizado de novas tecnologias."
         }
       }
     }

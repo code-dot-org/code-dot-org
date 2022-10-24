@@ -378,6 +378,7 @@ ar:
       about: "نبذة"
       legal: "الخصوصية والقانونية"
       legal_privacy: "سياسة الخصوصية"
+      legal_cookie_notice: "إشعار ملفات تعريف الارتباط"
       legal_tos: "شروط الخدمة"
     user:
       classroom: 'الصفحة الرئيسية للمعلم'
@@ -1146,3 +1147,5 @@ ar:
       cannot_view_locked_answers: "لا يمكن مشاهدة الإجابات أثناء القفل"
       forbidden: "لا يمكن للمستخدم تحديث حالة الطالب القابلة للقفل "
   reset_predict_progress_button: "حذف الإجابة"
+  pixelation:
+    binary: "ثنائي"

@@ -1,0 +1,17 @@
+{
+  "hy-AM": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "հաշվողական Մտածմունք"
+        },
+        "L": {
+          "description": "Լեզու"
+        },
+        "F": {
+          "description": "գործառույթները"
+        }
+      }
+    }
+  }
+}

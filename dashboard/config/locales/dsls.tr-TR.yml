@@ -14234,18 +14234,11 @@ tr-TR:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri gidecek.
-          correct: true
+        - correct: true
           feedback: Doğru!
         - text: Zombi, ayçiçeğine ulaşacak.
-          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
-            gidecek.
         - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
-          feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
-            gidecek.
         - text: Zombi ileriye giden yolun sonunda sıkışıp kalacak.
-          feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
-            gidecek.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
             olacak?

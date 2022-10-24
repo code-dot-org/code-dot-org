@@ -865,3 +865,5 @@ ne:
   cookie_banner:
     accept: I agree
   copy: प्रतिलिपि गर्नुहोस्
+  pixelation:
+    binary: Binary

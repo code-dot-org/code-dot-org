@@ -697,6 +697,26 @@
         },
         "courseF_bee_for42022": {
           "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Novi blok!"
         }
       }
     }

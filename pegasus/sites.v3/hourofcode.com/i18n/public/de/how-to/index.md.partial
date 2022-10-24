@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Schließen Sie sich der Bewegung an und führen Sie Ihre SchülerInnen mit diesen Schritten an die Informatik heran.
 
-Die SchülerInnen von heute müssen lernen, man Technologie schafft und nicht nur, wie man sie verwendet.
+Die SchülerInnen von heute müssen lernen, wie man Technologie schafft und nicht nur, wie man sie verwendet.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Mit Hour of Code können Lernende einfach und unterhaltsam an die Informatik herangeführt werden. Finden Sie eine passende Aktivität, entweder für den Unterricht oder in der Freizeit, persönlich oder virtuell. Werfen Sie einen Blick in unseren [Teilnehmerleitfaden, wenn Sie nach den ]({{ localized_files/participation_guide }}) folgenden Schritten Fragen haben:
 
 - [Sehen Sie sich die Videoanleitung zur Hour of Code an](#how-to-video)
 - [Erkunden Sie die Aktivitäten und Tutorials](#explore-activities)
@@ -58,7 +58,7 @@ Sehen Sie sich die Aktivitäten an und entscheiden Sie bereits im Vorfeld, ob Si
 
 ### Wählen Sie einen Tag und eine Uhrzeit 
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Aber Sie können an jedem Tag des Jahres eine Hour of Code machen!
+In der CS Education Week (9. bis 13. Dezember) werden die neuesten Tutorials und Aktivitäten veröffentlicht und SchülerInnen überall auf der Welt nehmen an einer Hour of Code teil. Aber Sie können an jedem Tag des Jahres eine Hour of Code machen!
 
 * * *
 
@@ -74,11 +74,11 @@ Machen Sie bei anderen Lehrern, die dieses tolle Ereignis vielleicht auch verans
 
 ### Informieren Sie Freiwillige, indem Sie Ihre Veranstaltung registrieren 
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. So wissen dann auch lokale Freiwillige Bescheid darüber, dass Ihre Schule daran teilnehmen wird. Freiwillige sind extrem hilfreich für eine solche Veranstaltung und können in Ihrer Stunde über Informatik referieren oder den SchülerInnen bei den Hour of Code-Aktivitäten helfen. 
+Wenn Sie [Ihre Hour of Code-Veranstaltung registrieren](/), erhalten Sie E-Mails mit aktuellen Informationen und Tipps für eine erfolgreiche Hour of Code. So wissen dann auch lokale Freiwillige Bescheid darüber, dass Ihre Schule daran teilnehmen wird. Freiwillige sind extrem hilfreich für eine solche Veranstaltung und können in Ihrer Stunde über Informatik referieren oder den SchülerInnen bei den Hour of Code-Aktivitäten helfen. 
 
 ### Begeistern Sie Ihre Klasse 
 
-Präsentieren Sie vor der Veranstaltung [ motivierende Videos ](/promote/resources), die vielfältige Menschen und kreative Anwendungsbereiche der Informatik zeigen. Or print inspirational posters for your classroom! Wenn SchülerInnen Menschen sehen, mit denen sie sich identifizieren können, lassen sie sich leichter für das Mitmachen bei einem Fach begeistern. 
+Präsentieren Sie vor der Veranstaltung [ motivierende Videos ](/promote/resources), die vielfältige Menschen und kreative Anwendungsbereiche der Informatik zeigen. Sie können auch inspirierende Poster für Ihren Unterrichtsraum ausdrucken. Wenn SchülerInnen Menschen sehen, mit denen sie sich identifizieren können, lassen sie sich leichter für das Mitmachen bei einem Fach begeistern. 
 
 {{ promote_new_posters }}
 
@@ -113,7 +113,7 @@ Es ist kein Problem, wenn Sie und Ihre SchülerInnen bisher überhaupt nichts mi
 
 Erklären Sie den SchülerInnen, wie sie ihre Aktivität finden 
 
-- Schreiben Sie den Link für das Tutorial auf ein Whiteboard. Sie finden den Link in den [Informationen für Ihr ausgewähltes Tutorium]({{{{ urls/learn }}) unter der Anzahl der Teilnehmer.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Wenn Ihren SchülerInnen etwas schwerfällt, können Sie sagen: 
 
@@ -140,7 +140,6 @@ Was mache ich, wenn ein Schüler/eine Schülerin früher fertig ist?
 
 - [Drucken Sie Zertifikate]({{ urls/certificates }}) für Ihre SchülerInnen.
 - [Drucken Sie "I did an Hour of Code!"]({{ urls/promote_stickers }}}) Sticker für Ihre SchülerInnen aus. 
-- [Bestellen Sie individuelle T-Shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) für Ihre Schule.
 - Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
 
 * * *
@@ -154,6 +153,6 @@ Was mache ich, wenn ein Schüler/eine Schülerin früher fertig ist?
 
 ### Was kommt nach der Hour of Code?
 
-Die Informatik muss nicht mit der Hour of Code enden! Unser Lehrplan ist webbasiert und steht Ihnen für immer zur freien Verfügung. [Erfahren Sie, wie](/beyond) Sie Informatik in Ihrer Schule einführen und Ihre SchülerInnen an das Fach heranführen können.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

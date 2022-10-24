@@ -1064,3 +1064,7 @@ hr:
               display_name: Varijable
         soccer:
           name: nogomet
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Petlje

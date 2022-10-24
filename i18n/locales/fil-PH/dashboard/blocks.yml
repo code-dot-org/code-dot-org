@@ -1331,6 +1331,10 @@ fil:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": pumili
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": kakaibang bass
             "'sound://category_digital/jump_7.mp3'": talon
+      gamelab_playSoundOptionsSoccer:
+        text: Ang ... {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: Ang ... {SOUND}
       gamelab_playSpeech:
         text: i-play ang salita {SOUND}
       gamelab_playerBehaviors:
@@ -2098,6 +2102,11 @@ fil:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: kapag {VAR} ay nasagot
       RyanLab_moveForward:

@@ -111,7 +111,7 @@ Het maakt niet uit als programmeren voor u en uw leerlingen nog nieuw is. Hier z
 
 Betrek de deelnemers bij de activiteit
 
-- Schrijf de link van de tutorial op een whiteboard. de link is te vinden in de [informatie over uw geselecteerde tutorial]({{ urls/learn }}) onder het aantal deelnemers.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Wanneer uw studenten moeilijkheden tegenkomen kunt u gerust reageren met:
 
@@ -138,7 +138,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Bestel custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) voor uw school.
 - Deel foto's en video's van uw CodeUur evenement op sociale media. Gebruik de hashtag #HourOfCode en @codeorg zodat wij ook uw succes kunnen zien!
 
 * * *
@@ -152,6 +151,6 @@ What if a student finishes early?
 
 ### Wat komt er na het CodeUur?
 
-Informatica hoeft niet te eindigen met de 'Hour of Code'. Ons curriculum bevindt zich op het web en is altijd gratis te gebruiken. [Leer hoe](/beyond) u uw school en studenten kennis kunt laten maken met CS.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}
