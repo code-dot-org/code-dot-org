@@ -583,6 +583,7 @@ describe('entry tests', () => {
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -751,26 +752,17 @@ describe('entry tests', () => {
 
   var pegasusEntries = {
     // code.org
-    'code.org/public/congrats': './src/sites/code.org/pages/public/congrats.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/certificates/blank':
-      './src/sites/code.org/pages/public/certificates/blank.js',
-    'code.org/public/certificates':
-      './src/sites/code.org/pages/public/certificates.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
-    'code.org/public/sharecertificate':
-      './src/sites/code.org/pages/public/sharecertificate.js',
     'code.org/public/teacher-dashboard/index':
       './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/yourschool':
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
-    'code.org/views/csf_congrats':
-      './src/sites/code.org/pages/views/csf_congrats.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
@@ -783,6 +775,7 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/amazon_future_engineer.js',
     'code.org/views/amazon_future_engineer_eligibility':
       './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
+    'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -933,7 +926,14 @@ describe('entry tests', () => {
           new TerserPlugin({
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/]
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+            terserOptions: {
+              // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
+              // Can remove when we can safely drop support for older iPad/iOS.
+              mangle: {
+                safari10: true
+              }
+            }
           })
         ],
 

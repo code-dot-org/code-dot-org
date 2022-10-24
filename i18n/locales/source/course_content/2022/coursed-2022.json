@@ -1275,24 +1275,24 @@
         "dsls": {
           "answers": [
             {
-              "text": "The zombie will pass the correct path and end up going back and forth forever.",
+              "text": "The zombie will pass by the correct path and end up going back and forth forever.",
               "correct": true,
               "feedback": "Correct!"
             },
             {
               "text": "The zombie will make it to the sunflower.",
               "correct": false,
-              "feedback": "Incorrect. The zombie will pass the correct path and end up going back and forth forever."
+              "feedback": "Incorrect. The zombie will pass by the correct path and end up going back and forth forever."
             },
             {
               "text": "The zombie will turn right on the first path and go around in circles forever.",
               "correct": false,
-              "feedback": "Incorrect. The zombie will pass the correct path and end up going back and forth forever."
+              "feedback": "Incorrect. The zombie will pass by the correct path and end up going back and forth forever."
             },
             {
               "text": "The zombie will be stuck at the end of the path forward.",
               "correct": false,
-              "feedback": "In this code, the zombie will pass the correct path and end up going back and forth forever."
+              "feedback": "In this code, the zombie will pass by the correct path and end up going back and forth forever."
             }
           ],
           "questions": [

@@ -37,6 +37,7 @@ Dashboard::Application.routes.draw do
     get "/congrats", to: "congrats#index"
 
     get "/incubator", to: "incubator#index"
+    get "/musiclab", to: "musiclab#index"
 
     resources :activity_hints, only: [:update]
 
@@ -72,12 +73,7 @@ Dashboard::Application.routes.draw do
 
     get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-    # We moved code docs off of curriculum builder in spring 2022.
-    # In that move, we wanted to preserve the previous /docs routes for these
-    # pages. However, there are a lot of other /docs URLs that did not move over
-    # so we're allow-listing the four IDEs that lived on curriculum builder to be
-    # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
-    # with the rest falling back to the old proxying logic.
+    # Code docs are off of curriculum builder as of spring 2022.
     get 'docs/', to: 'programming_environments#docs_index'
     get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
     get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'programming_expressions#docs_show'
@@ -96,6 +92,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Data docs are off of curriculum builder as of fall 2022.
+    get 'docs/concepts/data-library', to: 'data_docs#index'
+    get 'docs/concepts/data-library/:key', param: :key, constraints: {data_doc_key: /#{CurriculumHelper::KEY_CHAR_RE}+/o}, to: 'data_docs#show'
+
+    # There are still old curricula that live on curriculum.code.org.
+    # There are also old levels that point to docs on curriculum.code.org.
+    # For both, fall back to old proxying logic.
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -486,11 +489,11 @@ Dashboard::Application.routes.draw do
 
     get '/beta', to: redirect('/')
 
-    get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
-    get '/hoc/:chapter', to: 'script_levels#show', script_id: Script::HOC_NAME, as: 'hoc_chapter', format: false
+    get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
+    get '/hoc/:chapter', to: 'script_levels#show', script_id: Unit::HOC_NAME, as: 'hoc_chapter', format: false
 
-    get '/flappy/:chapter', to: 'script_levels#show', script_id: Script::FLAPPY_NAME, as: 'flappy_chapter', format: false
-    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Script::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
+    get '/flappy/:chapter', to: 'script_levels#show', script_id: Unit::FLAPPY_NAME, as: 'flappy_chapter', format: false
+    get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 
     get '/weblab/host', to: 'weblab_host#index'
 
