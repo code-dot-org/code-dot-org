@@ -15,12 +15,12 @@ html {
 
 header {
   text-align: center;
-  padding: 4em 1em;
-  background: $background_gray;
-  color: $darkest_gray;
+  padding: 5em 1em;
+  background: $dark_gray;
+  color: $white;
 
   h1, h2 {
-    color: $darkest_gray;
+    color: $white;
   }
 
   h1 {
@@ -59,12 +59,12 @@ header {
       a {
         margin-bottom: 0;
         line-height: 1;
-        color: $darkest_gray;
+        color: $white;
         font-family: $gotham-bold;
 
         &:visited,
         &:link {
-          color: $darkest_gray;
+          color: $white;
         }
       }
     }
