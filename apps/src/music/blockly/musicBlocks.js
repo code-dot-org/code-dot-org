@@ -3,6 +3,7 @@ import {forLoop, loopFromTo} from './blocks/control';
 import {arithmetic, number, random, round} from './blocks/math';
 import {variablesGet, variablesSet} from './blocks/variables';
 import {triggeredAt, whenRun} from './blocks/events';
+import {simpleIf} from './blocks/logic';
 
 // All blocks
 const blockList = [
@@ -18,7 +19,8 @@ const blockList = [
   arithmetic,
   random,
   variablesSet,
-  variablesGet
+  variablesGet,
+  simpleIf
 ];
 
 const MUSIC_BLOCKS = {};

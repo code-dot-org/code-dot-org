@@ -219,6 +219,23 @@ export const baseToolbox = {
           }
         }
       ]
+    },
+    {
+      kind: 'category',
+      name: 'Logic',
+      cssConfig: baseCategoryCssConfig,
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.SIMPLE_IF,
+          fields: {
+            var: {
+              name: 'currentTime',
+              type: 'number'
+            }
+          }
+        }
+      ]
     }
   ]
 };
