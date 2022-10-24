@@ -16,10 +16,6 @@ Pd::Application::PrincipalApprovalApplication.find_each do |principal_applicatio
 
     principal_response = principal_application.sanitize_form_data_hash
 
-    response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-    replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
-    replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
-
     teacher_application = Pd::Application::TeacherApplication.where(application_guid: principal_application.application_guid).first
 
     teacher_application.update_form_data_hash(
@@ -29,7 +25,6 @@ Pd::Application::PrincipalApprovalApplication.find_each do |principal_applicatio
         diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
         free_lunch_percent: principal_response[:free_lunch_percent],
         underrepresented_minority_percent: principal_application.underrepresented_minority_percent.to_s,
-        wont_replace_existing_course: replace_course_string,
         can_pay_fee: principal_response[:pay_fee]
       }
     )
@@ -54,10 +49,6 @@ Pd::Application::TeacherApplication.find_each do |teacher_application|
 
       principal_response = principal_application.sanitize_form_data_hash
 
-      response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
-      replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
-
       teacher_application.update_form_data_hash(
         {
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
@@ -65,7 +56,6 @@ Pd::Application::TeacherApplication.find_each do |teacher_application|
           diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           free_lunch_percent: principal_response[:free_lunch_percent],
           underrepresented_minority_percent: principal_application.underrepresented_minority_percent.to_s,
-          wont_replace_existing_course: replace_course_string,
           can_pay_fee: principal_response[:pay_fee]
         }
       )
