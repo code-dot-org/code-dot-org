@@ -59,7 +59,7 @@ cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locale
 ### AI Lab datasets
 
 orig_dir=apps/node_modules/@code-dot-org/ml-playground/public/datasets
-loc_dir=i18n/locales/source/external-sources/ml-playgound/datasets
+loc_dir=i18n/locales/source/external-sources/ml-playground/datasets
 mkdir -p $loc_dir
 
 # Copy JSON files.
