@@ -6,7 +6,7 @@
 //   clickColor
 
 function setupMapDrawing($, document, window, Raphael, undefined) {
-    // jQuery Plugin Factory
+  // jQuery Plugin Factory
   function jQueryPluginFactory($, name, methods, getters) {
     getters = getters instanceof Array ? getters : [];
     var getters_obj = {};
