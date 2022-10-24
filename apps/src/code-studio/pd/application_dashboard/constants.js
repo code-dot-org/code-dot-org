@@ -80,14 +80,16 @@ export const ScholarshipStatusRequiredStatuses = ['accepted'];
 export function getApplicationStatuses(type, addAutoEmail = true) {
   if (type === 'teacher') {
     return {
-      unreviewed: 'Unreviewed',
       incomplete: 'Incomplete',
+      awaiting_admin_approval: `Needs Admin Approval${autoEmailText(
+        addAutoEmail
+      )}`,
+      unreviewed: 'Unreviewed',
       reopened: 'Reopened',
-      awaiting_admin_approval: 'Awaiting Admin Approval',
       pending: 'Pending',
       pending_space_availability: `Pending Space Availability`,
+      accepted: `Accepted${autoEmailText(addAutoEmail)}`,
       declined: `Declined${autoEmailText(addAutoEmail)}`,
-      accepted: 'Accepted',
       withdrawn: 'Withdrawn'
     };
   } else if (type === 'facilitator') {
