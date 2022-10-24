@@ -14,6 +14,7 @@ class CertificateImageTest < Minitest::Test
     assert CertificateImage.prefilled_title_course?('mee')
     assert CertificateImage.prefilled_title_course?('mee_empathy')
     assert CertificateImage.prefilled_title_course?('mee_timecraft')
+    assert CertificateImage.prefilled_title_course?('mee_estate')
     assert !CertificateImage.prefilled_title_course?('course1')
     assert !CertificateImage.prefilled_title_course?('course2')
     assert !CertificateImage.prefilled_title_course?('course3')
