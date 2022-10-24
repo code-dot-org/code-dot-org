@@ -66,3 +66,29 @@ export function blockLimitExceeded() {
 export function getBlockLimit(blockType) {
   return 0;
 }
+
+export function getField(type) {
+  let field;
+  // Used for custom field type ClampedNumber(,)
+  // Captures two optional arguments from the type string
+  // Allows:
+  //   ClampedNumber(x,y)
+  //   ClampedNumber( x , y )
+  //   ClampedNumber(,y)
+  //   ClampedNumber(x,)
+  //   ClampedNumber(,)
+  const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
+  if (type === 'Number') {
+    field = new Blockly.FieldNumber();
+  } else if (type.includes('ClampedNumber')) {
+    const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+    if (clampedNumberMatch) {
+      const min = parseFloat(clampedNumberMatch[1]);
+      const max = parseFloat(clampedNumberMatch[2]);
+      field = new Blockly.FieldNumber(0, min, max);
+    }
+  } else {
+    field = new Blockly.FieldTextInput();
+  }
+  return field;
+}

@@ -67,6 +67,34 @@ function strip(code) {
   );
 }
 
+/**
+ * Given a type string for a field input, returns an appropriate change handler function
+ * for that type, which customizes the input field and provides validation on blur.
+ * @param {Blockly} blockly
+ * @param {string} type
+ * @returns {?function}
+ */
+function getFieldInputChangeHandler(type) {
+  // Used for custom field type ClampedNumber(,)
+  // Captures two optional arguments from the type string
+  // Allows:
+  //   ClampedNumber(x,y)
+  //   ClampedNumber( x , y )
+  //   ClampedNumber(,y)
+  //   ClampedNumber(x,)
+  //   ClampedNumber(,)
+  const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
+  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
+  if (clampedNumberMatch) {
+    const min = parseFloat(clampedNumberMatch[1]);
+    const max = parseFloat(clampedNumberMatch[2]);
+    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
+  } else if ('Number' === type) {
+    return Blockly.FieldTextInput.numberValidator;
+  } else {
+    return undefined;
+  }
+}
 function initializeBlocklyWrapper(blocklyInstance) {
   const blocklyWrapper = new BlocklyWrapper(blocklyInstance);
 
@@ -248,6 +276,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
       return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
+    },
+    getField: function(type) {
+      return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
     }
   };
   return blocklyWrapper;
