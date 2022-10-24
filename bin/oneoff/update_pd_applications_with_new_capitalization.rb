@@ -22,7 +22,6 @@ Pd::Application::PrincipalApprovalApplication.find_each do |principal_applicatio
       {
         principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
         schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
-        diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
         free_lunch_percent: principal_response[:free_lunch_percent],
         underrepresented_minority_percent: principal_application.underrepresented_minority_percent.to_s,
         can_pay_fee: principal_response[:pay_fee]
@@ -53,7 +52,6 @@ Pd::Application::TeacherApplication.find_each do |teacher_application|
         {
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
           schedule_confirmed: principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
-          diversity_recruitment: principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           free_lunch_percent: principal_response[:free_lunch_percent],
           underrepresented_minority_percent: principal_application.underrepresented_minority_percent.to_s,
           can_pay_fee: principal_response[:pay_fee]
