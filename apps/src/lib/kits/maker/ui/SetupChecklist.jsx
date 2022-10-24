@@ -8,21 +8,13 @@ import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 import applabI18n from '@cdo/applab/locale';
-import {
-  isWindows,
-  isChrome,
-  isChromeOS,
-  isCodeOrgBrowser,
-  isLinux
-} from '../util/browserChecks';
+import {isWindows, isCodeOrgBrowser, isLinux} from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import experiments from '@cdo/apps/util/experiments';
 import {BOARD_TYPE, shouldUseWebSerial} from '../util/boardUtils';
-import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
-const STATUS_APP_INSTALLED = 'statusAppInstalled';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';
 const STATUS_BOARD_CONNECT = 'statusBoardConnect';
 const STATUS_BOARD_COMPONENTS = 'statusBoardComponents';
@@ -39,7 +31,6 @@ const initialState = {
   caughtError: null,
   boardTypeDetected: BOARD_TYPE.OTHER,
   [STATUS_SUPPORTED_BROWSER]: Status.WAITING,
-  [STATUS_APP_INSTALLED]: Status.WAITING,
   [STATUS_BOARD_PLUG]: Status.WAITING,
   [STATUS_BOARD_CONNECT]: Status.WAITING,
   [STATUS_BOARD_COMPONENTS]: Status.WAITING
@@ -171,13 +162,8 @@ export default class SetupChecklist extends Component {
    * Helper to be used on second/subsequent attempts at detecting board usability.
    */
   redetect() {
-    if (
-      this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED ||
-      ((isChromeOS() || isChrome()) &&
-        this.state[STATUS_APP_INSTALLED] !== Status.SUCCEEDED)
-    ) {
-      // If the Chrome app was not installed last time we checked, but has been
-      // installed since, we'll probably need a full page reload to pick it up.
+    if (this.state[STATUS_SUPPORTED_BROWSER] !== Status.SUCCEEDED) {
+      // Full page reload
       utils.reload();
     } else {
       // Otherwise we should be able to redetect without a page reload.
@@ -198,37 +184,14 @@ export default class SetupChecklist extends Component {
           stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
         />
       );
-    } else if (isChromeOS() || isChrome()) {
-      if (shouldUseWebSerial()) {
-        return (
-          <ValidationStep
-            stepName={applabI18n.makerSetupBrowserSupported()}
-            stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
-          />
-        );
-      } else {
-        // Chromebooks - Chrome App
-        return (
-          <ValidationStep
-            stepName={
-              applabI18n.makerSetupAppInstalled() +
-              (isChromeOS() ? '' : applabI18n.legacy())
-            }
-            stepStatus={this.state[STATUS_APP_INSTALLED]}
-          >
-            <SafeMarkdown
-              markdown={applabI18n.makerSetupInstallSerialConnector({
-                webstoreURL: CHROME_APP_WEBSTORE_URL
-              })}
-            />
-            <br />
-            {applabI18n.makerSetupRedetect()}
-            <br />
-            {applabI18n.makerSetupAcceptPrompt()}
-            {this.contactSupport()}
-          </ValidationStep>
-        );
-      }
+    } else if (shouldUseWebSerial()) {
+      // ChromeOS or Chromium browser
+      return (
+        <ValidationStep
+          stepName={applabI18n.makerSetupBrowserSupported()}
+          stepStatus={this.state[STATUS_SUPPORTED_BROWSER]}
+        />
+      );
     } else {
       // Unsupported Browser
       return (
