@@ -1,7 +1,6 @@
 /** @file Playground Component setup tests */
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
@@ -41,20 +40,29 @@ describe('Circuit Playground Components', () => {
     // Our sensors and thermometer block initialization until they receive data
     // over the wire.  That's not great for unit tests, so here we stub waiting
     // for data to resolve immediately.
-    sinon.stub(EventEmitter.prototype, 'once');
-    EventEmitter.prototype.once
+    sinon.stub(five.Sensor.prototype, 'once');
+    five.Sensor.prototype.once
       .withArgs('data')
       .callsFake(function(_, callback) {
         // Pretend we got a real analog value back on the component's pin.
         setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
         callback();
       });
-    EventEmitter.prototype.once.callThrough();
+    five.Sensor.prototype.once.callThrough();
+    sinon.stub(five.Thermometer.prototype, 'once');
+    five.Thermometer.prototype.once
+      .withArgs('data')
+      .callsFake(function(_, callback) {
+        // Pretend we got a real analog value back on the component's pin.
+        setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
+        callback();
+      });
   });
 
   afterEach(() => {
-    EventEmitter.prototype.once.restore();
     clock.restore();
+    five.Sensor.prototype.once.restore();
+    five.Thermometer.prototype.once.restore();
   });
 
   describe(`createCircuitPlaygroundComponents()`, () => {
