@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import {SummaryTable} from '../../../../../src/code-studio/pd/application_dashboard/summary_table';
+import {getApplicationStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 
 describe('SummaryTable', () => {
   it('computes total applications', () => {
@@ -10,7 +11,7 @@ describe('SummaryTable', () => {
     assert(
       wrapper.containsMatchingElement(
         <tr>
-          <td>Unreviewed</td>
+          <td>{getApplicationStatuses('teacher').unreviewed}</td>
           <td>{10}</td>
         </tr>
       ),
@@ -20,7 +21,7 @@ describe('SummaryTable', () => {
     assert(
       wrapper.containsMatchingElement(
         <tr>
-          <td>Accepted (auto-email)</td>
+          <td>{getApplicationStatuses('teacher').accepted}</td>
           <td>{9}</td>
         </tr>
       ),
@@ -50,7 +51,7 @@ describe('SummaryTable', () => {
     assert(
       wrapper.containsMatchingElement(
         <tr>
-          <td>Unreviewed</td>
+          <td>{getApplicationStatuses('facilitator').unreviewed}</td>
           <td>{1}</td>
           <td>{9}</td>
           <td>{10}</td>
@@ -62,7 +63,7 @@ describe('SummaryTable', () => {
     assert(
       wrapper.containsMatchingElement(
         <tr>
-          <td>Accepted</td>
+          <td>{getApplicationStatuses('facilitator').accepted}</td>
           <td>{2}</td>
           <td>{7}</td>
           <td>{9}</td>
