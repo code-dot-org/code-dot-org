@@ -1445,3 +1445,5 @@ uz:
     this_sprite: bu sprayt
   unit_prefix: Bo'lim %{n}
   teacher_feedback: O‘qituvchilarning fikri
+  pixelation:
+    binary: Binarli

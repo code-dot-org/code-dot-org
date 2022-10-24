@@ -654,3 +654,5 @@ sl:
   cookie_banner:
     accept: 'Strinjam se'
   copy: 'Kopiraj'
+  pixelation:
+    binary: "Binarno"

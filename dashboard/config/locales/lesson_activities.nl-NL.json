@@ -23,6 +23,12 @@
         "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
           "name": "Beoordeling"
         },
+        "372347a4-5034-4888-9232-160ad727c83d": {
+          "name": "Opwarmen"
+        },
+        "970b0cb3-e914-4b54-9457-7c328aa70870": {
+          "name": "Afronden"
+        },
         "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
           "name": "Afronden"
         },
@@ -73,6 +79,12 @@
         },
         "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
           "name": "Einde"
+        },
+        "26cd3c8b-1ae7-4fd3-87c2-12cf2612d677": {
+          "name": "Opwarmen"
+        },
+        "cda96f31-2f49-4c74-946c-101bea687c76": {
+          "name": "Afronden"
         },
         "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
           "name": "Opwarmen"

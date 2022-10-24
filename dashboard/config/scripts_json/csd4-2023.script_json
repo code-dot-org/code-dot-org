@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2022-09-19 22:39:03 UTC",
+    "serialized_at": "2022-10-20 23:28:54 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -938,8 +938,21 @@
       }
     },
     {
-      "key": "185008f3-a8b0-4c05-8331-5dec09c43c53",
+      "key": "c435615b-30f1-456b-ac5b-daee89b8936c",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c435615b-30f1-456b-ac5b-daee89b8936c",
+        "lesson.key": "Market Research",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "key": "185008f3-a8b0-4c05-8331-5dec09c43c53",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -953,7 +966,7 @@
     },
     {
       "key": "26764c1d-092c-436c-9b9a-14f505648e47",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -967,7 +980,7 @@
     },
     {
       "key": "84305bb6-640c-4319-b9e4-5eaba8101219",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -3592,6 +3605,18 @@
       }
     },
     {
+      "key": "1f92f1d8-9761-4a89-a449-476564d04bec",
+      "position": 1,
+      "properties": {
+        "description": "Students will be researching apps that could be similar to the ones they plan on creating. You can provide students with copies of the [Market Research - Research Areas](https://docs.google.com/document/d/1ZSf6F57MCRMkwoDDfhofI5OgGaYtGvehRNDSdBs0Y7Q/edit) guide to students in their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or you may decide to add or remove items from this list as you see fit. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students.**",
+        "name": "Preparing for the Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f92f1d8-9761-4a89-a449-476564d04bec",
+        "lesson_activity.key": "c435615b-30f1-456b-ac5b-daee89b8936c"
+      }
+    },
+    {
       "key": "85c6625d-28ec-4e58-a408-06f01573d2ba",
       "position": 1,
       "properties": {
@@ -3659,11 +3684,12 @@
       "key": "a171bbb4-18d0-4299-a585-f640e3706b36",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Hand out one copy of the activity guide to each team.",
+        "description": "**Distribute:** Hand out one copy of the activity guide to each team.\n\n**Display:** Read through the instructions on the Market Research activity guide. Every student is expected to find at least one app for the team to analyze. ",
+        "name": "Finding Similar Apps",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Reducing Printed Materials:** This Activity Guide can be completed online or as a journal activity.\r\n\r\n"
+            "markdown": "**Reducing Printed Materials:** This Activity Guide can be completed online or as a journal activity. The Research Areas resource should also be distributed digitally.\n"
           }
         ]
       },
@@ -3673,22 +3699,10 @@
       }
     },
     {
-      "key": "a51bed21-4e5e-4293-a2df-70487a59dc61",
+      "key": "39d2262c-0659-4c41-a39f-582e4ca7f726",
       "position": 2,
       "properties": {
-        "description": "#### Market Research Activity Guide"
-      },
-      "seeding_key": {
-        "activity_section.key": "a51bed21-4e5e-4293-a2df-70487a59dc61",
-        "lesson_activity.key": "26764c1d-092c-436c-9b9a-14f505648e47"
-      }
-    },
-    {
-      "key": "39d2262c-0659-4c41-a39f-582e4ca7f726",
-      "position": 3,
-      "properties": {
-        "description": "**Display:** Read through the instructions on the Market Research activity guide. Every student is expected to find at least one app for the team to analyze. Give students time to research individually first, then time to share the apps they found in their teams. They should make special note if there are any features of the apps they found that they might “borrow” for their own app.\n\n**Researching Apps:** Here are a few places for students to search:\n\n* [Code.org Public Gallery](//studio.code.org/projects/public)\n* Mobile app classes or competitions such as:\n\t* [Apps for Good](https://www.appsforgood.org/)\n\t* [Technovation](http://www.technovationchallenge.org/)\n* Mobile app stores like Apple App Store or Google Play\n* General web search using Google or Bing\n\t* Try phrases like “app competition” or “apps for social good”\n\t* Include your state name for local ideas or competitions",
-        "name": "Finding Similar Apps\r"
+        "description": "**Distribute:** Digitally distribute copies of the Market Research - Research Areas handout.\n\n**Do This:** Give students time to research individually first, then time to share the apps they found in their teams. They should make special note if there are any features of the apps they found that they might “borrow” for their own app."
       },
       "seeding_key": {
         "activity_section.key": "39d2262c-0659-4c41-a39f-582e4ca7f726",
@@ -3697,7 +3711,7 @@
     },
     {
       "key": "3468b86e-dac9-4540-9df7-720a4cc64083",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "**Circulate:** Monitor teams as they look for apps and complete the first page of the activity guide. This activity may start off quietly as students research on their own, but will gradually build to team conversations as they share the apps with their teams. Make sure teams are recording the name and location of the app they research, so they can later create a citation in their final presentation.",
         "tips": [
@@ -3714,7 +3728,7 @@
     },
     {
       "key": "79d28e88-d2cb-4eed-998d-f07f9a9f17b9",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Display:** Have teams transition to the second page of the activity guide and read the instructions. Inspired by their research, teams should have roughly 10 minutes to share specific ideas for the apps they want to make and the features the app should have. There is space for them to write down these ideas as team members propose them. As they generate ideas, they should also record the apps they discovered that inspired their ideas.",
         "name": "Brainstorming App Ideas\r"
@@ -3726,7 +3740,7 @@
     },
     {
       "key": "2bbec57f-98d4-4bee-a108-93ae21b93d2f",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": " **Circulate:** Monitor students as they complete their brainstorm, ensuring all voices are heard in their discussions. Their goal today is to start getting more specific with the app the team wants to design, including the features the app should have. Emphasize that they will have time in the next lesson to make a final choice, plus time in future lessons to design the app.",
         "tips": [
@@ -3743,7 +3757,7 @@
     },
     {
       "key": "dfa6feb2-507c-4ecf-9bce-ae75ff5e0182",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "**Collect:** Either collect the materials from each team or have students store their market research activity guide in the same place as their team contract so they can be accessed later."
       },
@@ -5943,6 +5957,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2023"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5965,6 +5982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-1_2023"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5987,6 +6007,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-2_2023"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -6009,6 +6032,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-3_2023"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -6031,6 +6057,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-1_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6053,6 +6082,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-2_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6075,6 +6107,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-3_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6097,6 +6132,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-4_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6119,6 +6157,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-5_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6141,6 +6182,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-6_2023"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6163,6 +6207,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Design Mode Video_2023"
+        ],
         "progression": "Video: Intro to Design Mode"
       },
       "bonus": false,
@@ -6185,6 +6232,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6207,6 +6257,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6229,6 +6282,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6251,6 +6307,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2023"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6273,6 +6332,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2023"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6295,6 +6357,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2023"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6317,6 +6382,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2023"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6339,6 +6407,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2023"
+        ],
         "progression": "Design a Screen for your App"
       },
       "bonus": false,
@@ -6361,6 +6432,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2023"
+        ],
         "progression": "App Project: Screen Design"
       },
       "bonus": false,
@@ -6383,6 +6457,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Events Video_2023"
+        ],
         "progression": "Video: Events in App Lab"
       },
       "bonus": false,
@@ -6405,6 +6482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6427,6 +6507,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6449,6 +6532,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6471,6 +6557,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2023"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6493,6 +6582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2023"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6515,6 +6607,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2023"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6537,6 +6632,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2023"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6559,6 +6657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2023"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6581,6 +6682,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2023"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6603,6 +6707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2023"
+        ],
         "progression": "Updating Your Prototype"
       },
       "bonus": false,
@@ -6625,6 +6732,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd4_2023"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -6647,6 +6757,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD User Centered Design Post-Project Test_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7363,6 +7476,54 @@
       }
     },
     {
+      "name": "Example Project - Cooking App - Convincing Evidence",
+      "url": "https://docs.google.com/document/d/13Q2QXHg7EKmBOJRgkmWo57wbIpPt9kLVwnKU6OBlFr4/edit",
+      "key": "example_project_-_cooking_app_-_convincing_evidence",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "example_project_-_cooking_app_-_convincing_evidence"
+      }
+    },
+    {
+      "name": "Example Project - Cooking App - Extensive Evidence",
+      "url": "https://docs.google.com/document/d/1o_9JXVWcz-pb0UzdxGvc6JK3F0urzYBBGeYEmsPVQsQ/edit",
+      "key": "example_project_-_cooking_app_-_extensive_evidence",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "example_project_-_cooking_app_-_extensive_evidence"
+      }
+    },
+    {
+      "name": "Example Project - Language App - Convincing Evidence",
+      "url": "https://docs.google.com/document/d/1ClqPV-tCtyWfNY_symf6htPZJIVXrvmbcv2mEABpq4c/edit",
+      "key": "example_project_-_language_app_-_convincing_evidence",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "example_project_-_language_app_-_convincing_evidence"
+      }
+    },
+    {
+      "name": "Example Project - Language App - Limited Evidence",
+      "url": "https://docs.google.com/document/d/1KP1j3ZSTJLIDYh-xJIdw_umw9CgbcB0ps13bqvY2t4M/edit",
+      "key": "example_project_-_language_app_-_limited_evidence",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "example_project_-_language_app_-_limited_evidence"
+      }
+    },
+    {
       "name": "Example User Interviews",
       "url": "https://docs.google.com/document/d/171tU61kaUxWI9k3jBAJoc0z4iaxdEP6jZYeLairEJXg/view",
       "key": "example_user_interviews",
@@ -7512,6 +7673,18 @@
       },
       "seeding_key": {
         "resource.key": "market_research"
+      }
+    },
+    {
+      "name": "Market Research - Research Areas",
+      "url": "https://docs.google.com/document/d/1ZSf6F57MCRMkwoDDfhofI5OgGaYtGvehRNDSdBs0Y7Q/edit#",
+      "key": "market_research_-_research_areas",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "market_research_-_research_areas"
       }
     },
     {
@@ -7873,18 +8046,6 @@
       },
       "seeding_key": {
         "resource.key": "responding_to_user_input"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1TK80IOPnC3Z3Oz5BnGu4JELZ9ewnOzWshu9dZH90iX8/view",
-      "key": "sample_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics"
       }
     },
     {
@@ -8438,6 +8599,12 @@
     {
       "seeding_key": {
         "lesson.key": "Market Research",
+        "resource.key": "market_research_-_research_areas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
         "resource.key": "market_research_1"
       }
     },
@@ -8510,6 +8677,30 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_cooking_app_-_convincing_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_cooking_app_-_extensive_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_language_app_-_convincing_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "example_project_-_language_app_-_limited_evidence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
         "resource.key": "paper_prototype_-_student_checklist"
       }
     },
@@ -8529,12 +8720,6 @@
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
         "resource.key": "project_-_paper_prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "sample_marked_rubrics"
       }
     },
     {

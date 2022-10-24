@@ -265,6 +265,7 @@ module SharedConstants
       "declareAssign_x_prompt": null,
       "declareAssign_x_promptNum": null,
       "console.log": null,
+      "console.clear": null,
       "declareAssign_str_hello_world": null,
       "substring": null,
       "indexOf": null,
@@ -568,6 +569,7 @@ module SharedConstants
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
+      "console.clear": null,
       "comment_Variables": null,
 
       // Functions

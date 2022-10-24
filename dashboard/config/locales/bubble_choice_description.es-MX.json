@@ -665,7 +665,15 @@
         "CSD U6 - Screen Outputs - PracA_2222": "Cambia el fondo de tu aplicación con un botón",
         "CSD U6 - Screen Outputs - PracB_2222": "Actualizar la imagen del icono con un clic de botón",
         "CSD U6 - Screen Outputs - PracC_2222": "Ayuda a corregir los errores para que la aplicación aparezca correctamente",
-        "CSD U6 - Screen Outputs - PracD_2222": "Utiliza el código para cambiar los colores y crear un arcoíris"
+        "CSD U6 - Screen Outputs - PracD_2222": "Utiliza el código para cambiar los colores y crear un arcoíris",
+        "helloworld_food_costumes_soccer-2022": "Aprende a cambiar la apariencia de los sprites.",
+        "helloworld_food_costumes_space-2022": "Aprende a cambiar la apariencia de los sprites.",
+        "helloworld_food_sizes_soccer-2022": "Aprende a cambiar el tamaño de los sprites.",
+        "helloworld_food_sizes_space-2022": "Aprende a cambiar el tamaño de los sprites.",
+        "helloworld_food_sounds_soccer-2022": "Aprende a reproducir sonidos.",
+        "helloworld_food_sounds_space-2022": "Aprende a reproducir sonidos.",
+        "CSD U6 - Combine Inputs - ChalA_2222": "Crear un prototipo de app que simule un Anillo de Estado de Ánimo, que cambie los colores de los LEDs en función del estado de ánimo del usuario.",
+        "CSD U6 - Combine Inputs - ChalB_2222": "Crear una aplicación que mueva una moto a la izquierda y a la derecha de la pantalla utilizando los botones del Circuit Playground"
       }
     }
   }

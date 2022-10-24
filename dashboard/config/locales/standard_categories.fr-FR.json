@@ -1,0 +1,20 @@
+{
+  "fr-FR": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Algorithmique"
+        },
+        "L": {
+          "description": "Langue"
+        },
+        "C": {
+          "description": "Tunnel"
+        },
+        "F": {
+          "description": "Fonctions"
+        }
+      }
+    }
+  }
+}

@@ -24,8 +24,6 @@
 #  index_levels_on_name       (name)
 #
 
-require 'cdo/script_constants'
-
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
 class DSLDefined < Level

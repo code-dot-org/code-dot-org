@@ -1394,3 +1394,5 @@ is:
   unit_prefix: Eining %{n}
   code_org_logo_alt: Code.org Heimasíða
   teacher_feedback: Endurgjöf kennara
+  pixelation:
+    binary: Tvíundir

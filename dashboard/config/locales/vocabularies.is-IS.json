@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Villuleit"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Villuleit"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Skilyrði"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Villuleit"
         },
         "loops/aquatic/unversioned": {
           "word": "Lykkjur"

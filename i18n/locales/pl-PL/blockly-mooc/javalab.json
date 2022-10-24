@@ -70,6 +70,7 @@
   "errorTheaterInvalidShape": "Kształt musi zawierać parzystą liczbę wartości reprezentujących współrzędne (x,y) i musi zawierać co najmniej 4 wartości.",
   "errorTheaterVideoTooLarge": "Twój film jest za duży. Zmniejsz liczbę klatek w swoim filmie i spróbuj ponownie.",
   "errorTheaterVideoTooLong": "Twój film przekroczył maksymalny czas odtwarzania. Zmniejsz długość filmu i spróbuj ponownie.",
+  "exceptionMessage": "[EXCEPTION] {message}",
   "exceptionThrown": "[EXCEPTION] {exceptionName} został rzucony",
   "failedTestResult": "{className} > {methodName} PRZEGRANY",
   "feedbackBeginning": "To jest początek informacji zwrotnej dla Twojego projektu.",

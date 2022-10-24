@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "cs4all-invasive-species",
-    "serialized_at": "2022-10-12 20:51:40 UTC",
+    "serialized_at": "2022-10-19 20:45:53 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -92,7 +92,7 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "Click on this [link](https://docs.google.com/document/d/155tzR7eSCGxLB9lij88CGZjOSJLd03FJ/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true) to access this lesson plan.  \n\n\n"
+        "overview": "**IMPORTANT:** Click here to access **[Lesson 0](https://docs.google.com/document/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit?usp=sharing)** to learn about the module before starting Lesson 1.\n\nAfter reviewing Lesson 0, continue to **[Lesson 1]((https://docs.google.com/document/d/155tzR7eSCGxLB9lij88CGZjOSJLd03FJ/edit?usp=sharing&ouid=102794241782231748313&rtpof=true&sd=true)).**  \n\n\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",

@@ -1,5 +1,3 @@
-require 'cdo/script_constants'
-
 class MakerController < ApplicationController
   authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code, :confirm_login]
 
@@ -22,7 +20,7 @@ class MakerController < ApplicationController
   ScriptAndCourse = Struct.new(:script, :course)
 
   def self.maker_script(for_user)
-    maker_units = Script.maker_units(for_user).
+    maker_units = Unit.maker_units(for_user).
         sort_by {|s| s.unit_group.version_year}.
         reverse.
         freeze

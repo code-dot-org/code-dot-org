@@ -1159,3 +1159,5 @@ de:
       cannot_view_locked_answers: "Antworten können nicht angezeigt werden, wenn sie gesperrt sind"
       forbidden: "Benutzer kann den Sperrstatus des Schülers nicht aktualisieren"
   reset_predict_progress_button: "Antwort löschen"
+  pixelation:
+    binary: "Binärdatei"

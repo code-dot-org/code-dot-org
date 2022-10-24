@@ -17,7 +17,7 @@ import {
 } from '../util/browserChecks';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import experiments from '@cdo/apps/util/experiments';
-import {BOARD_TYPE} from '../util/boardUtils';
+import {BOARD_TYPE, shouldUseWebSerial} from '../util/boardUtils';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
@@ -50,7 +50,8 @@ export default class SetupChecklist extends Component {
 
   static propTypes = {
     webSerialPort: PropTypes.object,
-    stepDelay: PropTypes.number
+    stepDelay: PropTypes.number,
+    displaySupport: PropTypes.bool
   };
 
   fail(selector) {
@@ -89,9 +90,9 @@ export default class SetupChecklist extends Component {
       // Is Chrome App Installed?
       .then(
         () =>
-          // Only necessary for ChromeOS when the webserial flag is not-enabled
+          // Only necessary for ChromeOS when not using webserial
           (isChromeOS() || isChrome()) &&
-          !experiments.isEnabled('webserial') &&
+          !shouldUseWebSerial() &&
           this.detectStep(STATUS_APP_INSTALLED, () =>
             setupChecker.detectChromeAppInstalled()
           )
@@ -209,8 +210,7 @@ export default class SetupChecklist extends Component {
         />
       );
     } else if (isChromeOS() || isChrome()) {
-      if (experiments.isEnabled('webserial')) {
-        // Chromebooks use WebSerial for connection
+      if (shouldUseWebSerial()) {
         return (
           <ValidationStep
             stepName={applabI18n.makerSetupBrowserSupported()}
@@ -365,11 +365,13 @@ export default class SetupChecklist extends Component {
             </ValidationStep>
           )}
         </div>
-        <div>
-          <h2>{i18n.support()}</h2>
-          <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
-          {this.contactSupport()}
-        </div>
+        {this.props.displaySupport && (
+          <div>
+            <h2>{i18n.support()}</h2>
+            <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
+            {this.contactSupport()}
+          </div>
+        )}
       </div>
     );
   }

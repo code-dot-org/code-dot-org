@@ -1160,3 +1160,5 @@ fr:
       cannot_view_locked_answers: "Impossible d'afficher les réponses lorsque le système est verrouillé"
       forbidden: "L'utilisateur ne peut pas modifier les paramètres de verrouillage de l'apprenant"
   reset_predict_progress_button: "Supprimer la réponse"
+  pixelation:
+    binary: "Binaire"
