@@ -775,6 +775,7 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/amazon_future_engineer.js',
     'code.org/views/amazon_future_engineer_eligibility':
       './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
+    'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -925,7 +926,14 @@ describe('entry tests', () => {
           new TerserPlugin({
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/]
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+            terserOptions: {
+              // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
+              // Can remove when we can safely drop support for older iPad/iOS.
+              mangle: {
+                safari10: true
+              }
+            }
           })
         ],
 

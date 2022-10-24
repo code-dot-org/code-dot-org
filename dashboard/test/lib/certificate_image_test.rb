@@ -1,7 +1,6 @@
-require_relative '../../../shared/test/common_test_helper'
-require_relative '../certificate_image'
+require 'test_helper'
 
-class CertificateImageTest < Minitest::Test
+class CertificateImageTest < ActiveSupport::TestCase
   def test_special_template_courses
     assert CertificateImage.prefilled_title_course?('Hour of Code') # 2013
     assert CertificateImage.prefilled_title_course?('hourofcode') # 2014
