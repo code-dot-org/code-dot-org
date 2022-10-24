@@ -2,7 +2,6 @@
 # Note: requires pegasus_dir to be in scope.
 require 'honeybadger/ruby'
 require 'rmagick'
-require_relative './script_constants'
 # needed for force_8859_to_utf8
 require 'cdo/pegasus/string'
 
