@@ -215,7 +215,6 @@ describe('DetailViewContents', () => {
           principal_approval_not_required: true
         }
       });
-      console.log(detailView.find('#DetailViewHeader select').debug());
       expect(
         detailView
           .find('#DetailViewHeader select')
@@ -231,7 +230,6 @@ describe('DetailViewContents', () => {
           principal_approval_not_required: false
         }
       });
-      console.log(detailView.find('#DetailViewHeader select').debug());
       expect(
         detailView
           .find('#DetailViewHeader select')
@@ -493,13 +491,12 @@ describe('DetailViewContents', () => {
         .last()
         .simulate('click');
 
-      // Dropdown is still disabled
-      // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
+      // Dropdown is no longer disabled
       expect(
         getLastRow()
           .find('Select')
           .prop('disabled')
-      ).to.equal(true);
+      ).to.equal(false);
 
       // Click "Save"
       detailView
