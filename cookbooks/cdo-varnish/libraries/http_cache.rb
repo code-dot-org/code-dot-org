@@ -33,6 +33,8 @@ class HttpCache
     '/s/hello-world-animals-2021/lessons/1/levels/11',
     '/s/hello-world-retro-2021/lessons/1/levels/11',
     '/s/hello-world-emoji-2021/lessons/1/levels/11',
+    '/s/hello-world-space-2022/lessons/1/levels/11',
+    '/s/hello-world-soccer-2022/lessons/1/levels/11',
     '/s/outbreak/lessons/1/levels/10'
   ]
 
@@ -56,6 +58,8 @@ class HttpCache
     hello-world-animals-2021
     hello-world-retro-2021
     hello-world-emoji-2021
+    hello-world-space-2022
+    hello-world-soccer-2022
     outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.
