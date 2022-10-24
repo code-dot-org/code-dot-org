@@ -1,6 +1,5 @@
 /** @file Serialport scanning logic for Maker Toolkit */
 /* global SerialPort */ // Maybe provided by the Code.org Browser
-import DCDO from '@cdo/apps/dcdo';
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
@@ -13,9 +12,6 @@ import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
  * @property {string} productId e.g. "0x8011"
  * @property {string} vendorId e.g. "0x239a"
  */
-
-/** @const {string} */
-const CHROME_APP_ID = 'ncmmhcpckfejllekofcacodljhdhibkg';
 
 /** @const {string} Adafruit's vendor id as reported by Circuit Playground boards */
 export const ADAFRUIT_VID = 0x239a;
@@ -39,7 +35,6 @@ export const MICROBIT_PID = 0x0204;
  */
 export function findPortWithViableDevice() {
   return Promise.resolve()
-    .then(ensureAppInstalled)
     .then(listSerialDevices)
     .then(list => {
       const bestOption = getPreferredPort(list);
@@ -53,21 +48,6 @@ export function findPortWithViableDevice() {
         );
       }
     });
-}
-
-/**
- * Check whether the Code.org Serial Connector Chrome extension is available.
- * @returns {Promise} Resolves if installed, rejects if not.
- */
-export function ensureAppInstalled() {
-  if (!isChromeOS() || !!DCDO.get('webserial-on-chromeos', true)) {
-    return Promise.resolve();
-  }
-
-  ChromeSerialPort.extensionId = CHROME_APP_ID;
-  return new Promise((resolve, reject) => {
-    ChromeSerialPort.isInstalled(error => (error ? reject(error) : resolve()));
-  });
 }
 
 /**
