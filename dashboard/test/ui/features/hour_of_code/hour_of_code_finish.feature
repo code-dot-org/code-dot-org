@@ -56,6 +56,7 @@ Scenario: Pegasus share page preserves certificate when redirecting
   And I wait to see an image "/certificate_images/"
   And I see custom certificate image with name "Robo Coder" and course "mc"
 
+@no_safari
 Scenario: non-mee 3rd party tutorial redirects to congrats page with params
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
