@@ -69,9 +69,7 @@ export function getApplicationStatuses(type, addAutoEmail = true) {
   if (type === 'teacher') {
     return {
       incomplete: 'Incomplete',
-      awaiting_admin_approval: `Awaiting Admin Approval${autoEmailText(
-        addAutoEmail
-      )}`,
+      awaiting_admin_approval: `Awaiting Admin Approval${autoEmailText()}`,
       unreviewed: 'Unreviewed',
       reopened: 'Reopened',
       pending: 'Pending',
