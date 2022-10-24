@@ -6,7 +6,6 @@ import {
   MICROBIT_VID
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
-import DCDO from '@cdo/apps/dcdo';
 import {isChromeOS} from '../util/browserChecks';
 
 export const BOARD_TYPE = {
@@ -56,15 +55,12 @@ export function isWebSerialPort(port) {
 
 /**
  * Determines whether WebSerial port is available in the current browser.
- * WebSerial should be available in ChromeOS (depending on DCDO flag) and
- * in Chromium browsers.
+ * WebSerial should be available in ChromeOS and in Chromium browsers.
  */
 export function shouldUseWebSerial() {
   const webSerialAvailableInBrowser = 'serial' in navigator;
-  const usingChromeOSAndDCDO =
-    isChromeOS() && !!DCDO.get('webserial-on-chromeos', true);
 
-  return usingChromeOSAndDCDO || webSerialAvailableInBrowser;
+  return isChromeOS() || webSerialAvailableInBrowser;
 }
 
 /** @const {number} serial port transfer rate */

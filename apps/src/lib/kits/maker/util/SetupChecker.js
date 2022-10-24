@@ -1,6 +1,6 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
-import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
+import {findPortWithViableDevice} from '../portScanning';
 import {
   isCodeOrgBrowser,
   isChrome,
@@ -41,14 +41,6 @@ export default class SetupChecker {
         reject(new Error('Not using a supported browser.'));
       }
     });
-  }
-
-  /**
-   * Resolve if the Chrome Connector App is installed.
-   * @return {Promise}
-   */
-  detectChromeAppInstalled() {
-    return ensureAppInstalled();
   }
 
   /**
