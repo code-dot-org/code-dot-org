@@ -29,7 +29,7 @@ title: دليل "ساعة من البرمجة" الإرشادي لأولياء �
 تدمج جميع أنشطتنا حل المشكلات والتفكير النقدي بالمرح والابتكار، ولكن إليك بعض تفضيلات الطلاب:
 
 - الطفل الذي يحب اللعب: [ماينكرافت](https://code.org/minecraft) أو [حفلة رقص](https://code.org/dance) 
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- الطفل الذي يحب ديزني: [حرب النجوم](https://code.org/starwars), [ملكة الثلج](https://studio.code.org/s/frozen/lessons/1/levels/1), or [موانا](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C) 
 - الطفل الذي يحب التعلّم: [الذكاء الاصطناعي للمحيطات](https://code.org/oceans) أو [اصنع الموسيقى بلغة سكراتش](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>ضعف التقنيات أو عدم توفرها؟</h3>
@@ -87,7 +87,7 @@ title: دليل "ساعة من البرمجة" الإرشادي لأولياء �
 
 - اطبع [شهادات "ساعة من البرمجة"](https://staging.code.org/certificates) التي ستمنحها لطفلك عندما يُكمِل نشاطه
 - [اطبع الملصقات](https://staging.hourofcode.com/us/promote/resources#stickers) في المنزل أو [اشتريها عبر الإنترنت](https://store.code.org/) كمفاجأة إضافية.
-- شارِك الصور ومقاطع الفيديو الخاصة بفعالية "ساعة من البرمجة" في منزلك على مواقع التواصل الاجتماعي. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- شارِك الصور ومقاطع الفيديو الخاصة بفعالية "ساعة من البرمجة" في منزلك على مواقع التواصل الاجتماعي. استخدم [#ساعة من البرمجة](https://twitter.com/hashtag/hourofcode) ومؤسسة[@codeorg](https://twitter.com/codeorg) حتى نتمكن من إبراز نجاحك أيضًا!
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 

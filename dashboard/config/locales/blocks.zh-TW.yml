@@ -1330,6 +1330,10 @@ zh-TW:
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": 魔咒
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": 古怪低音
             "'sound://category_digital/jump_7.mp3'": 定位到
+      gamelab_playSoundOptionsSoccer:
+        text: 播放音效 {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: 播放音效 {SOUND}
       gamelab_playSpeech:
         text: 游戲言語{SOUND}
       gamelab_playerBehaviors:
@@ -2177,6 +2181,11 @@ zh-TW:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: 當{VAR}已回答
       RyanLab_moveForward:

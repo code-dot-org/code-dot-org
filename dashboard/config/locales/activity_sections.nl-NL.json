@@ -144,6 +144,26 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Na het Uur Code"
         },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
+          "tips": [
+            "U wilt maar weinig tijd spenderen aan het laden of introduceren van uw 'Hour of Code', vooral als het gaat om jonge leerlingen waarbij het het beste is om zo snel mogelijk te beginnen."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Hallo Wereld",
+          "progression_name": "Hallo Wereld"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflectie",
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -368,6 +388,26 @@
           "tips": [
             null
           ]
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",
+          "tips": [
+            "U wilt maar weinig tijd spenderen aan het laden of introduceren van uw 'Hour of Code', vooral als het gaat om jonge leerlingen waarbij het het beste is om zo snel mogelijk te beginnen."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "description": "Hier volgen enkele tips die studenten kunnen helpen ongeacht het niveau waarop ze werken:\n\n-   **Werk samen met de buren:** Moedig studenten aan samen te werken met een buurman of -vrouw als ze vast zitten. Afhankelijk van de leeftijd en de vaardigheden van uw studenten, kunt u overwegen om uw klas in koppels in te delen om de tutorial te voltooien met behulp van [programmeren in paren](https://youtu.be/vgkahOzFH2Q).   \n\n-   **Lees de instructies:** De instructies bevatten meestal nuttige tips over hoe een niveau te voltooien. Zorg ervoor dat ze de instructies, hints, video's en eventuele startcode<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"><img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> grondig hebben gelezen of bekeken.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Zit u vast? Ga op zoek naar hints:** Elk niveau bevat een hint met een advies over hoe een niveau te voltooien, waaronder de uit te proberen codeblokken. \n\n-   **Neem de tijd en experimenteer:** De instructies vetellen de studenten in het algemeen wat ze moeten doen, maar ze moeten tevens de vrijheidheid hebben hun eigen ideeën uit te proberen.  "
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Hallo Wereld",
+          "progression_name": "Hallo Wereld"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Als een groep of individu vroeg eerder klaar is, moedig hen, hem of haar aan door te gaan met het bouwen van een project in het laatste niveau. Als studenten niet zeker weten wat ze moeten doen, dan kunt u vragen aan hen stellen:\n\n-   Welke ander sprites kun je toevoegen aan je project?\n-   Heb je in de kostuumbibliotheek gekeken of geprobeerd zelf een spritekostuum te tekenen?\n-   Wat kun je je sprites nog meer laten zeggen?\n-   Wat dienen je sprites te doen als er op ze wordt geklikt?\n-   Nodig studenten uit ideeën te delen en van elkaar te leren. Tevens kunnen ze een andere tutorial proberen door naar [code.org/leren](https://code.org/learn) te gaan."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflectie",
+          "description": "#### Nabespreking\n\nVraag aan studenten feedback te geven over de uitgevoerde activiteiten van vandaag. Wat hebben ze geleerd over programmeren? Sprites? Events?\n\nHoe denken ze over informatica en programmeren na een uur bezig te zijn geweest met het verkennen daarvan?\n\n#### Volgende stappen\n\nLaat studenten weten dat als ze de activiteiten van vandaag leuk vonden, ze veel opties hebben om verder te gaan met programmeren. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeën over hoe informatica te integreren in andere vakken of lees meer over onze [aanbiedingen van cursussen voor kleuterscholen](https://code.org/educate/curriculum/elementary-school)."
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "description": "_Tijdens deze activiteit zult u het leuk vinden een interactieve wereld te creëren met leuke personages die we sprites noemen. U zult in staat zijn de sprites dingen te laten zeggen met tekstballonnetjes zoals u die kent uit stripboeken, en u zult leren hen automatisch te laten reageren als u of iemand anders op hen klikt._\n\n_Vandaag zult u \"code\" schrijven, wat niets anders inhoudt dan een set van instructies die een computer kan begrijpen. Als u een verhaal schrijft, dan moet u goed nadenken over de woorden die u gaat gebruiken. Als u code schrijft, dan dient u goed na te denken over de instructies die u geeft aan uw computer._",

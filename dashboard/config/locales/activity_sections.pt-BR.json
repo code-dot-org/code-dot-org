@@ -265,6 +265,31 @@
           "name": "Além da Hora do Código",
           "description": "Ao final do Hour of Code, há muitas formas de continuar ensinando ciência da computação na sua sala de aula K-5. Veja aqui algumas ideias: \n\n– **Ensine no curso [Fundamentos de ciência da computação no Code Studio](http://code.org/educate/k5). Esses seis cursos forem projetados para alunos jovens. Os alunos trabalham do seu jeito, com uma série de enigmas que ensinam a codificar, e os professores terão acesso a planos de aula envolventes, que ajudam a tornar a aprendizagem mais vívida. O Code.org oferece desenvolvimento profissional gratuito nesses cursos, sejam eles on-line ou presenciais. - \\*\\*Convide um especialista em ciência da computação para discursar para sua classe sobre o trabalho**. Você não conhece um voluntário? Procure alguns no [mapa de voluntários](https://code.org/volunteer/local)."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Configuração da Etapa",
+          "description": "Dê as boas-vindas aos alunos da turma e apresente resumidamente as atividades do dia."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
+          "tips": [
+            "O ideal é não gastar muito tempo nas etapas iniciais ou na introdução ao Hour of Code. Particularmente no caso de alunos jovens, é melhor ir direto ao assunto o mais rápido possível."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Suporte Geral",
+          "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflexão",
+          "description": "#### Painel de discussão\n\nPeça aos alunos para refletirem sobre as atividades do dia. O que eles aprenderam sobre codificação? Fadas? Eventos? \n\nComo eles se sentem a respeito da ciência da computação e da codificação depois de uma hora de exploração? \n\n#### Próximos passos\n\nInforme aos alunos que, se eles tiverem gostado das atividades do dia, eles terão muitas opções para continuar gerando o código. Visite [CS Connections](https://code.org/educate/csc) para ver ideias sobre como integrar a ciência da computação a outros temas ou leia mais sobre as nossas [ofertas de curso para o nível fundamental](https://code.org/educate/curriculum/elementary-school)."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Configure a etapa\n\nDê as boas-vindas aos alunos para a classe e apresente resumidamente as atividades do dia. \n\n\\_Diga: \"Hoje vamos aprender a codificar por uma hora. Alguém aqui já ouvi o termo \"código\" antes? O que significa\"? \\_ \n\nOs alunos podem citar que um \"código\" é como uma mensagem secreta ou que está relacionado a computadores de alguma maneira."
         },
@@ -752,6 +777,31 @@
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Leia Blown to Bits**\n\n-   Leia as pp. 165-169 de [Blown to Bits, Capítulo 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf) \n    – Responda às perguntas fornecidas no guia de leitura e na planilha [Guia de leitura para criptografia](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Planilha. \n\n**Mais Blown to Bits**\n\n-   As seções anteriores do Capítulo 5 de Blown to Bits fazem referência à relevância das controvérsias em torno da criptografia no período pós-desastre do 11 de setembro. Essa leitura pode ser uma ferramenta útil para  introduzir com maior profundidade o impacto da criptografia em muitos aspectos da vida moderna. \n\n– Peça aos alunos para analisarem o histórico do seu navegador na internet e calcular o percentual aproximado de ações presumindo-se que sejam \"privativas\". Eles têm um meio para terem certeza de que é o caso de fato? Existem sites que eles visitam em que se sentem mais confiantes no sigilo de seu tráfego do que em outros? Eles justificaram essa conclusão?"
         },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Configuração da Etapa",
+          "description": "Dê as boas-vindas aos alunos da turma e apresente resumidamente as atividades do dia."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
+          "tips": [
+            "O ideal é não gastar muito tempo nas etapas iniciais ou na introdução ao Hour of Code. Particularmente no caso de alunos jovens, é melhor ir direto ao assunto o mais rápido possível."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Suporte Geral",
+          "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflexão",
+          "description": "#### Painel de discussão\n\nPeça aos alunos para refletirem sobre as atividades do dia. O que eles aprenderam sobre codificação? Fadas? Eventos? \n\nComo eles se sentem a respeito da ciência da computação e da codificação depois de uma hora de exploração? \n\n#### Próximos passos\n\nInforme aos alunos que, se eles tiverem gostado das atividades do dia, eles terão muitas opções para continuar gerando o código. Visite [CS Connections](https://code.org/educate/csc) para ver ideias sobre como integrar a ciência da computação a outros temas ou leia mais sobre as nossas [ofertas de curso para o nível fundamental](https://code.org/educate/curriculum/elementary-school)."
+        },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Configuração da Etapa",
           "description": "Dê as boas-vindas aos alunos da turma e apresente resumidamente as atividades do dia."
@@ -868,7 +918,7 @@
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Configuração da Etapa",
-          "description": "Dê as boas-vindas aos alunos da turma e apresente resumidamente as atividades do dia. \n\n\\*_Diga:__Hoje vamos ter uma hora de aprendizagem de codificação. Alguém aqui já ouvi o termo \"código\" antes? O que significa\"?_ \n\nOs alunos podem citar que um \"código\" é como uma mensagem secreta ou que está relacionado a computadores de alguma maneira."
+          "description": "Dê as boas-vindas aos alunos da turma e apresente resumidamente as atividades do dia. \n\n\\**Diga:\\_\\_Hoje vamos ter uma hora de aprendizagem de codificação. Alguém aqui já ouvi o termo \"código\" antes? O que significa\"?* \n\nOs alunos podem citar que um \"código\" é como uma mensagem secreta ou que está relacionado a computadores de alguma maneira."
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -1027,7 +1077,7 @@
           "description": "**Transição:**\n\nVejamos um exemplo de mensagem de texto que foi compactada de forma inteligente."
         },
         "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
-          "description": "#### Decodifique este texto misterioso (10 a 15 min)\n\n– **Distribua ou mostre a Guia da atividade \n– Forme grupos de alunos ou deixe que trabalhem individualmente. \n– \\*_Tarefa:_Qual era o texto original? \n– Dê aos alunos alguns minutos para decodificarem o texto. O texto deve ser um poema curto (veja a recapitulação da atividade abaixo) \n| Guia da atividade para alunos                | Recapitulação da atividade                       |\n| –––––––––––––––––––– | ––––––––––––––––––––––––––––––– | \n| \\*\\*Distribua ou mostre** o Guia da atividade| (Mostre ou desenhe você mesmo) Recapitulação da atividade: Decodifique esta Mensagem |\n \\| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-encoded.png)                            \\| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressionbreakdown.png) \\| \n\n**Recapitulação: Quant foi compactado?**\n\nPara responder, precisamos comparar o número de caracteres no poema original e o número de caracteres necessários para representar a versão compactada. Vamos desmembrar o texto.\n\n – \\*_Mostre_ ou \\*\\*Demonstre ideias de: [r atividade-recapitulação-decodificação-desta-mensagem] \\(exibido na tabela acima) \n\n– \\*\\*Observação importante: \n\n– O poema compactado não é _apenas_ esta parte: ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressed.png) \n\nSe você quiser enviá-lo para alguém via internet, a pessoa não conseguiria decodificá-lo. \n  \\* O texto completo compactado inclui TANTO o texto compactado _quanto_ a chave para solucioná-lo.\\\\ \\\\Desta forma, é preciso contar o número total de caracteres na mensagem _mais_ o número total de caracteres na chave, para saber o quanto você compactou o texto em relação ao original. \n\n**Transição**\n\nAgora você vai tentar compactar algumas coisas por conta própria."
+          "description": "#### Decodifique este texto misterioso (10 a 15 min)\n\n– **Distribua ou mostre a Guia da atividade \n– Forme grupos de alunos ou deixe que trabalhem individualmente. \n– \\*_Tarefa:_Qual era o texto original? \n– Dê aos alunos alguns minutos para decodificarem o texto. O texto deve ser um poema curto (veja a recapitulação da atividade abaixo) \n| Guia da atividade para alunos                | Recapitulação da atividade                       |\n| –––––––––––––––––––– | ––––––––––––––––––––––––––––––– | \n\\| \\*\\*Distribua ou mostre** o Guia da atividade| (Mostre ou desenhe você mesmo) Recapitulação da atividade: Decodifique esta Mensagem |\n \\| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-encoded.png)                            \\| ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressionbreakdown.png) \\| \n\n**Recapitulação: Quant foi compactado?**\n\nPara responder, precisamos comparar o número de caracteres no poema original e o número de caracteres necessários para representar a versão compactada. Vamos desmembrar o texto.\n\n – \\*_Mostre_ ou \\*\\*Demonstre ideias de: [r atividade-recapitulação-decodificação-desta-mensagem] \\(exibido na tabela acima) \n\n– \\*\\*Observação importante: \n\n– O poema compactado não é _apenas_ esta parte: ![](https://code.org/curriculum/docs/csp/U2L02-pitterPatter-compressed.png) \n\nSe você quiser enviá-lo para alguém via internet, a pessoa não conseguiria decodificá-lo. \n  \\* O texto completo compactado inclui TANTO o texto compactado _quanto_ a chave para solucioná-lo.\\\\ \\\\Desta forma, é preciso contar o número total de caracteres na mensagem _mais_ o número total de caracteres na chave, para saber o quanto você compactou o texto em relação ao original. \n\n**Transição**\n\nAgora você vai tentar compactar algumas coisas por conta própria."
         },
         "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
           "description": "#### Use o widget de compactação de textos para\n\nMostre o vídeo – **Compactação de textos com Aloe Blacc**"
@@ -1375,7 +1425,7 @@
           "progression_name": "Aprendizado de Máquina com IA - Vídeo"
         },
         "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
-          "description": "**Compartilhamento rápido:** Onde vocês já viram ou experimentaram inteligência artificial em sua vida? Exemplos do vídeo: \n\n– filtros de e-mail \n– texto automatizado \n– sistemas de recomendação de vídeos \n– reconhecimento de voz \n– aplicativos de tradução \n– assistentes digitais \n– reconhecimento de imagens \n\n**Prompt:**Com base no que vocês viram no vídeo, o que é aprendizagem de máquina? \n\n\\*_Discuta:_Começando com pequenos grupos e passando para a turma inteiro, os alunos compartilham suas respostas. O objetivo é que os alunos se familiarizem com o mundo da inteligência artificial, que reflitam sobre a prevalência da inteligência artificial nas nossas vidas e pensem abertamente sobre possíveis inovações no futuro. \n\n\\*_Diga:__A aprendizagem de máquina é um meio pelo qual o computador é capaz de reconhecer padrões e decisões, sem ser explicitamente programado. Nesta atividade, vocês vão fornecer os dados para treinar com seu próprio modelo de aprendizagem de máquina. Imaginem um oceano com criaturas como peixes, mas também com o lixo jogado por seres humanos. E se nós pudéssemos treinar um computador para conseguir diferenciar as duas coisas e usar a tecnologia para ajudar a limpar o oceano?_"
+          "description": "**Compartilhamento rápido:** Onde vocês já viram ou experimentaram inteligência artificial em sua vida? Exemplos do vídeo: \n\n– filtros de e-mail \n– texto automatizado \n– sistemas de recomendação de vídeos \n– reconhecimento de voz \n– aplicativos de tradução \n– assistentes digitais \n– reconhecimento de imagens \n\n**Prompt:**Com base no que vocês viram no vídeo, o que é aprendizagem de máquina? \n\n\\*_Discuta:_Começando com pequenos grupos e passando para a turma inteiro, os alunos compartilham suas respostas. O objetivo é que os alunos se familiarizem com o mundo da inteligência artificial, que reflitam sobre a prevalência da inteligência artificial nas nossas vidas e pensem abertamente sobre possíveis inovações no futuro. \n\n\\**Diga:\\_\\_A aprendizagem de máquina é um meio pelo qual o computador é capaz de reconhecer padrões e decisões, sem ser explicitamente programado. Nesta atividade, vocês vão fornecer os dados para treinar com seu próprio modelo de aprendizagem de máquina. Imaginem um oceano com criaturas como peixes, mas também com o lixo jogado por seres humanos. E se nós pudéssemos treinar um computador para conseguir diferenciar as duas coisas e usar a tecnologia para ajudar a limpar o oceano?*"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "IA para oceanos",
@@ -1407,14 +1457,14 @@
           ]
         },
         "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
-          "description": "#### Nível 7 – Impactos na sociedade\n\n\\*_Diga:__Os sistemas de inteligência artificial aprendem com os dados que nós fornecemos, mas os dados podem ser baseados em opiniões ou tendenciosos._",
+          "description": "#### Nível 7 – Impactos na sociedade\n\n\\**Diga:\\_\\_Os sistemas de inteligência artificial aprendem com os dados que nós fornecemos, mas os dados podem ser baseados em opiniões ou tendenciosos.*",
           "progression_name": "IA: Impacto na sociedade - Vídeo"
         },
         "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac": {
-          "description": "\\*_Diga:__Pense nos exemplos de inteligência artificial que nós discutimos no início. Pense em um momento em que a aprendizagem de máquina poderia entendido errado alguma coisa do mundo real? (Por exemplo, o reconhecimento de voz não compreendendo o que você disse.)_ \n\n\\*_Prompt:_Como dados tendenciosos podem resultar em problemas para a inteligência artificial? De que meio dispomos para lidar com esse problema?"
+          "description": "\\**Diga:\\_\\_Pense nos exemplos de inteligência artificial que nós discutimos no início. Pense em um momento em que a aprendizagem de máquina poderia entendido errado alguma coisa do mundo real? (Por exemplo, o reconhecimento de voz não compreendendo o que você disse.)* \n\n\\*_Prompt:_Como dados tendenciosos podem resultar em problemas para a inteligência artificial? De que meio dispomos para lidar com esse problema?"
         },
         "fa3c9144-cc51-42f5-8069-6f50da5b465d": {
-          "description": "\\*_Discuta:_Começando com pequenos grupos e em seguida passando para a sala inteira, os alunos compartilham suas respostas. O objetivo da discussão é trazer os alunos de volta ao contexto de inteligência artificial no mundo real. \n\n\\*_Diga:__Algumas formas de lidar com o preconceito é utilizando um conjunto maior ou mais inclusivo de  dados de treinamento. Na última parte da atividade você vai ensinar à I.A. uma palavra que possa ser interpretada de maneiras diferentes._"
+          "description": "\\*_Discuta:_Começando com pequenos grupos e em seguida passando para a sala inteira, os alunos compartilham suas respostas. O objetivo da discussão é trazer os alunos de volta ao contexto de inteligência artificial no mundo real. \n\n\\**Diga:\\_\\_Algumas formas de lidar com o preconceito é utilizando um conjunto maior ou mais inclusivo de  dados de treinamento. Na última parte da atividade você vai ensinar à I.A. uma palavra que possa ser interpretada de maneiras diferentes.*"
         },
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
           "description": "#### Nível 8 – Ensine à I.A. uma palavra nova\n\nAqui, assim como fizemos antes, os alunos utilizarão dados de treinamento para ensinar à I.A. a reconhecer diferentes tipos de peixes. As palavras desta lista são intencionalmente mais subjetivas do que as que os alunos viram até o momento. Incentive os alunos a decidirem por conta própria o que faz um peixe parecer \"irritado\" ou \"divertido\". Dois alunos podem escolher o mesmo identificador e obter um conjunto muito diferente de resultados, com base nas feições do peixe em que se concentrarem. Estimule os alunos a discutir suas constatações uns com os outros ou voltar e escolher novas palavras. Cada aluno deve se apoiar nas próprias opiniões para treinar a I.A., o que significa que a I.A. vai aprender com os mesmos preconceitos dos alunos. Como aluno começa a perceber o papel que sua opinião desempenha. Peça que reflitam sobre como este é um fator positivo ou negativo e como ele pode ser tratado. \n\n**Pergunta aberta:**_Cite um problema com o qual você se preocupa e que a inteligência artificial poderia ajudar a solucionar?_",
@@ -3148,9 +3198,6 @@
           "tips": [
             "Lembre os alunos de compartilhar seu trabalho apenas com amigos próximos ou familiares. Para obter mais informações, assista ou mostre a turma**\\\\ \\*Pause and Think Online - Vídeo**"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Incluímos alguns níveis de previsão de múltipla escolha que são difíceis para os não leitores. Esses níveis são opcionais para você revisar com sua classe para ajudar a se preparar para os quebra-cabeças que virão. Alternativamente, eles podem ser usados após o término do estágio como uma revisão para a aula. \n\n\\*\\*Nível de previsão: \\*\\* - [Curso B, Loops no Artista](https://studio.code.org/levels/8745)"
         },
         "b7796885-3fd7-48b7-9a37-60950e9906ee": {
           "progression_name": "Desenvolvimento de Habilidades"

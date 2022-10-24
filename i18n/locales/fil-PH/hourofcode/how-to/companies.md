@@ -16,41 +16,41 @@ Sa panahon ng kampanya ng Hour of Code, makakatulong ang kompanya mo na itaas an
 
 Tingnan ang mga hakbang sa ibaba upang makapagsimula, at tingnan ang aming [gabay sa mga partner sa korporasyon](/files/hoc-corporate-toolkit.pdf)sa higit pa sa kung paano masasabik ang kompanya mo tungkol sa Hour of Code.
 
-- [Hikayatin ang mga empleyado na magboluntaryo sa isang silid-aralan](#encourage-employees)
-- [Ikonekta ang kompanya mo sa isang paaralan](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [I-host ang sarili mong event ng Hour of Code](#host-hour-of-code)
 - [Isulong ang Hour of Code](#promote-hour-of-code)
 - [Higit pang mga paraan upang suportahan ang Hour of Code](#support-hour-of-code)
 
 * * *
 
-<a id="encourage-employees"></a>
-
-## Hikayatin ang mga empleyado na magboluntaryo sa isang silid-aralan
-
-[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
-
-Ang isa sa mga pinakakasiya-siyang paraan upang lumahok sa Hour of Code ay ang pagboluntaryo sa isang lokal na silid-aralan, nang personal man o sa virtual. Higit sa lahat, hindi mo kailangang maging engineer para makapagboluntaryo. Maaari ka pa ring magbigay ng makabuluhang karanasan sa mga mag-aaral sa pamamagitan ng pagbabahagi ng sarili mong karanasan sa karera at kung paano naapektuhan ng CS o teknolohiya ang tungkulin mo.
-
-[<button>Mag-sign up upang magboluntaryo</button>]({{ urls/volunteer }})
-
-Kapag nag-register ang boluntaryo, maaaring suriin ng guro ang kanilang profile sa aming [mapa ng volunteer](https://code.org/volunteer/local) - kaya dapat isumite ang mga profile nang kumpleto hangga't maaari. Kung bagay ka sa kanilang silid-aralan, makikipag-ugnayan sa iyo ang guro sa pamamagitan ng platform (hindi namin kailanman ibabahagi ang email address mo sa guro). Maaari mong direktang i-coordinate ang mga detalye sa guro na nandiyan [paano pinakamahusay na magboluntaryo sa silid-aralan nila](https://hourofcode.com/us/how-to/volunteers).
-
-Sa higit pang gabay sa pagboboluntaryo at sample na pagmemensahe upang masabik ang kompanya mo sa Hour of Code, tingnan ang aming [na gabay sa mga partner sa korporasyon]({{ localized_files/hoc_corporate_toolkit }}).
-
-* * *
-
 <a id="connect-with-a-school"></a>
 
-## Ikonekta ang kompanya mo sa isang paaralan
+## Connect with a local school
 
-Hindi mo kailangang gamitin ang mapa ng boluntaryo namin upang kumonekta sa silid-aralan o paaralan. Kadalasan, inirerekomenda naming magsimula sa malapit. Isaalang-alang kung mayroong mga paaralan kung saan ikaw o ang mga empleyado mo ay may malakas na koneksiyon tulad ng alma mater, paaralan ng bata, o organisasyon o paaralan na nakatutok sa paglilingkod sa populasyon na dati ay hindi gaanong nailalarawan sa computer science.
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-Mula doon, maaari mong bisitahin ang website ng paaralan upang makahanap ng mga naaangkop na contact ng mga administrator tulad ng Principal o Vice Principal, technology o computer science instructor, o maging ang PTSA ng paaralan. Maaari ka ring makipag-partner sa mga organisasyon tulad ng Boys & Girls Clubs of America, YMCA branch, at higit pa upang mag-co-host ng event.
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
 
-Kung hindi ka makakonekta sa isang paaralan, mangyaring [kontakin kami](https://support.code.org/hc/en-us/requests/new) at ikokonekta ka namin sa isa sa aming mga lokal na partner kung maaari.
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
+<a id="encourage-employees"></a>
+
+## Encourage employees to volunteer with a classroom
+
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
+
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+
+[<button>Mag-sign up upang magboluntaryo</button>]({{ urls/volunteer }})
+
+Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -84,7 +84,6 @@ Nakakita na kami ng mga event [na virtual](https://hourofcode.com/us/how-to/virt
 - Ipaliwanag kung paano nakakaapekto ang teknolohiya sa ating buhay, na may mga halimbawa na interesado ang mga mag-aaral sa lahat ng background - pag-usapan ang teknolohiyang nagliligtas ng mga buhay, tumutulong sa mga tao, nag-uugnay sa mga tao.
 - Kung isa kang tech na kompanya, masayang demo, mga makabagong produkto na ginagawa ng kompanya mo. Kung hindi ka isang tech na kompanya, talakayin ang mga paraan na ginagamit ng kompanya mo ang teknolohiya upang malutas ang mga problema at makamit ang mga layunin.
 - Mag imbita ng mga inhenyero ng software na mula sa iyong company para magbahagi ng kanilang miithiin kung bakit nila pinag aralan ang computer science at ang mga proyekto na kasalukuyan nilang tinatrabaho.
-- Kung mayroon kang grupo ng mga staff na makakatulong sa event mo o nagboboluntaryo sa isang lokal na paaralan, isaalang-alang ang pag-order ng [ mga custom t-shirt](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para sa mga empleyado mo.
 
 ### 3. Planuhin ang mga pangangailangan mo sa teknolohiya
 
@@ -137,7 +136,7 @@ Ang isa sa mga pinakamahusay na paraan upang tumulong ay ang ipalaganap ang bali
 
 ### 1. Irehistro ang Event Mo
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Ito rin ay kung paano mo maipapaalam sa mga lokal na paaralan o magulang na nagho-host ka ng event na malapit sa kanila.
+Kapag [ iyong na sign-up ang iyong Hour of Code event](/#join) ikaw ay makakatanggap ng mga sulatronikong komunikasyon kasama ng mga balita at mungkahi para sa pag-host ng matagumpay na Hour of Code. Ito rin ay kung paano mo maipapaalam sa mga lokal na paaralan o magulang na nagho-host ka ng event na malapit sa kanila.
 
 ### 2. Mag-post sa Social Media
 
@@ -164,7 +163,7 @@ Tumulong na itaas ang kamalayan sa kilusan ng computer science gamit ang sample 
 - Kung binago ang buhay mo ng pinakaunang linya ng code, tulungan ang mga mag-aaral na malapit sa iyo na isulat ang kanilang unang #HourOfCode https://code.org/volunteer
 - Kung natuto kang mag-code—ano ang kwento mo? Magbigay inspirasyon sa isang mag-aaral na malapit sa iyo sa pamamagitan ng kanilang unang #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Matuto ng higit pa</a> tungkol sa mga poster, video, sticker at iba pang paraan upang i-promote ang event mo sa iyong komunidad.
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

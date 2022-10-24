@@ -1259,6 +1259,10 @@ he:
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": נקישה
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": דיגיטלי
             "'sound://category_digital/jump_7.mp3'": קפוץ
+      gamelab_playSoundOptionsSoccer:
+        text: נגן צליל {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: נגן צליל {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1906,6 +1910,11 @@ he:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:

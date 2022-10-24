@@ -1,6 +1,6 @@
 require 'cdo/db'
 require 'cdo/geocoder'
-require 'cdo/properties'
+require_relative '../helpers/properties'
 require 'cdo/form'
 require 'securerandom'
 require 'active_support/core_ext/enumerable'

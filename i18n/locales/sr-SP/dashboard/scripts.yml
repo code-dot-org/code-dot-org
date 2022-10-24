@@ -935,3 +935,7 @@ sr:
               display_name: Променљиве
         soccer:
           name: Фудбал
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Петље

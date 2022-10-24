@@ -434,7 +434,8 @@ tr:
       about: Hakkında
       legal: Gizlilik & Hukuk
       legal_privacy: Gizlilik Politikası
-      legal_tos: Şartlar
+      legal_cookie_notice: Çerez Bildirimi
+      legal_tos: Hizmet Şartları
     user:
       classroom: Öğretmen ana sayfa
       district_dashboard: Kontrol Paneli Bölgesi
@@ -479,7 +480,7 @@ tr:
       poetry_hoc: Şiir Sanatı
       scratch: Scratch
       sports: Spor
-      spritelab: Kukla Laboratuvarı
+      spritelab: Hareketli Nesne Laboratuvarı
       starwars: Yıldız Savaşları
       starwarsblocks: Yıldız savaşları (blok)
       starwarsblocks_hour: Yıldız savaşları (blok)
@@ -721,7 +722,7 @@ tr:
     support: Yardım ve Topluluk
     support_url: http://support.code.org
     tos_short: Koşullar
-    tos: Şartlar
+    tos: Hizmet Şartları
     privacy: Gizlilik Politikası
     privacy_updated: Gizlilik Politikası (güncellendi)
     secure: Güvenli sürüm
@@ -762,9 +763,9 @@ tr:
       gamelab_unsupported_tablet: Game Lab bir fare ve klavye ile bir masaüstü veya
         dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak
         sorunlarla karşılaşabilirsiniz.
-      weblab_unsupported_locale_storage: Web Lab Özel tarama modunda kullanma sorunlarla
-        karşılaşabilirsiniz. Lütfen projenize normal modda yeniden yükleyin. Rahatsız
-        ettiğim için özür dilerim.
+      weblab_unsupported_locale_storage: Web Lab Özel tarama modunu kullanırken sorunlarla
+        karşılaşabilirsiniz. Lütfen projenizi normal modda yeniden yükleyin. Rahatsızlık
+        verdiğim için özür dilerim.
   slow_loading: Bu normalden uzun sürüyor...
   try_reloading: Sayfayı yeniden yüklemeyi deneyin
   next_stage: Bitti! Bir sonraki aşamaya geç
@@ -1013,7 +1014,7 @@ tr:
       bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel
       bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere
       okul parası için ebeveyn izni olduğundan emin olun istenecektir.
-    tos: Şartlar
+    tos: Hizmet Şartları
     privacy: Gizlilik Politikası
     privacy_notice: Gizlilik Politikası
     accept_label: Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet
@@ -1439,3 +1440,5 @@ tr:
       cannot_view_locked_answers: Kilitliyken yanıtlar görüntülenemez
       forbidden: Kullanıcı, öğrencinin kilitlenebilme durumunu güncelleyemez
   reset_predict_progress_button: Yanıtı Sil
+  pixelation:
+    binary: İkili

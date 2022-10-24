@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -9,7 +9,6 @@ import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 export const UnconnectedContainedLevelResetButton = ({
   userId,
@@ -20,10 +19,6 @@ export const UnconnectedContainedLevelResetButton = ({
   serverScriptId,
   serverLevelId
 }) => {
-  const isEnabled = useMemo(
-    () => experiments.isEnabled('instructorPredictLevelReset'),
-    []
-  );
   const [resetFailed, setResetFailed] = useState(false);
 
   const logButtonClick = () => {
@@ -35,7 +30,7 @@ export const UnconnectedContainedLevelResetButton = ({
     });
   };
 
-  if (userRoleInCourse !== CourseRoles.Instructor || !isEnabled) {
+  if (userRoleInCourse !== CourseRoles.Instructor) {
     return null;
   }
   return (

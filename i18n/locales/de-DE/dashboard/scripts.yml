@@ -3904,7 +3904,10 @@ de:
             lessonGroup-2:
               display_name: Inhalt
         tessplayground: {}
-        cs4all-invasive-species: {}
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Erste Schritte
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4018,6 +4021,9 @@ de:
           description_audience: Lehrpan-Autoren
           description_short: Für die Bereitstellung von Aktualisierungen der Lektionen oder Stufen zwischen Lehrplanversionen
           description: Für die Bereitstellung von Aktualisierungen der Lektionen oder Stufen zwischen Lehrplanversionen
+          lessons:
+            lesson-7:
+              name: Einführung in Sprites
         csc-pilot-2022-ecosystems: {}
         csc-pilot-2022-timecapsule: {}
         csc-pilot-2022-starquilts: {}
@@ -4177,7 +4183,17 @@ de:
             lessonGroup-5:
               display_name: Umfrage
         csa9-validation-pilot-2022: {}
-        csa1-2023: {}
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java-Labor
+            lesson-6:
+              name: Schleifen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Umfrage
+            lessonGroup-3:
+              display_name: Inhalt
         csa2-2023: {}
         csa3-2023: {}
         csa4-2023: {}
@@ -4240,3 +4256,9 @@ de:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
         csc-bookcover: {}
         csc-landmarks-pilot: {}
+        csc-playground: {}
+        self-paced-pl-physical-computing1: {}
+        self-paced-pl-physical-computing2: {}
+        emmas-playground: {}
+        amys-playground: {}
+        csc-function-machines-pilot: {}

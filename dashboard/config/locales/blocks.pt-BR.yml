@@ -1329,6 +1329,10 @@ pt:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tom grave
               peculiar
             "'sound://category_digital/jump_7.mp3'": pule
+      gamelab_playSoundOptionsSoccer:
+        text: reproduzir som {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: reproduzir som {SOUND}
       gamelab_playSpeech:
         text: reproduzir fala {SOUND}
       gamelab_playerBehaviors:
@@ -2135,6 +2139,11 @@ pt:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: quando {VAR} respondida
       RyanLab_moveForward:

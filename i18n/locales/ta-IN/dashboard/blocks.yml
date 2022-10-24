@@ -1271,6 +1271,10 @@ ta:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": தேர்ந்தெடுப்பு
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": நகைச்சுவையான பாஸ்
             "'sound://category_digital/jump_7.mp3'": குதி
+      gamelab_playSoundOptionsSoccer:
+        text: ஒலி விளையாட்டு {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: ஒலி விளையாட்டு {SOUND}
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
       gamelab_playerBehaviors:
@@ -2024,6 +2028,11 @@ ta:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} பதிலளித்த போது "
       RyanLab_moveForward:

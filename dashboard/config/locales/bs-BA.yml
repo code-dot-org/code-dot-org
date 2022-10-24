@@ -706,3 +706,5 @@ bs:
   cookie_banner:
     accept: Slažem se
   copy: Kopiraj
+  pixelation:
+    binary: Binarno

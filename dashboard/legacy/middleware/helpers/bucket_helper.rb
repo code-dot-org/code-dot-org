@@ -487,7 +487,7 @@ class BucketHelper
   #
   def invalid_version_id?(err)
     # S3 returns an InvalidArgument exception with a particular message for this case.
-    err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message =~ %r{Invalid version id specified}
+    err.is_a?(Aws::S3::Errors::InvalidArgument) && err.message.include?('Invalid version id specified')
   end
 
   def log_restored_file(project_id:, user_id:, filename:, source_version_id:, new_version_id:)

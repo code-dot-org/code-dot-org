@@ -343,6 +343,7 @@
   homepage_banner_40k_teachers_link: "اعرف المزيد"
   homepage_slot_text_title_hoc: "ساعة من البرمجة"
   homepage_slot_text_blurb_hoc: "بإمكان أي شخص أن يتعلم. ابدأ اليوم"
+  homepage_slot_text_blurb_hoc_2022: "استكشف، العب، ابتكِر!"
   homepage_slot_text_link_hoc: "جرب ساعة من البرمجة - \"Hour of Code\""
   homepage_slot_text_link_about_hoc: "عن ساعة من البرمحة"
   homepage_slot_text_link_host: "استضافة ساعة البرمجة"
@@ -1795,3 +1796,5 @@
   outbreak_tile_title: "تفشي المرض"
   outbreak_tile_subtitle: "لقد أصاب فيروس مونستر تاون! قم بترميز جهاز محاكاة تفشي المرض وقم بعمل تنبؤات حول ما سيحدث لجيران Monster Town."
   footer_cookie_notice: "إشعار ملفات تعريف الارتباط"
+  hoc2022_landing_page_create_title: "إنشاء"
+  try_it_yourself: "جرِّب بنفسك!"

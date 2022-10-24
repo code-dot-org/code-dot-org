@@ -30,6 +30,7 @@ export default class CoreLibrary {
     this.promptVars = {};
     this.eventLog = [];
     this.speechBubbles = [];
+    this.storyLabText = {};
     this.soundLog = [];
     this.criteria = [];
     this.bonusCriteria = [];
@@ -53,6 +54,7 @@ export default class CoreLibrary {
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
         }
+        commands.drawStoryLabText.apply(this);
       },
       ...commands
     };

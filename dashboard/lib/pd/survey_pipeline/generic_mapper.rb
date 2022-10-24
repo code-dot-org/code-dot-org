@@ -1,4 +1,4 @@
-require_relative 'reducer.rb'
+require_relative 'reducer'
 
 module Pd::SurveyPipeline
   class GenericMapper < SurveyPipelineWorker

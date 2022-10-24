@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": "hello-world-space",
-    "serialized_at": "2022-10-03 20:52:14 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-10-17 21:36:28 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "Hello World: Food",
-      "name": "Hello World: Food",
+      "name": "Hello World: Space",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,

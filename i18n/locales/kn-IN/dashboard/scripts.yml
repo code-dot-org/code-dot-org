@@ -1273,6 +1273,12 @@ kn:
           title: ನಿಮ್ಮದೇ ಸಾಕರ್ ಗೇಮ್ ಅನ್ನು ಕೋಡ್ ಮಾಡಿ
           description_short: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
           description: ಒಂದು ಸಾಕರ್ ಗೇಮ್ ಮಾಡಿ
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: ಜಾವಾ ಲ್ಯಾಬ್
+            lesson-6:
+              name: ಲೂಪ್‌ಗಳು
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

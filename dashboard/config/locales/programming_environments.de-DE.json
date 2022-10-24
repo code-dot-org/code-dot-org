@@ -4,6 +4,7 @@
       "programming_environments": {
         "weblab": {
           "name": "Web Lab",
+          "description": "Web basierter HTML/CSS-Editor.",
           "categories": {
             "html_tags": {
               "name": "HTML-Tags"

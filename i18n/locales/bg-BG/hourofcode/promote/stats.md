@@ -16,7 +16,7 @@ title: Blurbs and useful stats
 
 #### Bring computer science to your school. Start with an Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But just half of all schools offer computer science! Добрата новина е, че ние сме на път да променим това. Ако сте чували за часът на кода, може би знаете, че ние влезнахме в историята. 100 милиона ученици откриха колко достъпни и забавни са компютърните науки само за един "час на кода".
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But just half of all schools offer computer science! Добрата новина е, че ние сме на път да променим това. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Часът на кода е въведение в компютърните науки в рамките на 1 час, предназначено да демитологизира програмирането и да покаже, че всеки може да се научи да програмира. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
@@ -30,7 +30,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Защо това е важно?
 
-Технологията е променя всеки отрасъл на планетата. През 2015 г., 7 милиона работни места в САЩ са в професии — включително изкуство и дизайн-изискващи умения в програмирането. But 49 percent of schools in the U.S. don't offer computer science. Време е да навлезнем в 21 век. Ние знаем, че независимо от това, какво ще изберат нашите ученици да учат -медицина, бизнес, политика или изкуства, те трябва да знаят как е изградена технологията, и това ще им даде увереност и ноу-хау, за да успеят. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Ние знаем, че независимо от това, какво ще изберат нашите ученици да учат -медицина, бизнес, политика или изкуства, те трябва да знаят как е изградена технологията, и това ще им даде увереност и ноу-хау, за да успеят. <br /> <br />
 
 #### A quote you can use in materials
 

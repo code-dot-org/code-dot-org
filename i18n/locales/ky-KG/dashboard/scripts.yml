@@ -518,3 +518,7 @@ ky:
               display_name: Өзгөрмөлөр
         soccer:
           name: футбол
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Циклдер

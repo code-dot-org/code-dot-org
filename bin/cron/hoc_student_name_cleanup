@@ -23,7 +23,7 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require 'optparse'
 require 'optparse/date'
 require 'cdo/db'
-require 'cdo/properties'
+require_relative '../../pegasus/helpers/properties'
 require 'cdo/chat_client'
 
 script_start_time = Time.now

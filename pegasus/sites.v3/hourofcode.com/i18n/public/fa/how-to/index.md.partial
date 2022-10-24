@@ -113,7 +113,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 دانش آموزان را به فعالیت هدایت کنید
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 اگر در حین آموزش سوالی برای کسی پیش آمد ایرادی ندارد اگر پاسخ دهید:
 
@@ -140,7 +140,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - گواهینامه ها را برای دانش آموزانتان [ چاپ کنید](%= resolve_url('https://code.org/certificates') %).
 - استیکر «من یک ساعت کدنویسی انجام دادم» را برای دانش آموزانتان چاپ کنید.
-- [سفارش تی شرت مخصوص](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) برای کارمندان.
 - عکسها و ویدیوهای کلاسهای یکساعت کدنویسی را در فضای مجازی به اشتراک بگذارید. از #HourOfCode و @codeorg استفاده کنید تا ما بتوانیم موفقیتهایتان را منعکس کنیم!
 
 * * *
@@ -154,6 +153,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ### مرحله بعد از ساعت كدنويسي چيست؟
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

@@ -13,6 +13,7 @@ const DataDocFormEditor = props => {
   const [dataDocContent, setDataDocContent] = useState(originalDataDocContent);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [error, setError] = useState(null);
 
   const save = (e, saveAndClose) => {
     if (isSaving) {
@@ -26,23 +27,21 @@ const DataDocFormEditor = props => {
         name: dataDocName,
         content: dataDocContent
       }
-    }).done(() => {
-      setIsSaving(false);
-      setLastUpdated(Date.now());
-      if (saveAndClose) {
-        navigateToHref(`/data_docs/${dataDocKey}`);
-      }
-    });
+    })
+      .done(() => {
+        setIsSaving(false);
+        setLastUpdated(Date.now());
+        if (saveAndClose) {
+          navigateToHref(`/data_docs/${dataDocKey}`);
+        }
+      })
+      .fail(err => setError(err.responseText));
   };
 
   return (
     <div>
       <RailsAuthenticityToken />
       <h1>Edit Data Doc</h1>
-      <h2>
-        This feature is in progress. It is not ready for use on Levelbuilder
-        yet.
-      </h2>
       <label style={styles.label}>
         Slug
         <input
@@ -77,7 +76,12 @@ const DataDocFormEditor = props => {
         markdown={dataDocContent || ''}
       />
       <br />
-      <SaveBar handleSave={save} isSaving={isSaving} lastSaved={lastUpdated} />
+      <SaveBar
+        handleSave={save}
+        isSaving={isSaving}
+        lastSaved={lastUpdated}
+        error={error}
+      />
     </div>
   );
 };

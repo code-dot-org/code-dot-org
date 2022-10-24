@@ -4361,6 +4361,10 @@ zh-TW:
               display_name: 內容
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: 新手上路
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4460,6 +4464,9 @@ zh-TW:
           description_audience: 課程作者
           description_short: 用於課程版本之間的課程或級別分階段更新
           description: 用於課程版本之間的課程或級別分階段更新
+          lessons:
+            lesson-7:
+              name: 精靈圖介紹
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -4588,6 +4595,17 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 問卷
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java 實驗室
+            lesson-6:
+              name: 迴圈
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 問卷
+            lessonGroup-3:
+              display_name: 內容
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

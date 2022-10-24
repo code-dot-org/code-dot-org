@@ -1,1 +1,5 @@
-{}
+{
+  "selectDataset": "Wybierz zestaw danych, którego chcesz użyć.",
+  "uploadedDataset": "Właśnie przesłałeś zbiór danych.",
+  "selectedDataset": "Właśnie wybrałeś zbiór danych."
+}

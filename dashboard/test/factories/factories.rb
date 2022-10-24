@@ -642,6 +642,11 @@ FactoryGirl.define do
     end
   end
 
+  factory :ailab, parent: :level, class: Ailab do
+    game {Game.ailab}
+    level_num 'custom'
+  end
+
   factory :free_response, parent: :level, class: FreeResponse do
     game {Game.free_response}
     level_num 'custom'
@@ -776,7 +781,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script, aliases: [:unit] do
+  factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true

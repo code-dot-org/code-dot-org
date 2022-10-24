@@ -2234,6 +2234,9 @@ ms:
           description_short: Untuk mengemas kini pelajaran atau peringkat antara versi
             kurikulum
           description: Untuk mengemas kini pelajaran atau peringkat antara versi kurikulum
+          lessons:
+            lesson-7:
+              name: Pengenalan kepada Sprite
         csd-post-survey-2022:
           title: Kajian Pasca Kursus CS Discoveries
           description: Unit ini mengandungi Tinjauan Pascakursus Penemuan CS. Unit
@@ -2260,6 +2263,12 @@ ms:
           title: Mengekod permainan bola sepak anda sendiri
           description_short: Buat permainan bola sepak
           description: Buat permainan bola sepak
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Gelung
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

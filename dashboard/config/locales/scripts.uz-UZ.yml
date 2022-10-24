@@ -4979,6 +4979,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Boshlash
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5030,6 +5034,10 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Spraytlarga kirish
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -5159,6 +5167,15 @@ uz:
               display_name: Kontent
             lessonGroup-5:
               display_name: Survey
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Sikllar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Kontent
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

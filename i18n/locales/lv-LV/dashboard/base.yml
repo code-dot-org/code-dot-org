@@ -544,3 +544,5 @@ lv:
   cookie_banner:
     accept: 'es piekrītu'
   copy: 'Kopija'
+  pixelation:
+    binary: "Binārie"
