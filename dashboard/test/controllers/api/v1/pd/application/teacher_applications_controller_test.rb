@@ -154,7 +154,7 @@ module Api::V1::Pd::Application
       assert_response :created
     end
 
-    test 'updates course hours, autoscores, and queues email once application is submitted' do
+    test 'autoscores and queues email once application is submitted' do
       application_hash = build :pd_teacher_application_hash_common, :csp
       application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
 
