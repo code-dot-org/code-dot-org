@@ -1,7 +1,6 @@
 require 'cdo/script_config'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
-require 'cdo/script_constants'
 
 class ScriptLevelsController < ApplicationController
   check_authorization

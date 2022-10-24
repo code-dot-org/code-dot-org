@@ -1,6 +1,6 @@
 name 'CSA U1L9-L4_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Writing Algorithms'
+description 'Create a new `PainterPlus` subclass and use it in The Neighborhood.'
 
 sublevels
 level 'CSA U1L9-L4a_2023'

@@ -1158,4 +1158,6 @@ es-MX:
       forbidden: "El usuario no puede actualizar el estado bloqueable del estudiante"
   reset_predict_progress_button: "Borrar respuesta"
   pixelation:
+    save_image: "Guardar imagen"
+    actual_size: "Tamaño real"
     binary: "Binario"

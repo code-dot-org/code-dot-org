@@ -1,0 +1,9 @@
+{
+  "key": "instantiating-objects",
+  "course_version_key": "2023",
+  "course_offering_key": "csa",
+  "parent_reference_guide_key": "classes-and-objects",
+  "display_name": "Instantiating Objects",
+  "content": "An object is instantiated using the following syntax:\n\n  ```\n  ClassName nameOfObject = new ClassName();\n  ```\n\nBe sure to replace `ClassName`(#e7e8ea) with the name of the class and `nameOfObject`(#e7e8ea) with the name of the object.",
+  "position": 2
+}
