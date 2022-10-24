@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-10-18 01:17:21 UTC",
+    "serialized_at": "2022-10-21 16:02:54 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4931,13 +4931,7 @@
       "key": "1325cf3a-014f-483e-b95a-33446045ef8f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Give students a minute to write down thoughts before inviting them to share with a neighbor. Then have the class share their thoughts. You may wish to write their ideas on the board.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The earlier demonstration should have reinforced the fact that repeatedly giving the same instruction is something you would never do in real life. You would instead come up with a way to capture that the instruction should be repeated, like \"keep moving forward by 1.\"\r\n"
-          }
-        ]
+        "description": "**Discuss:** Give students a minute to write down thoughts before inviting them to share with a neighbor. Then have the class share their thoughts. You may wish to write their ideas on the board.\n\n**Discussion Goal:** The earlier demonstration should have reinforced the fact that repeatedly giving the same instruction is something you would never do in real life. You would instead come up with a way to capture that the instruction should be repeated, like \"keep moving forward by 1.\""
       },
       "seeding_key": {
         "activity_section.key": "1325cf3a-014f-483e-b95a-33446045ef8f",
@@ -5012,14 +5006,8 @@
       "key": "c2999695-82bf-4122-ad30-5d496c903195",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.",
-        "progression_name": "Video: Velocity",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goals**\n\nIt may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n\nAs students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.",
+        "progression_name": "Video: Velocity"
       },
       "seeding_key": {
         "activity_section.key": "c2999695-82bf-4122-ad30-5d496c903195",
@@ -5156,13 +5144,7 @@
       "key": "aa999a9e-e56b-4465-9389-c1febc437ccf",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion.\r\n"
-          }
-        ]
+        "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.\n\n**Discussion Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion."
       },
       "seeding_key": {
         "activity_section.key": "aa999a9e-e56b-4465-9389-c1febc437ccf",
@@ -5551,13 +5533,7 @@
       "key": "9d5bcbab-052d-47b9-afaa-2f0b58537bda",
       "position": 3,
       "properties": {
-        "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\r\n"
-          }
-        ]
+        "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.\n\n**Discussion Goal:** It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9d5bcbab-052d-47b9-afaa-2f0b58537bda",
@@ -5686,13 +5662,7 @@
       "key": "02ffa3d9-d715-4484-bea3-711445317b72",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks, but being creative about combining the tools you already know how to use.\r\n"
-          }
-        ]
+        "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.\n\n**Discussion Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks but being creative about combining the tools you already know how to use."
       },
       "seeding_key": {
         "activity_section.key": "02ffa3d9-d715-4484-bea3-711445317b72",
@@ -5766,13 +5736,7 @@
       "key": "0ecdbdb5-2cb2-425e-bca3-cbd6b9ebbe5d",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus, because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned."
       },
       "seeding_key": {
         "activity_section.key": "0ecdbdb5-2cb2-425e-bca3-cbd6b9ebbe5d",
@@ -6076,13 +6040,7 @@
       "key": "d31714b0-8d4b-41f6-82d8-ef52628dbb76",
       "position": 2,
       "properties": {
-        "description": "**Think-Pair-Share:** Allow students to explain their blocks to a partner before sharing out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As students share their ideas, make sure they have a clear idea of the code that they would use to make the block, reminding them that all of the blocks they have learned this chapter (e.g. velocity, collisions) have been built from blocks that they already knew.\r\n"
-          }
-        ]
+        "description": "**Think-Pair-Share:** Allow students to explain their blocks to a partner before sharing out their ideas.\n\n**Discussion Goal:** As students share their ideas, make sure they have a clear idea of the code that they would use to make the block, reminding them that all of the blocks they have learned this chapter (e.g. velocity, collisions) have been built from blocks that they already knew.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d31714b0-8d4b-41f6-82d8-ef52628dbb76",
@@ -6127,14 +6085,8 @@
       "key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
       "position": 2,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?",
-        "progression_name": "Video: Functions",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**\n\n**Key Vocabulary:**\n- **Function** - a named bit of programming instructions\n\nMake sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program that the student wants that block of code to run."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.",
+        "progression_name": "Video: Functions"
       },
       "seeding_key": {
         "activity_section.key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
@@ -6240,7 +6192,7 @@
       "key": "b7ee1e8a-d621-4ad2-b4be-8eb1d3ad0c60",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students discuss at their table before talking as a class.",
+        "description": "**Discuss:** Have students discuss at their table before talking as a class.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6292,14 +6244,8 @@
       "key": "5d8e45b6-cc6d-4702-9596-7735b1217b91",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.",
-        "name": "Stop: Review Project Guide\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Running the Conversation:** You can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.\n\n**Discussion Goal:** To help you run the conversation, you can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\n\n",
+        "name": "Stop: Review Project Guide\r"
       },
       "seeding_key": {
         "activity_section.key": "5d8e45b6-cc6d-4702-9596-7735b1217b91",
@@ -6485,13 +6431,7 @@
       "key": "fcf7e2c6-f669-4225-affe-8e575a4585a7",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterwards, lead a share out discussion. You can record ideas on the board.  Possible parts of each step include:",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided. This discussion will motivate the use of the project guide for building a game later in the lesson.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterward, lead a share-out discussion. You can record ideas on the board.  Possible parts of each step include:\n* Define: Figuring out what you want the game to look like, how it should work, and who will play it.\n* Prepare: Plan ahead what your code will look like. Decide on a structure for your game.\n* Try: Write the code following your plan.\n* Reflect: Test your code, play the game to make sure it works, and get feedback from other people to make the game better.\n\n**Discussion Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided above. This discussion will motivate the use of the project guide for building a game later in the lesson."
       },
       "seeding_key": {
         "activity_section.key": "fcf7e2c6-f669-4225-affe-8e575a4585a7",
@@ -6502,7 +6442,6 @@
       "key": "7aec7a54-3133-46a2-9196-44dc4ad0eff5",
       "position": 3,
       "properties": {
-        "description": "* Define: Figuring out what you want the game to look like, how it should work, who will play it.\r\n* Prepare: Plan ahead what your code will look like. Decide on a structure for your game.\r\n* Try: Write the code following your plan.\r\n* Reflect: Test your code, play the game to make sure it works, get feedback from other people to make the game better."
       },
       "seeding_key": {
         "activity_section.key": "7aec7a54-3133-46a2-9196-44dc4ad0eff5",
@@ -6717,13 +6656,7 @@
       "key": "443fdf1b-8a71-4e15-892a-ffd002b89656",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "443fdf1b-8a71-4e15-892a-ffd002b89656",
