@@ -14,11 +14,12 @@ import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
 import InputContext from './InputContext';
-import {Triggers} from './constants';
+import {PLAY_ICON, STOP_ICON, Triggers} from './constants';
 import {musicLabDarkTheme} from './blockly/themes';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {getStaticFilePath} from '@cdo/apps/music/utils';
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -212,6 +213,43 @@ class UnconnectedMusicView extends React.Component {
       }
     );
 
+    Blockly.blockly_.Extensions.register('preview_extension', function() {
+      this.getField('image').setOnClickHandler(function() {
+        if (self.state.isPlaying) {
+          return;
+        }
+        const id = this.getSourceBlock()
+          .getField('sound')
+          .getValue();
+
+        if (self.player.isPreviewPlaying(id)) {
+          self.player.stopAndCancelPreviews();
+          this.setValue(getStaticFilePath(PLAY_ICON));
+        } else {
+          this.setValue(getStaticFilePath(STOP_ICON));
+          self.player.previewSound(id, () => {
+            this.setValue(getStaticFilePath(PLAY_ICON));
+          });
+        }
+      });
+    });
+
+    Blockly.blockly_.Extensions.register(
+      'clear_preview_on_change_extension',
+      function() {
+        this.setOnChange(function(event) {
+          if (
+            event.blockId === this.id &&
+            event.type === Blockly.blockly_.Events.BLOCK_CHANGE &&
+            event.name === 'sound' &&
+            self.player.isPreviewPlaying(event.oldValue)
+          ) {
+            self.player.stopAndCancelPreviews();
+          }
+        });
+      }
+    );
+
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
         init: function() {
@@ -285,6 +323,7 @@ class UnconnectedMusicView extends React.Component {
     // usable then.
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.blockly_.Events.BLOCK_DRAG) {
+      this.player.stopAndCancelPreviews();
       return;
     }
 
