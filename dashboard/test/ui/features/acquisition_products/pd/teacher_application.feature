@@ -84,7 +84,7 @@ Scenario: Teacher starts a new application and submits it
   # Principal approval
   Then I sign out
   Then I navigate to the principal approval page for "Severus"
-  Then I wait until element "h1" contains text "Code.org Principal Approval Form"
+  Then I wait until element "h1" contains text "Code.org Administrator/School Leader Approval Form"
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
   And I press keys "nonexistent" for element "#nces_school"
@@ -110,9 +110,7 @@ Scenario: Teacher starts a new application and submits it
 
   Then I press the first "input[name='committedToMasterSchedule']" element
   Then I press the first "input[name='replaceCourse']" element
-  Then I press the first "input[name='replaceWhichCourseCsd']" element
 
-  Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
   Then I press the first "input[name='payFee']" element
   Then I press the first "#confirmPrincipal" element
