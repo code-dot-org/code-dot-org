@@ -208,7 +208,39 @@ describe('DetailViewContents', () => {
   });
 
   describe('Edit controls in Teacher', () => {
-    it(`cannot make status incomplete from dropdown`, () => {
+    it("cannot make status 'Needs Admin Approval' from dropdown if admin approval not required", () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: true
+        }
+      });
+      console.log(detailView.find('#DetailViewHeader select').debug());
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="awaiting_admin_approval"]')
+      ).to.have.lengthOf(0);
+    });
+
+    it("can make status 'Needs Admin Approval' from dropdown if admin approval is required", () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          principal_approval_not_required: false
+        }
+      });
+      console.log(detailView.find('#DetailViewHeader select').debug());
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="awaiting_admin_approval"]')
+      ).to.have.lengthOf(1);
+    });
+
+    it("cannot make status 'Incomplete' from dropdown", () => {
       const detailView = mountDetailView('Teacher');
       expect(
         detailView
@@ -218,7 +250,7 @@ describe('DetailViewContents', () => {
       ).to.have.lengthOf(0);
     });
 
-    it(`incomplete status is in dropdown if teacher application is incomplete`, () => {
+    it('incomplete status is in dropdown if teacher application is incomplete', () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,

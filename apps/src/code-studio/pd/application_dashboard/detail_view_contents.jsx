@@ -603,13 +603,22 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    // Only show incomplete in the dropdown if the application is incomplete
+    let statusesToHide = [];
+    // Do not show "Needs Admin Approval" if it is not required
+    if (!this.state.principalApprovalIsRequired) {
+      statusesToHide.push('awaiting_admin_approval');
+    }
+    // Do not show "Incomplete" if it is not currently "Incomplete"
+    if (this.state.status !== 'incomplete') {
+      statusesToHide.push('incomplete');
+    }
+
     const statuses = _.omit(
       getApplicationStatuses(
         this.props.viewType,
         this.props.applicationData.update_emails_sent_by_system
       ),
-      this.state.status === 'incomplete' ? [] : ['incomplete']
+      statusesToHide
     );
     const selectControl = (
       <div>
