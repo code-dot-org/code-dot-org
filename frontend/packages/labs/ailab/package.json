@@ -66,7 +66,8 @@
     "webpack": "4.19.1",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.1.4",
+    "yarn": "^1.22.10"
   },
   "files": [
     "dist/**/!(mainDev.js)",
@@ -79,7 +80,6 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "chart.js": "^2.9.4",
     "react-chartjs-2": "^2.11.1",
-    "reselect": "^4.0.0",
-    "yarn": "^1.22.10"
+    "reselect": "^4.0.0"
   }
 }
