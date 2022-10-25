@@ -914,7 +914,7 @@ module Pd::Application
       application = create :pd_teacher_application
       assert_nil application.principal_approval_state
 
-      incomplete = "Incomplete - Principal email sent on Oct 8"
+      incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
         application.queue_email :principal_approval, deliver_now: true

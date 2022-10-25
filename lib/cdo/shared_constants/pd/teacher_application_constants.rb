@@ -9,7 +9,7 @@ module Pd
 
     PRINCIPAL_APPROVAL_STATE = {
       not_required: 'Not required',
-      in_progress: 'Incomplete - Principal email sent on ',
+      in_progress: 'Incomplete - Admin email sent on ',
       complete: 'Complete - '
     }
 
@@ -21,7 +21,7 @@ module Pd
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
       additional_demographic_information: 'Additional Demographic Information and Submission',
-      school_stats_and_principal_approval_section: 'Principal Approval and School Information'
+      school_stats_and_principal_approval_section: 'Administrator Approval and School Information'
     }
 
     PAGE_LABELS = {
@@ -170,24 +170,24 @@ module Pd
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
-        principal_approval_url: "Principal Approval Form URL",
+        principal_approval_url: "Administrator Approval Form URL",
         street_address: 'Home street address',
         city: 'Home city',
         state: 'Home state',
       },
       principal: {
-        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
-        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by principal)",
-        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by principal)",
-        role: PAGE_LABELS[:about_you][:principal_role] + " (provided by principal)",
-        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
+        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by administrator)",
+        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by administrator)",
+        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by administrator)",
+        role: PAGE_LABELS[:about_you][:principal_role] + " (provided by administrator)",
+        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by administrator)",
         can_email_you: 'Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)',
-        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
-        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
+        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by administrator)",
+        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by administrator)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's #{YEAR} Professional Learning Program?",
         total_student_enrollment: "Total student enrollment",
-        free_lunch_percent: "Percent of students who are eligible to receive free or reduced lunch (Principal's response)",
-        underrepresented_minority_percent: "Percent of students from underrepresented racial and ethnic groups (Principal's response)",
+        free_lunch_percent: "Percent of students who are eligible to receive free or reduced lunch (Administrator's response)",
+        underrepresented_minority_percent: "Percent of students from underrepresented racial and ethnic groups (Administrator's response)",
         white: "Percent of student enrollment by race - White",
         black: "Percent of student enrollment by race - Black or African American",
         hispanic: "Percent of student enrollment by race - Hispanic or Latino",
@@ -196,12 +196,12 @@ module Pd
         american_indian: "Percent of student enrollment by race - American Indian or Native Alaskan",
         other: "Percent of student enrollment by race - Other",
         committed_to_master_schedule: "Are you committed to including this course on the master schedule in #{YEAR} if this teacher is accepted into the program?",
-        replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
+        replace_course: "Will this course replace an existing computer science course in the master schedule? (Administrator's response)",
         csp_implementation: "How will you implement CS Principles at your school?",
         csd_implementation: "How will you implement CS Discoveries at your school?",
         csa_implementation: "How will you implement CSA at your school?",
         pay_fee: "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
-        share_ap_scores: "Principal authorizes college board to send AP Scores",
+        share_ap_scores: "Administrator authorizes college board to send AP Scores",
       },
       nces: {
         title_i_status: "Title I status code (NCES data)",

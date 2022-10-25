@@ -386,7 +386,7 @@ describe('DetailViewContents', () => {
     it(`Shows principal responses if approval is complete`, () => {
       const detailView = mountDetailView('Teacher');
       expect(detailView.text()).to.contain(
-        'Principal Approval and School Information'
+        'Administrator Approval and School Information'
       );
     });
     it(`Shows URL to principal approval if sent and incomplete`, () => {
