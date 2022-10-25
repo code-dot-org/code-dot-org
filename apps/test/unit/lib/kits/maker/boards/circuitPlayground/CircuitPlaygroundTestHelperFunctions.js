@@ -20,7 +20,7 @@ export function setSensorAnalogValue(component, rawValue) {
  * Generate a test board object.
  * From rwaldron/johnny-five's newBoard() test helper:
  * https://github.com/rwaldron/johnny-five/blob/dd47719/test/common/bootstrap.js#L83
- * @returns {*}
+ * @returns {five.Board}
  */
 export function newBoard() {
   // We use real playground-io, but our test configuration swaps in mock-firmata
