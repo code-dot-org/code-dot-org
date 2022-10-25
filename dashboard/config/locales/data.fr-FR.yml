@@ -725,7 +725,7 @@ fr:
         mc_2016_loops: Minecraft Hour of Code - Boucles
         mc_2016_events: Minecraft Hour of Code - Événements
         mc_2016_spawn: Minecraft Hour of Code - Rejeton
-        mc_2016_congrats: Minecraft Hour of Code - Félicitations
+        mc_2016_congrats: Heure de Code Minecraft - Félicitations
         applab_hoc_welcome: Hour of Code dans le Labo des Applis - Bienvenue
         applab_hoc_setproperty: Hour of Code dans le Labo des Applis - setProperty
         applab_hoc_onevent: Hour of Code dans le Labo des Applis - onEvent
@@ -733,11 +733,11 @@ fr:
         applab_hoc_share: Hour of Code dans le Labo des Applis - Partager
         mc_2017_agent_intro: Heure de Code Minecraft - L'Agent
         mc_2017_repeat: Heure de Code Minecraft - Les Boucles Répéter
-        mc_2017_functions: Minecraft Hour of Code - Les Fonctions
-        mc_2017_congratulations: Minecraft Hour of Code - Félicitations
+        mc_2017_functions: Heure de Code Minecraft - Les Fonctions
+        mc_2017_congratulations: Heure de Code Minecraft - Félicitations
         mc_2017_puzzle_1: Heure de Code Minecraft - L'Agent
         mc_2017_puzzle_3: Heure de Code Minecraft - Les Boucles Répéter
-        mc_2017_puzzle_8: Minecraft Hour of Code - Les Fonctions
+        mc_2017_puzzle_8: Heure de Code Minecraft - Les Fonctions
         mc_2017_puzzle_12: Minecraft Hour of Code - Jeu Libre
         hint_videos_d_11_3_first: 'Astuces en vidéo : D.11.3 en Premier'
         hint_videos_d_11_3_last: 'Astuces en vidéo : D.11.3 en Dernier'
@@ -870,6 +870,7 @@ fr:
         codebreak_e12: 'Pause informatique 12.0 : Matériel avec  Aloe Blacc, Bret
           Taylor et Paula Mejia'
         csf21pilot_events: 'Les Labo des Sprites : les Sprites en Action'
+        csf21pilot_prompts: 'Labo des sprites : Texte et Invites'
         outbreak_mike: CodeBytes Episode 3 avec Mike - Simulateur d'épidémie
         csd_ml_import_model: Importer un modèle IA
         playlab_2021: Introduction au Labo de jeux

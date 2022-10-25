@@ -4044,3 +4044,77 @@ zh-CN:
           lesson_groups:
             lessonGroup-3:
               display_name: 第 2 章︰ 创建物理原型
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: 那是什么声音？
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: 调查
+            csp_unit1_2020:
+              display_name: 单元 1︰ 数字信息
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 单元 2︰ 互联网
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 第3单元：应用设计简介
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: 变量
+            csp_conditionals:
+              display_name: 条件语句
+            csp_functions:
+              display_name: 函数
+            csp_project:
+              display_name: 项目
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: 列表
+            csp_loops:
+              display_name: 循环
+            csp_traversals:
+              display_name: 遍历
+            csp_project:
+              display_name: 项目
+            lessonGroup-5:
+              display_name: 课后问卷
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '单元 6: 算法'
+            lessonGroup-2:
+              display_name: 课后问卷
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 参数和返回值
+            csp_libraries:
+              display_name: 库
+            lessonGroup-3:
+              display_name: 课后问卷
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 创建表演任务
+            lessonGroup-3:
+              display_name: 课后问卷
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '单元 9: 数据'
+            lessonGroup-2:
+              display_name: 课后问卷
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 第10单元：网络安全和全球影响
+            lessonGroup-2:
+              display_name: 课后问卷
+        csp-post-survey-2023:
+          title: 计算机科学原理课后调查
