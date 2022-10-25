@@ -185,12 +185,9 @@ module Api::V1::Pd::Application
       original_data = application.form_data_hash
       original_school_info = @applicant.school_info
 
-      # Keep cs_total_course_hours because it is calculated on create or update
-      put :update, params: {id: application.id, status: 'incomplete', form_data: {"cs_total_course_hours": 80}}
+      put :update, params: {id: application.id, status: 'incomplete'}
       application.reload
-      refute_equal original_data, application.form_data_hash
-      assert_nil application.course
-      assert_nil application.form_data_hash[:cs_total_course_hours]
+      assert_equal original_data, application.form_data_hash
       assert_equal original_school_info, @applicant.school_info
       assert_response :ok
     end
