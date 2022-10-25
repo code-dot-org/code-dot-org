@@ -39,14 +39,14 @@ social:
 
     .col-50
       .tutorial-tile
-        %a{href: "/ai"}
-          %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/ai_2020_overview.png", alt: I18n.t(:hoc_ai_alt_text)}
+        %a{href: "/helloworld"}
+          %img.tutorial-tile-img{src: "/images/fill-484x234/oceans/ai_2020_overview.png", alt: I18n.t(:hoc_danceparty_alt_text)}
         .tutorial-info
+          %span{style: "text-transform: capitalize"}
+            %h3.tutorial-info-h= I18n.t(:hello)
+            .smalltext= I18n.t(:hoc_overview_hello_world_2022_subtitle)
           %span
-            %h3.tutorial-info-h=hoc_s(:hoc2020_ai_header)
-            .smalltext=hoc_s(:hoc_overview_oceans_tutorial_desc)
-          %span
-            %a{href: "/ai"}
+            %a{href: "/helloworld"}
               %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
 
   .tile-container-responsive
