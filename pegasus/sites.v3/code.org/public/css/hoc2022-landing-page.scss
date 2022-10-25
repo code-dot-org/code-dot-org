@@ -16,8 +16,20 @@ html {
 header {
   text-align: center;
   padding: 5em 1em;
-  background: $dark_gray;
   color: $white;
+  background: url("/images/hoc2022-landing-page-banner-bg.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+
+  img {
+    z-index: 0;
+    height: 378px;
+    position: absolute;
+    bottom: 0;
+
+    &.left { left: 0 }
+    &.right { right: 0 }
+  }
 
   h1, h2 {
     color: $white;
