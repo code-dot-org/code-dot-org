@@ -11,7 +11,10 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
-import {setSensorAnalogValue} from './CircuitPlaygroundTestHelperFunctions';
+import {
+  stubComponentInitialization,
+  unstubComponentInitialization
+} from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
 import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
@@ -562,28 +565,13 @@ describe('CircuitPlaygroundBoard', () => {
       // promise chains run as far as they can before entering the callback.
       const realSetTimeout = window.setTimeout;
       yieldToPromiseChain = cb => realSetTimeout(cb, 0);
-      const INITIAL_ANALOG_VALUE = 235;
 
       // When the board connects, the playground components will be initialized.
       // Our sensors and thermometer block initialization until they receive data
       // over the wire.  That's not great for unit tests, so here we stub waiting
       // for data to resolve immediately.
-      sinon.stub(five.Sensor.prototype, 'once');
-      five.Sensor.prototype.once
-        .withArgs('data')
-        .callsFake(function(_, callback) {
-          // Pretend we got a real analog value back on the component's pin.
-          setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
-          callback();
-        });
-      sinon.stub(five.Thermometer.prototype, 'once');
-      five.Thermometer.prototype.once
-        .withArgs('data')
-        .callsFake(function(_, callback) {
-          // Pretend we got a real analog value back on the component's pin.
-          setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
-          callback();
-        });
+      stubComponentInitialization(five.Sensor);
+      stubComponentInitialization(five.Thermometer);
 
       // Now use fake timers so we can test exactly when the different commands
       // are sent to the board
@@ -592,8 +580,8 @@ describe('CircuitPlaygroundBoard', () => {
 
     afterEach(() => {
       clock.restore();
-      five.Sensor.prototype.once.restore();
-      five.Thermometer.prototype.once.restore();
+      unstubComponentInitialization(five.Sensor);
+      unstubComponentInitialization(five.Thermometer);
     });
 
     it('plays a song and animates lights', done => {

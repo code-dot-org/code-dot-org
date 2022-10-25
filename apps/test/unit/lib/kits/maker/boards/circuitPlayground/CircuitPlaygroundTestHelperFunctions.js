@@ -2,6 +2,8 @@ import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import sinon from 'sinon';
 
+const INITIAL_ANALOG_VALUE = 235;
+
 /**
  * Simulate a raw value coming back from the board on the given component's pin.
  * @param {five.Sensor|five.Thermometer} component
@@ -47,4 +49,18 @@ export function newBoard() {
   io.emit('ready');
 
   return board;
+}
+
+export function stubComponentInitialization(component) {
+  // component would be a reference to five.Sensor, etc.
+  sinon.stub(component.prototype, 'once');
+  component.prototype.once.withArgs('data').callsFake(function(_, callback) {
+    // Pretend we got a real analog value back on the component's pin.
+    setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
+    callback();
+  });
+}
+
+export function unstubComponentInitialization(component) {
+  component.prototype.once.restore();
 }

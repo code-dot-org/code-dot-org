@@ -20,7 +20,9 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import {
   newBoard,
-  setSensorAnalogValue
+  setSensorAnalogValue,
+  stubComponentInitialization,
+  unstubComponentInitialization
 } from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -44,28 +46,14 @@ describe('Circuit Playground Components', () => {
     // Our sensors and thermometer block initialization until they receive data
     // over the wire.  That's not great for unit tests, so here we stub waiting
     // for data to resolve immediately.
-    sinon.stub(five.Sensor.prototype, 'once');
-    five.Sensor.prototype.once
-      .withArgs('data')
-      .callsFake(function(_, callback) {
-        // Pretend we got a real analog value back on the component's pin.
-        setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
-        callback();
-      });
-    sinon.stub(five.Thermometer.prototype, 'once');
-    five.Thermometer.prototype.once
-      .withArgs('data')
-      .callsFake(function(_, callback) {
-        // Pretend we got a real analog value back on the component's pin.
-        setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
-        callback();
-      });
+    stubComponentInitialization(five.Sensor);
+    stubComponentInitialization(five.Thermometer);
   });
 
   afterEach(() => {
     clock.restore();
-    five.Sensor.prototype.once.restore();
-    five.Thermometer.prototype.once.restore();
+    unstubComponentInitialization(five.Sensor);
+    unstubComponentInitialization(five.Thermometer);
   });
 
   describe(`createCircuitPlaygroundComponents()`, () => {
