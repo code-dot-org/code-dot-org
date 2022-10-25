@@ -14,6 +14,7 @@ export const FUNCTION_BLOCK = {
     );
     nameField.setSpellcheck(false);
     this.appendDummyInput()
+      .appendField(' ')
       .appendField(nameField, 'NAME')
       .appendField('', 'PARAMS');
     this.setStyle('procedure_blocks');
