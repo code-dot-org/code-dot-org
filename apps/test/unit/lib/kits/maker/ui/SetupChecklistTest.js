@@ -71,10 +71,10 @@ describe('SetupChecklist', () => {
         <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
       );
       expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
-      expect(wrapper.find(WAITING_ICON)).to.have.length(1);
+      expect(wrapper.find(WAITING_ICON)).to.have.length(0);
       await yieldUntilDoneDetecting(wrapper);
       expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+      expect(wrapper.find(SUCCESS_ICON)).to.have.length(3);
       expect(window.console.error).not.to.have.been.called;
     });
 
@@ -84,11 +84,11 @@ describe('SetupChecklist', () => {
           <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
         );
         await yieldUntilDoneDetecting(wrapper);
-        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(3);
         wrapper.find(REDETECT_BUTTON).simulate('click');
-        expect(wrapper.find(WAITING_ICON)).to.have.length(1);
+        expect(wrapper.find(WAITING_ICON)).to.have.length(0);
         await yieldUntilDoneDetecting(wrapper);
-        expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+        expect(wrapper.find(SUCCESS_ICON)).to.have.length(3);
         expect(utils.reload).not.to.have.been.called;
       });
     });
