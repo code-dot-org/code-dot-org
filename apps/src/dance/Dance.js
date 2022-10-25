@@ -1,3 +1,11 @@
+// NOTE: This works
+// I manually commented out this line in the dance-party repo
+// in order to stop resetting sprite loading state every time the
+// reset button is clicked.
+// https://github.com/code-dot-org/dance-party/blob/6672bdb0cffad1cbfda6e7396155f542b6cdcffe/src/p5.dance.js#L256
+// This should be ok now that we are checking that all sprites are loaded
+// when the page loads, and any time a student changes sometihng in the workspace.
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
@@ -112,7 +120,7 @@ Dance.prototype.init = function(config) {
   });
   this.danceReadyPromise = new Promise(resolve => {
     this.danceReadyPromiseResolve = () => {
-      this.registerSetupEvent('danceReady');
+      this.registerSetupEvent('danceApiReady');
       return resolve();
     };
   });
@@ -156,14 +164,18 @@ Dance.prototype.init = function(config) {
     this.registerSetupEvent('songsInitialized')
   );
 
+  // ensure sprites are loaded for initial program state
+  this.nativeAPI
+    ?.ensureSpritesAreLoaded(computeCharactersReferenced())
+    .then(() => this.registerSetupEvent('spritesReady'));
+
   // To support synchronous audio on iOS devices,
   // load sprites as students add new characters
   // to their programs. Block the run button until all characters have loaded.
-  // maybe add check that all sprite have loaded too before run button enabled?
+  // should we optimize this to be iOS only?
   const computeCharactersReferenced = () =>
     this.computeCharactersReferenced(this.studioApp_.getCode());
   this.studioApp_.addChangeHandler(() => {
-    // this.disableRunButton();
     this.unregisterSetupEvent('spritesReady');
     this.nativeAPI
       ?.ensureSpritesAreLoaded(computeCharactersReferenced())
@@ -218,7 +230,7 @@ Dance.prototype.initSongs = async function(config) {
   getStore().dispatch(setSelectedSong(selectedSong));
   getStore().dispatch(setSongData(songData));
 
-  this.disableRunButton();
+  this.unregisterSetupEvent('songLoaded');
   loadSong(
     selectedSong,
     songData,
@@ -265,7 +277,6 @@ Dance.prototype.setSongCallback = function(songId) {
   getStore().dispatch(setSelectedSong(songId));
 
   this.unregisterSetupEvent('songLoaded');
-  this.disableRunButton();
   unloadSong(lastSongId, songData);
   loadSong(
     songId,
@@ -416,6 +427,7 @@ Dance.prototype.afterInject_ = function() {
         // In the share scenario, we call ensureSpritesAreLoaded() early since the
         // student code can't change. This way, we can start fetching assets while
         // waiting for the user to press the Run button.
+        // need to add event listener here as well to support share scenario?
         await this.studioAppInitPromise;
         const charactersReferenced = this.computeCharactersReferenced(
           this.studioApp_.getCode()
@@ -556,6 +568,8 @@ Dance.prototype.runButtonClick = async function() {
     clickToRunImage.style.display = 'none';
   }
 
+  // Probably can get rid of this if we go synchronous.
+  // Also might be able to get rid of some timing metrics that time how long it takes to start playing, etc.
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
@@ -563,19 +577,13 @@ Dance.prototype.runButtonClick = async function() {
     return;
   }
 
+  // remove this if synch?
   this.performanceData_.lastRunButtonClick = performance.now();
   this.performanceData_.lastRunButtonDelay = null;
 
-  // Disable the run button now to give some visual feedback
-  // that the button was pressed. toggleRunReset() will
-  // eventually execute down below, but there are some long-running
-  // tasks that need to complete first
-  this.disableRunButton();
   const divDanceLoading = document.getElementById('divDanceLoading');
   divDanceLoading.style.display = 'flex';
   getStore().dispatch(setRunIsStarting(true));
-  // (done) AWAIT
-  await this.danceReadyPromise;
 
   //Log song count in Dance Lab
   trackEvent('HoC_Song', 'Play-2019', getStore().getState().songs.selectedSong);
@@ -584,8 +592,7 @@ Dance.prototype.runButtonClick = async function() {
   this.studioApp_.attempts++;
 
   try {
-    // AWAIT
-    await this.execute();
+    this.execute();
   } finally {
     this.studioApp_.toggleRunReset('reset');
     divDanceLoading.style.display = 'none';
@@ -603,7 +610,7 @@ Dance.prototype.runButtonClick = async function() {
   }
 };
 
-Dance.prototype.execute = async function() {
+Dance.prototype.execute = function() {
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
@@ -616,11 +623,7 @@ Dance.prototype.execute = async function() {
     return;
   }
 
-  const charactersReferenced = this.initInterpreter();
-
-  // AWAIT
-  // can i just remove this?
-  await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
+  this.initInterpreter();
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
@@ -635,17 +638,8 @@ Dance.prototype.execute = async function() {
   );
   this.nativeAPI.registerValidation(validationCallback);
 
-  // songMetadataPromise will resolve immediately if the request which populates
-  // it has not yet been initiated. Therefore we must first wait for song init
-  // to complete before awaiting songMetadataPromise.
-  // pretty sure this will load...
-  // AWAIT
-  await this.initSongsPromise;
-
-  // AWAIT
-  const songMetadata = await this.songMetadataPromise;
   return new Promise((resolve, reject) => {
-    this.nativeAPI.play(songMetadata, success => {
+    this.nativeAPI.play(this.songMetadata, success => {
       this.performanceData_.lastRunButtonDelay =
         performance.now() - this.performanceData_.lastRunButtonClick;
       success ? resolve() : reject();
@@ -672,8 +666,6 @@ Dance.prototype.initInterpreter = function() {
     events,
     code
   ).hooks;
-
-  return this.computeCharactersReferenced(studentCode);
 };
 
 Dance.prototype.computeCharactersReferenced = function(studentCode) {
@@ -698,8 +690,8 @@ Dance.prototype.shouldShowSharing = function() {
 
 Dance.prototype.updateSongMetadata = function(id) {
   this.songMetadataPromise = loadSongMetadata(id).then(metadata => {
+    this.songMetadata = metadata;
     this.registerSetupEvent('updatedSongMetadata');
-    return metadata;
   });
 };
 
@@ -798,7 +790,7 @@ Dance.prototype.unregisterSetupEvent = function(event) {
 
 Dance.prototype.setRunButtonState = function() {
   this.getRunButton().disabled = !(
-    this.setupEvents.includes('danceReady') &&
+    this.setupEvents.includes('danceApiReady') &&
     this.setupEvents.includes('songsInitialized') &&
     this.setupEvents.includes('songLoaded') &&
     this.setupEvents.includes('updatedSongMetadata') &&
