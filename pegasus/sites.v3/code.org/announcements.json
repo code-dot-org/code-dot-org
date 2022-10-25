@@ -2,7 +2,8 @@
   "pages": {
     "/projects": "coldplay",
     "/certificates": "hoc-more",
-    "/home": "csleadersprize"
+    "/home": "csleadersprize",
+    "/courses": "csleadersprize"
   },  
   "banners": {
     "csleadersprize": {
