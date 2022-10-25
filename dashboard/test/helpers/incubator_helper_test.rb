@@ -25,6 +25,13 @@ class IncubatorHelperTest < ActionView::TestCase
     refute show_incubator_banner?
   end
 
+  test 'teacher with dcdo who can not see incubator' do
+    sign_in @teacher_yes
+    stubs(:language).returns "en"
+    DCDO.stubs(:get).with('hide_incubator_link', false).returns(true)
+    refute show_incubator_banner?
+  end
+
   test 'student who can not see incubator' do
     sign_in @student
     stubs(:language).returns "en"
