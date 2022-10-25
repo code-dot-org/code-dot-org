@@ -26,56 +26,42 @@ describe('Custom Functions', () => {
   });
 
   it('Category has correct blocks with no defined functions', () => {
-    const customBlocks = FUNCTION_CATEGORY(undefined, []).map(element =>
-      // Filter out randomized ids and uninteresting attributes.
-      JSON.stringify(element, ['tagName', 'innerHTML', 'outerHTML'])
-    );
-    const expectedBlocks = {
-      tagName: 'block',
-      innerHTML: '<field name="NAME">undefined</field>',
-      outerHTML:
-        '<block type="procedures_defnoreturn" gap="24"><field name="NAME">undefined</field></block>'
-    };
-    expect(customBlocks).to.deep.equal([JSON.stringify(expectedBlocks)]);
+    const customBlocks = FUNCTION_CATEGORY(undefined, []);
+    const customBlocksHTML = customBlocks
+      .map(element => element.outerHTML)
+      .join();
+    const expectedBlocksHTML =
+      '<block type="procedures_defnoreturn" gap="24"><field name="NAME">undefined</field></block>';
+    expect(customBlocksHTML).to.deep.equal(expectedBlocksHTML);
   });
 
   it('Category has correct blocks with one defined function', () => {
     const customBlocks = FUNCTION_CATEGORY(undefined, [
       ['myTestFunction', [], false]
-    ]).map(element =>
-      // Filter out randomized ids and uninteresting attributes.
-      JSON.stringify(element, ['tagName', 'innerHTML', 'outerHTML'])
-    );
-    const expectedBlocks = [
-      {
-        tagName: 'block',
-        innerHTML: '<field name="NAME">undefined</field>',
-        outerHTML:
-          '<block type="procedures_defnoreturn" gap="24"><field name="NAME">undefined</field></block>'
-      },
-      {
-        tagName: 'block',
-        innerHTML: '<mutation name="myTestFunction"></mutation>',
-        outerHTML:
-          '<block type= "procedures_callnoreturn" gap="16"><mutation name="myTestFunction"></mutation></block>'
-      }
-    ];
-    expect(customBlocks).to.deep.equal(JSON.stringify(expectedBlocks));
+    ]);
+    const customBlocksHTML = customBlocks
+      .map(element => element.outerHTML)
+      .join();
+    const expectedBlocksHTML = [
+      '<block type="procedures_defnoreturn" gap="24"><field name="NAME">undefined</field></block>',
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="myTestFunction"></mutation></block>'
+    ].join();
+    expect(customBlocksHTML).to.equal(expectedBlocksHTML);
   });
 
   it('Category has correct blocks with multiple defined functions', () => {
     const customBlocks = FUNCTION_CATEGORY(undefined, [
       ['myFirstTestFunction', [], false],
       ['mySecondTestFunction', [], false]
-    ]).map(element =>
-      // Filter out randomized ids and uninteresting attributes.
-      JSON.stringify(element, ['tagName', 'innerHTML', 'outerHTML'])
-    );
-    const expectedBlocks = [
-      '{"tagName":"block","innerHTML":"<field name=\\"NAME\\">undefined</field>","outerHTML":"<block type=\\"procedures_defnoreturn\\" gap=\\"24\\"><field name=\\"NAME\\">undefined</field></block>"}',
-      '{"tagName":"block","innerHTML":"<mutation name=\\"myFirstTestFunction\\"></mutation>","outerHTML":"<block type=\\"procedures_callnoreturn\\" gap=\\"16\\"><mutation name=\\"myFirstTestFunction\\"></mutation></block>"}',
-      '{"tagName":"block","innerHTML":"<mutation name=\\"mySecondTestFunction\\"></mutation>","outerHTML":"<block type=\\"procedures_callnoreturn\\" gap=\\"16\\"><mutation name=\\"mySecondTestFunction\\"></mutation></block>"}'
-    ];
-    expect(customBlocks).to.deep.equal(expectedBlocks);
+    ]);
+    const customBlocksHTML = customBlocks
+      .map(element => element.outerHTML)
+      .join();
+    const expectedBlocksHTML = [
+      '<block type="procedures_defnoreturn" gap="24"><field name="NAME">undefined</field></block>',
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="myFirstTestFunction"></mutation></block>',
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="mySecondTestFunction"></mutation></block>'
+    ].join();
+    expect(customBlocksHTML).to.deep.equal(expectedBlocksHTML);
   });
 });
