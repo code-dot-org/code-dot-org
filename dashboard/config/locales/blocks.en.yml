@@ -254,20 +254,12 @@ en:
             '1': "→"
       Dancelab_eval:
         text: eval {CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'repeat every {N} measures after {START} '
       Dancelab_everySeconds:
         text: 'repeat every {N} {UNIT} '
         options:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
-      Dancelab_everySecondsRange:
-        text: 'every {N} {UNIT} from {START} to {STOP} '
-        options:
-          UNIT:
-            measures: Measures
-            seconds: Seconds
       Dancelab_everyVerseChorus:
         text: 'every {UNIT} '
         options:
