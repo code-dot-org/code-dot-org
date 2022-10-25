@@ -34,7 +34,7 @@
         "csf-artist-intro-video/artist/unversioned": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "",
@@ -44,7 +44,7 @@
         "csf-turns-angles-video/artist/unversioned": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "dance-party-playlist/dance/unversioned": {
           "name": "",
@@ -134,12 +134,12 @@
           "url": ""
         },
         "common_core_and_ngss_guidance/coursed/2022": {
-          "name": "Common Core و NGSS Guidance",
-          "url": "",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursed/2022": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
@@ -148,7 +148,7 @@
           "url": ""
         },
         "debugging_guide/coursed/2022": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -158,7 +158,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursed/2022": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -168,26 +168,26 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursed/2022": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": ""
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
-          "name": "",
-          "url": "",
+          "name": "بخش Password Power-Up: سناریوهای ...If...Then",
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "جزوه"
         },
         "password_power-up_if_then_scenarios_1/coursed/2022": {
-          "name": "",
-          "url": "",
+          "name": "بخش Password Power-Up: سناریوهای ...If...Then",
+          "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "کلید پاسخ"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
-          "name": "",
-          "url": "",
+          "name": "Password Power-Up: امتحان درس",
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "منبع"
         },
         "password_power-up_lesson_quiz_1/coursed/2022": {
-          "name": "",
+          "name": "Password Power-Up: امتحان درس",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
           "type": "کلید پاسخ"
         },
@@ -214,80 +214,80 @@
         "graph_paper_programming/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
           "url": "https://docs.google.com/document/d/1-13EglioRqmSMkD5cAdlquA0OYc5MZdPHWICXs1DUkY/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ فعالیت"
         },
         "graph_paper_programming_1/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/Y_paSrH2ffw",
+          "type": "ویدئوی Unplugged"
         },
         "graph_paper_programming_2/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "ویدئوی Lesson in Action"
         },
         "graph_paper_programming_3/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1HZr_YlKSSxAXRjW1F0g7xtOrfIKPMAArmsRMd-j1AHY/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "graph_paper_programming_4/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1S1t7dMPOZkZBxzQhysX1IUQFapyZHcZXSRCRmAngewU/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "graph_paper_programming_5/coursed/2022": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1cmmXSH-mI9gu4EZMsDTyPA2MRdotirsHwcxKvnyEe0A/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "pair_programming/coursed/2022": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "relay_programming/coursed/2022": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1NaeCY2YcNCI-ARVvKrXBUlB53flVqu5Nqw-hdEI_E0A/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "relay_programming_1/coursed/2022": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1QGrHiYV4wgsYgjUhmiG6wkD-_1k8YCB7z0dbsYnE0mg/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "relay_programming_2/coursed/2022": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1NBh3fT8AH-u9tDsS-9IBnYJSUGFaXzhz9FHK71aD9s8/edit?usp=sharing",
+          "type": "اشکال زدایی تصویر معلم"
         },
         "relay_programming_3/coursed/2022": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/l5MKkXbzOsk",
+          "type": "ویدئوی Unplugged"
         },
         "relay_programming_4/coursed/2022": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/ZULpfAVJOBo",
+          "type": "ویدئو معلم"
         },
         "relay_programming_5/coursed/2022": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1W6iz1CViMfX8-bdwaXxXE4rCDTbH3tvdeGMTPhTZFkM/edit?usp=sharing",
+          "type": "بسته فعالیت"
         },
         "unplugged_blocks_courses_c-f_/coursed/2022": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "open-ended_programming_levels/coursed/2022": {
           "name": "مراحل برنامه نویسی بی‌انتها",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
           "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursed/2022": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویدیو"
         },
@@ -298,22 +298,22 @@
         },
         "sample_level_solutions/coursed/2022": {
           "name": "نمونه راه حل‌های مرحله",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1XNOBi1OrHlRQbQCiaCV9MPHeAQhQDDr34wjlAd3qatw/template/preview",
           "type": "کلید پاسخ"
         },
         "dance_party_project_guide/coursed/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "راهنمای پروژه Dance Party",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "کاربرگ"
         },
         "dance_party_unplugged/coursed/2022": {
-          "name": "",
+          "name": "Dance Party: Unplugged",
           "url": "",
           "type": "منبع"
         },
         "open-ended_programming_levels_2/coursed/2022": {
           "name": "مراحل برنامه نویسی بی‌انتها",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/coursed/2022": {
@@ -323,17 +323,17 @@
         "feeling_faces/coursed/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "conditionals_with_cards/coursed/2022": {
           "name": "شرطی ها با کارتها",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/UymN4lTL50s",
+          "type": "ویدئوی Unplugged"
         },
         "conditionals_with_cards_1/coursed/2022": {
           "name": "شرطی ها با کارتها",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "ویدئوی Lesson in Action"
         },
         "conditionals_with_cards_2/coursed/2022": {
           "name": "شرطی ها با کارتها",
@@ -342,23 +342,23 @@
         },
         "conditionals_with_cards_3/coursed/2022": {
           "name": "شرطی ها با کارتها",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "ویدئو ارزیابی"
         },
         "conditionals_with_cards_4/coursed/2022": {
           "name": "شرطی ها با کارتها",
           "url": "https://docs.google.com/document/d/1yTrrMtQZRNPWGieDg5OQCS-zRhtKynEufo82_gJFMWI/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ ارزیابی"
         },
         "conditionals_with_cards_sample_program/coursed/2022": {
-          "name": "",
+          "name": "شرط با کارت‌های برنامه نمونه",
           "url": "https://docs.google.com/document/d/1XOc6eEKKl9QMiUovDaoaG3F3jekqDI3Srndc6Q-nqxc/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای آمادگی معلم"
         },
         "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
-          "name": "",
+          "name": "CSF دوره D راهنمای برنامه‌ریزی پروژه پایان دوره",
           "url": "https://docs.google.com/document/d/1C47vPia2w2WwGb6rFHaRGDB6AffeIniHg-cVtvdsfPc/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "2022_change_log/coursef/2022": {
           "name": "",
@@ -377,12 +377,12 @@
           "url": ""
         },
         "common_core_and_ngss_guidance/coursef/2022": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursef/2022": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
@@ -392,7 +392,7 @@
           "type": "منبع"
         },
         "debugging_guide/coursef/2022": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -402,7 +402,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursef/2022": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": ""
         },
         "sprite_lab_documentation/coursef/2022": {
@@ -416,7 +416,7 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursef/2022": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": ""
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
@@ -440,7 +440,7 @@
           "type": "ویدیو"
         },
         "the_power_of_words_words_can_hurt/coursef/2022": {
-          "name": "قدرت کلمات: کلمات میتوانند آسیب برسانند",
+          "name": "قدرت کلمات: کلمات می‌توانند آسیب برسانند",
           "url": "https://docs.google.com/document/d/1cHW8UOcHZTLtEjsp029miGPXGUcfn3GyCPg_0H0EdpM/edit?usp=sharing",
           "type": "جزوه"
         },
@@ -450,12 +450,12 @@
           "type": "اسلایدها"
         },
         "exploring_apps/coursef/2022": {
-          "name": "کاوش در اپلیکیشن ها",
+          "name": "کاوش برنامه‌های کاربردی ",
           "url": "https://docs.google.com/document/d/141nblqhokVNBaaZwjZNrkyPefk-D9eZvmUsdUCqQ-kk/edit?usp=sharing",
           "type": "منبع"
         },
         "exploring_apps_1/coursef/2022": {
-          "name": "کاوش در اپلیکیشن ها",
+          "name": "کاوش برنامه‌های کاربردی ",
           "url": "https://docs.google.com/document/d/1x5vSImoOlzai1PzwJkKptODhooNH3lmog9uqt40AjFY/edit?usp=sharing",
           "type": "کلید پاسخ"
         },
@@ -470,12 +470,12 @@
           "type": "اسلایدها"
         },
         "blank_space_stories/coursef/2022": {
-          "name": "داستانهای فضای خالی",
+          "name": "داستان‌های فضای خالی",
           "url": "https://docs.google.com/document/d/1rgcaqvBDDBEMxevF90W5OP8DDfp-ZNjPx2xAmnDwDwE/edit?usp=sharing",
           "type": ""
         },
         "blank_space_stories_1/coursef/2022": {
-          "name": "داستانهای فضای خالی",
+          "name": "داستان‌های فضای خالی",
           "url": "https://docs.google.com/document/d/1b8-7kzqTcnRHCGKnxFEY1SsbUIzz8qL6v6FSzV6JvQs/edit?usp=sharing",
           "type": "کلید پاسخ"
         },
@@ -500,9 +500,9 @@
           "type": ""
         },
         "running_simulations/coursef/2022": {
-          "name": "اجرای شبیه ساز",
+          "name": "اجرای شبیه‌ساز",
           "url": "https://docs.google.com/document/d/1gkKyrXQTbpKUmkY2q2z0RdT3KC-DAQsUK032RNibupo/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "ai_impact_on_society/coursef/2022": {
           "name": "",
@@ -526,23 +526,23 @@
         },
         "internet/coursef/2022": {
           "name": "اینترنت",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "url": "https://docs.google.com/document/d/1WpB_zfsOBjiUiwSaqHVf5wDE9Wt0h9LCvx1fr5UnC68/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "internet_1/coursef/2022": {
           "name": "اینترنت",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1jxOFf396YqWPu1OHrmv8reaTEkMHiCQhguJ9pP3j9QM/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "ip_address_cards_and_delivery_type_cards/coursef/2022": {
-          "name": "کارت های IP آدرس ها و کارت های نوع تحویل",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
-          "type": ""
+          "name": "کارت‌های IP آدرس‌ها و کارت‌های نوع تحویل",
+          "url": "https://docs.google.com/document/d/17tE-yvMDmAf3Cr9V45eUY898Qx6Bk8qNWelyzG-Cd7s/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "the_internet/coursef/2022": {
           "name": "اینترنت",
           "url": "https://youtu.be/mFOUbqYv1Sc",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "cs_fundamentals_final_project/coursef/2022": {
           "name": "پروژه نهایی CS Fundamentals",
@@ -550,7 +550,7 @@
           "type": "سرفصل"
         },
         "final_project_design_1/coursef/2022": {
-          "name": "",
+          "name": "پایان راهنمای پروژه دوره",
           "url": "",
           "type": ""
         },
@@ -571,12 +571,12 @@
           "url": ""
         },
         "common_core_and_ngss_guidance/coursee/2022": {
-          "name": "Common Core و NGSS Guidance",
-          "url": "",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursee/2022": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
@@ -585,7 +585,7 @@
           "url": ""
         },
         "debugging_guide/coursee/2022": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -595,7 +595,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursee/2022": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -610,41 +610,41 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursee/2022": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": ""
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
-          "name": "",
+          "name": "یک شهروند فوق دیجیتال باشید: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1Vo7REdCSmorWMirt_OXcsS77F5VZ6UGdabm69N8K2kY/edit?usp=sharing"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2022": {
-          "name": "",
-          "url": ""
+          "name": "شهروند فوق دیجیتال باشید: شهروند فوق دیجیتال",
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
         "private_and_personal_information_exit_ticket/coursee/2022": {
-          "name": "",
-          "url": "",
+          "name": "اطلاعات خصوصی و شخصی: Exit Ticket",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
           "type": ""
         },
         "private_and_personal_information_lesson_quiz/coursee/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "اطلاعات خصوصی و شخصی: امتحان درس",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "فرم"
         },
         "private_and_personal_information_lesson_quiz_1/coursee/2022": {
-          "name": "",
-          "url": "",
+          "name": "اطلاعات خصوصی و شخصی: امتحان درس",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
           "type": "کلید پاسخ"
         },
         "private_and_personal_information_lesson_slides/coursee/2022": {
-          "name": "",
-          "url": "",
+          "name": "اطلاعات خصوصی و شخصی: اسلایدهای درس",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
           "type": ""
         },
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "اطلاعات خصوصی و شخصی: Private and Personal Information",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
+          "type": "فیلم دانش‌آموز"
         },
         "csf_-_course_e_-_slides_2022-2023/coursee/2022": {
           "name": "",
@@ -652,9 +652,9 @@
           "type": "اسلایدها"
         },
         "swimming_fish_teacher_sandbox/coursee/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "جعبه شنی معلم در مورد ماهی در حال شنا",
+          "url": "https://studio.code.org/levels/18623",
+          "type": "مرحله‌ی برنامه‌نویسی"
         },
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
           "name": "",
@@ -662,67 +662,67 @@
           "type": "اسلایدها"
         },
         "about_me_planning_guide/coursee/2022": {
-          "name": "",
+          "name": "راهنمای برنامه‌ریزی درباره من (About Me)",
           "url": "https://docs.google.com/document/d/1eKTBvBxS_T_MNvdj_lXJGnRDAo8zJRuz6gLvWKNk2y4/edit?usp=sharing",
           "type": "جزوه"
         },
         "pause_and_think_online/coursee/2022": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
-          "url": "",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
+          "url": "https://youtu.be/X_duZ-1LApg",
           "type": "ویدیو"
         },
         "turns_angles/coursee/2022": {
           "name": "",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
           "type": ""
         },
         "turns_angles_1/coursee/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "functions_unplugged_songwriting/coursee/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "ویدئوی Lesson in Action"
         },
         "functions_unplugged_songwriting_1/coursee/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://docs.google.com/document/d/16mhZKdMWD50WqCAlhr9TqV22me0UQcpEiOEnHWyLLic/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "functions_unplugged_songwriting_2/coursee/2022": {
-          "name": "",
-          "url": "",
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://docs.google.com/document/d/1qw3sviNepoy9zFqOqmkBe-jQwmNB1lh9nS9FfU1UVfM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "functions_unplugged_songwriting_3/coursee/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://docs.google.com/document/d/1tE_PM4_CNtuK3a9vNRQUZmxQTz5mP2AmmOl6_fTiA9w/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "songwriting_with_functions/coursee/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "ترانه سرایی با توابع",
+          "url": "https://youtu.be/5iDCKkI6y2Y",
+          "type": "ویدئوی Unplugged"
         },
         "unplugged_blocks_courses_c-f_/coursee/2022": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "types_of_disabilities/coursee/2022": {
-          "name": "",
-          "url": "",
+          "name": "انواع ناتوانی‌ها",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
           "type": "منبع"
         },
         "digital_sharing_ethics_video_/coursee/2022": {
-          "name": "",
-          "url": "",
+          "name": "اصول اخلاقی اشتراک گذاری دیجیتال (ویدئو)",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
           "type": "ویدیو"
         },
         "digital_sharing_lesson_plan/coursee/2022": {
-          "name": "",
+          "name": "برنامه درس اشتراک گذاری دیجیتال",
           "url": "https://docs.google.com/document/d/1emDu9jf0aNnXqGfgS1rQ5Klf1iqDdhXSy87OveesqWE/edit?usp=sharing",
           "type": "منبع"
         },
@@ -732,7 +732,7 @@
           "type": "سرفصل"
         },
         "end_of_course_project_guide/coursee/2022": {
-          "name": "",
+          "name": "پایان راهنمای پروژه دوره",
           "url": "",
           "type": ""
         },
@@ -753,12 +753,12 @@
           "url": ""
         },
         "common_core_and_ngss_guidance/courseb/2022": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/courseb/2022": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
@@ -767,7 +767,7 @@
           "url": ""
         },
         "debugging_guide/courseb/2022": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -777,7 +777,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/courseb/2022": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -787,7 +787,7 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": ""
         },
         "digital_trails_animal_tracks/courseb/2022": {
@@ -817,23 +817,23 @@
         },
         "move_it_move_it/courseb/2022": {
           "name": "حرکت کن، حرکت کن",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "url": "https://docs.google.com/document/d/1uOicAuiPgGG3gUlPahocw9GooiICldfK6iPSZ2T9ukI/edit?usp=sharing",
           "type": "فعالیت نقشه"
         },
         "move_it_move_it_1/courseb/2022": {
           "name": "حرکت کن، حرکت کن",
-          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1ZEljR-o_ba_gui1sxlphDWoc3Lq_uSe865jix9_2qYU/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "move_it_move_it_2/courseb/2022": {
           "name": "حرکت کن، حرکت کن",
-          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1XWyiCoohpTCTNBwOLVZEiBurjVe1MFRE4-M8wZixmro/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "move_it_move_it_3/courseb/2022": {
           "name": "تکانش بده، تکانش بده",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
-          "type": ""
+          "type": "ویدئو معلم"
         },
         "20_20_20_rule/courseb/2022": {
           "name": "قانون ۲۰/۲۰/۲۰",
@@ -847,22 +847,22 @@
         "feeling_faces/courseb/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
           "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "ویدئو معلم"
         },
         "pair_programming/courseb/2022": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
-          "name": "طراحی بدون کامپیوتر",
+          "name": "طراحی بدون رایانه",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
-          "type": ""
+          "type": "دستکاری‌ها"
         },
         "wiggles_-_gonoodle/courseb/2022": {
           "name": "Wiggles - GoNoodle",
@@ -870,7 +870,7 @@
           "type": "ویدیو"
         },
         "compass_rose/courseb/2022": {
-          "name": "Compass Rose",
+          "name": "گل رز قطب‌نما (Compass Rose)",
           "url": "https://docs.google.com/document/d/1-WoXBHxuUHUZBpSiBwSslFlv4SWE94oDaWzzzZVmblc/edit?usp=sharing",
           "type": "جزوه"
         },
@@ -881,8 +881,8 @@
         },
         "happy_map_game_pieces/courseb/2022": {
           "name": "قسمت‌های بازی Happy Map",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1P_aH5J6ctb3uBd1C0DApg1Kf-YtxFwk0cjIPMhjj2fc/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "stevie_and_the_big_project/courseb/2022": {
           "name": "",
@@ -897,12 +897,12 @@
         "getting_loopy/courseb/2022": {
           "name": "سر گیجه گرفتن",
           "url": "https://youtu.be/JoKTqHCni0M",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "getting_loopy_1/courseb/2022": {
           "name": "سر گیجه گرفتن",
-          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1fQHz6nVIrGPD7lcwMI_ZWt6yEdST8zBw6TiDx96zFTM/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "getting_loopy_2/courseb/2022": {
           "name": "سر گیجه گرفتن",
@@ -911,16 +911,16 @@
         },
         "getting_loopy_3/courseb/2022": {
           "name": "سر گیجه گرفتن",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1wnQ-XERxH3L_XgMSogJUCQU6EjzSSce0hgZnpzFQ7kI/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "cs_fundamentals_main_activity_tips/courseb/2022": {
-          "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
+          "name": "نکات اساسی فعالیت اصلی علوم رایانه",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "توصیه‌های درس"
         },
         "pause_and_think_online/courseb/2022": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویدیو"
         },
@@ -935,17 +935,17 @@
         },
         "the_big_event_1/courseb/2022": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "the_big_event_2/courseb/2022": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/14E9IemEuVF0I6okUSXjQYXd9OcDi_YFzIPbbSmwbqz8/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "the_big_event_courses_a_b_/courseb/2022": {
           "name": "The Big Event (دوره‌های A,B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
           "type": "تصویر ناظر\n"
         },
         "play_lab_project_planning_guide/courseb/2022": {
@@ -971,8 +971,8 @@
           "url": ""
         },
         "debugging_guide/express/2022": {
-          "name": "راهنمای رفع اشکال",
-          "url": ""
+          "name": "راهنمای رفع نقص",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum/express/2022": {
           "name": "انجمن استادان",
@@ -981,7 +981,7 @@
         },
         "unplugged_maze_blocks/express/2022": {
           "name": "بلوک‌های ماز بدون کامپیوتر",
-          "url": "",
+          "url": "https://docs.google.com/presentation/d/12PuBaQrltmoUfikifil3oGYNgWfrE57CUxdE50y7yNk/edit?usp=sharing",
           "type": "منبع"
         },
         "pair_programming/express/2022": {
@@ -990,8 +990,8 @@
           "type": "ویدیو"
         },
         "unplugged_blocks_courses_c-f_/express/2022": {
-          "name": "",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "name": "بلوک‌های بدون برق و رایانه (دوره‌های C-F)",
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "artist_introduction/express/2022": {
           "name": "",
@@ -1005,7 +1005,7 @@
         },
         "turns_angles_1/express/2022": {
           "name": "",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
           "type": "جزوه"
         },
         "sprite_lab_documentation/express/2022": {
@@ -1014,27 +1014,27 @@
           "type": "منبع"
         },
         "swimming_fish_teacher_sandbox/express/2022": {
-          "name": "",
-          "url": ""
+          "name": "جعبه شنی معلم در مورد ماهی در حال شنا",
+          "url": "https://studio.code.org/levels/18623"
         },
         "sprites_in_action/express/2022": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "اسلایدها"
         },
         "pause_and_think_online/express/2022": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویدیو"
         },
         "dance_party_project_guide/express/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "راهنمای پروژه Dance Party",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "کاربرگ"
         },
         "open-ended_programming_levels/express/2022": {
           "name": "مراحل برنامه نویسی بی‌انتها",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
           "type": "کلید پاسخ"
         },
         "spotify_playlist_all_ages_/express/2022": {
@@ -1042,13 +1042,13 @@
           "url": ""
         },
         "pair_programming_video/express/2022": {
-          "name": "",
+          "name": "ویدئو برنامه‌نویسی دو نفره",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویدیو"
         },
         "unplugged_blocks_courses_c-f__1/express/2022": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "text_and_prompts/express/2022": {
           "name": "متن و انگیزش",
@@ -1057,8 +1057,8 @@
         },
         "variables/express/2022": {
           "name": "متغیرها",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/DI7DprN4FtE",
+          "type": "فیلم دانش‌آموز"
         },
         "cs_fundamentals_final_project/express/2022": {
           "name": "پروژه نهایی CS Fundamentals",
@@ -1066,9 +1066,9 @@
           "type": "سرفصل"
         },
         "csf_express_end_of_course_project_planning_guide/express/2022": {
-          "name": "",
+          "name": "راهنمای برنامه ریزی پروژه پایان دوره سریع مبانی امنیت کامپیوتر",
           "url": "https://docs.google.com/document/d/1geOnapIZcQHcJmKMTAe7WmAXbIi9xVQju-hIdBhTi-A/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "all_resources/pre-express/2022": {
           "name": "",
@@ -1083,8 +1083,8 @@
           "url": ""
         },
         "debugging_guide/pre-express/2022": {
-          "name": "راهنمای رفع اشکال",
-          "url": ""
+          "name": "راهنمای رفع نقص",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum/pre-express/2022": {
           "name": "انجمن استادان",
@@ -1099,25 +1099,25 @@
         "feeling_faces/pre-express/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "how_to_make_a_class_section_on_code_org/pre-express/2022": {
           "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "ویدئو معلم"
         },
         "pair_programming/pre-express/2022": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
-          "name": "",
+          "name": "Wiggles - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدیو"
         },
         "pause_and_think_online/pre-express/2022": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویدیو"
         },
@@ -1138,12 +1138,12 @@
           "url": ""
         },
         "common_core_and_ngss_guidance/coursea/2022": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursea/2022": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
@@ -1152,7 +1152,7 @@
           "url": ""
         },
         "debugging_guide/coursea/2022": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -1162,7 +1162,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursea/2022": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -1172,7 +1172,7 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": ""
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
@@ -1208,7 +1208,7 @@
         "pair_programming/coursea/2022": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "wiggles-go_noodle/coursea/2022": {
           "name": "Wiggles-Go Noodle",
@@ -1222,28 +1222,28 @@
         },
         "happy_map_cards/coursea/2022": {
           "name": "کارت‌های Happy Map",
-          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1K3jT9zH_uHMBHDzEHuPQnpyQuPC9Up_IQD_NpQoQXqY/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "happy_map_cards_1/coursea/2022": {
           "name": "کارت‌های Happy Map",
-          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1EjaTsWCWO3D3TVnvm4f2KyunEpSapaMi-BnAAWF7QGo/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "happy_map_game_pieces/coursea/2022": {
           "name": "قسمت‌های بازی Happy Map",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1P_aH5J6ctb3uBd1C0DApg1Kf-YtxFwk0cjIPMhjj2fc/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "happy_maps/coursea/2022": {
           "name": "نقشه های شاد",
           "url": "https://youtu.be/hrnhiKAQ1_k",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
-          "name": "طراحی بدون کامپیوتر",
+          "name": "طراحی بدون رایانه",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
-          "type": ""
+          "type": "دستکاری‌ها"
         },
         "wiggles_-_gonoodle/coursea/2022": {
           "name": "Wiggles - GoNoodle",
@@ -1267,18 +1267,18 @@
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "کارت‌های Happy Map XL",
-          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1foEpBKG9lW5CdZBgUa-g8CeHjGe6VHz4fu330ulBbPA/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "happy_map_game_pieces_bonus_pack/coursea/2022": {
           "name": "بسته پاداش بازی Happy Map",
-          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/110I3bzOmYhGsY2SVZYsGqJmUdSy8_t239VW_3ZQ8r14/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "feeling_faces/coursea/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "pair-programming/coursea/2022": {
           "name": "برنامه نویسی اشتراکی",
@@ -1291,42 +1291,42 @@
           "type": "منبع"
         },
         "pause_and_think_online/coursea/2022": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویدیو"
         },
         "the_big_event/coursea/2022": {
           "name": "رویداد بزرگ",
           "url": "https://youtu.be/u0WV9shCoak",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "the_big_event_1/coursea/2022": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "the_big_event_2/coursea/2022": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/14E9IemEuVF0I6okUSXjQYXd9OcDi_YFzIPbbSmwbqz8/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "the_big_event_courses_a_b_/coursea/2022": {
           "name": "The Big Event (دوره‌های A,B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
           "type": "تصویر ناظر\n"
         },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
-          "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
+          "name": "نکات اساسی فعالیت اصلی علوم رایانه",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
-          "url": "https://docs.google.com/document/d/1hLNKsUkqCzRKH9fYsbiOeSipAAr6re1M4yF3Na42s8g/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
           "type": "جزوه"
         },
         "artist_project_planning_guide_1/coursea/2022": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
-          "url": "https://docs.google.com/document/d/13FEhzjfZq1ITunIdxyJ-ZSXyiqeaBVkQxXFirWj2iC4/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "کلید پاسخ"
         },
         "2022_change_log/coursec/2022": {
@@ -1346,12 +1346,12 @@
           "url": ""
         },
         "common_core_and_ngss_guidance/coursec/2022": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursec/2022": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
@@ -1360,7 +1360,7 @@
           "url": ""
         },
         "debugging_guide_1/coursec/2022": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -1370,7 +1370,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursec/2022": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -1380,7 +1380,7 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursec/2022": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": ""
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
@@ -1400,27 +1400,27 @@
         },
         "my_robotic_friends/coursec/2022": {
           "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "url": "https://docs.google.com/document/d/16UQo9ENS34txf7Xj4LNlZb6xGYIJTWTZ57r1BL2lKeg/edit?usp=sharing",
           "type": "فاصله بین فنجان‌ها"
         },
         "my_robotic_friends_1/coursec/2022": {
           "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "url": "https://docs.google.com/document/d/1anGRw9tuxZTT6thBbL1yEwTq_0k8CZlzWfFhpGmXdlQ/edit?usp=sharing",
           "type": "کلید نماد"
         },
         "my_robotic_friends_2/coursec/2022": {
           "name": "دوستان رباتی من",
           "url": "https://youtu.be/xaW3PAzHxCU",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "my_robotic_friends_3/coursec/2022": {
           "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "url": "https://docs.google.com/document/d/1tXrLzt84PqX3lY46tABDVLMY-9tcBVOADJt97BdqjK8/edit?usp=sharing",
           "type": "ایده‌های چیدن فنجان‌ها"
         },
         "my_robotic_friends_4/coursec/2022": {
           "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "url": "https://docs.google.com/document/d/1c9t5dlpzTIHNZoISGHl-w5BEkSHiendE44-3o3YfHdA/edit?usp=sharing",
           "type": "الگوی ذوزنقه‌ای کاغذی"
         },
         "maze_bridging_page/coursec/2022": {
@@ -1429,16 +1429,16 @@
         },
         "unplugged_maze_blocks/coursec/2022": {
           "name": "بلوک‌های ماز بدون کامپیوتر",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
-          "type": ""
+          "url": "https://docs.google.com/presentation/d/12PuBaQrltmoUfikifil3oGYNgWfrE57CUxdE50y7yNk/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "cs_fundamentals_main_activity_tips/coursec/2022": {
-          "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
+          "name": "نکات اساسی فعالیت اصلی علوم رایانه",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "توصیه‌های درس"
         },
         "debugging_guide/coursec/2022": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
           "type": "منبع"
         },
@@ -1449,42 +1449,42 @@
         },
         "unplugged_blocks_courses_c-f_/coursec/2022": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "artist_introduction/coursec/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "turns_angles/coursec/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "turns_angles_1/coursec/2022": {
           "name": "",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
           "type": ""
         },
         "the_big_event/coursec/2022": {
           "name": "رویداد بزرگ",
           "url": "https://youtu.be/u0WV9shCoak",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "the_big_event_1/coursec/2022": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "the_big_event_2/coursec/2022": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/14E9IemEuVF0I6okUSXjQYXd9OcDi_YFzIPbbSmwbqz8/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "the_big_event_course_c_/coursec/2022": {
           "name": "The Big Event (دوره C)",
-          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "url": "https://docs.google.com/document/d/1lbXYVo52ijJi6qj1_0-o_zujH3IzmjA_Rs7RYj5U5xw/edit?usp=sharing",
           "type": "کنترل کننده رویداد"
         },
         "level_solutions/coursec/2022": {
@@ -1498,7 +1498,7 @@
           "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursec/2022": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویدیو"
         },
@@ -1508,24 +1508,24 @@
           "type": "کلید پاسخ"
         },
         "graphing_data_from_play_lab/coursec/2022": {
-          "name": "",
+          "name": "رسم نمودار داده‌ها از Play Lab",
           "url": "https://docs.google.com/document/d/1QUsF9uHVKFCxerLYF35XAB2NmyStq9IPesuEZcYRcsQ/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "binary_bracelets/coursec/2022": {
           "name": "دستبند دودویی",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/3S2YfoO4_CM",
+          "type": "ویدئوی Unplugged"
         },
         "binary_bracelets_1/coursec/2022": {
           "name": "دستبند دودویی",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "ویدئوی Lesson in Action"
         },
         "binary_bracelets_2/coursec/2022": {
           "name": "دستبند دودویی",
           "url": "https://docs.google.com/document/d/1ZNR_kCRO0KkZl0HgcAj-71KZEq3Hb4vlMugJCpik-iM/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "binary_bracelets_3/coursec/2022": {
           "name": "دستبند دودویی",
@@ -1535,22 +1535,22 @@
         "binary_bracelets_4/coursec/2022": {
           "name": "دستبند دودویی",
           "url": "https://docs.google.com/document/d/1cM50brrbz4elzIFQ_x_aHEDrH3n189MwMsxpJNJ-Q7Y/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ ارزیابی"
         },
         "bits_versus_bytes/coursec/2022": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Bits در مقابل Bytes",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+          "type": "فیلم دانش‌آموز"
         },
         "play_lab_project_planning_guide/coursec/2022": {
           "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
           "url": "https://docs.google.com/document/d/11lIOrJw_LWRJsP3A12CVzoZC5q-BzQ8mR7LbXGIVxY8/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "play_lab_project_planning_guide_exemplar_/coursec/2022": {
-          "name": "",
+          "name": "راهنمای برنامه‌ریزی پروژه آزمایشگاه Play (نمونه)",
           "url": "https://docs.google.com/document/d/1aiZXyXeQU0J7K9PJfet_cn4f3w0g9G7QaQ6oGX3krBk/edit?usp=sharing",
-          "type": ""
+          "type": "منبع درس"
         },
         "csd_curriculum_guide/csd/2022": {
           "name": "",
@@ -1654,7 +1654,7 @@
           "type": "اسلایدها"
         },
         "representing_images/csd/2022": {
-          "name": "",
+          "name": "تصاویر نمایانگر",
           "url": "",
           "type": "اسلایدها"
         },
@@ -1724,14 +1724,14 @@
           "type": ""
         },
         "keeping_data_secret_1/csd/2022": {
-          "name": "",
+          "name": "محرمانه نگه داشتن داده ها",
           "url": "",
           "type": "اسلایدها"
         },
         "computer_science_practices/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "بازاندیشی"
         },
         "create_a_representation/csd/2022": {
           "name": "",
@@ -1882,7 +1882,7 @@
           "type": "اسلایدها"
         },
         "video_impact_on_society/csd/2022": {
-          "name": "",
+          "name": "فیلم: تأثیر در جامعه",
           "url": "",
           "type": "ویدیو"
         },
@@ -1892,7 +1892,7 @@
           "type": "ویدیو"
         },
         "video_training_data_and_bias/csd/2022": {
-          "name": "",
+          "name": "فیلم: داده های آموزشی و سوگیری",
           "url": "",
           "type": "ویدیو"
         },
@@ -1904,7 +1904,7 @@
         "make_a_recommendation/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "make_a_recommendation_-_student_checklist/csd/2022": {
           "name": "",
@@ -1918,7 +1918,7 @@
         "make_a_recommendation_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "peer_review_exemplar_1/csd/2022": {
           "name": "",
@@ -2103,7 +2103,7 @@
         "apps_and_problem_solving_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "apps_and_problem_solving_2/csd/2022": {
           "name": "",
@@ -2431,7 +2431,7 @@
           "type": "اسلایدها"
         },
         "sprite_movement/csd/2022": {
-          "name": "",
+          "name": "حرکت اسپرایت",
           "url": "",
           "type": "ویدیو"
         },
@@ -2441,7 +2441,7 @@
           "type": "منبع"
         },
         "sprite_movement_1/csd/2022": {
-          "name": "",
+          "name": "حرکت اسپرایت",
           "url": "",
           "type": "اسلایدها"
         },
@@ -2491,7 +2491,7 @@
           "type": "اسلایدها"
         },
         "keyboard_input/csd/2022": {
-          "name": "",
+          "name": "ورودی صفحه کلید",
           "url": "",
           "type": "اسلایدها"
         },
@@ -2532,12 +2532,12 @@
         "interactive_card_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "interactive_card_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "interactive_card_3/csd/2022": {
           "name": "",
@@ -2595,14 +2595,14 @@
           "type": ""
         },
         "side_scroller/csd/2022": {
-          "name": "",
+          "name": "اسکرلرهای کناری",
           "url": "",
           "type": "سرفصل"
         },
         "side_scroller_1/csd/2022": {
-          "name": "",
+          "name": "اسکرلرهای کناری",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "mini-project_-_side_scroller/csd/2022": {
           "name": "",
@@ -2610,7 +2610,7 @@
           "type": "اسلایدها"
         },
         "velocity_and_the_counter_pattern/csd/2022": {
-          "name": "",
+          "name": "الگوی شمارشگر و سرعت",
           "url": "",
           "type": "منبع"
         },
@@ -2625,7 +2625,7 @@
           "type": "اسلایدها"
         },
         "flyer_game/csd/2022": {
-          "name": "",
+          "name": "بازی Flyer",
           "url": "",
           "type": "سرفصل"
         },
@@ -2635,9 +2635,9 @@
           "type": ""
         },
         "flyer_game_1/csd/2022": {
-          "name": "",
+          "name": "بازی Flyer",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "mini-project_-_flyer_game/csd/2022": {
           "name": "",
@@ -2700,12 +2700,12 @@
         "make_your_own_game_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "make_your_own_game_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "make_your_own_game_3/csd/2022": {
           "name": "",
@@ -2779,17 +2779,17 @@
           "type": "منبع"
         },
         "video_debugging/csd/2022": {
-          "name": "",
+          "name": "فیلم: اشکال زدایی",
           "url": "",
           "type": "ویدیو"
         },
         "video_pair_programming/csd/2022": {
-          "name": "",
+          "name": "فیلم: برنامه نویسی دونفره",
           "url": "",
           "type": "ویدیو"
         },
         "headings/csd/2022": {
-          "name": "",
+          "name": "عناوین",
           "url": "",
           "type": "اسلایدها"
         },
@@ -2806,12 +2806,12 @@
         "html_web_page_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "html_web_page_3/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "lists/csd/2022": {
           "name": "فهرست‌ها",
@@ -2839,12 +2839,12 @@
           "type": "اسلایدها"
         },
         "social_sleuth/csd/2022": {
-          "name": "",
+          "name": "کارآگاه اجتماعی",
           "url": "",
           "type": ""
         },
         "social_sleuth_1/csd/2022": {
-          "name": "",
+          "name": "کارآگاه اجتماعی",
           "url": "",
           "type": ""
         },
@@ -2891,12 +2891,12 @@
         "your_personal_style_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "your_personal_style_2/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "mini-project_your_personal_style/csd/2022": {
           "name": "",
@@ -2971,7 +2971,7 @@
         "personal_web_page_-_prepare/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "project_guide_-_personal_web_page_-_prepare/csd/2022": {
           "name": "",
@@ -2996,12 +2996,12 @@
         "personal_web_page/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "personal_web_page_-_reflect/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "personal_web_page_-_student_checklist/csd/2022": {
           "name": "",
@@ -3024,7 +3024,7 @@
           "type": ""
         },
         "publishing_your_website/csd/2022": {
-          "name": "",
+          "name": "انتشار وبسایت خود",
           "url": "",
           "type": "ویدیو"
         },
@@ -3049,12 +3049,12 @@
           "type": "اسلایدها"
         },
         "video_managing_disagreement/csd/2022": {
-          "name": "",
+          "name": "فیلم: اختلاف مدیریت",
           "url": "",
           "type": "ویدیو"
         },
         "video_teamwork/csd/2022": {
-          "name": "",
+          "name": "فیلم: کار گروهی",
           "url": "",
           "type": "ویدیو"
         },
@@ -3089,7 +3089,7 @@
           "type": ""
         },
         "video_how_search_works/csd/2022": {
-          "name": "",
+          "name": "فیلم: جستجو چطور انجام می شود",
           "url": "",
           "type": "ویدیو"
         },
@@ -3111,7 +3111,7 @@
         "plan_a_multi-page_website/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "project_guide_-_website_for_a_purpose_-_prepare/csd/2022": {
           "name": "",
@@ -3138,7 +3138,7 @@
           "type": "منبع"
         },
         "linking_pages/csd/2022": {
-          "name": "",
+          "name": "صفحات پیوندی",
           "url": "",
           "type": "اسلایدها"
         },
@@ -3165,12 +3165,12 @@
         "website_for_a_purpose_-_reflect/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "website_for_a_purpose_1/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "peer_review_and_final_touches/csd/2022": {
           "name": "",
@@ -3575,12 +3575,12 @@
           "type": "اسلایدها"
         },
         "updating_your_prototype/csd/2022": {
-          "name": "",
+          "name": "بروزرسانی نمونه اصلی خود",
           "url": "",
           "type": ""
         },
         "updating_your_prototype_1/csd/2022": {
-          "name": "",
+          "name": "بروزرسانی نمونه اصلی خود",
           "url": "",
           "type": "اسلایدها"
         },
@@ -3700,12 +3700,12 @@
           "type": "اسلایدها"
         },
         "board_events/csd/2022": {
-          "name": "حوادث بورد",
+          "name": "رویدادهای بورد",
           "url": "",
           "type": "منبع"
         },
         "board_events_1/csd/2022": {
-          "name": "حوادث بورد",
+          "name": "رویدادهای بورد",
           "url": "",
           "type": "اسلایدها"
         },
@@ -3874,7 +3874,7 @@
           "type": "اسلایدها"
         },
         "accelerometer_events/csd/2022": {
-          "name": "حوادث شتاب سنج",
+          "name": "رویدادهای شتاب سنج",
           "url": "",
           "type": "منبع"
         },
@@ -3894,7 +3894,7 @@
           "type": "اسلایدها"
         },
         "playing_notes/csd/2022": {
-          "name": "",
+          "name": "نکات بازی",
           "url": "",
           "type": "منبع"
         },
@@ -5017,52 +5017,52 @@
           "type": "اسلایدها"
         },
         "2021_change_log/coursef/2021": {
-          "name": "2021Change Log",
+          "name": "گزارش تغییرات ۲۰۲۱",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-          "type": "منبع"
+          "type": "منبع "
         },
         "common_core_and_ngss_guidance/coursef/2021": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
-          "type": "منبع"
+          "type": "منبع "
         },
         "course_vocabulary/coursef/2021": {
-          "name": "واژگان دوره",
+          "name": "واژگان دوره  ",
           "url": "https://studio.code.org/s/coursef-2021/vocab",
           "type": "منبع"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-          "type": "منبع"
+          "type": "منبع "
         },
         "csta_standards_mapping/coursef/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
           "url": "https://studio.code.org/s/coursef-2021/standards",
           "type": "منبع"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "راهنمای برنامه درسی",
+          "name": "راهنمای برنامه تحصیلی ",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "منبع"
         },
         "debugging_guide/coursef/2021": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
         "implementation_guide/coursef/2021": {
-          "name": "راهنمای پیاده سازی",
+          "name": "راهنمای راه‌اندازی ",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
           "type": "منبع"
         },
         "lesson_type_guide/coursef/2021": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
         "sprite_lab_documentation_1/coursef/2021": {
-          "name": "مستندات/مدارک آزمایشگاه Sprite (Sprite Lab)",
+          "name": "مستند سازی‌ آزمایشگاه اسپرایت",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "منبع"
         },
@@ -5072,29 +5072,29 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursef/2021": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
           "type": "منبع"
         },
         "exploring_apps/coursef/2021": {
-          "name": "کاوش در اپلیکیشن‌ها",
+          "name": "کاوش برنامه‌های کاربردی",
           "url": "https://docs.google.com/document/d/141nblqhokVNBaaZwjZNrkyPefk-D9eZvmUsdUCqQ-kk/edit?usp=sharing",
           "type": "منبع"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "کاوش در اپلیکیشن‌ها",
+          "name": "کاوش برنامه‌های کاربردی",
           "url": "https://docs.google.com/document/d/1x5vSImoOlzai1PzwJkKptODhooNH3lmog9uqt40AjFY/edit?usp=sharing",
-          "type": "کلید پاسخ"
+          "type": "کلید پاسخ‌ها"
         },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "",
+          "name": "آشنایی با آزمایشگاه Sprites",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview",
           "type": "اسلاید‌ها"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "معرفی آزمایشگاه Sprites",
+          "name": "آشنایی با آزمایشگاه Sprites",
           "url": "https://youtu.be/yd-9xZ275dM",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "making_sprites/coursef/2021": {
           "name": "ساختن اسپرایت‌ها",
@@ -5107,7 +5107,7 @@
           "type": "منبع"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "",
+          "name": "Sprites در عمل",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "اسلایدها"
         },
@@ -5132,22 +5132,22 @@
           "type": "ویدیو"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
-          "name": "قدرت کلمات: کلمات میتوانند آسیب برسانند",
+          "name": "قدرت کلمات: کلمات می‌توانند آسیب برسانند",
           "url": "https://docs.google.com/document/d/1cHW8UOcHZTLtEjsp029miGPXGUcfn3GyCPg_0H0EdpM/edit?usp=sharing",
           "type": "جزوه"
         },
         "blank_space_stories/coursef/2021": {
-          "name": "داستانهای فضای خالی",
+          "name": "داستان‌های فضای خالی",
           "url": "https://docs.google.com/document/d/1b8-7kzqTcnRHCGKnxFEY1SsbUIzz8qL6v6FSzV6JvQs/edit?usp=sharing",
           "type": "کلید پاسخ"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
-          "name": "داستانهای فضای خالی",
+          "name": "داستان‌های فضای خالی",
           "url": "https://docs.google.com/document/d/1rgcaqvBDDBEMxevF90W5OP8DDfp-ZNjPx2xAmnDwDwE/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای فعالیت"
         },
         "variables_blank_space_stories/coursef/2021": {
-          "name": "متغیرها: داستانهای فضای خالی",
+          "name": "متغیرها: داستان‌های فضای خالی",
           "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview",
           "type": "اسلایدها"
         },
@@ -5174,17 +5174,17 @@
         "user_input_programs/coursef/2021": {
           "name": "‌برنامه‌های ورودی کاربر",
           "url": "https://docs.google.com/document/d/1jPC_L88VRBrY3rzeYXmnlZWzNuVuHFELYonZaQO3_pE/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای فعالیت"
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
           "type": "ویدیو"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
           "name": "برای تفریح حلقه ای",
           "url": "https://docs.google.com/document/d/1t6Qd3pstlpZ6WzMWDBxLTXhKX_01VCjbDoPQZkml5V8/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ کاربرگ"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "برای تفریح حلقه ای",
@@ -5194,32 +5194,32 @@
         "csf-for-loop-fun-worksheet/coursef/2021": {
           "name": "برای تفریح حلقه ای",
           "url": "https://docs.google.com/document/d/1FFTwAslLj3jkF5ESxJybh_yRyxgrZHsoJLBxtWyrZYM/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "سرگرمی حلقه for - کلید ارزیابی",
+          "name": "For Loop Fun - کلید ارزیابی",
           "url": "https://docs.google.com/document/d/1xFWw0WjHu6RDWu-npFPYHwwpsW-LsCkHaAAdXja-suo/edit?usp=sharing",
           "type": "کلید معلم"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "برای تفریح حلقه ای",
           "url": "https://www.youtube.com/watch?v=HO4uhoahtjM",
-          "type": ""
+          "type": "ویدئوی Lesson in Action"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "برای تفریح حلقه ای",
           "url": "https://youtu.be/mX857v5B4gE",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "running-simulations/coursef/2021": {
-          "name": "اجرای شبیه ساز",
+          "name": "اجرای شبیه‌ساز",
           "url": "https://docs.google.com/document/d/1gkKyrXQTbpKUmkY2q2z0RdT3KC-DAQsUK032RNibupo/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "ai-ml/coursef/2021": {
           "name": "",
@@ -5238,18 +5238,18 @@
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "اینترنت",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1jxOFf396YqWPu1OHrmv8reaTEkMHiCQhguJ9pP3j9QM/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "اینترنت",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "url": "https://docs.google.com/document/d/1WpB_zfsOBjiUiwSaqHVf5wDE9Wt0h9LCvx1fr5UnC68/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "کارت های IP آدرس ها و کارت های نوع تحویل",
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
-          "type": ""
+          "name": "کارت‌های IP آدرس‌ها و کارت‌های نوع تحویل",
+          "url": "https://docs.google.com/document/d/17tE-yvMDmAf3Cr9V45eUY898Qx6Bk8qNWelyzG-Cd7s/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
@@ -5259,17 +5259,17 @@
         "unplugged-video-internet/coursef/2021": {
           "name": "اینترنت",
           "url": "https://youtu.be/mFOUbqYv1Sc",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "design-process/coursef/2021": {
           "name": "روند طراحی",
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
-          "type": ""
+          "type": "راهنمای آمادگی معلم"
         },
         "final-project-design-worksheet/coursef/2021": {
           "name": "طراحی نهایی پروژه",
           "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/",
-          "type": ""
+          "type": "کاربرگ"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "پروژه نهایی CS Fundamentals",
@@ -5277,12 +5277,12 @@
           "type": "سرفصل"
         },
         "2021_change_log/courseb/2021": {
-          "name": "2021Change Log",
+          "name": "گزارش تغییرات ۲۰۲۱",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "منبع"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
           "type": "منبع"
         },
@@ -5292,12 +5292,12 @@
           "type": "منبع"
         },
         "cross-curricular_extension_activities/courseb/2021": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
         "csta_standards_mapping/courseb/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
           "url": "https://studio.code.org/s/courseb-2021/standards",
           "type": "منبع"
         },
@@ -5307,7 +5307,7 @@
           "type": "منبع"
         },
         "debugging_guide/courseb/2021": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -5317,7 +5317,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/courseb/2021": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -5327,19 +5327,19 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/courseb/2021": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
           "type": "منبع"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "مسیرهای دیجیتالی: مسیرهای حیوانات",
           "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
-          "type": ""
+          "type": "جزوه دانش آموزی"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "مسیرهای دیجیتالی: مربع‌های مسیر دیجیتال (Digital Trail Squares)",
           "url": "https://docs.google.com/document/d/14yPXFPCm6RSeD7NAyEQUiqEZmK8AMWuSnt8b4BL176c/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه دانش آموزی"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
           "name": "مسیرهای دیجیتالی: مسیر دیجیتالی را دنبال کنید",
@@ -5349,7 +5349,7 @@
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "مسیرهای دیجیتالی: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1hXCx67EO_m13Nn1lBzh1AbF_XV6sakSkSoNvPDM8p-A/edit?usp=sharing",
-          "type": ""
+          "type": "ارائه کوتاه"
         },
         "feeling_faces_emotion_image/courseb/2021": {
           "name": "تصویر احساسی چهره‌ها",
@@ -5358,23 +5358,23 @@
         },
         "mimi-activity/courseb/2021": {
           "name": "حرکت کن، حرکت کن",
-          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "url": "https://docs.google.com/document/d/1uOicAuiPgGG3gUlPahocw9GooiICldfK6iPSZ2T9ukI/edit?usp=sharing",
           "type": "فعالیت نقشه"
         },
         "mimi-debugging/courseb/2021": {
           "name": "حرکت کن، حرکت کن",
-          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1ZEljR-o_ba_gui1sxlphDWoc3Lq_uSe865jix9_2qYU/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "mimi-teacher-puzzle/courseb/2021": {
           "name": "حرکت کن، حرکت کن",
-          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1XWyiCoohpTCTNBwOLVZEiBurjVe1MFRE4-M8wZixmro/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "teacher-video-move-it/courseb/2021": {
           "name": "تکانش بده، تکانش بده",
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
-          "type": ""
+          "type": "ویدئو معلم"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "قانون ۲۰/۲۰/۲۰",
@@ -5386,14 +5386,14 @@
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "طراحی بدون کامپیوتر",
+          "name": "طراحی بدون رایانه",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
-          "type": ""
+          "type": "دستکاری‌ها"
         },
         "feeling-faces-image/courseb/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "jigsaw/courseb/2021": {
           "name": "تمرین کشیدن و رها کردن",
@@ -5402,15 +5402,15 @@
         "pair-programming-vid/courseb/2021": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "compass-rose/courseb/2021": {
-          "name": "Compass Rose",
+          "name": "گل رز قطب‌نما (Compass Rose)",
           "url": "https://docs.google.com/document/d/1-WoXBHxuUHUZBpSiBwSslFlv4SWE94oDaWzzzZVmblc/edit?usp=sharing",
           "type": "جزوه"
         },
@@ -5421,28 +5421,28 @@
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "قسمت‌های بازی Happy Map",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1P_aH5J6ctb3uBd1C0DApg1Kf-YtxFwk0cjIPMhjj2fc/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "",
+          "name": "استیوی و پروژه بزرگ",
           "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
           "type": "منبع"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "",
+          "name": "نقص‌های بدون خال",
           "url": "https://youtu.be/rah3DYlp5nQ",
           "type": "ویدیو"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "سر گیجه گرفتن",
-          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1wnQ-XERxH3L_XgMSogJUCQU6EjzSSce0hgZnpzFQ7kI/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
           "name": "سر گیجه گرفتن",
-          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1fQHz6nVIrGPD7lcwMI_ZWt6yEdST8zBw6TiDx96zFTM/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "سر گیجه گرفتن",
@@ -5452,42 +5452,42 @@
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "سر گیجه گرفتن",
           "url": "https://youtu.be/JoKTqHCni0M",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "csf-lesson-recommend/courseb/2021": {
-          "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
+          "name": "نکات اساسی فعالیت اصلی علوم رایانه",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "توصیه‌های درس"
         },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "سناریوهای برنامه مناسب",
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
-          "type": ""
+          "type": "ارائه کوتاه"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/14E9IemEuVF0I6okUSXjQYXd9OcDi_YFzIPbbSmwbqz8/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "The Big Event (دوره‌های A,B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
           "type": "تصویر ناظر\n"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "رویداد بزرگ",
           "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
@@ -5500,12 +5500,12 @@
           "type": "کلید پاسخ"
         },
         "2021_change_log/coursea/2021": {
-          "name": "2021Change Log",
+          "name": "گزارش تغییرات ۲۰۲۱",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
           "type": "منبع"
         },
@@ -5515,12 +5515,12 @@
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursea/2021": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
         "csta_standards_mapping/coursea/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
           "url": "https://studio.code.org/s/coursea-2021/standards",
           "type": "منبع"
         },
@@ -5530,7 +5530,7 @@
           "type": "منبع"
         },
         "debugging_guide/coursea/2021": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -5540,7 +5540,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursea/2021": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -5550,7 +5550,7 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursea/2021": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
           "type": "منبع"
         },
@@ -5582,22 +5582,22 @@
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "شروع کار - ایجاد یک بخش کلاس",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles-Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "activity-answer-happy-maps/coursea/2021": {
           "name": "کارت‌های Happy Map",
-          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1EjaTsWCWO3D3TVnvm4f2KyunEpSapaMi-BnAAWF7QGo/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "چهره‌های احساسی - تصویر احساسی",
@@ -5606,18 +5606,18 @@
         },
         "happy-map-cards/coursea/2021": {
           "name": "کارت‌های Happy Map",
-          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1K3jT9zH_uHMBHDzEHuPQnpyQuPC9Up_IQD_NpQoQXqY/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "قسمت‌های بازی Happy Map",
-          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1P_aH5J6ctb3uBd1C0DApg1Kf-YtxFwk0cjIPMhjj2fc/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "نقشەهای شاد",
           "url": "https://youtu.be/hrnhiKAQ1_k",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "قانون ۲۰/۲۰/۲۰",
@@ -5625,19 +5625,19 @@
           "type": "منبع"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "طراحی بدون کامپیوتر",
+          "name": "طراحی بدون رایانه",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
-          "type": ""
+          "type": "دستکاری‌ها"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "رفع نقص با دکمه Step",
           "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "تصویر احساسی چهره‌ها",
@@ -5656,18 +5656,18 @@
         },
         "happy-map-cards-xl/coursea/2021": {
           "name": "کارت‌های Happy Map XL",
-          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1foEpBKG9lW5CdZBgUa-g8CeHjGe6VHz4fu330ulBbPA/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
           "name": "بسته پاداش بازی Happy Map",
-          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/110I3bzOmYhGsY2SVZYsGqJmUdSy8_t239VW_3ZQ8r14/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "pair-programming/coursea/2021": {
           "name": "برنامه نویسی اشتراکی",
@@ -5685,9 +5685,9 @@
           "type": "منبع"
         },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
           "name": "توصیه های درس CSF",
@@ -5701,12 +5701,12 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/14E9IemEuVF0I6okUSXjQYXd9OcDi_YFzIPbbSmwbqz8/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
@@ -5716,16 +5716,16 @@
         },
         "the_big_event_courses_a_b_/coursea/2021": {
           "name": "The Big Event (دوره‌های A,B)",
-          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
           "type": "تصویر ناظر\n"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "رویداد بزرگ",
           "url": "https://youtu.be/u0WV9shCoak",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "csf-lesson-recommend/coursea/2021": {
-          "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
+          "name": "نکات اساسی فعالیت اصلی علوم رایانه",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
@@ -5740,21 +5740,21 @@
         },
         "artist_project_planning_guide/coursea/2021": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
-          "url": "https://docs.google.com/document/d/1hLNKsUkqCzRKH9fYsbiOeSipAAr6re1M4yF3Na42s8g/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
           "type": "جزوه"
         },
         "artist_project_planning_guide_1/coursea/2021": {
           "name": "راهنمای برنامه ریزی پروژه Artist",
-          "url": "https://docs.google.com/document/d/13FEhzjfZq1ITunIdxyJ-ZSXyiqeaBVkQxXFirWj2iC4/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "کلید پاسخ"
         },
         "2021_change_log/coursec/2021": {
-          "name": "2021Change Log",
+          "name": "گزارش تغییرات ۲۰۲۱",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
-          "name": "Common Core و NGSS Guidance",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
           "type": "منبع"
         },
@@ -5764,12 +5764,12 @@
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursec/2021": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
         "csta_standards_mapping/coursec/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
           "url": "https://studio.code.org/s/coursec-2021/standards",
           "type": "منبع"
         },
@@ -5779,7 +5779,7 @@
           "type": "منبع"
         },
         "debugging_guide_1/coursec/2021": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -5789,7 +5789,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursec/2021": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -5799,44 +5799,44 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursec/2021": {
-          "name": "اصلاحات درس مجازی",
+          "name": "اصلاحات درس مجازی ",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
           "type": "منبع"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "قرار دادن توقفی برای پستی برخط: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
-          "type": ""
+          "type": "ارائه کوتاه"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "قرار دادن توقفی برای پستی برخط: متوقف کردن پستی برخط",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
-          "type": ""
+          "type": "جزوه دانش آموزی"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "url": "https://docs.google.com/document/d/16UQo9ENS34txf7Xj4LNlZb6xGYIJTWTZ57r1BL2lKeg/edit?usp=sharing",
           "type": "فاصله بین فنجان‌ها"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "name": "دوستان رباتیک من",
+          "url": "https://docs.google.com/document/d/1tXrLzt84PqX3lY46tABDVLMY-9tcBVOADJt97BdqjK8/edit?usp=sharing",
           "type": "ایده‌های چیدن فنجان‌ها"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "name": "دوستان رباتیک من",
+          "url": "https://docs.google.com/document/d/1c9t5dlpzTIHNZoISGHl-w5BEkSHiendE44-3o3YfHdA/edit?usp=sharing",
           "type": "الگوی ذوزنقه‌ای کاغذی"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "دوستان رباتی من",
-          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "name": "دوستان رباتیک من",
+          "url": "https://docs.google.com/document/d/1anGRw9tuxZTT6thBbL1yEwTq_0k8CZlzWfFhpGmXdlQ/edit?usp=sharing",
           "type": "کلید نماد"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "دوستان رباتی من",
+          "name": "دوستان رباتیک من",
           "url": "https://youtu.be/xaW3PAzHxCU",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "c2-maze-bridge/coursec/2021": {
           "name": "صفحه پل‌زنی پر پیچ و خم",
@@ -5844,43 +5844,43 @@
         },
         "unplugged-maze-blocks/coursec/2021": {
           "name": "بلوک‌های ماز بدون کامپیوتر",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
-          "type": ""
+          "url": "https://docs.google.com/presentation/d/12PuBaQrltmoUfikifil3oGYNgWfrE57CUxdE50y7yNk/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "csf-lesson-recommend/coursec/2021": {
-          "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر",
+          "name": "نکات اساسی فعالیت اصلی علوم رایانه",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "توصیه‌های درس"
         },
         "debugging_guide/coursec/2021": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
           "type": "منبع"
         },
         "pair-programming-vid/coursec/2021": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "ویدیو"
+          "type": "ویدیدئو"
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
           "type": ""
         },
         "csf-turns-angles-video/coursec/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "تصویر احساسی چهره‌ها",
@@ -5889,23 +5889,23 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/14E9IemEuVF0I6okUSXjQYXd9OcDi_YFzIPbbSmwbqz8/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "رویداد بزرگ",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "url": "https://docs.google.com/document/d/103BzOuo5U8G5tNGytJ7Qv_COfYhsnJcojd33YN9GrpM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "the_big_event_course_c_/coursec/2021": {
           "name": "The Big Event (دوره C)",
-          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "url": "https://docs.google.com/document/d/1lbXYVo52ijJi6qj1_0-o_zujH3IzmjA_Rs7RYj5U5xw/edit?usp=sharing",
           "type": "کنترل کننده رویداد"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "رویداد بزرگ",
           "url": "https://youtu.be/u0WV9shCoak",
-          "type": ""
+          "type": "ویدئوی Unplugged"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "نمونه راه حل‌های مرحله",
@@ -5913,9 +5913,9 @@
           "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "open-ended_programming_levels_1/coursec/2021": {
           "name": "مراحل برنامه نویسی بی‌انتها",
@@ -5923,19 +5923,19 @@
           "type": "کلید پاسخ"
         },
         "right-app-scenarios/coursec/2021": {
-          "name": "",
+          "name": "رسم نمودار داده‌ها از Play Lab",
           "url": "https://docs.google.com/document/d/1QUsF9uHVKFCxerLYF35XAB2NmyStq9IPesuEZcYRcsQ/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "دستبند دودویی",
           "url": "https://docs.google.com/document/d/1cM50brrbz4elzIFQ_x_aHEDrH3n189MwMsxpJNJ-Q7Y/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "دستبند دودویی",
           "url": "https://docs.google.com/document/d/1ZNR_kCRO0KkZl0HgcAj-71KZEq3Hb4vlMugJCpik-iM/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "دستبند دودویی",
@@ -5943,53 +5943,53 @@
           "type": "ارزشیابی"
         },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "Bits در مقابل Bytes",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+          "type": "فیلم دانش‌آموز"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
           "name": "دستبند دودویی",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "ویدئوی Lesson in Action"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "دستبند دودویی",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/3S2YfoO4_CM",
+          "type": "ویدئوی Unplugged"
         },
         "play-lab-project-guide/coursec/2021": {
           "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
           "url": "https://docs.google.com/document/d/11lIOrJw_LWRJsP3A12CVzoZC5q-BzQ8mR7LbXGIVxY8/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "",
+          "name": "راهنمای برنامه‌ریزی پروژه آزمایشگاه Play (نمونه)",
           "url": "https://docs.google.com/document/d/1aiZXyXeQU0J7K9PJfet_cn4f3w0g9G7QaQ6oGX3krBk/edit?usp=sharing",
-          "type": ""
+          "type": "منبع درس"
         },
         "2021_change_log/coursed/2021": {
-          "name": "2021Change Log",
+          "name": "گزارش تغییرات ۲۰۲۱",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "Common Core و NGSS Guidance",
-          "url": "",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
           "type": "منبع"
         },
         "course_vocabulary/coursed/2021": {
           "name": "واژگان دوره",
-          "url": "",
+          "url": "https://studio.code.org/s/coursed-2021/vocab",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursed/2021": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
         "csta_standards_mapping/coursed/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
-          "url": "",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
+          "url": "https://studio.code.org/s/coursed-2021/standards",
           "type": "منبع"
         },
         "curriculum_guide_1/coursed/2021": {
@@ -5998,7 +5998,7 @@
           "type": "منبع"
         },
         "debugging_guide/coursed/2021": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -6008,7 +6008,7 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursed/2021": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
@@ -6018,27 +6018,27 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursed/2021": {
-          "name": "اصلاحات درس مجازی",
-          "url": "",
+          "name": "اصلاحات درس مجازی ",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit",
           "type": "منبع"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": "",
+          "name": "بخش Password Power-Up: سناریوهای ...If...Then",
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
           "type": "جزوه"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": "",
+          "name": "بخش Password Power-Up: سناریوهای ...If...Then",
+          "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
           "type": "کلید پاسخ"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": "",
+          "name": "Password Power-Up: امتحان درس",
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
           "type": "منبع"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
+          "name": "Password Power-Up: امتحان درس",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
           "type": "کلید پاسخ"
         },
@@ -6059,91 +6059,91 @@
         },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1HZr_YlKSSxAXRjW1F0g7xtOrfIKPMAArmsRMd-j1AHY/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1cmmXSH-mI9gu4EZMsDTyPA2MRdotirsHwcxKvnyEe0A/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1S1t7dMPOZkZBxzQhysX1IUQFapyZHcZXSRCRmAngewU/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
           "url": "https://docs.google.com/document/d/1-13EglioRqmSMkD5cAdlquA0OYc5MZdPHWICXs1DUkY/edit?usp=sharing",
-          "type": ""
+          "type": "کاربرگ فعالیت"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "ویدئوی Lesson in Action"
         },
         "unplugged-video-graph-paper/coursed/2021": {
           "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/Y_paSrH2ffw",
+          "type": "ویدئوی Unplugged"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1W6iz1CViMfX8-bdwaXxXE4rCDTbH3tvdeGMTPhTZFkM/edit?usp=sharing",
+          "type": "بسته فعالیت"
         },
         "relay-assessment/coursed/2021": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1QGrHiYV4wgsYgjUhmiG6wkD-_1k8YCB7z0dbsYnE0mg/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1NaeCY2YcNCI-ARVvKrXBUlB53flVqu5Nqw-hdEI_E0A/edit?usp=sharing",
+          "type": "کلید پاسخ کاربرگ"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1NBh3fT8AH-u9tDsS-9IBnYJSUGFaXzhz9FHK71aD9s8/edit?usp=sharing",
+          "type": "اشکال زدایی تصویر معلم"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/ZULpfAVJOBo",
+          "type": "ویدئو معلم"
         },
         "unplugged-video-relay-programming/coursed/2021": {
           "name": "برنامه نویسی دست به دست",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/l5MKkXbzOsk",
+          "type": "ویدئوی Unplugged"
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "رویدادها در برنامه کاربردی Bounce - چگونه اتفاق می‌افتند؟",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "مراحل برنامه نویسی بی‌انتها",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
           "type": "کلید پاسخ"
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "open-ended_programming_levels_1/coursed/2021": {
           "name": "نمونه راه حل‌های مرحله",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1XNOBi1OrHlRQbQCiaCV9MPHeAQhQDDr34wjlAd3qatw/template/preview",
           "type": "کلید پاسخ"
         },
         "dance-party-playlist/coursed/2021": {
@@ -6151,39 +6151,39 @@
           "url": ""
         },
         "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "راهنمای پروژه Dance Party",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "کاربرگ"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": "",
-          "url": "",
+          "name": "Dance Party: Unplugged",
+          "url": "https://studio.code.org/s/dance-unplugged/lessons/1",
           "type": "منبع"
         },
         "open-ended_programming_levels_2/coursed/2021": {
           "name": "مراحل برنامه نویسی بی‌انتها",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
           "type": "کلید پاسخ"
         },
         "feeling-faces-image/coursed/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "شرطی ها با کارتها",
           "url": "https://docs.google.com/document/d/1yTrrMtQZRNPWGieDg5OQCS-zRhtKynEufo82_gJFMWI/edit?usp=sharing",
-          "type": ""
+          "type": "کلید پاسخ ارزیابی"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "شرطی ها با کارتها",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "ویدئو ارزیابی"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "شرطی ها با کارتها",
@@ -6191,38 +6191,38 @@
           "type": "ارزشیابی"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "",
+          "name": "شرط با کارت‌های برنامه نمونه",
           "url": "https://docs.google.com/document/d/1XOc6eEKKl9QMiUovDaoaG3F3jekqDI3Srndc6Q-nqxc/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای آمادگی معلم"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "شرطی ها با کارتها",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "ویدئوی Lesson in Action"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "شرطی ها با کارتها",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/UymN4lTL50s",
+          "type": "ویدئوی Unplugged"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
+          "name": "CSF دوره D راهنمای برنامه‌ریزی پروژه پایان دوره",
           "url": "https://docs.google.com/document/d/1C47vPia2w2WwGb6rFHaRGDB6AffeIniHg-cVtvdsfPc/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "course_vocabulary_1/express/2021": {
-          "name": "واژگان دوره",
-          "url": "",
+          "name": "واژگان دوره  ",
+          "url": "https://studio.code.org/s/express-2021/vocab",
           "type": "منبع"
         },
         "csta_standards_mapping/express/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
-          "url": "",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
+          "url": "https://studio.code.org/s/express-2021/standards",
           "type": "منبع"
         },
         "debugging_guide/express/2021": {
-          "name": "راهنمای رفع اشکال",
-          "url": ""
+          "name": "راهنمای رفع نقص",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum_1/express/2021": {
           "name": "انجمن استادان",
@@ -6231,31 +6231,31 @@
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "بلوک‌های ماز بدون کامپیوتر",
-          "url": "",
+          "url": "https://docs.google.com/presentation/d/12PuBaQrltmoUfikifil3oGYNgWfrE57CUxdE50y7yNk/edit?usp=sharing",
           "type": "منبع"
         },
         "pair_programming/express/2021": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "name": "بلوک‌های بدون برق و رایانه (دوره‌های C-F)",
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "artist_introduction/express/2021": {
-          "name": "",
-          "url": "",
-          "type": "ویدیو"
+          "name": "معرفی Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "ویدئو"
         },
         "turns_angles/express/2021": {
-          "name": "",
-          "url": "",
-          "type": "ویدیو"
+          "name": "چرخش‌ها و زاویه‌ها",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "ویدئو"
         },
         "turns_angles_1/express/2021": {
           "name": "",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
           "type": "جزوه"
         },
         "sprite_lab_documentation/express/2021": {
@@ -6264,12 +6264,12 @@
           "type": "منبع"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "جعبه شنی معلم در مورد ماهی در حال شنا",
+          "url": "https://studio.code.org/levels/18623"
         },
         "making_sprites/express/2021": {
           "name": "ساختن اسپرایت‌ها",
-          "url": "",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
           "type": "اسلایدها"
         },
         "sprite_lab_documentation_1/express/2021": {
@@ -6279,52 +6279,52 @@
         },
         "sprites_in_action/express/2021": {
           "name": "",
-          "url": "",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
           "type": "اسلایدها"
         },
         "pause_and_think_online/express/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "dance-party-playlist/express/2021": {
           "name": "",
           "url": ""
         },
         "dance-party-project-guide/express/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "راهنمای پروژه Dance Party",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "کاربرگ"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "مراحل برنامه نویسی بی‌انتها",
-          "url": "",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
           "type": "کلید پاسخ"
         },
         "pair_programming_video/express/2021": {
-          "name": "",
+          "name": "ویدئو برنامه‌نویسی دو نفره",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویدیو"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "name": "بلوک‌های بدون برق و رایانه (دوره‌های C-F)",
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "name": "بلوک‌های بدون برق و رایانه (دوره‌های C-F)",
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "name": "بلوک‌های بدون برق و رایانه (دوره‌های C-F)",
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing"
         },
         "text_and_prompts/express/2021": {
           "name": "متن و انگیزش",
@@ -6333,13 +6333,13 @@
         },
         "variables_video/express/2021": {
           "name": "متغیرها",
-          "url": "",
-          "type": ""
+          "url": "https://youtu.be/DI7DprN4FtE",
+          "type": "فیلم دانش‌آموز"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "",
+          "name": "راهنمای برنامه ریزی پروژه پایان دوره سریع مبانی امنیت کامپیوتر",
           "url": "https://docs.google.com/document/d/1geOnapIZcQHcJmKMTAe7WmAXbIi9xVQju-hIdBhTi-A/edit?usp=sharing",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "پروژه نهایی CS Fundamentals",
@@ -6347,18 +6347,18 @@
           "type": "سرفصل"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "واژگان دوره",
-          "url": "",
+          "name": "واژگان دوره  ",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab",
           "type": "منبع"
         },
         "csta_standards_mapping/pre-express/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
-          "url": "",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
+          "url": "https://studio.code.org/s/pre-express-2021/standards",
           "type": "منبع"
         },
         "debugging_guide/pre-express/2021": {
-          "name": "راهنمای رفع اشکال",
-          "url": ""
+          "name": "راهنمای رفع نقص",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "انجمن استادان",
@@ -6368,56 +6368,56 @@
         "20_20_20_rule/pre-express/2021": {
           "name": "قانون ۲۰/۲۰/۲۰",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "class-section-video/pre-express/2021": {
           "name": "نحوه ایجاد یک قسمت کلاس در Code.org",
-          "url": "",
-          "type": ""
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "ویدئو معلم"
         },
         "feeling-faces-image/pre-express/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": ""
+          "type": "تصاویر احساسی"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "برنامه نویسی دوتایی",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "",
+          "name": "Wiggles - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدیو"
         },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-          "type": "ویدیو"
+          "type": "ویدئو"
         },
         "2021_change_log/coursee/2021": {
-          "name": "2021Change Log",
+          "name": "گزارش تغییرات ۲۰۲۱",
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
           "type": "منبع"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "Common Core و NGSS Guidance",
-          "url": "",
+          "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
           "type": "منبع"
         },
         "course_vocabulary/coursee/2021": {
-          "name": "واژگان دوره",
-          "url": "",
+          "name": "واژگان دوره  ",
+          "url": "https://studio.code.org/s/coursee-2021/vocab",
           "type": "منبع"
         },
         "cross-curricular_extension_activities/coursee/2021": {
-          "name": "فعالیت‌های ترویجی بین درسی (Cross-Curricular Extension Activities)",
+          "name": "فعالیت‌‌های الحاقی بین درسی  ",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
           "type": "منبع"
         },
         "csta_standards_mapping/coursee/2021": {
-          "name": "نقشه برداری استانداردهای CSTA (CSTA Standards Mapping)",
-          "url": "",
+          "name": "نگاشت استانداردهای انجمن معلمان علوم رایانه ",
+          "url": "https://studio.code.org/s/coursee-2021/standards",
           "type": "منبع"
         },
         "curriculum_guide_1/coursee/2021": {
@@ -6426,7 +6426,7 @@
           "type": "منبع"
         },
         "debugging_guide/coursee/2021": {
-          "name": "راهنمای رفع اشکال",
+          "name": "راهنمای رفع نقص",
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
           "type": "منبع"
         },
@@ -6436,12 +6436,12 @@
           "type": "منبع"
         },
         "lesson_type_guide/coursee/2021": {
-          "name": "راهنمای نوع درس",
+          "name": "راهنمای نوع درس ",
           "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
           "type": "منبع"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "",
+          "name": "اسناد آزمایشگاه Sprite",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "teacher_forum_1/coursee/2021": {
@@ -6450,142 +6450,142 @@
           "type": "منبع"
         },
         "virtual_lesson_modifications/coursee/2021": {
-          "name": "اصلاحات درس مجازی",
-          "url": "",
+          "name": "اصلاحات درس مجازی ",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit",
           "type": "منبع"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "الگوریتم را دنبال کنید",
-          "url": "",
+          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview",
           "type": "اسلایدها"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "",
+          "name": "مستندسازی آزمایشگاه Sprite",
           "url": "https://studio.code.org/docs/spritelab/",
           "type": "منبع"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "جعبه شنی معلم در مورد ماهی در حال شنا",
+          "url": "https://studio.code.org/levels/18623",
+          "type": "مرحله‌ی برنامه‌نویسی"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "",
+          "name": "یک شهروند فوق دیجیتال باشید: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1Vo7REdCSmorWMirt_OXcsS77F5VZ6UGdabm69N8K2kY/edit?usp=sharing"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "شهروند فوق دیجیتال باشید: شهروند فوق دیجیتال",
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "اطلاعات خصوصی و شخصی: Exit Ticket",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "جزوه دانش آموزی"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "اطلاعات خصوصی و شخصی: امتحان درس",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "فرم"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "",
-          "url": "",
+          "name": "اطلاعات خصوصی و شخصی: امتحان درس",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
           "type": "کلید پاسخ"
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "اطلاعات خصوصی و شخصی: اسلایدهای درس",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
+          "type": "ارائه کوتاه"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "اطلاعات خصوصی و شخصی: Private and Personal Information",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
+          "type": "فیلم دانش‌آموز"
         },
         "about_me_planning_guide/coursee/2021": {
-          "name": "",
+          "name": "راهنمای برنامه‌ریزی درباره من (About Me)",
           "url": "https://docs.google.com/document/d/1eKTBvBxS_T_MNvdj_lXJGnRDAo8zJRuz6gLvWKNk2y4/edit?usp=sharing",
           "type": "جزوه"
         },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "مکث کنید و به صورت آنلاین فکر کنید (Pause and Think Online)",
-          "url": "",
-          "type": "ویدیو"
+          "name": "مکث کنید و به صورت برخط فکر کنید (Pause and Think Online)",
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "ویدئو"
         },
         "digital-sharing-lesson/coursee/2021": {
-          "name": "",
+          "name": "برنامه درس اشتراک گذاری دیجیتال",
           "url": "https://docs.google.com/document/d/1emDu9jf0aNnXqGfgS1rQ5Klf1iqDdhXSy87OveesqWE/edit?usp=sharing",
           "type": "منبع"
         },
         "digital-sharing-video/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": "ویدیو"
+          "name": "اصول اخلاقی اشتراک گذاری دیجیتال (ویدئو)",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "ویدئو"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "url": "https://docs.google.com/document/d/1JX4c8LFEEZHo3nn3YipKWUtGxciTzWKw2_3OKOYLoE8/edit?usp=sharing",
           "type": ""
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "فیلم دانش‌آموز"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://docs.google.com/document/d/1tE_PM4_CNtuK3a9vNRQUZmxQTz5mP2AmmOl6_fTiA9w/edit?usp=sharing",
+          "type": "کلید پاسخ ارزیابی"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "",
-          "url": "",
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://docs.google.com/document/d/1qw3sviNepoy9zFqOqmkBe-jQwmNB1lh9nS9FfU1UVfM/edit?usp=sharing",
           "type": "ارزشیابی"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://docs.google.com/document/d/16mhZKdMWD50WqCAlhr9TqV22me0UQcpEiOEnHWyLLic/edit?usp=sharing",
+          "type": "کاربرگ"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "توابع بدون برق و رایانه: ترانه سرایی",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "ویدئوی Lesson in Action"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "ترانه سرایی با توابع",
+          "url": "https://youtu.be/5iDCKkI6y2Y",
+          "type": "ویدئوی Unplugged"
         },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "بلوک‌های بدون برق (دوره‌های C-F)",
-          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-          "type": ""
+          "url": "https://docs.google.com/document/d/15QoqheIIQbMuCHJ-SYAYZFUtJZpMrv1YVV-RuIZM1bo/edit?usp=sharing",
+          "type": "دستکاری‌ها"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "در حال طراحی برای دستیابی پذیری",
-          "url": "",
+          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
           "type": "اسلایدها"
         },
         "types_of_disabilities/coursee/2021": {
-          "name": "",
-          "url": "",
+          "name": "انواع ناتوانی‌ها",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
           "type": "منبع"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "",
-          "url": "",
+          "name": "۷۲ روش خلاقانه برای دانش‌آموزان جهت نشان دادن آنچه که می‌دانند",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/",
           "type": "منبع"
         },
         "design-process/coursee/2021": {
           "name": "روند طراحی",
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
-          "type": ""
+          "type": "راهنمای آمادگی معلم"
         },
         "end-of-course-project-guide/coursee/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "پایان راهنمای پروژه دوره",
+          "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit",
+          "type": "کاربرگ"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "پروژه نهایی CS Fundamentals",
@@ -7174,7 +7174,7 @@
         "computer-science-practices/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "بازاندیشی"
         },
         "paper-prototype-2021/csd/2021": {
           "name": "",
@@ -7343,7 +7343,7 @@
           "type": ""
         },
         "updating-your-prototype/csd/2021": {
-          "name": "",
+          "name": "بروزرسانی نمونه اصلی خود",
           "url": "",
           "type": ""
         },
@@ -7457,7 +7457,7 @@
           "type": ""
         },
         "board_events/csd/2021": {
-          "name": "حوادث بورد",
+          "name": "رویدادهای بورد",
           "url": "",
           "type": "منبع"
         },
@@ -7499,7 +7499,7 @@
         "emoji-race-guide/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "booleans_and_comparison_operators_1/csd/2021": {
           "name": "",
@@ -7556,7 +7556,7 @@
           "type": "منبع"
         },
         "playing_notes/csd/2021": {
-          "name": "",
+          "name": "نکات بازی",
           "url": "",
           "type": "منبع"
         },
@@ -7581,7 +7581,7 @@
           "type": "منبع"
         },
         "accelerometer_events/csd/2021": {
-          "name": "حوادث شتاب سنج",
+          "name": "رویدادهای شتاب سنج",
           "url": "",
           "type": "منبع"
         },
@@ -7598,7 +7598,7 @@
         "physical-prototyping-project/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "circuits_and_buttons/csd/2021": {
           "name": "",
@@ -7613,7 +7613,7 @@
         "planning-your-innovation/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "peer_review_1_1/csd/2021": {
           "name": "",
@@ -7884,7 +7884,7 @@
           "type": ""
         },
         "video_impact_on_society/csd/2021": {
-          "name": "",
+          "name": "فیلم: تأثیر در جامعه",
           "url": "",
           "type": "ویدیو"
         },
@@ -7894,14 +7894,14 @@
           "type": "ویدیو"
         },
         "video_training_data_and_bias/csd/2021": {
-          "name": "",
+          "name": "فیلم: داده های آموزشی و سوگیری",
           "url": "",
           "type": "ویدیو"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "make-a-recommendation-1/csd/2021": {
           "name": "",
@@ -7911,7 +7911,7 @@
         "solve-a-data-problem/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "project_guide_exemplar/csd/2021": {
           "name": "",
@@ -8106,7 +8106,7 @@
           "type": "منبع"
         },
         "animating-sprites/csd/2021": {
-          "name": "",
+          "name": "حرکت اسپرایت",
           "url": "",
           "type": "ویدیو"
         },
@@ -8173,12 +8173,12 @@
         "interactive-card-project-guide-2019/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "interactive_card/csd/2021": {
           "name": "",
@@ -8230,17 +8230,17 @@
           "type": ""
         },
         "side-scroller-1/csd/2021": {
-          "name": "",
+          "name": "اسکرلرهای کناری",
           "url": "",
           "type": "سرفصل"
         },
         "side-scroller/csd/2021": {
-          "name": "",
+          "name": "اسکرلرهای کناری",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
-          "name": "",
+          "name": "الگوی شمارشگر و سرعت",
           "url": "",
           "type": "منبع"
         },
@@ -8250,14 +8250,14 @@
           "type": ""
         },
         "flyer-game-1/csd/2021": {
-          "name": "",
+          "name": "بازی Flyer",
           "url": "",
           "type": "سرفصل"
         },
         "flyer-game/csd/2021": {
-          "name": "",
+          "name": "بازی Flyer",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "توابع",
@@ -8295,12 +8295,12 @@
         "make-your-own-game/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "make_your_own_game/csd/2021": {
           "name": "",
@@ -8439,7 +8439,7 @@
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "apps-and-problem-solving-marked-rubrics/csd/2021": {
           "name": "",
@@ -8571,7 +8571,7 @@
           "type": "ویدیو"
         },
         "video_pair_programming/csd/2021": {
-          "name": "",
+          "name": "فیلم: برنامه نویسی دونفره",
           "url": "",
           "type": "ویدیو"
         },
@@ -8581,7 +8581,7 @@
           "type": "منبع"
         },
         "video_debugging/csd/2021": {
-          "name": "",
+          "name": "فیلم: اشکال زدایی",
           "url": "",
           "type": "ویدیو"
         },
@@ -8608,12 +8608,12 @@
         "html-web-page/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "html-page/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "formatting_html/csd/2021": {
           "name": "",
@@ -8631,12 +8631,12 @@
           "type": "اسلایدها"
         },
         "social-sleuth-exemplar-2020/csd/2021": {
-          "name": "",
+          "name": "کارآگاه اجتماعی",
           "url": "",
           "type": ""
         },
         "social-sleuth/csd/2021": {
-          "name": "",
+          "name": "کارآگاه اجتماعی",
           "url": "",
           "type": ""
         },
@@ -8678,12 +8678,12 @@
         "your-personal-style-1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "your-personal-style/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "licensing-your-work-exemplar-2020/csd/2021": {
           "name": "",
@@ -8738,7 +8738,7 @@
         "person-web-page-prepare/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "practices-reflection-exemplar-2020/csd/2021": {
           "name": "",
@@ -8758,12 +8758,12 @@
         "personal-web-page-1/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "person-web-page-reflect/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "personal-web-page/csd/2021": {
           "name": "",
@@ -8771,7 +8771,7 @@
           "type": "سرفصل"
         },
         "publishing_your_website/csd/2021": {
-          "name": "",
+          "name": "انتشار وبسایت خود",
           "url": "",
           "type": "ویدیو"
         },
@@ -8801,12 +8801,12 @@
           "type": ""
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
-          "name": "",
+          "name": "فیلم: اختلاف مدیریت",
           "url": "",
           "type": "ویدیو"
         },
         "how-teamwork-works/csd/2021": {
-          "name": "",
+          "name": "فیلم: کار گروهی",
           "url": "",
           "type": "ویدیو"
         },
@@ -8826,7 +8826,7 @@
           "type": ""
         },
         "how-search-works-video/csd/2021": {
-          "name": "",
+          "name": "فیلم: جستجو چطور انجام می شود",
           "url": "",
           "type": "ویدیو"
         },
@@ -8853,7 +8853,7 @@
         "plan-a-multi-page-website/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "website_for_a_purpose_-_student_checklist/csd/2021": {
           "name": "",
@@ -8882,12 +8882,12 @@
         "website-for-a-purpose/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "مرور توسط هم رتبه"
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "راهنمای پروژه"
         },
         "lesson_plans/pre-express/2020": {
           "name": "برنامه های درسی",
