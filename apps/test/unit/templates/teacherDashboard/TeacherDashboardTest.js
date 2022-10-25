@@ -71,4 +71,10 @@ describe('TeacherDashboard', () => {
     );
     expect(location.pathname).to.equal('/manage_students');
   });
+
+  it('does not override given path if there are students and path is legitimate', () => {
+    const location = {pathname: '/assessments'};
+    shallow(<TeacherDashboard {...DEFAULT_PROPS} location={location} />);
+    expect(location.pathname).to.equal('/assessments');
+  });
 });
