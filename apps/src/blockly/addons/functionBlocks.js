@@ -33,12 +33,13 @@ export const FUNCTION_BLOCK = {
 export function FUNCTION_CATEGORY(workspace, testProcedures) {
   const xmlList = [];
   // Create a block with the following XML:
-  // <block type="procedures_defnoreturn" gap="16">
+  // <block type="procedures_defnoreturn" gap="24">
   //     <field name="NAME">do something</field>
   // </block>
   const block = Blockly.utils.xml.createElement('block');
   block.setAttribute('type', 'procedures_defnoreturn');
-  block.setAttribute('gap', 16);
+  // Add slightly larger gap between system blocks and user calls.
+  block.setAttribute('gap', 24);
   const nameField = Blockly.utils.xml.createElement('field');
   nameField.setAttribute('name', 'NAME');
   nameField.appendChild(
@@ -47,12 +48,14 @@ export function FUNCTION_CATEGORY(workspace, testProcedures) {
     )
   );
   block.appendChild(nameField);
-  // Add slightly larger gap between system blocks and user calls.
-  block.setAttribute('gap', 24);
   xmlList.push(block);
 
   // Find all user-created procedure definitions in the workspace.
   // allProcedures returns a pair of arrays, but we only need the first.
+  // The second contains procedures with return variables which we don't support.
+  // Each procedure is defined by a three-element list of name, parameter list,
+  // and return value boolean (false).
+  // https://developers.google.com/blockly/reference/js/blockly.procedures_namespace.allprocedures_1_function.md
   const allProcedureCalls = workspace
     ? Blockly.Procedures.allProcedures(workspace)[0]
     : testProcedures;
@@ -65,6 +68,8 @@ export function FUNCTION_CATEGORY(workspace, testProcedures) {
     const mutation = Blockly.utils.xml.createElement('mutation');
     mutation.setAttribute('name', name);
     block.appendChild(mutation);
+    // The parameter list is likely empty as we don't currently support
+    // functions with parameters. This loop is needed if that changes.
     for (let j = 0; j < args.length; j++) {
       const arg = Blockly.utils.xml.createElement('arg');
       arg.setAttribute('name', args[j]);
