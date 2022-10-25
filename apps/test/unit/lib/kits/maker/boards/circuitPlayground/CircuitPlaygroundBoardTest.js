@@ -11,6 +11,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
+import {setSensorAnalogValue} from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
 import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
@@ -575,7 +576,6 @@ describe('CircuitPlaygroundBoard', () => {
           setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
           callback();
         });
-      five.Sensor.prototype.once.callThrough();
       sinon.stub(five.Thermometer.prototype, 'once');
       five.Thermometer.prototype.once
         .withArgs('data')
@@ -857,18 +857,4 @@ describe('CircuitPlaygroundBoard', () => {
       }
     });
   });
-
-  /**
-   * Simulate a raw value coming back from the board on the given component's pin.
-   * @param {five.Sensor|five.Thermometer} component
-   * @param {number} rawValue - usually in range 0-1023.
-   * @throws if nothing is monitoring the given analog pin
-   */
-  function setSensorAnalogValue(component, rawValue) {
-    const {board, pin} = component;
-    const readCallback = board.io.analogRead.args.find(
-      callArgs => callArgs[0] === pin
-    )[1];
-    readCallback(rawValue);
-  }
 });
