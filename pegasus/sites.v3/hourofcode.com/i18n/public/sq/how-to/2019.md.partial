@@ -6,9 +6,9 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# 7. Planifikoni Orën tuaj të Kodimit
 
-### Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Join the movement and introduce a group of students to their first hour of computer science with these steps. Ora e kodit është e çasshme edhe për fillestarët! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
 
 ### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
