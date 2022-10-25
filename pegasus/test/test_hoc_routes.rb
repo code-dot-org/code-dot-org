@@ -76,9 +76,16 @@ class HocRoutesTest < Minitest::Test
 
     it 'redirects vanilla congrats page to code studio' do
       @pegasus.get CDO.code_org_url('/congrats')
-      assert_equal 301, @pegasus.last_response.status
-      expected_url = 'https://studio.code.org/congrats'
-      assert_equal expected_url, @pegasus.last_response['Location'].strip
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
+    end
+
+    it 'preserves url params when redirecting congrats page' do
+      @pegasus.get CDO.code_org_url('/congrats?i=foo&s=bar')
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats?i=foo&s=bar', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
     end
 
     it 'starts and ends given tutorial, tracking company and tutorial' do
