@@ -1,10 +1,7 @@
 # Utility methods for generating certificate images.
 # Note: requires pegasus_dir to be in scope.
-
 require 'honeybadger/ruby'
 require 'rmagick'
-require 'cdo/pegasus/donor'
-
 # needed for force_8859_to_utf8
 require 'cdo/pegasus/string'
 
@@ -145,7 +142,7 @@ class CertificateImage
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
   def self.create_course_certificate_image(name, course=nil, donor_name=nil, course_title=nil, default_random_donor: false)
-    name = ' ' if name.nil? || name.empty?
+    name = ' ' if name.blank?
 
     course ||= ScriptConstants::HOC_NAME
 
@@ -168,7 +165,7 @@ class CertificateImage
     end
 
     if default_random_donor && !donor_name
-      donor = CdoDonor.get_random_donor_by_weight
+      donor = DashboardCdoDonor.get_random_donor_by_weight
       donor_name = donor[:name_s]
     end
 
