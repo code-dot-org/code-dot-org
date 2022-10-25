@@ -8,19 +8,26 @@ import applabI18n from '@cdo/applab/locale';
 import experiments from '@cdo/apps/util/experiments';
 
 describe('MakerSetupGuide', () => {
-  sinon
-    .stub(applabI18n, 'makerSetupCircuitPlaygroundTitle')
-    .returns('i18n-CP-title');
-  sinon
-    .stub(applabI18n, 'makerSetupCircuitPlaygroundDescription')
-    .returns('i18n-CP-description');
-  sinon.stub(applabI18n, 'makerSetupMicrobitTitle').returns('i18n-MB-title');
-  sinon
-    .stub(applabI18n, 'makerSetupMicrobitDescription')
-    .returns('i18n-MB-description');
+  before(() => {
+    // Stub i18n function before translation tests.
+    const i18n = {
+      makerSetupCircuitPlaygroundTitle: 'i18n-CP-title',
+      makerSetupCircuitPlaygroundDescription: 'i18n-CP-description',
+      makerSetupMicrobitTitle: 'i18n-MB-title',
+      makerSetupMicrobitDescription: 'i18n-MB-description'
+    };
+
+    for (const key in i18n) {
+      sinon.stub(applabI18n, key).returns(i18n[key]);
+    }
+  });
+
+  after(() => {
+    sinon.restore();
+  });
 
   describe('Microbit experiment is not enabled', () => {
-    it('renders circuit playground description', () => {
+    it('uses localized circuit playground description', () => {
       let [description, markdown] = getGuideContent(
         '#circuit-playground-description'
       );
@@ -39,7 +46,7 @@ describe('MakerSetupGuide', () => {
     before(() => experiments.setEnabled('microbit', true));
     after(() => experiments.setEnabled('microbit', false));
 
-    it('renders circuit playground description', () => {
+    it('uses localized circuit playground description', () => {
       let [description, markdown] = getGuideContent(
         '#circuit-playground-description'
       );
@@ -47,7 +54,7 @@ describe('MakerSetupGuide', () => {
       expect(markdown.prop('markdown')).to.contain('i18n-CP-description');
     });
 
-    it('renders microbit description description', () => {
+    it('uses localized microbit description', () => {
       let [description, markdown] = getGuideContent('#microbit-description');
       expect(description.prop('title')).to.contain('i18n-MB-title');
       expect(markdown.prop('markdown')).to.contain('i18n-MB-description');
