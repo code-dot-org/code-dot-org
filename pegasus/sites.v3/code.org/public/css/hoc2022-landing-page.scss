@@ -11,6 +11,7 @@ html {
 // Allows for full-width banner and sections
 .container_responsive {
   width: unset;
+  padding: unset;
 }
 
 header {
@@ -20,15 +21,44 @@ header {
   background: url("/images/hoc2022-landing-page-banner-bg.png") no-repeat center center;
   background-size: cover;
   position: relative;
+  text-shadow: 0px 0px 8px #5d1582;
+
+  @media screen and (max-width: $width-sm) {
+    background: url("/images/hoc2022-landing-page-banner-bg-mobile.png") no-repeat bottom center;
+    background-size: cover;
+  }
+
+  .wrapper {
+    z-index: 1;
+    position: relative;
+    margin: unset;
+  }
 
   img {
     z-index: 0;
-    height: 378px;
+    height: 100%;
     position: absolute;
     bottom: 0;
 
-    &.left { left: 0 }
-    &.right { right: 0 }
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
+
+    &.left {
+      left: 0;
+
+      @media screen and (max-width: $width-lg) {
+        left: -60px;
+      }
+    }
+
+    &.right {
+      right: 0;
+
+      @media screen and (max-width: $width-lg) {
+        right: -38px;
+      }
+    }
   }
 
   h1, h2 {
@@ -38,6 +68,10 @@ header {
   h1 {
     font-size: 4em;
     margin: 0.5em auto;
+
+    @media screen and (max-width: $width-lg) {
+      font-size: 3.5em;
+    }
   }
 
   h2 {
@@ -88,7 +122,7 @@ main {
   aside {
     max-width: 970px;
     background-color: $background_gray;
-    margin: 4em auto 0;
+    margin: 4em auto -2em;
     padding: 2em;
   }
 
@@ -99,6 +133,10 @@ main {
 
   section {
     padding: 6em 1em;
+
+    &:last-child {
+      padding-bottom: 1em;
+    }
 
     &:nth-of-type(2) {
       background: $background_gray;

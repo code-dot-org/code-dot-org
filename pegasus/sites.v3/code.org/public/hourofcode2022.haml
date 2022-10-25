@@ -20,23 +20,24 @@ theme: responsive
 - icon_paint = "fa-regular fa-paintbrush-pencil"
 
 %header
-  %span=I18n.t(:og_title_here)
-  %h1=I18n.t(:hoc2022_banner_title)
-  %h2=I18n.t(:try_it_yourself)
-  %nav
-    %ul
-      %li
-        %i{class: "#{icon_rocket}"}
-        %a{href: "#explore"}
-          =I18n.t(:hoc2022_landing_page_explore_title)
-      %li
-        %i{class: "#{icon_futbol}"}
-        %a{href: "#play"}
-          =I18n.t(:hoc2022_landing_page_play_title)
-      %li
-        %i{class: "#{icon_paint}"}
-        %a{href: "#create"}
-          =I18n.t(:hoc2022_landing_page_create_title)
+  .wrapper
+    %span=I18n.t(:og_title_here)
+    %h1=I18n.t(:hoc2022_banner_title)
+    %h2=I18n.t(:try_it_yourself)
+    %nav
+      %ul
+        %li
+          %i{class: "#{icon_rocket}"}
+          %a{href: "#explore"}
+            =I18n.t(:hoc2022_landing_page_explore_title)
+        %li
+          %i{class: "#{icon_futbol}"}
+          %a{href: "#play"}
+            =I18n.t(:hoc2022_landing_page_play_title)
+        %li
+          %i{class: "#{icon_paint}"}
+          %a{href: "#create"}
+            =I18n.t(:hoc2022_landing_page_create_title)
   %img.left{src: "/images/hoc2022-landing-page-banner-left.svg", alt: I18n.t(:hoc2022_landing_page_banner_alt_left)}
   %img.right{src: "/images/hoc2022-landing-page-banner-right.svg", alt: I18n.t(:hoc2022_landing_page_banner_alt_right)}
 
