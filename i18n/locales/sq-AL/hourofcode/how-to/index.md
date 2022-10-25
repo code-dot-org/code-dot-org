@@ -4,7 +4,7 @@ title: Udhëzuesi për Orën e Kodit
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# 7. Planifikoni Orën tuaj të Kodimit
 
 ### Bashkohuni me lëvizjen dhe prezantojini studentët tuaj në shkencat kompjuterike me këto hapa.
 

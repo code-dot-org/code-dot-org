@@ -1264,3 +1264,17 @@ mi:
           lesson_groups:
             lessonGroup-3:
               display_name: Ihirangi
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Ngā Taurangi
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke

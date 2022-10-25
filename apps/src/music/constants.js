@@ -36,3 +36,6 @@ export const Triggers = [
     keyboardKey: '6'
   }
 ];
+
+export const PLAY_ICON = 'music/play-button.png';
+export const STOP_ICON = 'music/stop-button.png';

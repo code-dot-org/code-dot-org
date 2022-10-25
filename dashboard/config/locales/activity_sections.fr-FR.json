@@ -537,7 +537,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Fêtez ça",
-          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://code.org/certificates?script=mc) à son nom."
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://studio.code.org/certificates/batch?course=bWM=) à son nom."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Prochaines étapes",
@@ -3935,7 +3935,7 @@
           "tips": [
             "Tout comme lorsque les élèves écrivent ou communiquent verbalement, il est important de définir des attentes sur l'utilisation appropriée des mots dans cette activité. Les élèves doivent comprendre qu'ils sont responsables du code qu'ils écrivent, y compris de tout texte qui s'affiche à l'écran. Le texte doit être respectueux et sûr. Ils peuvent s'entraîner à ne pas partager d'informations personnelles dans leurs programmes, surtout s'ils souhaitent les partager avec d'autres.\nNotez que les informations saisies dans une invite Sprite Lab ne sont pas enregistrées à long terme. Les mots et messages tapés par les utilisateurs de ces applications disparaissent une fois l'application réinitialisée. "
           ],
-          "progression_name": "Vidéo : Texte et invites "
+          "progression_name": "Vidéo : Texte et Invites "
         },
         "515ecad5-bd7d-46e5-b210-53f7e7a3d43b": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -17729,7 +17729,7 @@
           "tips": [
             "Tout comme lorsque les élèves écrivent ou communiquent verbalement, il est important de définir des attentes sur l'utilisation appropriée des mots dans cette activité. Les élèves doivent comprendre qu'ils sont responsables du code qu'ils écrivent, y compris de tout texte qui s'affiche à l'écran. Le texte doit être respectueux et sûr. Ils peuvent s'entraîner à ne pas partager d'informations personnelles dans leurs programmes, surtout s'ils souhaitent les partager avec d'autres.\nNotez que les informations saisies dans une invite Sprite Lab ne sont pas enregistrées à long terme. Les mots et messages tapés par les utilisateurs de ces applications disparaissent une fois l'application réinitialisée. "
           ],
-          "progression_name": "Vidéo : Texte et invites "
+          "progression_name": "Vidéo : Texte et Invites "
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
