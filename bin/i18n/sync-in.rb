@@ -28,6 +28,7 @@ def sync_in
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_external_sources
   redact_level_content
   redact_block_content
   redact_script_and_course_content
@@ -106,6 +107,32 @@ def localize_docs
   FileUtils.mkdir_p(File.dirname(docs_content_file))
   File.open(docs_content_file, "w") do |file|
     file.write(JSON.pretty_generate(programming_env_docs))
+  end
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def localize_external_sources
+  puts "Preparing external sources"
+  external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
+
+  # ml-playground files
+  # These are overwritten in this format so the properties that use
+  # arrays have unique identifiers for translation.
+  dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
+
+  Dir.glob(dataset_files).each do |dataset_file|
+    original_dataset = JSON.parse(File.read(dataset_file))
+
+    # Currently only including fields for translation.
+    # Use field id as unique identifier.
+    final_dataset = Hash.new
+    final_dataset["fields"] = Hash.new
+    dataset_fields = original_dataset["fields"]
+    dataset_fields.each {|field| final_dataset["fields"][field["id"]] = field}
+
+    File.open(dataset_file, "w") do |f|
+      f.write(JSON.pretty_generate(final_dataset))
+    end
   end
 end
 
