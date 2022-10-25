@@ -1364,6 +1364,7 @@ fr-FR:
   coursed-2020_name: Cours D (2020)
   coursee-2020_name: Cours E (2020)
   coursef-2020_name: Cours F (2020)
+  coursea-2021_name: Cours A (2021)
   coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
   coursed-2022_name: Cours D (2021)
@@ -2810,6 +2811,17 @@ fr-FR:
   outbreak_tile_title: Épidémie
   outbreak_tile_subtitle: Un virus a infecté Monster Town ! Codez un simulateur d'épidémie
     et faites des prédictions sur ce qui arrivera aux voisins de Monster Town.
-  footer_cookie_notice: " Utilisation de cookies"
+  footer_cookie_notice: " Utilisation des cookies"
+  hoc2022_banner_title: Découvrir, jouer, créer !
+  hoc2022_banner_description: 'Explorez l''univers, marquez des buts, bougez : il
+    y a tant de manières d''utiliser l''informatique!'
+  hoc2022_cta_primary: Découvrez les nouveautés
+  hoc2022_cta_secondary: Essayez d'autres activités
+  hoc2022_landing_page_explore_description: Grâce aux sciences informatiques, ouvrez
+    les portes de nouveaux mondes !
+  hoc2022_landing_page_play_description: Montrez de quoi vous êtes capable et marquez
+    des points !
   hoc2022_landing_page_create_title: Créer
+  hoc2022_landing_page_create_description: Créez des choses hors du commun et merveilleuses
+    !
   try_it_yourself: Essaie toi-même !

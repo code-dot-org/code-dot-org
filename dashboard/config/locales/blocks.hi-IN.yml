@@ -232,20 +232,12 @@ hi:
             MOVES.XArmsUp: ज़ोर से खींचें
             MOVES.ThisOrThat: यह या वह
             MOVES.Rest: कोई नहीं
-      Dancelab_everyMeasuresRange:
-        text: 'प्रत्येक {N} प्रविधियों को {START} के बाद दोहराएं '
       Dancelab_everySeconds:
         text: 'प्रत्येक {N} {UNIT} '
         options:
           UNIT:
             '"measures"': संगीत प्रविधियां
             '"seconds"': सेकंड
-      Dancelab_everySecondsRange:
-        text: 'प्रत्येक {N} {UNIT} {START} से {STOP} तक '
-        options:
-          UNIT:
-            measures: संगीत प्रविधियां
-            seconds: सेकंड
       Dancelab_everyVerseChorus:
         text: 'प्रत्येक {UNIT} '
         options:
@@ -1328,8 +1320,29 @@ hi:
             "'sound://category_digital/jump_7.mp3'": कूदें
       gamelab_playSoundOptionsSoccer:
         text: प्लेसाउंड {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": एयरहॉर्न
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": शाबाशी
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": चैंट
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": चीअर
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": किक करें
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": दो सीटियाँ
+            "'sound://category_sports/One_Whistle_SFX.mp3'": विस्सल
       gamelab_playSoundOptionsSpace:
         text: प्लेसाउंड {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": बुलेट क्लस्टर
+            "'sound://category_space/Carina_SFX.mp3'": करीना
+            "'sound://category_space/Cassiopeia_SFX.mp3'": कैसिओपेआ
+            "'sound://category_space/Crab_nebula_SFX.mp3'": क्रैब नेबुला
+            "'sound://category_space/Launch_SFX.mp3'": जारी करें
+            "'sound://category_space/Lift_Off.mp3'": लिफ्ट ऑफ
+            "'sound://category_space/Pillars_SFX.mp3'": पिलर्स
+            "'sound://category_space/Southern_ring_SFX.mp3'": दक्षिणी रिंग
+            "'sound://category_space/Supernova_SFX.mp3'": सुपरनोवा
+            "'sound://category_sports/One_Whistle_SFX.mp3'": टाईको
       gamelab_playSpeech:
         text: प्ले स्पीच {SOUND}
       gamelab_playerBehaviors:
@@ -2485,6 +2498,10 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      storylab_setHeading:
+        text: शीर्षक सेट करें {HEADING}
+      storylab_setSubheading:
+        text: उपशीर्षक सेट करें {SUBHEADING}
       validation_validatedBackground:
         text: पृष्ठभूमि के तौर पर {IMG} सेट करें
       validation_validatedSound:

@@ -522,3 +522,17 @@ ky:
           lessons:
             lesson-6:
               name: Циклдер
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер

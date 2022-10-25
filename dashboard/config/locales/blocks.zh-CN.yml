@@ -234,20 +234,12 @@ zh-CN:
             MOVES.Rest: 没有
       Dancelab_eval:
         text: 执行 {CODE}
-      Dancelab_everyMeasuresRange:
-        text: "{START} 后重复 {N} 小节"
       Dancelab_everySeconds:
         text: 每 {N} {UNIT} 重复一次
         options:
           UNIT:
             '"measures"': 衡量
             '"seconds"': " 秒"
-      Dancelab_everySecondsRange:
-        text: 每个 {N} {UNIT} 从 {START} 到 {STOP}
-        options:
-          UNIT:
-            measures: 节拍
-            seconds: 秒
       Dancelab_everyVerseChorus:
         text: '每个 {UNIT} '
         options:
@@ -1322,8 +1314,30 @@ zh-CN:
             "'sound://category_digital/jump_7.mp3'": 跳跃
       gamelab_playSoundOptionsSoccer:
         text: 播放音效{SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": 气笛
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": 掌声
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": 颂歌
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": 欢呼
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": 踢
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": 双哨声
+            "'sound://category_sports/One_Whistle_SFX.mp3'": 口哨
       gamelab_playSoundOptionsSpace:
         text: 播放音效{SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": 黑洞
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": 子弹星系团
+            "'sound://category_space/Carina_SFX.mp3'": 船底座
+            "'sound://category_space/Cassiopeia_SFX.mp3'": 仙后座
+            "'sound://category_space/Crab_nebula_SFX.mp3'": 蟹状星云
+            "'sound://category_space/Launch_SFX.mp3'": 发射
+            "'sound://category_space/Lift_Off.mp3'": 起飞
+            "'sound://category_space/Pillars_SFX.mp3'": 创生之柱
+            "'sound://category_space/Southern_ring_SFX.mp3'": 南环星云
+            "'sound://category_space/Supernova_SFX.mp3'": 超新星
+            "'sound://category_sports/One_Whistle_SFX.mp3'": 第谷
       gamelab_playSpeech:
         text: 游戏言语{SOUND}
       gamelab_playerBehaviors:
@@ -2416,5 +2430,9 @@ zh-CN:
           DIR:
             right: 右 ↻
             left: 左 ↺
+      storylab_setHeading:
+        text: 设置标题 {HEADING}
+      storylab_setSubheading:
+        text: 设置副标题 {SUBHEADING}
       validation_validatedBackground:
         text: 设置背景为 {IMG}

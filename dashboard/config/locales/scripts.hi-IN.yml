@@ -5024,3 +5024,71 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: 'अध्याय 2: भौतिक प्रारूप बनाना'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: वह आवाज क्या थी?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: सर्वेक्षण
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'इकाई 2: इंटरनेट'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: चर
+            csp_conditionals:
+              display_name: कंडीशनल्स
+            csp_functions:
+              display_name: कार्य
+            csp_project:
+              display_name: प्रोजेक्ट
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: सूचियाँ
+            csp_loops:
+              display_name: फंदे
+            csp_traversals:
+              display_name: चक्रमण
+            csp_project:
+              display_name: प्रोजेक्ट
+            lessonGroup-5:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'इकाई 6: कलन विधियां'
+            lessonGroup-2:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: मापदंड और रिटर्न वैल्यूज
+            csp_libraries:
+              display_name: पुस्तकालय
+            lessonGroup-3:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT बनाएं
+            lessonGroup-3:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'इकाई 9: डेटा'
+            lessonGroup-2:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: पाठ्यक्रम के बाद का सर्वेक्षण
+        csp-post-survey-2023:
+          title: CS के सिद्धांत कोर्स के बाद का सर्वेक्षण

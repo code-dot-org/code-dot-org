@@ -3330,94 +3330,93 @@ fr:
           les boucles.'
       7:
         image: notes/mc_2017_repeat_7.png
-        text: Dans le prochain niveau, vous pouvez utiliser une boucle pour déplacer
-          l'Agent le long du chemin. Glisse le bloc répéter dans l'espace de travail
-          et place un bloc avancer plus à l'intérieur du bloc répéter. Ça signifie
-          que l'ordinateur doit faire plusieurs fois de suite la même chose sans avoir
-          à glisser un tas de blocs à l'intérieur de l'espace de travail. Vous pouvez
-          choisir combien de répétitions effectuer en plaçant un nombre dans le bloc
-          répéter.
+        text: Dans le prochain niveau, tu vas pouvoir utiliser une boucle pour déplacer
+          l'Agent le long du chemin. Fais glisser le bloc répéter vers l'espace de
+          travail et place un bloc avancer à l'intérieur du bloc répéter. Ça indique
+          à l'ordinateur qu'il doit faire la même chose plusieurs fois de suite sans
+          avoir à glisser un tas de blocs vers l'espace de travail. Tu peux choisir
+          combien de répétitions effectuer en changeant le nombre dans le bloc répéter.
       8:
         image: notes/mc_2017_repeat_8.png
-        text: Vous pouvez aussi mettre des blocs tourner et plusieurs commandes à
-          l'intérieur d'un bloc répéter, mais pour le moment, essayez d'utiliser répéter
-          pour faire avancer l'Agent de quelques pas. Rappelez-vous, si vous êtes
-          coincés sur un puzzle, vous pouvez toujours utiliser le bouton bleu Réinitialiser
-          et recommencer.
+        text: Tu peux aussi mettre des blocs tourner et de multiples commandes à l'intérieur
+          d'un bloc répéter, mais pour le moment, essaie d'utiliser répéter pour faire
+          avancer l'Agent de quelques pas. N'oublie pas que si tu te retrouves coincé
+          sur un casse-tête, tu peux toujours utiliser le bouton bleu « réinitialiser »
+          et réessayer.
       9:
         image: notes/mc_2017_repeat_9.png
-        text: 'Si vous pensez avoir un travail aussi cool que Katie, allez-y et cliquez
-          sur le bouton montrer le code quand vous finissez chaque niveau. Cela va
-          vous montrer le code Javascript que quelqu''un comme Katie utilise quand
-          elle programme Minecraft. Katie: Oui, bonne chance à tous!'
+        text: 'Si toi aussi, tu aimerais avoir un travail aussi cool que celui de
+          Katie, vas-y, clique sur le bouton montrer le code quand tu termines chaque
+          niveau. Cela te montrera le code Javascript que quelqu''un comme Katie utilise
+          quand elle programme Minecraft. Katie : Oui, bonne chance, tout le monde !'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
-        text: 'Preston: Ce n''est pas pour frimer mais je suis plutôt bon en parkour.
-          Lizzy: Dormons comme ça il fera jour quand Stacy reviendra.'
+        text: 'Preston : C''est pas pour crâner, mais je suis plutôt fort en parkour.
+          Lizzy : Viens, on dort, comme ça il fera jour quand Stacy revient.'
       2:
         image: notes/mc_2017_functions_2.png
-        text: 'Stacy: Ok les amis, je reviens des bureaux de Minecraft, et je pense
-          que je sais comment résoudre le problème que j''ai dans le jeu. Je pense
-          que je peux utiliser une fonction. J''ouvre juste ceci.'
+        text: 'Stacy : Ok les gens, je reviens des bureaux de Minecraft, et je pense
+          que je sais comment résoudre le problème que j''ai avec le jeu. Je crois
+          que je peux utiliser une fonction. Je vais juste ouvrir ceci.'
       3:
         image: notes/mc_2017_functions_3.png
-        text: Alors une fonction est une liste spécifique d'instructions pour accomplir
-          une certaine tâche, un peu comme une recette. Dans les niveaux suivants,
-          vous aurez accès aux fonctions et vous pourrez les utiliser pour résoudre
-          les puzzles.
+        text: Alors, une fonction, c'est une liste précise d'instructions qui sert
+          à accomplir une certaine tâche, un peu comme une recette. Dans les niveaux
+          suivants, tu auras accès aux fonctions, que tu vas pouvoir utiliser pour
+          résoudre les casse-têtes.
       4:
         image: notes/mc_2017_functions_4.png
-        text: Examinez le code dans la fonction quand celle-ci est dans l'espace de
-          travail pour voir ce qu'elle fait.
+        text: Examine le code au sein de fonction quand il est dans l'espace de travail
+          pour voir ce qu'il fait.
       5:
         image: notes/mc_2017_functions_5.png
-        text: Ensuite, trouvez le bloc avec ce nom dans la boîte à outils et glissez-le
-          de la boîte à outils vers le bloc quand l'exécution commence.
+        text: Puis, trouve le bloc de ce nom dans la boîte à outils et glisse-le de
+          la boîte à outils vers le bloc quand l'exécution commence.
       6:
         image: notes/mc_2017_functions_6.png
-        text: Rappelez-vous, vous pouvez utiliser la même fonction à chaque fois que
-          vous voulez exécuter la même série d'instructions pour faire quelque chose,
-          comme construire un pont. Bonne chance, je sais que vous allez y arriver!
+        text: N'oublie pas que tu peux utiliser la même fonction à chaque fois que
+          tu as besoin d'exécuter la même série d'instructions pour faire quelque
+          chose, comme construire un pont. Bonne chance, je sais que tu vas y arriver !
     mc_2017_congratulations:
       1:
         image: notes/mc_2017_congratulations_1.png
-        text: 'Preston: Félicitations!'
+        text: 'Preston : Félicitations !'
       2:
         image: notes/mc_2017_congratulations_2.png
-        text: 'Lizzy: Félicitations!'
+        text: 'Lizzy : Félicitations !'
       3:
         image: notes/mc_2017_congratulations_3.png
-        text: 'Stampy: Félicitations, vous avez réussi!'
+        text: 'Stampy : Félicitations, tu as réussi !'
       4:
         image: notes/mc_2017_congratulations_4.png
-        text: 'Stacy: Félicitations les amis, vous avez assuré! Et maintenant que
-          vous avez terminé l''Heure de Code, vous pouvez commencer à coder dans Minecraft.
-          Vous avez appris les boucles, les fonctions et ce que l''Agent peut faire.'
+        text: 'Stacy : Félicitations les amis, vous avez assuré ! Et maintenant qu''on
+          a terminé l''Heure de Code, on peut commencer à coder dans Minecraft. On
+          a découvert les boucles, les fonctions et ce que fait un agent logiciel.'
       5:
         image: notes/mc_2017_congratulations_5.png
-        text: Maintenant, c'est le moment de jouer sur un niveau libre, où vous êtes
-          le développeur. Utiliser le reste du temps pour écrire vos propres fonctions
-          pour explorer, creuser et construire.
+        text: Maintenant, c'est l'heure du niveau en jeu libre, où c'est toi, le développeur.
+          Utilise le temps qui reste pour écrire tes propres fonctions afin d'explorer,
+          creuser et construire.
       6:
         image: notes/mc_2017_congratulations_6.png
-        text: 'Vous pouvez prendre le code que vous avez écrit dans ce niveau pour
-          l''utiliser dans votre monde Minecraft de Minecraft: Education Edition.
-          Cliquez juste sur ''Finir'' et suivez les instructions pour avoir un lien
-          à utiliser dans votre monde, pour continuer à coder avec l''Agent. Amusez-vous
-          bien, et bon travail!'
+        text: 'Tu peux prendre le code que tu as écrit dans ce niveau et l''utiliser
+          dans ton univers Minecraft avec Minecraft : Education Edition. Clique simplement
+          sur « Terminer » et suis les instructions pour avoir un lien à utiliser
+          dans ton univers, pour que tu puisses continuer à coder avec l''Agent. Amuse-toi
+          bien, et bon travail !'
       7:
         image: notes/mc_2017_congratulations_7.png
-        text: 'Stacy: Et je suis de retour! Donc là les amis, c''est l''Agent! Laissez-moi
-          vous montrer ce qu''il peut faire. Regardez, il le fait! Je lui ai dit de
-          construire un escalier à partir de blocs de terre cuite, et maintenant nous
-          pouvons l''utiliser pour sortir de là. Et en plus, il n''y a pas que des
-          escaliers. Je peux dire à l''Agent de faire tout ce que je veux, et il le
-          fera pour moi.'
+        text: 'Stacy : Et voilà, je suis de retour ! Donc ça, les amis, c''est l''Agent !
+          Laissez-moi vous montrer ce qu''il peut faire. Regardez, il le fait ! Je
+          lui ai dit de construire un escalier en utilisant ces blocs de terre cuite,
+          et maintenant on peut s''en servir pour sortir de là. Et il n''y a pas que
+          des escaliers qu''il puisse faire. Je peux dire à l''Agent de faire tout
+          ce que je veux, et il le fera pour moi.'
       8:
         image: notes/mc_2017_congratulations_8.png
-        text: 'Stampy: Comment tu as fait ça? Stacy: C''était facile en fait. J''ai
-          juste utilisé du code!'
+        text: 'Stampy : Comment tu as fait ça ? Stacy : C''était facile, en fait.
+          J''ai juste utilisé du code !'
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png
