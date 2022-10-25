@@ -685,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://studio.code.org/certificates/batch?course=bWM=) certificado con su nombre."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Siguientes Pasos",
@@ -11685,7 +11685,7 @@
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
           "tips": [
             null,
-            "Al pulsar el botón de la pantalla, el código encenderá un pequeño LED rojo cerca de la clavija USB del Circuit Playground. Es posible que los alumnos esperen que se encienda una de las luces LED más grandes, por lo que es posible que no se den cuenta inmediatamente del LED rojo más pequeño. "
+            "Al pulsar el botón de la pantalla, el código encenderá un pequeño LED rojo cerca del conector USB del Circuit Playground. Es posible que los alumnos esperen que se encienda una de las luces LED más grandes, por lo que es posible que no se den cuenta inmediatamente del LED rojo más pequeño. "
           ],
           "progression_name": "Predecir"
         },
@@ -11697,7 +11697,7 @@
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
-            "Este código utiliza el zumbador del Circuit Playground para crear un sonido. El primer número del bloque de frecuencias controla la nota del zumbador: los números bajos crean notas graves más bajas, y los números altos crean sonidos de mayor frecuencia. Los estudiantes explorarán estas frecuencias en los próximos niveles"
+            "Este código utiliza el zumbador del Circuit Playground para crear un sonido. El primer número del bloque de frecuencias controla la nota del zumbador: los números bajos crean notas graves más bajas, y los números altos crean sonidos agudos de mayor frecuencia. Los estudiantes explorarán estas frecuencias en los próximos niveles"
           ],
           "progression_name": "Predecir"
         },
@@ -11739,7 +11739,7 @@
         },
         "c77e40a7-1e58-48b3-a333-c458c9983ef8": {
           "tips": [
-            "Los alumnos están familiarizados con el modo diseño para configurar la interfaz de usuario de su aplicación, pero este nivel introduce cómo cambiar los elementos de diseño con código. Los alumnos pueden pasar el ratón por encima de los elementos para ver sus identificaciones y utilizarlas para hacer sus suposiciones. Cuando pulsen Ejecutar, el código se ejecutará lentamente y resaltará cada línea mientras se ejecuta para que los alumnos puedan ver paso a paso lo que hace cada línea. Esto puede ser útil a la hora de comentar su pronóstico y relacionar el resultado con líneas de código específicas.",
+            "Los alumnos están familiarizados con el Modo Diseño para configurar la interfaz de usuario de su aplicación, pero este nivel introduce cómo cambiar los elementos de diseño con código. Los alumnos pueden pasar el ratón por encima de los elementos para ver sus identificaciones y utilizarlas para hacer sus suposiciones. Cuando pulsen Ejecutar, el código se ejecutará lentamente y resaltará cada línea mientras se ejecuta para que los alumnos puedan ver paso a paso lo que hace cada línea. Esto puede ser útil a la hora de comentar su pronóstico y relacionar el resultado con líneas de código específicas.",
             null
           ],
           "progression_name": "Predecir"
@@ -12067,7 +12067,7 @@
         },
         "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c": {
           "tips": [
-            null
+            "Hay tres sensores en el Circuit Playground: un sensor de luz, un sensor de sonido y un sensor de temperatura. Anima a los alumnos a que relacionen los sensores con sus propios sentidos y a que interactúen con el Circuit Playground de esa manera; por ejemplo, ¿qué ocurre cuando mostramos u ocultamos cosas en el Circuit Playground? ¿Qué ocurre cuando el volumen cambia cerca del Circuit Playground?\n\nA través de la experimentación, los alumnos deberían notar que el valor mínimo es 0 y el máximo es 1023. Los estudiantes también pueden notar que un sensor (la temperatura) no parece cambiar mucho."
           ],
           "progression_name": "Predecir"
         },
@@ -12102,7 +12102,7 @@
         },
         "8fbee503-556a-40cd-be06-2fe300b09ef5": {
           "tips": [
-            null
+            "El acelerómetro tiene dos propiedades: el `balanceo` y el `cabeceo`. El `balanceo` corresponde a la inclinación hacia la izquierda y hacia la derecha, y el `cabeceo` corresponde a la inclinación hacia delante y hacia atrás. Los alumnos deberían darse cuenta de esto si sostienen su Circuit Playground a nivel del suelo con el cable USB apuntando en dirección contraria a ellos para que todas las letras aparezcan correctamente. Los alumnos también pueden experimentar con el movimiento de su Circuit Playground en el espacio físico, moviéndolo hacia arriba y hacia abajo o hacia la izquierda y la derecha, pero esto no afecta al acelerómetro. Sólo la rotación y la inclinación del Circuit Playground cambiarán el balanceo y el cabeceo."
           ],
           "progression_name": "Predecir"
         },
@@ -12132,7 +12132,7 @@
         },
         "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66": {
           "tips": [
-            null
+            "A los alumnos les costará predecir los resultados aquí, pero no pasa nada: es más importante que se den cuenta de que debe haber sonidos coincidentes entre los botones de la izquierda y los de la derecha. Cuando los alumnos ejecuten el código, pueden pulsar los botones varias veces para intentar encontrar los pares coincidentes. Deberían descubrir que los siguientes pares crean los mismos sonidos:\n\n-   261 \\<> C4\n-   329 \\<> E4\n-   493 \\<> B4\n-   392 \\<> G4\n\nComo los alumnos descubrirán pronto, estas frecuencias corresponden a notas musicales como las que podrían escuchar en un piano. Por ahora, deben salir de este nivel entendiendo que ciertas frecuencias corresponden a ciertas \"notas\"."
           ],
           "progression_name": "Predecir"
         },
@@ -12144,7 +12144,7 @@
         },
         "c4228271-c5b7-4567-a23a-47389f925254": {
           "tips": [
-            null
+            "Este nivel introduce formalmente a los alumnos en los arrays, que son como listas. Los estudiantes ya han estado utilizando arrays sin darse cuenta - los [\\`colorLeds\\`(#f78183)](/docs/applab/colorLeds/) son un array de luces en el Circuit Playground. El array en este nivel funciona de forma similar a los colorLeds. Ayuda a los alumnos a fijarse en lo siguiente:\n\n-   Ambos arrays utilizan corchetes `[]` con números dentro para representar la posición en el array\n-   Ambos arrays parecen empezar por 0\n-   El array `notas` está definido en la parte superior del código con un bloque `var`, pero los `colorLED` no están definidos de ninguna manera\n\nLos alumnos aprenderán más sobre arrays en el vídeo de la próxima lección"
           ],
           "progression_name": "Predecir"
         },
@@ -12184,7 +12184,7 @@
         },
         "5c0e38f9-bfaf-4555-8051-d867140232fc": {
           "tips": [
-            null
+            "Los alumnos pueden predecir que la pantalla se actualizará al pulsar los botones y que los colores del emoji y del fondo cambiarán. Pueden observar que `updateScreen()` aparece en tres lugares: dentro de los dos eventos de los botones, y como un bloque verde más grande en la parte inferior del código. No pasa nada si no están completamente seguros de cómo funciona el bloque verde, y pueden intentar describir lo que está ocurriendo relacionándolo con las variables: que una variable puede utilizarse en lugar de un valor, y que quizás `updateScreen()` se está utilizando como marcador de posición para el código en la parte inferior de la pantalla. Guía a los alumnos para que se den cuenta de que esto es útil porque el mismo código se puede utilizar en dos lugares diferentes (el botón izquierdo y el botón derecho).\n\nNo importa que no lleguen a una conclusión firme, ya que los alumnos verán un vídeo en el siguiente nivel que explica las funciones y cómo utilizarlas en el código."
           ],
           "progression_name": "Predecir"
         },
@@ -12199,7 +12199,7 @@
         },
         "a37f0b1f-508e-4592-a58b-664fcefb22bf": {
           "tips": [
-            null
+            "Los alumnos deben observar que se utilizan los botones izquierdo y derecho, y que la función de la parte inferior utiliza el acelerómetro para mover algo en la pantalla. Los alumnos pueden predecir que la función cambia según el botón que se pulse: el botón izquierdo mueve el bicho morado y el derecho el naranja. Los alumnos también pueden observar que la función tiene una variable, \"bicho\", que se incluye en la parte superior de la función y se utiliza en todo momento. \n\nEn el siguiente nivel, los alumnos verán un vídeo en el que se describe cómo funcionan estas funciones y cómo `bicho` es un **parámetro** que se puede utilizar para cambiar el comportamiento de una función cuando se llama a la función, como mover el bicho naranja o el bicho morado."
           ],
           "progression_name": "Predecir"
         },
@@ -12272,7 +12272,7 @@
         },
         "f7118f4f-2fc6-430c-a803-09df0254c7dc": {
           "tips": [
-            null
+            "**Seguridad en el Aula:** Este nivel está diseñado a propósito para proporcionar una oportunidad de explicar la seguridad y las mejores prácticas con el manejo del Circuit Playground. Puedes decidir hacer hincapié en estos pasos con la clase como grupo completo y supervisar a los estudiantes mientras completan estos pasos durante este nivel. En general, los alumnos siempre deben reiniciar la aplicación y desconectarse del ordenador antes de realizar cualquier cambio en el cableado. De lo contrario, podrían destruir el LED o estropear la placa."
           ],
           "progression_name": "Predecir"
         },
@@ -24814,7 +24814,7 @@
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
           "name": "Diario",
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",
