@@ -11,6 +11,7 @@
   "activity": "Veikla",
   "actions": "Komandos",
   "add": "Pridėti",
+  "addingToTable": "Dedama...",
   "addParentEmailModal_parentEmail_invalid": "Toks el. paštas nerastas.",
   "addParentEmailModal_parentEmail_mustBeDifferent": "Naujas el. Pašto adresas neturi atitikti senojo el. Pašto adreso.",
   "addParentEmailModal_emailOptIn_isRequired": "Šį laukelį būtina užpildyti.",
