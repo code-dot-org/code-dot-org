@@ -66,16 +66,14 @@ export default function ControlButtons({
       </div>
       <div className={style.rightButtons}>
         <JavalabSettings />
-        {!isEditingStartSources && (
-          <JavalabButton
-            text={finishButtonText}
-            onClick={isSubmittable ? null : onContinue}
-            className={style.buttonBlue}
-            isDisabled={disableFinishButton}
-            id={finishButtonId}
-            tooltipText={finishButtonTooltipText}
-          />
-        )}
+        <JavalabButton
+          text={finishButtonText}
+          onClick={isSubmittable ? null : onContinue}
+          className={style.buttonBlue}
+          isDisabled={disableFinishButton}
+          id={finishButtonId}
+          tooltipText={finishButtonTooltipText}
+        />
       </div>
     </div>
   );
