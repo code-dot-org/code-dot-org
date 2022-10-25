@@ -9,31 +9,34 @@ class Incubator extends Component {
       <div>
         <HeaderBanner
           headingText="Incubator"
-          subHeadingText="Try an experiment!"
-          backgroundUrl="/shared/images/banners/banner_default.jpg"
+          subHeadingText="Try something new"
+          backgroundUrl="/shared/images/banners/banner-incubator.png"
+          imageUrl="/shared/images/banners/banner-incubator-image.png"
           short={true}
         />
         <div className="main" style={{maxWidth: 970, margin: '0 auto'}}>
           <div style={{margin: '40px 0'}}>
             <p>
-              At Code.org, we’re always trying new ways to make cool things with
-              computer science.
+              The Incubator is where you get to try out some of the latest ideas
+              from inside Code.org.
             </p>
             <p>
-              Code.org Incubator is where we try out new ideas. These are
-              experiments so{' '}
               <strong>
-                they could go away at any time, your work could get lost, and
-                there may be bugs
+                These are "works in progress", so some things are a bit
+                different. Things change regularly, you might find things that
+                need fixing, progress isn't always saved, and they might go away
+                again.
               </strong>
-              !
             </p>
-            <p>Still want to explore? Try out a project!</p>
+            <p>
+              By using the Incubator, you can help us shape the future of
+              computer science education. We would love to hear what you think.
+            </p>
           </div>
 
           <TwoColumnActionBlock
             imageUrl={
-              '/shared/images/teacher-announcement/incubator-musiclab-color.png'
+              '/shared/images/teacher-announcement/incubator-musiclab.png'
             }
             subHeading={'Music Lab'}
             description={
