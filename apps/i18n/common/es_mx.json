@@ -15,6 +15,7 @@
   "activityHeaderTime": " ({activityDuration} minutos)",
   "actions": "Acciones",
   "add": "Añadir",
+  "addingToTable": "Añadiendo...",
   "additionalInformationHeader": "Información adicional",
   "additionalInformationText": "Para más información, ver [{externalDocumentationUrl}]({externalDocumentationUrl})",
   "addNewSection": "Añadir una sección nueva",

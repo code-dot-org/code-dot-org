@@ -234,20 +234,12 @@ ja:
             MOVES.XArmsUp: ストレッチ
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
-      Dancelab_everyMeasuresRange:
-        text: "{START} 後に、毎 {N} 小節 "
       Dancelab_everySeconds:
         text: "{N} ごとに{UNIT} を繰り返します "
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
-      Dancelab_everySecondsRange:
-        text: 'すべての {N} {UNIT} {START} から {STOP} まで '
-        options:
-          UNIT:
-            measures: 小節
-            seconds: 秒
       Dancelab_everyVerseChorus:
         text: 'すべての {UNIT} '
         options:
@@ -1333,8 +1325,30 @@ ja:
             "'sound://category_digital/jump_7.mp3'": ジャンプする
       gamelab_playSoundOptionsSoccer:
         text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": エアホーン
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": 拍手
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": 詠唱音
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": 応援音
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": キック音
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": 2つの口笛の音
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ホイッスル
       gamelab_playSoundOptionsSpace:
         text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ブラックホール
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": 弾丸クラスタ
+            "'sound://category_space/Carina_SFX.mp3'": カリナ
+            "'sound://category_space/Cassiopeia_SFX.mp3'": カシオペア
+            "'sound://category_space/Crab_nebula_SFX.mp3'": カニ星雲
+            "'sound://category_space/Launch_SFX.mp3'": 発射音
+            "'sound://category_space/Lift_Off.mp3'": リフトオフ
+            "'sound://category_space/Pillars_SFX.mp3'": 柱
+            "'sound://category_space/Southern_ring_SFX.mp3'": 南環
+            "'sound://category_space/Supernova_SFX.mp3'": 超新星
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ティーチョ
       gamelab_playSpeech:
         text: ピーチを再生する {SOUND}
       gamelab_playerBehaviors:
@@ -2440,6 +2454,10 @@ ja:
           DIR:
             right: 右↻
             left: 左↺
+      storylab_setHeading:
+        text: 見出し{HEADING}を設定
+      storylab_setSubheading:
+        text: サブ見出し{SUBHEADING}を設定
       validation_validatedBackground:
         text: 背景を次の値に設定する {IMG}
       validation_validatedSound:
