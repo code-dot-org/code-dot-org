@@ -4,7 +4,10 @@ import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import {expect} from '../../util/reconfiguredChai';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
-import {FUNCTION_CATEGORY} from '../../../src/blockly/addons/functionBlocks.js';
+import {
+  newDefinitionBlock,
+  allCallBlocks
+} from '../../../src/blockly/addons/functionBlocks.js';
 
 describe('Custom Functions', () => {
   const cdoBlockly = Blockly;
@@ -25,44 +28,45 @@ describe('Custom Functions', () => {
     );
   });
 
-  it('Category has correct blocks with no defined functions', () => {
-    const customBlocks = FUNCTION_CATEGORY(undefined, []).map(element =>
-      // Filter out randomized ids and uninteresting attributes.
-      JSON.stringify(element, ['tagName', 'innerHTML', 'outerHTML'])
-    );
-    const expectedBlocks = [
-      '{"tagName":"block","innerHTML":"<field name=\\"NAME\\">undefined</field>","outerHTML":"<block type=\\"procedures_defnoreturn\\" gap=\\"24\\"><field name=\\"NAME\\">undefined</field></block>"}'
-    ];
-    expect(customBlocks).to.deep.equal(expectedBlocks);
+  it('Can create a blank function definition block', () => {
+    const defBlock = newDefinitionBlock();
+    const defBlockHTML = defBlock.map(element => element.outerHTML).join();
+    const expectedHTML =
+      '<block type="procedures_defnoreturn" gap="24"><field name="NAME">undefined</field></block>';
+    expect(defBlockHTML).to.equal(expectedHTML);
   });
 
-  it('Category has correct blocks with one defined function', () => {
-    const customBlocks = FUNCTION_CATEGORY(undefined, [
-      ['myTestFunction', [], false]
-    ]).map(element =>
-      // Filter out randomized ids and uninteresting attributes.
-      JSON.stringify(element, ['tagName', 'innerHTML', 'outerHTML'])
-    );
-    const expectedBlocks = [
-      '{"tagName":"block","innerHTML":"<field name=\\"NAME\\">undefined</field>","outerHTML":"<block type=\\"procedures_defnoreturn\\" gap=\\"24\\"><field name=\\"NAME\\">undefined</field></block>"}',
-      '{"tagName":"block","innerHTML":"<mutation name=\\"myTestFunction\\"></mutation>","outerHTML":"<block type=\\"procedures_callnoreturn\\" gap=\\"16\\"><mutation name=\\"myTestFunction\\"></mutation></block>"}'
-    ];
-    expect(customBlocks).to.deep.equal(expectedBlocks);
+  it('Does not create call blocks if there are no defined functions', () => {
+    const definedFunctions = [];
+    const callBlock = allCallBlocks(definedFunctions);
+    const callBlockHTML = callBlock.map(element => element.outerHTML).join();
+    const expectedHTML = '';
+    expect(callBlockHTML).to.equal(expectedHTML);
   });
 
-  it('Category has correct blocks with multiple defined functions', () => {
-    const customBlocks = FUNCTION_CATEGORY(undefined, [
+  it('Can create a call block for one defined function', () => {
+    const definedFunctions = [['myTestFunction', [], false]];
+    const callBlock = allCallBlocks(definedFunctions);
+    const callBlockHTML = callBlock.map(element => element.outerHTML).join();
+    const expectedHTML = [
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="myTestFunction"></mutation></block>'
+    ].join();
+    expect(callBlockHTML).to.equal(expectedHTML);
+  });
+
+  it('Can create call blocks for multiple defined functions', () => {
+    const definedFunctions = [
       ['myFirstTestFunction', [], false],
-      ['mySecondTestFunction', [], false]
-    ]).map(element =>
-      // Filter out randomized ids and uninteresting attributes.
-      JSON.stringify(element, ['tagName', 'innerHTML', 'outerHTML'])
-    );
-    const expectedBlocks = [
-      '{"tagName":"block","innerHTML":"<field name=\\"NAME\\">undefined</field>","outerHTML":"<block type=\\"procedures_defnoreturn\\" gap=\\"24\\"><field name=\\"NAME\\">undefined</field></block>"}',
-      '{"tagName":"block","innerHTML":"<mutation name=\\"myFirstTestFunction\\"></mutation>","outerHTML":"<block type=\\"procedures_callnoreturn\\" gap=\\"16\\"><mutation name=\\"myFirstTestFunction\\"></mutation></block>"}',
-      '{"tagName":"block","innerHTML":"<mutation name=\\"mySecondTestFunction\\"></mutation>","outerHTML":"<block type=\\"procedures_callnoreturn\\" gap=\\"16\\"><mutation name=\\"mySecondTestFunction\\"></mutation></block>"}'
+      ['mySecondTestFunction', [], false],
+      ['myThirdTestFunction', [], false]
     ];
-    expect(customBlocks).to.deep.equal(expectedBlocks);
+    const callBlocks = allCallBlocks(definedFunctions);
+    const callBlocksHTML = callBlocks.map(element => element.outerHTML).join();
+    const expectedHTML = [
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="myFirstTestFunction"></mutation></block>',
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="mySecondTestFunction"></mutation></block>',
+      '<block type="procedures_callnoreturn" gap="16"><mutation name="myThirdTestFunction"></mutation></block>'
+    ].join();
+    expect(callBlocksHTML).to.equal(expectedHTML);
   });
 });
