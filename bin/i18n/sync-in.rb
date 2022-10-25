@@ -225,7 +225,7 @@ def get_i18n_strings(level)
         function_definition["name"] = name.content if name
         function_definition["description"] = description.content if description
         function_definition["parameters"] = parameters unless parameters.empty?
-        i18n_strings['function_definitions'][name.content] = function_definition
+        i18n_strings['function_definitions'][name.content] = function_definition if name
       end
 
       # Spritelab behaviors
