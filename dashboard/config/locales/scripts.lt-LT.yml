@@ -1451,3 +1451,17 @@ lt:
           lesson_groups:
             lessonGroup-3:
               display_name: Turinys
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Kintamieji
+            csp_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csp_functions:
+              display_name: Komandų kūrimas
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Sąrašai
+            csp_loops:
+              display_name: Kartojimas
