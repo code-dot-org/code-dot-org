@@ -9322,6 +9322,14 @@ en:
           lessons:
             lesson-1:
               name: function machines playground
+            lesson-2:
+              name: Particles Lesson 1
+            lesson-3:
+              name: Particles Lesson 2
+            lesson-4:
+              name: Particles Lesson 3
+            lesson-5:
+              name: Particles Lesson 4
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
@@ -9608,3 +9616,28 @@ en:
             **Estimated Time:** 7.5 hours
           description_short: ''
           description_audience: ''
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+            lesson-2:
+              name: Unit 2 Projects
+            lesson-3:
+              name: Unit 3 Projects
+            lesson-4:
+              name: Unit 4 Projects
+            lesson-5:
+              name: Unit 5 Projects
+            lesson-6:
+              name: Unit 6 Projects
+            lesson-7:
+              name: Unit 7 Projects
+            lesson-8:
+              name: Unit 8 Projects
+          lesson_groups: {}
+          name: csa-examples-22
+          title: CSA Unit Project Examples [2022-2023]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
