@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation, {
@@ -28,8 +28,8 @@ function TeacherDashboard({
   location
 }) {
   const usePrevious = value => {
-    const ref = React.useRef();
-    React.useEffect(() => {
+    const ref = useRef();
+    useEffect(() => {
       ref.current = value;
     });
 
@@ -168,5 +168,4 @@ const styles = {
   }
 };
 
-export const UnconnectedTeacherDashboard = TeacherDashboard;
 export default TeacherDashboard;
