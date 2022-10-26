@@ -30,28 +30,27 @@ describe('Custom Functions', () => {
 
   it('Can create a blank function definition block', () => {
     const defBlock = newDefinitionBlock();
-    const defBlockHTML = defBlock.map(element => element.outerHTML).join();
-    const expectedHTML =
+    const expectedXML =
       '<block type="procedures_defnoreturn" gap="24"><field name="NAME">undefined</field></block>';
-    expect(defBlockHTML).to.equal(expectedHTML);
+    expect(defBlock.outerHTML).to.equal(expectedXML);
   });
 
   it('Does not create call blocks if there are no defined functions', () => {
     const definedFunctions = [];
-    const callBlock = allCallBlocks(definedFunctions);
-    const callBlockHTML = callBlock.map(element => element.outerHTML).join();
-    const expectedHTML = '';
-    expect(callBlockHTML).to.equal(expectedHTML);
+    const callBlocks = allCallBlocks(definedFunctions);
+    const callBlocksXML = callBlocks.map(element => element.outerHTML).join();
+    const expectedXML = '';
+    expect(callBlocksXML).to.equal(expectedXML);
   });
 
   it('Can create a call block for one defined function', () => {
     const definedFunctions = [['myTestFunction', [], false]];
     const callBlock = allCallBlocks(definedFunctions);
-    const callBlockHTML = callBlock.map(element => element.outerHTML).join();
-    const expectedHTML = [
+    const callBlocksXML = callBlock.map(element => element.outerHTML).join();
+    const expectedXML = [
       '<block type="procedures_callnoreturn" gap="16"><mutation name="myTestFunction"></mutation></block>'
     ].join();
-    expect(callBlockHTML).to.equal(expectedHTML);
+    expect(callBlocksXML).to.equal(expectedXML);
   });
 
   it('Can create call blocks for multiple defined functions', () => {
@@ -61,12 +60,12 @@ describe('Custom Functions', () => {
       ['myThirdTestFunction', [], false]
     ];
     const callBlocks = allCallBlocks(definedFunctions);
-    const callBlocksHTML = callBlocks.map(element => element.outerHTML).join();
-    const expectedHTML = [
+    const callBlocksXML = callBlocks.map(element => element.outerHTML).join();
+    const expectedXML = [
       '<block type="procedures_callnoreturn" gap="16"><mutation name="myFirstTestFunction"></mutation></block>',
       '<block type="procedures_callnoreturn" gap="16"><mutation name="mySecondTestFunction"></mutation></block>',
       '<block type="procedures_callnoreturn" gap="16"><mutation name="myThirdTestFunction"></mutation></block>'
     ].join();
-    expect(callBlocksHTML).to.equal(expectedHTML);
+    expect(callBlocksXML).to.equal(expectedXML);
   });
 });
