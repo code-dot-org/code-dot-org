@@ -77,6 +77,7 @@ function showHomepage() {
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
             hasFeedback={homepageData.hasFeedback}
+            showIncubatorBanner={homepageData.showIncubatorBanner}
           />
         )}
         {!isTeacher && (
