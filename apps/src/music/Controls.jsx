@@ -24,13 +24,8 @@ const Controls = ({
     return (
       <button
         type="button"
+        className={moduleStyles.startOverButton}
         onClick={startOverClicked}
-        style={{
-          backgroundColor: 'rgba(0,0,0,0)',
-          color: 'white',
-          fontSize: 14,
-          padding: '0px 8px'
-        }}
       >
         <FontAwesome icon={'refresh'} />
         &nbsp; Start Over
