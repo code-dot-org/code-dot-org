@@ -13,6 +13,7 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import FontAwesome from '../../../templates/FontAwesome';
@@ -225,18 +226,21 @@ class UnitOverviewTopRow extends React.Component {
           )}
         </div>
         {!deeperLearningCourse && viewAs === ViewType.Instructor && (
-          <SectionAssigner
-            sections={sectionsForDropdown}
-            selectedSectionId={selectedSectionId}
-            assignmentName={unitTitle}
-            showAssignButton={showAssignButton}
-            courseId={currentCourseId}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
-            scriptId={scriptId}
-            forceReload={true}
-            buttonLocationAnalytics={'unit-overview-top'}
-          />
+          <div style={styles.sectionContainer}>
+            <SectionAssigner
+              sections={sectionsForDropdown}
+              selectedSectionId={selectedSectionId}
+              assignmentName={unitTitle}
+              showAssignButton={showAssignButton}
+              courseId={currentCourseId}
+              courseOfferingId={courseOfferingId}
+              courseVersionId={courseVersionId}
+              scriptId={scriptId}
+              forceReload={true}
+              buttonLocationAnalytics={'unit-overview-top'}
+            />
+            <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
+          </div>
         )}
         <div style={isRtl ? styles.left : styles.right}>
           <span>
@@ -292,6 +296,10 @@ const styles = {
   },
   buttonMarginRTL: {
     marginRight: 5
+  },
+  sectionContainer: {
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 };
 
