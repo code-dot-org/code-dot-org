@@ -124,7 +124,6 @@ module Pd
         other_races_percent: 'Percent of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{YEAR} Professional Learning Program?",
         principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{YEAR} if <Teacher Name> is accepted into the program?",
-        principal_diversity_recruitment: 'Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?',
         contact_invoicing: "Contact name for invoicing",
         contact_invoicing_detail: "Contact email or phone number for invoicing",
       }

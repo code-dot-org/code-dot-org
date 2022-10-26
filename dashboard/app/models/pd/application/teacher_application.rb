@@ -1117,6 +1117,8 @@ module Pd::Application
       # Approval application created, now score corresponding teacher application
       principal_response = principal_approval.sanitize_form_data_hash
 
+      replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
+
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
