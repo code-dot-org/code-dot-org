@@ -73,15 +73,15 @@ function TeacherSectionSelectorMenuItem({
       <span
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
-        onClick={!isPending && onAssignClick}
-        onKeyDown={!isPending && onKeyDown}
+        onClick={isPending ? null : onAssignClick}
+        onKeyDown={isPending ? null : onKeyDown}
         tabIndex="0"
-        ariaRole="button"
-        ariaLabel={
+        aria-label={
           section.isAssigned
             ? `Unassign course from ${section.name}`
             : `Assign course to ${section.name}`
         }
+        aria-role="button"
       >
         {getIcon()}
       </span>

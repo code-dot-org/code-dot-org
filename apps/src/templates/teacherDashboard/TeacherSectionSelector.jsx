@@ -35,6 +35,12 @@ export default class TeacherSectionSelector extends Component {
     e.preventDefault();
   };
 
+  handleKeyDown = e => {
+    if (e.key === 'Enter') {
+      this.handleClick();
+    }
+  };
+
   handleClick = () => {
     if (!this.state.isMenuOpen) {
       this.openMenu();
@@ -92,11 +98,11 @@ export default class TeacherSectionSelector extends Component {
       <div>
         <div
           onClick={this.handleClick}
-          onKeyDown={this.handleClick}
+          onKeyDown={this.handleKeyDown}
           ref={div => (this.select = div)}
           style={styles.dropdown}
           tabIndex="0"
-          ariaRole="button"
+          aria-role="button"
         >
           <span>{dropdownText}</span>
           <FontAwesome style={{marginTop: 3}} icon="caret-down" />
@@ -132,11 +138,6 @@ export default class TeacherSectionSelector extends Component {
 }
 
 const styles = {
-  select: {
-    height: 34,
-    width: 300,
-    marginBottom: 0
-  },
   addNewSection: {
     borderTop: `1px solid ${color.charcoal}`,
     paddingTop: 16,
@@ -146,7 +147,7 @@ const styles = {
     width: 268
   },
   dropdown: {
-    width: 300,
+    width: 286,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
     padding: 7,
