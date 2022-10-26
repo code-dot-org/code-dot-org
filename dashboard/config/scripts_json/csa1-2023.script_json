@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-23 13:26:23 UTC",
+    "serialized_at": "2022-10-26 00:38:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -269,6 +269,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nStudents expand their knowledge of selection statements and Boolean values to learn how to use two-way selection statements and the NOT ( `!` ) logical operator. Students explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms they have developed so far. Students then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class.",
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Investigate: Selection and Logic handout (one for each pair of students)\n* Preview the *Two-Way Selection and NOT* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I check if a condition is NOT `true` or execute a separate block of code if the condition is `false`?**\n\nSo far, you have used selection statements and Boolean values to execute a specific block of code if a condition is true. In this lesson, you learn how to use two-way selection statements and the NOT ( `!` ) logical operator. You explore the functionality of two-way selection statements and the NOT ( `!` ) logical operator and consider how these can be used to expand or improve the algorithms you have developed so far. You then practice using these to develop algorithms and create a new subclass of the `PainterPlus` class."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -293,7 +296,7 @@
     },
     {
       "key": "lesson-15",
-      "name": "Edge Cases",
+      "name": "Refactoring Code",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -308,7 +311,7 @@
     },
     {
       "key": "lesson-16",
-      "name": "Open Source Code",
+      "name": "Putting It All Together",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -323,12 +326,13 @@
     },
     {
       "key": "lesson-17",
-      "name": "Asphalt Art Project – Day 1",
+      "name": "Asphalt Art Project",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -337,42 +341,12 @@
       }
     },
     {
-      "key": "lesson-18",
-      "name": "Asphalt Art Project – Day 2",
+      "key": "lesson-20",
+      "name": "FRQ Practice",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-2023"
-      }
-    },
-    {
-      "key": "lesson-19",
-      "name": "Asphalt Art Project – Day 3",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-2023"
-      }
-    },
-    {
-      "key": "lesson-20",
-      "name": "FRQ Practice",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -384,11 +358,12 @@
     {
       "key": "lesson-21",
       "name": "Unit 1 Assessment",
-      "absolute_position": 20,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 18,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-21",
@@ -857,6 +832,126 @@
         "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff",
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "303536f3-8b97-4a14-a956-c4e25d10c7d1",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "303536f3-8b97-4a14-a956-c4e25d10c7d1",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "7cfb592e-d49e-44ef-a20f-e559ab265f26",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7cfb592e-d49e-44ef-a20f-e559ab265f26",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "871d2b6c-aa98-4abc-86d2-477eb9397267",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "871d2b6c-aa98-4abc-86d2-477eb9397267",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "2fedd84a-9231-4fc1-aa7b-b63414128f66",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "1518b521-c15c-47d3-b7d8-7feca92ca786",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2023"
       }
     }
@@ -4204,6 +4299,372 @@
         "activity_section.key": "aa43f47f-f253-4037-9ff1-3acd90ac87b1",
         "lesson_activity.key": "f1a94a8f-596e-42b0-a777-66edcbda43ff"
       }
+    },
+    {
+      "key": "67e5d0d1-d109-4941-a26c-0d3a6c7b2efd",
+      "position": 1,
+      "properties": {
+        "description": "We have learned a lot of new terms so far! Let's review some of these terms through a game of CS Bingo.",
+        "name": "CS Bingo",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "67e5d0d1-d109-4941-a26c-0d3a6c7b2efd",
+        "lesson_activity.key": "303536f3-8b97-4a14-a956-c4e25d10c7d1"
+      }
+    },
+    {
+      "key": "d1dc6485-7fc8-419c-9de6-9f491306a6ba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique CS Bingo Card.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Bingo.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Bingo activity. Choose a random definition and read it aloud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells \"Java.\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To allow for multiple students to \"win\" the game, continue pulling definitions until a couple more students win as well."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d1dc6485-7fc8-419c-9de6-9f491306a6ba",
+        "lesson_activity.key": "303536f3-8b97-4a14-a956-c4e25d10c7d1"
+      }
+    },
+    {
+      "key": "07b24030-fe47-40c8-9b48-333dba0616c3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "15",
+        "name": "Selection and Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "07b24030-fe47-40c8-9b48-333dba0616c3",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "2b653967-accb-4c56-9286-8f8062a51227",
+      "position": 2,
+      "properties": {
+        "description": "We have learned to use `if` statements to execute a block of code if a condition is `true` and `while` loops to repeat a block of code as long as a condition is `true`. What if we wanted to execute a specific block of code if a condition is NOT `true`?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2b653967-accb-4c56-9286-8f8062a51227",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "004afd65-eb9c-4ee6-ba87-b6e33d4367e7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Selection and Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "004afd65-eb9c-4ee6-ba87-b6e33d4367e7",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "9c49ef82-1f7a-4894-93c5-e7a4f5878486",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the `!` (NOT) before the condition for the `if` statement and the `if/else` statement that executes a separate block of code if the condition is false. Students may wonder when they would choose to use the NOT ( `!` ) operator instead of an `if/else` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***logical operator***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Focus only on the NOT operator in this lesson. Students learn about the AND and OR operators in a future lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9c49ef82-1f7a-4894-93c5-e7a4f5878486",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "ee980b0d-86d4-44d5-a1ae-ae8a903e0799",
+      "position": 5,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigate: Selection and Logic handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program and complete the Investigate: Selection and Logic handout.",
+        "progression_name": "Investigate and Modify: Selection and Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee980b0d-86d4-44d5-a1ae-ae8a903e0799",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "a6933ef1-3930-4ce9-8d3f-68d9bf6aad90",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Selection and Logic handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***two-way selection statement***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Two-Way Selection and NOT*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection:\n1. Establish the purpose of the video by recalling the Question of the Day.\n2. Prompt students to share what they already know about the topic of the video.\n3. Emphasize the focus question on the slide.\n4. Pause at various points to identify and clarify what students are hearing and seeing.\n5. Instruct students to signal when they need the video to be paused to ask for clarification.\n6. Facilitate reflection by asking students to share how their thinking has changed after watching.\n\nYou may also choose to show the video twice, once to elicit emotional responses and get an overview of the topic, and again to focus on facts and draw out opinions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a6933ef1-3930-4ce9-8d3f-68d9bf6aad90",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "115028f2-9008-43ec-9d99-d349ba334a0e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can two-way selection statements and the NOT ( `!` ) operator be useful in the algorithms we have developed so far?*\n\n**Discussion Goal:** Students suggest using two-way selection statements to execute a block of code if the condition is `true` and a separate block of code if the condition is `false`. Students may also suggest using the NOT ( `!` ) operator to execute a block of code if a condition is not `true`, such as turning if a `Painter` object cannot move forward in the direction it is facing.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "115028f2-9008-43ec-9d99-d349ba334a0e",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "3f9eeea9-97b6-4357-b0e7-c518b1bb4381",
+      "position": 8,
+      "properties": {
+        "description": "As you work through these problems, use the problem solving process and decomposition strategies to break them down into manageable tasks. Write your algorithms in pseudocode so you can easily implement and refine them in Java.",
+        "duration": "15",
+        "name": "Writing Algorithms",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3f9eeea9-97b6-4357-b0e7-c518b1bb4381",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "9d3fa23f-fc5f-4af9-8874-6d45e99a1aca",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to complete a choice level on Level 4 to create a subclass of the `PainterPlus` class and implement their algorithm using two-way selection statements and the NOT ( `!` ) operator.",
+        "progression_name": "Practice: Writing Algorithms",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of planning and using two-way selection statements, the problem solving process, and pseudocode to plan and implement algorithms."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use the problem solving process to plan their solution and write pseudocode for their algorithms. Emphasize the use of natural language when writing pseudocode. Allow students to write their pseudocode in whichever language they are most comfortable to support the focus on planning their algorithms rather than focusing on specific structures or languages."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9d3fa23f-fc5f-4af9-8874-6d45e99a1aca",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "0c2b23f3-26db-4e9d-add0-e60b259fc1f4",
+      "position": 10,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new `PainterPlus` subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit our work in case we need to go back to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0c2b23f3-26db-4e9d-add0-e60b259fc1f4",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "7870a183-ede2-400a-9275-0937e0d1ae79",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7870a183-ede2-400a-9275-0937e0d1ae79",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "64120bd5-85c4-43d3-8e1a-1837a09177e7",
+      "position": 12,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "64120bd5-85c4-43d3-8e1a-1837a09177e7",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "975d6597-b2de-4218-8106-88f318ec1b78",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "975d6597-b2de-4218-8106-88f318ec1b78",
+        "lesson_activity.key": "33de09a2-a986-4908-b5ab-1e6326a4e9f0"
+      }
+    },
+    {
+      "key": "f3b0ecd7-0fbe-4203-b262-3a435c8cf5bb",
+      "position": 1,
+      "properties": {
+        "description": "We have made a lot of progress writing algorithms using sequencing, selection, and iteration to help the Painter solve a variety of problems in The Neighborhood! We now also have multiple subclasses of our PainterPlus class to create specialized versions using inheritance.",
+        "name": "Glows, Grows, Want-to-Knows",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f3b0ecd7-0fbe-4203-b262-3a435c8cf5bb",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "bc5652d6-62d6-43ce-b4ab-d2a247247ed2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or how they solved the problem and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Glows, Grows, Want-to-Knows is a strategy to help students identify their strengths and areas of improvement and share any questions or misconceptions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc5652d6-62d6-43ce-b4ab-d2a247247ed2",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "4d37ee8a-5db0-4a8d-aafd-1c26eeaa0aac",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d37ee8a-5db0-4a8d-aafd-1c26eeaa0aac",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "f391d056-4ded-43ab-9ab2-9fdeedc65d1d",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "69edf532-31ae-4405-99b8-e9726e77204e",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "69edf532-31ae-4405-99b8-e9726e77204e",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64",
+        "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
+      }
+    },
+    {
+      "key": "02912945-fcc6-4b08-a3ad-6b79ed8aad7d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "02912945-fcc6-4b08-a3ad-6b79ed8aad7d",
+        "lesson_activity.key": "7cfb592e-d49e-44ef-a20f-e559ab265f26"
+      }
+    },
+    {
+      "key": "c4351633-7cf0-4405-a19d-7570a0508ec9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c4351633-7cf0-4405-a19d-7570a0508ec9",
+        "lesson_activity.key": "871d2b6c-aa98-4abc-86d2-477eb9397267"
+      }
+    },
+    {
+      "key": "d8622c11-11fc-4197-85eb-7a7de8fedd9c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d8622c11-11fc-4197-85eb-7a7de8fedd9c",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "1b45a88c-3538-4457-8d19-e3c61fa4712e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1b45a88c-3538-4457-8d19-e3c61fa4712e",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "422c1b79-250c-465a-a506-8369f51bb175",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "422c1b79-250c-465a-a506-8369f51bb175",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "e8ee028e-561d-4bae-ac7f-8495d0e0324f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e8ee028e-561d-4bae-ac7f-8495d0e0324f",
+        "lesson_activity.key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5"
+      }
     }
   ],
   "script_levels": [
@@ -5338,6 +5799,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1_2023"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -5360,6 +5824,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_2023"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -5382,6 +5849,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_2023"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -5404,6 +5874,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5418,6 +5891,131 @@
       },
       "level_keys": [
         "CSA U1L11-L4_2023"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L12-L1_2023"
+        ],
+        "progression": "Predict and Run: Selection and Logic"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L12-L1_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "004afd65-eb9c-4ee6-ba87-b6e33d4367e7"
+      },
+      "level_keys": [
+        "CSA U1L12-L1_2023"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L12-L2_2023"
+        ],
+        "progression": "Investigate and Modify: Selection and Logic"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L12-L2_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "ee980b0d-86d4-44d5-a1ae-ae8a903e0799"
+      },
+      "level_keys": [
+        "CSA U1L12-L2_2023"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_2023"
+        ],
+        "progression": "Practice: Writing Algorithms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L12-L3_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "9d3fa23f-fc5f-4af9-8874-6d45e99a1aca"
+      },
+      "level_keys": [
+        "CSA U1L12-L3_2023"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L12-L4_2023"
+        ],
+        "progression": "Practice: Writing Algorithms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L12-L4_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "9d3fa23f-fc5f-4af9-8874-6d45e99a1aca"
+      },
+      "level_keys": [
+        "CSA U1L12-L4_2023"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_2023"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L12-L5_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64"
+      },
+      "level_keys": [
+        "CSA U1L12-L5_2023"
       ]
     }
   ],
@@ -6009,6 +6607,66 @@
         "script.name": "csa1-2023",
         "activity_section.key": "aa43f47f-f253-4037-9ff1-3acd90ac87b1"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L12-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L12-L1_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "004afd65-eb9c-4ee6-ba87-b6e33d4367e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L12-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L12-L2_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "ee980b0d-86d4-44d5-a1ae-ae8a903e0799"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L12-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L12-L3_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "9d3fa23f-fc5f-4af9-8874-6d45e99a1aca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L12-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L12-L4_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "9d3fa23f-fc5f-4af9-8874-6d45e99a1aca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L12-L5_2023",
+        "script_level.level_keys": [
+          "CSA U1L12-L5_2023"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64"
+      }
     }
   ],
   "resources": [
@@ -6046,6 +6704,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_investigate_debugging_in_the_neighborhood"
+      }
+    },
+    {
+      "name": "[KEY] Investigate: Selection and Logic",
+      "url": "https://docs.google.com/document/d/1gpo0uxElxjGmTVpuu-irtUOVMFsRRAbMAE26aKAf1k0/edit?usp=sharing",
+      "key": "_key_investigate_selection_and_logic",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_investigate_selection_and_logic"
       }
     },
     {
@@ -6094,6 +6764,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ANcxeKEZaVOYLNZqkIDvqjqoREEkOjXgKyMC1fgStXg/edit?usp=sharing",
+      "key": "_key_u1l12_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l12_extra_practice"
       }
     },
     {
@@ -6277,6 +6959,31 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/document/d/190-3YJjtJF4Gr8di3tCd4DQQwJ3SWFTwoNihzyXcQNg/edit?usp=sharing",
+      "key": "cs_bingo_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1O_ojYMEZ1Y68FUtwX7EVurR-16LlG17d1az545wnfcc/edit?usp=sharing",
+      "key": "cs_bingo_definitions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions"
+      }
+    },
+    {
       "name": "Debugging Strategies",
       "url": "https://docs.google.com/presentation/d/1JebRe7kA8gc80b3vrG9zrOZjNtezlIINHuMpAzkz4gk/edit?usp=sharing",
       "key": "debugging_strategies",
@@ -6374,6 +7081,19 @@
       },
       "seeding_key": {
         "resource.key": "investigate_debugging_in_the_neighborhood"
+      }
+    },
+    {
+      "name": "Investigate: Selection and Logic",
+      "url": "https://docs.google.com/document/d/10WPRMHm7-Gh8AzEqQYQenc9zHT8ItUpboHGmTUE9qEA/edit?usp=sharing",
+      "key": "investigate_selection_and_logic",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "investigate_selection_and_logic"
       }
     },
     {
@@ -6547,6 +7267,30 @@
       }
     },
     {
+      "name": "Two-Way Selection and NOT",
+      "url": "https://youtu.be/EjypsirssII",
+      "key": "two-way_selection_and_not",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-way_selection_and_not"
+      }
+    },
+    {
+      "name": "Two-Way Selection Statements",
+      "url": "https://docs.google.com/presentation/d/13RVFVV4ONYAUC_oVnKc9dFbWnb55a0r_DOTnSxOvWLY/edit?usp=sharing",
+      "key": "two-way_selection_statements",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "two-way_selection_statements"
+      }
+    },
+    {
       "name": "U1L10 Extra Practice",
       "url": "https://docs.google.com/document/d/1TCtlH9nNgAi6C0S52VFBJSFBO6GNNgiAB2m2ruRtcR8/edit?usp=sharing",
       "key": "u1l10_extra_practice",
@@ -6570,6 +7314,19 @@
       },
       "seeding_key": {
         "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "name": "U1L12 Extra Practice",
+      "url": "https://docs.google.com/document/d/14d-__vjA71T3sUP8cHtuZL4Qsd7bAz_PmlOn7qA1JgM/edit?usp=sharing",
+      "key": "u1l12_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l12_extra_practice"
       }
     },
     {
@@ -6887,6 +7644,54 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_investigate_selection_and_logic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "cs_bingo_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "cs_bingo_definitions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "investigate_selection_and_logic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "two-way_selection_and_not"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "two-way_selection_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "u1l12_extra_practice"
       }
     },
     {
@@ -7320,6 +8125,16 @@
       }
     },
     {
+      "key": "logical_operator",
+      "word": "logical operator",
+      "definition": "an operator that returns a Boolean value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
       "key": "method",
       "word": "method",
       "definition": "a named set of instructions to perform a task",
@@ -7500,6 +8315,16 @@
       }
     },
     {
+      "key": "two_way_selection_statement",
+      "word": "two-way selection statement",
+      "definition": "specifies a block of code to execute when the condition is `true` and a block of code to execute when the condition is `false`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "two_way_selection_statement"
+      }
+    },
+    {
       "key": "variable",
       "word": "variable",
       "definition": "a container that stores a value in memory",
@@ -7567,6 +8392,18 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "vocabulary.key": "redundant"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "two_way_selection_statement"
       }
     },
     {
@@ -7827,6 +8664,16 @@
       }
     },
     {
+      "key": "2cb351ea-4e6f-4790-899e-cf67f9ecc87f",
+      "properties": {
+        "description": "Explain the purpose and functionality of a two-way selection statement"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "2cb351ea-4e6f-4790-899e-cf67f9ecc87f"
+      }
+    },
+    {
       "key": "2f257369-703a-458b-8752-5bdd3cfe3feb",
       "properties": {
         "description": "Use Java Lab features to run and test program code"
@@ -7884,6 +8731,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "62b92964-1343-49b2-bc66-a85501e6f566"
+      }
+    },
+    {
+      "key": "6b7fa724-fd44-423c-9715-bc9e6d1f9b33",
+      "properties": {
+        "description": "Use the NOT ( `!` ) logical operator to execute specific blocks of code if a condition is not `true`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "6b7fa724-fd44-423c-9715-bc9e6d1f9b33"
       }
     },
     {
@@ -8027,6 +8884,16 @@
       }
     },
     {
+      "key": "d659bd99-9aa6-4a98-ab9a-8102e1b00858",
+      "properties": {
+        "description": "Write two-way selection statements to execute specific blocks of code based on the outcome of a condition"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "d659bd99-9aa6-4a98-ab9a-8102e1b00858"
+      }
+    },
+    {
       "key": "e5a00027-2eaf-482a-80b6-07a06db22264",
       "properties": {
         "description": "Explain the functionality of a method with a `void` return type"
@@ -8132,6 +8999,27 @@
         "lesson.key": "lesson-12",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.G.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.4"
       }
     },
     {

@@ -369,7 +369,17 @@ namespace :test do
 
     desc 'Runs shared tests if shared might have changed from staging.'
     task :shared do
-      run_tests_if_changed('shared', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'shared/**/*', 'lib/**/*']) do
+      run_tests_if_changed(
+        'shared',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'cookbooks/cdo-varnish/libraries/http_cache.rb',
+          'deployment.rb',
+          'shared/**/*',
+          'lib/**/*',
+        ]
+      ) do
         TestRunUtils.run_shared_tests
       end
     end

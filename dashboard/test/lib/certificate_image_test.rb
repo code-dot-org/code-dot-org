@@ -34,13 +34,6 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course4')
   end
 
-  def test_course_fallback_titles
-    assert_equal 'Course 1', CertificateImage.fallback_course_title_for('course1')
-    assert_equal 'Course 2', CertificateImage.fallback_course_title_for('course2')
-    assert_equal 'Course 3', CertificateImage.fallback_course_title_for('course3')
-    assert_equal 'Course 4', CertificateImage.fallback_course_title_for('course4')
-  end
-
   def test_image_generation
     mc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'mc')
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
@@ -109,6 +102,25 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal '\\\\n', CertificateImage.escape_image_magick_string('\\n')
     # Nothing should be escaped with a '\' so just print any '\'s.
     assert_equal '\\\\', CertificateImage.escape_image_magick_string('\\')
+  end
+
+  def test_hoc_course
+    coursea = create :script, name: "coursea-2021", is_course: true
+    create :course_version, content_root: coursea
+
+    csp = create :unit_group, name: 'csp-2021'
+    create :course_version, content_root: csp
+
+    assert CertificateImage.hoc_course?('flappy')
+    assert CertificateImage.hoc_course?('oceans')
+    assert CertificateImage.hoc_course?('mc')
+    assert CertificateImage.hoc_course?('mee')
+    assert CertificateImage.hoc_course?('kodable')
+
+    # course1 is created by dashboard test fixtures
+    refute CertificateImage.hoc_course?('course1')
+    refute CertificateImage.hoc_course?('coursea-2021')
+    refute CertificateImage.hoc_course?('csp-2021')
   end
 
   private

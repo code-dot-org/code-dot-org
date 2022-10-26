@@ -5090,6 +5090,10 @@
           "moving east and looping": "движение на восток и зацикливание",
           "moving north and looping": "движение на север и действие в цикле",
           "moving south and looping": "движение на юг и действие в цикле"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "блуждание 2",
+          "wandering 1": "блуждание 1"
         }
       }
     }

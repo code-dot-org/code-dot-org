@@ -11,6 +11,7 @@
   "activity": "აქტივობა",
   "actions": "მოქმედებები",
   "add": "დამატება",
+  "addingToTable": "დამატება...",
   "addParentEmailModal_parentEmail_invalid": "თქვენ მიერ მითითებული ელფოსტის მისამართი არასწორია.",
   "addParentEmailModal_parentEmail_isRequired": "ელფოსტის მითითება სავალდებულოა.",
   "addParentEmailModal_parentEmail_label": "მშობლის/მეურვის ელფოსტის მისამართი",
