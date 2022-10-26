@@ -29,13 +29,13 @@ module Pd::Application
         mail(
           to: @application.formatted_applicant_email,
           reply_to: @application.formatted_partner_contact_email,
-          subject: "REMINDER: Action Needed: Your principal has not yet submitted your approval form"
+          subject: "REMINDER: Action Needed: Your Administrator/School Leader has not yet submitted your approval form"
         )
       else
         mail(
           from: 'Code.org <teacher@code.org>',
           to: @application.formatted_applicant_email,
-          subject: "REMINDER: Action Needed: Your principal has not yet submitted your approval form"
+          subject: "REMINDER: Action Needed: Your Administrator/School Leader has not yet submitted your approval form"
         )
       end
     end
@@ -69,7 +69,7 @@ module Pd::Application
       mail(
         from: 'Jared Fritz <teacher@code.org>',
         to: @application.formatted_partner_contact_email || CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
-        subject: 'A principal has completed the principal approval form'
+        subject: "An Administrator/School Leader has completed the Administrator/School Leader approval form for #{@application.applicant_full_name}"
       )
     end
 

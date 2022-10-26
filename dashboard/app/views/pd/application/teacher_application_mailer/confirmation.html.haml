@@ -7,7 +7,7 @@
   = @application.effective_regional_partner_name + "'s"
   Professional Learning Program! We've received your application.
   = @application.regional_partner&.name || 'We'
-  will review your application soon.
+  will review your application within 2 to 4 weeks.
 
 - if !@application.regional_partner
   %p
@@ -18,9 +18,6 @@
 
 %p
   In the meantime, please visit
-  = link_to 'https://code.org/yourschool', 'https://code.org/yourschool'
-  and tell us more about what computer science opportunities are available at your school.
-  Or, visit
   = link_to 'https://code.org/educate', 'https://code.org/educate'
   for additional resources and opportunities to connect with other computer science educators.
   Thank you for supporting computer science for every student!
