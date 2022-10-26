@@ -20,14 +20,7 @@ import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {getStaticFilePath} from '@cdo/apps/music/utils';
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-
-  // The maximum is inclusive and the minimum is inclusive.
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+import feedbackStyles from './feedback.module.scss';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -82,8 +75,9 @@ class UnconnectedMusicView extends React.Component {
       startPlayingAudioTime: null,
       currentAudioElapsedTime: 0,
       updateNumber: 0,
-      timelineAtTop: !!getRandomIntInclusive(0, 1),
-      showInstructions: true
+      timelineAtTop: false,
+      showInstructions: true,
+      feedbackClicked: false
     };
   }
 
@@ -517,6 +511,15 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
+  onFeedbackClicked = () => {
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
+      '_blank'
+    );
+
+    this.setState({feedbackClicked: true});
+  };
+
   render() {
     // The tutorial has a width:height ratio of 16:9.
     const aspectRatio = 16 / 9;
@@ -666,6 +669,14 @@ class UnconnectedMusicView extends React.Component {
             currentMeasure={this.player.getCurrentMeasure()}
             sounds={this.getCurrentGroupSounds()}
           />
+          {!this.state.feedbackClicked && (
+            <div
+              className={feedbackStyles.feedbackButton}
+              onClick={this.onFeedbackClicked}
+            >
+              Tell us what you think
+            </div>
+          )}
         </div>
       </div>
     );
