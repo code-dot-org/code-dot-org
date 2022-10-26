@@ -163,6 +163,10 @@ export default class MusicPlayer {
     );
   }
 
+  clearAllSoundEvents() {
+    this.soundEvents = [];
+  }
+
   stopAndCancelPreviews() {
     StopSound(GROUP_TAG);
     this.playingPreviews = [];

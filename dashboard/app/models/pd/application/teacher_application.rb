@@ -85,7 +85,6 @@ module Pd::Application
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
-    before_save :set_total_course_hours, if: -> {form_data_changed?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed?}
 
@@ -131,32 +130,11 @@ module Pd::Application
     # @override
     def set_type_and_year
       self.application_type = TEACHER_APPLICATION
-      self.application_year = Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
+      self.application_year = ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
     end
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
-    end
-
-    def set_total_course_hours
-      hash = sanitize_form_data_hash
-      minutes = hash[:cs_how_many_minutes]
-      days_per_week = hash[:cs_how_many_days_per_week]
-      weeks_per_year = hash[:cs_how_many_weeks_per_year]
-
-      if minutes && days_per_week && weeks_per_year
-        update_form_data_hash(
-          {
-            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
-          }
-        )
-      else
-        update_form_data_hash(
-          {
-            cs_total_course_hours: nil
-          }
-        )
-      end
     end
 
     def save_partner
@@ -501,16 +479,10 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        previous_used_curriculum: [
-          'CS Discoveries',
-          'CS Principles',
-          'Both',
-          'Neither'
-        ],
-
         previous_yearlong_cdo_pd: [
           'CS Discoveries',
           'CS Principles',
+          'Computer Science A (CSA)',
           'Exploring Computer Science',
           'CS in Algebra',
           'CS in Science',
@@ -611,10 +583,10 @@ module Pd::Application
           'We will offer both non-AP Java introductory and AP-level courses'
         ],
 
-        plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year})",
-          "No, I don’t plan to teach this course this year (#{year})",
-          TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+        enough_course_hours: [
+          YES,
+          NO,
+          "I don't know yet."
         ],
 
         pay_fee: [
@@ -629,8 +601,9 @@ module Pd::Application
           'Regional Partner website',
           'Regional Partner email',
           'Regional Partner event or workshop',
-          'From a teacher',
-          'From an administrator',
+          'Teacher',
+          'District administrator',
+          'Conference',
           TEXT_FIELDS[:other_with_text]
         ],
 
@@ -649,25 +622,6 @@ module Pd::Application
           "No, this course will be added to the schedule in addition to an existing computer science course",
           "No, computer science is new to my school",
           TEXT_FIELDS[:i_dont_know_explain]
-        ],
-        replace_which_course: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
         ]
       }
     end
@@ -684,6 +638,7 @@ module Pd::Application
         city
         state
         zip_code
+        principal_role
         principal_first_name
         principal_last_name
         principal_email
@@ -691,14 +646,10 @@ module Pd::Application
         principal_phone_number
         completing_on_behalf_of_someone_else
         current_role
-        previous_used_curriculum
         previous_yearlong_cdo_pd
 
         program
-        cs_how_many_minutes
-        cs_how_many_days_per_week
-        cs_how_many_weeks_per_year
-        plan_to_teach
+        enough_course_hours
         replace_existing
 
         gender_identity
@@ -730,6 +681,7 @@ module Pd::Application
         elsif hash[:program] == PROGRAMS[:csa]
           required << :csa_which_grades
           required << :csa_how_offer
+          required << :csa_already_know
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -755,13 +707,10 @@ module Pd::Application
         [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
         [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
         [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
-        [:replace_which_course, TEXT_FIELDS[:other_please_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -1027,12 +976,9 @@ module Pd::Application
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
       elsif course == 'csa'
+        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
-      end
-
-      if responses[:plan_to_teach].in? options[:plan_to_teach].first(2)
-        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(1)) ? YES : NO
       end
 
       meets_minimum_criteria_scores[:replace_existing] =
@@ -1052,6 +998,9 @@ module Pd::Application
       elsif course == 'csp'
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
           responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
+      elsif course == 'csa'
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
+          responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
       end
 
       # Section 4

@@ -2213,3 +2213,31 @@
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge fysiske prototyper'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+            csp_unit1_2020:
+              display_name: "(gammel) Enhet 1: Digital informasjon"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(gammel) Enhet 2: Internett"
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabler
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funksjoner
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(gammel) Enhet 9: Data"
