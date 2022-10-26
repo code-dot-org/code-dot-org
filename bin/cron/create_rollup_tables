@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 
-# This script populates (after truncating) the contained_levels,
-# contained_level_answers, and the level_sources_multi_type tables.
+# This script truncates and then populates the following tables:
+#   contained_levels
+#   contained_level_answers
+#   level_sources_multi_type
+#   pd_applications_status_logs
 
 require_relative 'only_one'
 
