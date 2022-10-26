@@ -28,7 +28,10 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
-import {FUNCTION_BLOCK, FUNCTION_CATEGORY} from './addons/functionBlocks.js';
+import {
+  FUNCTION_BLOCK,
+  getFunctionsFlyoutBlocks
+} from './addons/functionBlocks.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -524,7 +527,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     trashcan.init();
 
     // Customize auto-populated Functions toolbox category
-    workspace.registerToolboxCategoryCallback('PROCEDURE', FUNCTION_CATEGORY);
+    workspace.registerToolboxCategoryCallback(
+      'PROCEDURE',
+      getFunctionsFlyoutBlocks
+    );
 
     // Customize function defintion blocks
     Blockly.blockly_.Blocks['procedures_defnoreturn'].init =

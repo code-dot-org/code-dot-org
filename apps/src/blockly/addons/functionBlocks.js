@@ -29,9 +29,9 @@ export const FUNCTION_BLOCK = {
  * Derived from core Google Blockly:
  * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/core/procedures.ts#L202-L287
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
- * @returns XML block elements
+ * @returns an array of XML block elements
  */
-export function FUNCTION_CATEGORY(workspace) {
+export function getFunctionsFlyoutBlocks(workspace) {
   const functionDefinitionBlock = newDefinitionBlock();
 
   // Find all user-created procedure definitions in the workspace.
@@ -42,7 +42,7 @@ export function FUNCTION_CATEGORY(workspace) {
   // https://developers.google.com/blockly/reference/js/blockly.procedures_namespace.allprocedures_1_function.md
   const allWorkspaceProcedures = Blockly.Procedures.allProcedures(workspace)[0];
   const functionCallBlocks = allCallBlocks(allWorkspaceProcedures);
-  return functionDefinitionBlock.concat(functionCallBlocks);
+  return [functionDefinitionBlock, ...functionCallBlocks];
 }
 
 export function newDefinitionBlock() {
@@ -62,7 +62,7 @@ export function newDefinitionBlock() {
     )
   );
   blockElement.appendChild(nameField);
-  return [blockElement];
+  return blockElement;
 }
 
 export function allCallBlocks(procedures) {
