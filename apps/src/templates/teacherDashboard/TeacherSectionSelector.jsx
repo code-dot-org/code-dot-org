@@ -85,8 +85,8 @@ export default class TeacherSectionSelector extends Component {
     const numAssigned = sections.filter(section => section.isAssigned).length;
     const dropdownText =
       numAssigned === 0
-        ? 'Choose sections'
-        : `Assigned to ${numAssigned} sections`;
+        ? i18n.chooseSections()
+        : i18n.assignedToXSections({numAssigned});
 
     return (
       <div>
