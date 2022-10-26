@@ -15,6 +15,7 @@
   "activityHeaderTime": "({activiteit} minuten)",
   "actions": "Acties",
   "add": "Toevoegen",
+  "addingToTable": "Toevoegen...",
   "additionalInformationHeader": "Aanvullende informatie",
   "additionalInformationText": "Ga naar [{externalDocumentationUrl}]({externalDocumentationUrl}) voor meer informatie",
   "addNewSection": "Onderdeel toevoegen",

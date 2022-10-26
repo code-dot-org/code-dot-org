@@ -36,6 +36,7 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
+    get "/incubator", to: "incubator#index"
     get "/musiclab", to: "musiclab#index"
 
     resources :activity_hints, only: [:update]
@@ -964,6 +965,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'sprite_upload'
         get 'default_sprites_editor'
+        get 'release_default_sprites_to_production'
         get 'select_start_animations'
       end
     end

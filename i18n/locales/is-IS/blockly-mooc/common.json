@@ -13,6 +13,7 @@
   "activity": "Verkefni",
   "actions": "Aðgerðir",
   "add": "Bæta við",
+  "addingToTable": "Bæti við...",
   "addNewSection": "Bæta við nýjum hluta",
   "addParentEmailModal_confirmedParentEmail_label": "Staðfesta netfang foreldris/umráðamanns",
   "addParentEmailModal_confirmedParentEmail_mustMatch": "Netföngin þurfa að vera eins.",

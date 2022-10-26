@@ -15,6 +15,7 @@
   "activityHeaderTime": " ({activityDuration} минути)",
   "actions": "Действия",
   "add": "Добави",
+  "addingToTable": "Добавяне...",
   "additionalInformationHeader": "Допълнителна Информация",
   "additionalInformationText": "За повече информация, виж [{externalDocumentationUrl}]({externalDocumentationUrl})",
   "addNewSection": "Добавете нова секция",
