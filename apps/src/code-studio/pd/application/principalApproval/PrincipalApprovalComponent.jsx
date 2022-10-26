@@ -5,6 +5,7 @@ import {
   PageLabels,
   TextFields
 } from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
+import {TextLink} from '@dsco_/link';
 import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   FormContext,
@@ -320,9 +321,11 @@ const PrincipalApprovalComponent = props => {
             label={
               <span>
                 {PageLabels.canEmailYou}{' '}
-                <a href={'https://code.org/privacy'}>
-                  (See our privacy policy)
-                </a>
+                <TextLink
+                  text="(See our privacy policy)"
+                  href={'https://code.org/privacy'}
+                  openInNewTab
+                />
               </span>
             }
           />
