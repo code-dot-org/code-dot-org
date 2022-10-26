@@ -22,7 +22,7 @@ import {
   newBoard,
   setSensorAnalogValue,
   stubComponentInitialization,
-  unstubComponentInitialization
+  restoreComponentInitialization
 } from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -52,8 +52,8 @@ describe('Circuit Playground Components', () => {
 
   afterEach(() => {
     clock.restore();
-    unstubComponentInitialization(five.Sensor);
-    unstubComponentInitialization(five.Thermometer);
+    restoreComponentInitialization(five.Sensor);
+    restoreComponentInitialization(five.Thermometer);
   });
 
   describe(`createCircuitPlaygroundComponents()`, () => {

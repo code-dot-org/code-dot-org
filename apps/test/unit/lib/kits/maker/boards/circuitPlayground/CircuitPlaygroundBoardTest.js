@@ -13,7 +13,7 @@ import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import {
   stubComponentInitialization,
-  unstubComponentInitialization
+  restoreComponentInitialization
 } from './CircuitPlaygroundTestHelperFunctions';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
@@ -580,8 +580,8 @@ describe('CircuitPlaygroundBoard', () => {
 
     afterEach(() => {
       clock.restore();
-      unstubComponentInitialization(five.Sensor);
-      unstubComponentInitialization(five.Thermometer);
+      restoreComponentInitialization(five.Sensor);
+      restoreComponentInitialization(five.Thermometer);
     });
 
     it('plays a song and animates lights', done => {

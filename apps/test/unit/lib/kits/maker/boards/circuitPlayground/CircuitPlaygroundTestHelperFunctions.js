@@ -61,6 +61,6 @@ export function stubComponentInitialization(component) {
   });
 }
 
-export function unstubComponentInitialization(component) {
+export function restoreComponentInitialization(component) {
   component.prototype.once.restore();
 }
