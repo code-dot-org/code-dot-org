@@ -288,23 +288,7 @@ class UnconnectedMusicView extends React.Component {
 
   clearCode = () => {
     // Default code.
-    const defaultCode = {
-      blocks: {
-        languageVersion: 0,
-        blocks: [
-          {type: 'when_run', x: 30, y: 30},
-          {
-            type: 'triggered_at',
-            x: 500,
-            y: 30,
-            fields: {
-              trigger: 'trigger1'
-            }
-          }
-        ]
-      },
-      variables: [{name: 'currentTime'}]
-    };
+    const defaultCode = require('@cdo/static/music/defaultCode.json');
 
     Blockly.blockly_.serialization.workspaces.load(defaultCode, this.workspace);
 
