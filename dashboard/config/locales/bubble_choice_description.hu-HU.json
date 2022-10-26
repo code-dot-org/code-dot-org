@@ -7,7 +7,7 @@
         "courseD_bee_nestedLoops9_2021": "Készítsd el az összes mézet.",
         "ramp_artist_loops8_2021": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával.",
         "courseF_extras_sim": "Készítsd el és szerkeszd a saját szimulációdat!",
-        "spritelab_extras_repeat": "Készíts sok ugyanolyan karaktert egy hurok haszálatával!",
+        "spritelab_extras_repeat": "Készíts sok ugyanolyan karaktert ismétlések haszálatával!",
         "CourseF_outbreak6": "A vírusok nem mindig fertőznek, és a maszkokkal sem lehet megakadályozni teljesen a terjedést. Tökéletesítsd a szimulációdat azzal, hogy a fertőzések véletlenszerűen történnek.",
         "CourseF_outbreak7": "Védd meg a sprite-jaidat a betegségektől azzal, tedd őket védetté.",
         "helloworld_animals_costumes": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
@@ -34,7 +34,11 @@
         "courseC_artist_prog_challenge12022": "Rajzolj szobákat mindegyik állat számára. ",
         "courseD_bee_nestedLoops82022": "Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden méhsejtbe. ",
         "courseD_bee_nestedLoops92022": "Készítsd el az összes mézet.",
-        "ramp_artist_loops82022": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával."
+        "ramp_artist_loops82022": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával.",
+        "helloworld_food_costumes_soccer-2022": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
+        "helloworld_food_costumes_space-2022": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
+        "helloworld_food_sounds_soccer-2022": "Tanuld meg, hogany kell hangot lejátszani.",
+        "helloworld_food_sounds_space-2022": "Tanuld meg, hogany kell hangot lejátszani."
       }
     }
   }

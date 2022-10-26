@@ -888,6 +888,8 @@ sr:
               description: тест
         spelling-bee:
           title: Пчелица словарица
+        ai-ethics-2021:
+          description_audience: Разреди 6-12
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -986,3 +988,21 @@ sr:
               display_name: Променљиве
         soccer:
           name: Фудбал
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Петље
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Променљиве
+            csp_conditionals:
+              display_name: Кондиционали
+            csp_functions:
+              display_name: Функције
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Листе
+            csp_loops:
+              display_name: Петље

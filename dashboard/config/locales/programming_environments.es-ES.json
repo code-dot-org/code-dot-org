@@ -30,6 +30,9 @@
             "drawing": {
               "name": "Dibujo"
             },
+            "control": {
+              "name": "Control"
+            },
             "math": {
               "name": "Matemáticas"
             },
@@ -57,6 +60,9 @@
             "turtle": {
               "name": "Tortuga"
             },
+            "control": {
+              "name": "Control"
+            },
             "math": {
               "name": "Matemáticas"
             },
@@ -79,6 +85,7 @@
         },
         "spritelab": {
           "name": "Laboratorio de Sprites",
+          "description": "El Laboratorio de Sprite es un entorno de programación basado en Blockly en el que se pueden crear proyectos interactivos.",
           "categories": {
             "sprites": {
               "name": "Sprites"

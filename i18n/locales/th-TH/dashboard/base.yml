@@ -281,6 +281,7 @@ th:
       teach: "สอน"
       about: "เกี่ยวกับ"
       legal_privacy: "นโยบายความเป็นส่วนตัว"
+      legal_cookie_notice: "ประกาศเกี่ยวกับคุกกี้"
       legal_tos: "เงื่อนไขการให้บริการ"
     user:
       classroom: 'หน้าแรกของคุณครู'
@@ -410,6 +411,7 @@ th:
     no_primary_course: "ทดลองคอร์ส Code Studio"
     choose_next_course: "ทดลองเรียนคอร์ส Code Studio โดยเลือกจากรายการต่อไปนี้"
     print_certificate: "พิมพ์ใบรับรอง"
+  certificate_hour_of_code: "ช่วงเวลาของ Code"
   move_students:
     not_correct_participant_type: "คุณไม่สามารถย้ายผู้ใช้งานได้ เนื่องจากผู้ใช้งานเหล่านั้นยังไม่มีสิทธิ์เข้าร่วมในหมวดใหม่"
   share:
@@ -686,3 +688,10 @@ th:
     link_your_email: "เชื่อมต่ออีเมลของคุณ"
     not_now: "ไม่ใช่ตอนนี้"
   teacher_feedback: "ข้อเสนอแนะของผู้สอน"
+  lesson_lock:
+    error:
+      no_updates: "ไม่มีการอัปเดตที่ต้องดำเนินการ"
+      missing_params: "ต้องระบุผู้ใช้ ระดับ และรหัสหน่วย"
+      cannot_view_locked_answers: "ไม่สามารถดูคำตอบขณะล็อกได้"
+      forbidden: "ผู้ใช้ไม่สามารถอัปเดตสถานะล็อกของนักเรียนได้"
+  reset_predict_progress_button: "ลบคำตอบ"

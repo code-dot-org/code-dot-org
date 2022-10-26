@@ -539,6 +539,7 @@ ka:
     print_certificate: სერტიფიკატის ამობეჭდვა
   certificate_sponsor_message: "%{sponsor_name} გააკეთა გულუხვი საჩუქარი სპონსორი
     თქვენი სწავლის."
+  certificate_hour_of_code: კოდის ერთი საათი
   move_students:
     new_section_dne: სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ
       სხვა სექციის კოდი.
@@ -1178,3 +1179,5 @@ ka:
     ვებ მისამართი და დააბრუნეთ. ან, დაბრუნდით ჩვენს მთავარ გვერდზე.
   page_not_found_button: სახლში დაბრუნება
   copy: კოპირება
+  pixelation:
+    binary: ორობითი

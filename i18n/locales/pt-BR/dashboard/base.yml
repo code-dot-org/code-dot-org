@@ -339,6 +339,7 @@ pt:
       sections: "Seções"
       help_support: "Ajuda e suporte"
       report_bug: "Reportar um erro"
+      report_abuse: "Reportar abuso"
       teacher_community: "Comunidade de professores"
       professional_learning: "Aprendizado Profissional"
       documentation: "Documentação"
@@ -375,7 +376,9 @@ pt:
       help_us: "Ajude-nos"
       teach: "Ensinar"
       about: "Sobre"
+      legal: "Termos & Privacidade"
       legal_privacy: "Política de Privacidade"
+      legal_cookie_notice: "Aviso sobre Cookies"
       legal_tos: "Termos de Serviço"
     user:
       classroom: 'Página inicial do professor'
@@ -551,6 +554,7 @@ pt:
     choose_next_course: "Experimente um dos seguintes cursos do Code Studio"
     print_certificate: "Imprimir certificado"
   certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_hour_of_code: "Hora do Código"
   move_students:
     new_section_dne: "A seção %{new_section_code} não existe. Insira outro código de seção."
     section_code_cant_be_current_section: "A seção atual não pode ser igual à nova seção."
@@ -1126,3 +1130,12 @@ pt:
   behaviors:
     this_sprite: "este personagem"
   teacher_feedback: "Feedback do Professor"
+  lesson_lock:
+    error:
+      no_updates: "Nenhuma atualização a ser executada"
+      missing_params: "As IDs de usuário, nível e unidade são obrigatórias"
+      cannot_view_locked_answers: "Não é possível visualizar as respostas com o item bloqueado"
+      forbidden: "O usuário não pode atualizar o status bloqueável do aluno"
+  reset_predict_progress_button: "Excluir resposta"
+  pixelation:
+    binary: "Binário"

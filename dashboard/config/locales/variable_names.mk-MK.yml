@@ -3,7 +3,9 @@ mk:
   data:
     variable_names:
       birds: Птици
+      planet: планета
       random: случајно
       repeat: повтори
       score: Резултат
+      shout: вика
       variable: променлива

@@ -13446,23 +13446,11 @@ zh-TW:
         - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: '殭屍會經過正確的路徑，最後無限地來回繞圈。
-
-'
-          correct: true
+        - correct: true
           feedback: 正確！
         - text: 殭屍將成功吃到向日葵。
-          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
-
-'
         - text: 殭屍將在第一條路徑上右轉，並且持續不斷地原地旋轉。
-          feedback: '不正確。殭屍會經過正確的路徑，最後無限地來回繞圈。
-
-'
         - text: 僵屍將被困在前進道路的盡頭。
-          feedback: '在這段程式碼中，殭屍會經過正確的路徑，最後永遠地來回繞圈。
-
-'
         questions:
         - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
       courseD_multi_maze_until2_predict12022:

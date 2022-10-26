@@ -2259,6 +2259,8 @@ cs:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Třídy osmiletých gymnázií
         poem-art-2021:
           title: Básnické umění
         explore-data-1-2021:
@@ -2483,6 +2485,10 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Začínáme
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2588,6 +2594,9 @@ cs:
           description_audience: Pisatelé životopisů
           description_short: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi životopisu
           description: Na uvádění aktualizací lekcí nebo úrovní mezi verzemi životopisu
+          lessons:
+            lesson-7:
+              name: Úvod ke sprajtům
         csd1-2022:
           lesson_groups:
             csd1_1:
@@ -2621,8 +2630,19 @@ cs:
         aiml-2022:
           name: aiml-2022
           description_short: Naučte se něco o umělé inteligenci a strojovém učení
+        vpl-csd1-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Doplněk pro asynchronní ladění
+        vpl-csd2-ayw-pilot-2022:
+          lessons:
+            lesson-6:
+              name: Modul 2 Asynchronní práce
         soccer:
           name: fotbal
+          title: Naprogramujte svou vlastní fotbalovou hru
+          description_short: Udělat fotbalovou hru
+          description: Udělat fotbalovou hru
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2655,3 +2675,84 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Cykly
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Obsah
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+          title: Řešení problémů
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+          title: Proces návrhu
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Co je to za zvuk?
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: '1.  lekce: Digitální informace'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lekce: Internet'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Proměnné
+            csp_conditionals:
+              display_name: Podmínky
+            csp_functions:
+              display_name: Funkce
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznamy
+            csp_loops:
+              display_name: Cykly
+            csp_project:
+              display_name: Projekt
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '9.  lekce: Data'

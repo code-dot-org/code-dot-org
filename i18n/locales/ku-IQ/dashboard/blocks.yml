@@ -987,6 +987,10 @@ ku:
           SOUND:
             "'sound://category_animals/bear.mp3'": وورچ
             "'sound://category_animals/dolphin.mp3'": دۆلفین
+      gamelab_playSoundOptionsSoccer:
+        text: دەنگ هەڵکەر {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: دەنگ هەڵکەر {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1346,6 +1350,11 @@ ku:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       SpriteLab2Beta_spriteSay:
         text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:

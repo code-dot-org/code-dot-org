@@ -6,7 +6,7 @@ hu:
   front_title: Csatlakozz minden idők legnagyobb tanulmányi eseményéhez %{campaign_date}
   coming_soon: Hamarosan!
   campaign_date_start_short: Dec. 5.
-  campaign_date_start_long: December 6.
+  campaign_date_start_long: December 5.
   campaign_date_short: Dec. 5-11.
   campaign_date_full: December 5-11.
   campaign_date_year: '2022.'
@@ -37,6 +37,14 @@ hu:
   africa_campaign_date_full: Október 1-31.
   africa_campaign_date_year: '2022.'
   africa_campaign_date_full_year: 2020. október 1-31.
+  hoc2022_header: Fedezd fel, játssz és alkoss!
+  social_hoc2022_explore_play_create: Használd az informatikát a felfedezéshez, a
+    játékhoz és az alkotáshoz!
+  codeorg_homepage_hoc2022_body: Fedezd fel az univerzumot, lőj célba, mozogj - az
+    informatika kipróbálásának sokféle útja-módja van.
+  hoc2022_codeorg_title: Ünnepeld a Kódolás óráját a NASA-val és másokkal
+  hoc2022_codeorg_description: A 10. Kódolás órája fantasztikus! Gyere fedezzük fel
+    együtt, játsszunk és alkossunk.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Tanulj ma, és építs egy szebb holnapot.
@@ -508,6 +516,25 @@ hu:
   front_join_us_n_students_served: "# elérés"
   front_join_us_challenge: Nyerj egy videóchat lehetőséget az osztályodnak egy hírességgel!
   front_join_us_learn_more: Tudj meg többet
+  cta_see_whats_new: Újdonságok megtekintése
+  cta_try_more_activities: Próbálj ki még több tevékenységet!
+  cta_try_an_activity: Próbálj ki egy tevékenységet!
+  hoc_homepage_join_the_movement_heading: Csatlakozz a mozgalomhoz!
+  hoc_homepage_join_the_movement_description: A Kódolás órája ugyan egész évben elérhető,
+    de minden év decemberében az osztályod diákok millióihoz csatlakozhat, ekkor ünnepeljük
+    Számítástechnikai Oktatás Hetét a Kódolás órája keretében. A regisztráció erre
+    az ünnepségre minden év októberében kezdődik.
+  hoc_homepage_what_is_hoc_subhead: Az egyórás oktatóprogramok több mint 45 nyelven
+    elérhetőek. Nincs szükség előzetes tapasztalatra. A Kódolás órája tevékenységek
+    egész évben ingyenesen elérhetők.
+  hoc_homepage_what_is_hoc_description: A Kódolás órája egy egyórás bevezetés az informatikába,
+    és ennek a keretében szórakoztató oktatóprogramok segítségével mutatjuk be, hogy
+    az alapokat bárki elsajátíthatja. Ezt az alulról szerveződő kampányt világszerte
+    több mint 400 partner és 200 000 pedagógus támogatja.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Olvasd el a(z)](%{howto_guide_url})
+    útmutatónkat, és tervezz meg egy eseményt az osztályod számára."
+  hoc_homepage_highlights_heading: Kódolás órája - kiemelt tartalmak
+  hoc_homepage_organized_by: A Kódolás óráját a [Code.org]%{codeorg_url}) szervezi.
   signup_closed: A regisztráció a Kódolás Órájára lezárult. Nézz vissza Októberben
     hogy jelentkezz a következő Kódolás Órájára.
   signup_registration_not_required: Nincs szükséged regisztrációra, hogy részt vegyél!

@@ -343,6 +343,7 @@
   homepage_banner_40k_teachers_link: "اعرف المزيد"
   homepage_slot_text_title_hoc: "ساعة من البرمجة"
   homepage_slot_text_blurb_hoc: "بإمكان أي شخص أن يتعلم. ابدأ اليوم"
+  homepage_slot_text_blurb_hoc_2022: "استكشف، العب، ابتكِر!"
   homepage_slot_text_link_hoc: "جرب ساعة من البرمجة - \"Hour of Code\""
   homepage_slot_text_link_about_hoc: "عن ساعة من البرمحة"
   homepage_slot_text_link_host: "استضافة ساعة البرمجة"
@@ -965,15 +966,17 @@
   coursee-2020_name: الدورة "هـ" (2020)
   coursef-2020_name: الدورة "و" (2020)
   coursea-2021_name: الدورة "أ" (2021)
-  courseb-2021_name: الدورة "ب" (2020)
-  coursec-2021_name: الدورة "ج" (2020)
-  coursed-2021_name: الدورة "د" (2020)
-  coursee-2021_name: الدورة "هـ" (2020)
+  courseb-2021_name: الدورة "ب" (2021)
+  coursec-2021_name: الدورة "ج" (2021)
+  coursed-2021_name: الدورة "د" (2021)
+  coursee-2021_name: الدورة "هـ" (2021)
   coursef-2021_name: الدورة F (2021)
-  coursea-2022_name: الدورة "أ" (2020)
-  courseb-2022_name: الدورة "ب" (2020)
-  coursec-2022_name: الدورة "ج" (2020)
-  coursed-2022_name: الدورة "د" (2020)
+  coursea-2022_name: الدورة "أ" (2022)
+  courseb-2022_name: الدورة "ب" (2022)
+  coursec-2022_name: الدورة "ج" (2022)
+  coursed-2022_name: الدورة "د" (2022)
+  coursee-2022_name: الدورة "هـ" (2022)
+  coursef-2022_name: الدورة "و" (2022)
   express-2018_name: دورة سريعة (2018)
   pre-express-2018_name: دورة سريعة لمستوى ما قبل القراءة (2018)
   express-2019_name: دورة سريعة (2019)
@@ -982,7 +985,7 @@
   pre-express-2020_name: دورة سريعة لمستوى ما قبل القراءة (2020)
   express-2021_name: دورة سريعة (2020)
   pre-express-2021_name: دورة سريعة لمستوى ما قبل القراءة (2021)
-  express-2022_name: دورة سريعة (2020)
+  express-2022_name: دورة سريعة (2022)
   csd2_name: 'الوحدة 2: تطوير الويب'
   csd3_name: 'الوحدة 3: الرسوم المتحركة والألعاب'
   accelerated_name: "دورة تدريبية مسرّعة"
@@ -1790,5 +1793,15 @@
   ai_cognimates: "تظلم"
   ai_cognimates_description: "منصة تعليمية للذكاء الاصطناعي لبناء الألعاب وبرمجة الروبوتات والتدريب."
   ai_try_activity: "جرب النشاط"
+  outbreak_tile_title: "تفشي المرض"
   outbreak_tile_subtitle: "لقد أصاب فيروس مونستر تاون! قم بترميز جهاز محاكاة تفشي المرض وقم بعمل تنبؤات حول ما سيحدث لجيران Monster Town."
   footer_cookie_notice: "إشعار ملفات تعريف الارتباط"
+  hoc2022_banner_title: "استكشف، العب، ابتكِر!"
+  hoc2022_banner_description: "استكشف الكون، وسجل هدفًا، وقم بإيقاف الحركة - هناك العديد من الطرق لتجربة علوم الكمبيوتر!"
+  hoc2022_cta_primary: "شاهد ما هو جديد"
+  hoc2022_cta_secondary: "جرب أنشطة أكثر"
+  hoc2022_landing_page_explore_description: "افتح الأبواب لعوالم جديدة مع علوم الكمبيوتر!"
+  hoc2022_landing_page_play_description: "خذ الملعب وسجل!"
+  hoc2022_landing_page_create_title: "إنشاء"
+  hoc2022_landing_page_create_description: "اصنع شيئًا غريبًا ورائعًا!"
+  try_it_yourself: "جرِّب بنفسك!"

@@ -4321,7 +4321,31 @@
         "ramp_artist_loops62022": "Altere seu laço para desenhar essa escadaria.",
         "ramp_artist_loops72022": "Procure por um padrão e deixe esse código menor utilizando laços!",
         "ramp_artist_loops82022": "Procure por um padrão e deixe esse código menos utilizando laços.",
-        "ramp_artist_loops92022": "Resolva este enigma desenhando um quadrado."
+        "ramp_artist_loops92022": "Resolva este enigma desenhando um quadrado.",
+        "courseF_variables2_change_-2022-2": "Crie um programa que mude o valor de uma variável com o tempo. Faça a figura dizer o novo valor quando ele mudar.",
+        "courseF_variables2_set_-2022-2": "Guarde um número qualquer em uma variável e faça sua figura dizer o número guardado.",
+        "helloworld_food_backgrounds_soccer-2022": "Vamos aprender a mudar o plano de fundo.",
+        "helloworld_food_backgrounds_space-2022": "Vamos aprender a mudar o plano de fundo.",
+        "helloworld_food_behaviors_soccer-2022": "Vamos aprender a animar uma fada utilizando um comportamento.",
+        "helloworld_food_behaviors_space-2022": "Vamos aprender a animar uma fada utilizando um comportamento.",
+        "helloworld_food_click_soccer-2022": "O que faz essas fadas falarem?",
+        "helloworld_food_click_space-2022": "O que faz essas fadas falarem?",
+        "helloworld_food_costumes_soccer-2022": "Vamos aprender a mudar a aparência das fadas.",
+        "helloworld_food_costumes_space-2022": "Vamos aprender a mudar a aparência das fadas.",
+        "helloworld_food_events_soccer-2022": "Use o evento ‘when clicked’ para fazer uma fada dizer algo.",
+        "helloworld_food_events_space-2022": "Use o evento ‘when clicked’ para fazer uma fada dizer algo.",
+        "helloworld_food_freeplay_soccer-2022": "É hora de criar o que você quiser!",
+        "helloworld_food_freeplay_space-2022": "É hora de criar o que você quiser!",
+        "helloworld_food_location_soccer-2022": "Dê a cada fada uma localização diferente.",
+        "helloworld_food_location_space-2022": "Dê a cada fada uma localização diferente.",
+        "helloworld_food_multi_soccer-2022": "Faça com que cada uma das duas fadas diga algo. ",
+        "helloworld_food_multi_space-2022": "Faça com que cada uma das duas fadas diga algo. ",
+        "helloworld_food_say_soccer-2022": "Use o bloco `falar` para me fazer falar o que você quiser!",
+        "helloworld_food_say_space-2022": "Use o bloco `falar` para me fazer falar o que você quiser!",
+        "helloworld_food_sizes_soccer-2022": "Vamos aprender a mudar o tamanho das fadas.",
+        "helloworld_food_sizes_space-2022": "Vamos aprender a mudar o tamanho das fadas.",
+        "helloworld_food_sounds_soccer-2022": "Vamos aprender a tocar sons.",
+        "helloworld_food_sounds_space-2022": "Vamos aprender a tocar sons."
       }
     }
   }

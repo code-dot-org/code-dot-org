@@ -5,12 +5,12 @@ zh:
   language: English
   front_title: 加入史上最大的學習活動， %{campaign_date}
   coming_soon: 即將推出
-  campaign_date_start_short: 12 月 5 日
-  campaign_date_start_long: 12 月 6 日
-  campaign_date_short: 12月5日11日
+  campaign_date_start_short: 12月5日
+  campaign_date_start_long: 12月5日
+  campaign_date_short: 12月5日-11日
   campaign_date_full: 12 月 5 日 - 11 日
   campaign_date_year: '2022'
-  campaign_date_full_year: 2022 年 12 月的 5-11 日
+  campaign_date_full_year: 2022年12月5-11日
   nonus_campaign_date_start_short: Oct. 1
   nonus_campaign_date_start_long: October 1
   nonus_campaign_date_short: 10 月 1 日 - 12 月 18 日
@@ -35,6 +35,11 @@ zh:
   africa_campaign_date_full: 10 月 1 日 - 12 月 18 日
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
+  hoc2022_header: 探索，玩耍，創造！
+  social_hoc2022_explore_play_create: 使用電腦科學來探索、玩耍和創造！
+  codeorg_homepage_hoc2022_body: 探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多。
+  hoc2022_codeorg_title: 与NASA等一起慶祝一小時玩程式
+  hoc2022_codeorg_description: 第10次一小時玩程式非常好！來和我們一起探索、玩耍和創造吧。
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  馬上開始學習，打造更美好的明天。  "
@@ -437,6 +442,16 @@ zh:
   front_join_us_n_students_served: "# 人已體驗"
   front_join_us_challenge: 贏得與名人的教室視頻聊天！
   front_join_us_learn_more: 進一步學習
+  cta_see_whats_new: 看看有什麼新內容
+  cta_try_more_activities: 嘗試更多活動
+  cta_try_an_activity: 嘗試一個活動
+  hoc_homepage_join_the_movement_heading: 加入運動
+  hoc_homepage_join_the_movement_description: 一小時玩程式全年都可參與，但每年12月，你的班級可以加入世界各地數百萬學生的行列，用一小時玩程式慶祝電腦科學教育周。一年一度的慶祝活動於每年10月開始註冊。
+  hoc_homepage_what_is_hoc_subhead: 一小時的教程，超過45種語言。不需要經驗。一小時玩程式活動全年都可免費參與。
+  hoc_homepage_what_is_hoc_description: 一小時玩程式是一個小時的電腦科學介紹，使用有趣的教程展示出任何人都可以學習基礎知識。這一基層運動得到全球逾400個合作夥伴和20萬名教育工作者的支持。
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[閱讀我們的操作指南](%{howto_guide_url})為你的班級計劃活動。"
+  hoc_homepage_highlights_heading: 一小時玩程式亮點
+  hoc_homepage_organized_by: 一小時玩程式由[Code.org](%{codeorg_url})組織。
   signup_closed: 程式碼小時注册現已關閉。請在十月再次檢查，以便為下一小時的程式碼注册。
   signup_registration_not_required: You don't need to register to participate! The
     Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try

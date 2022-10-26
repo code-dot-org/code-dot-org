@@ -4,6 +4,7 @@ import {NotificationType} from '@cdo/apps/templates/Notification';
 const ADD_ANNOUNCEMENT = 'announcements/ADD_ANNOUNCEMENT';
 
 export const addAnnouncement = ({
+  key,
   notice,
   details,
   link,
@@ -13,6 +14,7 @@ export const addAnnouncement = ({
   buttonText
 }) => ({
   type: ADD_ANNOUNCEMENT,
+  key,
   notice,
   details,
   link,
@@ -29,6 +31,7 @@ export const VisibilityType = {
 };
 
 export const announcementShape = PropTypes.shape({
+  key: PropTypes.string,
   notice: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
@@ -41,6 +44,7 @@ export const announcementShape = PropTypes.shape({
 export default function announcements(state = [], action) {
   if (action.type === ADD_ANNOUNCEMENT) {
     return state.concat({
+      key: action.key,
       notice: action.notice,
       details: action.details,
       link: action.link,

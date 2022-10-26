@@ -5,4 +5,6 @@ description 'Try out these new blocks and challenges with collisions.'
 sublevels
 level 'CSD U3 collision detection challenge collider angle_2023'
 level 'CSD U3 collision detection practice debugpoints_2023'
+level 'CSD U3 collision detection challenge 3_2023'
 level 'CSD U3 L16 Freeplay_2023'
+level 'CSD U3 L19 Freeplay2_2023'

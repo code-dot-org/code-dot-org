@@ -35,6 +35,12 @@ ko:
   africa_campaign_date_full: 10월 1일~31일
   africa_campaign_date_year: 2022년
   africa_campaign_date_full_year: 2020년 10월 1일~31일
+  hoc2022_header: 탐구하고, 놀고, 창의력을 발휘하세요!
+  social_hoc2022_explore_play_create: 컴퓨터과학을 통해 탐구하고, 놀고, 창의력을 발휘하세요!
+  codeorg_homepage_hoc2022_body: 우주를 탐구하고, 골을 넣고, 바로 시작하세요. 컴퓨터과학을 체험해볼 수 있는 방법은 아주
+    많습니다.
+  hoc2022_codeorg_title: NASA 등과 함께 Hour of Code를 기념하세요.
+  hoc2022_codeorg_description: 제10회 Hour of Code가 시작되었습니다! 탐색하고, 즐기고 함께 창작해 보세요.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 지금 배워서, 보다 밝은 미래를 건설하세요.
@@ -441,6 +447,21 @@ ko:
   front_join_us_n_students_served: "# 명에게 제공됨"
   front_join_us_challenge: '학급을 대표하여 유명인사와 영상 채팅할 기회를 얻으세요! '
   front_join_us_learn_more: 더보기
+  cta_see_whats_new: 새로운 내용 보기
+  cta_try_more_activities: 더 많은 활동 시도해보기
+  cta_try_an_activity: 활동 시도해보기
+  hoc_homepage_join_the_movement_heading: 운동에 참여하세요
+  hoc_homepage_join_the_movement_description: 아워오브코드는 연중 내내 이용 가능하지만, 매년 12월 전 세계
+    수백만의 학생들과 함께 아워오브코드를 통해 컴퓨터과학교육주간을 기념하는 행사에 함께 할 수 있습니다. 이 연중 축하 행사에 대한 등록은 매년
+    10월부터 시작됩니다.
+  hoc_homepage_what_is_hoc_subhead: 45개 이상의 언어로 진행되는 한 시간 분량의 튜토리얼. 경험이 없어도 됩니다. 아워오브코드는
+    연중 내내 무료로 이용 가능합니다.
+  hoc_homepage_what_is_hoc_description: 아워오브코드는 누구나 기초를 배울 수 있음을 보여주는 재미있는 튜토리얼을 이용하여
+    한 시간 동안 컴퓨터과학을 소개합니다. 이 풀뿌리 캠페인은 전 세계 400곳 이상의 파트너와 20만 명이 넘는 교육자들이 지원합니다.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[저희의 How-to 가이드](%{howto_guide_url})를
+    읽고 학급 이벤트 계획을 수립하세요."
+  hoc_homepage_highlights_heading: 아워오브코드 하이라이트
+  hoc_homepage_organized_by: 아워오브코드는 [Code.org](%{codeorg_url})에서 운영합니다.
   signup_closed: '아워오브코드 등록이 마감되었습니다. 다음 아워오브코드를 신청하시려면 10월에 다시 확인해 주십시오. '
   signup_registration_not_required: 참가하기 위해 반드시 등록할 필요는 없습니다! 아워오브코드 활동은 일년 내내 제공
     가능합니다. <a href='%{hoc_activities_url}'>활동을 해보거나</a> 또는 <a href='%{howto_guide_url}'>하우

@@ -10,7 +10,7 @@ ur:
   campaign_date_start_long: 6 دسمبر
   campaign_date_short: دسمبر 5 - 11
   campaign_date_full: 6 تا 12 دسمبر
-  campaign_date_year: '2021'
+  campaign_date_year: '2022'
   campaign_date_full_year: 6-12، 2021
   nonus_campaign_date_start_short: 1 اکتوبر
   nonus_campaign_date_start_long: 1 اکتوبر
@@ -22,20 +22,28 @@ ur:
   latam_campaign_date_start_long: 1 اکتوبر
   latam_campaign_date_short: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_full: 1 اکتوبر - 18 دسمبر
-  latam_campaign_date_year: '2021'
+  latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
   europe_campaign_date_start_short: 1 اکتوبر
   europe_campaign_date_start_long: 1 اکتوبر
   europe_campaign_date_short: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_full: 1 اکتوبر - 18 دسمبر
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
   africa_campaign_date_start_short: 1 اکتوبر
   africa_campaign_date_start_long: 1 اکتوبر
   africa_campaign_date_short: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_full: 1 اکتوبر - 18 دسمبر
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  hoc2022_header: کھوجیں، کھیلیں، بنائیں!
+  social_hoc2022_explore_play_create: کمپیوٹر سائنس کا استعمال کرتے ہوئے کھوجیں، کھیلیں،
+    اور تخلیق کریں۔
+  codeorg_homepage_hoc2022_body: عالم میں گھومیں، گول سکور کریں، حرکت توڑیں — کمپیوٹر
+    سائنس آزمانے کے بہت سے طریقے ہیں.
+  hoc2022_codeorg_title: NASA اور مزید کے ساتھ ور آف کوڈ کا جشن منائیں
+  hoc2022_codeorg_description: دسواں آور آف کوڈ تو انتہائی حیرت انگیز ہے! آئیں ہمارے
+    ساتھ دریافت کریں، کھیلیں، اور بنائیں۔
   social_hoc2021_cse: "#HourOfCode کے دوران، ہم ہر جگہ #CSE کا جشن منا رہے ہیں۔ کنکشن
     دریافت کریں!"
   hoc2020_header: اج سیکھیں، اور اپنا مستقبل روشن بنائیں.
@@ -500,6 +508,24 @@ ur:
   front_join_us_challenge: اپنے کلاس روم کے لئے ایک ویڈیو چیٹ کی عظیم شخصیت کے ساتھ
     جیت!
   front_join_us_learn_more: مزید جانیں
+  cta_see_whats_new: دیکھیں کہ کیا نیا ہے
+  cta_try_more_activities: نئی سرگرمیاں آزمائیں
+  cta_try_an_activity: ایک سرگرمی آزمائیں
+  hoc_homepage_join_the_movement_heading: تحریک کا حصہ بنیں
+  hoc_homepage_join_the_movement_description: آور آف کوڈ پورا سال دستیاب ہوتی ہے،
+    لیکن ہر سال دسمبر کے مہینہ میں پوری دنیا کے لاکھوں طلباء مل کر کمپیوٹر سائنس ہفتے
+    کے دوران آور آف کوڈ کے پروگرام کی وساطت سے سیکھتے ہیں۔ سالانہ جشن کے لیے رجسٹریشن
+    ہر سال اکتوبر میں شروع ہوتی ہے۔
+  hoc_homepage_what_is_hoc_subhead: 45 زبانوں میں ایک گھنٹہ کے درس۔ کسی بھی تجربے
+    کی ضرورت نہیں ہے۔ آور آف کوڈ کی سرگرمیاں پورا سال دستیاب ہوتی ہیں۔
+  hoc_homepage_what_is_hoc_description: آور آف کوڈ کمپیوٹر سائنس کے لیے ایک گھنٹے
+    کا تعارف ہوتا ہے، جس میں خوشگوار درسوں کے ذریعے کوئی بھی سیکھ سکتا ہے۔ اس عوامی
+    مہم کو پوری دنیا میں 400 شراکت داروں اور 200،000 تعلیم دہندوں کی حمایت حاصل ہے۔
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[ہمارا طریقہ کا راہنما پڑھ لیں](%{howto_guide_url})
+    تاکہ آپ اپنے کلاس کے ایک ایونٹ کا پلان بنائیں."
+  hoc_homepage_highlights_heading: آور آف کوڈ کی جھلکیاں
+  hoc_homepage_organized_by: آور آف کوڈ [Code.org](%{codeorg_url}) کی طرف سے منظم
+    کیا جاتا ہے.
   signup_closed: رجسٹریشن کے کوڈ کے گھنٹے کے لئے اب بند کر دیا ہے ۔ کوڈ کی اگلی گھڑی
     کے لئے سائن اپ کریں پھر اکتوبر میں پڑتال کریں ۔
   signup_registration_not_required: آپ کو شرکت کے لئے رجسٹر کرنے کی ضرورت نہیں! سال

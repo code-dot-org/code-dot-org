@@ -4451,7 +4451,29 @@
         "ramp_artist_loops72022": "Szukaj wzorca i skracaj kod z wykorzystaniem pętli!",
         "ramp_artist_loops82022": "Szukaj wzorca i skracaj kod z wykorzystaniem pętli.",
         "ramp_artist_loops92022": "Rozwiąż to zadanie rysując kwadrat.",
-        "simcustom_-2022-2": "Spróbuj wprowadzić kilka zmian do kostiumów duszka lub poniższego kodu."
+        "simcustom_-2022-2": "Spróbuj wprowadzić kilka zmian do kostiumów duszka lub poniższego kodu.",
+        "helloworld_food_backgrounds_soccer-2022": "Nauczmy się zmieniać tło.",
+        "helloworld_food_backgrounds_space-2022": "Nauczmy się zmieniać tło.",
+        "helloworld_food_behaviors_soccer-2022": "Nauczmy się animować duszki za pomocą zachowań.",
+        "helloworld_food_behaviors_space-2022": "Nauczmy się animować duszki za pomocą zachowań.",
+        "helloworld_food_click_soccer-2022": "Co sprawia, że te duszki mówią?",
+        "helloworld_food_click_space-2022": "Co sprawia, że te duszki mówią?",
+        "helloworld_food_costumes_soccer-2022": "Nauczmy się zmieniać wygląd duszków.",
+        "helloworld_food_costumes_space-2022": "Nauczmy się zmieniać wygląd duszków.",
+        "helloworld_food_events_soccer-2022": "Użyj zdarzenia „kiedy kliknięto”, aby duszek coś powiedział.",
+        "helloworld_food_events_space-2022": "Użyj zdarzenia „kiedy kliknięto”, aby duszek coś powiedział.",
+        "helloworld_food_freeplay_soccer-2022": "Czas tworzyćm co tylko zechcesz!",
+        "helloworld_food_freeplay_space-2022": "Czas tworzyćm co tylko zechcesz!",
+        "helloworld_food_location_soccer-2022": "Nadaj każdemu duszkowi inną lokalizację.",
+        "helloworld_food_location_space-2022": "Nadaj każdemu duszkowi inną lokalizację.",
+        "helloworld_food_multi_soccer-2022": "Niech każdy z twoich dwóch duszków coś powie.",
+        "helloworld_food_multi_space-2022": "Niech każdy z twoich dwóch duszków coś powie.",
+        "helloworld_food_say_soccer-2022": "Użyj bloku „powiedz”, abym powiedział, co chcesz!",
+        "helloworld_food_say_space-2022": "Użyj bloku „powiedz”, abym powiedział, co chcesz!",
+        "helloworld_food_sizes_soccer-2022": "Nauczmy się zmieniać rozmiar duszków.",
+        "helloworld_food_sizes_space-2022": "Nauczmy się zmieniać rozmiar duszków.",
+        "helloworld_food_sounds_soccer-2022": "Nauczmy się, jak odtwarzać dźwięki.",
+        "helloworld_food_sounds_space-2022": "Nauczmy się, jak odtwarzać dźwięki."
       }
     }
   }

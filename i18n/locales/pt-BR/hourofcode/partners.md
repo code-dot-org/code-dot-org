@@ -2,38 +2,74 @@
 title: Parceiros
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+O Hour of Code é administrado pela Comissão de Análise do Hour of Code.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+A Comissão de Análise<a> é composta de 12 educadores atuais e antigos, nas séries do sistema K-12, que avaliam e recomendam atividades utilizando uma critério de avaliação estabelecido por uma comissão de consultoria. Esses educadores analisam atividades lideradas por estudantes e planos de ensino liderados por professores planos de ensino apresentados por centenas de parceiros de atividades, que avaliam o valor educacional das atividades, a capacidade de envolver os aprendizes e o apelo potencial para vários grupos de estudantes.</p> 
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+<p>
+  O trabalho e a dedicação da comissão têm contribuído para o sucesso do Hour of Code e sua visão de oferecer uma introdução à ciência da computação para todos os alunos.
+</p>
 
-# Principais Parceiros e Empresas Patrocinadoras
+<h1>
+  Principais parceiros e empresas patrocinadoras
+</h1>
 
-{{ partners/major_partners_corporate_supporters }}
+<p>
+  {{ partners/major_partners_corporate_supporters }}
+</p>
 
-* * *
+<p>
+  <hr />
+  
+</p>
 
-# Parceiros internacionais
+<h1>
+  Parceiros internacionais
+</h1>
 
-{{ partners/international_partners }}
+<p>
+  {{ partners/additional_partners }}
+</p>
 
-* * *
+<p>
+  <hr />
+  
+</p>
 
-# Parceria de Currículos e Tutoriais
+<h1>
+  Parceria em currículos e tutoriais
+</h1>
 
-{{ partners/curriculum_tutorial_partners }}
+<p>
+  {{ partners/curriculum_tutorial_partners }}
+</p>
 
-* * *
+<p>
+  <hr />
+  
+</p>
 
-# Parceiros de infraestrutura e de ferramentas
+<h1>
+  Parceiros em infraestrutura e ferramentas
+</h1>
 
-{{ partners/infrastructure_partners_tools }}
+<p>
+  {{ partners/infrastructure_partners_tools }}
+</p>
 
-* * *
+<p>
+  <hr />
+  
+</p>
 
-# Outros parceiros
+<h1>
+  Parceiros adicionais
+</h1>
 
-{{ partners/additional_partners }}
+<p>
+  {{ partners/additional_partners }}
+</p>
 
-{{ signup_button }}
+<p>
+  {{ signup_button }}
+</p>

@@ -5,46 +5,52 @@ vi:
   language: Tiếng Việt
   front_title: Tham gia sự kiện học tập lớn nhất trong lịch sử, %{campaign_date}
   coming_soon: Sắp diễn ra
-  campaign_date_start_short: 5 tháng Mười Hai
-  campaign_date_start_long: 6 Tháng Mười Hai
-  campaign_date_short: Tháng 12 Ngày 5-11
-  campaign_date_full: Tháng 12 5-11
+  campaign_date_start_short: Ngày 5 tháng 12
+  campaign_date_start_long: Ngày 6 tháng 12
+  campaign_date_short: Ngày 5-11 tháng 12
+  campaign_date_full: Ngày 5-11 tháng 12
   campaign_date_year: '2022'
-  campaign_date_full_year: Tháng 12 5-11, 2022
+  campaign_date_full_year: Ngày 5-11 tháng 12 năm 2022
   nonus_campaign_date_start_short: ngày 1 tháng 10
   nonus_campaign_date_start_long: 'ngày 1 tháng 10
 
 '
-  nonus_campaign_date_short: ngày 1 tháng 10 - ngày 18 tháng 12
-  nonus_campaign_date_full: ngày 1 tháng 10 - ngày 18 tháng 12
+  nonus_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  nonus_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
   nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: ngày 1 tháng 10 năm 2022 - ngày 18 tháng 12 năm 2022
+  nonus_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm 2022
   latam_campaign_date_start_short: ngày 1 tháng 10
   latam_campaign_date_start_long: 'ngày 1 tháng 10
 
 '
-  latam_campaign_date_short: ngày 1 tháng 10 - ngày 18 tháng 12
-  latam_campaign_date_full: ngày 1 tháng 10 - ngày 18 tháng 12
+  latam_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  latam_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
   latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: ngày 1 tháng 10 năm 2022 - ngày 18 tháng 12 năm 2022
-  europe_campaign_date_start_short: ngày 1 tháng 10
-  europe_campaign_date_start_long: 'ngày 1 tháng 10
-
-'
-  europe_campaign_date_short: ngày 1 tháng 10 - ngày 18 tháng 12
-  europe_campaign_date_full: ngày 1 tháng 10 - ngày 18 tháng 12
+  latam_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm 2022
+  europe_campaign_date_start_short: Ngày 1 tháng 10
+  europe_campaign_date_start_long: Ngày 1 tháng 10
+  europe_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  europe_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
   europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: ngày 1 tháng 10 năm 2022 - ngày 18 tháng 12 năm
+  europe_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm
     2022
-  africa_campaign_date_start_short: ngày 1 tháng 10
-  africa_campaign_date_start_long: 'ngày 1 tháng 10
+  africa_campaign_date_start_short: Ngày 1 tháng 10
+  africa_campaign_date_start_long: 'Ngày 1 tháng 10
 
 '
-  africa_campaign_date_short: ngày 1 tháng 10 - ngày 18 tháng 12
-  africa_campaign_date_full: ngày 1 tháng 10 - ngày 18 tháng 12
+  africa_campaign_date_short: Ngày 1 tháng 10 - Ngày 18 tháng 12
+  africa_campaign_date_full: Ngày 1 tháng 10 - Ngày 18 tháng 12
   africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: ngày 1 tháng 10 năm 2022 - ngày 18 tháng 12 năm
+  africa_campaign_date_full_year: Ngày 1 tháng 10 năm 2022 - Ngày 18 tháng 12 năm
     2022
+  hoc2022_header: Khám phá, vui chơi, sáng tạo!
+  social_hoc2022_explore_play_create: Sử dụng khoa học máy tính để khám phá, vui chơi
+    và sáng tạo!
+  codeorg_homepage_hoc2022_body: Khám phá vũ trụ, ghi điểm, khoe vũ đạo — có rất nhiều
+    cách để thử nghiệm khoa học máy tính.
+  hoc2022_codeorg_title: Hãy ăn mừng Giờ lập trình cùng NASA và hơn thế nữa
+  hoc2022_codeorg_description: Giờ lập trình lần thứ 10 đã bắt đầu rồi bạn ơi! Hãy
+    cùng chúng tôi khám phá, vui chơi và sáng tạo nhé.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Học lập trình hôm nay, xây dựng tươi lai tươi sáng hơn ngày mai.
@@ -522,6 +528,25 @@ vi:
   front_join_us_challenge: Giành chiến thắng cuộc thi trò chuyện video cho lớp của
     bạn với người nổi tiếng!
   front_join_us_learn_more: Tìm hiểu thêm
+  cta_see_whats_new: Xem thông tin mới
+  cta_try_more_activities: Thử các hoạt động khác
+  cta_try_an_activity: Thử một hoạt động
+  hoc_homepage_join_the_movement_heading: Tham gia phong trào
+  hoc_homepage_join_the_movement_description: Giờ lập trình diễn ra quanh năm, nhưng
+    vào tháng 12 hàng năm, lớp của bạn có thể cùng hàng triệu sinh viên trên khắp
+    thế giới kỷ niệm Tuần lễ Giáo dục Khoa học Máy tính với Giờ lập trình. Hãy đăng
+    ký tham gia lễ kỷ niệm thường niên bắt đầu vào tháng Mười hàng năm.
+  hoc_homepage_what_is_hoc_subhead: Những bài hướng dẫn kéo dài 1 giờ với hơn 45 ngôn
+    ngữ. Không cần có kinh nghiệm. Các hoạt động Giờ lập trình được tổ chức miễn phí
+    quanh năm.
+  hoc_homepage_what_is_hoc_description: Giờ lập trình là phần giới thiệu kéo dài một
+    giờ về khoa học máy tính, sử dụng những hướng dẫn thú vị để cho thấy rằng bất
+    kỳ ai cũng có thể học những kiến thức cơ bản. Chiến dịch cấp cơ sở này được hơn
+    400 đối tác và 200.000 nhà giáo trên toàn thế giới ủng hộ.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Xem Hướng dẫn thực hiện](%{howto_guide_url})
+    để lập kế hoạch sự kiện cho lớp của bạn."
+  hoc_homepage_highlights_heading: Điểm nổi bật của Giờ lập trình
+  hoc_homepage_organized_by: Giờ lập trình được tổ chức bởi [Code.org](%{codeorg_url}).
   signup_closed: Đăng ký Giờ Lập Trình đã đóng ngay bây giờ. Vui lòng kiểm tra lại
     vào tháng 10 để đăng ký Giờ Lập Trình ở đợt tiếp theo.
   signup_registration_not_required: Bạn không cần đăng ký để tham gia! Các hoạt động
@@ -1048,8 +1073,8 @@ vi:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Bản quyền %{current_year} Code.org. Đã đăng ký Bản quyền.
-  footer_trademark_message: Hour of Code là một tác quyền cá nhân/ thương hiệu của
-    Code.org.
+  footer_trademark_message: Hour of Code® và Hora del Código® là nhãn hiệu đăng ký
+    của Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Đối tác
   footer_menu_contact: Liên hệ với chúng tôi

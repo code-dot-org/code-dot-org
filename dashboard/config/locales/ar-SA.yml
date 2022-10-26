@@ -428,6 +428,7 @@ ar:
       about: نبذة
       legal: الخصوصية والقانونية
       legal_privacy: سياسة الخصوصية
+      legal_cookie_notice: إشعار ملفات تعريف الارتباط
       legal_tos: شروط الخدمة
     user:
       classroom: الصفحة الرئيسية للمعلم
@@ -633,6 +634,7 @@ ar:
     choose_next_course: جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل
     print_certificate: طباعة الشهادة
   certificate_sponsor_message: "%{sponsor_name} تقدم بهدية سخية لرعاية تعلّمك."
+  certificate_hour_of_code: ساعة البرمجة
   move_students:
     new_section_dne: عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال كود
       قسم مختلف.
@@ -1404,3 +1406,12 @@ ar:
   unit_prefix: وحدة %{n}
   code_org_logo_alt: الصفحة الرئيسية Code.org
   teacher_feedback: ملاحظات المعلمين
+  lesson_lock:
+    error:
+      no_updates: لا توجد تحديثات يمكن إجراؤها
+      missing_params: يجب توفير المستخدم والمستوى ومعرّفات الوحدات
+      cannot_view_locked_answers: لا يمكن مشاهدة الإجابات أثناء القفل
+      forbidden: 'لا يمكن للمستخدم تحديث حالة الطالب القابلة للقفل '
+  reset_predict_progress_button: حذف الإجابة
+  pixelation:
+    binary: ثنائي

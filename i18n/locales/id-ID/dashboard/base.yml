@@ -377,6 +377,7 @@ id:
       about: "Tentang"
       legal: "Privasi & Hukum"
       legal_privacy: "Kebijakan privasi"
+      legal_cookie_notice: "Informasi Cookie"
       legal_tos: "Ketentuan Layanan"
     user:
       classroom: 'Beranda guru'
@@ -552,6 +553,7 @@ id:
     choose_next_course: "Coba kursus Code Studio dengan memilih satu di bawah ini"
     print_certificate: "Cetak Sertifikat"
   certificate_sponsor_message: "%{sponsor_name} banyak memberikan sumbangan untuk mensponsori pembelajaran Anda."
+  certificate_hour_of_code: "Jam kode"
   move_students:
     new_section_dne: "Maaf, bagian %{new_section_code} tidak ada. Harap masukkan kode bagian yang berbeda."
     section_code_cant_be_current_section: "Bagian saat ini tidak boleh sama dengan bagian yang baru."
@@ -1147,3 +1149,12 @@ id:
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Home Code.org"
   teacher_feedback: "Umpan Balik Guru"
+  lesson_lock:
+    error:
+      no_updates: "Tidak ada pembaruan untuk dilakukan"
+      missing_params: "Harus menyertakan id pengguna, level, dan unit"
+      cannot_view_locked_answers: "Tidak dapat melihat jawaban saat terkunci"
+      forbidden: "Pengguna tidak dapat memperbarui status siswa yang dapat dikunci"
+  reset_predict_progress_button: "Hapus Jawaban"
+  pixelation:
+    binary: "Binary"

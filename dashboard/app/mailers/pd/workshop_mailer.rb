@@ -250,6 +250,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
       content_type = 'multipart/mixed'
     end
 
+    @enrollment.update!(survey_sent_at: Time.zone.now)
+
     mail content_type: content_type,
       from: from_survey,
       subject: "Help us improve Code.org #{@workshop.course} workshops!",

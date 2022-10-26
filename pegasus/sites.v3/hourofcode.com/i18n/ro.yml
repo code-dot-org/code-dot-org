@@ -6,8 +6,8 @@ ro:
   front_title: Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}
   coming_soon: În curând
   campaign_date_start_short: 5 decembrie
-  campaign_date_start_long: 6 decembrie
-  campaign_date_short: 5-11 decembrie
+  campaign_date_start_long: 5 decembrie
+  campaign_date_short: 5-11 dec.
   campaign_date_full: 5-11 decembrie
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 decembrie, 2022
@@ -35,6 +35,14 @@ ro:
   africa_campaign_date_full: 1 octombrie - 18 decembrie
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 octombrie, 2022 - 18 decembrie, 2022
+  hoc2022_header: Explorează, Joacă-Te, Creează!
+  social_hoc2022_explore_play_create: Utilizează informatica pentru a explora, a te
+    juca și a crea!
+  codeorg_homepage_hoc2022_body: Explorează universul, înscrie un gol, fă o mișcare
+    - există atât de multe moduri de a experimenta informatica.
+  hoc2022_codeorg_title: Sărbătorește Hour of Code cu NASA și mai mulți
+  hoc2022_codeorg_description: A zecea Hour of Code este în afara acestei lumi! Vino
+    să explorezi, să te joci și să creezi cu noi.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Învață astăzi, construiește un viitor mai bun.
@@ -511,6 +519,26 @@ ro:
   front_join_us_n_students_served: "# efectuate"
   front_join_us_challenge: Câștiga un chat video cu o celebritate pentru clasa ta!
   front_join_us_learn_more: Aflați mai multe
+  cta_see_whats_new: Vezi ce este nou
+  cta_try_more_activities: Încearcă mai multe activități
+  cta_try_an_activity: Încearcă o activitate
+  hoc_homepage_join_the_movement_heading: Alătură-te mișcării
+  hoc_homepage_join_the_movement_description: Hour of Code este disponibilă în tot
+    cursul anului, dar în fiecare an, în decembrie, cclasa ta se poate alătura milioanelor
+    de elevi din întreaga lume care sărbătoresc Săptămâna Educației în domeniul Informaticii  cu
+    Hour of Code. Înregistrarea pentru sărbătorirea anuală începe în luna octombrie
+    a fiecărui an.
+  hoc_homepage_what_is_hoc_subhead: Tutoriale de o oră în peste 45 de limbi. Nu este
+    necesară experiența. Activitățile Hour of Code sunt disponibile gratuit în tot
+    cursul anului.
+  hoc_homepage_what_is_hoc_description: Hour of Code este o introducere de o oră în
+    informatică, utilizând tutoriale distractive pentru a demonstra oricui că poate
+    învăța principiile fundamentale. Această campanie fundamentală este sprijinită
+    de peste 400 de parteneri și 200.000 de educatori din întreaga lume.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Citește ghidul nostru Cum-să]%{howto_guide_url}
+    pentru a planifica un eveniment pentru clasa ta."
+  hoc_homepage_highlights_heading: Puncte de atracție Hour of Code
+  hoc_homepage_organized_by: Hour of Code este organizat de [Code.org]%{codeorg_url}
   signup_closed: Înregistrarea pentru Hour of Code este închisă acum. Verificați din
     nou în luna Octombrie pentru a vă înscrie la următoarea Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The

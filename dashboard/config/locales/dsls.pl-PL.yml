@@ -6075,7 +6075,7 @@ pl-PL:
 
       courseF_variables_projects:
         description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historię
-          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swój projekt, przejdź
+          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swojego projektu, przejdź
           do \"Części 2\".
         display_name: Wybierz projekt
         teacher_markdown: |2-
@@ -6085,16 +6085,16 @@ pl-PL:
           Studenci mogą potrzebować naprawdę czytelnych instrukcji, aby zrozumieć jak poruszać się pośród możliwości wyboru. Dla każdego z wyborów w ramach projektu występują tutaj dwa podpoziomy. Na początek uczniowie powinni wybrać jeden z poziomów oznaczonych jako "Część 1". Po ukończeniu poziomu powinni oni powrócić tutaj i wybrać "Część 2" tego *samego* projektu. W ramach pierwszego poziomu uczniom zostaną zapewnione informacje zwrotne w trakcie łączenia ze sobą podstawowych elementów składowych projektu. Drugi poziom to "czas na zabawę", który jest przeznaczony do tego, by umożliwić uczniom dokonywanie wszelkich zmian w swoim kodzie, jaki chcą.
       courseF_variables_samples:
         description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historie
-          pustej przestrzeni. Zanim zaczniesz, zbadaj poniższe przykładowe projekty,
-          aby przekonać się czego tworzeniem się interesujesz. Wciśnij \"Koniec"\,
+          pustej przestrzeni. Zanim zaczniesz, przejrzyj poniższe przykładowe projekty,
+          aby przekonać się tworzeniem czego się interesujesz. Naciśnij \"Koniec"\,
           gdy będziesz gotowy do rozpoczęcia planowania swojego własnego programu.
         display_name: Eksploracja - Przykładowe programy
-        teacher_markdown: "Omówienie poziomu wyboru # W ramach poziomów wyboru oferuje
-          się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą
-          wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić
-          tyle, ile się chce. \n\nUczniowie powinni uważnie zapoznać się z tymi projektami
-          przed podjęciem decyzji, co chcą tworzyć. Można zapoznać się z nimi wspólnie,
-          jako klasa lub kazać uczniom zgłębiać je na własną rękę.\n"
+        teacher_markdown: "# Omówienie poziomu wyboru \nPoziomy wyboru oferują menu
+          dodatkowych poziomów do realizacji przez uczniów. Muszą oni wykonać przynajmniej
+          jeden z podpoziomów tutaj, ale mogą przerobić tyle, ile się chce. \n\nUczniowie
+          powinni uważnie zapoznać się z tymi projektami przed podjęciem decyzji,
+          co chcą tworzyć. Mogą zapoznać się z nimi wspólnie, jako klasa lub kazać
+          uczniom zgłębiać je na własną rękę.\n"
       SimonSays-Unplugged_2021:
         markdown: |-
           # Podążaj za algorytmem
@@ -13754,20 +13754,12 @@ pl-PL:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombie przejdzie odpowiednią ścieżką i kończy na tym, że chodzi bez
-            końca tam i z powrotem.
-          correct: true
+        - correct: true
           feedback: Poprawnie!
         - text: Zombie dotrze do słonecznika.
-          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
-            tym, że chodzi bez końca tam i z powrotem.
         - text: Zombie skręci w prawo na pierwszej ścieżce i cały czas będzie chodził
             w kółko.
-          feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
-            tym, że chodzi bez końca tam i z powrotem.
         - text: Zombie utknie na końcu ścieżki wiodącej do przodu.
-          feedback: W ramach tego kodu Zombie przejdzie odpowiednią ścieżką i kończy
-            na tym, że chodzi bez końca tam i z powrotem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseD_multi_maze_until2_predict12022:
@@ -14003,13 +13995,13 @@ pl-PL:
             prognozy: Co się stanie po udzieleniu odpowiedzi na pytanie?'
       courseF_variables_projects2022_2022_pilot_-2022-2:
         description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historię
-          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swój projekt, przejdź
+          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swojego projektu, przejdź
           do \"Części 2\".
         display_name: Wybierz projekt
       courseF_variables_samples2022_2022_pilot_-2022-2:
         description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historie
-          pustej przestrzeni. Zanim zaczniesz, zbadaj poniższe przykładowe projekty,
-          aby przekonać się czego tworzeniem się interesujesz. Wciśnij \"Koniec"\,
+          pustej przestrzeni. Zanim zaczniesz, przejrzyj poniższe przykładowe projekty,
+          aby przekonać się tworzeniem czego się interesujesz. Naciśnij \"Koniec"\,
           gdy będziesz gotowy do rozpoczęcia planowania swojego własnego programu.
         display_name: Eksploracja - Przykładowe programy
       courseF_variables_stop2022_2022_pilot_-2022-2:

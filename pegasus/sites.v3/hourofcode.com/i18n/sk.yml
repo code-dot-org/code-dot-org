@@ -35,6 +35,14 @@ sk:
   africa_campaign_date_full: 1. - 31. október
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. - 31. október 2020
+  hoc2022_header: Skúmajte, hrajte sa, tvorte!
+  social_hoc2022_explore_play_create: Využite informatiku na objavovanie, hranie sa
+    a tvorenie!
+  codeorg_homepage_hoc2022_body: Skúmajte vesmír, streľte gól, prelomte pohyb – existuje
+    veľ spôsobov, ako vyskúšať informatiku.
+  hoc2022_codeorg_title: Oslávte Hodinu kódu s NASA atď.
+  hoc2022_codeorg_description: 10. verzia Hodiny kódu je úžasná! Poďte s nami objavovať,
+    hrať sa a tvoriť.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: 'Uč sa už dnes a vytvor lepší zajtrajšok. '
@@ -490,6 +498,25 @@ sk:
   front_join_us_n_students_served: "# ľudí si to už vyskúšalo."
   front_join_us_challenge: Vyhrajte video konferenciu s celebritou pre celú Vašu triedu!
   front_join_us_learn_more: Viac info
+  cta_see_whats_new: Zobraziť novinky
+  cta_try_more_activities: Vyskúšajte ďalšie aktivity
+  cta_try_an_activity: Vyskúšajte aktivitu
+  hoc_homepage_join_the_movement_heading: Pripojte sa k hnutiu
+  hoc_homepage_join_the_movement_description: Hodina kódu je k dispozícii po celý
+    rok, ale každý rok v decembri sa vaša trieda môže pripojiť k miliónom študentov
+    na celom svete, ktorí oslavujú Týždeň vzdelávania informatiky prostredníctvom
+    Hodiny kódu. Registrácia na výročnú oslavu začína každý rok v októbri.
+  hoc_homepage_what_is_hoc_subhead: Hodinové výukové programy vo viac ako 45 jazykoch.
+    Nie sú potrebné žiadne skúsenosti. Aktivity Hodiny kódu sú k dispozícii bezplatne
+    po celý rok.
+  hoc_homepage_what_is_hoc_description: Hodina kódu je 1-hodinový úvod do informatiky,
+    ktorý pomocou zábavných tutoriálov ukazuje, že základy sa môže naučiť každý. Túto
+    základnú kampaň podporuje viac ako 400 partnerov a 200 000 pedagógov po celom
+    svete.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Prečítajte si našu príručku na používanie](%{howto_guide_url}),
+    ak chcete naplánovať udalosť pre svoju triedu."
+  hoc_homepage_highlights_heading: 'Hlavné myšlienky Hodiny kódu  '
+  hoc_homepage_organized_by: Hodinu kódu organizuje [Code.org](%{codeorg_url}).
   signup_closed: Registrácia pre Hour of Code je nateraz uzavretá. Skontrolujte prosím
     znova v Októbri možnosť prihlásenia sa do ďalšej Hour of Code.
   signup_registration_not_required: Na zúčastnenie sa nemusíte registrovať! Aktivity

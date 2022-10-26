@@ -265,6 +265,31 @@
           "name": "Más de una Hora de Code",
           "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en persona.\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Preparando el terreno",
+          "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "\\_En esta actividad, te vas a divertir creando un mundo interactivo con divertidos personajes llamados sprites. Podrás hacer que los sprites digan cosas con viñetas de diálogo como las que verías en un cómic o novela gráfica, y aprenderás a hacer que respondan automáticamente cuando tú u otra persona haga clic sobre ellos.\n\n_Hoy escribirás \"código\", es decir, un conjunto de instrucciones que un ordenador puede entender. Cuando escribes una historia, tienes que pensar cuidadosamente en las palabras que utilizas. Cuando escribas un código, tendrás que pensar cuidadosamente en las instrucciones que le estás dando a tu ordenador._",
+          "tips": [
+            "Conviene dedicar muy poco tiempo a la introducción de la Hora del Código. Especialmente en el caso de los alumnos más jóvenes, lo mejor es empezar lo antes posible."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Apoyo General",
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflexión",
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Preparando el Terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _\"Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar antes del término \"código\"? ¿Qué significa?\"_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
@@ -660,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates?script=mc) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://studio.code.org/certificates/batch?course=bWM=) certificado con su nombre."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Siguientes Pasos",
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "\\*\\*Leer \"Blown to Bits\".\n\n-   Lee las páginas 165-169 de [Blown to Bits, capítulo 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Responde a las preguntas de la guía de lectura y de la hoja de trabajo [Guía de Lectura para el Cifrado](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Hoja de trabajo.\t\t\n\n**Más sobre Blown to Bits**\n\n-   Las primeras secciones del capítulo 5 de Blown to Bits hacen referencia a la importancia y las controversias que rodean a la encriptación tras el 11 de septiembre. Esta lectura puede ser una herramienta útil para seguir introduciendo el impacto de la criptografía en muchos aspectos de la vida moderna.\n\n-   Pide a los alumnos que revisen el historial de su navegación por Internet y calculen aproximadamente qué porcentaje realizan con la suposición de que es \"privada\". ¿Tienen alguna forma de estar seguros de que esto es así? ¿Hay algún sitio web que visiten en el que se sientan más seguros de la confidencialidad de su tráfico que en otros? ¿Están convencidos de ello?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Preparando el terreno",
+          "description": "Dales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "\\_En esta actividad, te vas a divertir creando un mundo interactivo con divertidos personajes llamados sprites. Podrás hacer que los sprites digan cosas con viñetas de diálogo como las que verías en un cómic o novela gráfica, y aprenderás a hacer que respondan automáticamente cuando tú u otra persona haga clic sobre ellos.\n\n_Hoy escribirás \"código\", es decir, un conjunto de instrucciones que un ordenador puede entender. Cuando escribes una historia, tienes que pensar cuidadosamente en las palabras que utilizas. Cuando escribas un código, tendrás que pensar cuidadosamente en las instrucciones que le estás dando a tu ordenador._",
+          "tips": [
+            "Conviene dedicar muy poco tiempo a la introducción de la Hora del Código. Especialmente en el caso de los alumnos más jóvenes, lo mejor es empezar lo antes posible."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Apoyo General",
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Hola Mundo",
+          "progression_name": "Hola Mundo"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflexión",
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Preparando el terreno",
@@ -1637,6 +1687,9 @@
         "4e14f7ca-7b1a-4769-ae57-9f128722a0dd": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "8e887047-0b51-46cf-8c62-4ef56d1b58c0": {
+          "progression_name": "Desafío/Práctica"
+        },
         "aa5e1de6-0f8d-4e95-82cc-da2f38e8a9ad": {
           "name": "Reflexión"
         },
@@ -1696,6 +1749,9 @@
         },
         "7e3632b0-108a-4179-adf0-89a8e204b031": {
           "progression_name": "Desarrollo de Habilidades"
+        },
+        "a0c3172d-bf7f-4842-b719-5c987d502489": {
+          "progression_name": "Desafío/Práctica"
         },
         "9280e14f-90c1-467a-ab01-b3a0d7d42415": {
           "name": "Reflexión"
@@ -2423,6 +2479,9 @@
         "56262489-b084-4a55-a4e2-b45138492e6c": {
           "progression_name": "Predicción"
         },
+        "9a30234f-6c15-4525-aa78-4b8905d29133": {
+          "progression_name": "Vídeo: Muchos Sprites"
+        },
         "e2e2e67f-7883-47c0-b018-118af90abc79": {
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -2465,14 +2524,26 @@
         "f621cd05-64b4-41d4-8c9a-b310731edecb": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "2203aacd-4e1b-4cb5-ab3e-b0b72011a6f9": {
+          "progression_name": "Exploración: Juego de Clicker"
+        },
+        "08684dd6-65f9-42b1-877a-05814f08c46c": {
+          "progression_name": "Mini-Proyecto: Juego de Clicker"
+        },
         "30357f1e-97b8-43b2-9fa9-edace8299c36": {
           "name": "Reflexionar"
         },
         "37214efe-4044-4968-8924-71472b1d2725": {
           "name": "Introducción"
         },
+        "229b6ed8-f28d-4d6b-98ea-39fe3ac44fab": {
+          "name": "Mini-Proyecto: Juego de Coleccionista"
+        },
         "22b7037c-93fc-4723-a172-22f1501dbf3b": {
           "progression_name": "Exploración: Ejemplos de Programas"
+        },
+        "61043979-dfcc-47f4-b882-94ea107cd123": {
+          "progression_name": "Mini-Proyecto: Juego de Coleccionista"
         },
         "0e088be7-4df3-4826-842b-2c6655bc02e9": {
           "name": "Presentación"
@@ -2525,14 +2596,23 @@
         "fc407406-3b2b-46cd-be85-000640f4f949": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "43ec708f-4fc2-467d-b096-303d4f897b68": {
+          "progression_name": "Vídeo: Simulador de Brote: Eventos"
+        },
         "21348baa-81f3-473d-a4d8-bfdef00cc99e": {
           "progression_name": "Desarrollo de Habilidades"
+        },
+        "29a7a268-d78c-4217-9c8e-42bd781dee2a": {
+          "progression_name": "Vídeo: Simulador de Brote: Pensando como un Científico"
         },
         "9456da46-d269-42c3-ab51-42e617b07542": {
           "progression_name": "Aprendiendo de las Simulaciones"
         },
         "7e9c17d4-3d1e-4a6c-a9ef-e1d09bfedee1": {
           "progression_name": "Miniproyecto: Simulador de Brotes"
+        },
+        "50845627-ac76-4f69-b95d-2e3718a6ed49": {
+          "progression_name": "Vídeo: Simulador de Brote: Juego Libre"
         },
         "40fc31a6-1dc5-41dd-88d1-80206579453f": {
           "progression_name": "Miniproyecto: Simulador de Brotes"
@@ -2762,13 +2842,20 @@
           "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
-          "name": "Hola Mundo"
+          "name": "Hola Mundo",
+          "progression_name": "Vídeo: Hola Mundo: Bienvenido a Laboratorio Sprite"
         },
         "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "0a9662e0-8661-4cfe-be3c-e5fe52ed582f": {
+          "progression_name": "Vídeo: Hola Mundo: Programación con Eventos"
+        },
         "0121aca1-bd15-436e-ac4d-5424f269e25a": {
           "progression_name": "Desarrollo de Habilidades"
+        },
+        "e1fbbc5b-976f-47d0-a9d6-749b9b3c916b": {
+          "progression_name": "Vídeo: Hola Mundo: Haz lo que quieras"
         },
         "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
           "progression_name": "Juego libre"
@@ -3320,7 +3407,8 @@
           "description": "En grupos pequeños, permite que los alumnos diseñen sus propios laberintos en papel y que desafíen a otros grupos a escribir programas para resolverlos. Para agregar diversión, haz laberintos en tamaño real con alumnos como el pájaro y el cerdo. "
         },
         "4709a0b0-10cf-444a-95c2-79194cef926d": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Vocabulario\n\nEsta lección tiene tres palabras de vocabulario nuevas e importantes:\n\n-   **Error** - _Dilo conmigo: E-rror._\n\nAlgo que va mal. Un error.\n\n-   **Depuración** - _Dilo conmigo: De-pu-ra-ción._\n\nEncontrar y corregir errores.\n\n-   **Perseverancia** - _Dilo conmigo: Per-se-ve-ran-cia._ \n\nNo rendirse. La perseverancia funciona mejor cuando se intentan las cosas de muchas maneras diferentes, muchas veces diferentes."
         },
         "cf252e6b-3a51-4e06-959e-e45d962462c4": {
           "description": "#### Depuración, Persistencia y Frustración\n\n**Debatir:** Prepara a los estudiantes para los ejercicios en línea de hoy preguntándoles qué harían si creyeran que tienen un error en su código. Más concretamente, ¿Qué se preguntarían? \n\n-   ¿Fue todo correcto en el primer paso?\n-   ¿Y el segundo? ¿Y el tercero?\n-   ¿Dónde se ha equivocado mi programa?\n-   ¿Qué me dice eso?\n\n**Estímulo:** **La depuración** puede ser frustrante. Pero la persistencia puede ayudarnos a superarlo. ¿Qué podemos hacer para persistir en la frustración? \n\nEjemplos de respuestas:\n\n-   Contar hasta 10\n-   Respirar profundamente\n-   Escribir un diario sobre los insectos que hemos encontrado\n-   Hablar con un compañero sobre los bichos\n-   Pedir ayuda\n\n**Transición:** Haz saber a tus alumnos que la frustración forma parte de la codificación. Todo el mundo tiene errores. No pasa nada si creen que tienen un error pero no pueden encontrarlo o arreglarlo de inmediato. Utilizar estrategias como las mencionadas anteriormente puede ayudarles a persistir en la frustración y a resolver cualquier problema."
@@ -3495,9 +3583,6 @@
           "tips": [
             "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, visualiza o muestra a la clase el vídeo \"Pausa y Piensa en Línea\"."
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Hemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. Estos niveles son opcionales para que los revises con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase. \n\n**Nivel de Predicción:** - [Curso B, Bucles en Artista](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Vídeo: El Artista en Code Studio"
@@ -4526,6 +4611,12 @@
         "93c42114-b7e6-4d21-9e93-0760e125a7b9": {
           "progression_name": "Desarrollo de Habilidades"
         },
+        "a88f91f8-569f-40db-a8f8-700323940f53": {
+          "progression_name": "Exploración: Juego de Clicker"
+        },
+        "92b27a47-c534-4671-afd1-23a3586897c9": {
+          "progression_name": "Mini-Proyecto: Juego de Clicker"
+        },
         "b8a87ad4-50ba-433f-8c86-27093af1fafd": {
           "name": "Reflexionar"
         },
@@ -5032,7 +5123,8 @@
           "progression_name": "Lecciones adicionales"
         },
         "dd1fd06b-92d8-4020-a58b-034802f65cc8": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto, puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso que les sirva para el futuro.\n\n\\*\\*Preguntas: \\*\\*\n\n-   ¿De qué ha tratado la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una de las [r feeling_faces/pre-express/2022] que muestre cómo te has sentido con la lección de hoy.\n-   Dibuja un evento que hayas utilizado hoy en tu programa.\n-   Imagina que tienes un robot con mando a distancia. ¿Qué aspecto tendría el mando a distancia? Haz un dibujo de lo que crees que podrías hacer con el robot."
         },
         "85a0391a-826e-4c1e-b208-5b9d7c82c65d": {
           "description": "Usa estas actividades para mejorar el aprendizaje del alumno. Se pueden usar como actividades al aire libre u otro tipo de enriquecimiento. \n\n**Mirar bajo la capucha**\n\nCuando compartes un enlace a tu historia, también compartes todo el código que va de fondo. Esta es una buena forma para que los alumnos aprendan de los demás. \n\n Publica enlaces para historias completas en línea. \n    \\-   ¡También inventa una historia para compartir! \n\n-   Cuando los alumnos suban un enlace, pídeles que hagan clic en el botón \"Cómo Funciona\" para ver el código que está detrás de la historia.\n-   Discutan como grupo las formas diferentes en que sus compañeros codificaron sus historias. \n    -   ¿Qué te sorprendió?\n    -   ¿Qué te gustaría intentar?\n-   Escoge la historia de alguien más y haz clic en `Remix` para construir desde ahí. (No te preocupes, la historia original será guardada)."
@@ -6120,6 +6212,9 @@
         "b8275a09-3de2-42a9-844f-0ac27f7ee3ea": {
           "progression_name": "Proyecto"
         },
+        "4b6c542e-6c02-498e-83bb-7f153f6f8eea": {
+          "progression_name": "Lección Extra"
+        },
         "e5d05d8d-961f-4885-b074-cfce5bb4f87d": {
           "name": "Presentación"
         },
@@ -6684,6 +6779,9 @@
             null
           ]
         },
+        "1892c7ae-6927-42df-a1ee-d590267476da": {
+          "progression_name": "Encuesta Final de la Unidad"
+        },
         "63bed78d-f5a0-44ae-8f02-99c0bb81ba05": {
           "name": "Prueba posterior al proyecto"
         },
@@ -6696,8 +6794,11 @@
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "description": "A lo largo del año, para que puedas ver el trabajo de los alumnos y para que éstos puedan acceder a las herramientas y recursos en línea, todos los alumnos deben estar en la misma sección en Code Studio. Para ver las evaluaciones y las claves de respuesta que Code.org proporciona, también es necesario ser un \"profesor verificado\".",
           "tips": [
-            null
+            "\\*\\*Videos de Como Hacerlo: \\*\\* Los siguientes pasos también se explican en una serie de [code\\_org\\_how-to\\_videos] que se ubiquen en Code.org’s “Teacher Support Website” (Centro de Soporte para los maestros página web). Puedes decidir mirar estés videos antes de leer las instrucciones de abajo. "
           ]
+        },
+        "17a885d7-d6e7-490e-8307-bc31c01b6e64": {
+          "description": "## Antes De Clase\n\n\\*\\*Como empezar en Code.org: \\*\\* Considera mirando nuestro [Getting Started with Code.org] \\(Empezando en Code.org) serié de videos para una descripción general de como navegar nuestros planes de lección, crear una sección de salón de clases, y otros aspectos importantes de la plataforma de Code.org. Cada video también tiene un artículo de soporte si prefieres leer o sacar copias de instrucciones. - [click here to learn more] \\(oprima aquí para aprender más.)\n\n\\*\\*Como Crear un Sección de salón de Clases: \\*\\* Tú puedes usar un Salón de Clases en Code.org para manejar tus estudiantes, ver su progreso, a asignar un curricular especifico - [click here to learn more] \\(Oprima aquí para aprender más.)"
         },
         "b0d9f9cb-d953-47a3-9e09-3dd5d822d198": {
           "description": "## Al comienzo de la clase\n\n1.  Haz que los alumnos creen una cuenta de Code Studio en <https://studio.code.org> si aún no la tienen.\n2.  Comparte la URL de la sección con los alumnos y diles que naveguen hasta ella para unirse a tu sección\n    -   Puedes confirmar que un estudiante se ha unido con éxito a tu sección teniendo abierta la página de progreso de la sección en la página de inicio del profesor y pulsando actualizar a medida que los estudiantes se unen. Los estudiantes deberían ver una pequeña barra verde en la parte superior de su página que dice 'Te has unido con éxito...' \n3.  Desde [studio.code.org](https://studio.code.org) haz que los estudiantes localicen el mosaico de Descubrimientos de la Informática y hagan clic en 'Ver curso', y luego vayan a la Unidad 1.\n\nUna vez que los estudiantes estén viendo la página de la Unidad 1, estarán listos para realizar la encuesta previa al curso de CSD"
@@ -6995,6 +7096,9 @@
         },
         "41238864-3441-4ea3-b685-06a5f1c6e877": {
           "description": "Como puedes ver, no siempre está claro si algo es un ordenador, e incluso los expertos tienen a veces diferentes puntos de vista. No obstante, veamos una definición que utilizaremos a lo largo de este curso."
+        },
+        "a1ff9435-c64d-47de-b80e-706e4d82d807": {
+          "description": "\\*\\*Demostración: \\*\\*” Mostrar [r what_is_a_computer/csd/2022]. (Que es una computadora). Este video también se encuentre en el Code.org sitio web, incluyendo un enlace alternativo para las escuelas que no permiten YouTube. Este video presenta una computadora como una máquina que ayuda con diferentes tipos de trabajo imaginativa can su manipulación de información. También puedes presentar esta definición como “una máquina que trabaja con información”. "
         },
         "59e91a3e-33a0-4f37-96d7-3c7ab5ca6e78": {
           "description": "**Preguntas para reflexionar con el vídeo**:\n\n-   ¿En qué se diferencian los ordenadores de las máquinas anteriores?",
@@ -7303,7 +7407,7 @@
         "79636d63-1378-4779-b0f6-c0e3d41dbaf6": {
           "description": "**Paso 1: Elegir un Compañero**: Coloca a los alumnos en parejas o grupos de tres.",
           "tips": [
-            null
+            "\\*\\*Creando Grupos: \\*\\* Idealmente, este proyecto se completa en parejas. Si se requiere, se pude hacen en grupos de tres. Debes decidir antes de empezar si prefieres asignar parejas o dejar que los estudiantes elijen con quien trabajan.\n\n\\*\\*Facilitando Proyectos de Equipó: \\*\\* Si los estudiantes están trabajando en parejas o en equipos para completar un proyecto, considera mostrar estes dos videos a tu clase:\n\n-   [How Teamwork Works] [0] \\(Como Funciona el Trabajo en Equipo)\n-   [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs) (Como Superar los Desacuerdos)\n\nDependiendo de tus metas con este proyecto, considera asignar los equipos a completar [Student Guide to Team Planning] [2] \\(Guía de estudiantes de Planear en equipo), que fortaleza los mensajes del video. "
           ]
         },
         "4ab37207-f96e-49e5-9f5a-cc547af387c2": {
@@ -7324,7 +7428,7 @@
         "7017d684-e823-4892-9211-ed75e4b20bfa": {
           "description": "**Paso 5: Tu Aplicación**: Una vez que los alumnos hayan definido su problema, pídeles que hablen de una aplicación que podría utilizarse para resolver su problema. Para empezar, solo tendrán que proporcionar una descripción de alto nivel de la aplicación que describa cómo la usaría un usuario y qué hace.",
           "tips": [
-            null
+            "\\*\\*Preparando los Proyectos de Estudiantes: \\*\\* Estudiantes pueden crear proyectos que se sobre extienden sus habilidades o que van a tardar más que el tiempo alotado para el proyecto. En ves de pidiendo que los estudiantes eligen otro proyecto, considera sugerir una versión similar pero menos complicado del proyecto que imaginaron. Como una analogía, pide a los estudiantes que intenten “caminar” antes de intentar “correr”. Si resulta que caminar es demasiado difícil, tal vez pide a los estudiantes que “gatean”\n\\*\\*Viajando más Profundo: \\*\\* A veces este se refiere como el Producto Mínimo Viable - Puedes aprender más sobre este proceso y adaptarlo a caber en tus estrategias de proyecto con leer este articulo: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) por Henrik Kniberg (Entiendo tú MVP)"
           ]
         },
         "27a2c29c-cace-4068-903c-fff92442c785": {
@@ -7342,7 +7446,8 @@
         },
         "3258b13a-0f05-4f62-bf07-38aca3a745db": {
           "name": "Reflexión",
-          "description": "**Pregunta del Día: ¿Cómo puede ayudarnos el modelo IOSP a diseñar una aplicación que resuelva un problema?**\n\n**Reflexión:** Los alumnos reflexionan sobre la siguiente pregunta en sus diarios: \n\n-   ¿De qué estás más orgullo en tu proyecto?\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta."
+          "description": "**Pregunta del Día: ¿Cómo puede ayudarnos el modelo IOSP a diseñar una aplicación que resuelva un problema?**\n\n**Reflexión:** Los alumnos reflexionan sobre la siguiente pregunta en sus diarios: \n\n-   ¿De qué estás más orgullo en tu proyecto?\n\nEnvía a los estudiantes a Code Studio para que completen su reflexión sobre sus actitudes hacia la informática.  Aunque sus respuestas son anónimas, los datos agregados estarán disponibles para tí una vez que al menos cinco estudiantes hayan completado la encuesta.",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "62bf93c9-f7ae-40b7-a515-4b81b83acee9": {
           "name": "Tanque de Tiburones",
@@ -9377,16 +9482,28 @@
           "name": "Diario",
           "description": "**Pregunta del Día:  ¿Cómo puede el proceso de resolución de problemas ayudar a los programadores a gestionar grandes proyectos?**\n\n**Sugerencia:** Antes de empezar a programar tu juego, tuviste que rellenar una guía de proyecto con un plan. ¿Cómo cambió la forma en que codificaste tu juego el hecho de tener un plan?  ¿Harás algo diferente cuando hagas el plan para tu proyecto final?"
         },
+        "0509f505-d74a-4025-ad66-4ae4d8cae406": {
+          "description": "**Sugerencia:** Hoy vas a empezar el proyecto final de la unidad, en el que vas a diseñar y codificar tu propio juego.  Antes de empezar, ¿cuáles son los tres conocimientos o cualidades que consideras más importantes para llevar a cabo este proyecto?"
+        },
         "e6250418-b491-436b-993c-02db6b0115bc": {
           "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir sus ideas.",
           "tips": [
-            null
+            "Este debate sirve para establecer normas culturales para el proyecto. Los estudiantes deberían esperar que el proyecto sea un desafío, pero que tendrán muchas oportunidades de perfeccionar su trabajo mientras trabajan juntos para aprender como grupo."
           ]
+        },
+        "3af87d73-aae4-46f1-bb0f-1c5f4e85ad46": {
+          "description": "Hay muchas prácticas que los programadores utilizan cuando trabajan en grandes proyectos. Mientras diseñas y construyes tu juego, intenta reflexionar sobre cómo utilizas las cinco prácticas de resolución de problemas, persistencia, comunicación, colaboración y creatividad."
+        },
+        "ccd6776a-0b7d-4008-8083-c6c0ade7e573": {
+          "description": "**Pregunta del Día: ¿Cómo pueden ayudar las cinco prácticas de la informática (resolución de problemas, persistencia, comunicación, colaboración y creatividad) a los programadores a completar grandes proyectos?**"
         },
         "4cedbe11-f01d-4877-8772-99baae5c7d46": {
           "tips": [
             null
           ]
+        },
+        "cd32a6fd-953a-44c7-a55a-4c8bbdda4db2": {
+          "name": "Revisión de la Guía de Proyecto"
         },
         "2f874f2f-5f9e-4d5a-a84f-61151378280c": {
           "tips": [
@@ -9429,7 +9546,8 @@
           "name": "Diario"
         },
         "574e77dd-d6f7-4d59-80db-f24e54851aa1": {
-          "name": "Reflexionar"
+          "name": "Reflexionar",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "324ed892-67b4-45b3-96d1-5e0ea6563e2e": {
           "name": "Prueba posterior al proyecto"
@@ -10795,7 +10913,8 @@
           "progression_name": "Incorporar los Comentarios"
         },
         "02053aac-92d9-4d70-a1fa-9e82cbb76686": {
-          "name": "Reflexionar: Reflexión final"
+          "name": "Reflexionar: Reflexión final",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "45d6560e-cf16-40cc-b076-b9f90a091668": {
           "name": "Configuración de la Exposición",
@@ -11339,6 +11458,9 @@
             null
           ]
         },
+        "17a2215c-52ce-485c-a518-493e2d778803": {
+          "progression_name": "Vídeo: Eventos en Laboratorio de Aplicaciones"
+        },
         "59bb3ddc-28e7-4257-9245-68d4d48bf3d2": {
           "name": "Sucesos en Laboratorio de Aplicaciones"
         },
@@ -11502,6 +11624,9 @@
             null
           ]
         },
+        "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b": {
+          "progression_name": "Encuesta Final de la Unidad"
+        },
         "4650c6de-71ab-47d0-bea2-61ff838fba65": {
           "name": "Prueba posterior al proyecto"
         },
@@ -11554,12 +11679,13 @@
         "29b1832f-4872-46da-a270-a41592f155ae": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Configuración"
         },
         "b7ad2587-c022-4e9e-8bcd-2e0d1b15e41f": {
           "tips": [
             null,
-            null
+            "Al pulsar el botón de la pantalla, el código encenderá un pequeño LED rojo cerca del conector USB del Circuit Playground. Es posible que los alumnos esperen que se encienda una de las luces LED más grandes, por lo que es posible que no se den cuenta inmediatamente del LED rojo más pequeño. "
           ],
           "progression_name": "Predecir"
         },
@@ -11571,7 +11697,7 @@
         },
         "a184074d-7a79-46a5-892f-8aeff5829c19": {
           "tips": [
-            null
+            "Este código utiliza el zumbador del Circuit Playground para crear un sonido. El primer número del bloque de frecuencias controla la nota del zumbador: los números bajos crean notas graves más bajas, y los números altos crean sonidos agudos de mayor frecuencia. Los estudiantes explorarán estas frecuencias en los próximos niveles"
           ],
           "progression_name": "Predecir"
         },
@@ -11613,7 +11739,7 @@
         },
         "c77e40a7-1e58-48b3-a333-c458c9983ef8": {
           "tips": [
-            null,
+            "Los alumnos están familiarizados con el Modo Diseño para configurar la interfaz de usuario de su aplicación, pero este nivel introduce cómo cambiar los elementos de diseño con código. Los alumnos pueden pasar el ratón por encima de los elementos para ver sus identificaciones y utilizarlas para hacer sus suposiciones. Cuando pulsen Ejecutar, el código se ejecutará lentamente y resaltará cada línea mientras se ejecuta para que los alumnos puedan ver paso a paso lo que hace cada línea. Esto puede ser útil a la hora de comentar su pronóstico y relacionar el resultado con líneas de código específicas.",
             null
           ],
           "progression_name": "Predecir"
@@ -11647,7 +11773,7 @@
         },
         "0570736b-7259-4187-8305-3dabf7ee65a8": {
           "tips": [
-            null
+            "Este código utiliza un evento para detectar la entrada del usuario, pero espera un evento en el Circuit Playground en lugar de la pantalla. Cuando los alumnos ejecuten el código, no ocurrirá nada hasta que pulsen el botón izquierdo del Circuit Playground. Una vez que lo hagan, el LED rojo se encenderá. Si las placas de los alumnos no funcionan, haz que [pulsen el botón de configuración](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) en la aplicación maker o que visiten <https://studio.code.org/maker/setup> en un Chromebook."
           ],
           "progression_name": "Predecir"
         },
@@ -11682,7 +11808,7 @@
         },
         "e9d45b03-0bff-41bc-9727-8e21f8f0256a": {
           "tips": [
-            null
+            "Los alumnos deben observar que los nombres de los bloques var (variable) se repiten en el código. Pueden adivinar que los números asignados a estos nombres en la parte superior serán sustituidos en la parte inferior del código. Aunque los alumnos no estén seguros del aspecto que tendrá la pantalla, pueden estar más seguros de que los rectángulos tendrán todos el mismo aspecto porque tienen la misma anchura y altura"
           ],
           "progression_name": "Predecir"
         },
@@ -11692,7 +11818,8 @@
         "a0f4ad44-579c-4404-8ba2-bcb19e459e0c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Variables"
         },
         "c8cebe3f-35da-44ac-9cc6-29190c5b6544": {
           "progression_name": "Desarrollo de Habilidades"
@@ -11700,7 +11827,8 @@
         "64e9d8c1-f351-4dec-b424-f4c03bd5324a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - El Patrón de Contador"
         },
         "99737e58-9db8-43d5-8437-03794c232a9c": {
           "progression_name": "Desarrollo de Habilidades"
@@ -11708,11 +11836,12 @@
         "314cd764-1846-45e2-951b-1fc00d8b5aed": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Sentencias If"
         },
         "c9fa6f0e-80c5-4009-b74a-8bc73095ecbe": {
           "tips": [
-            null
+            "Los alumnos deben notar que ambas sentencias `if` utilizan el valor 315, y algunos alumnos pueden utilizar el cursor del ratón para pasar por encima de la aplicación y notar que el 315 está cerca del horizonte creado por las colinas y los árboles. Los alumnos también deberían observar que el fondo cambia entre dos colores diferentes: naranja y gris. Conectando estas dos observaciones, los alumnos podrían predecir que esto cambiará cuando el \"sol se ponga\" detrás del horizonte, cambiando los colores entre el día (naranja) y la noche (gris)."
           ],
           "progression_name": "Predecir"
         },
@@ -11762,7 +11891,8 @@
           "name": "Code Studio",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Aplicación de Recolector de Campo"
         },
         "cdba4023-5235-4505-8c9e-903e45be9ca4": {
           "tips": [
@@ -11815,7 +11945,7 @@
         },
         "47cf28d0-a32f-46bb-89b5-c3488628a1fd": {
           "tips": [
-            null
+            "En este nivel se introducen dos nuevos bloques de código: `getProperty` y `getText`. Los alumnos se darán cuenta de que estos nuevos bloques se utilizan con variables y podrán suponer que se utilizan para obtener información del usuario en la pantalla. También pueden notar que hay nuevos elementos de diseño: entradas de texto, desplegables y deslizadores. Intenta que los alumnos se den cuenta de que las variables de `getText` y `getProperty` se vuelven a utilizar más adelante en el código para actualizar la pantalla mediante los bloques `setText` y `setProperty`."
           ],
           "progression_name": "Predecir"
         },
@@ -11847,7 +11977,7 @@
         },
         "a43fd1ca-e808-415f-8b73-ecc0caf330e2": {
           "tips": [
-            null
+            "Las respuestas de los alumnos pueden incluir:\n\n-   La pantalla está utilizando un menú desplegable y un bloque `getProperty` como entrada para comprobar si el LED debería parpadear o pulsar\n-   La pantalla utiliza una etiqueta y un bloque `setText` para mostrar si la luz está encendida o apagada\n-   El Circuit Playground utiliza los botones y un bloque `onBoardEvent` como entrada para encender o apagar las luces\n-   El Circuit Playground utiliza los bloques `colorLEDs` como salida para encender las luces\n\nLos alumnos también necesitarán sus Circuit Playground para este nivel. Si las placas de los alumnos no funcionan, pídeles que [pulsen el botón de configuración](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) en la aplicación maker o que visiten <https://studio.code.org/maker/setup> en un Chromebook."
           ],
           "progression_name": "Predecir"
         },
@@ -11908,7 +12038,8 @@
         "7757e358-925f-460e-8204-919de76b3d9f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Interacción entre Dispositivo y Persona"
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "Actividad de cierre"
@@ -11936,7 +12067,7 @@
         },
         "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c": {
           "tips": [
-            null
+            "Hay tres sensores en el Circuit Playground: un sensor de luz, un sensor de sonido y un sensor de temperatura. Anima a los alumnos a que relacionen los sensores con sus propios sentidos y a que interactúen con el Circuit Playground de esa manera; por ejemplo, ¿qué ocurre cuando mostramos u ocultamos cosas en el Circuit Playground? ¿Qué ocurre cuando el volumen cambia cerca del Circuit Playground?\n\nA través de la experimentación, los alumnos deberían notar que el valor mínimo es 0 y el máximo es 1023. Los estudiantes también pueden notar que un sensor (la temperatura) no parece cambiar mucho."
           ],
           "progression_name": "Predecir"
         },
@@ -11971,7 +12102,7 @@
         },
         "8fbee503-556a-40cd-be06-2fe300b09ef5": {
           "tips": [
-            null
+            "El acelerómetro tiene dos propiedades: el `balanceo` y el `cabeceo`. El `balanceo` corresponde a la inclinación hacia la izquierda y hacia la derecha, y el `cabeceo` corresponde a la inclinación hacia delante y hacia atrás. Los alumnos deberían darse cuenta de esto si sostienen su Circuit Playground a nivel del suelo con el cable USB apuntando en dirección contraria a ellos para que todas las letras aparezcan correctamente. Los alumnos también pueden experimentar con el movimiento de su Circuit Playground en el espacio físico, moviéndolo hacia arriba y hacia abajo o hacia la izquierda y la derecha, pero esto no afecta al acelerómetro. Sólo la rotación y la inclinación del Circuit Playground cambiarán el balanceo y el cabeceo."
           ],
           "progression_name": "Predecir"
         },
@@ -12001,23 +12132,27 @@
         },
         "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66": {
           "tips": [
-            null
+            "A los alumnos les costará predecir los resultados aquí, pero no pasa nada: es más importante que se den cuenta de que debe haber sonidos coincidentes entre los botones de la izquierda y los de la derecha. Cuando los alumnos ejecuten el código, pueden pulsar los botones varias veces para intentar encontrar los pares coincidentes. Deberían descubrir que los siguientes pares crean los mismos sonidos:\n\n-   261 \\<> C4\n-   329 \\<> E4\n-   493 \\<> B4\n-   392 \\<> G4\n\nComo los alumnos descubrirán pronto, estas frecuencias corresponden a notas musicales como las que podrían escuchar en un piano. Por ahora, deben salir de este nivel entendiendo que ciertas frecuencias corresponden a ciertas \"notas\"."
           ],
           "progression_name": "Predecir"
+        },
+        "3be863d9-6e87-48f3-a2ed-86a64ccc5ffa": {
+          "progression_name": "Investigar"
         },
         "ee143b4c-c0a3-41f2-a7ad-f6a9d17b1aa0": {
           "progression_name": "Desarrollo de Habilidades"
         },
         "c4228271-c5b7-4567-a23a-47389f925254": {
           "tips": [
-            null
+            "Este nivel introduce formalmente a los alumnos en los arrays, que son como listas. Los estudiantes ya han estado utilizando arrays sin darse cuenta - los [\\`colorLeds\\`(#f78183)](/docs/applab/colorLeds/) son un array de luces en el Circuit Playground. El array en este nivel funciona de forma similar a los colorLeds. Ayuda a los alumnos a fijarse en lo siguiente:\n\n-   Ambos arrays utilizan corchetes `[]` con números dentro para representar la posición en el array\n-   Ambos arrays parecen empezar por 0\n-   El array `notas` está definido en la parte superior del código con un bloque `var`, pero los `colorLED` no están definidos de ninguna manera\n\nLos alumnos aprenderán más sobre arrays en el vídeo de la próxima lección"
           ],
           "progression_name": "Predecir"
         },
         "11718267-5da6-4e25-9cf3-0782a3820c8d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Introducción a los Arrays"
         },
         "1789c265-b590-41c2-856d-381d22646c28": {
           "progression_name": "Desarrollo de Habilidades"
@@ -12049,28 +12184,30 @@
         },
         "5c0e38f9-bfaf-4555-8051-d867140232fc": {
           "tips": [
-            null
+            "Los alumnos pueden predecir que la pantalla se actualizará al pulsar los botones y que los colores del emoji y del fondo cambiarán. Pueden observar que `updateScreen()` aparece en tres lugares: dentro de los dos eventos de los botones, y como un bloque verde más grande en la parte inferior del código. No pasa nada si no están completamente seguros de cómo funciona el bloque verde, y pueden intentar describir lo que está ocurriendo relacionándolo con las variables: que una variable puede utilizarse en lugar de un valor, y que quizás `updateScreen()` se está utilizando como marcador de posición para el código en la parte inferior de la pantalla. Guía a los alumnos para que se den cuenta de que esto es útil porque el mismo código se puede utilizar en dos lugares diferentes (el botón izquierdo y el botón derecho).\n\nNo importa que no lleguen a una conclusión firme, ya que los alumnos verán un vídeo en el siguiente nivel que explica las funciones y cómo utilizarlas en el código."
           ],
           "progression_name": "Predecir"
         },
         "0cb8acf6-d4c7-4cc8-b550-fa53b04303f9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Funciones"
         },
         "ee36fb1a-c452-4da6-a983-33c5987f9085": {
           "progression_name": "Desarrollo de Habilidades"
         },
         "a37f0b1f-508e-4592-a58b-664fcefb22bf": {
           "tips": [
-            null
+            "Los alumnos deben observar que se utilizan los botones izquierdo y derecho, y que la función de la parte inferior utiliza el acelerómetro para mover algo en la pantalla. Los alumnos pueden predecir que la función cambia según el botón que se pulse: el botón izquierdo mueve el bicho morado y el derecho el naranja. Los alumnos también pueden observar que la función tiene una variable, \"bicho\", que se incluye en la parte superior de la función y se utiliza en todo momento. \n\nEn el siguiente nivel, los alumnos verán un vídeo en el que se describe cómo funcionan estas funciones y cómo `bicho` es un **parámetro** que se puede utilizar para cambiar el comportamiento de una función cuando se llama a la función, como mover el bicho naranja o el bicho morado."
           ],
           "progression_name": "Predecir"
         },
         "69fa3327-7be1-4285-859c-d2f87a36b550": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo - Parámetros"
         },
         "f0d4f74c-c410-4931-aef8-6438559f83a4": {
           "progression_name": "Desarrollo de Habilidades"
@@ -12118,7 +12255,8 @@
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Arte Interactivo"
         },
         "04f9d7e1-c590-4d22-ab74-069209762be4": {
           "name": "Reflexión"
@@ -12129,9 +12267,12 @@
             null
           ]
         },
+        "e64406a9-57fb-477d-bdc7-3921a12129cb": {
+          "progression_name": "Configuración"
+        },
         "f7118f4f-2fc6-430c-a803-09df0254c7dc": {
           "tips": [
-            null
+            "**Seguridad en el Aula:** Este nivel está diseñado a propósito para proporcionar una oportunidad de explicar la seguridad y las mejores prácticas con el manejo del Circuit Playground. Puedes decidir hacer hincapié en estos pasos con la clase como grupo completo y supervisar a los estudiantes mientras completan estos pasos durante este nivel. En general, los alumnos siempre deben reiniciar la aplicación y desconectarse del ordenador antes de realizar cualquier cambio en el cableado. De lo contrario, podrían destruir el LED o estropear la placa."
           ],
           "progression_name": "Predecir"
         },
@@ -12156,6 +12297,9 @@
             null
           ]
         },
+        "1fc60f0f-8066-4a49-86d7-2f3dda01d427": {
+          "progression_name": "Configuración"
+        },
         "5ef6b3a1-45cf-420c-9ba9-db06070441df": {
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -12172,6 +12316,7 @@
           "progression_name": "Desafío"
         },
         "b06fecf3-f666-4d47-97ed-0f43e2bd6781": {
+          "name": "Revisión de la Guía de Proyecto",
           "tips": [
             null
           ]
@@ -12213,6 +12358,9 @@
           "tips": [
             "**Celebrar:** Como este es el proyecto culminante de todo el curso, considera la posibilidad de hacerlo a lo grande. Invita a los padres y administradores, o incluso organiza un evento después de la escuela para proporcionar a los estudiantes una audiencia real para compartir sus logros."
           ]
+        },
+        "266e20ca-98da-4140-80a3-b88831c809bc": {
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "9d25bedc-e25e-4765-933d-124a5f27be74": {
           "name": "Prueba posterior al proyecto"
@@ -13003,7 +13151,8 @@
           "name": "Actividad de cierre"
         },
         "5d04c580-a932-46bd-86c4-649793eac948": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "progression_name": "Encuesta Final de la Unidad"
         },
         "d1b8559e-ee84-4203-bed9-7674842fb791": {
           "tips": [
@@ -24665,7 +24814,7 @@
         },
         "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
           "name": "Diario",
-          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [\\[cinco prácticas de  Descubrimientos CS\\]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
+          "description": "**Sugerencia:** Pide a tus alumnos que reflexionen sobre su desarrollo en las [[cinco prácticas de  Descubrimientos CS]](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/edit#heading=h.5u3d4jfozbgc) (Resolución de Problemas, Persistencia, Creatividad, Colaboración, Comunicación). Elige una de las siguientes indicaciones según consideres oportuno.\n\n-   Elige una de las cinco prácticas en las que crees que has demostrado crecimiento en esta lección. Escribe algo que hayas hecho que ejemplifique esta práctica.\n\n-   Elige una práctica en la que creas que puedes seguir creciendo. ¿Qué es lo que te gustaría hacer mejor?\n\n-   Elige una práctica que te haya parecido especialmente importante para la actividad que hemos realizado hoy. ¿Por qué era tan importante?"
         },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "name": "¿Qué hace un sensor?",
@@ -24810,6 +24959,7 @@
           ]
         },
         "0516be14-10b2-4124-af7c-3d76c5177d95": {
+          "name": "Revisión de la Guía de Proyecto",
           "description": "**Agrupa:** Coloca a los alumnos en grupos de 2 a 4 para este proyecto. A tu criterio, puedes elegir que los estudiantes formen grupos más grandes o que trabajen de forma independiente.\n\n**Distribuye:** Proporciona una copia de la guía del proyecto a cada grupo. Como clase, revisa los diferentes pasos del proyecto y dónde aparecen en la guía del proyecto. \n\nDistribuye la rúbrica o la lista de control del estudiante a cada uno de ellos. Pídeles que revisen este recurso para que sepan desde el principio qué componentes del proyecto se van a buscar.",
           "tips": [
             "**Rúbrica y Lista de Control:** Los alumnos disponen de dos recursos que pueden utilizar para la autorreflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de control del alumno. Recomendamos que los alumnos utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de digerir y comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos. Puedes ver ejemplos de esto con el recurso Ejemplo de Rúbricas Marcadas en la parte superior del plan de la lección (sólo visible para los profesores verificados)"
@@ -27023,11 +27173,24 @@
         "a22e920a-3ad4-4eb0-b23f-103e34360b9a": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**¡Atención, profesores!** Si estás enseñando virtualmente o en un aula socialmente distante, por favor, [pulsa aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que se pueden utilizar durante esta lección."
         },
+        "5e38fc68-1d2b-4450-9d26-d14a3f268071": {
+          "description": "**Sugerencia:** Hoy vas a empezar el proyecto final de la unidad, en el que vas a diseñar y codificar tu propio juego.  Antes de empezar, ¿cuáles son los tres conocimientos o cualidades que consideras más importantes para llevar a cabo este proyecto?"
+        },
         "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
           "description": "\\*\\* Compartir:\\*\\* Permite a los estudiantes compartir sus ideas.",
           "tips": [
-            null
+            "Este debate sirve para establecer normas culturales para el proyecto. Los estudiantes deberían esperar que el proyecto sea un desafío, pero que tendrán muchas oportunidades de perfeccionar su trabajo mientras trabajan juntos para aprender como grupo."
           ]
+        },
+        "25a1d621-fb10-476d-b2b8-70684b8b2808": {
+          "description": "Hay muchas prácticas que los programadores utilizan cuando trabajan en grandes proyectos. Mientras diseñas y construyes tu juego, intenta reflexionar sobre cómo utilizas las cinco prácticas de resolución de problemas, persistencia, comunicación, colaboración y creatividad."
+        },
+        "1ed1c68e-f08b-4df6-b7f0-8abefe3db57a": {
+          "description": "**Pregunta del Día: ¿Cómo pueden ayudar las cinco prácticas de la informática (resolución de problemas, persistencia, comunicación, colaboración y creatividad) a los programadores a completar grandes proyectos?**"
+        },
+        "c579d4e4-c215-4c83-9db5-55fb3853a960": {
+          "name": "Revisión de la Guía de Proyecto",
+          "description": "**Agrupar:** Este proyecto puede completarse individualmente o en parejas. A tu criterio, puedes optar por que los alumnos formen también grupos más grandes.\n\n**Distribuir:** Cada estudiante o grupo de estudiantes debe recibir una copia de la guía del proyecto. Como clase, revisa los diferentes pasos del proyecto y dónde aparecen en la guía del proyecto.\n\n**Distribuir:** Dar a cada estudiante una copia de la rúbrica o lista de control del estudiante para que sepan desde el principio qué componentes del proyecto se van a buscar."
         },
         "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
           "progression_name": "Ejemplos de Juegos"

@@ -452,6 +452,7 @@ it:
       about: Informazioni
       legal: Privacy & Legale
       legal_privacy: Informativa sulla privacy
+      legal_cookie_notice: Informativa sui cookie
       legal_tos: Termini di servizio
     user:
       classroom: Cruscotto di Controllo dell'insegnante
@@ -672,6 +673,7 @@ it:
     print_certificate: Stampa l'attestato
   certificate_sponsor_message: "%{sponsor_name} ha fatto il generoso dono di sponsorizzare
     il tuo apprendimento."
+  certificate_hour_of_code: L'Ora del Codice
   move_students:
     new_section_dne: Ci dispiace, la classe col codice %{new_section_code} non esiste.
       Inserisci un codice di classe esistente.
@@ -1458,3 +1460,12 @@ it:
   unit_prefix: Unità %{n}
   code_org_logo_alt: Code.org Home
   teacher_feedback: Commento dell'insegnante
+  lesson_lock:
+    error:
+      no_updates: Nessun aggiornamento da effettuare
+      missing_params: È necessario fornite gli ID utente, livello e unità
+      cannot_view_locked_answers: Impossibile visualizzare le risposte se bloccato
+      forbidden: L'utente non può aggiornare lo stato bloccabile dello studente
+  reset_predict_progress_button: Eliminare la risposta
+  pixelation:
+    binary: Binario
