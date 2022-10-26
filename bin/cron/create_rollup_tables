@@ -142,16 +142,8 @@ def main
   end
 
   Pd::Application::ApplicationBase.find_each do |application|
-    log_json = application.status_timestamp_change_log
-    next unless log_json
-    JSON.parse(log_json).each_with_index do |log_entry, i|
-      pd_application_statuses << {
-        pd_application_id: application.id,
-        status: log_entry['title'],
-        timestamp: Time.parse(log_entry['time']).gmtime.strftime('%Y-%m-%d %H:%M:%S'),
-        position: i
-      }
-    end
+    row_hashes = get_pd_applications_status_log_row_hashes(application)
+    pd_application_statuses.push(*row_hashes)
   end
 
   # Verify that the data size is sensible.
@@ -274,6 +266,22 @@ def level_sources_multi_types_row(row_hash)
       #{row_hash[:hidden]}
     )
   ROW
+end
+
+def get_pd_applications_status_log_row_hashes(application)
+  row_hashes = []
+  log_json = application.status_timestamp_change_log
+  if log_json
+    JSON.parse(log_json).each_with_index do |log_entry, i|
+      row_hashes << {
+        pd_application_id: application.id,
+        status: log_entry['title'],
+        timestamp: Time.parse(log_entry['time']).gmtime.strftime('%Y-%m-%d %H:%M:%S'),
+        position: i
+      }
+    end
+  end
+  row_hashes
 end
 
 def pd_applications_status_logs_row(row_hash)
