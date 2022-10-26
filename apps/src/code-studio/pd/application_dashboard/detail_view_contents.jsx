@@ -1016,7 +1016,6 @@ export class DetailViewContents extends React.Component {
                       // For most fields, render them only when they have values.
                       // For explicitly listed fields, render them regardless of their values.
                       (this.props.applicationData.form_data[key] ||
-                        key === 'csTotalCourseHours' ||
                         key === 'alternateEmail' ||
                         header ===
                           'schoolStatsAndPrincipalApprovalSection') && (

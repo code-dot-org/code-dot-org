@@ -225,7 +225,6 @@ const AboutYou = props => {
           <LabeledSelect name="state" placeholder="Select a state" />
           <LabeledInput name="zipCode" />
 
-          <LabeledCheckBoxes name="previousUsedCurriculum" />
           <LabeledCheckBoxes name="previousYearlongCdoPd" />
           <LabeledRadioButtonsWithAdditionalTextFields
             name="currentRole"
@@ -292,6 +291,7 @@ const AboutYou = props => {
             // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
             // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
           }
+          <LabeledInput name="principalRole" autoComplete="never" />
           <LabeledInput name="principalFirstName" autoComplete="never" />
           <LabeledInput name="principalLastName" autoComplete="never" />
           <LabeledInput name="principalEmail" autoComplete="never" />
