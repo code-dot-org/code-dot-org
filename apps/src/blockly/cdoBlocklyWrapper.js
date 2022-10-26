@@ -80,7 +80,7 @@ function getFieldInputChangeHandler(type) {
     const min = parseFloat(clampedNumberMatch[1]);
     const max = parseFloat(clampedNumberMatch[2]);
     return Blockly.FieldTextInput.clampedNumberValidator(min, max);
-  } else if ('Number' === type) {
+  } else if (type === Blockly.BlockValueType.NUMBER) {
     return Blockly.FieldTextInput.numberValidator;
   } else {
     return undefined;
