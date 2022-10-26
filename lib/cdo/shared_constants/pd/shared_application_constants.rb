@@ -4,7 +4,6 @@ module Pd
     # the current application year on both sides.
     APPLICATION_TYPES = [
       TEACHER_APPLICATION = 'Teacher'.freeze,
-      FACILITATOR_APPLICATION = 'Facilitator'.freeze,
       PRINCIPAL_APPROVAL_APPLICATION = 'Principal Approval'.freeze
     ].freeze
 
