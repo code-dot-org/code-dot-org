@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# This script assigns default workshops to teacher applications
+# This script assigns default workshops to teacher and facilitator applications
 # including fit workshops for facilitators, only when none is already assigned.
 # This is idempotent and safe to run multiple times
 
