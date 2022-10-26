@@ -162,6 +162,7 @@ exports.isAndroid = function() {
 };
 
 exports.isIOS = function() {
+  // currently unused in this PR, but added in case we want to scope to iOS only
   // check out userAgent for iPad version 13+
   return (
     [

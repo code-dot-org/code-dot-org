@@ -1,10 +1,10 @@
-// NOTE: This works
-// I manually commented out this line in the dance-party repo
+// NOTE: In order for this to work,
+// I manually commented out the following line in the dance-party repo
 // in order to stop resetting sprite loading state every time the
 // reset button is clicked.
 // https://github.com/code-dot-org/dance-party/blob/6672bdb0cffad1cbfda6e7396155f542b6cdcffe/src/p5.dance.js#L256
 // This should be ok now that we are checking that all sprites are loaded
-// when the page loads, and any time a student changes sometihng in the workspace.
+// when the page loads, and any time a student changes something in the workspace.
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -231,6 +231,7 @@ Dance.prototype.initSongs = async function(config) {
   getStore().dispatch(setSongData(songData));
 
   this.unregisterSetupEvent('songLoaded');
+  // need to confirm 'this' is bound correctly in registerSetupEvent callback
   loadSong(
     selectedSong,
     songData,
@@ -255,7 +256,6 @@ Dance.prototype.initSongs = async function(config) {
   );
 
   this.updateSongMetadata(selectedSong);
-  // this.songMetadataPromise.then(onLoadMetadataCallback);
 
   if (config.channel) {
     // Ensure that the selected song will be stored in the project the first
@@ -777,7 +777,6 @@ Dance.prototype.registerSetupEvent = function(event) {
   this.setRunButtonState();
 };
 
-// unregister on song change
 Dance.prototype.unregisterSetupEvent = function(event) {
   const index = this.setupEvents?.indexOf(event);
   if (index > -1) {
@@ -788,6 +787,7 @@ Dance.prototype.unregisterSetupEvent = function(event) {
   this.setRunButtonState();
 };
 
+// to do: keep track of different setup events in an object rather than an array
 Dance.prototype.setRunButtonState = function() {
   this.getRunButton().disabled = !(
     this.setupEvents.includes('danceApiReady') &&

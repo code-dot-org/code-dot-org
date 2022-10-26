@@ -106,8 +106,6 @@ Sound.prototype.play = function(options) {
   this.audioElement.addEventListener('abort', unregisterAndCallback);
   this.audioElement.addEventListener('ended', unregisterAndCallback);
   this.audioElement.addEventListener('pause', unregisterAndCallback);
-  // see if we can figure out where this is being called from
-  // does it come from the canplaythrough callback? I think not, but that's the basis of all the work i've been doing...
   this.audioElement.play();
   this.handlePlayStarted(options);
 };
@@ -412,8 +410,6 @@ Sound.prototype.preloadAudioElement = function(audioElement) {
   // Fire onLoad as soon as enough of the sound is loaded to play it
   // all the way through.
   var loadEventName = 'canplaythrough';
-  // Am i wrong that maybe this has nothing to do with it?
-  // check out playSound in audioApi
   var eventListener = function() {
     this.onSoundLoaded();
     audioElement.removeEventListener(loadEventName, eventListener);
