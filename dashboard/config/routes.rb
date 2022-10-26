@@ -660,8 +660,6 @@ Dashboard::Application.routes.draw do
         post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions'
 
         namespace :application do
-          post :facilitator, to: 'facilitator_applications#create'
-
           resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
             member do
               post :send_principal_approval
@@ -741,7 +739,6 @@ Dashboard::Application.routes.draw do
           constraints: {agenda: /(module\/[0-9_]+)|(in_person)/}
 
       namespace :application do
-        get 'facilitator', to: 'facilitator_application#new'
         get 'teacher', to: 'teacher_application#new'
         get 'principal_approval/:application_guid', to: 'principal_approval_application#new', as: 'principal_approval'
       end
