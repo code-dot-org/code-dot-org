@@ -76,8 +76,8 @@
   .clear
   %h2= I18n.t(:hoc2020_mc_available_mee)
 
-  = view :minecraft_2021_promo
-  = view :minecraft_2021_promo_older
+  = view :minecraft_2022_promo
+  = view :minecraft_2022_promo_older
 
   %div{style: "clear: both; margin-top: 45px;"}
 
@@ -91,9 +91,9 @@
           %img.tutorial-tile-img{src: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg")}
         .tutorial-info
           %h3{style: "margin-top: 0px;"}= I18n.t(:hoc2018_mc_educators_box3_title)
-          .smalltext= I18n.t(:hoc2018_mc_educators_box3_desc)
+          .smalltext= I18n.t(:hoc2022_mc_educators_box3_desc_markdown, markdown: :inline)
           %a{href: "https://www.microsoft.com/en-us/store/locations/events-for-students", target: '_blank'}
-            %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2018_mc_educators_box3_button)
+            %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2022_mc_educators_box3_button)
           .clear
 
     .col-50
@@ -102,9 +102,9 @@
           %img.tutorial-tile-img{src: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small2.jpg")}
         .tutorial-info
           %h3{style: "margin-top: 0px;"}= I18n.t(:hoc2018_mc_educators_box4_title)
-          .smalltext= I18n.t(:hoc2018_mc_educators_box4_desc)
+          .smalltext= I18n.t(:hoc2022_mc_educators_box4_desc)
           %a{href: "https://www.microsoft.com/digitalskills", target: '_blank'}
-            %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2018_mc_educators_box4_button)
+            %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2022_mc_educators_box4_button)
           .clear
 
   .clear
