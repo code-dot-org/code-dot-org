@@ -104,15 +104,6 @@ module Api::V1::Pd
       end
     end
 
-    # GET /api/v1/pd/applications/fit_cohort
-    def fit_cohort
-      serialized_fit_cohort = FACILITATOR_APPLICATION_CLASS.fit_cohort(@applications).map do |application|
-        FitCohortViewSerializer.new(application, scope: {view: 'fit'}).attributes
-      end
-
-      render json: serialized_fit_cohort
-    end
-
     # PATCH /api/v1/pd/applications/1
     def update
       application_data = application_params.to_h

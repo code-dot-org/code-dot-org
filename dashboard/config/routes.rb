@@ -676,7 +676,6 @@ Dashboard::Application.routes.draw do
             get :quick_view
             get :cohort_view
             get :search
-            get :fit_cohort
           end
         end
 

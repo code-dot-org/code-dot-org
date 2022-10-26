@@ -1195,34 +1195,6 @@ module Api::V1::Pd
       assert_equal expected_headers.length, response_csv.second.length
     end
 
-    test 'fit_cohort' do
-      fit_workshop = create :fit_workshop
-
-      # create some applications to be included in fit_cohort
-      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :accepted
-      create FACILITATOR_APPLICATION_FACTORY, :locked, fit_workshop_id: fit_workshop.id, status: :withdrawn
-      # no workshop
-      create FACILITATOR_APPLICATION_FACTORY, :locked, status: :accepted
-
-      # create some applications that won't be included in fit_cohort
-      # not locked
-      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :accepted
-
-      # not accepted or withdrawn
-      create FACILITATOR_APPLICATION_FACTORY, fit_workshop_id: fit_workshop.id, status: :waitlisted
-
-      sign_in @workshop_admin
-
-      get :fit_cohort
-      assert_response :success
-
-      result = JSON.parse response.body
-      actual_applications = result.map {|a| a["id"]}
-      expected_applications = FACILITATOR_APPLICATION_CLASS.fit_cohort.map(&:id)
-
-      assert_equal expected_applications, actual_applications
-    end
-
     test 'search finds applications by email for workshop admins' do
       sign_in @workshop_admin
       get :search, params: {email: @csd_teacher_application.user.email}
