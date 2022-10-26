@@ -31,43 +31,4 @@ def update_teacher_application_workshops
   puts counts.inspect
 end
 
-def update_facilitator_application_workshops
-  puts "Updating facilitator application workshops..."
-
-  counts = {
-    pd_skipped: 0,
-    pd_updated: 0,
-    no_pd_workshop: 0,
-    fit_skipped: 0,
-    fit_updated: 0,
-    no_fit_workshop: 0
-  }
-  Pd::Application::Facilitator1819Application.find_each do |facilitator_application|
-    if facilitator_application.pd_workshop_id
-      counts[:pd_skipped] += 1
-    else
-      facilitator_application.assign_default_workshop!
-      if facilitator_application.pd_workshop_id
-        counts[:pd_updated] += 1
-      else
-        counts[:no_pd_workshop] += 1
-      end
-    end
-
-    if facilitator_application.fit_workshop_id
-      counts[:fit_skipped] += 1
-    else
-      facilitator_application.assign_default_fit_workshop!
-      if facilitator_application.fit_workshop_id
-        counts[:fit_updated] += 1
-      else
-        counts[:no_fit_workshop] += 1
-      end
-    end
-  end
-
-  puts counts.inspect
-end
-
 update_teacher_application_workshops
-update_facilitator_application_workshops
