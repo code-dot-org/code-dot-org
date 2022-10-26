@@ -9,6 +9,7 @@ import {toggleHiddenLesson} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import _ from 'lodash';
 import style from './bulk-lesson-visibility-toggle.module.scss';
+import i18n from '@cdo/locale';
 
 function BulkLessonVisibilityToggle({lessons, sectionId, scriptName}) {
   const tooltipId = _.uniqueId();
@@ -16,7 +17,7 @@ function BulkLessonVisibilityToggle({lessons, sectionId, scriptName}) {
   return (
     <div className={style.container}>
       <Button
-        text="Show All Lessons"
+        text={i18n.showAllLessons()}
         icon="eye"
         color={Button.ButtonColor.gray}
         onClick={() =>
@@ -24,7 +25,7 @@ function BulkLessonVisibilityToggle({lessons, sectionId, scriptName}) {
         }
       />
       <Button
-        text="Hide All Lessons"
+        text={i18n.hideAllLessons()}
         icon="eye-slash"
         color={Button.ButtonColor.gray}
         onClick={() =>
@@ -35,9 +36,7 @@ function BulkLessonVisibilityToggle({lessons, sectionId, scriptName}) {
         <FontAwesome icon="info-circle" className={style.infoTipIcon} />
       </span>
       <ReactTooltip id={tooltipId} effect="solid">
-        <p>
-          Make all lessons in this Unit visible or hidden for your students.
-        </p>
+        <p>{i18n.bulkLessonVisibilityToggleTip()}</p>
       </ReactTooltip>
     </div>
   );
