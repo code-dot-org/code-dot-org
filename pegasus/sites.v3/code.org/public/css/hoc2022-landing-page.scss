@@ -21,7 +21,12 @@ header {
   background: url("/images/hoc2022-landing-page-banner-bg.png") no-repeat center center;
   background-size: cover;
   position: relative;
+  overflow: hidden;
   text-shadow: 0px 0px 8px #5d1582;
+
+  @media screen and (max-width: $width-md) {
+    padding: 3.5em 1em;
+  }
 
   @media screen and (max-width: $width-sm) {
     background: url("/images/hoc2022-landing-page-banner-bg-mobile.png") no-repeat bottom center;
@@ -32,6 +37,18 @@ header {
     z-index: 1;
     position: relative;
     margin: unset;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 88%;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   img {
@@ -48,7 +65,7 @@ header {
       left: 0;
 
       @media screen and (max-width: $width-lg) {
-        left: -60px;
+        left: -62px;
       }
     }
 
@@ -56,7 +73,7 @@ header {
       right: 0;
 
       @media screen and (max-width: $width-lg) {
-        right: -38px;
+        right: -48px;
       }
     }
   }
@@ -71,6 +88,11 @@ header {
 
     @media screen and (max-width: $width-lg) {
       font-size: 3.5em;
+    }
+
+    @media screen and (max-width: $width-lg) {
+      font-size: 4.5em !important; // overrides brstrap.css
+      margin: 0.25em auto -0.25em !important; // overrides brstrap.css
     }
   }
 
@@ -88,6 +110,10 @@ header {
     align-items: center;
     max-width: 380px;
     margin: 0 auto;
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: space-evenly;
+    }
 
     li {
       list-style: none;
@@ -124,6 +150,10 @@ main {
     background-color: $background_gray;
     margin: 4em auto -2em;
     padding: 2em;
+
+    @media screen and (max-width: $width-md) {
+      width: 90%;
+    }
   }
 
   hr {
@@ -134,8 +164,18 @@ main {
   section {
     padding: 6em 1em;
 
+    &.play .top-wrapper {
+      @media screen and (max-width: $width-md) {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
     &:last-child {
       padding-bottom: 1em;
+
+      @media screen and (max-width: $width-md) {
+        margin-bottom: 4em;
+      }
     }
 
     &:nth-of-type(2) {
@@ -145,6 +185,14 @@ main {
     .wrapper {
       max-width: 970px;
       margin: 0 auto;
+
+      @media screen and (max-width: $width-md) {
+        padding: 0 5em;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        padding: 0;
+      }
     }
 
     .top-wrapper {
@@ -156,6 +204,16 @@ main {
       & > div {
         text-align: center;
         width: 33%;
+
+        @media screen and (max-width: $width-md) {
+          width: 50%;
+          margin: 0 auto 2em;
+        }
+
+        @media screen and (max-width: $width-sm) {
+          width: 100%;
+          margin: 0 auto 2em;
+        }
 
         i {
           font-size: 3em;
@@ -172,12 +230,30 @@ main {
         }
       }
 
-      iframe {
-        width: 500px;
-        height: 281px;
+      figure {
+        max-width: 500px;
+        max-height: auto;
+        width: 100%;
 
-        &.has-border {
-          border: 1px solid $lighter_gray;
+        & > div {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          padding-top: 56.25%;
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+
+            &.has-border {
+              border: 1px solid $lighter_gray;
+            }
+          }
         }
       }
     }
