@@ -6995,7 +6995,7 @@
   tutorial_creaticodescratch_string_detail_platforms: ""
   tutorial_bbsierpinski_string_detail_platforms: ""
   tutorial_bbstopwatch_string_detail_platforms: ""
-  tutorial_idrpatterns_string_detail_platforms: " "
+  tutorial_idrpatterns_string_detail_platforms: ""
   tutorial_idrshapes_string_detail_platforms: ""
   tutorial_edisondetect_string_detail_platforms: "Edison Robot"
   tutorial_edisonmusical_string_detail_platforms: "Edison Robot"
