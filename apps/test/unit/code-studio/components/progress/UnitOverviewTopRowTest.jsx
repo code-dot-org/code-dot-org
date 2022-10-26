@@ -139,20 +139,12 @@ describe('UnitOverviewTopRow', () => {
 
     expect(
       wrapper.containsMatchingElement(
-        <div>
-          <div />
-          <SectionAssigner
-            sections={defaultProps.sectionsForDropdown}
-            courseId={defaultProps.currentCourseId}
-            scriptId={defaultProps.scriptId}
-            showAssignButton={defaultProps.showAssignButton}
-          />
-          <div>
-            <span>
-              <ProgressDetailToggle />
-            </span>
-          </div>
-        </div>
+        <SectionAssigner
+          sections={defaultProps.sectionsForDropdown}
+          courseId={defaultProps.currentCourseId}
+          scriptId={defaultProps.scriptId}
+          showAssignButton={defaultProps.showAssignButton}
+        />
       )
     ).to.be.true;
   });
