@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-24 14:40:30 UTC",
+    "serialized_at": "2022-10-26 00:38:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -296,7 +296,7 @@
     },
     {
       "key": "lesson-15",
-      "name": "Edge Cases",
+      "name": "Refactoring Code",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -311,7 +311,7 @@
     },
     {
       "key": "lesson-16",
-      "name": "Open Source Code",
+      "name": "Putting It All Together",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -326,12 +326,13 @@
     },
     {
       "key": "lesson-17",
-      "name": "Asphalt Art Project – Day 1",
+      "name": "Asphalt Art Project",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -340,42 +341,12 @@
       }
     },
     {
-      "key": "lesson-18",
-      "name": "Asphalt Art Project – Day 2",
+      "key": "lesson-20",
+      "name": "FRQ Practice",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-2023"
-      }
-    },
-    {
-      "key": "lesson-19",
-      "name": "Asphalt Art Project – Day 3",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-19",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-2023"
-      }
-    },
-    {
-      "key": "lesson-20",
-      "name": "FRQ Practice",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -387,11 +358,12 @@
     {
       "key": "lesson-21",
       "name": "Unit 1 Assessment",
-      "absolute_position": 20,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 18,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-21",
@@ -902,6 +874,84 @@
         "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7",
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "7cfb592e-d49e-44ef-a20f-e559ab265f26",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7cfb592e-d49e-44ef-a20f-e559ab265f26",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "871d2b6c-aa98-4abc-86d2-477eb9397267",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "871d2b6c-aa98-4abc-86d2-477eb9397267",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "2fedd84a-9231-4fc1-aa7b-b63414128f66",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "1518b521-c15c-47d3-b7d8-7feca92ca786",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2023"
       }
     }
@@ -4555,6 +4605,66 @@
         "activity_section.key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64",
         "lesson_activity.key": "fb4d8d1c-972e-4336-ab2d-9f79dd1238c7"
       }
+    },
+    {
+      "key": "02912945-fcc6-4b08-a3ad-6b79ed8aad7d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "02912945-fcc6-4b08-a3ad-6b79ed8aad7d",
+        "lesson_activity.key": "7cfb592e-d49e-44ef-a20f-e559ab265f26"
+      }
+    },
+    {
+      "key": "c4351633-7cf0-4405-a19d-7570a0508ec9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c4351633-7cf0-4405-a19d-7570a0508ec9",
+        "lesson_activity.key": "871d2b6c-aa98-4abc-86d2-477eb9397267"
+      }
+    },
+    {
+      "key": "d8622c11-11fc-4197-85eb-7a7de8fedd9c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d8622c11-11fc-4197-85eb-7a7de8fedd9c",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "1b45a88c-3538-4457-8d19-e3c61fa4712e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1b45a88c-3538-4457-8d19-e3c61fa4712e",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "422c1b79-250c-465a-a506-8369f51bb175",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "422c1b79-250c-465a-a506-8369f51bb175",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "e8ee028e-561d-4bae-ac7f-8495d0e0324f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e8ee028e-561d-4bae-ac7f-8495d0e0324f",
+        "lesson_activity.key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5"
+      }
     }
   ],
   "script_levels": [
@@ -5789,6 +5899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L1_2023"
+        ],
         "progression": "Predict and Run: Selection and Logic"
       },
       "bonus": false,
@@ -5811,6 +5924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L2_2023"
+        ],
         "progression": "Investigate and Modify: Selection and Logic"
       },
       "bonus": false,
@@ -5833,6 +5949,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_2023"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -5855,6 +5974,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4_2023"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -5877,6 +5999,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
