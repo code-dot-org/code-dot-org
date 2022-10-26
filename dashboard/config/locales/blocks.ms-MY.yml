@@ -231,20 +231,12 @@ ms:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
-      Dancelab_everyMeasuresRange:
-        text: 'ulangi setiap {N} corak berirama selepas {START} '
       Dancelab_everySeconds:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
             '"measures"': corak berirama
             '"seconds"': saat
-      Dancelab_everySecondsRange:
-        text: 'setiap {N} {UNIT} dari {START} hingga {STOP} '
-        options:
-          UNIT:
-            measures: Corak Berirama
-            seconds: Saat
       Dancelab_everyVerseChorus:
         text: 'setiap {UNIT} '
         options:
@@ -1327,8 +1319,29 @@ ms:
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_playSoundOptionsSoccer:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": tanduk udara
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": bertepuk tangan
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": laung
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": bunyi bersorak
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": bunyi sepakan
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": two whistles
+            "'sound://category_sports/One_Whistle_SFX.mp3'": wisel
       gamelab_playSoundOptionsSpace:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Launch_SFX.mp3'": launch
+            "'sound://category_space/Lift_Off.mp3'": lift off
+            "'sound://category_space/Pillars_SFX.mp3'": pillars
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": bunyi tycho
       gamelab_playSpeech:
         text: bermain ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -2336,5 +2349,9 @@ ms:
           DIR:
             right: kanan?
             left: kiri
+      storylab_setHeading:
+        text: tetapkan tajuk {HEADING}
+      storylab_setSubheading:
+        text: tetapkan subtajuk {SUBHEADING}
       validation_validatedBackground:
         text: tetapkan latar belakang ke {IMG}

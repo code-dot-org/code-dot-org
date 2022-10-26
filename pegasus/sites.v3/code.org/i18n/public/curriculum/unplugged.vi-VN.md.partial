@@ -20,8 +20,8 @@ Chúng tôi đang nói đến các bài học mà học viên không cần làm 
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2022-23
-The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
+## Bài học không dùng thiết bị điện tử về Nguyên tắc cơ bản của KHMT 2022-2023
+Bạn có thể xem các bài học sau đây tại <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">Nguyên tắc cơ bản của KHMT 2022-2023</a>. <br><br>
 
 <style>
 table, th, td {
@@ -103,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn làm điều gì đó khác trong một tình huống này so với một tình huống khác, ngay cả khi bạn không biết tình huống nào sẽ đúng khi code của bạn chạy. Đó là lúc cần sử dụng tới điều kiện. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Không phải lúc nào chúng ta cũng có tất cả thông tin cần thiết khi viết một chương trình. Đôi khi bạn sẽ muốn làm điều gì đó khác trong một tình huống này so với một tình huống khác, ngay cả khi bạn không biết tình huống nào sẽ đúng khi code của bạn chạy. Đó là lúc cần sử dụng tới điều kiện. Lệnh điều kiện giúp máy tính đưa ra quyết định dựa trên thông tin có kết quả đúng khi chạy mã lệnh.+</td><td>Lệnh điều kiện</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
   </tr>
   <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Hàm (đôi khi được gọi là thủ tục) là các chương trình nhỏ mà bạn có thể sử dụng nhiều lần bên trong chương trình lớn hơn của mình. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Khóa học E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Sáng tác nhạc</a><br><small>Hàm chính là một trong những cấu trúc tuyệt vời nhất trong thế giới khoa học máy tính. Hàm (đôi khi được gọi là thủ tục) là các chương trình nhỏ mà bạn có thể sử dụng nhiều lần bên trong chương trình lớn hơn của mình. Bài học này sẽ giúp học sinh có câu trả lời trực quan cho câu hỏi tại sao kết hợp các đoạn mã lệnh thành hàm lại là một phương pháp vô cùng hữu ích.</td><td>Hàm</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Thiết kế cho trợ năng</a><br><small>Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị của sự thấu cảm thông qua quá trình tìm kiếm ý tưởng và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.</td><td>Tác động của máy tính</td><td><img src="/images/e18.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Chia sẻ trong môi trường số</a><br><i>*Dụng cụ: Điện thoại thông minh và máy tính bảng</i><br><small>Nhờ Nguyên tắc cơ bản của Khoa học máy tính của nhóm Bản quyền và Sáng tạo, bài học này nhằm giúp học sinh hiểu những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt trong môi trường số. Học sinh cần được khuyến khích tôn trọng quyền của nghệ sĩ như một đức tính quan trọng của một công dân số có đạo đức.</td><td>Công dân số</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+    <th rowspan="3" id="t06">Khóa học F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 - Câu chuyện khoảng trống</a><br><i>*Dụng cụ: 6 phong bì (dụng cụ thích hợp khác: giấy hoặc giấy ghi chú gập đôi)</i><br><small>Sinh viên sẽ sử dụng những câu chuyện điền vào chỗ trống (tương tự như Mad Libs®) làm ngữ cảnh để hiểu cách máy tính tiếp nhận và lưu trữ thông tin đầu vào từ người dùng, rồi sau đó sử dụng chúng khi chương trình chạy.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. Những cấu trúc mới này sẽ giúp học sinh tạo mã lệnh tốt hơn và linh hoạt hơn.</td><td>Vòng lặp for</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. Trong bài học này, học viên sẽ giả vờ như mình đang lướt qua internet, đồng thời tìm hiểu về kết nối, URL, Địa chỉ IP và DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - Mạng Internet</a><br><small>Mặc dù nhiều người sử dụng Internet hàng ngày, nhưng không nhiều người biết nó hoạt động như thế nào. Trong bài học này, học viên sẽ giả vờ như mình đang lướt qua internet, đồng thời tìm hiểu về kết nối, URL, Địa chỉ IP và DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>
