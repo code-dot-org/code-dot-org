@@ -47,7 +47,6 @@ def main
   contained_levels = []
   contained_level_answers = []
   level_sources_multi_types = []
-  pd_application_statuses = []
 
   LevelGroup.find_each do |level|
     level.pages.each_with_index do |page, page_index|
@@ -141,11 +140,6 @@ def main
     end
   end
 
-  Pd::Application::ApplicationBase.find_each do |application|
-    row_hashes = get_pd_applications_status_log_row_hashes(application)
-    pd_application_statuses.push(*row_hashes)
-  end
-
   # Verify that the data size is sensible.
   raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 10000" if contained_levels.size > 10_000
   raise "contained_level_answers too big: #{contained_levels_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
@@ -225,7 +219,15 @@ def main
     )
   end
 
-  insert_pd_applications_status_logs_rows(pd_application_statuses)
+  # Because there are > 100K application status log entries, batch the reads in
+  # addition to the writes so that we do not end up loading too many objects
+  # into memory.
+  Pd::Application::ApplicationBase.find_in_batches(batch_size: 1000) do |batch|
+    row_hashes = batch.map do |application|
+      get_pd_applications_status_log_row_hashes(application)
+    end.flatten
+    insert_pd_applications_status_logs_rows(row_hashes)
+  end
 end
 
 def contained_levels_row(row_hash)
