@@ -332,22 +332,26 @@ module Pd::Application
     end
 
     test 'csv_header' do
+      csd_plan_offer_question = "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
+      csp_plan_offer_question = "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
+      csa_plan_offer_question = "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
+
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
-      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      refute csv_header_csd.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert csv_header_csd.include? csd_plan_offer_question
+      refute csv_header_csd.include? csp_plan_offer_question
+      refute csv_header_csd.include? csa_plan_offer_question
       assert_equal 90, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      refute csv_header_csp.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
+      refute csv_header_csp.include? csd_plan_offer_question
+      assert csv_header_csp.include? csp_plan_offer_question
+      refute csv_header_csp.include? csa_plan_offer_question
       assert_equal 92, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
-      refute csv_header_csa.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
-      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert csv_header_csa.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
+      refute csv_header_csa.include? csd_plan_offer_question
+      refute csv_header_csd.include? csp_plan_offer_question
+      assert csv_header_csa.include? csa_plan_offer_question
       assert_equal 94, csv_header_csa.length
     end
 
