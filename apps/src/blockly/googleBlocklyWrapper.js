@@ -28,6 +28,10 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
+import {
+  FUNCTION_BLOCK,
+  getFunctionsFlyoutBlocks
+} from './addons/functionBlocks.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -489,7 +493,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: opt_options.renderer || 'cdo_renderer'
+      renderer: opt_options.renderer || 'cdo_renderer',
+      comments: false
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
@@ -521,6 +526,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
+    // Customize auto-populated Functions toolbox category
+    workspace.registerToolboxCategoryCallback(
+      'PROCEDURE',
+      getFunctionsFlyoutBlocks
+    );
+
+    // Customize function defintion blocks
+    Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+      FUNCTION_BLOCK.init;
     return workspace;
   };
 
