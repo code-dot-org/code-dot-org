@@ -33,7 +33,7 @@ export const MICROBIT_PID = 0x0204;
  */
 export function findPortWithViableDevice() {
   return Promise.resolve()
-    .then(SerialPort.list())
+    .then(() => SerialPort.list())
     .then(list => {
       const bestOption = getPreferredPort(list);
       if (bestOption) {
