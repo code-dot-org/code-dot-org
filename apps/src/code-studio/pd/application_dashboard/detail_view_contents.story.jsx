@@ -24,7 +24,7 @@ export default storybook => {
               district_name: 'District Name',
               email: 'email',
               application_year: '2019-2020',
-              application_type: 'Facilitator',
+              application_type: 'Teacher',
               meets_criteria: 'Yes',
               bonus_points: 15,
               form_data: {
@@ -45,7 +45,7 @@ export default storybook => {
                 bonus_points_scores: {}
               }
             }}
-            viewType="facilitator"
+            viewType="teacher"
           />
         )
       }
