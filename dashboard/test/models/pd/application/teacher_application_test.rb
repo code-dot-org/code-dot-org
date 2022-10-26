@@ -336,19 +336,19 @@ module Pd::Application
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 91, csv_header_csd.length
+      assert_equal 90, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
       refute csv_header_csp.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 93, csv_header_csp.length
+      assert_equal 92, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
       refute csv_header_csa.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
       assert csv_header_csa.include? "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 95, csv_header_csa.length
+      assert_equal 94, csv_header_csa.length
     end
 
     test 'school cache' do
