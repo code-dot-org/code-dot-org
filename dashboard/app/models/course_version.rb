@@ -198,4 +198,8 @@ class CourseVersion < ApplicationRecord
       units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
     }
   end
+
+  def hoc?
+    course_offering&.category == 'hoc'
+  end
 end

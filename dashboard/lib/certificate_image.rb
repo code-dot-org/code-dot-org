@@ -185,7 +185,7 @@ class CertificateImage
   # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course)
     course_version = CurriculumHelper.find_matching_course_version(course)
-    return true if course_version&.course_offering&.category == 'hoc'
+    return true if course_version&.hoc?
     return false if accelerated_course?(course)
     return false if course_version
     true
