@@ -29,7 +29,7 @@ module Api::V1::Pd::Application
         render json: @application, status: :ok
 
         # send confirmation email only if user is submitting their application for the first time
-        on_successful_create if previous_status == 'incomplete' && status == 'unreviewed'
+        on_successful_create if previous_status == 'incomplete' && (%w[unreviewed awaiting_admin_approval].include?(status))
       else
         return render json: {errors: @application.errors.full_messages}, status: :bad_request
       end
