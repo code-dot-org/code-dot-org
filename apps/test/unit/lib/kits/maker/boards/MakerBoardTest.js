@@ -7,6 +7,13 @@ import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 
 /**
+ * Stand-in for serialport library, for use in tests.
+ */
+class StubSerialPort {
+  constructor() {}
+}
+
+/**
  * Interface that our board controllers must implement to be usable with
  * Maker Toolkit.
  * @interface MakerBoard
@@ -25,6 +32,10 @@ export function itImplementsTheMakerBoardInterface(
 ) {
   describe('implements the MakerBoard interface', () => {
     let board;
+
+    before(() => {
+      window.SerialPort = StubSerialPort;
+    });
 
     beforeEach(() => {
       board = new BoardClass();
