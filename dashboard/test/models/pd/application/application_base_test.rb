@@ -213,7 +213,7 @@ module Pd::Application
       assert_equal '2018-03-09', application.date_accepted
     end
 
-    test 'applied_at and date_applied have the first unreviewed status' do
+    test 'incomplete apps get applied_at and date_applied fields when they become unreviewed' do
       application = create :pd_teacher_application, status: 'incomplete'
       assert_nil application.applied_at
 
@@ -227,6 +227,26 @@ module Pd::Application
       Timecop.freeze(next_day) do
         application.update!(status: 'reopened')
         application.update!(status: 'unreviewed')
+      end
+
+      assert_equal tomorrow, application.applied_at
+      assert_equal tomorrow, application.date_applied.to_time
+    end
+
+    test 'incomplete apps get applied_at and date_applied fields when they become awaiting_admin_approval' do
+      application = create :pd_teacher_application, status: 'incomplete'
+      assert_nil application.applied_at
+
+      tomorrow = Date.tomorrow.to_time
+      next_day = tomorrow + 1.day
+
+      Timecop.freeze(tomorrow) do
+        application.update!(status: 'awaiting_admin_approval')
+      end
+
+      Timecop.freeze(next_day) do
+        application.update!(status: 'reopened')
+        application.update!(status: 'awaiting_admin_approval')
       end
 
       assert_equal tomorrow, application.applied_at
