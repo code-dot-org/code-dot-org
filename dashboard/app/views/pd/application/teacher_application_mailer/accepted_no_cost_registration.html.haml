@@ -9,13 +9,10 @@
   = @application.effective_regional_partner_name + "'s"
   = @application.year
   Professional Learning Program for
-  = @application.course_name + ","
+  = @application.course_name
   - if @application.regional_partner
-    %strong at no cost to you or your school,
-    in partnership with Code.org!
-  - else
-    %strong at no cost to you or your school!
-  Please read on for more details, and then make
+    in partnership with Code.org
+  ! Please read on for more details, and then make
   sure to register using
   = link_to('this link', registration_url)
   %strong within two weeks
@@ -23,22 +20,6 @@
   %strong confirm your seat in the program.
 
 = render partial: 'expectations'
-
-%strong
-  Your Professional Learning Program contact
-
-%p
-  If you decide to accept your space in the program, you will be joining a
-  yearlong professional learning experience managed by
-  - if @application.regional_partner
-    = @application.regional_partner_name + ","
-    Code.org's Regional Partner in your area.
-  - else
-    Code.org.
-  Moving forward, I will be your main point of contact
-  for this program, including all communication regarding your
-  summer and school-year workshops. Please let me know if you
-  have any questions or concerns.
 
 %p
   Here are your important next steps:
@@ -70,9 +51,25 @@
       If you want to decline your seat, let me know as soon as possible
       using the contact information below so we can accommodate another teacher.
 
+%strong
+  Your Professional Learning Program contact
+
 %p
-  Congratulations again! We look forward to receiving your registration
-  within two weeks.
+  If you decide to accept your space in the program, you will be joining a
+  yearlong professional learning experience managed by
+  - if @application.regional_partner
+    = @application.regional_partner_name + ","
+    Code.org's Regional Partner in your area.
+  - else
+    Code.org.
+  Moving forward, I will be your main point of contact
+  for this program, including all communication regarding your
+  summer and school-year workshops. Please let me know if you
+  have any questions or concerns.
+
+  %p
+    Congratulations again! We look forward to receiving your registration
+    within two weeks.
 
 = render partial: 'questions_concerns'
 

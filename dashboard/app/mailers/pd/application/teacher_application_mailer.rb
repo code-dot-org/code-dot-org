@@ -75,11 +75,12 @@ module Pd::Application
 
     def accepted_no_cost_registration(teacher_application)
       @application = teacher_application
+      congrats_from = @application.regional_partner ? "#{@application.effective_regional_partner_name} and " : ""
 
       mail(
         to: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Congratulations from #{@application.effective_regional_partner_name} and Code.org!"
+        subject: "Congratulations from #{congrats_from}Code.org!"
       )
     end
 
