@@ -43,7 +43,12 @@ theme: responsive
 
 %main
   %aside
-    NASA skinny banner
+    %img{src: "/images/nasa-logo.svg", alt: "NASA logo"}
+    %h1
+      Copy from NASA goes here
+    %a{href: "#", target: "_blank", rel: "noopener noreferrer"}
+      %button
+        Learn more
 
   %a{id: "explore"}
   %section.explore
@@ -53,7 +58,9 @@ theme: responsive
           %i{class: "#{icon_rocket}"}
           %h1=I18n.t(:hoc2022_landing_page_explore_title)
           %p=I18n.t(:hoc2022_landing_page_explore_description)
-        %iframe{src: "https://www.youtube.com/embed/WE2s3647awE", allowFullScreen: 'true', frameborder: '0'}
+        %figure
+          %div
+            %iframe{src: "https://www.youtube.com/embed/WE2s3647awE", allowFullScreen: 'true', frameborder: '0', width: '500', height: '281'}
       %hr
       .activities
         %h2=I18n.t(:try_an_activity)
@@ -65,7 +72,9 @@ theme: responsive
   %section.play
     .wrapper
       .top-wrapper
-        %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0'}
+        %figure
+          %div
+            %iframe{src: "https://www.youtube.com/embed/ARLt0GcyRgQ", allowFullScreen: 'true', frameborder: '0'}
         %div
           %i{class: "#{icon_futbol}"}
           %h1=I18n.t(:hoc2022_landing_page_play_title)
@@ -85,7 +94,9 @@ theme: responsive
           %i{class: "#{icon_paint}"}
           %h1=I18n.t(:hoc2022_landing_page_create_title)
           %p=I18n.t(:hoc2022_landing_page_create_description)
-        %iframe{src: "https://www.youtube.com/embed/lud4bU3YY9U", allowFullScreen: 'true', frameborder: '0', class: "has-border"}
+        %figure
+          %div
+            %iframe{src: "https://www.youtube.com/embed/lud4bU3YY9U", allowFullScreen: 'true', frameborder: '0', class: "has-border"}
       %hr
       .activities
         %h2=I18n.t(:try_an_activity)
