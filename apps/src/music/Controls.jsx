@@ -11,7 +11,8 @@ const Controls = ({
   setPlaying,
   playTrigger,
   top,
-  startOverClicked
+  startOverClicked,
+  toggleInstructions
 }) => {
   const [isShowingBeatPad, setBeatPadShowing] = useState(false);
   useEffect(() => {
@@ -57,18 +58,13 @@ const Controls = ({
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       {isShowingBeatPad && renderBeatPad()}
-      {/*Placeholder button area, currently hidden*/}
       <div
-        className={classNames(
-          moduleStyles.controlButtons,
-          moduleStyles.side,
-          moduleStyles.hide
-        )}
+        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
       >
         <FontAwesome
-          icon={'th'}
-          style={{fontSize: 30}}
+          icon={'info-circle'}
           className={moduleStyles.iconButton}
+          onClick={toggleInstructions}
         />
       </div>
       <div
@@ -76,7 +72,6 @@ const Controls = ({
       >
         <FontAwesome
           icon={isPlaying ? 'stop-circle' : 'play-circle'}
-          style={{fontSize: 30}}
           onClick={() => setPlaying(!isPlaying)}
           className={moduleStyles.iconButton}
         />
@@ -87,7 +82,6 @@ const Controls = ({
       >
         <FontAwesome
           icon={'th'}
-          style={{fontSize: 30}}
           onClick={() => setBeatPadShowing(!isShowingBeatPad)}
           className={moduleStyles.iconButton}
         />
@@ -101,7 +95,8 @@ Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
-  startOverClicked: PropTypes.func.isRequired
+  startOverClicked: PropTypes.func.isRequired,
+  toggleInstructions: PropTypes.func.isRequired
 };
 
 export default Controls;
