@@ -75,7 +75,7 @@ export function getBlockLimit(blockType) {
  */
 export function getField(type) {
   let field;
-  if (type === 'Number') {
+  if (type === Blockly.BlockValueType.NUMBER) {
     field = new Blockly.FieldNumber();
   } else if (type.includes('ClampedNumber')) {
     const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
