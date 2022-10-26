@@ -44,10 +44,6 @@ class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
     object.attendances.count
   end
 
-  def scholarship_ineligible_reason
-    object.newly_accepted_facilitator? ? Pd::EnrollmentConstants::SCHOLARSHIP_INELIGIBLE_NEW_FACILITATOR : nil
-  end
-
   def enrolled_date
     object.created_at&.to_date&.iso8601
   end
