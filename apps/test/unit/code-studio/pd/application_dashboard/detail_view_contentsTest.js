@@ -208,7 +208,7 @@ describe('DetailViewContents', () => {
   });
 
   describe('Edit controls in Teacher', () => {
-    it("cannot make status 'Needs Admin Approval' from dropdown if admin approval not required", () => {
+    it("cannot make status 'Awaiting Admin Approval' from dropdown if admin approval not required", () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
@@ -223,7 +223,7 @@ describe('DetailViewContents', () => {
       ).to.have.lengthOf(0);
     });
 
-    it("can make status 'Needs Admin Approval' from dropdown if admin approval is required", () => {
+    it("can make status 'Awaiting Admin Approval' from dropdown if admin approval is required", () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,

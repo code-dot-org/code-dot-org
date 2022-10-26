@@ -604,11 +604,11 @@ export class DetailViewContents extends React.Component {
 
   renderStatusSelect = () => {
     let statusesToHide = [];
-    // Do not show "Needs Admin Approval" if it is not required
+    // Hide "Awaiting Admin Approval" if it is not required
     if (!this.state.principalApprovalIsRequired) {
       statusesToHide.push('awaiting_admin_approval');
     }
-    // Do not show "Incomplete" if it is not currently "Incomplete"
+    // Hide "Incomplete" if it is not currently "Incomplete"
     if (this.state.status !== 'incomplete') {
       statusesToHide.push('incomplete');
     }
