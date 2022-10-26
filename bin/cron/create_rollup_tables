@@ -229,7 +229,7 @@ def main
     row_hashes = batch.map do |application|
       get_pd_applications_status_log_row_hashes(application)
     end.flatten
-    insert_pd_applications_status_logs_rows(row_hashes)
+    insert_pd_applications_status_logs_rows(row_hashes) if row_hashes.any?
   end
 end
 
