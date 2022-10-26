@@ -12,7 +12,7 @@ class Api::V1::Pd::FormsController < ::ApplicationController
 
     status = params[:status]
     if status
-      @application.status = status
+      form.status = status
     end
 
     # Check for idempotence
