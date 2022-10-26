@@ -94,31 +94,6 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
     end
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'capacity as a workshop organizer returns nil regional partner cohort capacity for facilitator applications' do
-    time = Date.new(2017, 3, 15)
-
-    Timecop.freeze(time) do
-      application = create(
-        :pd_facilitator1819_application,
-        course: 'csp',
-        regional_partner: @regional_partner,
-        user: @serializing_teacher
-      )
-
-      application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
-      application.save!
-      application.lock!
-
-      sign_in @workshop_organizer
-      get :capacity, params: {role: 'csp_facilitators'}
-      assert_response :success
-
-      assert_nil JSON.parse(@response.body)['capacity']
-    end
-  end
-
   test 'capacity returns regional partner cohort capacity for teacher applications' do
     time = Date.new(2017, 3, 15)
 
@@ -140,30 +115,6 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       assert_response :success
 
       assert_equal(50, JSON.parse(@response.body)['capacity'])
-    end
-  end
-
-  test 'capacity returns nil regional partner cohort capacity for facilitator applications' do
-    time = Date.new(2017, 3, 15)
-
-    Timecop.freeze(time) do
-      application = create(
-        :pd_facilitator1819_application,
-        course: 'csp',
-        regional_partner: @regional_partner,
-        user: @serializing_teacher
-      )
-
-      application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
-      application.save!
-      application.lock!
-
-      sign_in @program_manager
-      get :capacity, params: {role: 'csp_facilitators'}
-      assert_response :success
-
-      assert_nil JSON.parse(@response.body)['capacity']
     end
   end
 
