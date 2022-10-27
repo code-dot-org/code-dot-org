@@ -1,11 +1,15 @@
 import React from 'react';
 import {
   getDefaultListMetadata,
+  getManifest,
   regenerateDefaultSpriteMetadata
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
+import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
+import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
@@ -13,7 +17,9 @@ export default class DefaultSpritesEditor extends React.Component {
     defaultList: [], // Array of name/category sprite objects
     pendingChangesCount: 0,
     isUpdating: false,
-    errorText: ''
+    errorText: '',
+    displayAnimationPicker: false,
+    libraryManifest: {}
   };
 
   componentDidMount() {
@@ -24,6 +30,14 @@ export default class DefaultSpritesEditor extends React.Component {
       })
       .catch(err => {
         console.log(err);
+      });
+
+    getManifest('spritelab')
+      .then(sprites => {
+        this.setState({libraryManifest: sprites});
+      })
+      .catch(err => {
+        console.error(err);
       });
   }
 
@@ -96,6 +110,25 @@ export default class DefaultSpritesEditor extends React.Component {
       });
   };
 
+  // Add the selected sprite to the end of the list of default sprites
+  handleSpriteAdd = targetSprite => {
+    let updatedList = this.state.defaultList;
+    let defaultSprite = {
+      categories: targetSprite.categories,
+      frameCount: targetSprite.frameCount,
+      frameDelay: targetSprite.frameDelay,
+      frameSize: targetSprite.frameSize,
+      looping: targetSprite.looping,
+      name: targetSprite.name,
+      sourceUrl: targetSprite.sourceUrl,
+      version: targetSprite.version
+    };
+    updatedList.push(defaultSprite);
+
+    this.setState({displayAnimationPicker: false, defaultList: updatedList});
+    this.incrementPendingChanges();
+  };
+
   renderDefaultSprites() {
     return this.state.defaultList.map(spriteObject => {
       return (
@@ -109,13 +142,42 @@ export default class DefaultSpritesEditor extends React.Component {
     });
   }
 
-  // Button rendered twice - at top and bottom of list - to minimize
+  // Buttons rendered twice - at top and bottom of list - to minimize
   // required scrolling
-  renderUploadButton() {
+  renderButtonRow() {
     let {isUpdating, errorText} = this.state;
     return (
       <div>
         <div style={styles.changesRow}>
+          <Button
+            onClick={() => this.setState({displayAnimationPicker: true})}
+            color={Button.ButtonColor.blue}
+            text="Add a Sprite to the Default List"
+          />
+          <BaseDialog
+            isOpen={this.state.displayAnimationPicker}
+            handleClose={() => this.setState({displayAnimationPicker: false})}
+            fullWidth
+          >
+            <AnimationPickerBody
+              is13Plus
+              onDrawYourOwnClick={() =>
+                console.log('Not supported at this time')
+              }
+              onPickLibraryAnimation={target => this.handleSpriteAdd(target)}
+              onAnimationSelectionComplete={() => {}}
+              onUploadClick={() => console.log('Not supported at this time')}
+              playAnimations={false}
+              libraryManifest={this.state.libraryManifest}
+              hideUploadOption
+              hideAnimationNames={false}
+              navigable
+              hideBackgrounds={false}
+              canDraw={false}
+              pickerType={PICKER_TYPE.spritelab}
+              selectedAnimations={[]}
+            />
+          </BaseDialog>
           <Button
             onClick={this.updateDefaultSprites}
             color={Button.ButtonColor.blue}
@@ -153,10 +215,11 @@ export default class DefaultSpritesEditor extends React.Component {
           Changes aren't saved until the "Update Default List" button is
           clicked.
         </p>
-        {this.renderUploadButton()}
+
+        {this.renderButtonRow()}
         {isLoading && <Spinner />}
         {this.renderDefaultSprites()}
-        {this.renderUploadButton()}
+        {this.renderButtonRow()}
       </div>
     );
   }
