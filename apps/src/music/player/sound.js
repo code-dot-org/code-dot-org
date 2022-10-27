@@ -41,16 +41,22 @@ function LoadSounds(desiredSounds) {
 
 // play a sound.
 // an optional groupTag puts the sound in a group with a limited set of instances.
-export function PlaySound(name, groupTag, when = 0, loop = false) {
+export function PlaySound(
+  name,
+  groupTag,
+  when = 0,
+  onStop = () => {},
+  loop = false
+) {
   for (var i = 0; i < soundList.length; i++) {
     if (soundList[i] === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
-      return PlaySoundByIndex(i, groupTag || name, when, loop);
+      return PlaySoundByIndex(i, groupTag || name, when, loop, onStop);
     }
   }
 }
 
-function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop) {
+function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop, onStop) {
   if (!audioSoundBuffers[audioBufferIndex]) {
     return;
   }
@@ -76,6 +82,9 @@ function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop) {
       // we've recorded this source (in case we needed to stop it prematurely),
       // so now we can release the handle.
       RemoveStoppedBuffer(groupTag, id);
+      if (onStop) {
+        onStop();
+      }
     }
   );
 

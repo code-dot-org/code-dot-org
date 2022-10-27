@@ -5201,3 +5201,59 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Chapter 2: Building Physical Prototypes'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: Internet'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shartli bayonotlar
+            csp_functions:
+              display_name: Funksiyalar
+            csp_project:
+              display_name: Loyiha
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Ro‘yxatlar
+            csp_loops:
+              display_name: Sikllar
+            csp_project:
+              display_name: Loyiha
+            lessonGroup-5:
+              display_name: Post-Course Survey
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unit 6: Algoritmlar'
+            lessonGroup-2:
+              display_name: Post-Course Survey
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Post-Course Survey
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Post-Course Survey
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Post-Course Survey
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Post-Course Survey
+        csp-post-survey-2023:
+          title: CS Principles Post-Course Survey

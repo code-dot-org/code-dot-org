@@ -794,15 +794,15 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("DOMContentLoaded");
 });
 
-$(document).ready(function () {
-  initExtendedMap();
-});
-
 // NOTE: This is not a good pattern to replicate, but is a workaround
 // for an issue with loading Raphael before attempting to render the map.
 // A better implementation would move this code to /apps/src.
 
 let initAttemptsRemaining = 10;
+
+$(document).ready(function () {
+  initExtendedMap();
+});
 
 function initExtendedMap() {
   if (initAttemptsRemaining === 0) {
