@@ -109,12 +109,18 @@ export const forLoop = {
         'TO',
         Blockly.JavaScript.ORDER_ASSIGNMENT
       ) || '0';
+
+    // + is used to convert this value to a number.
+    // Useful if the field is blank, because '0' will
+    // be returned, and in that case we need the fallback
+    // to '1' to occur.
     const increment =
-      Blockly.JavaScript.valueToCode(
+      +Blockly.JavaScript.valueToCode(
         ctx,
         'BY',
         Blockly.JavaScript.ORDER_ASSIGNMENT
       ) || '1';
+
     let branch = Blockly.JavaScript.statementToCode(ctx, 'DO');
     branch = Blockly.JavaScript.addLoopTrap(branch, ctx);
     let code;
