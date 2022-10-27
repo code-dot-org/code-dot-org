@@ -7,7 +7,7 @@ import {
 } from '../portScanning';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import DCDO from '@cdo/apps/dcdo';
-import {isChromeOS} from '../util/browserChecks';
+import {isChromeOS, getChromeVersion} from '../util/browserChecks';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',
@@ -56,13 +56,15 @@ export function isWebSerialPort(port) {
 
 /**
  * Determines whether WebSerial port is available in the current browser.
- * WebSerial should be available in ChromeOS (depending on DCDO flag) and
- * in Chromium browsers.
+ * WebSerial should be available in ChromeOS (depending on DCDO flag and
+ * in a version after WebSerial was released) and in Chromium browsers.
  */
 export function shouldUseWebSerial() {
   const webSerialAvailableInBrowser = 'serial' in navigator;
   const usingChromeOSAndDCDO =
-    isChromeOS() && !!DCDO.get('webserial-on-chromeos', true);
+    isChromeOS() &&
+    !!DCDO.get('webserial-on-chromeos', true) &&
+    getChromeVersion() >= 90;
 
   return usingChromeOSAndDCDO || webSerialAvailableInBrowser;
 }
