@@ -4261,4 +4261,80 @@ de:
         self-paced-pl-physical-computing2: {}
         emmas-playground: {}
         amys-playground: {}
-        csc-function-machines-pilot: {}
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Was ist das für ein Geräusch?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csp_unit1_2020:
+              display_name: 'Einheit 1: Digitale Informationen'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Lektion 2: Das Internet'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Lerneinheit 3: Einführung in das App Design '
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variablen
+            csp_conditionals:
+              display_name: Bedingungen
+            csp_functions:
+              display_name: Funktionen
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Listen
+            csp_loops:
+              display_name: Schleifen
+            csp_traversals:
+              display_name: Traversierungen
+            csp_project:
+              display_name: Projekt
+            lessonGroup-5:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Lerneinheit 6: Algorithmen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter und Rückgabewerte
+            csp_libraries:
+              display_name: Bibliotheken
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT Erstellen
+            lessonGroup-3:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Lektion 9: Daten'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
+            lessonGroup-2:
+              display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csp-post-survey-2023:
+          title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+        self-paced-pl-csa1-2023: {}
+        self-paced-pl-csa2-2023: {}
+        self-paced-pl-csa3-2023: {}

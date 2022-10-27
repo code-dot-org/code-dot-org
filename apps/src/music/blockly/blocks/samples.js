@@ -1,4 +1,6 @@
 import {BlockTypes} from '../blockTypes';
+import {getStaticFilePath} from '@cdo/apps/music/utils';
+import {PLAY_ICON} from '@cdo/apps/music/constants';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -19,11 +21,12 @@ export const playSound = {
     args0: [
       {
         type: 'field_image',
-        src: 'https://code.org/shared/images/play-button.png',
-        width: 15,
-        height: 20,
+        src: getStaticFilePath(PLAY_ICON),
+        width: 18,
+        height: 23,
         alt: '*',
-        flipRtl: false
+        flipRtl: false,
+        name: 'image'
       },
       {
         type: 'input_dummy',
@@ -40,7 +43,11 @@ export const playSound = {
     colour: 230,
     tooltip: 'play sound',
     helpUrl: '',
-    extensions: ['dynamic_menu_extension']
+    extensions: [
+      'dynamic_menu_extension',
+      'preview_extension',
+      'clear_preview_on_change_extension'
+    ]
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +

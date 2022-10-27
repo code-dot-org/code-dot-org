@@ -227,20 +227,12 @@ tr:
             MOVES.XArmsUp: Gerink
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
-      Dancelab_everyMeasuresRange:
-        text: "{N} ölçütünü her {START} sonrasında tekrarlayın "
       Dancelab_everySeconds:
         text: 'her {N} {UNIT}’de bir '
         options:
           UNIT:
             '"measures"': ölçü
             '"seconds"': saniye
-      Dancelab_everySecondsRange:
-        text: "{START}’den {STOP}’e her {N} {UNIT}’de bir "
-        options:
-          UNIT:
-            measures: Ölçü
-            seconds: Saniye
       Dancelab_everyVerseChorus:
         text: 'her {UNIT}’de bir '
         options:
@@ -1250,8 +1242,30 @@ tr:
             "'sound://category_digital/jump_7.mp3'": zıpla
       gamelab_playSoundOptionsSoccer:
         text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": havalı korna
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": alkış
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": marş
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": tezahürat
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": tekme
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": iki ıslık
+            "'sound://category_sports/One_Whistle_SFX.mp3'": düdük
       gamelab_playSoundOptionsSpace:
         text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": kara delik
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": kurşun kümesi
+            "'sound://category_space/Carina_SFX.mp3'": karina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": kraliçe takımyıldızı
+            "'sound://category_space/Crab_nebula_SFX.mp3'": yengeç bulutsusu
+            "'sound://category_space/Launch_SFX.mp3'": fırlatma
+            "'sound://category_space/Lift_Off.mp3'": kalkış
+            "'sound://category_space/Pillars_SFX.mp3'": sütunlar
+            "'sound://category_space/Southern_ring_SFX.mp3'": güney halka bulutsusu
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: konuşmayı çal {SOUND}
       gamelab_playerBehaviors:
@@ -2286,5 +2300,9 @@ tr:
           DIR:
             right: sağa ↻
             left: sola ↺
+      storylab_setHeading:
+        text: "{HEADING} başlığını ayarlayın"
+      storylab_setSubheading:
+        text: "{SUBHEADING} alt başlığını ayarlayın"
       validation_validatedBackground:
         text: arka planı {IMG} olarak ayarlayın

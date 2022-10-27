@@ -580,6 +580,7 @@ describe('entry tests', () => {
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
     'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
     'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
+    'incubator/index': './src/sites/studio/pages/incubator/index.js',
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
@@ -746,6 +747,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
     'sprite_management/default_sprites_editor':
       './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/release_default_sprites_to_production':
+      './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
     'sprite_management/select_start_animations':
       './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
@@ -922,12 +925,15 @@ describe('entry tests', () => {
       ],
       mode: minify ? 'production' : 'development',
       optimization: {
+        minimize: minify,
         minimizer: [
           new TerserPlugin({
+            parallel: 4,
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
             exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
             terserOptions: {
+              sourceMap: envConstants.DEBUG_MINIFIED,
               // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
               // Can remove when we can safely drop support for older iPad/iOS.
               mangle: {

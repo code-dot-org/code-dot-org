@@ -48,7 +48,7 @@ class Dancelab < GamelabJr
           ],
           hide_animation_mode: true,
           show_type_hints: true,
-          use_modal_function_editor: true,
+          use_modal_function_editor: false,
         }
       )
     )

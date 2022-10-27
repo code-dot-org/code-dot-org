@@ -1452,3 +1452,29 @@ si:
           lesson_groups:
             lessonGroup-3:
               display_name: අන්තර්ගතය
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"

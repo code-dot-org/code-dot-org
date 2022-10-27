@@ -1344,3 +1344,17 @@ kk:
           lesson_groups:
             lessonGroup-3:
               display_name: Контент
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Айнымалылар
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Тізімдер
+            csp_loops:
+              display_name: Ілмек
