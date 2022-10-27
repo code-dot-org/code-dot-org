@@ -35,7 +35,7 @@ class CoursesController < ApplicationController
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
     @force_race_interstitial = params[:forceRaceInterstitial]
-    @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
+    @modern_elementary_courses_available = Unit.modern_elementary_courses_available?(request.locale)
   end
 
   def show
@@ -98,7 +98,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
     @unit_group_data = {
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
-      script_names: Script.all.map(&:name),
+      script_names: Unit.all.map(&:name),
       course_families: UnitGroup.family_names,
       version_year_options: UnitGroup.get_version_year_options
     }

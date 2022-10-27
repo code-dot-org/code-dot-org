@@ -654,7 +654,12 @@
           "moving south2": "cənuba hərəkət2",
           "swimming left and right2": "sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
-          "moving west2": "qərbə hərəkət2"
+          "moving west2": "qərbə hərəkət2",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "Virtual Pet 3_2020": {
           "wandering": "gəzən",
@@ -674,7 +679,12 @@
           "moving south2": "cənuba hərəkət2",
           "swimming left and right2": "sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
-          "moving west2": "qərbə hərəkət2"
+          "moving west2": "qərbə hərəkət2",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "Virtual Pet 4": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -1307,7 +1317,12 @@
           "moving south2": "cənuba hərəkət2",
           "swimming left and right2": "Sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
-          "moving west2": "qərbə hərəkət2"
+          "moving west2": "qərbə hərəkət2",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_aquarium": {
           "wandering": "gəzən",
@@ -1337,7 +1352,8 @@
           "moving south2": "cənuba hərəkət2",
           "swimming left and right2": "sola və sağa üzmək ",
           "moving north2": "şimala hərəkət2",
-          "jittering2": "titrəyən2"
+          "jittering2": "titrəyən2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_card": {
           "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
@@ -1384,7 +1400,8 @@
           "swimming left and right2": "sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
           "moving west2": "qərbə hərəkət2",
-          "jittering2": "titrəyən2"
+          "jittering2": "titrəyən2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_collector": {
           "wandering": "gəzən",
@@ -1414,7 +1431,8 @@
           "spinning right2": "sağa fırlanır2",
           "shrinking2": "balacalaşma2",
           "growing2": "böyümə2",
-          "jittering2": "titrəyən2"
+          "jittering2": "titrəyən2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_madlib": {
           "wandering": "gəzən",
@@ -2498,7 +2516,12 @@
           "moving south2": "cənuba hərəkət2",
           "wandering2": "gəzən2",
           "driving with arrow keys": "işarə düymələri ilə hərəkət",
-          "fluttering": "çırpınan"
+          "fluttering": "çırpınan",
+          "growing2": "artan 2",
+          "patrolling2": "patrul 2",
+          "jittering2": "titrəmə2",
+          "shrinking2": "azaltma2",
+          "spinning left2": "sola fırlanma2"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving west": "qərbə doğru hərəkət",
@@ -2524,7 +2547,12 @@
           "moving south2": "cənuba hərəkət2",
           "wandering2": "gəzən2",
           "driving with arrow keys": "işarə düymələri ilə hərəkət",
-          "fluttering": "çırpınan"
+          "fluttering": "çırpınan",
+          "growing2": "artan 2",
+          "patrolling2": "patrul 2",
+          "jittering2": "titrəmə2",
+          "shrinking2": "azaltma2",
+          "spinning left2": "sola fırlanma2"
         },
         "Dance Party 2_2021": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -3359,7 +3387,12 @@
           "fluttering": "çırpınan",
           "wobbling": "titrəmə(titrəmək)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "growing2": "artan 2",
+          "patrolling2": "patrul 2",
+          "jittering2": "titrəmə2",
+          "shrinking2": "azaltma2",
+          "spinning left2": "sola fırlanma2"
         },
         "CourseE_Project_SpriteLab_examples2022": {
           "moving west": "qərbə doğru hərəkət",
@@ -3385,7 +3418,12 @@
           "fluttering": "çırpınan",
           "wobbling": "titrəmə(titrəmək)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "growing2": "artan 2",
+          "patrolling2": "patrul 2",
+          "jittering2": "titrəmə2",
+          "shrinking2": "azaltma2",
+          "spinning left2": "sola fırlanma2"
         },
         "CourseF_outbreak1_-2022-2": {
           "recovering": "bərpa etmək",
@@ -3572,7 +3610,12 @@
           "moving west": "qərbə doğru hərəkət",
           "moving north2": "şimala hərəkət2",
           "patrolling": "patrul",
-          "moving west2": "qərbə hərəkət2"
+          "moving west2": "qərbə hərəkət2",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseE_aboutme_22022": {
           "wandering": "gəzən",
@@ -3653,7 +3696,12 @@
           "swimming left and right2": "sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
           "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
-          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_aquarium_-2022-2": {
           "wandering2": "gəzən2",
@@ -3678,7 +3726,12 @@
           "swimming left and right2": "sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
           "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
-          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_card2022": {
           "blocking movement": "hərəkətin bloklaması",
@@ -3737,7 +3790,12 @@
           "moving north2": "şimala hərəkət2",
           "moving west2": "qərbə hərəkət2",
           "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
-          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_chatbot_-2022-2": {
           "blocking movement": "hərəkətin bloklaması",
@@ -3762,7 +3820,12 @@
           "moving north2": "şimala hərəkət2",
           "moving west2": "qərbə hərəkət2",
           "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
-          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_collector2022": {
           "wandering": "gəzən",
@@ -3787,7 +3850,12 @@
           "swimming left and right2": "sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
           "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
-          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_collector_-2022-2": {
           "wandering": "gəzən",
@@ -3812,7 +3880,12 @@
           "swimming left and right2": "sola və sağa üzmək2",
           "moving north2": "şimala hərəkət2",
           "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
-          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "spinning left2": "sola fırlanma2",
+          "shrinking2": "azaltma2",
+          "growing2": "artan 2",
+          "jittering2": "titrəmə2",
+          "patrolling2": "patrul 2"
         },
         "courseF_apps_madlib2022": {
           "wandering": "gəzən",
@@ -4913,6 +4986,94 @@
           "wobbling": "titrəmə(titrəmək)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
           "moving east and looping": "şərqə doğru döngə hərəkəti"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "spinning left": "sola fırlanır",
+          "spinning right": "sağa fırlanır",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "growing": "böyüyən",
+          "moving south": "cənuba hərəkət",
+          "swimming left and right": "sola və sağa üzmək",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "driving with arrow keys": "işarə düymələri ilə hərəkət",
+          "fluttering": "çırpınan",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving north and looping": "şimala doğru hərəkət və döngə",
+          "moving south and looping": "cənuba doğru hərəkət və döngü"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "spinning left": "sola fırlanır",
+          "spinning right": "sağa fırlanır",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "growing": "böyüyən",
+          "moving south": "cənuba hərəkət",
+          "swimming left and right": "sola və sağa üzmək",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "driving with arrow keys": "işarə düymələri ilə hərəkət",
+          "fluttering": "çırpınan",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving north and looping": "şimala doğru hərəkət və döngə",
+          "moving south and looping": "cənuba doğru hərəkət və döngü"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "spinning left": "sola fırlanır",
+          "spinning right": "sağa fırlanır",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "growing": "böyüyən",
+          "moving south": "cənuba hərəkət",
+          "swimming left and right": "sola və sağa üzmək",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "driving with arrow keys": "işarə düymələri ilə hərəkət",
+          "fluttering": "çırpınan",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving north and looping": "şimala doğru hərəkət və döngə",
+          "moving south and looping": "cənuba doğru hərəkət və döngü"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "spinning left": "sola fırlanır",
+          "spinning right": "sağa fırlanır",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "growing": "böyüyən",
+          "moving south": "cənuba hərəkət",
+          "swimming left and right": "sola və sağa üzmək",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "driving with arrow keys": "işarə düymələri ilə hərəkət",
+          "fluttering": "çırpınan",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving north and looping": "şimala doğru hərəkət və döngə",
+          "moving south and looping": "cənuba doğru hərəkət və döngü"
         }
       }
     }

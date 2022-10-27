@@ -401,6 +401,7 @@ nn:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blokker)'
       starwarsblocks_hour: 'Star Wars (blokker)'
+      thebadguys: 'Skurkene'
       loading: 'Lastar...'
       weblab: 'Nett-lab'
       view_all: 'Sjå alle prosjekt...'
@@ -1057,3 +1058,5 @@ nn:
   copy: 'Kopier'
   confirm: 'Bekreft'
   teacher_feedback: "Tilbakemeldingar frå lærarar"
+  pixelation:
+    binary: "Binær"

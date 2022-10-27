@@ -34,7 +34,11 @@
         "courseC_artist_prog_challenge12022": "Rajzolj szobákat mindegyik állat számára. ",
         "courseD_bee_nestedLoops82022": "Gyűjtsd össze az összes nektárt az összes virágról, és készíts mézet minden méhsejtbe. ",
         "courseD_bee_nestedLoops92022": "Készítsd el az összes mézet.",
-        "ramp_artist_loops82022": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával."
+        "ramp_artist_loops82022": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával.",
+        "helloworld_food_costumes_soccer-2022": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
+        "helloworld_food_costumes_space-2022": "Tanuld meg, hogyan lehet a sprite-ok megjelenését megváltoztatni.",
+        "helloworld_food_sounds_soccer-2022": "Tanuld meg, hogany kell hangot lejátszani.",
+        "helloworld_food_sounds_space-2022": "Tanuld meg, hogany kell hangot lejátszani."
       }
     }
   }

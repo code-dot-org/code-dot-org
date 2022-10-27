@@ -1,0 +1,29 @@
+{
+  "ko-KR": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "CSTA K-12 컴퓨터 과학 표준 (2017)"
+        },
+        "csp2021": {
+          "name": "CSP 개념 프레임워크"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 컴퓨터 과학 기준 (2011)"
+        },
+        "ccela": {
+          "name": "커몬 코어 (Common Core) 영어 기준"
+        },
+        "ngss": {
+          "name": "차세대 과학 표준"
+        },
+        "ccmath": {
+          "name": "커몬 코어 (Common Core) 수학 기준"
+        },
+        "iste": {
+          "name": "학생들을 위한 ISTE 기준"
+        }
+      }
+    }
+  }
+}

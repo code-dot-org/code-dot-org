@@ -461,6 +461,7 @@ id-ID:
   homepage_banner_40k_teachers_link: Pelajari lebih lanjut
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
+  homepage_slot_text_blurb_hoc_2022: Menjelajah, Bermain, Berkreasi!
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
   homepage_slot_text_link_about_hoc: Tentang Hour of Code
   homepage_slot_text_link_host: Selenggarakan Hour of Code
@@ -2749,3 +2750,13 @@ id-ID:
     biru
   minecraft_tile_alt: Dua karakter Minecraft, Steve dan Alex, dengan latar belakang
     yang menunjukkan adegan Minecraft air dengan karang, lumba-lumba, dan rumput laut
+  hoc2022_banner_title: Menjelajah, Bermain, Berkreasi!
+  hoc2022_banner_description: Jelajahi alam semesta, cetak gol, atau lakukan gerakan
+    — ada banyak cara untuk mencoba ilmu komputer!
+  hoc2022_cta_primary: Lihat yang baru
+  hoc2022_cta_secondary: Coba kegiatan lainnya
+  hoc2022_landing_page_explore_description: Buka pintu menuju dunia baru dengan ilmu
+    komputer!
+  hoc2022_landing_page_create_title: Buat
+  hoc2022_landing_page_create_description: Ciptakan sesuatu yang unik dan indah!
+  try_it_yourself: Cobalah sendiri!

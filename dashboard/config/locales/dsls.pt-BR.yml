@@ -18745,19 +18745,12 @@ pt-BR:
             clicar em "Executar"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: O zombie irá andar no caminho correto e terminará indo e voltando
-            eternamente.
-          correct: true
+        - correct: true
           feedback: Correto!
         - text: O zumbi chegará até o girassol.
-          feedback: Incorreto. O zombie irá andar no caminho correto e terminará indo
-            e voltando eternamente.
         - text: O zumbi vai virar à direita no primeiro caminho e ficar andando em
             círculos para sempre.
-          feedback: Incorreto. O zombie irá andar no caminho correto e terminará indo
-            e voltando eternamente.
-        - feedback: Neste código, o zombie irá andar no caminho correto e terminará
-            indo e voltando eternamente.
+        - {}
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?
@@ -18904,20 +18897,39 @@ pt-BR:
         - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: O coelho dirá "5".
+          correct: true
+          feedback: Certo! O número 5 é guardado na variável e então é usado novamente
+            quando a figura fala.
+        - text: A figura do coelho dirá qualquer número que tenha sido digitado.
+          feedback: Errado. Não há caixa de texto neste programa. O número é informado
+            diretamente no código.
+        - text: O coelho dirá "contador".
+          feedback: Errado. 'Contador' é uma variável. Quando o bloco executar, ele
+            vai pegar o número guardado, independente de qual for. O coelho vai dizer
+            "5".
+        - text: Nada vai acontecer porque 'contador' não é um número.
+          feedback: Errado. O número 5 é guardado na variável e usado quando a figura
+            falar.
         questions:
-        - {}
+        - text: 'Tente adivinhar: O que o coelho vai dizer?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: O programa vai exibir qualquer número que tenha sido digitado.
+          feedback: Errado. O número é guardado na variável e usado para criar figuras
+            de cenouras.
+        - text: A figura do coelho dirá qualquer número que tenha sido digitado.
+          feedback: Errado. O número é guardado na variável e usado para criar figuras
+            de cenouras.
+        - text: 'O programa vai criar essa quantidade de novas figuras de cenouras. '
+          correct: true
+          feedback: Certo! O número de figuras criadas é o número guardado na variável.
+        - text: Nada vai acontecer porque 'contador' não é um número.
+          feedback: Errado. Um número é guardado numa variável e usado para criar
+            figuras de cenouras.
         questions:
-        - {}
+        - text: 'Tente adivinhar: O que vai acontecer depois que for digitado um número
+            na caixa de texto?'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
         - {}

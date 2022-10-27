@@ -165,6 +165,26 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Ver outras atividades além da Hora de Código"
         },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
+          "tips": [
+            "O ideal é não gastar muito tempo nas etapas iniciais ou na introdução ao Hour of Code. Particularmente no caso de alunos jovens, é melhor ir direto ao assunto o mais rápido possível."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflexão",
+          "description": "#### Painel de discussão\n\nPeça aos alunos para refletirem sobre as atividades do dia. O que eles aprenderam sobre codificação? Fadas? Eventos? \n\nComo eles se sentem a respeito da ciência da computação e da codificação depois de uma hora de exploração? \n\n#### Próximos passos\n\nInforme aos alunos que, se eles tiverem gostado das atividades do dia, eles terão muitas opções para continuar gerando o código. Visite [CS Connections](https://code.org/educate/csc) para ver ideias sobre como integrar a ciência da computação a outros temas ou leia mais sobre as nossas [ofertas de curso para o nível fundamental](https://code.org/educate/curriculum/elementary-school)."
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -401,6 +421,26 @@
           "tips": [
             null
           ]
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
+          "tips": [
+            "O ideal é não gastar muito tempo nas etapas iniciais ou na introdução ao Hour of Code. Particularmente no caso de alunos jovens, é melhor ir direto ao assunto o mais rápido possível."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Olá Mundo",
+          "progression_name": "Olá Mundo"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n-   Que outras fadas você poderia adicionar ao seu projeto? \n-   Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n-   O que mais sua fada poderia dizer? \n-   O que sua fada deve fazer quando alguém clicar nela? \n-   Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflexão",
+          "description": "#### Painel de discussão\n\nPeça aos alunos para refletirem sobre as atividades do dia. O que eles aprenderam sobre codificação? Fadas? Eventos? \n\nComo eles se sentem a respeito da ciência da computação e da codificação depois de uma hora de exploração? \n\n#### Próximos passos\n\nInforme aos alunos que, se eles tiverem gostado das atividades do dia, eles terão muitas opções para continuar gerando o código. Visite [CS Connections](https://code.org/educate/csc) para ver ideias sobre como integrar a ciência da computação a outros temas ou leia mais sobre as nossas [ofertas de curso para o nível fundamental](https://code.org/educate/curriculum/elementary-school)."
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
@@ -2419,9 +2459,6 @@
           "tips": [
             "Lembre os alunos de compartilhar seu trabalho apenas com amigos próximos ou familiares. Para obter mais informações, assista ou mostre a turma**\\\\ \\*Pause and Think Online - Vídeo**"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Incluímos alguns níveis de previsão de múltipla escolha que são difíceis para os não leitores. Esses níveis são opcionais para você revisar com sua classe para ajudar a se preparar para os quebra-cabeças que virão. Alternativamente, eles podem ser usados após o término do estágio como uma revisão para a aula. \n\n\\*\\*Nível de previsão: \\*\\* - [Curso B, Loops no Artista](https://studio.code.org/levels/8745)"
         },
         "b7796885-3fd7-48b7-9a37-60950e9906ee": {
           "progression_name": "Desenvolvimento de Habilidades"

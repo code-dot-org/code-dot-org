@@ -2,6 +2,8 @@
 es:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: moviendo NESW con las teclas de flecha
       AmysBlocks_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
@@ -232,20 +234,12 @@ es:
             MOVES.XArmsUp: Estirar
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
-      Dancelab_everyMeasuresRange:
-        text: 'repetir cada {N} compaces después de {START} '
       Dancelab_everySeconds:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': compaces
             '"seconds"': segundos
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} desde {START} hasta {STOP} '
-        options:
-          UNIT:
-            measures: Compases
-            seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -1342,6 +1336,32 @@ es:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bajo peculiar
             "'sound://category_digital/jump_7.mp3'": salta
+      gamelab_playSoundOptionsSoccer:
+        text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina de aire
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": canto
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": patear
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dos silbatos
+            "'sound://category_sports/One_Whistle_SFX.mp3'": silbato
+      gamelab_playSoundOptionsSpace:
+        text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": agujero negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": cúmulo bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cangrejo
+            "'sound://category_space/Launch_SFX.mp3'": lanzar
+            "'sound://category_space/Lift_Off.mp3'": despegar
+            "'sound://category_space/Pillars_SFX.mp3'": pilares
+            "'sound://category_space/Southern_ring_SFX.mp3'": anillo del sur
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: reproducir grabación {SOUND}
       gamelab_playerBehaviors:
@@ -1442,6 +1462,8 @@ es:
             '100': grande
       gamelab_setPrompt:
         text: solicitar usuario {QUESTION} para la variable {VAR}
+      gamelab_setPromptWith2Choices:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}
       gamelab_setPromptWithChoices:
         text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       gamelab_setProp:
@@ -2244,6 +2266,11 @@ es:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: cuando {VAR} respondió
       RyanLab_moveForward:
@@ -2512,6 +2539,10 @@ es:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      storylab_setHeading:
+        text: establecer encabezado {HEADING}
+      storylab_setSubheading:
+        text: establecer sub-encabezado {SUBHEADING}
       validation_validatedBackground:
         text: establecer fondo a {IMG}
       validation_validatedSound:

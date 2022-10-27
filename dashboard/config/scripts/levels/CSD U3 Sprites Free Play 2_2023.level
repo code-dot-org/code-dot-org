@@ -81,18 +81,16 @@
     "libraries_enabled": "false",
     "bubble_choice_description": "For this free play challenge, either draw your own sprites or edit existing sprites to give them your unique fashion style!",
     "validation_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"f65bc034-129e-4f37-bac7-3074383df80d\",\r\n    \"6f2dd26b-0821-449d-b9bd-4d4e0e989676\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"f65bc034-129e-4f37-bac7-3074383df80d\": {\r\n      \"name\": \"kid_1\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/SurSAnaFy8MyK4YEl10XiJLZdWI5yNl5/category_people/kid_outline.png\",\r\n      \"frameSize\": {\r\n        \"x\": 180,\r\n        \"y\": 250\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"SurSAnaFy8MyK4YEl10XiJLZdWI5yNl5\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"6f2dd26b-0821-449d-b9bd-4d4e0e989676\": {\r\n      \"name\": \"kid_side\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/api/v1/animation-library/gamelab/rJruC4lipIT_eYJo1SCCmhTtfo9TvF.q/category_people/kid_outline_side.png\",\r\n      \"frameSize\": {\r\n        \"x\": 180,\r\n        \"y\": 295\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"rJruC4lipIT_eYJo1SCCmhTtfo9TvF.q\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "preload_asset_list": null
   },
   "game_id": 50,
-  "published": true,
   "created_at": "2022-10-05T20:20:19.000Z",
   "level_num": "custom",
   "user_id": 155,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-05T20:20:19.872+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites combine_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites combine_2023\"},{\"changed_at\":\"2022-10-05 20:25:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-05T20:20:19.872+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites combine_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites combine_2023\"},{\"changed_at\":\"2022-10-05 20:25:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 15:39:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 15:40:17 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 15:40:20 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

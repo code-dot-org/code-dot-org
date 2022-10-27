@@ -14,6 +14,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
+import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './addons/cdoTheme';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -27,6 +28,10 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
+import {
+  FUNCTION_BLOCK,
+  getFunctionsFlyoutBlocks
+} from './addons/functionBlocks.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -114,6 +119,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
+  blocklyWrapper.wrapReadOnlyProperty('zelos');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
@@ -187,6 +193,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRenderer,
     true /* opt_allowOverrides */
   );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
+    'cdo_renderer_zelos',
+    CdoRendererZelos,
+    true /* opt_allowOverrides */
+  );
   registerAllContextMenuItems();
   registerAllShortcutItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
@@ -237,13 +249,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
-  };
-
-  blocklyWrapper.getFieldForInputType = function(type) {
-    if (type === 'Number') {
-      return blocklyWrapper.FieldNumber;
-    }
-    return blocklyWrapper.FieldTextInput;
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
@@ -467,7 +472,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: CdoTheme,
+      theme: opt_options.theme || CdoTheme,
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -481,7 +486,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: 'cdo_renderer'
+      renderer: opt_options.renderer || 'cdo_renderer',
+      comments: false
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
@@ -512,6 +518,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
+
+    // Customize auto-populated Functions toolbox category
+    workspace.registerToolboxCategoryCallback(
+      'PROCEDURE',
+      getFunctionsFlyoutBlocks
+    );
+
+    // Customize function defintion blocks
+    Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+      FUNCTION_BLOCK.init;
+    return workspace;
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.

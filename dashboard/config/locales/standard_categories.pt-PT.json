@@ -1,0 +1,20 @@
+{
+  "pt-PT": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Pensamento computacional"
+        },
+        "L": {
+          "description": "Idioma"
+        },
+        "C": {
+          "description": "Túnel"
+        },
+        "F": {
+          "description": "Funções"
+        }
+      }
+    }
+  }
+}

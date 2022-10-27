@@ -1979,6 +1979,13 @@ he:
           lesson_groups:
             lessonGroup-5:
               display_name: סקר
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: חזרות
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2001,3 +2008,51 @@ he:
           lesson_groups:
             lessonGroup-3:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: מה זה הצליל הזה?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר שלאחר הקורס
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס

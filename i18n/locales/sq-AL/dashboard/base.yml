@@ -754,3 +754,5 @@ sq:
     accept: 'Pranoj'
   copy: 'Kopjo'
   confirm: 'Konfirmo'
+  pixelation:
+    binary: "Binare"

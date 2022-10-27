@@ -1,0 +1,29 @@
+{
+  "sk-SK": {
+    "data": {
+      "frameworks": {
+        "csta": {
+          "name": "Normy vyučovania informatiky podľa CSTA K-12 (2017)"
+        },
+        "csp2021": {
+          "name": "Koncepčný rámec CSP"
+        },
+        "csta2011": {
+          "name": "Normy vyučovania informatiky podľa CSTA K-12 (2011)"
+        },
+        "ccela": {
+          "name": "Normy Common Core English Language Arts"
+        },
+        "ccmath": {
+          "name": "Normy Common Core Math"
+        },
+        "ai4k12-2021": {
+          "name": "Národné usmernenia AI4K12 2021"
+        },
+        "iste": {
+          "name": "Normy ISTE pre žiakov"
+        }
+      }
+    }
+  }
+}

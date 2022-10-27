@@ -452,6 +452,7 @@ it:
       about: Informazioni
       legal: Privacy & Legale
       legal_privacy: Informativa sulla privacy
+      legal_cookie_notice: Informativa sui cookie
       legal_tos: Termini di servizio
     user:
       classroom: Cruscotto di Controllo dell'insegnante
@@ -1466,3 +1467,5 @@ it:
       cannot_view_locked_answers: Impossibile visualizzare le risposte se bloccato
       forbidden: L'utente non può aggiornare lo stato bloccabile dello studente
   reset_predict_progress_button: Eliminare la risposta
+  pixelation:
+    binary: Binario

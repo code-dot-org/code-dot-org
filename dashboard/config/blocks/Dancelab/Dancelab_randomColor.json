@@ -3,6 +3,11 @@
   "config": {
     "func": "randomColor",
     "blockText": "random color",
-    "returnType": "Colour"
+    "returnType": "Colour",
+    "color": [
+      196,
+      1,
+      0.79
+    ]
   }
 }

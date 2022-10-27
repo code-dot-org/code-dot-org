@@ -35,11 +35,14 @@ la:
   africa_campaign_date_full: Octubre 1-31
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Octubre 1-31, 2020
-  hoc2022_header: "¡Explora, Juega, Crea!"
-  social_hoc2022_explore_play_create: Utiliza la informática para explorar, jugar
-    y crear.
-  codeorg_homepage_hoc2022_body: 'Explorar el universo, marcar un gol, hacer un movimiento:
-    hay muchas maneras de probar la informática.'
+  hoc2022_header: "¡Explora, juega y crea!"
+  social_hoc2022_explore_play_create: "¡Utiliza las ciencias de la computación para
+    explorar, jugar y crear!"
+  codeorg_homepage_hoc2022_body: 'Explora el universo, anota un gol, crea tu propia
+    coreografía: hay muchas maneras de probar las ciencias de la computación.'
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
   social_hoc2021_cse: 'Durante la #HourOfCode, estamos celebrando #CSEverywhere. ¡Descubre
     las conexiones!'
   hoc2020_header: Aprende hoy y construye un mejor futuro.
@@ -517,26 +520,25 @@ la:
   front_join_us_n_students_served: "# participantes."
   front_join_us_challenge: "¡Gana una videoconferencia para tu aula con una celebridad!"
   front_join_us_learn_more: Conoce más
-  cta_see_whats_new: Ver las novedades
+  cta_see_whats_new: Mira las novedades
   cta_try_more_activities: Prueba más actividades
   cta_try_an_activity: Prueba una actividad
   hoc_homepage_join_the_movement_heading: Únete al movimiento
   hoc_homepage_join_the_movement_description: La Hora del Código está disponible todo
-    el año, pero cada año en diciembre tu clase puede unirse a millones de estudiantes
-    de todo el mundo que celebran la Semana de la Educación en Informática con la
-    Hora del Código. La inscripción para la celebración anual comienza cada año en
-    octubre.
+    el año, pero en diciembre tu clase puede unirse a millones de estudiantes de todo
+    el mundo que celebran la Semana de la Educación en Ciencias de la Computación
+    con la Hora del Código. La inscripción para la celebración anual comienza en octubre.
   hoc_homepage_what_is_hoc_subhead: Tutoriales de una hora en más de 45 idiomas. No
     se necesita experiencia. Las actividades de la Hora del Código están disponibles
     de forma gratuita durante todo el año.
   hoc_homepage_what_is_hoc_description: La Hora del Código es una introducción de
-    una hora a la informática, que utiliza divertidos tutoriales para demostrar que
-    cualquiera puede aprender lo básico. Esta campaña de base cuenta con el apoyo
-    de más de 400 socios y 200.000 educadores en todo el mundo.
+    una hora a las ciencias de la computación, que utiliza divertidos tutoriales para
+    demostrar que cualquiera puede aprender los conceptos básicos. Esta campaña comunitaria
+    cuenta con el apoyo de más de 400 socios y 200,000 educadores de todo el mundo.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Lee nuestra guía práctica](%{howto_guide_url})
     para planificar un evento para tu clase."
   hoc_homepage_highlights_heading: Lo más destacado de la Hora del Código
-  hoc_homepage_organized_by: La Hora del Código está organizada por [Code.org](%{codeorg_url}).
+  hoc_homepage_organized_by: La Hora del Código es organizada por [Code.org](%{codeorg_url}).
   signup_closed: La inscripción para la Hora del Código está cerrada. Vuelve a intentarlo
     en octubre cuando abramos la inscripción para la siguiente Hora del Código.
   signup_registration_not_required: "¡No es necesario inscribirse para participar!

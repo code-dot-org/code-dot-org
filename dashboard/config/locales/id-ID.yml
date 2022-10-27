@@ -443,6 +443,7 @@ id:
       about: Tentang
       legal: Privasi & Hukum
       legal_privacy: Kebijakan privasi
+      legal_cookie_notice: Informasi Cookie
       legal_tos: Ketentuan Layanan
     user:
       classroom: Beranda guru
@@ -1460,3 +1461,5 @@ id:
       cannot_view_locked_answers: Tidak dapat melihat jawaban saat terkunci
       forbidden: Pengguna tidak dapat memperbarui status siswa yang dapat dikunci
   reset_predict_progress_button: Hapus Jawaban
+  pixelation:
+    binary: Binary

@@ -412,6 +412,7 @@
       starwars: Star Wars
       starwarsblocks: Star Wars (blokker)
       starwarsblocks_hour: Star Wars (blokker)
+      thebadguys: Skurkene
       loading: Laster...
       weblab: Weblaboratoriet
       view_all: Vis alle prosjekter...
@@ -1172,3 +1173,5 @@
   page_not_found_button: Returner hjem
   copy: Kopier
   confirm: Bekreft
+  pixelation:
+    binary: Binær

@@ -379,6 +379,7 @@ zh-CN:
       about: "关于"
       legal: "隐私与法律"
       legal_privacy: "隐私政策"
+      legal_cookie_notice: "Cookie通知"
       legal_tos: "使用条款"
     user:
       classroom: '教师主页'
@@ -1155,3 +1156,5 @@ zh-CN:
       cannot_view_locked_answers: "锁定时无法查看答案"
       forbidden: "用户无法更新学生的可锁定状态"
   reset_predict_progress_button: "删除答案"
+  pixelation:
+    binary: "二进制"

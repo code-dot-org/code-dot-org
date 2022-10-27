@@ -1465,6 +1465,10 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Álgge
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1585,6 +1589,12 @@ se:
               display_name: Sisdoallu
             lessonGroup-5:
               display_name: Iskkadeapmi
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+            lessonGroup-3:
+              display_name: Sisdoallu
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1597,3 +1607,33 @@ se:
               display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
             lessonGroup-3:
               display_name: 'Kapihtal 2: Hukse Spealuid'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp5-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi

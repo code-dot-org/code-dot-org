@@ -100,13 +100,13 @@ fr:
         text: "Amuse-toi en utilisant ton nouveau bloc « Répéter »!"
     loop_until:
       1:
-        text: "Salut, je suis Chris. Avant de rejoindre le Heat de Miami, je suis allé à Georgia Tech pour étudier l'informatique. Essayons notre nouveau bloc, le bloc «Répéter jusqu'à»."
+        text: "Salut, moi, c'est Chris. Avant de rejoindre le Heat de Miami, j'ai étudié l'informatique à la fac de Georgia Tech. Viens, on essaie notre nouveau bloc, le bloc « répéter jusqu'à »."
       2:
-        text: "Et si on ne sait pas de quelle distance l'oiseau doit se déplacer pour arriver au cochon?"
+        text: "Et si on ne savait pas de combien l'oiseau devait se déplacer pour arriver jusqu'au cochon ?"
       3:
-        text: "Si nous mettons un bloc « Avancer » à l'intérieur d'un bloc «Répéter jusqu'à», l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne contre un mur)."
+        text: "Si on met un bloc « avancer » au sein d'un bloc « répéter jusqu'à », l'oiseau va avancer JUSQU'À ce qu'il atteigne le cochon (ou qu'il se cogne contre un mur)."
       4:
-        text: 'Et ceci est important: comme avant, on peut mettre plusieurs blocs à l''intérieur du bloc « Répéter jusqu’à », et ils seront tous répétés.'
+        text: 'Et c''est important : tout comme avant, on peut mettre plusieurs blocs à l''intérieur du bloc « répéter jusqu’à », et ils seront tous répétés.'
     if:
       1:
         text: "Salut, je suis Bill ! Nous allons apprendre un nouveau concept fondamental : les instructions «Si». C'est de cette manière que les ordinateurs prennent des décisions."
@@ -1200,7 +1200,7 @@ fr:
       5:
         text: "3) À droite, l'espace de travail : c'est là que nous allons créer notre programme."
       6:
-        text: "Si vous oubliez quoi faire, les instructions de chaque niveau sont en haut."
+        text: "Si tu oublies ce qu'il faut faire, les instructions pour chaque niveau se trouvent en haut."
       7:
         text: "Commençons par programmer un poulet. On glisse la commande « avancer » dans l'espace de travail. Quand je choisis « Exécuter », le poulet avance d'un pas. Pour aller plus loin, je glisse un autre bloc « avancer » sous le premier jusqu'à ce qu'il apparaisse en surbrillance. Je le lâche et les deux blocs s'ancrent l'un à l'autre. Si je choisis à nouveau « Exécuter », le poulet avance de deux pas."
       8:
@@ -1357,110 +1357,110 @@ fr:
         text: "Merci d'être venu. Maintenant, construis et partage ta première application, et continue à créer des applications avec le labo des applis !"
     mc_2017_agent_intro:
       1:
-        text: "Stacy : Stampy, Lizzy, Preston - merci d’être avec moi. Ce que je veux vous montrer est juste au dessus de ce plateau. Je pense que vous allez adorer !"
+        text: "Stacy : Stampy, Lizzy, Preston – merci d’être venu avec moi. Le truc que je veux vous montrer est juste au-delà de ce plateau. Je crois que vous allez adorer !"
       2:
-        text: "Attendez une minute - il y a un trou sur la voie! (Aaaahhhhh)"
+        text: "Ouh là, attendez – il y a un trou dans les rails ! (cris)"
       3:
-        text: "Tout le monde va bien? Stampy: Ah, je vois le problème. Regarde! Il y avait un trou dans la voie. Stacy: Vraiment Stampy? Lizzy: Peut-être qu'on doit assembler des blocs pour la réparer. Preston: Faisons-en une course. Le premier arrivé en haut gagne. Stacy: D'accord, à vos marques, prêts, partez! Ok, je vais juste prendre un peu de cette terre cuite. Attendez. Les amis, je ne peux pas creuser! Preston: Pareil. Lizzy: Je ne peux pas non plus. Stacy: Ok, c'est vraiment bizarre. Stampy, est-ce que tu peux creuser? Stampy: Je n'y arrive pas! Stacy: Ok, tout le monde reste calme. Stampy: Est-ce que le jeu est cassé? Stacy: Si c'est le cas, comment allons-nous le réparer? Lizzy: Aucune idée. Stampy: Est-ce que quelqu'un sait écrire du code pour Minecraft?"
+        text: "Tout le monde va bien ? Stampy : Ah, je vois le problème. Regardez ! Il y avait un trou dans les rails. Stacy : Non, sérieux, Stampy ? Lizzy : Peut-être qu'on devrait rassembler des blocs pour les réparer. Preston : On en fait une course ? Le premier arrivé en haut gagne. Stacy : D'accord, à vos marques, prêts, PARTEZ ! Bon, je vais juste ramasser un peu de cette terre cuite. Attendez. Les amis, je n'arrive pas à l'extraire ! Preston : Pareil. Lizzy : Je ne peux pas non plus. Stacy : Ok, c'est vraiment bizarre. Stampy, est-ce que tu arrives à creuser, toi ? Stampy : Non, j'y arrive pas! Stacy : Ok, pas de panique. Stampy : Est-ce que le jeu est cassé ? Stacy : S'il l'est comment est-ce qu'on le répare ? Lizzy : Aucune idée. Stampy : Est-ce que quelqu'un sait écrire du code pour Minecraft ?"
       4:
         image: 'notes/mc_2017_agent_intro_4.png'
-        text: "(pouf) Preston: Qu'est-ce que c'est que ça? Stampy: Je n'en ai jamais vu avant. Lizzy: C'est trop mignon! Stacy: Est-ce que... est-ce qu'on peut l'apprivoiser? Preston: Ok, qu'est-ce qui se passe? Quelqu'un doit retourner dans le monde réel et réparer. Tous: Pas ça! Stacy: Pas moi (pfffff) Ok, j'y vais."
+        text: "(pouf) Preston : C'est quoi, ça ? Stampy : Je n'en ai jamais vu un. Lizzy : C'est trop mignon! Stacy : Est-ce que... est-ce qu'on peut l'apprivoiser ? Preston : Bon, qu'est-ce qui se passe, là ? Quelqu'un doit retourner au monde réel et réparer tout ça. Tous : Pas moi ! Stacy : Pas mo– (soupire). Bon ok, j'y vais."
       5:
         image: 'notes/mc_2017_agent_intro_5.png'
-        text: "Oh, d'accord, donc je suis maintenant dans le monde réel. Je vais voir si je peux trouver les bureaux de Minecraft."
+        text: "Ah, d'accord, salut, donc je suis dans le monde réel, là. Je vais voir si je peux trouver les bureaux de Minecraft."
       6:
         image: 'notes/mc_2017_agent_intro_6.png'
-        text: "Mais je vais avoir besoin de votre aide. Commencez par suivre le tutoriel, commencer à apprendre à coder, et je vous retrouve après quelques niveaux, d'accord? Souhaitez-moi bonne chance! Je pense que c'est par là. Aie! Un cactus! Je vais bien!"
+        text: "Mais je vais avoir besoin de ton aide. Commence par faire le tutoriel, commence à apprendre à coder, et on se retrouve dans quelques niveaux, d'accord ? Souhaite-moi bonne chance ! Je pense que c'est par là. Aïe ! Un cactus ! Tout va bien !"
       7:
         image: 'notes/mc_2017_agent_intro_7.png'
-        text: "Pour terminer le défi de l'Heure de Code, vous allez devoir coder pour programmer l'agent. Vous allez travailler avec l'Agent pour supprimer les obstacles sur votre chemin, de manière à récolter les objets nécessaires à votre voyage. Seul l'Agent peut placer et casser des blocs, et vous seul pouvez récolter des objets. L'écran est divisé en trois parties principales. À gauche, vous trouvez Minecraft."
+        text: "Pour terminer le défi de l'Heure de Code, tu vas devoir écrire du code qui programmera l'Agent. Tu vas travailler avec l'Agent pour enlever les obstacles de ton chemin, pour que tu puisses récolter les objets nécessaires pour ton voyage. Seul l'Agent peut placer et casser des blocs, et toi tu es le seul à pouvoir récolter des objets. L'écran va se diviser en trois parties principales. Sur la gauche se trouve Minecraft."
       8:
         image: 'notes/mc_2017_agent_intro_8.png'
-        text: "La zone centrale est la boîte à outils avec les commandes que l'Agent peut comprendre."
+        text: "La zone centrale, c'est la boîte à outils, qui contient des commandes que l'Agent peut comprendre."
       9:
         image: 'notes/mc_2017_agent_intro_9.png'
-        text: "Et sur la droite se trouve l'espace de travail. C'est à cet endroit que vous allez empiler les commandes pour construire le programme contrôlant l'Agent."
+        text: "Et sur la droite se trouve l'espace de travail. C'est là que tu vas empiler des commandes pour construire le programme qui contrôlera l'Agent."
       10:
         image: 'notes/mc_2017_agent_intro_10.png'
-        text: "L'Agent peut avancer, tourner et activer des plaques par pression. Il peut aussi détruire des blocs et placer des blocs. Quand il place un bloc comme des rails de wagonnet, il les place en dessous de lui."
+        text: "L'Agent peut avancer, tourner et activer des plaques de pression. Il peut aussi détruire des blocs et placer des blocs. Quand il place un bloc comme ces rails de wagonnet, il les place en dessous de lui."
       11:
         image: 'notes/mc_2017_agent_intro_11.png'
-        text: "Si vous oubliez quoi faire, les instructions de chaque niveau sont en haut."
+        text: "Si tu oublies ce qu'il faut faire, les instructions pour chaque niveau se trouvent en haut."
       12:
         image: 'notes/mc_2017_agent_intro_12.png'
-        text: "Si vous voulez recommencer, vous pouvez appuyer sur le bouton bleu réinitialiser pour tout remettre comme au début. Et si vous voulez supprimer un bloc de code, glissez-le de l'espace de travail vers la boîte à outils. N'oubliez pas d'appuyer sur démarrer pour que l'Agent se déplace. Alors allez-y et essayez ces quelques premiers niveaux. Bonne chance!"
+        text: "Si tu veux recommencer, tu peux appuyer sur le bouton bleu réinitialiser pour remettre tout en place comme au début. Et si tu veux supprimer un bloc de code, glisse-le de l'espace de travail vers la boîte à outils. N'oublie pas d'appuyer sur démarrer pour que l'Agent se mette en route. Allez, vas-y, essaie ces quelques premiers niveaux. Bonne chance !"
     mc_2017_repeat:
       1:
         image: 'notes/mc_2017_repeat_1.png'
-        text: "Stampy: Je me demande ce que fait Stacy?"
+        text: "Stampy : Je me demande ce que fait Stacy ?"
       2:
         image: 'notes/mc_2017_repeat_2.png'
-        text: "Stacy: Ouaah, je pense que je suis au bon endroit. C'est impressionnant!"
+        text: "Stacy: Ouaah, je pense que je suis au bon endroit. C'est incroyable !"
       3:
         image: 'notes/mc_2017_repeat_3.png'
-        text: "C'est comme si j'étais de nouveau dans Minecraft! Bonjour. Comment vas-tu? Bonjour?"
+        text: "J'ai l'impression d'être de retour dans Minecraft ! Bonjour, comment ça va ? Allô ?"
       4:
         image: 'notes/mc_2017_repeat_4.png'
-        text: "Oh, il y a une plante grimpante. Tu ne fais rien, n'est-ce pas? Katie: Stacy? Stacy: Bonjour, Katie? Katie: Oui, bienvenue chez Minecraft!"
+        text: "Oh, il y a un creeper. Tu ne fais rien, si ? Katie : Stacy ? Stacy : Bonjour, Katie ? Katie : Oui, bienvenue chez Minecraft !"
       5:
         image: 'notes/mc_2017_repeat_5.png'
-        text: "Stacy: C'est incroyable. Donc tu travailles ici tous les jours comme développeur. Katie: Oui, c'est assez impressionnant. Je suis développeur dans l'équipe qui s'occupe de la place du marché de Minecraft. Stacy: Combien connais-tu de langages de programmation? Katie: Dans ma carrière, j'ai probablement travaillé avec plus d'une douzaine. Stacy: Une douzaine? Katie: Oui. Stacy: Donc maintenant, est-ce que tu connaîtrais des choses sur ce petit golem qui se fait appelé l'Agent? Katie: Nous utilisons l'Agent pour faire des choses que Steve et Alex ne peuvent pas faire, comme survoler la lave. Stacy: Super, je veux apprendre à coder, et ils veulent aussi apprendre à coder, alors quelle est l'une des premières choses à connaître quand on apprend?"
+        text: "Stacy : C'est incroyable. Donc tu travailles ici tous les jours en tant que développeuse. Katie : Oui, c'est assez génial. Je suis développeuse dans l'équipe qui s'occupe de la place du marché de Minecraft. Stacy : Combien connais-tu de langages de programmation ? Katie : Au cours de ma carrière, j'ai probablement travaillé avec plus d'une douzaine. Stacy : Une douzaine ? Katie : Oui. Stacy : Alors, maintenant, est-ce que tu sais quelque chose au sujet de ce petit golem qui se fait appelé l'Agent ? Katie : Nous utilisons l'Agent pour faire des choses que Steve et Alex ne peuvent pas faire, comme traverser de la lave. Stacy : Eh bien, moi je veux apprendre à coder, et eux ils veulent aussi apprendre à coder, alors qu'est-ce qu'une des premières choses à savoir quand on apprend ?"
       6:
         image: 'notes/mc_2017_repeat_6.png'
-        text: "Katie: Et bien, vous devez apprendre comment utiliser les boucles. Une boucle est ce que les développeurs écrivent pour donner des ordres à un ordinateur qui peuvent être exécuter encore et encore. Stacy: Compris, donc je pense que les niveaux suivant vont aborder le sujet, alors continuez et essayez les boucles."
+        text: "Katie : Eh bien, il faut apprendre à utiliser les boucles. Une boucle est ce que les développeurs écrivent pour donner des ordres à un ordinateur qui peuvent être exécuter encore et encore. Stacy : Compris, alors je pense que les niveaux suivant vont aborder ce sujet, alors on y va, on va essayer les boucles."
       7:
         image: 'notes/mc_2017_repeat_7.png'
-        text: "Dans le prochain niveau, vous pouvez utiliser une boucle pour déplacer l'Agent le long du chemin. Glisse le bloc répéter dans l'espace de travail et place un bloc avancer plus à l'intérieur du bloc répéter. Ça signifie que l'ordinateur doit faire plusieurs fois de suite la même chose sans avoir à glisser un tas de blocs à l'intérieur de l'espace de travail. Vous pouvez choisir combien de répétitions effectuer en plaçant un nombre dans le bloc répéter."
+        text: "Dans le prochain niveau, tu vas pouvoir utiliser une boucle pour déplacer l'Agent le long du chemin. Fais glisser le bloc répéter vers l'espace de travail et place un bloc avancer à l'intérieur du bloc répéter. Ça indique à l'ordinateur qu'il doit faire la même chose plusieurs fois de suite sans avoir à glisser un tas de blocs vers l'espace de travail. Tu peux choisir combien de répétitions effectuer en changeant le nombre dans le bloc répéter."
       8:
         image: 'notes/mc_2017_repeat_8.png'
-        text: "Vous pouvez aussi mettre des blocs tourner et plusieurs commandes à l'intérieur d'un bloc répéter, mais pour le moment, essayez d'utiliser répéter pour faire avancer l'Agent de quelques pas. Rappelez-vous, si vous êtes coincés sur un puzzle, vous pouvez toujours utiliser le bouton bleu Réinitialiser et recommencer."
+        text: "Tu peux aussi mettre des blocs tourner et de multiples commandes à l'intérieur d'un bloc répéter, mais pour le moment, essaie d'utiliser répéter pour faire avancer l'Agent de quelques pas. N'oublie pas que si tu te retrouves coincé sur un casse-tête, tu peux toujours utiliser le bouton bleu « réinitialiser » et réessayer."
       9:
         image: 'notes/mc_2017_repeat_9.png'
-        text: "Si vous pensez avoir un travail aussi cool que Katie, allez-y et cliquez sur le bouton montrer le code quand vous finissez chaque niveau. Cela va vous montrer le code Javascript que quelqu'un comme Katie utilise quand elle programme Minecraft. Katie: Oui, bonne chance à tous!"
+        text: "Si toi aussi, tu aimerais avoir un travail aussi cool que celui de Katie, vas-y, clique sur le bouton montrer le code quand tu termines chaque niveau. Cela te montrera le code Javascript que quelqu'un comme Katie utilise quand elle programme Minecraft. Katie : Oui, bonne chance, tout le monde !"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
-        text: "Preston: Ce n'est pas pour frimer mais je suis plutôt bon en parkour. Lizzy: Dormons comme ça il fera jour quand Stacy reviendra."
+        text: "Preston : C'est pas pour crâner, mais je suis plutôt fort en parkour. Lizzy : Viens, on dort, comme ça il fera jour quand Stacy revient."
       2:
         image: 'notes/mc_2017_functions_2.png'
-        text: "Stacy: Ok les amis, je reviens des bureaux de Minecraft, et je pense que je sais comment résoudre le problème que j'ai dans le jeu. Je pense que je peux utiliser une fonction. J'ouvre juste ceci."
+        text: "Stacy : Ok les gens, je reviens des bureaux de Minecraft, et je pense que je sais comment résoudre le problème que j'ai avec le jeu. Je crois que je peux utiliser une fonction. Je vais juste ouvrir ceci."
       3:
         image: 'notes/mc_2017_functions_3.png'
-        text: "Alors une fonction est une liste spécifique d'instructions pour accomplir une certaine tâche, un peu comme une recette. Dans les niveaux suivants, vous aurez accès aux fonctions et vous pourrez les utiliser pour résoudre les puzzles."
+        text: "Alors, une fonction, c'est une liste précise d'instructions qui sert à accomplir une certaine tâche, un peu comme une recette. Dans les niveaux suivants, tu auras accès aux fonctions, que tu vas pouvoir utiliser pour résoudre les casse-têtes."
       4:
         image: 'notes/mc_2017_functions_4.png'
-        text: "Examinez le code dans la fonction quand celle-ci est dans l'espace de travail pour voir ce qu'elle fait."
+        text: "Examine le code au sein de fonction quand il est dans l'espace de travail pour voir ce qu'il fait."
       5:
         image: 'notes/mc_2017_functions_5.png'
-        text: "Ensuite, trouvez le bloc avec ce nom dans la boîte à outils et glissez-le de la boîte à outils vers le bloc quand l'exécution commence."
+        text: "Puis, trouve le bloc de ce nom dans la boîte à outils et glisse-le de la boîte à outils vers le bloc quand l'exécution commence."
       6:
         image: 'notes/mc_2017_functions_6.png'
-        text: "Rappelez-vous, vous pouvez utiliser la même fonction à chaque fois que vous voulez exécuter la même série d'instructions pour faire quelque chose, comme construire un pont. Bonne chance, je sais que vous allez y arriver!"
+        text: "N'oublie pas que tu peux utiliser la même fonction à chaque fois que tu as besoin d'exécuter la même série d'instructions pour faire quelque chose, comme construire un pont. Bonne chance, je sais que tu vas y arriver !"
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: "Preston: Félicitations!"
+        text: "Preston : Félicitations !"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: "Lizzy: Félicitations!"
+        text: "Lizzy : Félicitations !"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: "Stampy: Félicitations, vous avez réussi!"
+        text: "Stampy : Félicitations, tu as réussi !"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: "Stacy: Félicitations les amis, vous avez assuré! Et maintenant que vous avez terminé l'Heure de Code, vous pouvez commencer à coder dans Minecraft. Vous avez appris les boucles, les fonctions et ce que l'Agent peut faire."
+        text: "Stacy : Félicitations les amis, vous avez assuré ! Et maintenant qu'on a terminé l'Heure de Code, on peut commencer à coder dans Minecraft. On a découvert les boucles, les fonctions et ce que fait un agent logiciel."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
-        text: "Maintenant, c'est le moment de jouer sur un niveau libre, où vous êtes le développeur. Utiliser le reste du temps pour écrire vos propres fonctions pour explorer, creuser et construire."
+        text: "Maintenant, c'est l'heure du niveau en jeu libre, où c'est toi, le développeur. Utilise le temps qui reste pour écrire tes propres fonctions afin d'explorer, creuser et construire."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
-        text: "Vous pouvez prendre le code que vous avez écrit dans ce niveau pour l'utiliser dans votre monde Minecraft de Minecraft: Education Edition. Cliquez juste sur 'Finir' et suivez les instructions pour avoir un lien à utiliser dans votre monde, pour continuer à coder avec l'Agent. Amusez-vous bien, et bon travail!"
+        text: "Tu peux prendre le code que tu as écrit dans ce niveau et l'utiliser dans ton univers Minecraft avec Minecraft : Education Edition. Clique simplement sur « Terminer » et suis les instructions pour avoir un lien à utiliser dans ton univers, pour que tu puisses continuer à coder avec l'Agent. Amuse-toi bien, et bon travail !"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
-        text: "Stacy: Et je suis de retour! Donc là les amis, c'est l'Agent! Laissez-moi vous montrer ce qu'il peut faire. Regardez, il le fait! Je lui ai dit de construire un escalier à partir de blocs de terre cuite, et maintenant nous pouvons l'utiliser pour sortir de là. Et en plus, il n'y a pas que des escaliers. Je peux dire à l'Agent de faire tout ce que je veux, et il le fera pour moi."
+        text: "Stacy : Et voilà, je suis de retour ! Donc ça, les amis, c'est l'Agent ! Laissez-moi vous montrer ce qu'il peut faire. Regardez, il le fait ! Je lui ai dit de construire un escalier en utilisant ces blocs de terre cuite, et maintenant on peut s'en servir pour sortir de là. Et il n'y a pas que des escaliers qu'il puisse faire. Je peux dire à l'Agent de faire tout ce que je veux, et il le fera pour moi."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
-        text: "Stampy: Comment tu as fait ça? Stacy: C'était facile en fait. J'ai juste utilisé du code!"
+        text: "Stampy : Comment tu as fait ça ? Stacy : C'était facile, en fait. J'ai juste utilisé du code !"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
@@ -1759,21 +1759,21 @@ fr:
         text: "Bon, c'était un peu bizarre, ça. Qui aurait cru que les calamars pouvaient coder ? Je ne pensais même pas qu'ils avaient des doigts. Bref, maintenant, on en sait plus sur les boucles. Viens, on va s'en servir pour s'emparer de plus de trésor."
     mc_2018_conditionals:
       1:
-        text: "Ça alors ! Trois nouvelles énigmes résolues ! Et nous avons attrapé... un saumon. Pas aussi excitant que des tas d'or, mais nous prendrons ce que nous pouvons obtenir. Et j'ai le sentiment que la coquille de nautile sera utile plus tard. Je me demande ce qui se cache dans ces ruines. Peut-être un autre indice ! Jetons un coup d'oeil à l'intérieur."
+        text: "Ça alors ! Trois nouveaux casse-têtes de résolus ! Et puis on a attrapé... un saumon. Certes, ce n'est pas aussi palpitant que des montagnes d'or, mais on va faire avec. Et j'ai comme l'impression que ce coquillage de nautile va nous être utile plus tard. Je me demande ce qui se cache dans ces ruines. Peut-être un autre indice ! Allez, on jette un coup d'oeil à l'intérieur."
       2:
-        text: "Je m'appelle Netty et bienvenue dans mes ruines. Nous prenons des décisions tout le temps, en fonction des conditions. Si ça ressemble à de la pluie, alors nous prendrons un parapluie. Si nous avons faim, alors nous mangerons une collation."
+        text: "Je m'appelle Netty, bienvenue dans mes ruines. On prend tout le temps des décisions, en fonction des conditions. Si on dirait qu'il va pleuvoir, on prendra un parapluie. Si on a faim, on mangera un casse-croûte."
       3:
-        text: "Si nous voyons une plante grimpante, alors nous courons dans la direction opposée. Les ordinateurs prennent ces types de décisions aussi. Ils peuvent réellement répondre aux conditions en utilisant du code."
+        text: "Si on voit un type louche, on courra dans l'autre sens. Les ordinateurs prennent ces types de décisions aussi. Ils peuvent vraiment répondre aux conditions en utilisant du code."
       4:
-        text: "Pour programmer une réponse comme celle-ci, à l'aide de te commandes de code, sélectionnez un bloc de chemin si."
+        text: "Pour programmer une réaction de ce type à l'aide de tes commandes de code, sélectionne un bloc « si chemin »."
       5:
-        text: "Sélectionne la liste déroulante pour créer la commande."
+        text: "Clique sur le menu déroulant pour créer la commande."
       6:
-        text: "Par exemple, si tu écris la commande \"si chemin vers la droite\" et places tourner à droite à l'intérieur de la condition, alors, quand Steve atteint un chemin ouvert vers la droite, il tournera toujours à droite. S'il n'y a pas d'ouverture vers la droite, il ne tournera pas à droite. Ces commandes conditionnelles si sont utiles lorsque tu exécutes du code dans des situations imprévisibles, telles que des ruines mystérieuses dans des grottes sous-marines."
+        text: "Par exemple, si tu sélectionnes la commande « si chemin vers la droite » et places « tourner à droite » à l'intérieur de l'instruction conditionnelle, alors, quand Steve rencontre un chemin ouvert sur la droite, il tournera toujours à droite. S'il n'y a pas d'ouverture vers la droite, il ne tournera pas à droite. Ces commandes conditionnelles « si » sont utiles quand tu exécutes du code dans des situations imprévisibles, comme dans des ruines mystérieuses dans des grottes sous-marines."
       7:
-        text: "Essaye d'utiliser les blocs « Si » et prends ton code pour un tour."
+        text: "Essaye d'utiliser les blocs « si » et va faire un tour avec ton code."
       8:
-        text: "Ça alors ! Les ruines de Netty étaient géniales. Je dois vraiment quitter la maison de mes parents. Alors, qu'en penses-tu ? Est-ce que les conditions sont bonnes pour que nous réalisions les énigmes finales ? Nous allons lui donner un aller."
+        text: "Waouh ! Les ruines de Netty étaient géniales. Il faut vraiment que j'arrête d'habiter chez mes parents. Bon, qu'en penses-tu ? Est-ce que les conditions sont bonnes pour qu'on termine les derniers casse-têtes ? Allez viens, on tente."
     mc_2018_closing:
       1:
         text: "Amy Lee33 : Félicitations ! Tu l'as fait !"
@@ -1784,15 +1784,15 @@ fr:
       4:
         text: "Tomohawk : Félicitations !"
       5:
-        text: "Quelle formidable journée ! Toute la chasse au trésor nous a amenés à construire un conduit Minecraft, à trouver des coquilles de Nautile et à découvrir des coffres au trésor. J'adore la couleur de prismarine. Nous avons également appris à coder avec des boucles et des conditions."
+        text: "Quelle super journée ! Toute cette chasse au trésor nous a amené à construire un conduit Minecraft, à trouver des coquillages de nautile et à découvrir des coffres de trésor. J'adore la couleur de la prismarine. On a aussi appris à coder avec des boucles et des instructions conditionnelles."
       6:
-        text: "En parlant de codage, il y a un niveau de plus à cette quête. Êtes-vous prêts, aventuriers ?"
+        text: "En parlant de codage, il y a encore un niveau dans cette quête. Alors, tu te sens prêt, aventurier ?"
       7:
-        text: "C'est un niveau de jeu gratuit et tu peux mettre tes compétences de codage à profit et construire quelque chose d'incroyable."
+        text: "C'est un niveau en jeu libre et tu peux mettre en pratique tes compétences de codage et construire quelque chose de formidable."
       8:
-        text: "Hmmm... un endroit pour cacher votre trésor, un monument sous-marin, un château de corail? Ahhh... tant d'idées. Essaye d'utiliser des boucles pour créer une action répétée, et des conditions pour te préparer à tous ces scénarios imprévisibles."
+        text: "Hmmm... une planque pour ton trésor, un monument sous-marin, un château de corail ? Ahhh... tellement d'idées ! Essaye d'utiliser des boucles pour créer une action qui se répète, et des instructions conditionnelles pour te préparer à tous ces scénarios imprévisibles."
       9:
-        text: "Tu as certainement déjà fait tes preuves, en tant que codeur intrépide, et je suis impatient de voir ce que tu construis. Et j'espère que tes aventures avec le code ne s'arrêtent pas là. Bon Voyage !"
+        text: "En tout cas, tu as déjà bien démontré que tu étais un codeur intrépide, et j'ai hâte de voir ce que tu vas construire. Et j'espère que ton aventure avec le code ne s'arrêtera pas là. Bon voyage !"
     teaching_csf_how_it_works:
       1:
         image: 'notes/teaching_cs_fundamentals_1.png'

@@ -9,8 +9,6 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    // TODO(dave): remove assignmentName prop after launching studioCertificate experiment
-    assignmentName: PropTypes.string,
     courseVersionName: PropTypes.string
   };
 
@@ -44,11 +42,6 @@ class PrintCertificates extends Component {
         method="POST"
       >
         <RailsAuthenticityToken />
-        <input
-          type="hidden"
-          name="script"
-          defaultValue={this.props.assignmentName}
-        />
         {courseVersionName && (
           <input type="hidden" name="course" value={btoa(courseVersionName)} />
         )}

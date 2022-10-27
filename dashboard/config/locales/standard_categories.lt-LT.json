@@ -1,0 +1,17 @@
+{
+  "lt-LT": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Skaičiuojamasis mąstymas"
+        },
+        "L": {
+          "description": "Kalba"
+        },
+        "F": {
+          "description": "Komandų kūrimas"
+        }
+      }
+    }
+  }
+}

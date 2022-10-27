@@ -8,6 +8,9 @@ fr:
       'AI: Training Data & Bias - Video': 'IA : Données de formation et erreurs courantes
         - Vidéo'
       Accelerometer Events: Événements d'accéléromètre
+      Add Content and Structure to Your Page: Ajoutez du contenu et une structure
+        à votre page
+      Add Style to Your Page: Ajouter du style à votre page
       Adding Images: Ajouter des images
       Adding Screens: Ajouter des écrans
       Alien Defender: Défenseur alien
@@ -15,6 +18,20 @@ fr:
       Animate Your Scene: Animez votre scène
       App Lab Intro - Video: Introduction à l'App Lab - Vidéo
       'App Project: Screen Design': 'Projet d’appli : Conception d’écran'
+      'App: Choose a Kid''s Movie': 'App : Choisir un film pour enfants'
+      'App: Friend Finder': 'App : Chercher des amis'
+      'App: Guess the Number': 'App : Devinez le nombre'
+      'App: How Many Countries': 'App : Combien de pays'
+      'App: Improved Pet App': 'App : Application d''animaux améliorée'
+      'App: Is It Your Birthday?': 'App : C''est votre anniversaire ?'
+      'App: My Famous Birthday': 'App : Mon anniversaire célèbre'
+      'App: National Parks': 'App : Parcs nationaux'
+      'App: Outfit Picker': 'App : Sélectionneur de tenue'
+      'App: Pet Chooser': 'App : Sélectionneur d''animaux'
+      'App: Stamp Notebook': 'App : Carnet de timbres'
+      'App: Story Creator': 'App : Générateur d''histoires'
+      'App: The Fastest Finger': 'App : Le doigt le plus rapide'
+      'App: Where Should I Live?': 'App : Où devrais-je vivre ?'
       Arrays: Tableaux
       Artist Intro with JR Hildebrand: Intro Artiste avec JR Hildebrand
       Artist Intro with JR Hildebrande: Intro Artiste avec JR Hildebrande
@@ -62,7 +79,9 @@ fr:
         multiples'
       'Challenge: Draw an Image': 'Défi : Dessine une image'
       'Challenge: Extend Your Scene': 'Défie : Élargis ta scène'
+      'Challenge: Lists': 'Défi : Listes'
       'Challenge: Making Sense of Sensors': 'Défi : Donner du sens aux capteurs'
+      'Challenge: RGB Colors': 'Défi : Couleurs RVB'
       'Challenge: Updating Variables': 'Défi : Mettre des variables à jour'
       Challenges: Défis
       Change: Changer
@@ -77,6 +96,7 @@ fr:
       'Circuit Playground: LEDs': 'Circuit Playground : LEDs'
       Circuits and Logic: Circuits et logique
       Code Your Own Flappy Game: Codez votre propre jeu Flappy
+      Code Your Page: Codez votre page
       Collector Game: Jeu Collector
       Collision Detection: Détection de collision
       Collision Detection Review: Révision de la détection de collision
@@ -143,6 +163,7 @@ fr:
       Example App Types: Exemples de types d'applis
       Example Projects: Exemples de projets
       Example projects: Exemples de projets
+      Experiment with Web Lab: Expérimenter le Web Lab
       Exploration: Exploration
       'Exploration: Adding Style': 'Exploration : Ajout de style'
       'Exploration: For Loops': 'Exploration: Boucles « Pour »'
@@ -170,7 +191,7 @@ fr:
       Getting Properties: Lire les propriétés
       HTML Tags: Balises HTML
       Hardware and Software: Matériel et logiciels
-      Headings: Rubriques
+      Headings: Titres
       Headings in HTML: Titres en HTML
       Hello World: Bonjour tout le monde !
       How to Make a Sprite: Comment faire un Sprite
@@ -278,6 +299,7 @@ fr:
       Properties: Propriétés
       Publishing Your Website: Publiez votre site Web
       Quarter Notes: Notes noires
+      Quick Check: Vérification rapide
       RGB Exploration: Exploration RVB
       RGB Widget: Widget RVB
       Random Numbers: Nombres aléatoires
@@ -290,6 +312,9 @@ fr:
       Representing Images: Représenter des Images
       Responding to User Input: Répondre à l’entrée de l’utilisateur
       Review: Revoir
+      Review Your Page: Vérifiez votre page
+      'Review: CSS': 'Révision : CSS'
+      'Review: HTML': 'Révision : HTML'
       Revise Artist Project: 'Réviser le Projet d''Artiste
 
 '
@@ -301,11 +326,15 @@ fr:
 '
       Sample App: Appli d’exemple
       Sample Game: Jeu d’exemple
+      Sample Personal Web Pages: Exemples de pages web personnelles
+      Sample Personal Websites: Exemples de sites web personnels
       Sample Platform Jumper Game: Jeu de plates-formes d’exemple
       Sample Program: Programme d’exemple
+      Sample Website: Exemple de site web
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
       Skill Building: Développement des Compétences
+      Social Sleuth: Limier social
       Speed it Up, Slow it Down: Accélère et ralentis
       Sprite Interactions: Interactions de sprite
       Sprite Interactions Review: Révision des interactions de sprite
@@ -333,7 +362,7 @@ fr:
       Velocity and the Counter Pattern Review: Révision de la vélocité et du contre-modèle
       Video: Vidéo
       'Video:  Minecraft - The Agent': 'Vidéo : Minecraft - L''Agent'
-      'Video:  Text  and Prompts': 'Vidéo : Texte et invites '
+      'Video:  Text  and Prompts': 'Vidéo : Texte et Invites '
       'Video: "If/Else"': 'Video: « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
       'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
@@ -358,6 +387,7 @@ fr:
       'Video: Dance Party Warm Up': 'Vidéo : Échauffement – Soirée Dansante'
       'Video: De-bugging with the Step Button': 'Vidéo : Débogage avec le bouton Step
         (étape)'
+      'Video: Debugging': 'Vidéo : Déboguage'
       'Video: Debugging with Scrat ': 'Vidéo : Le débogage avec Scrat '
       'Video: Debugging with the Step Button': 'Vidéo : Débogage avec le bouton Étape'
       'Video: Drawing in Game Lab - Part 1': 'Vidéo : Dessiner dans le labo des jeux
@@ -371,13 +401,16 @@ fr:
       'Video: Getting Loopy': 'Vidéo : Faire des boucles '
       'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité hors
         ligne'
-      'Video: Harvesting with Conditionals': " Récolter avec les Conditions"
+      'Video: Harvesting with Conditionals': 'Vidéo : Récolter avec les Conditions'
       'Video: How to Create a Simple Function': 'Vidéo : Comment créer une fonction
         simple'
       'Video: How to Make a Sprite': 'Vidéo : Comment faire un sprite'
+      'Video: IOSP Model': 'Vidéo : Modèle IOSP'
       'Video: Ice Age Loops': 'Vidéo : Boucles l''Âge de glace'
       'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
       'Video: Impacts on Society': 'Vidéo : Impacts sur la Société'
+      'Video: Intro to CSS - Part 1': 'Vidéo : Introduction au CSS - Partie 1'
+      'Video: Intro to CSS - Part 2': 'Vidéo : Introduction au CSS - Partie 2'
       'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie
         1'
       'Video: Intro to Web Lab - Part 2': 'Vidéo : Introduction au labo du web - Partie
@@ -397,7 +430,8 @@ fr:
       'Video: Measures': " Mesures"
       'Video: Minecraft - Congratulations': " Minecraft - Félicitations"
       'Video: Minecraft - Functions': 'Vidéo : Minecraft - Fonctions'
-      'Video: Minecraft - Repeat Loops': 'Vidéo : Minecraft - Répétition de boucles'
+      'Video: Minecraft - Repeat Loops': 'Vidéo : Minecraft - Les boucles « répéter
+        »'
       'Video: Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
       'Video: Minecraft: Voyage Aquatic Conditionals': 'Minecraft : Minecraft : Voyage
         Aquatique – Formules Conditionnelles'
@@ -415,11 +449,12 @@ fr:
       'Video: Programming with Blocks': 'Vidéo : Programmer avec les blocs'
       'Video: Programming with Rey and BB-8': " Vidéo : Programmer avec Rey et BB-8"
       'Video: Properties': " Propriétés"
+      'Video: Publishing Your Website': 'Vidéo : Publier votre site web'
       'Video: Repeat Blocks': 'Video: Les blocs `Répéter`'
       'Video: Repeat Blocks with BB-8': 'Vidéo : Les blocs « répéter » avec BB-8'
       'Video: Repeat Blocks with the Artist': 'Vidéo : Répéter les blocs avec l''Artiste '
       'Video: Repeat Until Blocks': 'Video: Les blocs Répéter Jusqu’à'
-      'Video: Repeat Until Statements': 'Vidéo : Instructions Répéter tant que'
+      'Video: Repeat Until Statements': 'Vidéo : Instructions Répéter Jusqu''à '
       'Video: Sprite Movement': 'Vidéo : Animer un sprite'
       'Video: Sprites in Action': 'Vidéo : Les Sprites en Action'
       'Video: Star Wars Project': " Projet Star Wars"

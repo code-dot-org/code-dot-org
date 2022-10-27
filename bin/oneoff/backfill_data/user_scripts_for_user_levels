@@ -132,7 +132,7 @@ NUM_LEVELS_REQUIRED = {
   # 203
   # 204
 }.freeze
-SCRIPTS = Script.all.pluck(:id).freeze
+SCRIPTS = Unit.all.pluck(:id).freeze
 TRANSACTION_SIZE = 5_000
 TIME_NOW = Time.now.freeze
 
