@@ -9322,6 +9322,14 @@ en:
           lessons:
             lesson-1:
               name: function machines playground
+            lesson-2:
+              name: Particles Lesson 1
+            lesson-3:
+              name: Particles Lesson 2
+            lesson-4:
+              name: Particles Lesson 3
+            lesson-5:
+              name: Particles Lesson 4
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
@@ -9530,3 +9538,106 @@ en:
           student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
           description_short: ''
           description_audience: ''
+        self-paced-pl-csa-2023:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-csa1-2023:
+          title: 'Module 1: Welcome'
+          description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          student_description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa2-2023:
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Estimated Time:** 70 minutes\n"
+          student_description: |-
+            This module is intended for teachers who are new to Code.org and the Code.org platform.
+
+            **You will:**
+            * Navigate the Code.org website and teacher tools.
+            * Set up a classroom section.
+            * Locate and use course lesson plans and teacher resources.
+            * Learn how to access support while teaching the course.
+
+            **Estimated Time:** 70 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa3-2023:
+          title: 'Module 3: Support for text-based programming'
+          description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          student_description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          description_short: ''
+          description_audience: ''
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+            lesson-2:
+              name: Unit 2 Projects
+            lesson-3:
+              name: Unit 3 Projects
+            lesson-4:
+              name: Unit 4 Projects
+            lesson-5:
+              name: Unit 5 Projects
+            lesson-6:
+              name: Unit 6 Projects
+            lesson-7:
+              name: Unit 7 Projects
+            lesson-8:
+              name: Unit 8 Projects
+          lesson_groups: {}
+          name: csa-examples-22
+          title: CSA Unit Project Examples [2022-2023]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

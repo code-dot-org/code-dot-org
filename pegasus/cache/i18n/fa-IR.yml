@@ -427,6 +427,8 @@ fa-IR:
   minecraft_agent_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
   minecraft_agent_button: شروع
+  minecraft_designer_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی
+    ماینکرافت شما
   minecraft_designer_button: شروع
   minecraft_adventurer_button: شروع
   sports_watch_video: فیلم را تماشا کنید
@@ -1453,6 +1455,10 @@ fa-IR:
     یک دوره ی فشرده ی جالب در برنامه نویسی ربات به بچه ها می دهد و هم زمان توانایی
     های آن ها در ریاضی و علوم را تقویت می کند.
   compatibility_hide_this_warning: مخفی کردن هشدار
+  compatibility_unsupported_browser_markdown: مرورگر شما پشتیبانی نمیشود. لطفا مرورگر
+    خود را به [یکی از مرورگرهای تحت پشتیبانی ما] [one of our supported browsers] %{supported_browsers_url}
+    بروزرسانی کنید. میتوانید محتویات صفحه را مشاهده کنید، اما عملکرد آن مطلوب نخواهد
+    بود.
   flappy_shortcode: پریدن
   header_my_dashboard: دَشبورد من
   header_courses: مراحل
@@ -1460,11 +1466,23 @@ fa-IR:
   header_project_gallery: پروژه ها
   header_sections: بخش‌ها
   header_professional_learning: یادگیری پیشرفته
+  header_educate_overview: مروری بر مربی
+  header_educate_elementary: مدرسه ابتدایی
+  header_educate_middle: مدرسه راهنمایی
+  header_educate_high: دبیرستان
   header_educate_hoc: ساعت کد نویسی
+  header_educate_partner: با ما شریک شوید
+  header_educate_beyond: فراتر از Code.org
+  header_educate_inspire: انگیزه دادن به دانش آموز
+  header_educate_community: جامعه‌ی مجازی
   header_educate_tools: ابزار‌ها و فیلم‌ها
   header_about_us: درباره ما
+  header_about_leadership: راهبری
+  header_about_donors: اهدا کنندگان
   header_about_partners: شرکا
   header_about_team: کل تیم
+  header_about_news: اتاق خبر
+  header_about_evaluation: ارزیابی
   header_about_jobs: مشاغل
   header_about_contact: تماس با ما
   header_about_faqs: سوال‌های متداول
@@ -1476,6 +1494,8 @@ fa-IR:
   header_report_bug: گزارش مشکل
   header_legal_privacy: قوانین حفظ حریم خصوصی
   header_legal_tos: شرایط
+  header_tutorials: آموزش‌ها
+  header_documentation: مستندات
   user_header_label: سلام %{username}
   user_header_team: تیم
   user_header_settings: حساب کاربری من
@@ -1511,6 +1531,8 @@ fa-IR:
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
   hoc2018_mc_hero_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
+  hoc2018_mc_designer_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی
+    ماینکرافت شما
   hoc2018_mc_start: شروع
   hoc2018_mc_homepage_join_us: به ما بپیوندید
   hoc2018_mc_homepage_try_it: آن را امتحان کنید

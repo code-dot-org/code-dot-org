@@ -44,17 +44,17 @@ module Pd
         school_state: 'School state',
         school_zip_code: 'School zip code',
         school_type: 'My school is a',
+        principal_role: "Administrator/School Leader's Role",
         principal_title: "Principal's title",
-        principal_first_name: "Principal's first name",
-        principal_last_name: "Principal's last name",
-        principal_email: "Principal's email address",
-        principal_confirm_email: "Confirm principal's email address",
-        principal_phone_number: "Principal's phone number",
+        principal_first_name: "Administrator/School Leader's first name",
+        principal_last_name: "Administrator/School Leader's last name",
+        principal_email: "Administrator/School Leader's email address",
+        principal_confirm_email: "Confirm Administrator/School Leader's email address",
+        principal_phone_number: "Administrator/School Leader's phone number",
         current_role: 'What is your current role at your school?',
         completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
         completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
         how_heard: 'How did you hear about this program?',
-        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
@@ -90,18 +90,8 @@ module Pd
           (select all that apply)"
         ),
         csa_how_offer: 'How will you offer CSA?',
-        cs_how_many_minutes: clean_multiline(
-          'How many minutes per day is one {{CS program}} class section? (Include the
-          number of minutes from start to finish that you see your students per class
-          period. If it varies from day to day, estimate the average number of minutes
-          you meet per class period.)'
-        ),
-        cs_how_many_days_per_week: 'How many days per week will your {{CS program}} class be offered to one section of students?',
-        cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
-        cs_total_course_hours: 'Computed total course hours',
-        plan_to_teach: "Do you plan to personally teach this course in the #{YEAR} school year?",
-        replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
-        replace_which_course: 'Which existing course or curriculum will {{CS program}} replace? Mark all that apply.'
+        enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
+        replace_existing: 'Will this course replace an existing computer science course in the master schedule?'
       },
       professional_learning_program_requirements:
         {
@@ -142,9 +132,7 @@ module Pd
 
     LABEL_OVERRIDES = {
       program: "Which professional learning program would you like to join for the #{YEAR} school year?",
-      cs_how_many_minutes: 'How many minutes per day is one class section?',
-      cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
-      cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
+      enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
     }.freeze
 
     CSV_LABELS = {
@@ -174,13 +162,9 @@ module Pd
         program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
-        cs_how_many_minutes: 'How many minutes per day is one class section?',
-        cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
-        cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
-        cs_total_course_hours: "Total course hours",
+        csa_which_grades: "To which grades does your school plan to offer CSA in the #{YEAR} school year?",
+        enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
-        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
@@ -276,7 +260,7 @@ module Pd
       csp_which_grades: YES_NO,
       csa_which_grades: YES_NO,
       committed: YES_NO,
-      plan_to_teach: YES_NO,
+      enough_course_hours: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
       replace_existing: YES_NO,
       principal_approval: YES_NO,
@@ -294,8 +278,8 @@ module Pd
       ],
       criteria_score_questions_csd: [
         :csd_which_grades,
+        :enough_course_hours,
         :committed,
-        :plan_to_teach,
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
@@ -303,17 +287,18 @@ module Pd
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
+        :enough_course_hours,
         :committed,
-        :plan_to_teach,
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
         :principal_schedule_confirmed,
       ],
       criteria_score_questions_csa: [
+        :csa_already_know,
         :csa_which_grades,
+        :enough_course_hours,
         :committed,
-        :plan_to_teach,
         :previous_yearlong_cdo_pd,
         :replace_existing,
         :principal_approval,
@@ -352,6 +337,7 @@ module Pd
         :phone,
         :zip_code,
         :country,
+        :principal_role,
         :principal_first_name,
         :principal_last_name,
         :principal_email,
@@ -364,13 +350,8 @@ module Pd
         :csd_which_grades,
         :csp_which_grades,
         :csp_how_offer,
-        :cs_how_many_minutes,
-        :cs_how_many_days_per_week,
-        :cs_how_many_weeks_per_year,
-        :cs_total_course_hours,
-        :plan_to_teach,
+        :enough_course_hours,
         :replace_existing,
-        :replace_which_course,
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,
@@ -380,7 +361,6 @@ module Pd
         :race,
         :how_heard,
         :principal_approval_url,
-        :previous_used_curriculum,
         :street_address,
         :city,
         :state,

@@ -225,14 +225,17 @@ const AboutYou = props => {
           <LabeledSelect name="state" placeholder="Select a state" />
           <LabeledInput name="zipCode" />
 
-          <LabeledCheckBoxes name="previousUsedCurriculum" />
           <LabeledCheckBoxes name="previousYearlongCdoPd" />
           <LabeledRadioButtonsWithAdditionalTextFields
             name="currentRole"
             textFieldMap={{[TextFields.otherPleaseList]: 'other'}}
           />
 
-          <p>Please provide your school and principal information below:</p>
+          <p>
+            Please provide your school’s information below. If your school is
+            not listed please select from the drop-down “Other school not listed
+            below” and provide the school details below.
+          </p>
 
           <FormGroup
             id="school"
@@ -270,11 +273,25 @@ const AboutYou = props => {
             </div>
           )}
 
+          <p style={{margin: '10px 0'}}>
+            Please provide information for an Administrator/School Leader (i.e.
+            Principal, Vice Principal, STEM Program Director, etc) who can
+            certify that the course will be offered at your school. Upon your
+            submission of this application, we will contact the
+            Administrator/School Leader that you listed via email in order to
+            obtain their approval. Note that your application cannot be fully
+            reviewed until there is approval from your administrator/school
+            leader. Therefore, we encourage you to follow up with them directly
+            to let them know about your application and to expect an email
+            seeking their approval.
+          </p>
+
           {
             // Disable auto complete for principal fields, so they are not filled with the teacher's details.
             // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
             // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
           }
+          <LabeledInput name="principalRole" autoComplete="never" />
           <LabeledInput name="principalFirstName" autoComplete="never" />
           <LabeledInput name="principalLastName" autoComplete="never" />
           <LabeledInput name="principalEmail" autoComplete="never" />

@@ -222,4 +222,11 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     TeacherMailer.expects(:verified_teacher_email).never
     create :admin
   end
+
+  test 'cannot grant permission to student user' do
+    student = create :student
+    assert_raises do
+      student.permission = UserPermission::AUTHORIZED_TEACHER
+    end
+  end
 end
