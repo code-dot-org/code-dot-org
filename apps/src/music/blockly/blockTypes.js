@@ -12,5 +12,6 @@ export const BlockTypes = {
   RANDOM: 'random',
   VARIABLES_GET: 'variables_get',
   VARIABLES_SET: 'variables_set',
-  SIMPLE_IF: 'simple_if'
+  SIMPLE_IF: 'simple_if',
+  LOGIC_COMPARE: 'logic_compare'
 };
