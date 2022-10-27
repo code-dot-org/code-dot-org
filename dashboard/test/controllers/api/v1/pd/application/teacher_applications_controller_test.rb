@@ -154,11 +154,8 @@ module Api::V1::Pd::Application
       assert_response :created
     end
 
-    test 'updates course hours, autoscores, and queues email once application is submitted' do
-      application_hash = build :pd_teacher_application_hash_common, :csp,
-                               cs_how_many_minutes: 45,
-                               cs_how_many_days_per_week: 5,
-                               cs_how_many_weeks_per_year: 30
+    test 'autoscores and queues email once application is submitted' do
+      application_hash = build :pd_teacher_application_hash_common, :csp
       application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
 
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
@@ -170,7 +167,6 @@ module Api::V1::Pd::Application
 
       sign_in @applicant
       put :update, params: {id: application.id, form_data: application_hash, status: 'unreviewed'}
-      assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
@@ -189,12 +185,9 @@ module Api::V1::Pd::Application
       original_data = application.form_data_hash
       original_school_info = @applicant.school_info
 
-      # Keep cs_total_course_hours because it is calculated on create or update
-      put :update, params: {id: application.id, status: 'incomplete', form_data: {"cs_total_course_hours": 80}}
+      put :update, params: {id: application.id, status: 'incomplete'}
       application.reload
-      refute_equal original_data, application.form_data_hash
-      assert_nil application.course
-      assert_nil application.form_data_hash[:cs_total_course_hours]
+      assert_equal original_data, application.form_data_hash
       assert_equal original_school_info, @applicant.school_info
       assert_response :ok
     end

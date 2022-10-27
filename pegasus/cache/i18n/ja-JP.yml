@@ -365,6 +365,7 @@ ja-JP:
   homepage_banner_40k_teachers_link: もっと詳しく知る
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: 誰でも学べる！早速始めよう。
+  homepage_slot_text_blurb_hoc_2022: いろいろ見て、プレイして作成！
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
   homepage_slot_text_link_about_hoc: Hour of Code（アワー オブ コード）について
   homepage_slot_text_link_host: Hour of Code を主催する
@@ -392,7 +393,7 @@ ja-JP:
   homepage_slot_text_link_shop: T シャツ、帽子、その他
   homepage_slot_text_link_thebadguys: The Bad Guysでコーディング
   homepage_slot_text_link_administrators: あなたの学校にコンピューター サイエンスを取り入れましょう
-  homepage_gallery_header: これまでに %{project_count} 百万以上のCode.orgプロジェクトが作成されました
+  homepage_gallery_header: これまでに %{project_count} 百万を超えるCode.orgプロジェクトが作成されました
   homepage_header_donors: Code.orgは支援者の皆様に感謝します。
   homepage_donors_seall: すべてを見る
   homepage_donors_donate: 寄付する
@@ -1973,3 +1974,12 @@ ja-JP:
   footer_cookie_notice: クッキーについての通知
   top_hoc_tutorial_applab_alt_text: 青い背景に星や光を放射する人差し指でタッチスクリーンタブレットに触れる茶色の手
   minecraft_tile_alt: 珊瑚、イルカ、コンブが生息する水中のマインクラフトシーンを背景にした2人のマインクラフトのキャラクター (スティーブとアレックス)
+  hoc2022_banner_title: 探索、プレイ、作成！
+  hoc2022_banner_description: 宇宙を探検してゴールを決め、ダンスをしましょう。コンピューターサイエンスを試す方法はたくさんあります！
+  hoc2022_cta_primary: アップデート情報
+  hoc2022_cta_secondary: アクティビティをもっと試す
+  hoc2022_landing_page_explore_description: コンピュータサイエンスで新世界への扉を開きましょう！
+  hoc2022_landing_page_play_description: フィールドを取って、得点しましょう！
+  hoc2022_landing_page_create_title: つくる
+  hoc2022_landing_page_create_description: 変で素敵なものを作りましょう！
+  try_it_yourself: 自分でやってみよう！

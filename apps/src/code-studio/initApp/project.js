@@ -1983,7 +1983,7 @@ function setMakerAPIsStatusFromQueryParams() {
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = CP_API;
+    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
   }
 }
 

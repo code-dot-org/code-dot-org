@@ -2633,6 +2633,10 @@ vi:
               display_name: Nội dung
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Bắt đầu
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2732,6 +2736,9 @@ vi:
           description_audience: Người biên soạn giáo trình
           description_short: Để cập nhật theo giai đoạn cho các bài học hoặc cấp độ giữa các phiên bản giáo trình
           description: Để cập nhật theo giai đoạn cho các bài học hoặc cấp độ giữa các phiên bản giáo trình
+          lessons:
+            lesson-7:
+              name: Giới thiệu về nhân vật
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2823,3 +2830,85 @@ vi:
               display_name: Nội dung
             lessonGroup-5:
               display_name: Khảo sát
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-6:
+              name: Vòng lặp
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát
+            lessonGroup-3:
+              display_name: Nội dung
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2
+          title: Giải quyết vấn đề
+        csd4-2023:
+          title: Quy trình thiết kế
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Tiếng gì vậy?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+            csp_project:
+              display_name: Dự án
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Danh sách
+            csp_loops:
+              display_name: Vòng lặp
+            csp_project:
+              display_name: Dự án
+            lessonGroup-5:
+              display_name: Khảo sát sau khoá học
+        csp6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Khảo sát sau khoá học
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tạo PT
+            lessonGroup-3:
+              display_name: Khảo sát sau khoá học
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Khảo sát sau khoá học

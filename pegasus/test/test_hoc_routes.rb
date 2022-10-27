@@ -53,29 +53,39 @@ class HocRoutesTest < Minitest::Test
       assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
     end
 
-    it 'has certificate share page' do
-      cert_id = make_certificate
-      assert_successful_get CDO.code_org_url("/certificates/#{cert_id}")
-      assert_successful_get CDO.code_org_url("/printcertificate/#{cert_id}")
-
-      invalid_cert_id = 'abcdefg12345'
-      assert_not_found_get CDO.code_org_url("/certificates/#{invalid_cert_id}")
+    it 'redirects batch certificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/certificates')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/batch'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
     end
 
-    it 'has certificates pages for different scripts' do
-      assert_successful_get CDO.code_org_url('/certificates?course=20-hour')
-      assert_successful_get CDO.code_org_url('/certificates?course=mc')
-      assert_successful_get CDO.code_org_url('/certificates?course=course1')
-      assert_successful_get CDO.code_org_url('/certificates?course=Hour%20of%20Code')
+    it 'redirects blank certificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/certificates/blank')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/blank'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
     end
 
-    it 'serves png, jpg, jpeg certificate images, not others' do
-      cert_id = make_certificate
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpg")
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpeg")
-      assert_successful_png_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.png")
+    it 'redirects sharecertificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/sharecertificate')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/blank'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
+    end
 
-      assert_not_found_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.bmp")
+    it 'redirects vanilla congrats page to code studio' do
+      @pegasus.get CDO.code_org_url('/congrats')
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
+    end
+
+    it 'preserves url params when redirecting congrats page' do
+      @pegasus.get CDO.code_org_url('/congrats?i=foo&s=bar')
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats?i=foo&s=bar', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
     end
 
     it 'starts and ends given tutorial, tracking company and tutorial' do

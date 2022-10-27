@@ -5076,6 +5076,10 @@ ar:
               display_name: محتوى
         tessplayground:
           name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: البدء
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -5472,3 +5476,130 @@ ar:
               display_name: محتوى
             lessonGroup-5:
               display_name: استبيان
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: مختبر Java
+            lesson-6:
+              name: الحلقات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: استبيان
+            lessonGroup-3:
+              display_name: محتوى
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+        csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: التصميم المحوري للمستخدم'
+            lessonGroup-3:
+              display_name: 'الفصل 2: نماذج التطبيق'
+          title: عملية التصميم
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: تمثيل المعلومات'
+            lessonGroup-3:
+              display_name: 'الفصل 2: حل مشكلات البيانات'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'الفصل 1: الصور والمتحركات'
+            lessonGroup-3:
+              display_name: 'الفصل 2: إنشاء الألعاب'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+          title: الحوسبة المادية
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'الفصل 2: بناء نماذج أوليّة مادية'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: ما ذلك الصوت؟
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: استبيان
+            csp_unit1_2020:
+              display_name: "(قديم) الوحدة 1: معلومات رقمية"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'الوحدة 2: الانترنت'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'الوحدة 3: مقدمة في تصميم التطبيقات'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: المتغيرات
+            csp_conditionals:
+              display_name: الجمل الشرطية
+            csp_functions:
+              display_name: دوال
+            csp_project:
+              display_name: مشروع
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: القوائم
+            csp_loops:
+              display_name: الحلقات
+            csp_traversals:
+              display_name: الاجتيازات
+            csp_project:
+              display_name: مشروع
+            lessonGroup-5:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'الوحدة 6: الخوارزميات'
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: إعداد وإرجاع القيم
+            csp_libraries:
+              display_name: المكتبات
+            lessonGroup-3:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: إنشاء مهام الأداء
+            lessonGroup-3:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'الوحدة 9: البيانات'
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'الوحدة 10: الأمان عبر الإنترنت والآثار العالمية'
+            lessonGroup-2:
+              display_name: استبيان ما بعد الدورة التدريبية
+        csp-post-survey-2023:
+          title: استطلاع رأي بعد انتهاء دورة مبادئ علم الحاسوب

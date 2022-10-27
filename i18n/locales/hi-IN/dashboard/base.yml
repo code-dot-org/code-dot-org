@@ -373,6 +373,7 @@ hi:
       about: "के बारे में"
       legal: "निजता और कानूनी"
       legal_privacy: "गोपनीयता नीति"
+      legal_cookie_notice: "कुकी नोटिस"
       legal_tos: "सेवा की शर्तें"
     user:
       classroom: 'अध्यापक संबंधी मुख्य पृष्ठ'
@@ -548,6 +549,7 @@ hi:
     choose_next_course: "नीचे दिए गए कोड स्टूडियो पाठ्यक्रम में से एक चुनकर आजमाएं"
     print_certificate: "प्रमाण-पत्र प्रिंट करें"
   certificate_sponsor_message: "%{sponsor_name} ने आपके सीखने को प्रायोजित करने के लिए उदार उपहार दिया।"
+  certificate_hour_of_code: "आवर ऑफ़ कोड"
   move_students:
     new_section_dne: "हमें खेद है कि अनुभाग %{new_section_code} मौजूद नहीं है। कृपया अलग अनुभाग कोड दर्ज करें।"
     section_code_cant_be_current_section: "मौजूदा अनुभाग, नए अनुभाग के समान नहीं हो सकता।"
@@ -1147,3 +1149,5 @@ hi:
       cannot_view_locked_answers: "लॉक होने पर उत्तर नहीं देख सकते"
       forbidden: "उपयोगकर्ता छात्र की लॉक करने योग्य स्थिति को अपडेट नहीं कर सकता"
   reset_predict_progress_button: "उत्तर मिटाएँ"
+  pixelation:
+    binary: "युग्मक"

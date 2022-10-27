@@ -2243,6 +2243,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Въведение в Спрайтове
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2309,3 +2313,50 @@ bg:
               display_name: Съдържание
             lessonGroup-5:
               display_name: Проучване
+        csa1-2023:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-6:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Проучване
+            lessonGroup-3:
+              display_name: Съдържание
+        csd1-2023:
+          title: Разрешаване на Проблеми
+        csd7-2023:
+          title: AI и Машинно Обучение
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифрова информация'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Раздел 2: Интернет'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+            csp_project:
+              display_name: Проект
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+            csp_project:
+              display_name: Проект
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Раздел 9: данни'

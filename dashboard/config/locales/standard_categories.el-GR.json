@@ -1,0 +1,20 @@
+{
+  "el-GR": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Αλγοριθμική Σκέψη"
+        },
+        "L": {
+          "description": "Γλώσσα"
+        },
+        "C": {
+          "description": "Σήραγγα"
+        },
+        "F": {
+          "description": "Συναρτήσεις"
+        }
+      }
+    }
+  }
+}

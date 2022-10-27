@@ -239,20 +239,12 @@ fr:
             MOVES.Rest: Aucun
       Dancelab_eval:
         text: evaluer {CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'répéter toutes les {N} mesures après {START} '
       Dancelab_everySeconds:
         text: 'répéter chaque {N} {UNIT} '
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': secondes
-      Dancelab_everySecondsRange:
-        text: 'chaque {N} {UNIT} de {START} à {STOP} '
-        options:
-          UNIT:
-            measures: Mesures
-            seconds: Secondes
       Dancelab_everyVerseChorus:
         text: 'chaque {UNIT} '
         options:
@@ -1064,8 +1056,8 @@ fr:
             new Behavior(patrolling, []): patrouiller
             new Behavior(moving_west_and_looping, []): se déplacer vers l'ouest et
               en boucle
-            new Behavior(moving_east_and_looping, []): aller vers l'est et mettre
-              en boucle
+            new Behavior(moving_east_and_looping, []): se déplacer vers l'est et en
+              boucle
             new Behavior(moving_north_and_looping, []): se déplacer vers le Nord et
               en boucle
             new Behavior(moving_south_and_looping, []): se déplacer vers le Sud et
@@ -1344,6 +1336,29 @@ fr:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": sélectionner
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": basse décalée
             "'sound://category_digital/jump_7.mp3'": sauter
+      gamelab_playSoundOptionsSoccer:
+        text: jouer le son {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": avertisseur
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": Bravos
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chanter
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": Encourager
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": frappe
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": deux sifflets
+            "'sound://category_sports/One_Whistle_SFX.mp3'": Sifflets
+      gamelab_playSoundOptionsSpace:
+        text: jouer le son {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": trou noir
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": " amas du boulet"
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopée
+            "'sound://category_space/Launch_SFX.mp3'": Lancer
+            "'sound://category_space/Pillars_SFX.mp3'": piliers
+            "'sound://category_space/Southern_ring_SFX.mp3'": anneau du sud
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: émettre les paroles {SOUND}
       gamelab_playerBehaviors:
@@ -2204,6 +2219,11 @@ fr:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: lorsque {VAR} est saisi
       RyanLab_moveForward:
@@ -2381,11 +2401,11 @@ fr:
         text: si chemin {DIR}{STATEMENT}
         options:
           DIR:
-            "'ahead'": devant
+            "'ahead'": vers l'avant
             "'right'": à droite
             "'left'": à gauche
       craft_ifStandingOn:
-        text: si debout sur {TYPE}{STATEMENT}
+        text: si se tient sur {TYPE}{STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": corail bleu
@@ -2395,7 +2415,7 @@ fr:
             "'planksOak'": planches en chêne
             "'seaLantern'": lanterne aquatique
       craft_ifStandingOnLimit:
-        text: si debout sur {TYPE}{STATEMENT}
+        text: si se tient sur {TYPE}{STATEMENT}
         options:
           TYPE:
             "'sand'": sable
@@ -2409,11 +2429,11 @@ fr:
         text: placer {blockType}
         options:
           blockType:
-            '"strippedOak"': chêne écorcé
-            '"strippedDarkOak"': chêne noir écorcé
+            '"strippedOak"': chêne décapé
+            '"strippedDarkOak"': chêne foncé décapé
             '"stoneBricks"': briques de pierre
             '"mossyStoneBricks"': briques de pierre moussues
-            '"crackedStoneBricks"': briques de pierre craquelées
+            '"crackedStoneBricks"': briques de pierre fissurées
             '"chiseledStoneBricks"': briques de pierre décoratives
             '"blueCoralBlock"': bloc de corail bleu
             '"pinkCoralBlock"': bloc de corail rose
@@ -2432,32 +2452,36 @@ fr:
             '"blueIce"': glace bleue
             '"blackConcrete"': béton noir
             '"seaGrass"': herbe marine
-            '"kelp"': varech
+            '"kelp"': algue
             '"polishedGranite"': granite poli
       craft_placePrismarine:
         text: placer prismarine
       craft_placeTorch:
         text: placer la torche
       craft_repeatUntilConduit:
-        text: répéter jusqu'à ce que le tuyau soit terminé{STATEMENT}
+        text: répéter jusqu'à ce que le tuyau soit terminé {STATEMENT}
       craft_repeatUntilGoal:
-        text: répéter jusqu'au but{STATEMENT}
+        text: répéter jusqu'au but {STATEMENT}
       craft_spawnEntity:
-        text: œuf {ENTITY}
+        text: pondre {ENTITY}
         options:
           ENTITY:
             '"cod"': morue
             '"dolphin"': dauphin
             '"salmon"': saumon
             '"seaTurtle"': tortue de mer
-            '"squid"': poulpe
+            '"squid"': calamar
             '"tropicalFish"': poisson tropical
       craft_turn:
-        text: tourner {DIR}
+        text: tourner à {DIR}
         options:
           DIR:
             right: droite ↻
             left: gauche ↺
+      storylab_setHeading:
+        text: définir le titre{HEADING}
+      storylab_setSubheading:
+        text: définir le sous-titre {SUBHEADING}
       validation_validatedBackground:
         text: établir {IMG} comme arrière-plan
       validation_validatedSound:

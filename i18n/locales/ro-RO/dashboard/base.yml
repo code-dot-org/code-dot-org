@@ -548,6 +548,7 @@ ro:
     choose_next_course: "Încearcă un curs cu Atelierul de programare alegând unul de mai jos"
     print_certificate: "Tipărește certificatul"
   certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza învățarea."
+  certificate_hour_of_code: "Oră de Programare"
   move_students:
     new_section_dne: "Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă rugăm să introduceţi un cod aferent unei secţiuni diferite."
     section_code_cant_be_current_section: "Secţiunea curentă nu poate fi la fel ca o secţiune nouă."
@@ -1126,3 +1127,5 @@ ro:
       cannot_view_locked_answers: "Nu se pot vizualiza răspunsurile în timp ce sunt blocate"
       forbidden: "Utilizatorul nu poate actualiza starea de blocare a elevului."
   reset_predict_progress_button: "Șterge Răspunsul"
+  pixelation:
+    binary: "Binar"

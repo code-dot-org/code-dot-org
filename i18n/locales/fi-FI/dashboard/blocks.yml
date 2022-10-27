@@ -1212,6 +1212,10 @@ fi:
             "'sound://category_animals/dolphin.mp3'": delfiini
             "'sound://category_animals/dog.mp3'": koira
             "'sound://category_digital/jump_7.mp3'": hyppää
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1727,6 +1731,11 @@ fi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: siirry eteenpäin
       RyanLab_turnLeft:

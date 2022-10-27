@@ -48,6 +48,8 @@ class DCDOBase < DynamicConfigBase
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
       'ceos-for-cs-banner': DCDO.get('ceos-for-cs-banner', false),
       'ceos-for-cs-banner-govs': DCDO.get('ceos-for-cs-banner-govs', false),
+      'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
+      'cs-leaders-prize': DCDO.get('cs-leaders-prize', false)
     }
   end
 end

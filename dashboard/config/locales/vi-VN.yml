@@ -453,6 +453,7 @@ vi:
       about: Giới thiệu
       legal: Quyền riêng tư & Pháp lý
       legal_privacy: Chính sách bảo mật
+      legal_cookie_notice: Thông báo về cookie
       legal_tos: Các điều khoản của Code.org
     user:
       classroom: Trang chủ giáo viên
@@ -675,6 +676,7 @@ vi:
     print_certificate: In giấy chứng nhận
   certificate_sponsor_message: "%{sponsor_name} đã hào phóng trao tặng một món quà
     để tài trợ cho việc học của bạn."
+  certificate_hour_of_code: Giờ của mã
   move_students:
     new_section_dne: Xin lỗi, nhưng phần học %{new_section_code} không tồn tại. Vui
       lòng nhập một mã khác cho phần học.
@@ -1496,3 +1498,5 @@ vi:
       cannot_view_locked_answers: Không thể xem câu trả lời ở trạng thái khóa
       forbidden: Người dùng không thể cập nhật trạng thái khóa của học sinh
   reset_predict_progress_button: Xóa câu trả lời
+  pixelation:
+    binary: Nhị phân

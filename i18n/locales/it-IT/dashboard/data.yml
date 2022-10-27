@@ -603,14 +603,23 @@ it:
         poemart_events: L'arte della poesia - Eventi
         poemart_imagery: L'arte della poesia  - Metafore
         poemart_celebration: L'arte della poesia  - Celebrazione
+        csd_ml_ethics_ai: 'Etica e Intelligenza Artificiale '
         outbreak_intro: 'Simulatore di focolaio - Introduzione'
         outbreak_events: 'Simulatore di focolaio - Eventi'
         outbreak_scientist: 'Simulatore di focolaio - Pensa come uno scienziato'
         outbreak_outro: 'Simulatore di focolaio - Gioco libero'
         CSA-PL-debugging-temp: Introduzione al Debugging in Sviluppo Java - temp
+        CSA-PL-variables: Creazione di variabili in Java
         PL_CS_Journeys_Overview: CS Journeys
+        CSD_u6_variables_part1: 'CSD: Variabili'
+        csd_u6_if_statements: 'CSD: Istruzioni if'
+        csc-poem-art-intro: Video introduttivo
+        csc-poem-art-outro: Video finale
+        csd_u6_call_define_functions: 'CSD: Chiamare e Definire Funzioni'
         csp_applab_parameters: Funzioni con parametri
         CSA-PL-intro-to-arrays: Array unidimensionale (1D)
+        CSA-PL-conditionals: Istruzioni Condizionali in Java
+        CSA-PL-Printing-in-Java: Stampa in Java
         CS_Changing_Everything: L'informatica sta cambiando ogni cosa
     callout:
       text:

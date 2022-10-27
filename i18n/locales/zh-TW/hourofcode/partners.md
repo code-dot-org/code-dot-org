@@ -2,37 +2,37 @@
 title: 合作夥伴
 ---
 
-The Hour of Code is driven by the Hour of Code Review Committee.
+一小時玩程式由一小時玩程式評審委員會推動。
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 12 current and former educators across K-12 grade bands that assess and recommend activities using a rubric established by an advisory committee. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[審查委員會]({{ urls/review_committee }})由12名當前和過去的K-12年級教育工作者組成，他們使用諮詢委員會制定的標準對活動進行評估和建議。 這些教育工作者審查由數以百計的活動夥伴提交的由學生主導的活動和由教師引導的課程計劃，評估活動的教育價值、吸引學員的能力以及對各類學生的潛在吸引力。
 
-The committee's work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.
+委員會所做的工作和貢獻讓一小時玩程式活動得以成功，同時實現活動讓每個學生認識電腦科學的願景。
 
-# Major Partners and Corporate Supporters
+# 主要合作夥伴和企業贊助商
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# 國際合作夥伴
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# 課程和教程合作夥伴
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# 基礎設施合作夥伴和工具
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# 其他合作夥伴
 
 {{ partners/additional_partners }}
 

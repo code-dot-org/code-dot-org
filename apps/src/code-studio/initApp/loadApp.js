@@ -44,7 +44,7 @@ export function setupApp(appOptions) {
       // Lock the contained levels if this is a teacher viewing student work:
       lockContainedLevelAnswers();
     }
-    if (!appOptions.level.edit_blocks) {
+    if (!(appOptions.level.edit_blocks || appOptions.level.editBlocks)) {
       // Always mark the workspace as readonly when we have contained levels,
       // unless editing:
       appOptions.readonlyWorkspace = true;

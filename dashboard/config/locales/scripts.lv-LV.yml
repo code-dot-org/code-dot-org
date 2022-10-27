@@ -998,3 +998,21 @@ lv:
               display_name: Mainīgie
         soccer:
           name: futbols
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Cikli
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Mainīgie
+            csp_conditionals:
+              display_name: Sazarojumi
+            csp_functions:
+              display_name: Funkcijas
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Saraksti
+            csp_loops:
+              display_name: Cikli

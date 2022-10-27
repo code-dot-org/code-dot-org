@@ -266,3 +266,17 @@ my:
           lesson_groups:
             lessonGroup-8:
               display_name: Variables
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Loops
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops

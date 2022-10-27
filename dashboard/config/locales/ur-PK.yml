@@ -228,6 +228,7 @@ ur:
     online: آن لائن
     trynow: مزید سیکھے
     try_beta_courses: نیا! ہمارے بیٹا کورس برائے K-5 طلبہ کا جائژہ لیں.
+  certificate_hour_of_code: آور-آف-کوڈ
   user_type:
     student: Talib-e-ilm
   footer:
@@ -353,3 +354,10 @@ ur:
     link_your_email: ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں
     not_now: ابھی نہیں
   teacher_feedback: استاد کے حوالے سے رائے
+  lesson_lock:
+    error:
+      no_updates: کوئی اپڈیٹ نہیں ہیں
+      missing_params: یوزر، لیول، اور یونٹ کے آئی ڈی دینا ضروری ہے
+      cannot_view_locked_answers: قفل کی حالت میں جواب نہیں دکھائے جا سکتے
+      forbidden: یوزر طالب علم کے قابل قلف حالت کو اپڈیٹ نہیں کر سکتا
+  reset_predict_progress_button: جواب ڈیلیٹ کریں

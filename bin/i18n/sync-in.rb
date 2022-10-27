@@ -24,6 +24,7 @@ def sync_in
   localize_animation_library
   localize_shared_functions
   localize_course_offerings
+  localize_standards
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
@@ -35,6 +36,53 @@ def sync_in
 rescue => e
   puts "Sync in failed from the error: #{e}"
   raise e
+end
+
+# Takes strings describing and naming Framework, StandardCategory, and Standard
+# and places them in the source pool to be sent to crowdin.
+def localize_standards
+  puts "Preparing standards content"
+  standards_content_path = File.join(I18N_SOURCE_DIR, "standards")
+
+  frameworks = {}
+
+  # Localize all frameworks.
+  Framework.all.each do |framework|
+    frameworks[framework.shortcode] = {
+      'name' => framework.name,
+      'categories' => {},
+      'standards' => {}
+    }
+  end
+
+  # Localize all categories.
+  StandardCategory.all.each do |category|
+    framework = category.framework
+
+    categories = frameworks[framework.shortcode]['categories']
+    categories[category.shortcode] = {
+      'description' => category.description
+    }
+  end
+
+  # Localize all standards.
+  Standard.all.each do |standard|
+    framework = standard.framework
+
+    standards = frameworks[framework.shortcode]['standards']
+    standards[standard.shortcode] = {
+      'description' => standard.description
+    }
+  end
+
+  FileUtils.mkdir_p(standards_content_path)
+
+  # Then, for each framework, generate a file for it.
+  frameworks.keys.each do |framework|
+    File.open(File.join(standards_content_path, "#{framework}.json"), "w") do |file|
+      file.write(JSON.pretty_generate(frameworks[framework]))
+    end
+  end
 end
 
 # This function localizes all content in studio.code.org/docs
@@ -133,6 +181,12 @@ def get_i18n_strings(level)
       i18n_strings['mini_rubric'].merge! rubric_properties
     end
 
+    # dynamic_instructions
+    if level.dynamic_instructions
+      dynamic_instructions = JSON.parse(level.dynamic_instructions)
+      i18n_strings['dynamic_instructions'] = dynamic_instructions unless dynamic_instructions.empty?
+    end
+
     # parse markdown properties for potential placeholder texts
     documents = []
     %w(
@@ -163,12 +217,14 @@ def get_i18n_strings(level)
       i18n_strings['function_definitions'] = Hash.new unless functions.empty?
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
+        # The name is used to uniquely identify the function. Skip if there is no name.
+        next unless name
         description = function.at_xpath('./mutation/description')
         parameters = function.xpath('./mutation/arg').map do |parameter|
           [parameter["name"], parameter["name"]]
         end.to_h
         function_definition = Hash.new
-        function_definition["name"] = name.content if name
+        function_definition["name"] = name.content
         function_definition["description"] = description.content if description
         function_definition["parameters"] = parameters unless parameters.empty?
         i18n_strings['function_definitions'][name.content] = function_definition
@@ -252,7 +308,7 @@ def get_placeholder_texts(document, block_type, title_names)
 
       # Skip empty or untranslatable string.
       # A translatable string must have at least 3 consecutive alphabetic characters.
-      next unless title&.content =~ /[a-zA-Z]{3,}/
+      next unless /[a-zA-Z]{3,}/.match?(title&.content)
 
       # Use only alphanumeric characters in lower cases as string key
       text_key = Digest::MD5.hexdigest title.content
@@ -305,7 +361,7 @@ def localize_level_content(variable_strings, parameter_strings)
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
   # which relies on running a shell command
   Dir.chdir(Rails.root) do
-    Script.all.each do |script|
+    Unit.all.each do |script|
       next unless ScriptConstants.i18n? script.name
       script_strings = {}
       script.script_levels.each do |script_level|
@@ -340,7 +396,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if Script.unit_in_category?('hoc', script.name)
+        if Unit.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")
@@ -440,7 +496,11 @@ def localize_course_offerings
   CourseOffering.all.sort.each do |co|
     hash[co.key] = co.display_name
   end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/course_offerings.json"), "w+") do |f|
+  write_dashboard_json('course_offerings', hash)
+end
+
+def write_dashboard_json(location, hash)
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{location}.json"), "w+") do |f|
     f.write(JSON.pretty_generate(hash))
   end
 end

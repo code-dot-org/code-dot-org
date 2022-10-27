@@ -16,7 +16,7 @@ title: Blurbs and useful stats
 
 #### Få informatikk inn i skolen din. Begynn med Kodetimen!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But just half of all schools offer computer science! Den gode nyheita er at vi arbeider for å endre dette. Om du hørte om Kodetimen i fjor, så veit du at den blei historisk. 100 millionar elevar har no oppdaga kor tilgjengeleg og morosam informatikk kan vere gjennom å ha gjennomført berre ein Kodetime.
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But just half of all schools offer computer science! Den gode nyheita er at vi arbeider for å endre dette. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Kodetimen er ein timeslang introduksjon til informatikk, laga for å demystifisere koding og vise at alle kan lære det mest grunnleggande. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
@@ -30,7 +30,7 @@ Vi håper det vil vekkje interesse hos elevane som motiverer dei til vidare lær
 
 #### Kvifor er dette viktig?
 
-Informasjonsteknologi griper etterhvert inn i alle bransjer. I 2015 fantes det 7 millioner ledige jobber i USA innenfor yrker der programmeringsferdigheter verdsettes, bl.a. innen kunst og design. But 49 percent of schools in the U.S. don't offer computer science. No er det på tide å nå att det 21. hundreåret. Vi vet at uansett hva disse elevene ender opp med å bli her i livet, det være seg medisin, næringsliv, politikk, eller kunst, vil evnen til å skape og styre teknologien gi dem en selvsikkerhet og et konkurransefortrinn. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. Vi vet at uansett hva disse elevene ender opp med å bli her i livet, det være seg medisin, næringsliv, politikk, eller kunst, vil evnen til å skape og styre teknologien gi dem en selvsikkerhet og et konkurransefortrinn. <br /> <br />
 
 #### A quote you can use in materials
 
