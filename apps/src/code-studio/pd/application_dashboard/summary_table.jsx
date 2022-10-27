@@ -38,7 +38,20 @@ export class SummaryTable extends React.Component {
       locked: 0,
       all: 0
     };
-    const categoryRows = Object.keys(this.props.data).map((status, i) => {
+
+    const statusesInOrder = [
+      'incomplete',
+      'reopened',
+      'awaiting_admin_approval',
+      'unreviewed',
+      'pending',
+      'pending_space_availability',
+      'accepted',
+      'declined',
+      'withdrawn'
+    ];
+
+    const categoryRows = statusesInOrder.map((status, i) => {
       const statusData = this.props.data[status];
       totals.locked += statusData.locked;
       totals.all += statusData.total;
