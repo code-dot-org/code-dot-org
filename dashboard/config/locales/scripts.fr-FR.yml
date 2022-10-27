@@ -4475,6 +4475,7 @@ fr:
             lessonGroup-2:
               display_name: Enquête
         coursea-2021:
+          title: Cours A (2021)
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
           lesson_groups:
@@ -5813,3 +5814,77 @@ fr:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Qu'est-ce que cela vous évoque ?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Enquête
+            csp_unit1_2020:
+              display_name: Principes de l'informatique, unité 1
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unité 2: L''Internet'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unité 3: Introduction à la conception d''applications'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Instructions conditionnelles
+            csp_functions:
+              display_name: Fonctions
+            csp_project:
+              display_name: Projet
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Listes
+            csp_loops:
+              display_name: Boucles
+            csp_traversals:
+              display_name: Parcours
+            csp_project:
+              display_name: Projet
+            lessonGroup-5:
+              display_name: Suivi d'après cours
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unité 6 : Les Algorithmes'
+            lessonGroup-2:
+              display_name: Suivi d'après cours
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Paramètres et Valeurs de Retour
+            csp_libraries:
+              display_name: Bibliothèques
+            lessonGroup-3:
+              display_name: Suivi d'après cours
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Créer la Tâche de Performance (PT)
+            lessonGroup-3:
+              display_name: Suivi d'après cours
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unité 9 : Les Données'
+            lessonGroup-2:
+              display_name: Suivi d'après cours
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: " Unité 10: Cyber sécurité et impacts mondiaux"
+            lessonGroup-2:
+              display_name: Suivi d'après cours
+        csp-post-survey-2023:
+          title: CS PrincipPrincipleses Enquête Post-Cours

@@ -1909,3 +1909,21 @@ ms:
               display_name: Bab 1
             lessonGroup-3:
               display_name: Bab 2
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Pemboleh ubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+            csp_project:
+              display_name: Projek
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Senarai
+            csp_loops:
+              display_name: Gelung
+            csp_project:
+              display_name: Projek

@@ -420,9 +420,11 @@ img.video_thumbnail {
 .bannerContentContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin: 16px;
 }
+
 #courses-container {
   #header-banner {
     background-position: 75% 40%;
