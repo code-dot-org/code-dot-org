@@ -468,14 +468,17 @@ class JsDebugger extends React.Component {
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <span style={styles.showHideIcon}>
+          <button
+            type="button"
+            style={{...styles.showHideIcon, ...styles.chevronButton}}
+            onClick={this.slideToggle}
+          >
             <FontAwesome
               icon={
                 this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
               }
-              onClick={this.slideToggle}
             />
-          </span>
+          </button>
           {this.props.debugButtons && (
             <PaneSection id="debug-commands-header">
               <FontAwesome
@@ -512,8 +515,9 @@ class JsDebugger extends React.Component {
                   : {}
               }
             >
-              <span
-                style={styles.showDebugWatchIcon}
+              <button
+                type="button"
+                style={{...styles.showDebugWatchIcon, ...styles.chevronButton}}
                 onClick={() => {
                   // reset resizer-overridden styles
                   // (remove once resize logic migrated to React)
@@ -537,7 +541,7 @@ class JsDebugger extends React.Component {
                       : 'chevron-circle-right'
                   }
                 />
-              </span>
+              </button>
               <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
                   ? i18n.debugShowWatchHeader()
@@ -628,30 +632,31 @@ const styles = {
     msUserSelect: 'none',
     userSelect: 'none'
   },
-  showHideIcon: {
-    position: 'absolute',
-    top: 0,
-    left: 8,
-    margin: 0,
+  chevronButton: {
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: color.white
-    }
+      color: color.white,
+      boxShadow: 'none'
+    },
+    padding: 0,
+    backgroundColor: 'transparent',
+    //color: color.dark_charcoal,
+    border: 'none'
+  },
+  showHideIcon: {
+    position: 'absolute',
+    top: 0,
+    left: 8,
+    margin: 0
   },
   showDebugWatchIcon: {
     position: 'absolute',
     top: 0,
     right: '6px',
     width: '18px',
-    margin: 0,
-    lineHeight: styleConstants['workspace-headers-height'] + 'px',
-    fontSize: 18,
-    ':hover': {
-      cursor: 'pointer',
-      color: 'white'
-    }
+    margin: 0
   },
   hidden: {
     display: 'none'
