@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:02:16.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -212,15 +208,24 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "widget_mode": "false",
     "parent_level_id": 18759,
     "name_suffix": "2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "libraries_enabled": "false",
+    "validation_enabled": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:02:16.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:16.144+00:00\",\"changed\":[\"cloned from \\\"CSP U3 Water Conservation Sample App_2021\\\"\"],\"cloned_from\":\"CSP U3 Water Conservation Sample App_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:16.144+00:00\",\"changed\":[\"cloned from \\\"CSP U3 Water Conservation Sample App_2021\\\"\"],\"cloned_from\":\"CSP U3 Water Conservation Sample App_2021\"},{\"changed_at\":\"2022-10-26 16:03:11 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

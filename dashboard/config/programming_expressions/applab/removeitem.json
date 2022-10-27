@@ -33,7 +33,8 @@
     "list",
     "index"
   ],
+  "return_value": "No return value.",
   "short_description": "Removes the item from the array at the specified index position.",
-  "syntax": "No return value.",
+  "syntax": "removeItem(list, index)",
   "tips": "- List(array) manipulation functions include: [appendItem(list, item)](/docs/applab/appendItem), [insertItem(list, index, item)](/docs/applab/insertItem) and [removeItem(list, index)](/docs/applab/removeItem)."
 }
