@@ -652,11 +652,6 @@ Style/SlicingWithRange:
 Style/SoleNestedConditional:
   Enabled: false
 
-# Offense count: 29
-# This cop supports safe auto-correction (--auto-correct).
-Style/StderrPuts:
-  Enabled: false
-
 # Offense count: 314
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Mode.

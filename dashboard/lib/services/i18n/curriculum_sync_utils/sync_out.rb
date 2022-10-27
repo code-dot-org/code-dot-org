@@ -66,11 +66,11 @@ module Services
                   relative_position: route_params[:position].to_i,
                 ).select(&:numbered_lesson?)
               if lessons.count == 0
-                STDERR.puts "Could not find lesson for url #{lesson_url.inspect}"
+                warn "Could not find lesson for url #{lesson_url.inspect}"
                 next
               end
               if lessons.count > 1
-                STDERR.puts "More than one lesson found for url #{lesson_url.inspect}. This should be investigated."
+                warn "More than one lesson found for url #{lesson_url.inspect}. This should be investigated."
                 next
               end
               lesson = lessons.first
@@ -92,7 +92,7 @@ module Services
                 course_versions.find_by_key(course_version_key).
                 reference_guides.find_by_key(route_params[:key])
               if reference_guide.nil?
-                STDERR.puts "Could not find reference_guide for url #{reference_guide_url.inspect}"
+                warn "Could not find reference_guide for url #{reference_guide_url.inspect}"
                 next
               end
               [Services::GloballyUniqueIdentifiers.build_reference_guide_key(reference_guide), reference_guide_data]
