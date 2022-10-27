@@ -17,22 +17,22 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
-  Services::I18n::CurriculumSyncUtils.sync_in
-  HocSyncUtils.sync_in
-  localize_level_and_project_content
-  localize_block_content
-  localize_animation_library
-  localize_shared_functions
-  localize_course_offerings
-  localize_standards
+  # Services::I18n::CurriculumSyncUtils.sync_in
+  # HocSyncUtils.sync_in
+  # localize_level_and_project_content
+  # localize_block_content
+  # localize_animation_library
+  # localize_shared_functions
+  # localize_course_offerings
+  # localize_standards
   localize_docs
-  puts "Copying source files"
-  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-  redact_level_content
+  # puts "Copying source files"
+  # I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  # redact_level_content
   redact_docs
-  redact_block_content
-  redact_script_and_course_content
-  localize_markdown_content
+  # redact_block_content
+  # redact_script_and_course_content
+  # localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
   puts "Sync in failed from the error: #{e}"
@@ -89,11 +89,13 @@ end
 # This function localizes all content in studio.code.org/docs
 def localize_docs
   puts "Preparing /docs content"
-  docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
-  programming_env_docs = {}
+  # docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
+  # programming_env_docs = {}
   # For each programming environment, name is used as key, title is used as name,
   ProgrammingEnvironment.all.sort.each do |env| # env as short for environment
     env_name = env.name
+    docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env_name + ".json")
+    programming_env_docs = {}
     # Skip javalab
     # javalab documentations exists in a different table because it has a different structure, more align with java.
     next if env_name == 'javalab'
@@ -120,46 +122,49 @@ def localize_docs
         expressions_data.store(
           expression_key, {
             'content' => expression_docs.properties["content"],
-            'examples' => {},
-            'palette_params' => {},
+            'examples' => ({} unless expression_docs.properties['examples'].nil?),
+            'palette_params' => ({} unless expression_docs.properties["palette_params"].nil?),
             'return_value' => expression_docs.properties["return_value"],
             'short_description' => expression_docs.properties["short_description"],
-            'syntax' => expression_docs.properties["syntax"],
+            # 'syntax' => expression_docs.properties["syntax"], Syntax is not translated as it is JavaScript syntax
             'tips' => expression_docs.properties["tips"]
-          }
+          }.compact
         )
         # Programming expresions may have 0 or more examples
         example_docs = expressions_data[expression_key]["examples"]
         expression_docs.properties['examples']&.each do |example|
-          example_docs.store(
-            example["name"], {
-              'name' => example["name"],
-              'description' => example["description"],
-              # 'code' => example["code"] # we don't want code
-              # translated until expression names are marked 'do not
-              # translate' in crowdin in the same way variables are.
-              # We only want to translate comments, labels, text, etc.
-            }
-          )
+          unless example["name"].nil_or_empty? && example["description"].nil_or_empty?
+            example_docs.store(
+              example["name"], {
+                'name' => (example["name"] if example["name"]),
+                'description' => (example["description"] if example["description"]),
+                # 'code' => example["code"] Code translations are not currently supported
+              }.compact
+            )
+          end
         end
         # Programming expresions may have 0 or more parameters
         param_docs = expressions_data[expression_key]["palette_params"]
         expression_docs.properties["palette_params"]&.each do |param|
           param_docs.store(
             param["name"], {
-              # 'name' => param["name"], # expression names and parameters are not translated yet
-              'type' => param["type"],
-              'description' => param["description"]
-            }
+              # 'name' => param["name"], # expression parameters are not translated as they are JavaScript syntax
+              'type' => (param["type"] if param["type"]),
+              'description' => (param["description"] if param["description"])
+            }.compact
           )
         end
       end
     end
+    FileUtils.mkdir_p(File.dirname(docs_content_file))
+    File.open(docs_content_file, "w") do |file|
+      file.write(JSON.pretty_generate(programming_env_docs.compact))
+    end
   end
-  FileUtils.mkdir_p(File.dirname(docs_content_file))
-  File.open(docs_content_file, "w") do |file|
-    file.write(JSON.pretty_generate(programming_env_docs))
-  end
+  # FileUtils.mkdir_p(File.dirname(docs_content_file))
+  # File.open(docs_content_file, "w") do |file|
+  #   file.write(JSON.pretty_generate(programming_env_docs.compact))
+  # end
 end
 
 def localize_level_and_project_content
