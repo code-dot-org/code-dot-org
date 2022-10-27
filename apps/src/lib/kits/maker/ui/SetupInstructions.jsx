@@ -82,9 +82,9 @@ export default class SetupInstructions extends React.Component {
       return this.webSerialButtonRender();
     }
 
-    // In the Maker App and in Chromebooks when a webSerial connection has been selected,
-    // skip the download instructions and display y checklist
-    if (isCodeOrgBrowser() || (isChromeOS() && shouldUseWebSerial())) {
+    // In the Maker App and in Chromebooks when a webSerial connection has been selected
+    // or when web serial is no enabled, skip the download instructions and display checklist
+    if (isCodeOrgBrowser() || isChromeOS()) {
       return this.webSerialSetupChecklist(webSerialPort, true);
     }
 
