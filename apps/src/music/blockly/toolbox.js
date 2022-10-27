@@ -227,20 +227,11 @@ export const baseToolbox = {
       contents: [
         {
           kind: 'block',
-          type: BlockTypes.SIMPLE_IF,
-          fields: {
-            var: {
-              name: 'currentTime',
-              type: 'number'
-            }
-          }
+          type: 'controls_if'
         },
         {
           kind: 'block',
-          type: BlockTypes.LOGIC_COMPARE,
-          fields: {
-            var: {}
-          }
+          type: 'logic_compare'
         }
       ]
     }
