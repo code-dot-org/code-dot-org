@@ -116,8 +116,7 @@
         - slowquery
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
       BackupRetentionPeriod: !Ref DBBackupRetention
-<%
-     DB_INSTANCE_RANGE.each do |i| %>
+<%     DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
     Properties:
@@ -130,7 +129,7 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
-<%   end -%>
+<%     end -%>
 
   DBProxy:
     Type: AWS::RDS::DBProxy
@@ -162,8 +161,8 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
-<%end -%>
-<% else -%>
+<%   end -%>
+<% end -%>
 # Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
 # populate CDO.* application configuration settings. Publish these Secrets even when `database == false` so that
 # these configuration settings correctly point to MySQL service running on localhost in those environments.
@@ -201,5 +200,3 @@
       Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_proxy_reporting_endpoint'
       Name: '<%=environment%>/cdo/db_proxy_reporting_endpoint'
       SecretString: <%=db_proxy_reporting_endpoint%>
-<% end -%>
-
