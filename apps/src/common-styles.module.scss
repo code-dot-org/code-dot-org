@@ -1,0 +1,53 @@
+// As we move from inline css to css modules we are temporarily duplicating commonStyles.js into this css module.
+// Any changes in one should be made in the other to apply to all components.
+@import "color.scss";
+@import "style-constants";
+
+.hidden {
+  display: none;
+}
+
+.purpleHeader {
+  height: $workspace-headers-height;
+  background-color: $purple;
+  color: $white;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.purpleHeaderUnfocused {
+  background-color: $lighter_purple;
+  color: $dark_charcoal;
+}
+
+.teacherBlueHeader {
+  background-color: $cyan;
+  color: $lightest_cyan;
+}
+
+.teacherHeaderUnfocused {
+  color: $dark_charcoal;
+}
+
+.minecraftHeader {
+  background-color: #3b3b3b;
+  color: $white;
+}
+
+.button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+// Div contain instructions; either below visualization or in top instructions
+// May not need a common location once everything is in top instructions
+.bubble {
+  color: $black;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
