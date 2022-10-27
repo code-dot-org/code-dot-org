@@ -379,6 +379,7 @@ mr:
       about: "या बद्दल"
       legal: "गोपनीयता आणि कायदेशीर"
       legal_privacy: "गोपनीयता धोरण"
+      legal_cookie_notice: "कुकी सूचना "
       legal_tos: "सेवेच्या अटी"
     user:
       classroom: 'शिक्षक होम पेज'

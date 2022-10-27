@@ -111,7 +111,7 @@ Det er heilt greit om du og elevene dine ikkje er kjend med datavitskap frå fø
 
 Sett elevane i gong med aktiviteten
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Når elevane har spørsmål eller synast noko er vanskeleg, er det greit å svare:
 
@@ -138,7 +138,6 @@ Kva kan eg gjere om ein elev blir tidleg ferdig?
 
 - [Skriv ut diplomer]({{ urls/certificates }}) fo dine deltakere.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) til skulen din.
 - Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
 
 * * *
@@ -152,6 +151,6 @@ Kva kan eg gjere om ein elev blir tidleg ferdig?
 
 ### Kva kjem etter Kodetimen?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

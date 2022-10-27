@@ -326,6 +326,7 @@ ru:
   teacher_mailer:
     new_teacher_subject: Добро пожаловать на Code.org!
     delete_teacher_subject: 'Уведомление Code.org: Ваш аккаунт был удален'
+    verified_teacher_subject: Code.org Проверка Преподавателя - Успех
   section:
     your_section:
       one: 'Твой раздел:'
@@ -446,6 +447,7 @@ ru:
       about: О разработчике
       legal: Правовая информация
       legal_privacy: Политика конфиденциальности
+      legal_cookie_notice: Уведомление о cookie
       legal_tos: Условия предоставления услуг
     user:
       classroom: Домашняя страница преподавателя
@@ -1474,3 +1476,22 @@ ru:
       cannot_view_locked_answers: Невозможно просмотреть ответы, пока они заблокированы
       forbidden: Пользователь не может обновлять состояние блокировки студента
   reset_predict_progress_button: Удалить ответ
+  pixelation:
+    raw_format: Raw Формат
+    raw_format_alt: Просмотр битов без форматирования
+    readable_format: Читаемый Формат
+    readable_format_alt: Просмотр битов, разделенных пикселями
+    save_image: Сохранить Изображение
+    actual_size: Текущий Размер
+    image_file_format_header: Формат Файла Изображения
+    image_file_format_width: 'Ширина: 1 байт'
+    image_file_format_height: 'Высота: 1 байт'
+    image_file_format_bits_per_pixel: 'Бит на Пиксель: 1 байт'
+    image_file_format_data_a: n бит пиксельных данных
+    image_file_format_data_b: n = Ширина * Высота * Бит на Пиксель
+    image_width: Ширина Изображения
+    image_height: Высота Изображения
+    bits_per_pixel_header: Бит На Пиксель
+    binary: Двоичный
+    hexadecimal: Шестнадцатеричный
+    pixel_format_header: Формат Пикселей

@@ -8,7 +8,7 @@ nav: how_to_nav
 
 # तुमची कंपनी अवर ऑफ कोडमध्ये कशी सहभागी होऊ शकते
 
-### तुम्ही आणि तुमचे कर्मचारी संगणक शास्त्र शिकण्यासाठी विद्यार्थ्यांना कसे प्रेरित करू शकता ते शोधा!
+### तुम्ही आणि तुमचे कर्मचारी विद्यार्थ्यांना संगणक शास्त्राचा प्रयत्न करण्यासाठी कशा प्रकारे प्रेरित करू शकता ते शोधा!
 
 * * *
 
@@ -18,21 +18,35 @@ nav: how_to_nav
 
 सुरुवात करण्‍यासाठी खालील पायर्‍या पहा आणि तुमच्‍या कंपनीला आवर ऑफ कोडबद्दल उत्‍साहित कसे करावे याविषयी अधिक माहितीसाठी आमचे [कॉर्पोरेट पार्टनर्स साठी गाइड ](/files/hoc-corporate-toolkit.pdf) पहा.
 
-- [कर्मचाऱ्यांना वर्गासाठी स्वयंसेवक म्हणून काम करायला प्रोत्साहन द्या](#encourage-employees)
-- [तुमच्या कंपनीला एखाद्या शाळेशी जोडा](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [तुमचा स्वत:चा अवर ऑफ कोड कार्यक्रम होस्ट करा](#host-hour-of-code)
 - [कोडच्या तासाचा प्रचार करा ](#promote-hour-of-code)
 - [अवर ऑफ कोडला मदत करण्याचे इतर काही मार्ग](#support-hour-of-code)
 
 * * *
 
+<a id="connect-with-a-school"></a>
+
+## Connect with a local school
+
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
+
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
 <a id="encourage-employees"></a>
 
-## कर्मचाऱ्यांना वर्गासाठी स्वयंसेवक म्हणून काम करायला प्रोत्साहन द्या
+## Encourage employees to volunteer with a classroom
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
 [<button>स्वयंसेवक होण्यासाठी साईन अप करा</button>]({{ urls/volunteer }})
 
@@ -42,23 +56,9 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 * * *
 
-<a id="connect-with-a-school"></a>
-
-## तुमच्या कंपनीला एखाद्या शाळेशी जोडा
-
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
-
-[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
-
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
-
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
-
-* * *
-
 <h4><font color="00adbc"><i>"सगळी मुले अतिशय उत्तेजित झाली आहेत हे पाहून मला फार आनंद होत होता. शिक्षकांच्या लक्षात आलेली एक छान गोष्ट म्हणजे जे विद्यार्थी शैक्षणिकदृष्ट्या फार पुढे नाहीत असे काही विद्यार्थी डेव्हलपरसारखा विचार करण्यात चांगली कामगिरी करत होते आणि इतरांना मद्त करत होते - आणि त्यांना आत्मविश्वास देत होते."</i></font></h4>
 
--Hour of Code volunteer
+-अवर ऑफ कोड स्वयंसेवक
 
 * * *
 
@@ -66,7 +66,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 ## तुमचा स्वत:चा अवर ऑफ कोड कार्यक्रम होस्ट करा
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+जर तुम्हाला अधिक काही करायचे असेल तर तुमची कंपनीसुद्धा अवर ऑफ कोड कार्यक्रम होस्ट करू शकते. कार्यक्रम होस्ट करण्याची कोणतीही विशिष्ट पद्धत नाही त्यामुळे आम्ही तुम्हाला कल्पक होण्यासाठी प्रोत्साहित करतो! आमच्या कर्मचाऱ्यांची संख्या कमी (पण ताकदवान!) असल्यामुळे अवर ऑफ कोड कार्यक्रमाचे समन्वयन करण्यासाठी Code.org ची समर्पित टीम नाही. मात्र, सुरुवात करण्यासाठी इथे काही टिप्स दिलेल्या आहेत.
 
 ### 1. 'कसे करावे' चा हा व्हिडीओ पहा <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
@@ -78,14 +78,13 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 
 #### नमुना कृतीपत्रिका:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? कशाने किंवा कोणी तुम्हाला प्रेरणा दिली? तुम्हाला संगणक शास्त्रात कशामुळे स्वारस्य निर्माण झाले? तुम्हाला कोणी मार्गदर्शक होता का? विद्यार्थ्यांना प्रश्न विचारा आणि प्रश्नोत्तरांसाठी वेळ ठेवा. | |30-60 minutes | Code! जर तुमचा कार्यक्रम प्रत्यक्ष असेल तर तर मुलांच्या प्रश्नाची उत्तरे देण्याची आणि त्यांना अवघड कोड्यांसाठी मार्गदर्शन करायची हीच वेळ आहे. त्यांना थेट उत्तर न देण्याचा प्रयत्न करा, त्याऐवजी, त्यांना प्रश्न विचारायचा प्रयत्न करा म्हणजे तेच काय चुकले याचे उत्तर देऊ शकतील आणि विद्यार्थ्यांना काही प्रश्न असतील तर त्यांना एकमेकांना ते विचारायला प्रोत्साहन द्या. जर तुम्ही व्हर्च्युअल पद्धतीने स्वयंसेवक म्हणून काम करणार असाल तर सगळ्यात चांगली पद्धत काय असू शकते याबद्दल शिक्षकांशी चर्चा करा. सत्राच्या शेवटी परत येऊन विद्यार्थ्यांनी काय प्रगती केली आहे, ते पाहणे जास्त उपयुक्त ठरू शकते. | | |1-3 मिनिटे | सर्वांचे आभार माना आणि समारोपाचे प्रेरणादायी भाषण करा. तुमच्या कंपनीचा काही स्वॅग असेल तर वाटा.( [स्टिकर्स](#celebrate) मस्त असतात)! | <br />
+|वेळ | अजेंडा आयटम | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\--- | \---\---\---\---\----- | |1-5 मिनिटे | [प्रेरणादायी व्हिडिओ](https://hourofcode.com/us/promote/resources#videos)| दाखवा |5-10 मिनिटे | तुमचा परिचय करून द्या आणि विद्यार्थ्यांबद्दल अधिक जाणून घ्या: तुम्ही कुठे काम करता, तुम्ही काय करता आणि तुम्हाला तुमच्या नोकरीबद्दल काय आवडते? कशाने किंवा कोणी तुम्हाला प्रेरणा दिली? तुम्हाला संगणक शास्त्रात कशामुळे स्वारस्य निर्माण झाले? तुम्हाला कोणी मार्गदर्शक होता का? विद्यार्थ्यांना प्रश्न विचारा आणि प्रश्नोत्तरांसाठी वेळ ठेवा. | |30-60 मिनिटे | कोड! जर तुमचा कार्यक्रम प्रत्यक्ष असेल तर तर मुलांच्या प्रश्नाची उत्तरे देण्याची आणि त्यांना अवघड कोड्यांसाठी मार्गदर्शन करायची हीच वेळ आहे. त्यांना थेट उत्तर न देण्याचा प्रयत्न करा, त्याऐवजी, त्यांना प्रश्न विचारायचा प्रयत्न करा म्हणजे तेच काय चुकले याचे उत्तर देऊ शकतील आणि विद्यार्थ्यांना काही प्रश्न असतील तर त्यांना एकमेकांना ते विचारायला प्रोत्साहन द्या. जर तुम्ही व्हर्च्युअल पद्धतीने स्वयंसेवक म्हणून काम करणार असाल तर सगळ्यात चांगली पद्धत काय असू शकते याबद्दल शिक्षकांशी चर्चा करा. सत्राच्या शेवटी परत येऊन विद्यार्थ्यांनी काय प्रगती केली आहे, ते पाहणे जास्त उपयुक्त ठरू शकते. | | |1-3 मिनिटे | सर्वांचे आभार माना आणि समारोपाचे प्रेरणादायी भाषण करा. तुमच्या कंपनीचा काही स्वॅग असेल तर वाटा.( [स्टिकर्स](#celebrate) मस्त असतात)! | <br />
 
 #### तुमच्या कार्यक्रमात समाविष्ट करण्यासाठी अजून काही कल्पना
 
 - तंत्रज्ञानाचा आपल्या जीवनावर कोणत्या प्रकारे परिणाम होतो, ते सर्व प्रकारच्या पार्श्वभूमीमधून आलेल्या विद्यार्थ्यांना आवडतील अशा उदाहरणांसह स्पष्ट करा - जीव वाचवणे, लोकांना मदत करणे, लोकांशी जोडले जाणे इ. करणाऱ्या तंत्रज्ञानाबद्दल बोला.
 - तुम्ही तंत्रज्ञान क्षेत्रातील कंपनी असाल तर तुम्ही काम करीत असलेल्या रंजक आणि नाविन्यपूर्ण उत्पादनांचे प्रात्यक्षिक दाखवा. तुमची कंपनी तंत्रज्ञान क्षेत्रातील नसेल तर, तुम्ही तंत्रज्ञानाचा वापर, समस्या सोडवण्यास आणि लक्ष्य साध्य करण्यास कसा करता त्याविषयी चर्चा करा.
 - तुमच्या कंपनीतील साॅफ्टवेअर अभियंत्यांना आमंत्रित करून, त्यांनी संगणक शास्त्र शिकण्याचा निर्णय का घेतला याविषयी आणि ते काम करत असलेल्या प्रकल्पांविषयी बोलण्यास सांगा.
-- जर तुमच्या कर्मचाऱ्यांचा गट तुमचा कार्यक्रम आयोजित करणार असेल किंवा स्थानिक शाळेत स्वयंसेवक म्हणून काम करणार असेल तर तुमच्या कर्मचाऱ्यांसाठी [कस्टम टी-शर्ट्स](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) ऑर्डर करण्याचा विचार करा. 
 
 ### 3. तुमच्या तंत्रज्ञानाच्या गरजांचे नियोजन करा
 
@@ -124,7 +123,7 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 
 - सह्भाग्यांसाठी आणि विद्यार्थ्यांसाठी [प्रमाणपत्रे प्रिंट करा.]({{ urls/certificates }})
 - ["मी अवर ऑफ कोड केला!"]({{ promote/resources_stickers }}) असे लिहिलेले स्टिकर्स छापा किंवा [Code.org अमेझॉन स्टोअरवर](https://code.org/shop) इतर बक्षिसे आणि स्वॅग शोधा.
-- तुमच्या सोशल मिडीयावर तुमच्या अवर ऑफ कोड कार्यक्रमाचे फोटो आणि व्हिडीओ शेअर करा. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- तुमच्या सोशल मिडीयावर तुमच्या अवर ऑफ कोड कार्यक्रमाचे फोटो आणि व्हिडीओ शेअर करा. [#HourOfCode](https://twitter.com/hashtag/hourofcode) आणि [@codeorg](https://twitter.com/codeorg) वापरा जेणेकरुन आम्ही तुमचे यश देखील हायलाइट करू शकतो!
 
 * * *
 
@@ -151,7 +150,7 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 
 #### सांख्यिकी
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- यूएस शाळांपैकी केवळ 53% संगणक विज्ञान शिकवतात हे तुम्हाला माहीत आहे का? प्रत्येक विद्यार्थ्याला #HourOfCode https://hourofcode.com/ शिकण्याची संधी द्या
 - अमेरिकेत केवळ 26% सॉफ्टवेअर व्यावसायिक स्त्रिया आहेत. अधिक तरुण स्त्रियांना #HourOfCode https://hourofcode.com/ सह संगणक शास्त्राचा परिचय करून द्या. 
 - कॉम्प्युटिंगचे अमेरिकेतील 67% जॉब्ज तंत्रज्ञान क्षेत्रात नाहीत. #HourOfCode सह संगणक शास्त्राचा मानक अभ्यासक्रमात समावेश करण्यासाठी मदत करा https://hourofcode.com/ 
 
@@ -163,9 +162,9 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 #### इंजिनीअरसाठी-विशिष्ट
 
 - जर कोडच्या पहिल्याच ओळीने तुमच्या आयुष्यात बदल घडवून आणलेला असेल तर तुमच्या जवळच्या विद्यार्थ्यांना त्यांचा पहिला #HourOfCode लिहायला मदत करा. https://code.org/volunteer
-- जर तुम्ही कोड करायला शिकला असाल तर—तुमची कथा काय आहे? त्मच्या जवळच्या विद्यार्थ्याला त्याच्या पहिल्या #HourOfCode द्वारे प्रेरित करा https://code.org/volunteer
+- जर तुम्ही कोड करायला शिकला असाल तर—तुमची कथा काय आहे? तुमच्या जवळच्या विद्यार्थ्याला त्याच्या पहिल्या #HourOfCode द्वारे प्रेरित करा https://code.org/volunteer
 
-तुमच्या कार्यक्रमाचा तुमच्या समुदायात प्रचार करण्यासाठी पोस्टर्स, व्हिडीओज, स्टिकर्स आणि इतर मार्गांबद्दल <a href="https://hourofcode.com/promote/resources#posters">अधिक जाणून घ्या</a>.
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

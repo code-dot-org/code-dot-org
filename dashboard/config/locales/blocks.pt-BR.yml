@@ -231,20 +231,12 @@ pt:
             MOVES.XArmsUp: Esticar
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
-      Dancelab_everyMeasuresRange:
-        text: 'repita todos os {N} compassos após {START} '
       Dancelab_everySeconds:
         text: 'a cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': compassos
             '"seconds"': segundos
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} de {START} até {STOP} '
-        options:
-          UNIT:
-            measures: Compassos
-            seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -1329,6 +1321,32 @@ pt:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tom grave
               peculiar
             "'sound://category_digital/jump_7.mp3'": pule
+      gamelab_playSoundOptionsSoccer:
+        text: reproduzir som {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": buzina a gás
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplausos
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": canto
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": torcida
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": chute
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dois apitos
+            "'sound://category_sports/One_Whistle_SFX.mp3'": apito
+      gamelab_playSoundOptionsSpace:
+        text: reproduzir som {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": buraco negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": aglomerado bala
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Nebulosa do Caranguejo
+            "'sound://category_space/Launch_SFX.mp3'": lançamento
+            "'sound://category_space/Lift_Off.mp3'": lista detalhada
+            "'sound://category_space/Pillars_SFX.mp3'": colunas
+            "'sound://category_space/Southern_ring_SFX.mp3'": anel meridional
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": Cratera de Tycho
       gamelab_playSpeech:
         text: reproduzir fala {SOUND}
       gamelab_playerBehaviors:
@@ -2135,6 +2153,11 @@ pt:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: quando {VAR} respondida
       RyanLab_moveForward:
@@ -2360,6 +2383,10 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      storylab_setHeading:
+        text: definir cabeçalho {HEADING}
+      storylab_setSubheading:
+        text: definir subcabeçalho {SUBHEADING}
       validation_validatedBackground:
         text: definir plano de fundo para {IMG}
       validation_validatedSound:

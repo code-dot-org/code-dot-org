@@ -142,6 +142,26 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Higit pa sa isang Hour of Code"
         },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
+          "tips": [
+            "Gumugol ng napakakaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga batang nag-aaral, pinakamahusay na sumali sa lalong madaling panahon."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Hello World",
+          "progression_name": "Hello World"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, hikayatin silang ipagpatuloy ang pagbuo ng proyekto sa huling antas. Kung hindi sigurado ang mga mag-aaral kung ano pa ang gagawin, maaari mo silang i-prompt ng mga tanong: \n\n-   Anong iba pang mga tiyanak ang maaari mong idagdag sa proyekto mo?\n-   Tumingin ka na ba sa library ng kasuotan o sinubukan mong gumuhit ng sarili mong kasuotan ng tiyanak?\n-   Ano pa ang maaaring sabihin ng mga tiyanak mo?\n-   Ano ang dapat gawin ng mga tiyanak mo kapag na-click sila?\n-   Anyayahan ang mga estudyante na magbahagi ng mga ideya at matuto sa isa't isa. Maaari din nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Pagmumuni-muni",
+          "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -391,6 +411,26 @@
           "tips": [
             null
           ]
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
+          "tips": [
+            "Gumugol ng napakakaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga batang nag-aaral, pinakamahusay na sumali sa lalong madaling panahon."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n-   **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q).\n\n-   **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n    **Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n-   **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Hello World",
+          "progression_name": "Hello World"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Kung maagang natapos ang isang grupo o indibidwal, hikayatin silang ipagpatuloy ang pagbuo ng proyekto sa huling antas. Kung hindi sigurado ang mga mag-aaral kung ano pa ang gagawin, maaari mo silang i-prompt ng mga tanong: \n\n-   Anong iba pang mga tiyanak ang maaari mong idagdag sa proyekto mo?\n-   Tumingin ka na ba sa library ng kasuotan o sinubukan mong gumuhit ng sarili mong kasuotan ng tiyanak?\n-   Ano pa ang maaaring sabihin ng mga tiyanak mo?\n-   Ano ang dapat gawin ng mga tiyanak mo kapag na-click sila?\n-   Anyayahan ang mga estudyante na magbahagi ng mga ideya at matuto sa isa't isa. Maaari din nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Pagmumuni-muni",
+          "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections](https://code.org/educate/csc) para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya](https://code.org/educate/curriculum/elementary-school)."
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",

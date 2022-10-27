@@ -175,7 +175,8 @@
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "écrire le texte ici",
-          "30fcc1693fa8402931d13ac3a5f396fd": "écrire le titre ici"
+          "30fcc1693fa8402931d13ac3a5f396fd": "écrire le titre ici",
+          "f6429fe0f1a76611670df7e1234af936": "Comment t'appelles-tu ? "
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "écrire le texte ici",
@@ -316,10 +317,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_text_concat": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question",
+          "f6429fe0f1a76611670df7e1234af936": "Comment t'appelles-tu ? "
         },
         "courseF_text_prompts": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question",
+          "f6429fe0f1a76611670df7e1234af936": "Comment t'appelles-tu ? "
         },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
@@ -418,7 +421,7 @@
           "1f258d88a70309efc1435ef5daa277a0": "Merci d'avoir discuté avec moi aujourd'hui ! "
         },
         "courseF_variables_predict": {
-          "f6429fe0f1a76611670df7e1234af936": "Quel est votre nom ?"
+          "f6429fe0f1a76611670df7e1234af936": "Comment t'appelles-tu ? "
         },
         "helloworld_animals_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Bonjour tout le monde !"
@@ -693,10 +696,12 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_text_concat_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question",
+          "f6429fe0f1a76611670df7e1234af936": "Comment t'appelles-tu ? "
         },
         "courseF_text_prompts_-2022-2": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "ma question",
+          "f6429fe0f1a76611670df7e1234af936": "Comment t'appelles-tu ? "
         },
         "courseF_variables_card_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
@@ -718,6 +723,9 @@
         },
         "coursee_helloworld_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Bonjour tout le monde !"
+        },
+        "courseF_variables_predict_-2022-2": {
+          "f6429fe0f1a76611670df7e1234af936": "Comment t'appelles-tu ? "
         }
       }
     }

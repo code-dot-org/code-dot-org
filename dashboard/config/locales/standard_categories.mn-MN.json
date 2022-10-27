@@ -1,0 +1,20 @@
+{
+  "mn-MN": {
+    "data": {
+      "standard_categories": {
+        "CT": {
+          "description": "Тооцоолох ухаан"
+        },
+        "L": {
+          "description": "Хэл"
+        },
+        "C": {
+          "description": "Тойргууд"
+        },
+        "F": {
+          "description": "Функцүүд"
+        }
+      }
+    }
+  }
+}

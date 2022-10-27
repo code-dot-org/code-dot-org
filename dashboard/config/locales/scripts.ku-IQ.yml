@@ -388,3 +388,21 @@ ku:
               display_name: گۆڕاوەکان
         soccer:
           name: یاری تۆپی پێ
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: گرێکان
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: گۆڕاوەکان
+            csp_conditionals:
+              display_name: مەرجیەکان
+            csp_functions:
+              display_name: فرمانەکان
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: لیستەکان
+            csp_loops:
+              display_name: گرێکان

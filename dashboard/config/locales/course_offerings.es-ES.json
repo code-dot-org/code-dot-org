@@ -365,7 +365,16 @@
         "vpl-csa": "Aprendizaje Profesional Virtual de CSA",
         "katie-practice": "katie-practice",
         "soccer": "fútbol",
-        "csa-validation-pilot": "Validación de CSA - Piloto"
+        "csa-validation-pilot": "Validación de CSA - Piloto",
+        "csa-data-lab": "AP CSA Laboratorio de Datos",
+        "csd7": "csd7",
+        "csd2": "csd2",
+        "csa-celebrity-lab": "AP CSA Laboratorio de Opinión del Consumidor",
+        "csd1": "csd1",
+        "csd4": "csd4",
+        "hello-world-space": "espacio-hola-mundo",
+        "physcomp-temp": "physcomp-temp",
+        "csa-collegeboard-labs": "AP CSA Laboratorio Magpie"
       }
     }
   }

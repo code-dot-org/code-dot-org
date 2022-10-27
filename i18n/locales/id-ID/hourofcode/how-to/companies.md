@@ -14,23 +14,37 @@ Pemikirian komputasional membantu pengembangan keahlian memecahkan masalah, logi
 
 Selama kampanye Hour of Code, perusahaan Anda dapat membantu meningkatkan kesadaran tentang gerakan ilmu komputer. Baik dengan menjadi relawan individu atau merencanakan acara untuk perusahaan Anda, semua upaya Anda dapat memberi dampak besar terhadap cara remaja putri dan siswa dari kelompok ras dan etnis yang terpinggirkan dalam memandang ilmu komputer dan potensi mereka sendiri.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Lihat langkah-langkah berikut untuk memulai, dan lihat [panduan kami untuk bagi mitra korporat](/files/hoc-corporate-toolkit.pdf) untuk mengetahui selengkapnya tentang cara menarik perhatian perusahaan Anda terhadap Hour of Code.
 
-- [Dorong karyawan untuk menjadi relawan di kelas](#encourage-employees)
-- [Hubungkan perusahaan Anda dengan sekolah](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [Selenggarakan acara Hour of Code Anda sendiri](#host-hour-of-code)
 - [Promosikan Hour of Code](#promote-hour-of-code)
 - [Cara lainnya untuk mendukung Hour of Code](#support-hour-of-code)
 
 * * *
 
+<a id="connect-with-a-school"></a>
+
+## Connect with a local school
+
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
+
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
 <a id="encourage-employees"></a>
 
-## Dorong karyawan untuk menjadi relawan di kelas
+## Encourage employees to volunteer with a classroom
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
 [<button>Mendaftar sebagai relawan</button>]({{ urls/volunteer }})
 
@@ -40,23 +54,9 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 * * *
 
-<a id="connect-with-a-school"></a>
-
-## Hubungkan perusahaan Anda dengan sekolah
-
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
-
-[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
-
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
-
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
-
-* * *
-
 <h4><font color="00adbc"><i>"SAYA SENANG melihat betapa senangnya anak-anak itu. Satu hal yang menakjubkan adalah bahwa para guru mendapati sejumlah siswa yang tidak berprestasi secara akademis namun sangat unggul dalam berpikir seperti seorang pengembang dan membantu orang lain - ini membuat mereka merasa percaya diri.”</i></font></h4>
 
--Hour of Code volunteer
+-Relawan Hour of Code
 
 * * *
 
@@ -64,7 +64,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 ## Selenggarakan acara Hour of Code Anda sendiri
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Jika Anda ingin lebih jauh, perusahaan Anda juga dapat menyelenggarakan acara Hour of Code. Tidak ada formula khusus untuk menyelenggarakan acara, jadi kami mendorong Anda untuk berkreasi! Mengingat ukuran staf kami yang kecil (namun hebat!), Code.org tidak memiliki tim khusus untuk mengoordinasikan acara Hour of Code. Akan tetapi, berikut sejumlah kiat untuk memulainya.
 
 ### 1. Tonton video how-to ini <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
@@ -76,14 +76,14 @@ Kami sudah sering mendapati acara yang diselenggarakan secara [virtual](https://
 
 #### Contoh Agenda:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Apa atau siapa yang menginspirasimu? Bagaimana kamu tertarik dengan ilmu komputer? Apakah kamu memiliki mentor? Ajukan pertanyaan kepada siswa dan berikan waktu untuk tanya jawab. | |30-60 minutes | Code! Jika acara Anda diadakan secara tatap muka, inilah saatnya untuk menjawab pertanyaan dan membimbing siswa melalui puzzle yang sulit. Cobalah untuk tidak memberi solusi secara langsung kepada siswa. Sebaliknya, cobalah mengajukan pertanyaan sehingga mereka dapat menjawab sendiri apa yang salah, dan dorong siswa untuk bertanya satu sama lain jika memiliki pertanyaan. Jika Anda menjadi relawan secara virtual, diskusikan dengan guru tentang pendekatan terbaik yang dapat diambil. Mungkin lebih cocok jika kembali pada akhir sesi untuk melihat kemajuan yang telah dicapai oleh siswa. | | |1-3 menit | Berterimakasih kepada semua dan berikan kata-kata perpisahan yang menginspirasi. Bagikan cendera mata dari perusahaan Anda ([stiker](#celebrate) juga boleh)! | | <br />
+|Waktu | Rincian Agenda | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 menit | Menampilkan [video inspiratif](https://hourofcode.com/us/promote/resources#videos)|  
+|5-10 menit | Perkenalkan diri Anda dan kenali siswa lebih jauh: Di mana kamu bekerja, apa yang kamu lakukan, dan apa yang paling kamu sukai dari pekerjaanmu? Apa atau siapa yang menginspirasimu? Bagaimana kamu tertarik dengan ilmu komputer? Apakah kamu memiliki mentor? Ajukan pertanyaan kepada siswa dan berikan waktu untuk tanya jawab. | |30-60 menit | Coding! Jika acara Anda diadakan secara tatap muka, inilah saatnya untuk menjawab pertanyaan dan membimbing siswa melalui puzzle yang sulit. Cobalah untuk tidak memberi solusi secara langsung kepada siswa. Sebaliknya, cobalah mengajukan pertanyaan sehingga mereka dapat menjawab sendiri apa yang salah, dan dorong siswa untuk bertanya satu sama lain jika memiliki pertanyaan. Jika Anda menjadi relawan secara virtual, diskusikan dengan guru tentang pendekatan terbaik yang dapat diambil. Mungkin lebih cocok jika kembali pada akhir sesi untuk melihat kemajuan yang telah dicapai oleh siswa. | | |1-3 menit | Berterimakasih kepada semua dan berikan kata-kata perpisahan yang menginspirasi. Bagikan cendera mata dari perusahaan Anda ([stiker](#celebrate) juga boleh)! | | <br />
 
 #### Ide lain yang bisa ditambahkan ke acara Anda
 
 - Jelaskan dampak teknologi terhadap kehidupan kita, dengan contoh yang akan diperhatikan oleh siswa dari semua latar belakang - bicarakan tentang teknologi yang menyelamatkan nyawa, membantu orang, menghubungkan orang.
 - Jika Anda adalah perusahaan teknologi, demonstrasikan produk inovatif dan seru yang sedang dikembangkan oleh perusahaan Anda. Jika Anda bukan perusahaan teknologi, ceritakan cara perusahaan Anda dalam menggunakan teknologi untuk memecahkan masalah dan mencapai tujuan.
 - Undang software engineer dari perusahaan Anda untuk berbicara mengenai alasan mereka memutuskan untuk belajar ilmu komputer dan proyek-proyek yang sedang mereka kerjakan.
-- Jika Anda memiliki kelompok staf yang akan memfasilitasi acara Anda atau menjadi relawan di sekolah lokal, pertimbangkan untuk memesan [kaos khusus](http://blog.code.org/post/132608499493/hour-of-code-shirts-and -more) untuk karyawan Anda.
 
 ### 3. Rencanakan kebutuhan teknologi Anda
 
@@ -122,7 +122,7 @@ Setelah siswa atau tamu menyelesaikan Hour of Code mereka, saatnya merayakan keb
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Cetak stiker "Saya mengikuti Hour of Code!"]({{ promote/resources stickers }}) atau cari hadiah dan barang lainnya di [Toko Amazon Code.org](https://code.org /shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Share photos and videos of your Hour of Code event on social media. Gunakan [#HourOfCode](https://twitter.com/hashtag/hourofcode) dan [@codeorg](https://twitter.com/codeorg) agar kami juga dapat menyorot keberhasilan Anda!
 
 * * *
 
@@ -136,7 +136,7 @@ Salah satu cara terbaik untuk membantu adalah menyebarkan informasi ini dan memp
 
 ### 1. Daftarkan Acara Anda
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Ini juga dapat menjadi cara Anda dalam memberi tahu sekolah setempat atau orang tua bahwa Anda mengadakan acara di dekat wilayah mereka.
+Saat [mendaftarkan acara Hour of Code Anda](/#join), Anda akan menerima email yang berisi berita dan kiat untuk menyelenggarakan Hour of Code yang sukses. Ini juga dapat menjadi cara Anda dalam memberi tahu sekolah setempat atau orang tua bahwa Anda mengadakan acara di dekat wilayah mereka.
 
 ### 2. Posting di Media Sosial
 
@@ -149,7 +149,7 @@ Bantu tingkatkan kesadaran akan gerakan ilmu komputer dengan contoh konten ini u
 
 #### Statistik
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- Tahukah Anda bahwa hanya 53% sekolah di AS yang mengajarkan ilmu komputer? Beri kesempatan kepada setiap siswa untuk belajar satu #HourOfCode https://hourofcode.com/
 - Di AS, hanya terdapat 26% profesional perangkat lunak berjenis kelamin wanita. Perkenalkan lebih banyak wanita muda dengan ilmu komputer dengan #HourOfCode https://hourofcode.com/
 - 67% pekerjaan komputasi di A.S. tidak berada di sektor teknologi. Bantu masukkan ilmu komputer ke dalam kurikulum standar dengan #HourOfCode https://hourofcode.com/
 
@@ -163,7 +163,7 @@ Bantu tingkatkan kesadaran akan gerakan ilmu komputer dengan contoh konten ini u
 - Jika baris kode pertama Anda mengubah hidup Anda, bantu siswa di dekat Anda menuliskan #HourOfCode pertamanya https://code.org/volunteer
 - Jika Anda belajar coding—seperti apa cerita Anda? Berikan inspirasi kepada siswa di dekat Anda melalui #HourOfCode pertamanya https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Pelajari selengkapnya</a> tentang poster, video, stiker, dan cara lain untuk mempromosikan acara ke komunitas Anda.
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

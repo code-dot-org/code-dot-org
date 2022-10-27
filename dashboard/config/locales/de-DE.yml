@@ -458,6 +458,7 @@ de:
       about: Über
       legal: Privatsphäre und Rechtliches
       legal_privacy: Datenschutzerklärung
+      legal_cookie_notice: Cookie-Meldung
       legal_tos: AGBs
     user:
       classroom: Lehrer-Homepage
@@ -1509,3 +1510,5 @@ de:
         gesperrt sind
       forbidden: Benutzer kann den Sperrstatus des Schülers nicht aktualisieren
   reset_predict_progress_button: Antwort löschen
+  pixelation:
+    binary: Binärdatei

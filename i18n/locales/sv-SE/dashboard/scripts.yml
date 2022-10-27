@@ -1877,6 +1877,13 @@ sv:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: loopar
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Innehåll
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1901,3 +1908,25 @@ sv:
               display_name: Kapitel 1
             lessonGroup-3:
               display_name: Kapitel 2
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: variabler
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Listor
+            csp_loops:
+              display_name: loopar
+            csp_project:
+              display_name: Projekt
+        csp7-2023:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek

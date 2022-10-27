@@ -1,7 +1,7 @@
 {
   "key": "hello-world-space",
   "display_name": "hello-world-space",
-  "category": "other",
-  "is_featured": false,
+  "category": "hoc",
+  "is_featured": true,
   "assignable": true
 }

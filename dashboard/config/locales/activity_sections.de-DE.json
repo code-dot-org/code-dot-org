@@ -265,6 +265,31 @@
           "name": "￼Erweitern Sie Ihr Wissen",
           "description": "Auch nach Ihrer \"Hour of Code\" gibt es viele Möglichkeiten, wie Sie den Informatikunterricht in Ihrer 5. Klasse fortsetzen können.Hier einige Ideen:\n\n-   **Unterrichten Sie die [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses**. In diesen sechs Kurse für junge Lernende lösen die SchülerInnen eine Reihe von Aufgaben, um das Programmieren zu lernen. Die Lehrkräfte können motivierende Unterrichtsplänen nutzen, die das Lernen mit Leben erfüllen.Code.org bietet kostenlose berufliche Weiterbildungen für diese Kurse an, sowohl online oder persönlich.\n-   **Laden Sie einen Informatik-Experten oder eine Informatik-Expertin ein, die Ihrer Klasse etwas über seine oder ihre Arbeit erzäheln**. Wenn Sie keinen Informatiker kennen, wenden Sie sich an einen Freiwilligen auf unserer [volunteer map](https://code.org/volunteer/local)“."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Vorbereitung",
+          "description": "Begrüßen Sie die SchülerInnen zum Unterricht und stellen die kurz die Tagesaktivität vor."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "\\_In dieser Aktivität gestaltest du mit viel Spaß eine interaktive Welt mit lustigen Figuren, den Sprites. Du kannst die Sprites mit Sprechblasen wie in einem Comic oder einer Graphic Novel sprechen lassen und siehst, wie sie automatisch reagieren, wenn sie von dir oder anderen angeklickt werden.\n\nHeute wirst du einen \"Code\" schreiben, d. h. eine Reihe von Anweisungen, die ein Computer versteht. Wenn du eine Geschichte schreibst, musst du dir genau überlegen, welche Wörter du verwendest. Wenn du einen Code schreibst, musst du sorgfältig über die Anweisungen nachdenken, die du deinem Computer gibst.",
+          "tips": [
+            "Sie sollten wenig Zeit damit verbringen, Code of Hour vorzustellen. Vor allem bei jungen Schülern ist es am besten, so schnell wie möglich zu beginnen."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Allgemeine Unterstützung",
+          "description": "Diese Tipps helfen den Schülern, egal auf welchem Niveau sie sich befinden\n\n-   **Mit Nachbarn zusammenarbeiten:** Ermutigen Sie die Schüler, sich mit dem Nachbarn auszutauschen, wenn sie nicht weiterkommen. Je nach Alter und Fähigkeiten Ihrer Schüler können Sie die Klasse in Paare aufteilen, um das Lernprogramm mit Hilfe von [Paarprogrammierung](https://youtu.be/vgkahOzFH2Q) zu bearbeiten.  \n\n-   **Anleitungen lesen:** Die Anleitungen enthalten in der Regel hilfreiche Tipps, wie die Aufgabe zu lösen ist. Bevor Sie die Fragen beantworten, sollten Sie darauf achten, dass sie sich die Anleitungen, Hinweise, Videos und den Startcode genau angesehen haben.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Du kommst nicht weiter? Lies die Hinweise:** In jedem Level gibt es einen Tipp mit Ratschlägen zum Abschließen eines Levels, einschließlich der Code-Bausteine, die sie ausprobieren sollten. \n\n-   **Zeit nehmen und experimentieren.** Die Anleitungen erklären den Schülern im Allgemeinen, was sie tun sollen, die Schüler sollten jedoch auch Freiraum haben, ihre eigenen Ideen auszuprobieren."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Hallo Welt",
+          "progression_name": "Hallo Welt"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Wenn eine Gruppe oder ein Schüler vorzeitig fertig ist, sollten Sie sie ermutigen, das Projekt in der letzten Stufe weiterzuentwickeln. Wenn die Schüler nicht wissen, was sie noch tun sollen, können Sie ihnen Fragen stellen:\n\n-   Welche anderen Sprites könntet ihr zu eurem Projekt hinzufügen?\n-   Habt ihr euch die Kostümbibliothek angesehen oder versucht, euer eigenes Sprite-Kostüm zu zeichnen?\n-   Was könnten deine Sprites noch sagen?\n-   Was sollten deine Sprites tun, wenn sie angeklickt werden?\n-   Fordern Sie die Schüler auf, Ideen auszutauschen und voneinander zu lernen. Sie können auch ein anderes Lernprogramm ausprobieren, indem sie [code.org/learn](https://code.org/learn) besuchen."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflexion",
+          "description": "#### Nachbesprechung\n\nBitten Sie die Schüler über ihre Aktivitäten am Tag nachzudenken. Was haben sie gelernt zu programmieren? Sprites? Ereignisse?\n\nWie finden sie die Informatik und das Programmieren, nachdem sie sich eine Stunde damit befasst haben?\n\n#### Nächste Schritte\n\nWenn den Schülern die heutige Aktivität Spaß gemacht hat, sagen Sie ihnen, dass es viele weitere Möglichkeiten gibt zu programmieren. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie Informatik in andere Fächer integrieren können, oder lesen Sie mehr über unser [Kursangebot für Grundschulen](https://code.org/educate/curriculum/elementary-school)."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Setting the Stage\n\nBegrüßen Sie die SchülerInnen zum Unterricht und stellen Sie kurz die Tagesaktivität vor. \n\nSagen Sie: \"Heute werden wir eine Stunde Code zu lernen. Hat jemand von Ihnen schon einmal den Begriff \"Code\" gehört? Was bedeutet er?\" \\_\n\nDie SchülerInnen könnten erwähnen, dass ein \"Code\" so etwas wie eine geheime Nachricht ist oder dass er mit Computern zu tun hat."
         },
@@ -660,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Feiern",
-          "description": "Erklären Sie, dass Sie heute aus Anlass der CS Education Week eine Stunde programmieren werden und dass auch Millionen anderer SchülerInnen auf der ganzen Welt in dieser Woche eine Hour of Code lernen. Gratulieren Sie ihnen, dass sie Teil dieser weltweiten Bewegung sind.\n\nÜberreichen Sie allen SchülerInnen eine [Zertifikat](https://code.org/certificates?script=mc) mit ihrem Namen."
+          "description": "Erklären Sie, dass Sie heute aus Anlass der CS Education Week eine Stunde programmieren werden und dass auch Millionen anderer SchülerInnen auf der ganzen Welt in dieser Woche eine Hour of Code lernen. Gratulieren Sie ihnen, dass sie Teil dieser weltweiten Bewegung sind.\n\nÜberreichen Sie allen SchülerInnen eine [Zertifikat](https://studio.code.org/certificates/batch?course=bWM=) mit ihrem Namen."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Nächste Schritte",
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Lesen Sie Blown to Bits**\n\n-   Lesen Sie S. 165 bis 169 von [Blown to Bits, Kapitel 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Beantworten Sie die Fragen in der Lektüreanleitung und im Arbeitsblatt [Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Arbeitsblatt.\t\t\n\n**Mehr Blown to Bits**\n\n-   In den früheren Abschnitten von Kapitel 5 von Blown to Bits wird auf die Bedeutung und die Kontroversen um die Verschlüsselung nach dem 11. September eingegangen. Diese Lektüre kann ein nützliches Hilfsmittel sein, um den Einfluss der Kryptographie auf viele Aspekte des modernen Lebens näher zu erläutern.\n\n-   Bitten Sie die SchülerInnen, zu überlegen, zu wie viel Prozent ihr Internetnutzung \"privat\" ist. Können sie sicher sein, dass das der Fall ist? Gibt es Websites, bei denen die Geheimhaltung ihres Datenverkehrs sicherer ist als bei anderen? Ist diese Schlussfolgerung gerechtfertigt?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Vorbereitung",
+          "description": "Begrüßen Sie die SchülerInnen zum Unterricht und stellen die kurz die Tagesaktivität vor."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "\\_In dieser Aktivität gestaltest du mit viel Spaß eine interaktive Welt mit lustigen Figuren, den Sprites. Du kannst die Sprites mit Sprechblasen wie in einem Comic oder einer Graphic Novel sprechen lassen und siehst, wie sie automatisch reagieren, wenn sie von dir oder anderen angeklickt werden.\n\nHeute wirst du einen \"Code\" schreiben, d. h. eine Reihe von Anweisungen, die ein Computer versteht. Wenn du eine Geschichte schreibst, musst du dir genau überlegen, welche Wörter du verwendest. Wenn du einen Code schreibst, musst du sorgfältig über die Anweisungen nachdenken, die du deinem Computer gibst.",
+          "tips": [
+            "Sie sollten wenig Zeit damit verbringen, Code of Hour vorzustellen. Vor allem bei jungen Schülern ist es am besten, so schnell wie möglich zu beginnen."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Allgemeine Unterstützung",
+          "description": "Diese Tipps helfen den Schülern, egal auf welchem Niveau sie sich befinden\n\n-   **Mit Nachbarn zusammenarbeiten:** Ermutigen Sie die Schüler, sich mit dem Nachbarn auszutauschen, wenn sie nicht weiterkommen. Je nach Alter und Fähigkeiten Ihrer Schüler können Sie die Klasse in Paare aufteilen, um das Lernprogramm mit Hilfe von [Paarprogrammierung](https://youtu.be/vgkahOzFH2Q) zu bearbeiten.  \n\n-   **Anleitungen lesen:** Die Anleitungen enthalten in der Regel hilfreiche Tipps, wie die Aufgabe zu lösen ist. Bevor Sie die Fragen beantworten, sollten Sie darauf achten, dass sie sich die Anleitungen, Hinweise, Videos und den Startcode genau angesehen haben.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Du kommst nicht weiter? Lies die Hinweise:** In jedem Level gibt es einen Tipp mit Ratschlägen zum Abschließen eines Levels, einschließlich der Code-Bausteine, die sie ausprobieren sollten. \n\n-   **Zeit nehmen und experimentieren.** Die Anleitungen erklären den Schülern im Allgemeinen, was sie tun sollen, die Schüler sollten jedoch auch Freiraum haben, ihre eigenen Ideen auszuprobieren."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Hallo Welt",
+          "progression_name": "Hallo Welt"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Wenn eine Gruppe oder ein Schüler vorzeitig fertig ist, sollten Sie sie ermutigen, das Projekt in der letzten Stufe weiterzuentwickeln. Wenn die Schüler nicht wissen, was sie noch tun sollen, können Sie ihnen Fragen stellen:\n\n-   Welche anderen Sprites könntet ihr zu eurem Projekt hinzufügen?\n-   Habt ihr euch die Kostümbibliothek angesehen oder versucht, euer eigenes Sprite-Kostüm zu zeichnen?\n-   Was könnten deine Sprites noch sagen?\n-   Was sollten deine Sprites tun, wenn sie angeklickt werden?\n-   Fordern Sie die Schüler auf, Ideen auszutauschen und voneinander zu lernen. Sie können auch ein anderes Lernprogramm ausprobieren, indem sie [code.org/learn](https://code.org/learn) besuchen."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflexion",
+          "description": "#### Nachbesprechung\n\nBitten Sie die Schüler über ihre Aktivitäten am Tag nachzudenken. Was haben sie gelernt zu programmieren? Sprites? Ereignisse?\n\nWie finden sie die Informatik und das Programmieren, nachdem sie sich eine Stunde damit befasst haben?\n\n#### Nächste Schritte\n\nWenn den Schülern die heutige Aktivität Spaß gemacht hat, sagen Sie ihnen, dass es viele weitere Möglichkeiten gibt zu programmieren. Unter [CS Connections](https://code.org/educate/csc) finden Sie Ideen, wie Sie Informatik in andere Fächer integrieren können, oder lesen Sie mehr über unser [Kursangebot für Grundschulen](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Vorbereitung",
@@ -3488,9 +3538,6 @@
           "tips": [
             "Erinnern Sie die SchülerInneninnen und SchülerInnen daran, ihre Arbeit nur mit engen Freunden oder der Familie zu teilen. Für weitere Informationen schauen Sie sich das Video **\\*Pause and Think Online - Video** an oder zeigen Sie es der Klasse"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Wir haben einige Multiple-Choice-Vorhersagestufen eingefügt, die für Nicht-Leser schwierig sind. Diese Levels können Sie mit Ihrer Klasse durchgehen, um sich auf die kommenden Rätsel vorzubereiten. Sie können aber auch nach Abschluss der Etappe als Wiederholung für die Klasse verwendet werden.\n\n**Vorhersagelevel:** - [Kurs B, Schleifen in Künstler](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Der Künstler im Code Studio"
@@ -15260,7 +15307,7 @@
         },
         "220a9c31-c877-4fe2-83ef-722e93bed0a5": {
           "name": "Einführung von Variablen",
-          "description": "**Vorgehensweise:** Fassen Sie die Regeln der Lückengeschichten noch einmal gemeinsam mit der Klasse zusammen.\n\n*Die Leerstellen in diesen Geschichten funktionieren wie Behälter für Informationen. Jeder Behälter hat auch eine Beschriftung. Wenn man in der Informatik eine Beschriftung für eine Information in einem Programm erstellt, nennt man sie \\_ \\*\\**Variable\\_\\*\\*.\n\n**Vorgehensweise:** Zeigen Sie die Folie mit den drei Beispielbildern der App."
+          "description": "**Vorgehensweise:** Fassen Sie die Regeln der Lückengeschichten noch einmal gemeinsam mit der Klasse zusammen.\n\n*Die Leerstellen in diesen Geschichten funktionieren wie Behälter für Informationen. Jeder Behälter hat auch eine Beschriftung. Wenn man in der Informatik eine Beschriftung für eine Information in einem Programm erstellt, nennt man sie \\_ \\\\*\\**Variable\\_\\\\*\\*.\n\n**Vorgehensweise:** Zeigen Sie die Folie mit den drei Beispielbildern der App."
         },
         "a76c58bc-57ad-45c4-b179-bdb68ce8d392": {
           "description": "_Diese Apps fordern den Benutzer auf, Informationen anzugeben. Was hat das mit der heutigen Aufgabe zu tun?_\n\n_Informationen werden im Speicher des Computers mit Variablen gespeichert. Jede Variable hat eine Bezeichnung, die uns sagt, welche Art von Information wir erwarten können. Wenn der Computer diese Informationen später benötigt, sucht er nach der Bezeichnung der Variablen._\n\n_Ob man nun Objekte in einer Schachtel, Wörter in einem Umschlag oder Informationen in einer Variablen speichert, es ist wichtig, gute Beschriftungen zu verwenden, damit man später nicht durcheinander kommt._\n\n\\_Wenn ein Benutzer eine Eingabeaufforderung eingibt, ist es, als ob der Computer die Informationen in einem Behälter speichert. Die Variablenbeschriftung sagt uns, welche Art von Information wir erwarten können"

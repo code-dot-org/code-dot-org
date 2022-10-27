@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Depuració"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Depuració"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Condicionals"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Depuració"
         },
         "loops/aquatic/unversioned": {
           "word": "Bucles"

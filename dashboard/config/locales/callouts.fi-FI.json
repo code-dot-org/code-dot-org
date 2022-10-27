@@ -672,6 +672,32 @@
         },
         "Underground Iron2022": {
           "craft_what_is_iron": "Louhi tämä rauta!"
+        },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "Käytä \"jos\"-lohkoa päättääksesi pitääkö mehiläisen kerätä nektaria vai tehdä hunajaa"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "Käytä \"jos-muuten\"-lohkoa siten, että mehiläinen kerää mettä kukasta ja tekee hunajaa jos se ei ole kukassa"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Uusi blokki!",
+          "hello_world_new_block": "Uusi blokki!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Uusi blokki!",
+          "hello_world_new_block": "Uusi blokki!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Uusi blokki!"
         }
       }
     }

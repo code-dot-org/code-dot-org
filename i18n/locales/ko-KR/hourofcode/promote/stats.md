@@ -16,7 +16,7 @@ title: 안내문과 유용한 통계
 
 #### 여러분의 학교에 컴퓨터 과학 과목을 개설하세요. 아워오브코드로 시작하세요!
 
-기술이 지구상 모든 산업을 변화시키고 있는 가운데 컴퓨팅 지식은 균형잡힌 기술의 일부분이 되고 있습니다. 하지만 전체 학교의 절반만이 컴퓨터 과학을 가르칩니다! 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다. 작년에 아워오브코브에 대해 들어봤다면, 이것이 역사를 만들었다는 걸 아실겁니다. 1억 명의 학생이 아워오브코드를 단지 한 번만 하고도 컴퓨터 과학에 재밌고 쉽게 다가갈 수 있다는 걸 알게 되었습니다.
+기술이 지구상 모든 산업을 변화시키고 있는 가운데 컴퓨팅 지식은 균형잡힌 기술의 일부분이 되고 있습니다. 하지만 전체 학교의 절반만이 컴퓨터 과학을 가르칩니다! 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 아워오브코드는 한 시간 동안 컴퓨터 과학을 소개하며 코드를 쉽게 설명하고 누구나 기초를 배울 수 있음을 보여주도록 설계되었습니다. 더 자세한 내용은[http://HourOfCode.com](http://HourofCode.com)에서 확인하고 직접 해보거나 또는 아워오브코드를 주최하여 다른 사람들에게 컴퓨팅의 세계를 소개해보세요!
 
@@ -30,7 +30,7 @@ title: 안내문과 유용한 통계
 
 #### 왜 중요한가요?
 
-기술은 지구상의 모든 산업을 바꾸고 있습니다. 2015년 미국에서 코딩 기술을 높이 평가하는 예술과 디자인 분야를 포함한 각종 직업군에 7백만 개의 일자리가 있었습니다. 미국에 있는 학교의 49%는 컴퓨터 과학을 가르치지 않습니다. 이제 우리가 21세기를 따라 잡을 시간입니다. 저희는 학생들이 성인이 되어 의료, 사업, 정치, 예술 등 어느 분야로 진출하든, 기술을 구축하는 방식을 안다면 자신감과 경쟁력이 생긴다는 사실을 잘 알고 있습니다. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. 저희는 학생들이 성인이 되어 의료, 사업, 정치, 예술 등 어느 분야로 진출하든, 기술을 구축하는 방식을 안다면 자신감과 경쟁력이 생긴다는 사실을 잘 알고 있습니다. <br /> <br />
 
 #### 자료에서 활용할 수 있는 인용문
 

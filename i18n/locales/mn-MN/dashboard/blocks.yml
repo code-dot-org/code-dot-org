@@ -1219,6 +1219,10 @@ mn:
             "'sound://category_animals/dolphin.mp3'": далайн гахай
             "'sound://category_animals/dog.mp3'": нохой
             "'sound://category_digital/jump_7.mp3'": үсрэх
+      gamelab_playSoundOptionsSoccer:
+        text: хөгжимтоглох {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: хөгжимтоглох {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1745,6 +1749,11 @@ mn:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:

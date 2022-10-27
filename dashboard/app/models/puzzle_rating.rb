@@ -19,7 +19,7 @@ require 'dynamic_config/gatekeeper'
 
 class PuzzleRating < ApplicationRecord
   belongs_to :user, optional: true
-  belongs_to :script
+  belongs_to :script, class_name: 'Unit'
   belongs_to :level
 
   validates :rating, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 1}

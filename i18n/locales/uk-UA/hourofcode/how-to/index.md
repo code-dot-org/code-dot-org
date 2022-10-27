@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 Скеруйте учнів до заняття
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Коли ваші учні стикаються з труднощами, є нормальним відповідати:
 
@@ -138,7 +138,6 @@ What if a student finishes early?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Замовте спеціальні футболки](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для своєї школи.
 - Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
 
 * * *
@@ -152,6 +151,6 @@ What if a student finishes early?
 
 ### Що після Години коду?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

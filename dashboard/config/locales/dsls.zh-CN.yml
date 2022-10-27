@@ -17217,15 +17217,11 @@ zh-CN:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: 僵尸会通过正确的路径, 最终会永远的来回走动。
-          correct: true
+        - correct: true
           feedback: 叮咚！答对啦！
         - text: 僵尸会到达向日葵。
-          feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
-          feedback: 错误。僵尸会通过正确的路径, 最终会永远的来回走动。
         - text: 僵尸将被困在前进道路的尽头。
-          feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_maze_until2_predict12022:

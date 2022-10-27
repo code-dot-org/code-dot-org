@@ -2465,6 +2465,73 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "핀"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "새 블록!"
         }
       }
     }

@@ -397,6 +397,7 @@ ko-KR:
   homepage_banner_40k_teachers_link: 더 알아보기
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: 누구든지 배울 수 있습니다. 오늘 시작하세요.
+  homepage_slot_text_blurb_hoc_2022: 탐구하고, 놀고, 창의력을 발휘하세요!
   homepage_slot_text_link_hoc: Hour of Code 해보기
   homepage_slot_text_link_about_hoc: 아워오브코드 소개
   homepage_slot_text_link_host: Hour of Code의 주인
@@ -2223,3 +2224,12 @@ ko-KR:
   top_hoc_tutorial_applab_alt_text: 파란색 배경에 별과 광선을 발산하는 터치 스크린 태블릿을 집게 손가락으로 터치하는
     갈색 손
   minecraft_tile_alt: 산호와 돌고래, 해초로 구성된 수중 마인크래프트 장면을 배경으로 둔 두 마인크래프트 캐릭터 스티브와 알렉스
+  hoc2022_banner_title: 탐구하고, 놀고, 창의력을 발휘하세요!
+  hoc2022_banner_description: 우주를 탐구하고, 골을 넣고, 바로 시작하세요. 컴퓨터과학을 체험해볼 수 있는 방법은 아주 많습니다!
+  hoc2022_cta_primary: 새로운 내용 보기
+  hoc2022_cta_secondary: 더 많은 활동 시도해보기
+  hoc2022_landing_page_explore_description: 컴퓨터 과학의 새로운 세계로 향하는 문을 열어보세요!
+  hoc2022_landing_page_play_description: 필드와 점수를 장악해 보세요!
+  hoc2022_landing_page_create_title: 만들기
+  hoc2022_landing_page_create_description: 이상하고도 아름다운 무언가를 만들어보세요!
+  try_it_yourself: 혼자 힘으로 해보세요!
