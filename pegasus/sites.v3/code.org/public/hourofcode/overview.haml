@@ -43,10 +43,10 @@ theme: responsive
     .col-50
       .tutorial-tile
         %a{href: "/helloworld"}
-          %img.tutorial-tile-img{src: "/images/fill-484x234/oceans/ai_2020_overview.png", alt: I18n.t(:hoc_danceparty_alt_text)}
+          %img.tutorial-tile-img{src: "/images/fill-484x234/hello-world-2022.png", alt: I18n.t(:hoc_overview_hello_world_2022_alt_text)}
         .tutorial-info
-          %span{style: "text-transform: capitalize"}
-            %h3.tutorial-info-h= I18n.t(:hello)
+          %span
+            %h3.tutorial-info-h{style: "text-transform: capitalize"}= I18n.t(:hello)
             .smalltext= I18n.t(:hoc_overview_hello_world_2022_subtitle)
           %span
             %a{href: "/helloworld"}
