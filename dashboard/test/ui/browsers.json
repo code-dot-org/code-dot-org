@@ -23,42 +23,12 @@
     "platform": "Windows 10",
     "w3c": true
   },
-//  {
-//    "name": "iPhone",
-//    "platformName": "iOS",
-//    "browserName": "Safari",
-//    "appium:deviceName": "iPhone Simulator",
-//    "appium:platformVersion": "16.0",
-//    "appium:automationName": "XCUITest"
-//    "mobile": true,
-//    "deviceOrientation": "landscape",
-//    "rotatable": true
-//    'sauce:options': {
-//      appiumVersion: '2.0.0-beta44',
-//      build: "<your build id>",
-//      name: "<your test name>"
-//    }
-//  },
-//  {
-//    "name": "iPhone",
-//    "platformName": "iOS",
-//    "platformVersion": "15.4",
-//    "browserName": "safari",
-//    "deviceName": "iPhone Simulator",
-//    "mobile": true,
-//    "deviceOrientation": "landscape",
-//    "rotatable": true
-//  },
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "browserName": "Safari",
-    "appium:deviceName": "iPhone Simulator",
-    "appium:platformVersion": "16.0",
-    "appium:automationName": "XCUITest",
-    "sauce:options": {
-      "appiumVersion": "2.0.0"
-    },
+    "platformVersion": "15.4",
+    "browserName": "safari",
+    "deviceName": "iPhone Simulator",
     "mobile": true,
     "deviceOrientation": "landscape",
     "rotatable": true
@@ -66,7 +36,7 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "platformVersion": "16.0",
+    "platformVersion": "15.4",
     "browserName": "safari",
     "deviceName": "iPad Simulator",
     "mobile": true,

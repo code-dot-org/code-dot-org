@@ -20,7 +20,7 @@ Feature: Share Buttons
 
   # Making DPad button show up in Game Lab and not in Sprite Lab for mobile
 
-  @no_ie @no_safari @no_firefox @no_chrome
+  @only_mobile
   Scenario: Dpad does not appear for Sprite Lab Share
     Given I am on "http://studio.code.org/projects/spritelab/"
     And I wait for the page to fully load
@@ -28,7 +28,10 @@ Feature: Share Buttons
     And I wait until element "#gameButtons" is visible
     And element "#studio-dpad-rim" is not displayed
 
-  @no_ie @no_safari @no_firefox @no_chrome
+  # We currently are not displaying the dpad on shared game lab
+  # projects on ipad. Tracked here:
+  # ...
+  @only_phone
   Scenario: Dpad appears for Game Lab Share
     Given I am on "http://studio.code.org/projects/gamelab/"
     And I wait for the page to fully load

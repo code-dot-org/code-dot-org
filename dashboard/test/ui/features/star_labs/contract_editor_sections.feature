@@ -10,6 +10,7 @@ Background:
   And I press the SVG text "Create a Function"
   And I wait to see "#modalEditorClose"
 
+@no_phone
 Scenario: Examples should be hidden when specified in contract editor
   And examples are visible
   And the "Contract and Purpose Statement" contract editor header is visible
