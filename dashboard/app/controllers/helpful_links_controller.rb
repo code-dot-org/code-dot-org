@@ -1,0 +1,2 @@
+class HelpfulLinksController < ApplicationController
+end
