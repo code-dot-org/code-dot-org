@@ -40,6 +40,7 @@ export const INITIAL_STATE = {
 class VisualizerModal extends React.Component {
   static propTypes = {
     // from redux state
+    isRtl: PropTypes.bool.isRequired,
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
     tableRecords: PropTypes.array.isRequired
@@ -225,7 +226,13 @@ class VisualizerModal extends React.Component {
       this.state.filterColumn
     );
     return (
-      <span style={styles.container}>
+      <span
+        style={
+          this.props.isRtl
+            ? {...styles.container, ...styles.containerRtl}
+            : styles.container
+        }
+      >
         <button
           type="button"
           className={classNames(dataStyles.button, dataStyles.buttonWhite)}
@@ -421,6 +428,9 @@ const styles = {
   container: {
     display: 'inline-block'
   },
+  containerRtl: {
+    marginLeft: '10px'
+  },
   modalBody: {
     display: 'flex',
     flexDirection: 'column',
@@ -456,6 +466,7 @@ const styles = {
 
 export const UnconnectedVisualizerModal = VisualizerModal;
 export default connect(state => ({
+  isRtl: state.isRtl,
   tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || [],
   tableName: state.data.tableName || ''
