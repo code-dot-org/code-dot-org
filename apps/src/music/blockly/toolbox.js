@@ -234,6 +234,13 @@ export const baseToolbox = {
               type: 'number'
             }
           }
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.LOGIC_COMPARE,
+          fields: {
+            var: {}
+          }
         }
       ]
     }

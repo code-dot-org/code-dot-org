@@ -3,85 +3,96 @@ import {BlockTypes} from '../blockTypes';
 export const simpleIf = {
   definition: {
     type: BlockTypes.SIMPLE_IF,
-    message0: 'if %1 %2 %3',
+    message0: 'if %1',
     args0: [
       {
         type: 'input_value',
-        name: 'lvalue',
+        name: 'value',
         check: 'Number',
-        align: 'RIGHT'
-      },
-      {
-        type: 'field_dropdown',
-        name: 'operator',
-        options: [
-          ['odd', 'ODD'],
-          ['even', 'EVEN'],
-          ['divisible by', 'DIVISIBLE_BY']
-        ]
-      },
-      {
-        type: 'input_value',
-        name: 'rvalue',
-        check: 'Number',
-        align: 'RIGHT'
+        align: 'LEFT'
       }
     ],
     message1: '%1',
     args1: [
       {
         type: 'input_statement',
-        name: 'code'
+        name: 'code',
+        align: 'LEFT'
       }
     ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
-    colour: 230,
+    style: 'logic_blocks',
     tooltip: 'if condition is true then do the code',
     helpUrl: ''
   },
   generator: ctx => {
-    const operator = ctx.getFieldValue('operator');
-    let code;
-
-    let lvalue =
+    let value =
       Blockly.JavaScript.valueToCode(
         ctx,
-        'lvalue',
+        'value',
         Blockly.JavaScript.ORDER_ASSIGNMENT
       ) || '0';
 
-    let rvalue =
-      Blockly.JavaScript.valueToCode(
-        ctx,
-        'rvalue',
-        Blockly.JavaScript.ORDER_ASSIGNMENT
-      ) || '0';
-
-    switch (operator) {
-      case 'ODD':
-        code = ctx.getFieldValue('lvalue') + '% 2 == 1';
-        break;
-      case 'EVEN':
-        code = ctx.getFieldValue('lvalue') + '% 2 == 0';
-        break;
-      case 'DIVISIBLE_BY':
-        code =
-          lvalue +
-          //ctx.getFieldValue('lvalue') +
-          ' % ' +
-          //ctx.getFieldValue('rvalue') +
-          rvalue +
-          ' == 0';
-        break;
-    }
     return (
       'if (' +
-      code +
+      value +
       ') {\n' +
       Blockly.JavaScript.statementToCode(ctx, 'code') +
       '\n}\n'
     );
+  }
+};
+
+export const logicCompare = {
+  definition: {
+    type: BlockTypes.LOGIC_COMPARE,
+    message0: '%1 %2 %3',
+    args0: [
+      {
+        type: 'input_value',
+        name: 'A'
+      },
+      {
+        type: 'field_dropdown',
+        name: 'OP',
+        options: [
+          ['=', 'EQ'],
+          ['\u2260', 'NEQ'],
+          ['\u200F<', 'LT'],
+          ['\u200F\u2264', 'LTE'],
+          ['\u200F>', 'GT'],
+          ['\u200F\u2265', 'GTE']
+        ]
+      },
+      {
+        type: 'input_value',
+        name: 'B'
+      }
+    ],
+    inputsInline: true,
+    output: 'Number',
+    style: 'logic_blocks'
+  },
+  generator: ctx => {
+    // Comparison operator.
+    const OPERATORS = {
+      EQ: '==',
+      NEQ: '!=',
+      LT: '<',
+      LTE: '<=',
+      GT: '>',
+      GTE: '>='
+    };
+    const operator = OPERATORS[ctx.getFieldValue('OP')];
+    const order =
+      operator === '==' || operator === '!='
+        ? Blockly.JavaScript.ORDER_EQUALITY
+        : Blockly.JavaScript.ORDER_RELATIONAL;
+    const argument0 = Blockly.JavaScript.valueToCode(ctx, 'A', order) || '0';
+    const argument1 = Blockly.JavaScript.valueToCode(ctx, 'B', order) || '0';
+    const code = argument0 + ' ' + operator + ' ' + argument1;
+    return [code, order];
   }
 };
