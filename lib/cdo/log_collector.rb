@@ -7,7 +7,10 @@
 #   such as HoneyBadger and Slack.
 #
 class LogCollector
-  attr_reader :exceptions, :logs, :metrics, :task_name
+  attr_reader :exceptions
+  attr_reader :logs
+  attr_reader :metrics
+  attr_reader :task_name
 
   # @param task_name [String] friendly name of the task to collect logs for
   # @param print_log_immediately [Boolean] print a log as soon as it is added to the log collector

@@ -18,7 +18,8 @@ class SingleSignOn
   BOOLS = [:avatar_force_update, :admin, :moderator].freeze
 
   attr_accessor(*ACCESSORS)
-  attr_accessor :sso_secret, :sso_url
+  attr_accessor :sso_secret
+  attr_accessor :sso_url
 
   def self.sso_secret
     raise "sso_secret not implemented on class, be sure to set it on instance"

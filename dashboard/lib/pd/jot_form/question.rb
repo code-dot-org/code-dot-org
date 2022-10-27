@@ -6,14 +6,12 @@ module Pd
     class Question
       include Constants
 
-      attr_accessor(
-        :id,   # question id
-        :type, # See Translation::QUESTION_CLASSES for a complete list of supported types
-        :name, # "unique" (not actually enforced by JotForm) name per form
-        :text, # label
-        :order, # 1-based order the question appears in the form
-        :hidden,
-      )
+      attr_accessor :id # question id
+      attr_accessor :type # See Translation::QUESTION_CLASSES for a complete list of supported types
+      attr_accessor :name # "unique" (not actually enforced by JotForm) name per form
+      attr_accessor :text # label
+      attr_accessor :order # 1-based order the question appears in the form
+      attr_accessor :hidden
 
       alias_method :hidden?, :hidden
 

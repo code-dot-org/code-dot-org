@@ -2,7 +2,8 @@ require_relative 'reducer'
 
 module Pd::SurveyPipeline
   class GenericMapper < SurveyPipelineWorker
-    attr_reader :group_config, :map_config
+    attr_reader :group_config
+    attr_reader :map_config
 
     REQUIRED_INPUT_KEYS = [:question_answer_joined]
     OUTPUT_KEYS = [:summaries, :errors]

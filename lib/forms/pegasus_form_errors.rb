@@ -22,7 +22,8 @@ class FormError < ArgumentError
 end
 
 class FieldError
-  attr_accessor :value, :message
+  attr_accessor :value
+  attr_accessor :message
 
   def initialize(value, message)
     @value = value

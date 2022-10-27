@@ -3,7 +3,8 @@ require 'cdo/chat_client'
 require 'cdo/google/drive'
 
 class CsvToSqlTable
-  attr_reader :db, :table
+  attr_reader :db
+  attr_reader :table
 
   def initialize(path, db, table_prefix = '')
     @db = db

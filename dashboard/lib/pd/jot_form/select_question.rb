@@ -13,11 +13,9 @@ module Pd
       # Other question keys are numbered.
       OTHER_ANSWER_KEY = 'other'.freeze
 
-      attr_accessor(
-        :allow_other,
-        :other_text,
-        :preserve_text # kept for backward compatibility
-      )
+      attr_accessor :allow_other
+      attr_accessor :other_text
+      attr_accessor :preserve_text # kept for backward compatibility
 
       def self.from_jotform_question(jotform_question)
         super.tap do |select_question|

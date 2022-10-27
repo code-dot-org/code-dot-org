@@ -25,8 +25,12 @@ require 'cdo/chat_client'
 class ExpiredDeletedAccountPurger
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :deleted_after, :deleted_before, :max_teachers_to_purge,
-    :max_accounts_to_purge, :log
+  attr_reader :dry_run
+  attr_reader :deleted_after
+  attr_reader :deleted_before
+  attr_reader :max_teachers_to_purge
+  attr_reader :max_accounts_to_purge
+  attr_reader :log
   alias :dry_run? :dry_run
 
   def initialize(options = {})

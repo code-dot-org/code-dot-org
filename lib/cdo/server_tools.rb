@@ -83,7 +83,9 @@ class ServerTools
 
   # A struct for bundling together the name, hostname, and instance_id for a server.
   class ServerIdentifier
-    attr_accessor :name, :hostname, :instance_id
+    attr_accessor :name
+    attr_accessor :hostname
+    attr_accessor :instance_id
 
     def initialize(name:, hostname:, instance_id:)
       @name = name

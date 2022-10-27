@@ -47,7 +47,9 @@ end
 # HttpDocument normalizes a document-in-transition through our system.
 #
 class HttpDocument
-  attr_accessor :status, :headers, :body
+  attr_accessor :status
+  attr_accessor :headers
+  attr_accessor :body
 
   def initialize(body, headers={}, status=200)
     @body = body

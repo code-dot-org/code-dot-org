@@ -4,7 +4,8 @@
 # without loss of progress, this implementation also includes code to migrate
 # state from unencrypted cookies back into the session cookie.)
 class ClientState
-  attr_reader :session, :cookies
+  attr_reader :session
+  attr_reader :cookies
 
   def initialize(session, cookies)
     @session = session

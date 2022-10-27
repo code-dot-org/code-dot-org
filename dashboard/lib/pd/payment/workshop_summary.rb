@@ -27,7 +27,11 @@ module Pd::Payment
       @teacher_summaries = []
     end
 
-    attr_reader :workshop, :pay_period, :num_days, :num_hours, :min_attendance_days
+    attr_reader :workshop
+    attr_reader :pay_period
+    attr_reader :num_days
+    attr_reader :num_hours
+    attr_reader :min_attendance_days
 
     # @return [Class] calculator class that was used to calculate this payment.
     attr_reader :calculator_class

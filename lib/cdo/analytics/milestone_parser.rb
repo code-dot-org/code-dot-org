@@ -32,7 +32,9 @@ class MilestoneParser
   # Number of bytes to compare to test for rotated log
   COMPARE_BYTE_LENGTH = 1024
 
-  attr_accessor :cache, :s3_client, :s3_resource
+  attr_accessor :cache
+  attr_accessor :s3_client
+  attr_accessor :s3_resource
 
   cattr_accessor :log_debug
 

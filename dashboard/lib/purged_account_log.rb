@@ -6,8 +6,12 @@ class PurgedAccountLog
     REQUESTED_BY_USER = 'requested by user',
   ]
 
-  attr_reader :user_id, :hashed_email
-  attr_accessor :pardot_ids, :poste_contact_ids, :purged_at, :confirmed_at
+  attr_reader :user_id
+  attr_reader :hashed_email
+  attr_accessor :pardot_ids
+  attr_accessor :poste_contact_ids
+  attr_accessor :purged_at
+  attr_accessor :confirmed_at
 
   def initialize(user, reason:)
     # enum indicating delete source
