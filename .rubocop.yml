@@ -67,19 +67,28 @@ Style/WordArray:
 # BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
 # future. Rules we plan to fix (but are currently failing) belong in
 # .rubocop_todo.yml.
-Metrics/BlockLength:
+Layout/ClosingParenthesisIndentation:
   Enabled: false
 
-Metrics/AbcSize:
-  Enabled: false
-
-Metrics/BlockNesting:
+Layout/ExtraSpacing:
   Enabled: false
 
 Layout/LineLength:
   Enabled: false
 
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
 Metrics/ModuleLength:
+  Enabled: false
+
+Style/AccessorGrouping:
   Enabled: false
 
 Style/AsciiComments:
@@ -88,10 +97,7 @@ Style/AsciiComments:
 Style/BarePercentLiterals:
   Enabled: false
 
-Layout/ClosingParenthesisIndentation:
-  Enabled: false
-
-Layout/ExtraSpacing:
+Style/ClassAndModuleChildren:
   Enabled: false
 
 Style/IdenticalConditionalBranches:
@@ -112,13 +118,9 @@ Style/RedundantReturn:
 Style/StringLiterals:
   Enabled: false
 
-Style/TrivialAccessors:
-  AllowDSLWriters: true
-
 Style/SymbolArray:
   Enabled: false
 
-Style/ClassAndModuleChildren:
-  Enabled: false
-
+Style/TrivialAccessors:
+  AllowDSLWriters: true
 # END BLACKLIST
