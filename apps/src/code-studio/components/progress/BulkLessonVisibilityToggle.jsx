@@ -46,7 +46,7 @@ BulkLessonVisibilityToggle.propTypes = {
   lessons: PropTypes.arrayOf(unitCalendarLesson),
 
   // redux provided
-  sectionId: PropTypes.number,
+  sectionId: PropTypes.number.isRequired,
   scriptName: PropTypes.string.isRequired
 };
 

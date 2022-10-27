@@ -18,6 +18,7 @@ const defaultProps = {
   scriptId: 42,
   scriptName: 'test-script',
   unitTitle: 'Unit test script title',
+  unitAllowsHiddenLessons: true,
   viewAs: ViewType.Participant,
   isRtl: false,
   studentResources: [],

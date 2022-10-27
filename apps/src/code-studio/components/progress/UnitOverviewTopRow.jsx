@@ -54,6 +54,7 @@ class UnitOverviewTopRow extends React.Component {
     scriptName: PropTypes.string.isRequired,
     unitTitle: PropTypes.string.isRequired,
     currentCourseId: PropTypes.number,
+    unitAllowsHiddenLessons: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired
   };
@@ -105,6 +106,7 @@ class UnitOverviewTopRow extends React.Component {
       sectionsForDropdown,
       selectedSectionId,
       currentCourseId,
+      unitAllowsHiddenLessons,
       deeperLearningCourse,
       scriptId,
       scriptName,
@@ -239,7 +241,9 @@ class UnitOverviewTopRow extends React.Component {
               forceReload={true}
               buttonLocationAnalytics={'unit-overview-top'}
             />
-            <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
+            {unitAllowsHiddenLessons && (
+              <BulkLessonVisibilityToggle lessons={unitCalendarLessons} />
+            )}
           </div>
         )}
         <div style={isRtl ? styles.left : styles.right}>
@@ -320,6 +324,7 @@ export default connect((state, ownProps) => ({
   scriptName: state.progress.scriptName,
   unitTitle: state.progress.unitTitle,
   currentCourseId: state.progress.courseId,
+  unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
   viewAs: state.viewAs,
   isRtl: state.isRtl
 }))(UnitOverviewTopRow);
