@@ -81,7 +81,8 @@ export default class Timeline extends React.Component {
         <div
           style={{
             width: '100%',
-            overflow: 'hidden',
+            overflowX: 'auto',
+            overflowY: 'hidden',
             height: '100%',
             position: 'relative'
           }}

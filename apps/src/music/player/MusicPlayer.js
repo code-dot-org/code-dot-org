@@ -10,11 +10,16 @@ import {
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
 const GROUP_TAG = 'mainaudio';
+const EventType = {
+  PLAY: 'play',
+  PREVIEW: 'preview'
+};
 
 export default class MusicPlayer {
   constructor(bpm) {
     this.bpm = bpm || DEFAULT_BPM;
     this.soundEvents = [];
+    this.playingPreviews = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
     this.soundList = [];
@@ -53,7 +58,7 @@ export default class MusicPlayer {
     }
 
     const soundEvent = {
-      type: 'play',
+      type: EventType.PLAY,
       id,
       insideWhenRun,
       when: measure - 1
@@ -81,6 +86,21 @@ export default class MusicPlayer {
     );
   }
 
+  previewSound(id, onStop) {
+    this.stopAndCancelPreviews();
+
+    const previewEvent = {
+      type: EventType.PREVIEW,
+      id
+    };
+
+    this.playSoundEvent(previewEvent, onStop);
+  }
+
+  isPreviewPlaying(id) {
+    return this.playingPreviews.includes(id);
+  }
+
   getIdForSoundName(name) {
     for (let group of this.library.groups) {
       for (let folder of group.folders) {
@@ -95,7 +115,7 @@ export default class MusicPlayer {
   }
 
   playSong() {
-    StopSound(GROUP_TAG);
+    this.stopAndCancelPreviews();
 
     this.startPlayingAudioTime = GetCurrentAudioTime();
 
@@ -107,7 +127,7 @@ export default class MusicPlayer {
   }
 
   stopSong() {
-    StopSound(GROUP_TAG);
+    this.stopAndCancelPreviews();
     this.isPlaying = false;
   }
 
@@ -143,6 +163,15 @@ export default class MusicPlayer {
     );
   }
 
+  clearAllSoundEvents() {
+    this.soundEvents = [];
+  }
+
+  stopAndCancelPreviews() {
+    StopSound(GROUP_TAG);
+    this.playingPreviews = [];
+  }
+
   getSoundEvents() {
     return this.soundEvents;
   }
@@ -175,8 +204,8 @@ export default class MusicPlayer {
     );
   }
 
-  playSoundEvent(soundEvent) {
-    if (soundEvent.type === 'play') {
+  playSoundEvent(soundEvent, onStop) {
+    if (soundEvent.type === EventType.PLAY) {
       const eventStart =
         this.startPlayingAudioTime +
         this.convertMeasureToSeconds(soundEvent.when);
@@ -188,6 +217,18 @@ export default class MusicPlayer {
           eventStart
         );
       }
+    }
+
+    if (soundEvent.type === EventType.PREVIEW) {
+      PlaySound(this.groupPrefix + '/' + soundEvent.id, GROUP_TAG, 0, () => {
+        const index = this.playingPreviews.indexOf(soundEvent.id);
+        if (index > -1) {
+          this.playingPreviews.splice(index, 1);
+        }
+        onStop();
+      });
+
+      this.playingPreviews.push(soundEvent.id);
     }
   }
 

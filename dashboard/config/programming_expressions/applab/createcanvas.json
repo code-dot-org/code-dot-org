@@ -1,6 +1,6 @@
 {
   "key": "createCanvas",
-  "name": "createCanvas(id, *width*, *height*)",
+  "name": "createCanvas(id, width, height)",
   "category": "Canvas",
   "category_key": "canvas",
   "content": "A canvas element is a rectangular area which you include in apps to allow the user to draw and manipulate images. The Turtle is actually implemented using a canvas.\n\ncanvas element must be created before using any other canvas blocks. If the width and height are not specified, the canvas will be the same size as the app window. Each time *createCanvas()* is invoked, it creates a new canvas with default values for stroke width (1), stroke color (\"black\"), and fill color (\"transparent\"). Changing those values only affects the active canvas, and only one canvas may be active at a time. Canvas blocks, such as [line()](/docs/applab/line) and [rect()](/docs/applab/rect), can draw only within the bounds of a canvas. Any drawing outside the bounds of the canvas will not be visible.\n\nWhen *createCanvas()* is invoked the first time, the canvas it creates becomes the active canvas. Other canvas blocks (like [line()](/docs/applab/line) or [setStrokeWidth()](/docs/applab/setStrokeWidth)) only affect the active canvas. Creating additional canvas elements does not change the active canvas. To change the active canvas, you must use [setActiveCanvas()](/docs/applab/setActiveCanvas).",
@@ -11,17 +11,17 @@
     },
     {
       "name": "Example: It's All Relative",
-      "description": "**Example: It's All Relative** The coordinates used for drawing on a canvas are relative to the top left corner of the canvas, not the screen.\n",
+      "description": "The coordinates used for drawing on a canvas are relative to the top left corner of the canvas, not the screen.\n",
       "code": "```\n// The coordinates used for drawing on a canvas are relative to the top left corner of the canvas, not the screen.\ncreateCanvas(\"canvas1\");\nsetPosition(\"canvas1\", 50, 50);\nrect(0, 0, 100, 100);\n```"
     },
     {
       "name": "Example: Stay Inside the Canvas",
-      "description": "**Example: Stay Inside the Canvas** Only the part of the rectangle that fits on the canvas is visible.\n",
+      "description": "Only the part of the rectangle that fits on the canvas is visible.\n",
       "code": "```\n// Only the part of the rectangle that fits on the canvas is visible.\ncreateCanvas(\"canvas1\", 50, 50);\nrect(25, 25, 100, 100);\n```"
     },
     {
       "name": "Example: Multiple Canvases",
-      "description": "**Example: Multiple Canvases** Only the active canvas is effected by canvas drawing functions.\n",
+      "description": "Only the active canvas is effected by canvas drawing functions.\n",
       "code": "```\n// Only the active canvas is effected by canvas drawing functions.\ncreateCanvas(\"canvas1\");\nsetPosition(\"canvas1\", 50, 50);\nsetStrokeColor(\"red\");\nrect(0, 0, 100, 100);\n\ncreateCanvas(\"canvas2\", 200, 200);\nsetActiveCanvas(\"canvas2\");\nsetPosition(\"canvas2\", 60, 0);\ncircle(0, 100, 50);\ncircle(100, 100, 50);\ncircle(200, 100, 50);\n```"
     }
   ],

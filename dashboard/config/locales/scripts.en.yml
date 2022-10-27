@@ -4412,6 +4412,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: This self-paced module introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          lessons: {}
+          name: csp5-virtual
         virtual-holding-place:
           title: ''
           description_audience: ''
@@ -8819,7 +8821,7 @@ en:
             lesson-1:
               name: Welcome to CSA
             lesson-3:
-              name: CSA Pre-Survey
+              name: Asphalt Art Project [1-Day Version]
             lesson-2:
               name: Java Lab
             lesson-4:
@@ -8865,6 +8867,8 @@ en:
               display_name: Content
             lessonGroup-4:
               display_name: Show What You Know
+            lessonGroup-5:
+              display_name: Alternate Lessons
           name: csa1-2023
           title: Object-Oriented Programming
           description_audience: ''
@@ -9023,7 +9027,7 @@ en:
             lesson-5:
               name: Closing
             lesson-6:
-              name: Practicing with Feedback
+              name: Module 3 Asynchronous Work
             lesson-7:
               name: Data Inquiry Cycles
           lesson_groups:
@@ -9035,10 +9039,30 @@ en:
           title: CS Discoveries Virtual Module 3
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Revisit summer workshop content about formative assessment by reflecting on how formatively assessing students has played out in classroom culture and routines.
+            * Describe how the use of a data inquiry cycle with student data supports improving access, diversity, and inclusion in CS.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Revisit summer workshop content about formative assessment by reflecting on how formatively assessing students has played out in classroom culture and routines.
+            * Describe how the use of a data inquiry cycle with student data supports improving access, diversity, and inclusion in CS.
         vpl-csd4-ayw-pilot-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Defining Student Success in Summative Assessment
+            lesson-4:
+              name: Closing
+            lesson-5:
+              name: Module 4 Asynchronous Work
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
@@ -9048,8 +9072,18 @@ en:
           title: CS Discoveries Virtual Module 4
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Gain a deeper understanding of how rubrics are used in the CS Discoveries curriculum.
+            * Calibrate with their cohort on how to define and measure success in CS Discoveries projects by scoring and discussing a sample student project.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Gain a deeper understanding of how rubrics are used in the CS Discoveries curriculum.
+            * Calibrate with your cohort on how to define and measure success in CS Discoveries projects by scoring and discussing a sample student project.
         csa-magpie-lab:
           lessons:
             lesson-1:
@@ -9265,6 +9299,8 @@ en:
               display_name: 'Chapter 1: Inputs and Outputs'
             lessonGroup-3:
               display_name: 'Chapter 2: Building Physical Prototypes'
+            lessonGroup-4:
+              display_name: Introduction to App Lab
           name: physcomp-temp
           title: Physical Computing [temp]
           description_audience: ''
@@ -9273,7 +9309,6 @@ en:
             In the Physical Computing unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
 
             **Implementation Guidance for Physical Computing**
-            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the [App Lab Hour of Code](https://studio.code.org/s/applab-intro/reset) before starting this unit.
             - This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom
             - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
 
@@ -9309,6 +9344,14 @@ en:
           lessons:
             lesson-1:
               name: function machines playground
+            lesson-2:
+              name: Particles Lesson 1
+            lesson-3:
+              name: Particles Lesson 2
+            lesson-4:
+              name: Particles Lesson 3
+            lesson-5:
+              name: Particles Lesson 4
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
@@ -9378,6 +9421,8 @@ en:
               name: What's That Sound?
             lesson-2:
               name: Where is it coming from?
+            lesson-3:
+              name: What Do They Want?
           lesson_groups: {}
           name: csc-function-machines-pilot
           title: Function Machines Pilot Module
@@ -9515,3 +9560,106 @@ en:
           student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
           description_short: ''
           description_audience: ''
+        self-paced-pl-csa-2023:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-csa1-2023:
+          title: 'Module 1: Welcome'
+          description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          student_description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa2-2023:
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Estimated Time:** 70 minutes\n"
+          student_description: |-
+            This module is intended for teachers who are new to Code.org and the Code.org platform.
+
+            **You will:**
+            * Navigate the Code.org website and teacher tools.
+            * Set up a classroom section.
+            * Locate and use course lesson plans and teacher resources.
+            * Learn how to access support while teaching the course.
+
+            **Estimated Time:** 70 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa3-2023:
+          title: 'Module 3: Support for text-based programming'
+          description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          student_description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          description_short: ''
+          description_audience: ''
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+            lesson-2:
+              name: Unit 2 Projects
+            lesson-3:
+              name: Unit 3 Projects
+            lesson-4:
+              name: Unit 4 Projects
+            lesson-5:
+              name: Unit 5 Projects
+            lesson-6:
+              name: Unit 6 Projects
+            lesson-7:
+              name: Unit 7 Projects
+            lesson-8:
+              name: Unit 8 Projects
+          lesson_groups: {}
+          name: csa-examples-22
+          title: CSA Unit Project Examples [2022-2023]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
