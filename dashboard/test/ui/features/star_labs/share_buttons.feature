@@ -28,10 +28,7 @@ Feature: Share Buttons
     And I wait until element "#gameButtons" is visible
     And element "#studio-dpad-rim" is not displayed
 
-  # We currently are not displaying the dpad on shared game lab
-  # projects on ipad. Tracked here:
-  # ...
-  @only_phone
+  @only_mobile
   Scenario: Dpad appears for Game Lab Share
     Given I am on "http://studio.code.org/projects/gamelab/"
     And I wait for the page to fully load
