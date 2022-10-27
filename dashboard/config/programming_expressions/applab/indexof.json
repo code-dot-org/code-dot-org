@@ -37,7 +37,8 @@
   "parameters": [
     "searchValue"
   ],
+  "return_value": "Returns the position of the first occurrence of *searchValue* within the string, else returns -1 if not found.",
   "short_description": "Returns the position of the first occurrence of *searchValue* within the string, else returns -1 if not found.",
-  "syntax": "Returns the position of the first occurrence of *searchValue* within the string, else returns -1 if not found.",
+  "syntax": "[string].indexOf(searchValue)",
   "tips": "- The search is a case-sensitive search. "
 }
