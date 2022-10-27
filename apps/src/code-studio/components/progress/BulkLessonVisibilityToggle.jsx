@@ -11,7 +11,7 @@ import _ from 'lodash';
 import style from './bulk-lesson-visibility-toggle.module.scss';
 import i18n from '@cdo/locale';
 
-function BulkLessonVisibilityToggle({lessons, sectionId, scriptName}) {
+function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
   const tooltipId = _.uniqueId();
 
   return (
@@ -20,17 +20,13 @@ function BulkLessonVisibilityToggle({lessons, sectionId, scriptName}) {
         text={i18n.showAllLessons()}
         icon="eye"
         color={Button.ButtonColor.gray}
-        onClick={() =>
-          toggleHiddenLessons(scriptName, sectionId, lessons, false)
-        }
+        onClick={() => toggleHiddenLessons(unitName, sectionId, lessons, false)}
       />
       <Button
         text={i18n.hideAllLessons()}
         icon="eye-slash"
         color={Button.ButtonColor.gray}
-        onClick={() =>
-          toggleHiddenLessons(scriptName, sectionId, lessons, true)
-        }
+        onClick={() => toggleHiddenLessons(unitName, sectionId, lessons, true)}
       />
       <span data-tip data-for={tooltipId}>
         <FontAwesome icon="info-circle" className={style.infoTipIcon} />
@@ -47,15 +43,15 @@ BulkLessonVisibilityToggle.propTypes = {
 
   // redux provided
   sectionId: PropTypes.number.isRequired,
-  scriptName: PropTypes.string.isRequired
+  unitName: PropTypes.string.isRequired
 };
 
-function toggleHiddenLessons(scriptName, sectionId, lessons, hidden) {
+function toggleHiddenLessons(unitName, sectionId, lessons, hidden) {
   lessons.forEach(lesson => {
     // For some reason, sectionId is a number here, and needs to be a string
     // for the redux toggle stuff to work.
     getStore().dispatch(
-      toggleHiddenLesson(scriptName, sectionId.toString(), lesson.id, hidden)
+      toggleHiddenLesson(unitName, sectionId.toString(), lesson.id, hidden)
     );
   });
 }
@@ -64,7 +60,7 @@ export const UnconnectedBulkLessonVisibilityToggle = BulkLessonVisibilityToggle;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    scriptName: state.progress.scriptName
+    unitName: state.progress.scriptName
   }) /*,
   dispatch => ({
     toggleHiddenLesson(unitName, sectionId, lessonId, hidden) {
