@@ -32,3 +32,10 @@
 .iconButton {
   cursor: pointer;
 }
+
+.startOverButton {
+  background-color: rgba(0 0 0 / 0);
+  color: $white;
+  font-size: 14px;
+  padding: 0 8px;
+}
