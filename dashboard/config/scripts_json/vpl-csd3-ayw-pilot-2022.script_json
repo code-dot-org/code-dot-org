@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-20 21:56:48 UTC",
+    "serialized_at": "2022-10-26 22:40:55 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -57,7 +57,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Overview**: This session provides a space for participants to reconnect with their cohort and check in about CS Discoveries implementation. They will also review the norms, goals, theme, and agenda for the workshop, including the continuing focus on debugging.\n\n**Participants will:**\n\n* Be aware of the norms, goals, theme, and agenda for the workshop.\n* Build community by celebrating successes, venting frustrations, and troubleshooting roadblocks with fellow cohort members in small groups.\n\n**Suggested time:** 15 minutes",
+        "overview": "**Overview**: This session provides a space for participants to reconnect with their cohort and check in about CS Discoveries implementation. They will also review the norms, goals, theme, and agenda for the workshop, including the continuing focus on assessment.\n\n**Participants will:**\n\n* Be aware of the norms, goals, theme, and agenda for the workshop.\n* Build community by celebrating successes, venting frustrations, and troubleshooting roadblocks with fellow cohort members in small groups.\n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Be aware of the norms, goals, theme, and agenda for the workshop.\n* Build community by celebrating successes, venting frustrations, and troubleshooting roadblocks with fellow cohort members in small groups."
       },
       "seeding_key": {

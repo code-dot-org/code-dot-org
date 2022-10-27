@@ -254,20 +254,12 @@ pl:
             "-1": "←"
       Dancelab_eval:
         text: oceń {CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'powtórz co {N} takty po {START} '
       Dancelab_everySeconds:
         text: 'powtarzaj co {N} {UNIT} '
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
-      Dancelab_everySecondsRange:
-        text: 'co {N} {UNIT} od {START} do {STOP} '
-        options:
-          UNIT:
-            measures: Takty
-            seconds: Sekundy
       Dancelab_everyVerseChorus:
         text: 'co {UNIT} '
         options:
@@ -1369,6 +1361,11 @@ pl:
             "'sound://category_digital/jump_7.mp3'": skocz
       gamelab_playSoundOptionsSoccer:
         text: zagraj {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": klakson powietrzny
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": oklaski
+            "'sound://category_sports/One_Whistle_SFX.mp3'": gwizdek
       gamelab_playSoundOptionsSpace:
         text: zagraj {SOUND}
       gamelab_playSpeech:
@@ -1514,7 +1511,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -1933,7 +1930,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:

@@ -11,6 +11,7 @@
   "activity": "Dejavnost",
   "actions": "Dejanja",
   "add": "Dodaj",
+  "addingToTable": "Dodajanje...",
   "addNewSection": "Dodaj nov razdelek",
   "addParentEmailModal_parentEmail_invalid": "Vnešen elektronski naslov ni veljaven",
   "addParentEmailModal_parentEmail_isRequired": "Manjka elektronski naslov",
