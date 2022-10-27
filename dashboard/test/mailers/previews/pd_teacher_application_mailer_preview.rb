@@ -9,7 +9,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     principal_approval
     principal_approval_completed
     principal_approval_completed_partner
-    accepted_no_cost_registration
+    accepted_registration
     registration_sent
     registration_reminder
     declined

@@ -73,7 +73,7 @@ module Pd::Application
       )
     end
 
-    def accepted_no_cost_registration(teacher_application)
+    def accepted_registration(teacher_application)
       @application = teacher_application
       congrats_from = @application.regional_partner ? "#{@application.effective_regional_partner_name} and " : ""
 
