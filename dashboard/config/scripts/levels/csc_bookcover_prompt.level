@@ -5,13 +5,14 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "storylab"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
@@ -32,8 +33,8 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "project_template_level_name": "csc_bookcover_template2",
-    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make sure to connect a prompt user block under when run\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fb00f5ecf9ef8148a207aaf7013344c5/csc_bookcover_prompt.mp3\"}]",
-    "long_instructions": "**Let’s make our program ask the user a question!**\r\n \r\n- Connect a `prompt user` block under when run\r\n- Press the \"Run\" button.\r\n- Click on your answer to the question “Would you read this book” \r\n- It doesn’t do anything yet but that’s okay! In the next level we’ll learn how to have the program use your response.\r\n\r\n\r\n\r\n\r\n\r\n",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make sure to connect a `prompt user` block under when run.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dae6428d8dc121cd9ce82eca9e57f933/csc_bookcover_prompt.mp3\"}]",
+    "long_instructions": "**Let’s make our program ask the user a question!**\r\n \r\n- Connect a `prompt user` block under a `when sprite clicked` block.\r\n- Press the \"Run\" button.\r\n- Click \"Learn More\" under the question “Interested?”\r\n- It doesn’t do anything yet but that’s okay! In the next level we’ll make the program use your response.\r\n\r\n\r\n\r\n\r\n\r\n",
     "instructions_icon": "bear",
     "preload_asset_list": null
   },
@@ -42,22 +43,24 @@
   "created_at": "2022-09-27T23:31:01.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-27T23:31:01.930+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_behaviors\\\"\"],\"cloned_from\":\"csc_bookcover_behaviors\"},{\"changed_at\":\"2022-09-27 23:31:44 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-27 23:42:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 17:19:31 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-29 23:12:28 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:25:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:33:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:48:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-27T23:31:01.930+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_behaviors\\\"\"],\"cloned_from\":\"csc_bookcover_behaviors\"},{\"changed_at\":\"2022-09-27 23:31:44 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-27 23:42:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 17:19:31 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-09-29 23:12:28 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:25:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:33:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:48:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-11 20:09:43 +0000\",\"changed\":[\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:17:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:33:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:34:53 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:37:49 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:18:20 +0000\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:32:21 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:34:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:37:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_showTitleScreen">
-          <value name="TITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT"/>
             </block>
           </value>
-          <value name="SUBTITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT"/>
             </block>
           </value>
         </block>
@@ -89,14 +92,7 @@
           </value>
           <value name="VAL">
             <block type="math_number" can_disconnect_from_parent="false">
-              <field name="NUM">50</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_printText">
-          <value name="TEXT">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+              <field name="NUM">200</field>
             </block>
           </value>
         </block>
@@ -108,25 +104,20 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setPromptWith2Choices">
+        <block type="storylab_setPromptWithChoice">
           <value name="QUESTION">
             <block type="text">
-              <field name="TEXT"/>
+              <field name="TEXT">Interested?</field>
             </block>
           </value>
           <value name="VAR">
             <block type="variables_get">
-              <field name="VAR">i</field>
+              <field name="VAR">prompt</field>
             </block>
           </value>
           <value name="A">
             <block type="text">
-              <field name="TEXT"/>
-            </block>
-          </value>
-          <value name="B">
-            <block type="text">
-              <field name="TEXT"/>
+              <field name="TEXT">Learn more</field>
             </block>
           </value>
         </block>

@@ -34,21 +34,18 @@ $(window).load(function() {
     loadVideos(forcePlayer);
   }
 
-  // This code works for both the congrats_share and the more general
-  // share_buttons partials.  (Only the former features a share-button-container.)
+  // This code is for the share_buttons partial.
   $(document).ready(function() {
     testImageAccess(
       'https://facebook.com/favicon.ico' + '?' + Math.random(),
       () => {
         $('.share-button-facebook-link').show();
-        $('.share-button-container').show();
       }
     );
     testImageAccess(
       'https://twitter.com/favicon.ico' + '?' + Math.random(),
       () => {
         $('.share-button-twitter-link').show();
-        $('.share-button-container').show();
       }
     );
   });

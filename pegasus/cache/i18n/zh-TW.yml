@@ -342,6 +342,7 @@ zh-TW:
   homepage_banner_40k_teachers_link: 進一步了解
   homepage_slot_text_title_hoc: 一小時玩程式
   homepage_slot_text_blurb_hoc: 任何人都可以學習 從今天開始
+  homepage_slot_text_blurb_hoc_2022: 探索，玩耍，創造！
   homepage_slot_text_link_hoc: 試試一小時玩程式
   homepage_slot_text_link_about_hoc: 關於一小時玩程式（Hour of Code）
   homepage_slot_text_link_host: 舉辦一小時玩程式活動
@@ -1924,3 +1925,12 @@ zh-TW:
   footer_cookie_notice: Cookie通知
   top_hoc_tutorial_applab_alt_text: 一只用食指觸碰觸屏平板電腦的棕色手，在藍色背景下發射星星和光線
   minecraft_tile_alt: 我的世界中的兩個角色：史蒂夫和亞曆克斯，背景是一個帶珊瑚、海豚和海帶的水生我的世界場景
+  hoc2022_banner_title: 探索，玩耍，創造！
+  hoc2022_banner_description: 探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多！
+  hoc2022_cta_primary: 看看有什麼新內容
+  hoc2022_cta_secondary: 嘗試更多活動
+  hoc2022_landing_page_explore_description: 用電腦科學打開通往新世界的大門！
+  hoc2022_landing_page_play_description: 上場得分！
+  hoc2022_landing_page_create_title: 建立
+  hoc2022_landing_page_create_description: 做一些怪異而美妙的東西！
+  try_it_yourself: 自己試試！

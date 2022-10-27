@@ -13,8 +13,8 @@ require 'dynamic_config/dcdo'
 #
 # - Teacher-facing Lesson Plans (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/teacher-lesson-plans/Welcome+to+CSP.pdf)
 # - Student-facing Lesson Plans (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/student-lesson-plans/Welcome+to+CSP.pdf)
-# - Script Overviews (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22).pdf)
-# - Script Resource Rollups (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22)+-+Resources.pdf)
+# - Unit Overviews (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22).pdf)
+# - Unit Resource Rollups (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22)+-+Resources.pdf)
 #
 # We may also want in the future to generate more kinds, including:
 #
@@ -107,7 +107,7 @@ module Services
     end
 
     def self.get_pdf_enabled_scripts
-      Script.all.select do |script|
+      Unit.all.select do |script|
         next false if [PUBLISHED_STATE.pilot, PUBLISHED_STATE.in_development].include?(script.get_published_state)
         next false if script.use_legacy_lesson_plans
         script.is_migrated && script.seeded_from.present?
@@ -134,13 +134,13 @@ module Services
           end
 
           if !script_overview_pdf_exists_for?(script) && should_generate_overview_pdf?(script)
-            puts "Generating missing Script Overview PDF for #{script.name}"
+            puts "Generating missing Unit Overview PDF for #{script.name}"
             generate_script_overview_pdf(script, dir)
             any_pdf_generated = true
           end
 
           if !script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
-            puts "Generating missing Script Resources PDF for #{script.name}"
+            puts "Generating missing Unit Resources PDF for #{script.name}"
             generate_script_resources_pdf(script, dir)
             any_pdf_generated = true
           end

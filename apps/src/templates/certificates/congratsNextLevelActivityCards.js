@@ -30,35 +30,35 @@ const Applab = {
 
 const CourseB = {
   scriptName: 'courseb',
-  link: '/s/courseB',
+  link: '/s/courseb',
   image: 'courseB',
   buttonText: i18n.viewCourse()
 };
 
 const CourseC = {
   scriptName: 'coursec',
-  link: '/s/courseC',
+  link: '/s/coursec',
   image: 'courseC',
   buttonText: i18n.viewCourse()
 };
 
 const CourseD = {
   scriptName: 'coursed',
-  link: '/s/courseD',
+  link: '/s/coursed',
   image: 'courseD',
   buttonText: i18n.viewCourse()
 };
 
 const CourseE = {
   scriptName: 'coursee',
-  link: '/s/courseE',
+  link: '/s/coursee',
   image: 'courseE',
   buttonText: i18n.viewCourse()
 };
 
 const CourseF = {
   scriptName: 'coursef',
-  link: '/s/courseF',
+  link: '/s/coursef',
   image: 'courseF',
   buttonText: i18n.viewCourse()
 };

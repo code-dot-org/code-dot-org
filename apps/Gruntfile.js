@@ -580,9 +580,11 @@ describe('entry tests', () => {
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
     'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
     'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
+    'incubator/index': './src/sites/studio/pages/incubator/index.js',
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
     'print_certificates/batch':
       './src/sites/studio/pages/print_certificates/batch.js',
     'programming_classes/show':
@@ -629,6 +631,7 @@ describe('entry tests', () => {
     'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
     'levels/_match': './src/sites/studio/pages/levels/_match.js',
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
+    'levels/_pixelation': './src/sites/studio/pages/levels/_pixelation.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
     'levels/_teacher_markdown':
@@ -673,6 +676,7 @@ describe('entry tests', () => {
     'courses/new': './src/sites/studio/pages/courses/new.js',
     'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
     'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
+    'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/edit_manifest':
@@ -743,32 +747,25 @@ describe('entry tests', () => {
       './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
     'sprite_management/default_sprites_editor':
       './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
+    'sprite_management/release_default_sprites_to_production':
+      './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
     'sprite_management/select_start_animations':
       './src/sites/studio/pages/sprite_management/select_start_animations.js'
   };
 
   var pegasusEntries = {
     // code.org
-    'code.org/public/congrats': './src/sites/code.org/pages/public/congrats.js',
     'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
     'code.org/public/educate/curriculum/courses':
       './src/sites/code.org/pages/public/educate/curriculum/courses.js',
-    'code.org/public/certificates/blank':
-      './src/sites/code.org/pages/public/certificates/blank.js',
-    'code.org/public/certificates':
-      './src/sites/code.org/pages/public/certificates.js',
     'code.org/public/student/middle-high':
       './src/sites/code.org/pages/public/student/middle-high.js',
-    'code.org/public/sharecertificate':
-      './src/sites/code.org/pages/public/sharecertificate.js',
     'code.org/public/teacher-dashboard/index':
       './src/sites/code.org/pages/public/teacher-dashboard/index.js',
     'code.org/public/yourschool':
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
-    'code.org/views/csf_congrats':
-      './src/sites/code.org/pages/views/csf_congrats.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
@@ -781,6 +778,7 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/views/amazon_future_engineer.js',
     'code.org/views/amazon_future_engineer_eligibility':
       './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
+    'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
 
     // hourofcode.com
     'hourofcode.com/public/index':
@@ -927,11 +925,21 @@ describe('entry tests', () => {
       ],
       mode: minify ? 'production' : 'development',
       optimization: {
+        minimize: minify,
         minimizer: [
           new TerserPlugin({
+            parallel: 4,
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/]
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+            terserOptions: {
+              sourceMap: envConstants.DEBUG_MINIFIED,
+              // Handle Safari 10.x issues: [See FND-2108 / FND-2109]
+              // Can remove when we can safely drop support for older iPad/iOS.
+              mangle: {
+                safari10: true
+              }
+            }
           })
         ],
 

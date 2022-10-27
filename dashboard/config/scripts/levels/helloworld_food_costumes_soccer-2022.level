@@ -70,7 +70,7 @@
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel7();",
     "instructions_icon": "soccerball",
     "skip_autosave": true,
-    "encrypted_examples": "d6KblJAKeFlJE0C7WCWjBoPnk0tm+jUxtaYb8h03gSF39mKFt8PZDKyO+TnB\nWvubhmfNTAcU7nhLzCJsbTrcGFjC9eAfyp3EiBalMLS3N5EVLgZuup2V1uO/\nvnMwtqf74MIgYxdI6nTAQpevQqlMHQ==\n",
+    "encrypted_examples": "ljtJc9rsnPg26oiethtW+zcEOWg3ukNbEm0NZo2MF+M5+ccripn0KRSrfEcN\nmvUObrQlbRXu20qL7WY4DABCRlGiPQMO9aGVzFNpfNxqw5EyIHsxA+J7P32x\nubnck9Tbk34OuTAl2V7Lh7pBriQpbQ==\n",
     "preload_asset_list": null
   },
   "game_id": 64,
@@ -79,7 +79,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:13.366+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_costumes\\\"\"],\"cloned_from\":\"helloworld_food_costumes\"},{\"changed_at\":\"2022-10-06 02:41:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:42:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:44:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:46:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:13.366+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_costumes\\\"\"],\"cloned_from\":\"helloworld_food_costumes\"},{\"changed_at\":\"2022-10-06 02:41:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:42:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:44:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:46:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 16:56:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
