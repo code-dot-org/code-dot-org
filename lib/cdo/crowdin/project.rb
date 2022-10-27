@@ -1,5 +1,5 @@
 require 'httparty'
-require_relative 'client_extentions.rb'
+require_relative 'client_extentions'
 
 module Crowdin
   # This class represents a single project hosted on Crowdin, and provides

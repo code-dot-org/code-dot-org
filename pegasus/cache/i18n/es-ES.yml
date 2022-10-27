@@ -458,6 +458,7 @@ es-ES:
   homepage_banner_40k_teachers_link: Más información
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Todo el mundo puede aprender. Empieza hoy mismo
+  homepage_slot_text_blurb_hoc_2022: "¡Explora, Juega, Crea!"
   homepage_slot_text_link_hoc: Prueba la Hora del Código
   homepage_slot_text_link_about_hoc: Sobre la Hora del Código
   homepage_slot_text_link_host: Organiza una Hora del Código
@@ -839,6 +840,7 @@ es-ES:
   volunteer_engineer_submission_distance_16: 10 kilómetros
   volunteer_engineer_submission_distance_24: 15 kilómetros
   volunteer_engineer_submission_distance_32: 20 kilómetros
+  volunteer_engineer_submission_distance_80: 80 kilómetros
   volunteer_engineer_submission_num_volunteers_5: 5 voluntarios
   volunteer_engineer_submission_num_volunteers_10: 10 voluntarios
   volunteer_engineer_submission_num_volunteers_25: 25 voluntarios
@@ -2820,3 +2822,17 @@ es-ES:
     tableta de pantalla táctil que emite estrellas y rayos de luz sobre un fondo azul
   minecraft_tile_alt: Dos personajes de Minecraft, Steve y Alex, sobre un fondo que
     muestra una escena acuática de Minecraft con corales, delfines y algas
+  hoc2022_banner_title: "¡Explora, Juega, Crea!"
+  hoc2022_banner_description: 'Explorar el universo, marcar un gol, hacer un movimiento:
+    ¡hay muchas maneras de probar la informática!'
+  hoc2022_cta_primary: Ver lo nuevo
+  hoc2022_cta_secondary: Prueba más actividades
+  hoc2022_landing_page_explore_description: "¡Abre las puertas a nuevos mundos con
+    la informática!"
+  hoc2022_landing_page_play_title: Jugar
+  hoc2022_landing_page_play_description: "¡Sal al campo y marca!"
+  hoc2022_landing_page_create_title: Crear
+  hoc2022_landing_page_create_description: "¡Haz algo raro y maravilloso!"
+  try_it_yourself: "¡Inténtalo tú mismo!"
+  try_an_activity: Prueba una actividad
+  see_more_activities: Ver más actividades

@@ -21,6 +21,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   test 'urls are escaped' do
     script = create(:script, name: "test-escapes-script", seeded_from: Time.at(0))
     lesson = create(:lesson, script: script, name: "Some!name_with?special/characters")
+    Services::CurriculumPdfs.expects(:lesson_plan_pdf_exists_for?).with(lesson, false).returns(true)
     assert_equal Pathname.new("test-escapes-script/19700101000000/teacher-lesson-plans/Some-name_with-special-characters.pdf"),
       Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, false)
     assert_equal "https://lesson-plans.code.org/test-escapes-script/19700101000000/teacher-lesson-plans/Some-name_with-special-characters.pdf",
@@ -44,6 +45,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
       url = Rails.application.routes.url_helpers.script_lesson_url(script, lesson)
       filename = File.join(tmpdir, Services::CurriculumPdfs.get_lesson_plan_pathname(lesson))
       PDF.expects(:generate_from_url).with(url, filename)
+      FileUtils.stubs(:cp)
       Services::CurriculumPdfs.generate_lesson_pdf(lesson, tmpdir)
     end
   end
@@ -56,6 +58,7 @@ class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
       url = Rails.application.routes.url_helpers.script_lesson_student_url(script, lesson)
       filename = File.join(tmpdir, Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, true))
       PDF.expects(:generate_from_url).with(url, filename)
+      FileUtils.stubs(:cp)
       Services::CurriculumPdfs.generate_lesson_pdf(lesson, tmpdir, true)
     end
   end

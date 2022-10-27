@@ -113,7 +113,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ដឹកនាំសិស្សទៅធ្វើសកម្មភាព
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 វាមិនអីទេក្នុងការឆ្លើយតបនៅពេលដែលសិស្សរបស់អ្នកជួបការលំបាក៖
 
@@ -140,7 +140,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - [បោះពុម្ពវិញ្ញាបនបត្រ]({{ urls/certificates }}) អោយសិស្សរបស់អ្នក។ 
 - [បោះពុម្ពស្ទីឃ័រ "ខ្ញុំបានធ្វើ Hour of Code!"]({{ urls/promote_stickers }}) អោយសិស្សរបស់អ្នក។
-- [ទិញអាវយឺត](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) សំរាប់សាលារបស់អ្នក។
 - ចែករំលែករូបថតនិងវីដេអូនៃកម្មវិធី Hour of Code របស់អ្នកនៅលើប្រព័ន្ធផ្សព្វផ្សាយសង្គម។ ប្រើ #HourOfCode និង @codeorg ដើម្បីអោយយើងអាចបង្ហាញភាពជោគជ័យរបស់អ្នកផងដែរ!
 
 * * *
@@ -154,6 +153,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ### What comes after the Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

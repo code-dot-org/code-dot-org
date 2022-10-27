@@ -815,7 +815,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Script', skip_name_format_validation: true
+    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
     script.reload
 
