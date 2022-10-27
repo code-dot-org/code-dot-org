@@ -1127,7 +1127,7 @@ function assignedUnit(state) {
   if (courseVersion) {
     if (sectionBeingEdited.unitId) {
       assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
-    } else if (courseVersion.type === 'Script') {
+    } else if (courseVersion.type === 'Unit') {
       assignedUnit = Object.values(courseVersion.units)[0];
     }
   }

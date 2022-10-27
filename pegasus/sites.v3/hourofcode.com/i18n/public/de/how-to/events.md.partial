@@ -37,23 +37,17 @@ Veröffentlichen Sie bei Facebook und Twitter Fotos Ihrer Veranstaltung und verw
 
 * * *
 
-## Veranstalten Sie eine "Coding-Nacht" zum Thema Hour of Code für die ganze Familie und laden Sie Eltern und Angehörige dazu ein
+## Example plan for a school assembly or event
 
-Vielleicht wäre eine Veranstaltung für Kinder bis 15 Jahre interessant? Laden Sie die Eltern Ihrer SchülerInnen zu einer Informatikstunde ein. Das ist eine gute Möglichkeit, ein größeres Publikum zu erreichen und Eltern und Angehörige zu ermutigen, den Informatik-Unterricht an Ihrer Schule zu fördern. Unsere Partner von "Familie Code Night" haben einen umfassenden Leitfaden erstellt (inkl. Checklisten, Vorlagen, Einladungen, E-Mails, Plakate, Powerpoint-Präsentationen und mehr), um Sie bei Ihrer Veranstaltung zu unterstützen. [Hier können Sie den Leitfaden herunterladen.](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Beispiel für eine Schulveranstaltung oder einen Event
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Veranstaltung:**Kick-off Veranstaltung für eine schulweite Informatikwoche,
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Datum:** {{ campaign_date/start_short }} (Beginn der Informatikwoche)
-
-**Zeit:**Während des Schultages, vorzugsweise am Vormittag. Voraussichtliche Dauer: 1 Stunde.
-
-**Ort:**Versammlungsraum der Schule (z.B. Aula, Turnsaal, Vortragssaal)
-
-## Programm
+## Run of Show
 
 | Zeit                  | Programm                                                                                                                                                                 |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

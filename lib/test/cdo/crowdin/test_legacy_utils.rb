@@ -17,7 +17,7 @@ class MockCrowdinProject < Minitest::Mock
   def list_files
     [
       {"id" => 1, "path" => "/foo.bar"},
-      {"id" => 1, "path" => "/baz.bat"}
+      {"id" => 2, "path" => "/baz.bat"}
     ]
   end
 
@@ -79,94 +79,40 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     }
   end
 
-  def test_fetching_with_no_changes
-    # When the etag values on local are the same as the ones in Crowdin,
-    # +fetch_changes+ should not modify any local file.
-    File.write @options[:etags_json], JSON.pretty_generate(@latest_crowdin_etags)
-    File.write @options[:files_to_download_json], JSON.pretty_generate({})
+  def test_downloading_is_idempotent
+    # +download_changed_files+ should return the same results (files_to_sync_out_json)
+    # if it runs multiple times.
+    File.write @options[:etags_json], JSON.pretty_generate({})
+    File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
 
-    @utils.fetch_changes
+    @utils.download_changed_files
+    @utils.download_changed_files
 
     assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:etags_json]))
-    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
-  end
-
-  def test_fetching_with_empty_local_etags
-    # If the local etags_json file is empty, +fetch_changes+
-    # should return all the current files in Crowdin.
-    File.write @options[:etags_json], JSON.pretty_generate({})
-    File.write @options[:files_to_download_json], JSON.pretty_generate({})
-
-    @utils.fetch_changes
-
-    assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
-    assert_equal @latest_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
-  end
-
-  def test_fetching_is_idempotent
-    # +fetch_changes+ should return the same results (files_to_download_json)
-    # if it runs multiple times. And it should not modify its input (etags_json).
-    File.write @options[:etags_json], JSON.pretty_generate({})
-    File.write @options[:files_to_download_json], JSON.pretty_generate({})
-
-    @utils.fetch_changes
-    @utils.fetch_changes
-
-    assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
-    assert_equal @latest_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
-  end
-
-  def test_fetching_respects_unchanged_files
-    # +fetch_changes+ should return only the files that have newer versions in Crowdin.
-    local_etags = {
-      "i1-8n" => {
-        "/foo.bar" => MockCrowdinProject::LATEST_ETAG_VALUE,
-        "/baz.bat" => "not_the_latest_etag"
-      }
-    }
-    File.write @options[:etags_json], JSON.pretty_generate(local_etags)
-    File.write @options[:files_to_download_json], JSON.pretty_generate({})
-
-    @utils.fetch_changes
-
-    assert_equal local_etags, JSON.parse(File.read(@options[:etags_json]))
-    expected_files_to_download = {
-      "i1-8n" => {
-        "/baz.bat" => {
-          "download_url" => DOWNLOAD_URL,
-          "etag" => MockCrowdinProject::LATEST_ETAG_VALUE
-        }
-      }
-    }
-    assert_equal expected_files_to_download, JSON.parse(File.read(@options[:files_to_download_json]))
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_sync_out_json]))
   end
 
   def test_downloading_with_no_changes
     # If files_to_download_json is empty, +download_changed_files+
     # should not modify any local file.
-    File.write @options[:files_to_download_json], JSON.pretty_generate({})
     File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
-    File.write @options[:etags_json], JSON.pretty_generate({})
+    File.write @options[:etags_json], JSON.pretty_generate(@latest_crowdin_etags)
 
     @utils.download_changed_files
 
-    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
     assert_equal({}, JSON.parse(File.read(@options[:files_to_sync_out_json])))
-    assert_equal({}, JSON.parse(File.read(@options[:etags_json])))
+    assert_equal(@latest_crowdin_etags, JSON.parse(File.read(@options[:etags_json])))
     assert_equal [], Dir.glob(@options[:locales_dir] + "/**/*.*")
   end
 
   def test_downloading_updates_local_state
     # If +download_changed_files+ successfully downloads files from Crowdin,
-    # it should update the local state tracked by the 3 files: etags_json,
-    # files_to_sync_out_json, and files_to_download_json.
-    File.write @options[:files_to_download_json], JSON.pretty_generate(@latest_files_to_download)
+    # it should update the local state tracked by etags_json and files_to_sync_out_json.
     File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
     File.write @options[:etags_json], JSON.pretty_generate({})
 
     @utils.download_changed_files
 
-    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
     assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_sync_out_json]))
     assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:etags_json]))
     expected_local_files = [
@@ -199,7 +145,6 @@ class CrowdinLegacyUtilsTest < Minitest::Test
       }
     }
 
-    File.write @options[:files_to_download_json], JSON.pretty_generate(files_to_download)
     File.write @options[:files_to_sync_out_json], JSON.pretty_generate(files_to_sync_out)
     File.write @options[:etags_json], JSON.pretty_generate(local_etags)
 
@@ -209,10 +154,41 @@ class CrowdinLegacyUtilsTest < Minitest::Test
     expected_downloaded_files = JSON.parse(files_to_download.to_json)
     expected_downloaded_files["i1-8n"]["/baz.bat"] = expected_downloaded_files["i1-8n"]["/baz.bat"]["etag"]
 
-    assert_equal({}, JSON.parse(File.read(@options[:files_to_download_json])))
     assert_equal files_to_sync_out.deep_merge(expected_downloaded_files), JSON.parse(File.read(@options[:files_to_sync_out_json]))
     assert_equal local_etags.deep_merge(expected_downloaded_files), JSON.parse(File.read(@options[:etags_json]))
     expected_local_files = ["#{@options[:locales_dir]}/Test Language/baz.bat"]
     assert_equal expected_local_files, Dir.glob(@options[:locales_dir] + "/**/*.*")
+  end
+
+  def test_downloading_updates_with_aws_error
+    error = {
+      status: 503,
+      body: "Error"
+    }
+    success = {
+      status: 200,
+      body: "Success"
+    }
+    # Return error on first request, succeed on retry
+    stub_request(
+      :get,
+      DOWNLOAD_URL
+    ).to_return(
+      error,
+      success
+    )
+
+    File.write @options[:files_to_sync_out_json], JSON.pretty_generate({})
+    File.write @options[:etags_json], JSON.pretty_generate({})
+
+    @utils.download_changed_files
+
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:files_to_sync_out_json]))
+    assert_equal @latest_crowdin_etags, JSON.parse(File.read(@options[:etags_json]))
+    expected_local_files = [
+      "#{@options[:locales_dir]}/Test Language/baz.bat",
+      "#{@options[:locales_dir]}/Test Language/foo.bar"
+    ]
+    assert_equal expected_local_files, Dir.glob(@options[:locales_dir] + "/**/*.*").sort
   end
 end

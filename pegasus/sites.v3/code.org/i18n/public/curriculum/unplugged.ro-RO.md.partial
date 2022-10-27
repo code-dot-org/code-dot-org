@@ -20,8 +20,8 @@ Lecțiile în care elevii nu lucrează la calculator sunt denumite lecții „of
 <div style="clear: both;"></div>
 
 ***
-## Lecții offline în Bazele științei calculatoarelor 2021-22
-Lecțiile de mai jos pot fi găsite în <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">Bazele științei calculatoarelor 2021-22</a>. <br><br>
+## Lecții deschise în Bazele Informaticii 2022-23
+Următoarele lecții pot fi găsite în <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">Bazele Informaticii 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -103,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Nu avem întotdeauna la dispoziție toate informațiile de care avem nevoie atunci când scriem un program. Poate uneori vreți să procedați diferit de la o situație la ala, chiar dacă nu știți care situație va fi adevărată atunci când codul rulează. Aici intră în scenă relațiile de condiționalitate. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Nu avem întotdeauna la dispoziție toate informațiile de care avem nevoie atunci când scriem un program. Poate uneori vreți să procedați diferit de la o situație la ala, chiar dacă nu știți care situație va fi adevărată atunci când codul rulează. Aici intră în scenă relațiile de condiționalitate. Condiționalele permit unui computer să ia o decizie, pe baza informațiilor care sunt adevărate oricând codul dv. este rulat.+</td><td>Condiționale</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
+ </tr>
+ <tr>
+ <th rowspan="3" id="t05">Curs E</th>
+ <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 -
+Editor de cântece</a><br><small>Una dintre cele mai magnifice structuri din lumea informaticii este funcțiunea. Funcțiile (uneori denumite și proceduri) sunt mini-programe pe care le poți folosi repetat într-un program mai mare. Această lecție îi ajută pe elevi să înțeleagă intuitiv de ce cominarea bucăților mari de cod în funcțiuni poate fi atât de folositoare în practică.</td><td>Funcțiuni<</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+ </tr>
+ <tr>
+ <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Proiectare pentru Accesibilitate</a><br><small>În această lecție, elevii vor învăța despre accesibilitate și valoarea empatiei prin căutarea de idei și conceperea soluțiilor accesibile pentru aplicațiile ipotetice.</td><td>Impactul Informaticii</td><td><img src="/images/e18.png" width="90%"></td>
+ <tr>
+ <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Partajare Digitală</a><br><i>*Furnizori: Smartphone sau tabletă</i><br><small>Împrumutat pentru Fundamentele Informaticii de către echipa de la Dreptul de Autor și Creativitate, această lecție există pentru a ajuta elevii să înțeleagă provocările și beneficiile respectării dreptului de proprietate și a drepturilor de autor, în special în mediile digitale. Elevii trebuie să fie încurajați să respecte drepturile artiștilor ca parte importantă de a fi un cetățean digital etic.</td><td>Cetățenia Digitală</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+ </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Funcțiile (uneori denumite și proceduri) sunt mini-programe pe care le poți folosi repetat într-un program mai mare. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
-  </tr>
-    </tr>
-         <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+    <th rowspan="3" id="t06">Cursul F</th><td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 Povestea Spațiilor Goale</a><br><i>*Materiale: 6 plicuri (de asemenea din:hartie sau carduri de index îndoite la jumătate)</i><br><small>Elevii vor utiliza poveștile completării spațiilor goale (similare cu Mad Libs®) ca un context pentru a înțelege modul în care computerele preiau și stochează informațiile pentru un utilizator, apoi le utilizează ulterior atunci când proramul este rulat.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. În această lecție, elevii vor pretinde că pot circula în interiorul Internetului în timp ce învață despre conexiuni, adrese URL, adrese IP și DNS.</td><td>Date</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. Aceste noi structuri vor permite elevilor să creeze codul care este mult mai puternic și dinamic</td><td>Pentru Bucle</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+ </tr>
+ <tr>
+  <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - Internetul</a><br><small>Deși mulți oameni folosesc internetul zilnic, nu foarte mulți știu cum funcționează. În această lecție, elevii vor pretinde că pot circula în interiorul Internetului în timp ce învață despre conexiuni, adrese URL, adrese IP și DNS.</td><td>Date</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>

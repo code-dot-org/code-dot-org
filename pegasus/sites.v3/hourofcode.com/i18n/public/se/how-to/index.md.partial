@@ -10,9 +10,9 @@ nav: how_to_nav
 
 ### Join the movement and introduce your students to computer science with these steps.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Students today should learn how to create technology, not just use it.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
 
 - [Watch the Hour of Code how-to video](#how-to-video)
 - [Explore activities and tutorials](#explore-activities)
@@ -22,8 +22,6 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - [Get coding](#code)
 - [Celebrate your students' success](#celebrate)
 - [Other Hour of Code resources for educators](#other-resources)
-
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -41,7 +39,7 @@ We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for al
 
 Guorahala doaimmaid ja mearrit ovdagihtii háliidat go válljet seamma neavvaga buot ohppiide, dahje divtte ahte juohke oahppi ieš vállje neavvaga.
 
-[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
@@ -60,7 +58,7 @@ Guorahala doaimmaid ja mearrit ovdagihtii háliidat go válljet seamma neavvaga 
 
 ### Vállje beaivvi ja diimmu
 
-Olbmot miehtá máilmmi servet Kodendiimmu ávvudeapmái CS Education Week (Juovlamánu 9.-13. beaiv.) dalle go ođđaseamos neavvagat ja doaimmat leat almmuhuvvon. Muhto don sáhtát čađahit Kodendiimmu vaikko goas jagis!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Muhto don sáhtát čađahit Kodendiimmu vaikko goas jagis!
 
 * * *
 
@@ -76,11 +74,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! D
 
 ### Dieđit Eaktodáhtolaččaide dalle go Registeret iežat Dáhpáhusa
 
-Dalle go [dieđihat iežat Kodendiimmu dáhpáhusa ](/), de dutnje sáddejuvvo e-poastagulahallan mas leat ođđasat ja fuomášumit oažžut lihkostuvvat du Kodendiimmu lágideami. Dá lea maiddái vuohki movt sáhtát dieđihit báikkálaš eaktodáhtolaččaide ahte du skuvla oassálastá. Eaktodáhtolaččat sáhttet leat buorit resursat ja sii sáhttet boahtit du luohkkái hupmat dihtordiehtaga birra dahje dušše veahkehit du ohppiid Kodendiimmu doaimmaiguin.
+When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Dá lea maiddái vuohki movt sáhtát dieđihit báikkálaš eaktodáhtolaččaide ahte du skuvla oassálastá. Eaktodáhtolaččat sáhttet leat buorit resursat ja sii sáhttet boahtit du luohkkái hupmat dihtordiehtaga birra dahje dušše veahkehit du ohppiid Kodendiimmu doaimmaiguin.
 
 ### Movttidahte iežat Ohppiid
 
-Ráhkkan dáhpáhussii juogadettiin [movttidahttin videoid](/promote/resources) mas rámpot muhtin olbmuid ja mas čájehat buriid vugiid movt dihtordiehtaga sáhttá geavahit. Dahje diŋgo movttidahtti plakáhtaid du luohkkálatnjii! Oahppit soitet háliidit oassálastit fáttás go oidnet ahte olbmot movttidahttet sin.
+Ráhkkan dáhpáhussii juogadettiin [movttidahttin videoid](/promote/resources) mas rámpot muhtin olbmuid ja mas čájehat buriid vugiid movt dihtordiehtaga sáhttá geavahit. Or print inspirational posters for your classroom! Oahppit soitet háliidit oassálastit fáttás go oidnet ahte olbmot movttidahttet sin.
 
 {{ promote_new_posters }}
 
@@ -115,7 +113,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 Čájet ohppiide doaimma
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
 
 Go du oahppit deaivvidit váttisvuođaiguin lea vuogas vástidit:
 
@@ -142,7 +140,6 @@ Movt de jus oahppi geargá ovdal?
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Čálit "Mun čađahin Kodendiimmu!"]({{ urls/promote_stickers }}) darvvihanmearkkaid du ohppiide.
-- [Diŋgo heivehuvvon t-báiddiid](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) du skuvlii.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 * * *
@@ -156,6 +153,6 @@ Movt de jus oahppi geargá ovdal?
 
 ### What comes after the Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

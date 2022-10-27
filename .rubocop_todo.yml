@@ -141,10 +141,6 @@ Lint/ScriptPermission:
   Enabled: false
 
 # Offense count: 1
-Lint/SelfAssignment:
-  Enabled: false
-
-# Offense count: 1
 Lint/StructNewOverride:
   Enabled: false
 
@@ -210,29 +206,8 @@ Performance/CollectionLiteralInLoop:
 Performance/Detect:
   Enabled: false
 
-# Offense count: 9
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/InefficientHashSearch:
-  Enabled: false
-
 # Offense count: 20
 Performance/MethodObjectAsBlock:
-  Enabled: false
-
-# Offense count: 56
-# This cop supports safe auto-correction (--auto-correct).
-Performance/RegexpMatch:
-  Enabled: false
-
-# Offense count: 29
-# This cop supports safe auto-correction (--auto-correct).
-Performance/StringInclude:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: OnlySumOrWithInitialValue.
-Performance/Sum:
   Enabled: false
 
 # Offense count: 20
@@ -262,11 +237,6 @@ Rails/Date:
 Rails/DeprecatedActiveModelErrorsMethods:
   Enabled: false
 
-# Offense count: 11
-# This cop supports safe auto-correction (--auto-correct).
-Rails/DurationArithmetic:
-  Enabled: false
-
 # Offense count: 478
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Whitelist, AllowedMethods, AllowedReceivers.
@@ -284,11 +254,6 @@ Rails/FilePath:
 
 # Offense count: 90
 Rails/I18nLocaleTexts:
-  Enabled: false
-
-# Offense count: 11
-# This cop supports safe auto-correction (--auto-correct).
-Rails/IndexWith:
   Enabled: false
 
 # Offense count: 19
@@ -315,12 +280,6 @@ Rails/Pick:
 # Offense count: 50
 # This cop supports safe auto-correction (--auto-correct).
 Rails/Pluck:
-  Enabled: false
-
-# Offense count: 33
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
-Rails/Present:
   Enabled: false
 
 # Offense count: 85
@@ -625,11 +584,6 @@ Style/RedundantBegin:
 # Offense count: 25
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantCondition:
-  Enabled: false
-
-# Offense count: 42
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantFileExtensionInRequire:
   Enabled: false
 
 # Offense count: 2
