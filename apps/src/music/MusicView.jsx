@@ -596,7 +596,7 @@ class UnconnectedMusicView extends React.Component {
     );
   }
 
-  renderTimelineArea(timelineAtTop) {
+  renderTimelineArea(timelineAtTop, instructionsOnRight) {
     const songData = {
       events: this.player.getSoundEvents()
     };
@@ -616,6 +616,7 @@ class UnconnectedMusicView extends React.Component {
           top={timelineAtTop}
           startOverClicked={this.clearCode}
           toggleInstructions={this.toggleInstructions}
+          instructionsOnRight={instructionsOnRight}
         />
         <Timeline
           isPlaying={this.state.isPlaying}
@@ -649,7 +650,11 @@ class UnconnectedMusicView extends React.Component {
           instructionsPosition === InstructionsPositions.TOP &&
           this.renderInstructions(InstructionsPositions.TOP)}
 
-        {this.state.timelineAtTop && this.renderTimelineArea(true)}
+        {this.state.timelineAtTop &&
+          this.renderTimelineArea(
+            true,
+            instructionsPosition === InstructionsPositions.RIGHT
+          )}
 
         <div className={moduleStyles.middleArea}>
           {this.state.showInstructions &&
@@ -665,7 +670,11 @@ class UnconnectedMusicView extends React.Component {
             this.renderInstructions(InstructionsPositions.RIGHT)}
         </div>
 
-        {!this.state.timelineAtTop && this.renderTimelineArea(false)}
+        {!this.state.timelineAtTop &&
+          this.renderTimelineArea(
+            false,
+            instructionsPosition === InstructionsPositions.RIGHT
+          )}
       </div>
     );
   }

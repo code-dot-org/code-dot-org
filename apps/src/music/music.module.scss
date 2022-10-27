@@ -3,6 +3,7 @@
 // Constants
 $timeline-area-height: 200px;
 $default-border-radius: 4px;
+$default-spacing: 5px;
 
 .container {
   position: relative;
@@ -30,7 +31,7 @@ $default-border-radius: 4px;
   &.instructionsTop {
     flex-direction: row;
     height: 90px;
-    margin-bottom: 5px;
+    margin-bottom: $default-spacing;
     width: 100%;
   }
 
@@ -40,18 +41,18 @@ $default-border-radius: 4px;
     width: 20%;
 
     &.instructionsLeft {
-      margin-right: 10px;
+      margin-right: $default-spacing;
     }
 
     &.instructionsRight {
-      margin-left: 10px;
+      margin-left: $default-spacing;
     }
   }
 }
 
 .shareArea {
   &.shareTop {
-    margin-left: 10px;
+    margin-left: $default-spacing * 2;
   }
 }
 

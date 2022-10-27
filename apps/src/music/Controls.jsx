@@ -12,7 +12,8 @@ const Controls = ({
   playTrigger,
   top,
   startOverClicked,
-  toggleInstructions
+  toggleInstructions,
+  instructionsOnRight
 }) => {
   const [isShowingBeatPad, setBeatPadShowing] = useState(false);
   useEffect(() => {
@@ -40,7 +41,7 @@ const Controls = ({
         style={{
           position: 'absolute',
           [top ? 'bottom' : 'top']: -175,
-          right: 10
+          [instructionsOnRight ? 'left' : 'right']: 10
         }}
       >
         <BeatPad
@@ -55,18 +56,29 @@ const Controls = ({
     );
   };
 
+  const renderIconButton = (icon, onClick) => (
+    <div className={classNames(moduleStyles.controlButtons, moduleStyles.side)}>
+      <FontAwesome
+        icon={icon}
+        className={moduleStyles.iconButton}
+        onClick={onClick}
+      />
+    </div>
+  );
+
+  const beatPadIconSection = renderIconButton('th', () =>
+    setBeatPadShowing(!isShowingBeatPad)
+  );
+  const infoIconSection = renderIconButton('info-circle', toggleInstructions);
+
+  const [leftIcon, rightIcon] = instructionsOnRight
+    ? [beatPadIconSection, infoIconSection]
+    : [infoIconSection, beatPadIconSection];
+
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
       {isShowingBeatPad && renderBeatPad()}
-      <div
-        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
-      >
-        <FontAwesome
-          icon={'info-circle'}
-          className={moduleStyles.iconButton}
-          onClick={toggleInstructions}
-        />
-      </div>
+      {leftIcon}
       <div
         className={classNames(moduleStyles.controlButtons, moduleStyles.center)}
       >
@@ -77,15 +89,7 @@ const Controls = ({
         />
       </div>
       {renderStartOver()}
-      <div
-        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
-      >
-        <FontAwesome
-          icon={'th'}
-          onClick={() => setBeatPadShowing(!isShowingBeatPad)}
-          className={moduleStyles.iconButton}
-        />
-      </div>
+      {rightIcon}
     </div>
   );
 };
@@ -96,7 +100,8 @@ Controls.propTypes = {
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
   startOverClicked: PropTypes.func.isRequired,
-  toggleInstructions: PropTypes.func.isRequired
+  toggleInstructions: PropTypes.func.isRequired,
+  instructionsOnRight: PropTypes.bool.isRequired
 };
 
 export default Controls;
