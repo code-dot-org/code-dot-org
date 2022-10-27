@@ -41,12 +41,14 @@ Pd::Application::PrincipalApprovalApplication.find_each do |principal_applicatio
     teacher_application.auto_score!
   end
 end
+
 puts "\nUpdating teacher applications...\n\n"
 # Update capitalization on each teacher application, update it from its principal approval,
 # save it, then autoscore it
 Pd::Application::TeacherApplication.find_each do |teacher_application|
   if teacher_application.form_data.include?("(please explain)")
     teacher_application.form_data = teacher_application.form_data.gsub("(please explain)", "(Please Explain)")
+
     principal_application = Pd::Application::PrincipalApprovalApplication.where(application_guid: teacher_application.application_guid).first
     if principal_application
 
