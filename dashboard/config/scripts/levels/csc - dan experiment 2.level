@@ -35,8 +35,8 @@
     "pause_animations_by_default": "false",
     "edit_code": "false",
     "helper_libraries": [
-      "DanLab",
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zParticlesModule"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -49,8 +49,8 @@
     "include_shared_functions": "false",
     "block_pool": "gamelab",
     "block_pools": [
-      "DansBlocks",
-      "GamelabJr"
+      "GamelabJr",
+      "ParticlesBlocks"
     ],
     "mini_rubric": "false",
     "long_instructions": "# Dan Experiment",
@@ -74,7 +74,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-25T21:58:43.352+00:00\",\"changed\":[\"cloned from \\\"csc - dan experiment 1\\\"\"],\"cloned_from\":\"csc - dan experiment 1\"},{\"changed_at\":\"2022-10-25 21:58:48 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:21:43 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:22:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:24:18 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-25T21:58:43.352+00:00\",\"changed\":[\"cloned from \\\"csc - dan experiment 1\\\"\"],\"cloned_from\":\"csc - dan experiment 1\"},{\"changed_at\":\"2022-10-25 21:58:48 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:21:43 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:22:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:24:18 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-26 17:05:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
