@@ -36,7 +36,7 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "platformVersion": "15.4",
+    "platformVersion": "11.3",
     "browserName": "safari",
     "deviceName": "iPad Simulator",
     "mobile": true,
