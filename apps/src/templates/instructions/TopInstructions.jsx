@@ -506,8 +506,15 @@ class TopInstructions extends Component {
             ref={ref => this.setInstructionsRef(ref)}
             hidden={tabSelected !== TabType.INSTRUCTIONS}
           />
+          {console.log('isViewingAsTeacher ' + this.isViewingAsTeacher)}
+          {console.log('read only work space ' + this.props.readOnlyWorkspace)}
+          {console.log(
+            'windowIncludesUSerID ' + window.location.search.includes('user_id')
+          )}
           {!this.props.inLessonPlan && tabSelected === TabType.INSTRUCTIONS && (
-            <ContainedLevelResetButton />
+            <ContainedLevelResetButton
+              teacherViewingStudentWork={this.state.teacherViewingStudentWork}
+            />
           )}
         </div>
       );
