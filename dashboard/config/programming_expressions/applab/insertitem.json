@@ -41,7 +41,8 @@
     "index",
     "item"
   ],
+  "return_value": "No return value.",
   "short_description": "\nInserts the item into the array at the specified index position.",
-  "syntax": "No return value.",
+  "syntax": "insertItem(list, index, item)",
   "tips": "- List(array) manipulation functions include: [appendItem(list, item)](/docs/applab/appendItem), [insertItem(list, index, item)](/docs/applab/insertItem) and [removeItem(list, index)](/docs/applab/removeItem).\n- Multiple calls to *insertItem()* can be slow because to expand the list, Javascript needs to create a new list one item larger and then copy all the items over before instering the new item at the end. If possible it is better to create the list intially large enough for all the possible items and *list[index]* to add new items at specific positions."
 }
