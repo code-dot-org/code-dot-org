@@ -21,8 +21,7 @@ module AzureTextToSpeech
       token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
       token_http_request.use_ssl = true
       token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
-      token_http_request.read_timeout = default_timeout
+      token_http_request.write_timeout = default_timeout
       token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
 
       token_http_request.request(token_request)&.body
@@ -124,13 +123,13 @@ module AzureTextToSpeech
 
   def self.get_voice_by(locale, gender)
     voice = get_voices&.values&.find {|v| v["locale"] == locale}
-    return nil unless voice.present?
+    return nil if voice.blank?
     voice[gender]
   end
 
   def self.ssml(text, gender, locale)
     voice_name = get_voice_by(locale, gender)
-    return nil unless voice_name.present?
+    return nil if voice_name.blank?
     "<speak version='1.0' xmlns='https://www.w3.org/2001/10/synthesis' xml:lang='en-US'><voice name='#{voice_name}'>#{text}</voice></speak>"
   end
 end

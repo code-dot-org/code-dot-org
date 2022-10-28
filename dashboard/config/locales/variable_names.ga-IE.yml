@@ -21,6 +21,7 @@ ga:
       level: leibhéal
       name: ainm
       nectar: neachtar
+      object: réad
       points: pointí
       random: randamach
       repeat: athdhéan
@@ -28,6 +29,7 @@ ga:
       score: scór
       size: méid
       speed: luas
+      type: cineál
       variable: athróg
       width: leithead
       wizard: draoi

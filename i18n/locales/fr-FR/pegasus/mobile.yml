@@ -339,6 +339,7 @@
   homepage_banner_40k_teachers_link: "En savoir plus"
   homepage_slot_text_title_hoc: "Heure de Code"
   homepage_slot_text_blurb_hoc: "Tout le monde peut apprendre. Commence aujourd'hui"
+  homepage_slot_text_blurb_hoc_2022: "Explores, joues, crées !"
   homepage_slot_text_link_hoc: "Essayer l'Heure de Code"
   homepage_slot_text_link_about_hoc: "À propos de l'Heure de Code"
   homepage_slot_text_link_host: "Héberger une Heure de Code"
@@ -962,6 +963,8 @@
   coursed-2020_name: Cours D (2020)
   coursee-2020_name: Cours E (2020)
   coursef-2020_name: Cours F (2020)
+  coursea-2021_name: Cours A (2021)
+  coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
   coursed-2022_name: Cours D (2021)
   express-2018_name: Cours Express (2018)
@@ -970,6 +973,7 @@
   pre-express-2019_name: Cours Express pour les Pré-lecteurs (2019)
   express-2020_name: Cours Express (2020)
   pre-express-2020_name: Cours rapide pour les primo-lecteurs (2020)
+  express-2021_name: Cours Express (2021)
   pre-express-2021_name: Cours rapide pour les primo-lecteurs (2021)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
@@ -1684,8 +1688,8 @@
   hoc2018_aquatic_video3: "Minecraft : Voyage Aquatique - Les Conditions"
   hoc2018_aquatic_video4: "Minecraft : Voyage aquatique - Félicitations"
   hoc2018_dance_video1: "Soirée Dansante - Introduction"
-  hoc2018_dance_video2: "Soirée Dansante – Les Événements"
-  hoc2018_dance_video3: "Soirée Dansante – Les Propriétés"
+  hoc2018_dance_video2: "Soirée Dansante – Événements"
+  hoc2018_dance_video3: "Soirée Dansante – Propriétés"
   hoc2018_dance_video4: "Soirée Dansante - Félicitations"
   dance_box_higher_power_line_1: "Codez une danse au son de \"Higher Power\" de Coldplay et vous pourriez avoir l'occasion de voir le groupe en live!"
   dance_box_higher_power_line_2: "Visitez <a href=\"%{path}\">code.org/coldplay</a> pour plus d'infos"
@@ -1782,4 +1786,13 @@
   ai_try_activity: "Essayez l'activité"
   outbreak_tile_title: "Épidémie"
   outbreak_tile_subtitle: "Un virus a infecté Monster Town ! Codez un simulateur d'épidémie et faites des prédictions sur ce qui arrivera aux voisins de Monster Town."
-  footer_cookie_notice: " Utilisation de cookies"
+  footer_cookie_notice: " Utilisation des cookies"
+  hoc2022_banner_title: "Découvrir, jouer, créer !"
+  hoc2022_banner_description: "Explorez l'univers, marquez des buts, bougez : il y a tant de manières d'utiliser l'informatique!"
+  hoc2022_cta_primary: "Découvrez les nouveautés"
+  hoc2022_cta_secondary: "Essayez d'autres activités"
+  hoc2022_landing_page_explore_description: "Grâce aux sciences informatiques, ouvrez les portes de nouveaux mondes !"
+  hoc2022_landing_page_play_description: "Montrez de quoi vous êtes capable et marquez des points !"
+  hoc2022_landing_page_create_title: "Créer"
+  hoc2022_landing_page_create_description: "Créez des choses hors du commun et merveilleuses !"
+  try_it_yourself: "Essaie toi-même !"

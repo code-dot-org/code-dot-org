@@ -354,6 +354,7 @@ hr:
     no_primary_course: Isprobaj tečaj Code Studio
     choose_next_course: Isprobaj tečaj Code Studio uz niže navedeni odabir
     print_certificate: Ispišite diplome
+  certificate_hour_of_code: Hour of Code
   share:
     title: Naučite o Code Studiu
     description: Svatko može učiti računarske znanosti, te izrađivati igre, aplikacije
@@ -775,3 +776,5 @@ hr:
     link_your_email: Povežite svoj e-mail
     not_now: Ne sada
   code_org_logo_alt: Početna stranica Code.org
+  pixelation:
+    binary: Binarno

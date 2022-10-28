@@ -76,10 +76,6 @@ Lint/ConstantDefinitionInBlock:
 Lint/DuplicateBranch:
   Enabled: false
 
-# Offense count: 2
-Lint/DuplicateElsifCondition:
-  Enabled: false
-
 # Offense count: 5
 Lint/DuplicateMethods:
   Enabled: false
@@ -97,11 +93,6 @@ Lint/EmptyClass:
 # Offense count: 1
 # Configuration parameters: AllowComments.
 Lint/EmptyFile:
-  Enabled: false
-
-# Offense count: 4
-# This cop supports safe auto-correction (--auto-correct).
-Lint/ErbNewArguments:
   Enabled: false
 
 # Offense count: 7
@@ -142,10 +133,6 @@ Lint/RescueException:
 # Offense count: 95
 # This cop supports safe auto-correction (--auto-correct).
 Lint/ScriptPermission:
-  Enabled: false
-
-# Offense count: 1
-Lint/SelfAssignment:
   Enabled: false
 
 # Offense count: 1
@@ -214,29 +201,8 @@ Performance/CollectionLiteralInLoop:
 Performance/Detect:
   Enabled: false
 
-# Offense count: 9
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Performance/InefficientHashSearch:
-  Enabled: false
-
 # Offense count: 20
 Performance/MethodObjectAsBlock:
-  Enabled: false
-
-# Offense count: 56
-# This cop supports safe auto-correction (--auto-correct).
-Performance/RegexpMatch:
-  Enabled: false
-
-# Offense count: 29
-# This cop supports safe auto-correction (--auto-correct).
-Performance/StringInclude:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: OnlySumOrWithInitialValue.
-Performance/Sum:
   Enabled: false
 
 # Offense count: 20
@@ -256,12 +222,6 @@ Rails/ApplicationMailer:
 Rails/AssertNot:
   Enabled: false
 
-# Offense count: 49
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: NilOrEmpty, NotPresent, UnlessPresent.
-Rails/Blank:
-  Enabled: false
-
 # Offense count: 120
 # Configuration parameters: EnforcedStyle, AllowToTime.
 # SupportedStyles: strict, flexible
@@ -270,11 +230,6 @@ Rails/Date:
 
 # Offense count: 9
 Rails/DeprecatedActiveModelErrorsMethods:
-  Enabled: false
-
-# Offense count: 11
-# This cop supports safe auto-correction (--auto-correct).
-Rails/DurationArithmetic:
   Enabled: false
 
 # Offense count: 478
@@ -294,11 +249,6 @@ Rails/FilePath:
 
 # Offense count: 90
 Rails/I18nLocaleTexts:
-  Enabled: false
-
-# Offense count: 11
-# This cop supports safe auto-correction (--auto-correct).
-Rails/IndexWith:
   Enabled: false
 
 # Offense count: 19
@@ -325,12 +275,6 @@ Rails/Pick:
 # Offense count: 50
 # This cop supports safe auto-correction (--auto-correct).
 Rails/Pluck:
-  Enabled: false
-
-# Offense count: 33
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: NotNilAndNotEmpty, NotBlank, UnlessBlank.
-Rails/Present:
   Enabled: false
 
 # Offense count: 85
@@ -637,11 +581,6 @@ Style/RedundantBegin:
 Style/RedundantCondition:
   Enabled: false
 
-# Offense count: 42
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantFileExtensionInRequire:
-  Enabled: false
-
 # Offense count: 2
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowComments.
@@ -695,11 +634,6 @@ Style/RescueModifier:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: implicit, explicit
 Style/RescueStandardError:
-  Enabled: false
-
-# Offense count: 17
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/SingleArgumentDig:
   Enabled: false
 
 # Offense count: 38

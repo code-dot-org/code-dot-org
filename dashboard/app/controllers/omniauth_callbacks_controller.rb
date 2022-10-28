@@ -134,7 +134,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     email = auth_hash.info.email || ""
     hashed_email = nil
-    hashed_email = User.hash_email(email) unless email.blank?
+    hashed_email = User.hash_email(email) if email.present?
     auth_option = AuthenticationOption.new(
       user: current_user,
       email: email,
@@ -379,7 +379,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     lookup_user = User.find_by_email_or_hashed_email(lookup_email)
     provider = auth_hash.provider.to_s
 
-    unless lookup_user.present?
+    if lookup_user.blank?
       # Even if silent takeover is not available for imported student, we still
       # want to attach the email received from the provider to the student's
       # account since many imports do not provide emails.
@@ -487,7 +487,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def allows_silent_takeover(oauth_user, auth_hash)
-    return false unless auth_hash.provider.present?
+    return false if auth_hash.provider.blank?
     return false unless AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.include?(auth_hash.provider.to_s)
     return false if oauth_user.persisted?
 

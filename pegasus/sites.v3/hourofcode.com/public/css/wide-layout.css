@@ -41,7 +41,7 @@
 }
 
 .resources-navigation {
-  background-color: rgb(89, 202, 211);
+  background-color: rgba(89, 202, 211, .3);
   font-size: 16px;
   color: white;
   padding-bottom: 10px;
@@ -49,12 +49,18 @@
 }
 
 .resources-navigation .nav-item {
-  padding: 4px 15px;
+  padding: 6px 15px;
+  font-size: 14px;
+}
+
+.resources-navigation .nav-item:hover {
+  text-decoration: underline;
 }
 
 .resources-navigation .nav-link {
-  color: white;
+  color: #272822;
   font-family: 'Gotham 4r', sans-serif;
+  text-decoration: none;
 }
 
 .resources-navigation .nav-header {
@@ -67,4 +73,10 @@
   margin-bottom: 6px;
   font-family: 'Gotham 7r', sans-serif;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .nav-col {
+    margin-top: 140px;
+  }
 }

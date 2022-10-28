@@ -163,7 +163,7 @@
       "CSD Web Headings Special Character 3_2022": {
         "display_name": "Extra Code: Special Character \"&\"",
         "bubble_choice_description": "Learn the code for the special character \"&\" and practice using it.",
-        "long_instructions": "# Extra Code: Special Character \"&\"\r\n\r\nThe ampersand character (**&**) can cause errors in your HTML code because it is actually used for other special characters like less than symbols (**<** is encoded as `&lt;`), and double quotation marks (**\"** is encoded as`&quot`). \r\n\r\nTo use the **&** character in a paragraph correctly, you need the special code `&amp;`.\r\n*Yes, you need an ampersand to encode an ampersand!*\r\n<br>In this activity, you'll make up a list some of your favorite things and practice using ampersands. \r\n\r\n# Do This\r\n* Read the HTML and look for where the `&amp;` code is used correctly.\r\n* Replace the ampersand that is causing pink code with the special code for the symbol.\r\n* Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol!\r\n"
+        "long_instructions": "# Extra Code: Special Character \"&\"\r\n\r\nThe ampersand character (**&**) can cause errors in your HTML code because it is actually used for other special characters like less than symbols (**<** is encoded as `&lt;`), and double quotation marks (**\"** is encoded as`&quot;`). \r\n\r\nTo use the **&** character in a paragraph correctly, you need the special code `&amp;`.\r\n*Yes, you need an ampersand to encode an ampersand!*\r\n<br>In this activity, you'll make up a list some of your favorite things and practice using ampersands. \r\n\r\n# Do This\r\n* Read the HTML and look for where the `&amp;` code is used correctly.\r\n* Replace the ampersand that is causing pink code with the special code for the symbol.\r\n* Fill in the blank categories or add your own using the new code. Try to come up with answers that use the symbol!\r\n"
       },
       "CSD Web Headings Free Play_2022": {
         "display_name": "HTML Free Play",
@@ -1058,7 +1058,7 @@
       "Student End of Unit Survey - Intro+TeacherMD_csd2-2022": {
         "dsls": {
           "markdown": "### Please take a moment to respond to these **three quick questions**.\n\n_Code.org takes your privacy seriously._ Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n",
-          "teacher_markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a **5-question** teacher survey\n\n## [Click Here for Teacher Survey]()\n\n(Note: The survey link does not currently work - it will become available at the start of the school year)\n"
+          "teacher_markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a quick teacher survey\n\n## [Click Here for Teacher Survey](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)\n"
         }
       },
       "Student End of Unit Survey - Q1_2022": {

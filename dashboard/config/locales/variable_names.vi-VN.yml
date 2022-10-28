@@ -21,6 +21,7 @@ vi:
       length: chiều dài
       name: tên
       nectar: phấn hoa
+      object: đối tượng
       points: điểm
       random: ngẫu nhiên
       repeat: lặp lại
@@ -29,6 +30,7 @@ vi:
       sides: các cạnh
       size: kích cỡ
       speed: tốc độ
+      type: loại
       variable: biến
       width: chiều rộng
       wizard: phù thủy

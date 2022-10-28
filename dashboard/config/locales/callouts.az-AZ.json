@@ -793,13 +793,19 @@
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 platform background1": {
-          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin."
+          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin.",
+          "CSD_U3_L16_S3_C1": "fonu çəkən funksiya",
+          "CSD_U3_L16_S3_C2": "funksiyanı çağıran kod"
         },
         "CSD U3 platform background1_2018": {
-          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin."
+          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin.",
+          "CSD_U3_L16_S3_C1": "fonu çəkən funksiya",
+          "CSD_U3_L16_S3_C2": "funksiyanı çağıran kod"
         },
         "CSD U3 platform background1_2019": {
-          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin."
+          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin.",
+          "CSD_U3_L16_S3_C1": "fonu çəkən funksiya",
+          "CSD_U3_L16_S3_C2": "funksiyanı çağıran kod"
         },
         "CSD U3 platform scoreboard": {
           "CSD_U3_L17_S7_C1": "Xalınız burada çap olunub."
@@ -847,7 +853,7 @@
           "CSD_U6_checkWin": "Oyuncunun galib gəldiyini yola"
         },
         "Course 4 Play Lab Params 6": {
-          "edit_add_parameter": "Funksiyanıza parametr əlavə etmək üçün \"redaktə edin\" - ə basın"
+          "edit_add_parameter": "Funksiyanıza parametr əlavə etmək üçün \"redaktə edin\" - ə klikləyin"
         },
         "Course 4 Play Lab Vars 1": {
           "arrows_move_actor": "Aktyoru hərəkətə keçirmək üçün oxlardan istifadə edin."
@@ -920,8 +926,8 @@
           "MC_HOC_2017_06_Cole_1": "Bu blokları ata bilməzsiniz, ancaq onları düzəldə bilərsiniz!"
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Funksiyanıza parametr əlavə etmək üçün \"redaktə edin\" - ə basın",
-          "add_and_drag_parameter": "Parametrinizin adını buraya yazın, əlavə et üzərinə klikləyin və sonra onu funksiya tərifinizə sürükləyin"
+          "edit_add_parameter": "Funksiyanıza parametr əlavə etmək üçün \"redaktə edin\" - ə klikləyin",
+          "add_and_drag_parameter": "Parametrinizin adını buraya yazın, əlavə et üzərinə basın və sonra onu funksiya tərifinizə sürükləyin"
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Bura sizin başlamağınız üçün bəzi bloklar qoyduq."
@@ -1179,7 +1185,7 @@
           "edit_get_nectar": "Funksiyanı redaktə etmək və Arının nektarı əldə etmək üçün dönəcəyi istiqaməti dəyişmək üçün bu düymədən istifadə edin."
         },
         "Course 4 Maze 4": {
-          "repeat": "Əmrləri təkrarlamaq üçün döngənin içərisinə bloklar qoyun"
+          "repeat": "Əmrləri təkrarlamaq üçün döngənin içərisinə blokları yerləşdirin"
         },
         "Course 4 Play Lab Params 3": {
           "edit_function": "Funksiyanıza düzəliş etmək üçün bura klikləyin."
@@ -1693,7 +1699,9 @@
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 platform background1_2021": {
-          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin."
+          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin.",
+          "CSD_U3_L16_S3_C1": "fonu çəkən funksiya",
+          "CSD_U3_L16_S3_C2": "funksiyanı çağıran kod"
         },
         "CSD U3 platform scoreboard_2021": {
           "CSD_U3_L17_S7_C1": "Xalınız burada çap olunub."
@@ -1858,7 +1866,9 @@
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 platform background1_2022": {
-          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin."
+          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin.",
+          "CSD_U3_L16_S3_C1": "fonu çəkən funksiya",
+          "CSD_U3_L16_S3_C2": "funksiyanı çağıran kod"
         },
         "CSD U3 platform scoreboard_2022": {
           "CSD_U3_L17_S7_C1": "Xalınız burada çap olunub."
@@ -1917,6 +1927,499 @@
         },
         "CSD web text size_2022": {
           "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Burada rəqqasın növünü seçin."
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Bu bloku proqramına əlavə et",
+          "arrow_buttons": "Rəqqasınızı idarə etmək üçün ox düymələrini basın."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Bu bloku proqramına əlavə et!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Proqramına yeni hadisə əlavə et"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Yeni blok!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Yeni blok!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Yeni blok!",
+          "new_block_4": "Yeni blok!"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Bloku genişləndirmək üçün bura basın.",
+          "pointerlocation": "Mövzu blokunu bura çəkin."
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Bu kiçik təlimat, kompüterə iş sahəsindəki eyni adlı BIG kod yığınını işə salmağı söyləyir."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Bu \"təkrar\" döngəsidir! İş sahəsinə klikləyin və dəfələrlə işlətmək istədiyiniz kodu əlavə edin."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agent su üzərində gəzə bilər, amma oyunçu edə bilməz!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Bu blokları ata bilməzsiniz, ancaq onları düzəldə bilərsiniz!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agent lava üzərində hərəkət edə bilər, lakin Stiv və Aleks bunu edə bilməz!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Bura sizin başlamağınız üçün bəzi bloklar qoyduq."
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Bu kod evinizi tikməyə başlayacaq. Bitirə bilərsən?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Proqramınızı sınaqdan keçirmək üçün \"İcra et\"i basın",
+          "craft_drag_block_callout": "\"İrəli get\" blokunu sürükləyin və digər blokun aşağısına əlavə edin."
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Burada bloklar qoyaraq hərəkətləri təkrarlayın"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Bu kod lavanı yoxlayacaq, irəli getmək üçün əmr əlavə edə bilərsiniz?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Bu dəmir mənimdir!"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Bu nömrə sizə bu tapmacada bu bloklardan neçəsini istifadə edə biləcəyinizi bildirir."
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "Bu rəqəm o deməkdir ki, son cavabda bu tip blokdan yalnız biri istifadə oluna bilər."
+        },
+        "courseA_collector_loops32022": {
+          "gradek_adventurer_loops2_1": "Bu nömrə sizə bu tapmacada bu bloklardan neçəsini istifadə edə biləcəyinizi bildirir."
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Bir işarəyə ehtiyacınız olduğu zaman lampaya basın!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Bir işarəyə ehtiyacınız olduğu zaman lampaya basın!"
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "Waddles və Chomp toxunduqda bu blokdan istifadə edin!"
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "Bu blok bu layihə üçün çox vacibdir. İstifadə etdiyinizə əmin olun!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "Bunu proqramınızın ortasına əlavə edin."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Alət qutusunda yeni bloklar görürsünüzmü? Narahat olmayın, onlardan başqa bir dərsdə necə istifadə edəcəyinizi sizə göstərəcəyik."
+        },
+        "courseC_collector_prog72022": {
+          "courseC_collector_prog7_1": "Lazım gələrsə alət qutusundan daha çox blok götürə bilərsiniz!"
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "Balqabağın üzərindəki dörd rəqəmi sənə yığmaq  üçün dörd balqabağın mövcud  olduğunu söyləyir."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Bu bloklar kilitlənib və silinə bilməzlər!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
+          "courseC_maze_programming3_3": "Bu bloklar dashdi kimidir, onlari qiraga atmaq olmur."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
+        },
+        "courseC_maze_programming52022": {
+          "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "Bu ilk tapmacandır! Bunlar çətin olmaq üçündür və bir neçə cəhd tələb edə bilər.",
+          "courseC_maze_programming7_2": "Bu bloklar daşdan düzəlib və atıla bilməzlər."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "Bu tapmacada sizdə yalnız bu bloklar mövcuddur.  "
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
+          "stone_block_2": "Boz blokları kənara  atmaq olmaz."
+        },
+        "courseD_maze_ramp52022": {
+          "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
+        },
+        "courseE_aboutme_22022": {
+          "": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "courseE_artist_functions8a2022": {
+          "courseD_artist_functions8_1": "Funksiyalar yaratmaq üçün bloklarınız alətlər qutusunda bu etiketin altına köçürülüb."
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions1a2022": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseE_farmer_functions2b2022": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
+        "courseF_apps_aquarium2022": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_card2022": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_chatbot2022": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector_drive_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector_move2_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_madlib2022": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Yeni bloklar burada!"
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Burada aşkar yeni bir hadisə blok istifadə edin."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Bu blok düzgün qaydada deyil."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "\"Hadisələr\" kateqoriyasını açmaq üçün buraya vurun."
+        },
+        "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Yerlər kateqoriyasını açmaq üçün bura basın."
+        },
+        "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Bura basaraq Yerlər kateqoriyasını açın."
+        },
+        "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Burda yeni blok axtar."
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "Burada yeni bir blok axtarın!"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "Siz suala cavab zaman fon rəngi dəyişdi mi? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Siz başa? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "title_block": "Burada iki yeni blok axtarın!",
+          "text_answer_finish": "Başlıq ekranı 3 saniyə ərzində göstərdinizmi? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Burada yeni blokları üçün baxın!"
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "\"Hadisələr\" kateqoriyasını açmaq üçün buraya vurun."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Çap blokunu burada tapın!",
+          "text_print_finish": "Sizin mesaj yuxarıda çap edilmişdir? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Burada ipucu blokunu tapın!"
+        },
+        "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları birləşdirəndən sonra, proqramı başlatmaq üçün \"Başlat\"a basın."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "express_maze_debugging92022": {
+          "express_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Açmaq və ya bağlamaq üçün mavi düyməsini basın."
+        },
+        "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Sprites kateqoriyasını açmaq üçün bura vurun."
+        },
+        "CSD U3 abstraction jump": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
+          "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
+        },
+        "CSD U3 abstraction jump_2018": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
+          "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
+        },
+        "CSD U3 abstraction jump_2018_2019": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
+          "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
+        },
+        "CSD U3 abstraction jump_2021": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
+          "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
+        },
+        "CSD U3 abstraction jump_2022": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
+          "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
+        },
+        "CSD U3 abstraction looping": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction looping_2018": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction looping_2019": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction looping_2021": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction looping_2022": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction tumbleweed": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction tumbleweed_2018": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction tumbleweed_2019": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction tumbleweed_2021": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction tumbleweed_2022": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 game backgrounds": {
+          "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır.",
+          "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi"
+        },
+        "CSD U3 game backgrounds_2018": {
+          "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır.",
+          "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi"
+        },
+        "CSD U3 game backgrounds_2019": {
+          "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır.",
+          "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi"
+        },
+        "CSD U3 game backgrounds_2021": {
+          "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır.",
+          "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi"
+        },
+        "CSD U3 game backgrounds_2022": {
+          "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır.",
+          "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi"
+        },
+        "CSD U3 game variables": {
+          "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır.",
+          "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi"
+        },
+        "CSD U3 game variables_2018": {
+          "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır.",
+          "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi"
+        },
+        "CSD U3 game variables_2019": {
+          "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır.",
+          "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi"
+        },
+        "CSD U3 game variables_2021": {
+          "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır.",
+          "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi"
+        },
+        "CSD U3 game variables_2022": {
+          "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır.",
+          "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi"
+        },
+        "CSD U3 platform variable1": {
+          "callout": "Bu blok bir dəyişən yaradır."
+        },
+        "CSD U3 platform variable1_2018": {
+          "callout": "Bu blok bir dəyişən yaradır."
+        },
+        "CSD U3 platform variable1_2019": {
+          "callout": "Bu blok bir dəyişən yaradır."
+        },
+        "CSD U3 platform variable1_2021": {
+          "callout": "Bu blok bir dəyişən yaradır."
+        },
+        "CSD U3 platform variable1_2022": {
+          "callout": "Bu blok bir dəyişən yaradır."
+        },
+        "CSD games sidescroll background_2021": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD games sidescroll background_2022": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "Calc Circles of Eval .2": {
+          "calc_question_marks": "Bu açılan menyudan düzgün nömrəni seçin"
+        },
+        "Calc Vars 1": {
+          "Calc Vars 1_edit_option": "Bu dəyişənin dəyərini dəyişdirmək üçün redaktə et üzərinə klikləyin"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
+        },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Kostyum Nişanı"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Kostyum Nişanı"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Yeni ara fon yaratmaq üçün bu bloku seçin."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Yeni ara fon yaratmaq üçün bu bloku seçin."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Kodu işə salman üçün buraya vurun."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "Yapışdır"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "Yapışdır"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "Yapışdır"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "Yapışdır"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Yeni blok!"
         }
       }
     }

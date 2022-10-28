@@ -239,6 +239,69 @@
         "csta/1B-CS-02": {
           "description": "Modeluj, jak sprzęt komputerowy i oprogramowanie współpracują ze sobą jako system, aby wykonywać zadania."
         },
+        "csta/1B-NI-05": {
+          "description": "Omów problemy cyberbezpieczeństwa w świecie oraz, jak mogą być chronione informacje osobiste."
+        },
+        "csta/1B-AP-11": {
+          "description": "Rozkładaj (podziel) zadania na mniejsze, możliwe do opanowania podzadania, aby ułatwić proces tworzenia programu."
+        },
+        "csta/1B-AP-09": {
+          "description": "Twórz programy, w których wykorzystuje się zmienne do przechowywania i modyfikacji danych"
+        },
+        "csta/1A-AP-10": {
+          "description": "Opracowuj programy zawierające sekwencje i proste pętle, aby wyrażać pomysły i rozwiązać problem."
+        },
+        "csta/1B-AP-14": {
+          "description": "Przestrzegaj praw własności intelektualnej i podawaj odpowiednie atrybucje podczas tworzenia lub remiksowania programów."
+        },
+        "csta/1B-AP-17": {
+          "description": "Opisz wybory dokonywane podczas opracowywania programu, stosując komentarze do kodu, prezentacji i pokazów. "
+        },
+        "csta/1B-IC-18": {
+          "description": "Omów technologie informatyczne, które zmieniły świat i przedstaw, w jaki sposób te technologie wpływają i jaki wpływ mają na nie praktyki kulturowe. "
+        },
+        "csta/1B-DA-07": {
+          "description": "Użyj danych, aby pokazać lub zaproponować związek przyczynowo-skutkowy, przewidzieć wynik lub przekazać pomysł. "
+        },
+        "csta/1A-IC-16": {
+          "description": "Porównaj, jak żyją i pracują ludzie przed i po wdrożeniu lub zaadoptowaniu nowej technologii obliczeniowej."
+        },
+        "csta/1A-IC-18": {
+          "description": "Zachowaj informacje o loginach w tajemnicy i odpowiednio wyloguj się z urządzeń."
+        },
+        "csta/1A-NI-04": {
+          "description": "Wyjaśnij, czym są hasła i dlaczego ich używamy, oraz zastosuj silne hasła, aby chronić urządzenia i informacje przed nieautoryzowanym dostępem."
+        },
+        "csta/1A-AP-08": {
+          "description": "Modeluj codzienne procesy poprzez tworzenie i przestrzeganie algorytmów (zestawów instrukcji krok po kroku) w celu wykonania zadań."
+        },
+        "csta/1A-AP-12": {
+          "description": "Opracuj plany, które opisują sekwencję wydarzeń, cele i oczekiwane rezultaty programu."
+        },
+        "csta/1A-CS-01": {
+          "description": "Wybierz i użyj odpowiedniego oprogramowania do wykonania różnych zadań i dostrzeż, że użytkownicy mają różne potrzeby i preferencje dotyczące technologii, z której korzystają."
+        },
+        "csta/1A-CS-02": {
+          "description": "Use appropriate terminology in identifying and describing the function of common physical components of computing systems (hardware)."
+        },
+        "csta/1A-CS-03": {
+          "description": "Opisz podstawowe problemy ze sprzętem i oprogramowaniem, używając dokładnej terminologii."
+        },
+        "csta/1A-DA-05": {
+          "description": "Przechowuj, kopiuj, wyszukuj, odzyskuj, modyfikuj i usuwaj informacje za pomocą komputera oraz definiuj przechowywane informacje jako dane."
+        },
+        "csta/1A-DA-06": {
+          "description": "Zbieraj i prezentuj te same dane w różnych formatach wizualnych."
+        },
+        "csta/1A-DA-07": {
+          "description": "Zidentyfikuj i opisz wzorce w wizualizacjach danych, takich jak wykresy lub grafy, aby dokonać prognozy."
+        },
+        "csta/1A-AP-13": {
+          "description": "Podaj źródło, gdy korzystasz z pomysłów i kreacji innych osób podczas tworzenia programów."
+        },
+        "csta/1A-AP-15": {
+          "description": "Używając poprawnej terminologii, opisz kroki podjęte i wybory dokonane podczas procesu iteracyjnego rozwoju programu."
+        },
         "csta/2-DA-07": {
           "description": "Reprezentuj dane przy użyciu wielu schematów kodowania."
         },
@@ -257,80 +320,380 @@
         "csta/2-IC-23": {
           "description": "Opisz kompromisy między udostępnieniem informacji a zachowaniem ich prywatności i bezpieczeństwa."
         },
-        "csta/1B-AP-11": {
-          "description": "Rozkładaj (podziel) zadania na mniejsze, możliwe do opanowania podzadania, aby ułatwić proces tworzenia programu."
-        },
         "csta/2-AP-17": {
           "description": "Systematycznie testuj i udoskonalaj programy, korzystając z wielu testów."
         },
         "csta/2-AP-19": {
           "description": "Dokumentuj programy, aby ułatwić ich śledzenie, testowanie i debugowanie."
         },
-        "csta/1B-NI-05": {
-          "description": "Omów problemy cyberbezpieczeństwa w świecie oraz, jak mogą być chronione informacje osobiste."
-        },
         "csta/3A-AP-20": {
           "description": "Oceń licencje, które ograniczają użycie artefaktów obliczeniowych podczas korzystania z zasobów, takich jak biblioteki."
-        },
-        "csta/1B-IC-18": {
-          "description": "Omów technologie informatyczne, które zmieniły świat i przedstaw, w jaki sposób te technologie wpływają i jaki wpływ mają na nie praktyki kulturowe. "
-        },
-        "csta/1B-AP-14": {
-          "description": "Przestrzegaj praw własności intelektualnej i podawaj odpowiednie atrybucje podczas tworzenia lub remiksowania programów."
         },
         "ai4k12-2021/3-C-iii.3-5": {
           "description": "Zbadaj cechy i etykiety danych treningowych, aby wykryć potencjalne źródła błędów."
         },
-        "csta/1A-IC-18": {
-          "description": "Zachowaj informacje o loginach w tajemnicy i odpowiednio wyloguj się z urządzeń."
-        },
-        "csta/1A-CS-02": {
-          "description": "Use appropriate terminology in identifying and describing the function of common physical components of computing systems (hardware)."
-        },
-        "csta/1A-CS-03": {
-          "description": "Opisz podstawowe problemy ze sprzętem i oprogramowaniem, używając dokładnej terminologii."
-        },
-        "csta/1A-AP-08": {
+        "1A-AP-08": {
           "description": "Modeluj codzienne procesy poprzez tworzenie i przestrzeganie algorytmów (zestawów instrukcji krok po kroku) w celu wykonania zadań."
         },
-        "csta/1A-AP-12": {
-          "description": "Opracuj plany, które opisują sekwencję wydarzeń, cele i oczekiwane rezultaty programu."
+        "1A-AP-09": {
+          "description": "Modeluj sposób, w jaki programy przechowują dane i manipulują nimi, używając liczb lub innych symboli do reprezentowania informacji."
         },
-        "csta/1A-AP-10": {
+        "1A-AP-10": {
           "description": "Opracowuj programy zawierające sekwencje i proste pętle, aby wyrażać pomysły i rozwiązać problem."
         },
-        "csta/1A-NI-04": {
-          "description": "Wyjaśnij, czym są hasła i dlaczego ich używamy, oraz zastosuj silne hasła, aby chronić urządzenia i informacje przed nieautoryzowanym dostępem."
+        "1A-AP-11": {
+          "description": "Rozłóż na kroki potrzebne do rozwiązania problemu w postaci sekwencji instrukcji."
         },
-        "csta/1A-CS-01": {
-          "description": "Wybierz i użyj odpowiedniego oprogramowania do wykonania różnych zadań i dostrzeż, że użytkownicy mają różne potrzeby i preferencje dotyczące technologii, z której korzystają."
+        "1A-AP-12": {
+          "description": "Opracuj plany, które opisują sekwencję wydarzeń, cele i oczekiwane rezultaty programu."
         },
-        "csta/1A-IC-16": {
-          "description": "Porównaj, jak żyją i pracują ludzie przed i po wdrożeniu lub zaadoptowaniu nowej technologii obliczeniowej."
-        },
-        "csta/1B-AP-09": {
-          "description": "Twórz programy, w których wykorzystuje się zmienne do przechowywania i modyfikacji danych"
-        },
-        "csta/1B-DA-07": {
-          "description": "Użyj danych, aby pokazać lub zaproponować związek przyczynowo-skutkowy, przewidzieć wynik lub przekazać pomysł. "
-        },
-        "csta/1B-AP-17": {
-          "description": "Opisz wybory dokonywane podczas opracowywania programu, stosując komentarze do kodu, prezentacji i pokazów. "
-        },
-        "csta/1A-DA-05": {
-          "description": "Przechowuj, kopiuj, wyszukuj, odzyskuj, modyfikuj i usuwaj informacje za pomocą komputera oraz definiuj przechowywane informacje jako dane."
-        },
-        "csta/1A-DA-06": {
-          "description": "Zbieraj i prezentuj te same dane w różnych formatach wizualnych."
-        },
-        "csta/1A-DA-07": {
-          "description": "Zidentyfikuj i opisz wzorce w wizualizacjach danych, takich jak wykresy lub grafy, aby dokonać prognozy."
-        },
-        "csta/1A-AP-13": {
+        "1A-AP-13": {
           "description": "Podaj źródło, gdy korzystasz z pomysłów i kreacji innych osób podczas tworzenia programów."
         },
-        "csta/1A-AP-15": {
+        "1A-AP-14": {
+          "description": "Debuguj (identyfikuj i naprawiaj) błędy w algorytmie lub programie, który obejmuje sekwencje lub proste pętle. "
+        },
+        "1A-AP-15": {
           "description": "Używając poprawnej terminologii, opisz kroki podjęte i wybory dokonane podczas procesu iteracyjnego rozwoju programu."
+        },
+        "1A-CS-01": {
+          "description": "Wybierz i użyj odpowiedniego oprogramowania do wykonania różnych zadań i dostrzeż, że użytkownicy mają różne potrzeby i preferencje dotyczące technologii, z której korzystają."
+        },
+        "1A-CS-02": {
+          "description": "Use appropriate terminology in identifying and describing the function of common physical components of computing systems (hardware)."
+        },
+        "1A-CS-03": {
+          "description": "Opisz podstawowe problemy ze sprzętem i oprogramowaniem, używając dokładnej terminologii."
+        },
+        "1A-DA-05": {
+          "description": "Przechowuj, kopiuj, wyszukuj, odzyskuj, modyfikuj i usuwaj informacje za pomocą komputera oraz definiuj przechowywane informacje jako dane."
+        },
+        "1A-DA-06": {
+          "description": "Zbieraj i prezentuj te same dane w różnych formatach wizualnych."
+        },
+        "1A-DA-07": {
+          "description": "Zidentyfikuj i opisz wzorce w wizualizacjach danych, takich jak wykresy lub grafy, aby dokonać prognozy."
+        },
+        "1A-IC-16": {
+          "description": "Porównaj, jak żyją i pracują ludzie przed i po wdrożeniu lub zaadoptowaniu nowej technologii obliczeniowej."
+        },
+        "1A-IC-17": {
+          "description": "Pracuj z innymi w trybie online okazując szacunek i odpowiedzialność."
+        },
+        "1A-IC-18": {
+          "description": "Zachowaj informacje o loginach w tajemnicy i odpowiednio wyloguj się z urządzeń."
+        },
+        "1A-NI-04": {
+          "description": "Wyjaśnij, czym są hasła i dlaczego ich używamy, oraz zastosuj silne hasła, aby chronić urządzenia i informacje przed nieautoryzowanym dostępem."
+        },
+        "1B-AP-09": {
+          "description": "Twórz programy, w których wykorzystuje się zmienne do przechowywania i modyfikacji danych"
+        },
+        "1B-AP-10": {
+          "description": "Twórz programy, które obejmują sekwencje, zdarzenia, pętle i wyrażenia warunkowe"
+        },
+        "1B-AP-11": {
+          "description": "Rozkładaj (podziel) zadania na mniejsze, możliwe do opanowania podzadania, aby ułatwić proces tworzenia programu."
+        },
+        "1B-AP-12": {
+          "description": "Modyfikuj, remiksuj i wprowadzaj części istniejącego programu do czyjejś pracy, aby opracować coś nowego lub dodać zaawansowane funkcje."
+        },
+        "1B-AP-14": {
+          "description": "Przestrzegaj praw własności intelektualnej i podawaj odpowiednie atrybucje podczas tworzenia lub remiksowania programów."
+        },
+        "1B-AP-15": {
+          "description": "Testuj i debuguj (identyfikuj i naprawiaj błędy) program lub algorytm, aby zapewnić jego działania zgodnie z przeznaczeniem."
+        },
+        "1B-AP-17": {
+          "description": "Opisz wybory dokonywane podczas opracowywania programu, stosując komentarze do kodu, prezentacji i pokazów. "
+        },
+        "1B-CS-01": {
+          "description": "Opisz, jak funkcjonują wewnętrzne i zewnętrzne części urządzeń komputerowych, tworząc system."
+        },
+        "1B-CS-02": {
+          "description": "Modeluj, jak sprzęt komputerowy i oprogramowanie współpracują ze sobą jako system, aby wykonywać zadania."
+        },
+        "1B-DA-07": {
+          "description": "Użyj danych, aby pokazać lub zaproponować związek przyczynowo-skutkowy, przewidzieć wynik lub przekazać pomysł. "
+        },
+        "1B-IC-18": {
+          "description": "Omów technologie informatyczne, które zmieniły świat i przedstaw, w jaki sposób te technologie wpływają i jaki wpływ mają na nie praktyki kulturowe. "
+        },
+        "1B-NI-05": {
+          "description": "Omów problemy cyberbezpieczeństwa w świecie oraz, jak mogą być chronione informacje osobiste."
+        },
+        "2-AP-10": {
+          "description": "Użyj schematów blokowych i/lub pseudokodu, aby rozwiązać złożone problemy w postaci algorytmów."
+        },
+        "2-AP-13": {
+          "description": "Rozkładaj problemy i podproblemy na części, aby ułatwić projektowanie, implementowanie i przeglądanie programów."
+        },
+        "2-AP-17": {
+          "description": "Systematycznie testuj i udoskonalaj programy, korzystając z wielu testów."
+        },
+        "2-AP-19": {
+          "description": "Dokumentuj programy, aby ułatwić ich śledzenie, testowanie i debugowanie."
+        },
+        "3A-AP-20": {
+          "description": "Oceń licencje, które ograniczają użycie artefaktów obliczeniowych podczas korzystania z zasobów, takich jak biblioteki."
+        },
+        "2-DA-07": {
+          "description": "Reprezentuj dane przy użyciu wielu schematów kodowania."
+        },
+        "3A-DA-10": {
+          "description": "Oceń kompromisy związane z uporządkowaniem elementów danych oraz miejsca przechowywania danych."
+        },
+        "2-IC-23": {
+          "description": "Opisz kompromisy między udostępnieniem informacji a zachowaniem ich prywatności i bezpieczeństwa."
+        },
+        "2-NI-05": {
+          "description": "Wyjaśnij, w jaki sposób fizyczne i cyfrowe środki bezpieczeństwa chronią informacje elektroniczne."
+        },
+        "2-NI-06": {
+          "description": "Zastosuj wiele metod szyfrowania, aby modelować bezpieczną transmisję informacji."
+        },
+        "3A-NI-06": {
+          "description": "Poleć sposoby ochrony na potrzeby różnych scenariuszy na podstawie czynników takich, jak skuteczność, wykonalność oraz aspekty etyczne."
+        },
+        "3A-NI-07": {
+          "description": "Porównaj różne zabezpieczenia w kontekście kompromisów pomiędzy przydatnością a bezpieczeństwem systemu komputerowego."
+        },
+        "3B-NI-04": {
+          "description": "Porównaj sposoby ochrony urządzeń i informacji przed nieuprawnionym dostępem stosowane przez różnych twórców oprogramowania."
+        },
+        "DAT-1.D.1": {
+          "description": "Kompresja danych może prowadzić do zmniejszenia wielkości (liczby bitów) przesyłanych lub przechowywanych danych."
+        },
+        "DAT-1.D.2": {
+          "description": "Mniej bitów niekoniecznie oznacza mniej informacji."
+        },
+        "DAT-1.D.3": {
+          "description": "Zakresie zmniejszenia rozmiaru wynikający z kompresji zależy od zakresu nadmiarowości w przedstawieniu danych oryginalnych oraz zastosowanego algorytmu kompresji."
+        },
+        "DAT-1.D.4": {
+          "description": "Algorytmy bezstratnej kompresji danych zwykle zmniejszają liczbę przechowywanych lub przesyłanych bitów gwarantując pełną rekonstrukcję danych oryginalnych."
+        },
+        "IOC-2.B.5": {
+          "description": "Szyfrowanie stanowi proces kodowania danych w celu niedopuszczenia do nieuprawnionego dostępu. Oto dwa popularne tryby kodowania: ●       Szyfrowanie symetryczne, w którym używa się jednego klucza do zaszyfrowania i odszyfrowania.●       Szyfrowanie kluczem publicznym polega na dopasowaniu klucza publicznego do szyfrowania i klucza prywatnego do odszyfrowania. Nadawca nie potrzebuje prywatnego klucza odbiorcy do zaszyfrowania wiadomości, ale prywatny klucz odbiorcy jest potrzebny do odszyfrowania wiadomości.  OŚWIADCZENIE WYŁĄCZAJĄCE(EKIOC-2.B.5): Konkretne procedury matematyczne do szyfrowania i odszyfrowywania nie chodzą w zakres tego kursu i egzaminu AP."
+        },
+        "CD.L1:3-01": {
+          "description": "Korzystaj ze standardowych urządzeń wejściowych i wyjściowych, aby skutecznie obsługiwać komputery i powiązane technologie."
+        },
+        "CI.L1:3-01": {
+          "description": "Praktykuj odpowiedzialne obywatelstwo cyfrowe (zachowania zgodne z prawem i etyczne) w zakresie korzystania z systemów technologicznych i oprogramowania. "
+        },
+        "CL.L1:6-02": {
+          "description": "Korzystaj z zasobów online (np. e-maila, dyskusji online, współpracujących  środowisk internetowych) celem udziału w opartych na współpracy zajęciach poświęconych rozwiązywaniu problemów na potrzeby opracowywania rozwiązań lub produktów."
+        },
+        "CPP.L1:3-01": {
+          "description": "Korzystaj z zasobów technologicznych do prowadzenia badań dostosowanych do wieku."
+        },
+        "CPP.L1:3-02": {
+          "description": "Korzystaj z odpowiednich multimedialnych zasobów w kontekście etapu rozwoju (np. książek interaktywnych i oprogramowania edukacyjnego) celem wspierania nauki w ramach programu."
+        },
+        "CPP.L1:3-04": {
+          "description": "Skonstruuj zbiór stwierdzeń, które będą odgrywane w celu realizacji prostego zdania (np. instrukcje dla żółwia)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Korzystaj z zasobów technologicznych (np. kalkulatorów, próbek zbierania danych, urządzeń mobilnych, filmów wideo, oprogramowania edukacyjnego oraz narzędzi internetowych) do rozwiązywania problemów oraz samodzielnej nauki."
+        },
+        "CPP.L1:6-06": {
+          "description": "Wdrażaj rozwiązania zadania korzystając z opartego na blokach, wizualnego języka programowania."
+        },
+        "CPP.L2:3": {
+          "description": "Projektuj, opracowuj, publikuj i przedstawiaj produkty (np. strony internetowe, aplikacje mobilne, animacje) korzystając z zasobów technologii, które umożliwiają pokazanie i przekazanie koncepcji programu. "
+        },
+        "CT.L2:1": {
+          "description": "Używaj podstawowych kroków w algorytmicznym rozwiązywaniu problemów, aby opracowywać rozwiązania (np. określenia i zgłębienia zadania, badania przykładów, projektowania, wdrażania rozwiązania, testowania i oceny)."
+        },
+        "CT.L2:12": {
+          "description": "Stosuj abstrakcję, aby rozkładać problem na mniejsze podproblemy. "
+        },
+        "CT.L2:6": {
+          "description": "Opisz i przeanalizuj sekwencję realizowanej instrukcji (np. opisz zachowanie postaciâ€™ w grze wideo kształtowane przez reguły i algorytmy)."
+        },
+        "CT.L2:7": {
+          "description": "Przedstawiaj dane na różne sposoby z uwzględnieniem tekstu, dźwięków, obrazków i liczb."
+        },
+        "CT.L2:8": {
+          "description": "Korzystaj z wizualnych obrazów stanów, struktur i danych zdania (np. grafów, wykresów, schematów sieciowych, schematów blokowych)."
+        },
+        "1.L.6": {
+          "description": "Używaj słów i fraz nabytych podczas konwersacji, czytania i słuchania odczytywania oraz odpowiadania na teksty, w tym przy użyciu często występujących spójników, aby zasygnalizować proste powiązania (np. ponieważ)."
+        },
+        "11-12.L.6": {
+          "description": "Przyswajaj sobie i korzystaj w sposób poprawny z słów i zwrotów o ogólnym charakterze naukowym albo typowych dla domeny, wystarczających do czytania, pisania, mówienia i słuchania w szkole wyższej i na poziomie gotowości do podjęcia pracy zawodowej; wykaż się niezależnością w gromadzeniu wiedzy słownikowej, gdy uznasz"
+        },
+        "2.L.6": {
+          "description": "Używaj słów i fraz nabytych podczas konwersacji, czytania i słuchania oraz odpowiadania na teksty, w tym przy użyciu przymiotników i przysłówków do opisywania (np. Kiedy inne dzieci są szczęśliwe, to mnie uszczęśliwia)."
+        },
+        "3.L.6": {
+          "description": "Przyswajaj sobie i korzystaj w sposób właściwy ze słów i zwrotów o charakterze konwersacyjnym, ogólno akademickim oraz typowym dla domeny dostosowanych do klasy, z uwzględnieniem takich, które sygnalizują relacje przestrzenne i czasowe (np. Tego wieczoru, po kolacji, zaczęliśmy ich szukać)."
+        },
+        "4.L.6": {
+          "description": "Przyswajaj sobie i korzystaj w sposób właściwy z słów i zwrotów o charakterze ogólnym akademickim oraz typowym dla domeny dostosowanych do klasy, z uwzględnieniem takich, które sygnalizują dokładne działania, emocje lub stany istnienia (np. zapytany, zajęczał, wyjąkał) oraz stanowiących podstawę określonego tematu (np."
+        },
+        "5.L.6": {
+          "description": "Przyswajaj sobie i korzystaj w sposób właściwy z słów i zwrotów o charakterze ogólnym akademickim oraz typowym dla domeny dostosowanych do klasy, z uwzględnieniem takich, które wskazują przeciwieństwo, dodatek oraz inne relacje logiczne (np. jednak, chociaż, niemniej jednak, podobnie, ponadto, w dodatku)."
+        },
+        "9-10.L.6": {
+          "description": "Przyswajaj sobie i korzystaj w sposób poprawny z słów i zwrotów o ogólnym charakterze naukowym albo typowych dla domeny, wystarczających do czytania, pisania, mówienia i słuchania w szkole wyższej i na poziomie gotowości do podjęcia pracy zawodowej; wykaż się niezależnością w gromadzeniu wiedzy słownikowej, gdy uznasz"
+        },
+        "11-12.RI.4": {
+          "description": "Określaj znaczenie słów i zwrotów tak, jak są użyte w tekście, z uwzględnieniem znaczenia przenośnego, konotacyjnego i technicznego; analizuj, w jaki sposób autor korzysta i doskonali znaczenie kluczowego terminu lub terminów w tekście (np. jak Madison definiuje "
+        },
+        "3.RL.4": {
+          "description": "Określ znaczenie słów i wyrażeń użytych w tekście, odróżniając język dosłowny od niedosłownego."
+        },
+        "4.RL.7": {
+          "description": "Twórz połączenia między tekstem opowiadania lub dramatu a wizualną lub ustną prezentacją tekstu, określając, gdzie każda wersja odzwierciedla konkretne opisy i wskazówki w tekście."
+        },
+        "5.RL.4": {
+          "description": "Określ znaczenie słów i fraz użytych w tekście, w tym w języku figuratywnym, takim jak metafory i porównania."
+        },
+        "5.RL.7": {
+          "description": "Przeanalizuj, w jaki sposób elementy wizualne i multimedialne wpływają na znaczenie, ton lub piękno tekstu (np. powieść graficzna, multimedialna prezentacja fikcji, bajki ludowej, mitu, wiersza)."
+        },
+        "1.SL.1": {
+          "description": "Uczestnicz we wspólnych rozmowach z różnymi partnerami na tematy z 1-szej klasy i tekstów, z rówieśnikami i dorosłymi w małych i większych grupach."
+        },
+        "2.SL.1": {
+          "description": "Uczestnicz we wspólnych rozmowach z różnymi partnerami na tematy z 2-giej klasy i tekstów, z rówieśnikami i dorosłymi w małych i większych grupach."
+        },
+        "3.SL.1": {
+          "description": "Angażuj się skutecznie we wspólne rozmowy (w trybie jeden do jednego, w grupach, w trybie prowadzenia przez nauczyciela) z różnymi partnerami na tematy i o tekstach na poziomie klasy 3, korzystając z pomysłów innych i wyrażając swoje własne w sposób jasny."
+        },
+        "6.SL.1": {
+          "description": "Angażuj się skutecznie we wspólne dyskusje (w trybie jeden do jednego, w grupach, prowadzonych przez nauczyciela) z różnymi partnerami na tematy, o tekstach i zagadnieniach na poziomie klasy 6, korzystając z pomysłów innych i wyrażając swoje własne w sposób jasny."
+        },
+        "7.SL.1": {
+          "description": "Angażuj się skutecznie we wspólne dyskusje (w trybie jeden do jednego, w grupach, prowadzonych przez nauczyciela) z różnymi partnerami na tematy, o tekstach i zagadnieniach na poziomie klasy 7, korzystając z pomysłów innych i wyrażając swoje własne w sposób jasny."
+        },
+        "11-12.W.6": {
+          "description": "Korzystaj z technologii, w tym z Internetu, aby tworzyć, publikować i aktualizować prace pisemne tworzone indywidualnie lub wspólnie, w odpowiedzi na nadchodzące informacje zwrotne, w tym na nowe argumenty lub informacje. "
+        },
+        "3.W.3": {
+          "description": "Pisz teksty narracyjne, aby rozwijać rzeczywiste lub wyimaginowane doświadczenia lub zdarzenia korzystając ze skutecznej techniki,  opisowych informacji szczegółowych oraz czytelnej sekwencji wydarzeń. \n\n"
+        },
+        "4.W.3": {
+          "description": "Pisz teksty narracyjne, aby rozwijać rzeczywiste lub wyimaginowane doświadczenia lub zdarzenia korzystając ze skutecznej techniki,  opisowych informacji szczegółowych oraz czytelnej sekwencji wydarzeń. \n\n"
+        },
+        "5.W.3": {
+          "description": "Pisz teksty narracyjne, aby rozwijać rzeczywiste lub wyimaginowane doświadczenia lub zdarzenia korzystając ze skutecznej techniki,  opisowych informacji szczegółowych oraz czytelnej sekwencji wydarzeń. \n\n"
+        },
+        "6.W.3": {
+          "description": "Pisz teksty narracyjne, aby rozwijać rzeczywiste lub wyimaginowane doświadczenia lub zdarzenia korzystając ze skutecznej techniki, stosowanych opisowych informacji szczegółowych oraz dobrze skonstruowanych sekwencji wydarzeń. \n\n"
+        },
+        "6.W.6": {
+          "description": "Korzystaj z technologii, w tym Internetu, do tworzenia i publikowania teksów, jak również nawiązywania wzajemnej interakcji i współpracy z innymi; wykazuj wystarczającą biegłość w zakresie korzystania z klawiatury, aby zapisać minimum trzy strony w trakcie jednego posiedzenia."
+        },
+        "7.W.3": {
+          "description": "Pisz teksty narracyjne, aby rozwijać rzeczywiste lub wyimaginowane doświadczenia lub zdarzenia korzystając ze skutecznej techniki, stosowanych opisowych informacji szczegółowych oraz dobrze skonstruowanych sekwencji wydarzeń. \n\n"
+        },
+        "7.W.6": {
+          "description": "Korzystaj z technologii, z tym Internetu, do tworzenia i publikowania teksów i wiążąc oraz cytując  źródła, jak również w celu nawiązywania wzajemnej interakcji i współpracy z innymi, w tym tworzenia linków do źródeł i cytowania ich."
+        },
+        "8.W.3": {
+          "description": "Pisz teksty narracyjne, aby rozwijać rzeczywiste lub wyimaginowane doświadczenia lub zdarzenia korzystając ze skutecznej techniki, stosowanych opisowych informacji szczegółowych oraz dobrze skonstruowanych sekwencji wydarzeń. \n\n"
+        },
+        "8.W.6": {
+          "description": "Korzystaj z technologii, w tym Internetu, do tworzenia i publikowania teksów oraz przedstawiaj powiązania pomiędzy informacjami a pojęciami w sposób skuteczny, jak również do nawiązywania wzajemnej interakcji i współpracy z innymi."
+        },
+        "9-10.W.6": {
+          "description": "Korzystaj z technologii, w tym z Internetu, aby tworzyć, publikować i aktualizować prace pisemne tworzone indywidualnie lub wspólnie, korzystając z możliwości technologii do tworzenia linków do innych informacji oraz wyświetlania informacji w sposób elastyczny i dynamiczny."
+        },
+        "11-12.WHST.6": {
+          "description": "Korzystaj z technologii, w tym z Internetu, aby tworzyć, publikować i aktualizować prace pisemne tworzone indywidualnie lub wspólnie, w odpowiedzi na nadchodzące informacje zwrotne, w tym na nowe argumenty lub informacje. "
+        },
+        "9-10.WHST.6": {
+          "description": "Korzystaj z technologii, w tym z Internetu, aby tworzyć, publikować i aktualizować prace pisemne tworzone indywidualnie lub wspólnie, korzystając z możliwości technologii do tworzenia linków do innych informacji oraz wyświetlania informacji w sposób elastyczny i dynamiczny."
+        },
+        "K-2-ETS1-1": {
+          "description": "Zadawaj pytania, dokonuj obserwacji oraz zbieraj informacje na temat sytuacji, którą ludzie chcą zmienić, aby zdefiniować prosty problem, który można rozwiązać przez opracowanie nowego albo udoskonalonego obiektu lub narzędzia."
+        },
+        "K-2-ETS1-2": {
+          "description": "Opracuj prosty szkic, rysunek lub model fizyczny, aby zilustrować, w jaki sposób kształt obiektu pomaga mu funkcjonować zgodnie z potrzebami, aby rozwiązać dany problem."
+        },
+        "7.G.2": {
+          "description": "Narysuj (odręcznie, przy pomocy linijki i kątomierza oraz korzystając z technologii) kształty geometryczne na podanych warunkach. Skup się na skonstruowaniu trójkątów z kątów o trzech miarach lub bokach, zauważając, kiedy warunki określają pojedynczy trójkąt, więcej niż jeden trójkąt"
+        },
+        "2.MD.10": {
+          "description": "Narysuj wykres graficzny i wykres słupkowy (z pojedynczą skalą), aby przedstawić zestaw danych z maksymalnie czterema kategoriami. Rozwiązuj proste składanie, rozkładanie i porównywanie problemów, korzystając z informacji przedstawionych na wykresie słupkowym."
+        },
+        "4.MD.5.b": {
+          "description": "Kąt, który obraca się n razy o kąt jednostopniowy, ma n stopni."
+        },
+        "4.MD.6": {
+          "description": "Mierz kąty w pełnej liczbie stopni z użyciem kątomierza. Szkicuj kąty o określonym rozwarciu."
+        },
+        "MP.1": {
+          "description": "Staraj się rozumieć problemy i wytrwaj w ich rozwiązywaniu"
+        },
+        "MP.2": {
+          "description": "Rozumuj abstrakcyjnie i ilościowo"
+        },
+        "MP.4": {
+          "description": "Modeluj przy pomocy matematyki"
+        },
+        "MP.5": {
+          "description": "Stosuj strategicznie odpowiednie narzędzia"
+        },
+        "MP.6": {
+          "description": "Dbaj o precyzję"
+        },
+        "MP.7": {
+          "description": "Poszukaj struktur i wykorzystuj je"
+        },
+        "MP.8": {
+          "description": "Poszukuj regularności i uwzględnij ją w powtarzanym rozumowaniu."
+        },
+        "4.NBT.4": {
+          "description": "W sposób biegły dodawaj i odejmuj pełne liczby wielocyfrowe z użyciem algorytmu standardowego."
+        },
+        "4.NBT.5": {
+          "description": "Przemnóż pełną liczbę składającą się z czterech cyfr przez pełną liczbę jednocyfrową, przemnóż liczby dwucyfrowe liczby z użyciem strategii opartych na wartości miejsca oraz właściwości operacji. Zilustruj i wyjaśnij wyliczenie korzystając z równań, prostokątów "
+        },
+        "1.OA.1": {
+          "description": "Korzystaj z dodawania i odejmowania w zakresie do 20, aby rozwiązywać zadania tekstowe dotyczące dodawania do, ujmowania, łączenia, brania części i porównywania, z niewiadomymi we wszystkich pozycjach np. poprzez korzystanie z obiektów, rysunków i równań z symbolami."
+        },
+        "2.OA.1": {
+          "description": "Korzystaj z dodawania i odejmowania w zakresie do 100, aby rozwiązywać zadania tekstowe dotyczące dodawania, ujmowania, łączenia, brania części i porównywania, z niewiadomymi we wszystkich pozycjach np. poprzez korzystanie z obiektów, rysunków i równań z symbolemi. "
+        },
+        "3.OA.3": {
+          "description": "Korzystaj z mnożenia i dzielenia w zakresie do 100, aby rozwiązywać zadania tekstowe dotyczące sytuacji związanych z równymi grupami, tablicami i mierzonymi ilościami, np. wykorzystując rysunki i równania z symbolem dla nieznanej liczby, która reprezentuje problem. 1"
+        },
+        "3-C-iii.3-5": {
+          "description": "Zbadaj cechy i etykiety danych treningowych, aby wykryć potencjalne źródła błędów."
+        },
+        "1.a": {
+          "description": "Stosuj znaną wiedzę do generowania nowych pojęć, produktów lub procesów."
+        },
+        "1.b": {
+          "description": "Twórz oryginalne prace jako rezultaty ekspresji osobistej lub grupowej."
+        },
+        "1.c": {
+          "description": "Użyj modeli i symulacji do badania złożonych systemów i kwestii."
+        },
+        "2.a": {
+          "description": "Wchodź w interakcje, współpracuj i publikuj wraz z rówieśnikami, ekspertami i innymi osobami, angażując różnorodne środowiska cyfrowe i media. "
+        },
+        "2.b": {
+          "description": "Przekazuj informacje i pojęcia w sposób skuteczny, aby mnożyć liczbę odbiorców używając różnych mediów i formatów. "
+        },
+        "4.b": {
+          "description": "Planuj i zarządzaj działaniami prowadzącymi do opracowania rozwiązania i realizacji projektu."
+        },
+        "4.d": {
+          "description": "Korzystaj z wielu procesorów i zróżnicowanych perspektyw, aby badać rozwiązania alternatywne."
+        },
+        "6.a": {
+          "description": "Staraj się zrozumieć i korzystaj z systemów technologii."
+        },
+        "6.c": {
+          "description": "Systemy i aplikacje do rozwiązywania problemów"
+        },
+        "6.d": {
+          "description": "Przekazuj aktualną wiedzę, aby poznawać nowe technologie."
         }
       }
     }

@@ -313,6 +313,7 @@ ca-ES:
   homepage_banner_40k_teachers_link: Més informació
   homepage_slot_text_title_hoc: L'hora del codi
   homepage_slot_text_blurb_hoc: Tothom pot aprendre. Comença avui
+  homepage_slot_text_blurb_hoc_2022: Explora, Juga, Crea!
   homepage_slot_text_link_hoc: Proveu l'Hora de programació
   homepage_slot_text_link_host: Amfitrió d'una hora de codi
   homepage_slot_text_link_hocserved: "# servit"
@@ -334,7 +335,8 @@ ca-ES:
   homepage_slot_text_link_stats: Veure les estadístiques
   homepage_slot_text_link_buy: Involucra't
   homepage_slot_text_link_donate: Fes una donació
-  homepage_gallery_header: Més de %{project_count} milions de projectes creats a Code.org
+  homepage_gallery_header: Més de %{project_count} milions de projectes  Code.org
+    creats
   homepage_header_donors: Code.org dóna gràcies als seus patrocinadors
   homepage_donors_seall: Mostra'ls tots
   homepage_donors_donate: Feu una donació
@@ -1664,3 +1666,13 @@ ca-ES:
   ai_in_partnership_with: En associació amb
   ai_activity: Activitat
   ai_description: Descripció
+  hoc2022_banner_title: Explora, Juga, Crea!
+  hoc2022_banner_description: Explora l'univers, marca un gol, mou-te — hi ha tantes
+    maneres de provar les ciències informàtiques!
+  hoc2022_cta_primary: Vagueu les novetats
+  hoc2022_cta_secondary: Proveu més activitats
+  hoc2022_landing_page_explore_description: Obriu portes a nous mons amb les ciències
+    informàtiques!
+  hoc2022_landing_page_play_description: Sortiu al camp i marqueu!
+  hoc2022_landing_page_create_title: Crea
+  hoc2022_landing_page_create_description: Feu alguna cosa estranya i meravellosa!

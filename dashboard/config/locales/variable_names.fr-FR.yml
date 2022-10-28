@@ -66,6 +66,7 @@ fr:
       name: nom
       nectar: nectar
       nectars: nectars
+      object: objet
       padYOffset: padYOffset
       planet: planète
       player_score: joueur_score
@@ -91,6 +92,7 @@ fr:
       speed: vitesse
       startX: startX
       startY: startY
+      type: écrire
       variable: variable
       width: largeur
       wizard: assistant

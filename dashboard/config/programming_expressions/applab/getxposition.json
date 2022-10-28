@@ -3,7 +3,7 @@
   "name": "getXPosition",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Gets the element's x position.\n\nSince the UI elements in your app are not static but can be moved, your app may need to know where a UI element currently is placed on the screen. All UI elements ([`button()`(#fff176)](/docs/applab/button/), [`textInput()`(#fff176)](/docs/applab/textInput/), [`textLabel()`(#fff176)](/docs/applab/textLabel/), [`dropdown()`(#fff176)](/docs/applab/dropdown/), [`checkbox()`(#fff176)](/docs/applab/checkbox/), [`radioButton()`(#fff176)](/docs/applab/radioButton/), `image()`), can be queried for their current position.",
+  "content": "Gets the element's x position.\n\nSince the UI elements in your app are not static but can be moved, your app may need to know where a UI element currently is placed on the screen. All UI elements ([`button()`(#fff176)](/docs/applab/button/), [`textInput()`(#fff176)](/docs/applab/textInput/), [`textLabel()`(#fff176)](/docs/applab/textLabel/), [`dropdown()`(#fff176)](/docs/applab/dropdown/), [`checkbox()`(#fff176)](/docs/applab/checkbox/), [`radioButton()`(#fff176)](/docs/applab/radioButton/), [`image()`(#fff176)](/docs/applab/image/)), can be queried for their current position.",
   "examples": [
     {
       "name": "Am I off the screen?",

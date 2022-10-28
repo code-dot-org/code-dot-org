@@ -371,6 +371,55 @@
           "end game": {
             "name": "یارییەکە تەواو بکە"
           }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "یارییەکە تەواو بکە"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "یارییەکە تەواو بکە"
+          }
         }
       }
     }

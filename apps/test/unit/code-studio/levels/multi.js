@@ -174,6 +174,33 @@ describe('multi', () => {
 
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
     });
+
+    it('selects none after attempt is reset', () => {
+      window.appOptions.scriptName = scriptName;
+      writeSourceForLevel(
+        scriptName,
+        levelId,
+        +new Date(2017, 1, 19),
+        lastAttemptString
+      );
+      const multi = new Multi(
+        levelId,
+        id,
+        app,
+        standalone,
+        numAnswers,
+        answers,
+        answersFeedback,
+        emptyLastAttemptString,
+        containedMode
+      );
+
+      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+
+      multi.resetAnswers();
+
+      expect(multi.selectedAnswers.length).to.equal(0);
+    });
   });
 
   describe('getResult', () => {

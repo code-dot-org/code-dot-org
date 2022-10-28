@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-04-11 19:36:54 UTC",
+    "serialized_at": "2022-09-09 16:37:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1726,7 +1726,7 @@
       "key": "702af661-8fa8-4a8e-8051-ac1ca9f455e6",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n\nThis lesson has four new and important vocabulary words:\n\n - **Program** - *Say it with me: Pro - Gram*\n\n    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** - *Say it with me: Pro - Gramm - ing*\n\n   The art of creating a program. \n\n - **Bug** - *Say it with me: Bug*\n\n   An error in a program that prevents the program from running as expected. \n\n - **Debugging** - *Say it with me: De - Bugg - ing*\n\n   Finding and fixing errors in programs. \n\n - **Loop** - *Say it with me: Loo-p*\n\n   The action of doing something over and over again"
+        "description": "####Vocabulary\n\nThis lesson has five new and important vocabulary words:\n\n - **Program** - *Say it with me: Pro - Gram*\n\n    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** - *Say it with me: Pro - Gramm - ing*\n\n   The art of creating a program. \n\n - **Bug** - *Say it with me: Bug*\n\n   An error in a program that prevents the program from running as expected. \n\n - **Debugging** - *Say it with me: De - Bugg - ing*\n\n   Finding and fixing errors in programs. \n\n - **Loop** - *Say it with me: Loo-p*\n\n   The action of doing something over and over again"
       },
       "seeding_key": {
         "activity_section.key": "702af661-8fa8-4a8e-8051-ac1ca9f455e6",

@@ -380,6 +380,7 @@ ca:
     no_primary_course: "Intenta un curs a Code Studio"
     choose_next_course: "Intenta un curs Code Studio triant-ne un a continuació"
     print_certificate: "Imprimeix el certificat"
+  certificate_hour_of_code: "L'hora del codi"
   share:
     title: "Aprendre sobre Code Studio"
     description: "Tothom pot aprendre programació. Crea jocs, apps i art amb codi."
@@ -650,3 +651,12 @@ ca:
     accept: 'D''acord'
   copy: 'Copiar'
   confirm: 'confirmació'
+  lesson_lock:
+    error:
+      no_updates: "No hi ha actualitzacions per realitzar"
+      missing_params: "S'ha de proporcionar identificadors d'usuari, nivell i unitat"
+      cannot_view_locked_answers: "No es poden visualitzar les respostes mentre està bloquejat"
+      forbidden: "L'usuari no pot actualitzar l'estat bloquejable de l'alumne"
+  reset_predict_progress_button: "Esborrar resposta"
+  pixelation:
+    binary: "Binari"

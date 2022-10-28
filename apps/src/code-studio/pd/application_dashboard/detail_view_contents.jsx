@@ -27,7 +27,8 @@ import {
   SectionHeaders as TeacherSectionHeaders,
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
-  ValidScores as TeacherValidScores
+  ValidScores as TeacherValidScores,
+  PrincipalApprovalState
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   InterviewQuestions,
@@ -58,9 +59,8 @@ const DEFAULT_NOTES =
   'Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:';
 
 const WORKSHOP_REQUIRED = `Please assign a summer workshop to this applicant before setting this
-                          applicant's status to "Accepted - No Cost Registration" or "Registration Sent".
-                          These statuses will trigger an automated email with a registration link to their
-                          assigned workshop.`;
+                          applicant's status to "Accepted". This status will trigger an automated
+                          email with a registration link to their assigned workshop.`;
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
@@ -112,6 +112,7 @@ export class DetailViewContents extends React.Component {
       status_change_log: PropTypes.arrayOf(PropTypes.object),
       scholarship_status: PropTypes.string,
       principal_approval_state: PropTypes.string,
+      principal_approval_not_required: PropTypes.bool,
       allow_sending_principal_email: PropTypes.bool
     }).isRequired,
     viewType: PropTypes.oneOf(['teacher', 'facilitator']).isRequired,
@@ -182,7 +183,9 @@ export class DetailViewContents extends React.Component {
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
-      cantSaveStatusReason: ''
+      cantSaveStatusReason: '',
+      principalApprovalIsRequired: !this.props.applicationData
+        .principal_approval_not_required
     };
   }
 
@@ -241,9 +244,7 @@ export class DetailViewContents extends React.Component {
       this.props.applicationData.regional_partner_id &&
       this.props.applicationData.update_emails_sent_by_system &&
       !workshopAssigned &&
-      ['accepted_no_cost_registration', 'registration_sent'].includes(
-        event.target.value
-      )
+      'accepted' === event.target.value
     ) {
       this.setState({
         cantSaveStatusReason: WORKSHOP_REQUIRED,
@@ -602,13 +603,22 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    // Only show incomplete in the dropdown if the application is incomplete
+    let statusesToHide = [];
+    // Hide "Awaiting Admin Approval" if it is not required
+    if (!this.state.principalApprovalIsRequired) {
+      statusesToHide.push('awaiting_admin_approval');
+    }
+    // Hide "Incomplete" if it is not currently "Incomplete"
+    if (this.state.status !== 'incomplete') {
+      statusesToHide.push('incomplete');
+    }
+
     const statuses = _.omit(
       getApplicationStatuses(
         this.props.viewType,
         this.props.applicationData.update_emails_sent_by_system
       ),
-      this.state.status === 'incomplete' ? [] : ['incomplete']
+      statusesToHide
     );
     const selectControl = (
       <div>
@@ -981,13 +991,16 @@ export class DetailViewContents extends React.Component {
   }
 
   showPrincipalApprovalTable = () => {
-    return (
-      this.props.applicationData.principal_approval_state || ''
-    ).startsWith('Complete');
+    return this.props.applicationData.principal_approval_state?.startsWith(
+      PrincipalApprovalState.complete
+    );
   };
 
   handlePrincipalApprovalChange = (_id, principalApproval) => {
     this.setState({principalApproval});
+    this.setState({
+      principalApprovalIsRequired: !this.state.principalApprovalIsRequired
+    });
   };
 
   renderDetailViewTableLayout = () => {
@@ -1009,7 +1022,6 @@ export class DetailViewContents extends React.Component {
                       // For most fields, render them only when they have values.
                       // For explicitly listed fields, render them regardless of their values.
                       (this.props.applicationData.form_data[key] ||
-                        key === 'csTotalCourseHours' ||
                         key === 'alternateEmail' ||
                         header ===
                           'schoolStatsAndPrincipalApprovalSection') && (
@@ -1091,42 +1103,18 @@ export class DetailViewContents extends React.Component {
     }
   };
 
-  renderResendOrUnrequirePrincipalApprovalSection = () => {
-    if (!this.props.applicationData.principal_approval_state) {
-      return (
-        <div>
-          <h3>Principal Approval</h3>
-          <h4>Select option</h4>
-          <PrincipalApprovalButtons
-            applicationId={this.props.applicationId}
-            showSendEmailButton={true}
-            showNotRequiredButton={true}
-            onChange={this.handlePrincipalApprovalChange}
-            applicationStatus={this.props.applicationData.status}
-          />
-        </div>
-      );
-    } else if (
-      this.props.applicationData.principal_approval_state === 'Not required'
-    ) {
-      return (
-        <div>
-          <h3>Principal Approval</h3>
-          <h4>Not required</h4>
-          <p>
-            If you would like to require principal approval for this teacher,
-            please click “Send email” to the principal asking for approval.
-          </p>
-          <PrincipalApprovalButtons
-            applicationId={this.props.applicationId}
-            showSendEmailButton={true}
-            onChange={this.handlePrincipalApprovalChange}
-            applicationStatus={this.props.applicationData.status}
-          />
-        </div>
-      );
-    } else {
-      // Approval sent but is not complete
+  renderModifyPrincipalApprovalSection = () => {
+    // principal_approval_state can be 'Not required', 'Incomplete - Principal email sent on ...', or 'Complete - ...'
+    // If 'Complete,' this function will not be run.
+    // If 'Incomplete', we show a link to the application and a button to re-send the request,
+    // and a button to change the principal approval requirement.
+    // If 'Not required', we show a button to make the principal approval required.
+    // If none of these, then the principal approval is required, and we show a button to make it not required.
+
+    const principalApprovalStartsWith = state =>
+      this.props.applicationData.principal_approval_state?.startsWith(state);
+
+    if (principalApprovalStartsWith(PrincipalApprovalState.inProgress)) {
       const principalApprovalUrl = `${
         window.location.origin
       }/pd/application/principal_approval/${
@@ -1137,9 +1125,10 @@ export class DetailViewContents extends React.Component {
         <div>
           <h3>Principal Approval</h3>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
-          <p>
+          <p id="principal-approval-link">
             Link to principal approval form:{' '}
             <a
+              id="principal-approval-url"
               href={principalApprovalUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -1153,7 +1142,33 @@ export class DetailViewContents extends React.Component {
               this.props.applicationData.allow_sending_principal_email
             }
             onChange={this.handlePrincipalApprovalChange}
+            showChangeRequirementButton={true}
+            showSendEmailButton={false}
             applicationStatus={this.props.applicationData.status}
+            approvalRequired={this.state.principalApprovalIsRequired}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h3>Principal Approval</h3>
+          {!this.state.principalApprovalIsRequired && (
+            <p>
+              If you would like to require principal approval for this teacher,
+              please click “Make required." If this application is Unreviewed,
+              Pending, or Pending Space Availability, then clicking this button
+              will also send an email to the principal asking for approval,
+              given one hasn't been sent in the past 5 days.
+            </p>
+          )}
+          <PrincipalApprovalButtons
+            applicationId={this.props.applicationId}
+            showSendEmailButton={false}
+            showChangeRequirementButton={true}
+            onChange={this.handlePrincipalApprovalChange}
+            applicationStatus={this.props.applicationData.status}
+            approvalRequired={this.state.principalApprovalIsRequired}
           />
         </div>
       );
@@ -1267,7 +1282,7 @@ export class DetailViewContents extends React.Component {
         {this.props.applicationData.application_type ===
           ApplicationTypes.teacher &&
           !this.showPrincipalApprovalTable() &&
-          this.renderResendOrUnrequirePrincipalApprovalSection()}
+          this.renderModifyPrincipalApprovalSection()}
         {this.props.applicationData.application_type ===
           ApplicationTypes.facilitator && this.renderInterview()}
         {this.renderNotes()}

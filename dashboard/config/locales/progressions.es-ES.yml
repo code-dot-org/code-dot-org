@@ -98,6 +98,7 @@ es:
       Cake Survey: Encuesta de Pasteles
       Challenge: Desafío
       Challenge Levels: Niveles de Desafío
+      Challenge/Practice: Desafío/Práctica
       'Challenge: Add More Inputs': 'Desafío: añadir más entradas'
       'Challenge: Checking for Multiple Conditions': 'Desafío: comprobar condiciones
         múltiples'
@@ -193,6 +194,8 @@ es:
       Editing Images: Editar imágenes
       Emotion Machine Example: Ejemplo de máquina de emociones
       End of Course Projects: Proyectos de final de curso
+      End-Of-Unit Survey: Encuesta Final de la Unidad
+      End-of-Unit Survey: Encuesta Final de la Unidad
       Escape Room Example: Ejemplo de Escape Room
       Event Types: Tipos de eventos
       Events: Eventos
@@ -212,6 +215,7 @@ es:
       Experiment with Web Lab: Experimento con el Laboratorio Web
       Exploration: Exploración
       'Exploration: Adding Style': 'Exploración: añadir estilo'
+      'Exploration: Clicker Game': 'Exploración: Juego de Clicker'
       'Exploration: For Loops': 'Exploración: Bucles "For"'
       'Exploration: Rikki''s Poster': 'Investigación: El cartel de Rikki'
       'Exploration: Sample Apps': 'Exploración: Ejemplos de Aplicaciones'
@@ -223,6 +227,7 @@ es:
       Extra: Extra
       Extra Challenge: Desafío Extra
       'Extra Challenge: Sound Board': 'Desafío Extra: Efectos de Sonido'
+      Field Collector App: Aplicación de Recolector de Campo
       Final Personal Website: Sitio web personal final
       Final Room Escape App: Aplicación Final Escape Room
       Find the Wizard: Encuentra el Asistente
@@ -262,6 +267,7 @@ es:
       Hello World: Hola Mundo
       How to Create a Simple Function: Cómo crear una función simple
       How to Make a Sprite: Cómo crear un sprite
+      Human Device Interaction: Interacción entre Dispositivo y Persona
       Hyperlinks: Hipervínculos
       Ice Age Loops: Bucles con la Edad de Hielo
       If Statements: Sentencias si
@@ -280,6 +286,7 @@ es:
       Input with If-Else: Entrada con "If-Else"
       Inspiration!: "¡Inspiración!"
       InspirationalArtwork: InspirationalArtwork
+      Interactive Art: Arte Interactivo
       Interactive Card: Tarjeta interactiva
       Intro to Design Mode: Introducción al modo de diseño
       Intro to Flyer Game: Introducción al Juego de Voladores
@@ -291,6 +298,7 @@ es:
       Introduction to Arrays: Introducción a los arreglos
       Introduction to Game Lab: Introducción al Laboratorio de juegos
       Introduction to Variables: Introducción a las variables
+      Investigate: Investigar
       Isaac's Survey Data: Datos de la Encuesta de Isaac
       Iteration and Parameters: Repetición y parámetros
       Keep On Dancing!: Sigue bailando!
@@ -302,6 +310,7 @@ es:
       Layout Properties: Propiedades de diseño
       Layout with CSS: Diseño con CSS
       Learning from Simulations: Aprendiendo de las Simulaciones
+      Lesson Extra: Lección Extra
       Lesson Extras: Lecciones adicionales
       Lesson Overview: Resumen de la lección
       Level Overview: Resumen del Nivel
@@ -333,11 +342,14 @@ es:
       'Mini-Project: About Me': Acerca de mí con Sprite Lab
       'Mini-Project: Alien Dance Moves': 'Miniproyecto: Movimientos de Baile de Extraterrestres'
       'Mini-Project: Alien Dance Party': 'Miniproyecto: Fiesta de Baile de Extraterrestres'
+      'Mini-Project: Clicker Game': 'Mini-Proyecto: Juego de Clicker'
+      'Mini-Project: Collector Game': 'Mini-Proyecto: Juego de Coleccionista'
       'Mini-Project: Create a Virtual Pet': 'Miniproyecto: Crear una Mascota Virtual'
       'Mini-Project: Outbreak Simulator': 'Miniproyecto: Simulador de Brotes'
       'Mini-Project: Royal Battle': 'Miniproyecto: Batalla Real'
       'Mini-Project: Snowflake #1': 'Miniproyecto: Copo de nieve nº 1'
       'Mini-Project: Snowflake #2': 'Miniproyecto: Copo de nieve nº 2'
+      'Mini-Project: Sticker Art': 'Mini-Proyecto: Arte con Pegatinas'
       'Mini-Project: Swimming Fish': 'Miniproyecto: Pez nadador'
       'Mini-Project: Swimming Fish (continued)': 'Miniproyecto: Pez nadador (continuación)'
       'Mini-Project: User Input Programs': 'Mini-Proyecto: Programas de Entrada de
@@ -473,6 +485,7 @@ es:
       Sensors to Colors: Sensores para Colores
       Set Up Sprites: Configurar Sprites
       Setting Properties: Programación de Propiedades
+      Setup: Configuración
       Shapes and Parameters: Formas y parámetros
       Shapes and the Draw Loop: Figuras y el Bucle de Dibujo
       Share Your App: Comparte tu Aplicación
@@ -553,8 +566,14 @@ es:
         contador
       Video: Vídeo
       Video - Encryption and Public Keys: Vídeo - Cifrado y Claves Públicas
+      Video - Functions: Vídeo - Funciones
+      Video - If Statements: Vídeo - Sentencias If
+      Video - Introduction to Arrays: Vídeo - Introducción a los Arrays
       'Video - Maze Intro: Programming with Blocks': 'Vídeo - Introducción al Laberinto:
         Programación con Bloques'
+      Video - Parameters: Vídeo - Parámetros
+      Video - The Counter Pattern: Vídeo - El Patrón de Contador
+      Video - Variables: Vídeo - Variables
       'Video:  Debugging with the Step Button': 'Vídeo:  Depuración con el Botón Step'
       'Video:  Minecraft - The Agent': 'Vídeo:  Minecraft - El Agente'
       'Video:  Text  and Prompts': 'Vídeo:  Texto y Avisos'
@@ -589,6 +608,7 @@ es:
       'Video: Drawing in Game Lab - Part 2': 'Video: dibujar en el Laboratorio de
         juegos - Parte 2'
       'Video: Events': 'Vídeo: Eventos'
+      'Video: Events in App Lab': 'Vídeo: Eventos en Laboratorio de Aplicaciones'
       'Video: Follow The Digital Trail': 'Vídeo: Sigue el Rastro Digital'
       'Video: For Loops': 'Vídeo: Bucles "for"'
       'Video: Functions': 'Video: funciones'
@@ -596,6 +616,11 @@ es:
       'Video: Happy Maps - Unplugged Activity': 'Vídeo: Mapas Felices - Actividad
         Desconectada'
       'Video: Harvesting with Conditionals': 'Vídeo: Cosechar con Condicionales'
+      'Video: Hello World: Do What You Want': 'Vídeo: Hola Mundo: Haz lo que quieras'
+      'Video: Hello World: Programming with Events': 'Vídeo: Hola Mundo: Programación
+        con Eventos'
+      'Video: Hello World: Welcome to Sprite Lab': 'Vídeo: Hola Mundo: Bienvenido
+        a Laboratorio Sprite'
       'Video: How Search Works': 'Vídeo: Cómo Funciona la Búsqueda'
       'Video: How to Create a Simple Function': 'Vídeo: Cómo Crear una Función Simple'
       'Video: How to Make a Sprite': 'Vídeo: Cómo Hacer un Sprite'
@@ -621,6 +646,7 @@ es:
       'Video: Introduction to the Draw Loop': 'Video: introducción al bucle dibujar'
       'Video: Loops in Artist': 'Vídeo: Bucles en Artista'
       'Video: Loops with the Artist': 'Vídeo: Bucles con el Artista'
+      'Video: Lots of Sprites': 'Vídeo: Muchos Sprites'
       'Video: Managing Disagreement': 'Vídeo: Gestionando los Desacuerdos'
       'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducción al Laberinto
         - Programación con Bloques'
@@ -644,7 +670,11 @@ es:
       'Video: Nested Loops': 'Vídeo: Bucles Anidados'
       'Video: Nested Loops with the Bee': 'Vídeo: Bucles Anidados con la Abeja'
       'Video: Netflix and Data': 'Vídeo: Netflix y Datos'
+      'Video: Outbreak Simulator: Events': 'Vídeo: Simulador de Brote: Eventos'
+      'Video: Outbreak Simulator: Free Play': 'Vídeo: Simulador de Brote: Juego Libre'
       'Video: Outbreak Simulator: Introduction': 'Vídeo: Muchos Sprites'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Vídeo: Simulador de
+        Brote: Pensando como un Científico'
       'Video: Pair Programming': 'Vídeo: Programación en Pareja'
       'Video: Pair Programming ': 'Vídeo: Programación en Pareja'
       'Video: Problem Solving Process': 'Vídeo: El proceso de resolución de problemas'

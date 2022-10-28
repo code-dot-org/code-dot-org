@@ -1,88 +1,62 @@
 import React from 'react';
 import ValidationStep, {Status} from './ValidationStep';
 
-export default storybook => {
-  return storybook.storiesOf('ValidationStep', module).addStoryTable([
-    {
-      name: 'Succeeded Step',
-      description: 'Step in success state',
-      story: () => (
-        <ValidationStep
-          stepName="This step is successful"
-          stepStatus={Status.SUCCEEDED}
-        />
-      )
-    },
-    {
-      name: 'Failed Step',
-      description: 'Step in failed state',
-      story: () => (
-        <ValidationStep
-          stepName="This step has failed"
-          stepStatus={Status.FAILED}
-        />
-      )
-    },
-    {
-      name: 'Failed Step with Explanation',
-      description: 'Step in failed state with explanation showing',
-      story: () => (
-        <ValidationStep
-          stepName="This step has failed"
-          stepStatus={Status.FAILED}
-        >
-          Here is an explanation of why this step failed.
-        </ValidationStep>
-      )
-    },
-    {
-      name: 'Celebrating Step',
-      description: 'Step in celebrating state',
-      story: () => (
-        <ValidationStep
-          stepName="This step is celebrating"
-          stepStatus={Status.CELEBRATING}
-        />
-      )
-    },
-    {
-      name: 'Waiting Step',
-      description: 'Step in waiting state',
-      story: () => (
-        <ValidationStep
-          stepName="This step is waiting"
-          stepStatus={Status.WAITING}
-        />
-      )
-    },
-    {
-      name: 'Attempting Step',
-      description: 'Step in attempting state',
-      story: () => (
-        <ValidationStep
-          stepName="This step is attempting"
-          stepStatus={Status.ATTEMPTING}
-        />
-      )
-    },
-    {
-      name: 'Unknown Step',
-      description: 'Step in unknown state',
-      story: () => (
-        <ValidationStep
-          stepName="This step is unknown"
-          stepStatus={Status.UNKNOWN}
-        />
-      )
-    },
-    {
-      name: 'Alert Step',
-      description: 'Step in alert state',
-      story: () => (
-        <ValidationStep stepName="This is an alert" stepStatus={Status.ALERT}>
-          Alerts have explanations!
-        </ValidationStep>
-      )
-    }
-  ]);
+export default {
+  title: 'ValidationStep',
+  component: ValidationStep
+};
+
+// Template
+const Template = args => <ValidationStep {...args} />;
+
+// Stories
+
+export const SuccessStep = Template.bind({});
+SuccessStep.args = {
+  stepName: 'This step is successful',
+  stepStatus: Status.SUCCEEDED
+};
+
+export const FailStep = Template.bind({});
+FailStep.args = {
+  stepName: 'This step has failed',
+  stepStatus: Status.FAILED
+};
+
+export const FailStepWithExplanation = Template.bind({});
+FailStepWithExplanation.args = {
+  stepName: 'This step has failed and explains why',
+  stepStatus: Status.FAILED,
+  children: <p>Explaining why the step failed</p>
+};
+
+export const CelebrateStep = Template.bind({});
+CelebrateStep.args = {
+  stepName: 'This step is celebrating',
+  stepStatus: Status.CELEBRATING
+};
+
+export const WaitingStep = Template.bind({});
+WaitingStep.args = {
+  stepName: 'This step is waiting',
+  stepStatus: Status.WAITING
+};
+
+export const AttemptingStep = Template.bind({});
+AttemptingStep.args = {
+  stepName: 'This step is attempting',
+  stepStatus: Status.ATTEMPTING
+};
+
+export const UnknownStep = Template.bind({});
+UnknownStep.args = {
+  stepName: 'This step is unknown',
+  stepStatus: Status.UNKNOWN
+};
+
+export const AlertStep = Template.bind({});
+AlertStep.args = {
+  stepName: 'This step is an alert',
+  stepStatus: Status.ALERT,
+  children: 'Alerts have explanations!'
 };

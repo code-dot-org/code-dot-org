@@ -453,6 +453,7 @@ es-MX:
       about: Acerca de
       legal: Privacidad y Legalidad
       legal_privacy: Política de privacidad
+      legal_cookie_notice: Aviso de Cookies
       legal_tos: Términos de uso
     user:
       classroom: Página de inicio para docentes
@@ -675,6 +676,7 @@ es-MX:
     print_certificate: Imprimir Certificado
   certificate_sponsor_message: "%{sponsor_name} tuve el generoso gesto de patrocinar
     tu aprendizaje."
+  certificate_hour_of_code: Hora del código
   move_students:
     new_section_dne: Lo sentimos, pero no existe la sección %{new_section_code}. Ingresa
       un código de sección diferente.
@@ -1339,6 +1341,8 @@ es-MX:
         not_listed: El término preferido no aparece
         none: Prefiero no contestar
       school_country:
+        barbados: Barbados
+        belize: Belice
         canada: Canadá
         chile: Chile
         colombia: Colombia
@@ -1470,3 +1474,14 @@ es-MX:
   unit_prefix: Unidad %{n}
   code_org_logo_alt: Inicio de Code.org
   teacher_feedback: Retroalimentación del docente
+  lesson_lock:
+    error:
+      no_updates: No hay actualizaciones disponibles
+      missing_params: Debe proporcionar los ID de usuario, nivel y unidad
+      cannot_view_locked_answers: No se pueden ver las respuestas mientras están bloqueadas
+      forbidden: El usuario no puede actualizar el estado bloqueable del estudiante
+  reset_predict_progress_button: Borrar respuesta
+  pixelation:
+    save_image: Guardar imagen
+    actual_size: Tamaño real
+    binary: Binario

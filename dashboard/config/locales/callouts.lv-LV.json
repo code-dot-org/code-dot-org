@@ -161,6 +161,9 @@
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
         }
       }
     }

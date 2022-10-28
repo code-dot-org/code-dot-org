@@ -2821,6 +2821,500 @@
           "function 2": {
             "name": "fungsi 2"
           }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "small flower": {
+            "name": "bunga kecil"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "BUNGA LOGIK2"
+          },
+          "LOGIC FLOWER": {
+            "name": "BUNGA LOGIK"
+          },
+          "LOGIC FLOWERS": {
+            "name": "BUNGA LOGIK"
+          },
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang",
+            "description": "lukis bintang dengan titik dan sisi yang diberi panjang tertentu",
+            "parameters": {
+              "points": "mata",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan",
+            "description": "lukis bulatan jejari yang diberi",
+            "parameters": {
+              "radius": "jejari"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "lukis kincir",
+            "parameters": {
+              "sides": "tepi",
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "name": "lukiskan satu bentuk segi tiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "name": "lukis bentuk",
+            "parameters": {
+              "sides": "tepi",
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "lukiskan sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang",
+              "sides": "tepi"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang",
+            "description": "lukis bintang dengan titik dan sisi yang diberi panjang tertentu",
+            "parameters": {
+              "points": "mata",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan",
+            "description": "lukis bulatan jejari yang diberi",
+            "parameters": {
+              "radius": "jejari"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "lukis kincir",
+            "parameters": {
+              "sides": "tepi",
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "name": "lukiskan satu bentuk segi tiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "name": "lukis bentuk",
+            "parameters": {
+              "sides": "tepi",
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "lukiskan sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "tetapkan semula permainan"
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "bina jambatan"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "kosongkan laluan"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "perbaiki jalan yang panjang"
+          },
+          "fix short path": {
+            "name": "perbaiki jalan yang pendek"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build short bridge": {
+            "name": "bina jambatan pendek"
+          },
+          "build long bridge": {
+            "name": "bina jambatan panjang"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
+          "function 1": {
+            "name": "fungsi 1"
+          },
+          "function 2": {
+            "name": "fungsi 2"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "penyelesaian yang berpotensi"
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw flame": {
+            "name": "lukis nyalaan api",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "lukis api"
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": "penggalak"
+          }
+        },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "Buat sesuatu"
+          },
+          "draw hexagon": {
+            "name": "lukiskan heksagon"
+          },
+          "draw line of hexagons": {
+            "name": "lukiskan garisan heksagon"
+          }
+        },
+        "courseE_artist_functions22022": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          },
+          "draw ear stems": {
+            "name": "lukiskan batang telinga"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions52022": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "lukiskan tingkap"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "Buat sesuatu"
+          },
+          "staggered squares": {
+            "name": "segi empat sama berperingkat"
+          },
+          "draw a line of squares": {
+            "name": "lukiskan garisan segi empat sama"
+          },
+          "draw square": {
+            "name": "lukiskan segi empat sama"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          },
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "draw a line of squares": {
+            "name": "lukiskan garisan segi empat sama"
+          },
+          "draw square": {
+            "name": "lukiskan segi empat sama"
+          },
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "draw a line of squares": {
+            "name": "lukiskan garisan segi empat sama"
+          },
+          "draw square": {
+            "name": "lukiskan segi empat sama"
+          },
+          "do something": {
+            "name": "Buat sesuatu"
+          },
+          "staggered squares": {
+            "name": "segi empat sama berperingkat"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "Buat sesuatu"
+          },
+          "draw triangle": {
+            "name": "lukiskan segi tiga"
+          },
+          "draw line of triangles": {
+            "name": "lukiskan garisan segi tiga"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw hexagon": {
+            "name": "lukiskan heksagon"
+          },
+          "draw line of hexagons": {
+            "name": "lukiskan garisan heksagon"
+          },
+          "staggered squares": {
+            "name": "segi empat sama berperingkat"
+          },
+          "draw a line of squares": {
+            "name": "lukiskan garisan segi empat sama"
+          },
+          "draw square": {
+            "name": "lukiskan segi empat sama"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
+          "my design": {
+            "name": "reka bentuk saya"
+          },
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
+          "my design": {
+            "name": "reka bentuk saya"
+          },
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          },
+          "draw ear stems": {
+            "name": "lukiskan batang telinga"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
+          "draw line of polygons": {
+            "name": "lukiskan garisan poligon"
+          },
+          "draw polygon": {
+            "name": "lukiskan poligon"
+          },
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_farmer_functions10a12022": {
+          "pick along path": {
+            "name": "ambil sepanjang laluan"
+          },
+          "check square for corn": {
+            "name": "periksa segi empat sama untuk jagung"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          },
+          "pumpkin square": {
+            "name": "segi empat sama labu"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "pick along path": {
+            "name": "ambil sepanjang laluan"
+          },
+          "pumpkin square": {
+            "name": "segi empat sama labu"
+          },
+          "check square for corn": {
+            "name": "periksa segi empat sama untuk jagung"
+          },
+          "get produce": {
+            "name": "dapatkan hasil"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "pick along path": {
+            "name": "ambil sepanjang laluan"
+          },
+          "check for corn": {
+            "name": "periksa untuk jagung"
+          },
+          "corn rectangle": {
+            "name": "segi empat tepat jagung"
+          },
+          "lettuce stairs": {
+            "name": "tangga salad"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "periksa segi empat sama untuk jagung"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "periksa segi empat sama untuk jagung"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "periksa segi empat sama untuk jagung"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "pick along path": {
+            "name": "ambil sepanjang laluan"
+          },
+          "check square for corn": {
+            "name": "periksa segi empat sama untuk jagung"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "periksa segi empat sama untuk jagung"
+          },
+          "get all pumpkins": {
+            "name": "dapatkan semua labu"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "segi empat sama taman"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "segi empat sama taman"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "segi empat sama taman"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "permainan tamat"
+          }
+        },
+        "courseF_bee_for_challenge12022": {
+          "move and get nectar with counter": {
+            "name": "bergerak dan dapatkan nektar dengan pembilang"
+          }
+        },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "fungsi saya"
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang",
+            "description": "lukis bintang dengan titik dan sisi yang diberi panjang tertentu",
+            "parameters": {
+              "points": "mata",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan",
+            "description": "lukis bulatan jejari yang diberi",
+            "parameters": {
+              "radius": "jejari"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "lukis kincir",
+            "parameters": {
+              "sides": "tepi",
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "name": "lukiskan satu bentuk segi tiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "name": "lukis bentuk",
+            "parameters": {
+              "sides": "tepi",
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "lukiskan sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "tetapkan semula permainan"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "permainan tamat"
+          }
         }
       }
     }

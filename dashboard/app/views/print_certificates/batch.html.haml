@@ -1,0 +1,6 @@
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/print_certificates/batch.js'), data: {certificate: @certificate_data.to_json}}
+%link{:href=>'/shared/css/print.css', :rel=>'stylesheet', type: 'text/css'}
+%link{href: asset_path('css/certificates.css'), rel: 'stylesheet', type: 'text/css'}
+
+#print-certificate-batch

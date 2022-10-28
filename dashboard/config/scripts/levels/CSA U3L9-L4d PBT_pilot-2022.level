@@ -1,9 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:38.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -20,7 +16,7 @@
         "isVisible": true
       },
       "Cats.java": {
-        "text": "/*\n * Processes cat breeds in a String array\n */\npublic class Cats {\n\n  private String[] catBreeds;   // The 1D array of cat breeds\n\n  /*\n   * Constructor to create a Cats object with\n   * a specified list of cat breeds\n   */\n  public Cats(String[] catBreeds) {\n    this.catBreeds = catBreeds;\n  }\n\n  /*\n   * Prints the names of the parks in the catBreeds array\n   */\n  public void printCatBreeds() {\n    for (String cat : catBreeds) {\n      System.out.println(cat);\n    }\n  }\n\n  /*\n   * Reverses the catBreeds array\n   */\n  public void reverse() {\n    // TO DO #1: Reverse the elements in the catBreeds array.\n\n\n    \n  }\n  \n}",
+        "text": "/*\n * Processes cat breeds in a String array\n */\npublic class Cats {\n\n  private String[] catBreeds;   // The 1D array of cat breeds\n\n  /*\n   * Constructor to create a Cats object with\n   * a specified list of cat breeds\n   */\n  public Cats(String[] catBreeds) {\n    this.catBreeds = catBreeds;\n  }\n\n  /*\n   * Returns the array catBreeds\n   */\n  public String[] getCatBreeds() {\n    return catBreeds;\n  }\n\n  /*\n   * Prints the names of the parks in the catBreeds array\n   */\n  public void printCatBreeds() {\n    for (String cat : catBreeds) {\n      System.out.println(cat);\n    }\n  }\n\n  /*\n   * Reverses the catBreeds array\n   */\n  public void reverse() {\n    // TO DO #1: Reverse the elements in the catBreeds array.\n\n\n    \n  }\n  \n}",
         "isVisible": true
       },
       "catbreeds.txt": {
@@ -30,7 +26,11 @@
     },
     "name_suffix": "_pilot-2022"
   },
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:38.629+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L4d PBT_2022\\\"\"],\"cloned_from\":\"CSA U3L9-L4d PBT_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:38.629+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L4d PBT_2022\\\"\"],\"cloned_from\":\"CSA U3L9-L4d PBT_2022\"},{\"changed_at\":\"2022-09-09 00:54:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

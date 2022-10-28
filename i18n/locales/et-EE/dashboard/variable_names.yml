@@ -23,6 +23,7 @@ et:
       score: tulemus
       size: suurus
       speed: kiirus
+      type: tüüp
       variable: muutuja
       width: laius
       wizard: võlur

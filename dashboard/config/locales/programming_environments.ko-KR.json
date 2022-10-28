@@ -4,14 +4,19 @@
       "programming_environments": {
         "weblab": {
           "name": "웹 랩",
+          "description": "웹 기반 HTML/CSS 편집기입니다.",
           "categories": {
             "html_tags": {
               "name": "HTML 태그"
+            },
+            "css_properties": {
+              "name": "CSS 속성"
             }
           }
         },
         "gamelab": {
           "name": "게임 랩",
+          "description": "Game Lab 은 흥미로운 게임과 애니메이션을 제작할 수 있는 프로그래밍 환경입니다. 캐릭터를 그리고 블록이나 JavaScript로 코딩하여 게임을 완성하기만 하면 몇 초안에 게임을 공유할 수 있습니다.",
           "categories": {
             "game_lab": {
               "name": "게임 랩"
@@ -24,6 +29,9 @@
             },
             "drawing": {
               "name": "그리기"
+            },
+            "control": {
+              "name": "제어"
             },
             "math": {
               "name": "계산"
@@ -40,8 +48,20 @@
           "name": "앱 연구실",
           "description": "App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에 앱을 디자인하고, 블록이나 자바스크립트로 만들고, 공유할 수 있습니다.",
           "categories": {
+            "ui_controls": {
+              "name": "UI 컨트롤"
+            },
+            "canvas": {
+              "name": "Canvas"
+            },
             "data": {
               "name": "데이터"
+            },
+            "turtle": {
+              "name": "Turtle"
+            },
+            "control": {
+              "name": "제어"
             },
             "math": {
               "name": "계산"
@@ -54,11 +74,15 @@
             },
             "advanced": {
               "name": "고급"
+            },
+            "maker": {
+              "name": "Maker"
             }
           }
         },
         "spritelab": {
           "name": "스프라이트 연구소",
+          "description": "Sprite Lab은 대화형 프로젝트를 생성할 수 있는 블록 구조 프로그래밍 환경입니다.",
           "categories": {
             "sprites": {
               "name": "스프라이트"
@@ -102,7 +126,39 @@
           }
         },
         "javalab": {
-          "name": "Java 연구소"
+          "name": "Java 연구소",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Java Lab 바로가기"
+            },
+            "general": {
+              "name": "Java 기초"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "제어 구조"
+            },
+            "data_structures": {
+              "name": "데이터 구조"
+            }
+          }
         }
       }
     }

@@ -4,6 +4,7 @@ it:
       Actions: Azioni
       Advanced: Avanzate
       Behaviors: Comportamenti
+      Boolean: Booleano
       Brushes: Pennelli
       Category: Categoria
       Color: Colore
@@ -24,9 +25,13 @@ it:
       Logic: Logica
       Loops: Cicli
       Math: Matematica
+      Number: Numero
       Numbers: Numeri
+      Picker: Selettore
+      Prebuilt: Prefabbricato
       Properties: Proprietà
       Sprites: Personaggi
+      String: Stringa
       Text: Testo
       Variables: Variabili
       'Variables ': 'Variabili '

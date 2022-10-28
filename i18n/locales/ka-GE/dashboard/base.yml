@@ -479,6 +479,7 @@ ka:
     choose_next_course: "სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი"
     print_certificate: "სერტიფიკატის ამობეჭდვა"
   certificate_sponsor_message: "%{sponsor_name} გააკეთა გულუხვი საჩუქარი სპონსორი თქვენი სწავლის."
+  certificate_hour_of_code: "კოდის ერთი საათი"
   move_students:
     new_section_dne: "სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
     section_code_cant_be_current_section: "მიმდინარე სექცია ვერ იქნება იგივე, რაც ახალი სექცია."
@@ -982,3 +983,5 @@ ka:
   page_not_found_description: "გვერდი, რომელსაც ეძებთ, არ არსებობს ამ მისამართზე. შეამოწმეთ ვებ მისამართი და დააბრუნეთ. ან, დაბრუნდით ჩვენს მთავარ გვერდზე."
   page_not_found_button: "სახლში დაბრუნება"
   copy: 'კოპირება'
+  pixelation:
+    binary: "ორობითი"

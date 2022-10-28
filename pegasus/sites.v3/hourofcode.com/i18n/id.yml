@@ -6,39 +6,52 @@ id:
   front_title: Bergabunglah dalam acara belajar terbesar sepanjang sejarah pada tanggal
     7-13 Desember 2015
   coming_soon: Akan Datang
-  campaign_date_start_short: 6 Des.
-  campaign_date_start_long: 6 Desember
-  campaign_date_short: 7-13 Des.
-  campaign_date_full: 6-12 Desember
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 Desember 2021
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6 Des.
-  europe_campaign_date_start_long: 6 Desember
-  europe_campaign_date_short: 7-13 Des.
-  europe_campaign_date_full: 6-12 Desember
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 Desember 2021
-  africa_campaign_date_start_short: 6 Des.
-  africa_campaign_date_start_long: 6 Desember
-  africa_campaign_date_short: 7-13 Des.
-  africa_campaign_date_full: 6-12 Desember
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 Desember 2021
-  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
-    the connections!'
+  campaign_date_start_short: 5 Des.
+  campaign_date_start_long: 5 Desember
+  campaign_date_short: 5-11 Des.
+  campaign_date_full: 5-11 Desember
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 Desember 2022
+  nonus_campaign_date_start_short: 1 Okt.
+  nonus_campaign_date_start_long: 1 Oktober
+  nonus_campaign_date_short: 1 Oktober - 18 Desember
+  nonus_campaign_date_full: 1 Oktober - 18 Desember
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
+  latam_campaign_date_start_short: 1 Okt.
+  latam_campaign_date_start_long: 1 Oktober
+  latam_campaign_date_short: 1 Oktober - 18 Desember
+  latam_campaign_date_full: 1 Oktober - 18 Desember
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
+  europe_campaign_date_start_short: 1 Okt.
+  europe_campaign_date_start_long: 1 Oktober
+  europe_campaign_date_short: 1 Oktober - 18 Desember
+  europe_campaign_date_full: 1 Oktober - 18 Desember
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
+  africa_campaign_date_start_short: 1 Okt.
+  africa_campaign_date_start_long: 1 Oktober
+  africa_campaign_date_short: 1 Oktober - 18 Desember
+  africa_campaign_date_full: 1 Oktober - 18 Desember
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 Oktober 2022 - 18 Desember 2022
+  hoc2022_header: Menjelajah, Bermain, Berkreasi!
+  social_hoc2022_explore_play_create: Manfaatkan ilmu komputer untuk menjelajah, bermain,
+    dan berkreasi!
+  codeorg_homepage_hoc2022_body: Jelajahi alam semesta, cetak gol, atau lakukan gerakan
+    — ada banyak cara untuk mencoba ilmu komputer.
+  hoc2022_codeorg_title: Rayakan Hour of Code bersama NASA dan lainnya
+  hoc2022_codeorg_description: Hour of Code ke-10 sangat luar biasa! Ayo menjelajah,
+    bermain, dan berkreasi bersama kami.
+  social_hoc2021_cse: 'Selama #HourOfCode, kami merayakan #CSEverywhere. Temukan koneksinya!'
   hoc2020_header: Pelajari hari ini, ciptakan hari esok yang lebih cerah.
   hoc2020_header_with_line_break_markdown: |-
     Pelajari hari ini,
 
     ciptakan hari esok yang lebih cerah.
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+  social_hoc2020_cs_important: 'Ilmu komputer sangatlah penting. Mari bangun masa
+    depan yang kita inginkan. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: "#HourOfCode adalah tentang #CSforGood. Pelajari
     hari ini, ciptakan hari esok yang lebih cerah."
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
@@ -54,18 +67,20 @@ id:
   hoc2019_header: Ubahlah dunia dengan belajar ilmu komputer!
   hoc2019_header_line1_mobile: Belajarlah ilmu komputer.
   hoc2019_header_line2_mobile: Ubahlah dunia.
-  social_hoc2019_every_sudent: 'Every student has the potential to change the world.
-    Help them get started. #CSforGood'
-  social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
-    #CSforGood #HourOfCode'
+  social_hoc2019_every_sudent: 'Setiap murid mempunyai potensi untuk mengubah dunia.
+    Bantu mereka untuk memulai. #CSforGood'
+  social_hoc2019_learn_computer_science: 'Pelajari ilmu komputer. Ubah dunia. #CSforGood
+    #HourOfCode'
   social_hoc_is_coming: Jam kode akan segera hadir
-  social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    computer science. Change the world.'
+  social_hoc2019_hoc_is_about_csforgood: "#HourOfCode adalah tentang #CSforGood. Pelajari
+    ilmu komputer. Ubah dunia."
   social_hoc2019_coming_dates: Jam Kode akan hadir pada 9-15 Desember 2019. Ilmu komputer
     adalah dasar yang mesti dipelajari setiap siswa.
-  social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
-    Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
+  social_hoc2019_dance: 'Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco,
+    Lil Nas X, Jonas Brothers, Nicki Minaj, dan 34 lainnya!
+
+'
+  social_hoc_anybody: 'Hour of Code: Siapapun bisa Belajar'
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Pelajari tentang machine learning dan penggunaan AI
     secara etis.
@@ -144,16 +159,17 @@ id:
     masalah dunia. Ilmu komputer lebih dari sekadar coding! Nikmati langkah pertama
     Code.org dalam misi baru untuk mengajarkan lebih banyak tentang AI melalui kurikulum
     kami.
-  social_coldplay_title: Create with Coldplay & Code.org
-  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
-    and you could win.
+  social_coldplay_title: Buat dengan Coldplay & Code.org
+  social_coldplay_desc: Tunjukkan gerakan terbaikmu! Kode, menari, bagikan kepada
+    dunia, dan kamu bisa menang.
   hoc_live: Hour of Code Live
-  hoc_live_sign_up_title: Sign up for Hour of Code Live
-  hoc_live_learn_title: Learn with Hour of Code Live
-  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
-    of all ages and abilities, including those without computers, are welcome. Join
-    our mailing list to receive recordings of the episodes and resources to continue
-    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_sign_up_title: Daftar Hour of Code Live
+  hoc_live_learn_title: Belajar dengan Hour of Code Live
+  hoc_live_sign_up_message: Belajar langsung secara bersamaan dengan tamu spesial!
+    Murid dari berbagai umur dan kemampuan, termasuk yang tidak memiliki komputer,
+    dipersilakan bergabung. Ayo berlangganan surel kami untuk menerima rekaman episode
+    dan materi untuk melanjutkan pembelajaran di rumah. Lihat episode-episode sebelumnya
+    [here](%{episodes_url}).
   hoc_live_learn_message: Learn basic concepts of computer science alongside special
     guests! Students of all ages and abilities, including those without computers,
     are welcome to our virtual workshop. Continue learning at home through our Hour
@@ -175,9 +191,10 @@ id:
   hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
     a scanner on the bottom, and an LED face
   hoc_banner_alt_text: Hour of Code banner
-  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_what_is_ai: Apa itu Kecerdasan Buatan (AI)?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_phone_knows_dog: Bagaimana ponselmu tahu bahwa ini adalah seekor
+    anjing?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
@@ -504,6 +521,27 @@ id:
   front_join_us_n_students_served: "# tersaji"
   front_join_us_challenge: Menangkan obrolan video untuk kelas Anda dengan selebriti!
   front_join_us_learn_more: Belajarlah lagi
+  cta_see_whats_new: Lihat yang baru
+  cta_try_more_activities: Coba kegiatan lainnya
+  cta_try_an_activity: Coba sebuah kegiatan
+  hoc_homepage_join_the_movement_heading: 'Bergabunglah dengan gerakan ini
+
+'
+  hoc_homepage_join_the_movement_description: Hour of Code tersedia sepanjang tahun,
+    akan tetapi setiap tahun di bulan Desember kelas Anda dapat bergabung dengan jutaan
+    siswa di seluruh dunia untuk merayakan Pekan Pendidikan Ilmu Komputer bersama
+    Hour of Code. Pendaftaran untuk perayaan tahunan ini dimulai setiap tahun pada
+    bulan Oktober.
+  hoc_homepage_what_is_hoc_subhead: Tutorial satu jam dalam lebih dari 45 bahasa.
+    Tidak perlu pengalaman. Kegiatan Hour of Code tersedia gratis sepanjang tahun.
+  hoc_homepage_what_is_hoc_description: Hour of Code merupakan pengantar ilmu komputer
+    yang berdurasi satu jam, dan menggunakan tutorial yang menyenangkan untuk menunjukkan
+    bahwa siapa pun dapat mempelajari dasar-dasarnya. Kampanye ini didukung oleh lebih
+    dari 400 mitra dan 200.000 pendidik di seluruh dunia.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Baca Panduan](%{howto_guide_url}) kami
+    untuk merencanakan event bagi kelas Anda."
+  hoc_homepage_highlights_heading: Manfaat Hour of Code
+  hoc_homepage_organized_by: Hour of Code diselenggarakan oleh [Code.org](%{codeorg_url}).
   signup_closed: Pendaftaran untuk Jam Kode sekarang ditutup. Silakan periksa lagi
     di bulan Oktober untuk mendaftar ke Hour of Code berikutnya.
   signup_registration_not_required: You don't need to register to participate! The
@@ -550,7 +588,6 @@ id:
   signup_multiple_event_warning: Jika Anda menyelenggarakan beberapa acara, kirimkan
     nama atau email unik untuk masing-masing acara. Kami hanya menghitung satu event
     per kombinasi nama dan email.
-  signup_registration_deadline: Pendaftaran untuk Jam Kode ditutup 11 Desember.
   signup_name_placeholder: Nama anda
   signup_email_placeholder: anda@contoh.com
   signup_organization_name_placeholder: Contohnya, SMA Lincoln
@@ -1026,7 +1063,8 @@ id:
     mereka sendiri.
   highlights_constant_athletes_short_heading: Paksa dirimu
   footer_copyright_message: Hak cipta 2015 Code.org. Semua hak dilindungi.
-  footer_trademark_message: Hour of Code™ adalah merek dagang dari Code.org.
+  footer_trademark_message: Hour of Code® dan Hora del Código® adalah merek dagang
+    Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Mitra-mitra
   footer_menu_contact: Hubungi kami

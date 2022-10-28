@@ -217,6 +217,243 @@
         },
         "csta/1B-DA-07": {
           "description": "Na základě dat zdůrazněte nebo navrhněte vztahy příčin a následků, předpovězte výstupy nebo komunikujte nápady."
+        },
+        "1B-DA-07": {
+          "description": "Na základě dat zdůrazněte nebo navrhněte vztahy příčin a následků, předpovězte výstupy nebo komunikujte nápady."
+        },
+        "1B-IC-18": {
+          "description": "Proberte počítačové technologie, které změnily svět, a poukažte na to, jak se tyto technologie vzájemně ovlivňují s kulturními zvyklostmi."
+        },
+        "3A-DA-10": {
+          "description": "Zhodnoťte kompromis mezi tím, jak jsou uspořádané datové prvky a kde jsou data uložená."
+        },
+        "3A-NI-06": {
+          "description": "Doporučte bezpečnostní opatření pro různé scénáře na základě faktorů jako účinnost, proveditelnost nebo etické dopady."
+        },
+        "3A-NI-07": {
+          "description": "Porovnejte různá bezpečnostní opatření, zvažte kompromisy mezi použitelností a bezpečností počítačového systému."
+        },
+        "3B-NI-04": {
+          "description": "Srovnejte, jakými způsoby vývojáři softwaru chrání zařízení a informace před neoprávněným přístupem."
+        },
+        "DAT-1.D.1": {
+          "description": "Komprese dat může snížit velikost (počet bitů) přenášených nebo uložených dat."
+        },
+        "DAT-1.D.2": {
+          "description": "Méně bitů neznamená nutně méně informací."
+        },
+        "DAT-1.D.3": {
+          "description": "Do jaké míry je možné zmenšit velikost původního obsahu pomocí komprese, závisí jednak na množství nadbytečných dat v původní reprezentaci dat a jednak na použitém algoritmu komprese."
+        },
+        "DAT-1.D.4": {
+          "description": "Algoritmy bezeztrátové komprese dat můžou obvykle zmenšit počet uložených nebo přenášených bitů a zároveň zaručí úplné obnovení původních dat."
+        },
+        "IOC-2.B.5": {
+          "description": "Šifrování je proces zakódování dat s cílem předejít neoprávněnému přístupu. Dešifrování je proces dekódování dat. Dva běžné šifrovací přístupy jsou: ●       Symetrické šifrování klíčů zahrnuje jeden a ten samý klíč pro šifrování i dešifrování.●       Šifrování veřejným klíčem páruje veřejný klíč k šifrování s privátním klíčem k dešifrování. Odesílatel nepotřebuje privátní klíč příjemce, aby zprávu zašifroval, ale privátní klíč příjemce je potřeba k dešifrování zprávy. PROHLÁŠENÍ O VYLOUČENÍ (EKIOC-2.B.5): Specifické matematické postupy pro šifrování a dešifrování jsou mimo rámec tohoto kurzu a zkoušky AP Exam."
+        },
+        "CD.L1:3-01": {
+          "description": "K úspěšnému provozování počítačů a souvisejících technologií používejte standardní vstupní a výstupní zařízení."
+        },
+        "CI.L1:3-01": {
+          "description": "Při používání technických systémů a software praktikujte zodpovědný digitální občanský život (právní a etické normy chování)."
+        },
+        "CL.L1:6-02": {
+          "description": "Používejte online prostředků (jako je např. e-mail, online diskuze, webová prostředí na spolupráci) k účasti na společných pracovních aktivitách při řešení problémů za účelem vývoje řešení nebo produktů."
+        },
+        "CPP.L1:3-01": {
+          "description": "Používejte technologických prostředků k provádění věkově přiměřeného výzkumu."
+        },
+        "CPP.L1:3-02": {
+          "description": "Na podporu učení podle osnov využívejte vývojově přiměřené multimediální prostředky (např. interaktivní knihy a vzdělávací software)."
+        },
+        "CPP.L1:3-04": {
+          "description": "Zkonstruujte sadu příkazů, které by měly být vykonány, má-li být realizována nějaká jednoduchá úloha (např. pokyny pro želvu)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Využívejte technických prostředků (jako např. kalkulaček, sond k odběru dat, mobilních zařízení, videí, vzdělávacího software a webových nástrojů) k řešení problémů a samostatnému učení."
+        },
+        "CPP.L1:6-06": {
+          "description": "Zavádějte řešení problémů pomocí blokového vizuálního programovacího jazyka."
+        },
+        "CPP.L2:3": {
+          "description": "Navrhujte, vyvíjejte, zveřejňujte a prezentujte produkty (např. webové stránky, mobilní aplikace, animace) pomocí technických prostředků, které předvádějí a sdělují koncepce osnov."
+        },
+        "CT.L2:1": {
+          "description": "Při návrhu řešení používejte základní kroky algoritmického řešení problémů (např. vyjádření a probádání problému, vyšetření vzorků případů, návrh, zavádění řešení, zkoušky a hodnocení)."
+        },
+        "CT.L2:12": {
+          "description": "Užívejte abstrakce k rozdělení problému na dílčí problémy."
+        },
+        "CT.L2:6": {
+          "description": "Popište a analyzujte sledovanou posloupnost instrukcí (např. popište chování nějaké postavy ve video hře tak, jak je ovládána pravidly a algoritmy)."
+        },
+        "CT.L2:7": {
+          "description": "Reprezentujte data mnoha různými způsoby, jako například textem, zvuky, obrázky a čísly."
+        },
+        "CT.L2:8": {
+          "description": "Užívejte vizuální reprezentace stavů problému, struktur a dat (např. grafů, diagramů, síťových a průtokových diagramů)."
+        },
+        "1.L.6": {
+          "description": "Používejte slova a slovní spojení získaná při konverzacích, čtení a poslechu čteného slova a při reakcích na texty, včetně často užívaných spojek vyjadřujících jednoduché vztahové vazby (například „protože“). "
+        },
+        "11-12.L.6": {
+          "description": "Osvojte si a přesně užívejte všeobecná akademická a oborově specifická slova a slovní spojení postačující ke čtení, psaní, mluvení a poslechu na vysoké škole a na úrovni připravenosti pro kariéru; vykazujte nezávislost při shromažďování slovníku při zvažování"
+        },
+        "2.L.6": {
+          "description": "Používejte slova a slovní spojení získaná při konverzacích, čtení a poslechu čteného slova, a při reakci na texty, včetně užívání přídavných jmen a příslovcí k popisu (jako např. „Když jsou ostatní děti šťastné, dělá mi to radost“)."
+        },
+        "3.L.6": {
+          "description": "Získávejte a přesně užívejte konverzační, všeobecně akademická a oborově specifická slova a slovní spojení odpovídající Vašemu stupni, včetně slov naznačujících prostorové a časové vztahy (např.: „Ten večer po večeři jsme je šli hledat“)."
+        },
+        "4.L.6": {
+          "description": "Osvojte si a přesně užívejte třídě odpovídající všeobecná akademická a oborově specifická slova nebo slovní spojení, včetně takových, které přesně vyjadřují nějaké činnosti, city nebo stavy bytí (např. vyptával se, fňukal, koktal) a které jsou základem nějakého konkrétního tématu (např."
+        },
+        "5.L.6": {
+          "description": "Osvojte si a přesně užívejte třídě odpovídající všeobecná akademická a oborově specifická slova nebo slovní spojení, včetně takových, které vyjadřují protiklad, přidání a jiné logické vztahy (např. však, ačkoli, nicméně, obdobně, nad to, kromě toho)."
+        },
+        "9-10.L.6": {
+          "description": "Osvojte si a přesně užívejte všeobecná akademická a oborově specifická slova a slovní spojení postačující ke čtení, psaní, mluvení a poslechu na vysoké škole a na úrovni připravenosti pro kariéru; vykazujte nezávislost při shromažďování slovníku při zvažování"
+        },
+        "11-12.RI.4": {
+          "description": "Určovat význam slov a slovních spojení v kontextu, v kterém jsou užívána v nějakém textu, tedy například obrazný, asociativní a technický význam; analyzovat, jak autor ve svém textu užívá nějaký klíčový pojem a dolaďuje jeho význam (např., jak Madison definuje"
+        },
+        "3.RL.4": {
+          "description": "Určete význam slov a frází použitých v textu. Rozlišujte mezi doslovným a přeneseným významem."
+        },
+        "4.RL.7": {
+          "description": "Propojte text příběhu nebo dramatu s vizuální nebo ústní prezentací textu – identifikujte, kde jednotlivé verze odrážejí konkrétní popis nebo tok myšlenek v textu."
+        },
+        "5.RL.4": {
+          "description": "Určete význam slov a frází použitých v textu, včetně přenesených významů, jako jsou metafory a přirovnání."
+        },
+        "5.RL.7": {
+          "description": "Zhodnoťte, jak vizuální a multimediální prvky přispívají k vyznění, tónu nebo estetické hodnotě textu (například grafický román, multimediální prezentace fikce, folklorní příběh, mýtus, báseň)."
+        },
+        "1.SL.1": {
+          "description": "Navazujte s rozmanitými partnery společné konverzace o tématech a textech pro první stupeň, a to s vrstevníky i s dospělými v malých a větších skupinách."
+        },
+        "2.SL.1": {
+          "description": "Zapojujte se s různými partnery do konverzací a spolupráce o tématech a textech pro 2. třídu, a to po malých a větších skupinách se svými vrstevníky i s dospělými."
+        },
+        "3.SL.1": {
+          "description": "Účinně se zapojujte do řady společných diskusí (po dvojicích, ve skupinách i pod vedením učitele) s rozmanitými partnery na témata a texty pro třetí třídu, přičemž využívejte nápady ostatních a stavějte na nich  a jasně vyjadřujte své vlastní."
+        },
+        "6.SL.1": {
+          "description": "Účinně se zapojujte do řady společných diskusí (po dvojicích, ve skupinách i pod vedením učitele) s rozmanitými partnery na témata, texty a problematiku pro šestou třídu, přičemž vycházejte z nápadů ostatních a jasně vyjadřujte své vlastní."
+        },
+        "7.SL.1": {
+          "description": "Účinně se zapojujte do řady společných diskusí (po dvojicích, ve skupinách i pod vedením učitele) s rozmanitými partnery na témata, texty a problematiku pro sedmou třídu, přičemž vycházejte z nápadů ostatních a jasně vyjadřujte své vlastní."
+        },
+        "11-12.W.6": {
+          "description": "Využijte technologií, včetně internetu, k vytvoření, zveřejnění a aktualizaci individuálních nebo sdílených psacích potřeb v rámci reakce na probíhající zpětnou vazbu, včetně nových argumentů nebo informací."
+        },
+        "3.W.3": {
+          "description": "Pište scénáře k rozvíjení skutečných nebo imaginárních prožitků nebo událostí s využitím efektivní techniky, popisných údajů a jasných posloupností událostí."
+        },
+        "4.W.3": {
+          "description": "Pište scénáře k rozvíjení skutečných nebo imaginárních prožitků nebo událostí s využitím efektivní techniky, popisných údajů a jasných posloupností událostí."
+        },
+        "5.W.3": {
+          "description": "Pište scénáře k rozvíjení skutečných nebo imaginárních prožitků nebo událostí s využitím efektivní techniky, popisných údajů a jasných posloupností událostí."
+        },
+        "6.W.3": {
+          "description": "Pište scénáře k rozvíjení skutečných nebo imaginárních prožitků nebo událostí s využitím efektivní techniky, příslušných popisných údajů a dobře strukturovaných posloupností událostí."
+        },
+        "6.W.6": {
+          "description": "Využívejte technologií, včetně internetu, k vytváření a zveřejňování psaného slova a k interakci a spolupráci s ostatními; předveďte dostatečnou úroveň schopnosti psát na klávesnici tak, abyste napsali alespoň tři stránky na jedno posezení."
+        },
+        "7.W.3": {
+          "description": "Pište scénáře k rozvíjení skutečných nebo imaginárních prožitků nebo událostí s využitím efektivní techniky, příslušných popisných údajů a dobře strukturovaných posloupností událostí."
+        },
+        "7.W.6": {
+          "description": "Využívejte technologií včetně internetu k vytváření a zveřejňování psaného slova a k napojování a citování zdrojů, ale i k interakci a spolupráci s ostatními, včetně napojování a citování zdrojů."
+        },
+        "8.W.3": {
+          "description": "Pište scénáře k rozvíjení skutečných nebo imaginárních prožitků nebo událostí s využitím efektivní techniky, příslušných popisných údajů a dobře strukturovaných posloupností událostí."
+        },
+        "8.W.6": {
+          "description": "Využívejte technologií včetně internetu k vytváření a zveřejňování psaného slova a k efektivní prezentaci vztahů mezi informacemi a myšlenkami, ale i k interakci a spolupráci s ostatními."
+        },
+        "9-10.W.6": {
+          "description": "Používejte technologie jako například Internet k vytváření, zveřejňování a aktualizaci sdílených produktů, přičemž využívejte schopnosti techniky vytvářet napojení na jiné informace zobrazovat informace flexibilně a dynamicky."
+        },
+        "11-12.WHST.6": {
+          "description": "Využijte technologií, včetně internetu, k vytvoření, zveřejnění a aktualizaci individuálních nebo sdílených psacích potřeb v rámci reakce na probíhající zpětnou vazbu, včetně nových argumentů nebo informací."
+        },
+        "9-10.WHST.6": {
+          "description": "Používejte technologie jako například Internet k vytváření, zveřejňování a aktualizaci sdílených produktů, přičemž využívejte schopnosti techniky vytvářet napojení na jiné informace zobrazovat informace flexibilně a dynamicky."
+        },
+        "7.G.2": {
+          "description": "Draw (freehand, with ruler and protractor, and with technology) geometric shapes with given conditions. Zaměřte se na konstruování trojúhelníků na základě tří údajů o úhlech nebo o stranách, přičemž si všímejte toho, kdy podmínky určují jedinečný trojúhelník, více než jeden trojúhelník"
+        },
+        "4.MD.6": {
+          "description": "Úhly měřte úhloměrem jako celá čísla ve stupních. Kreslete úhly konkrétní délky."
+        },
+        "MP.1": {
+          "description": "Chápat podstatu problémů a být vytrvalý při jejich řešení"
+        },
+        "MP.2": {
+          "description": "Myslet abstraktně a kvantitativně."
+        },
+        "MP.4": {
+          "description": "Modelujte matematicky"
+        },
+        "MP.5": {
+          "description": "Strategicky užívat vhodné nástroje"
+        },
+        "MP.6": {
+          "description": "Dbát na přesnost"
+        },
+        "MP.7": {
+          "description": "Vyhledávat strukturu a využívat jí"
+        },
+        "MP.8": {
+          "description": "Vyhledávat pravidelnost a vyjadřovat ji opakujícími se úvahami"
+        },
+        "4.NBT.4": {
+          "description": "Pomocí standardního algoritmu plynně sčítat a odčítat vícemístná celá čísla."
+        },
+        "4.NBT.5": {
+          "description": "Násobit až čtyřmístné celé číslo jednociferným celým číslem a násobit dvě dvoumístná čísla s užitím strategií založených na hodnotě místa a na vlastnostech operací. Výpočet ilustrujte a vysvětlete užitím rovnic, obdélníkové ar"
+        },
+        "1.OA.1": {
+          "description": "Používejte sčítání a odčítání do 20 k řešení slovních problémů obsahujících situace jako přidávání, odebírání, dávání dohromady, rozebírání a porovnávání, s neznámými ve všech polohách, např. pomocí předmětů, náčrtků a rovnic se symbolem pro"
+        },
+        "2.OA.1": {
+          "description": "Používejte sčítání a odčítání do 100 k řešení jedno- či dvoukrokových slovních problémů obsahujících situace jako přidávání, odebírání, dávání dohromady, rozebírání a porovnávání, s neznámými ve všech polohách, např. pomocí náčrtků a rovnic se sy"
+        },
+        "3.OA.3": {
+          "description": "Používejte násobení a dělení do 100 k řešení slovních problémů se situacemi obsahujícími rovné skupiny, řady a měřitelná množství, např. pomocí náčrtků a rovnic se symbolem pro neznámé číslo zastupujících daný problém.1"
+        },
+        "1.a": {
+          "description": "Aplikujte stávající znalosti tak, abyste vytvořili nové nápady, produkty nebo procesy."
+        },
+        "1.b": {
+          "description": "Vytvářejte originální díla jako prostředek osobního nebo skupinového sebevyjádření."
+        },
+        "1.c": {
+          "description": "K probádání složitých soustav a problémů využívejte modely a simulace."
+        },
+        "2.a": {
+          "description": "Interagujte, spolupracujte a zveřejňujte spolu se svými vrstevníky, s odborníky nebo s ostatními využitím různých digitálních prostředků a médií."
+        },
+        "2.b": {
+          "description": "Pomocí různých médií a formátů efektivně sdělujte informace a nápady více různým obecenstvům."
+        },
+        "4.b": {
+          "description": "Plánujte a spravujte aktivity za účelem vyvinutí řešení nebo realizace projektu."
+        },
+        "4.d": {
+          "description": "Využívejte více procesů a různých perspektiv k prozkoumání alternativních řešení."
+        },
+        "6.a": {
+          "description": "Chápejte a využívejte technologické systémy."
+        },
+        "6.c": {
+          "description": "Řešte problémy se systémy a aplikacemi."
+        },
+        "6.d": {
+          "description": "Převádějte aktuální znalosti na výuku nových technologií."
         }
       }
     }

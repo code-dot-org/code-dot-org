@@ -19,13 +19,13 @@
         "debugging/minecraft/unversioned": {
           "word": "Hibakeresés"
         },
-        "program/minecraft/unversioned": {
-          "word": "Program",
-          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
-        },
         "event/minecraft/unversioned": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/hero/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
@@ -33,12 +33,12 @@
         "debugging/hero/unversioned": {
           "word": "Hibakeresés"
         },
+        "function/hero/unversioned": {
+          "word": "Függvény"
+        },
         "program/hero/unversioned": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
-        },
-        "function/hero/unversioned": {
-          "word": "Függvény"
         },
         "code/poem-art/2021": {
           "word": "Kód",
@@ -122,6 +122,9 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
+        "code/dance/unversioned": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
+        },
         "event/dance/unversioned": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
@@ -130,24 +133,21 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
-        "code/dance/unversioned": {
-          "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
-        },
         "code/aquatic/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Hibakeresés"
-        },
-        "program/aquatic/unversioned": {
-          "word": "Program",
-          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Feltételek"
         },
+        "debugging/aquatic/unversioned": {
+          "word": "Hibakeresés"
+        },
         "loops/aquatic/unversioned": {
           "word": "hurkok"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "code/starwars/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
@@ -197,15 +197,15 @@
           "word": "Modellek és szimulációk",
           "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
         },
-        "event/sports/unversioned": {
-          "word": "Esemény",
-          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
-        },
         "code/sports/unversioned": {
           "word": "Kód"
         },
         "debugging/sports/unversioned": {
           "word": "Hibakeresés"
+        },
+        "event/sports/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/sports/unversioned": {
           "word": "Program",
@@ -221,15 +221,15 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
-        "event/basketball/unversioned": {
-          "word": "Esemény",
-          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
-        },
         "code/basketball/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },
         "debugging/basketball/unversioned": {
           "word": "Hibakeresés"
+        },
+        "event/basketball/unversioned": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
         "program/basketball/unversioned": {
           "word": "Program",
@@ -256,6 +256,168 @@
         "program/dance-2019/unversioned": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "program/coursed/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "debugging/coursed/2022": {
+          "word": "Hibakeresés"
+        },
+        "programming/coursed/2022": {
+          "word": "Programozás"
+        },
+        "event/coursed/2022": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "code/coursed/2022": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
+        },
+        "conditionals/coursed/2022": {
+          "word": "Feltételek"
+        },
+        "behavior/coursef/2022": {
+          "word": "Viselkedés"
+        },
+        "program/coursef/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "event/coursef/2022": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "variable/coursef/2022": {
+          "word": "Változó"
+        },
+        "input/coursef/2022": {
+          "word": "Bemenet"
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Meghatározás"
+        },
+        "behavior/coursee/2022": {
+          "word": "Viselkedés"
+        },
+        "function/coursee/2022": {
+          "word": "Függvény"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Feltételek"
+        },
+        "copyright/coursee/2022": {
+          "word": "Szerzői jog"
+        },
+        "define/coursee/2022": {
+          "word": "Meghatározás"
+        },
+        "debugging/courseb/2022": {
+          "word": "Hibakeresés"
+        },
+        "drop/courseb/2022": {
+          "word": "Spárga"
+        },
+        "program/courseb/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "programming/courseb/2022": {
+          "word": "Programozás"
+        },
+        "event/courseb/2022": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "debugging/express/2022": {
+          "word": "Hibakeresés"
+        },
+        "program/express/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "programming/express/2022": {
+          "word": "Programozás"
+        },
+        "behavior/express/2022": {
+          "word": "Viselkedés"
+        },
+        "event/express/2022": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "conditionals/express/2022": {
+          "word": "Feltételek"
+        },
+        "function/express/2022": {
+          "word": "Függvény"
+        },
+        "variable/express/2022": {
+          "word": "Változó"
+        },
+        "define/express/2022": {
+          "word": "Meghatározás"
+        },
+        "drop/pre-express/2022": {
+          "word": "Spárga"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Hibakeresés"
+        },
+        "program/pre-express/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "programming/pre-express/2022": {
+          "word": "Programozás"
+        },
+        "event/pre-express/2022": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "debugging/coursea/2022": {
+          "word": "Hibakeresés"
+        },
+        "program/coursea/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "drop/coursea/2022": {
+          "word": "Spárga"
+        },
+        "programming/coursea/2022": {
+          "word": "Programozás"
+        },
+        "event/coursea/2022": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "debugging/coursec/2022": {
+          "word": "Hibakeresés"
+        },
+        "program/coursec/2022": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "programming/coursec/2022": {
+          "word": "Programozás"
+        },
+        "event/coursec/2022": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "data/coursec/2022": {
+          "word": "Adat"
+        },
+        "binary/coursec/2022": {
+          "word": "Bináris"
         },
         "input/csd/2022": {
           "word": "Bemenet"

@@ -31,7 +31,7 @@ The information in a variable can be updated over time, which comes in handy whe
 
 
 ##Example
-This programmer created a fishing game for preschoolers. Every time the user clicks on a fish, the program will update heir score and print it on the screen. 
+This programmer created a fishing game for preschoolers. Every time the user clicks on a fish, the program will update their score and print it on the screen. 
 <div style="text-align: center;">
 <img src="https://images.code.org/19653ca36048056802ae951ac4cd8f31-image-1660603331264.gif"/>
 </div>

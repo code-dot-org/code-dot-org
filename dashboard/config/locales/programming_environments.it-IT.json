@@ -4,14 +4,19 @@
       "programming_environments": {
         "weblab": {
           "name": "Sviluppo Web",
+          "description": "Editor HTML/CSS basato sul web.",
           "categories": {
             "html_tags": {
               "name": "Tag HTML"
+            },
+            "css_properties": {
+              "name": "Proprietà CSS"
             }
           }
         },
         "gamelab": {
           "name": "Sviluppo Giochi",
+          "description": "Game Lab è un ambiente di programmazione dove puoi creare entusiasmanti giochi e animazioni. Disegna i tuoi personaggi, programma coi blocchi o JavaScript per farlif unzionare, poi condividi il tuo gioco in pochi secondi.",
           "categories": {
             "game_lab": {
               "name": "Sviluppo Giochi"
@@ -24,6 +29,9 @@
             },
             "drawing": {
               "name": "Disegni"
+            },
+            "control": {
+              "name": "Controlli"
             },
             "math": {
               "name": "Matematica"
@@ -40,8 +48,20 @@
           "name": "Sviluppo App",
           "description": "Sviluppo App è un ambiente di programmazione in cui puoi creare semplici applicazioni. Progetta una App, sviluppala usando i blocchi o JavaScript e infine condividila.",
           "categories": {
+            "ui_controls": {
+              "name": "Controlli UI"
+            },
+            "canvas": {
+              "name": "Tela"
+            },
             "data": {
               "name": "Dati"
+            },
+            "turtle": {
+              "name": "Tartaruga"
+            },
+            "control": {
+              "name": "Controlli"
             },
             "math": {
               "name": "Matematica"
@@ -54,11 +74,15 @@
             },
             "advanced": {
               "name": "Avanzate"
+            },
+            "maker": {
+              "name": "Autore"
             }
           }
         },
         "spritelab": {
           "name": "Laboratorio dei Personaggi",
+          "description": "Sprite Lab è un ambiente di programmazione di Blockly in cui puoi creare progetti interattivi.",
           "categories": {
             "sprites": {
               "name": "Personaggi"
@@ -102,7 +126,39 @@
           }
         },
         "javalab": {
-          "name": "Laboratorio di Java"
+          "name": "Laboratorio di Java",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Scorciatoie di Java Lab"
+            },
+            "general": {
+              "name": "Basi di Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Strutture di Controllo"
+            },
+            "data_structures": {
+              "name": "Strutture di Dati"
+            }
+          }
         }
       }
     }

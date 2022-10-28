@@ -2,6 +2,8 @@
 vi:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: nhắc người dùng {QUESTION} để lấy biến {VAR} có các lựa chọn {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -228,20 +230,12 @@ vi:
             MOVES.XArmsUp: Kéo dãn
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
-      Dancelab_everyMeasuresRange:
-        text: 'lặp lại sau mỗi {N} nhịp sau khi {START} '
       Dancelab_everySeconds:
         text: 'mỗi {N} {UNIT} '
         options:
           UNIT:
             '"measures"': nhịp
             '"seconds"': giây
-      Dancelab_everySecondsRange:
-        text: 'mỗi {N} {UNIT} từ {START} đến {STOP} '
-        options:
-          UNIT:
-            measures: Nhịp
-            seconds: Giây
       Dancelab_everyVerseChorus:
         text: 'mỗi {UNIT} '
         options:
@@ -1322,6 +1316,33 @@ vi:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tiếng bass
               vòng
             "'sound://category_digital/jump_7.mp3'": nhảy
+      gamelab_playSoundOptionsSoccer:
+        text: phát âm thanh {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": còi hơi
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": tiếng vỗ tay
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": tiếng hô đồng thanh
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": tiếng cổ vũ
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": tiếng đá bóng
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": hai tiếng còi
+            "'sound://category_sports/One_Whistle_SFX.mp3'": còi
+      gamelab_playSoundOptionsSpace:
+        text: phát âm thanh {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": tiếng hố đen
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": tiếng thiên hà va chạm
+            "'sound://category_space/Carina_SFX.mp3'": tiếng tinh vân thuyền để
+            "'sound://category_space/Cassiopeia_SFX.mp3'": tiếng chòm sao thiên hậu
+            "'sound://category_space/Crab_nebula_SFX.mp3'": tiếng tinh vân con cua
+            "'sound://category_space/Launch_SFX.mp3'": tiếng phóng tàu
+            "'sound://category_space/Lift_Off.mp3'": tiếng cất cánh
+            "'sound://category_space/Pillars_SFX.mp3'": tiếng cột sáng tạo
+            "'sound://category_space/Southern_ring_SFX.mp3'": tiếng tinh vân vòng
+              phương nam
+            "'sound://category_space/Supernova_SFX.mp3'": tiếng siêu tân tinh
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tiếng siêu tân tinh tycho
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
       gamelab_playerBehaviors:
@@ -2161,6 +2182,11 @@ vi:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: khi đã trả lời {VAR}
       RyanLab_moveForward:
@@ -2360,5 +2386,9 @@ vi:
           DIR:
             right: phải ↻
             left: trái ↺
+      storylab_setHeading:
+        text: đặt tiêu đề {HEADING}
+      storylab_setSubheading:
+        text: đặt tiêu đề phụ {SUBHEADING}
       validation_validatedBackground:
         text: đặt hình nền thành {IMG}

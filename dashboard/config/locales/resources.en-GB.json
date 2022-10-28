@@ -2,6 +2,9 @@
   "en-GB": {
     "data": {
       "resources": {
+        "variables/express/2022": {
+          "name": "Variables"
+        },
         "variables/csd/2022": {
           "name": "Variables"
         },

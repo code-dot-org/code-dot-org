@@ -179,12 +179,6 @@ ca:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} des de {START} a {STOP} '
-        options:
-          UNIT:
-            measures: Mesures
-            seconds: Segons
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -793,6 +787,30 @@ ca:
             "'sound://category_animals/dolphin.mp3'": Dofí
             "'sound://category_animals/dog.mp3'": gos
             "'sound://category_digital/jump_7.mp3'": salt
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": botzina d'aire
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplaudiment
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": cant
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": xut
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dos xiulets
+            "'sound://category_sports/One_Whistle_SFX.mp3'": xiulet
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": forat negre
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": clúster de bales
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cranc
+            "'sound://category_space/Launch_SFX.mp3'": llançar
+            "'sound://category_space/Lift_Off.mp3'": aixecar
+            "'sound://category_space/Pillars_SFX.mp3'": pilars
+            "'sound://category_space/Southern_ring_SFX.mp3'": anell del sud
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -1160,3 +1178,7 @@ ca:
           DIR:
             right: dreta ↻
             left: esquerra ↺
+      storylab_setHeading:
+        text: establir encapçalament {HEADING}
+      storylab_setSubheading:
+        text: establir encapçalament {SUBHEADING}

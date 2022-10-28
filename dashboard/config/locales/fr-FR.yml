@@ -88,7 +88,7 @@ fr:
     submit: Ajouter un indice
   appname: Code.org
   stage: étape
-  stage_number: 'Leçon %{number} '
+  stage_number: Leçon %{number}
   puzzle: Énigme
   trophies: trophées
   courses: Cours
@@ -460,6 +460,7 @@ fr:
       about: À propos
       legal: Confidentialité et mentions légales
       legal_privacy: Politique de confidentialité
+      legal_cookie_notice: " Utilisation des cookies"
       legal_tos: Conditions Générales d'Utilisation
     user:
       classroom: Page d'accueil de l'enseignant
@@ -683,6 +684,7 @@ fr:
     print_certificate: Imprimer le certificat
   certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer
     ton apprentissage."
+  certificate_hour_of_code: Heure de Code
   move_students:
     new_section_dne: Désolé, la section %{new_section_code} n’existe pas. Veuillez
       saisir un code de section différent.
@@ -768,7 +770,7 @@ fr:
     how_it_works: Comment ça marche
     try_hour_of_code: Essaie une Heure du Code !
     store: Boutique
-    cookie_notice: " Utilisation de cookies"
+    cookie_notice: " Utilisation des cookies"
   reference_area:
     title: Besoin d'aide ?
     subtitle: Regarder les vidéos et les indices
@@ -816,7 +818,7 @@ fr:
     bounce_og_title: Vérifier mon jeu de rebond
     flappy_og_title: Vérifier mon jeu Flappy l’oiseau
     studio_og_title: Vérifier mon application Labo de jeux
-    check_out_what_i_made: Vérifier ce que j'ai fait
+    check_out_what_i_made: Aller voir ce que j'ai fait
     og_description: J'ai écrit le code moi-même avec Code.org
     phone_number_not_allowed: On dirait qu’il y a un numéro de téléphone dedans. Essaie
       de modifier le texte.
@@ -1317,7 +1319,7 @@ fr:
     Merci de demander à ton professeur quelle unité tu devrais suivre.
   no_exemplar_access_teacher: Seul les professeurs peuvent accéder aux programmes
     exemples. Si vous voulez devenir un professeur autorisé, prière d'écrire à support@code.org.
-  return_unit_overview: Accéder à l’aperçu de l'unité
+  return_unit_overview: Aller à l’aperçu de l'unité
   return_course_overview: Accéder à l’aperçu du cours
   view_all_units: Voir toutes les unités
   view_teacher_guide: Voir le guide de l'enseignant
@@ -1509,3 +1511,15 @@ fr:
   unit_prefix: Unité %{n}
   code_org_logo_alt: Accueil Code.org
   teacher_feedback: FeedBack enseignants
+  lesson_lock:
+    error:
+      no_updates: Aucune mise à jour à effectuer
+      missing_params: Fournir les identifiants de l'utilisateur, le niveau et les
+        codes d'identification d'unité.
+      cannot_view_locked_answers: Impossible d'afficher les réponses lorsque le système
+        est verrouillé
+      forbidden: L'utilisateur ne peut pas modifier les paramètres de verrouillage
+        de l'apprenant
+  reset_predict_progress_button: Supprimer la réponse
+  pixelation:
+    binary: Binaire

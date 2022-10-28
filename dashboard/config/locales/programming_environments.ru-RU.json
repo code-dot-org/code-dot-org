@@ -4,14 +4,19 @@
       "programming_environments": {
         "weblab": {
           "name": "Веб-лаборатория",
+          "description": "Веб-редактор HTML/CSS.",
           "categories": {
             "html_tags": {
               "name": "HTML тэги"
+            },
+            "css_properties": {
+              "name": "Свойства CSS"
             }
           }
         },
         "gamelab": {
           "name": "Лаборатория игр",
+          "description": "Лаборатория Игр - это среда программирования, в которой вы можете создавать захватывающие игры и анимацию. Нарисуйте своих персонажей, напишите рабочий код с помощью блоков или JavaScript, а затем поделитесь своей игрой за считанные секунды.",
           "categories": {
             "game_lab": {
               "name": "Лаборатория игр"
@@ -24,6 +29,9 @@
             },
             "drawing": {
               "name": "Рисование"
+            },
+            "control": {
+              "name": "Управление"
             },
             "math": {
               "name": "Математика"
@@ -40,8 +48,20 @@
           "name": "Лаборатория приложений",
           "description": "App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.",
           "categories": {
+            "ui_controls": {
+              "name": "Элементы управления интерфейса пользователя"
+            },
+            "canvas": {
+              "name": "Холст"
+            },
             "data": {
               "name": "Данные"
+            },
+            "turtle": {
+              "name": "Черепаха"
+            },
+            "control": {
+              "name": "Управление"
             },
             "math": {
               "name": "Математика"
@@ -54,11 +74,15 @@
             },
             "advanced": {
               "name": "Расширенный"
+            },
+            "maker": {
+              "name": "Изготовитель"
             }
           }
         },
         "spritelab": {
           "name": "Лаборатория Спрайтов",
+          "description": "Лаборатория Спрайтов - это блочная среда программирования, в которой вы можете создавать интерактивные проекты.",
           "categories": {
             "sprites": {
               "name": "Спрайты"
@@ -102,7 +126,39 @@
           }
         },
         "javalab": {
-          "name": "Java Lab"
+          "name": "Java Lab",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Ярлыки Java Лаборатории "
+            },
+            "general": {
+              "name": "Основы Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.theater"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Структуры Управления"
+            },
+            "data_structures": {
+              "name": "Структуры Данных"
+            }
+          }
         }
       }
     }

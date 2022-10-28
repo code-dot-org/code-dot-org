@@ -5,30 +5,43 @@ ar:
   language: الإنجليزية
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ، %{campaign_date}
   coming_soon: قريباً
-  campaign_date_start_short: 6 ديسمبر
-  campaign_date_start_long: 6 ديسمبر
-  campaign_date_short: 6-12 ديسمبر
-  campaign_date_full: 6-12 ديسمبر
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 ديسمبر 2021
+  campaign_date_start_short: 5 ديسمبر
+  campaign_date_start_long: 5 ديسمبر
+  campaign_date_short: 5 - 11 ديسمبر
+  campaign_date_full: 5 - 11 ديسمبر
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5 - 11 ديسمبر 2022
+  nonus_campaign_date_start_short: 1 أكتوبر
+  nonus_campaign_date_start_long: 1 أكتوبر
+  nonus_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  nonus_campaign_date_full: 1 أكتوبر - 18 ديسمبر
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   latam_campaign_date_start_short: 1 أكتوبر
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6 ديسمبر
-  europe_campaign_date_start_long: 6 ديسمبر
-  europe_campaign_date_short: 6-12 ديسمبر
-  europe_campaign_date_full: 6-12 ديسمبر
+  latam_campaign_date_start_long: 1 أكتوبر
+  latam_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  latam_campaign_date_full: 1 أكتوبر - 18 ديسمبر
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
+  europe_campaign_date_start_short: 1 أكتوبر
+  europe_campaign_date_start_long: 1 أكتوبر
+  europe_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  europe_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 ديسمبر 2021
+  europe_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   africa_campaign_date_start_short: 1 أكتوبر
-  africa_campaign_date_start_long: 6 ديسمبر
-  africa_campaign_date_short: 6-12 ديسمبر
-  africa_campaign_date_full: 6-12 ديسمبر
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 ديسمبر 2021
+  africa_campaign_date_start_long: 1 أكتوبر
+  africa_campaign_date_short: 1 أكتوبر - 18 ديسمبر
+  africa_campaign_date_full: 1 أكتوبر - 18 ديسمبر
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
+  hoc2022_header: استكشف، العب، ابتكِر!
+  social_hoc2022_explore_play_create: استخدم علم الكمبيوتر للاستكشاف واللعب والابتكار!
+  codeorg_homepage_hoc2022_body: استكشف الكون، وسجل هدفًا، وقم بإيقاف الحركة - هناك
+    العديد من الطرق لتجربة علوم الكمبيوتر.
+  hoc2022_codeorg_title: احتفل بساعة البرمجة مع ناسا وأكثر
+  hoc2022_codeorg_description: ساعة البرمجة العاشرة مذهلة! تعالَ واستكشف والعب وابتكر
+    معنا.
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: نتعلم اليوم، لنبني غداً مشرقاً
@@ -482,6 +495,24 @@ ar:
   front_join_us_n_students_served: "# تم تقديم خدماتنا إلى"
   front_join_us_challenge: اربح دردشة فيديو لصفك الدراسي مع أحد المشاهير!
   front_join_us_learn_more: اعرف المزيد
+  cta_see_whats_new: شاهد ما هو جديد
+  cta_try_more_activities: جرب أنشطة أكثر
+  cta_try_an_activity: جرب نشاطًا
+  hoc_homepage_join_the_movement_heading: انضم إلى الحراك
+  hoc_homepage_join_the_movement_description: '"ساعة البرمجة" متوفر على مدار العام،
+    ولكن في ديسمبر من كل عام يمكن لصفك الانضمام إلى ملايين الطلاب حول العالم للاحتفال
+    بأسبوع تدريس علوم الكمبيوتر بالتعاون مع "ساعة البرمجة". يبدأ التسجيل للاحفتال
+    السنوي في أكتوبر من كل عام.'
+  hoc_homepage_what_is_hoc_subhead: دروس تعليمية مدتها ساعة بأكثر من 45 لغة. لا حاجة
+    للخبرة. تتوفر أنشطة ساعة البرمجة مجانًا على مدار العام.
+  hoc_homepage_what_is_hoc_description: ساعة البرمجة هي مقدمة مدتها ساعة واحدة لعلوم
+    الكمبيوتر، تستخدم دروسًا تعليمية ممتعة لإظهار أنه يمكن لأي شخص تعلم الأساسيات.
+    يتم دعم هذه الحملة الشعبية من قبل أكثر من 400 شريك و 200000 معلم في جميع أنحاء
+    العالم.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[اقرأ دليلنا الإرشادي](%{howto_guide_url})
+    لتخطيط فعالية لصفك الدراسي."
+  hoc_homepage_highlights_heading: الأخبار الهامة في ساعة البرمجة
+  hoc_homepage_organized_by: ساعة البرمجة منظمة من قِبل [Code.org](%{codeorg_url}).
   signup_closed: التسجيل في حدث ساعة البرمجة مغلق الآن. يرجى الرجوع مرة أخرى في أكتوبر
     للتسجيل في نشاط ساعة من البرمجة التالي.
   signup_registration_not_required: لست بحاجة للتسجيل من أجل المشاركة! أنشطة ساعة
@@ -526,7 +557,6 @@ ar:
   signup_multiple_event_warning: سنضع اسم مدرستك ومدينتك على الخريطة عند التسجيل.
     وإذا كنت تستضيف العديد من الأحداث، فيرجى إرسال اسم فريد أو بريد إلكتروني لكل حدث.
     نحن نحتسب حدثًا واحدًا فقط لكل اسم ومجموعة بريد إلكتروني.
-  signup_registration_deadline: ينتهي التسجيل في "ساعة من البرمجة" في 11 ديسمبر.
   signup_name_placeholder: اسمك
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: على سبيل المثال، مدرسة لينكولن الثانوية
@@ -965,7 +995,7 @@ ar:
     محفوظة.
   footer_trademark_message: إن ™ساعة من البرمجة هي علامة تجارية لمنظمة Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
-  footer_menu_partners: الشركاء والمستشارون
+  footer_menu_partners: الشركاء
   footer_menu_contact: إتصل بنا
   footer_menu_support: الدعم
   footer_menu_terms: الشروط

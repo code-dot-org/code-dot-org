@@ -27,6 +27,7 @@ sv:
       length: längd
       name: namn
       nectar: nektar
+      object: '-objektet'
       planet: planet
       points: poäng
       random: slumpad
@@ -36,6 +37,7 @@ sv:
       sides: sidor
       size: storlek
       speed: hastighet
+      type: typ
       variable: variabel
       width: bredd
       wizard: trollkarl

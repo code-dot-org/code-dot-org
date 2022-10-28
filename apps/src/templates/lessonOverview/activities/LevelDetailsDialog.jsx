@@ -175,6 +175,7 @@ class LevelDetailsDialog extends Component {
           serverLevelId={parseInt(level.id)}
           serverScriptId={this.state.scriptLevel.scriptId}
           exampleSolutions={exampleSolutions}
+          inLessonPlan
         />
       );
     } else {

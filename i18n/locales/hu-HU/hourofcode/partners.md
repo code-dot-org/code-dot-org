@@ -2,13 +2,11 @@
 title: Partnerek
 ---
 
-A Kódolás Óráját a Computer Science Education Week és Kódolás Órája tanácsadó és felülvizsgáló bizottsága vezeti.
+A Kódolás óráját a Kódolás órájának a Felügyelő bizottsága irányítja.
 
-A [Tanácsadó Bizottság]({{ urls/advisory_committee }}) középiskolai, egyetemi, közhasznú, profitorientált és nemzetközi szervezetek képviselőiből áll. Ez a bizottság irányítja a Kódolás Órája kampány stratégiáját.
+A [Felügyelő Bizottság]({{ urls/review_committee }}}) 12 jelenlegi és volt pedagógusból áll, akik a K-12-es évfolyamokat értékelik, és tevékenységeket javasolnak egy tanácsadó bizottság által létrehozott kritériumrendszer alapján. Ezek a pedagógusok megvizsgálják a több száz partnertől beérkező óraterveket - amelyek lehetnek diákok által vezetett vagy tanárok által irányított tevékenységek -, értékelik a tevékenységek oktatási értékét, a tanulók bevonásának lehetőségét és azt, hogy ezeket a tevékenységeket a diákok különböző csoportjai mennyire fogják vonzónak találni.
 
-A [Felülvizsgáló Bizottság]({{ urls/review_committee }}) 15 általános iskolai és középiskolai oktatóból áll, akik a Tanácsadó Bizottság rovatának megfelelően mérik fel és tesznek javaslatot a tevékenységek kapcsán. Az oktatók véleményezik a több száz partner által leadott tevékenységeket, amelyeket diákok kezdeményeztek és az órákra készített oktatói terveket, felmérve a tevékenységek oktatási értékét, tanulói elkötelezési és érdeklődés fenntartási képességét.
-
-Mindkét bizottság munkája és odaadása hozzájárult a Kódolás Órájának sikeréhez és jövőképéhez, miszerint minden diáknak bevezetést szeretne nyújtani a számítástechnikába.
+A bizottság munkája és odaadása hozzájárult a Kódolás órájának sikeréhez és jövőképéhez, miszerint minden diáknak bevezetést szeretne nyújtani a számítástechnikába.
 
 # Fő partnerek és vállalati támogatók
 
@@ -22,13 +20,13 @@ Mindkét bizottság munkája és odaadása hozzájárult a Kódolás Órájának
 
 * * *
 
-# Curriculum és oktatási partnerek
+# Tantervek és oktatási partnerek
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastruktúra partnerek és eszközök
+# Infrastruktúra-partnerek és infrastukrúrális eszközök
 
 {{ partners/infrastructure_partners_tools }}
 

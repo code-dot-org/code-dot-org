@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
-ruby '>= 2.5', '< 2.7'
+
+# Temporarily support both Ruby 2.6 and 2.7 until we are fully transitioned
+ruby '>= 2.6', '< 2.8'
+
+# Ruby 2.7 no longer includes some libraries by default; install
+# the ones we need here
+# see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
+gem 'thwait'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -141,7 +148,7 @@ gem 'gemoji'
 # Authentication and permissions.
 gem 'cancancan', '~> 3.0.0'
 gem 'devise', '~> 4.7.0'
-gem 'devise_invitable', '~> 1.6.0'
+gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/instructure/ims-lti/pull/90
 gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
@@ -170,12 +177,7 @@ gem 'highline', '~> 1.6.21'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', group: [:staging, :development, :production], # perf/error/etc monitoring
-  # Ref:
-  # https://github.com/newrelic/newrelic-ruby-agent/pull/359
-  # https://github.com/newrelic/newrelic-ruby-agent/pull/372
-  # https://github.com/newrelic/newrelic-ruby-agent/issues/340
-  github: 'code-dot-org/newrelic-ruby-agent', ref: 'PR-359_prevent_reconnect_attempts_during_shutdowns'
+gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.3.4'
 
@@ -197,7 +199,7 @@ gem 'retryable' # retry code blocks when they throw exceptions
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt' # single signon for zendesk
 

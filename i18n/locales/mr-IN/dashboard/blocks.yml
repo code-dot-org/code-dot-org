@@ -2,6 +2,8 @@
 mr:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{A}{B}{C} पर्यायांसह व्हेरिएबल {VAR} साठी वापरकर्ता {QUESTION} प्रॉम्प्ट करा"
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       BadGuys_setSizeAll_dropdown:
@@ -228,12 +230,6 @@ mr:
           UNIT:
             '"measures"': मापे
             '"seconds"': सेकंद
-      Dancelab_everySecondsRange:
-        text: 'every {N} {UNIT} from {START} to {STOP} '
-        options:
-          UNIT:
-            measures: मापे
-            seconds: सेकंद
       Dancelab_everyVerseChorus:
         text: 'every {UNIT} '
         options:
@@ -1235,6 +1231,32 @@ mr:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": निवडा
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": क्वर्की बास
             "'sound://category_digital/jump_7.mp3'": जंप
+      gamelab_playSoundOptionsSoccer:
+        text: आवाज प्ले करा {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": एअरहॉर्न
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": टाळ्या
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": जप
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": जयजयकार
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": किक
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": दोन शिट्ट्या
+            "'sound://category_sports/One_Whistle_SFX.mp3'": शिट्टी
+      gamelab_playSoundOptionsSpace:
+        text: आवाज प्ले करा {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ब्लॅक होल
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": बुलेट क्लस्टर
+            "'sound://category_space/Carina_SFX.mp3'": कॅरिना
+            "'sound://category_space/Cassiopeia_SFX.mp3'": कॅसिओपिया
+            "'sound://category_space/Crab_nebula_SFX.mp3'": क्रॅब नेबुला
+            "'sound://category_space/Launch_SFX.mp3'": प्रक्षेपण/लाँच
+            "'sound://category_space/Lift_Off.mp3'": उचलणे
+            "'sound://category_space/Pillars_SFX.mp3'": खांब
+            "'sound://category_space/Southern_ring_SFX.mp3'": दक्षिण रिंग
+            "'sound://category_space/Supernova_SFX.mp3'": सुपरनोवा
+            "'sound://category_sports/One_Whistle_SFX.mp3'": टायको
       gamelab_playSpeech:
         text: भाषण प्ले करा {SOUND}
       gamelab_playerBehaviors:
@@ -1951,6 +1973,11 @@ mr:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: जेव्हा {VAR} ने उत्तर दिले
       RyanLab_moveForward:
@@ -2050,5 +2077,9 @@ mr:
           DIR:
             right: उजवीकडे ↻
             left: डावीकडे ↺
+      storylab_setHeading:
+        text: हेडिंग सेट करा {HEADING}
+      storylab_setSubheading:
+        text: सबहेडिंग सेट करा {SUBHEADING}
       validation_validatedBackground:
         text: "{IMG} वर पार्श्वभूमी सेट करा"

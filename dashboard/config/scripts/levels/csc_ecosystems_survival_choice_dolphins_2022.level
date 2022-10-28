@@ -66,9 +66,7 @@
     "display_name": "Dolphin Pods",
     "thumbnail_url": "https://images.code.org/239662fcb0e6bf3a8c588f6d8b70adc1-image-1650394330084.49.35 AM.png",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "KqCFW/mPQBYd2llilvgs+brK6qYR6cCFdQMiefHF53sdRkVnSbUznAonRYb0\nqxeEZRSbYF0p6rmVPoAy+f32iQ==\n"
   },
   "game_id": 64,
   "published": true,
@@ -76,7 +74,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:33.798+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins\"},{\"changed_at\":\"2022-08-23 15:17:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-23 16:55:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-06-13T21:00:33.798+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins\"},{\"changed_at\":\"2022-08-23 15:17:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-23 16:55:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-08-30 16:43:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

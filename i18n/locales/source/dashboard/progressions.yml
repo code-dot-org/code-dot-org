@@ -91,6 +91,7 @@ en:
       Cake Survey: Cake Survey
       Challenge: Challenge
       Challenge Levels: Challenge Levels
+      Challenge/Practice: Challenge/Practice
       'Challenge: Add More Inputs': 'Challenge: Add More Inputs'
       'Challenge: Checking for Multiple Conditions': 'Challenge: Checking for Multiple Conditions'
       'Challenge: Draw an Image': 'Challenge: Draw an Image'
@@ -201,6 +202,7 @@ en:
       Experiment with Web Lab: Experiment with Web Lab
       Exploration: Exploration
       'Exploration: Adding Style': 'Exploration: Adding Style'
+      'Exploration: Clicker Game': 'Exploration: Clicker Game'
       'Exploration: For Loops': 'Exploration: For Loops'
       'Exploration: Rikki''s Poster': 'Exploration: Rikki''s Poster'
       'Exploration: Sample Apps': 'Exploration: Sample Apps'
@@ -295,6 +297,7 @@ en:
       Layout Properties: Layout Properties
       Layout with CSS: Layout with CSS
       Learning from Simulations: Learning from Simulations
+      Lesson Extra: Lesson Extra
       Lesson Extras: Lesson Extras
       Lesson Overview: Lesson Overview
       Level Overview: Level Overview
@@ -325,11 +328,14 @@ en:
       'Mini-Project: About Me': 'Mini-Project: About Me'
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-Project: Alien Dance Party'
+      'Mini-Project: Clicker Game': 'Mini-Project: Clicker Game'
+      'Mini-Project: Collector Game': 'Mini-Project: Collector Game'
       'Mini-Project: Create a Virtual Pet': 'Mini-Project: Create a Virtual Pet'
       'Mini-Project: Outbreak Simulator': 'Mini-Project: Outbreak Simulator'
       'Mini-Project: Royal Battle': 'Mini-Project: Royal Battle'
       "Mini-Project: Snowflake #1": "Mini-Project: Snowflake #1"
       "Mini-Project: Snowflake #2": "Mini-Project: Snowflake #2"
+      'Mini-Project: Sticker Art': 'Mini-Project: Sticker Art'
       'Mini-Project: Swimming Fish': 'Mini-Project: Swimming Fish'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Project: Swimming Fish (continued)'
       'Mini-Project: User Input Programs': 'Mini-Project: User Input Programs'
@@ -577,6 +583,9 @@ en:
       'Video: Getting Loopy': 'Video: Getting Loopy'
       'Video: Happy Maps - Unplugged Activity': 'Video: Happy Maps - Unplugged Activity'
       'Video: Harvesting with Conditionals': 'Video: Harvesting with Conditionals'
+      'Video: Hello World: Do What You Want': 'Video: Hello World: Do What You Want'
+      'Video: Hello World: Programming with Events': 'Video: Hello World: Programming with Events'
+      'Video: Hello World: Welcome to Sprite Lab': 'Video: Hello World: Welcome to Sprite Lab'
       'Video: How Search Works': 'Video: How Search Works'
       'Video: How to Create a Simple Function': 'Video: How to Create a Simple Function'
       'Video: How to Make a Sprite': 'Video: How to Make a Sprite'
@@ -600,6 +609,7 @@ en:
       'Video: Introduction to the Draw Loop': 'Video: Introduction to the Draw Loop'
       'Video: Loops in Artist': 'Video: Loops in Artist'
       'Video: Loops with the Artist': 'Video: Loops with the Artist'
+      'Video: Lots of Sprites': 'Video: Lots of Sprites'
       'Video: Managing Disagreement': 'Video: Managing Disagreement'
       'Video: Maze Intro - Programming with Blocks': 'Video: Maze Intro - Programming with Blocks'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Maze Intro - Programming with Blocks '
@@ -616,7 +626,10 @@ en:
       'Video: Nested Loops': 'Video: Nested Loops'
       'Video: Nested Loops with the Bee': 'Video: Nested Loops with the Bee'
       'Video: Netflix and Data': 'Video: Netflix and Data'
+      'Video: Outbreak Simulator: Events': 'Video: Outbreak Simulator: Events'
+      'Video: Outbreak Simulator: Free Play': 'Video: Outbreak Simulator: Free Play'
       'Video: Outbreak Simulator: Introduction': 'Video: Outbreak Simulator: Introduction'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Video: Outbreak Simulator: Thinking Like a Scientist'
       'Video: Pair Programming': 'Video: Pair Programming'
       'Video: Pair Programming ': 'Video: Pair Programming '
       'Video: Problem Solving Process': 'Video: Problem Solving Process'

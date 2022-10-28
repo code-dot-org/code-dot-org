@@ -325,6 +325,7 @@ lv:
     no_primary_course: "Izmēģināt Code Studio kursu"
     choose_next_course: "Izmēģini kādu no Code Studio kursiem izvēloties zemāk"
     print_certificate: "Izdrukāt sertifikātu"
+  certificate_hour_of_code: "Programmēšanas stunda"
   share:
     title: "Mācies Code Studio"
     description: "Jebkurš var apgūt datorzinības. Izveido spēles aplikācijas un mākslu ar kodu."
@@ -543,3 +544,5 @@ lv:
   cookie_banner:
     accept: 'es piekrītu'
   copy: 'Kopija'
+  pixelation:
+    binary: "Binārie"

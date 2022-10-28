@@ -146,8 +146,7 @@ module Cdo
         stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
         "wss://#{stack_name}.code.org"
       else
-        # TODO: change the default to javabuilder once we have switched over
-        DCDO.get("javabuilder_websocket_url", 'wss://javabuilderbeta.code.org')
+        DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
     end
 
@@ -162,8 +161,7 @@ module Cdo
         stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
         "https://#{stack_name}-http.code.org/seedsources/sources.json"
       else
-        # TODO: change the default to javabuilder once we have switched over
-        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilderbeta-http.code.org')
+        http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"
       end
     end

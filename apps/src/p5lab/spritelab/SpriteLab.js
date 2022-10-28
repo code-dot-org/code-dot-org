@@ -9,6 +9,7 @@ import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
 import React from 'react';
 import {singleton as studioApp} from '../../StudioApp';
+import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -76,6 +77,7 @@ export default class SpriteLab extends P5Lab {
 
   reset() {
     super.reset();
+    getStore().dispatch(closeWorkspaceAlert());
     getStore().dispatch(clearPrompts());
     this.clearExecutionErrorWorkspaceAlert();
     this.preview();

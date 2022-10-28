@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Отсутствие или плохая связь с интернетом",
   "filterPlatformNoComputers": "Нет компьютеров или устройств",
+  "filterPlatformScreenReader": "Приложение для чтения с экрана",
   "filterTopics": "Темы",
   "filterTopicsScience": "Наука",
   "filterTopicsMath": "Математика",

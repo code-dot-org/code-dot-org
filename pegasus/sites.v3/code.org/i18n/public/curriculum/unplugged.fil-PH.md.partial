@@ -20,8 +20,8 @@ Tinutukoy namin ang mga aralin kung saan ang mga mag-aaral ay hindi nagtatrabaho
 <div style="clear: both;"></div>
 
 ***
-## Mga unplugged lesson sa CS Fundamentals 2021-22
-Ang mga sumusunod na lesson ay matatagpuan sa <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS Fundamentals 2021-22</a>. <br><br>
+## Mga unplugged lesson sa CS Fundamentals 2022-23
+Matatagpuan ang mga sumusunod na aralin sa <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -103,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Hindi palaging nasa amin ang lahat ng impormasyong kailangan namin kapag nagsusulat ng programa. Minsan gugustuhin mong gumawa ng ibang bagay sa isang sitwasyon kaysa sa isa pa, kahit na hindi mo alam kung anong sitwasyon ang magiging totoo kapag gumana ang iyong code. Doon pumapasok ang mga kondisyon. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Hindi palaging nasa amin ang lahat ng impormasyong kailangan namin kapag nagsusulat ng programa. Minsan gugustuhin mong gumawa ng ibang bagay sa isang sitwasyon kaysa sa isa pa, kahit na hindi mo alam kung anong sitwasyon ang magiging totoo kapag gumana ang iyong code. Doon pumapasok ang mga kondisyon. Nagbibigay-daan ang mga Conditional sa isang computer na gumawa ng desisyon, batay sa impormasyong totoo anumang oras na tumakbo ang code mo.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
-    </tr>
-         <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Ang mga function o tugkulin (minsan ay tinatawag na mga pamamaraan) ay mga mini program na pwede mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Course E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Pagsulat ng kanta</a><br><small>Ang isa sa mga pinaka-kahanga-hangang istruktura sa mundo ng computer science ang function. Ang mga function o tugkulin (minsan ay tinatawag na mga pamamaraan) ay mga mini program na pwede mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Makakatulong ang araling ito sa mga mag-aaral na madaling maunawaan kung bakit ang pagsasama-sama ng mga tipak ng code sa mga function ay maaaring maging kapaki-pakinabang na kasanayan.</td><td>Mga Function</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Pagdidisenyo para sa Accessibility</a><br><small>Sa araling ito, matututunan ng mga mag-aaral ang tungkol sa accessibility at ang halaga ng empatiya sa pamamagitan ng brainstorming at pagdidisenyo ng mga accessible na solusyon sa hypothetical na apps.</td>Mga Epekto ng Pag-compute</td><td><img src="/images/e18.png" width="90%"></td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital na Pagbabahagi</a><br><i>*Mga Suplay: Smartphone o tablet</i><br><small>Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, lalo na sa mga digital environment. Dapat hikayatin ang mga mag-aaral na igalang ang mga karapatan ng mga artist bilang mahalagang bahagi ng pagiging etikal na digital citizen.</td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
     <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Mga Kwento ng Blank Space</a><br><i>*Mga Suplay: 6 na envelope(angkop din:papel o mga index card, nakatiklop sa kalahati)</i><br><small>Gagamitin ng mga mag-aaral ang mga fill-in-the-blank na kwento (katulad ng Mad Libs®) bilang konteksto sa pag-unawa kung paano kumukuha at nag-iimbak ng input ang mga computer mula sa user, pagkatapos ay gagamitin ito sa ibang pagkakataon habang tumatakbo ang program.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. Magbibigay-daan ang mga bagong istrukturang ito sa mga mag-aaral na lumikha ng code na mas malakas at dynamic.</td><td>Para sa Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. Sa araling ito, magkukunwaring dumadaloy ang mga mag-aaral sa internet, habang natututo tungkol sa mga koneksyon, URL, IP Address, at DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - Ang Internet</a><br><small>Kahit na maraming tao ang gumagamit ng internet araw-araw, hindi masyadong marami ang nakakaalam kung paano ito gumagana. Sa araling ito, magkukunwaring dumadaloy ang mga mag-aaral sa internet, habang natututo tungkol sa mga koneksyon, URL, IP Address, at DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>

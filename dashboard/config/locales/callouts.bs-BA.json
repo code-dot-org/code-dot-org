@@ -654,6 +654,69 @@
         },
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Promjeni broj ovdje"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Dodajte ovaj blok u svoj program!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Novi blok!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Novi blok!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Novi blok!",
+          "new_block_4": "Novi blok!"
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Iskopaj ovo željezo!"
+        },
+        "courseD_maze_ramp32022": {
+          "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
+        },
+        "courseE_artist_functions_challenge12022": {
+          "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
+        "courseE_artist_functions_challenge22022": {
+          "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Novi blok!"
         }
       }
     }

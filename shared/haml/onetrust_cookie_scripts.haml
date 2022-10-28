@@ -1,8 +1,6 @@
+- require '../shared/middleware/helpers/experiments'
 -# OneTrust Cookies Consent Notice scripts for code.org
-- cookie_script_env = DCDO.get('onetrust_cookie_scripts', 'off')
--# If the user has a cookie to override this, use it. This is for testing purposes.
-- cookie_script_env_override = request.cookies['onetrust_cookie_scripts']
-- cookie_script_env = cookie_script_env_override if cookie_script_env_override.present?
+- cookie_script_env = experiment_value('onetrust_cookie_scripts')
 - if cookie_script_env == 'production'
   %script{src: 'https://cdn.cookielaw.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d/OtAutoBlock.js', type: 'text/javascript'}
   %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d'}

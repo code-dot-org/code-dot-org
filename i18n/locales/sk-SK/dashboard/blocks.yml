@@ -2,6 +2,8 @@
 sk:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -230,20 +232,12 @@ sk:
             MOVES.XArmsUp: Stretch
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
-      Dancelab_everyMeasuresRange:
-        text: 'opakuj každé {N} takty po {START} '
       Dancelab_everySeconds:
         text: 'opakuj každé {N} {UNIT} '
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
-      Dancelab_everySecondsRange:
-        text: 'každé {N} {UNIT} od {START} do {STOP} '
-        options:
-          UNIT:
-            measures: Takty
-            seconds: Sekundy
       Dancelab_everyVerseChorus:
         text: 'každý {UNIT} '
         options:
@@ -1324,6 +1318,32 @@ sk:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": vybrať
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": svojrázna basa
             "'sound://category_digital/jump_7.mp3'": skoč
+      gamelab_playSoundOptionsSoccer:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": siréna
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": potlesk
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": skandovať
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": fandiť
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kopať
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dve zapískania
+            "'sound://category_sports/One_Whistle_SFX.mp3'": píšťalka
+      gamelab_playSoundOptionsSpace:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": čierna diera
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": guľový klaster
+            "'sound://category_space/Carina_SFX.mp3'": člnok
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": krabia hmlovina
+            "'sound://category_space/Launch_SFX.mp3'": spustiť
+            "'sound://category_space/Lift_Off.mp3'": zdvihnúť
+            "'sound://category_space/Pillars_SFX.mp3'": piliere
+            "'sound://category_space/Southern_ring_SFX.mp3'": južný prstenec
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: prehrať reč {SOUND}
       gamelab_playerBehaviors:
@@ -2067,6 +2087,11 @@ sk:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: keď {VAR} zodpovedaná
       RyanLab_moveForward:
@@ -2312,5 +2337,9 @@ sk:
           DIR:
             right: vpravo ↻
             left: vľavo ↺
+      storylab_setHeading:
+        text: nastaviť nadpis {HEADING}
+      storylab_setSubheading:
+        text: nastaviť podnadpis {SUBHEADING}
       validation_validatedBackground:
         text: nastav pozadie na {IMG}

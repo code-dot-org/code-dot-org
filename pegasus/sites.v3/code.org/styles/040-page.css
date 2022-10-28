@@ -523,10 +523,6 @@ th a:active, th a:hover, th a:link, th a:visited {
   border-color: #ccc
 }
 
-.slide div.slide-participants-count {
-  color: #d1d566
-}
-
 .btn-carousel-slide {
   background: #ffa401
 }

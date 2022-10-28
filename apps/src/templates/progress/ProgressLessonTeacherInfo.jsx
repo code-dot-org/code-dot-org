@@ -127,7 +127,11 @@ class ProgressLessonTeacherInfo extends React.Component {
           </div>
         )}
         {lesson.lockable && lockableAuthorized && !hasNoSections && (
-          <LessonLock unitId={unitId} lessonId={lesson.id} />
+          <LessonLock
+            unitId={unitId}
+            lessonId={lesson.id}
+            isHidden={!!isHidden}
+          />
         )}
         {lesson.lessonStartUrl && !(lesson.lockable && !lockableAuthorized) && (
           <div style={styles.buttonContainer}>
