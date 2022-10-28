@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-26 15:52:13 UTC",
+    "serialized_at": "2022-10-27 16:40:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2579,7 +2579,7 @@
       "key": "0d2f3144-0e8b-4f92-acce-c22a190869a2",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 2. Then briefly remind students about debugging skills that they will be using in today's activity.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 7 Level 1. Then briefly remind students about debugging skills that they will be using in today's activity using the slides as a guide.",
         "name": "Practice Time"
       },
       "seeding_key": {
