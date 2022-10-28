@@ -37,7 +37,8 @@
   "parameters": [
     "searchValue"
   ],
+  "return_value": "Boolean true or false",
   "short_description": "Returns true if the *searchValue* string is found in the *string*, else returns false.",
-  "syntax": "Boolean true or false",
+  "syntax": "[string].includes(searchValue)",
   "tips": "- The search is a case-sensitive search. "
 }

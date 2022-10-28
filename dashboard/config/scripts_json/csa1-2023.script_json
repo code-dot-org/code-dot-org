@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-26 00:38:20 UTC",
+    "serialized_at": "2022-10-27 22:24:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -58,6 +58,19 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Alternate Lessons",
+        "description": "This section contains the one-day version of the Asphalt Art Project."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2023"
       }
     }
@@ -281,12 +294,15 @@
     },
     {
       "key": "lesson-14",
-      "name": "Expanding Conditions",
+      "name": "Relational Operators",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "**How can I write conditions to make decisions based on the location of a `Painter` object or how much paint it has?**\n\nIn this lesson, students build on what they have learned about conditions in selection and iteration statements to write conditions using relational operators. Students revisit methods in the `Painter` class to get information about the location of a `Painter` object and how much paint it has and explore using these in conditions to expand the decisions they can make in their programs. Students also learn about the `setPaint()` method in the `Painter` class to set the amount of paint a `Painter` has. Students then practice writing conditions using relational operators and methods in the `Painter` class and create a new subclass of the `PainterPlus` class.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I write conditions to make decisions based on the location of a `Painter` object or how much paint it has?**\n\nIn this lesson, you build on what you have learned about conditions in selection and iteration statements to write conditions using relational operators. You revisit methods in the `Painter` class to get information about the location of a `Painter` object and how much paint it has and explore using these in conditions to expand the decisions you can make in your programs. You also learn about the `setPaint()` method in the `Painter` class to set the amount of paint a `Painter` has. You then practice writing conditions using relational operators and methods in the `Painter` class and create a new subclass of the `PainterPlus` class."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -317,6 +333,9 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "overview": "**How can I use what I have learned about Java, the `Painter` class, the problem solving process, and decomposition strategies to create a mural in The Neighborhood?**\n\nIn this lesson, students practice applying the problem solving process and decomposition strategies to create a mural in The Neighborhood. Students have an opportunity to celebrate their growth and achievements before using the Java concepts and `Painter` class methods they have learned throughout the unit to solve a new problem. In the process, they create a new subclass of the `PainterPlus` class and implement new algorithms to paint a mural. Students are then introduced to the Show What You Know Week, including the Asphalt Art Project, so they can consider what artwork they want to create and how they will use the strategies and concepts they have learned to develop their projects.",
+        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-lesson-1-welcome-to-csa/36415/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I use what I have learned about Java, the `Painter` class, the problem solving process, and decomposition strategies to create a mural in The Neighborhood?**\n\nIn this lesson, you practice applying the problem solving process and decomposition strategies to create a mural in The Neighborhood. You have an opportunity to celebrate your growth and achievements before using the Java concepts and `Painter` class methods you have learned throughout the unit to solve a new problem. In the process, you create a new subclass of the `PainterPlus` class and implement new algorithms to paint a mural. You are then introduced to the Show What You Know Week, including the Asphalt Art Project, so you can consider what artwork you want to create and how you will use the strategies and concepts you have learned to develop your project."
       },
       "seeding_key": {
         "lesson.key": "lesson-16",
@@ -332,7 +351,10 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
+        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-asphalt-art-project/36400/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What do I want to represent using programming and art?**\n\nFor this project, you use the skills you have developed to create asphalt art in The Neighborhood. You choose a theme or concept for your asphalt art that represents something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your design."
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -348,6 +370,9 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-frq-practice/36399/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nYou are asked to develop solutions to Free Response Questions (FRQs) on the AP CSA Exam. You learn about the structure of an FRQ and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. You use annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
         "lesson.key": "lesson-20",
@@ -363,11 +388,32 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-assessment/36398/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Congratulations, you completed your first unit! Assess your progress through the Unit 1 Assessment."
       },
       "seeding_key": {
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Asphalt Art Project [1-Day Version]",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+        "assessment": true,
+        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2023"
       }
     }
@@ -878,9 +924,53 @@
       }
     },
     {
+      "key": "518f6f5c-9857-4061-addf-4a1783370593",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "518f6f5c-9857-4061-addf-4a1783370593",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "b1091287-79e2-4e3f-bbd5-4d0af72e9b21",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b1091287-79e2-4e3f-bbd5-4d0af72e9b21",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
       "key": "7cfb592e-d49e-44ef-a20f-e559ab265f26",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7cfb592e-d49e-44ef-a20f-e559ab265f26",
@@ -890,9 +980,39 @@
       }
     },
     {
+      "key": "27d8c538-61c4-49aa-9a82-1d8075cb6b11",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "27d8c538-61c4-49aa-9a82-1d8075cb6b11",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "d2f5619d-4692-411c-9215-0cfcb4539ad8",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d2f5619d-4692-411c-9215-0cfcb4539ad8",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
       "key": "871d2b6c-aa98-4abc-86d2-477eb9397267",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "871d2b6c-aa98-4abc-86d2-477eb9397267",
@@ -902,8 +1022,49 @@
       }
     },
     {
-      "key": "2fedd84a-9231-4fc1-aa7b-b63414128f66",
+      "key": "ae501e23-09f9-4b56-9c2d-84f023451268",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "61e715b4-3dce-4ea5-b7d3-9937069ef157",
       "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "61e715b4-3dce-4ea5-b7d3-9937069ef157",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "2fedd84a-9231-4fc1-aa7b-b63414128f66",
+      "position": 2,
       "properties": {
         "duration": 45,
         "name": "Day 1"
@@ -917,7 +1078,7 @@
     },
     {
       "key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 45,
         "name": "Day 2"
@@ -931,7 +1092,7 @@
     },
     {
       "key": "1518b521-c15c-47d3-b7d8-7feca92ca786",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 45,
         "name": "Day 3"
@@ -944,14 +1105,113 @@
       }
     },
     {
+      "key": "7fc18fea-4dd3-4c35-8542-6791fe863c9e",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7fc18fea-4dd3-4c35-8542-6791fe863c9e",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "b67c7f8b-1761-4e40-b70f-9f11dc324e8b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b67c7f8b-1761-4e40-b70f-9f11dc324e8b",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "055b9a37-f5c9-4388-955c-4d20da9669ef",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "055b9a37-f5c9-4388-955c-4d20da9669ef",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
       "key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5",
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "38059c65-c4ee-4a3a-87eb-64849a8510e3",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "38059c65-c4ee-4a3a-87eb-64849a8510e3",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "17e8c5c0-bfe1-43b8-b43e-747cb884e523",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17e8c5c0-bfe1-43b8-b43e-747cb884e523",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "e656b0ce-8a6c-4c25-a694-b5e65c47713b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e656b0ce-8a6c-4c25-a694-b5e65c47713b",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "55412c10-f40b-4a42-806f-7b2e8c7a8619",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55412c10-f40b-4a42-806f-7b2e8c7a8619",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa1-2023"
       }
     }
@@ -2714,7 +2974,7 @@
       "key": "58974c8d-ed97-47ce-a616-acd343d6f274",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Careers with Computer Science: Design Technologist at Meow Wolf*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Careers with Computer Science: Design Technologist at Meow Wolf*.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2731,7 +2991,7 @@
       "key": "7fd96e71-51a9-4532-893f-166439e87b28",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4607,6 +4867,333 @@
       }
     },
     {
+      "key": "0237ef3e-6123-4361-8552-1b713f9f009f",
+      "position": 1,
+      "properties": {
+        "description": "When we think about where computer science is used, we often think about software, apps on mobile devices, or video games. However, computer science influences many industries beyond programs, apps, and games, including some that we might not even think of right away.",
+        "name": "CS in Fashion",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0237ef3e-6123-4361-8552-1b713f9f009f",
+        "lesson_activity.key": "518f6f5c-9857-4061-addf-4a1783370593"
+      }
+    },
+    {
+      "key": "1df28969-7503-4fbf-a68e-3251636e0f27",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Share the examples of computer science in the fashion industry.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you continue to learn about your students and their personal interests, you can change this example to show those that are connected to their personal interests to make these more meaningful for your classroom."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1df28969-7503-4fbf-a68e-3251636e0f27",
+        "lesson_activity.key": "518f6f5c-9857-4061-addf-4a1783370593"
+      }
+    },
+    {
+      "key": "c7ff9570-7124-488e-bccf-c68bd50633ac",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue.\n\nGive One, Get One encourages students to seek and share ideas and information. Students circulate the classroom and pair up with a partner when prompted by the teacher. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c7ff9570-7124-488e-bccf-c68bd50633ac",
+        "lesson_activity.key": "518f6f5c-9857-4061-addf-4a1783370593"
+      }
+    },
+    {
+      "key": "84f3a786-cfde-4ddc-9d70-6ba01eb44037",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you learn from each other?*\n* *How did these ideas and thoughts contribute to your identity as a software engineer?*\n\n**Discussion Goal:** Students share the ideas they gathered and identify patterns or common thoughts. Students recognize how computer science can be used to express themselves and as a creative outlet and make personal connections to their identity as software engineers."
+      },
+      "seeding_key": {
+        "activity_section.key": "84f3a786-cfde-4ddc-9d70-6ba01eb44037",
+        "lesson_activity.key": "518f6f5c-9857-4061-addf-4a1783370593"
+      }
+    },
+    {
+      "key": "d073a8c0-72d9-4fdd-80cf-5bacebbc8277",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "15",
+        "name": "Relational Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "d073a8c0-72d9-4fdd-80cf-5bacebbc8277",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "409e3252-cd3e-4a5e-82b3-94474a19f549",
+      "position": 2,
+      "properties": {
+        "description": "We have learned a lot about writing algorithms using selection and iteration to make decisions about how a `Painter` object should navigate and paint in The Neighborhood. Let's see if we can combine what we already know about selection and iteration statements and the methods in the `Painter` class to further improve the decisions we can make in our programs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "409e3252-cd3e-4a5e-82b3-94474a19f549",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "2afec4eb-a629-4f0b-920d-4eb785a7f3ff",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Relational Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "2afec4eb-a629-4f0b-920d-4eb785a7f3ff",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "9ab12ac8-8520-419a-8961-f6a72430426a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the selection and iteration statements use the `getX()`, `getY()`, and `getMyPaint()` methods in the conditions to make decisions. Students also notice the `>`, `<`, and `==` operators and may wonder about the difference between the `==` and `=` operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *We previously used the `getX()`, `getY()`, and `getMyPaint()` methods to print information about a `Painter` object. What did each of these methods return?*\n\n**Discussion Goal:** Students recall that the `getX()` and `getY()` methods return a `Painter` object's current x and y location in The Neighborhood, while the `getMyPaint()` method returns the current amount of paint a `Painter` object has.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ab12ac8-8520-419a-8961-f6a72430426a",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "97841b5a-2f5c-48f7-9922-8179088e5a70",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used operators like less than, greater than, or equal?*\n\n**Discussion Goal:** Students recall using operators in math or previous computer science courses. Students may share examples of how they used these operators in previous courses, such as to compare values or variables.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "97841b5a-2f5c-48f7-9922-8179088e5a70",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "48a1270e-cf1d-40d6-bc56-dbe23d807556",
+      "position": 6,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "progression_name": "Investigate and Modify: Relational Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "48a1270e-cf1d-40d6-bc56-dbe23d807556",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "5cce1fd5-1588-4d49-91c1-d85525e38f7e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share what the `setPaint()` method does and how they might use this method in their programs. You could also ask students to identify how the `setPaint()` method is similar and different from the `getMyPaint()` method.\n\nYou do not need to discuss accessor or mutator methods here, as these topics are discussed in an upcoming lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5cce1fd5-1588-4d49-91c1-d85525e38f7e",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "aff8e012-723f-4873-ba08-de00d37df7de",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***relational operator*** and introduce the `>`, `<`, and `==` operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***Boolean expression***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we use relational operators in the conditions for our selection and iteration statements to solve problems in The Neighborhood?*\n\n**Discussion Goal:** Students suggest writing conditions for various scenarios they have encountered so far, such as to check if the `Painter` has reached a specific location in The Neighborhood to determine whether to turn. Students may also suggest writing conditions to choose a different paint color to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "aff8e012-723f-4873-ba08-de00d37df7de",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "3effdbdd-e15e-4304-9d64-18fc5e3df61d",
+      "position": 9,
+      "properties": {
+        "description": "As you work through these problems, use the problem solving process and decomposition strategies to break them down into manageable tasks. Write your algorithms in pseudocode so you can easily implement and refine them in Java.",
+        "name": "Writing Conditions",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3effdbdd-e15e-4304-9d64-18fc5e3df61d",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "1b0b5058-a4f0-4628-ae09-c94dc48b820d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to complete a choice level on Level 4 to create a subclass of the `PainterPlus` class and implement their algorithms using relational operators in their conditions.",
+        "progression_name": "Practice: Writing Conditions",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of planning and using relational operators to write conditions in selection and iteration statements."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use the problem solving process to plan their solution and write pseudocode for their algorithms. Emphasize the use of natural language when writing pseudocode. Allow students to write their pseudocode in whichever language they are most comfortable to support the focus on planning their algorithms rather than focusing on specific structures or languages."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1b0b5058-a4f0-4628-ae09-c94dc48b820d",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "2573a445-cfd2-45e5-a9c0-5d57e0ae8ded",
+      "position": 11,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new `PainterPlus` subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit our work in case we need to go back to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2573a445-cfd2-45e5-a9c0-5d57e0ae8ded",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "6853c6be-a44a-434b-b21c-18901e8d519c",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6853c6be-a44a-434b-b21c-18901e8d519c",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "98358c2d-4673-4852-a09a-246a36bbfeef",
+      "position": 13,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "98358c2d-4673-4852-a09a-246a36bbfeef",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "672d4e15-10f7-4b1f-822f-cceeb10fd190",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "672d4e15-10f7-4b1f-822f-cceeb10fd190",
+        "lesson_activity.key": "8ffc2efb-379e-49f9-a8f1-1fdc5eddfd9d"
+      }
+    },
+    {
+      "key": "cf3336f1-53ea-4410-8beb-1b0fbd9767ad",
+      "position": 1,
+      "properties": {
+        "description": "We have expanded our programming skills and knowledge quite a bit today! Writing conditions with relational operators and the methods in the `Painter` class allows us to expand the decisions we can make to solve problems in The Neighborhood.",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf3336f1-53ea-4410-8beb-1b0fbd9767ad",
+        "lesson_activity.key": "b1091287-79e2-4e3f-bbd5-4d0af72e9b21"
+      }
+    },
+    {
+      "key": "d6eaaaf2-e922-4c93-948b-1214dd6ff5bc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in the lesson, such as relational operators and Boolean expressions. Students might also share how they used these to solve problems in The Neighborhood and ways that writing conditions with relational operators made their code more efficient.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6eaaaf2-e922-4c93-948b-1214dd6ff5bc",
+        "lesson_activity.key": "b1091287-79e2-4e3f-bbd5-4d0af72e9b21"
+      }
+    },
+    {
+      "key": "415ed2b3-bb9e-4741-a54f-31ecce46bff3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "415ed2b3-bb9e-4741-a54f-31ecce46bff3",
+        "lesson_activity.key": "b1091287-79e2-4e3f-bbd5-4d0af72e9b21"
+      }
+    },
+    {
+      "key": "e09362a9-87a3-4cec-8efb-2067d20deb61",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "e09362a9-87a3-4cec-8efb-2067d20deb61",
+        "lesson_activity.key": "b1091287-79e2-4e3f-bbd5-4d0af72e9b21"
+      }
+    },
+    {
+      "key": "cc2f7b48-1520-44c9-bfa1-2b16e1386722",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc2f7b48-1520-44c9-bfa1-2b16e1386722",
+        "lesson_activity.key": "b1091287-79e2-4e3f-bbd5-4d0af72e9b21"
+      }
+    },
+    {
       "key": "02912945-fcc6-4b08-a3ad-6b79ed8aad7d",
       "position": 1,
       "properties": {
@@ -4617,9 +5204,31 @@
       }
     },
     {
+      "key": "77289260-9048-41ab-9838-587453539e74",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "77289260-9048-41ab-9838-587453539e74",
+        "lesson_activity.key": "27d8c538-61c4-49aa-9a82-1d8075cb6b11"
+      }
+    },
+    {
+      "key": "59412185-ad0d-49cb-8862-e62020484ea3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "59412185-ad0d-49cb-8862-e62020484ea3",
+        "lesson_activity.key": "d2f5619d-4692-411c-9215-0cfcb4539ad8"
+      }
+    },
+    {
       "key": "c4351633-7cf0-4405-a19d-7570a0508ec9",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the quote as students enter the classroom. Read the quote to the class.",
+        "name": "Software Engineering Characteristics"
       },
       "seeding_key": {
         "activity_section.key": "c4351633-7cf0-4405-a19d-7570a0508ec9",
@@ -4627,9 +5236,303 @@
       }
     },
     {
+      "key": "f61a5a83-b5d5-4080-8172-cc73f79e5e56",
+      "position": 2,
+      "properties": {
+        "description": "Just like Erik, you have become a sponge and started a new chapter in computer science. In class today, you will reflect on the characteristics of software engineers that you learned about in Lesson 1.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f61a5a83-b5d5-4080-8172-cc73f79e5e56",
+        "lesson_activity.key": "871d2b6c-aa98-4abc-86d2-477eb9397267"
+      }
+    },
+    {
+      "key": "b3bba4c9-f1fa-4f0d-bf2b-949a7e79855f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student at least three sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write down a word or phrase on each sticky note about software engineering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the definition of a *software engineer*.\n\n**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the words and phrases from Lesson 1, then have students share the words and phrases from their sticky notes with their group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What has changed?*\n* *What characteristics are important for software engineering?*\n\n**Discussion Goal:** Students notice how their perceptions about software engineering have changed and identify important characteristics. Students may share examples of things that changed their perceptions and how their personal identity as software engineers has developed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b3bba4c9-f1fa-4f0d-bf2b-949a7e79855f",
+        "lesson_activity.key": "871d2b6c-aa98-4abc-86d2-477eb9397267"
+      }
+    },
+    {
+      "key": "516ed5f0-8de3-4d3f-9910-d207161bad26",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "name": "Creating Murals"
+      },
+      "seeding_key": {
+        "activity_section.key": "516ed5f0-8de3-4d3f-9910-d207161bad26",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "155fee4c-d7b0-4274-9d55-31be41d4e785",
+      "position": 2,
+      "properties": {
+        "description": "You have learned a lot about software engineering in this unit! We have learned how to use Java as a tool to solve problems in The Neighborhood and the problem solving process to decompose problems into manageable tasks and to find and fix errors in our programs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "155fee4c-d7b0-4274-9d55-31be41d4e785",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "9249357d-2e25-49df-8d1c-5b7f8bd837c6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What have you accomplished in this unit?*\n* *What would you like to continue working on?*\n\n**Discussion Goal:** Students share their personal achievements and areas they feel they need improvement. These achievements and areas can be regarding specific activities they completed, the growth they made while learning Java, or how they demonstrated software engineering characteristics."
+      },
+      "seeding_key": {
+        "activity_section.key": "9249357d-2e25-49df-8d1c-5b7f8bd837c6",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "dfc6fd56-fe41-4645-b21a-70657b50ff5b",
+      "position": 4,
+      "properties": {
+        "description": "You will use what you have learned in this unit to create murals in The Neighborhood. As you work through these problems, use the problem solving process and decomposition strategies to break them down into manageable tasks. Write your algorithms in pseudocode so you can easily implement and refine them in Java.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dfc6fd56-fe41-4645-b21a-70657b50ff5b",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "14a11cdd-8721-41be-8396-1f40fe0c970d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students complete a choice level to create a subclass of the `PainterPlus` class and implement algorithms to create a mural.",
+        "progression_name": "Practice: Creating Murals",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This practice level is an opportunity to gauge student proficiency in the unit concepts and skills in preparation for the Asphalt Art Project. You can review students' work to identify areas that students may need additional support as they work on their projects or for the Unit 1 Assessment."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use the problem solving process to plan their solution and write pseudocode for their algorithms. Emphasize the use of natural language when writing pseudocode. Allow students to write their pseudocode in whichever language they are most comfortable to support the focus on planning their algorithms rather than focusing on specific structures or languages."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "14a11cdd-8721-41be-8396-1f40fe0c970d",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "8b9f0578-6906-466d-8414-78a89662d04b",
+      "position": 6,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new `PainterPlus` subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit our work in case we need to go back to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8b9f0578-6906-466d-8414-78a89662d04b",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "2ba70df7-7ef8-4728-a3e2-1991f8621a9c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2ba70df7-7ef8-4728-a3e2-1991f8621a9c",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "52d54386-1fbe-47a4-b22c-9bdb4056ed45",
+      "position": 8,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "52d54386-1fbe-47a4-b22c-9bdb4056ed45",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "11ea7e07-e33e-4f1e-a4ae-8649b7cd7119",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11ea7e07-e33e-4f1e-a4ae-8649b7cd7119",
+        "lesson_activity.key": "ae501e23-09f9-4b56-9c2d-84f023451268"
+      }
+    },
+    {
+      "key": "3312078f-ebeb-450f-b488-004019b0697f",
+      "position": 1,
+      "properties": {
+        "description": "Our perceptions about software engineering have changed throughout the unit. You have also made a lot of progress developing knowledge and skills as you became a software engineer in this course.",
+        "name": "Show What You Know Week",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3312078f-ebeb-450f-b488-004019b0697f",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "8dd0288f-1611-4109-9995-fd17504d4670",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student one sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write their name and one characteristic of a software engineer they most identify with on their sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8dd0288f-1611-4109-9995-fd17504d4670",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "3aa934d6-5725-45e2-88c6-bdc2ca0f60a1",
+      "position": 3,
+      "properties": {
+        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3aa934d6-5725-45e2-88c6-bdc2ca0f60a1",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "5cefb3f3-a730-4a26-a5b9-455f262aa9c1",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Study Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 1 Study Guide provides an overview of the lessons in the unit, including the key vocabulary, Java concepts, and `Painter` class methods introduced in each lesson. You can use this based on the needs of your students, such as a checklist for students to confirm that they feel confident about specific objectives, to quiz themselves on key vocabulary, or to review Java syntax."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5cefb3f3-a730-4a26-a5b9-455f262aa9c1",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "873688b1-bb5e-4a7b-a399-dee656c894aa",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week."
+      },
+      "seeding_key": {
+        "activity_section.key": "873688b1-bb5e-4a7b-a399-dee656c894aa",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "6743fe88-0701-4169-9cdd-28cf48d5dddf",
+      "position": 6,
+      "properties": {
+        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then spend a day practicing answering AP-style free-response questions and wrapping up the unit with a multiple-choice assessment. You've learned so much in this unit, and now you're ready to show what you know!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6743fe88-0701-4169-9cdd-28cf48d5dddf",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "902eca2c-dc58-44d5-ae1d-e7b414cfba4c",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Asphalt Art Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share ideas about the artwork they might want to create in The Neighborhood. Guide students to start thinking about ideas and to consider the murals they created in this lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "902eca2c-dc58-44d5-ae1d-e7b414cfba4c",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "4f91fb0c-c17b-4901-a195-6af4a3dd1217",
+      "position": 8,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f91fb0c-c17b-4901-a195-6af4a3dd1217",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "96e7dc41-8655-432c-a3c5-aea8ebc50153",
+      "position": 9,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "96e7dc41-8655-432c-a3c5-aea8ebc50153",
+        "lesson_activity.key": "6ab4a12b-ee6b-4785-8c18-a3138a68c1a1"
+      }
+    },
+    {
+      "key": "b67140b7-d16b-4077-867f-571f618740e1",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a new subclass that extends `PainterPlus` with a new method. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Asphalt Art Project 1-Day Lesson Plan**](https://studio.code.org/s/csa1-2023/lessons/19). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "b67140b7-d16b-4077-867f-571f618740e1",
+        "lesson_activity.key": "61e715b4-3dce-4ea5-b7d3-9937069ef157"
+      }
+    },
+    {
       "key": "d8622c11-11fc-4197-85eb-7a7de8fedd9c",
       "position": 1,
       "properties": {
+        "description": "Asphalt art brightens communities, improves public safety, and inspires residents and visitors. Each project has a unique approach to revitalizing streets and parks and bringing communities together.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "d8622c11-11fc-4197-85eb-7a7de8fedd9c",
@@ -4637,9 +5540,162 @@
       }
     },
     {
+      "key": "feeea1f5-17ea-45a5-95b9-480bfb8cb1c5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create art in The Neighborhood?*\n\n**Discussion Goal:** Students talk about using their `PainterPlus` class and developing additional subclasses to create asphalt art in The Neighborhood. Students present ideas of additional subclasses of `PainterPlus` they could create for elements in an asphalt art design because of limitations of the existing classes or to simplify complex components."
+      },
+      "seeding_key": {
+        "activity_section.key": "feeea1f5-17ea-45a5-95b9-480bfb8cb1c5",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "3bd76dfe-c4c3-4987-8bf0-fba23e0baf92",
+      "position": 3,
+      "properties": {
+        "description": "Over the next few days, you will be developing a program to create asphalt art in The Neighborhood. You will need to use what you have created in this unit and create a new type of `Painter` to make your design.",
+        "duration": "15",
+        "name": "Brainstorming and Planning",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd76dfe-c4c3-4987-8bf0-fba23e0baf92",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "9cf40d9c-e1db-451b-bf09-40bf457467d2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Asphalt Art Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9cf40d9c-e1db-451b-bf09-40bf457467d2",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "5ac59e23-a6db-45bd-9f67-9d5b7809da15",
+      "position": 5,
+      "properties": {
+        "description": "Before you begin writing your program, you first need to decide what you will create so you can plan your new subclass and methods to create your design.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5ac59e23-a6db-45bd-9f67-9d5b7809da15",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "11e962a7-0c49-476d-a700-47a9ee3e15ea",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their asphalt art design, identify the subclasses they want to create, and write pseudocode for their methods to plan their project on the Asphalt Art Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11e962a7-0c49-476d-a700-47a9ee3e15ea",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "98897942-24d3-4ede-97fc-0ae26d955b55",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
+        "duration": "15",
+        "name": "Development",
+        "progression_name": "Asphalt Art Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "98897942-24d3-4ede-97fc-0ae26d955b55",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "193ac0a1-a051-4624-b1f5-e8258d7d44fc",
+      "position": 8,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "193ac0a1-a051-4624-b1f5-e8258d7d44fc",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "93cd2904-bae2-4c5e-a68c-d88e8791f3a2",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "93cd2904-bae2-4c5e-a68c-d88e8791f3a2",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "0b3a6815-bea5-41d4-9294-9169818ea61c",
+      "position": 10,
+      "properties": {
+        "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0b3a6815-bea5-41d4-9294-9169818ea61c",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "9be45655-9a8e-4e5f-b999-5dfce73d0560",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Asphalt Art Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the Day 1 Reflection as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9be45655-9a8e-4e5f-b999-5dfce73d0560",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
       "key": "1b45a88c-3538-4457-8d19-e3c61fa4712e",
       "position": 1,
       "properties": {
+        "description": "Like in the examples we have seen in this unit, you are using computer science as a form of creative expression. You are also using your software engineering characteristics to create your programs.",
+        "duration": "10",
+        "name": "Warm Up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "1b45a88c-3538-4457-8d19-e3c61fa4712e",
@@ -4647,9 +5703,149 @@
       }
     },
     {
+      "key": "deb19145-6000-41b2-8e7c-6099e797a623",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Asphalt Art Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "deb19145-6000-41b2-8e7c-6099e797a623",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "0226b09c-f90a-4943-b764-5b6af9872193",
+      "position": 3,
+      "properties": {
+        "description": "Continue to work on your Asphalt Art Project. Be sure to refer to the project requirements and rubric to make sure you include the necessary components.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0226b09c-f90a-4943-b764-5b6af9872193",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "57cc00c4-7a8d-427c-b3cd-7a424383b321",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "57cc00c4-7a8d-427c-b3cd-7a424383b321",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "dc3c9d05-b6df-4226-b6cd-356b87c0b798",
+      "position": 5,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "duration": "15",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dc3c9d05-b6df-4226-b6cd-356b87c0b798",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "e47c117c-776b-4d20-83d1-86b52465f550",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e47c117c-776b-4d20-83d1-86b52465f550",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "a92d69a6-7418-4aa9-adcb-7b0e25a1f436",
+      "position": 7,
+      "properties": {
+        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a92d69a6-7418-4aa9-adcb-7b0e25a1f436",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "36161b04-41f0-4df7-8eb9-50e2f04aaa81",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Asphalt Art Project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "36161b04-41f0-4df7-8eb9-50e2f04aaa81",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "a0ab49a6-8ecf-43c0-87ba-a158529b4cc0",
+      "position": 9,
+      "properties": {
+        "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a0ab49a6-8ecf-43c0-87ba-a158529b4cc0",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "0f86bf7f-5694-485d-b13a-516a7eb5d660",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Asphalt Art Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the Day 2 Reflection as an optional completion assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0f86bf7f-5694-485d-b13a-516a7eb5d660",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
       "key": "422c1b79-250c-465a-a506-8369f51bb175",
       "position": 1,
       "properties": {
+        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "name": "Warm Up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "422c1b79-250c-465a-a506-8369f51bb175",
@@ -4657,13 +5853,442 @@
       }
     },
     {
+      "key": "16e9a735-c899-436c-a217-3a4649bc4a04",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+      },
+      "seeding_key": {
+        "activity_section.key": "16e9a735-c899-436c-a217-3a4649bc4a04",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "f05f2165-1d6b-4b6f-8085-516f33beb094",
+      "position": 3,
+      "properties": {
+        "description": "You will finish developing your program to create your asphalt art. Be sure to consider the feedback you received from your code review as you work on your program. First, let's revisit the Asphalt Art Project Planning Guide to make sure you have included everything you need to meet the project requirements.",
+        "duration": "15",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f05f2165-1d6b-4b6f-8085-516f33beb094",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "3433643f-48dd-40c0-b9e2-1b5648f84a72",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the guiding questions and rubric on the Asphalt Art Project Planning Guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3433643f-48dd-40c0-b9e2-1b5648f84a72",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "e28c0e98-6071-4a22-bab2-525039ab49b0",
+      "position": 5,
+      "properties": {
+        "description": "Use the feedback you received from your code review and self-assessment to finalize your Asphalt Art Project.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e28c0e98-6071-4a22-bab2-525039ab49b0",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "2b6136e2-e1e9-4bdb-8483-62a893109513",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Asphalt Art Project. Have students submit their projects at the end of the allotted time."
+      },
+      "seeding_key": {
+        "activity_section.key": "2b6136e2-e1e9-4bdb-8483-62a893109513",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "1bf29c15-ad28-4657-9d8c-fc50c948422a",
+      "position": 7,
+      "properties": {
+        "description": "Congratulations! You have completed your first project for this class. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "duration": "15",
+        "name": "Asphalt Art Display",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1bf29c15-ad28-4657-9d8c-fc50c948422a",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "9a987bb9-28e4-44f1-a977-14febb82e7ce",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's mural and leave sticky notes noting what they like about the program."
+      },
+      "seeding_key": {
+        "activity_section.key": "9a987bb9-28e4-44f1-a977-14febb82e7ce",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "295f9307-d05c-4194-b380-77d1106ce511",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Asphalt Art Project Planning Guide.",
+        "duration": "10",
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "295f9307-d05c-4194-b380-77d1106ce511",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "df88ebdb-8fc0-40f5-931c-637dca08cce0",
+      "position": 10,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "df88ebdb-8fc0-40f5-931c-637dca08cce0",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "64e220b2-3e67-4edb-a952-ab6897f21595",
+      "position": 11,
+      "properties": {
+        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "64e220b2-3e67-4edb-a952-ab6897f21595",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "69271a3b-17c4-4acc-b839-c183990e18f4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Describe one new thing you have learned about Java through this course.*\n\n**Discussion Goal:** Students share concepts and skills they have learned in this unit.",
+        "name": "Introduction to FRQs",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "69271a3b-17c4-4acc-b839-c183990e18f4",
+        "lesson_activity.key": "7fc18fea-4dd3-4c35-8542-6791fe863c9e"
+      }
+    },
+    {
+      "key": "9d48f028-269f-4c17-83c7-94b943ee3ac3",
+      "position": 2,
+      "properties": {
+        "description": "We will learn about Free Response Questions, FRQs. We will practice an FRQ at the end of each unit to apply the programming skills you learn and solve problems similar to the FRQs on the AP CSA Exam.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9d48f028-269f-4c17-83c7-94b943ee3ac3",
+        "lesson_activity.key": "7fc18fea-4dd3-4c35-8542-6791fe863c9e"
+      }
+    },
+    {
+      "key": "ccc3aeeb-9d05-4427-be1a-d5635944e306",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the structure of an FRQ.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Upcoming units discuss the structure of the AP CSA Exam and FRQs in detail. If students ask questions about the AP CSA Exam, remind them that it is a long way off! Practicing several FRQs as a class better equips students to discuss the AP CSA Exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ccc3aeeb-9d05-4427-be1a-d5635944e306",
+        "lesson_activity.key": "7fc18fea-4dd3-4c35-8542-6791fe863c9e"
+      }
+    },
+    {
+      "key": "796a57ba-996b-4324-941e-ebed07f91b33",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SpiralPainter FRQ handout.\n\n**Do This:** Explain the steps for the activity.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Around the World\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the first page of the SpiralPainter FRQ handout. Have students annotate the question at the bottom of the page based on the annotation guide.",
+        "duration": "10",
+        "name": "FRQ Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "tip about annotation strategy"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "796a57ba-996b-4324-941e-ebed07f91b33",
+        "lesson_activity.key": "b67c7f8b-1761-4e40-b70f-9f11dc324e8b"
+      }
+    },
+    {
+      "key": "3f423344-051c-4546-b354-f040ab5822c1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight pink or underline?*\n* *Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students share words and concepts they didn't understand and discuss their meanings.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight blue or star?*\n* *Which parts did you highlight orange or box?*\n* *How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students identify components of the problem that will help develop the solution."
+      },
+      "seeding_key": {
+        "activity_section.key": "3f423344-051c-4546-b354-f040ab5822c1",
+        "lesson_activity.key": "b67c7f8b-1761-4e40-b70f-9f11dc324e8b"
+      }
+    },
+    {
+      "key": "b82107d7-fb8e-4050-baf6-428f67510c64",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Around the World activity with their partners.",
+        "duration": "20",
+        "name": "Around the World",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.\n\nIf students are stuck on a station, suggest:\n* Writing comments for each \"Do this\" item.\n* Returning to the manipulatives and tracing through their pseudocode again.\n\nDifferentiation Suggestions:\n* Tell pairs who need more time to obtain two signatures instead of three. Have these students focus on completing the constructor and one of the methods.\n* Encourage those who finish early to serve as reviewers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b82107d7-fb8e-4050-baf6-428f67510c64",
+        "lesson_activity.key": "b67c7f8b-1761-4e40-b70f-9f11dc324e8b"
+      }
+    },
+    {
+      "key": "769447db-42a9-4428-b5ae-32b8dd0128b7",
+      "position": 4,
+      "properties": {
+        "description": "Great work, everyone! Let's take a look at one potential solution to this problem. You might have a different approach, and that's ok! There are often multiple ways to achieve the same goal.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "769447db-42a9-4428-b5ae-32b8dd0128b7",
+        "lesson_activity.key": "b67c7f8b-1761-4e40-b70f-9f11dc324e8b"
+      }
+    },
+    {
+      "key": "29bdd862-94f5-4536-81d5-89cecdf8cd6f",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss a potential solution.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The SpiralPainter FRQ handout can be used as an optional formative assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "29bdd862-94f5-4536-81d5-89cecdf8cd6f",
+        "lesson_activity.key": "b67c7f8b-1761-4e40-b70f-9f11dc324e8b"
+      }
+    },
+    {
+      "key": "0f55eabe-767d-49a6-8870-931cb51dcb39",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
+        "duration": "10",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f55eabe-767d-49a6-8870-931cb51dcb39",
+        "lesson_activity.key": "055b9a37-f5c9-4388-955c-4d20da9669ef"
+      }
+    },
+    {
       "key": "e8ee028e-561d-4bae-ac7f-8495d0e0324f",
       "position": 1,
       "properties": {
+        "description": "Congratulations! After painting colorful murals and overcoming barriers in The Neighborhood and our code, you have successfully made it to the end of Unit 1. Today, you will each complete a multiple-choice assessment to put your skills to the test.",
+        "name": "Unit 1 Assessment",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "e8ee028e-561d-4bae-ac7f-8495d0e0324f",
         "lesson_activity.key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5"
+      }
+    },
+    {
+      "key": "d8b9f366-9945-498c-94b0-685c66a756fe",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 1 Assessment on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "d8b9f366-9945-498c-94b0-685c66a756fe",
+        "lesson_activity.key": "f5450cb2-c212-45db-bf38-929c7e0a1aa5"
+      }
+    },
+    {
+      "key": "11227c3b-1dfe-4a9e-a055-73d1b9f92803",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class together.\n* Review answers asynchronously and allow students to do corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectation, follow up so they have the opportunity to learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11227c3b-1dfe-4a9e-a055-73d1b9f92803",
+        "lesson_activity.key": "38059c65-c4ee-4a3a-87eb-64849a8510e3"
+      }
+    },
+    {
+      "key": "76065c10-07c8-436f-912c-6d3754366b70",
+      "position": 1,
+      "properties": {
+        "description": "Asphalt art brightens communities, improves public safety, and inspires residents and visitors. Each project has a unique approach to revitalizing streets and parks and bringing communities together.",
+        "name": "Asphalt Art Projects",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "76065c10-07c8-436f-912c-6d3754366b70",
+        "lesson_activity.key": "17e8c5c0-bfe1-43b8-b43e-747cb884e523"
+      }
+    },
+    {
+      "key": "b466c467-a715-410d-8759-f72b71af1401",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Asphalt Art Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b466c467-a715-410d-8759-f72b71af1401",
+        "lesson_activity.key": "17e8c5c0-bfe1-43b8-b43e-747cb884e523"
+      }
+    },
+    {
+      "key": "3bd03fde-81cb-4211-b494-94157300bd65",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their asphalt art design and write pseudocode for a new method to plan their project on the Asphalt Art Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new method."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd03fde-81cb-4211-b494-94157300bd65",
+        "lesson_activity.key": "e656b0ce-8a6c-4c25-a694-b5e65c47713b"
+      }
+    },
+    {
+      "key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Asphalt Art Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef",
+        "lesson_activity.key": "e656b0ce-8a6c-4c25-a694-b5e65c47713b"
+      }
+    },
+    {
+      "key": "719d49f5-9eb0-41fe-8772-61cc0c8cc45d",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our updated subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "719d49f5-9eb0-41fe-8772-61cc0c8cc45d",
+        "lesson_activity.key": "e656b0ce-8a6c-4c25-a694-b5e65c47713b"
+      }
+    },
+    {
+      "key": "2d97a533-bb80-48d4-b24a-1ddfd3e4d98f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their updated subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d97a533-bb80-48d4-b24a-1ddfd3e4d98f",
+        "lesson_activity.key": "e656b0ce-8a6c-4c25-a694-b5e65c47713b"
+      }
+    },
+    {
+      "key": "8f08b0a5-44b4-45e8-b63a-b8e15ff55376",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Asphalt Art Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8f08b0a5-44b4-45e8-b63a-b8e15ff55376",
+        "lesson_activity.key": "55412c10-f40b-4a42-806f-7b2e8c7a8619"
+      }
+    },
+    {
+      "key": "cafa8a9d-fd2f-4312-b762-bd0a8931416f",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "cafa8a9d-fd2f-4312-b762-bd0a8931416f",
+        "lesson_activity.key": "55412c10-f40b-4a42-806f-7b2e8c7a8619"
+      }
+    },
+    {
+      "key": "40c4203e-b918-4c71-8ec5-8004174984eb",
+      "position": 3,
+      "properties": {
+        "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "40c4203e-b918-4c71-8ec5-8004174984eb",
+        "lesson_activity.key": "55412c10-f40b-4a42-806f-7b2e8c7a8619"
       }
     }
   ],
@@ -6017,6 +7642,210 @@
       "level_keys": [
         "CSA U1L12-L5_2023"
       ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Relational Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L13-L1_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "2afec4eb-a629-4f0b-920d-4eb785a7f3ff"
+      },
+      "level_keys": [
+        "CSA U1L13-L1_2023"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Relational Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L13-L2_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "48a1270e-cf1d-40d6-bc56-dbe23d807556"
+      },
+      "level_keys": [
+        "CSA U1L13-L2_2023"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Writing Conditions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L13-L3_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "1b0b5058-a4f0-4628-ae09-c94dc48b820d"
+      },
+      "level_keys": [
+        "CSA U1L13-L3_2023"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Writing Conditions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L13-L4_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "1b0b5058-a4f0-4628-ae09-c94dc48b820d"
+      },
+      "level_keys": [
+        "CSA U1L13-L4_2023"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L13-L5_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "cc2f7b48-1520-44c9-bfa1-2b16e1386722"
+      },
+      "level_keys": [
+        "CSA U1L13-L5_2023"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: Creating Murals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L15-L1_2023"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "14a11cdd-8721-41be-8396-1f40fe0c970d"
+      },
+      "level_keys": [
+        "CSA U1L15-L1_2023"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L15-L2_2023"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "96e7dc41-8655-432c-a3c5-aea8ebc50153"
+      },
+      "level_keys": [
+        "CSA U1L15-L2_2023"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project_2023"
+        ],
+        "progression": "Asphalt Art Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1 Asphalt Art Project_2023"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023",
+        "activity_section.key": "98897942-24d3-4ede-97fc-0ae26d955b55"
+      },
+      "level_keys": [
+        "CSA U1 Asphalt Art Project_2023"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_2023"
+        ],
+        "progression": "Asphalt Art Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023",
+        "activity_section.key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef"
+      },
+      "level_keys": [
+        "CSA U1 Asphalt Art Project 1-Day_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6667,6 +8496,114 @@
         "script.name": "csa1-2023",
         "activity_section.key": "3d660461-9548-4fe9-ab0d-9c72a21c1f64"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L13-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L13-L1_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "2afec4eb-a629-4f0b-920d-4eb785a7f3ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L13-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L13-L2_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "48a1270e-cf1d-40d6-bc56-dbe23d807556"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L13-L3_2023",
+        "script_level.level_keys": [
+          "CSA U1L13-L3_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "1b0b5058-a4f0-4628-ae09-c94dc48b820d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L13-L4_2023",
+        "script_level.level_keys": [
+          "CSA U1L13-L4_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "1b0b5058-a4f0-4628-ae09-c94dc48b820d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L13-L5_2023",
+        "script_level.level_keys": [
+          "CSA U1L13-L5_2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "cc2f7b48-1520-44c9-bfa1-2b16e1386722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L15-L1_2023",
+        "script_level.level_keys": [
+          "CSA U1L15-L1_2023"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "14a11cdd-8721-41be-8396-1f40fe0c970d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L15-L2_2023",
+        "script_level.level_keys": [
+          "CSA U1L15-L2_2023"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "96e7dc41-8655-432c-a3c5-aea8ebc50153"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1 Asphalt Art Project_2023",
+        "script_level.level_keys": [
+          "CSA U1 Asphalt Art Project_2023"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023",
+        "activity_section.key": "98897942-24d3-4ede-97fc-0ae26d955b55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1 Asphalt Art Project 1-Day_2023",
+        "script_level.level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023",
+        "activity_section.key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef"
+      }
     }
   ],
   "resources": [
@@ -6776,6 +8713,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/1IY6x-N2Y8tD1QMfRLOI9QfpplxOeMFoH1BKA71YGTl4/edit?usp=sharing",
+      "key": "_key_u1l13_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/186P3n17C7xPU0-2Zjxdr3rK8RPKpMrecmEZ3cX5S09w/edit?usp=sharing",
+      "key": "_key_u1l15_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l15_extra_practice"
       }
     },
     {
@@ -7194,6 +9155,30 @@
       }
     },
     {
+      "name": "Putting It All Together",
+      "url": "https://docs.google.com/presentation/d/197gwDHQqVENAa-x-nCjMpXfr4mbE9_oRMy6LRed9CJs/edit?usp=sharing",
+      "key": "putting_it_all_together",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "putting_it_all_together"
+      }
+    },
+    {
+      "name": "Relational Operators",
+      "url": "https://docs.google.com/presentation/d/1pp_qk7MHpyBHYkOvMl0jzdrbJMHmFt6gp-6vNt9jiBg/edit?usp=sharing",
+      "key": "relational_operators",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "relational_operators"
+      }
+    },
+    {
       "name": "Selection Statements",
       "url": "https://docs.google.com/presentation/d/14zJMk22_jttyT-dOaPUAAS6uKm02pPn0hG09mFQqYDg/edit?usp=sharing",
       "key": "selection_statements",
@@ -7330,6 +9315,32 @@
       }
     },
     {
+      "name": "U1L13 Extra Practice",
+      "url": "https://docs.google.com/document/d/1MKRyMcTHiGQbKTgYL63qPrHWhEJirjXgdWy480Mm0Co/edit?usp=sharing",
+      "key": "u1l13_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "name": "U1L15 Extra Practice",
+      "url": "https://docs.google.com/document/d/1yJGfnLD7FDaqqWz-F_pJJyvgwvF91c3ttOai0lwIvqM/edit?usp=sharing",
+      "key": "u1l15_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u1l15_extra_practice"
+      }
+    },
+    {
       "name": "U1L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1HpxVlUVskjmYwknNRCaNcOt5GQQ0C0fiHi-MRgkKHrw/edit?usp=sharing",
       "key": "u1l2_extra_practice",
@@ -7430,6 +9441,30 @@
       },
       "seeding_key": {
         "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unity and Safety Through Street Art in Norfolk, VA",
+      "url": "https://youtu.be/-gnXVMcg0yk",
+      "key": "unity_and_safety_through_street_art_in_norfolk_va",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
       }
     },
     {
@@ -7696,6 +9731,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "relational_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "putting_it_all_together"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_key_investigate_working_with_java_files"
       }
@@ -7722,6 +9799,18 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
       }
     },
     {
@@ -7965,6 +10054,16 @@
       }
     },
     {
+      "key": "boolean_expression",
+      "word": "Boolean expression",
+      "definition": "a logical statement that gives either a `true` or `false` value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
       "key": "class",
       "word": "class",
       "definition": "a programmer-defined blueprint from which objects are created",
@@ -8205,6 +10304,16 @@
       }
     },
     {
+      "key": "relational_operator",
+      "word": "relational operator",
+      "definition": "an operator used to compare values or expressions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "relational_operator"
+      }
+    },
+    {
       "key": "return",
       "word": "return",
       "definition": "to exit a method and go back to the point in the program that called it with the requested value or information",
@@ -8408,6 +10517,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "vocabulary.key": "relational_operator"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "class_header"
       }
@@ -8604,6 +10725,36 @@
   ],
   "objectives": [
     {
+      "key": "09aaecaa-58fa-49f7-a821-7cdea17a3e8a",
+      "properties": {
+        "description": "Evaluate expressions using relational operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "09aaecaa-58fa-49f7-a821-7cdea17a3e8a"
+      }
+    },
+    {
+      "key": "0b814405-1da0-462d-a1a3-ad0e36779140",
+      "properties": {
+        "description": "Implement a class using inheritance based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "objective.key": "0b814405-1da0-462d-a1a3-ad0e36779140"
+      }
+    },
+    {
+      "key": "181d6733-f1f1-4201-aad8-63c0d0e3331b",
+      "properties": {
+        "description": "Implement a new method in an existing class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "181d6733-f1f1-4201-aad8-63c0d0e3331b"
+      }
+    },
+    {
       "key": "186ce104-d014-46f2-9466-76c610faf9a5",
       "properties": {
         "description": "Identify the components of a method signature"
@@ -8734,6 +10885,16 @@
       }
     },
     {
+      "key": "697140a0-91bb-4166-a779-7fb7b2298510",
+      "properties": {
+        "description": "Trace and validate the code of peers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "objective.key": "697140a0-91bb-4166-a779-7fb7b2298510"
+      }
+    },
+    {
       "key": "6b7fa724-fd44-423c-9715-bc9e6d1f9b33",
       "properties": {
         "description": "Use the NOT ( `!` ) logical operator to execute specific blocks of code if a condition is not `true`"
@@ -8751,6 +10912,16 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "objective.key": "71f21f64-3e4c-44f4-9ffb-4f03df0e6f8b"
+      }
+    },
+    {
+      "key": "7962b345-1aeb-4849-a94f-073c646fd498",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "7962b345-1aeb-4849-a94f-073c646fd498"
       }
     },
     {
@@ -8824,6 +10995,26 @@
       }
     },
     {
+      "key": "93c4594b-a07a-4969-a173-3ff9f09cda5b",
+      "properties": {
+        "description": "Design a class to extend an existing class and implement a new method"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "objective.key": "93c4594b-a07a-4969-a173-3ff9f09cda5b"
+      }
+    },
+    {
+      "key": "9dfdc2d6-4769-4db8-beaf-8cdf68840606",
+      "properties": {
+        "description": "Implement methods with parameters based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "objective.key": "9dfdc2d6-4769-4db8-beaf-8cdf68840606"
+      }
+    },
+    {
       "key": "bc39376a-6e0f-4e0c-8d67-caaee655d3ae",
       "properties": {
         "description": "Identify the components of a Java source code file"
@@ -8894,6 +11085,16 @@
       }
     },
     {
+      "key": "dba05cc6-38d4-40a3-ada6-edda03867c8c",
+      "properties": {
+        "description": "Apply the problem solving process and decomposition strategies to solve a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "dba05cc6-38d4-40a3-ada6-edda03867c8c"
+      }
+    },
+    {
       "key": "e5a00027-2eaf-482a-80b6-07a06db22264",
       "properties": {
         "description": "Explain the functionality of a method with a `void` return type"
@@ -8914,6 +11115,16 @@
       }
     },
     {
+      "key": "ec51ff26-60ff-4969-a01e-457c82e6d887",
+      "properties": {
+        "description": "Write conditions for selection and iteration statements using relational operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "ec51ff26-60ff-4969-a01e-457c82e6d887"
+      }
+    },
+    {
       "key": "f1f61568-317e-4418-bf8a-bad89cf0caa8",
       "properties": {
         "description": "Create an object from an existing class"
@@ -8921,6 +11132,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "f1f61568-317e-4418-bf8a-bad89cf0caa8"
+      }
+    },
+    {
+      "key": "f44d1697-ab90-4fb2-8ffd-9de361384039",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "objective.key": "f44d1697-ab90-4fb2-8ffd-9de361384039"
       }
     },
     {
@@ -9020,6 +11241,34 @@
         "lesson.key": "lesson-13",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.7"
       }
     },
     {

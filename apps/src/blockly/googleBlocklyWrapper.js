@@ -28,10 +28,8 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
-import {
-  FUNCTION_BLOCK,
-  getFunctionsFlyoutBlocks
-} from './addons/functionBlocks.js';
+import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
+import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -249,13 +247,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
-  };
-
-  blocklyWrapper.getFieldForInputType = function(type) {
-    if (type === 'Number') {
-      return blocklyWrapper.FieldNumber;
-    }
-    return blocklyWrapper.FieldTextInput;
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
@@ -526,12 +517,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
-    // Customize auto-populated Functions toolbox category
-    workspace.registerToolboxCategoryCallback(
-      'PROCEDURE',
-      getFunctionsFlyoutBlocks
-    );
-
+    if (options.useModalFunctionEditor) {
+      // Customize auto-populated Functions toolbox category
+      workspace.registerToolboxCategoryCallback(
+        'PROCEDURE',
+        functionsFlyoutCategory
+      );
+    }
     // Customize function defintion blocks
     Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
       FUNCTION_BLOCK.init;
