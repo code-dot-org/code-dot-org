@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-26 18:40:23 UTC",
+    "serialized_at": "2022-10-27 16:45:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -622,6 +622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge"
+        ],
         "progression": "Challenge: States of Matter Under the Microscope"
       },
       "bonus": false,
@@ -644,6 +647,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge"
+        ],
         "progression": "Challenge: States of Matter Under the Microscope"
       },
       "bonus": false,
@@ -666,6 +672,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge"
+        ],
         "progression": "Challenge: States of Matter Under the Microscope"
       },
       "bonus": false,
@@ -686,6 +695,27 @@
       "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cdc_particles_physical_intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      },
+      "level_keys": [
+        "cdc_particles_physical_intro"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -910,6 +940,18 @@
         "lesson_group.key": "",
         "script.name": "csc-playground",
         "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cdc_particles_physical_intro",
+        "script_level.level_keys": [
+          "cdc_particles_physical_intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
       }
     },
     {

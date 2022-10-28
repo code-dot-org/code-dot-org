@@ -1,4 +1,4 @@
-function makeManipulative(var1, s1costume, behavior) {
+function representManipulative(var1, s1costume, behavior) {
   for(var count_i = 0; count_i < var1; count_i++) { 
   makeNewSpriteAnon(s1costume); 
   }

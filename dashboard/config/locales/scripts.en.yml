@@ -8562,6 +8562,10 @@ en:
               name: 'Module 3 post-work: The Theater and datasets in Unit 4'
             lesson-3:
               name: 'Module 4 post-work: FRQs and Unit 5'
+            lesson-4:
+              name: 'Module 5 post-work: Unit 5 Project'
+            lesson-5:
+              name: 'Module 6 post-work: String methods in Unit 6'
           lesson_groups: {}
           name: csa-draft-pl
           title: ''
