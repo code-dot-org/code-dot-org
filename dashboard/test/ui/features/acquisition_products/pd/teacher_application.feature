@@ -249,7 +249,7 @@ Scenario: Teacher starts a new csp application and submits it
 
   # Section 2
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
-  And I press "input[name='program']:second" using jQuery
+  And I press the second "input[name='program']" using jQuery
   And I press the first "input[name='cspWhichGrades']" element
   And I press the first "input[name='cspHowOffer']" element
   And I press the first "input[name='enoughCourseHours']" element
