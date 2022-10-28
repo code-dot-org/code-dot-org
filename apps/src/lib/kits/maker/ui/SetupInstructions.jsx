@@ -37,7 +37,7 @@ const style = {
   }
 };
 
-export default class SetupGuide extends React.Component {
+export default class SetupInstructions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {webSerialPort: null};
@@ -253,7 +253,7 @@ class MacDownloads extends React.Component {
           />
         )}
         {error && <FetchingLatestVersionError />}
-        <SetupInstructions />
+        <Instructions />
       </div>
     );
   }
@@ -297,7 +297,7 @@ class LinuxDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <SetupInstructions />
+          <Instructions />
           <h4>{applabI18n.makerSetupLinuxAlternative()}</h4>
           <ul>
             {debFile && (
@@ -346,7 +346,7 @@ const FetchingLatestVersionError = () => (
   </div>
 );
 
-const SetupInstructions = () => (
+const Instructions = () => (
   <div>
     <h4>{i18n.instructionsWithColon()}</h4>
     <ol>
