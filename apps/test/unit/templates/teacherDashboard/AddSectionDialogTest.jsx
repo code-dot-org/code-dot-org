@@ -47,7 +47,8 @@ describe('AddSectionDialog', () => {
       setLoginType,
       setParticipantType,
       handleCancel,
-      availableParticipantTypes: ['student']
+      availableParticipantTypes: ['student'],
+      asyncLoadComplete: true
     };
   });
 
