@@ -1,10 +1,8 @@
 import msg from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import frameSizes from './cdoConstants.js';
-
+import {frameSizes} from './cdoConstants.js';
 export default class BlockSvgFrame {
   constructor(block, text, className, textColor, headerColor, baseColor) {
-    console.log(block, text, className, textColor, headerColor, baseColor);
     this.block_ = block;
     this.text = text || msg.block();
     this.className = className || 'blocklyFrame';

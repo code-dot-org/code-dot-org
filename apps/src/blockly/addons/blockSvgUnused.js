@@ -1,7 +1,7 @@
 import msg from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import BlockSvgFrame from './blockSvgFrame.js';
-import frameSizes from './cdoConstants.js';
+import {frameSizes} from './cdoConstants.js';
 
 export default class BlockSvgUnused extends BlockSvgFrame {
   constructor(block, helpClickFunc) {
