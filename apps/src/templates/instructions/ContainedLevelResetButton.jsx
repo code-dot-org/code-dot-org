@@ -63,7 +63,7 @@ export const UnconnectedContainedLevelResetButton = ({
 };
 
 UnconnectedContainedLevelResetButton.propTypes = {
-  teacherViewingStudentWork: PropTypes.bool.isRequired,
+  teacherViewingStudentWork: PropTypes.bool,
   userId: PropTypes.number,
   queryUserProgress: PropTypes.func.isRequired,
   hasLevelResults: PropTypes.bool,
