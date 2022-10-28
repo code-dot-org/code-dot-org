@@ -63,18 +63,16 @@ module Pd::Application
     # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
     # In these decision emails, status and email_type are the same.
     AUTO_EMAIL_STATUSES = %w(
-      accepted_no_cost_registration
+      accepted
       declined
-      waitlisted
-      registration_sent
+      pending_space_availability
     )
 
     # If the regional partner's emails are SENT_BY_SYSTEM, the application must
     # have an assigned workshop to be set to one of these statuses because they
     # trigger emails with a link to the workshop registration form
     WORKSHOP_REQUIRED_STATUSES = %w(
-      accepted_no_cost_registration
-      registration_sent
+      accepted
     )
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
@@ -328,14 +326,11 @@ module Pd::Application
         unreviewed
         incomplete
         reopened
+        awaiting_admin_approval
         pending
-        waitlisted
+        pending_space_availability
         declined
-        accepted_not_notified
-        accepted_notified_by_partner
-        accepted_no_cost_registration
-        registration_sent
-        paid
+        accepted
         withdrawn
       )
     end
@@ -399,10 +394,6 @@ module Pd::Application
 
     def effective_regional_partner_name
       regional_partner&.name || 'Code.org'
-    end
-
-    def accepted?
-      status.start_with? 'accepted'
     end
 
     # @override
@@ -739,8 +730,8 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently unreviewed, pending, or waitlisted.
-      return false unless unreviewed? || pending? || waitlisted?
+      # Only if this teacher application is currently unreviewed, pending, or pending_space_availability.
+      return false unless unreviewed? || pending? || pending_space_availability?
 
       # Only if the principal approval is required.
       return false if principal_approval_not_required
@@ -760,7 +751,7 @@ module Pd::Application
       # Do we allow the cron job to send a reminder email to the teacher?
 
       # Only if this teacher application is currently unreviewed or pending.
-      # (Unlike allow_sending_principal_email?, don't allow for waitlisted.)
+      # (Unlike allow_sending_principal_email?, don't allow for pending_space_availability.)
       return false unless unreviewed? || pending?
 
       # Only if we haven't already sent one.

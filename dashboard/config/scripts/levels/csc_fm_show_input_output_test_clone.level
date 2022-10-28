@@ -45,7 +45,7 @@
   "created_at": "2022-10-25T21:00:01.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-25T21:00:01.376+00:00\",\"changed\":[\"cloned from \\\"csc_fm_show_input_output\\\"\"],\"cloned_from\":\"csc_fm_show_input_output\"},{\"changed_at\":\"2022-10-25 21:00:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 21:05:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 21:06:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 21:07:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:30:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:30:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:35:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 13:47:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 20:53:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-25T21:00:01.376+00:00\",\"changed\":[\"cloned from \\\"csc_fm_show_input_output\\\"\"],\"cloned_from\":\"csc_fm_show_input_output\"},{\"changed_at\":\"2022-10-25 21:00:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 21:05:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 21:06:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 21:07:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:30:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:30:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-25 23:35:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 13:47:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 20:53:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-27 17:22:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -107,27 +107,13 @@
                 </block>
               </value>
               <next>
-                <block type="gamelab_makeBurst">
-                  <field name="EFFECT">"burst"</field>
-                  <field name="ANIMATION_NAME">"pink-ice-cream"</field>
-                  <value name="NUM">
+                <block type="FunctionBlocks_communicate">
+                  <field name="SPRITE1COSTUME">"vanilla-ice-cream"</field>
+                  <value name="VAR1">
                     <block type="variables_get">
                       <field name="VAR">input</field>
                     </block>
                   </value>
-                  <next>
-                    <block type="gamelab_makeNumSprites">
-                      <field name="ANIMATION_NAME">"pink-ice-cream"</field>
-                      <value name="NUM">
-                        <block type="variables_get">
-                          <field name="VAR">input</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_layoutGrid"/>
-                      </next>
-                    </block>
-                  </next>
                 </block>
               </next>
             </block>
@@ -144,12 +130,12 @@
             <block type="gamelab_destroy">
               <value name="THIS">
                 <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"pink-ice-cream"</field>
+                  <field name="ANIMATION">"vanilla-ice-cream"</field>
                 </block>
               </value>
               <next>
                 <block type="procedures_callnoreturn">
-                  <mutation name="timesTwo"/>
+                  <mutation name="timesThree"/>
                   <next>
                     <block type="gamelab_spriteSayTime">
                       <value name="SPRITE">
@@ -168,27 +154,13 @@
                         </block>
                       </value>
                       <next>
-                        <block type="gamelab_makeBurst">
-                          <field name="EFFECT">"burst"</field>
-                          <field name="ANIMATION_NAME">"face_icecreamcone"</field>
-                          <value name="NUM">
+                        <block type="FunctionBlocks_communicate">
+                          <field name="SPRITE1COSTUME">"vanilla-ice-cream"</field>
+                          <value name="VAR1">
                             <block type="variables_get">
                               <field name="VAR">output</field>
                             </block>
                           </value>
-                          <next>
-                            <block type="gamelab_makeNumSprites">
-                              <field name="ANIMATION_NAME">"face_icecreamcone"</field>
-                              <value name="NUM">
-                                <block type="variables_get">
-                                  <field name="VAR">output</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_layoutGrid"/>
-                              </next>
-                            </block>
-                          </next>
                         </block>
                       </next>
                     </block>
@@ -200,7 +172,7 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <field name="NAME">timesTwo</field>
+          <field name="NAME">timesThree</field>
           <statement name="STACK">
             <block type="variables_set">
               <field name="VAR">output</field>
@@ -214,7 +186,7 @@
                   </value>
                   <value name="B">
                     <block type="math_number">
-                      <field name="NUM">2</field>
+                      <field name="NUM">3</field>
                     </block>
                   </value>
                 </block>
