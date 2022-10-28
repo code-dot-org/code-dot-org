@@ -251,13 +251,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
   };
 
-  blocklyWrapper.getFieldForInputType = function(type) {
-    if (type === 'Number') {
-      return blocklyWrapper.FieldNumber;
-    }
-    return blocklyWrapper.FieldTextInput;
-  };
-
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
   blocklyWrapper.BlockSvg.prototype.mixin = function(
     mixinObj,
