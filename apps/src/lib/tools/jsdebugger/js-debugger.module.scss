@@ -52,6 +52,15 @@
   display: none;
 }
 
+$debug-watch-max-column-width: 200px;
+$debug-header-border-width: 1px;
+
+.debugWatchHeader {
+  width: $debug-watch-max-column-width + $debug-header-border-width;
+  float: right;
+  border-left: $debug-header-border-width solid gray;
+}
+
 .watchersHidden {
   border-left: none;
   text-align: right;

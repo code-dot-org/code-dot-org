@@ -78,12 +78,6 @@ $debug-header-border-width: 1px;
   }
 }
 
-#debug-watch-header {
-  width: $debug-watch-max-column-width + $debug-header-border-width;
-  float: right;
-  border-left: $debug-header-border-width solid gray;
-}
-
 #watchersResizeBar {
   height: 100%;
   width: $resize-bar-width;

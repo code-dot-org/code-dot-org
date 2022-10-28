@@ -508,6 +508,7 @@ class JsDebugger extends React.Component {
                 (this._debugWatchHeader = debugWatchHeader)
               }
               className={classNames(
+                styles.debugWatchHeader,
                 this.state.watchersHidden && styles.watchersHidden
               )}
             >
