@@ -5,10 +5,12 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
+      "FunctionBlocks",
       "GamelabJr"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zFunctionMachine"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
@@ -18,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "true",
     "instructions_important": "false",
-    "long_instructions": "##Observer\r\n- Start with your own input, this time the math machine will carry out a new computation. \r\n- User your note catcher. \r\n- What is this mystery **function** doing to your input? \r\n\r\n![](https://images.code.org/e3bb9533e3c1b0ec2a70467f14c19b02-image-1665611945794.59.01 PM.png)",
+    "long_instructions": "##Observer\r\n- Start with your own input, then click the sprite and make the math machine carry out a new computation. \r\n- Use your note catcher. \r\n- What is this mystery **function** doing to your input? \r\n\r\n![](https://images.code.org/e3bb9533e3c1b0ec2a70467f14c19b02-image-1665611945794.59.01 PM.png)",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -39,37 +41,13 @@
   "created_at": "2022-10-12T21:58:04.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-12T21:58:04.623+00:00\",\"changed\":[\"cloned from \\\"csc_fm_addtwo_prompt\\\"\"],\"cloned_from\":\"csc_fm_addtwo_prompt\"},{\"changed_at\":\"2022-10-12 22:00:11 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:01:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-12T21:58:04.623+00:00\",\"changed\":[\"cloned from \\\"csc_fm_addtwo_prompt\\\"\"],\"cloned_from\":\"csc_fm_addtwo_prompt\"},{\"changed_at\":\"2022-10-12 22:00:11 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-12 22:01:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-26 13:55:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 13:56:37 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 13:57:34 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-27 20:23:41 +0000\",\"changed\":[\"start_blocks\",\"block_pools\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-27 20:31:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="addTwo">addTwo</field>
-          <statement name="STACK">
-            <block type="variables_set">
-              <field name="VAR">input</field>
-              <value name="VALUE">
-                <block type="math_arithmetic">
-                  <field name="OP">ADD</field>
-                  <value name="A">
-                    <block type="variables_get">
-                      <field name="VAR">input</field>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <block type="math_number">
-                      <field name="NUM">2</field>
-                    </block>
-                  </value>
-                </block>
-              </value>
-            </block>
-          </statement>
-        </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
           <field name="NAME" id="addFive">addFive</field>
@@ -120,15 +98,14 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"purple bunny"</field>
+        <block type="gamelab_whenPromptAnswered">
+          <value name="VAR">
+            <block type="variables_get">
+              <field name="VAR">input</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSayTime">
+            <block type="FunctionBlocks_spriteSayVar">
               <value name="SPRITE">
                 <block type="gamelab_allSpritesWithAnimation">
                   <field name="ANIMATION">"purple bunny"</field>
@@ -139,18 +116,59 @@
                   <field name="VAR">input</field>
                 </block>
               </value>
-              <value name="NUM">
-                <block type="math_number">
-                  <field name="NUM">4</field>
-                </block>
-              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"purple bunny"</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="addFive"/>
               <next>
-                <block type="procedures_callnoreturn">
-                  <mutation name="addFive"/>
+                <block type="FunctionBlocks_spriteSayVar">
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"purple bunny"</field>
+                    </block>
+                  </value>
+                  <value name="TEXT1">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
                 </block>
               </next>
             </block>
           </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <field name="NAME" id="addTwo">addTwo</field>
+          <statement name="STACK">
+            <block type="variables_set">
+              <field name="VAR">input</field>
+              <value name="VALUE">
+                <block type="math_arithmetic">
+                  <field name="OP">ADD</field>
+                  <value name="A">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <field name="NUM">2</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>

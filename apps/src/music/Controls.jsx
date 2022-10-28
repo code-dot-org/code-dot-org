@@ -6,13 +6,34 @@ import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
 
-const Controls = ({isPlaying, setPlaying, playTrigger, top}) => {
-  const [isShowingBeatBad, setBeatPadShowing] = useState(false);
+const Controls = ({
+  isPlaying,
+  setPlaying,
+  playTrigger,
+  top,
+  startOverClicked,
+  toggleInstructions,
+  instructionsOnRight
+}) => {
+  const [isShowingBeatPad, setBeatPadShowing] = useState(false);
   useEffect(() => {
     if (isPlaying) {
       setBeatPadShowing(true);
     }
   }, [isPlaying]);
+
+  const renderStartOver = () => {
+    return (
+      <button
+        type="button"
+        className={moduleStyles.startOverButton}
+        onClick={startOverClicked}
+      >
+        <FontAwesome icon={'refresh'} />
+        &nbsp; Start Over
+      </button>
+    );
+  };
 
   const renderBeatPad = () => {
     return (
@@ -20,7 +41,7 @@ const Controls = ({isPlaying, setPlaying, playTrigger, top}) => {
         style={{
           position: 'absolute',
           [top ? 'bottom' : 'top']: -175,
-          right: 10
+          [instructionsOnRight ? 'left' : 'right']: 10
         }}
       >
         <BeatPad
@@ -35,44 +56,40 @@ const Controls = ({isPlaying, setPlaying, playTrigger, top}) => {
     );
   };
 
+  const renderIconButton = (icon, onClick) => (
+    <div className={classNames(moduleStyles.controlButtons, moduleStyles.side)}>
+      <FontAwesome
+        icon={icon}
+        className={moduleStyles.iconButton}
+        onClick={onClick}
+      />
+    </div>
+  );
+
+  const beatPadIconSection = renderIconButton('th', () =>
+    setBeatPadShowing(!isShowingBeatPad)
+  );
+  const infoIconSection = renderIconButton('info-circle', toggleInstructions);
+
+  const [leftIcon, rightIcon] = instructionsOnRight
+    ? [beatPadIconSection, infoIconSection]
+    : [infoIconSection, beatPadIconSection];
+
   return (
     <div id="controls" className={moduleStyles.controlsContainer}>
-      {isShowingBeatBad && renderBeatPad()}
-      {/*Placeholder button area, currently hidden*/}
-      <div
-        className={classNames(
-          moduleStyles.controlButtons,
-          moduleStyles.side,
-          moduleStyles.hide
-        )}
-      >
-        <FontAwesome
-          icon={'th'}
-          style={{fontSize: 30}}
-          className={moduleStyles.iconButton}
-        />
-      </div>
-
+      {isShowingBeatPad && renderBeatPad()}
+      {leftIcon}
       <div
         className={classNames(moduleStyles.controlButtons, moduleStyles.center)}
       >
         <FontAwesome
           icon={isPlaying ? 'stop-circle' : 'play-circle'}
-          style={{fontSize: 30}}
           onClick={() => setPlaying(!isPlaying)}
           className={moduleStyles.iconButton}
         />
       </div>
-      <div
-        className={classNames(moduleStyles.controlButtons, moduleStyles.side)}
-      >
-        <FontAwesome
-          icon={'th'}
-          style={{fontSize: 30}}
-          onClick={() => setBeatPadShowing(!isShowingBeatBad)}
-          className={moduleStyles.iconButton}
-        />
-      </div>
+      {renderStartOver()}
+      {rightIcon}
     </div>
   );
 };
@@ -81,7 +98,10 @@ Controls.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
-  top: PropTypes.bool.isRequired
+  top: PropTypes.bool.isRequired,
+  startOverClicked: PropTypes.func.isRequired,
+  toggleInstructions: PropTypes.func.isRequired,
+  instructionsOnRight: PropTypes.bool.isRequired
 };
 
 export default Controls;

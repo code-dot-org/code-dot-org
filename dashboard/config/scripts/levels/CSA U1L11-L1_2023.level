@@ -4,7 +4,7 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
     "serialized_maze": [
       [
@@ -1337,16 +1337,16 @@
         "tabOrder": 2
       }
     },
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe what it does, then make the following changes to the program. Run the program after each change to observe the results.\r\n\r\n1. Look at the `DeliveryPainter`(#e7e8ea) class. What does the `makeDelivery()`(#e7e8ea) method do? What makes the structure of this method easy or difficult to explain how it is solving the problem?\r\n\r\n2. In the `DeliveryPainter`(#e7e8ea) class, look at the `makeTurn()`(#e7e8ea) method. Can this method be broken down into smaller tasks? For example, `turnWest()`(#e7e8ea), `turnEast()`(#e7e8ea), and `turnSouth()`(#e7e8ea)?\r\n\r\n3. Try breaking the `makeTurn()`(#e7e8ea) method into the separate methods to represent smaller tasks. Update the `makeDelivery()`(#e7e8ea) method to use these methods.",
     "encrypted_examples": [
 
-    ],
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe what it does, then make the following changes to the program. Run the program after each change to observe the results.\r\n\r\n1. Look at the `DeliveryPainter`(#e7e8ea) class. What does the `makeDelivery()`(#e7e8ea) method do? What makes the structure of this method easy or difficult to explain how it is solving the problem?\r\n\r\n2. In the `DeliveryPainter`(#e7e8ea) class, look at the `makeTurn()`(#e7e8ea) method. Can this method be broken down into smaller tasks? For example, `turnWest()`(#e7e8ea), `turnEast()`(#e7e8ea), and `turnSouth()`(#e7e8ea)?\r\n\r\n3. Try breaking the `makeTurn()`(#e7e8ea) method into the separate methods to represent smaller tasks. Update the `makeDelivery()`(#e7e8ea) method to use these methods."
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-10-21T19:16:50.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-10-21 19:16:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 15:55:38 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 15:56:00 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 17:36:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:24:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:24:25 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:26:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:32:33 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:40:06 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-21 19:16:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 15:55:38 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 15:56:00 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 17:36:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:24:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:24:25 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:26:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:32:33 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-22 18:40:06 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-26 15:04:56 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

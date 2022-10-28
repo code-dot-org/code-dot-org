@@ -3,7 +3,7 @@
   "name": "Math.pow",
   "category": "Math",
   "category_key": "math",
-  "content": "[description]\r\n\r\n[short_description]\r\n\r\nTakes x to the power of y.\r\n\r\n[/short_description]\r\n\r\nThere are some math calculations that require you to use exponents. *Math.power(x, y)* does not change the value of x or y, rather it returns the result of x to the power of y.\r\n\r\n[/description]",
+  "content": "There are some math calculations that require you to use exponents. *Math.power(x, y)* does not change the value of x or y, rather it returns the result of x to the power of y.",
   "examples": [
     {
       "name": "",
@@ -39,6 +39,6 @@
     }
   ],
   "return_value": "A number representing x to the power of y.",
-  "short_description": "\nTakes x to the power of y.",
+  "short_description": "Takes x to the power of y.",
   "syntax": "Math.pow(x,y);"
 }

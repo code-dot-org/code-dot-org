@@ -320,6 +320,7 @@ class Blockly < Level
             set_unless_nil(level_options, xml_block_prop, localized_placeholder_text_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
             set_unless_nil(level_options, xml_block_prop, localized_loop_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_remaining_variable_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -702,6 +703,42 @@ class Blockly < Level
         smart: true
       )
       controls_for_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing variable names in all remaining block types.
+  # @param blocks [String] an XML doc to be localized.
+  # @return [String] the given XML doc localized.
+  def localized_remaining_variable_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    tag = Blockly.field_or_title(block_xml)
+
+    # The block types that are otherwise unaccounted for.
+    block_types = %w[
+      studio_ask
+      math_change
+      gamelab_textVariableJoin
+    ]
+
+    # Localize each 'catch-all' block type.
+    block_types.each do |block_type|
+      block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+        # Find all <title/field name="VAR" /> blocks and maybe update their
+        # content if there exists a localization key for them.
+        block.xpath("./#{tag}[@name=\"VAR\"]").each do |var|
+          localized_name = I18n.t(
+            var.content,
+            scope: [:data, :variable_names],
+            default: nil,
+            smart: true
+          )
+          var.content = localized_name if localized_name
+        end
+      end
     end
 
     return block_xml.serialize(save_with: XML_OPTIONS).strip
