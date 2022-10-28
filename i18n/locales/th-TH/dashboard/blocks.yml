@@ -232,20 +232,12 @@ th:
             MOVES.XArmsUp: กาง
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
-      Dancelab_everyMeasuresRange:
-        text: 'ซ้ำทุกๆ {N} ห้องดนตรีหลังจาก {START} '
       Dancelab_everySeconds:
         text: 'ทุกๆ {N} {UNIT} '
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
-      Dancelab_everySecondsRange:
-        text: 'ทุก {N} {UNIT} จาก {START} ถึง {STOP} '
-        options:
-          UNIT:
-            measures: ห้องดนตรี
-            seconds: ขั้นคู่สอง
       Dancelab_everyVerseChorus:
         text: ทุก {UNIT}
         options:
@@ -1320,6 +1312,32 @@ th:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": เลือก
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": เสียงทุ้มนุ่มลึก
             "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
+      gamelab_playSoundOptionsSoccer:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": แอร์ฮอร์น
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": เสียงปรบมือ
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": เสียงสวด
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": เสียงเชียร์
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": เตะ
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": นกหวีดสองเสียง
+            "'sound://category_sports/One_Whistle_SFX.mp3'": นกหวีด
+      gamelab_playSoundOptionsSpace:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": หลุมดำ
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": กระจุกปืนรัว
+            "'sound://category_space/Carina_SFX.mp3'": คารินา
+            "'sound://category_space/Cassiopeia_SFX.mp3'": แคสสิโอเปีย
+            "'sound://category_space/Crab_nebula_SFX.mp3'": เนบิวลาปู
+            "'sound://category_space/Launch_SFX.mp3'": ปล่อย
+            "'sound://category_space/Lift_Off.mp3'": บินขึ้น
+            "'sound://category_space/Pillars_SFX.mp3'": เสาหลัก
+            "'sound://category_space/Southern_ring_SFX.mp3'": วงแหวนทางใต้
+            "'sound://category_space/Supernova_SFX.mp3'": ซุปเปอร์โนวา
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ไทโช
       gamelab_playSpeech:
         text: เล่นเสียงพูด {SOUND}
       gamelab_playerBehaviors:
@@ -2285,5 +2303,9 @@ th:
           DIR:
             right: ไปทางขวา ↻
             left: ไปทางซ้าย ↺
+      storylab_setHeading:
+        text: ตั้งค่าหัวเรื่อง {HEADING}
+      storylab_setSubheading:
+        text: ตั้งค่าหัวข้อย่อย {SUBHEADING}
       validation_validatedBackground:
         text: ตั้งค่าพื้นหลังเป็น {IMG}

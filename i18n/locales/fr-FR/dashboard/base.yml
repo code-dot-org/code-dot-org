@@ -86,7 +86,7 @@ fr:
     submit: 'Ajouter un indice'
   appname: "Code.org"
   stage: "étape"
-  stage_number: "Leçon %{number} "
+  stage_number: "Leçon %{number}"
   puzzle: "Énigme"
   trophies: "trophées"
   courses: 'Cours'
@@ -378,7 +378,7 @@ fr:
       about: "À propos"
       legal: "Confidentialité et mentions légales"
       legal_privacy: "Politique de confidentialité"
-      legal_cookie_notice: " Utilisation de cookies"
+      legal_cookie_notice: " Utilisation des cookies"
       legal_tos: "Conditions Générales d'Utilisation"
     user:
       classroom: 'Page d''accueil de l''enseignant'
@@ -606,7 +606,7 @@ fr:
     how_it_works: 'Comment ça marche'
     try_hour_of_code: 'Essaie une Heure du Code !'
     store: 'Boutique'
-    cookie_notice: ' Utilisation de cookies'
+    cookie_notice: ' Utilisation des cookies'
   reference_area:
     title: 'Besoin d''aide ?'
     subtitle: 'Regarder les vidéos et les indices'
@@ -1160,3 +1160,5 @@ fr:
       cannot_view_locked_answers: "Impossible d'afficher les réponses lorsque le système est verrouillé"
       forbidden: "L'utilisateur ne peut pas modifier les paramètres de verrouillage de l'apprenant"
   reset_predict_progress_button: "Supprimer la réponse"
+  pixelation:
+    binary: "Binaire"

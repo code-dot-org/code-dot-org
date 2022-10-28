@@ -8,6 +8,7 @@
   "activityHeaderTime": "({activityDuration} минути)",
   "actions": "Акције",
   "add": "Додај",
+  "addingToTable": "Додавање...",
   "additionalInformationHeader": "Додатне информације",
   "additionalInformationText": "За више информација види [{externalDocumentationUrl}]({externalDocumentationUrl})",
   "addNewSection": "Додати нову секцију",

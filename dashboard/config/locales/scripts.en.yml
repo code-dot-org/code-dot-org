@@ -4412,6 +4412,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: This self-paced module introduces foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This unit uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          lessons: {}
+          name: csp5-virtual
         virtual-holding-place:
           title: ''
           description_audience: ''
@@ -7386,7 +7388,7 @@ en:
           title: 'Invasive Species '
           description_audience: ''
           description_short: 'This is a NSF funded research grant for CS4All '
-          description: ''
+          description: 'This integrated Science+CS module invites students to learn about impacts of invasive species on their environment and to consider ways that computers might help. Please review [Lesson 0: Getting Started](https://docs.google.com/document/d/1EROJbMkqi-cs8grmyre5cgv91jCcerF2oVNEXgSNL6I/edit?usp=sharing) to learn about the module.'
           student_description: ''
           lessons:
             lesson-21:
@@ -7911,6 +7913,11 @@ en:
           description_short: For staging updates to lessons or levels between curriculum versions
           description: For staging updates to lessons or levels between curriculum versions
           student_description: ''
+          lessons:
+            lesson-7:
+              name: Intro to Sprites
+            lesson-8:
+              name: Physical Computing PSP
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
@@ -8341,12 +8348,13 @@ en:
           lessons: {}
         dlp-csd-mod3-2022:
           title: 2022 CS Discoveries Deeper Learning Module B
-          description: "##This module will be published by October 3, 2022."
+          description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
           lesson_groups: {}
           name: dlp-csd-mod3-2022
+          lessons: {}
         dlp-csd-mod4-2022:
           title: 2022 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description: ''
@@ -8374,12 +8382,13 @@ en:
           lessons: {}
         dlp-csp-mod3-2022:
           title: 2022 CS Principles Deeper Learning Module B
-          description: "##This module will be published by October 3, 2022."
+          description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
           lesson_groups: {}
           name: dlp-csp-mod3-2022
+          lessons: {}
         dlp-csp-mod4-2022:
           title: 2022 CS Principles Deeper Learning Module 4  for Workshop 4
           description: ''
@@ -8500,6 +8509,8 @@ en:
           lessons:
             lesson-2:
               name: 'Module 2 post-work: Understanding Unit 4 content'
+            lesson-4:
+              name: 'Module 4 post-work: 2D Arrays in Unit 5 and FRQs'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8551,6 +8562,10 @@ en:
               name: 'Module 3 post-work: The Theater and datasets in Unit 4'
             lesson-3:
               name: 'Module 4 post-work: FRQs and Unit 5'
+            lesson-4:
+              name: 'Module 5 post-work: Unit 5 Project'
+            lesson-5:
+              name: 'Module 6 post-work: String methods in Unit 6'
           lesson_groups: {}
           name: csa-draft-pl
           title: ''
@@ -8810,7 +8825,7 @@ en:
             lesson-1:
               name: Welcome to CSA
             lesson-3:
-              name: CSA Pre-Survey
+              name: Asphalt Art Project [1-Day Version]
             lesson-2:
               name: Java Lab
             lesson-4:
@@ -8856,6 +8871,8 @@ en:
               display_name: Content
             lessonGroup-4:
               display_name: Show What You Know
+            lessonGroup-5:
+              display_name: Alternate Lessons
           name: csa1-2023
           title: Object-Oriented Programming
           description_audience: ''
@@ -9014,7 +9031,7 @@ en:
             lesson-5:
               name: Closing
             lesson-6:
-              name: Practicing with Feedback
+              name: Module 3 Asynchronous Work
             lesson-7:
               name: Data Inquiry Cycles
           lesson_groups:
@@ -9026,10 +9043,30 @@ en:
           title: CS Discoveries Virtual Module 3
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Revisit summer workshop content about formative assessment by reflecting on how formatively assessing students has played out in classroom culture and routines.
+            * Describe how the use of a data inquiry cycle with student data supports improving access, diversity, and inclusion in CS.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Revisit summer workshop content about formative assessment by reflecting on how formatively assessing students has played out in classroom culture and routines.
+            * Describe how the use of a data inquiry cycle with student data supports improving access, diversity, and inclusion in CS.
         vpl-csd4-ayw-pilot-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Defining Student Success in Summative Assessment
+            lesson-4:
+              name: Closing
+            lesson-5:
+              name: Module 4 Asynchronous Work
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
@@ -9039,8 +9076,18 @@ en:
           title: CS Discoveries Virtual Module 4
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Gain a deeper understanding of how rubrics are used in the CS Discoveries curriculum.
+            * Calibrate with their cohort on how to define and measure success in CS Discoveries projects by scoring and discussing a sample student project.
+          student_description: |-
+            **You will:**
+
+            * Build confidence and skill in core computer science concepts.
+            * Gain a deeper understanding of how rubrics are used in the CS Discoveries curriculum.
+            * Calibrate with your cohort on how to define and measure success in CS Discoveries projects by scoring and discussing a sample student project.
         csa-magpie-lab:
           lessons:
             lesson-1:
@@ -9256,6 +9303,8 @@ en:
               display_name: 'Chapter 1: Inputs and Outputs'
             lessonGroup-3:
               display_name: 'Chapter 2: Building Physical Prototypes'
+            lessonGroup-4:
+              display_name: Introduction to App Lab
           name: physcomp-temp
           title: Physical Computing [temp]
           description_audience: ''
@@ -9264,7 +9313,6 @@ en:
             In the Physical Computing unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
 
             **Implementation Guidance for Physical Computing**
-            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the [App Lab Hour of Code](https://studio.code.org/s/applab-intro/reset) before starting this unit.
             - This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom
             - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
 
@@ -9287,6 +9335,8 @@ en:
               name: U.S. Landmarks
             lesson-3:
               name: Local Storytellers
+            lesson-4:
+              name: Local Landmarks - Unplugged
           lesson_groups: {}
           name: csc-landmarks-pilot
           title: ''
@@ -9298,6 +9348,14 @@ en:
           lessons:
             lesson-1:
               name: function machines playground
+            lesson-2:
+              name: Particles Lesson 1
+            lesson-3:
+              name: Particles Lesson 2
+            lesson-4:
+              name: Particles Lesson 3
+            lesson-5:
+              name: Particles Lesson 4
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
@@ -9315,7 +9373,9 @@ en:
           description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n"
           student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-physical-computing2:
-          lessons: {}
+          lessons:
+            lesson-5:
+              name: This lesson needs a name
           lesson_groups: {}
           name: self-paced-pl-physical-computing2
           title: 'Module 2: Preparing to Teach Physical Computing'
@@ -9363,9 +9423,246 @@ en:
           lessons:
             lesson-1:
               name: What's That Sound?
+            lesson-2:
+              name: Where is it coming from?
+            lesson-3:
+              name: What Do They Want?
           lesson_groups: {}
           name: csc-function-machines-pilot
           title: Function Machines Pilot Module
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
+          title: Digital Information ('22-'23)
+          description: 'This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world''s information.
+
+'
+          student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
+          description_short: Explore the challenges and impacts of representing information about the world around you in bits.
+          description_audience: ''
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: The Internet'
+          title: The Internet ('22-'23)
+          description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
+          student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
+          description_short: Build the internet from the ground up using the Internet Simulator.
+          description_audience: ''
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unit 3: Intro to App Design'
+          title: Intro to App Design ('22-'23)
+          description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
+          student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
+          description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
+          description_audience: ''
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_project:
+              display_name: Project
+          title: Variables, Conditionals, and Functions ('22-'23)
+          description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
+          student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
+          description_short: Learn how to build apps that store information, make decisions, and keep code organized.
+          description_audience: ''
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+            csp_traversals:
+              display_name: Traversals
+            csp_project:
+              display_name: Project
+            lessonGroup-5:
+              display_name: Post-Course Survey
+          title: Lists, Loops, and Traversals ('22-'23)
+          description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
+          student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
+          description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
+          description_audience: ''
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unit 6: Algorithms'
+            lessonGroup-2:
+              display_name: Post-Course Survey
+          title: Algorithms ('22-'23)
+          description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
+          student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
+          description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
+          description_audience: ''
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters and Return Values
+            csp_libraries:
+              display_name: Libraries
+            lessonGroup-3:
+              display_name: Post-Course Survey
+          title: Parameters, Return, and Libraries ('22-'23)
+          description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
+          description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
+          description_audience: ''
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Post-Course Survey
+          title: Create PT Prep ('22-'23)
+          description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
+          student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
+
+'
+          description_short: Practice and complete the Create Performance Task (PT).
+          description_audience: ''
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Post-Course Survey
+          title: Data ('22-'23)
+          description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
+          student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
+          description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
+          description_audience: ''
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unit 10: Cybersecurity and Global Impacts'
+            lessonGroup-2:
+              display_name: Post-Course Survey
+          title: Cybersecurity and Global Impacts ('22-'23)
+          description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\n\n"
+          student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+
+'
+          description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
+          description_audience: ''
+        csp-post-survey-2023:
+          title: CS Principles Post-Course Survey
+          description: This unit contains the CS Principles Post-Course Survey.
+          student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa-2023:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-csa1-2023:
+          title: 'Module 1: Welcome'
+          description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          student_description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+            * Get an introduction to Code.org.
+            * Learn how to engage in these professional learning modules.
+            * Get an introduction to the AP Computer Science A course
+            * Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa2-2023:
+          title: 'Module 2: Navigating Code.org'
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching the course.\n\n**Estimated Time:** 70 minutes\n"
+          student_description: |-
+            This module is intended for teachers who are new to Code.org and the Code.org platform.
+
+            **You will:**
+            * Navigate the Code.org website and teacher tools.
+            * Set up a classroom section.
+            * Locate and use course lesson plans and teacher resources.
+            * Learn how to access support while teaching the course.
+
+            **Estimated Time:** 70 minutes
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-csa3-2023:
+          title: 'Module 3: Support for text-based programming'
+          description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          student_description: |
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+            * Create a new file in the Java Lab IDE
+            * Become familiar with the basics of Java syntax
+            * Declare and initialize variables
+            * Use variables in arithmetic operations
+            * Print variables and text to the console
+            * Write and read if, if-else, if-else-if-else statements
+            * Read, write, and debug for loops in Java
+            * Declare and  initialize a 1D array of primitive data types
+            * Access and modify elements in arrays
+            * Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          description_short: ''
+          description_audience: ''
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+            lesson-2:
+              name: Unit 2 Projects
+            lesson-3:
+              name: Unit 3 Projects
+            lesson-4:
+              name: Unit 4 Projects
+            lesson-5:
+              name: Unit 5 Projects
+            lesson-6:
+              name: Unit 6 Projects
+            lesson-7:
+              name: Unit 7 Projects
+            lesson-8:
+              name: Unit 8 Projects
+          lesson_groups: {}
+          name: csa-examples-22
+          title: CSA Unit Project Examples [2022-2023]
           description_audience: ''
           description_short: ''
           description: ''

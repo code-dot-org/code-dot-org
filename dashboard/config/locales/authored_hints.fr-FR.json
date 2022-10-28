@@ -680,16 +680,16 @@
           "alternate": "Le bloc « alterner » est dans la catégorie « Danseurs »."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_b": "Si tu appelles les fonctions correctement, voici le chemin que tu feras...",
-          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
+          "Function_intro_Ryan_b": "Si tu appelles correctement les fonctions, voici le chemin que tu prendras...",
+          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras ! Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_b": "Si tu appelles les fonctions correctement, voici le chemin que tu feras...",
-          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
+          "Function_intro_Ryan_b": "Si tu appelles correctement les fonctions, voici le chemin que tu prendras...",
+          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras ! Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_b": "Si tu appelles les fonctions correctement, voici le chemin que tu feras...",
-          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
+          "Function_intro_Ryan_b": "Si tu appelles correctement les fonctions, voici le chemin que tu prendras...",
+          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras ! Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Tu vois les **Lanternes Aquatiques** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) ? Comment peux-tu utiliser un bloc conditionnel avec celles-ci pour traverser le monument sous-marin ?"
@@ -734,118 +734,118 @@
           "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_03_Cole": {
-          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
-          "MC_HOC_2017_03_Cole_b": "Le code semble trop long ?  Essaie de le raccourcir en utilisant une boucle ˋrépéterˋ !"
+          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches fléchées pour emmener le joueur jusqu'à la boussole !",
+          "MC_HOC_2017_03_Cole_b": "Ce code ne paraît-il pas un peu long ?  Essaie de le raccourcir en utilisant une boucle « répéter » !"
         },
         "MC_HOC_2017_03_Cole_2019": {
-          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
-          "MC_HOC_2017_03_Cole_b": "Le code semble trop long ?  Essaie de le raccourcir en utilisant une boucle ˋrépéterˋ !"
+          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches fléchées pour emmener le joueur jusqu'à la boussole !",
+          "MC_HOC_2017_03_Cole_b": "Ce code ne paraît-il pas un peu long ?  Essaie de le raccourcir en utilisant une boucle « répéter » !"
         },
         "MC_HOC_2017_03_Cole_2020": {
-          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
-          "MC_HOC_2017_03_Cole_b": "Le code semble trop long ?  Essaie de le raccourcir en utilisant une boucle ˋrépéterˋ !"
+          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches fléchées pour emmener le joueur jusqu'à la boussole !",
+          "MC_HOC_2017_03_Cole_b": "Ce code ne paraît-il pas un peu long ?  Essaie de le raccourcir en utilisant une boucle « répéter » !"
         },
         "MC_HOC_2017_04POINT5_RYAN": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc ˋtourner à droiteˋ pour changer l'orientation de l’agent ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent soit sur la première plaque de détection."
+          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc « tourner à droite » pour changer l'orientation de l’Agent ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent atteigne la première plaque de pression."
         },
         "MC_HOC_2017_04POINT5_RYAN_2019": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc ˋtourner à droiteˋ pour changer l'orientation de l’agent ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent soit sur la première plaque de détection."
+          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc « tourner à droite » pour changer l'orientation de l’Agent ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent atteigne la première plaque de pression."
         },
         "MC_HOC_2017_04POINT5_RYAN_2020": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc ˋtourner à droiteˋ pour changer l'orientation de l’agent ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent soit sur la première plaque de détection."
+          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc « tourner à droite » pour changer l'orientation de l’Agent ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent atteigne la première plaque de pression."
         },
         "MC_HOC_2017_04_Cole": {
-          "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
+          "MC_HOC_2017_04_Cole_a": "L'agent a besoin « d'avancer » 7 fois.  Comment peux-tu utiliser une boucle « répéter » pour ce faire ?",
           "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
+          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de pression, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_04_Cole_2019": {
-          "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
+          "MC_HOC_2017_04_Cole_a": "L'agent a besoin « d'avancer » 7 fois.  Comment peux-tu utiliser une boucle « répéter » pour ce faire ?",
           "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
+          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de pression, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_04_Cole_2020": {
-          "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
+          "MC_HOC_2017_04_Cole_a": "L'agent a besoin « d'avancer » 7 fois.  Comment peux-tu utiliser une boucle « répéter » pour ce faire ?",
           "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
+          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de pression, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_05_Cole": {
-          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux placer plusieurs bouts de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle ˋrépéterˋ pour résoudre ce casse-tête.",
-          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent en construisant un pont."
+          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux mettre plusieurs morceaux de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.",
+          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent tout en construisant un pont en chemin."
         },
         "MC_HOC_2017_05_Cole_2019": {
-          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux placer plusieurs bouts de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle ˋrépéterˋ pour résoudre ce casse-tête.",
-          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent en construisant un pont."
+          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux mettre plusieurs morceaux de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.",
+          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent tout en construisant un pont en chemin."
         },
         "MC_HOC_2017_05_Cole_2020": {
-          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux placer plusieurs bouts de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle ˋrépéterˋ pour résoudre ce casse-tête.",
-          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent en construisant un pont."
+          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux mettre plusieurs morceaux de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.",
+          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent tout en construisant un pont en chemin."
         },
         "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ?  Combien de fois _devrait_-elle se répéter ?",
+          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ? Combien de fois _devrait_-elle se répéter ?",
           "MC_HOC_2017_06_Cole_b": "Aide l’Agent à construire un pont pour traverser l’eau ! "
         },
         "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ?  Combien de fois _devrait_-elle se répéter ?",
+          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ? Combien de fois _devrait_-elle se répéter ?",
           "MC_HOC_2017_06_Cole_b": "Aide l’Agent à construire un pont pour traverser l’eau ! "
         },
         "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ?  Combien de fois _devrait_-elle se répéter ?",
+          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ? Combien de fois _devrait_-elle se répéter ?",
           "MC_HOC_2017_06_Cole_b": "Aide l’Agent à construire un pont pour traverser l’eau ! "
         },
         "MC_HOC_2017_07_Cole": {
           "MC_HOC_2017_07_Cole_c": "Tout ce que tu as à faire faire à l’Agent est de dégager le chemin vers le wagonnet.",
-          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, découvre à quoi sert la fonction ˋsupprimer obstacleˋ. Appelle-la autant de fois que nécessaire en utilisant le petit bloc vert ˋsupprimer obstacleˋ depuis la boite à outils.",
-          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs de fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
+          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, il faut d'abord saisir à quoi sert la fonction « supprimer obstacle ». Appelle-la autant de fois qu'il faut en utilisant le petit bloc vert « supprimer obstacle » qui se trouve dans la boite à outils.",
+          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_07_Cole_2019": {
           "MC_HOC_2017_07_Cole_c": "Tout ce que tu as à faire faire à l’Agent est de dégager le chemin vers le wagonnet.",
-          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, découvre à quoi sert la fonction ˋsupprimer obstacleˋ. Appelle-la autant de fois que nécessaire en utilisant le petit bloc vert ˋsupprimer obstacleˋ depuis la boite à outils.",
-          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs de fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
+          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, il faut d'abord saisir à quoi sert la fonction « supprimer obstacle ». Appelle-la autant de fois qu'il faut en utilisant le petit bloc vert « supprimer obstacle » qui se trouve dans la boite à outils.",
+          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_07_Cole_2020": {
           "MC_HOC_2017_07_Cole_c": "Tout ce que tu as à faire faire à l’Agent est de dégager le chemin vers le wagonnet.",
-          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, découvre à quoi sert la fonction ˋsupprimer obstacleˋ. Appelle-la autant de fois que nécessaire en utilisant le petit bloc vert ˋsupprimer obstacleˋ depuis la boite à outils.",
-          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs de fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
+          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, il faut d'abord saisir à quoi sert la fonction « supprimer obstacle ». Appelle-la autant de fois qu'il faut en utilisant le petit bloc vert « supprimer obstacle » qui se trouve dans la boite à outils.",
+          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_10_RETRY": {
           "MC_HOC_2017_10_Cole_b": "Tu ne sais pas où aller ? Regarde si tu peux trouver la ligne en pointillés !",
-          "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
+          "MC_HOC_2017_10_Cole_a": "Utilise les fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "MC_HOC_2017_10_Cole_b": "Tu ne sais pas où aller ? Regarde si tu peux trouver la ligne en pointillés !",
-          "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
+          "MC_HOC_2017_10_Cole_a": "Utilise les fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "MC_HOC_2017_10_Cole_b": "Tu ne sais pas où aller ? Regarde si tu peux trouver la ligne en pointillés !",
-          "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
+          "MC_HOC_2017_10_Cole_a": "Utilise les fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
-          "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
+          "MC_HOC_2017_08_RY_b": "Il y a PLEIN de façons de résoudre ce casse-tête. Essayes-en quelques-unes !",
+          "MC_HOC_2017_08_RY_c": "Essaie de suivre les pointillés pour emprunter un chemin simple à travers la lave."
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
-          "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
+          "MC_HOC_2017_08_RY_b": "Il y a PLEIN de façons de résoudre ce casse-tête. Essayes-en quelques-unes !",
+          "MC_HOC_2017_08_RY_c": "Essaie de suivre les pointillés pour emprunter un chemin simple à travers la lave."
         },
         "MC_HOC_2017_Ali_2020": {
           "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
-          "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
+          "MC_HOC_2017_08_RY_b": "Il y a PLEIN de façons de résoudre ce casse-tête. Essayes-en quelques-unes !",
+          "MC_HOC_2017_08_RY_c": "Essaie de suivre les pointillés pour emprunter un chemin simple à travers la lave."
         },
         "MC_HOC_2017_FP20x20": {
-          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte !"
+          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des rails de wagonnet à l'Agent pour que tu puisses explorer ce monde !"
         },
         "MC_HOC_2017_FP20x20_2019": {
-          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte !"
+          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des rails de wagonnet à l'Agent pour que tu puisses explorer ce monde !"
         },
         "MC_HOC_2017_FP20x20_2020": {
-          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte !"
+          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des rails de wagonnet à l'Agent pour que tu puisses explorer ce monde !"
         },
         "NEW Course 4 Artist Functions 13": {
           "NEW_Course_4_Artist_Functions_13_a": "Essaie de modifier la fonction ˋdessiner une ligne de carrés\\` pour ne pas avoir à l’appeler deux fois.",
@@ -7054,24 +7054,24 @@
           "courseE_artist_functions1_c": "Pour un code plus court, essaie d'utiliser une boucle `répéter` pour dessiner les cercles carrés des lunettes."
         },
         "courseE_artist_functions10": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
-          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est très similaire au précédent, mais la fonction « dessiner une rangée » dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où une fonction appelée « rangée d'hexagones » pourriat être utile à ce dessin ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions10_2018": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
-          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est très similaire au précédent, mais la fonction « dessiner une rangée » dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où une fonction appelée « rangée d'hexagones » pourriat être utile à ce dessin ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions10_2019": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
-          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est très similaire au précédent, mais la fonction « dessiner une rangée » dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où une fonction appelée « rangée d'hexagones » pourriat être utile à ce dessin ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions10_2020": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
-          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est très similaire au précédent, mais la fonction « dessiner une rangée » dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où une fonction appelée « rangée d'hexagones » pourriat être utile à ce dessin ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions1_copy": {
           "courseE_artist_functions1_a": "Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que tu devras avancer de 175 pixels avant de dessiner ton deuxième carré.",
@@ -7084,19 +7084,19 @@
           "courseD_artist_functions2_a": "Ton programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
         },
         "courseE_artist_functions2_2018": {
-          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, mais juste la partie qui dessine un carré avec des côtés de 100 pixels.",
-          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert `dessiner un carré` pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas.   <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Votre programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
+          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, juste la partie qui dessine un carré avec des côtés de 100 pixels.",
+          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert « dessiner un carré » pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Ton programme devrait :\n\n-   Utiliser ta fonction\n-   Avancer de 100 + 75 pixels\n-   Réutiliser ta fonction"
         },
         "courseE_artist_functions2_2019": {
-          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, mais juste la partie qui dessine un carré avec des côtés de 100 pixels.",
-          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert `dessiner un carré` pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas.   <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Votre programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
+          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, juste la partie qui dessine un carré avec des côtés de 100 pixels.",
+          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert « dessiner un carré » pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Ton programme devrait :\n\n-   Utiliser ta fonction\n-   Avancer de 100 + 75 pixels\n-   Réutiliser ta fonction"
         },
         "courseE_artist_functions2_2020": {
-          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, mais juste la partie qui dessine un carré avec des côtés de 100 pixels.",
-          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert `dessiner un carré` pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas.   <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Votre programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
+          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, juste la partie qui dessine un carré avec des côtés de 100 pixels.",
+          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert « dessiner un carré » pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Ton programme devrait :\n\n-   Utiliser ta fonction\n-   Avancer de 100 + 75 pixels\n-   Réutiliser ta fonction"
         },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme, seulement la partie qui dessine un carré de 100 pixels de côté.",
@@ -7129,17 +7129,17 @@
         "courseE_artist_functions5_2018": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
           "courseD_artist_functions5_b": "Les fonctions rendent plus facile à n'importe quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur d'une boucle!",
-          "courseD_artist_functions5_c": "Commence par créer ta fonction `dessiner une étoile`, puis utilise cette fonction pour dessiner les trois étoiles !"
+          "courseD_artist_functions5_c": "Commence par créer ta fonction « dessiner une étoile », puis utilise cette fonction pour dessiner les trois étoiles !"
         },
         "courseE_artist_functions5_2019": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
           "courseD_artist_functions5_b": "Les fonctions rendent plus facile à n'importe quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur d'une boucle!",
-          "courseD_artist_functions5_c": "Commence par créer ta fonction `dessiner une étoile`, puis utilise cette fonction pour dessiner les trois étoiles !"
+          "courseD_artist_functions5_c": "Commence par créer ta fonction « dessiner une étoile », puis utilise cette fonction pour dessiner les trois étoiles !"
         },
         "courseE_artist_functions5_2020": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
           "courseD_artist_functions5_b": "Les fonctions rendent plus facile à n'importe quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur d'une boucle!",
-          "courseD_artist_functions5_c": "Commence par créer ta fonction `dessiner une étoile`, puis utilise cette fonction pour dessiner les trois étoiles !"
+          "courseD_artist_functions5_c": "Commence par créer ta fonction « dessiner une étoile », puis utilise cette fonction pour dessiner les trois étoiles !"
         },
         "courseE_artist_functions5_copy": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
@@ -7152,110 +7152,110 @@
           "grade4_artist_functions_windows0_c": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête."
         },
         "courseE_artist_functions7": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtres une à la fois.",
           "courseD_artist_functions7_b": "Tu ne devrais pas avoir besoin d'ajouter des boucles pour répéter. Fais juste sauter l'artiste de 100 pixels entre chaque fenêtre du haut, puis de 150 pixels vers le bas pour faire les fenêtres du bas."
         },
         "courseE_artist_functions7_2018": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
-          "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtres une à la fois.",
+          "courseD_artist_functions7_b": "Pour aller des fenêtres du haut aux fenêtres du bas, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera orienté dans la bonne direction pour terminer d'achever la maison !"
         },
         "courseE_artist_functions7_2019": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
-          "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtres une à la fois.",
+          "courseD_artist_functions7_b": "Pour aller des fenêtres du haut aux fenêtres du bas, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera orienté dans la bonne direction pour terminer d'achever la maison !"
         },
         "courseE_artist_functions7_2020": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
-          "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtres une à la fois.",
+          "courseD_artist_functions7_b": "Pour aller des fenêtres du haut aux fenêtres du bas, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera orienté dans la bonne direction pour terminer d'achever la maison !"
         },
         "courseE_artist_functions8": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
-          "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un seul bloc « avancer », mais tu auras besoin de quelques blocs « sauter en avant » et/ou « sauter en arrière » !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de faire une fonction pour une rangée de carrés.\n\nComment utiliserais-tu la fonction « dessiner une rangée de carrés » pour recréer cette image ?",
+          "courseD_artist_functions8_d": "Pour faire une ligne de carrés :\n\n-   Répète 3 fois :\n    -   dessiner un carré de **50 pixels** de long\n    -   sauter en avant de **100 pixels**",
+          "courseD_artist_functions8_b": "Envisage chaque rangée de cette image comme une série de 3 carrés. Combien y a-t-il de rangées de carrés et où faut-il commencer à dessiner chacune d'entre elles ?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque ligne de carrés, l'artiste aura besoin de sauter en arrière vers le bas avant qu'il trace la prochaine ligne de carrés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2018": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
-          "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un seul bloc « avancer », mais tu auras besoin de quelques blocs « sauter en avant » et/ou « sauter en arrière » !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de faire une fonction pour une rangée de carrés.\n\nComment utiliserais-tu la fonction « dessiner une rangée de carrés » pour recréer cette image ?",
+          "courseD_artist_functions8_d": "Pour faire une ligne de carrés :\n\n-   Répète 3 fois :\n    -   dessiner un carré de **50 pixels** de long\n    -   sauter en avant de **100 pixels**",
+          "courseD_artist_functions8_b": "Envisage chaque rangée de cette image comme une série de 3 carrés. Combien y a-t-il de rangées de carrés et où faut-il commencer à dessiner chacune d'entre elles ?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2019": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
-          "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un seul bloc « avancer », mais tu auras besoin de quelques blocs « sauter en avant » et/ou « sauter en arrière » !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de faire une fonction pour une rangée de carrés.\n\nComment utiliserais-tu la fonction « dessiner une rangée de carrés » pour recréer cette image ?",
+          "courseD_artist_functions8_d": "Pour faire une ligne de carrés :\n\n-   Répète 3 fois :\n    -   dessiner un carré de **50 pixels** de long\n    -   sauter en avant de **100 pixels**",
+          "courseD_artist_functions8_b": "Envisage chaque rangée de cette image comme une série de 3 carrés. Combien y a-t-il de rangées de carrés et où faut-il commencer à dessiner chacune d'entre elles ?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8_2020": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
-          "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un seul bloc « avancer », mais tu auras besoin de quelques blocs « sauter en avant » et/ou « sauter en arrière » !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de faire une fonction pour une rangée de carrés.\n\nComment utiliserais-tu la fonction « dessiner une rangée de carrés » pour recréer cette image ?",
+          "courseD_artist_functions8_d": "Pour faire une ligne de carrés :\n\n-   Répète 3 fois :\n    -   dessiner un carré de **50 pixels** de long\n    -   sauter en avant de **100 pixels**",
+          "courseD_artist_functions8_b": "Envisage chaque rangée de cette image comme une série de 3 carrés. Combien y a-t-il de rangées de carrés et où faut-il commencer à dessiner chacune d'entre elles ?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8b_2018": {
-          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc `avancer` si tu fais cela correctement !",
-          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de créer une fonction pour une rangée de carrés.",
-          "courseD_artist_functions8_d": "Pour faire une rangée de carrés,   - répète 3 fois    -   dessine un carré   -   saute en avant de **100 pixels**"
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc « avancer » si tu fais les choses correctement !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour faire un carré, puis essaie de créer une fonction pour une rangée de carrés.",
+          "courseD_artist_functions8_d": "Pour faire une rangée de carrés :\n\n-   répéter 3 fois :  \n-   dessiner un carré  \n-   sauter en avant de **100 pixels**"
         },
         "courseE_artist_functions8b_2019": {
-          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc `avancer` si tu fais cela correctement !",
-          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de créer une fonction pour une rangée de carrés.",
-          "courseD_artist_functions8_d": "Pour faire une rangée de carrés,   - répète 3 fois    -   dessine un carré   -   saute en avant de **100 pixels**"
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc « avancer » si tu fais les choses correctement !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour faire un carré, puis essaie de créer une fonction pour une rangée de carrés.",
+          "courseD_artist_functions8_d": "Pour faire une rangée de carrés :\n\n-   répéter 3 fois :  \n-   dessiner un carré  \n-   sauter en avant de **100 pixels**"
         },
         "courseE_artist_functions8b_2020": {
-          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc `avancer` si tu fais cela correctement !",
-          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de créer une fonction pour une rangée de carrés.",
-          "courseD_artist_functions8_d": "Pour faire une rangée de carrés,   - répète 3 fois    -   dessine un carré   -   saute en avant de **100 pixels**"
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc « avancer » si tu fais les choses correctement !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour faire un carré, puis essaie de créer une fonction pour une rangée de carrés.",
+          "courseD_artist_functions8_d": "Pour faire une rangée de carrés :\n\n-   répéter 3 fois :  \n-   dessiner un carré  \n-   sauter en avant de **100 pixels**"
         },
         "courseE_artist_functions8c_2018": {
-          "courseD_artist_functions8_f": "C'est plus facile qu'il n'y paraît ! Tu ne devrais pas avoir besoin de blocs `déplacer` ou `sauter` ici !",
-          "courseD_artist_functions8_a": "La deuxième rangée de carrés est simplement un virage à 180 degrés différente de la première !",
-          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner à 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
+          "courseD_artist_functions8_f": "C'est plus facile que ça n'en a l'air ! Tu ne devrais pas avoir besoin de blocs « déplacer » ou « sauter » ici !",
+          "courseD_artist_functions8_a": "La deuxième rangée de carrés ne diffère de la première que par un virage de 180 degrés !",
+          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner de 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
         },
         "courseE_artist_functions8c_2019": {
-          "courseD_artist_functions8_f": "C'est plus facile qu'il n'y paraît ! Tu ne devrais pas avoir besoin de blocs `déplacer` ou `sauter` ici !",
-          "courseD_artist_functions8_a": "La deuxième rangée de carrés est simplement un virage à 180 degrés différente de la première !",
-          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner à 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
+          "courseD_artist_functions8_f": "C'est plus facile que ça n'en a l'air ! Tu ne devrais pas avoir besoin de blocs « déplacer » ou « sauter » ici !",
+          "courseD_artist_functions8_a": "La deuxième rangée de carrés ne diffère de la première que par un virage de 180 degrés !",
+          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner de 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
         },
         "courseE_artist_functions8c_2020": {
-          "courseD_artist_functions8_f": "C'est plus facile qu'il n'y paraît ! Tu ne devrais pas avoir besoin de blocs `déplacer` ou `sauter` ici !",
-          "courseD_artist_functions8_a": "La deuxième rangée de carrés est simplement un virage à 180 degrés différente de la première !",
-          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner à 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
+          "courseD_artist_functions8_f": "C'est plus facile que ça n'en a l'air ! Tu ne devrais pas avoir besoin de blocs « déplacer » ou « sauter » ici !",
+          "courseD_artist_functions8_a": "La deuxième rangée de carrés ne diffère de la première que par un virage de 180 degrés !",
+          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner de 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
         },
         "courseE_artist_functions9": {
-          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
-          "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
+          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la « rangée de triangles » peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Ce casse-tête peut être divisé en trois parties :\n\n-   Crée la fonction « dessiner un triangle »\n-   Crée la fonction « dessiner une rangée de triangles »\n-   Utilise ta fonction « dessiner une rangée de triangles » 4 fois pour achever le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles.",
+          "courseD_artist_functions9_c": "Pour dessiner une rangée de triangles :\n\n-   Répéter 4 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels",
+          "courseD_artist_functions9_d": "Pour dessiner le losange :\n\n-   Répéter 2 fois :\n    -   Dessiner une rangée de triangles\n    -   Tourner de 60 degrés\n    -   Dessiner une rangée de triangles\n    -   Tourner de 120 degrés"
         },
         "courseE_artist_functions9_2018": {
-          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
-          "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
+          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la « rangée de triangles » peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Ce casse-tête peut être divisé en trois parties :\n\n-   Crée la fonction « dessiner un triangle »\n-   Crée la fonction « dessiner une rangée de triangles »\n-   Utilise ta fonction « dessiner une rangée de triangles » 4 fois pour achever le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles.",
+          "courseD_artist_functions9_c": "Pour dessiner une rangée de triangles :\n\n-   Répéter 4 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels",
+          "courseD_artist_functions9_d": "Pour dessiner le losange :\n\n-   Répéter 2 fois :\n    -   Dessiner une rangée de triangles\n    -   Tourner de 60 degrés\n    -   Dessiner une rangée de triangles\n    -   Tourner de 120 degrés"
         },
         "courseE_artist_functions9_2019": {
-          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
-          "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
+          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la « rangée de triangles » peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Ce casse-tête peut être divisé en trois parties :\n\n-   Crée la fonction « dessiner un triangle »\n-   Crée la fonction « dessiner une rangée de triangles »\n-   Utilise ta fonction « dessiner une rangée de triangles » 4 fois pour achever le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles.",
+          "courseD_artist_functions9_c": "Pour dessiner une rangée de triangles :\n\n-   Répéter 4 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels",
+          "courseD_artist_functions9_d": "Pour dessiner le losange :\n\n-   Répéter 2 fois :\n    -   Dessiner une rangée de triangles\n    -   Tourner de 60 degrés\n    -   Dessiner une rangée de triangles\n    -   Tourner de 120 degrés"
         },
         "courseE_artist_functions9_2020": {
-          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
-          "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
+          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la « rangée de triangles » peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Ce casse-tête peut être divisé en trois parties :\n\n-   Crée la fonction « dessiner un triangle »\n-   Crée la fonction « dessiner une rangée de triangles »\n-   Utilise ta fonction « dessiner une rangée de triangles » 4 fois pour achever le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles.",
+          "courseD_artist_functions9_c": "Pour dessiner une rangée de triangles :\n\n-   Répéter 4 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels",
+          "courseD_artist_functions9_d": "Pour dessiner le losange :\n\n-   Répéter 2 fois :\n    -   Dessiner une rangée de triangles\n    -   Tourner de 60 degrés\n    -   Dessiner une rangée de triangles\n    -   Tourner de 120 degrés"
         },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_a": "Si tu appelles la fonction une fois de plus, tu peux créer le même dessin dans le dernier coin.",
@@ -7461,39 +7461,39 @@
         },
         "courseE_farmer_functions1a": {
           "courseE_farmer_functions1a_a": "Réfléchis à ce qu’il se passe dans la déclaration `« Si/Sinon »` pas à pas. Que dois-tu faire si tu te trouves près d'une plante de maïs ?",
-          "courseE_farmer_functions1a_b": "Utilise un block `répéter jusqu`à\\` pour aller jusqu'à la citrouille!"
+          "courseE_farmer_functions1a_b": "Utilise un bloc `répéter jusqu'à` pour aller jusqu'à la citrouille !"
         },
         "courseE_farmer_functions1a_2018": {
-          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Peux-tu dire ce qu'elle fait ?",
-          "courseE_farmer_functions1a_b": "Utilise un block `répéter jusqu`à\\` pour aller jusqu'à la citrouille!"
+          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Est-ce que tu arrives à voir ce qu'elle fait ?",
+          "courseE_farmer_functions1a_b": "Utilise un bloc `répéter jusqu'à` pour aller jusqu'à la citrouille !"
         },
         "courseE_farmer_functions1a_2019": {
-          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Peux-tu dire ce qu'elle fait ?",
-          "courseE_farmer_functions1a_b": "Utilise un block `répéter jusqu`à\\` pour aller jusqu'à la citrouille!"
+          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Est-ce que tu arrives à voir ce qu'elle fait ?",
+          "courseE_farmer_functions1a_b": "Utilise un bloc `répéter jusqu'à` pour aller jusqu'à la citrouille !"
         },
         "courseE_farmer_functions1a_2020": {
-          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Peux-tu dire ce qu'elle fait ?",
-          "courseE_farmer_functions1a_b": "Utilise un block `répéter jusqu`à\\` pour aller jusqu'à la citrouille!"
+          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Est-ce que tu arrives à voir ce qu'elle fait ?",
+          "courseE_farmer_functions1a_b": "Utilise un bloc `répéter jusqu'à` pour aller jusqu'à la citrouille !"
         },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions2b_a": "Tu peux utiliser un bloc `Répéter jusqu'à ce qu’il y ait des citrouilles` pour aller à la fin de chaque chemin.",
-          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
+          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs sur le chemin qui relie les deux autres, donc tu peux poursuivre et puis tourner.",
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2b_2018": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
-          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
+          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs sur le chemin qui relie les deux autres, donc tu peux poursuivre et puis tourner.",
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2b_2019": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
-          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
+          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs sur le chemin qui relie les deux autres, donc tu peux poursuivre et puis tourner.",
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2b_2020": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
-          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
+          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs sur le chemin qui relie les deux autres, donc tu peux poursuivre et puis tourner.",
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2ba": {
           "courseE_farmer_functions2ba_a": "Utilise le bloc vert `maïs et citrouille` pour appeler cette fonction.",
@@ -7513,16 +7513,16 @@
           "courseE_farmer_functions3c_b": "N'oublie pas d'appeler ta fonction dans le programme principal n'importe où tu enlèves des blocs."
         },
         "courseE_farmer_functions3c1_2018": {
-          "coursee_farmer_functions3c1_2018_a": "Tu devras utiliser la fonction `ramasser en chemin` trois fois pour résoudre cette énigme.",
-          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour contourner les coins ?"
+          "coursee_farmer_functions3c1_2018_a": "Il te faudra utiliser la fonction `récolter en chemin` trois fois pour résoudre ce casse-tête.",
+          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour naviguer les coins ?"
         },
         "courseE_farmer_functions3c1_2019": {
-          "coursee_farmer_functions3c1_2018_a": "Tu devras utiliser la fonction `ramasser en chemin` trois fois pour résoudre cette énigme.",
-          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour contourner les coins ?"
+          "coursee_farmer_functions3c1_2018_a": "Il te faudra utiliser la fonction `récolter en chemin` trois fois pour résoudre ce casse-tête.",
+          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour naviguer les coins ?"
         },
         "courseE_farmer_functions3c1_2020": {
-          "coursee_farmer_functions3c1_2018_a": "Tu devras utiliser la fonction `ramasser en chemin` trois fois pour résoudre cette énigme.",
-          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour contourner les coins ?"
+          "coursee_farmer_functions3c1_2018_a": "Il te faudra utiliser la fonction `récolter en chemin` trois fois pour résoudre ce casse-tête.",
+          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour naviguer les coins ?"
         },
         "courseE_farmer_functions4b": {
           "courseE_farmer_functions4b_a": "N'aie pas peur de faire des erreurs ! Essaie d'ajouter des blocs et d'exécuter ton code, pour voir ce qui se passe, même si tu ne penses pas avoir encore résolu le casse-tête.",
@@ -7556,16 +7556,16 @@
           "courseE_farmer_functions7b_c": "Une boucle `Répéter jusqu'à ce qu’ il y ait des citrouilles` peux t'aider à retrouver ton chemin dans ce labyrinthe."
         },
         "courseE_farmer_functions8a1_2018": {
-          "courseE_farmer_functions8a1_2018a": "Commence cette énigme en codant la même fonction que tu as créée, dans le dernière énigme.",
-          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à nouveau."
+          "courseE_farmer_functions8a1_2018a": "Commence ce casse-tête en codant la même fonction que tu as créée dans le dernier casse-tête.",
+          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras faire un tournant de plus avant de pouvoir l'exécuter à nouveau."
         },
         "courseE_farmer_functions8a1_2019": {
-          "courseE_farmer_functions8a1_2018a": "Commence cette énigme en codant la même fonction que tu as créée, dans le dernière énigme.",
-          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à nouveau."
+          "courseE_farmer_functions8a1_2018a": "Commence ce casse-tête en codant la même fonction que tu as créée dans le dernier casse-tête.",
+          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras faire un tournant de plus avant de pouvoir l'exécuter à nouveau."
         },
         "courseE_farmer_functions8a1_2020": {
-          "courseE_farmer_functions8a1_2018a": "Commence cette énigme en codant la même fonction que tu as créée, dans le dernière énigme.",
-          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à nouveau."
+          "courseE_farmer_functions8a1_2018a": "Commence ce casse-tête en codant la même fonction que tu as créée dans le dernier casse-tête.",
+          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras faire un tournant de plus avant de pouvoir l'exécuter à nouveau."
         },
         "courseE_farmer_functions8b": {
           "courseE_farmer_functions8b_a": "Essaie d'exécuter le code tel quel pour voir ce qu‘il fait. De quoi as-tu besoin ensuite ?",
@@ -7573,19 +7573,19 @@
           "courseE_farmer_functions8b_c": "Combien de fois as-tu besoin d'appeler la fonction?"
         },
         "courseE_farmer_functions9a1_2018": {
-          "courseE_farmer_functions9a1_2018a": "Tu utiliseras la même fonction que tu as créée pour les deux dernières énigmes.",
-          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour l'énigme précédente afin de résoudre la première moitié de cette énigme.",
-          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` quelques fois et `avancer` pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta fonction à nouveau."
+          "courseE_farmer_functions9a1_2018a": "Tu vas utiliser la même fonction que tu as créée pour les deux derniers casse-têtes.",
+          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour le casse-tête précédent pour résoudre la première moitié de celui-ci.",
+          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` plusieurs fois et `avancer` pour arriver à la dernière pousse de laitue avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_functions9a1_2019": {
-          "courseE_farmer_functions9a1_2018a": "Tu utiliseras la même fonction que tu as créée pour les deux dernières énigmes.",
-          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour l'énigme précédente afin de résoudre la première moitié de cette énigme.",
-          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` quelques fois et `avancer` pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta fonction à nouveau."
+          "courseE_farmer_functions9a1_2018a": "Tu vas utiliser la même fonction que tu as créée pour les deux derniers casse-têtes.",
+          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour le casse-tête précédent pour résoudre la première moitié de celui-ci.",
+          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` plusieurs fois et `avancer` pour arriver à la dernière pousse de laitue avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_functions9a1_2020": {
-          "courseE_farmer_functions9a1_2018a": "Tu utiliseras la même fonction que tu as créée pour les deux dernières énigmes.",
-          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour l'énigme précédente afin de résoudre la première moitié de cette énigme.",
-          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` quelques fois et `avancer` pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta fonction à nouveau."
+          "courseE_farmer_functions9a1_2018a": "Tu vas utiliser la même fonction que tu as créée pour les deux derniers casse-têtes.",
+          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour le casse-tête précédent pour résoudre la première moitié de celui-ci.",
+          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` plusieurs fois et `avancer` pour arriver à la dernière pousse de laitue avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_functions9b": {
           "courseE_farmer_functions9b_a": "Est-ce que tu peux utiliser des déclarations imbriquées `« Si »` et `« Si/Sinon »` pour suivre le trajet?",
@@ -8817,8 +8817,8 @@
           "verionhistory": "Vous êtes bloqué ? Vous pouvez toujours réinitialiser votre code en cliquant sur \"Historique des versions\" ci-dessous, puis en choisissant \"Recommencer\"."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_b": "Si tu appelles les fonctions correctement, voici le chemin que tu feras...",
-          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
+          "Function_intro_Ryan_b": "Si tu appelles correctement les fonctions, voici le chemin que tu prendras...",
+          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras ! Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_01_RETRY_2021": {
           "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc « avancer » de la boite à outils vers l'espace de travail et place-le en dessous du bloc « quand l’exécution commence ».",
@@ -8832,42 +8832,42 @@
           "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
-          "MC_HOC_2017_03_Cole_b": "Le code semble trop long ?  Essaie de le raccourcir en utilisant une boucle ˋrepeatˋ !"
+          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches fléchées pour emmener le joueur jusqu'à la boussole !",
+          "MC_HOC_2017_03_Cole_b": "Ce code ne paraît-il pas un peu long ?  Essaie de le raccourcir en utilisant une boucle « répéter » !"
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc ˋtourner à droiteˋ pour changer l'orientation de l’agent ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent soit sur la première plaque de détection."
+          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc « tourner à droite » pour changer l'orientation de l’Agent ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent atteigne la première plaque de pression."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrepeatˋ ?",
+          "MC_HOC_2017_04_Cole_a": "L'agent a besoin « d'avancer » 7 fois.  Comment peux-tu utiliser une boucle « répéter » pour ce faire ?",
           "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et recommence ton code jusqu'à trouver ce qui ne va pas.",
-          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent sera sur la plaque de détection, cela ouvrira la porte pour le joueur."
+          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvre la porte pour le joueur."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Tu savais que tu peux mettre plusieurs bouts de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle ˋrepeatˋ pour résoudre ce casse-tête.",
-          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent en construisant un pont, pendant que tu avances."
+          "MC_HOC_2017_05_Cole_a": "Tu savais que tu peux mettre plusieurs morceaux de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.",
+          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent tout en construisant un pont en chemin."
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ?  Combien de fois _devrait_-elle se répéter ?",
+          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ? Combien de fois _devrait_-elle se répéter ?",
           "MC_HOC_2017_06_Cole_b": "Aide l’Agent à construire un pont pour traverser l’eau ! "
         },
         "MC_HOC_2017_07_Cole_2021": {
           "MC_HOC_2017_07_Cole_c": "Tout ce que tu as à faire faire à l’Agent est de dégager le chemin vers le wagonnet.",
-          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, découvre à quoi sert la fonction ˋsupprimer obstacleˋ. Appelle-la autant de fois que nécessaire en utilisant le petit bloc vert ˋsupprimer obstacleˋ depuis la boite à outils.",
-          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs de fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
+          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, il faut d'abord saisir à quoi sert la fonction « supprimer obstacle ». Appelle-la autant de fois qu'il faut en utilisant le petit bloc vert « supprimer obstacle » qui se trouve dans la boite à outils.",
+          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "MC_HOC_2017_10_Cole_b": "Tu ne sais pas où aller ? Regarde si tu peux trouver la ligne en pointillés !",
-          "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
+          "MC_HOC_2017_10_Cole_a": "Utilise les fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essaies-en quelques-unes !",
-          "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
+          "MC_HOC_2017_08_RY_b": "Il y a PLEIN de façons de résoudre ce casse-tête. Essayes-en quelques-unes !",
+          "MC_HOC_2017_08_RY_c": "Essaie de suivre les pointillés pour emprunter un chemin simple à travers la lave."
         },
         "MC_HOC_2017_FP20x20_2021": {
-          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des wagonnets à l'Agent pour explorer le monde !"
+          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des wagonnets à l'Agent pour que tu puisses explorer ce monde !"
         },
         "Overworld Avoid Monsters_2021": {
           "mc_8_a": "Il y a plusieurs chemins que tu peux emprunter. Lequel est le plus court ?",
@@ -8930,8 +8930,8 @@
           "mc_9_c": "Utilise « placer la torche » pour mettre une torche dans l'espace où tu te tiens."
         },
         "courseA_artist_loops2_2021": {
-          "courseA_artist_loops2_a": "Tu n’arrives pas à dessiner une ligne ? Commence en attachant des blocs au bloc <xml><block type=\"when_run\"/></xml> pour voir ce qui se passe.",
-          "courseA_artist_loops2_b": "Utilise ce bloc <xml><block type=\"simple_move_right\"/></xml> pour résoudre ce casse-tête."
+          "courseA_artist_loops2_a": "Tu n’arrives pas à dessiner une ligne ? Commence par attacher des blocs au bloc <xml><block type=\"when_run\"/></xml> pour voir ce qu'il se passe.",
+          "courseA_artist_loops2_b": "Utilise ce bloc <xml><block type=\"simple_move_right\"/></xml> pour résoudre ce puzzle."
         },
         "courseA_artist_loops3_2021": {
           "courseA_artist_loops3_a": "Trace lentement à l'aide de ton doigt le trajet de ton programme pour voir à quel moment les choses tournent mal.",
@@ -8947,11 +8947,11 @@
           "courseA_artist_loops5_c": "Puisque tu ne peux utiliser qu’un seul bloc <xml><block type=\"simple_move_right\"/></xml>, essaie de le mettre à l’intérieur de la boucle \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>."
         },
         "courseA_artist_loops6_2021": {
-          "courseA_artist_loops6_a": "Tu ne vois pas comment dessiner la colline ? Essaie de jouer un peu avec les blocs pour voir ce que chacun te permet de dessiner.",
+          "courseA_artist_loops6_a": "Tu ne sais pas comment dessiner la colline ? Essaie de jouer un peu avec les blocs pour voir ce qu’ils dessinent.",
           "courseA_artist_loops6_b": "Tu auras besoin de 2 blocs allant dans 2 directions pour résoudre ce casse-tête."
         },
         "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_a": "Tu ne sais pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un schéma récurrent.",
+          "courseA_artist_loops7_a": "Tu ne sais pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un modèle.",
           "courseA_artist_loops7_b": "Écris d’abord le code pour une vague, puis répète-le pour dessiner les deux autres.",
           "courseA_artist_loops7_c": "N’oublie pas que tu peux mettre plus d’un bloc dans une boucle <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>."
         },
@@ -8963,7 +8963,7 @@
         "courseA_artist_loops9_2021": {
           "courseA_artist_loops9_a": "Ajoute un autre bloc au code qui t’a été donné pour dessiner le reste des escaliers.",
           "courseA_artist_loops9_b": "Le bloc que tu ajoutes devrait être inséré dans la boucle \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>.",
-          "courseA_artist_loops9_c": "Si tu ne vois pas où mettre la boucle, essaie d’écrire ton code étape par étape puis cherche des schémas récurrents."
+          "courseA_artist_loops9_c": "Si tu n’arrives pas à trouver où mettre la boucle, essaie d’écrire ton code étape par étape puis de chercher des modèles."
         },
         "courseA_artist_loops_challenge2a_2021": {
           "courseA_artist_loops_challenge2_a": "Les blocs comme ceux-ci <xml>  <block type=\"simple_move_up_left\"/></xml>feront bouger ton artiste en oblique !",
@@ -9176,7 +9176,7 @@
           "courseA_playLab_events2_b": "Voici le code dont tu as besoin pour résoudre ce casse-tête :\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playLab_events3_2021": {
-          "courseA_playLab_events3_a": "Fais glisser ce bloc <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> et attache-le au bas de <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>.",
+          "courseA_playLab_events3_a": "Fais glisser ce bloc <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> et attache-le au bas de <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>",
           "courseA_playLab_events3_b": "N’oublie pas d’appuyer sur la flèche gauche du clavier pour amener Jorge au drapeau une fois que tu as écrit ton programme. Quand le drapeau devient vert, tu as terminé !"
         },
         "courseA_playLab_events4_2021": {
@@ -9193,7 +9193,7 @@
           "courseA_playLab_events6_c": "Voici le bloc qu'il te faudrait utiliser pour jouer un son au hasard :\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
         },
         "courseA_playLab_events7_2021": {
-          "courseA_playLab_events7_a": "Utilise ce bloc pour contrôler ce qui se passe lorsque les acteurs se percutent.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+          "courseA_playLab_events7_a": "Utilise ce bloc pour contrôler ce qu'il se passe lorsque les acteurs entrent en collision.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2021": {
           "courseA_playlab_events_challenge1_a": "Fais apparaître Waddles le pingouin quand tu cliques sur Robin !\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -9209,7 +9209,7 @@
         },
         "courseB_Scrat_ramp1_2021": {
           "1": "Si Scrat ne fait pas ce que tu veux, assure-toi que les deux blocs sont connectés, puis appuie de nouveau sur « Exécuter ».",
-          "2": "N'aie pas peur de faire une erreurs ! Essaie quelque chose et, si cela ne fonctionne pas, essaie autre chose !"
+          "2": "N'aie pas peur de faire une erreur ! Essaie quelque chose et, si cela ne fonctionne pas, essaie autre chose !"
         },
         "courseB_Scrat_ramp2_2021": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -9325,8 +9325,8 @@
           "courseB_iceage_loops10_c": "Ce casse-tête est long ! Emprunte ce chemin."
         },
         "courseB_iceage_loops1_2021": {
-          "courseB_iceage_loops1_a": "Attention à la glace brisée ! Scrat tombera à travers !",
-          "courseB_iceage_loops1_b": "Il te faudra utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_a": "Attention à la glace brisée ! Scrat va tomber à travers !",
+          "courseB_iceage_loops1_b": "Tu devras utiliser ce bloc :\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseB_iceage_loops2_2021": {
           "courseB_iceage_loops2_a": "Essaye de résoudre ce casse-tête en deux temps : avant le tournant et après celui-ci.",
@@ -9335,16 +9335,16 @@
         },
         "courseB_iceage_loops3_2021": {
           "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Pour faire répéter le code, fais glisser une boucle « répéter » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> dans ton espace de travail, puis mets le bloc dont tu veux te servir dedans."
+          "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, puis mets le bloc que tu veux dedans."
         },
         "courseB_iceage_loops4_2021": {
           "courseB_iceage_loops4_a": "Essaie d’écrire les étapes qu'il faudrait que Scrat suive pour arriver au gland. Y vois-tu un schéma ?",
-          "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qui se passe !",
+          "courseB_iceage_loops4_b": "N’aie pas peur d’exécuter ton code pour voir ce qu'il se passe !",
           "courseB_iceage_loops4_c": "Voici le chemin qu'il faudrait que Scrat emprunte."
         },
         "courseB_iceage_loops6_2021": {
           "courseB_iceage_loops6_a": "Ton code final contiendra **trois** blocs de mouvement.",
-          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’encore **une** boucle !",
+          "courseB_iceage_loops6_b": "Tu n’as besoin d’ajouter qu’**une** seule boucle de plus !",
           "courseB_iceage_loops6_c": "Ton parcours final devrait ressembler à ceci."
         },
         "courseB_iceage_loops7_2021": {
@@ -9357,7 +9357,7 @@
           "courseB_iceage_loops8_c": "Utilise des boucles pour aider Scrat à emprunter ce chemin."
         },
         "courseB_iceage_loops9_2021": {
-          "courseB_iceage_loops9_a": "Tu as du mal ? Essaie de résoudre ce problème en plusieurs temps. N’aie pas peur d’exécuter ton programme au long du processus !",
+          "courseB_iceage_loops9_a": "Des problèmes ? Essaie de diviser ce problème en plus petites parties. N’aie pas peur d’exécuter ton programme tout au long du processus !",
           "courseB_iceage_loops9_b": "Ton code final devrait avoir **4** boucles.",
           "courseB_iceage_loops9_c": "Il faut que Scrat emprunte ce chemin pour obtenir le gland."
         },
@@ -9441,8 +9441,8 @@
           "courseB_playlab_events_challenge2_d": "Mélange tout ça ! \n\nFais en sorte que certains animaux donnent plus de points que d’autres.\nUtilise différents sons. \nModifie les humeurs des animaux !"
         },
         "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
-          "courseB_starWars_prog1_b": "Il te faudra te déplacer vers l’Est pour résoudre ce casse-tête.\nJusqu'où dois-tu aller ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qu'il se passe.",
+          "courseB_starWars_prog1_b": "Tu devras aller vers l’Est pour résoudre ce casse-tête.\nEst-ce que tu dois aller loin ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2_2021": {
           "courseB_starWars_prog2_a": "Divise ce problème en deux. Ramasse un tas de ferraille, puis fraie-toi un chemin jusqu'à l'autre. "
@@ -9453,17 +9453,17 @@
         },
         "courseB_starWars_prog4_2021": {
           "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller ensuite. ",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc « repeat » pour rendre le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrepeat\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
           "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
           "courseB_starWars_prog5_b": "BB-8 ramassera la ferraille lorsqu'il roule dessus.",
           "courseB_starWars_prog5_c": "Trace du doigt ce motif. Compte les morceaux de métal en avançant.",
-          "courseB_starWars_prog5_da": "Regarde ce qui se passe si tu utilises la même solution que pour le casse-tête en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+          "courseB_starWars_prog5_da": "Regarde ce qu'il se passe si tu utilises la même solution que pour l’énigme en escalier :\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
         },
         "courseB_starWars_prog6_2021": {
           "courseB_starWars_prog6_a": "Il s'agit tout simplement d'un motif en marche d’escalier avec deux déplacements par sens !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc « repeat » pour rendre le code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrepeat\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
           "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas un peu au casse-tête précédent ?",
@@ -9472,12 +9472,12 @@
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "Ce n’est pas grave si tu dois retourner sur des cases sur lesquelles tu es déjà passé.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc « repeat » pour voir ce qui se passe avec le code que tu mets dedans.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrepeat\\` pour voir ce qu'il arrive au code que tu mets à l’intérieur.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
         },
         "courseB_starWars_prog9_2021": {
-          "courseB_starWars_prog9_a": "N’aie pas peur de faire des erreurs ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu le casse-tête.",
+          "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qu'il se passe, même si tu n’as pas encore résolu l'énigme.",
           "courseB_starWars_prog9_b": "Il y a beaucoup de façons de résoudre ce casse-tête.",
-          "courseB_starWars_prog9_c": "Est-ce qu'une boucle « repeat » <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> pourrait t'aider ici ?"
+          "courseB_starWars_prog9_c": "Est-ce qu'une boucle `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> t'aiderait là ?"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "Le bloc `affecter à l'acteur 1 une image de ???` peut-être utilisé pour ajouter un acteur à cette étape.",
@@ -10338,9 +10338,9 @@
           "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseE_artist_functions10_2021": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
-          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est très similaire au précédent, mais la fonction « dessiner une rangée » dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où une fonction appelée « rangée d'hexagones » pourriat être utile à ce dessin ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions1_dani": {
           "courseE_artist_functions1_a": "Les carrés ont chacun des côtés de 100 pixels, ce qui signifie que tu devras avancer de 175 pixels avant de dessiner ton deuxième carré.",
@@ -10348,9 +10348,9 @@
           "courseE_artist_functions1_c": "Pour un code plus court, essaie d'utiliser une boucle `répéter` pour dessiner les cercles carrés des lunettes."
         },
         "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, mais juste la partie qui dessine un carré avec des côtés de 100 pixels.",
-          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert `dessiner un carré` pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas.  \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Votre programme devrait :\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Réutiliser une fonction"
+          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, juste la partie qui dessine un carré avec des côtés de 100 pixels.",
+          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert « dessiner un carré » pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Ton programme devrait :\n\n-   Utiliser ta fonction\n-   Avancer de 100 + 75 pixels\n-   Réutiliser ta fonction"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "La fonction que tu écris ne doit pas contenir tout ton programme, seulement la partie qui dessine un carré de 100 pixels de côté.",
@@ -10369,7 +10369,7 @@
         "courseE_artist_functions5_2021": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
           "courseD_artist_functions5_b": "Les fonctions rendent plus facile à n'importe quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur d'une boucle!",
-          "courseD_artist_functions5_c": "Commence par créer ta fonction `dessiner une étoile`, puis utilise cette fonction pour dessiner les trois étoiles !"
+          "courseD_artist_functions5_c": "Commence par créer ta fonction « dessiner une étoile », puis utilise cette fonction pour dessiner les trois étoiles !"
         },
         "courseE_artist_functions5_dani": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
@@ -10377,33 +10377,33 @@
           "courseD_artist_functions5_c": "Commence par déplacer le code pour une forme d'étoile dans la fonction `dessiner une étoile`, puis utilise la fonction pour dessiner 3 étoiles!"
         },
         "courseE_artist_functions7_2021": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
-          "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtres une à la fois.",
+          "courseD_artist_functions7_b": "Pour aller des fenêtres du haut aux fenêtres du bas, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera orienté dans la bonne direction pour terminer d'achever la maison !"
         },
         "courseE_artist_functions8_2021": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
-          "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un seul bloc « avancer », mais tu auras besoin de quelques blocs « sauter en avant » et/ou « sauter en arrière » !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de faire une fonction pour une rangée de carrés.\n\nComment utiliserais-tu la fonction « dessiner une rangée de carrés » pour recréer cette image ?",
+          "courseD_artist_functions8_d": "Pour faire une ligne de carrés :\n\n-   Répète 3 fois :\n    -   dessiner un carré de **50 pixels** de long\n    -   sauter en avant de **100 pixels**",
+          "courseD_artist_functions8_b": "Envisage chaque rangée de cette image comme une série de 3 carrés. Combien y a-t-il de rangées de carrés et où faut-il commencer à dessiner chacune d'entre elles ?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8b_2021": {
-          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc `avancer` si tu le fais bien !",
-          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de créer une fonction pour une rangée de carrés.",
-          "courseD_artist_functions8_d": "Pour faire une rangée de carrés,  \n\n-   fais repeat 3 fois    \n-   dessine un carré   \n-   saute en avant de **100 pixels**"
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc « avancer » si tu fais les choses correctement !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour faire un carré, puis essaie de créer une fonction pour une rangée de carrés.",
+          "courseD_artist_functions8_d": "Pour faire une rangée de carrés :\n\n-   répéter 3 fois :  \n-   dessiner un carré  \n-   sauter en avant de **100 pixels**"
         },
         "courseE_artist_functions8c_2021": {
-          "courseD_artist_functions8_f": "C'est plus facile qu'il n'y paraît ! Tu ne devrais pas avoir besoin de blocs `déplacer` ou `sauter` ici !",
-          "courseD_artist_functions8_a": "La deuxième rangée de carrés est simplement un virage à 180 degrés différente de la première !",
-          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner à 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
+          "courseD_artist_functions8_f": "C'est plus facile que ça n'en a l'air ! Tu ne devrais pas avoir besoin de blocs « déplacer » ou « sauter » ici !",
+          "courseD_artist_functions8_a": "La deuxième rangée de carrés ne diffère de la première que par un virage de 180 degrés !",
+          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner de 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
         },
         "courseE_artist_functions9_2021": {
-          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
-          "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
+          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la « rangée de triangles » peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Ce casse-tête peut être divisé en trois parties :\n\n-   Crée la fonction « dessiner un triangle »\n-   Crée la fonction « dessiner une rangée de triangles »\n-   Utilise ta fonction « dessiner une rangée de triangles » 4 fois pour achever le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles.",
+          "courseD_artist_functions9_c": "Pour dessiner une rangée de triangles :\n\n-   Répéter 4 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels",
+          "courseD_artist_functions9_d": "Pour dessiner le losange :\n\n-   Répéter 2 fois :\n    -   Dessiner une rangée de triangles\n    -   Tourner de 60 degrés\n    -   Dessiner une rangée de triangles\n    -   Tourner de 120 degrés"
         },
         "courseE_artist_functions_challenge1_2021": {
           "courseE_artist_functions_challenge1_a": "Si tu appelles la fonction une fois de plus, tu peux créer le même dessin dans le dernier coin.",
@@ -10417,33 +10417,33 @@
           "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1a_2021": {
-          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Peux-tu dire ce qu'elle fait ?",
-          "courseE_farmer_functions1a_b": "Utilise un block `répéter jusqu`à\\` pour aller jusqu'à la citrouille!"
+          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Est-ce que tu arrives à voir ce qu'elle fait ?",
+          "courseE_farmer_functions1a_b": "Utilise un bloc `répéter jusqu'à` pour aller jusqu'à la citrouille !"
         },
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
-          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
+          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs sur le chemin qui relie les deux autres, donc tu peux poursuivre et puis tourner.",
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2ba_2021": {
-          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `ramasse toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
+          "courseE_farmer_functions2ba_a": "Utilise le bloc vert `récolter toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
         },
         "courseE_farmer_functions3c1_2021": {
-          "coursee_farmer_functions3c1_2018_a": "Tu devras utiliser la fonction `ramasser en chemin` trois fois pour résoudre cette énigme.",
-          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour contourner les coins ?"
+          "coursee_farmer_functions3c1_2018_a": "Il te faudra utiliser la fonction `récolter en chemin` trois fois pour résoudre ce casse-tête.",
+          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour naviguer les coins ?"
         },
         "courseE_farmer_functions7a1_2021": {
           "courseE_farmer_functions7a1_2018_a": "Crée ta fonction dans la section `fonctions` de la boîte à outils.",
           "courseE_farmer_functions7a1_2018_b": "N'oublie pas d'utiliser ta fonction lorsque tu as terminé de la créer !"
         },
         "courseE_farmer_functions8a1_2021": {
-          "courseE_farmer_functions8a1_2018a": "Commence cette énigme en codant la même fonction que tu as créée, dans la dernière énigme.",
-          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à nouveau."
+          "courseE_farmer_functions8a1_2018a": "Commence ce casse-tête en codant la même fonction que tu as créée dans le dernier casse-tête.",
+          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras faire un tournant de plus avant de pouvoir l'exécuter à nouveau."
         },
         "courseE_farmer_functions9a1_2021": {
-          "courseE_farmer_functions9a1_2018a": "Tu utiliseras la même fonction que tu as créée pour les deux dernières énigmes.",
-          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour l'énigme précédente afin de résoudre la première moitié de cette énigme.",
-          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` quelques fois et `avancer` pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta fonction à nouveau."
+          "courseE_farmer_functions9a1_2018a": "Tu vas utiliser la même fonction que tu as créée pour les deux derniers casse-têtes.",
+          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour le casse-tête précédent pour résoudre la première moitié de celui-ci.",
+          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` plusieurs fois et `avancer` pour arriver à la dernière pousse de laitue avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_ramp11a_2021": {
           "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
@@ -10638,7 +10638,7 @@
           "when_answered_var": "Essayez de changer l'étiquette de la variable dans le bloc « une fois la réponse faite». Comme il existe plusieurs invites, utilisez le libellé de la _dernière_ invite qui recevra une réponse. \n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10651,7 +10651,7 @@
           "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -10725,7 +10725,7 @@
           "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -10754,8 +10754,8 @@
           "hw_retro_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Chaque sprite a un **emplacement**. Vous pouvez définir l'emplacement en cliquant sur l'épingle qui se trouve au niveau de ce bloc :\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Cliquez sur l'épingle ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) du bloc d'emplacement puis choisissez un nouvel emplacement pour votre sprite qui s'affiche à l'écran.\n-   Appuyez sur le bouton \"Exécuter\" après avoir saisi votre code.",
-          "remove_hint": "Vous pouvez supprimer le sprite d'un certain numéro de ligne. Et ajouter un nouveau sprite pour prendre sa place :\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Chaque sprite a un **emplacement**. Vous pouvez définir l'emplacement en cliquant sur l'épingle qui se trouve au niveau de ce bloc :\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Cliquez sur l'épingle ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) du bloc d'emplacement puis choisissez un nouvel emplacement pour votre sprite qui s'affiche à l'écran.\n-   Appuyez sur le bouton \"Exécuter\" après avoir saisi votre code.",
+          "remove_hint": "Vous pouvez supprimer le sprite d'un certain numéro de ligne. Et ajouter un nouveau sprite pour prendre sa place :\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Trouvez un bloc d'arrière-plan semblable à celui-ci :\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\net trouvez un bloc d'effet de texte semblable à celui-ci : \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nConnectez ces blocs à la section `lorsqu'on exécute` dans votre espace de travail.",
@@ -10767,14 +10767,14 @@
           "more_events_hint": "Vous pouvez utiliser plus d'un événement dans votre programme. Essayez d'utiliser deux événements avec des effets différents qui correspondent aux nouvelles lignes du poème. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Trouvez ce bloc :\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nou ce bloc : \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConnectez-le à la section `lorsqu'on exécute` dans votre espace de travail.",
+          "poetry_sound_hint": "Trouvez ce bloc :\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nou ce bloc : \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nConnectez-le à la section `lorsqu'on exécute` dans votre espace de travail.",
           "more_code": "Ajoutez plus d'effets et de couleurs pour correspondre au son que vous avez choisi.\n[blockly block] [0]"
         },
         "poetry_hoc_spriteBehaviors": {
           "add_behavior": "Ajoutez un bloc `lancement du sprite` à votre code. Assurez-vous d'avoir déjà créé le sprite pour lequel vous voulez définir le comportement.\n\n[blockly block] [0]"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Trouvez ce bloc et cliquez sur `150`.\n[blockly block] [0]\n\nQue se passe-t-il lorsque le nombre est `25` ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Trouvez ce bloc et cliquez sur `150`.\n[blockly block] [0]\n\nQue se passe-t-il lorsque le nombre est `25` ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte."
@@ -10786,7 +10786,7 @@
           "2-3_Artist_Functions_4_a": "L'artiste doit tourner de 120 degrés entre chaque carré pour compléter ce dessin."
         },
         "MC Agent Freeplay": {
-          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte !"
+          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des rails de wagonnet à l'Agent pour que tu puisses explorer ce monde !"
         },
         "CourseD_2022LessonExtra14a": {
           "courseD_bee_nested_loops_challenge2_a": "N'oublie pas que tu peux `répéter` une simple commande ou un modèle plus long. Tu peux même `répéter` un bloc `répéter`!",
@@ -10910,8 +10910,8 @@
           "verionhistory": "Vous êtes bloqué ? Vous pouvez toujours réinitialiser votre code en cliquant sur \"Historique des versions\" ci-dessous, puis en choisissant \"Recommencer\"."
         },
         "Function intro Ryan2022": {
-          "Function_intro_Ryan_b": "Si tu appelles les fonctions correctement, voici le chemin que tu feras...",
-          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras !  Essaie de l'appeler deux fois pour résoudre ce casse-tête."
+          "Function_intro_Ryan_b": "Si tu appelles correctement les fonctions, voici le chemin que tu prendras...",
+          "Function_intro_Ryan_a": "Dans ton programme, tu pourras appeler une fonction autant de fois que tu le voudras ! Essaie de l'appeler deux fois pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_01_RETRY2022": {
           "MC_HOC_2017_01_RETRY_a": "Fais glisser un bloc « avancer » de la boite à outils vers l'espace de travail et place-le en dessous du bloc « quand l’exécution commence ».",
@@ -10925,42 +10925,42 @@
           "MC_HOC_2017_02_Cole_d": "Assure-toi que l’Agent suit bien le chemin que montre la carte !"
         },
         "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches directionnelles pour déplacer le joueur jusqu'à la boussole !",
-          "MC_HOC_2017_03_Cole_b": "Le code semble trop long ?  Essaie de le raccourcir en utilisant une boucle ˋrépéterˋ !"
+          "MC_HOC_2017_03_Cole_a": "Une fois que l'Agent est placé sur la plaque de détection, utilise les touches fléchées pour emmener le joueur jusqu'à la boussole !",
+          "MC_HOC_2017_03_Cole_b": "Ce code ne paraît-il pas un peu long ?  Essaie de le raccourcir en utilisant une boucle « répéter » !"
         },
         "MC_HOC_2017_04POINT5_RYAN2022": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc ˋtourner à droiteˋ pour changer l'orientation de l’agent ",
-          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent soit sur la première plaque de détection."
+          "MC_HOC_2017_04POINT5_RYAN_b": "Utilise le bloc « tourner à droite » pour changer l'orientation de l’Agent ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Pour permettre à Alex ou Steve d'atteindre la hache, il suffit que l'Agent atteigne la première plaque de pression."
         },
         "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "L'agent a besoin d’ˋavancerˋ 7 fois.  Comment peux-tu faire cela en utilisant une boucle ˋrépéterˋ ?",
+          "MC_HOC_2017_04_Cole_a": "L'agent a besoin « d'avancer » 7 fois.  Comment peux-tu utiliser une boucle « répéter » pour ce faire ?",
           "MC_HOC_2017_04_Cole_c": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de détection, cela ouvrira la porte pour le joueur."
+          "MC_HOC_2017_04_Cole_b": "Une fois que l'Agent est sur la plaque de pression, cela ouvrira la porte pour le joueur."
         },
         "MC_HOC_2017_05_Cole2022": {
-          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux placer plusieurs bouts de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle ˋrépéterˋ pour résoudre ce casse-tête.",
-          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent en construisant un pont."
+          "MC_HOC_2017_05_Cole_a": "Savais-tu que tu peux mettre plusieurs morceaux de code à l'intérieur d'une boucle ? Essaie d’avancer **et** de placer une planche à l'intérieur d'une boucle « répéter » pour résoudre ce casse-tête.",
+          "MC_HOC_2017_05_Cole_b": "Fais traverser la rivière à l’Agent tout en construisant un pont en chemin."
         },
         "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ?  Combien de fois _devrait_-elle se répéter ?",
+          "MC_HOC_2017_06_Cole_a": "Combien de fois cette boucle va-t-elle se répéter ? Combien de fois _devrait_-elle se répéter ?",
           "MC_HOC_2017_06_Cole_b": "Aide l’Agent à construire un pont pour traverser l’eau ! "
         },
         "MC_HOC_2017_07_Cole2022": {
           "MC_HOC_2017_07_Cole_c": "Tout ce que tu as à faire faire à l’Agent est de dégager le chemin vers le wagonnet.",
-          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, découvre à quoi sert la fonction ˋsupprimer obstacleˋ. Appelle-la autant de fois que nécessaire en utilisant le petit bloc vert ˋsupprimer obstacleˋ depuis la boite à outils.",
-          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs de fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
+          "MC_HOC_2017_07_Cole_a": "Pour résoudre ce casse-tête, il faut d'abord saisir à quoi sert la fonction « supprimer obstacle ». Appelle-la autant de fois qu'il faut en utilisant le petit bloc vert « supprimer obstacle » qui se trouve dans la boite à outils.",
+          "MC_HOC_2017_07_Cole_b": "Essaie de mélanger les blocs fonctions avec d'autres blocs de la boite à outils pour résoudre ce casse-tête."
         },
         "MC_HOC_2017_10_RETRY2022": {
           "MC_HOC_2017_10_Cole_b": "Tu ne sais pas où aller ? Regarde si tu peux trouver la ligne en pointillés !",
-          "MC_HOC_2017_10_Cole_a": "Utilise des fonctions pour résoudre plus facilement ce casse-tête !"
+          "MC_HOC_2017_10_Cole_a": "Utilise les fonctions pour résoudre plus facilement ce casse-tête !"
         },
         "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_a": "Appuie sur « Démarrer » ! \n\nTu peux exécuter ton code même s’il n'est pas correct. Exécute et réinitialise ton code autant de fois qu'il faut pour trouver ce qui ne va pas.",
-          "MC_HOC_2017_08_RY_b": "Il existe de NOMBREUSES manières de résoudre ce casse-tête.  Essayes-en quelques-unes !",
-          "MC_HOC_2017_08_RY_c": "Essaie de suivre la ligne en pointillés pour un chemin simple à travers la lave."
+          "MC_HOC_2017_08_RY_b": "Il y a PLEIN de façons de résoudre ce casse-tête. Essayes-en quelques-unes !",
+          "MC_HOC_2017_08_RY_c": "Essaie de suivre les pointillés pour emprunter un chemin simple à travers la lave."
         },
         "MC_HOC_2017_FP20x202022": {
-          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des ponts à l'Agent afin qu'Alex ou Steve puissent se déplacer au-delà des bords de la carte !"
+          "MC_HOC_2017_13_Cole_a": "Essaie de faire construire des rails de wagonnet à l'Agent pour que tu puisses explorer ce monde !"
         },
         "Overworld Avoid Monsters2022": {
           "mc_8_a": "Il y a plusieurs chemins que tu peux emprunter. Lequel est le plus court ?",
@@ -12353,48 +12353,48 @@
           "courseD_maze_until8_c": "N'oublie pas d'utiliser le bloc « répéter jusqu'au » pour t'amener jusqu'au tournesol !"
         },
         "courseE_artist_functions102022": {
-          "courseD_artist_functions10_b": "Ce dessin est presque identique au dernier, mais la fonction `dessiner une ligne` dessine maintenant une forme différente.",
-          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs `avancer`, crée une fonction `dessiner un hexagone` et appelle la plusieurs fois.",
-          "courseD_artist_functions10_c": "Est-ce que tu vois où ce dessin pourrait utiliser une fonction appelée `ligne d'hexagones`\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_b": "Ce dessin est très similaire au précédent, mais la fonction « dessiner une rangée » dessine maintenant une forme différente.",
+          "courseD_artist_functions10_a": "Pour éviter d'utiliser plusieurs blocs « avancer », crée une fonction « dessiner un hexagone » et appelle la plusieurs fois.",
+          "courseD_artist_functions10_c": "Est-ce que tu vois où une fonction appelée « rangée d'hexagones » pourriat être utile à ce dessin ?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions22022": {
-          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, mais juste la partie qui dessine un carré avec des côtés de 100 pixels.",
-          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert `dessiner un carré` pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas.   <xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Votre programme devrait:\n\n-   Utiliser une fonction\n-   Avancer de 100 + 75 pixels\n-   Utiliser une fonction"
+          "courseD_artist_functions2_b": "La fonction ne doit pas contenir tout ton programme, juste la partie qui dessine un carré avec des côtés de 100 pixels.",
+          "courseD_artist_functions2_c": "Assure-toi d'utiliser le bloc vert « dessiner un carré » pour « appeler » ta fonction. Sinon, le code dans ta fonction ne fonctionnera pas. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Ton programme devrait :\n\n-   Utiliser ta fonction\n-   Avancer de 100 + 75 pixels\n-   Réutiliser ta fonction"
         },
         "courseE_artist_functions52022": {
           "courseD_artist_functions5_a": "N'abandonne pas! Souviens toi ce que tu as appris.",
           "courseD_artist_functions5_b": "Les fonctions rendent plus facile à n'importe quel moment l'utilisation de code sauvegardé, pas seulement à l'intérieur d'une boucle!",
-          "courseD_artist_functions5_c": "Commence par créer ta fonction `dessiner une étoile`, puis utilise cette fonction pour dessiner les trois étoiles !"
+          "courseD_artist_functions5_c": "Commence par créer ta fonction « dessiner une étoile », puis utilise cette fonction pour dessiner les trois étoiles !"
         },
         "courseE_artist_functions72022": {
-          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtre une à la fois.",
-          "courseD_artist_functions7_b": "Pour aller des fenêtres supérieures aux fenêtres inférieures, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera dans la bonne direction pour achever la maison !"
+          "courseD_artist_functions7_a": "Essaie de créer d'abord ta fonction puis ajoute les fenêtres une à la fois.",
+          "courseD_artist_functions7_b": "Pour aller des fenêtres du haut aux fenêtres du bas, tourne simplement l'artiste à droite, saute 150 pixels, puis tourne à nouveau l'artiste à droite ! À présent, l'artiste sera orienté dans la bonne direction pour terminer d'achever la maison !"
         },
         "courseE_artist_functions82022": {
-          "courseD_artist_functions8_f": "Tu as besoin d'un seul bloc `Avancer`, mais tu auras besoin de quelques blocs `sauter en avant` et/ou `sauter en arrière`!",
-          "courseD_artist_functions8_a": "Commence par faire une fonction pour un carré, puis essaie de faire une fonction pour une ligne de carré.\n\nComment utiliserais-tu la fonction `dessiner une ligne de carrés` pour faire cette image?",
-          "courseD_artist_functions8_d": "Pour faire une ligne de carrés,\n\n-   Répète 3 fois\n    -   dessine un carré de **50 pixels** de long\n    -   Saute en avant de **100 pixels**",
-          "courseD_artist_functions8_b": "Pense à chaque rangée de cette image comme une ligne de 3 carrés. Combien y a-t-il de lignes de carrés et où commences-tu à dessiner chacune d'entre elles?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un seul bloc « avancer », mais tu auras besoin de quelques blocs « sauter en avant » et/ou « sauter en arrière » !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de faire une fonction pour une rangée de carrés.\n\nComment utiliserais-tu la fonction « dessiner une rangée de carrés » pour recréer cette image ?",
+          "courseD_artist_functions8_d": "Pour faire une ligne de carrés :\n\n-   Répète 3 fois :\n    -   dessiner un carré de **50 pixels** de long\n    -   sauter en avant de **100 pixels**",
+          "courseD_artist_functions8_b": "Envisage chaque rangée de cette image comme une série de 3 carrés. Combien y a-t-il de rangées de carrés et où faut-il commencer à dessiner chacune d'entre elles ?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
           "courseD_artist_functions8_c": "À la fin de chaque série de carrés décalés, l'artiste devra sauter vers le bas et en arrière, avant de dessiner la série suivante de carrés décalés.",
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
         "courseE_artist_functions8b2022": {
-          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc `avancer` si tu fais cela correctement !",
-          "courseD_artist_functions8_a": "Commence par créer une fonction pour un carré, puis essaie de créer une fonction pour une rangée de carrés.",
-          "courseD_artist_functions8_d": "Pour faire une rangée de carrés,   - répète 3 fois    -   dessine un carré   -   saute en avant de **100 pixels**"
+          "courseD_artist_functions8_f": "Tu n'as besoin que d'un bloc « avancer » si tu fais les choses correctement !",
+          "courseD_artist_functions8_a": "Commence par créer une fonction pour faire un carré, puis essaie de créer une fonction pour une rangée de carrés.",
+          "courseD_artist_functions8_d": "Pour faire une rangée de carrés :\n\n-   répéter 3 fois :  \n-   dessiner un carré  \n-   sauter en avant de **100 pixels**"
         },
         "courseE_artist_functions8c2022": {
-          "courseD_artist_functions8_f": "C'est plus facile qu'il n'y paraît ! Tu ne devrais pas avoir besoin de blocs `déplacer` ou `sauter` ici !",
-          "courseD_artist_functions8_a": "La deuxième rangée de carrés est simplement un virage à 180 degrés différente de la première !",
-          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner à 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
+          "courseD_artist_functions8_f": "C'est plus facile que ça n'en a l'air ! Tu ne devrais pas avoir besoin de blocs « déplacer » ou « sauter » ici !",
+          "courseD_artist_functions8_a": "La deuxième rangée de carrés ne diffère de la première que par un virage de 180 degrés !",
+          "courseD_artist_functions8_c": "À la fin de chaque rangée de carrés, l'artiste a seulement besoin de tourner de 180 degrés, avant de dessiner la rangée de carrés suivante. Mets le tout dans une boucle de répétition pour te préparer au prochain exercice !"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la `ligne de triangles` peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
-          "courseD_artist_functions9_a": "Ce puzzle peut être divisé en 3 parties:\n\n-   Fais la fonction `dessiner un triangle`\n-   Fais la fonction `dessiner une ligne de triangle`\n-   Utilise ta fonction `dessiner une ligne de triangle` 4 fois pour terminer le dessin",
-          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une ligne de triangles et tournant de 60 ou 120 degrés avant de dessiner la prochaine ligne de triangles.",
-          "courseD_artist_functions9_c": "Pour dessiner une ligne de triangles:\n\n-   Répéter 4 fois\n    -   Dessine un triangle\n    -   Saute en avant de 50 pixels",
-          "courseD_artist_functions9_d": "Pour dessiner ce diamant :\n\n-   Répéte 2 fois\n    -   Dessine une ligne de triangles\n    -   Tourne de 60 degrés\n    -   Dessine une ligne de triangles\n    -   Tourne de 120 degrés"
+          "courseD_artist_functions9_e": "Est-ce que tu peux repérer les 4 endroits où la « rangée de triangles » peut être utilisée pour ce dessin ?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Ce casse-tête peut être divisé en trois parties :\n\n-   Crée la fonction « dessiner un triangle »\n-   Crée la fonction « dessiner une rangée de triangles »\n-   Utilise ta fonction « dessiner une rangée de triangles » 4 fois pour achever le dessin",
+          "courseD_artist_functions9_b": "Ce dessin est fait en dessinant 4 fois une rangée de triangles et en tournant de 60 ou 120 degrés avant de dessiner la prochaine rangée de triangles.",
+          "courseD_artist_functions9_c": "Pour dessiner une rangée de triangles :\n\n-   Répéter 4 fois :\n    -   Dessiner un triangle\n    -   Sauter en avant de 50 pixels",
+          "courseD_artist_functions9_d": "Pour dessiner le losange :\n\n-   Répéter 2 fois :\n    -   Dessiner une rangée de triangles\n    -   Tourner de 60 degrés\n    -   Dessiner une rangée de triangles\n    -   Tourner de 120 degrés"
         },
         "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_a": "Si tu appelles la fonction une fois de plus, tu peux créer le même dessin dans le dernier coin.",
@@ -12408,33 +12408,33 @@
           "courseE_farmer_functions1_b": "Tu dois ramasser seulement une citrouille, mais peux-tu utiliser une boucle pour l'obtenir ?"
         },
         "courseE_farmer_functions1a2022": {
-          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Peux-tu dire ce qu'elle fait ?",
-          "courseE_farmer_functions1a_b": "Utilise un block `répéter jusqu`à\\` pour aller jusqu'à la citrouille!"
+          "courseE_farmer_functions1a_a": "Assure-toi de lire la définition de la fonction. Est-ce que tu arrives à voir ce qu'elle fait ?",
+          "courseE_farmer_functions1a_b": "Utilise un bloc `répéter jusqu'à` pour aller jusqu'à la citrouille !"
         },
         "courseE_farmer_functions2b2022": {
           "courseE_farmer_functions2b_a": "Tu peux `répéter jusqu'à la citrouille` pour arriver au bout des deux chemins.",
-          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs dans le chemin connecté, donc tu peux continuer ton chemin et tourner.",
-          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `Répéter jusqu'à` pour atteindre toutes les cultures."
+          "courseE_farmer_functions2b_b": "Il n'y a pas de maïs sur le chemin qui relie les deux autres, donc tu peux poursuivre et puis tourner.",
+          "courseE_farmer_functions2b_c": "Tu auras besoin de 2 blocs séparés `répéter jusqu'à` pour atteindre toutes les cultures."
         },
         "courseE_farmer_functions2ba2022": {
           "courseE_farmer_functions2ba_a": "Utilise le bloc vert `ramasse toutes les citrouilles` pour être sûr de ramasser toutes les citrouilles !"
         },
         "courseE_farmer_functions3c12022": {
-          "coursee_farmer_functions3c1_2018_a": "Tu devras utiliser la fonction `ramasser en chemin` trois fois pour résoudre cette énigme.",
-          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour contourner les coins ?"
+          "coursee_farmer_functions3c1_2018_a": "Il te faudra utiliser la fonction `récolter en chemin` trois fois pour résoudre ce casse-tête.",
+          "coursee_farmer_functions3c1_2018_b": "Quel code dois-tu ajouter pour naviguer les coins ?"
         },
         "courseE_farmer_functions7a12022": {
           "courseE_farmer_functions7a1_2018_a": "Crée ta fonction dans la section `fonctions` de la boîte à outils.",
           "courseE_farmer_functions7a1_2018_b": "N'oublie pas d'utiliser ta fonction lorsque tu as terminé de la créer !"
         },
         "courseE_farmer_functions8a12022": {
-          "courseE_farmer_functions8a1_2018a": "Commence cette énigme en codant la même fonction que tu as créée, dans le dernière énigme.",
-          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras effectuer un tour supplémentaire avant de pouvoir l'exécuter à nouveau."
+          "courseE_farmer_functions8a1_2018a": "Commence ce casse-tête en codant la même fonction que tu as créée dans le dernier casse-tête.",
+          "courseE_farmer_functions8a1_2018b": "Après la première exécution de la fonction, tu devras faire un tournant de plus avant de pouvoir l'exécuter à nouveau."
         },
         "courseE_farmer_functions9a12022": {
-          "courseE_farmer_functions9a1_2018a": "Tu utiliseras la même fonction que tu as créée pour les deux dernières énigmes.",
-          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour l'énigme précédente afin de résoudre la première moitié de cette énigme.",
-          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` quelques fois et `avancer` pour arriver à la dernière récolte de laitue, avant de pouvoir appeler ta fonction à nouveau."
+          "courseE_farmer_functions9a1_2018a": "Tu vas utiliser la même fonction que tu as créée pour les deux derniers casse-têtes.",
+          "courseE_farmer_functions9a1_2018b": "Utilise les mêmes étapes que pour le casse-tête précédent pour résoudre la première moitié de celui-ci.",
+          "courseE_farmer_functions9a1_2018c": "Tu devras `tourner` plusieurs fois et `avancer` pour arriver à la dernière pousse de laitue avant de pouvoir appeler ta fonction à nouveau."
         },
         "courseE_farmer_ramp11a2022": {
           "courseE_farmer_ramp12_a": "Au lieu d'utiliser une boucle `répéter` pour dire au fermier combien de fois ramasser la saleté, tu peux maintenant utiliser un bloc `tant qu’il y a une pile`.  ",
@@ -12622,6 +12622,58 @@
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "Pour que la pizza puisse parler, connectez les blocs de code comme suit :"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "Vous pouvez changer l'arrière-plan en connectant un bloc `set background` sous un bloc événement `when clicked` :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "Remarque : Pour amener un sprite à adopter un comportement, vous devez utiliser le bloc `lancement du sprite` en plus d'un des blocs de comportement de couleur verte, comme par exemple `tourner à droite`. \n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme.",
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Cliquez sur les sprites pendant l'exécution du programme.",
+          "hw_no_changes": "À ce niveau, vous n'avez pas besoin de modifier le code."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "Connectez un bloc 'change costume' à un bloc d'événement \"when clicked\".\n\n[blockly block] [0]"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "Connectez un bloc 'parler' à un bloc d'événement de type 'lorsqu'on clique' :\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "Pour modifier l'emplacement d'un sprite, cliquez sur l'épingle qui se trouve sur le bloc d'emplacement, puis cliquez à l'endroit où vous voulez le placer.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "Veillez à ce que les costumes soient adaptés à chaque sprite.\n[blockly block] [0]"
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "Veillez à ce que les costumes soient adaptés à chaque sprite.\n[blockly block] [0]"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "Vous pouvez utiliser ce bloc pour définir en une seule fois la taille d'un sprite :\n\n[blockly block] [0]",
+          "storyboard_changePropBy": "Veuillez utiliser ce bloc si vous souhaitez modifier la taille d'un sprite à plusieurs reprises (avec des événements) :\n\n[blockly block] [0]"
         }
       }
     }

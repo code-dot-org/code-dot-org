@@ -265,6 +265,31 @@
           "name": "Poza Godziną Kodowania",
           "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Budowanie atmosfery",
+          "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_W tym ćwiczeniu będziemy dobrze się bawić tworząc interaktywny świat pełen zabawnych postaci zwanych duszkami. Będziesz w stanie sprawiać, by duszki mówiły różne rzeczy korzystając z \"dymków z wypowiedziami\", jakie można zobaczyć w komiksie lub w powieści graficznej i nauczysz się odpowiadać automatycznie, gdy Ty lub ktoś inny je klika._\n\n_Dzisiaj będziecie pisać \"kod\", oznaczający zestaw instrukcji, które komputer jest w stanie zrozumieć. Pisząc opowieść musisz uważnie dobierać słowa. Gdy będziesz pisał kod, musisz uważnie zastanawiać się nad tym, jakie instrukcje przekazujesz komputerowi_",
+          "tips": [
+            "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów, najlepiej jest wskoczyć tak szybko, jak to możliwe."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Ogólne wsparcie",
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Witaj świecie",
+          "progression_name": "Witaj świecie"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Refleksja",
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Przywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień.\n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami."
         },
@@ -660,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://code.org/certificates?script=mc) z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Następne Kroki",
@@ -764,6 +789,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "\\[**Przeczytaj \"Rozbite na kawałki\"**\n\n-   Przeczytaj strony 165-169  [\"Rozbite na kawałki\", rozdział 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf).\n-   Odpowiedz na pytania podane w przewodniku w czytaniu i na karcie pracy [Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/)\t\t\n\n**Więcej \"Rozbitego na kawałki**\n\n-   W poprzednich częściach rozdziału 5 \"Rozbitego na kawałki\" dokonano odniesień do znaczenia i kontrowersji otaczających szyfrowanie, jako pokłosia wydarzeń z 11 września. Ta lektura może stanowić użyteczne narzędzie do dalszego wprowadzania oddziaływania kryptografii na wiele aspektów współczesnego życia.\n\n-   Poproś uczniów o przejrzenie ich historii przeglądania internetu i dokonania przybliżonych wyliczeń, jaki procent prowadzą z założeniem, że ma ono charakter \"prywatny\". Czy jest jakiś sposób, który daje im pewność w tym przypadku? Czy są strony internetowe, na które wchodzą, na których czują większą pewność tajności niż na innych? Czy wnioski uzasadniają ich poczynania?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Budowanie atmosfery",
+          "description": "Powitaj uczniów na zajęciach i krótko przedstaw, co dziś będziecie robić."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_W tym ćwiczeniu będziemy dobrze się bawić tworząc interaktywny świat pełen zabawnych postaci zwanych duszkami. Będziesz w stanie sprawiać, by duszki mówiły różne rzeczy korzystając z \"dymków z wypowiedziami\", jakie można zobaczyć w komiksie lub w powieści graficznej i nauczysz się odpowiadać automatycznie, gdy Ty lub ktoś inny je klika._\n\n_Dzisiaj będziecie pisać \"kod\", oznaczający zestaw instrukcji, które komputer jest w stanie zrozumieć. Pisząc opowieść musisz uważnie dobierać słowa. Gdy będziesz pisał kod, musisz uważnie zastanawiać się nad tym, jakie instrukcje przekazujesz komputerowi_",
+          "tips": [
+            "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów, najlepiej jest wskoczyć tak szybko, jak to możliwe."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Ogólne wsparcie",
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Witaj świecie",
+          "progression_name": "Witaj świecie"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Refleksja",
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Budowanie atmosfery",
@@ -3437,9 +3487,6 @@
           "tips": [
             "Przypomnij uczniom, aby dzielili się swoją pracą tylko z bliskimi przyjaciółmi lub rodziną. Aby uzyskać więcej informacji obejrzyj lub pokaż klasę**\\\\ \\*Pause and Think Online - Video**"
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Zawarliśmy kilka poziomów przewidywania wielokrotnego wyboru, które są trudne dla osób niebędących czytelnikami. Poziomy te są opcjonalne, aby przejrzeć z klasą, aby pomóc przygotować się do zagadek, które nadejdą. Alternatywnie, można je wykorzystać po ukończeniu etapu jako przegląd zajęć. \n\n\\*\\*Poziom przewidywania: \\*\\* - [Kurs B, Pętle w artyście](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Film: Artysta w Code Studio"

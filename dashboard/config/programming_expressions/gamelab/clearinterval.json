@@ -6,13 +6,13 @@
   "content": "Some interval timers do not run forever, but need to be stopped at some time (maybe like a countdown, see the first example). *clearInterval()* uses the value returned by the [setInterval(function, milliseconds)](/docs/applab/setInterval/) function.",
   "examples": [
     {
-      "name": "Example: countdown",
+      "name": "Example: Countdown",
       "description": "",
       "code": "```\nvar countdown = 10;\ntextLabel(\"countdown\", countdown);\nvar i = setInterval(function() {\n  countdown = countdown - 1;\n  setText(\"countdown\", countdown);\n  if(countdown === 0) {\n    clearInterval(i);\n  }\n}, 1000);\nconsole.log(\"Interval timer ID: \" + i);\n```"
     },
     {
       "name": "Example: Stop the Presses!",
-      "description": "**Example: Stop the Presses!** Run a half second interval timer until a button is pressed.",
+      "description": "Run a half second interval timer until a button is pressed.",
       "code": "```\n// Run a half second interval timer until a button is pressed.\nbutton(\"stop\", \"Stop the timer\");\nvar i = setInterval(function() {\n  write(\"Timer code ran!\");\n}, 500);\nonEvent(\"stop\", \"click\", function(){\n  clearInterval(i);\n});\n```"
     }
   ],

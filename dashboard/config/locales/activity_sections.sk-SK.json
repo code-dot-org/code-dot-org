@@ -265,6 +265,31 @@
           "name": "Ako ďalej po Hodine kódu",
           "description": "Existuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si niekoľkých na našej [mape dobrovoľníkov](https://code.org/volunteer/local)"
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Príprava",
+          "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_V tejto aktivite sa zabavíš pri vytváraní interaktívneho sveta so zábavnými postavami nazývanými sprajty. Naučíš ich hovoriť veci pomocou bubliniek ako v komikse alebo grafickom románe a aj automaticky reagovať, keď na ne klikneš ty alebo niekto iný._\n\n_Dnes budeš písať „kód“, čo znamená súbor inštrukcií, ktorým počítač rozumie. Pri písaní príbehu musíš dôkladne premýšľať o slovách, ktoré používaš. Keď píšeš kód, musíš si dôkladne premyslieť inštrukcie, ktoré dávaš počítaču._",
+          "tips": [
+            "Netrávte zbytočne veľa času predstavovaním Hodiny kódu alebo jej predvádzaním. Najmä v prípade mladších žiakov je najlepšie začať čo najrýchlejšie."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Všeobecná podpora",
+          "description": "Tu je niekoľko tipov, ktoré by mali žiakom pomôcť bez ohľadu na úroveň, na ktorej pracujú.\n\n-   **Spolupracujte so susedmi:** Povzbudzujte žiakov, aby sa poradili so susedom, keď sa zaseknú. V závislosti od veku a schopností žiakov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli dokončiť kurz pomocou [párového programovania](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Prečítajte si pokyny:** V pokynoch sú zvyčajne uvedené užitočné tipy, ako dokončiť úroveň. Predtým, ako žiakom dáte odpoveď, uistite sa, že si pozorne prezreli pokyny, tipy, videá a prípadný začiatočný kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Neviete, ako ďalej? Hľadajte pomôcky:** Každá úroveň obsahuje pomôcku s radami, ako prejsť úroveň, vrátane toho, ktoré bloky kódu vyskúšať. \n\n-   **Neponáhľajte sa a experimentujte.** V pokynoch sa žiaci všeobecne dozvedia, čo majú robiť, ale mali by si pokojne vyskúšať aj vlastné nápady."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Ahoj Svet",
+          "progression_name": "Ahoj Svet"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Ak skupina alebo niektorý žiak skončí skôr, povzbuďte ich, aby pokračovali v budovaní projektu na poslednej úrovni. Ak si žiaci nie sú istí, čo majú ďalej robiť, môžete ich naviesť otázkami:\n\n-   Aké ďalšie postavy môžete pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste skúsili nakresliť vlastný kostým postavy?\n-   Čo ďalšie by mohli vaše postavy povedať?\n-   Čo by mali vaše postavy robiť, keď sa na ne klikne?\n-   Vyzvite žiakov, aby sa podelili o nápady a učili sa jeden od druhého. Môžu sa tiež pokúsiť o ďalší kurz na stránke [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Reflexia",
+          "description": "#### Reflexia\n\nPožiadajte žiakov, aby sa zamysleli nad aktivitami, ktorým sa dnes venovali. Čo sa naučili o kódovaní? Sprajtoch? Udalostiach?\n\nAko sa ich názor na informatiku a programovanie zmenil po tom, čo sa im hodinu venovali?\n\n#### Ďalšie kroky\n\nPovedzte žiakom, že ak sa im dnešná aktivita páčila, majú veľa možností, ako v programovaní pokračovať. Pozrite si náš učebný plán [CS Connections](https://code.org/educate/csc), kde nájdete nápady, ako prepojiť informatiku s inými predmetmi, alebo si prečítajte viac o našej [ponuke kurzov pre základné školy](https://code.org/educate/curriculum/elementary-school)."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Príprava\n\nPrivítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\n_Povedzte: „Dnes strávime hodinu tým, že sa budeme učiť kódovať. Počul už niekto z vás výraz „kód“? Čo sa ním myslí?“_\n\nŽiaci možno odpovedia, že „kód“ je ako tajná správa alebo nejakým spôsobom súvisí s počítačmi."
         },
@@ -660,7 +685,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Čas na oslavu",
-          "description": "Vysvetlite žiakom, že dnes ste strávili jednu hodinu programovaním pri príležitosti Týždňa informatiky, v rámci ktorého sa do Hodiny kódu zapájajú milióny žiakov po celom svete. Zablahoželajte žiakom za to, že sa do tohto celosvetového hnutia zapojili.\n\nKaždému žiakovi odovzdajte [certifikát](https://code.org/certificates?script=mc) s jeho menom."
+          "description": "Vysvetlite žiakom, že dnes ste strávili jednu hodinu programovaním pri príležitosti Týždňa informatiky, v rámci ktorého sa do Hodiny kódu zapájajú milióny žiakov po celom svete. Zablahoželajte žiakom za to, že sa do tohto celosvetového hnutia zapojili.\n\nKaždému žiakovi odovzdajte [certifikát](https://studio.code.org/certificates/batch?course=bWM=) s jeho menom."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Ďalšie kroky",
@@ -755,6 +780,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Prečítajte si Blown to Bits**\n\n-   Prečítajte si str. 165-169 z [Blown to Bits, kapitola 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Odpovedzte na otázky uvedené v sprievodcovi čítaním a v pracovnom liste [Sprievodca čítaním k šifrovaniu](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/).\t\t\n\n**Ďalšie z Blown to Bits**\n\n-   V predchádzajúcich častiach kapitoly 5 knihy Blown to Bits sa spomína význam a kontroverzie týkajúce sa šifrovania po 11. septembri. Toto čítanie môže byť užitočným nástrojom na ďalšie predstavenie vplyvu kryptografie na mnohé aspekty moderného života.\n\n-   Požiadajte žiakov, aby si prezreli históriu svojho surfovania po internete a vypočítali, aké percento z neho približne vykonávajú s predpokladom, že je \"súkromné\". Majú nejaký spôsob, ako sa uistiť, že to tak je? Existujú nejaké webové stránky, ktoré navštevujú a pri ktorých sa cítia istejšie, čo sa týka dôvernosti ich návštevnosti, ako pri iných? Je ich tento záver opodstatnený?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Príprava",
+          "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_V tejto aktivite sa zabavíš pri vytváraní interaktívneho sveta so zábavnými postavami nazývanými sprajty. Naučíš ich hovoriť veci pomocou bubliniek ako v komikse alebo grafickom románe a aj automaticky reagovať, keď na ne klikneš ty alebo niekto iný._\n\n_Dnes budeš písať „kód“, čo znamená súbor inštrukcií, ktorým počítač rozumie. Pri písaní príbehu musíš dôkladne premýšľať o slovách, ktoré používaš. Keď píšeš kód, musíš si dôkladne premyslieť inštrukcie, ktoré dávaš počítaču._",
+          "tips": [
+            "Netrávte zbytočne veľa času predstavovaním Hodiny kódu alebo jej predvádzaním. Najmä v prípade mladších žiakov je najlepšie začať čo najrýchlejšie."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Všeobecná podpora",
+          "description": "Tu je niekoľko tipov, ktoré by mali žiakom pomôcť bez ohľadu na úroveň, na ktorej pracujú.\n\n-   **Spolupracujte so susedmi:** Povzbudzujte žiakov, aby sa poradili so susedom, keď sa zaseknú. V závislosti od veku a schopností žiakov môžete zvážiť formálne rozdelenie triedy do dvojíc, aby ste mohli dokončiť kurz pomocou [párového programovania](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Prečítajte si pokyny:** V pokynoch sú zvyčajne uvedené užitočné tipy, ako dokončiť úroveň. Predtým, ako žiakom dáte odpoveď, uistite sa, že si pozorne prezreli pokyny, tipy, videá a prípadný začiatočný kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Neviete, ako ďalej? Hľadajte pomôcky:** Každá úroveň obsahuje pomôcku s radami, ako prejsť úroveň, vrátane toho, ktoré bloky kódu vyskúšať. \n\n-   **Neponáhľajte sa a experimentujte.** V pokynoch sa žiaci všeobecne dozvedia, čo majú robiť, ale mali by si pokojne vyskúšať aj vlastné nápady."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Ahoj Svet",
+          "progression_name": "Ahoj Svet"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Ak skupina alebo niektorý žiak skončí skôr, povzbuďte ich, aby pokračovali v budovaní projektu na poslednej úrovni. Ak si žiaci nie sú istí, čo majú ďalej robiť, môžete ich naviesť otázkami:\n\n-   Aké ďalšie postavy môžete pridať do svojho projektu?\n-   Prezreli ste si knižnicu kostýmov alebo ste skúsili nakresliť vlastný kostým postavy?\n-   Čo ďalšie by mohli vaše postavy povedať?\n-   Čo by mali vaše postavy robiť, keď sa na ne klikne?\n-   Vyzvite žiakov, aby sa podelili o nápady a učili sa jeden od druhého. Môžu sa tiež pokúsiť o ďalší kurz na stránke [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Reflexia",
+          "description": "#### Reflexia\n\nPožiadajte žiakov, aby sa zamysleli nad aktivitami, ktorým sa dnes venovali. Čo sa naučili o kódovaní? Sprajtoch? Udalostiach?\n\nAko sa ich názor na informatiku a programovanie zmenil po tom, čo sa im hodinu venovali?\n\n#### Ďalšie kroky\n\nPovedzte žiakom, že ak sa im dnešná aktivita páčila, majú veľa možností, ako v programovaní pokračovať. Pozrite si náš učebný plán [CS Connections](https://code.org/educate/csc), kde nájdete nápady, ako prepojiť informatiku s inými predmetmi, alebo si prečítajte viac o našej [ponuke kurzov pre základné školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Príprava",
@@ -3426,9 +3476,6 @@
           "tips": [
             "Pripomeňte žiakom, aby svoju prácu zdieľali iba s najbližšími kamarátmi a rodinou. Viac informácií nájdete vo videu **\\*Mysli celým telom, keď si online**, ktoré si môžu žiaci pozrieť v triede alebo samostatne."
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Do lekcie sme zahrnuli niekoľko úrovní, v ktorých majú žiaci v nejakej situácii predpovedať, čo sa bude diať, výberom správnej odpovede z viacerých možností. Tieto úlohy sú pre deti, ktoré ešte nevedia čítať, náročné. Preto sú voliteľné, no pomôžu vám pripraviť sa s triedou na úlohy, ktoré nasledujú po nich. Prípadne ich môžete po dokončení úrovne použiť na to, aby ste si s triedou zopakovali nové učivo.\n\n**Úroveň s predpoveďami:** - [Kurz B, Cykly v Umelcovi](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Umelec v Code Studiu"
@@ -9096,7 +9143,7 @@
         "a8add3df-984e-4df0-86c1-2c6b44e21870": {
           "description": "**Otázky na zamyslenie pri pozeraní videa:**\n\n-   Spomeňte si na situáciu, keď vám funkcia mohla pomôcť pri písaní programu.\n-   Aký kód by sa nachádzal v **definícii** funkcie?\n-   Kedy by ste funkciu **zavolali**?\n-   Ako by ste ju pomenovali?",
           "tips": [
-            "**Cieľ:**\n\n**Kľúčová slovná zásoba:**\n\n-   **Funkcia** - pomenovaná časť programových pokynov\n\nUistite sa, že žiaci chápu úlohu dvoch krokov pri používaní funkcií, ako aj o tom, že funkcie vnímajú ako formu „rozčlenenia“ alebo abstrakcie. Definícia funkcie by mala obsahovať celý kód, ktorý chcú spustiť, a názov funkcie by mal byť krátkym opisom účelu kódu. Funkcia by sa mala volať na každom mieste programu, na ktorom chce žiak daný blok kódu spustiť."
+            "**Cieľ:**\n\n**Kľúčová slovná zásoba:**\n\n-   **Funkcia** – pomenovaná časť programových pokynov\n\nUistite sa, že žiaci chápu úlohu dvoch krokov pri používaní funkcií, ako aj o tom, že funkcie vnímajú ako formu „rozčlenenia“ alebo abstrakcie. Definícia funkcie by mala obsahovať celý kód, ktorý chcú spustiť, a názov funkcie by mal byť krátkym opisom účelu kódu. Funkcia by sa mala volať na každom mieste programu, na ktorom chce žiak daný blok kódu spustiť."
           ],
           "progression_name": "Video: Funkcie"
         },
@@ -9128,7 +9175,7 @@
           "progression_name": "Náročnejšie úlohy"
         },
         "2949b63d-dc05-48b1-a55e-e71c66bb2ce3": {
-          "description": "**Kľúčová slovná zásoba:** \n\n-   **Funkcia** - pomenovaná časť programových pokynov\n\n**Spýtajte sa:** Prečo môžeme povedať, že funkcie nám umožňujú „vytvárať naše vlastné bloky“? Prečo by sme to mali chcieť robiť?  Prečo by sa funkcia mala považovať za abstrakciu?"
+          "description": "**Kľúčová slovná zásoba:** \n\n-   **Funkcia** – pomenovaná časť programových pokynov\n\n**Spýtajte sa:** Prečo môžeme povedať, že funkcie nám umožňujú „vytvárať naše vlastné bloky“? Prečo by sme to mali chcieť robiť?  Prečo by sa funkcia mala považovať za abstrakciu?"
         },
         "b9b27e11-e4de-4db4-b247-2138a0de2b65": {
           "description": "**Diskutujte:** Nechajte žiakov diskutovať v laviciach pred tým, ako sa porozprávajú ako trieda.",
@@ -12669,7 +12716,7 @@
         },
         "c9d34077-ce2d-447d-9250-5648ae92bc8c": {
           "name": "Príprava",
-          "description": "**Prieskum medzi žiakmi:** Žiaci budú v rámci tejto hodiny pracovať s prieskumom. Pred hodinou si tu môžete vytvoriť vlastnú kópiu prieskumu: [kliknutím vytvoríte kópiu](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Po vytvorení kópie môžete nechať žiakov vyplniť túto verziu prieskumu namiesto všeobecného prieskumu v učebnom pláne. Práca s touto verziou prieskumu môže byť osobnejšia, pretože žiaci môžu vidieť údaje od iných žiakov v rámci triedy.\n\n**Skúsenosti s App Labom:** Toto je prvá hodina, na ktorej budú žiaci používať App Lab. Ak sa žiaci s aplikáciou App Lab ešte nestretli, môžete zvážiť odloženie tejto hodiny a namiesto toho stráviť niekoľko ďalších vyučovacích hodín oboznamovaním žiakov s App Labom a režimom návrhu. [Kliknutím sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) si môžete prečítať viac o našich odporúčaniach, ako žiakom predstaviť App Lab."
+          "description": "**Prieskum medzi žiakmi:** Žiaci budú v rámci tejto hodiny pracovať s prieskumom. Pred hodinou si tu môžete vytvoriť vlastnú kópiu prieskumu: [kliknutím vytvoríte kópiu](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Po vytvorení kópie môžete nechať žiakov vyplniť túto verziu prieskumu namiesto všeobecného prieskumu v učebnom pláne. Práca s touto verziou prieskumu môže byť osobnejšia, pretože žiaci môžu vidieť údaje od iných žiakov v rámci triedy.\n\n**Skúsenosti s App Labom:** Toto je prvá hodina, na ktorej budú žiaci používať App Lab. Ak sa žiaci s aplikáciou App Lab ešte nestretli, môžete zvážiť odloženie tejto hodiny a namiesto toho stráviť niekoľko ďalších vyučovacích hodín oboznamovaním žiakov s App Labom a režimom Dizajn. [Kliknutím sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) si môžete prečítať viac o našich odporúčaniach, ako žiakom predstaviť App Lab."
         },
         "68ce1dca-d2a0-42e0-a8fb-3a7a86d1f977": {
           "name": "Denník",
@@ -12702,7 +12749,7 @@
           "progression_name": "Ako vyzerá vaša ideálna dovolenka?"
         },
         "13151fc9-c179-451c-ba5f-214172c69966": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Diskutujte:** _Aké prvky dizajnu ste videli v tejto aplikácii?_\n\nNechajte žiakov, aby sa sami zamysleli alebo si zapísali zoznam do svojich zápisníkov, a potom ich požiadajte, aby sa oň podelili s celou triedou.\n\n**Cieľ diskusie:** Žiaci si pravdepodobne všimnú, že sa vo veľkej miere používajú tlačidlá, obrázky a textové popisky. Nezabudnite žiakom pripomenúť, že každá obrazovka je tiež prvkom. Ak žiakom chýbajú nejaké prvky, využite to ako príležitosť pripomenúť žiakom režim návrhu v App Labe.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Diskutujte:** _Aké prvky dizajnu ste videli v tejto aplikácii?_\n\nNechajte žiakov, aby sa sami zamysleli alebo si zapísali zoznam do svojich zápisníkov, a potom ich požiadajte, aby sa oň podelili s celou triedou.\n\n**Cieľ diskusie:** Žiaci si pravdepodobne všimnú, že sa vo veľkej miere používajú tlačidlá, obrázky a textové štítky. Nezabudnite žiakom pripomenúť, že každá obrazovka je tiež prvkom. Ak žiakom chýbajú nejaké prvky, využite to ako príležitosť pripomenúť žiakom režim Dizajn v App Labe.",
           "tips": [
             null
           ]
@@ -12749,7 +12796,7 @@
           "progression_name": "Prispôsob si aplikáciu"
         },
         "68e6f1dd-9b52-42c1-bc94-eaeb006124ce": {
-          "description": "**Monitorujte:** Keď žiaci dokončia tieto úrovne, budú automaticky pokračovať v ďalšom prispôsobovaní svojich aplikácií. Tu je niekoľko tipov, ako podporiť žiakov na jednotlivých úrovniach:\n\n-   **Úroveň 3:** Žiaci aktualizujú text vo svojej aplikácii tak, aby bol pre používateľa zrozumiteľnejší. Namiesto jedno- alebo dvojslovného opisu z vopred vygenerovaných prvkov návrhu použijú žiaci tie isté otázky, ktoré videli v prieskume.\n-   **Úroveň 4:** Žiaci si vyberú tému na aktualizáciu dizajnu svojej aplikácie. Zatiaľ ich len nechajte vybrať si motív. Neskôr môžu pokračovať v prispôsobovaní svojej aplikácie pomocou režimu návrhu.\n-   **Úroveň 5:** Žiaci pridajú do svojej aplikácie domovskú obrazovku. Pokyny pre túto úroveň môže byť ťažké dodržať - nabádajte žiakov, aby si „odškrtávali“ každý krok, keď ho dokončia. Ako návod na dokončenie tejto úlohy môžu použiť aj animovaný príklad na tejto úrovni.\n-   **Úroveň 6:** Žiaci pridajú tlačidlo z domovskej obrazovky na obrazovku predpovede a pridajú udalosť, ktorá tieto dve obrazovky spojí. Povzbudzujte žiakov, aby si prečítali pokyny a priebežne si „odškrtávali“ jednotlivé časti. Môžu tiež kliknúť na riadky „Ukáž mi, ako“ v pokynoch pre snímky obrazovky, ako môžu jednotlivé kroky vyzerať.",
+          "description": "**Monitorujte:** Keď žiaci dokončia tieto úrovne, budú automaticky pokračovať v ďalšom prispôsobovaní svojich aplikácií. Tu je niekoľko tipov, ako podporiť žiakov na jednotlivých úrovniach:\n\n-   **Úroveň 3:** Žiaci aktualizujú text vo svojej aplikácii tak, aby bol pre používateľa zrozumiteľnejší. Namiesto jedno- alebo dvojslovného opisu z vopred vygenerovaných dizajnových prvkov použijú žiaci tie isté otázky, ktoré videli v prieskume.\n-   **Úroveň 4:** Žiaci si vyberú tému na aktualizáciu dizajnu svojej aplikácie. Zatiaľ ich len nechajte vybrať si motív. Neskôr môžu pokračovať v prispôsobovaní svojej aplikácie pomocou režimu Dizajn.\n-   **Úroveň 5:** Žiaci pridajú do svojej aplikácie domovskú obrazovku. Pokyny pre túto úroveň môže byť ťažké dodržať - nabádajte žiakov, aby si „odškrtávali“ každý krok, keď ho dokončia. Ako návod na dokončenie tejto úlohy môžu použiť aj animovaný príklad na tejto úrovni.\n-   **Úroveň 6:** Žiaci pridajú tlačidlo z domovskej obrazovky na obrazovku predpovede a pridajú udalosť, ktorá tieto dve obrazovky spojí. Povzbudzujte žiakov, aby si prečítali pokyny a priebežne si „odškrtávali“ jednotlivé časti. Môžu tiež kliknúť na riadky „Ukáž mi, ako“ v pokynoch pre snímky obrazovky, ako môžu jednotlivé kroky vyzerať.",
           "tips": [
             "**Formatívne hodnotenie:** Táto úroveň sa môže použiť ako formatívne hodnotenie. Úroveň obsahuje hodnotiacu tabuľku a žiakom je možné poskytnúť písomnú spätnú väzbu. [Kliknutím sem sa dozviete viac o poskytovaní spätnej väzby žiakom](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           ]
@@ -12934,7 +12981,7 @@
         },
         "d6aa981d-743a-422b-a499-123636259667": {
           "name": "Zápisník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte snímku obrazovky aplikácie, ktorá importovala model do App Labu bez zmien v režime návrhu. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aké zmeny by ste mohli urobiť v tejto aplikácii, aby sa ľuďom ľahšie používala? Napíšte zoznam zmien v návrhu alebo v toku aplikácie, ktoré by ste pre túto aplikáciu odporučili._\n\nPožiadajte žiakov, aby si najprv samostatne napísali odpovede, potom sa podelili v malých skupinách a až potom sa v rámci celej triedy."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte snímku obrazovky aplikácie, ktorá importovala model do App Labu bez zmien v režime Dizajn. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aké zmeny by ste mohli urobiť v tejto aplikácii, aby sa ľuďom ľahšie používala? Napíšte zoznam zmien v dizajne alebo v toku aplikácie, ktoré by ste pre túto aplikáciu odporučili._\n\nPožiadajte žiakov, aby si najprv samostatne napísali odpovede, potom sa podelili v malých skupinách a až potom sa v rámci celej triedy."
         },
         "b599740d-07b0-42c8-88b7-0955fc59b5f4": {
           "description": " **Cieľ diskusie:** Žiaci môžu komentovať prvky štýlu, napríklad použitie farieb na oživenie stránky. Žiaci sa môžu vyjadriť k popisom pre používateľa, napríklad k tomu, že vygenerované popisy nie sú veľmi výstižné. Žiaci môžu pripomienkovať tok aplikácie, napríklad navrhnúť, aby bola rozdelená na viacero obrazoviek, alebo pridať na začiatok „uvítaciu“ obrazovku. To všetko sú cenné nápady na zamyslenie, ktoré sa prenesú do dnešnej hodiny."
@@ -13269,7 +13316,7 @@
           "progression_name": "Program na odporúčanie ľadových džúsov"
         },
         "c8bc4d02-b3be-474d-8804-50efbe6f7b34": {
-          "description": "Teraz, keď už vieme, ako upraviť náš kód tak, aby používal nové prvky režimu návrhu, pozrime sa na zložitejší príklad. V ďalšej sérii úrovní pomôžeme vytvoriť výstražný systém pre vodičov, ktorý môžu používať autá na varovanie vodičov pred nebezpečenstvom."
+          "description": "Teraz, keď už vieme, ako upraviť náš kód tak, aby používal nové prvky režimu Dizajn, pozrime sa na zložitejší príklad. V ďalšej sérii úrovní pomôžeme vytvoriť výstražný systém pre vodičov, ktorý môžu používať autá na varovanie vodičov pred nebezpečenstvom."
         },
         "88aaa1b0-b438-4f6c-8649-b62c9e89638b": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prejsť na ďalšiu úroveň v Code Studiu. V týchto ďalších úrovniach žiaci prispôsobia aplikáciu tak, aby každá otázka bola na samostatnej obrazovke, čo umožňuje pridať viac informácií pre používateľa. Keď žiaci dokončia jednotlivé úrovne, naučia sa, ako aktualizovať svoj kód tak, aby používal vlastné prvky návrhu namiesto tých, ktoré boli vygenerované v predvolenom nastavení."
@@ -13380,7 +13427,7 @@
         "cb8dc3fc-747f-48f8-af75-a9a6239498d8": {
           "description": "**Krok 4 - Vytvorenie aplikácie:** Žiaci vytvoria svoju aplikáciu v App Labe. Aplikácie by mali mať aspoň motív a uvítaciu obrazovku, aby získali plný počet bodov v hodnotiacej tabuľke.",
           "tips": [
-            "**Prvky návrhu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime návrhu budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../13), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu návrhu manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
+            "**Prvky dizajnu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime Dizajn budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../13), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu Dizajn manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
           ]
         },
         "543c1356-b50b-4776-9462-4fabd0ab7f28": {
@@ -13893,7 +13940,7 @@
           "name": "Krok 7: Vývoj aplikácie",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Nechajte žiakov vytvoriť aplikáciu v App Labe. K dispozícii je hodnotiaca tabuľka, ktorá žiakom pomôže zistiť, ako by mal ich projekt vyzerať. Prinajmenšom musí obsahovať:\n\n-   motív dizajnu,\n-   uvítaciu obrazovku,\n-   textové popisné prvky vlastností a označenia.",
           "tips": [
-            "**Prvky návrhu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime návrhu budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../11), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu návrhu manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
+            "**Prvky dizajnu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime Dizajn budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../11), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu Dizajn manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
           ],
           "progression_name": "Návrh aplikácie umelej inteligencie – App Lab"
         },
@@ -22934,7 +22981,7 @@
           "description": "Ak už vaši žiaci dobre poznajú základné koncepty programovania, môžete ich požiadať, aby svoje projekty vytvorili v inej platforme, napríklad [Scratch](https://scratch.mit.edu/) alebo [Alice](http://www.alice.org/index.php)."
         },
         "1d97fa88-30c5-494c-81e0-c884102fe8e3": {
-          "description": "V tejto lekcii sa predpokladá, že žiaci už poznajú prvky dizajnu App Labu a príkazy onEvent a setScreen - v podstate to, čo sa preberá v 4. lekcii kurzu Objavujeme informatiku alebo v rámci kurzu App Lab - Hodina kódu. Žiaci použijú App Lab prvýkrát v 7. lekcii. \n\nAk máte žiakov, ktorí doteraz nepoužívali App Lab a režim návrhu, zvážte, či by nebolo vhodné venovať nejaký čas tomu, aby ste žiakom predstavili App Lab aspoň natoľko, aby dokázali túto lekciu úspešne zvládnuť. [Kliknite sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) a prečítajte si naše odporúčania, ako to urobiť."
+          "description": "V tejto lekcii sa predpokladá, že žiaci už poznajú prvky dizajnu App Labu a príkazy onEvent a setScreen - v podstate to, čo sa preberá v 4. lekcii kurzu Objavujeme informatiku alebo v rámci kurzu App Lab – Hodina kódu. Žiaci použijú App Lab prvýkrát v 7. lekcii. \n\nAk máte žiakov, ktorí doteraz nepoužívali App Lab a režim Dizajn, zvážte, či by nebolo vhodné venovať nejaký čas tomu, aby ste žiakom predstavili App Lab aspoň natoľko, aby dokázali túto lekciu úspešne zvládnuť. [Kliknite sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) a prečítajte si naše odporúčania, ako to urobiť."
         },
         "1d222524-316a-4988-b206-b1f948cfbee7": {
           "name": "Denník",
@@ -23544,7 +23591,7 @@
         },
         "5a04c389-cc19-4c32-8f86-5bafbfa5775f": {
           "name": "Príprava",
-          "description": "**Prieskum medzi žiakmi:** Žiaci budú v rámci tejto hodiny pracovať s prieskumom. Pred hodinou si tu môžete vytvoriť vlastnú kópiu prieskumu: [kliknutím vytvoríte kópiu](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Po vytvorení kópie môžete nechať žiakov vyplniť túto verziu prieskumu namiesto všeobecného prieskumu v učebnom pláne. Práca s touto verziou prieskumu môže byť osobnejšia, pretože žiaci môžu vidieť údaje od iných žiakov v rámci triedy.\n\n**Skúsenosti s App Labom:** Toto je prvá hodina, na ktorej budú žiaci používať App Lab. Ak sa žiaci s aplikáciou App Lab ešte nestretli, môžete zvážiť odloženie tejto hodiny a namiesto toho stráviť niekoľko ďalších vyučovacích hodín oboznamovaním žiakov s App Labom a režimom návrhu. [Kliknutím sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) si môžete prečítať viac o našich odporúčaniach, ako žiakom predstaviť App Lab."
+          "description": "**Prieskum medzi žiakmi:** Žiaci budú v rámci tejto hodiny pracovať s prieskumom. Pred hodinou si tu môžete vytvoriť vlastnú kópiu prieskumu: [kliknutím vytvoríte kópiu](https://docs.google.com/forms/d/1hc5nuA2DSxCaonYlKPUJv6ywtHWuX6Oc928ixMp0JPE/copy). Po vytvorení kópie môžete nechať žiakov vyplniť túto verziu prieskumu namiesto všeobecného prieskumu v učebnom pláne. Práca s touto verziou prieskumu môže byť osobnejšia, pretože žiaci môžu vidieť údaje od iných žiakov v rámci triedy.\n\n**Skúsenosti s App Labom:** Toto je prvá hodina, na ktorej budú žiaci používať App Lab. Ak sa žiaci s aplikáciou App Lab ešte nestretli, môžete zvážiť odloženie tejto hodiny a namiesto toho stráviť niekoľko ďalších vyučovacích hodín oboznamovaním žiakov s App Labom a režimom Dizajn. [Kliknutím sem](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) si môžete prečítať viac o našich odporúčaniach, ako žiakom predstaviť App Lab."
         },
         "181e84e3-430b-4c20-9e48-fffad8c5bab2": {
           "name": "Denník",
@@ -23577,9 +23624,9 @@
           "progression_name": "Ako vyzerá vaša ideálna dovolenka?"
         },
         "73ce1ded-8856-4156-bfc4-c114b2bae063": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Diskutujte:** _Aké prvky dizajnu ste videli v tejto aplikácii?_\n\nNechajte žiakov, aby sa sami zamysleli alebo si zapísali zoznam do svojich zápisníkov, a potom ich požiadajte, aby sa oň podelili s celou triedou.\n\n**Cieľ diskusie:** Žiaci si pravdepodobne všimnú, že sa vo veľkej miere používajú tlačidlá, obrázky a textové popisky. Nezabudnite žiakom pripomenúť, že každá obrazovka je tiež prvkom. Ak žiakom chýbajú nejaké prvky, využite to ako príležitosť pripomenúť žiakom režim návrhu v App Labe.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Diskutujte:** _Aké prvky dizajnu ste videli v tejto aplikácii?_\n\nNechajte žiakov, aby sa sami zamysleli alebo si zapísali zoznam do svojich zápisníkov, a potom ich požiadajte, aby sa oň podelili s celou triedou.\n\n**Cieľ diskusie:** Žiaci si pravdepodobne všimnú, že sa vo veľkej miere používajú tlačidlá, obrázky a textové štítky. Nezabudnite žiakom pripomenúť, že každá obrazovka je tiež prvkom. Ak žiakom chýbajú nejaké prvky, využite to ako príležitosť pripomenúť žiakom režim Dizajn v App Labe.",
           "tips": [
-            "**Pripomenutie režimu návrhu:** Ak si žiaci potrebujú pripomenúť režim návrhu, môžete im poskytnúť kópie tohto materiálu alebo im ho premietnuť: \n\n-   [Režim návrhu](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n-   [Prvky režimu návrhu](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)"
+            "**Pripomenutie pre režim Dizajn:** Ak si žiaci potrebujú pripomenúť režim Dizajn, môžete im poskytnúť kópie tohto materiálu alebo im ho premietnuť: \n\n-   [Režim Dizajn](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n-   [Prvky režimu Dizajn](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)"
           ]
         },
         "9a6a30be-65eb-4ba0-ac15-d35a4120f163": {
@@ -23601,7 +23648,7 @@
           "name": "Importovanie modelu",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Požiadajte žiakov, aby prešli na ďalšiu úroveň v Code Studiu. Tu importujú model do svojej aplikácie a otestujú, či funguje správne. Nechajte ich postupovať podľa pokynov na obrazovke a importovať svoj prvý model.",
           "tips": [
-            "**Môže to byť príliš náročné:** Pri importovaní modelov do App Labu sa vopred vygeneruje množstvo kódu, čo môže byť príliš zložité. Žiaci môžu byť nervózni z toho, že musia rozumieť všetkému, čo sa stalo. Možno budete chcieť žiakov upokojiť nasledujúcim spôsobom:\n\n-   Pripomeňte žiakom, že na základe diskusie, ktorú práve absolvovali, už veľa z toho, čo sa deje, vedia! Všetky prvky režimu návrhu sú im známe a kód používa rovnaké bloky onEvent, aké očakávali.\n-   Ubezpečte žiakov, že v priebehu tematického celku odhalíme, čo väčšina tohto kódu robí, a nemusia hneď rozumieť každej jeho časti. "
+            "**Môže to byť príliš náročné:** Pri importovaní modelov do App Labu sa vopred vygeneruje množstvo kódu, čo môže byť príliš zložité. Žiaci môžu byť nervózni z toho, že musia rozumieť všetkému, čo sa stalo. Možno budete chcieť žiakov upokojiť nasledujúcim spôsobom:\n\n-   Pripomeňte žiakom, že na základe diskusie, ktorú práve absolvovali, už veľa z toho, čo sa deje, vedia! Všetky prvky režimu Dizajn už poznajú a kód používa rovnaké bloky onEvent, aké očakávali.\n-   Ubezpečte žiakov, že v priebehu tematického celku odhalíme, čo väčšina tohto kódu robí, a nemusia hneď rozumieť každej jeho časti. "
           ],
           "progression_name": "Importovanie modelu"
         },
@@ -23618,7 +23665,7 @@
           "progression_name": "Prispôsob si aplikáciu"
         },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
-          "description": "**Monitorujte:** Keď žiaci dokončia tieto úrovne, budú automaticky pokračovať v ďalšom prispôsobovaní svojich aplikácií. Tu je niekoľko tipov, ako podporiť žiakov na jednotlivých úrovniach:\n\n-   **Úroveň 3:** Žiaci aktualizujú text vo svojej aplikácii tak, aby bol pre používateľa zrozumiteľnejší. Namiesto jedno- alebo dvojslovného opisu z vopred vygenerovaných prvkov návrhu použijú žiaci tie isté otázky, ktoré videli v prieskume.\n-   **Úroveň 4:** Žiaci si vyberú tému na aktualizáciu dizajnu svojej aplikácie. Zatiaľ ich len nechajte vybrať si motív. Neskôr môžu pokračovať v prispôsobovaní svojej aplikácie pomocou režimu návrhu.\n-   **Úroveň 5:** Žiaci pridajú do svojej aplikácie domovskú obrazovku. Pokyny pre túto úroveň môže byť ťažké dodržať - nabádajte žiakov, aby si „odškrtávali“ každý krok, keď ho dokončia. Ako návod na dokončenie tejto úlohy môžu použiť aj animovaný príklad na tejto úrovni.\n-   **Úroveň 6:** Žiaci pridajú tlačidlo z domovskej obrazovky na obrazovku predpovede a pridajú udalosť, ktorá tieto dve obrazovky spojí. Povzbudzujte žiakov, aby si prečítali pokyny a priebežne si „odškrtávali“ jednotlivé časti. Môžu tiež kliknúť na riadky „Ukáž mi, ako“ v pokynoch pre snímky obrazovky, ako môžu jednotlivé kroky vyzerať.",
+          "description": "**Monitorujte:** Keď žiaci dokončia tieto úrovne, budú automaticky pokračovať v ďalšom prispôsobovaní svojich aplikácií. Tu je niekoľko tipov, ako podporiť žiakov na jednotlivých úrovniach:\n\n-   **Úroveň 3:** Žiaci aktualizujú text vo svojej aplikácii tak, aby bol pre používateľa zrozumiteľnejší. Namiesto jedno- alebo dvojslovného opisu z vopred vygenerovaných dizajnových prvkov použijú žiaci tie isté otázky, ktoré videli v prieskume.\n-   **Úroveň 4:** Žiaci si vyberú tému na aktualizáciu dizajnu svojej aplikácie. Zatiaľ ich len nechajte vybrať si motív. Neskôr môžu pokračovať v prispôsobovaní svojej aplikácie pomocou režimu Dizajn.\n-   **Úroveň 5:** Žiaci pridajú do svojej aplikácie domovskú obrazovku. Pokyny pre túto úroveň môže byť ťažké dodržať - nabádajte žiakov, aby si „odškrtávali“ každý krok, keď ho dokončia. Ako návod na dokončenie tejto úlohy môžu použiť aj animovaný príklad na tejto úrovni.\n-   **Úroveň 6:** Žiaci pridajú tlačidlo z domovskej obrazovky na obrazovku predpovede a pridajú udalosť, ktorá tieto dve obrazovky spojí. Povzbudzujte žiakov, aby si prečítali pokyny a priebežne si „odškrtávali“ jednotlivé časti. Môžu tiež kliknúť na riadky „Ukáž mi, ako“ v pokynoch pre snímky obrazovky, ako môžu jednotlivé kroky vyzerať.",
           "tips": [
             "**Formatívne hodnotenie:** Táto úroveň sa môže použiť ako formatívne hodnotenie. Úroveň obsahuje hodnotiacu tabuľku a žiakom je možné poskytnúť písomnú spätnú väzbu. [Kliknutím sem sa dozviete viac o poskytovaní spätnej väzby žiakom](https://support.code.org/hc/en-us/articles/360027667832-Rubrics-in-Code-org-courses)."
           ]
@@ -23808,7 +23855,7 @@
         },
         "3227657f-0bd2-4f06-970c-445432836588": {
           "name": "Zápisník",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte snímku obrazovky aplikácie, ktorá importovala model do App Labu bez zmien v režime návrhu. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aké zmeny by ste mohli urobiť v tejto aplikácii, aby sa ľuďom ľahšie používala? Napíšte zoznam zmien v návrhu alebo v toku aplikácie, ktoré by ste pre túto aplikáciu odporučili._\n\nPožiadajte žiakov, aby si najprv samostatne napísali odpovede, potom sa podelili v malých skupinách a až potom sa v rámci celej triedy."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ukážte:** Zobrazte snímku obrazovky aplikácie, ktorá importovala model do App Labu bez zmien v režime Dizajn. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Spýtajte sa:** _Aké zmeny by ste mohli urobiť v tejto aplikácii, aby sa ľuďom ľahšie používala? Napíšte zoznam zmien v dizajne alebo v toku aplikácie, ktoré by ste pre túto aplikáciu odporučili._\n\nPožiadajte žiakov, aby si najprv samostatne napísali odpovede, potom sa podelili v malých skupinách a až potom sa v rámci celej triedy."
         },
         "1c56699c-58f5-4fcf-bc25-2d995318474e": {
           "description": " **Cieľ diskusie:** Žiaci môžu komentovať prvky štýlu, napríklad použitie farieb na oživenie stránky. Žiaci sa môžu vyjadriť k popisom pre používateľa, napríklad k tomu, že vygenerované popisy nie sú veľmi výstižné. Žiaci môžu pripomienkovať tok aplikácie, napríklad navrhnúť, aby bola rozdelená na viacero obrazoviek, alebo pridať na začiatok „uvítaciu“ obrazovku. To všetko sú cenné nápady na zamyslenie, ktoré sa prenesú do dnešnej hodiny."
@@ -24152,7 +24199,7 @@
           "progression_name": "Program na odporúčanie ľadových džúsov"
         },
         "eb0ab608-2446-46e7-b165-b31ea3c79400": {
-          "description": "Teraz, keď už vieme, ako upraviť náš kód tak, aby používal nové prvky režimu návrhu, pozrime sa na zložitejší príklad. V ďalšej sérii úrovní pomôžeme vytvoriť výstražný systém pre vodičov, ktorý môžu používať autá na varovanie vodičov pred nebezpečenstvom."
+          "description": "Teraz, keď už vieme, ako upraviť náš kód tak, aby používal nové prvky režimu Dizajn, pozrime sa na zložitejší príklad. V ďalšej sérii úrovní pomôžeme vytvoriť výstražný systém pre vodičov, ktorý môžu používať autá na varovanie vodičov pred nebezpečenstvom."
         },
         "12cae24a-218d-4061-8014-c228de157985": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Nechajte žiakov prejsť na ďalšiu úroveň v Code Studiu. V týchto ďalších úrovniach žiaci prispôsobia aplikáciu tak, aby každá otázka bola na samostatnej obrazovke, čo umožňuje pridať viac informácií pre používateľa. Keď žiaci dokončia jednotlivé úrovne, naučia sa, ako aktualizovať svoj kód tak, aby používal vlastné prvky návrhu namiesto tých, ktoré boli vygenerované v predvolenom nastavení."
@@ -24272,7 +24319,7 @@
         "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471": {
           "description": "**Krok 4 - Vytvorenie aplikácie:** Žiaci vytvoria svoju aplikáciu v App Labe. Aplikácie by mali mať aspoň motív a uvítaciu obrazovku, aby získali plný počet bodov v hodnotiacej tabuľke.",
           "tips": [
-            "**Prvky návrhu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime návrhu budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../11), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu návrhu manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
+            "**Prvky dizajnu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime Dizajn budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../11), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu Dizajn manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
           ]
         },
         "e046ddd1-110a-4a23-8f5a-76f6ac86fe48": {
@@ -24808,7 +24855,7 @@
           "name": "Krok 7: Vývoj aplikácie",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Urobte toto:** Nechajte žiakov vytvoriť aplikáciu v App Labe. K dispozícii je hodnotiaca tabuľka, ktorá žiakom pomôže zistiť, ako by mal ich projekt vyzerať. Prinajmenšom musí obsahovať:\n\n-   motív dizajnu,\n-   uvítaciu obrazovku,\n-   textové popisné prvky vlastností a označenia.",
           "tips": [
-            "**Prvky návrhu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime návrhu budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../11), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu návrhu manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
+            "**Prvky dizajnu mimo obrazovky**:  V závislosti od počtu vlastností, ktoré žiaci vo svojom modeli použijú, sa niektoré prvky návrhu môžu zobraziť mimo obrazovky. To sa zvyčajne stáva, keď sa v modeli používa viac ako 6 prvkov.\n\nExistujú dve stratégie, ktoré môžete použiť, aby ste žiakom pomohli tento problém vyriešiť:\n\n**Stratégia č. 1: Vytvorenie nových prvkov.** Žiaci môžu použiť režim návrhu a vytiahnuť nové prvky, ktoré použijú vo svojej aplikácii. Môžu sa tiež rozhodnúť presunúť prvky na rôzne obrazovky, aby sa aplikácia ľahšie používala. Po pridaní týchto nových prvkov v režime Dizajn budú musieť žiaci aktualizovať svoj kód tak, aby používal aj nové prvky. Žiaci si môžu pozrieť lekciu [Lekcia 13](../11), najmä úroveň 1, ako príklad toho, ako aktualizovať svoj kód, aby vyriešili tento problém.\n\n**Stratégia č. 2: Zmena pozície prvkov.** Aj keď sú prvky mimo obrazovky, môžete ich pomocou režimu Dizajn manuálne vybrať a zmeniť ich pozíciu tak, aby boli na obrazovke. To zahŕňa zmenu vlastnosti pozície y na hodnotu 0, aby boli na obrazovke, a potom zmenu umiestnenia prvku ako za normálnych okolností."
           ],
           "progression_name": "Návrh aplikácie umelej inteligencie – App Lab"
         },
@@ -27851,7 +27898,7 @@
         "52d53651-705c-47ec-a68f-d014f3499a99": {
           "description": "**Otázky na zamyslenie pri pozeraní videa:**\n\n-   Spomeňte si na situáciu, keď vám funkcia mohla pomôcť pri písaní programu.\n-   Aký kód by sa nachádzal v **definícii** funkcie?\n-   Kedy by ste funkciu **zavolali**?\n-   Ako by ste ju pomenovali?",
           "tips": [
-            "**Cieľ:**\n\n**Kľúčová slovná zásoba:**\n\n-   **Funkcia** - pomenovaná časť programových pokynov\n\nUistite sa, že žiaci chápu úlohu dvoch krokov pri používaní funkcií, ako aj o tom, že funkcie vnímajú ako formu „rozčlenenia“ alebo abstrakcie. Definícia funkcie by mala obsahovať celý kód, ktorý chcú spustiť, a názov funkcie by mal byť krátkym opisom účelu kódu. Funkcia by sa mala volať na každom mieste programu, na ktorom chce žiak daný blok kódu spustiť."
+            "**Cieľ:**\n\n**Kľúčová slovná zásoba:**\n\n-   **Funkcia** – pomenovaná časť programových pokynov\n\nUistite sa, že žiaci chápu úlohu dvoch krokov pri používaní funkcií, ako aj o tom, že funkcie vnímajú ako formu „rozčlenenia“ alebo abstrakcie. Definícia funkcie by mala obsahovať celý kód, ktorý chcú spustiť, a názov funkcie by mal byť krátkym opisom účelu kódu. Funkcia by sa mala volať na každom mieste programu, na ktorom chce žiak daný blok kódu spustiť."
           ],
           "progression_name": "Video: Funkcie"
         },
@@ -27883,7 +27930,7 @@
           "progression_name": "Náročnejšie úlohy"
         },
         "a35882d4-fd9e-4c8b-a3e0-31a764068440": {
-          "description": "**Kľúčová slovná zásoba:** \n\n-   **Funkcia** - pomenovaná časť programových pokynov\n\n**Spýtajte sa:** Prečo môžeme povedať, že funkcie nám umožňujú „vytvárať naše vlastné bloky“? Prečo by sme to mali chcieť robiť?  Prečo by sa funkcia mala považovať za abstrakciu?"
+          "description": "**Kľúčová slovná zásoba:** \n\n-   **Funkcia** – pomenovaná časť programových pokynov\n\n**Spýtajte sa:** Prečo môžeme povedať, že funkcie nám umožňujú „vytvárať naše vlastné bloky“? Prečo by sme to mali chcieť robiť?  Prečo by sa funkcia mala považovať za abstrakciu?"
         },
         "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
           "description": "**Diskutujte:** Nechajte žiakov diskutovať v laviciach pred tým, ako sa porozprávajú ako trieda.",

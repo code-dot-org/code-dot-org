@@ -254,20 +254,12 @@ pl:
             "-1": "←"
       Dancelab_eval:
         text: oceń {CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'powtórz co {N} takty po {START} '
       Dancelab_everySeconds:
         text: 'powtarzaj co {N} {UNIT} '
         options:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
-      Dancelab_everySecondsRange:
-        text: 'co {N} {UNIT} od {START} do {STOP} '
-        options:
-          UNIT:
-            measures: Takty
-            seconds: Sekundy
       Dancelab_everyVerseChorus:
         text: 'co {UNIT} '
         options:
@@ -1367,6 +1359,15 @@ pl:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": dziwaczny
               bas
             "'sound://category_digital/jump_7.mp3'": skocz
+      gamelab_playSoundOptionsSoccer:
+        text: zagraj {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": klakson powietrzny
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": oklaski
+            "'sound://category_sports/One_Whistle_SFX.mp3'": gwizdek
+      gamelab_playSoundOptionsSpace:
+        text: zagraj {SOUND}
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
       gamelab_playerBehaviors:
@@ -2531,6 +2532,10 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
+      storylab_setHeading:
+        text: ustaw tytuł {HEADING}
+      storylab_setSubheading:
+        text: ustaw podtytuł {SUBHEADING}
       validation_validatedBackground:
         text: ustaw tło na {IMG}
       validation_validatedSound:

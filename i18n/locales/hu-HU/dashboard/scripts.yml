@@ -2384,6 +2384,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: Első lépések
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2443,6 +2447,10 @@ hu:
               display_name: Tartalom
         hello-world-csc:
           title: Helló világ
+        csd-playground:
+          lessons:
+            lesson-7:
+              name: Bevezetés a sprite-okba
         csd1-2022:
           lesson_groups:
             cspSurvey:
@@ -2564,3 +2572,57 @@ hu:
               display_name: 1.  fejezet
             lessonGroup-3:
               display_name: 2.  fejezet
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Mi az a hang?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '1.  fejezet: Digitális információ'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lecke: Az internet'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
+            csp_project:
+              display_name: Projekt
+            lessonGroup-5:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp7-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp9-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés
+        csp10-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tanfomlyam Utáni Felmérés

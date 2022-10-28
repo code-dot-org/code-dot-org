@@ -230,20 +230,12 @@ ko:
             MOVES.XArmsUp: 늘리기
             MOVES.ThisOrThat: 이것저것
             MOVES.Rest: 없음
-      Dancelab_everyMeasuresRange:
-        text: "{START} 후{N} 마디마다반복 "
       Dancelab_everySeconds:
         text: '매 {N} {UNIT} '
         options:
           UNIT:
             '"measures"': 마디
             '"seconds"': "~초 기다리기"
-      Dancelab_everySecondsRange:
-        text: '매 {N} {UNIT}마다 {START}에서 {STOP}까지 '
-        options:
-          UNIT:
-            measures: 마디
-            seconds: 초
       Dancelab_everyVerseChorus:
         text: '매 {UNIT} '
         options:
@@ -1320,6 +1312,32 @@ ko:
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": 마법의 주문
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": 별난 베이스
             "'sound://category_digital/jump_7.mp3'": 점프
+      gamelab_playSoundOptionsSoccer:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": 에어혼
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": 박수 갈채
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": 구호
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": 응원
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": 킥
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": 두 번의 휘파람
+            "'sound://category_sports/One_Whistle_SFX.mp3'": 휘파람
+      gamelab_playSoundOptionsSpace:
+        text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": 블랙 홀
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": 총알 클러스터
+            "'sound://category_space/Carina_SFX.mp3'": 용골자리
+            "'sound://category_space/Cassiopeia_SFX.mp3'": 카시오페아
+            "'sound://category_space/Crab_nebula_SFX.mp3'": 게자리
+            "'sound://category_space/Launch_SFX.mp3'": 출시
+            "'sound://category_space/Lift_Off.mp3'": 이륙
+            "'sound://category_space/Pillars_SFX.mp3'": 기둥
+            "'sound://category_space/Southern_ring_SFX.mp3'": 남부 고리
+            "'sound://category_space/Supernova_SFX.mp3'": 초신성
+            "'sound://category_sports/One_Whistle_SFX.mp3'": 티코
       gamelab_playSpeech:
         text: 스피치 {SOUND} 재생
       gamelab_playerBehaviors:
@@ -2296,5 +2314,9 @@ ko:
           DIR:
             right: 우측 윙어
             left: 왼쪽
+      storylab_setHeading:
+        text: "{HEADING} 헤딩 설정"
+      storylab_setSubheading:
+        text: "{SUBHEADING} 서브 헤딩 설정"
       validation_validatedBackground:
         text: 배경을 {IMG}으로 설정

@@ -231,12 +231,6 @@ ta:
           UNIT:
             '"measures"': அளவீடுகள்
             '"seconds"': விநாடிகள்
-      Dancelab_everySecondsRange:
-        text: 'ஒவ்வொரு {N} {UNIT} {START} தொடங்கி {STOP} வரை '
-        options:
-          UNIT:
-            measures: அளவீடுகள்
-            seconds: விநாடிகள்
       Dancelab_everyVerseChorus:
         text: 'ஒவ்வொரு {UNIT} '
         options:
@@ -1274,6 +1268,32 @@ ta:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": நகைச்சுவையான
               பாஸ்
             "'sound://category_digital/jump_7.mp3'": குதி
+      gamelab_playSoundOptionsSoccer:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": காற்று ஒலிப்பான்
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": கைத்தட்டல்
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": கோஷமிடுங்கள்
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ஆரவாரம்
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": உதை
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": இரண்டு விசில்
+            "'sound://category_sports/One_Whistle_SFX.mp3'": விசில்
+      gamelab_playSoundOptionsSpace:
+        text: ஒலி விளையாட்டு {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": கருந்துளை
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": புல்லட் கிளஸ்ட்டர்
+            "'sound://category_space/Carina_SFX.mp3'": கரினா
+            "'sound://category_space/Cassiopeia_SFX.mp3'": காசியோபியா
+            "'sound://category_space/Crab_nebula_SFX.mp3'": கிராப் நெபுலா
+            "'sound://category_space/Launch_SFX.mp3'": ஏவுதல்
+            "'sound://category_space/Lift_Off.mp3'": தூக்கி எறியுங்கள்
+            "'sound://category_space/Pillars_SFX.mp3'": தூண்கள்
+            "'sound://category_space/Southern_ring_SFX.mp3'": தெற்கு வளையம்
+            "'sound://category_space/Supernova_SFX.mp3'": சூப்பர்நோவா
+            "'sound://category_sports/One_Whistle_SFX.mp3'": டைக்கோ
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
       gamelab_playerBehaviors:
@@ -2178,5 +2198,9 @@ ta:
           DIR:
             right: சரி ↻
             left: இடது  ↺
+      storylab_setHeading:
+        text: தலைப்பு அமைக்கவும் {HEADING}
+      storylab_setSubheading:
+        text: துணைத்தலைப்பு அமைக்கவும் {SUBHEADING}
       validation_validatedBackground:
         text: பின்னணி அமைக்க {IMG}

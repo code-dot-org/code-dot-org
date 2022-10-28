@@ -552,6 +552,38 @@
         },
         "courseD_bee_conditionals_challenge12022": {
           "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "course1_artist_loops_challenge3": {
+          "courseA_artist_loops_challenge2_b": "Ko boš končal z eno ptičjo hišico, skoči na naslednjo.",
+          "courseA_artist_loops_challenge2_c": "V zanko ponovi boš moral dodati veliko blokov."
+        },
+        "course1_artist_loops_challenge4": {
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1": {
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge12022": {
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2018": {
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2019": {
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2020": {
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
         }
       }
     }

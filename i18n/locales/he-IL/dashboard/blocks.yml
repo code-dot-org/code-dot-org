@@ -234,20 +234,12 @@ he:
             MOVES.ThisOrThat: כך וכך
             MOVES.Thriller: זומבי
             MOVES.Rest: כלום
-      Dancelab_everyMeasuresRange:
-        text: 'חזור כל {N} תיבות אחרי {START} '
       Dancelab_everySeconds:
         text: 'כל {N} {UNIT} '
         options:
           UNIT:
             '"measures"': תיבות
             '"seconds"': שניות
-      Dancelab_everySecondsRange:
-        text: 'כל {N} {UNIT} מ-{START} ועד {STOP} '
-        options:
-          UNIT:
-            measures: תיבות
-            seconds: שניות
       Dancelab_everyVerseChorus:
         text: 'כל {UNIT} '
         options:
@@ -1259,6 +1251,31 @@ he:
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": נקישה
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": דיגיטלי
             "'sound://category_digital/jump_7.mp3'": קפוץ
+      gamelab_playSoundOptionsSoccer:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": צופר אוויר
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": תשואות
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": שירה
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": עידוד
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": בעיטה
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": שתי משרוקיות
+            "'sound://category_sports/One_Whistle_SFX.mp3'": משרוקית
+      gamelab_playSoundOptionsSpace:
+        text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": חור שחור
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": קבוצה צפופה של כוכבים
+            "'sound://category_space/Carina_SFX.mp3'": שדרית
+            "'sound://category_space/Cassiopeia_SFX.mp3'": קסיופאה
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ערפילית הסרטן
+            "'sound://category_space/Lift_Off.mp3'": המראה
+            "'sound://category_space/Pillars_SFX.mp3'": עמודים
+            "'sound://category_space/Southern_ring_SFX.mp3'": הטבעת הדרומית
+            "'sound://category_space/Supernova_SFX.mp3'": סופרנובה
+            "'sound://category_sports/One_Whistle_SFX.mp3'": טיכו
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -2104,5 +2121,9 @@ he:
           DIR:
             right: ימינה
             left: שמאלה
+      storylab_setHeading:
+        text: קבעו כותרת {HEADING}
+      storylab_setSubheading:
+        text: קבעו תת-כותרת {SUBHEADING}
       validation_validatedBackground:
         text: הגדר רקע {IMG}

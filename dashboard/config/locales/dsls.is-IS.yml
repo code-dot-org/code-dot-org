@@ -12515,20 +12515,12 @@ is-IS:
             á "Keyra"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Uppvakningurinn mun fara fram hjá réttu slóðinni og enda með þvi að
-            fara fram og til baka að eilífu.
-          correct: true
+        - correct: true
           feedback: Rétt!
         - text: Uppvakningurinn mun ná til sólblómsins.
-          feedback: Ekki rétt. Uppvakningurinn mun fara fram hjá réttu slóðinni og
-            enda með þvi að fara fram og til baka að eilífu.
         - text: Uppvakningurinn mun snúa til hægri á fyrstu slóðinni og fara svo í
             endalausa hringi.
-          feedback: Ekki rétt. Uppvakningurinn mun fara fram hjá réttu slóðinni og
-            enda með þvi að fara fram og til baka að eilífu.
         - text: Uppvakningurinn mun festast við endann á slóðinni áfram.
-          feedback: Í þessum kóða mun uppvakningurinn fara fram hjá réttu slóðinni
-            og enda með þvi að fara fram og til baka að eilífu.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?

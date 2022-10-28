@@ -954,3 +954,5 @@ nl:
     this_sprite: "deze sprite"
   unit_prefix: "Unit %{n}"
   teacher_feedback: "Docenten feedback"
+  pixelation:
+    binary: "Binaire"

@@ -9035,6 +9035,9 @@ es:
           title: 'Especies Invasoras '
           description_short: 'Esta es una beca de investigación financiada por la
             NSF para CS4All '
+          lessons:
+            lesson-21:
+              name: Primeros pasos
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9504,6 +9507,9 @@ es:
             los niveles entre las versiones del plan de estudios
           description: Para organizar las actualizaciones de las lecciones o los niveles
             entre las versiones del plan de estudios
+          lessons:
+            lesson-7:
+              name: Introducción a los Sprites
         csc-pilot-2022-ecosystems:
           name: csc-piloto-2022-ecosistemas
         csc-pilot-2022-timecapsule:
@@ -10382,6 +10388,13 @@ es:
             del año, analizas la privacidad y la seguridad de los programas y los
             usuarios.
         vpl-csd3-ayw-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Contenido del Taller
+            lesson-5:
+              name: Cerrando
           lesson_groups:
             lessonGroup-2:
               display_name: 'Parte 1: Sesión Sincrónica'
@@ -10547,11 +10560,11 @@ es:
 
             **Guía de Implementación para la Computación Física**
 
-            -   Esta unidad asume que los alumnos están familiarizados con el Laboratorio de Aplicaciones, específicamente con el uso del Modo Diseño para crear una interfaz de usuario y con el uso de Eventos para cambiar la pantalla al hacer clic en un botón. Esto se puede lograr haciendo que los estudiantes completen la [Hora del Código de Laboratorio de Aplicaciones](https://studio.code.org/s/applab-intro/reset) antes de comenzar esta unidad.
-            -   Esta unidad requiere que los estudiantes tengan acceso al Circuit Playground - [pulsa aquí](https://code.org/circuitplayground) para más información sobre el uso de Circuit Playground's en tu aula.
-            -   En la [Guía de Niveles de Programación](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) y en la [Guía de Diferenciación](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview) se ofrece orientación sobre cómo apoyar a los estudiantes en los niveles de programación y diferenciar las tareas.
+            -   Esta unidad asume que los alumnos están familiarizados con el Laboratorio de Aplicaciones, específicamente con el uso del Modo Diseño para crear una interfaz de usuario y con el uso de Eventos para cambiar la pantalla al hacer clic en un botón. Esto se puede lograr haciendo que los estudiantes completen la [Hora del Código de Laboratorio de Aplicaciones](https://code.org/circuitplayground) antes de comenzar esta unidad.
+            -   Esta unidad requiere que los estudiantes tengan acceso al Circuit Playground - [pulsa aquí](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) para más información sobre el uso de Circuit Playground's en tu aula.
+            -   En la [Guía de Niveles de Programación](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview) y en la [Guía de Diferenciación](<>) se ofrece orientación sobre cómo apoyar a los estudiantes en los niveles de programación y diferenciar las tareas.
 
-            **Desarrollo profesional:** Si estás interesado en impartir este curso, te recomendamos que completes el módulo gratuito [Módulo de Desarrollo Profesional Autodidacta de Computación Física](<>). El módulo está diseñado para completarlo en 2 horas. No se asume ninguna experiencia previa con la programación o la Inteligencia Artificial.
+            **Desarrollo profesional:** Si estás interesado en impartir este curso, te recomendamos que completes el módulo gratuito [Módulo de Desarrollo Profesional Autodidacta de Computación Física][4]. El módulo está diseñado para completarlo en 2 horas. No se asume ninguna experiencia previa con la programación o la Inteligencia Artificial.
           student_description: Esta unidad explora el papel de las plataformas de
             hardware en la informática y cómo los diferentes sensores pueden proporcionar
             una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
@@ -10570,3 +10583,256 @@ es:
           lessons:
             lesson-1:
               name: Hitos de EE.UU.
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: "¿Qué es ese sonido?"
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Encuesta
+            csp_unit1_2020:
+              display_name: 'Tema 1: Información digital'
+          title: Información digital ('21-'22)
+          description: Esta unidad estudia los retos y cuestiones técnicas que surgen
+            de la necesidad de representar la información digital en los ordenadores.
+            Aprende cómo se representa la información compleja, como los números,
+            el texto, las imágenes y el sonido, cómo funciona la compresión y las
+            repercusiones sociales más amplias de la digitalización de la información
+            mundial.
+          student_description: Esta unidad estudia los retos y cuestiones técnicas
+            que surgen de la necesidad de representar la información digital en los
+            ordenadores. Aprende cómo se representa la información compleja, como
+            los números, el texto, las imágenes y el sonido, cómo funciona la compresión
+            y las repercusiones sociales más amplias de la digitalización de la información
+            mundial.
+          description_short: Explora los desafíos e impactos de representar la información
+            sobre el mundo que te rodea en bits.
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unidad 2: Internet'
+          title: Internet ('21-'22)
+          description: Esta unidad revela cómo se diseñó Internet para conectar miles
+            de millones de dispositivos y personas entre sí. Aprende cómo funcionan
+            los distintos protocolos de Internet y constrúyelos tú mismo con el Simulador
+            de Internet. A continuación, analiza el impacto que ha tenido Internet,
+            tanto bueno como malo, en la vida moderna.
+          student_description: Esta unidad revela cómo se diseñó Internet para conectar
+            miles de millones de dispositivos y personas entre sí. Aprende cómo funcionan
+            los distintos protocolos de Internet y constrúyelos tú mismo con el Simulador
+            de Internet. A continuación, analiza el impacto que ha tenido Internet,
+            tanto bueno como malo, en la vida moderna.
+          description_short: Construye Internet desde cero con el Simulador de Internet.
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Unidad 3: Introducción al diseño de aplicaciones'
+          title: Introducción al Diseño de Aplicaciones ('21-'22)
+          description: Esta unidad es una iniciación a la programación y al diseño
+            de aplicaciones con un fuerte enfoque en habilidades importantes como
+            la depuración, la programación en parejas y las pruebas de usuario. Aprende
+            a diseñar interfaces de usuario y a escribir programas basados en eventos
+            en Laboratorio de Aplicaciones y luego diseña un proyecto que enseñe a
+            tus compañeros de clase sobre un tema de tu elección.
+          student_description: Esta unidad es una iniciación a la programación y al
+            diseño de aplicaciones con un fuerte enfoque en habilidades importantes
+            como la depuración, la programación en parejas y las pruebas de usuario.
+            Aprende a diseñar interfaces de usuario y a escribir programas basados
+            en eventos en Laboratorio de Aplicaciones y luego diseña un proyecto que
+            enseñe a tus compañeros de clase sobre un tema de tu elección.
+          description_short: Diseña tu primera aplicación y aprende cómo los programadores
+            colaboran e interactúan con los usuarios para construir las mejores soluciones
+            posibles a los problemas.
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionales
+            csp_functions:
+              display_name: Funciones
+            csp_project:
+              display_name: Proyecto
+          title: Variables, Condicionales y Funciones ('21-'22)
+          description: Esta unidad explora cómo las variables, las condicionales y
+            las funciones permiten el diseño de aplicaciones cada vez más complejas.
+            Aprende a programar con estos tres nuevos conceptos a través de una secuencia
+            de actividades colaborativas. A continuación, construye tu propia aplicación
+            de toma de decisiones para compartirla con tus amigos y ayudarles a tomar
+            una decisión.
+          student_description: Esta unidad explora cómo las variables, las condicionales
+            y las funciones permiten el diseño de aplicaciones cada vez más complejas.
+            Aprende a programar con estos tres nuevos conceptos a través de una secuencia
+            de actividades colaborativas. A continuación, construye tu propia aplicación
+            de toma de decisiones para compartirla con tus amigos y ayudarles a tomar
+            una decisión.
+          description_short: Aprende a crear aplicaciones que almacenen información,
+            tomen decisiones y mantengan el código organizado.
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+            csp_traversals:
+              display_name: Recorridos
+            csp_project:
+              display_name: Proyecto
+            lessonGroup-5:
+              display_name: Encuesta de final de curso
+          title: Listas, Bucles y Recorridos ('21-'22)
+          description: Esta unidad describe las listas, los bucles y los recorridos,
+            y explora el modo en que pueden utilizarse para crear aplicaciones que
+            almacenen y procesen grandes cantidades de información. Aprende a programar
+            con la biblioteca de datos en Laboratorio de Aplicaciones y completa un
+            proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
+            un programa sobre cualquier tema que elijas.
+          student_description: Esta unidad describe las listas, los bucles y los recorridos,
+            y explora el modo en que pueden utilizarse para crear aplicaciones que
+            almacenen y procesen grandes cantidades de información. Aprende a programar
+            con la biblioteca de datos en Laboratorio de Aplicaciones y completa un
+            proyecto de hackatón de 5 días al final de la unidad donde puedes diseñar
+            un programa sobre cualquier tema que elijas.
+          description_short: Aprende a crear aplicaciones que utilicen listas, bucles
+            y recorridos para almacenar y procesar grandes cantidades de información.
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unidad 6: Algoritmos'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          title: Algoritmos ('21-'22)
+          description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          student_description: Esta unidad es una rápida exploración de cómo los informáticos
+            diseñan algoritmos para resolver problemas y cómo analizan la velocidad
+            de diferentes algoritmos. Aprende sobre el concepto de eficiencia algorítmica
+            a través de una variedad de actividades prácticas y descubre cómo se está
+            aplicando en la informática moderna.
+          description_short: Diseñar y analizar algoritmos para entender cómo funcionan
+            y por qué algunos se consideran mejores que otros.
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parámetros y valores de retorno
+            csp_libraries:
+              display_name: Librerías
+            lessonGroup-3:
+              display_name: Encuesta de final de curso
+          title: Parámetros, Retorno y Librerías ('21-'22)
+          description: Esta unidad explica los parámetros, el retorno y las bibliotecas.
+            Aprende a utilizar estos conceptos para construir nuevos tipos de aplicaciones,
+            así como bibliotecas de código que puedes compartir con tus compañeros
+            de clase. Termina la unidad diseñando una biblioteca de funciones en torno
+            a cualquier tema de tu elección.
+          student_description: Esta unidad explica los parámetros, el retorno y las
+            bibliotecas. Aprende a utilizar estos conceptos para construir nuevos
+            tipos de aplicaciones, así como bibliotecas de código que puedes compartir
+            con tus compañeros de clase. Termina la unidad diseñando una biblioteca
+            de funciones en torno a cualquier tema de tu elección.
+          description_short: Aprende a diseñar un código limpio y reutilizable que
+            puedas compartir con un solo compañero o con todo el mundo.
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT de creación
+            lessonGroup-3:
+              display_name: Encuesta de final de curso
+          title: Crear PT - Preparación ('21-'22)
+          description: En esta unidad se prepara y se realiza la AP Create Performance
+            Task. Cada lección contiene enlaces a documentos y actividades útiles
+            para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          student_description: En esta unidad se prepara y se realiza la AP Create
+            Performance Task. Cada lección contiene enlaces a documentos y actividades
+            útiles para ayudarte a entender la tarea y desarrollar un plan para completarla.
+          description_short: Practica y completa la Create Performance Task (PT).
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidad 9: Datos'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          title: Datos ('21-'22)
+          description: 'En esta unidad aprenderás cómo el análisis de datos ayuda
+            a convertir los datos en bruto en información útil sobre el mundo. Aprendes
+            a utilizar la visualización de datos para encontrar patrones dentro de
+            los conjuntos de datos y aprendes cómo este proceso de análisis de datos
+            se utiliza en contextos como los datos abiertos o el aprendizaje automático
+            para ayudar a tomar decisiones o aprender más sobre nuestro mundo. En
+            el proyecto de la unidad, analizarás un conjunto de datos de tu elección
+            y presentarás tus conclusiones. '
+          student_description: 'En esta unidad aprenderás cómo el análisis de datos
+            ayuda a convertir los datos en bruto en información útil sobre el mundo.
+            Aprendes a utilizar la visualización de datos para encontrar patrones
+            dentro de los conjuntos de datos y aprendes cómo este proceso de análisis
+            de datos se utiliza en contextos como los datos abiertos o el aprendizaje
+            automático para ayudar a tomar decisiones o aprender más sobre nuestro
+            mundo. En el proyecto de la unidad, analizarás un conjunto de datos de
+            tu elección y presentarás tus conclusiones. '
+          description_short: Explora y visualiza conjuntos de datos de una gran variedad
+            de temas mientras buscas patrones e intentas aprender más sobre el mundo
+            que te rodea.
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Unidad 10: Ciberseguridad e impactos globales'
+            lessonGroup-2:
+              display_name: Encuesta de final de curso
+          title: Ciberseguridad e Impactos Globales ('21-'22)
+          description: En esta unidad aprenderás cómo las innovaciones informáticas
+            han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
+            cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad
+            y las formas en que se utilizan la encriptación y otras técnicas para
+            protegerlos. A lo largo de la unidad participa en una conferencia sobre
+            la "escuela del futuro" en la que tú y un equipo hacéis una propuesta
+            sobre la mejor manera de mejorar la vida escolar con las innovaciones
+            informáticas.
+          student_description: En esta unidad aprenderás cómo las innovaciones informáticas
+            han influido en nuestro mundo de forma beneficiosa y perjudicial. Aprende
+            cómo los datos pueden suponer una amenaza para nuestra privacidad y seguridad
+            y las formas en que se utilizan la encriptación y otras técnicas para
+            protegerlos. A lo largo de la unidad participa en una conferencia sobre
+            la "escuela del futuro" en la que tú y un equipo hacéis una propuesta
+            sobre la mejor manera de mejorar la vida escolar con las innovaciones
+            informáticas.
+          description_short: Investigar y debatir la actualidad en la intersección
+            de los datos, las políticas públicas, el derecho, la ética y el impacto
+            social.
+        csp-post-survey-2023:
+          title: Encuesta de fin de curso de Principios de Ciencias de la Computación
+          description: Esta unidad contiene la Encuesta Final del Curso de Principios
+            de Informática.
+          student_description: Esta unidad contiene una encuesta sobre el Curso de
+            Principios de Informática. Tu profesor te dirá cuándo es el momento de
+            realizar esta encuesta.
+        self-paced-pl-csa1-2023:
+          description: |-
+            Este módulo es para cualquier persona que utilice estos métodos de aprendizaje profesional para CSA.
+
+            **Podrás:**
+
+            -   Obtener una introducción a Code.org.
+            -   Aprenderás cómo participar en estos módulos de aprendizaje profesional.
+            -   Obtener una introducción al curso AP Computer Science A
+            -   Aprender el enfoque curricular de Code.org para CSA
+
+            **Tiempo estimado:** 60 minutos
+          student_description: |-
+            Este módulo es para cualquier persona que utilice estos métodos de aprendizaje profesional para CSA.
+
+            **Podrás:**
+
+            -   Obtener una introducción a Code.org.
+            -   Aprenderás cómo participar en estos módulos de aprendizaje profesional.
+            -   Obtener una introducción al curso AP Computer Science A
+            -   Aprender el enfoque curricular de Code.org para CSA
+
+            **Tiempo estimado:** 60 minutos
+        self-paced-pl-csa2-2023:
+          title: 'Módulo 2: Navegando por Code.org'
+        self-paced-pl-csa3-2023:
+          title: Soporte para la programación basada en texto

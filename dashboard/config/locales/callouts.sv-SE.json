@@ -765,6 +765,26 @@
         },
         "courseD_bee_conditionals_challenge22022": {
           "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Nytt Block!"
         }
       }
     }

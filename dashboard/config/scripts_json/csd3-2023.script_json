@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-10-12 23:32:18 UTC",
+    "serialized_at": "2022-10-24 15:43:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -186,10 +186,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "1. **Create and use a sprite**\n\n\tSee levels 10 and 11 on Code Studio.\n\n2. **Use dot notation to update a sprite's properties**\n\n\tSee level 11 on Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, students are introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which will greatly increase the complexity of what they can draw on the screen.",
-        "preparation": "* (Optional) Print a copy of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "purpose": "Keeping track of many shapes and the different variables that control aspects of those shapes can get very complex. There will be lots of variables with different variable names. Instead, computer scientists created something called an **object** which allows for one variable name to control both the shape and all its aspects. In Game Lab we use a certain type of object called a **sprite**. A sprite is just a rectangle with **properties** for controlling its look. Properties are the variables that are attached to a sprite. You can access them through **dot notation**. \r\n\r\nUsing the Animation Tab, students can create or import images to be used with their sprites. Later on, these sprites will become a useful tool for creating animations, as their properties can be changed and updated throughout the course of a program.\r\n",
         "student_overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!"
       },
@@ -207,7 +206,6 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "**Use dot notation to update a sprite's properties**\n\nSee Code Studio level 5.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\r\n\r\nStudents extend their understanding of sprites by interacting with sprite properties.  Students start with a review of what a sprite is, then move on to Game Lab to practice more with sprites, using their properties to change their appearance. They then reflect on the connections between properties and variables.",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
@@ -1862,13 +1860,7 @@
       "key": "8cc9f685-35dd-4cf2-a373-f904dc3bdd4a",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to share out their ideas with the group.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal here is to get students to reflect more critically on _why_ people seek out entertainment. Students are likely to come up with \"boredom\" as a common answer, but push them to think more deeply about what their chosen form of entertainment actually does for them - what problem does it solve. Potential answers include:\r\n\r\n* Connection with others\r\n* Learning or experiencing new things\r\n* Sparking creativity\r\n* An escape from reality\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share out their ideas with the group.\n\n**Discussion Goal:** The goal here is to get students to reflect more critically on why people seek out entertainment. Students are likely to come up with \"boredom\" as a common answer, but push them to think more deeply about what their chosen form of entertainment actually does for them - what problem does it solve? Potential answers include:\n\n* Connection with others\n* Learning or experiencing new things\n* Sparking creativity\n* An escape from reality"
       },
       "seeding_key": {
         "activity_section.key": "8cc9f685-35dd-4cf2-a373-f904dc3bdd4a",
@@ -2061,13 +2053,7 @@
       "key": "27177eab-07e1-4a87-b4f9-93ee7fa729a4",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** Students should silently write their answers in their journals. Afterwards they should discuss with a partner and then with the entire class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal** This discussion is intended to bring up some challenges that students will need to address in the next few lessons, such as how to specify position, order, and color. The students don't necessarily need to decide how they would specify such things, but recognize that they will need a method for doing so. Students who have just come out of the HTML unit may make connections to how HTML helped solve similar problems.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should silently write their answers in their journals. Afterwards they should discuss with a partner and then with the entire class.\n\n**Discussion Goal:** This discussion is intended to bring up some challenges that students will need to address in the next few lessons, such as how to specify the position, order, and color. The students don't necessarily need to decide how they would specify such things but recognize that they will need a method for doing so. Students who have just come out of the HTML unit may make connections to how HTML helped solve similar problems.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "27177eab-07e1-4a87-b4f9-93ee7fa729a4",
@@ -2124,7 +2110,7 @@
       "key": "cc1aa353-4235-4b5b-8d8a-38f6bd3a4993",
       "position": 3,
       "properties": {
-        "description": "**Prompt:** Working with your partner, take two or three minutes to figure out how this tool works. Afterwards be ready to share as a class."
+        "description": "**Prompt:** Working with your partner, take two or three minutes to figure out how this tool works. Afterwards be ready to share as a class.\n\n**Discussion Goal:** Rather than doing a live demo of the tool, use this discovery-based strategy to let students explore the tool themselves. Afterward, use the debrief to ensure all students are aware of the key features of the tool. The most important components are the grid and the fact that the mouse coordinates are displayed below the drawing space.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "cc1aa353-4235-4b5b-8d8a-38f6bd3a4993",
@@ -2135,12 +2121,6 @@
       "key": "0c7d1d37-21f5-4300-9951-be78684bdc08",
       "position": 4,
       "properties": {
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Rather than doing a live-demo of the tool, use this strategy to let students explore the tool themselves. Afterwards use the debrief to ensure all students are aware of key features of the tool. The most important components are the grid and the fact that the mouse coordinates are displayed below the drawing space.\r\n\r\n\r\n"
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "0c7d1d37-21f5-4300-9951-be78684bdc08",
@@ -2272,13 +2252,7 @@
       "key": "13703a22-7866-405e-a8d0-8c47df529b67",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students time to think individually and discuss with a partner, then bring the class together and write their ideas on the board.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal** Guide students to realize that the way we communicate with each other may can be more informal than how we communicate with a computer. For example, communicating with a digital assistant requires precise language and commands, usually starting with \"Hey\" and then the name of the device. Similarly, as we start coding in this unit, students will need to use a precise set of commands to communicate with a computer."
-          }
-        ]
+        "description": "**Share:** Allow students time to think individually and discuss with a partner, then bring the class together and write their ideas on the board.\n\n**Discussion Goal:** Guide students to realize that the way we communicate with each other may be more informal than how we communicate with a computer. For example, communicating with a digital assistant requires precise language and commands, usually starting with \"Hey\" and then the name of the device. Similarly, as we start coding in this unit, students will need to use a precise set of commands to communicate with a computer."
       },
       "seeding_key": {
         "activity_section.key": "13703a22-7866-405e-a8d0-8c47df529b67",
@@ -2358,14 +2332,8 @@
       "key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?",
-        "progression_name": "Video: Drawing in Game Lab - Part 1",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal**\n\nMake sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n\nAs students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n\n(Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.)"
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?\n\n**Discussion Goal:** \n- *Where can you find more information about how to use the blocks?*\n  * Make sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n- *What’s an advantage of using block mode?*\n  * As students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n  * *Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.*",
+        "progression_name": "Video: Drawing in Game Lab - Part 1"
       },
       "seeding_key": {
         "activity_section.key": "e9a9c705-2850-44bc-a210-dc4b3466a353",
@@ -2393,14 +2361,8 @@
       "key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de",
       "position": 6,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?",
-        "progression_name": "Video: Drawing in Game Lab - Part 2",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**\nStroke controls the border color of the shape, and fill controls the color inside of it."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?\n\n**Discussion Goal:** Stroke controls the border color of the shape, and fill controls the color inside of it.",
+        "progression_name": "Video: Drawing in Game Lab - Part 2"
       },
       "seeding_key": {
         "activity_section.key": "eae3f1fc-9263-4892-a141-6c50d1f3b3de",
@@ -2514,13 +2476,7 @@
       "key": "9454d440-355b-4396-af51-d42e7ec925f3",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm ideas silently, then share with a neighbor, then share out with the whole class. Record ideas as students share them on the board.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion introduces the vocabulary word \"parameter\" and also helps students understand the need for parameters. Students will be seeing versions of the [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and [`rect()`(#4dd0e1)](/docs/gamelab/rect/) block in this lesson that have additional parameters. Students may say they want inputs for the size of the shapes, their color, etc. During this conversation tie the behaviors the students want to the inputs the block would need. For example, if you want rectangles to be a different size, the block will need an input that lets the programmer decide how large to make it.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should brainstorm ideas silently, then share with a neighbor, then share out with the whole class. Record ideas as students share them on the board.\n\n**Discussion Goal:** This discussion introduces the vocabulary word \"parameter\" and also helps students understand the need for parameters. Students will be seeing versions of the [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and [`rect`(#4dd0e1)](/docs/gamelab/rect/) block in this lesson that have additional parameters. Students may say they want inputs for the size of the shapes, their color, etc. During this conversation tie the behaviors the students want to the inputs the block would need. For example, if you want rectangles to be a different size, the block will need an input that lets the programmer decide how large to make it."
       },
       "seeding_key": {
         "activity_section.key": "9454d440-355b-4396-af51-d42e7ec925f3",
@@ -2652,13 +2608,7 @@
       "key": "3731d60e-793f-47f8-b537-f93fd85c103c",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share our their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Student answers will vary, but they should all follow the pattern of giving more specific information for how to carry out a task. If students have trouble thinking of something, you may want to give some examples for things a computer could do, such as ring an alarm (with a parameter for a certain time) or play a song (with a parameter for the song title).\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** Student answers will vary, but they should all follow the pattern of giving more specific information about how to carry out a task. If students have trouble thinking of something, you may want to give some examples of things a computer could do, such as ring an alarm (with a parameter for a certain time) or play a song (with a parameter for the song title).\n"
       },
       "seeding_key": {
         "activity_section.key": "3731d60e-793f-47f8-b537-f93fd85c103c",
@@ -2669,8 +2619,14 @@
       "key": "a827f281-0b65-44fb-a6e0-2a582cfab70a",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** At the beginning of the course, we learned that input, output, storage, and processing were common to all computers.  Where do you see input, output, storage, and processing in Game Lab?",
-        "name": "Input-Output-Storage-Processing\r"
+        "description": "**Prompt:** All computers do four things: input, output, processing, and storage. Where do you see input, output, storage, and processing in Game Lab?",
+        "name": "Input-Output-Storage-Processing\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Input, Output, Processing, and Storage:** These terms are introduced in the Problem Solving and Computing unit in CS Discoveries, so students may already be familiar with them. However, if they need a refresher, you may decide to show the [What Do Computer Do?](https://www.youtube.com/watch?v=92TaQRBwPSs) video which highlights these four functions."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a827f281-0b65-44fb-a6e0-2a582cfab70a",
@@ -2681,13 +2637,7 @@
       "key": "9de42f3f-32bc-4f8c-9f7c-ccbf449d53e8",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their answers.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Allow students to share out their different ideas, but eventually bring the conversation back to storage to tie into the lesson topic of variables. Students’ answers may include:\r\n\r\n* input: values passed as parameters, typing into the Game Lab workspace\r\n* output: shapes shown on the Game Lab screen\r\n* storage: remembering the code\r\n* processing: the If/then and matching that turn the code into the pictures on the screen\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their answers.\n\n**Discussion Goal:** Allow students to share out their different ideas, but eventually bring the conversation back to storage to tie into today's lesson. Students’ answers may include:\n\n* input: values passed as parameters, typing into the Game Lab workspace\n* output: shapes shown on the Game Lab screen\n* storage: remembering the code\n* processing: the If/then and matching that turn the code into the pictures on the screen\n"
       },
       "seeding_key": {
         "activity_section.key": "9de42f3f-32bc-4f8c-9f7c-ccbf449d53e8",
@@ -2739,7 +2689,18 @@
       "key": "2bcc9458-d216-47ec-844e-1d1bae3790a6",
       "position": 2,
       "properties": {
-        "progression_name": "Prediction",
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bcc9458-d216-47ec-844e-1d1bae3790a6",
+        "lesson_activity.key": "478a883d-43c1-4550-9094-a1d8a6c40373"
+      }
+    },
+    {
+      "key": "6f4336c3-44b3-4569-a53d-676b9a4d2247",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students may notice that the term `xPosition` is associated with the value 50, and so when we see the term `xPosition` farther down in the code, they may think it will use the value of 50 in that spot and draw the circle on the left side of the screen. When describing this relationship, they may not have the correct words to describe what's happening and may wonder what the purple `var` keyword means. Encourage students to use other familiar words when describing this relationship, like \"container\" or \"placeholder\", before introducing vocabulary",
         "tips": [
           {
             "type": "teachingTip",
@@ -2748,22 +2709,16 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2bcc9458-d216-47ec-844e-1d1bae3790a6",
+        "activity_section.key": "6f4336c3-44b3-4569-a53d-676b9a4d2247",
         "lesson_activity.key": "478a883d-43c1-4550-9094-a1d8a6c40373"
       }
     },
     {
       "key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?",
-        "progression_name": "Video: Introduction to Variables",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**\n\nStudents should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course."
-          }
-        ]
+        "progression_name": "Video: Introduction to Variables"
       },
       "seeding_key": {
         "activity_section.key": "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7",
@@ -2771,14 +2726,27 @@
       }
     },
     {
-      "key": "7856e9bd-4a6a-4eeb-98d4-d63b7a8069ee",
-      "position": 4,
+      "key": "f518dd78-c3d9-48ab-9702-6c5f51e3bc9b",
+      "position": 5,
       "properties": {
+        "description": "**Discussion Goal:** Students should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course.",
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "f518dd78-c3d9-48ab-9702-6c5f51e3bc9b",
+        "lesson_activity.key": "478a883d-43c1-4550-9094-a1d8a6c40373"
+      }
+    },
+    {
+      "key": "7856e9bd-4a6a-4eeb-98d4-d63b7a8069ee",
+      "position": 6,
+      "properties": {
+        "description": "**Discussion Goal:** During this discussion, encourage students to use the vocabulary they saw in the previous video, referring to `xPosition` and `whatsTheY` as variables and describing the equal sign as \"gets the value of\". The concept is the same as the first predict level, with the added emphasis on using correct vocabulary. For example: \"I see that the variable `xPosition` gets the value of 300, so I know it will be drawn on the right side of the screen\"",
         "progression_name": "Skill Building",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Level 4:**\nIf students use variable names that start with numbers, include spaces, or break other rules, the code may be forced into text mode the next time that they go to that level or refresh the page. To get back into block mode, students will first need to fix the problem with the variable names. Use the red error squares to see where the bugs most likely are, and once they are gone, click the \"block mode\" button at the top right of the workspace."
+            "markdown": "**Level 5:** If students use variable names that start with numbers, include spaces, or break other rules, the code may be forced into text mode the next time that they go to that level or refresh the page. To get back into block mode, students will first need to fix the problem with the variable names. Use the red error squares to see where the bugs most likely are, and once they are gone, click the \"block mode\" button at the top right of the workspace."
           }
         ]
       },
@@ -2789,7 +2757,7 @@
     },
     {
       "key": "2da379e9-eaf5-49ea-8c8e-6d355805b694",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2800,7 +2768,7 @@
     },
     {
       "key": "0664e5dc-78b3-4098-beba-846c965b6eb5",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2817,7 +2785,7 @@
     },
     {
       "key": "5474ff2c-8de3-4cdc-8e86-4b57b11c4742",
-      "position": 7,
+      "position": 9,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -2881,13 +2849,7 @@
       "key": "a1b5dd01-e627-457a-847a-3190449ae9cf",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students time to write down some ideas, then discuss as a group.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to set context for the introduction of random numbers. Students may come up with various ideas related to user interaction or gathering input from other sources. Allow them to discuss the different ideas that they have, but eventually turn the conversation to the idea of randomness.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students time to write down some ideas, then discuss them as a group.\n\n**Discussion goal:** The goal of this discussion is to set the context for the introduction of random numbers. Students may come up with various ideas related to user interaction or gathering input from other sources. Allow them to discuss the different ideas that they have, but eventually, turn the conversation to the idea of randomness.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "a1b5dd01-e627-457a-847a-3190449ae9cf",
@@ -2939,7 +2901,7 @@
       "key": "f3a6f35f-4187-4ce9-9f98-149c3be2bd1a",
       "position": 2,
       "properties": {
-        "progression_name": "Exploration"
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "f3a6f35f-4187-4ce9-9f98-149c3be2bd1a",
@@ -2947,8 +2909,19 @@
       }
     },
     {
-      "key": "5e4227d1-bd74-4769-87a1-49d5c696326a",
+      "key": "1fd78458-404f-4bae-aea8-eedf7a4f8bec",
       "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students should predict that _something_ will happen with the x-coordiante of the ellipse, even if they are unsure what will happen. Students may say that the value will be either 200 or 400, or they may say the value will be between 200 and 400. This creates the effect of drawing an ellipse somewhere on the right side of the screen.\n\nWhen facilitating the class discussion, ensure that students look at their neighbors screen and compare - this helps them see that different behaviors are occuring for different people. Also encourage students to run the code multiple times to see the result."
+      },
+      "seeding_key": {
+        "activity_section.key": "1fd78458-404f-4bae-aea8-eedf7a4f8bec",
+        "lesson_activity.key": "3657c3a9-9cd1-4f01-b7a1-7cffa2e61f05"
+      }
+    },
+    {
+      "key": "5e4227d1-bd74-4769-87a1-49d5c696326a",
+      "position": 4,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2959,7 +2932,7 @@
     },
     {
       "key": "147fc50f-f7ee-4812-a04f-e28df2ee19f5",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2970,7 +2943,7 @@
     },
     {
       "key": "786e71a4-53fe-49ab-bc97-838022a6c76a",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2987,7 +2960,7 @@
     },
     {
       "key": "d22d84cc-f379-48f6-ab9b-1c7d3ef8e704",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenges"
       },
@@ -2998,7 +2971,7 @@
     },
     {
       "key": "55ec658a-505c-48c7-9087-8bc3cd3e35e7",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Share:** If some students have taken extra time to work on their projects, give them a chance to share their more complex rainbow snakes. Focus conversation on which parameters students are manipulating or randomizing to create their drawings."
       },
@@ -3033,13 +3006,7 @@
       "key": "ba918b42-40c9-4e13-bccd-924e08e01cde",
       "position": 3,
       "properties": {
-        "description": "**Share:** Allow students to share out what sorts of random things they might like in their programs.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The discussion is intended to have students think about the wider implications of randomness in games and other programs. Although there is no block to general random data other than numbers, in later lessons students will learn techniques that will allow them to use random numbers to randomly choose from a variety of behaviors.    \r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out what sorts of random things they might like in their programs.\n\n**Discussion Goal:** The discussion is intended to have students think about the wider implications of randomness in games and other programs. Although there is no block to generate random data other than numbers, in later lessons students will learn techniques that will allow them to use random numbers to randomly choose from a variety of behaviors.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ba918b42-40c9-4e13-bccd-924e08e01cde",
@@ -3062,13 +3029,7 @@
       "key": "c606240b-3a5f-47aa-8b9b-9612f220f60d",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their lists.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal here is to get students thinking about all of the different values that go into drawing a single shape on the screen, and how many more values they may need to control a more detailed character in a program. If students are struggling to come up with ideas, you might use some of the following prompts:\r\n* How do you tell a shape where to go on the screen?\r\n* How do you tell a shape what size it needs to be?\r\n* How do you tell a shape what color it should be? What about its outline?\r\n* What if you wanted to change any of those values during your program, or control other things like rotation?\r\n\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their lists.\n\n**Discussion Goal:** The goal here is to get students thinking about all of the different values that go into drawing a single shape on the screen, and how many more values they may need to control a more detailed character in a program. If students are struggling to come up with ideas, you might use some of the following prompts:\n\n* How do you tell a shape where to go on the screen?\n* How do you tell a shape what size it needs to be?\n* How do you tell a shape what color it should be? What about its outline?\n* What if you wanted to change any of those values during your program, or control other things like rotation?"
       },
       "seeding_key": {
         "activity_section.key": "c606240b-3a5f-47aa-8b9b-9612f220f60d",
@@ -3120,7 +3081,7 @@
       "key": "be31ea27-1175-4516-a827-c80adae7c150",
       "position": 2,
       "properties": {
-        "progression_name": "Exploration"
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "be31ea27-1175-4516-a827-c80adae7c150",
@@ -3128,15 +3089,27 @@
       }
     },
     {
-      "key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0",
+      "key": "1cf25bad-898f-4920-9419-15d582df7747",
       "position": 3,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What is a sprite?\n- What are properties?\n- What problem do sprites solve?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Sprites video in the slides\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1cf25bad-898f-4920-9419-15d582df7747",
+        "lesson_activity.key": "5e7156d5-4145-408f-81a5-97859a00ca73"
+      }
+    },
+    {
+      "key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0",
+      "position": 4,
+      "properties": {
+        "description": "Keeping track of many shapes and the different variables that control characteristics of those shapes can get very complex. Computer scientists created something called an object which allows for one variable name to control both the shape and all its additional characteristics. In Game Lab, students will use a certain type of object called a sprite. A sprite is just a rectangle with properties for controlling its look.",
         "progression_name": "Video: Introduction to Sprites",
+        "remarks": true,
         "tips": [
           {
-            "type": "discussionGoal",
-            "markdown": "**Key Vocabulary:**\n\n- **Sprite** - A character on the screen with properties that describe its location, movement, and look.\n- **Property** - A label for a characteristic of a sprite, such as its location and appearance.\n- **Dot Notation** - the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.\n\nSprites are a very complex concept, and students may have difficulty understanding exactly what they are. The most important aspect for students to understand is that sprites allow them to organize a lot of information about something that they want to draw to the screen.\n\nStudents should make the connection between properties and variables, that both hold information that their program needs to run. Properties are accessed through their sprites, and Game Lab sprites already have specific properties that are automatically created when students create each sprite, such as x position, height, and rotation.\n\nSprites solve the problem of organizing a lot of information about how something should be drawn to a screen. Rather than creating new variables to hold all of that information, sprites use properties to hold all of the information about one thing that is drawn to the screen.\n\n**Content Corner:** The sprite is a type of data called an object. While we aren't yet explicitly introducing the concept of objects, students do need to understand that a sprite is a different type of value from the ones we've seen before, one that can hold references to many more values."
+            "type": "contentCorner",
+            "markdown": "**Sprites and Objects**: Behind the scenes, a sprite is a type of data called an object. Objects are programming structures that encapsulate data and behaviors into a single item. We don't need to introduce the formal idea of an object in this unit, but sprites are a good example of an object and students will learn to manipulate their properties throughout the unit."
           }
         ]
       },
@@ -3146,8 +3119,19 @@
       }
     },
     {
+      "key": "ea19bb20-e66e-4a7f-860c-bece4d199d45",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Sprite** - A character on the screen with properties that describe its location, movement, and look."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea19bb20-e66e-4a7f-860c-bece4d199d45",
+        "lesson_activity.key": "5e7156d5-4145-408f-81a5-97859a00ca73"
+      }
+    },
+    {
       "key": "3161543e-f64c-473c-bfe6-5a8d377da346",
-      "position": 4,
+      "position": 6,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -3158,14 +3142,14 @@
     },
     {
       "key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n- What are the different ways to get an image?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Animations video in the slide deck.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n",
         "progression_name": "Video: The Animation Tab",
         "tips": [
           {
-            "type": "discussionGoal",
-            "markdown": "Make sure students understand that they will need to both create the image (or animation) in the Animation Tab and then add the animation to the sprite using the [`setAnimation`(#f78183)](/docs/gamelab/setAnimation/) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\nStudents can use an animation already in the animation tab library, upload one from their computer, or create their own using the provided drawing tools. Additionally, students can use the drawing tools to modify the images they have chosen from the library or uploaded.\n\n**Misconception Alert!**\nMany students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, just as other properties can change, and that two or more sprites might share the same animation."
+            "type": "teachingTip",
+            "markdown": "**Misconception Alert!** Many students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, and that two or more sprites might share the same animation."
           }
         ]
       },
@@ -3176,7 +3160,7 @@
     },
     {
       "key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9",
-      "position": 6,
+      "position": 8,
       "properties": {
         "name": "Skill Building",
         "progression_name": "Skill Building"
@@ -3187,8 +3171,20 @@
       }
     },
     {
+      "key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34",
+      "position": 9,
+      "properties": {
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34",
+        "lesson_activity.key": "5e7156d5-4145-408f-81a5-97859a00ca73"
+      }
+    },
+    {
       "key": "b6ae6fab-2cb3-46e1-a0d9-d38c0dbf9dee",
-      "position": 7,
+      "position": 10,
       "properties": {
         "name": "Practice",
         "progression_name": "Practice"
@@ -3200,7 +3196,7 @@
     },
     {
       "key": "f8c13dc6-af62-4cb6-afb2-62d1fb99f35b",
-      "position": 8,
+      "position": 11,
       "properties": {
         "name": "Assessment",
         "progression_name": "Assessment",
@@ -3218,7 +3214,7 @@
     },
     {
       "key": "aedcf92f-9a8c-451c-b17c-2b9d4cef55fe",
-      "position": 9,
+      "position": 12,
       "properties": {
         "name": "Challenges",
         "progression_name": "Challenges",
@@ -3238,7 +3234,7 @@
       "key": "0795f7c0-cd24-48f8-9995-2d0bf1a0d6af",
       "position": 1,
       "properties": {
-        "description": "**Key Vocabulary:**\r\n\r\n* **Sprite** - A character on the screen with properties that describe its location, movement, and look.\r\n* **Property** - A label for a characteristic of a sprite, such as its location and appearance.\r\n* **Dot Notation** - the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot."
+        "description": "**Key Vocabulary:**\n\n* **Sprite** - A character on the screen with properties that describe its location, movement, and look."
       },
       "seeding_key": {
         "activity_section.key": "0795f7c0-cd24-48f8-9995-2d0bf1a0d6af",
@@ -3261,13 +3257,7 @@
       "key": "01518718-3b94-4a5f-9436-4c0922c45dc0",
       "position": 3,
       "properties": {
-        "description": "**Share:** Allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion prompts students to think about the different properties that a sprite might have, and prepares them for the next lesson, which explicitly covers sprite properties.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** This discussion prompts students to think about the different properties that a sprite might have, and prepares them for the next lesson, which explicitly covers sprite properties.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "01518718-3b94-4a5f-9436-4c0922c45dc0",
@@ -3340,6 +3330,7 @@
       "key": "d86c69ad-d7d1-4015-bb86-0d34ade76e5e",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Sprite Properties video in the slide deck\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3401,13 +3392,7 @@
       "key": "3dd6be0e-613b-4345-b3e1-89debcbf05e5",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to discuss in pairs or small groups before sharing out to the entire group.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students may note that sprite properties and variables are similar in that they both store information. They are different in that variables can be anything, but sprites have particular properties that are used in certain ways on the screen.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to discuss in pairs or small groups before sharing out to the entire group.\n\n**Discussion Goal:** Students may note that sprite properties and variables are similar in that they both store information. They are different in that variables can be anything, but sprites have particular properties that are used in certain ways on the screen.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "3dd6be0e-613b-4345-b3e1-89debcbf05e5",
@@ -3543,13 +3528,7 @@
       "key": "60ea7814-2565-49bf-a2b8-eb94f76ef03f",
       "position": 2,
       "properties": {
-        "description": "**Share:** If there is time, allow students to share out their answers.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Student answers to the question may vary, but some similarities are that they both use the coordinate plane, and that they are drawn automatically, unlike sprites, which must use the [`drawSprites`(#fff176)](/docs/gamelab/drawSprites/) command. One possible difference that it is more difficult to control the exact size of text, since the amount of text and font size are not as specific as height and width parameters. \r\n"
-          }
-        ]
+        "description": "**Share:** If there is time, allow students to share out their answers.\n\n**Discussion Goal:** Student answers to the question may vary, but some similarities are that they both use the coordinate plane and that they are drawn automatically, unlike sprites, which must use the [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) command. One possible difference is that it is more difficult to control the exact size of text since the amount of text and font size are not as specific as height and width parameters. \n"
       },
       "seeding_key": {
         "activity_section.key": "60ea7814-2565-49bf-a2b8-eb94f76ef03f",
@@ -3572,13 +3551,7 @@
       "key": "0c184c6e-48e0-4522-b4c2-a4e47f168772",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out what they remember as a group review.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to review the different blocks and skills that students have learned. As students talk about the different blocks, try to steer the conversation into how they can be used creatively, to link into the main topic of the day.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out what they remember as a group review.\n\n**Discussion Goal:** The goal of this discussion is to review the different blocks and skills that students have learned. As students talk about the different blocks, try to steer the conversation into how they can be used creatively, to link to the main topic of the day.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0c184c6e-48e0-4522-b4c2-a4e47f168772",
@@ -3726,13 +3699,7 @@
       "key": "b22ef3f7-70a2-4250-bd87-6b80729cf8cd",
       "position": 2,
       "properties": {
-        "description": "**Share:** Have students share out what they appreciated about their classmates' projects. You may want to do this \"popcorn\" style, with each student who responds choosing the next person to share.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion should serve as a celebration of what the students have accomplished. As students share out what they have seen, encourage them to learn from each other and ask questions if they were not sure how to do something. Highlight how students were able to do very different things with the same tool.\r\n"
-          }
-        ]
+        "description": "**Share:** Have students share out what they appreciated about their classmates' projects. You may want to do this \"popcorn\" style, with each student who responds choosing the next person to share.\n\n**Discussion Goal:** This discussion should serve as a celebration of what the students have accomplished. As students share out what they have seen, encourage them to learn from each other and ask questions if they were not sure how to do something. Highlight how students were able to do very different things with the same tool.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b22ef3f7-70a2-4250-bd87-6b80729cf8cd",
@@ -3754,13 +3721,7 @@
       "key": "d36078b3-45fe-43f0-b583-c483279fc72f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students write their ideas independently, then share with partners, then share as a whole group.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should introduce some key understandings about animation. Students should understand that the key is seeing many pictures in a row that are slightly different. Introduce the vocabulary word \"frame\" as being one of those many pictures--a single image within an animation. Then transition to the fact that soon students will be creating animations of their own. \r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students write their ideas independently, then share with partners, then share as a whole group.\n\n**Discussion Goal:** This discussion should introduce some key understandings about animation. Students should understand that the key is seeing many pictures in a row that are slightly different. Introduce the vocabulary word \"frame\" as being one of those many pictures--a single image within an animation. Then transition to the fact that soon students will be creating animations of their own."
       },
       "seeding_key": {
         "activity_section.key": "d36078b3-45fe-43f0-b583-c483279fc72f",
@@ -3805,14 +3766,8 @@
       "key": "8fc8adb0-d3f0-48c5-be42-85c520487ec3",
       "position": 2,
       "properties": {
-        "description": "**Question to Consider with Video:**\n- What does the draw function do?",
-        "progression_name": "Video: Introduction to the Draw Loop",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**\n\nThe draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\". This creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\n\n**Misconception Alert!**\n\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously."
-          }
-        ]
+        "description": "**Question to Consider with Video:**\n- What does the draw function do?\n\n**Discussion Goal:** The draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\". This creates an animation effect by changing what is drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\n\n**Misconception Alert!**\n\nWhen the draw loop runs, it does not \"clear\" out the previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously.",
+        "progression_name": "Video: Introduction to the Draw Loop"
       },
       "seeding_key": {
         "activity_section.key": "8fc8adb0-d3f0-48c5-be42-85c520487ec3",
@@ -3862,13 +3817,8 @@
       "key": "5b1985f6-d193-4456-865e-344495f2d52d",
       "position": 6,
       "properties": {
-        "progression_name": "Prediction",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Notice that the blue background is never visible because it is immediately drawn over by the red background. Also there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds."
-          }
-        ]
+        "description": "The prediction level program has one small difference that will make it run a little differently. \n\n**Discuss:** Students should consider and discuss:\n* What will this program do? \n\n**Discussion Goal:** Notice that the blue background is never visible because it is immediately drawn over by the red background. Also, there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.\n",
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "5b1985f6-d193-4456-865e-344495f2d52d",
@@ -3980,13 +3930,7 @@
       "key": "780e6ada-e94c-49da-84ab-eb8fa54b7df3",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to share their ideas with a partner before sharing with the entire class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The purpose of this discussion is to start students thinking about how they might use the various sprite properties they've seen so far to make animations with purposeful motion. If students struggle to come up with ideas, you can narrow down the question to specific properties. For example:\r\n\r\n* What would happen to a sprite if you constantly increased its [`x`(#f78183)](/docs/gamelab/x/) property?\r\n* What would happen to a sprite if you constantly increased its [`y`(#f78183)](/docs/gamelab/y/) property?\r\n* What about other properties, or combining multiple properties?\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share their ideas with a partner before sharing with the entire class.\n\n**Discussion Goal:** The purpose of this discussion is to start students thinking about how they might use the various sprite properties they've seen so far to make animations with purposeful motion. If students struggle to come up with ideas, you can narrow down the question to specific properties. For example:\n\n* What would happen to a sprite if you constantly increased its [`x`(#f78183)](/docs/gamelab/x/) property?\n* What would happen to a sprite if you constantly increased its [`y`(#f78183)](/docs/gamelab/y/) property?\n* What about other properties, or combining multiple properties?\n"
       },
       "seeding_key": {
         "activity_section.key": "780e6ada-e94c-49da-84ab-eb8fa54b7df3",
@@ -4036,14 +3980,8 @@
       "key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef",
       "position": 3,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?",
-        "progression_name": "Video: Sprite Movement",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goals:**\n\nStudents may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n\nWhen a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. Students should be able to explain that movement in an animation is just a change in position, and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?\n\n**Discussion Goal:** \n- *What is the counter pattern?*\n  - Students may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. \n  - They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. \n  - This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n- *How does the counter pattern move sprites across the screen?*\n  - When a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. \n  - Students should be able to explain that movement for an animation is just a change in position and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically.",
+        "progression_name": "Video: Sprite Movement"
       },
       "seeding_key": {
         "activity_section.key": "ddf3d6d4-d7d5-454a-9458-e08be66ef5ef",
@@ -4116,13 +4054,7 @@
       "key": "4ebb369a-817e-49e0-8326-c56775b27091",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to discuss with a partner before sharing with the entire class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Student answers may vary, but movements such as shaking use random numbers, and movements that are more purposeful use the counter pattern. It's less important that students have a specific answer than that their answers reflect a growing understanding of how the different programming constructs work.\r\n\r\nStudents may have seen random numbers used on one property (rotation) and the counter pattern used on another (x position) in one of the challenges, but if there is time, encourage them to think about what would happen if you used the counter pattern to add or subtract a random number to a sprite property, or to combine the two constructs in other ways.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to discuss with a partner before sharing with the entire class.\n\n**Discussion Goal:** Student answers may vary, but movements such as shaking use random numbers, and movements that are more purposeful use the counter pattern. It's less important that students have a specific answer than that their answers reflect a growing understanding of how the different programming constructs work.\n\nStudents may have seen random numbers used on one property (rotation) and the counter pattern used on another (x position) in one of the challenges, but if there is time, encourage them to think about what would happen if you used the counter pattern to add or subtract a random number to a sprite property, or to combine the two constructs in other ways."
       },
       "seeding_key": {
         "activity_section.key": "4ebb369a-817e-49e0-8326-c56775b27091",
@@ -4145,13 +4077,7 @@
       "key": "c7d8eceb-6051-4ceb-bfba-ca86dee20746",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out what they remember as a group review.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to review the different types of movement and animations that students have learned. As students talk about the different methods, make sure that they are mentioning why that type of movement would be useful.  Press them to be specific about what they might animate using the various methods.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out what they remember as a group review.\n\n**Discussion Goal:** The goal of this discussion is to review the different types of movement and animations that students have learned. As students talk about the different methods, make sure that they are mentioning why that type of movement would be useful. Press them to be specific about what they might animate using the various methods.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "c7d8eceb-6051-4ceb-bfba-ca86dee20746",
@@ -4328,13 +4254,7 @@
       "key": "080532d7-f628-404e-8985-3eaa96e7816a",
       "position": 2,
       "properties": {
-        "description": "**Share:** Have students share out what they appreciated about their classmates' projects. You may want to do this \"popcorn\" style, with each student who responds choosing the next person to share.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion should serve as a celebration of what the students have accomplished.  As students share out what they have seen, encourage them to learn from each other and ask questions if they were not sure how to do something. Highlight how students were able to do very different things with the same tool.\r\n"
-          }
-        ]
+        "description": "**Share:** Have students share out what they appreciated about their classmates' projects. You may want to do this \"popcorn\" style, with each student who responds choosing the next person to share.\n\n**Discussion Goal:** This discussion should serve as a celebration of what the students have accomplished. As students share out what they have seen, encourage them to learn from each other and ask questions if they were not sure how to do something. Highlight how students were able to do very different things with the same tool.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "080532d7-f628-404e-8985-3eaa96e7816a",
@@ -4385,13 +4305,7 @@
       "key": "e7bd5c09-a729-424e-8f13-f9538dd30867",
       "position": 4,
       "properties": {
-        "description": "**Think-Pair-Share:** After students have had a chance to write down their answers, allow them to talk to a partner before sharing out as a class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion should prepare students to investigate programs that react to changing conditions.  Students should realize that there is no \"one way\" that these questions will be answered, and that the answers will change according to changing conditions.\r\n"
-          }
-        ]
+        "description": "**Think-Pair-Share:** After students have had a chance to write down their answers, allow them to talk to a partner before sharing out as a class.\n\n**Discussion Goal:** This discussion should prepare students to investigate programs that react to changing conditions. Students should realize that there is no \"one way\" that these questions will be answered, and that the answers will change according to changing conditions.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e7bd5c09-a729-424e-8f13-f9538dd30867",
@@ -4454,14 +4368,8 @@
       "key": "4a3fafce-b94e-4146-a883-b1a761edf661",
       "position": 3,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?",
-        "progression_name": "Video: Booleans",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goals:**\n\n**Key Vocabulary:**\n\n- **Boolean Expression** - in programming, an expression that evaluates to True or False.\n\nStudents should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n\nSome examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n\nSome examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?\n\n**Discussion Goal:** \n- *What is a Boolean expression?*\n  - **Boolean Expression** - in programming, an expression that evaluates to True or False.\n  - Students should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. \n  - The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n- *What’s an expression that would evaluate to true?*\n  - Some examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n- *What’s an expression that would evaluate to false?*\n  - Some examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`.",
+        "progression_name": "Video: Booleans"
       },
       "seeding_key": {
         "activity_section.key": "4a3fafce-b94e-4146-a883-b1a761edf661",
@@ -4494,14 +4402,8 @@
       "key": "23e30728-5bed-44bd-8c4b-1074b93e8239",
       "position": 6,
       "properties": {
-        "description": "**Question to Consider with Video:**\n- When would you want to use an if statement?",
-        "progression_name": "Video: Conditional Statements",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goals:**\n\nThe broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item."
-          }
-        ]
+        "description": "**Question to Consider with Video:**\n- When would you want to use an if statement?\n\n**Discussion Goal:** The broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item.\n\n",
+        "progression_name": "Video: Conditional Statements"
       },
       "seeding_key": {
         "activity_section.key": "23e30728-5bed-44bd-8c4b-1074b93e8239",
@@ -4574,13 +4476,7 @@
       "key": "ce0b4dc9-efdf-4447-8a04-6b784c130ad9",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share responses.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion should get students thinking about how conditionals are used in games they have already seen, and help them connect those ideas to how they might want to use conditionals in their own programs.  Student responses might include:\r\n\r\n* If my username and password are correct, log me into Facebook\r\n* If Pacman has collected all the balls, start the next level\r\n* If my keyboard or mouse hasn't moved in 10 minutes, turn on the screensaver\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share responses.\n\n**Discussion Goal:** This discussion should get students thinking about how conditionals are used in games they have already seen, and help them connect those ideas to how they might want to use conditionals in their own programs. Student responses might include:\n\n* If my username and password are correct, log me into Facebook\n* If Pacman has collected all the balls, start the next level\n* If my keyboard or mouse hasn't moved in 10 minutes, turn on the screensaver"
       },
       "seeding_key": {
         "activity_section.key": "ce0b4dc9-efdf-4447-8a04-6b784c130ad9",
@@ -4591,14 +4487,8 @@
       "key": "a38f07a0-3b54-4ec0-882a-47601d6b565d",
       "position": 1,
       "properties": {
-        "description": "**Discuss:** So far all of the programs you've written run without any input from the user. How might adding user interaction make your programs more useful, effective, or entertaining? How might a user provide input into your program?",
-        "name": "Taking Input\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal here isn't to get into the technical specifics of how programs can take input (students will get to that in the online portion of the lesson), but rather to get students thinking about how user input could change the programs they've made. Encourage students to think back to Unit 1 and the various computer inputs and outputs they explored then. Which inputs would be most useful for the types of programs they've been making?\r\n"
-          }
-        ]
+        "description": "**Discuss:** So far all of the programs you've written run without any input from the user. How might adding user interaction make your programs more useful, effective, or entertaining? How might a user provide input into your program?\n\n**Discussion Goal:** The goal here isn't to get into the technical specifics of how programs can take input (students will get to that in the online portion of the lesson), but rather to get students thinking about how user input could change the programs they've made. Encourage students to think back to Unit 1 and the various computer inputs and outputs they explored then. Which inputs would be most useful for the types of programs they've been making?\n\n",
+        "name": "Taking Input\r"
       },
       "seeding_key": {
         "activity_section.key": "a38f07a0-3b54-4ec0-882a-47601d6b565d",
@@ -4723,13 +4613,7 @@
       "key": "b8e16854-405d-4f15-a11a-5e73774322c7",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their responses.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students may come up with many different specific scenarios, but make sure that they are differentiating between conditionals that respond to user input and those that respond to other changes in the program, such as a score increase, the location of a sprite, or player lives lost.  Major things to remember may include putting the conditionals in the draw loop or paying attention to how the blocks are nested.\r\n\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their responses.\n\n**Discussion Goal:** Students may come up with many different specific scenarios, but make sure that they are differentiating between conditionals that respond to user input and those that respond to other changes in the program, such as a score increase, the location of a sprite, or player lives lost. Major things to remember may include putting the conditionals in the draw loop or paying attention to how the blocks are nested.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b8e16854-405d-4f15-a11a-5e73774322c7",
@@ -4792,14 +4676,8 @@
       "key": "de342f84-bb35-4fc0-abaf-43d0865483b5",
       "position": 3,
       "properties": {
-        "description": "**Video:**  Watch the video as a class and review the discussion questions together.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?",
-        "progression_name": "Video: If/Else Statements",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**\n\nMake sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an `if` block, and when an `ifelse` block is necessary."
-          }
-        ]
+        "description": "**Video:**  Watch the video as a class and review the discussion questions together.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?\n\n**Discussion Goal:** Make sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an [`if()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block, and when an [`if()/else()`(#64B5F6)](/docs/ide/applab/expressions/ifElseBlock) block is necessary.",
+        "progression_name": "Video: If/Else Statements"
       },
       "seeding_key": {
         "activity_section.key": "de342f84-bb35-4fc0-abaf-43d0865483b5",
@@ -4901,13 +4779,7 @@
       "key": "e6202f4a-a2c5-4d53-9e39-41595a4bdf9e",
       "position": 2,
       "properties": {
-        "description": "**Share:** Have students share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion introduces the chapter project: creating an interactive card. This is a good chance to tie in the 'card' concept to the problem-solving process, by defining the \"problem\" as cheering someone up, or letting them know that we are thinking about them. \r\n\r\n"
-          }
-        ]
+        "description": "**Share:** Have students share out their ideas.\n\n**Discussion Goal:** This discussion introduces the chapter project: creating an interactive card. This is a good chance to tie in the 'card' concept to the problem-solving process, by defining the \"problem\" as cheering someone up, or letting them know that we are thinking about them.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e6202f4a-a2c5-4d53-9e39-41595a4bdf9e",
@@ -5105,13 +4977,7 @@
       "key": "1325cf3a-014f-483e-b95a-33446045ef8f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Give students a minute to write down thoughts before inviting them to share with a neighbor. Then have the class share their thoughts. You may wish to write their ideas on the board.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The earlier demonstration should have reinforced the fact that repeatedly giving the same instruction is something you would never do in real life. You would instead come up with a way to capture that the instruction should be repeated, like \"keep moving forward by 1.\"\r\n"
-          }
-        ]
+        "description": "**Discuss:** Give students a minute to write down thoughts before inviting them to share with a neighbor. Then have the class share their thoughts. You may wish to write their ideas on the board.\n\n**Discussion Goal:** The earlier demonstration should have reinforced the fact that repeatedly giving the same instruction is something you would never do in real life. You would instead come up with a way to capture that the instruction should be repeated, like \"keep moving forward by 1.\""
       },
       "seeding_key": {
         "activity_section.key": "1325cf3a-014f-483e-b95a-33446045ef8f",
@@ -5186,14 +5052,8 @@
       "key": "c2999695-82bf-4122-ad30-5d496c903195",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.",
-        "progression_name": "Video: Velocity",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goals**\n\nIt may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n\nAs students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.",
+        "progression_name": "Video: Velocity"
       },
       "seeding_key": {
         "activity_section.key": "c2999695-82bf-4122-ad30-5d496c903195",
@@ -5330,13 +5190,7 @@
       "key": "aa999a9e-e56b-4465-9389-c1febc437ccf",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion.\r\n"
-          }
-        ]
+        "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.\n\n**Discussion Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion."
       },
       "seeding_key": {
         "activity_section.key": "aa999a9e-e56b-4465-9389-c1febc437ccf",
@@ -5725,13 +5579,7 @@
       "key": "9d5bcbab-052d-47b9-afaa-2f0b58537bda",
       "position": 3,
       "properties": {
-        "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\r\n"
-          }
-        ]
+        "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.\n\n**Discussion Goal:** It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9d5bcbab-052d-47b9-afaa-2f0b58537bda",
@@ -5860,13 +5708,7 @@
       "key": "02ffa3d9-d715-4484-bea3-711445317b72",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks, but being creative about combining the tools you already know how to use.\r\n"
-          }
-        ]
+        "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.\n\n**Discussion Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks but being creative about combining the tools you already know how to use."
       },
       "seeding_key": {
         "activity_section.key": "02ffa3d9-d715-4484-bea3-711445317b72",
@@ -5940,13 +5782,7 @@
       "key": "0ecdbdb5-2cb2-425e-bca3-cbd6b9ebbe5d",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus, because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned."
       },
       "seeding_key": {
         "activity_section.key": "0ecdbdb5-2cb2-425e-bca3-cbd6b9ebbe5d",
@@ -6250,13 +6086,7 @@
       "key": "d31714b0-8d4b-41f6-82d8-ef52628dbb76",
       "position": 2,
       "properties": {
-        "description": "**Think-Pair-Share:** Allow students to explain their blocks to a partner before sharing out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As students share their ideas, make sure they have a clear idea of the code that they would use to make the block, reminding them that all of the blocks they have learned this chapter (e.g. velocity, collisions) have been built from blocks that they already knew.\r\n"
-          }
-        ]
+        "description": "**Think-Pair-Share:** Allow students to explain their blocks to a partner before sharing out their ideas.\n\n**Discussion Goal:** As students share their ideas, make sure they have a clear idea of the code that they would use to make the block, reminding them that all of the blocks they have learned this chapter (e.g. velocity, collisions) have been built from blocks that they already knew.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d31714b0-8d4b-41f6-82d8-ef52628dbb76",
@@ -6301,14 +6131,8 @@
       "key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
       "position": 2,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?",
-        "progression_name": "Video: Functions",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**\n\n**Key Vocabulary:**\n- **Function** - a named bit of programming instructions\n\nMake sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program that the student wants that block of code to run."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.",
+        "progression_name": "Video: Functions"
       },
       "seeding_key": {
         "activity_section.key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
@@ -6414,7 +6238,7 @@
       "key": "b7ee1e8a-d621-4ad2-b4be-8eb1d3ad0c60",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students discuss at their table before talking as a class.",
+        "description": "**Discuss:** Have students discuss at their table before talking as a class.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6466,14 +6290,8 @@
       "key": "5d8e45b6-cc6d-4702-9596-7735b1217b91",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.",
-        "name": "Stop: Review Project Guide\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Running the Conversation:** You can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.\n\n**Discussion Goal:** To help you run the conversation, you can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\n\n",
+        "name": "Stop: Review Project Guide\r"
       },
       "seeding_key": {
         "activity_section.key": "5d8e45b6-cc6d-4702-9596-7735b1217b91",
@@ -6659,13 +6477,7 @@
       "key": "fcf7e2c6-f669-4225-affe-8e575a4585a7",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterwards, lead a share out discussion. You can record ideas on the board.  Possible parts of each step include:",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided. This discussion will motivate the use of the project guide for building a game later in the lesson.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterward, lead a share-out discussion. You can record ideas on the board.  Possible parts of each step include:\n* Define: Figuring out what you want the game to look like, how it should work, and who will play it.\n* Prepare: Plan ahead what your code will look like. Decide on a structure for your game.\n* Try: Write the code following your plan.\n* Reflect: Test your code, play the game to make sure it works, and get feedback from other people to make the game better.\n\n**Discussion Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided above. This discussion will motivate the use of the project guide for building a game later in the lesson."
       },
       "seeding_key": {
         "activity_section.key": "fcf7e2c6-f669-4225-affe-8e575a4585a7",
@@ -6676,7 +6488,6 @@
       "key": "7aec7a54-3133-46a2-9196-44dc4ad0eff5",
       "position": 3,
       "properties": {
-        "description": "* Define: Figuring out what you want the game to look like, how it should work, who will play it.\r\n* Prepare: Plan ahead what your code will look like. Decide on a structure for your game.\r\n* Try: Write the code following your plan.\r\n* Reflect: Test your code, play the game to make sure it works, get feedback from other people to make the game better."
       },
       "seeding_key": {
         "activity_section.key": "7aec7a54-3133-46a2-9196-44dc4ad0eff5",
@@ -6891,13 +6702,7 @@
       "key": "443fdf1b-8a71-4e15-892a-ffd002b89656",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "443fdf1b-8a71-4e15-892a-ffd002b89656",
@@ -7546,6 +7351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L4 - Predict_2023"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -7821,7 +7629,7 @@
         "level_keys": [
           "CSD U3 Variables Predict Where XY_2023"
         ],
-        "progression": "Skill Building"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
@@ -7831,7 +7639,7 @@
         "lesson.key": "Variables",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "7856e9bd-4a6a-4eeb-98d4-d63b7a8069ee"
+        "activity_section.key": "f518dd78-c3d9-48ab-9702-6c5f51e3bc9b"
       },
       "level_keys": [
         "CSD U3 Variables Predict Where XY_2023"
@@ -7840,6 +7648,31 @@
     {
       "chapter": 28,
       "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3L5 - SB1_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L5 - SB1_2023"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7856e9bd-4a6a-4eeb-98d4-d63b7a8069ee"
+      },
+      "level_keys": [
+        "CSD U3L5 - SB1_2023"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -7863,8 +7696,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 5,
+      "chapter": 30,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -7888,8 +7721,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 6,
+      "chapter": 31,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7913,8 +7746,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
+      "chapter": 32,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7938,8 +7771,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 8,
+      "chapter": 33,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7963,15 +7796,40 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_2023"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3L6 - Predict_2023"
+        ],
+        "lesson.key": "Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "f3a6f35f-4187-4ce9-9f98-149c3be2bd1a"
+      },
+      "level_keys": [
+        "CSD U3L6 - Predict_2023"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U3 Random random ellipse_2023"
         ],
-        "progression": "Exploration"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -7981,16 +7839,16 @@
         "lesson.key": "Random Numbers",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "f3a6f35f-4187-4ce9-9f98-149c3be2bd1a"
+        "activity_section.key": "5e4227d1-bd74-4769-87a1-49d5c696326a"
       },
       "level_keys": [
         "CSD U3 Random random ellipse_2023"
       ]
     },
     {
-      "chapter": 34,
-      "position": 2,
-      "activity_section_position": 1,
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -8013,9 +7871,9 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -8038,9 +7896,9 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -8063,8 +7921,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 5,
+      "chapter": 39,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8088,8 +7946,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 6,
+      "chapter": 40,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -8113,8 +7971,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 7,
+      "chapter": 41,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8138,20 +7996,17 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites Exploration_2023"
-        ],
-        "progression": "Exploration"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_2023"
+          "CSD U3L7 - Predict_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -8159,37 +8014,12 @@
         "activity_section.key": "be31ea27-1175-4516-a827-c80adae7c150"
       },
       "level_keys": [
-        "CSD U3 Sprites Exploration_2023"
+        "CSD U3L7 - Predict_test2023"
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Sprites in Game Lab_2023"
-        ],
-        "progression": "Video: Introduction to Sprites"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Sprites in Game Lab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0"
-      },
-      "level_keys": [
-        "CSD: Sprites in Game Lab_2023"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8213,8 +8043,8 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 4,
+      "chapter": 44,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -8238,14 +8068,55 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      },
+      "level_keys": [
+        "CSD U3 Sprites Exploration_test2023"
+      ]
+    },
+    {
+      "chapter": 46,
       "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro sprites_test2023"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites anitab 1_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8256,52 +8127,24 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "3161543e-f64c-473c-bfe6-5a8d377da346"
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
       },
       "level_keys": [
         "CSD U3 Sprites anitab 1_2023"
       ]
     },
     {
-      "chapter": 45,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Animation Tab_2023"
-        ],
-        "progression": "Video: The Animation Tab"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Animation Tab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397"
-      },
-      "level_keys": [
-        "CSD: Animation Tab_2023"
-      ]
-    },
-    {
-      "chapter": 46,
+      "chapter": 48,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites sequencing_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites sequencing_2023"
+          "CSD U3 Sprites sequencing_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -8309,19 +8152,16 @@
         "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
       },
       "level_keys": [
-        "CSD U3 Sprites sequencing_2023"
+        "CSD U3 Sprites sequencing_test2023"
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawSprites placement match_2023"
-        ],
-        "progression": "Skill Building"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -8331,14 +8171,14 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+        "activity_section.key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34"
       },
       "level_keys": [
         "CSD U3 drawSprites placement match_2023"
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8363,7 +8203,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -8388,7 +8228,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8413,7 +8253,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8438,7 +8278,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8463,7 +8303,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8488,7 +8328,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8513,7 +8353,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8538,7 +8378,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8563,7 +8403,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8588,7 +8428,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8613,7 +8453,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8638,7 +8478,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8663,7 +8503,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8688,7 +8528,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8713,7 +8553,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8738,7 +8578,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8763,7 +8603,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8788,7 +8628,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8813,7 +8653,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8838,7 +8678,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8863,7 +8703,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8888,7 +8728,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8913,7 +8753,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8938,7 +8778,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8963,7 +8803,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8988,7 +8828,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9013,7 +8853,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -9038,7 +8878,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9063,7 +8903,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9088,7 +8928,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9113,7 +8953,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9138,7 +8978,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9163,7 +9003,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9188,7 +9028,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9213,7 +9053,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9238,7 +9078,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -9263,7 +9103,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9288,7 +9128,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9313,7 +9153,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9338,7 +9178,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9363,7 +9203,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9388,7 +9228,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9413,7 +9253,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9438,7 +9278,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9463,7 +9303,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9488,7 +9328,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9513,7 +9353,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9538,7 +9378,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9563,7 +9403,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9588,7 +9428,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9613,7 +9453,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9638,7 +9478,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9663,7 +9503,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -9688,7 +9528,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9713,7 +9553,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9738,7 +9578,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9763,7 +9603,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9788,7 +9628,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -9813,7 +9653,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9838,7 +9678,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -9863,7 +9703,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 111,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -9888,7 +9728,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9913,7 +9753,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 113,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9938,7 +9778,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 114,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9963,7 +9803,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 115,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9988,7 +9828,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 116,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10013,7 +9853,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 117,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10038,7 +9878,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 118,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10063,7 +9903,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 119,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10088,7 +9928,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 120,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -10113,7 +9953,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10138,7 +9978,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10163,7 +10003,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10188,7 +10028,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -10213,7 +10053,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10238,7 +10078,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10263,7 +10103,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10288,7 +10128,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -10313,7 +10153,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 129,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10338,7 +10178,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 130,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10363,7 +10203,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 131,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10388,7 +10228,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 132,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -10413,7 +10253,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 133,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -10438,7 +10278,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 134,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -10463,7 +10303,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 135,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -10488,7 +10328,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 136,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10513,7 +10353,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 137,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -10538,7 +10378,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 138,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10563,7 +10403,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 139,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10588,7 +10428,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 140,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10613,7 +10453,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 141,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10638,7 +10478,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 142,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10663,7 +10503,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 143,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10688,7 +10528,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 144,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10713,7 +10553,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 145,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -10738,7 +10578,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 146,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10763,7 +10603,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10788,7 +10628,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 148,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10813,7 +10653,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 149,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10838,7 +10678,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 150,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10863,7 +10703,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 151,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -10888,7 +10728,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 152,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10913,7 +10753,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 153,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10938,7 +10778,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 154,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10963,7 +10803,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 155,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10988,7 +10828,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 156,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11013,7 +10853,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 157,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11038,7 +10878,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 158,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11063,7 +10903,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 159,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11088,7 +10928,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 160,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -11113,7 +10953,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 161,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11138,7 +10978,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 162,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11163,7 +11003,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 163,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11188,7 +11028,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 164,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11213,7 +11053,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 165,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11238,7 +11078,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 166,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11263,7 +11103,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 167,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11288,7 +11128,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 168,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -11313,7 +11153,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 169,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11338,7 +11178,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 170,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11363,7 +11203,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 171,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11388,7 +11228,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 172,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11413,7 +11253,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 173,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11438,7 +11278,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 174,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11463,7 +11303,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 175,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11488,7 +11328,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 176,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11513,7 +11353,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 177,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11538,7 +11378,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 178,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11563,7 +11403,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 179,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11588,7 +11428,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 180,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11613,7 +11453,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 181,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11638,7 +11478,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 182,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11663,7 +11503,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 183,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11688,7 +11528,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 184,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11713,7 +11553,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 185,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -11738,7 +11578,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 186,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -11763,7 +11603,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 187,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11788,7 +11628,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 188,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11813,7 +11653,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 189,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11838,7 +11678,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 190,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11863,7 +11703,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 191,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11888,7 +11728,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 192,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11913,7 +11753,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 193,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -11938,7 +11778,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 194,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -11963,7 +11803,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 195,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11988,7 +11828,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 196,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -12013,7 +11853,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 197,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -12038,7 +11878,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 198,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -12063,7 +11903,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 199,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -12088,7 +11928,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 200,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12113,7 +11953,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 201,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12138,7 +11978,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 202,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12163,7 +12003,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 203,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12188,7 +12028,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 204,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12213,7 +12053,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 205,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12238,7 +12078,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 206,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12263,7 +12103,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 207,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12288,7 +12128,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 208,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -12313,7 +12153,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 209,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -12338,7 +12178,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 210,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12363,7 +12203,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 211,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12388,7 +12228,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 212,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -12413,7 +12253,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 213,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12438,7 +12278,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 214,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12463,7 +12303,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 215,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -12488,7 +12328,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 216,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -12513,7 +12353,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 217,
       "position": 17,
       "activity_section_position": 1,
       "assessment": true,
@@ -12538,7 +12378,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 218,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -12563,7 +12403,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 219,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12588,7 +12428,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 220,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12613,7 +12453,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 221,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12638,7 +12478,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 222,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12663,7 +12503,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 223,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12688,7 +12528,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 224,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12713,7 +12553,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 225,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12738,7 +12578,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 226,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12763,7 +12603,7 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 227,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -12788,7 +12628,7 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 228,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -12813,7 +12653,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 229,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12838,7 +12678,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 230,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -12863,7 +12703,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 231,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -13209,6 +13049,18 @@
         "lesson.key": "Variables",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
+        "activity_section.key": "f518dd78-c3d9-48ab-9702-6c5f51e3bc9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3L5 - SB1_2023",
+        "script_level.level_keys": [
+          "CSD U3L5 - SB1_2023"
+        ],
+        "lesson.key": "Variables",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
         "activity_section.key": "7856e9bd-4a6a-4eeb-98d4-d63b7a8069ee"
       }
     },
@@ -13274,6 +13126,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U3L6 - Predict_2023",
+        "script_level.level_keys": [
+          "CSD U3L6 - Predict_2023"
+        ],
+        "lesson.key": "Random Numbers",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "f3a6f35f-4187-4ce9-9f98-149c3be2bd1a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U3 Random random ellipse_2023",
         "script_level.level_keys": [
           "CSD U3 Random random ellipse_2023"
@@ -13281,7 +13145,7 @@
         "lesson.key": "Random Numbers",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "f3a6f35f-4187-4ce9-9f98-149c3be2bd1a"
+        "activity_section.key": "5e4227d1-bd74-4769-87a1-49d5c696326a"
       }
     },
     {
@@ -13358,26 +13222,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites Exploration_2023",
+        "level.key": "CSD U3L7 - Predict_test2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_2023"
+          "CSD U3L7 - Predict_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "be31ea27-1175-4516-a827-c80adae7c150"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD: Sprites in Game Lab_2023",
-        "script_level.level_keys": [
-          "CSD: Sprites in Game Lab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0"
       }
     },
     {
@@ -13406,6 +13258,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro sprites_test2023",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U3 Sprites anitab 1_2023",
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 1_2023"
@@ -13413,26 +13289,14 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "3161543e-f64c-473c-bfe6-5a8d377da346"
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD: Animation Tab_2023",
+        "level.key": "CSD U3 Sprites sequencing_test2023",
         "script_level.level_keys": [
-          "CSD: Animation Tab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites sequencing_2023",
-        "script_level.level_keys": [
-          "CSD U3 Sprites sequencing_2023"
+          "CSD U3 Sprites sequencing_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -13449,7 +13313,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+        "activity_section.key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34"
       }
     },
     {
@@ -16204,7 +16068,7 @@
       }
     },
     {
-      "name": "Introduction to Sprites",
+      "name": "Introduction to Sprites [Needs Updating]",
       "url": "https://youtu.be/aUHzpGt9nso",
       "key": "introduction_to_sprites",
       "properties": {
@@ -16667,6 +16531,18 @@
       }
     },
     {
+      "name": "Sprite Properties [Needs Updating]",
+      "url": "https://www.code.org",
+      "key": "sprite_properties_needs_updating_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_properties_needs_updating_"
+      }
+    },
+    {
       "name": "Sprite Scene Planning",
       "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
       "key": "sprite_scene_planning",
@@ -16718,7 +16594,7 @@
       }
     },
     {
-      "name": "The Animation Tab",
+      "name": "The Animation Tab [Needs Updating]",
       "url": "https://youtu.be/DQPruYTJ0Fk",
       "key": "the_animation_tab",
       "properties": {
@@ -16807,7 +16683,7 @@
     },
     {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1F8sBblNjZqI-Q7XndJNuvBIWh2KeJF4rqieUMUpGArU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/edit",
       "key": "variables_1",
       "properties": {
         "audience": "Teacher",
@@ -17327,6 +17203,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties_needs_updating_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprites",
         "resource.key": "animation_tab"
       }
@@ -17678,18 +17560,12 @@
     {
       "seeding_key": {
         "lesson.key": "Sprite Properties",
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
         "vocabulary.key": "dot_notation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprites",
+        "lesson.key": "Sprite Properties",
         "vocabulary.key": "property"
       }
     },
@@ -17978,6 +17854,13 @@
         "lesson.key": "Sprites",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "drawSprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "setAnimation"
       }
     },
     {

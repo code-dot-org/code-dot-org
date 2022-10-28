@@ -181,7 +181,13 @@
         "courseF_variables_madlib_-2022-2": "첫 번째 프롬프트를 만들고 그 다음 스프라이트와 행동을 추가하세요.",
         "courseF_variables_madlib_finish_-2022-2": "프로젝트를 마지막 손질하고 그 다음 공유하세요!",
         "ramp_artist_loops42022": "시퀸스를 반복해 별 패턴을 만드세요",
-        "ramp_artist_loops82022": "패턴을 찾고 루프를 사용해 이 코드를 더 짧게 만드세요."
+        "ramp_artist_loops82022": "패턴을 찾고 루프를 사용해 이 코드를 더 짧게 만드세요.",
+        "helloworld_food_costumes_soccer-2022": "스프라이트의 외형 변경에 관해 배웁니다.",
+        "helloworld_food_costumes_space-2022": "스프라이트의 외형 변경에 관해 배웁니다.",
+        "helloworld_food_sizes_soccer-2022": "스프라이트 크기 변경에 관해 배웁니다.",
+        "helloworld_food_sizes_space-2022": "스프라이트 크기 변경에 관해 배웁니다.",
+        "helloworld_food_sounds_soccer-2022": "사운드 재생방법 배우기",
+        "helloworld_food_sounds_space-2022": "사운드 재생방법 배우기"
       }
     }
   }

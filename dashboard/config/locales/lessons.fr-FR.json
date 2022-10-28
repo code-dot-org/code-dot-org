@@ -28,6 +28,12 @@
           "overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées.",
           "student_overview": "Durant cette leçon, les apprenants auront une introduction aux sciences informatiques et créeront un jeu en utilisant des blocs code.  Cette leçon est destinée aux apprenants de 10 à 16 ans mais peut être adaptée pour des apprenants plus jeunes ou plus vieux en instaurant les différentions suggérées."
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
+          "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
+        },
         "hourofcode/Maze": {
           "name": "Labyrinthe",
           "overview": "Ce cours permet aux apprenants de tous âges de s'initier au codage et à la science informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Ce cours a été conçu pour les enfants de 4 à 10 ans. Cependant, il peut être adapté à des apprenants plus âgés, et cela, grâce à des suggestions de personnalisation fournies.",
@@ -80,6 +86,12 @@
           "name": "Cryptage simple",
           "overview": "Durant ce cours, les apprenants découvriront la nécessité du cryptage et les techniques simples pour déchiffrer (ou décrypter) des messages confidentiels. Ils essayeront de décrypter un message codé à l'aide du chiffrement classique de César et d'un chiffrement par substitution aléatoire. Ils devront également comprendre qu'à l'ère des puissants outils informatiques, les techniques de cryptage devront être plus sophistiquées. Le point le plus important de ce cours est de comprendre comment et pourquoi le cryptage joue un rôle dans notre vie de tous les jours lorsque nous utilisons Internet, et qu'il n'est pas facile de mettre au point un cryptage robuste. Les élèves vont aussi comprendre les facteurs qui doivent être pris en compte pour assurer un cryptage solide face aux puissants outils informatiques qui peuvent être utilisés pour le déchiffrer. La nécessité du caractère confidentiel des données envoyées sur l'Internet est importante pour toute personne qui l'utilise.",
           "student_overview": "Durant ce cours, les apprenants découvriront la nécessité du cryptage et les techniques simples pour déchiffrer (ou décrypter) des messages confidentiels. Ils essayeront de décrypter un message codé à l'aide du chiffrement classique de César et d'un chiffrement par substitution aléatoire. Ils devront également comprendre qu'à l'ère des puissants outils informatiques, les techniques de cryptage devront être plus sophistiquées. Le point le plus important de ce cours est de comprendre comment et pourquoi le cryptage joue un rôle dans notre vie de tous les jours lorsque nous utilisons Internet, et qu'il n'est pas facile de mettre au point un cryptage robuste. Les élèves vont aussi comprendre les facteurs qui doivent être pris en compte pour assurer un cryptage solide face aux puissants outils informatiques qui peuvent être utilisés pour le déchiffrer. La nécessité du caractère confidentiel des données envoyées sur l'Internet est importante pour toute personne qui l'utilise."
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
+          "preparation": "-   Parcourez les énigmes pour trouver les problèmes potentiels de votre classe.\n-   Utilisez les ressources de [Connexions CS](https://code.org/educate/csc) pour élaborer un plan d'apprentissage en informatique après le tutoriel initial.",
+          "purpose": "Ce cours a pour but d'amener les élèves à créer des projets de programmation simples dans Sprite Lab. Après avoir acquis cette compétence, les élèves pourront ensuite créer des projets sur n'importe quel sujet, comme un autre sujet scolaire ou quelque chose qui les concerne personnellement. Consultez [Connexions CS](https://code.org/educate/csc) pour trouver des idées sur la manière d'intégrer l'informatique à d'autres disciplines scolaires.",
+          "student_overview": "Durant ce cours, vous allez apprendre les bases de l'informatique en programmant dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Vous apprendrez à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements."
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "Durant ce cours, les élèves vont apprendre les bases de l'informatique à partir de la programmation dans Sprite Lab. Sprite Lab est un outil que vous pouvez utiliser pour créer des projets imaginatifs et amusants. Les élèves apprendront à créer et à animer des sprites et à les rendre interactifs à l'aide d'événements. \n\nCe cours est disponible en plusieurs versions. Chaque version enseigne les mêmes concepts, mais présente des images différentes afin de répondre aux besoins de différents élèves. Pour plus d'informations, veuillez visiter la [page d'accueil Hello World](https://code.org/helloworld).",
@@ -474,10 +486,10 @@
         },
         "coursef-2022/Text and Prompts": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "coursef-2022/Mini-Project: User Input Programs": {
           "overview": "Les étudiants appliqueront leurs nouvelles compétences avec des variables à l'un des trois **mini-projets** ouverts. Ils exploreront des exemples de programmes, créeront un plan pour leur propre projet et le programmeront entièrement depuis le début.",
@@ -572,7 +584,7 @@
         },
         "coursee-2022/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
@@ -592,7 +604,7 @@
           "name": "Les Fonctions avec l'Agricultrice",
           "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "coursee-2022/Designing for Accessibility": {
           "name": "Concevoir pour l'Accessibilité",
@@ -836,23 +848,24 @@
         },
         "express-2022/Functions with Harvester": {
           "name": "Les Fonctions avec l'Agricultrice",
-          "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves conjugueront les instructions conditionnelles avec les fonctions pour récolter des cultures dans L'Agricultrice.",
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "express-2022/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
         "express-2022/Text and Prompts": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "express-2022/Using Variables with the Artist": {
+          "name": "Utiliser des Variables avec l'Artistes",
           "overview": "Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
@@ -1648,7 +1661,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2018/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2018/Conditionals with Cards": {
           "name": "Instructions conditionnelles avec des cartes"
@@ -1798,7 +1811,7 @@
           "name": "Les Boucles Tant Que avec la Fermière"
         },
         "express-2018/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2018/Conditionals with Cards": {
           "name": "Instructions conditionnelles avec des cartes"
@@ -2476,7 +2489,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2019/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2019/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"
@@ -2647,7 +2660,7 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "express-2019/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2019/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"
@@ -3484,7 +3497,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "express-2017/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2017/Conditionals in Minecraft": {
           "name": "Les Conditions dans l'Abeille"
@@ -4315,10 +4328,10 @@
         },
         "coursef-2021/lesson-10": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "coursef-2021/lesson-11": {
           "overview": "Les étudiants appliqueront leurs nouvelles compétences avec des variables à l'un des trois **mini-projets** ouverts. Ils exploreront des exemples de programmes, créeront un plan pour leur propre projet et le programmeront entièrement depuis le début.",
@@ -4334,6 +4347,7 @@
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "coursef-2021/Variables that Change in Artist": {
+          "name": "Utiliser des Variables avec l'Artistes",
           "overview": "Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
@@ -4952,23 +4966,24 @@
         },
         "express-2021/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
         "express-2021/Functions with Harvester": {
           "name": "Les Fonctions avec l'Agricultrice",
-          "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves conjugueront les instructions conditionnelles avec les fonctions pour récolter des cultures dans L'Agricultrice.",
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "express-2021/lesson-4": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "express-2021/Variables with Artist": {
+          "name": "Utiliser des Variables avec l'Artistes",
           "overview": "Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
@@ -5128,7 +5143,7 @@
         },
         "coursee-2021/Functions in Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
@@ -5149,7 +5164,7 @@
           "name": "Les Fonctions avec l'Agricultrice",
           "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "coursee-2021/lesson-1": {
           "name": "Concevoir pour l'Accessibilité",
@@ -5584,7 +5599,7 @@
           "name": "Les Conditions dans Minecraft : Voyage Aquatique"
         },
         "express-2020/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "express-2020/Harvesting with Conditionals": {
           "name": "Récolter avec les Conditions"
@@ -5701,7 +5716,7 @@
           "name": "Les Boucles Tant Que dans la Fermière"
         },
         "coursed-2020/Until Loops in Maze": {
-          "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe"
+          "name": "Les Boucles Jusqu'à dans le Labyrinthe"
         },
         "coursed-2020/Conditionals & Loops in Harvester": {
           "name": "Récolter avec les Conditions"

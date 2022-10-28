@@ -1398,3 +1398,5 @@ sk:
       cannot_view_locked_answers: V zamknutom režime sa nedajú zobrazovať odpovede
       forbidden: Používateľ nemôže aktualizovať stav zamknutia študenta
   reset_predict_progress_button: Vymazať odpoveď
+  pixelation:
+    binary: Binárny

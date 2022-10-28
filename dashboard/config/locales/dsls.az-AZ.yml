@@ -965,7 +965,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
         - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
         questions:
-        - text: Hansı bloklar kvadrat çəkir?
+        - text: Hansı bloklar kvadrat çəkir ?
         content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         title: Çoxlu seçim
       K-1 Artist 2 Match 2:
@@ -980,7 +980,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Cütləşdirmə
-        content2: Şəkilləri növündən asılı olaraq uyğunlaşdırın.
+        content2: Formaları növündən asılı olaraq uyğunlaşdırın.
       K-1 Bee 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/bee_images/nectar.png"
@@ -988,7 +988,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
-        - text: Burda nə qədər nektar var?
+        - text: Bu nə qədər nektardır?
         content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         title: Çoxlu seçim
       K-1 Bee 1 Multi 2:
@@ -998,7 +998,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
-        - text: Burda nə qədər nektar var?
+        - text: Bu nə qədər nektardır?
         content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         title: Çoxlu seçim
       K-1 Bee Loops Match 1:
@@ -1069,7 +1069,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/E.png"
         - text: "/script_assets/k_1_images/move_blocks/W.png"
         questions:
-        - text: Son blok hansı seçim olmalıdır?
+        - text: " Hansı seçim son blok olmalıdır?"
         content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         title: Çoxlu seçim
       K-1 Maze Loops Multi 1:
@@ -1087,7 +1087,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
         questions:
-        - text: Düzgün təkrarlanma bloku seçin.
+        - text: Düzgün təkrar et bloku seç.
         content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         title: Çoxlu seçim
       K-1 Maze Match 1:
@@ -1102,7 +1102,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
         - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Cütləşdirmə
-        content2: Pazl və Blokları uyğunlaşdırın
+        content2: Pazl və Blokları uyğunlaşdırın.
       K-1 Maze Multiple Choice 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
@@ -1110,7 +1110,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/WS.png"
         - text: "/script_assets/k_1_images/move_blocks/WN.png"
         questions:
-        - text: Bu səviyyəni hansı cavab həll edir?
+        - text: Bu mərhələni hansı cavab həll edir?
         title: Labirint
         content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
@@ -1138,7 +1138,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         questions:
-        - {}
+        - text: Bu alqoritm üçün hansı addım blanka doldurulmalıdır?
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         title: Çoxlu seçim
       K-1 Word Search Multi 1:
@@ -1147,14 +1147,14 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/EESS.png"
         - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
         questions:
-        - text: Hansı bloklar "MOVE" sözünü yazır?
+        - text: Hansı bloklar "Hərəkət et" sözünü yazır?
         content1: "/script_assets/k_1_images/search_images/move.png, 450"
         title: Çoxlu seçim
       K-1 Word Search Multi 3:
         answers:
         - text: Təyin et
-        - text: Dördbucaq
-        - text: Cənub
+        - text: kvadrat
+        - text: CƏNUB
         questions:
         - text: Hansı söz tələffüz olunur?
         content1: "/script_assets/k_1_images/search_images/square.png, 700"
@@ -1220,7 +1220,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -1232,7 +1232,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -1244,7 +1244,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -1256,7 +1256,7 @@ az-AZ:
         - text: Bilmirəm.
           feedback: Rəssam dördbucaqlı çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1363,7 +1363,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1375,7 +1376,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1387,7 +1389,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1399,7 +1402,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: Bilmirəm.
@@ -1696,35 +1700,43 @@ az-AZ:
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -1875,7 +1887,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1883,7 +1898,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1891,7 +1909,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1899,7 +1920,10 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
         - text: Bilmirəm.
         questions:
@@ -1944,7 +1968,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -1952,7 +1977,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -1960,7 +1986,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -1968,7 +1995,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - text: Bilmirəm.
         questions:
@@ -2666,7 +2694,8 @@ az-AZ:
         - text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
           feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
             yalnız 2 boşluq irəli getməsinə imkan verir.
-        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+        - text: BB-8 birinci dövrdən sonra səhv istiqamət alacaq.
+          feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
             yalnız 2 boşluq irəli getməsinə imkan verir.
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
@@ -3820,10 +3849,14 @@ az-AZ:
       courseD_multi_farmer_while4_predict1_2021:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - correct: true
           feedback: Düzgün!
-        - {}
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
@@ -3838,7 +3871,8 @@ az-AZ:
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - correct: true
+        - text: Quş donuza kimi edəcək.
+          correct: true
           feedback: Düzgün!
         - {}
         - {}
@@ -4778,10 +4812,26 @@ az-AZ:
         content1: Burada təsvir edin
       csf_be_a_super_digital_citizen:
         content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
       csf_be_a_super_digital_citizen_2021:
         content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
       csf_password_power-up:
         content1: Burada təsvir edin
+        markdown: |-
+          # Şifrənizi Gücləndirin
+
+          ## Xatırlamaq üçün Şifrə Məsləhətləri
+
+          * Unudulmaz **ifadə** ilə başlayın.
+          * Şifrənizi yalnız **valideynləriniz** bilməlidir.
+          * Heç vaxt parolunuzda heç bir **şəxsi** şəxsiyyət məlumatından istifadə etməyin.
+          * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
+          * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
       csf_password_power-up_2021:
         content1: Burada təsvir edin
         markdown: |-
@@ -4798,8 +4848,26 @@ az-AZ:
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
       CSD U4L06 SFLP:
         markdown: Bu vaxta qədər müəyyən dərəcədə bizdən uzaq olan istifadəçilər üçün
           dizayn hazırlamağa çalışdıq. İstər beyin fırtınası, istər profil, istərsə
@@ -5270,12 +5338,12 @@ az-AZ:
           yazın.
       MoveItMoveIt-Unplugged:
         markdown: |-
-          # Hərəkət etdir, hərəkət etdir
+          # Hərəkət etdirin, hərəkət etdirin
 
           Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
-          # Hərəkət etdir, hərəkət etdir
+          # Hərəkət etdirin, hərəkət etdirin
 
           Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
       RelayProgramming-Unplugged:
@@ -5706,23 +5774,26 @@ az-AZ:
         display_name: Tətbiqinizi özəlləşdirin
       Choose 2 Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sətir 2
+        - text: 'Sətir 3
+
+'
+        - text: Sətir 4
+        - text: Sətir 5
         questions:
         - {}
       Eval Contracts F:
         answers:
         - ''
+        title: Mətn müqaviləsi
       Multi Horizontal Scroll Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 3 bit
+        - text: 4 bit
+        - text: 5 bit
+        - text: 6 bit
+        - text: 7 bit
+        - text: 12 bit
         questions:
         - {}
       Submittable Multi:
@@ -5734,7 +5805,7 @@ az-AZ:
         - {}
         - text: qırmızı
         questions:
-        - {}
+        - text: Sənin sevimli rəngin hansıdır?
       Test Contained Multi:
         answers:
         - text: '0'
@@ -5749,18 +5820,22 @@ az-AZ:
         content1: Burada təsvir edin
       contained_Choose_2_Test:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sətir 2
+        - text: 'Sətir 3
+
+'
+        - text: Sətir 4
+        - text: Sətir 5
         questions:
         - {}
       contained_Choose_2_Test_2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sətir 2
+        - text: 'Sətir 3
+
+'
+        - text: Sətir 4
+        - text: Sətir 5
         questions:
         - {}
       contained_Happy_Maps_Multi 1:
@@ -6226,7 +6301,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Sətir 5
         - {}
         - {}
         - {}
@@ -6239,7 +6314,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Sətir 5
         - {}
         - {}
         - {}
@@ -6252,7 +6327,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Sətir 5
         - {}
         - {}
         - {}
@@ -6841,10 +6916,11 @@ az-AZ:
         - {}
       CSP PD Example Question 2:
         answers:
-        - {}
-        - {}
+        - lesson: Tələbə Yazısı üçün Strategiyalar
+        - text: Onları həmyaşıdlarından öyrənməyə vadar edəcəm
+          lesson: Həmyaşıdların öyrənilməsinə dəstək
         questions:
-        - {}
+        - text: Tələbələrə necə öyrədəcəksiniz?
       PS U3 Q1-1:
         answers:
         - {}
@@ -6860,10 +6936,10 @@ az-AZ:
         - {}
       PS U3 Q1-3:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 3-cü sətir və 4-cü sətir
+        - text: Sətir 5, 6, 7, 8 və 9
+        - text: 8-ci sətir və 9-cu sətir
+        - text: 9-cu sətir
       PS U3 Q1-4:
         answers:
         - {}
@@ -6893,7 +6969,8 @@ az-AZ:
         - {}
       PS U3 Q1-7:
         answers:
-        - ''
+        - Cavabı bura daxil edin
+        content1: Bura sorğu daxil edin
       PS U3 Q1-8:
         answers:
         - {}
@@ -10648,7 +10725,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edir.
       csp-post-survey-2017-q28_2018:
         answers:
         - {}
@@ -12105,7 +12182,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb tapşırıqlarını yerinə yetirmək bacarığım var
       pre-assessment survey q10:
         answers:
         - {}
@@ -12215,7 +12292,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Mən məktəb işlərində məktəbimdəki digər uşaqların əksəriyyətindən
+            daha yaxşıyam.
       pre-assessment survey q20:
         answers:
         - {}
@@ -12255,7 +12333,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmini öyrənmək mənə digər məktəb fənlərimdə kömək edir.
       pre-assessment survey q24:
         answers:
         - text: Bəli
@@ -12334,7 +12412,8 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Çalışsam, məktəbdəki ən çətin problemləri necə həll edəcəyimi anlaya
+            bilərəm.
       pre-assessment survey q5:
         answers:
         - {}
@@ -12344,7 +12423,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəb işlərimi bəyənirəm.
       pre-assessment survey q6:
         answers:
         - {}
@@ -12364,7 +12443,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Məktəbdə vaxt keçirməkdən zövq alıram.
       pre-assessment survey q8:
         answers:
         - {}
@@ -12478,18 +12557,18 @@ az-AZ:
         answers:
         - text: Bəli
         - text: Xeyr
-        - {}
+        - text: Ola bilər
         questions:
-        - {}
+        - text: Sizcə kompüter elmləri təhsildirmi?
       test anonymous student survey fun:
         answers:
         - {}
         - {}
-        - {}
+        - text: Neytral
         - {}
         - {}
         questions:
-        - {}
+        - text: Kompüter elmləri əyləncəlidir.
       will-be-myself-in-cs:
         answers:
         - {}
@@ -12598,7 +12677,7 @@ az-AZ:
           yazın.
       MoveItMoveIt-Unplugged2022:
         markdown: |-
-          # Hərəkət etdir, hərəkət etdir
+          # Hərəkət etdirin, hərəkət etdirin
 
           Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
       RelayProgramming-Unplugged2022:
@@ -12632,7 +12711,7 @@ az-AZ:
         - text: Rəssam beşbucaqlı cəkəcək
           feedback: Səhvdir. Rəssam kvadrat çəkir.
         questions:
-        - {}
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_harvester_loops11_predict12022:
         answers:
         - text: '4'
@@ -12671,7 +12750,8 @@ az-AZ:
         answers:
         - text: Quş donuzdan bir addım geridə qalacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - text: Quş TNT-nin üzərinə uçacaq.
           feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
         - text: 'Quş divarın içində qaçacaq. '
@@ -12746,11 +12826,13 @@ az-AZ:
       courseD_multi_bee_nestedLoops2_predict12022:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
-        - {}
-        - feedback: Düzgün!
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - text: Arı bütün nektarı alacaq.
+          feedback: Düzgün!
         - {}
         questions:
-        - {}
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops9_predict22022:
         answers:
         - text: '4'
@@ -12779,9 +12861,13 @@ az-AZ:
       courseD_multi_farmer_while4_predict12022:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         - feedback: Düzgün!
-        - {}
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
         questions:
         - {}
       courseD_multi_maze_until10_predict22022:
@@ -12795,7 +12881,8 @@ az-AZ:
       courseD_multi_maze_until2_predict12022:
         answers:
         - text: Quş heç hərəkət etməyəcək.
-        - feedback: Düzgün!
+        - text: Quş donuza kimi edəcək.
+          feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -12971,6 +13058,9 @@ az-AZ:
         - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       csf_be_a_super_digital_citizen2022:
         content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
       csf_digital_trails2022:
         markdown: |-
           # Rəqəmsal Cığırı izləyin
@@ -12978,8 +13068,27 @@ az-AZ:
           ## What information is OK to have in your digital footprint?
       csf_password_power-up2022:
         content1: Burada təsvir edin
+        markdown: |-
+          # Şifrənizi Gücləndirin
+
+          ## Xatırlamaq üçün Şifrə Məsləhətləri
+
+          * Unudulmaz **ifadə** ilə başlayın.
+          * Şifrənizi yalnız **valideynləriniz** bilməlidir.
+          * Heç vaxt parolunuzda heç bir **şəxsi** şəxsiyyət məlumatından istifadə etməyin.
+          * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
+          * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
       csf_putting_a_stop_to_online_meanness2022:
         content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
       csf_safety_in_my_online_neighborhood2022:
         markdown: |-
           # Onlayn Qonşuluğum
@@ -13130,3 +13239,69 @@ az-AZ:
           ***
 
           #### Əgər kompüter elmində daha az bacarıqlı görünməkdən narahatsınızsa, sizi bu cür hiss edən nədir?
+      CSD End of Unit Survey - Unit 1 - IntroMD_2022:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələriniz sorğunu tamamlasa da, qısa müddətdə müəllim sorğusunu tamamladığınız üçün sizə təşəkkür edirik
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD Student End of Unit Survey - Unit 1_2022:
+        title: CS Discoveries Semestr Sonu Sorğusu!
+      CSD U4L15 SFLP:
+        markdown: |-
+          # Baxış
+
+          Komandalar bu dəfə öz interaktiv prototipi ilə istifadəçi testinin növbəti mərhələsini keçirirlər. Bu sınaq mərhələsindən toplanan rəylər proqram prototiplərinin son təkrarlanması barədə məlumat verəcəkdir.
+
+
+          ## Resurslar
+
+          * [Tətbiq İstifadəçi Testi](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - Fəaliyyət Bələdçisi
+      CSD U4L16 SFLP:
+        markdown: |-
+          # Baxış
+
+          Testin son raundunun rəyindən istifadə edərək, komandalar istifadəçilərinin ehtiyaclarına cavab verən dəyişikliklər həyata keçirirlər. Hər bir komanda əlavə etmək istədikləri xüsusiyyətləri və düzəltməli olduqları səhvləri izləyir və prioritetləşdirir.
+          ## Lüğət
+
+          * **Bug** - Düzgün işləməyən proqramın bir hissəsi.
+          * **Xüsusiyyət** - Proqram elementinin fərdi funksional elementi. Bu, yeni bir şey etmək, birdən çox platformada işləmək və ya daha səmərəli işləmək bacarığı ola bilər.
+
+
+          ## Resurslar
+
+          * [Tətbiq İstifadəçisinin Test Təhlili](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Fəaliyyət Bələdçisi
+      CSD U4L17 SFLP:
+        markdown: |-
+          Hər bir komanda inkişaf etdirdikləri proqramı "təqdim etmək" üçün təqdimat hazırlayır. Mübarizələri, zəfərləri və gələcək üçün planları bölüşmək vaxtıdır.
+
+
+          ## Resurslar
+
+          * [Tətbiq Təqdimat Şablonu](https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - Slayd Göyərtəsi
+          * [Tətbiq Təqdimatı](https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - Nümunə
+          * [Tətbiq Təqdimatı](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubrik
+      CSP pre-assessment survey:
+        title: Əvvəlcədən sorğu
+      PrivatePersonalInformation-Unplugged2022:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
+      courseF_collector_samples_2022_pilot_-2022-2:
+        description: Siz kolleksiyası oyun yaratmaq olacaq. Başlamadan əvvəl aşağıda
+          göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
+          başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: İndi istədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə
+          edə bilərsiniz! Sprites bir çox interaktiv proqram yaradın!
+        display_name: Sprites çox-pulsuz oyun
+      pre-assessment survey heading1:
+        markdown: Birincisi, ümumi olaraq məktəb işinizlə bağlı sizə bəzi suallarımız
+          var.
