@@ -1,14 +1,6 @@
-@use "sass:math";
+@use "./progress-table-constants.module.scss" as constants;
 @import "color.scss";
 @import "style-constants";
-
-$scrollbar-height: 15px;
-$row-height: 42px;
-$expanded-row-height: 30px;
-$max-rows: 14;
-$max-height: $max-rows * $row-height + $scrollbar-height;
-$student-list-width: 170px;
-$content-view-width: $content-width - $student-list-width;
 
 .progress-table {
   table {
@@ -22,7 +14,7 @@ $content-view-width: $content-width - $student-list-width;
     color: $charcoal;
     border-width: 0 1px 2px 0;
     border-color: $border-gray;
-    height: $row-height;
+    height: constants.$row-height;
   }
   th,
   td {
@@ -39,12 +31,12 @@ $content-view-width: $content-width - $student-list-width;
   }
   .primary-row {
     td {
-      height: $row-height;
+      height: constants.$row-height;
     }
   }
   .expanded-row {
     td {
-      height: $expanded-row-height;
+      height: constants.$expanded-row-height;
       border-width: 0 1px 1px 0;
       border-style: solid;
       border-color: $border-gray;
@@ -65,7 +57,7 @@ $content-view-width: $content-width - $student-list-width;
     table,
     th,
     td {
-      width: $student-list-width;
+      width: constants.$student-list-width;
     }
     tbody {
       tr,
@@ -75,7 +67,7 @@ $content-view-width: $content-width - $student-list-width;
       }
     }
     .content {
-      height: $row-height;
+      height: constants.$row-height;
       box-sizing: border-box;
       padding: 10px;
       font-size: 14px;
@@ -105,7 +97,7 @@ $content-view-width: $content-width - $student-list-width;
   .content-view {
     thead,
     tbody {
-      max-width: $content-view-width;
+      max-width: constants.$content-view-width;
       td {
         text-align: center;
       }
@@ -136,14 +128,4 @@ $content-view-width: $content-width - $student-list-width;
       }
     }
   }
-}
-
-/* stylelint-disable */
-:export {
-  MAX_BODY_HEIGHT: math.div($max-height, 1px);
-  STUDENT_LIST_WIDTH: math.div($student-list-width, 1px);
-  CONTENT_VIEW_WIDTH: math.div($content-view-width, 1px);
-  ROW_HEIGHT: math.div($row-height, 1px);
-  MAX_ROWS: $max-rows;
-  MIN_COLUMN_WIDTH: 40;
 }

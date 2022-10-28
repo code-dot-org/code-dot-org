@@ -39,7 +39,7 @@ sk:
       user:
         name: 'Zobrazované meno'
         name_example: 'Zobrazované meno (napr. SuperKóder alebo Jana S.)'
-        email: 'Email'
+        email: 'E-mailová adresa'
         parent_email: 'Email rodiča/zákonného zástupcu'
         personal_email: "Súkromná emailová addresa <a href=\"%{url}\">(kliknite sem, ak nemáte emailovú adresu)</a>"
         personal_email_markdown: "Súkromná emailová addresa [(kliknite sem, ak nemáte emailovú adresu)](%{url})"
@@ -105,9 +105,9 @@ sk:
   prize: 'trofej'
   more_info: 'Viac info'
   auth:
-    continue_with: 'Pokračovať s %{provider}'
+    continue_with: 'Pokračovať s účtom %{provider}'
     sign_in_with: 'Prihlásiť sa cez %{provider}'
-    signed_in: 'Prihlásený!'
+    signed_in: 'Prihlásený používateľ'
     signed_out_markdown: '### Úspešne si sa odhlásil z [Code.org]%{url}.'
     sign_out_of_markdown: '#### Prihlásenie prebehlo cez %{provider}. Kliknutím sem (%{url}) sa odhlásiš z %{provider}.'
     already_signedup: 'Už ste zaregistrovaní?'
@@ -154,7 +154,7 @@ sk:
     gender: 'Pohlavie (nepovinné)'
     birthday: 'Narodeniny (voliteľné)'
     age: 'Vek'
-    user_type: 'Ste študent/žiak alebo učiteľ?'
+    user_type: 'Ste žiak alebo učiteľ?'
     submit: 'Zaregistrovať sa'
     go_to_account: 'Prejsť na môj účet'
     teacher: 'Ste učiteľ?'
@@ -221,8 +221,8 @@ sk:
     school_organization_zip: 'PSČ školy/organizácie'
   signin_form:
     title: 'Máte už vytvorený účet? Prihláste sa'
-    login: 'Email'
-    login_username: 'Email alebo užívateľské meno'
+    login: 'E-mailová adresa'
+    login_username: 'E-mail alebo používateľské meno'
     password: 'Heslo'
     remember: 'Zapamätať prihlásenie'
     submit: 'Prihlásiť sa'
@@ -281,7 +281,7 @@ sk:
     type:
       picture: 'Obrázkové heslo'
       word: 'Tajné slovo'
-      email: 'Email'
+      email: 'E-mailová adresa'
       google_classroom: 'Google Classroom'
       clever: 'Clever'
   follower:
@@ -464,7 +464,7 @@ sk:
     email_confirm_needed_required: 'Vaša emailová adresa %{email} nebola potvrdená:'
     email_confirm_wrong_email: '(Zlá emailová adresa?)'
     email_resend_confirm: 'Poslať potvrdzovacie inštrukcie znova'
-    new_email_hint: '(uistite sa, že môžete prijímať emaily na túto adresu)'
+    new_email_hint: '(uistite sa, že môžete prijímať e-maily na túto adresu)'
     new_password_hint: "(nechaj prázdne, ak ho nechceš zmeniť)"
     current_password_hint: '(tvoje aktuálne heslo potrebujeme na potvrdenie oprávnenia vykonať tieto zmeny)'
     delete: 'Vymazať účet'
@@ -542,6 +542,7 @@ sk:
     choose_next_course: "Vyskúšaj kurz Code Štúdia výberom niektorého z kurzov nižšie"
     print_certificate: "Vytlačiť certifikát"
   certificate_sponsor_message: "%{sponsor_name} prispel(a) štedrým darom na podporu tvojho učenia."
+  certificate_hour_of_code: "Hodina Kódu"
   move_students:
     new_section_dne: "Ospravedlňujeme sa, ale trieda %{new_section_code} neexistuje. Zadajte kód inej triedy."
     section_code_cant_be_current_section: "Aktuálna trieda nemôže byť rovnaká ako nová trieda."
@@ -987,7 +988,7 @@ sk:
       first_name: 'Krstné meno'
       first_name_preferred: 'Preferované krstné meno'
       last_name: 'Priezvisko'
-      email: 'Email'
+      email: 'E-mailová adresa'
       email_alternate: 'Ďaľšia emailová adresa'
       gender: 'Rodová identita'
       school: 'Škola'
@@ -1120,3 +1121,12 @@ sk:
   unit_prefix: "Tematický celok %{n}"
   code_org_logo_alt: "Code.org Domov"
   teacher_feedback: "Spätná väzba od učiteľa"
+  lesson_lock:
+    error:
+      no_updates: "Nie sú potrebné žiadne aktualizácie"
+      missing_params: "Musíte uviesť ID používateľa, úrovne a jednotky"
+      cannot_view_locked_answers: "V zamknutom režime sa nedajú zobrazovať odpovede"
+      forbidden: "Používateľ nemôže aktualizovať stav zamknutia študenta"
+  reset_predict_progress_button: "Vymazať odpoveď"
+  pixelation:
+    binary: "Binárny"

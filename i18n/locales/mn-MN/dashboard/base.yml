@@ -515,6 +515,7 @@ mn:
     no_primary_course: "Кодын студийн хичээлийг оролдоорой"
     choose_next_course: "Доорхын нэгийг сонгож Кодын студийн хичээлийг оролдоорой"
     print_certificate: "Гэрчилгээг хэвлэх"
+  certificate_hour_of_code: "Кодын цаг"
   move_students:
     new_section_dne: "Уучлаарай, гэхдээ хэсэг %{new_section_code} оршихгүй байна. Өөр хэсгийн кодыг оруулаарай."
     section_code_cant_be_current_section: "Одоогийн хэсэг шинэ хэсэгтэй адил байх боломжгүй."
@@ -1052,3 +1053,5 @@ mn:
   page_not_found_button: "Нүүр хуудас руу буцах"
   copy: 'Хуулах'
   teacher_feedback: "Багшийн хариу үйлдэл"
+  pixelation:
+    binary: "Хоёрт"

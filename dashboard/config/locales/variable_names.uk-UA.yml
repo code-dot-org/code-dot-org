@@ -21,6 +21,7 @@ uk:
       length: довжина
       name: ім’я
       nectar: нектар
+      object: об'єкта
       planet: планета
       points: балів
       random: випадковий
@@ -31,6 +32,7 @@ uk:
       size: розмір
       speed: швидкість
       startX: startX
+      type: тип
       variable: змінна
       width: ширина
       wizard: чарівник

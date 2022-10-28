@@ -13,8 +13,8 @@ require 'dynamic_config/dcdo'
 #
 # - Teacher-facing Lesson Plans (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/teacher-lesson-plans/Welcome+to+CSP.pdf)
 # - Student-facing Lesson Plans (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/student-lesson-plans/Welcome+to+CSP.pdf)
-# - Script Overviews (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22).pdf)
-# - Script Resource Rollups (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22)+-+Resources.pdf)
+# - Unit Overviews (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22).pdf)
+# - Unit Resource Rollups (for example, https://lesson-plans.code.org/csp1-2021/20210826162223/Digital+Information+('21-'22)+-+Resources.pdf)
 #
 # We may also want in the future to generate more kinds, including:
 #
@@ -76,48 +76,10 @@ module Services
     include Resources
     include ScriptOverview
     include Utils
+    include Curriculum::SharedCourseConstants
 
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
-
-    # Whether or not we should generate PDFs. Specifically, this
-    # encapsulates three concerns:
-    #
-    # 1. Is this code running on the staging server? We only want to do this
-    #    as part of the staging build; the generated PDFs will be made
-    #    available to other environments, so they don't need to run this
-    #    process themselves.
-    # 2. Is the script one for which we care about PDFs? Right now, we only
-    #    want to generate PDFs for "migrated" scripts.
-    # 3. Is the unit able to be seen by a signed out user?
-    #    We rely on being able to see the unit overview page as a signed out user
-    #    in order to generate the overview pdf. When a course is in-development or pilot
-    #    signed out users can not see the unit overview page
-    # 4. Is the script actually being updated? The overall seed process is
-    #    indiscriminate, and will happily re-seed content even without
-    #    changes. This is fine for database upserts, but we want to be more
-    #    cautious with the more-expensive PDFs generation process.
-    #
-    # In addition, we support manually disabling this feature with DCDO
-    #
-    # IMPORTANT: If you make updates to this method make sure to update the rake task for
-    # generate_missing_pdfs as well.
-    def self.generate_pdfs?(script_data)
-      return true if DEBUG
-
-      return false unless rack_env?(:staging)
-      return false unless script_data['properties'].fetch('is_migrated', false)
-      return false if [Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development].include?(script_data['published_state'])
-      return false if script_data['properties'].fetch('use_legacy_lesson_plans', false)
-      return false if DCDO.get('disable_curriculum_pdf_generation', false)
-
-      script = Script.find_by(name: script_data['name'])
-      return false unless script.present?
-
-      new_timestamp = script_data['serialized_at']
-      existing_timestamp = script.seeded_from
-      !timestamps_equal(new_timestamp, existing_timestamp)
-    end
 
     # Do no generate the overview pdf is there are no lesson plans
     def self.should_generate_overview_pdf?(unit)
@@ -128,26 +90,6 @@ module Services
     # resources are attached to lesson plans
     def self.should_generate_resource_pdf?(unit)
       !unit.unit_without_lesson_plans? && unit.lessons.map(&:resources).flatten.any?
-    end
-
-    # Actually generate PDFs for the given script, and upload the results to S3.
-    def self.generate_pdfs(script)
-      ChatClient.log "Generating PDFs for #{script.name}"
-      pdf_dir = Dir.mktmpdir("pdf_generation")
-
-      # Individual Lesson Plan and Student Lesson Plan PDFs
-      script.lessons.select(&:has_lesson_plan).each do |lesson|
-        generate_lesson_pdf(lesson, pdf_dir)
-        generate_lesson_pdf(lesson, pdf_dir, true) if script.include_student_lesson_plans
-      end
-
-      # Script Resources and Overview PDFs
-      generate_script_resources_pdf(script, pdf_dir) if should_generate_resource_pdf?(script)
-      generate_script_overview_pdf(script, pdf_dir) if should_generate_overview_pdf?(script)
-
-      # Persist PDFs to S3
-      upload_generated_pdfs_to_s3(pdf_dir)
-      FileUtils.remove_entry_secure(pdf_dir) unless DEBUG
     end
 
     # Uploads all PDFs in the given directory to S3. Will preserve existing
@@ -161,6 +103,53 @@ module Services
         data = File.read(filepath)
         filename = filepath.delete_prefix(directory).delete_prefix('/')
         AWS::S3.upload_to_bucket(S3_BUCKET, filename, data, no_random: true)
+      end
+    end
+
+    def self.get_pdf_enabled_scripts
+      Unit.all.select do |script|
+        next false if [PUBLISHED_STATE.pilot, PUBLISHED_STATE.in_development].include?(script.get_published_state)
+        next false if script.use_legacy_lesson_plans
+        script.is_migrated && script.seeded_from.present?
+      end
+    end
+
+    def self.get_pdfless_lessons(script)
+      script.lessons.select(&:has_lesson_plan).select do |lesson|
+        !lesson_plan_pdf_exists_for?(lesson) ||
+          (script.include_student_lesson_plans && !lesson_plan_pdf_exists_for?(lesson, true))
+      end
+    end
+
+    def self.generate_missing_pdfs
+      get_pdf_enabled_scripts.each do |script|
+        Dir.mktmpdir("pdf_generation") do |dir|
+          any_pdf_generated = false
+
+          get_pdfless_lessons(script).each do |lesson|
+            puts "Generating missing Lesson PDFs for #{lesson.key} (from #{script.name})"
+            generate_lesson_pdf(lesson, dir)
+            generate_lesson_pdf(lesson, dir, true)
+            any_pdf_generated = true
+          end
+
+          if !script_overview_pdf_exists_for?(script) && should_generate_overview_pdf?(script)
+            puts "Generating missing Unit Overview PDF for #{script.name}"
+            generate_script_overview_pdf(script, dir)
+            any_pdf_generated = true
+          end
+
+          if !script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
+            puts "Generating missing Unit Resources PDF for #{script.name}"
+            generate_script_resources_pdf(script, dir)
+            any_pdf_generated = true
+          end
+
+          if any_pdf_generated
+            puts "Generated all missing PDFs for #{script.name}; uploading results to S3"
+            upload_generated_pdfs_to_s3(dir)
+          end
+        end
       end
     end
   end

@@ -1,6 +1,5 @@
 require_relative './test_helper'
 require_relative '../router'
-require 'helpers/auth_helpers'
 require 'cdo/rack/request'
 require 'shared_resources'
 require 'parallel'
@@ -31,6 +30,7 @@ class PegasusTest < Minitest::Test
   STATUS_EXCEPTIONS = {
     302 => %w[
       code.org/amazon-future-engineer
+      code.org/congrats
       code.org/educate
       code.org/review-hociyskvuwa
       code.org/teach
@@ -38,9 +38,6 @@ class PegasusTest < Minitest::Test
     ],
     301 => %w[
       csedweek.org/resource_kit
-    ],
-    401 => %w[
-      code.org/create-company-profile
     ]
   }
 
@@ -77,7 +74,7 @@ class PegasusTest < Minitest::Test
   def test_render_pegasus_documents
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
-      page[:uri].end_with?('/splat') ||
+      page[:uri].end_with?('/splat', '/splat.fetch') ||
       # Private routes not yet handled.
       page[:uri].start_with?('/private')
     end

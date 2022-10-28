@@ -6,30 +6,43 @@ ru:
   front_title: Присоединяетесь к самому масштабному образовательному событию 7-13
     декабря 2015
   coming_soon: Скоро
-  campaign_date_start_short: 6 декабря
-  campaign_date_start_long: 6 декабря
+  campaign_date_start_short: 5 декабря
+  campaign_date_start_long: 5 декабря
   campaign_date_short: 5-11 декабря
-  campaign_date_full: 6-12 декабря
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 декабря 2021 года
+  campaign_date_full: 5-11 декабря
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 декабря 2022 года
+  nonus_campaign_date_start_short: Oct. 1
+  nonus_campaign_date_start_long: October 1
+  nonus_campaign_date_short: 1 октября - 18 декабря
+  nonus_campaign_date_full: 1 октября - 18 декабря
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 6 декабря
-  europe_campaign_date_start_long: 6 декабря
-  europe_campaign_date_short: 5-11 декабря
-  europe_campaign_date_full: 6-12 декабря
-  europe_campaign_date_year: '2021'
-  europe_campaign_date_full_year: 6-12 декабря 2021 года
-  africa_campaign_date_start_short: 6 декабря
-  africa_campaign_date_start_long: 6 декабря
-  africa_campaign_date_short: 5-11 декабря
-  africa_campaign_date_full: 6-12 декабря
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 декабря 2021 года
+  latam_campaign_date_short: 1 октября - 18 декабря
+  latam_campaign_date_full: 1 октября - 18 декабря
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
+  europe_campaign_date_start_short: Oct. 1
+  europe_campaign_date_start_long: October 1
+  europe_campaign_date_short: 1 октября - 18 декабря
+  europe_campaign_date_full: 1 октября - 18 декабря
+  europe_campaign_date_year: '2022'
+  europe_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
+  africa_campaign_date_start_short: Oct. 1
+  africa_campaign_date_start_long: October 1
+  africa_campaign_date_short: 1 октября - 18 декабря
+  africa_campaign_date_full: 1 октября - 18 декабря
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 октября 2022 г. - 18 декабря 2022 г.
+  hoc2022_header: Учись, играй, твори!
+  social_hoc2022_explore_play_create: Информатика помогает учиться, играть и творить!
+  codeorg_homepage_hoc2022_body: Исследуйте всселенную, достигайте целей, двигайтесь
+    вперед — информатика открывает для вас множество новых возможностей.
+  hoc2022_codeorg_title: Проведите Час кода с НАСА и другими участниками
+  hoc2022_codeorg_description: Час кода проводится десятый раз! Учитесь, играйте и
+    творите вместе с нами!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -506,6 +519,25 @@ ru:
   front_join_us_n_students_served: "# уже попробовали"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Узнать больше
+  cta_see_whats_new: Посмотреть, что нового
+  cta_try_more_activities: Попробуйте другие занятия
+  cta_try_an_activity: Попробовать занятие
+  hoc_homepage_join_the_movement_heading: Присоединяйтесь к движению
+  hoc_homepage_join_the_movement_description: Час кода доступен круглый год, но только
+    раз в год, в декабре, ваш класс может вместе с миллионами учащихся со всего мира
+    отпраздновать неделю обучения информатики и принять участие в Часе кода. Регистрация
+    для участия в этом событии начинается каждый код в октябре.
+  hoc_homepage_what_is_hoc_subhead: Обучение продолжительностью 1 час проводится на
+    45 языках. Никакого опыта не требуется. Уроки  Часа кода доступны бесплатно весь
+    год.
+  hoc_homepage_what_is_hoc_description: Час кода - это занятие длительностью один
+    час, в ходе которого учащиеся в увлекательной форме могут познакомиться с основами
+    информатики. Эта кампания для учащихся начального уровня проводится при поддержке
+    400 партнеров и 200000 учителей со всего мира.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Прочитайте наше руководство](%{howto_guide_url}),
+    чтобы запланировать это мероприятие для вашего класса."
+  hoc_homepage_highlights_heading: Основные моменты Часа кода
+  hoc_homepage_organized_by: Час кода организован [Code.org](%{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -552,7 +584,6 @@ ru:
   signup_multiple_event_warning: Если вы организуете сразу несколько мероприятий,
     просьба присвоить свое уникальное название и email каждому из них. Мы принимаем
     к регистрации только одно название для мероприятия с присвоенным ему email.
-  signup_registration_deadline: Регистрация на Час кода закроется 12 декабря
   signup_name_placeholder: Ваше имя
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Например, Старшая школа им.Линкольна
@@ -1011,7 +1042,8 @@ ru:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Авторские права 2015 Code.org. Все права защищены.
-  footer_trademark_message: Hour of Code™ является торговой маркой Code.org.
+  footer_trademark_message: Hour of Code® и Hora del Código® являются торговой маркой
+    Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Партнеры
   footer_menu_contact: Связаться с нами

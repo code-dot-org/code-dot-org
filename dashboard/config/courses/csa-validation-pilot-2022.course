@@ -11,7 +11,7 @@
     "csa8-validation-pilot-2022",
     "csa9-validation-pilot-2022"
   ],
-  "published_state": "in_development",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -19,6 +19,7 @@
     "family_name": "csa-validation-pilot",
     "has_numbered_units": true,
     "has_verified_resources": true,
+    "pilot_experiment": "csa-validation-pilot-2022",
     "version_year": "2022"
   },
   "resources": [

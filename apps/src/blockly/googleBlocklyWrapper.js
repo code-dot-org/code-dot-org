@@ -14,6 +14,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRenderer from './addons/cdoRenderer';
+import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './addons/cdoTheme';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
@@ -27,6 +28,8 @@ import {registerAllContextMenuItems} from './addons/contextMenu';
 import {registerAllShortcutItems} from './addons/shortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
+import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
+import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -95,19 +98,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleInput');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleTextInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldButton');
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('FieldDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
-  blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
-  blocklyWrapper.wrapReadOnlyProperty('FieldVariable');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -118,6 +117,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
+  blocklyWrapper.wrapReadOnlyProperty('zelos');
   blocklyWrapper.wrapReadOnlyProperty('getRelativeXY');
   blocklyWrapper.wrapReadOnlyProperty('googlecode');
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
@@ -156,19 +156,27 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
-  blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
-  blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
-
-  // Fix built-in block
+  // Force Google Blockly to use our custom versions of fields
   blocklyWrapper.blockly_.fieldRegistry.unregister('field_variable');
   blocklyWrapper.blockly_.fieldRegistry.register(
     'field_variable',
     CdoFieldVariable
   );
+  blocklyWrapper.blockly_.fieldRegistry.unregister('field_dropdown');
+  blocklyWrapper.blockly_.fieldRegistry.register(
+    'field_dropdown',
+    CdoFieldDropdown
+  );
 
+  // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
+
+  // Additions for when our wrapper is accessed in /apps code
+  blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldDropdown = CdoFieldDropdown;
+  blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.FieldVariable = CdoFieldVariable;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -181,6 +189,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.RENDERER,
     'cdo_renderer',
     CdoRenderer,
+    true /* opt_allowOverrides */
+  );
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.RENDERER,
+    'cdo_renderer_zelos',
+    CdoRendererZelos,
     true /* opt_allowOverrides */
   );
   registerAllContextMenuItems();
@@ -233,13 +247,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
-  };
-
-  blocklyWrapper.getFieldForInputType = function(type) {
-    if (type === 'Number') {
-      return blocklyWrapper.FieldNumber;
-    }
-    return blocklyWrapper.FieldTextInput;
   };
 
   const googleBlocklyMixin = blocklyWrapper.BlockSvg.prototype.mixin;
@@ -411,7 +418,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
         theme: CdoTheme,
-        plugins: {}
+        plugins: {},
+        RTL: options.rtl
       });
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
@@ -424,16 +432,25 @@ function initializeBlocklyWrapper(blocklyInstance) {
         },
         null
       );
+
+      // Core Blockly requires a container div to be LTR, regardless of page direction.
+      container.setAttribute('dir', 'LTR');
+      container.style.display = 'inline-block';
       container.appendChild(svg);
       svg.appendChild(workspace.createDom());
       Blockly.Xml.domToBlockSpace(workspace, xml);
 
-      // Loop through all the child blocks and remove transform
+      // Loop through all the parent blocks and remove vertical translation value
+      // This makes the output more condensed and readable, while preserving
+      // horizontal translation values for RTL rendering.
       const blocksInWorkspace = workspace.getAllBlocks();
       blocksInWorkspace
         .filter(block => block.getParent() === null)
         .forEach(block => {
-          block.svgGroup_.removeAttribute('transform');
+          const svgTransformList = block.svgGroup_.transform.baseVal;
+          const svgTransform = svgTransformList.getItem(0);
+          const svgTranslationX = svgTransform.matrix.e;
+          svgTransform.setTranslate(svgTranslationX, 0);
         });
 
       // Shrink SVG to size of the block
@@ -442,7 +459,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.setAttribute('width', bbox.width + bbox.x);
       // Add a transform to center read-only blocks on their line
       const notchHeight = workspace.getRenderer().getConstants().NOTCH_HEIGHT;
-
       svg.setAttribute(
         'style',
         `transform: translate(0px, ${notchHeight + BLOCK_PADDING}px)`
@@ -454,7 +470,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
-      theme: CdoTheme,
+      theme: opt_options.theme || CdoTheme,
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -468,7 +484,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
         blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
-      renderer: 'cdo_renderer'
+      renderer: opt_options.renderer || 'cdo_renderer',
+      comments: false
     };
 
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
@@ -499,6 +516,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
+
+    if (options.useModalFunctionEditor) {
+      // Customize auto-populated Functions toolbox category
+      workspace.registerToolboxCategoryCallback(
+        'PROCEDURE',
+        functionsFlyoutCategory
+      );
+    }
+    // Customize function defintion blocks
+    Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
+      FUNCTION_BLOCK.init;
+    return workspace;
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.

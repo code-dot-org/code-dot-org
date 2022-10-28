@@ -2,17 +2,19 @@
   "script": {
     "name": "csc-timecapsule-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2022-08-23 13:54:26 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-10-10 20:18:47 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -36,7 +38,7 @@
   "lessons": [
     {
       "key": "Poem Art",
-      "name": "Time Capsule Introduction",
+      "name": "Time Capsule Introduction (beta)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -55,7 +57,7 @@
     },
     {
       "key": "The Time We Live In",
-      "name": "My Time Capsule Story",
+      "name": "My Time Capsule Story (beta)",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -73,7 +75,7 @@
     },
     {
       "key": "Coding My Time Capsule",
-      "name": "Coding My Time Capsule",
+      "name": "Coding My Time Capsule (beta)",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -91,7 +93,7 @@
     },
     {
       "key": "Gallery Walk",
-      "name": "Sharing My Time Capsule",
+      "name": "Sharing My Time Capsule (beta)",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -318,6 +320,7 @@
       "key": "d3be155d-591d-4926-b920-74f7375b49f1",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
         "duration": "40",
         "name": "Level-by-Level Support",
         "progression_name": "Video"
@@ -328,10 +331,26 @@
       }
     },
     {
-      "key": "45db9776-4519-4911-95d3-06f748865b72",
+      "key": "b192995b-dd62-40bf-ac13-97aba90f2992",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Prediction\" and \"Level 2 - Prediction\" slides\n\n**Levels 1-2**: Option to read the time capsule story out loud to all students before they begin predicting. Ensure that students understand the terms background, sound, sprites. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "####General Support\nBy the end of this activity, students will have an animated time capsule story. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the time capsule story. Staying on a level and tinkering with their code is highly encouraged.\n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b192995b-dd62-40bf-ac13-97aba90f2992",
+        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
+      }
+    },
+    {
+      "key": "45db9776-4519-4911-95d3-06f748865b72",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Prediction\" slides\n\n**Level 2**: Consider reading the time capsule story out loud to all students before they begin writing their prediction. Ensure that students understand the terms background, sound, sprites. \n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -341,7 +360,7 @@
     },
     {
       "key": "b97e9038-909e-4aea-913e-57351442e7d0",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Level 3**: Students will be provided with a time capsule story example during this level that they will continue to use throughout the entire level progression. Show students how to drag & drop the blocks. Explain that the blocks are like puzzle pieces that must fit together to run. Explain the difference between the different background block options. Show students how to use the drop down menu to select a background. \n\n**Level 4**: Here students may use just one text effect block though they have the option to try out all three. Explain to students the different text effect block options. Again, support time management. Consider setting a 2 minute timer when all students must move on to the next level. \n\n**Level 5**: Students may need headphones to listen to the various sound options. If there are no headphones available, remind students to use a low volume that is respectful of the other students. \n\n**Level 6**: Students will explore **sprites** in this level. Remind them of the meaning of this vocabulary word. Students will require continued time management support. Consider that this is about halfway through the level progression.\n\n**Level 7**: Decide whether to watch this video all together as a class or allow students to watch it independently at their computers. The skill building shown in this Poem Art video is applicable to how students will be coding their digital time capsule story. This is a good stopping point for students to share with a partner what they have done so far.",
         "progression_name": "Skill Building"
@@ -353,7 +372,7 @@
     },
     {
       "key": "13b46d45-1afb-48fc-8b63-c764995f086f",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Video"
       },
@@ -364,7 +383,7 @@
     },
     {
       "key": "df904cc4-577a-43ea-8ed6-bd891adf522e",
-      "position": 6,
+      "position": 7,
       "properties": {
         "tips": [
           {
@@ -380,7 +399,7 @@
     },
     {
       "key": "2f2bf68d-87c2-43a5-976e-e764b3929282",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Level 8**: Show students the line numbers on the left-hand side of the short stories. Explain that students need to type a line number into the event block.\n\n**Level 9**: Ensure that the sprite students created earlier is the same sprite in the sprite behavior block. Students may choose to have several sprites with various behaviors.\n\n**Level 10**: Decide whether to watch this video as a class all together or allow students to watch independently at their computers. The skill building in this Poem Art video is very similar to what students will need to code for their digital time capsule. This is a good stopping point for students to share with a partner what they have done so far.\n\n**Level 11**: Free Play. Encourage students to bring a new time capsule story to life using all the new skills they’ve acquired. Have students share their work with a partner once they are finished.",
         "progression_name": "Skill Building"
@@ -392,7 +411,7 @@
     },
     {
       "key": "55b72557-6319-47a2-b13f-d8d8c7d7a743",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Video"
       },
@@ -403,28 +422,18 @@
     },
     {
       "key": "36072bc7-b4e6-4ced-a5c7-2ec77b7c6c01",
-      "position": 9,
-      "properties": {
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "36072bc7-b4e6-4ced-a5c7-2ec77b7c6c01",
-        "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
-      }
-    },
-    {
-      "key": "b192995b-dd62-40bf-ac13-97aba90f2992",
       "position": 10,
       "properties": {
+        "progression_name": "Free Play",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "####General Support\nBy the end of this activity, students will have an animated time capsule story. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the time capsule story. Staying on a level and tinkering with their code is highly encouraged.\n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. "
+            "markdown": "Free Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be used as assessments if there is a rubric attached to the project."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b192995b-dd62-40bf-ac13-97aba90f2992",
+        "activity_section.key": "36072bc7-b4e6-4ced-a5c7-2ec77b7c6c01",
         "lesson_activity.key": "489eb98e-0a53-4052-8e29-ea24ac7d8379"
       }
     },
@@ -1642,6 +1651,18 @@
       "seeding_key": {
         "resource.key": "time_capsule"
       }
+    },
+    {
+      "name": "Time Capsule Rubric",
+      "url": "https://docs.google.com/document/d/1cD9ih5xOlW2YMNgpK07K0-zjaxuzYixY5H_WKfEhrhk/template/preview",
+      "key": "time_capsule_rubric",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "time_capsule_rubric"
+      }
     }
   ],
   "lessons_resources": [
@@ -1727,6 +1748,12 @@
       "seeding_key": {
         "lesson.key": "The Time We Live In",
         "resource.key": "time_capsule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Time We Live In",
+        "resource.key": "time_capsule_rubric"
       }
     }
   ],
@@ -1940,6 +1967,69 @@
   "lessons_standards": [
     {
       "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "11-12.RL.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "11-12.RL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Coding My Time Capsule",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Gallery Walk",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Gallery Walk",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "7.RI.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Gallery Walk",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Poem Art",
         "framework.shortcode": "ccela",
         "standard.shortcode": "4.RL.4"
@@ -1985,6 +2075,41 @@
         "lesson.key": "Poem Art",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Time We Live In",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "11-12.RL.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Time We Live In",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "3.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Time We Live In",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Time We Live In",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Time We Live In",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
       }
     }
   ],

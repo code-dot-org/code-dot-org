@@ -1184,3 +1184,4 @@ in:
       missing_params: crwdns3054912:0crwdne3054912:0
       cannot_view_locked_answers: crwdns3054914:0crwdne3054914:0
       forbidden: crwdns3054916:0crwdne3054916:0
+  reset_predict_progress_button: crwdns3154132:0crwdne3154132:0

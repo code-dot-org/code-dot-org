@@ -4,6 +4,26 @@ theme: responsive
 style_min: true
 ---
 
+<style>
+  #dafdirectdiv form img {
+    width: 175px;
+    display: unset !important;
+  }
+
+  #dafdirectdiv .whatThis a{
+    width: unset;
+  }
+
+  #dafdirectdiv .dafdirectDropdown {
+    width: 100%;
+  }
+
+  #dafdirectdiv div.dafdirectButtonContain a img{
+    width: 75px !important;
+    margin: 7px -10px;
+  }
+</style>
+
 # How to Help
 
 ## Make a generous donation
@@ -15,6 +35,13 @@ We're working to give every student the opportunity to learn computer science â€
 If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
 
 [<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
+
+
+## Donate through DAF Direct
+Donate through your donor advised fund with Fidelity Charitable, Schwab Charitable or BNY Mellon and make your grant recommendation to Code.org through the DAF Direct online form.
+
+<script type = "text/javascript">_dafdirect_settings="460858543_2011_4c0f3ec3-bb31-485f-9544-25528b79d56a"</script><script type = "text/javascript" src = "https://www.dafdirect.org/ddirect/dafdirect4.js"></script>
+
 
 ## Ask your school to teach computer science
 Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/courses?view=teacher) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
@@ -65,7 +92,7 @@ Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. 
 ### Volunteer weekly with these great organizations
 [col-33]
 
-<img src="/images/fit-300/teals/quincy.jpg" style="border-radius: 5px; margin-left: 0px;">
+<img src="/images/fit-300/teals/quincy.jpg" style="border-radius: 5px; margin-left: 0px;" alt="">
 
 [/col-33]
 

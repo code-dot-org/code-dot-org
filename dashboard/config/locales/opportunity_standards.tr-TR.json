@@ -2,6 +2,12 @@
   "tr-TR": {
     "data": {
       "opportunity_standards": {
+        "ngss/3-5-ETS1-1": {
+          "description": "Başarı için belirlenmiş kriterler ve malzemeler, zaman veya maliyet üzerindeki kısıtlamaları içeren bir ihtiyacı veya isteği yansıtan basit bir tasarım problemi tanımlayın."
+        },
+        "ccmath/4.MD.5.b": {
+          "description": "n adet bir dereceli açılar boyunca dönen bir açının, n derecesinde bir açı ölçüsüne sahip olduğu söylenir."
+        },
         "ngss/K-2-ETS1-1": {
           "description": "Yeni veya iyileştirilmiş bir nesne veya araç geliştirme yoluyla çözülebilecek basit bir sorunu tanımlamak için insanlara değiştirmek isteyecekleri durumla ilgili soru sorun, gözlem yapın ve bilgi toplayın."
         },
@@ -10,12 +16,6 @@
         },
         "ccmath/2.MD.10": {
           "description": "Dört kategoriye kadar bir veri kümesini göstermek için bir resim grafiği ve bir çubuk grafik (tek birim ölçekli) çizin. Çubuk grafikte sunulan bilgileri kullanarak basit bir araya getirme, parçalara ayırma ve sorunları karşılaştırma adımlarını yapın."
-        },
-        "ngss/3-5-ETS1-1": {
-          "description": "Başarı için belirlenmiş kriterler ve malzemeler, zaman veya maliyet üzerindeki kısıtlamaları içeren bir ihtiyacı veya isteği yansıtan basit bir tasarım problemi tanımlayın."
-        },
-        "ccmath/4.MD.5.b": {
-          "description": "n adet bir dereceli açılar boyunca dönen bir açının, n derecesinde bir açı ölçüsüne sahip olduğu söylenir."
         }
       }
     }

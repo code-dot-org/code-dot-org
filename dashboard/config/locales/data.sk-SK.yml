@@ -710,7 +710,7 @@ sk:
         CSF_loops_AB: Cykly
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmienkové výroky
-        csd_gamelab_if_else: Podmienkové výroky (if/else)
+        csd_gamelab_if_else: Podmienkové príkazy (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
         CDEF_Video_SpritesInAction: Postavy v akcii
@@ -809,6 +809,7 @@ sk:
         csp_tutorial_libraries: Knižnice v App Labe
         PL-Video-21: Vitaj v profesionálnom vzdelávaní Code.org!
         csd_ml_intro_ai_lab_july2021: Úvod do UI Labu
+        csd_ml_numerical_ai_lab: Číselné údaje v AI Labe
         PL_CSD_TeacherTips_Advise: Tipy pre učiteľa – Rady pre nových učiteľov
         PL_CSD_TeacherTips_IntroToCSD: Tipy pre učiteľa – Úvod ku kurzu Objavujeme
           informatiku

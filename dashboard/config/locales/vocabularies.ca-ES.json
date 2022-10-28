@@ -35,11 +35,11 @@
         "debugging/gumball/unversioned": {
           "word": "Depuració"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Depuració"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Condicionals"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Depuració"
         },
         "loops/aquatic/unversioned": {
           "word": "Bucles"
@@ -67,6 +67,72 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Depuració"
+        },
+        "debugging/coursed/2022": {
+          "word": "Depuració"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Condicionals"
+        },
+        "variable/coursef/2022": {
+          "word": "Variable"
+        },
+        "internet/coursef/2022": {
+          "word": "Internet"
+        },
+        "define/coursef/2022": {
+          "word": "Defineix"
+        },
+        "function/coursee/2022": {
+          "word": "Funció"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Condicionals"
+        },
+        "copyright/coursee/2022": {
+          "word": "Copyright"
+        },
+        "define/coursee/2022": {
+          "word": "Defineix"
+        },
+        "debugging/courseb/2022": {
+          "word": "Depuració"
+        },
+        "drop/courseb/2022": {
+          "word": "Caiguda"
+        },
+        "debugging/express/2022": {
+          "word": "Depuració"
+        },
+        "conditionals/express/2022": {
+          "word": "Condicionals"
+        },
+        "function/express/2022": {
+          "word": "Funció"
+        },
+        "variable/express/2022": {
+          "word": "Variable"
+        },
+        "define/express/2022": {
+          "word": "Defineix"
+        },
+        "drop/pre-express/2022": {
+          "word": "Caiguda"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Depuració"
+        },
+        "debugging/coursea/2022": {
+          "word": "Depuració"
+        },
+        "drop/coursea/2022": {
+          "word": "Caiguda"
+        },
+        "debugging/coursec/2022": {
+          "word": "Depuració"
+        },
+        "binary/coursec/2022": {
+          "word": "Binari"
         },
         "debugging/csd/2022": {
           "word": "Depuració"

@@ -2,6 +2,8 @@
 fil:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: prompt user {QUESTION} sa variable {VAR} na may pagpipiliang {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -231,20 +233,12 @@ fil:
             MOVES.XArmsUp: Unatin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
-      Dancelab_everyMeasuresRange:
-        text: 'ulitin bawat {N} measure makalipas ang {START} '
       Dancelab_everySeconds:
         text: 'ulitin bawat {N} {UNIT} '
         options:
           UNIT:
             '"measures"': measure
             '"seconds"': mga segundo
-      Dancelab_everySecondsRange:
-        text: 'bawat {N} {UNIT} mula {START} hanggang {STOP} '
-        options:
-          UNIT:
-            measures: Mga Measure
-            seconds: Mga Segundo
       Dancelab_everyVerseChorus:
         text: 'bawat {UNIT} '
         options:
@@ -1336,6 +1330,32 @@ fil:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": kakaibang
               bass
             "'sound://category_digital/jump_7.mp3'": talon
+      gamelab_playSoundOptionsSoccer:
+        text: Ang ... {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": airhorn
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": palakpakan
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": umawit
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": mag-cheer
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": sumipa
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dalawang sipol
+            "'sound://category_sports/One_Whistle_SFX.mp3'": pito
+      gamelab_playSoundOptionsSpace:
+        text: Ang ... {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": black hole
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": kumpol ng bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": crab nebula
+            "'sound://category_space/Launch_SFX.mp3'": ilunsad
+            "'sound://category_space/Lift_Off.mp3'": iangat
+            "'sound://category_space/Pillars_SFX.mp3'": mga haligi
+            "'sound://category_space/Southern_ring_SFX.mp3'": singsing sa timog
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: i-play ang salita {SOUND}
       gamelab_playerBehaviors:
@@ -2142,6 +2162,11 @@ fil:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: kapag {VAR} ay nasagot
       RyanLab_moveForward:
@@ -2302,5 +2327,9 @@ fil:
           DIR:
             right: right ↻
             left: kaliwang ↺
+      storylab_setHeading:
+        text: i-set ang heading {HEADING}
+      storylab_setSubheading:
+        text: i-set ang subheading {SUBHEADING}
       validation_validatedBackground:
         text: Itakda ang background sa {IMG}

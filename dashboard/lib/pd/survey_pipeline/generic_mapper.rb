@@ -1,4 +1,4 @@
-require_relative 'reducer.rb'
+require_relative 'reducer'
 
 module Pd::SurveyPipeline
   class GenericMapper < SurveyPipelineWorker
@@ -74,7 +74,7 @@ module Pd::SurveyPipeline
           reducers.each do |reducer|
             # Only process values that are not nil
             reducer_result = reducer.reduce group_records.pluck(field).compact
-            next unless reducer_result.present?
+            next if reducer_result.blank?
 
             summaries << group_key.merge({reducer: reducer.name, reducer_result: reducer_result})
           rescue => e

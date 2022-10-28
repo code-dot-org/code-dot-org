@@ -3,10 +3,17 @@
     "data": {
       "programming_environments": {
         "weblab": {
-          "name": "Laboratorul de web"
+          "name": "Laboratorul de web",
+          "description": "Editor HTML/CSS bazat pe web.",
+          "categories": {
+            "css_properties": {
+              "name": "Proprietăți CSS"
+            }
+          }
         },
         "gamelab": {
           "name": "Game Lab",
+          "description": "Game Lab este un mediu de programare în care puteți realiza jocuri și animații interesante. Desenează-ți personajele, codează cu blocuri sau JavaScript pentru a-l face să funcționeze, apoi distribuie-ți jocul în câteva secunde.",
           "categories": {
             "game_lab": {
               "name": "Game Lab"
@@ -19,6 +26,9 @@
             },
             "drawing": {
               "name": "Desen"
+            },
+            "control": {
+              "name": "Control"
             },
             "math": {
               "name": "Matematică"
@@ -35,8 +45,20 @@
           "name": "Laboratului Aplicației",
           "description": "App Lab este un mediu de programare în care poți crea aplicații simple. Proiectează o aplicație, programează cu blocuri sau JavaScript pentru a o face să funcționeze, apoi partajează aplicația în doar câteva secunde.",
           "categories": {
+            "ui_controls": {
+              "name": "controale UI"
+            },
+            "canvas": {
+              "name": "Canvas"
+            },
             "data": {
               "name": "Date"
+            },
+            "turtle": {
+              "name": "Broască țestoasă"
+            },
+            "control": {
+              "name": "Control"
             },
             "math": {
               "name": "Matematică"
@@ -49,11 +71,15 @@
             },
             "advanced": {
               "name": "Avansat"
+            },
+            "maker": {
+              "name": "Producător"
             }
           }
         },
         "spritelab": {
           "name": "Laborator Sprite",
+          "description": "Sprite Lab este un mediu de programare Blockly în care puteți crea proiecte interactive.",
           "categories": {
             "sprites": {
               "name": "Spiriduși"
@@ -97,7 +123,39 @@
           }
         },
         "javalab": {
-          "name": "Laboratorul Java"
+          "name": "Laboratorul Java",
+          "categories": {
+            "java_lab_shortcuts": {
+              "name": "Comenzi rapide Java Lab"
+            },
+            "general": {
+              "name": "Bazele Java"
+            },
+            "org_code_theater": {
+              "name": "org.code.teatru"
+            },
+            "org_code_media": {
+              "name": "org.code.media"
+            },
+            "org_code_neighborhood": {
+              "name": "org.code.neighborhood"
+            },
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_util": {
+              "name": "java.util"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "control_structures": {
+              "name": "Structuri de control"
+            },
+            "data_structures": {
+              "name": "Structuri de date"
+            }
+          }
         }
       }
     }

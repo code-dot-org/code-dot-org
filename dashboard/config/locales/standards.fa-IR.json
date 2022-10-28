@@ -239,6 +239,96 @@
         "csta/1B-CS-02": {
           "description": ""
         },
+        "csta/1B-NI-05": {
+          "description": ""
+        },
+        "csta/1B-AP-11": {
+          "description": ""
+        },
+        "csta/1B-AP-09": {
+          "description": ""
+        },
+        "csta/1A-AP-10": {
+          "description": ""
+        },
+        "csta/1B-AP-14": {
+          "description": ""
+        },
+        "csta/1B-AP-17": {
+          "description": ""
+        },
+        "csta/1B-IC-21": {
+          "description": ""
+        },
+        "csta/1B-IC-18": {
+          "description": ""
+        },
+        "csta/1B-IC-19": {
+          "description": ""
+        },
+        "csta/1B-AP-08": {
+          "description": ""
+        },
+        "csta/1B-AP-13": {
+          "description": ""
+        },
+        "csta/1B-DA-06": {
+          "description": ""
+        },
+        "csta/1B-DA-07": {
+          "description": ""
+        },
+        "csta/1B-NI-04": {
+          "description": ""
+        },
+        "csta/1B-AP-16": {
+          "description": ""
+        },
+        "csta/1B-CS-03": {
+          "description": ""
+        },
+        "csta/1B-IC-20": {
+          "description": ""
+        },
+        "csta/1A-IC-16": {
+          "description": ""
+        },
+        "csta/1A-IC-18": {
+          "description": ""
+        },
+        "csta/1A-NI-04": {
+          "description": ""
+        },
+        "csta/1A-AP-08": {
+          "description": ""
+        },
+        "csta/1A-AP-12": {
+          "description": ""
+        },
+        "csta/1A-CS-01": {
+          "description": ""
+        },
+        "csta/1A-CS-02": {
+          "description": ""
+        },
+        "csta/1A-CS-03": {
+          "description": ""
+        },
+        "csta/1A-DA-05": {
+          "description": ""
+        },
+        "csta/1A-DA-06": {
+          "description": ""
+        },
+        "csta/1A-DA-07": {
+          "description": ""
+        },
+        "csta/1A-AP-13": {
+          "description": ""
+        },
+        "csta/1A-AP-15": {
+          "description": ""
+        },
         "csta/2-DA-07": {
           "description": ""
         },
@@ -272,15 +362,6 @@
         "csta/2-AP-18": {
           "description": ""
         },
-        "csta/1B-AP-08": {
-          "description": ""
-        },
-        "csta/1B-AP-11": {
-          "description": ""
-        },
-        "csta/1B-AP-16": {
-          "description": ""
-        },
         "csta/2-AP-17": {
           "description": ""
         },
@@ -305,22 +386,7 @@
         "csta/2-AP-14": {
           "description": ""
         },
-        "csta/1B-NI-05": {
-          "description": ""
-        },
-        "csta/1B-IC-21": {
-          "description": ""
-        },
         "csta/3A-AP-20": {
-          "description": ""
-        },
-        "csta/1B-IC-18": {
-          "description": ""
-        },
-        "csta/1B-AP-14": {
-          "description": ""
-        },
-        "csta/1B-IC-20": {
           "description": ""
         },
         "csta/2-CS-01": {
@@ -390,72 +456,6 @@
           "description": ""
         },
         "ai4k12-2021/3-A-iv.9-12": {
-          "description": ""
-        },
-        "csta/1A-IC-18": {
-          "description": ""
-        },
-        "csta/1A-CS-02": {
-          "description": ""
-        },
-        "csta/1A-CS-03": {
-          "description": ""
-        },
-        "csta/1A-AP-08": {
-          "description": ""
-        },
-        "csta/1A-AP-12": {
-          "description": ""
-        },
-        "csta/1A-AP-10": {
-          "description": ""
-        },
-        "csta/1A-NI-04": {
-          "description": ""
-        },
-        "csta/1A-CS-01": {
-          "description": ""
-        },
-        "csta/1A-IC-16": {
-          "description": ""
-        },
-        "csta/1B-AP-09": {
-          "description": ""
-        },
-        "csta/1B-DA-06": {
-          "description": ""
-        },
-        "csta/1B-DA-07": {
-          "description": ""
-        },
-        "csta/1B-NI-04": {
-          "description": ""
-        },
-        "csta/1B-AP-13": {
-          "description": ""
-        },
-        "csta/1B-AP-17": {
-          "description": ""
-        },
-        "csta/1B-CS-03": {
-          "description": ""
-        },
-        "csta/1B-IC-19": {
-          "description": ""
-        },
-        "csta/1A-DA-05": {
-          "description": ""
-        },
-        "csta/1A-DA-06": {
-          "description": ""
-        },
-        "csta/1A-DA-07": {
-          "description": ""
-        },
-        "csta/1A-AP-13": {
-          "description": ""
-        },
-        "csta/1A-AP-15": {
           "description": ""
         }
       }

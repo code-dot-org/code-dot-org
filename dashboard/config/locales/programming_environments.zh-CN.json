@@ -16,7 +16,7 @@
         },
         "gamelab": {
           "name": "游戏实验室",
-          "description": "应用实验室是一个应用程序的编程环境，可以让你创建角色，用代码块或 JavaScript来设计好玩的应用程序，然后马上分享您的应用程序。",
+          "description": "应用实验室是一个应用程序的编程环境，在这里，你可以创造游戏和动画。绘制你的角色，用代码块或 JavaScript来设计好玩的应用程序，然后分享你的应用程序。",
           "categories": {
             "game_lab": {
               "name": "游戏实验室"
@@ -29,6 +29,9 @@
             },
             "drawing": {
               "name": "绘画"
+            },
+            "control": {
+              "name": "控制"
             },
             "math": {
               "name": "数学"
@@ -45,8 +48,20 @@
           "name": "应用实验室",
           "description": "应用实验室是一个可以让你使用简单的应用程序的编程环境。设计应用程序，代码块或 JavaScript 使它工作，然后马上分享您的应用程序。",
           "categories": {
+            "ui_controls": {
+              "name": "UI控制"
+            },
+            "canvas": {
+              "name": "画布"
+            },
             "data": {
               "name": "数据"
+            },
+            "turtle": {
+              "name": "海龟"
+            },
+            "control": {
+              "name": "控制"
             },
             "math": {
               "name": "数学"
@@ -59,11 +74,15 @@
             },
             "advanced": {
               "name": "高级"
+            },
+            "maker": {
+              "name": "制造"
             }
           }
         },
         "spritelab": {
           "name": "精灵图实验室",
+          "description": "角色实验室是一个模块化编程环境，在这里你可以创造交互性程序。",
           "categories": {
             "sprites": {
               "name": "精灵图"
@@ -109,6 +128,9 @@
         "javalab": {
           "name": "Java实验室",
           "categories": {
+            "general": {
+              "name": "Java基础"
+            },
             "control_structures": {
               "name": "控制结构"
             },

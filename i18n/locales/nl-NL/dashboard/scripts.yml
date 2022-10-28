@@ -823,6 +823,7 @@ nl:
         aquatic:
           title: 'Minecraft: Aquatische reis'
           description_short: Minecraft is terug met een gloednieuwe activiteit voor het Codeuur!
+          name: aquatisch
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -2112,6 +2113,8 @@ nl:
               display_name: Content
             lessonGroup-5:
               display_name: Sandbox
+        ai-ethics-2021:
+          description_audience: Groep 8 en Middelbare school
         poem-art-2021:
           title: Poëzie
         counting-csc-2021:
@@ -2390,3 +2393,102 @@ nl:
               display_name: Welkom
         soccer:
           name: voetbal
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
+            lessonGroup-2:
+              display_name: Content
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-5:
+              display_name: Vragenlijst
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Lussen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vragenlijst
+            lessonGroup-3:
+              display_name: Content
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoofdstuk 1
+            lessonGroup-3:
+              display_name: Hoofdstuk 2
+        csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoofdstuk 1
+            lessonGroup-3:
+              display_name: Hoofdstuk 2
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoofdstuk 1
+            lessonGroup-3:
+              display_name: Hoofdstuk 2
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Vragenlijst
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabelen
+            csp_conditionals:
+              display_name: Voorwaardelijke instructies
+            csp_functions:
+              display_name: Functies
+            csp_project:
+              display_name: Project
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Lijsten
+            csp_loops:
+              display_name: Lussen
+            csp_project:
+              display_name: Project
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameters en Returnwaardes
+            csp_libraries:
+              display_name: Bibliotheken

@@ -2,6 +2,8 @@
 uk:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1279,6 +1281,10 @@ uk:
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
             "'sound://category_digital/jump_7.mp3'": стрибок
+      gamelab_playSoundOptionsSoccer:
+        text: грати звук {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: грати звук {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1885,6 +1891,11 @@ uk:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: коли відповідь {VAR}
       RyanLab_moveForward:

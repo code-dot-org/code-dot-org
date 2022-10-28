@@ -13,16 +13,14 @@ export const possibleHeaders = {
 
 const initialState = {
   currentHeader: undefined,
-  getLevelBuilderChanges: undefined,
-  includeExportInProjectHeader: false
+  getLevelBuilderChanges: undefined
 };
 
 export default (state = initialState, action) => {
   if (action.type === SHOW_PROJECT_HEADER) {
     return {
       ...state,
-      currentHeader: possibleHeaders.project,
-      includeExportInProjectHeader: action.showExport
+      currentHeader: possibleHeaders.project
     };
   } else if (action.type === SHOW_MINIMAL_PROJECT_HEADER) {
     return {
@@ -32,8 +30,7 @@ export default (state = initialState, action) => {
   } else if (action.type === SHOW_PROJECT_BACKED_HEADER) {
     return {
       ...state,
-      currentHeader: possibleHeaders.projectBacked,
-      includeExportInProjectHeader: action.showExport
+      currentHeader: possibleHeaders.projectBacked
     };
   } else if (
     action.type === ENABLE_LEVEL_BUILDER_SAVE_BUTTON &&
@@ -56,18 +53,16 @@ export default (state = initialState, action) => {
   return state;
 };
 
-export const showProjectHeader = showExport => ({
-  type: SHOW_PROJECT_HEADER,
-  showExport
+export const showProjectHeader = () => ({
+  type: SHOW_PROJECT_HEADER
 });
 
 export const showMinimalProjectHeader = () => ({
   type: SHOW_MINIMAL_PROJECT_HEADER
 });
 
-export const showProjectBackedHeader = showExport => ({
-  type: SHOW_PROJECT_BACKED_HEADER,
-  showExport
+export const showProjectBackedHeader = () => ({
+  type: SHOW_PROJECT_BACKED_HEADER
 });
 
 export const showLevelBuilderSaveButton = (

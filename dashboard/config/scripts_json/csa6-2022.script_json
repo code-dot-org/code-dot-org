@@ -12,7 +12,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "End of Unit Survey"
+          "buttonText": "End of Unit Survey",
+          "key": "3f32b98d-dd57-4681-a94f-9c80befc46b6"
         }
       ],
       "curriculum_umbrella": "CSA",
@@ -27,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-25 13:22:50 UTC",
+    "serialized_at": "2022-09-28 14:32:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5972,7 +5973,7 @@
     },
     {
       "name": "Removing Data from an ArrayList",
-      "url": "https://youtu.be/_xuo7Z40sRY",
+      "url": "https://youtu.be/XXARwZLpAVI",
       "key": "removing_data_from_an_arraylist",
       "properties": {
         "audience": "Student",

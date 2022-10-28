@@ -12,6 +12,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '@cdo/apps/logToCloud';
+import {getUnsupportedMiniAppMessage} from './utils';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -79,6 +80,8 @@ export default class JavabuilderConnection {
   connectJavabuilderWithOverrideSources(overrideSources) {
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
+    // we include the channel id so that assets are available
+    requestData.channelId = this.channelId;
 
     // When we have override sources, we do not need to check if the project has been edited,
     // as the override sources are what we want to run.
@@ -263,7 +266,7 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.TEST_RESULT:
-        testResult = onTestResult(data, this.onOutputMessage);
+        testResult = onTestResult(data, this.onOutputMessage, this.miniAppType);
         if (testResult.isValidation) {
           this.sawValidationTests = true;
           if (!testResult.success) {
@@ -288,7 +291,7 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.EXCEPTION:
         this.onNewlineMessage();
-        handleException(data, this.onOutputMessage);
+        handleException(data, this.onOutputMessage, this.miniAppType);
         this.onNewlineMessage();
         break;
       case WebSocketMessageType.DEBUG:
@@ -349,7 +352,11 @@ export default class JavabuilderConnection {
 
   onUnsupportedNeighborhoodMessage() {
     if (!this.seenUnsupportedNeighborhoodMessage) {
-      this.onOutputMessage(javalabMsg.unsupportedNeighborhoodMessage());
+      this.onOutputMessage(
+        javalabMsg.exceptionMessage({
+          message: getUnsupportedMiniAppMessage(CsaViewMode.NEIGHBORHOOD)
+        })
+      );
       this.onNewlineMessage();
       this.seenUnsupportedNeighborhoodMessage = true;
     }
@@ -357,7 +364,11 @@ export default class JavabuilderConnection {
 
   onUnsupportedTheaterMessage() {
     if (!this.seenUnsupportedTheaterMessage) {
-      this.onOutputMessage(javalabMsg.unsupportedTheaterMessage());
+      this.onOutputMessage(
+        javalabMsg.exceptionMessage({
+          message: getUnsupportedMiniAppMessage(CsaViewMode.THEATER)
+        })
+      );
       this.onNewlineMessage();
       this.seenUnsupportedTheaterMessage = true;
     }
@@ -377,6 +388,7 @@ export default class JavabuilderConnection {
       this.onOutputMessage(
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programStopped()}`
       );
+      this.onNewlineMessage();
     }
   }
 

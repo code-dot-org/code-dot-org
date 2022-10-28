@@ -173,7 +173,7 @@ it:
           di codice che si possono usare ripetutamente) per creare degli acchiappa-sole
           usando fili e perline.
       SongwritingParameters:
-        title: Scrittura musicale di un programma
+        title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
@@ -404,7 +404,7 @@ it:
           insieme un'attività in modo più efficiente rispetto a uno studente che ci
           prova da solo.
       courseE_unplugged_songwriting:
-        title: Scrittura musicale di un programma
+        title: Composizione di canzoni
         desc: Gli studenti usano il concetto del ritornello di una canzone per imparare
           come passare dei parametri ad una funzione. Questo permette di personalizzare
           una funzione senza doverla riscrivere interamente.
@@ -580,7 +580,7 @@ it:
           possa memorizzare informazioni ancora più complesse (ad esempio immagini
           e colori) in formato binario.
       courseE_unplugged_privateInformation_2019:
-        title: Cittadinanza digitale - Dati personali e altri dati
+        title: Dati personali e altri dati
         desc: Sviluppata da Common Sense Education, questa lezione tratta della differenza
           tra informazioni sicure da condividere online e informazioni che non lo
           sono.

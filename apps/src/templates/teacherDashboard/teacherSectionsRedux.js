@@ -1127,7 +1127,7 @@ function assignedUnit(state) {
   if (courseVersion) {
     if (sectionBeingEdited.unitId) {
       assignedUnit = courseVersion.units[sectionBeingEdited.unitId];
-    } else if (courseVersion.type === 'Script') {
+    } else if (courseVersion.type === 'Unit') {
       assignedUnit = Object.values(courseVersion.units)[0];
     }
   }
@@ -1179,6 +1179,7 @@ export function getSectionRows(state, sectionIds) {
     ..._.pick(sections[id], [
       'id',
       'name',
+      'courseVersionName',
       'loginType',
       'studentCount',
       'code',
@@ -1203,6 +1204,7 @@ export function getAssignmentName(state, sectionId) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  courseVersionName: serverSection.courseVersionName,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,

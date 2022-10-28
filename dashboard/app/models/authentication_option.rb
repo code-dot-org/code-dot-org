@@ -116,7 +116,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def normalize_email
-    return unless email.present?
+    return if email.blank?
     self.email = email.strip.downcase
   end
 
@@ -125,7 +125,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def hash_email
-    return unless email.present?
+    return if email.blank?
     self.hashed_email = AuthenticationOption.hash_email(email)
   end
 

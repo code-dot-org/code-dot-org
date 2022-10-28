@@ -319,9 +319,9 @@ namespace :test do
         [
           'Gemfile',
           'Gemfile.lock',
+          'cookbooks/cdo-varnish/libraries/http_cache.rb',
           'deployment.rb',
           'dashboard/**/*',
-          'dashboard_legacy/**/*',
           'lib/**/*',
           'shared/**/*'
         ],
@@ -331,15 +331,15 @@ namespace :test do
       end
     end
 
-    desc 'Runs dashboard_legacy tests if dashboard_legacy might have changed from staging.'
+    desc 'Runs dashboard_legacy tests if dashboard/legacy might have changed from staging.'
     task :dashboard_legacy do
       run_tests_if_changed(
-        'dashboard',
+        'dashboard legacy',
         [
           'Gemfile',
           'Gemfile.lock',
           'deployment.rb',
-          'dashboard_legacy/**/*',
+          'dashboard/legacy/**/*',
           'lib/**/*',
           'shared/**/*'
         ],
@@ -369,7 +369,17 @@ namespace :test do
 
     desc 'Runs shared tests if shared might have changed from staging.'
     task :shared do
-      run_tests_if_changed('shared', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'shared/**/*', 'lib/**/*']) do
+      run_tests_if_changed(
+        'shared',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'cookbooks/cdo-varnish/libraries/http_cache.rb',
+          'deployment.rb',
+          'shared/**/*',
+          'lib/**/*',
+        ]
+      ) do
         TestRunUtils.run_shared_tests
       end
     end

@@ -5,32 +5,45 @@ uk:
   language: Англійською
   front_title: Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}
   coming_soon: Незабаром
-  campaign_date_start_short: 4 грудня
+  campaign_date_start_short: 5 грудня
   campaign_date_start_long: 4 грудня
-  campaign_date_short: 4-10 грудня
-  campaign_date_full: 4-10 грудня
-  campaign_date_year: '2021'
-  campaign_date_full_year: 6-12 грудня 2021 року
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2021'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: 4 грудня
-  europe_campaign_date_start_long: 4 грудня
-  europe_campaign_date_short: 4-10 грудня
+  campaign_date_short: 5-11 грудня
+  campaign_date_full: 5-11 грудня
+  campaign_date_year: '2022'
+  campaign_date_full_year: 5-11 грудня 2022 року
+  nonus_campaign_date_start_short: Жов. 1
+  nonus_campaign_date_start_long: 1 Жовтня
+  nonus_campaign_date_short: 1 жовтня – 18 грудня
+  nonus_campaign_date_full: 1 жовтня - 18 грудня
+  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  latam_campaign_date_start_short: Жов. 1
+  latam_campaign_date_start_long: 1 Жовтня
+  latam_campaign_date_short: 1 жовтня – 18 грудня
+  latam_campaign_date_full: 1 жовтня - 18 грудня
+  latam_campaign_date_year: '2022'
+  latam_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  europe_campaign_date_start_short: Жов. 1
+  europe_campaign_date_start_long: 1 Жовтня
+  europe_campaign_date_short: 1 жовтня – 18 грудня
   europe_campaign_date_full: 10-25 жовтня
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 10-25 жовтня 2020
-  africa_campaign_date_start_short: 4 грудня
-  africa_campaign_date_start_long: 4 грудня
-  africa_campaign_date_short: 4-10 грудня
-  africa_campaign_date_full: 4-10 грудня
-  africa_campaign_date_year: '2021'
-  africa_campaign_date_full_year: 6-12 грудня 2021 року
-  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
-    the connections!'
+  africa_campaign_date_start_short: Жов. 1
+  africa_campaign_date_start_long: 1 Жовтня
+  africa_campaign_date_short: 1 жовтня – 18 грудня
+  africa_campaign_date_full: 1 жовтня - 18 грудня
+  africa_campaign_date_year: '2022'
+  africa_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  hoc2022_header: досліджуйте, грайте, створюйте
+  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
+  codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
+    there are so many ways to try computer science.
+  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
+  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
+    play, and create with us.
+  social_hoc2021_cse: 'Під час #HourOfCode, ми святкуємо #CSEverywhere. Відкрийте
+    зв''язки!'
   hoc2020_header: Вчіться сьогодні, будуйте світле майбутнє.
   hoc2020_header_with_line_break_markdown: "Вчіться сьогодні, \n\nбудуйте світле майбутнє."
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -170,25 +183,25 @@ uk:
   hoc_ai_alt_text: A floating, white, artificial intelligence character with an antennae,
     a scanner on the bottom, and an LED face
   hoc_banner_alt_text: Hour of Code banner
-  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_what_is_ai: Що таке AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ethics_of_ai: Етика AI
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
+  activity: Активність
+  name: Ім’я
+  description: Опис
+  audience: Аудиторія
   ai_resource_header: Teach and Learn about AI
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
     computer science curriculum, and teacher trainings. (Requires Minecraft: Education
     Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
+  ai_resource_ml_for_kids: Машинне Навчання для Дітей
   ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
     or images, and use it to make games in Scratch.
   ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
@@ -197,14 +210,14 @@ uk:
   ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
   ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
     Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
+  ai_resource_elements_ai: Елементи AI
   ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
     and the University of Helsinki.
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_audience_hs: Вища школа
   ai_activity_header: Activities Powered by AI and ML
   ai_activity_seeing_ai: Seeing AI
   ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
@@ -489,6 +502,24 @@ uk:
   front_join_us_n_students_served: "# учнів вже спробували"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Learn more
+  cta_see_whats_new: See what's new
+  cta_try_more_activities: Try more activities
+  cta_try_an_activity: Try an activity
+  hoc_homepage_join_the_movement_heading: Join the movement
+  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
+    but every year in December your class can join millions of students around the
+    world celebrating Computer Science Education Week with the Hour of Code. Registration
+    for the annual celebration starts each year in October.
+  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
+    needed. Hour of Code activities are available for free year-round.
+  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    This grassroots campaign is supported by over 400 partners and 200,000 educators
+    worldwide.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
+    to plan an event for your class."
+  hoc_homepage_highlights_heading: Hour of Code highlights
+  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: You don't need to register to participate! The
@@ -535,7 +566,6 @@ uk:
   signup_multiple_event_warning: Якщо Ви проводите кілька заходів, заповніть унікальну
     назву та електронну скриньку для кожного із них. Ми рахуємо події за комбінацією
     назви та електронної скриньки.
-  signup_registration_deadline: Реєстрація на Годину коду завершується 11 грудня.
   signup_name_placeholder: Ваше ім'я
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: Наприклад, СЗШ № 89

@@ -18,12 +18,14 @@ mn:
       level: түвшин
       name: нэр
       nectar: шүүс
+      object: объект
       points: цэгүүд
       repeat: давтах
       right: баруун
       score: оноо
       size: хэмжээ
       speed: хурд
+      type: төрөл
       variable: хувьсагч
       width: өргөн
       wizard: шидтэн

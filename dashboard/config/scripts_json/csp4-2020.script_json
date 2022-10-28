@@ -10,28 +10,32 @@
           "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
           "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
           "type": "bullhorn",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "6d968e2f-33a1-4446-8f1f-11c33897c303"
         },
         {
           "notice": "EIPM Lessons",
           "details": "In this unit, we begin following our new programming model called EIPM. Check out this helpful video series to learn all about it! ",
           "link": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "d89eb6b4-5e6f-49d5-9f98-e63839aac549"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
           "link": "https://studio.code.org/s/csp-post-survey-2020",
           "type": "feedback",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "e52c77f0-a00f-4c60-9b05-d6461fb437e8"
         },
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
           "details": "Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
           "link": "https://studio.code.org/s/csp-post-survey-2020",
           "type": "feedback",
-          "visibility": "Student-only"
+          "visibility": "Student-only",
+          "key": "45efe8d5-ee51-438a-9829-6cd15b4b806f"
         }
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}",
@@ -45,7 +49,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 21:16:33 UTC",
+    "serialized_at": "2022-09-28 14:31:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

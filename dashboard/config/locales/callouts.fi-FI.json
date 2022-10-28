@@ -615,6 +615,89 @@
         },
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Vaihda numeroa tässä"
+        },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_022022": {
+          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi.",
+          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi."
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Uusi blokki!",
+          "new_block_4": "Uusi blokki!"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
+        },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
+        },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]",
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle."
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "Louhi tämä rauta!"
+        },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "Käytä \"jos\"-lohkoa päättääksesi pitääkö mehiläisen kerätä nektaria vai tehdä hunajaa"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "Käytä \"jos-muuten\"-lohkoa siten, että mehiläinen kerää mettä kukasta ja tekee hunajaa jos se ei ole kukassa"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Uusi blokki!",
+          "hello_world_new_block": "Uusi blokki!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Uusi blokki!",
+          "hello_world_new_block": "Uusi blokki!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Uusi blokki!"
         }
       }
     }

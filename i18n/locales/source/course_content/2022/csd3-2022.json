@@ -696,7 +696,7 @@
       "CSD U3 properties alpha_2022": {
         "display_name": "New Block : Alpha",
         "bubble_choice_description": "Adjust the sprite's transparency with alpha.",
-        "long_instructions": "# Alpha\r\n\r\nAlpha is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- `0.5` would be 50% transparent (partially see-through)\r\n- `1` would be 100% transparent (invisible)\r\n- `0` would be 0% transparent (completely visible)\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the alpha property and see how it works and how it changes on different sprites!"
+        "long_instructions": "# Alpha\r\n\r\nAlpha is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- 0.5 would be 50% visible (partially transparent, like it's see-through)\r\n- 1 would be 100% visible (not transparent at all - it will look like a normal sprite)\r\n- 0 would be 0% visible (completely transparent - it will look invisible!)\r\n\r\n## Do This:\r\n\r\nUsing either the sprite already created for you or with any other sprites of your choosing, play around with the alpha property and see how it works and how it changes on different sprites!"
       }
     }
   },
@@ -2394,7 +2394,7 @@
       "Student End of Unit Survey - Intro+TeacherMD_csd3-2022": {
         "dsls": {
           "markdown": "### Please take a moment to respond to these **three quick questions**.\n\n_Code.org takes your privacy seriously._ Your responses here will be kept <strong>anonymous</strong>. Your teacher can see responses for the whole class, but without names attached.\n",
-          "teacher_markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a **5-question** teacher survey\n\n## [Click Here for Teacher Survey]()\n\n(Note: The survey link does not currently work - it will become available at the start of the school year)\n"
+          "teacher_markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a quick teacher survey\n\n## [Click Here for Teacher Survey](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)\n"
         }
       },
       "Student End of Unit Survey - Q1_2022": {

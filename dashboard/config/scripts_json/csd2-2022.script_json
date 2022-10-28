@@ -10,7 +10,8 @@
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
-          "visibility": "Teacher-only"
+          "visibility": "Teacher-only",
+          "key": "f1160bfc-3ae9-41a1-8ac9-1c9e7de4afeb"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -19,7 +20,8 @@
           "type": "feedback",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Teacher Survey"
+          "buttonText": "Teacher Survey",
+          "key": "340a3627-eb27-42c9-8649-24b9b77e8c48"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -37,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-24 16:06:29 UTC",
+    "serialized_at": "2022-10-06 17:33:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9491,7 +9493,6 @@
       "key": "digital_footprint",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9541,7 +9542,6 @@
       "key": "exploring_web_pages_2",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9578,7 +9578,6 @@
       "key": "headings",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9730,7 +9729,6 @@
       "key": "intro_to_html",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/11PRWsqomAx0svoQg7nZIFNHrw0X9LqPS7kACX6kTMZY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9843,7 +9841,6 @@
       "key": "mini-project_html_web_page",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

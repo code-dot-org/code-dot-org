@@ -239,11 +239,23 @@
         "csta/1B-CS-02": {
           "description": "Bilgisayar donanımı ve yazılımının görevleri gerçekleştirmek için bir sistem olarak birlikte nasıl çalıştığını modelleyin."
         },
+        "csta/1B-NI-05": {
+          "description": "Gerçek dünyadaki siber güvenlik sorunları ve kişisel bilgilerin nasıl korunabileceği hakkında tartışın."
+        },
         "csta/1B-AP-11": {
           "description": "Program geliştirme sürecini basitleştirmek için problemleri daha küçük, yönetilebilir alt problemler halinde ayrıştırın (ayırın)."
         },
-        "csta/1B-NI-05": {
-          "description": "Gerçek dünyadaki siber güvenlik sorunları ve kişisel bilgilerin nasıl korunabileceği hakkında tartışın."
+        "csta/1B-AP-09": {
+          "description": "Veri depolamak ve modifiye etmek için değişkenleri kullanan programlar oluşturun."
+        },
+        "csta/1A-AP-10": {
+          "description": "Fikirleri ifade etmek veya bir problemi yönlendirmek için sıraların ve basit döngülerin olduğu programlar geliştirin."
+        },
+        "csta/1B-AP-14": {
+          "description": "Programları oluştururken veya yeniden karıştırırken fikri mülkiyet haklarını gözetin ve uygun atıflarda bulunun."
+        },
+        "csta/1B-AP-17": {
+          "description": "Kod yorumları, sunumlar ve gösterimleri kullanarak program geliştirme sırasında yapılan seçimleri açıklayın."
         },
         "csta/1B-IC-21": {
           "description": "Herkese açık veya kamu telif hakkı olan ortamları kullanın ve başkalarının ürettiği materyalleri izin almadan kopyalamaktan ve kullanmaktan kaçının."
@@ -251,23 +263,314 @@
         "csta/1B-IC-18": {
           "description": "Dünyayı değiştiren bilgisayar teknolojileri hakkında tartışın ve bu teknolojilerin kültürler pratikleri nasıl etkilediğini ve bunlar tarafından nasıl etkilendiğini açıklayın."
         },
-        "csta/1B-AP-14": {
-          "description": "Programları oluştururken veya yeniden karıştırırken fikri mülkiyet haklarını gözetin ve uygun atıflarda bulunun."
+        "csta/1B-DA-07": {
+          "description": "Sebep-sonuç ilişkilerini vurgulamak veya önermek, sonuçları tahmin etmek veya bir fikri iletmek için verileri kullanın."
         },
         "csta/1A-CS-03": {
           "description": "Temel donanım ve yazılım sorunlarını doğru terimler ile açıklayın."
         },
-        "csta/1A-AP-10": {
+        "1A-AP-09": {
+          "description": "Bilgiyi temsil etmek için sayıları veya başka sembolleri kullanarak programların veriyi depolama ve kullanma biçimini modelleyin."
+        },
+        "1A-AP-10": {
           "description": "Fikirleri ifade etmek veya bir problemi yönlendirmek için sıraların ve basit döngülerin olduğu programlar geliştirin."
         },
-        "csta/1B-AP-09": {
+        "1A-AP-11": {
+          "description": "Bir problemi çözmek için gerekli adımları, tam bir talimat sırası halinde ayrıştırın (ayırın)."
+        },
+        "1A-AP-14": {
+          "description": "Sıraları ve basit döngüleri içeren bir algoritmadaki veya programdaki yanlışlıkların hatasını ayıklayın (tanımlayın ve düzeltin)."
+        },
+        "1A-CS-03": {
+          "description": "Temel donanım ve yazılım sorunlarını doğru terimler ile açıklayın."
+        },
+        "1A-IC-17": {
+          "description": "Başkaları ile çevrimiçi ortamda saygılı ve sorumlu bir şekilde çalışın."
+        },
+        "1B-AP-09": {
           "description": "Veri depolamak ve modifiye etmek için değişkenleri kullanan programlar oluşturun."
         },
-        "csta/1B-DA-07": {
+        "1B-AP-10": {
+          "description": "Sıra, olay, döngü ve koşulları içeren programlar oluşturun."
+        },
+        "1B-AP-11": {
+          "description": "Program geliştirme sürecini basitleştirmek için problemleri daha küçük, yönetilebilir alt problemler halinde ayrıştırın (ayırın)."
+        },
+        "1B-AP-12": {
+          "description": "Yeni bir şey geliştirmek veya daha gelişmiş özellikler eklemek için mevcut bir programın bölümlerini modifiye edin, yeniden karıştırın veya birinin kendi çalışmasına dahil edin. "
+        },
+        "1B-AP-14": {
+          "description": "Programları oluştururken veya yeniden karıştırırken fikri mülkiyet haklarını gözetin ve uygun atıflarda bulunun."
+        },
+        "1B-AP-15": {
+          "description": "Bir programın veya algoritmanın hedeflendiği gibi çalıştığından emin olmak için onu deneyin ve hatasını ayıklayın (hataları tespit edin ve düzeltin)."
+        },
+        "1B-AP-17": {
+          "description": "Kod yorumları, sunumlar ve gösterimleri kullanarak program geliştirme sırasında yapılan seçimleri açıklayın."
+        },
+        "1B-CS-01": {
+          "description": "Bir sistem oluşturmak için bilgi işlem cihazlarının dahili ve harici parçalarının nasıl çalıştığını açıklayın."
+        },
+        "1B-CS-02": {
+          "description": "Bilgisayar donanımı ve yazılımının görevleri gerçekleştirmek için bir sistem olarak birlikte nasıl çalıştığını modelleyin."
+        },
+        "1B-DA-07": {
           "description": "Sebep-sonuç ilişkilerini vurgulamak veya önermek, sonuçları tahmin etmek veya bir fikri iletmek için verileri kullanın."
         },
-        "csta/1B-AP-17": {
-          "description": "Kod yorumları, sunumlar ve gösterimleri kullanarak program geliştirme sırasında yapılan seçimleri açıklayın."
+        "1B-IC-18": {
+          "description": "Dünyayı değiştiren bilgisayar teknolojileri hakkında tartışın ve bu teknolojilerin kültürler pratikleri nasıl etkilediğini ve bunlar tarafından nasıl etkilendiğini açıklayın."
+        },
+        "1B-IC-21": {
+          "description": "Herkese açık veya kamu telif hakkı olan ortamları kullanın ve başkalarının ürettiği materyalleri izin almadan kopyalamaktan ve kullanmaktan kaçının."
+        },
+        "1B-NI-05": {
+          "description": "Gerçek dünyadaki siber güvenlik sorunları ve kişisel bilgilerin nasıl korunabileceği hakkında tartışın."
+        },
+        "3A-DA-10": {
+          "description": "Veri öğelerinin nasıl düzenlendiği ve verilerin nerede depolandığı konusundaki ödünleşimleri değerlendirin."
+        },
+        "3A-NI-06": {
+          "description": "Verimlilik, uygulanabilirlik ve etik etkiler gibi etkenlere dayalı çeşitli senaryoları çözmek için güvenlik önlemleri önerin.\n"
+        },
+        "3A-NI-07": {
+          "description": "Bir bilgisayar sisteminin kullanılabilirliği ve güvenliği arasındaki dengeleri göz önünde bulundurarak çeşitli güvenlik önlemlerini karşılaştırın."
+        },
+        "3B-NI-04": {
+          "description": "Yazılım geliştiricilerin aygıtları ve bilgileri yetkisiz erişime karşı nasıl koruduklarını karşılaştırın."
+        },
+        "DAT-1.D.1": {
+          "description": "Veri sıkıştırma, iletilen veya depolanan verilerin boyutunu (bit sayısını) azaltabilir."
+        },
+        "DAT-1.D.2": {
+          "description": "Daha az bit, mutlaka daha az bilgi anlamına gelmez."
+        },
+        "DAT-1.D.3": {
+          "description": "Sıkıştırmadan kaynaklanan boyut küçültme miktarı, hem orijinal veri gösterimindeki artıklık miktarına hem de uygulanan sıkıştırma algoritmasına bağlıdır."
+        },
+        "DAT-1.D.4": {
+          "description": "Kayıpsız veri sıkıştırma algoritmaları, orijinal verilerin tamamen yeniden oluşturulmasını garanti ederken, genellikle depolanan veya iletilen bitlerin sayısını azaltabilir."
+        },
+        "IOC-2.B.5": {
+          "description": "Şifreleme, yetkisiz erişimi önlemek için verileri kodlama işlemidir. Şifre çözme, verilerin şifresinin çözülme işlemidir. İki yaygın şifreleme yaklaşımı şunlardır: ●       Simetrik anahtar şifrelemesi, hem şifreleme hem de şifre çözme için bir anahtarı içerir.●       Genel anahtar şifrelemesi, şifreleme için bir genel anahtarı ve şifre çözme için bir özel anahtarı eşleştirir. Göndericinin bir mesajı şifrelemek için alıcının özel anahtarına ihtiyacı yoktur, ancak mesajın şifresini çözmek için alıcının özel anahtarına ihtiyaç duyulur. İSTİSNA BEYANI(EKIOC-2.B.5): Şifreleme ve şifre çözme için özel matematiksel prosedürler bu kursun ve AP Sınavının kapsamı dışındadır."
+        },
+        "CD.L1:3-01": {
+          "description": "Bilgisayarlar ve ilgili teknolojileri başarıyla çalıştırmak için standart giriş ve çıkış aygıtlarını kullanın."
+        },
+        "CI.L1:3-01": {
+          "description": "Teknoloji sistemleri ve yazılımı kullanırken sorumlu dijital vatandaş (yasal ve etik davranışlar) olmayı deneyin."
+        },
+        "CL.L1:6-02": {
+          "description": "Çözümler veya ürünler geliştirme amacıyla işbirlikçi problem çözme aktivitelerine katılmak için çevrimiçin kaynakları (örneğin eposta, çevrimiçi tartışmalar, işbirlikçi web ortamları) kullanın."
+        },
+        "CPP.L1:3-01": {
+          "description": "Yaşa uygun araştırmayı yürütmek için teknoloji kaynaklarını kullanın."
+        },
+        "CPP.L1:3-02": {
+          "description": "Müfredat boyunca öğrenimi destekleme için uygun çoklu ortam kaynaklarını (örneğin etkileşimli kitaplar ve eğitim yazılımı) gelişimsel olarak kullanın."
+        },
+        "CPP.L1:3-04": {
+          "description": "Basit bir görevi başarmak için harekete geçirilecek bir dizi ifade oluşturun (örneğin kaplumbağa talimatları)."
+        },
+        "CPP.L1:6-01": {
+          "description": "Problem çözme ve kendi kendine öğrenme için teknoloji kaynaklarını (örneğin hesap makineleri, veri toplama probları, cep telefonları, videolar, eğitim yazılımı ve web araçları) kullanın."
+        },
+        "CPP.L1:6-06": {
+          "description": "Blok tabanlı bir görsel programlama dili kullanarak problem çözümleri uygulayın."
+        },
+        "CPP.L2:3": {
+          "description": "Müfredat kavramlarını gösteren ve ileten teknoloji kaynaklarını kullanarak ürünleri (örneğin web sayfaları, mobil uygulamalar, animasyonlar) tasarlayın, geliştirin, yayınlayın ve sunun."
+        },
+        "CT.L2:1": {
+          "description": "Çözümler tasarlamak için algoritmik problem çözmedeki temel adımları kullanın (örneğin, problemin ifade edilmesi ve keşfedilmesi, örnek cümlelerin incelenmesi, tasarım, bir çözüm uygulama, test etme ve değerlendirme)."
+        },
+        "CT.L2:12": {
+          "description": "Bir problemi alt problemlere ayırmak için soyutlamayı kullanın."
+        },
+        "CT.L2:6": {
+          "description": "Takip edilen bir dizi talimatı açıklayın ve analiz edin (örneğin, bir karakterin bir video oyunundaki davranışını kurallar ve algoritmalar tarafından yönlendirilen şekilde açıklayın)."
+        },
+        "CT.L2:7": {
+          "description": "Metin, sesler, resimler, sayılar dahil olmak üzere verileri çeşitli şekillerde belirtin."
+        },
+        "CT.L2:8": {
+          "description": "Problem durumları, yapıları ve verilerinin görsel temsilleri (örneğin grafikler, tablolar, ağ diyagramları, akış tabloları) kullanın."
+        },
+        "1.L.6": {
+          "description": "Basit ilişkileri işaretlemek için sıklıkla oluşan bağlantıları kullanarak konuşmaları, okumayı ve okunmayı ve de metinlere cevap verme yoluyla elde edilen kelimeleri ve cümleleri kullanın (örneğin çünkü)."
+        },
+        "11-12.L.6": {
+          "description": "Üniversite ve kariyere hazırlık seviyesinde okuma, yazma, konuşma ve dinleme için yeterli genel akademik ve alana spesifik kelimeleri ve sözdizimlerini doğru bir şekilde edinin ve kullanın; kelime bilgisi edinmede serbestlik gösterin."
+        },
+        "2.L.6": {
+          "description": "Tasvir etmek için sıfatlar ve zarflar (örneğin, Diğer çocuklar mutlu olduğunda bu beni de mutlu eder) da dahil olmak üzere, konuşmalar, okuma ve okunma, ve metinlere cevap verme yoluyla edindiğiniz sözcükleri ve kalıpları kullanın."
+        },
+        "3.L.6": {
+          "description": "Uzaysal ve zamansal ilişkilere işaret edenler de dahil olmak üzere, sınıfa uygun sohbet ile ilgili, genel akademik ve alana özgü kelime ve ifadeleri doğru bir şekilde edinin ve kullanın (örneğin O geceki yemekten sonra onları aramaya gittik)."
+        },
+        "4.L.6": {
+          "description": "Kesin hareketleri, duyguları veya hal durumlarını işaret eden (örneğin gülünç, mızmız, kekeme) ve belirli bir konu için temel olan (örneğin  şeyler dahil olmak üzere sınıfa uygun sohbetle ilgili, genel akademik ve alana özgü kelimeleri ve söz dizimlerini doğru bir şekilde edinin ve kullanın."
+        },
+        "5.L.6": {
+          "description": "Zıtlık, artış ve diğer mantıksal ilişkileri belirtenler de dahil olmak üzere, seviyeye uygun genel akademik ve alana özgü kelimeleri ve kalıpları (örneğin ancak, -e rağmen, yine de, benzer şekilde, üstelik, ek olarak) doğru bir şekilde edinin ve kullanın."
+        },
+        "9-10.L.6": {
+          "description": "Üniversite ve kariyere hazırlık seviyesinde okuma, yazma, konuşma ve dinleme için yeterli genel akademik ve alana spesifik kelimeleri ve sözdizimlerini doğru bir şekilde edinin ve kullanın; kelime bilgisi edinmede serbestlik gösterin."
+        },
+        "11-12.RI.4": {
+          "description": "Mecazi, çağrışımsal ve teknik anlamlar dahil olmak üzere, bir metinde kullanıldıkları şekliyle kelimelerin ve cümlelerin anlamlarını belirleyin; bir yazarın bir metin boyunca anahtar terim veya terimlerin anlamını nasıl kullandığını ve geliştirdiğini analiz edin (örneğin Madison, "
+        },
+        "3.RL.4": {
+          "description": "Bir metinde kullanıldığı şekliyle sözcüklerin ve deyimlerin anlamlarını, gerçek ve mecazi olacak şekilde ayırt edin."
+        },
+        "4.RL.7": {
+          "description": "Bir hikaye veya drama metni ile metnin görsel veya sözlü sunumu arasında bağlantı kurun, her versiyonun metindeki belirli açıklamaları ve yönergeleri nerede yansıttığını belirleyin."
+        },
+        "5.RL.4": {
+          "description": "Metaforlar ve benzetmeler gibi mecazi bir dil de dahil olmak üzere, bir metinde kullanıldıkları şekliyle kelimelerin ve ifadelerin anlamlarını belirleyin."
+        },
+        "5.RL.7": {
+          "description": "Görsel ve çoklu ortam öğelerinin bir metnin anlamına, tonuna veya güzelliğine nasıl katkıda bulunduğunu analiz edin (örneğin, grafik roman, multimedya kurgu sunumu, halk masalı, mit, şiir)."
+        },
+        "1.SL.1": {
+          "description": "Küçük ve büyük gruplarda, yetişkinler ve akranları ile 1. sınıf konu ve yazıları hakkında farklı partnerler ile yapılan işbirliğine dayalı konuşmalara katılın."
+        },
+        "2.SL.1": {
+          "description": "Küçük ve büyük gruplarda, yetişkinler ve akranları ile 2. sınıf konu ve yazıları hakkında farklı partnerler ile yapılan işbirliğine dayalı konuşmalara katılın."
+        },
+        "3.SL.1": {
+          "description": "3. sınıftaki konularda ve metinlerde, başkalarının fikirlerini oluşturarak ve kendi fikirlerini açıkça ifade ederek farklı ortaklarla, birebir görüşmelerle (birebir, grup halinde ve öğretmen liderliğinde) bir dizi tartışmaya katılın."
+        },
+        "6.SL.1": {
+          "description": "6. sınıftaki konularda, metinlerde ve meselelerde, başkalarının fikirlerini oluşturarak ve kendi fikirlerini açıkça ifade ederek farklı ortaklarla, birebir görüşmelerle (birebir, grup halinde ve öğretmen liderliğinde) bir dizi tartışmaya katılın."
+        },
+        "7.SL.1": {
+          "description": "7. sınıftaki konularda, metinlerde ve meselelerde, başkalarının fikirlerini oluşturarak ve kendi fikirlerini açıkça ifade ederek farklı ortaklarla, birebir görüşmelerle (birebir, grup halinde ve öğretmen liderliğinde) bir dizi tartışmaya katılın."
+        },
+        "11-12.W.6": {
+          "description": "Yeni argümanlar veya bilgiler de dahil olmak üzere devam eden geri bildirimlere yanıt olarak bireysel veya paylaşılan yazı ürünlerini üretmek, yayınlamak ve güncellemek için İnternet dahil teknolojiyi kullanın."
+        },
+        "3.W.3": {
+          "description": "Etkili teknik, açıklayıcı ayrıntılar ve net olay dizileri kullanarak gerçek ya da hayal edilen deneyimleri ya da olayları açıklamak için hikayeler yazın."
+        },
+        "4.W.3": {
+          "description": "Etkili teknik, açıklayıcı ayrıntılar ve net olay dizileri kullanarak gerçek ya da hayal edilen deneyimleri ya da olayları açıklamak için hikayeler yazın."
+        },
+        "5.W.3": {
+          "description": "Etkili teknik, açıklayıcı ayrıntılar ve net olay dizileri kullanarak gerçek ya da hayal edilen deneyimleri ya da olayları açıklamak için hikayeler yazın."
+        },
+        "6.W.3": {
+          "description": "Etkili teknik, ilgili açıklayıcı ayrıntılar ve net olay dizileri kullanarak gerçek ya da hayal edilen deneyimleri ya da iyi yapılandırılmış açık  olay sıralarını açıklamak için hikayeler yazın."
+        },
+        "6.W.6": {
+          "description": "Yazıyı oluşturmak ve yayınlamak ve ayrıca başkaları ile etkileşime girip işbirliği yapmak için İnternet de dahil olmak üzere teknolojiyi kullanın; tek oturuşta minimum üç sayfa yazmaya yönelik yeterli klavye kullanma becerilerinin olduğunu gösterin."
+        },
+        "7.W.3": {
+          "description": "Etkili teknik, ilgili açıklayıcı ayrıntılar ve net olay dizileri kullanarak gerçek ya da hayal edilen deneyimleri ya da iyi yapılandırılmış açık  olay sıralarını açıklamak için hikayeler yazın."
+        },
+        "7.W.6": {
+          "description": "Yazıyı oluşturmak ve yayınlamak ve kaynaklara bağlanmak ve bunları alıntılamak, ve ayrıca kaynaklara bağlanma ve bunları alıntılama dahil olmak üzere başkaları ile etkileşime girip işbirliği yapmak için İnternet de dahil olmak üzere teknolojiyi kullanın."
+        },
+        "8.W.3": {
+          "description": "Etkili teknik, ilgili açıklayıcı ayrıntılar ve net olay dizileri kullanarak gerçek ya da hayal edilen deneyimleri ya da iyi yapılandırılmış açık  olay sıralarını açıklamak için hikayeler yazın."
+        },
+        "8.W.6": {
+          "description": "Yazıyı oluşturmak ve yayınlamak ve bilgi ve fikirler arasındaki ilişkiyi etkili bir şekilde sunmak ve ayrıca başkaları ile etkileşime girip işbirliği yapmak için İnternet de dahil olmak üzere teknolojiyi kullanın."
+        },
+        "9-10.W.6": {
+          "description": "Teknolojinin diğer bilgilere bağlanma ve bilgileri esnek ve dinamik bir şekilde görüntüleme kapasitesinden yararlanarak, bireysel veya paylaşılan yazı ürünleri üretmek, yayınlamak ve güncellemek için, İnternet dahil olmak üzere, teknolojiyi kullanın."
+        },
+        "11-12.WHST.6": {
+          "description": "Yeni argümanlar veya bilgiler de dahil olmak üzere devam eden geri bildirimlere yanıt olarak bireysel veya paylaşılan yazı ürünlerini üretmek, yayınlamak ve güncellemek için İnternet dahil teknolojiyi kullanın."
+        },
+        "9-10.WHST.6": {
+          "description": "Teknolojinin diğer bilgilere bağlanma ve bilgileri esnek ve dinamik bir şekilde görüntüleme kapasitesinden yararlanarak, bireysel veya paylaşılan yazı ürünleri üretmek, yayınlamak ve güncellemek için, İnternet dahil olmak üzere, teknolojiyi kullanın."
+        },
+        "3-5-ETS1-1": {
+          "description": "Başarı için belirlenmiş kriterler ve malzemeler, zaman veya maliyet üzerindeki kısıtlamaları içeren bir ihtiyacı veya isteği yansıtan basit bir tasarım problemi tanımlayın."
+        },
+        "K-2-ETS1-1": {
+          "description": "Yeni veya iyileştirilmiş bir nesne veya araç geliştirme yoluyla çözülebilecek basit bir sorunu tanımlamak için insanlara değiştirmek isteyecekleri durumla ilgili soru sorun, gözlem yapın ve bilgi toplayın."
+        },
+        "K-2-ETS1-2": {
+          "description": "Nesnenin şeklinin, verilen bir problemi çözmek için gerektiği gibi işlev görmesine yardımcı olmak için basit bir kroki, çizim veya fiziksel model geliştirin."
+        },
+        "7.G.2": {
+          "description": "Belirli koşulların olduğu geometrik şekilleri (elle, cetvelle ve açıölçerle, ve teknoloji ile) çizin. \nÜç açı veya kenar ölçüsünden üçgenler oluşturmaya odaklanın, koşulların benzersiz bir üçgeni, birden fazla üçgeni belirlediğinifark edin."
+        },
+        "2.MD.10": {
+          "description": "Dört kategoriye kadar bir veri kümesini göstermek için bir resim grafiği ve bir çubuk grafik (tek birim ölçekli) çizin. Çubuk grafikte sunulan bilgileri kullanarak basit bir araya getirme, parçalara ayırma ve sorunları karşılaştırma adımlarını yapın."
+        },
+        "4.MD.5.b": {
+          "description": "n adet bir dereceli açılar boyunca dönen bir açının, n derecesinde bir açı ölçüsüne sahip olduğu söylenir."
+        },
+        "4.MD.6": {
+          "description": "Bir açıölçer kullanarak açıları tam sayılı derecelerde ölçün. Belirtilen ölçüdeki açıların taslağını çizin."
+        },
+        "MP.1": {
+          "description": "Problemler konusunda fikir sahibi olun ve onları çözmeye çalışın"
+        },
+        "MP.2": {
+          "description": "Soyut ve niceliksel biçimde düşünün"
+        },
+        "MP.4": {
+          "description": "Matematik ile modelleme"
+        },
+        "MP.5": {
+          "description": "Stratejik olarak uygun araçları kullanın"
+        },
+        "MP.6": {
+          "description": "Kesinlikle ilgilenmek"
+        },
+        "MP.7": {
+          "description": "Yapıyı anlayın ve kullanın"
+        },
+        "MP.8": {
+          "description": "Tekrarlanan mantık içindeki düzenliliği arayın ve açıklayın"
+        },
+        "4.NBT.4": {
+          "description": "Standart algoritmayı kullanarak tüm çok basamaklı sayıları akıcı olarak ekleyin ve çıkartın."
+        },
+        "4.NBT.5": {
+          "description": "Basamak değerine ve işlemlerin niteliklerine dayanarak stratejileri kullanarak, en fazla dört basamaklı bir tam sayıyı tek basamaklı bir tam sayı ile çarpın ve iki tane iki basamaklı sayıyı çarpın. Denklemleri, dikdörtgen kullanarak hesaplamayı gösterin ve açıklayın."
+        },
+        "1.OA.1": {
+          "description": "Kelime problemlerini çözmek için, 20'ye kadar toplama ve çıkarma kullanın; bunları, tüm konumlardaki bilinmeyenlerle birlikte ekleme, alma, birleştirme, ayırma ve karşılaştırma gibi durumlarla yapın; örneğin, nesnesi, çizimleri ve denklemleri bir sembolle temsil ederek sorunu belirtin."
+        },
+        "2.OA.1": {
+          "description": "Bütün pozisyonlarda bilinmeyenler için ekleme, alma, birleştirme, ayırma ve karşılaştırma gibi durumları içeren bir ve iki adımlı kelime problemlerini çözmek için 100'e kadar toplama ve çıkarma kullanın, örneğin çizimleri ve denklemleri kullanarak belirtin."
+        },
+        "3.OA.3": {
+          "description": "Eşit gruplar, diziler ve ölçüm miktarları içeren durumlarda kelime problemlerini çözmek için, örneğin, problemi temsil etmek için bilinmeyen sayı için bir sembole sahip çizimler ve denklemler kullanarak 100 içinde çarpma ve bölmeyi kullanın.1"
+        },
+        "1.a": {
+          "description": "Yeni fikirler, ürünler veya süreçler üretmek için mevcut bilgileri uygulayın."
+        },
+        "1.b": {
+          "description": "Özgün eserleri kişisel veya grup ifadesi aracı olarak oluşturun."
+        },
+        "1.c": {
+          "description": "Karmaşık sistemleri ve sorunu keşfetmek için modeller ve simülasyonları kullanın.\n"
+        },
+        "2.a": {
+          "description": "Çeşitli dijital ortamlar ve medya kullanan yaşıtlar, uzmanlar veya diğer çalışanlarla etkileşim kurun, işbirliği yapın ve yayınlayın."
+        },
+        "2.b": {
+          "description": "Çeşitli medya ve formatları kullanarak bilgi ve fikirleri etkili bir şekilde birden fazla kitleye iletin."
+        },
+        "4.b": {
+          "description": "Bir çözüm geliştirmek ya da bir projeyi tamamlamak için faaliyetleri planlayın ve yönetin."
+        },
+        "4.d": {
+          "description": "Alternatif çözümleri keşfetmek için birden fazla süreç ve çeşitli perspektifler kullanın."
+        },
+        "6.a": {
+          "description": "Teknoloji sistemlerini anlayın ve kullanın."
+        },
+        "6.c": {
+          "description": "Sistemler ve uygulamalardaki sorunları giderin."
+        },
+        "6.d": {
+          "description": "Mevcut bilgiyi yeni teknolojilerin öğrenilmesine aktarın."
         }
       }
     }

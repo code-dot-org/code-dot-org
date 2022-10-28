@@ -384,6 +384,926 @@
         "frequency_analysis/Frequency Analysis": {
           "name": "crwdns2919816:0crwdne2919816:0"
         },
+        "coursed-2022/Password Power-Up": {
+          "name": "crwdns3120284:0crwdne3120284:0",
+          "overview": "crwdns3120286:0[1]crwdnd3120286:0[0]crwdnd3120286:0[2]crwdne3120286:0",
+          "preparation": "crwdns3120288:0crwdne3120288:0",
+          "purpose": "crwdns3120290:0crwdne3120290:0",
+          "student_overview": "crwdns3120292:0crwdne3120292:0"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "crwdns3120370:0crwdne3120370:0",
+          "overview": "crwdns3120372:0crwdne3120372:0",
+          "preparation": "crwdns3120374:0crwdne3120374:0",
+          "purpose": "crwdns3120376:0crwdne3120376:0",
+          "student_overview": "crwdns3120378:0crwdne3120378:0"
+        },
+        "coursed-2022/Introduction to Online Puzzles": {
+          "name": "crwdns3120622:0crwdne3120622:0",
+          "overview": "crwdns3120644:0crwdne3120644:0",
+          "preparation": "crwdns3120650:0crwdne3120650:0",
+          "purpose": "crwdns3120658:0crwdne3120658:0",
+          "student_overview": "crwdns3120664:0crwdne3120664:0"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "crwdns3120940:0crwdne3120940:0",
+          "overview": "crwdns3120946:0crwdne3120946:0",
+          "preparation": "crwdns3120952:0crwdne3120952:0",
+          "purpose": "crwdns3120958:0crwdne3120958:0",
+          "student_overview": "crwdns3120966:0crwdne3120966:0"
+        },
+        "coursed-2022/Debugging with Laurel": {
+          "name": "crwdns3121360:0crwdne3121360:0",
+          "overview": "crwdns3121362:0crwdne3121362:0",
+          "preparation": "crwdns3121364:0crwdne3121364:0",
+          "purpose": "crwdns3121366:0crwdne3121366:0",
+          "student_overview": "crwdns3121368:0crwdne3121368:0"
+        },
+        "coursed-2022/Events in Bounce": {
+          "name": "crwdns3121476:0crwdne3121476:0",
+          "overview": "crwdns3121478:0crwdne3121478:0",
+          "preparation": "crwdns3121480:0crwdne3121480:0",
+          "purpose": "crwdns3121482:0crwdne3121482:0",
+          "student_overview": "crwdns3121484:0crwdne3121484:0"
+        },
+        "coursed-2022/Build a Star Wars Game": {
+          "name": "crwdns3121582:0crwdne3121582:0",
+          "overview": "crwdns3121584:0crwdne3121584:0",
+          "preparation": "crwdns3121586:0crwdne3121586:0",
+          "purpose": "crwdns3121588:0crwdne3121588:0",
+          "student_overview": "crwdns3121590:0crwdne3121590:0"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "crwdns3121678:0crwdne3121678:0",
+          "overview": "crwdns3121680:0crwdne3121680:0",
+          "preparation": "crwdns3121682:0crwdne3121682:0",
+          "purpose": "crwdns3121684:0crwdne3121684:0",
+          "student_overview": "crwdns3121686:0crwdne3121686:0"
+        },
+        "coursed-2022/Loops in Ice Age": {
+          "name": "crwdns3121838:0crwdne3121838:0",
+          "overview": "crwdns3121840:0crwdne3121840:0",
+          "preparation": "crwdns3121842:0crwdne3121842:0",
+          "purpose": "crwdns3121844:0crwdne3121844:0",
+          "student_overview": "crwdns3121846:0crwdne3121846:0"
+        },
+        "coursed-2022/Drawing Shapes with Loops": {
+          "name": "crwdns3121962:0crwdne3121962:0",
+          "overview": "crwdns3121964:0crwdne3121964:0",
+          "preparation": "crwdns3121966:0crwdne3121966:0",
+          "purpose": "crwdns3121968:0crwdne3121968:0",
+          "student_overview": "crwdns3121970:0crwdne3121970:0"
+        },
+        "coursed-2022/Nested Loops in Maze": {
+          "name": "crwdns3122062:0crwdne3122062:0",
+          "overview": "crwdns3122064:0crwdne3122064:0",
+          "preparation": "crwdns3122066:0crwdne3122066:0",
+          "purpose": "crwdns3122068:0crwdne3122068:0",
+          "student_overview": "crwdns3122070:0crwdne3122070:0"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "crwdns3122166:0crwdne3122166:0",
+          "overview": "crwdns3122168:0crwdne3122168:0",
+          "preparation": "crwdns3122170:0crwdne3122170:0",
+          "purpose": "crwdns3122172:0crwdne3122172:0",
+          "student_overview": "crwdns3122174:0crwdne3122174:0"
+        },
+        "coursed-2022/Looking Ahead with Minecraft": {
+          "name": "crwdns3122284:0crwdne3122284:0",
+          "overview": "crwdns3122286:0crwdne3122286:0",
+          "preparation": "crwdns3122288:0crwdne3122288:0",
+          "purpose": "crwdns3122290:0crwdne3122290:0",
+          "student_overview": "crwdns3122292:0crwdne3122292:0"
+        },
+        "coursed-2022/If/Else with Bee": {
+          "name": "crwdns3122372:0crwdne3122372:0",
+          "overview": "crwdns3122374:0crwdne3122374:0",
+          "preparation": "crwdns3122376:0crwdne3122376:0",
+          "purpose": "crwdns3122378:0crwdne3122378:0",
+          "student_overview": "crwdns3122380:0crwdne3122380:0"
+        },
+        "coursed-2022/While Loops in Farmer": {
+          "name": "crwdns3122476:0crwdne3122476:0",
+          "overview": "crwdns3122478:0crwdne3122478:0",
+          "preparation": "crwdns3122480:0crwdne3122480:0",
+          "purpose": "crwdns3122482:0crwdne3122482:0",
+          "student_overview": "crwdns3122484:0crwdne3122484:0"
+        },
+        "coursed-2022/Until Loops in Maze": {
+          "name": "crwdns3122590:0crwdne3122590:0",
+          "overview": "crwdns3122592:0crwdne3122592:0",
+          "preparation": "crwdns3122594:0crwdne3122594:0",
+          "purpose": "crwdns3122596:0crwdne3122596:0",
+          "student_overview": "crwdns3122598:0crwdne3122598:0"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "crwdns3122694:0crwdne3122694:0",
+          "overview": "crwdns3122696:0crwdne3122696:0",
+          "preparation": "crwdns3122698:0crwdne3122698:0",
+          "purpose": "crwdns3122700:0crwdne3122700:0",
+          "student_overview": "crwdns3122702:0crwdne3122702:0"
+        },
+        "coursef-2022/The Power of Words": {
+          "name": "crwdns3150922:0crwdne3150922:0",
+          "overview": "crwdns3150948:0[1]crwdnd3150948:0[0]crwdnd3150948:0[2]crwdne3150948:0",
+          "preparation": "crwdns3150952:0crwdne3150952:0",
+          "purpose": "crwdns3150956:0crwdne3150956:0",
+          "student_overview": "crwdns3150960:0crwdne3150960:0"
+        },
+        "coursef-2022/Introducing Sprite Lab": {
+          "name": "crwdns3151066:0crwdne3151066:0",
+          "overview": "crwdns3151070:0crwdne3151070:0",
+          "preparation": "crwdns3151074:0crwdne3151074:0",
+          "purpose": "crwdns3151078:0crwdne3151078:0",
+          "student_overview": "crwdns3151080:0crwdne3151080:0"
+        },
+        "coursef-2022/Making Sprites": {
+          "name": "crwdns3151292:0crwdne3151292:0",
+          "overview": "crwdns3151294:0crwdne3151294:0",
+          "preparation": "crwdns3151298:0crwdne3151298:0",
+          "purpose": "crwdns3151300:0crwdne3151300:0",
+          "student_overview": "crwdns3151304:0crwdne3151304:0"
+        },
+        "coursef-2022/Sprites in Action": {
+          "name": "crwdns3151500:0crwdne3151500:0",
+          "overview": "crwdns3151506:0crwdne3151506:0",
+          "preparation": "crwdns3151510:0crwdne3151510:0",
+          "purpose": "crwdns3151514:0crwdne3151514:0",
+          "student_overview": "crwdns3151518:0crwdne3151518:0"
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "name": "crwdns3151646:0crwdne3151646:0",
+          "overview": "crwdns3151648:0crwdne3151648:0",
+          "preparation": "crwdns3151650:0crwdne3151650:0",
+          "purpose": "crwdns3151652:0crwdne3151652:0",
+          "student_overview": "crwdns3151654:0crwdne3151654:0"
+        },
+        "coursef-2022/Blank Space Stories": {
+          "name": "crwdns3151742:0crwdne3151742:0",
+          "overview": "crwdns3151744:0crwdne3151744:0",
+          "preparation": "crwdns3151746:0crwdne3151746:0",
+          "purpose": "crwdns3151748:0crwdne3151748:0",
+          "student_overview": "crwdns3151750:0crwdne3151750:0"
+        },
+        "coursef-2022/Text and Prompts": {
+          "name": "crwdns3151854:0crwdne3151854:0",
+          "overview": "crwdns3151856:0crwdne3151856:0",
+          "preparation": "crwdns3151858:0crwdne3151858:0",
+          "purpose": "crwdns3151860:0crwdne3151860:0",
+          "student_overview": "crwdns3151862:0crwdne3151862:0"
+        },
+        "coursef-2022/Mini-Project: User Input Programs": {
+          "name": "crwdns3151960:0crwdne3151960:0",
+          "overview": "crwdns3151962:0crwdne3151962:0",
+          "preparation": "crwdns3151964:0crwdne3151964:0",
+          "purpose": "crwdns3151966:0crwdne3151966:0",
+          "student_overview": "crwdns3151968:0crwdne3151968:0"
+        },
+        "coursef-2022/[New] Lots of Sprites": {
+          "name": "crwdns3152100:0crwdne3152100:0",
+          "overview": "crwdns3152102:0crwdne3152102:0",
+          "preparation": "crwdns3152104:0crwdne3152104:0",
+          "purpose": "crwdns3152106:0crwdne3152106:0",
+          "student_overview": "crwdns3152108:0crwdne3152108:0"
+        },
+        "coursef-2022/[New] Counting with Variables": {
+          "name": "crwdns3152176:0crwdne3152176:0",
+          "overview": "crwdns3152178:0crwdne3152178:0",
+          "preparation": "crwdns3152180:0crwdne3152180:0",
+          "purpose": "crwdns3152182:0crwdne3152182:0",
+          "student_overview": "crwdns3152184:0crwdne3152184:0"
+        },
+        "coursef-2022/[New] Mini-Project: Collector Game": {
+          "name": "crwdns3152256:0crwdne3152256:0",
+          "overview": "crwdns3152258:0crwdne3152258:0",
+          "preparation": "crwdns3152260:0crwdne3152260:0",
+          "purpose": "crwdns3152262:0crwdne3152262:0",
+          "student_overview": "crwdns3152264:0crwdne3152264:0"
+        },
+        "coursef-2022/Simulating Experiments": {
+          "name": "crwdns3152330:0crwdne3152330:0",
+          "overview": "crwdns3152332:0crwdne3152332:0",
+          "preparation": "crwdns3152334:0crwdne3152334:0",
+          "purpose": "crwdns3152336:0crwdne3152336:0",
+          "student_overview": "crwdns3152338:0crwdne3152338:0"
+        },
+        "coursef-2022/Outbreak": {
+          "name": "crwdns3152408:0crwdne3152408:0",
+          "overview": "crwdns3152410:0crwdne3152410:0",
+          "preparation": "crwdns3152412:0crwdne3152412:0",
+          "purpose": "crwdns3152414:0crwdne3152414:0",
+          "student_overview": "crwdns3152416:0crwdne3152416:0"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "crwdns3152556:0crwdne3152556:0",
+          "overview": "crwdns3152558:0crwdne3152558:0",
+          "purpose": "crwdns3152560:0crwdne3152560:0",
+          "student_overview": "crwdns3152562:0crwdne3152562:0"
+        },
+        "coursef-2022/The Internet": {
+          "name": "crwdns3152672:0crwdne3152672:0",
+          "overview": "crwdns3152674:0crwdne3152674:0",
+          "preparation": "crwdns3152676:0crwdne3152676:0",
+          "purpose": "crwdns3152678:0crwdne3152678:0",
+          "student_overview": "crwdns3152680:0crwdne3152680:0"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "crwdns3152812:0crwdne3152812:0",
+          "overview": "crwdns3152814:0crwdne3152814:0",
+          "preparation": "crwdns3152816:0crwdne3152816:0",
+          "purpose": "crwdns3152818:0crwdne3152818:0",
+          "student_overview": "crwdns3152820:0crwdne3152820:0"
+        },
+        "coursee-2022/Be A Super Digital Citizen": {
+          "name": "crwdns3123248:0crwdne3123248:0",
+          "overview": "crwdns3123254:0[1]crwdnd3123254:0[0]crwdnd3123254:0[2]crwdne3123254:0",
+          "preparation": "crwdns3123258:0crwdne3123258:0",
+          "purpose": "crwdns3123262:0crwdne3123262:0",
+          "student_overview": "crwdns3123264:0crwdne3123264:0"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "crwdns3123356:0crwdne3123356:0",
+          "overview": "crwdns3123360:0[1]crwdnd3123360:0[0]crwdnd3123360:0[2]crwdne3123360:0",
+          "preparation": "crwdns3123364:0crwdne3123364:0",
+          "purpose": "crwdns3123368:0crwdne3123368:0",
+          "student_overview": "crwdns3123372:0crwdne3123372:0"
+        },
+        "coursee-2022/Swimming Fish with Sprite Lab": {
+          "name": "crwdns3123544:0crwdne3123544:0",
+          "overview": "crwdns3123548:0crwdne3123548:0",
+          "preparation": "crwdns3123554:0crwdne3123554:0",
+          "purpose": "crwdns3123558:0crwdne3123558:0",
+          "student_overview": "crwdns3123562:0crwdne3123562:0"
+        },
+        "coursee-2022/Hello World: Food": {
+          "name": "crwdns3123728:0crwdne3123728:0",
+          "overview": "crwdns3123732:0crwdne3123732:0",
+          "preparation": "crwdns3123736:0[Optional]crwdnd3123736:0[0]crwdne3123736:0",
+          "purpose": "crwdns3123740:0crwdne3123740:0",
+          "student_overview": "crwdns3123742:0crwdne3123742:0"
+        },
+        "coursee-2022/Mini-Project: About Me": {
+          "name": "crwdns3123918:0crwdne3123918:0",
+          "overview": "crwdns3123926:0crwdne3123926:0",
+          "preparation": "crwdns3123930:0crwdne3123930:0",
+          "purpose": "crwdns3123932:0crwdne3123932:0",
+          "student_overview": "crwdns3123936:0crwdne3123936:0"
+        },
+        "coursee-2022/Drawing with Loops": {
+          "name": "crwdns3124076:0crwdne3124076:0",
+          "overview": "crwdns3124080:0crwdne3124080:0",
+          "preparation": "crwdns3124084:0crwdne3124084:0",
+          "purpose": "crwdns3124088:0crwdne3124088:0",
+          "student_overview": "crwdns3124092:0crwdne3124092:0"
+        },
+        "coursee-2022/Fancy Shapes using Nested Loops": {
+          "name": "crwdns3124208:0crwdne3124208:0",
+          "overview": "crwdns3124212:0crwdne3124212:0",
+          "preparation": "crwdns3124216:0crwdne3124216:0",
+          "purpose": "crwdns3124224:0crwdne3124224:0",
+          "student_overview": "crwdns3124228:0crwdne3124228:0"
+        },
+        "coursee-2022/Mini-Project: Design a Snowflake": {
+          "name": "crwdns3124412:0crwdne3124412:0",
+          "overview": "crwdns3124416:0crwdne3124416:0",
+          "preparation": "crwdns3124420:0crwdne3124420:0",
+          "purpose": "crwdns3124422:0crwdne3124422:0",
+          "student_overview": "crwdns3124424:0crwdne3124424:0"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "crwdns3124534:0crwdne3124534:0",
+          "overview": "crwdns3124536:0crwdne3124536:0",
+          "preparation": "crwdns3124540:0crwdne3124540:0",
+          "purpose": "crwdns3124542:0crwdne3124542:0",
+          "student_overview": "crwdns3124546:0crwdne3124546:0"
+        },
+        "coursee-2022/Functions in Minecraft": {
+          "name": "crwdns3124752:0crwdne3124752:0",
+          "overview": "crwdns3124756:0crwdne3124756:0",
+          "preparation": "crwdns3124760:0crwdne3124760:0",
+          "purpose": "crwdns3124764:0crwdne3124764:0",
+          "student_overview": "crwdns3124768:0crwdne3124768:0"
+        },
+        "coursee-2022/Functions with Artist": {
+          "name": "crwdns3124936:0crwdne3124936:0",
+          "overview": "crwdns3124938:0crwdne3124938:0",
+          "preparation": "crwdns3124940:0crwdne3124940:0",
+          "purpose": "crwdns3124942:0crwdne3124942:0",
+          "student_overview": "crwdns3124944:0crwdne3124944:0"
+        },
+        "coursee-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "crwdns3125024:0crwdne3125024:0",
+          "overview": "crwdns3125026:0crwdne3125026:0",
+          "preparation": "crwdns3125028:0crwdne3125028:0",
+          "purpose": "crwdns3125030:0crwdne3125030:0",
+          "student_overview": "crwdns3125032:0crwdne3125032:0"
+        },
+        "coursee-2022/Conditionals with the Farmer": {
+          "name": "crwdns3125110:0crwdne3125110:0",
+          "overview": "crwdns3125112:0crwdne3125112:0",
+          "preparation": "crwdns3125114:0crwdne3125114:0",
+          "purpose": "crwdns3125116:0crwdne3125116:0",
+          "student_overview": "crwdns3125118:0crwdne3125118:0"
+        },
+        "coursee-2022/Functions with Harvester": {
+          "name": "crwdns3125210:0crwdne3125210:0",
+          "overview": "crwdns3125212:0crwdne3125212:0",
+          "preparation": "crwdns3125214:0crwdne3125214:0",
+          "purpose": "crwdns3125216:0crwdne3125216:0",
+          "student_overview": "crwdns3125218:0crwdne3125218:0"
+        },
+        "coursee-2022/Designing for Accessibility": {
+          "name": "crwdns3125284:0crwdne3125284:0",
+          "overview": "crwdns3125286:0crwdne3125286:0",
+          "preparation": "crwdns3125288:0crwdne3125288:0",
+          "purpose": "crwdns3125290:0crwdne3125290:0",
+          "student_overview": "crwdns3125292:0crwdne3125292:0"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "crwdns3125368:0crwdne3125368:0",
+          "overview": "crwdns3125370:0crwdne3125370:0",
+          "preparation": "crwdns3125372:0crwdne3125372:0",
+          "purpose": "crwdns3125374:0crwdne3125374:0",
+          "student_overview": "crwdns3125376:0crwdne3125376:0"
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "crwdns3125452:0crwdne3125452:0",
+          "overview": "crwdns3125454:0crwdne3125454:0",
+          "preparation": "crwdns3125456:0crwdne3125456:0",
+          "purpose": "crwdns3125458:0crwdne3125458:0",
+          "student_overview": "crwdns3125460:0crwdne3125460:0"
+        },
+        "courseb-2022/Digital Trails": {
+          "name": "crwdns3140132:0crwdne3140132:0",
+          "overview": "crwdns3140134:0[1]crwdnd3140134:0[0]crwdnd3140134:0[2]crwdne3140134:0",
+          "preparation": "crwdns3140136:0crwdne3140136:0",
+          "purpose": "crwdns3140138:0crwdne3140138:0",
+          "student_overview": "crwdns3140140:0crwdne3140140:0"
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "crwdns3140220:0crwdne3140220:0",
+          "overview": "crwdns3140222:0crwdne3140222:0",
+          "preparation": "crwdns3140224:0crwdne3140224:0",
+          "purpose": "crwdns3140226:0crwdne3140226:0",
+          "student_overview": "crwdns3140228:0crwdne3140228:0"
+        },
+        "courseb-2022/Sequencing with Angry Birds": {
+          "name": "crwdns3140332:0crwdne3140332:0",
+          "overview": "crwdns3140334:0crwdne3140334:0",
+          "preparation": "crwdns3140336:0crwdne3140336:0",
+          "purpose": "crwdns3140338:0crwdne3140338:0",
+          "student_overview": "crwdns3140340:0crwdne3140340:0"
+        },
+        "courseb-2022/Programming with Angry Birds": {
+          "name": "crwdns3140464:0crwdne3140464:0",
+          "overview": "crwdns3140466:0crwdne3140466:0",
+          "preparation": "crwdns3140468:0crwdne3140468:0",
+          "purpose": "crwdns3140470:0crwdne3140470:0",
+          "student_overview": "crwdns3140472:0crwdne3140472:0"
+        },
+        "courseb-2022/Programming with Harvester": {
+          "name": "crwdns3140596:0crwdne3140596:0",
+          "overview": "crwdns3140598:0crwdne3140598:0",
+          "preparation": "crwdns3140600:0crwdne3140600:0",
+          "purpose": "crwdns3140602:0crwdne3140602:0",
+          "student_overview": "crwdns3140604:0crwdne3140604:0"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "crwdns3140700:0crwdne3140700:0",
+          "overview": "crwdns3140702:0crwdne3140702:0",
+          "preparation": "crwdns3140704:0crwdne3140704:0",
+          "purpose": "crwdns3140706:0crwdne3140706:0",
+          "student_overview": "crwdns3140708:0crwdne3140708:0"
+        },
+        "courseb-2022/Loops with Harvester": {
+          "name": "crwdns3140812:0crwdne3140812:0",
+          "overview": "crwdns3140814:0crwdne3140814:0",
+          "preparation": "crwdns3140816:0crwdne3140816:0",
+          "purpose": "crwdns3140818:0crwdne3140818:0",
+          "student_overview": "crwdns3140820:0crwdne3140820:0"
+        },
+        "courseb-2022/Loops with Laurel": {
+          "name": "crwdns3140928:0crwdne3140928:0",
+          "overview": "crwdns3140930:0crwdne3140930:0",
+          "preparation": "crwdns3140932:0crwdne3140932:0",
+          "purpose": "crwdns3140934:0crwdne3140934:0",
+          "student_overview": "crwdns3140936:0crwdne3140936:0"
+        },
+        "courseb-2022/Drawing Gardens with Loops": {
+          "name": "crwdns3141026:0crwdne3141026:0",
+          "overview": "crwdns3141028:0crwdne3141028:0",
+          "preparation": "crwdns3141030:0crwdne3141030:0",
+          "purpose": "crwdns3141032:0crwdne3141032:0",
+          "student_overview": "crwdns3141034:0crwdne3141034:0"
+        },
+        "courseb-2022/The Right App": {
+          "name": "crwdns3141128:0crwdne3141128:0",
+          "overview": "crwdns3141130:0crwdne3141130:0",
+          "preparation": "crwdns3141132:0crwdne3141132:0",
+          "purpose": "crwdns3141134:0crwdne3141134:0",
+          "student_overview": "crwdns3141136:0crwdne3141136:0"
+        },
+        "courseb-2022/The Big Event Jr": {
+          "name": "crwdns3141204:0crwdne3141204:0",
+          "overview": "crwdns3141206:0crwdne3141206:0",
+          "preparation": "crwdns3141208:0crwdne3141208:0",
+          "purpose": "crwdns3141210:0crwdne3141210:0",
+          "student_overview": "crwdns3141212:0crwdne3141212:0"
+        },
+        "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "crwdns3141298:0crwdne3141298:0",
+          "overview": "crwdns3141300:0crwdne3141300:0",
+          "preparation": "crwdns3141302:0crwdne3141302:0",
+          "purpose": "crwdns3141304:0crwdne3141304:0",
+          "student_overview": "crwdns3141306:0crwdne3141306:0"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "crwdns3141400:0crwdne3141400:0",
+          "overview": "crwdns3141402:0crwdne3141402:0",
+          "preparation": "crwdns3141404:0crwdne3141404:0",
+          "purpose": "crwdns3141406:0crwdne3141406:0",
+          "student_overview": "crwdns3141408:0crwdne3141408:0"
+        },
+        "express-2022/Programming with Angry Birds": {
+          "name": "crwdns3137880:0crwdne3137880:0",
+          "overview": "crwdns3137882:0crwdne3137882:0",
+          "preparation": "crwdns3137884:0crwdne3137884:0",
+          "purpose": "crwdns3137886:0crwdne3137886:0",
+          "student_overview": "crwdns3137888:0crwdne3137888:0"
+        },
+        "express-2022/Debugging in Maze": {
+          "name": "crwdns3137972:0crwdne3137972:0",
+          "overview": "crwdns3137974:0crwdne3137974:0",
+          "preparation": "crwdns3137976:0crwdne3137976:0",
+          "purpose": "crwdns3137978:0crwdne3137978:0",
+          "student_overview": "crwdns3137980:0crwdne3137980:0"
+        },
+        "express-2022/Collecting Treasure with Laurel": {
+          "name": "crwdns3138052:0crwdne3138052:0",
+          "overview": "crwdns3138054:0crwdne3138054:0",
+          "preparation": "crwdns3138056:0crwdne3138056:0",
+          "purpose": "crwdns3138058:0crwdne3138058:0",
+          "student_overview": "crwdns3138060:0crwdne3138060:0"
+        },
+        "express-2022/Creating Art with Code": {
+          "name": "crwdns3138134:0crwdne3138134:0",
+          "overview": "crwdns3138136:0crwdne3138136:0",
+          "preparation": "crwdns3138138:0crwdne3138138:0",
+          "purpose": "crwdns3138140:0crwdne3138140:0",
+          "student_overview": "crwdns3138142:0crwdne3138142:0"
+        },
+        "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "crwdns3138224:0crwdne3138224:0",
+          "overview": "crwdns3138226:0crwdne3138226:0",
+          "preparation": "crwdns3138228:0crwdne3138228:0",
+          "purpose": "crwdns3138230:0crwdne3138230:0",
+          "student_overview": "crwdns3138232:0crwdne3138232:0"
+        },
+        "express-2022/Making Sprites": {
+          "name": "crwdns3138298:0crwdne3138298:0",
+          "overview": "crwdns3138300:0crwdne3138300:0",
+          "preparation": "crwdns3138302:0crwdne3138302:0",
+          "purpose": "crwdns3138304:0crwdne3138304:0",
+          "student_overview": "crwdns3138306:0crwdne3138306:0"
+        },
+        "express-2022/Sprites in Action": {
+          "name": "crwdns3138382:0crwdne3138382:0",
+          "overview": "crwdns3138384:0crwdne3138384:0",
+          "preparation": "crwdns3138386:0crwdne3138386:0",
+          "purpose": "crwdns3138388:0crwdne3138388:0",
+          "student_overview": "crwdns3138390:0crwdne3138390:0"
+        },
+        "express-2022/Virtual Pet with Sprite Lab": {
+          "name": "crwdns3138472:0crwdne3138472:0",
+          "overview": "crwdns3138474:0crwdne3138474:0",
+          "preparation": "crwdns3138476:0crwdne3138476:0",
+          "purpose": "crwdns3138478:0crwdne3138478:0",
+          "student_overview": "crwdns3138480:0crwdne3138480:0"
+        },
+        "express-2022/Dance Party": {
+          "name": "crwdns3138564:0crwdne3138564:0",
+          "overview": "crwdns3138566:0crwdne3138566:0",
+          "preparation": "crwdns3138568:0crwdne3138568:0",
+          "purpose": "crwdns3138570:0crwdne3138570:0",
+          "student_overview": "crwdns3138572:0crwdne3138572:0"
+        },
+        "express-2022/Loops with Rey and BB-8": {
+          "name": "crwdns3138690:0crwdne3138690:0",
+          "overview": "crwdns3138692:0crwdne3138692:0",
+          "preparation": "crwdns3138694:0crwdne3138694:0",
+          "purpose": "crwdns3138696:0crwdne3138696:0",
+          "student_overview": "crwdns3138698:0crwdne3138698:0"
+        },
+        "express-2022/Mini-Project: Sticker Art": {
+          "name": "crwdns3138790:0crwdne3138790:0",
+          "overview": "crwdns3138792:0crwdne3138792:0",
+          "preparation": "crwdns3138794:0crwdne3138794:0",
+          "purpose": "crwdns3138796:0crwdne3138796:0",
+          "student_overview": "crwdns3138798:0crwdne3138798:0"
+        },
+        "express-2022/Nested Loops in Maze": {
+          "name": "crwdns3138868:0crwdne3138868:0",
+          "overview": "crwdns3138870:0crwdne3138870:0",
+          "preparation": "crwdns3138872:0crwdne3138872:0",
+          "purpose": "crwdns3138874:0crwdne3138874:0",
+          "student_overview": "crwdns3138876:0crwdne3138876:0"
+        },
+        "express-2022/Snowflakes with Anna and Elsa": {
+          "name": "crwdns3138948:0crwdne3138948:0",
+          "overview": "crwdns3138950:0crwdne3138950:0",
+          "preparation": "crwdns3138952:0crwdne3138952:0",
+          "purpose": "crwdns3138954:0crwdne3138954:0",
+          "student_overview": "crwdns3138956:0crwdne3138956:0"
+        },
+        "express-2022/Looking Ahead with Minecraft": {
+          "name": "crwdns3139006:0crwdne3139006:0",
+          "overview": "crwdns3139008:0crwdne3139008:0",
+          "preparation": "crwdns3139010:0crwdne3139010:0",
+          "purpose": "crwdns3139012:0crwdne3139012:0",
+          "student_overview": "crwdns3139014:0crwdne3139014:0"
+        },
+        "express-2022/If/Else with Bee": {
+          "name": "crwdns3139062:0crwdne3139062:0",
+          "overview": "crwdns3139064:0crwdne3139064:0",
+          "preparation": "crwdns3139066:0crwdne3139066:0",
+          "purpose": "crwdns3139068:0crwdne3139068:0",
+          "student_overview": "crwdns3139070:0crwdne3139070:0"
+        },
+        "express-2022/While Loops in Farmer": {
+          "name": "crwdns3139130:0crwdne3139130:0",
+          "overview": "crwdns3139132:0crwdne3139132:0",
+          "preparation": "crwdns3139134:0crwdne3139134:0",
+          "purpose": "crwdns3139136:0crwdne3139136:0",
+          "student_overview": "crwdns3139138:0crwdne3139138:0"
+        },
+        "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "crwdns3139204:0crwdne3139204:0",
+          "overview": "crwdns3139206:0crwdne3139206:0",
+          "preparation": "crwdns3139208:0crwdne3139208:0",
+          "purpose": "crwdns3139210:0crwdne3139210:0",
+          "student_overview": "crwdns3139212:0crwdne3139212:0"
+        },
+        "express-2022/Until Loops in Maze": {
+          "name": "crwdns3139270:0crwdne3139270:0",
+          "overview": "crwdns3139272:0crwdne3139272:0",
+          "preparation": "crwdns3139274:0crwdne3139274:0",
+          "purpose": "crwdns3139276:0crwdne3139276:0",
+          "student_overview": "crwdns3139278:0crwdne3139278:0"
+        },
+        "express-2022/Harvesting with Conditionals": {
+          "name": "crwdns3139344:0crwdne3139344:0",
+          "overview": "crwdns3139346:0crwdne3139346:0",
+          "preparation": "crwdns3139348:0crwdne3139348:0",
+          "purpose": "crwdns3139350:0crwdne3139350:0",
+          "student_overview": "crwdns3139352:0crwdne3139352:0"
+        },
+        "express-2022/Functions in Minecraft": {
+          "name": "crwdns3139416:0crwdne3139416:0",
+          "overview": "crwdns3139418:0crwdne3139418:0",
+          "preparation": "crwdns3139420:0crwdne3139420:0",
+          "purpose": "crwdns3139422:0crwdne3139422:0",
+          "student_overview": "crwdns3139424:0crwdne3139424:0"
+        },
+        "express-2022/Functions with Harvester": {
+          "name": "crwdns3139486:0crwdne3139486:0",
+          "overview": "crwdns3139488:0crwdne3139488:0",
+          "preparation": "crwdns3139490:0crwdne3139490:0",
+          "purpose": "crwdns3139492:0crwdne3139492:0",
+          "student_overview": "crwdns3139494:0crwdne3139494:0"
+        },
+        "express-2022/Functions with Artist": {
+          "name": "crwdns3139548:0crwdne3139548:0",
+          "overview": "crwdns3139550:0crwdne3139550:0",
+          "preparation": "crwdns3139552:0crwdne3139552:0",
+          "purpose": "crwdns3139554:0crwdne3139554:0",
+          "student_overview": "crwdns3139556:0crwdne3139556:0"
+        },
+        "express-2022/Text and Prompts": {
+          "name": "crwdns3139616:0crwdne3139616:0",
+          "overview": "crwdns3139618:0crwdne3139618:0",
+          "preparation": "crwdns3139620:0crwdne3139620:0",
+          "purpose": "crwdns3139622:0crwdne3139622:0",
+          "student_overview": "crwdns3139624:0crwdne3139624:0"
+        },
+        "express-2022/[New] Counting with Variables": {
+          "name": "crwdns3139716:0crwdne3139716:0",
+          "overview": "crwdns3139718:0crwdne3139718:0",
+          "preparation": "crwdns3139720:0crwdne3139720:0",
+          "purpose": "crwdns3139722:0crwdne3139722:0",
+          "student_overview": "crwdns3139724:0crwdne3139724:0"
+        },
+        "express-2022/Using Variables with the Artist": {
+          "name": "crwdns3139786:0crwdne3139786:0",
+          "overview": "crwdns3139788:0crwdne3139788:0",
+          "preparation": "crwdns3139790:0crwdne3139790:0",
+          "purpose": "crwdns3139792:0crwdne3139792:0",
+          "student_overview": "crwdns3139794:0crwdne3139794:0"
+        },
+        "express-2022/Variables with the Bee": {
+          "name": "crwdns3139850:0crwdne3139850:0",
+          "overview": "crwdns3139852:0crwdne3139852:0",
+          "preparation": "crwdns3139854:0crwdne3139854:0",
+          "purpose": "crwdns3139856:0crwdne3139856:0",
+          "student_overview": "crwdns3139858:0crwdne3139858:0"
+        },
+        "express-2022/For Loops with Bee": {
+          "name": "crwdns3139902:0crwdne3139902:0",
+          "overview": "crwdns3139904:0crwdne3139904:0",
+          "preparation": "crwdns3139906:0crwdne3139906:0",
+          "purpose": "crwdns3139908:0crwdne3139908:0",
+          "student_overview": "crwdns3139910:0crwdne3139910:0"
+        },
+        "express-2022/For Loops with Artist": {
+          "name": "crwdns3139968:0crwdne3139968:0",
+          "overview": "crwdns3139970:0crwdne3139970:0",
+          "preparation": "crwdns3139972:0crwdne3139972:0",
+          "purpose": "crwdns3139974:0crwdne3139974:0",
+          "student_overview": "crwdns3139976:0crwdne3139976:0"
+        },
+        "express-2022/End of Course Project": {
+          "name": "crwdns3140026:0crwdne3140026:0",
+          "overview": "crwdns3140028:0crwdne3140028:0",
+          "preparation": "crwdns3140030:0crwdne3140030:0",
+          "purpose": "crwdns3140032:0crwdne3140032:0",
+          "student_overview": "crwdns3140034:0crwdne3140034:0"
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "name": "crwdns3125682:0crwdne3125682:0",
+          "overview": "crwdns3125684:0crwdne3125684:0",
+          "preparation": "crwdns3125686:0crwdne3125686:0",
+          "purpose": "crwdns3125688:0crwdne3125688:0",
+          "student_overview": "crwdns3125690:0crwdne3125690:0"
+        },
+        "pre-express-2022/Sequencing with Scrat": {
+          "name": "crwdns3125800:0crwdne3125800:0",
+          "overview": "crwdns3125802:0crwdne3125802:0",
+          "preparation": "crwdns3125804:0crwdne3125804:0",
+          "purpose": "crwdns3125806:0crwdne3125806:0",
+          "student_overview": "crwdns3125808:0crwdne3125808:0"
+        },
+        "pre-express-2022/Programming with Angry Birds": {
+          "name": "crwdns3125896:0crwdne3125896:0",
+          "overview": "crwdns3125898:0crwdne3125898:0",
+          "preparation": "crwdns3125900:0crwdne3125900:0",
+          "purpose": "crwdns3125902:0crwdne3125902:0"
+        },
+        "pre-express-2022/Programming with Rey and BB-8": {
+          "name": "crwdns3125984:0crwdne3125984:0",
+          "overview": "crwdns3125986:0crwdne3125986:0",
+          "preparation": "crwdns3125988:0crwdne3125988:0",
+          "purpose": "crwdns3125990:0crwdne3125990:0"
+        },
+        "pre-express-2022/Programming with Harvester": {
+          "name": "crwdns3126066:0crwdne3126066:0",
+          "overview": "crwdns3126068:0crwdne3126068:0",
+          "preparation": "crwdns3126070:0crwdne3126070:0",
+          "purpose": "crwdns3126072:0crwdne3126072:0",
+          "student_overview": "crwdns3126074:0crwdne3126074:0"
+        },
+        "pre-express-2022/Loops with Scrat": {
+          "name": "crwdns3126156:0crwdne3126156:0",
+          "overview": "crwdns3126158:0crwdne3126158:0",
+          "preparation": "crwdns3126160:0crwdne3126160:0",
+          "purpose": "crwdns3126162:0crwdne3126162:0",
+          "student_overview": "crwdns3126164:0crwdne3126164:0"
+        },
+        "pre-express-2022/Loops with Laurel": {
+          "name": "crwdns3126248:0crwdne3126248:0",
+          "overview": "crwdns3126250:0crwdne3126250:0",
+          "preparation": "crwdns3126252:0crwdne3126252:0",
+          "purpose": "crwdns3126254:0crwdne3126254:0"
+        },
+        "pre-express-2022/Ocean Scene with Loops": {
+          "name": "crwdns3126338:0crwdne3126338:0",
+          "overview": "crwdns3126340:0crwdne3126340:0",
+          "preparation": "crwdns3126342:0crwdne3126342:0",
+          "purpose": "crwdns3126344:0crwdne3126344:0",
+          "student_overview": "crwdns3126346:0crwdne3126346:0"
+        },
+        "pre-express-2022/Drawing Gardens with Loops": {
+          "name": "crwdns3126436:0crwdne3126436:0",
+          "overview": "crwdns3126438:0crwdne3126438:0",
+          "preparation": "crwdns3126440:0crwdne3126440:0",
+          "purpose": "crwdns3126442:0crwdne3126442:0",
+          "student_overview": "crwdns3126444:0crwdne3126444:0"
+        },
+        "pre-express-2022/On the Move with Events": {
+          "name": "crwdns3126522:0crwdne3126522:0",
+          "overview": "crwdns3126524:0crwdne3126524:0",
+          "preparation": "crwdns3126526:0crwdne3126526:0",
+          "purpose": "crwdns3126528:0crwdne3126528:0",
+          "student_overview": "crwdns3126530:0crwdne3126530:0"
+        },
+        "pre-express-2022/A Royal Battle with Events": {
+          "name": "crwdns3126600:0crwdne3126600:0",
+          "overview": "crwdns3126602:0crwdne3126602:0",
+          "preparation": "crwdns3126604:0crwdne3126604:0",
+          "purpose": "crwdns3126606:0crwdne3126606:0",
+          "student_overview": "crwdns3126608:0crwdne3126608:0"
+        },
+        "coursea-2022/Safety in My Online Neighborhood": {
+          "name": "crwdns3126694:0crwdne3126694:0",
+          "overview": "crwdns3126696:0[1]crwdnd3126696:0[0]crwdnd3126696:0[2]crwdne3126696:0",
+          "preparation": "crwdns3126698:0crwdne3126698:0",
+          "purpose": "crwdns3126700:0crwdne3126700:0",
+          "student_overview": "crwdns3126702:0crwdne3126702:0"
+        },
+        "coursea-2022/Learn to Drag and Drop": {
+          "name": "crwdns3126762:0crwdne3126762:0",
+          "overview": "crwdns3126764:0crwdne3126764:0",
+          "preparation": "crwdns3126766:0crwdne3126766:0",
+          "purpose": "crwdns3126768:0crwdne3126768:0",
+          "student_overview": "crwdns3126770:0crwdne3126770:0"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "crwdns3126876:0crwdne3126876:0",
+          "overview": "crwdns3126878:0crwdne3126878:0",
+          "preparation": "crwdns3126880:0crwdne3126880:0",
+          "purpose": "crwdns3126882:0crwdne3126882:0",
+          "student_overview": "crwdns3126884:0crwdne3126884:0"
+        },
+        "coursea-2022/Sequencing with Scrat": {
+          "name": "crwdns3126986:0crwdne3126986:0",
+          "overview": "crwdns3126988:0crwdne3126988:0",
+          "preparation": "crwdns3126990:0crwdne3126990:0",
+          "purpose": "crwdns3126992:0crwdne3126992:0",
+          "student_overview": "crwdns3126994:0crwdne3126994:0"
+        },
+        "coursea-2022/Programming with Scrat": {
+          "name": "crwdns3127090:0crwdne3127090:0",
+          "overview": "crwdns3127092:0crwdne3127092:0",
+          "preparation": "crwdns3127094:0crwdne3127094:0",
+          "purpose": "crwdns3127096:0crwdne3127096:0",
+          "student_overview": "crwdns3127098:0crwdne3127098:0"
+        },
+        "coursea-2022/Programming with Rey and BB-8": {
+          "name": "crwdns3127204:0crwdne3127204:0",
+          "overview": "crwdns3127206:0crwdne3127206:0",
+          "preparation": "crwdns3127208:0crwdne3127208:0",
+          "purpose": "crwdns3127210:0crwdne3127210:0",
+          "student_overview": "crwdns3127212:0crwdne3127212:0"
+        },
+        "coursea-2022/Happy Loops": {
+          "name": "crwdns3127288:0crwdne3127288:0",
+          "overview": "crwdns3127290:0crwdne3127290:0",
+          "preparation": "crwdns3127292:0crwdne3127292:0",
+          "purpose": "crwdns3127294:0crwdne3127294:0",
+          "student_overview": "crwdns3127296:0crwdne3127296:0"
+        },
+        "coursea-2022/Loops with Scrat": {
+          "name": "crwdns3127386:0crwdne3127386:0",
+          "overview": "crwdns3127388:0crwdne3127388:0",
+          "preparation": "crwdns3127390:0crwdne3127390:0",
+          "purpose": "crwdns3127392:0crwdne3127392:0",
+          "student_overview": "crwdns3127394:0crwdne3127394:0"
+        },
+        "coursea-2022/Loops with Laurel": {
+          "name": "crwdns3127526:0crwdne3127526:0",
+          "overview": "crwdns3127528:0crwdne3127528:0",
+          "preparation": "crwdns3127530:0crwdne3127530:0",
+          "purpose": "crwdns3127532:0crwdne3127532:0",
+          "student_overview": "crwdns3127534:0crwdne3127534:0"
+        },
+        "coursea-2022/Ocean Scene with Loops": {
+          "name": "crwdns3127628:0crwdne3127628:0",
+          "overview": "crwdns3127630:0crwdne3127630:0",
+          "preparation": "crwdns3127632:0crwdne3127632:0",
+          "purpose": "crwdns3127634:0crwdne3127634:0",
+          "student_overview": "crwdns3127636:0crwdne3127636:0"
+        },
+        "coursea-2022/The Big Event Jr": {
+          "name": "crwdns3127736:0crwdne3127736:0",
+          "overview": "crwdns3127738:0crwdne3127738:0",
+          "preparation": "crwdns3127740:0crwdne3127740:0",
+          "purpose": "crwdns3127742:0crwdne3127742:0",
+          "student_overview": "crwdns3127744:0crwdne3127744:0"
+        },
+        "coursea-2022/Mini-Project: On the Move with Play Lab": {
+          "name": "crwdns3127834:0crwdne3127834:0",
+          "overview": "crwdns3127836:0crwdne3127836:0",
+          "preparation": "crwdns3127838:0crwdne3127838:0",
+          "purpose": "crwdns3127840:0crwdne3127840:0",
+          "student_overview": "crwdns3127842:0crwdne3127842:0"
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "crwdns3127946:0crwdne3127946:0",
+          "overview": "crwdns3127948:0crwdne3127948:0",
+          "preparation": "crwdns3127950:0crwdne3127950:0",
+          "purpose": "crwdns3127952:0crwdne3127952:0",
+          "student_overview": "crwdns3127954:0crwdne3127954:0"
+        },
+        "coursec-2022/Putting a STOP to Online Meanness": {
+          "name": "crwdns3128720:0crwdne3128720:0",
+          "overview": "crwdns3128722:0[1]crwdnd3128722:0[0]crwdnd3128722:0[2]crwdne3128722:0",
+          "preparation": "crwdns3128724:0crwdne3128724:0",
+          "purpose": "crwdns3128726:0crwdne3128726:0",
+          "student_overview": "crwdns3128728:0crwdne3128728:0"
+        },
+        "coursec-2022/My Robotic Friends Jr": {
+          "name": "crwdns3128776:0crwdne3128776:0",
+          "overview": "crwdns3128778:0crwdne3128778:0",
+          "preparation": "crwdns3128780:0crwdne3128780:0",
+          "purpose": "crwdns3128782:0crwdne3128782:0",
+          "student_overview": "crwdns3128784:0crwdne3128784:0"
+        },
+        "coursec-2022/Programming with Angry Birds": {
+          "name": "crwdns3128894:0crwdne3128894:0",
+          "overview": "crwdns3128896:0crwdne3128896:0",
+          "preparation": "crwdns3128898:0crwdne3128898:0",
+          "purpose": "crwdns3128900:0crwdne3128900:0",
+          "student_overview": "crwdns3128902:0crwdne3128902:0"
+        },
+        "coursec-2022/Debugging in Maze": {
+          "name": "crwdns3129030:0crwdne3129030:0",
+          "overview": "crwdns3129032:0crwdne3129032:0",
+          "preparation": "crwdns3129034:0crwdne3129034:0",
+          "purpose": "crwdns3129036:0crwdne3129036:0",
+          "student_overview": "crwdns3129038:0crwdne3129038:0"
+        },
+        "coursec-2022/Collecting Treasure with Laurel": {
+          "name": "crwdns3129264:0crwdne3129264:0",
+          "overview": "crwdns3129268:0crwdne3129268:0",
+          "preparation": "crwdns3129274:0crwdne3129274:0",
+          "purpose": "crwdns3129278:0crwdne3129278:0",
+          "student_overview": "crwdns3129282:0crwdne3129282:0"
+        },
+        "coursec-2022/Creating Art with Code": {
+          "name": "crwdns3129492:0crwdne3129492:0",
+          "overview": "crwdns3129496:0crwdne3129496:0",
+          "preparation": "crwdns3129498:0crwdne3129498:0",
+          "purpose": "crwdns3129502:0crwdne3129502:0",
+          "student_overview": "crwdns3129506:0crwdne3129506:0"
+        },
+        "coursec-2022/My Loopy Robotic Friends Jr": {
+          "name": "crwdns3129732:0crwdne3129732:0",
+          "overview": "crwdns3129736:0crwdne3129736:0",
+          "preparation": "crwdns3129740:0crwdne3129740:0",
+          "purpose": "crwdns3129744:0crwdne3129744:0",
+          "student_overview": "crwdns3129746:0crwdne3129746:0"
+        },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "crwdns3129964:0crwdne3129964:0",
+          "overview": "crwdns3129968:0crwdne3129968:0",
+          "preparation": "crwdns3129972:0crwdne3129972:0",
+          "purpose": "crwdns3129978:0crwdne3129978:0",
+          "student_overview": "crwdns3129982:0crwdne3129982:0"
+        },
+        "coursec-2022/Harvesting Crops with Loops": {
+          "name": "crwdns3130336:0crwdne3130336:0",
+          "overview": "crwdns3130342:0crwdne3130342:0",
+          "preparation": "crwdns3130346:0crwdne3130346:0",
+          "purpose": "crwdns3130350:0crwdne3130350:0",
+          "student_overview": "crwdns3130356:0crwdne3130356:0"
+        },
+        "coursec-2022/Mini-Project: Sticker Art": {
+          "name": "crwdns3130582:0crwdne3130582:0",
+          "overview": "crwdns3130586:0crwdne3130586:0",
+          "preparation": "crwdns3130590:0crwdne3130590:0",
+          "purpose": "crwdns3130594:0crwdne3130594:0",
+          "student_overview": "crwdns3130606:0crwdne3130606:0"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "crwdns3130794:0crwdne3130794:0",
+          "overview": "crwdns3130806:0crwdne3130806:0",
+          "preparation": "crwdns3130812:0crwdne3130812:0",
+          "purpose": "crwdns3130816:0crwdne3130816:0",
+          "student_overview": "crwdns3130820:0crwdne3130820:0"
+        },
+        "coursec-2022/Build a Flappy Game": {
+          "name": "crwdns3131016:0crwdne3131016:0",
+          "overview": "crwdns3131020:0crwdne3131020:0",
+          "preparation": "crwdns3131024:0crwdne3131024:0",
+          "purpose": "crwdns3131030:0crwdne3131030:0",
+          "student_overview": "crwdns3131034:0crwdne3131034:0"
+        },
+        "coursec-2022/Mini-Project: Chase Game": {
+          "name": "crwdns3131282:0crwdne3131282:0",
+          "overview": "crwdns3131286:0crwdne3131286:0",
+          "preparation": "crwdns3131292:0crwdne3131292:0",
+          "purpose": "crwdns3131296:0crwdne3131296:0",
+          "student_overview": "crwdns3131300:0crwdne3131300:0"
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "crwdns3131512:0crwdne3131512:0",
+          "overview": "crwdns3131516:0crwdne3131516:0",
+          "preparation": "crwdns3131520:0crwdne3131520:0",
+          "purpose": "crwdns3131524:0crwdne3131524:0",
+          "student_overview": "crwdns3131528:0crwdne3131528:0"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "crwdns3131724:0crwdne3131724:0",
+          "overview": "crwdns3131730:0crwdne3131730:0",
+          "preparation": "crwdns3131732:0crwdne3131732:0",
+          "purpose": "crwdns3131736:0crwdne3131736:0",
+          "student_overview": "crwdns3131740:0crwdne3131740:0"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "crwdns3131992:0crwdne3131992:0",
+          "overview": "crwdns3131996:0crwdne3131996:0",
+          "preparation": "crwdns3132000:0crwdne3132000:0",
+          "purpose": "crwdns3132004:0crwdne3132004:0",
+          "student_overview": "crwdns3132008:0crwdne3132008:0"
+        },
         "csd5-2022/Representation Matters": {
           "name": "crwdns2959232:0crwdne2959232:0",
           "overview": "crwdns2959236:0crwdne2959236:0",

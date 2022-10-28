@@ -15,8 +15,9 @@ class Ability
     cannot :read, [
       TeacherFeedback,
       CourseOffering,
+      DataDoc,
       UnitGroup, # see override below
-      Script, # see override below
+      Unit, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
       ProgrammingClass, # see override below
@@ -63,10 +64,11 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
-      CodeReview,
-      CodeReviewComment,
+      CodeReview
     ]
     cannot :index, Level
+
+    can [:show, :index], DataDoc
 
     # If you can see a level, you can also do these things:
     can [:embed_level, :get_rubric, :get_serialized_maze], Level do |level|
@@ -103,14 +105,6 @@ class Ability
       end
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
-      can :destroy, CodeReviewComment do |code_review_comment|
-        # Teachers can delete comments on their student's projects,
-        # their own comments anywhere, and comments on their projects.
-        code_review_comment.project_owner&.student_of?(user) ||
-          (user.teacher? && user == code_review_comment.commenter) ||
-          (user.teacher? && user == code_review_comment.project_owner)
-      end
       can :view_project_commits, User do |project_owner|
         project_owner.id === user.id || can?(:code_review, project_owner)
       end
@@ -137,20 +131,20 @@ class Ability
         in_shared_section_with_code_review && user.in_code_review_group_with?(other_user)
       end
 
-      can :create, CodeReviewNote do |code_review_note|
-        code_review_note.code_review.open? && can?(:code_review, code_review_note.code_review.owner)
+      can :create, CodeReviewComment do |code_review_comment|
+        code_review_comment.code_review.open? && can?(:code_review, code_review_comment.code_review.owner)
       end
 
-      can :update, CodeReviewNote do |code_review_note|
-        code_review_note.code_review.user_id == user.id
+      can :update, CodeReviewComment do |code_review_comment|
+        code_review_comment.code_review.user_id == user.id
       end
 
-      can :destroy, CodeReviewNote do |code_review_note|
+      can :destroy, CodeReviewComment do |code_review_comment|
         # Teachers can delete comments on their student's projects,
         # their own comments anywhere, and comments on their projects.
-        code_review_note.code_review.owner&.student_of?(user) ||
-          (user.teacher? && user.id == code_review_note.commenter_id) ||
-          (user.teacher? && user.id == code_review_note.code_review.user_id)
+        code_review_comment.code_review.owner&.student_of?(user) ||
+          (user.teacher? && user.id == code_review_comment.commenter_id) ||
+          (user.teacher? && user.id == code_review_comment.code_review.user_id)
       end
 
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
@@ -210,7 +204,7 @@ class Ability
           !user.students.where(id: user_level.user_id).empty?
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
-        can :view_level_solutions, Script do |script|
+        can :view_level_solutions, Unit do |script|
           !script.old_professional_learning_course?
         end
         can [:read, :find], :regional_partner_workshops
@@ -301,7 +295,7 @@ class Ability
       unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
-    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Script do |script|
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Unit do |script|
       script.is_migrated && can?(:read, script)
     end
 
@@ -319,7 +313,7 @@ class Ability
       end
     end
 
-    can :read, Script do |script|
+    can :read, Unit do |script|
       if script.can_be_participant?(user) || script.can_be_instructor?(user)
         if script.in_development?
           user.permission?(UserPermission::LEVELBUILDER)
@@ -396,10 +390,11 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        DataDoc,
         CourseOffering,
         UnitGroup,
         Resource,
-        Script,
+        Unit,
         ScriptLevel,
         Video,
         Vocabulary,
@@ -430,7 +425,7 @@ class Ability
         can :index, Level
         can :clone, Level, &:custom?
         can :manage, Level, editor_experiment: editor_experiment
-        can [:edit, :update], Script, editor_experiment: editor_experiment
+        can [:edit, :update], Unit, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
       end
     end
@@ -439,14 +434,13 @@ class Ability
       # These checks control access to Javabuilder.
       # All verified instructors and can generate a Javabuilder session token to run Java code.
       # Students who are also assigned to a CSA section with a verified instructor can run Java code.
-      # Verified instructors can access and run Java Lab exemplars.
-      # Levelbuilders can access and update Java Lab validation code.
-      can :get_access_token, :javabuilder_session do
+      # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
+      # is used when viewing another version of a student's project (in preview or Code Review mode).
+      # It is also used for running exemplars, but only teachers can access exemplars.
+      # Levelbuilders can access and update Java Lab validation code (using the
+      # access_token_with_override_validation endpoint).
+      can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
-      end
-
-      can :access_token_with_override_sources, :javabuilder_session do
-        user.verified_instructor?
       end
 
       can :access_token_with_override_validation, :javabuilder_session do
@@ -472,12 +466,13 @@ class Ability
         Level,
         UnitGroup,
         CourseOffering,
-        Script,
+        Unit,
         Lesson,
         ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,
+        DataDoc,
         :pd_foorm,
         Foorm::Form,
         Foorm::Library,

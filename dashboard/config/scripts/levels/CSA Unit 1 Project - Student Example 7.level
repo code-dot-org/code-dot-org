@@ -5214,13 +5214,15 @@
         "isVisible": true
       }
     },
-    "long_instructions": "**Teacher Feedback:** This originally took over 2,000 lines of code. He had to redo it to make it work."
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2021-11-01T17:59:32.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-11-01T17:59:32.561+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 6\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 6\"},{\"changed_at\":\"2021-11-01 18:10:38 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-01 18:12:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-11-01T17:59:32.561+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 6\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 6\"},{\"changed_at\":\"2021-11-01 18:10:38 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-01 18:12:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2022-09-03 16:43:18 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

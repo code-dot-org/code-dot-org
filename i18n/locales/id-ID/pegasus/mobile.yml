@@ -352,6 +352,7 @@
   homepage_banner_40k_teachers_link: "Pelajari lebih lanjut"
   homepage_slot_text_title_hoc: "Jam kode"
   homepage_slot_text_blurb_hoc: "Siapapun bisa belajar. Mulailah hari ini"
+  homepage_slot_text_blurb_hoc_2022: "Menjelajah, Bermain, Berkreasi!"
   homepage_slot_text_link_hoc: "Cobalah \"Hour of Code\""
   homepage_slot_text_link_about_hoc: "Tentang Hour of Code"
   homepage_slot_text_link_host: "Selenggarakan Hour of Code"
@@ -379,7 +380,7 @@
   homepage_slot_text_link_shop: "Kaos, topi, & banyak lagi"
   homepage_slot_text_link_thebadguys: "Buat Kode dengan The Bad Guys"
   homepage_slot_text_link_administrators: "Bawa CS ke sekolah mu"
-  homepage_gallery_header: "Lebih dari %{project_count} juta proyek Code.org telah dibuat"
+  homepage_gallery_header: "Lebih dari %{project_count} juta proyek Code.org yang telah dibuat"
   homepage_header_donors: "Code.org mengucapkan terima kasih kepada para pendukungnya"
   homepage_donors_seall: "Lihat semua"
   homepage_donors_donate: "Donasi"
@@ -1827,6 +1828,8 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Pembelajaran Mesin untuk Anak-Anak'
   ai_ecs: 'ECS: Kecerdasan Buatan (AI)'
   ai_ecs_description: "Unit kurikulum alternatif baru untuk kurikulum Exploring Computer Science (ECS)."
+  ai_aiedu_intro: 'aiEDU: Pengantar Kecerdasan Buatan'
+  ai_aiedu_intro_description: "Pengantar Kecerdasan Buatan adalah sebuah kurikulum yang gratis, inovatif, relevan secara budaya dimana murid mengembangkan pengetahuan konseptual tentang kecerdasan buatan dan bagaimana penggunaannya di dunia nyata."
   ai_elements: "Unsur AI"
   ai_elements_description: "Serangkaian kursus online gratis yang dibuat oleh Reaktor dan University of Helsinki."
   ai_cognimates: "Kognimat"
@@ -1837,3 +1840,11 @@
   footer_cookie_notice: "Informasi Cookie"
   top_hoc_tutorial_applab_alt_text: "Tangan cokelat dengan jari telunjuk menyentuh tablet layar sentuh yang memancarkan bintang dan sinar cahaya berlatar belakang biru"
   minecraft_tile_alt: "Dua karakter Minecraft, Steve dan Alex, dengan latar belakang yang menunjukkan adegan Minecraft air dengan karang, lumba-lumba, dan rumput laut"
+  hoc2022_banner_title: "Menjelajah, Bermain, Berkreasi!"
+  hoc2022_banner_description: "Jelajahi alam semesta, cetak gol, atau lakukan gerakan — ada banyak cara untuk mencoba ilmu komputer!"
+  hoc2022_cta_primary: "Lihat yang baru"
+  hoc2022_cta_secondary: "Coba kegiatan lainnya"
+  hoc2022_landing_page_explore_description: "Buka pintu menuju dunia baru dengan ilmu komputer!"
+  hoc2022_landing_page_create_title: "Buat"
+  hoc2022_landing_page_create_description: "Ciptakan sesuatu yang unik dan indah!"
+  try_it_yourself: "Cobalah sendiri!"

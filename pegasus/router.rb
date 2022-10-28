@@ -8,7 +8,7 @@ require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
 require 'cdo/rack/cdo_deflater'
 require 'cdo/rack/request'
-require 'cdo/properties'
+require_relative 'helpers/properties'
 require 'cdo/languages'
 require 'dynamic_config/page_mode'
 require 'active_support'
@@ -112,10 +112,12 @@ class Documents < Sinatra::Base
       ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    Sass::Plugin.add_template_location(
-      sites_v3_dir('code.org', 'public', 'css'),
-      sites_v3_dir('code.org', 'public', 'css', 'generated')
-    )
+    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+      Sass::Plugin.add_template_location(
+        sites_v3_dir(site, 'public', 'css'),
+        sites_v3_dir(site, 'public', 'css', 'generated')
+      )
+    end
     set :mustermann_opts, check_anchors: false, ignore_unknown_options: true
 
     # Haml/Temple engine doesn't recognize the `path` option
@@ -560,7 +562,7 @@ class Documents < Sinatra::Base
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
             FileUtils.mkdir_p File.dirname(cache_file)
-            File.binwrite(cache_file, Net::HTTP.get(URI(result)))
+            File.binwrite(cache_file, Net::HTTP.get(URI(result.chomp)))
           end
           pass unless File.file?(cache_file)
 

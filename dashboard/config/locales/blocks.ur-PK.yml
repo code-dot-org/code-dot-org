@@ -2,6 +2,9 @@
 ur:
   data:
     blocks:
+      AmysBlocks_setPromptWithChoices:
+        text: "{QUESTION} کے ذریعے صارف سے متغیر {VAR} مانگیں جو انتخابات {A}{B}{C}
+          رکھتا ہو"
       BadGuys_makeNewBadGuysSprite:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -230,20 +233,12 @@ ur:
             MOVES.XArmsUp: کھینچائی
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
-      Dancelab_everyMeasuresRange:
-        text: 'ہر {N} پیمائشوں کو {START} کے بعد دہرائیں '
       Dancelab_everySeconds:
         text: 'ہر ایک کو دہرائیں {N} {UNIT} '
         options:
           UNIT:
             '"measures"': پیمائشیں
             '"seconds"': سیکنڈز
-      Dancelab_everySecondsRange:
-        text: "{N} {UNIT} ہر {START} سے {STOP} تک "
-        options:
-          UNIT:
-            measures: اقدامات
-            seconds: سیکنڈز
       Dancelab_everyVerseChorus:
         text: 'ہر {UNIT} '
         options:
@@ -1313,6 +1308,32 @@ ur:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": عجیب بیس
               آواز
             "'sound://category_digital/jump_7.mp3'": چھلانگ لگایں
+      gamelab_playSoundOptionsSoccer:
+        text: پلے آواز {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": ایئر ہارن
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": تالیں
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": چلانا
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": نعرا لگانا
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": کک
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": دو سیٹیاں
+            "'sound://category_sports/One_Whistle_SFX.mp3'": سیٹی
+      gamelab_playSoundOptionsSpace:
+        text: پلے آواز {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": بلیک ہول
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": بُلّیٹ کلسٹر
+            "'sound://category_space/Carina_SFX.mp3'": کارینا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": کیسیوپیا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": کریب نیبولا
+            "'sound://category_space/Launch_SFX.mp3'": شروع کریں
+            "'sound://category_space/Lift_Off.mp3'": اوپر اٹھیں
+            "'sound://category_space/Pillars_SFX.mp3'": ستون
+            "'sound://category_space/Southern_ring_SFX.mp3'": جنوبی انگوٹی
+            "'sound://category_space/Supernova_SFX.mp3'": سپرنووا
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ٹائیکو
       gamelab_playSpeech:
         text: کلام چلائیں {SOUND}
       gamelab_playerBehaviors:
@@ -2091,6 +2112,11 @@ ur:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: جب {VAR} کا جواب دیا جائے
       RyanLab_moveForward:
@@ -2251,5 +2277,9 @@ ur:
           DIR:
             right: ٹھیک ہے
             left: بائیں بازو
+      storylab_setHeading:
+        text: ہیڈنگ سیٹ کریں {HEADING}
+      storylab_setSubheading:
+        text: ذیلی ہیڈنگ سیٹ کریں {SUBHEADING}
       validation_validatedBackground:
         text: پس منظر کو {IMG} پر سیٹ کریں

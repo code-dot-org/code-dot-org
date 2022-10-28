@@ -32,12 +32,14 @@ class JavabuilderSessionsController < ApplicationController
       return render status: :bad_request, json: {}
     end
     override_sources = params[:overrideSources]
+    # channel id is not required but can be included in order to retrieve assets
+    channel_id = params[:channelId]
 
     session_id = SecureRandom.uuid
     encoded_payload = get_encoded_payload({sid: session_id})
 
     level_id = params[:levelId].to_i
-    project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id)
+    project_files = JavalabFilesHelper.get_project_files_with_override_sources(override_sources, level_id, channel_id)
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 

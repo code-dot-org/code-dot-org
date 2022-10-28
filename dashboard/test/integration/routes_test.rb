@@ -16,11 +16,15 @@ class RoutesTest < ActionDispatch::IntegrationTest
       ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
     assert_nil cookies['_learn_session_test']
 
-    get '/s/dance-2019/lessons/1/levels/10'
+    get '/s/dance-2019/lessons/1/levels/9'
     assert_caching_enabled response.headers['Cache-Control'],
       ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
       ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
     assert_nil cookies['_learn_session_test']
+
+    get '/s/dance-2019/lessons/1/levels/10'
+    assert_caching_disabled response.headers['Cache-Control']
+    assert_not_nil cookies['_learn_session_test']
   end
 
   def test_level_starter_assets_handles_periods

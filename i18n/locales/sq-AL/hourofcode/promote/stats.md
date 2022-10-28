@@ -16,7 +16,7 @@ title: Blurbs and useful stats
 
 #### Bring computer science to your school. Start with an Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But just half of all schools offer computer science! Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë. Nëse keni degjuar për Orën e Kodimit më përpara, ju mund ta dini që ka bërë histori. 100 milionë studentë kanë zbuluar tashmë se sa e arritshme dhe argëtuese mund të jenë shkencat kompjuterike thjesht duke zhvilluar një Orë Kodimi.
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But just half of all schools offer computer science! Lajmi i mirë është se jemi në rrugë a sipër për ta ndryshuar këtë. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Ora e Kodimit është prezantim një orësh për shkencat kompjuterike, i dizenjuar të çmitizojë kodimin dhe të dëshmojë që çdo kush mund të mësojë gjërat bazike. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
@@ -30,7 +30,7 @@ Shpresojmë që kjo do të nxisë interesin tek studentët që të vazhdojnë t�
 
 #### Pse është kjo e rëndësishme?
 
-Teknologjia po transformon çdo industri në planet. Në 2015, 7 milion vende pune ne Shtetet e Bashkuara ishin në profesione -që përfshijnë artin dhe dizenjimin- të cilat vlerësojnë aftësitë në kodim. But 49 percent of schools in the U.S. don't offer computer science. Është koha që të kapim hapin e shekullit 21. E dimë se pavarësisht se çka do bëjnë studentët tanë kur të rriten, a shkojnë në mjekësi, biznes, politikë, apo arte, të dish si të ndërtosh teknologji do t'iu japë vetëbesim dhe avantazhe konkuruese. <br /> <br />
+There are nearly 700,000 open computing jobs in the US, but only 80,000 computer science students graduated into the workforce last year. And, 47 percent of schools in the U.S. don't offer computer science. It’s time for us to catch up to the 21st century. E dimë se pavarësisht se çka do bëjnë studentët tanë kur të rriten, a shkojnë në mjekësi, biznes, politikë, apo arte, të dish si të ndërtosh teknologji do t'iu japë vetëbesim dhe avantazhe konkuruese. <br /> <br />
 
 #### A quote you can use in materials
 
