@@ -895,7 +895,7 @@ ActiveRecord::Schema.define(version: 2022_10_24_233909) do
   end
 
   create_table "pd_applications_status_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.integer "pd_application_id", null: false
+    t.bigint "pd_application_id", null: false
     t.string "status", null: false
     t.datetime "timestamp", null: false
     t.integer "position", null: false

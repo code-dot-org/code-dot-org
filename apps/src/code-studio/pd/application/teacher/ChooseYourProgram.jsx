@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Row, Col} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap';
 import {
   PageLabels,
   SectionHeaders,
@@ -14,7 +14,6 @@ import {
 } from './TeacherApplicationConstants';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
-import {LabeledNumberInput} from '../../form_components_func/labeled/LabeledInput';
 import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields
@@ -25,7 +24,7 @@ import {useRegionalPartner} from '../../components/useRegionalPartner';
 const getProgramInfo = program => {
   switch (program) {
     case PROGRAM_CSD:
-      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 50};
+      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 25};
     case PROGRAM_CSP:
       return {name: 'CS Principles', shortName: 'CSP', minCourseHours: 100};
     case PROGRAM_CSA:
@@ -33,18 +32,6 @@ const getProgramInfo = program => {
     default:
       return {name: 'CS Program', shortName: null, minCourseHours: 0};
   }
-};
-
-const CourseHoursLabeledNumberInput = props => {
-  return (
-    <LabeledNumberInput
-      style={styles.numberInput}
-      labelWidth={{md: 8}}
-      controlWidth={{md: 4}}
-      inlineControl={true}
-      {...props}
-    />
-  );
 };
 
 const WhichGradesSelector = props => {
@@ -76,21 +63,6 @@ const ChooseYourProgram = props => {
   const isOffered = regionalPartner?.pl_programs_offered?.includes(
     programInfo.shortName
   );
-
-  // This should be kept consistent with the calculation logic in
-  // dashboard/app/models/pd/application/teacher_application.rb.
-  const csHowManyMinutes = parseInt(data.csHowManyMinutes, 10);
-  const csHowManyDaysPerWeek = parseInt(data.csHowManyDaysPerWeek, 10);
-  const csHowManyWeeksPerYear = parseInt(data.csHowManyWeeksPerYear, 10);
-  let courseHours = null;
-  if (
-    !isNaN(csHowManyMinutes) &&
-    !isNaN(csHowManyDaysPerWeek) &&
-    !isNaN(csHowManyWeeksPerYear)
-  ) {
-    courseHours =
-      (csHowManyMinutes * csHowManyDaysPerWeek * csHowManyWeeksPerYear) / 60;
-  }
 
   const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${
     programInfo.name
@@ -191,47 +163,11 @@ const ChooseYourProgram = props => {
             class) <strong> X </strong> (number of days per week the class will
             be offered) <strong> X </strong> (number of weeks with the class)
           </p>
-          <CourseHoursLabeledNumberInput
-            name="csHowManyMinutes"
-            label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
-              '{{CS program}}',
-              programInfo.name
-            )}
-          />
-          <CourseHoursLabeledNumberInput
-            name="csHowManyDaysPerWeek"
-            label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
-              '{{CS program}}',
-              programInfo.name
-            )}
-          />
-          <CourseHoursLabeledNumberInput
-            name="csHowManyWeeksPerYear"
-            label={PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
-              '{{CS program}}',
-              programInfo.name
-            )}
-          />
-          {courseHours && (
-            <div style={{marginBottom: 30}}>
-              <Row>
-                <Col md={8}>
-                  <div style={{textAlign: 'right'}}>
-                    <strong>Course hours</strong>
-                  </div>
-                </Col>
-                <Col md={4}>
-                  <strong>{courseHours.toFixed(2)}</strong>
-                </Col>
-              </Row>
-            </div>
-          )}
-
-          <LabeledRadioButtonsWithAdditionalTextFields
-            name="planToTeach"
-            textFieldMap={{
-              [TextFields.dontKnowIfIWillTeachExplain]: 'other'
-            }}
+          <LabeledRadioButtons
+            name="enoughCourseHours"
+            label={PageLabels.chooseYourProgram.enoughCourseHours
+              .replace('{{CS program}}', programInfo.name)
+              .replace('{{min hours}}', programInfo.minCourseHours)}
           />
 
           <LabeledRadioButtonsWithAdditionalTextFields
@@ -240,18 +176,6 @@ const ChooseYourProgram = props => {
               [TextFields.iDontKnowExplain]: 'other'
             }}
           />
-          {data.replaceExisting === 'Yes' && (
-            <LabeledRadioButtonsWithAdditionalTextFields
-              name="replaceWhichCourse"
-              label={PageLabels.chooseYourProgram.replaceWhichCourse.replace(
-                '{{CS program}}',
-                programInfo.name
-              )}
-              textFieldMap={{
-                [TextFields.otherPleaseExplain]: 'other'
-              }}
-            />
-          )}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
@@ -287,10 +211,6 @@ ChooseYourProgram.getDynamicallyRequiredFields = data => {
     requiredFields.push(...uniqueRequiredFields[data.program]);
   }
 
-  if (data.replaceExisting === 'Yes') {
-    requiredFields.push('replaceWhichCourse');
-  }
-
   return requiredFields;
 };
 
@@ -307,40 +227,8 @@ ChooseYourProgram.processPageData = data => {
       });
     });
   }
-  if (data.replaceExisting !== 'Yes') {
-    changes.replaceWhichCourse = undefined;
-  }
 
   return changes;
-};
-
-ChooseYourProgram.getErrorMessages = data => {
-  let formatErrors = {};
-  if (
-    data.csHowManyMinutes &&
-    (data.csHowManyMinutes < 1 || data.csHowManyMinutes > 480)
-  ) {
-    formatErrors.csHowManyMinutes =
-      'Class section minutes per day must be between 1 and 480';
-  }
-
-  if (
-    data.csHowManyDaysPerWeek &&
-    (data.csHowManyDaysPerWeek < 1 || data.csHowManyDaysPerWeek > 7)
-  ) {
-    formatErrors.csHowManyDaysPerWeek =
-      'Class section days per week must be between 1 and 7';
-  }
-
-  if (
-    data.csHowManyWeeksPerYear &&
-    (data.csHowManyWeeksPerYear < 1 || data.csHowManyWeeksPerYear > 52)
-  ) {
-    formatErrors.csHowManyWeeksPerYear =
-      'Class section weeks per year must be between 1 and 52';
-  }
-
-  return formatErrors;
 };
 
 const styles = {

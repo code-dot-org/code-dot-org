@@ -15,6 +15,7 @@
   "activityHeaderTime": " ({activityDuration} minutes)",
   "actions": "Harakatlar",
   "add": "Qo‘sh",
+  "addingToTable": "Qo‘shilmoqda ...",
   "addNewSection": "Yangi bo‘lim qo‘shish",
   "addParentEmailModal_confirmedParentEmail_label": "Ota-ona / homiyning elektron pochta manzilini tasdiqlang",
   "addParentEmailModal_confirmedParentEmail_mustMatch": "Elektron pochta manzillari mos kelishi kerak.",

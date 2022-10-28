@@ -12,6 +12,7 @@
   "activity": "Aktivitet",
   "actions": "Handlinger",
   "add": "Tilføj",
+  "addingToTable": "Tilføjer...",
   "addNewSection": "Tilføj nyt afsnit",
   "addParentEmailModal_confirmedParentEmail_label": "Bekræft forælderens eller værgens e-mailadresse",
   "addParentEmailModal_confirmedParentEmail_mustMatch": "E-mailadresserne skal være ens.",

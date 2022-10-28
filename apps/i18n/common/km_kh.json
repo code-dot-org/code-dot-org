@@ -4,6 +4,7 @@
   "activity": "សកម្មភាព",
   "actions": "សកម្មភាព",
   "add": "បន្ថែម",
+  "addingToTable": "កំពុង​បន្ថែម...",
   "addParentEmailModal_confirmedParentEmail_label": "បញ្ចាក់អ៊ីម៉ែលរបស់ឪពុកម្តាយឬអាណាព្យាបាល",
   "addParentEmailModal_parentEmail_invalid": "អុីម៉ែលដែលផ្តល់ឲគឺមិនត្រឹមត្រូវ។",
   "addParentEmailModal_parentEmail_isRequired": "ទាមទារអាស័យដ្ឋានអុីម៉ែល។",
