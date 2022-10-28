@@ -1,0 +1,84 @@
+@import "color";
+@import "style-constants";
+
+.paneSection {
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: hidden;
+  height: $workspace-headers-height;
+  line-height: $workspace-headers-height;
+}
+
+.headerButton {
+  cursor: pointer;
+  float: right;
+  overflow: hidden;
+  background-color: $light_purple;
+  margin: 3px 3px 3px 0;
+  height: 24px;
+  border-radius: 4px;
+  font-family: "Gotham 5r", sans-serif;
+  line-height: 18px;
+  &:hover {
+    background-color: $cyan;
+  }
+}
+
+.headerButtonRtl {
+  float: left;
+  margin-left: 3px;
+  margin-right: 0;
+}
+
+.headerButtonMinecraft {
+  background-color: #606060;
+  color: #bfbfbf;
+  border: none;
+  &:hover {
+    background-color: #606060;
+    color: $white;
+  }
+}
+
+.headerButtonUnfocused {
+  background-color: $lightest_purple;
+}
+
+.headerButtonPressed {
+  background-color: $white;
+  color: $purple;
+  &:hover {
+    color: $white;
+  }
+}
+
+.headerButtonDisabled {
+  background-color: $light_gray;
+  cursor: default;
+}
+
+.headerButtonSpan {
+  padding: 0 12px 0 12px;
+}
+
+.headerButtonIcon {
+  line-height: 24px;
+  padding-right: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.headerButtonIconRtl {
+  padding-right: 0;
+  padding-left: 8px;
+}
+
+.headerButtonIconHidden {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.headerButtonNoLabel {
+  padding-right: 0;
+  padding-left: 0;
+}

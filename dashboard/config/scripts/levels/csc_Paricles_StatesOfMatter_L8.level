@@ -18,13 +18,13 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Let's make 20 new H2O molecules and learn how to make them move like a liquid state of matter!**\r\n- Drag a `make make _ new sprites` block into the workspace and connect it under when run.\r\n- Connect a `number` block inside the make new sprite block and change the 0 to 20.\r\n- Drag a `Sprite begins` block and connect it under the `make new sprite` block\r\n- Drag a `sprite` block and connect it to the `Sprite begins` block\r\n- Drag a `fluttering` behavior block and connect it to the `Sprite begins` block\r\n- Press \"Run\" when you are finished.\r\n\r\n",
+    "long_instructions": "**Let's make 20 new H2O molecules and learn how to make them move like a liquid state of matter!**\r\n- Drag a `make _ new sprites` block into the workspace and connect it under when run.\r\n- Connect a `number` block inside the make new sprite block and change the 0 to 15.\r\n- Make sure to select the H2O sprite for this new block.\r\n- Drag a `Sprite begins` block and connect it under the `make 15 new sprites` block.\r\n- Drag a `sprite` block and connect it to the top of the `Sprite begins` block.\r\n- Drag a `fluttering` behavior block and connect it to the bottom of the `Sprite begins` block.\r\n- Press \"Run\" when you are finished.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "false",
+    "include_shared_functions": "true",
     "free_play": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
@@ -40,18 +40,18 @@
       "upButton",
       "downButton"
     ],
+    "project_template_level_name": "csc_Paricles_StatesOfMatter_L8-9 Template",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "project_template_level_name": "csc_Paricles_StatesOfMatter_L8-9 Template"
+    ]
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-10-25T22:25:55.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-25T22:25:55.104+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L8-9 Template\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L8-9 Template\"},{\"changed_at\":\"2022-10-25 22:30:11 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 22:32:35 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-25T22:25:55.104+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L8-9 Template\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L8-9 Template\"},{\"changed_at\":\"2022-10-25 22:30:11 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-25 22:32:35 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 22:09:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 23:08:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
