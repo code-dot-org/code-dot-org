@@ -14,21 +14,12 @@ aside.hoc-skinny-banner {
   @media screen and (max-width: $width-md) {
     background-size: cover;
     padding: 1.5em 1.75em;
-
-    img {
-      width: 100px;
-      margin: 0 2em 0 1em;
-    }
   }
 
   @media screen and (max-width: $width-sm) {
     flex-wrap: wrap;
     margin: 1em 0;
     text-align: center;
-
-    img {
-      display: none;
-    }
   }
 
   .wrapper {
@@ -47,6 +38,19 @@ aside.hoc-skinny-banner {
 
     @media screen and (max-width: $width-sm) {
       margin-bottom: 1em;
+    }
+  }
+
+  img {
+    width: 120px;
+
+    @media screen and (max-width: $width-md) {
+      width: 100px;
+      margin: 0 2em 0 1em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
     }
   }
 
