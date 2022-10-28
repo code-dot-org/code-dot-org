@@ -7,7 +7,7 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 import {
   newDefinitionBlock,
   allCallBlocks
-} from '../../../src/blockly/addons/functionBlocks.js';
+} from '../../../src/blockly/addons/functionEditor.js';
 
 describe('Custom Functions', () => {
   const cdoBlockly = Blockly;
