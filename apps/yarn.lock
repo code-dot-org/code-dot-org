@@ -1334,24 +1334,6 @@
   resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.5.tgz#0872991761e8f4458c73ba3b7f288b2e747af240"
   integrity sha512-Wr4zQgSpBh/Pus0+91Cshl93efew051PfVM4BBzcf0hqNGMVGj8Pztgvtqew07AnMrjxBVDITSlLzCfhHmyBQw==
 
-"@code-dot-org/johnny-five-deprecated@0.11.1-cdo.2":
-  version "0.11.1-cdo.2"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five-deprecated/-/johnny-five-deprecated-0.11.1-cdo.2.tgz#929196662ce707c708ebba8ecb6ac1bdda4cbbef"
-  integrity sha512-Zeq37rNClJtIl+emUP4mL4XdLuHJj+0JFLbQQvVlBwAIEW2ydAqRbutEPmEEgQnnbdcevhIuzWZgooofWY0Fmg==
-  dependencies:
-    chalk latest
-    color-convert "~1.2.2"
-    ease-component latest
-    es6-shim latest
-    lodash.clonedeep "^4.3.0"
-    lodash.debounce "^4.0.3"
-    nanotimer "0.3.10"
-    temporal latest
-  optionalDependencies:
-    browser-serialport latest
-    firmata latest
-    serialport "^4.0.0"
-
 "@code-dot-org/johnny-five@2.1.0-cdo.1":
   version "2.1.0-cdo.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/johnny-five/-/johnny-five-2.1.0-cdo.1.tgz#6042ea1ca0dcea42d45a620df39846946d321887"
