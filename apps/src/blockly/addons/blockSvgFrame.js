@@ -1,15 +1,16 @@
 import msg from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import frameSizes from './cdoConstants.js';
 
-const FRAME_MARGIN_SIDE = 15;
-const FRAME_MARGIN_TOP = 10;
-const FRAME_MARGIN_BOTTOM = 5;
-
-const FRAME_HEADER_HEIGHT = 25;
-
-export default class BlockSvgFunctional {
-  constructor(block) {
+export default class BlockSvgFrame {
+  constructor(block, text, className, textColor, headerColor, baseColor) {
+    console.log(block, text, className, textColor, headerColor, baseColor);
     this.block_ = block;
+    this.text = text || msg.block();
+    this.className = className || 'blocklyFrame';
+    this.textColor = textColor || color.white;
+    this.headerColor = headerColor || color.light_gray;
+    this.baseColor = baseColor || color.lightest_gray;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
@@ -20,8 +21,8 @@ export default class BlockSvgFunctional {
     this.initChildren();
   }
   initChildren() {
-    const frameX = -FRAME_MARGIN_SIDE;
-    const frameY = -(FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT);
+    const frameX = -frameSizes.MARGIN_SIDE;
+    const frameY = -(frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT);
     // Google Blockly's block ids are randomly generated and can
     // include invalid characters for element ids. Remove everything
     // except alphanumeric characters and whitespace, then collapse
@@ -31,7 +32,7 @@ export default class BlockSvgFunctional {
       .replace(/\s+/g, ' ');
 
     this.frameGroup_ = Blockly.utils.dom.createSvgElement('g', {
-      class: 'blocklyFunctionalFrame'
+      class: this.className
     });
 
     var clip = Blockly.utils.dom.createSvgElement(
@@ -41,13 +42,12 @@ export default class BlockSvgFunctional {
       },
       this.frameGroup_
     );
-
     this.frameClipRect_ = Blockly.utils.dom.createSvgElement(
       'rect',
       {
         x: frameX,
         y: frameY,
-        height: FRAME_HEADER_HEIGHT
+        height: frameSizes.HEADER_HEIGHT
       },
       clip
     );
@@ -57,8 +57,8 @@ export default class BlockSvgFunctional {
       {
         x: frameX,
         y: frameY,
-        fill: color.lightest_gray,
-        stroke: color.light_gray,
+        fill: this.baseColor,
+        stroke: this.headerColor,
         rx: 15,
         ry: 15
       },
@@ -70,7 +70,7 @@ export default class BlockSvgFunctional {
       {
         x: frameX,
         y: frameY,
-        fill: color.light_gray,
+        fill: this.headerColor,
         rx: 15,
         ry: 15,
         'clip-path': `url(#frameClip${safeCharBlockId})`
@@ -79,34 +79,33 @@ export default class BlockSvgFunctional {
     );
 
     var frameTextVerticalPosition = -(
-      FRAME_MARGIN_TOP +
-      FRAME_HEADER_HEIGHT / 2
+      frameSizes.MARGIN_TOP +
+      frameSizes.HEADER_HEIGHT / 2
     );
 
     this.frameText_ = Blockly.utils.dom.createSvgElement(
       'text',
       {
         class: 'blocklyText',
-        style: `font-size: 12pt;fill: ${color.white}`,
+        style: `font-size: 12pt;fill: ${this.textColor}`,
         y: frameTextVerticalPosition,
         'dominant-baseline': 'central'
       },
       this.frameGroup_
     );
-
-    this.frameText_.appendChild(document.createTextNode(msg.function()));
+    this.frameText_.appendChild(document.createTextNode(this.text));
   }
 
   getPadding() {
     return {
-      top: FRAME_MARGIN_TOP + FRAME_HEADER_HEIGHT,
-      right: FRAME_MARGIN_SIDE,
-      bottom: FRAME_MARGIN_BOTTOM,
-      left: FRAME_MARGIN_SIDE
+      top: frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT,
+      right: frameSizes.MARGIN_SIDE,
+      bottom: frameSizes.MARGIN_BOTTOM,
+      left: frameSizes.MARGIN_SIDE
     };
   }
 
-  render(svgGroup, isRtl) {
+  render(svgGroup, isRtl, minWidthAdjustment) {
     // Remove ourselves from the DOM and calculate the size of our
     // container, then insert ourselves into the container.
     // We do this because otherwise, the value returned by
@@ -123,14 +122,18 @@ export default class BlockSvgFunctional {
       Blockly.utils.dom.removeClass(frameGroup, 'hidden');
     }, 0);
 
-    var minWidth = this.frameText_.getBoundingClientRect().width;
+    var minWidth =
+      this.frameText_.getBoundingClientRect().width + minWidthAdjustment
+        ? minWidthAdjustment
+        : 0;
+    var width =
+      Math.max(groupRect.width, minWidth) + 2 * frameSizes.MARGIN_SIDE;
 
-    var width = Math.max(groupRect.width, minWidth) + 2 * FRAME_MARGIN_SIDE;
     var height =
       groupRect.height +
-      FRAME_MARGIN_TOP +
-      FRAME_MARGIN_BOTTOM +
-      FRAME_HEADER_HEIGHT;
+      frameSizes.MARGIN_TOP +
+      frameSizes.MARGIN_BOTTOM +
+      frameSizes.HEADER_HEIGHT;
 
     this.frameClipRect_.setAttribute('width', width);
     this.frameBase_.setAttribute('width', width);
@@ -139,10 +142,10 @@ export default class BlockSvgFunctional {
     this.frameHeader_.setAttribute('height', height);
 
     if (isRtl) {
-      this.frameClipRect_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-      this.frameHeader_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-      this.frameBase_.setAttribute('x', -width + FRAME_MARGIN_SIDE);
-      this.frameText_.setAttribute('x', -width + 2 * FRAME_MARGIN_SIDE);
+      this.frameClipRect_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
+      this.frameHeader_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
+      this.frameBase_.setAttribute('x', -width + frameSizes.MARGIN_SIDE);
+      this.frameText_.setAttribute('x', -width + 2 * frameSizes.MARGIN_SIDE);
     }
   }
 }
