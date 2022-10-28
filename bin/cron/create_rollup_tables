@@ -226,7 +226,7 @@ def main
   # addition to the writes so that we do not end up loading too many objects
   # into memory.
   ActiveRecord::Base.connection.execute 'TRUNCATE pd_applications_status_logs'
-  Pd::Application::ApplicationBase.find_in_batches(batch_size: 1000) do |batch|
+  Pd::Application::TeacherApplication.find_in_batches(batch_size: 1000) do |batch|
     row_hashes = batch.map do |application|
       get_pd_applications_status_log_row_hashes(application)
     end.flatten
@@ -274,18 +274,16 @@ def level_sources_multi_types_row(row_hash)
   ROW
 end
 
+# @param [Pd::Application::TeacherApplication] application
 def get_pd_applications_status_log_row_hashes(application)
   row_hashes = []
-  log_json = application.status_timestamp_change_log
-  if log_json
-    JSON.parse(log_json).each_with_index do |log_entry, i|
-      row_hashes << {
-        pd_application_id: application.id,
-        status: log_entry['title'],
-        timestamp: Time.parse(log_entry['time']).gmtime.strftime('%Y-%m-%d %H:%M:%S'),
-        position: i
-      }
-    end
+  application.status_log&.each_with_index do |log_entry, i|
+    row_hashes << {
+      pd_application_id: application.id,
+      status: log_entry['status'],
+      timestamp: Time.parse(log_entry['at']).gmtime.strftime('%Y-%m-%d %H:%M:%S'),
+      position: i
+    }
   end
   row_hashes
 end
