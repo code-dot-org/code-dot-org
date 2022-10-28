@@ -52,7 +52,8 @@ function sanitizedProps(props) {
 
 /**
  * A section of our Pane Header. Essentially this is just a div with some
- * particular styles applied
+ * particular styles applied. Continuing to wrap with radium because some usage
+ * of this component may depend on it.
  */
 export const PaneSection = Radium(
   class extends React.Component {
@@ -75,7 +76,8 @@ export const PaneSection = Radium(
 
 /**
  * A button within or PaneHeader, whose styles change whether or not the pane
- * has focus
+ * has focus. Continuing to wrap with radium because some usage
+ * of this component may depend on it.
  */
 export const PaneButton = Radium(function(props) {
   const {
@@ -177,4 +179,5 @@ PaneButton.propTypes = {
   style: PropTypes.object
 };
 
+// Continuing to wrap with radium because some usage of this component may depend on it.
 export default Radium(PaneHeader);
