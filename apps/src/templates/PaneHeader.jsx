@@ -19,11 +19,19 @@ class PaneHeader extends React.Component {
     hasFocus: PropTypes.bool.isRequired,
     style: PropTypes.object,
     teacherOnly: PropTypes.bool,
-    isMinecraft: PropTypes.bool
+    isMinecraft: PropTypes.bool,
+    className: PropTypes.string
   };
 
   render() {
-    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
+    let {
+      hasFocus,
+      teacherOnly,
+      style,
+      isMinecraft,
+      className,
+      ...props
+    } = this.props;
 
     return (
       <div
@@ -35,7 +43,8 @@ class PaneHeader extends React.Component {
           !hasFocus && commonStyles.purpleHeaderUnfocused,
           teacherOnly && commonStyles.teacherBlueHeader,
           teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused,
-          isMinecraft && commonStyles.minecraftHeader
+          isMinecraft && commonStyles.minecraftHeader,
+          className
         )}
         style={style}
       />
@@ -58,7 +67,8 @@ function sanitizedProps(props) {
 export const PaneSection = Radium(
   class extends React.Component {
     static propTypes = {
-      style: PropTypes.object
+      style: PropTypes.object,
+      className: PropTypes.string
     };
 
     render() {
@@ -67,7 +77,7 @@ export const PaneSection = Radium(
           {...sanitizedProps(this.props)}
           ref={root => (this.root = root)}
           style={this.props.style}
-          className={moduleStyles.paneSection}
+          className={classNames(moduleStyles.paneSection, this.props.className)}
         />
       );
     }
@@ -91,7 +101,8 @@ export const PaneButton = Radium(function(props) {
     isMinecraft,
     headerHasFocus,
     isDisabled,
-    style
+    style,
+    className
   } = props;
 
   const buttonLabel = isPressed ? pressedLabel : label;
@@ -109,7 +120,8 @@ export const PaneButton = Radium(function(props) {
     isMinecraft && moduleStyles.headerButtonMinecraft,
     isPressed && moduleStyles.headerButtonPressed,
     !headerHasFocus && moduleStyles.headerButtonUnfocused,
-    isDisabled && moduleStyles.headerButtonDisabled
+    isDisabled && moduleStyles.headerButtonDisabled,
+    className
   );
 
   function renderIcon() {
