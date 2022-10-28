@@ -222,9 +222,9 @@ def main
     )
   end
 
-  # Because there are > 100K application status log entries, batch the reads in
-  # addition to the writes so that we do not end up loading too many objects
-  # into memory.
+  # Because there may soon be > 100K application status log entries, batch the
+  # reads in addition to the writes so that we do not end up loading too many
+  # objects into memory.
   ActiveRecord::Base.connection.execute 'TRUNCATE pd_applications_status_logs'
   Pd::Application::TeacherApplication.find_in_batches(batch_size: 1000) do |batch|
     row_hashes = batch.map do |application|
