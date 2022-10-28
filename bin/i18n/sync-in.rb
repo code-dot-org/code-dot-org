@@ -124,10 +124,10 @@ def localize_external_sources
 
     # Currently only including fields for translation.
     # Use field id as unique identifier.
-    final_dataset = Hash.new
-    final_dataset["fields"] = Hash.new
-    dataset_fields = original_dataset["fields"]
-    dataset_fields.each {|field| final_dataset["fields"][field["id"]] = field}
+    fields_as_hash = original_dataset["fields"].map {|field| [field["id"], field]}.to_h
+    final_dataset = {
+      "fields" => fields_as_hash
+    }
 
     File.open(dataset_file, "w") do |f|
       f.write(JSON.pretty_generate(final_dataset))
