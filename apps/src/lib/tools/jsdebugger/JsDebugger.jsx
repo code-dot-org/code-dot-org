@@ -471,7 +471,11 @@ class JsDebugger extends React.Component {
           </span>
           <button
             type="button"
-            className={classNames(styles.showHideIcon, styles.chevronButton)}
+            className={classNames(
+              styles.showHideIcon,
+              styles.chevronButton,
+              !hasFocus && styles.chevronButtonUnfocused
+            )}
             onClick={this.slideToggle}
           >
             <FontAwesome
@@ -518,7 +522,8 @@ class JsDebugger extends React.Component {
                 type="button"
                 className={classNames(
                   styles.showDebugWatchIcon,
-                  styles.chevronButton
+                  styles.chevronButton,
+                  !hasFocus && styles.chevronButtonUnfocused
                 )}
                 onClick={() => {
                   // reset resizer-overridden styles

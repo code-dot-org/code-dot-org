@@ -73,15 +73,15 @@
 }
 
 .chevronButton {
-  line-height: $workspace-headers-height;
-  font-size: 18px;
   &:hover {
-    cursor: pointer;
-    color: $white;
     box-shadow: none;
   }
   padding: 0;
   background-color: transparent;
-  //color: color.dark_charcoal;
   border: none;
+  color: $white;
+}
+
+.chevronButtonUnfocused {
+  color: $dark-charcoal;
 }
