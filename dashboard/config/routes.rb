@@ -36,6 +36,7 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
+    get "/incubator", to: "incubator#index"
     get "/musiclab", to: "musiclab#index"
 
     resources :activity_hints, only: [:update]
@@ -279,6 +280,8 @@ Dashboard::Application.routes.draw do
       resources :blocks, constraints: {id: /[^\/]+/}
     end
     resources :shared_blockly_functions, path: '/functions'
+
+    get 'helpful_links', to: 'helpful_links#index', as: 'helpful_links'
 
     resources :libraries do
       collection do

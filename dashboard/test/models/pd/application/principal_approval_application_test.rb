@@ -14,13 +14,6 @@ module Pd::Application
       refute application.valid?
     end
 
-    test 'requires csp/csd replacement course info if a course is being replaced' do
-      application = build :pd_principal_approval_application, replace_course: Pd::Application::PrincipalApprovalApplication.options[:replace_course][1]
-      assert application.valid?
-      application.update_form_data_hash({replace_course: 'Yes'})
-      refute application.valid?
-    end
-
     test 'do not require anything if placeholder' do
       application = build :pd_principal_approval_application, form_data: {}.to_json
       assert application.valid?

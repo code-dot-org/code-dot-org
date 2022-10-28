@@ -9,7 +9,7 @@ export const number = {
         type: 'field_number',
         name: 'num',
         value: 1,
-        min: 1
+        min: 0
       }
     ],
     output: 'Number'
