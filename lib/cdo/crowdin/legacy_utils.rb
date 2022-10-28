@@ -9,8 +9,15 @@ module Crowdin
   MAX_THREADS = 8
 
   class LegacyUtils
-    attr_reader :etags_json, :files_to_download_json, :files_to_sync_out_json,
-      :locale_subdir, :locales_dir, :logger, :project
+    attr_reader(
+      :project,
+      :files_to_download_json,
+      :files_to_sync_out_json,
+      :etags_json,
+      :locales_dir,
+      :locale_subdir,
+      :logger
+    )
 
     # @param project [Crowdin::Project]
     # @param options [Hash, nil]
