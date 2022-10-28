@@ -1,0 +1,9 @@
+{
+  "key": "inheritance",
+  "course_version_key": "2023",
+  "course_offering_key": "csa",
+  "parent_reference_guide_key": "classes-and-objects",
+  "display_name": "Inheritance",
+  "content": "Use the `extends`(#e7e8ea) keyword to indicate that the class is a subclass and the superclass it inherits from.\n\n```\npublic class NameOfSubclass extends NameOfSuperclass {\n\n}\n```\n\nBe sure to replace `NameOfSubclass`(#e7e8ea) with the name of the class you are creating as the subclass and `NameOfSuperclass`(#e7e8ea) with the name of the superclass this class should inherit from.",
+  "position": 3
+}

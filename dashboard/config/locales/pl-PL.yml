@@ -1482,4 +1482,13 @@ pl:
       forbidden: Użytkownik nie może zaktualizować stanu blokady ucznia
   reset_predict_progress_button: Usuń odpowiedź
   pixelation:
+    save_image: Zapisz obraz
+    actual_size: Aktualny rozmiar
+    image_file_format_header: Format pliku obrazu
+    image_file_format_width: 'Szerokość: 1 bajt'
+    image_file_format_height: 'Wysokość: 1 bajt'
+    image_width: Szerokość obrazu
+    image_height: Wysokość obrazu
     binary: Binarny
+    hexadecimal: Szesnastkowy
+    pixel_format_header: Format pikseli

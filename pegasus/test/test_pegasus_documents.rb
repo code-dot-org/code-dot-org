@@ -30,6 +30,7 @@ class PegasusTest < Minitest::Test
   STATUS_EXCEPTIONS = {
     302 => %w[
       code.org/amazon-future-engineer
+      code.org/congrats
       code.org/educate
       code.org/review-hociyskvuwa
       code.org/teach
@@ -37,9 +38,6 @@ class PegasusTest < Minitest::Test
     ],
     301 => %w[
       csedweek.org/resource_kit
-    ],
-    401 => %w[
-      code.org/create-company-profile
     ]
   }
 

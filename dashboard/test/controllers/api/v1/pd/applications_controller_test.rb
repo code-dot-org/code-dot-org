@@ -728,7 +728,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
 
         sign_in @workshop_organizer
@@ -746,7 +746,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             registered_workshop_id: workshop.id,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -772,7 +772,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
 
         sign_in @workshop_organizer
@@ -790,7 +790,7 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             registered_workshop_id: nil,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -868,7 +868,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
         application.lock!
 
@@ -887,7 +887,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             registered_workshop_id: workshop.id,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -913,7 +913,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
 
         sign_in @program_manager
@@ -931,7 +931,7 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             registered_workshop_id: nil,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -991,7 +991,7 @@ module Api::V1::Pd
     test 'cohort csv download returns expected columns for teachers' do
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
       create PRINCIPAL_APPROVAL_FACTORY, teacher_application: application
-      application.update(status: 'accepted_not_notified')
+      application.update(status: 'accepted')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csp_teachers'}
       assert_response :success
@@ -1027,24 +1027,20 @@ module Api::V1::Pd
         "Home or cell phone",
         "Home zip code",
         "Country",
-        "Principal's first name",
-        "Principal's last name",
-        "Principal's email address",
-        "Confirm principal's email address",
-        "Principal's phone number",
+        "Administrator/School Leader's Role",
+        "Administrator/School Leader's first name",
+        "Administrator/School Leader's last name",
+        "Administrator/School Leader's email address",
+        "Confirm Administrator/School Leader's email address",
+        "Administrator/School Leader's phone number",
         "Current role",
         "Are you completing this application on behalf of someone else?",
         "If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.",
         "Which professional learning program would you like to join for the #{APPLICATION_CURRENT_YEAR} school year?",
         "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
         "How will you offer CS Principles?",
-        "How many minutes per day is one class section?",
-        "How many days per week will this course be offered to one section of students?",
-        "How many weeks during the year will this course be taught to one section of students?",
-        "Total course hours",
-        "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year?",
+        "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
@@ -1054,14 +1050,14 @@ module Api::V1::Pd
         "Teacher's race",
         "How did you hear about this program? (Teacher's response)",
         "Principal Approval Form URL",
-        "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         "Home street address",
         "Home city",
         "Home state",
-        "Principal's title (provided by principal)",
-        "Principal's first name (provided by principal)",
-        "Principal's last name (provided by principal)",
-        "Principal's email address (provided by principal)",
+        "Administrator/School Leader's title (provided by principal)",
+        "Administrator/School Leader's first name (provided by principal)",
+        "Administrator/School Leader's last name (provided by principal)",
+        "Administrator/School Leader's email address (provided by principal)",
+        "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)",
         "School name (provided by principal)",
         "School district (provided by principal)",
         "Do you approve of this teacher participating in Code.org's #{APPLICATION_CURRENT_YEAR} Professional Learning Program?",
@@ -1077,9 +1073,7 @@ module Api::V1::Pd
         "Percent of student enrollment by race - Other",
         "Are you committed to including this course on the master schedule in #{APPLICATION_CURRENT_YEAR} if this teacher is accepted into the program?",
         "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
-        "Which existing course or curriculum will CS Principles replace?",
         "How will you implement CS Principles at your school?",
-        "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         "Principal authorizes college board to send AP Scores",
         "Contact name for invoicing",

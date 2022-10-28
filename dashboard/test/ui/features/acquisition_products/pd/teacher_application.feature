@@ -20,7 +20,6 @@ Scenario: Teacher starts a new application and submits it
     And I press keys "Seattle" for element "input#city"
     And I select the "Washington" option in dropdown "state"
     And I press keys "98101" for element "input#zipCode"
-    And I press the first "input[name='previousUsedCurriculum']" element
     And I press the first "input[name='previousYearlongCdoPd']" element
     And I press the first "input[name='currentRole']" element
     And I press keys "nonexistent" for element "#school input"
@@ -36,7 +35,8 @@ Scenario: Teacher starts a new application and submits it
     And I select the "Washington" option in dropdown "schoolState"
     And I press keys "98101" for element "input#schoolZipCode"
     And I press the first "input[name='schoolType'][value='Other']" element
-  Then I press keys "Albus" for element "input#principalFirstName"
+  Then I press keys "Headmaster" for element "input#principalRole"
+  And I press keys "Albus" for element "input#principalFirstName"
   And I press keys "Dumbledore" for element "input#principalLastName"
   And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
   And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
@@ -50,13 +50,8 @@ Scenario: Teacher starts a new application and submits it
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
-  And I press keys "50" for element "input#csHowManyMinutes"
-  And I press keys "5" for element "input#csHowManyDaysPerWeek"
-  And I press keys "40" for element "input#csHowManyWeeksPerYear"
-  And I press the first "input[name='planToTeach']" element
+  And I press the first "input[name='enoughCourseHours']" element
   And I press the first "input[name='replaceExisting']" element
-  Then I wait until element "input[name='replaceWhichCourse']" is visible
-    And I press the first "input[name='replaceWhichCourse']" element
 
   Then I see no difference for "Section 2: Choose Your Program"
   And I press the first "button#next" element
@@ -89,7 +84,8 @@ Scenario: Teacher starts a new application and submits it
   # Principal approval
   Then I sign out
   Then I navigate to the principal approval page for "Severus"
-  Then I wait until element "h1" contains text "Code.org Principal Approval Form"
+  Then I wait until element "h1" contains text "Code.org Administrator/School Leader Approval Form"
+  Then I press the first "input[name='canEmailYou']" element
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
   And I press keys "nonexistent" for element "#nces_school"
@@ -115,9 +111,7 @@ Scenario: Teacher starts a new application and submits it
 
   Then I press the first "input[name='committedToMasterSchedule']" element
   Then I press the first "input[name='replaceCourse']" element
-  Then I press the first "input[name='replaceWhichCourseCsd']" element
 
-  Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element
   Then I press the first "input[name='payFee']" element
   Then I press the first "#confirmPrincipal" element
@@ -157,7 +151,6 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I press keys "Seattle" for element "input#city"
   And I select the "Washington" option in dropdown "state"
   And I press keys "98101" for element "input#zipCode"
-  And I press the first "input[name='previousUsedCurriculum']" element
   And I press the first "input[name='previousYearlongCdoPd']" element
   And I press the first "input[name='currentRole']" element
   And I press keys "nonexistent" for element "#school input"
@@ -173,7 +166,8 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I select the "Washington" option in dropdown "schoolState"
   And I press keys "98101" for element "input#schoolZipCode"
   And I press the first "input[name='schoolType'][value='Other']" element
-  Then I press keys "Albus" for element "input#principalFirstName"
+  Then I press keys "Headmaster" for element "input#principalRole"
+  And I press keys "Albus" for element "input#principalFirstName"
   And I press keys "Dumbledore" for element "input#principalLastName"
   And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
   And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
@@ -184,13 +178,8 @@ Scenario: Teacher saves, re-opens, and submits an application
   Then I wait until element "h3" contains text "Section 2: Choose Your Program"
   And I press "input[name='program']:first" using jQuery
   And I press the first "input[name='csdWhichGrades']" element
-  And I press keys "50" for element "input#csHowManyMinutes"
-  And I press keys "5" for element "input#csHowManyDaysPerWeek"
-  And I press keys "40" for element "input#csHowManyWeeksPerYear"
-  And I press the first "input[name='planToTeach']" element
+  And I press the first "input[name='enoughCourseHours']" element
   And I press the first "input[name='replaceExisting']" element
-  Then I wait until element "input[name='replaceWhichCourse']" is visible
-  And I press the first "input[name='replaceWhichCourse']" element
   And I press the first "button#next" element
 
   # Section 3
