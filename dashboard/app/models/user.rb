@@ -121,14 +121,24 @@ class User < ApplicationRecord
     share_teacher_email_regional_partner_opt_in
   )
 
-  attr_accessor :child_users, :data_transfer_agreement_required,
-    :email_preference_form_kind, :email_preference_opt_in,
-    :email_preference_opt_in_required, :email_preference_request_ip,
-    :email_preference_source, :login, :parent_email_preference_email,
-    :parent_email_preference_opt_in, :parent_email_preference_opt_in_required,
-    :parent_email_preference_request_ip, :parent_email_preference_source,
-    :parent_email_update_only, :raw_token,
-    :share_teacher_email_reg_partner_opt_in_radio_choice
+  attr_accessor(
+    :login,
+    :email_preference_opt_in_required,
+    :email_preference_opt_in,
+    :email_preference_request_ip,
+    :email_preference_source,
+    :email_preference_form_kind,
+    :parent_email_update_only,
+    :parent_email_preference_opt_in_required,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_email,
+    :parent_email_preference_request_ip,
+    :parent_email_preference_source,
+    :share_teacher_email_reg_partner_opt_in_radio_choice,
+    :data_transfer_agreement_required,
+    :raw_token,
+    :child_users
+  )
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

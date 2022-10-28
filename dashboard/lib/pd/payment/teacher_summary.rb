@@ -18,7 +18,12 @@ module Pd::Payment
       @hours = hours
     end
 
-    attr_reader :workshop_summary, :teacher, :enrollment, :raw_days, :raw_hours, :days, :hours
+    attr_reader(
+      :workshop_summary,
+      :teacher, :enrollment,
+      :raw_days, :raw_hours,
+      :days, :hours
+    )
 
     # @return [TeacherPayment] payment information for this teacher in this workshop
     attr_accessor :payment
