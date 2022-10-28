@@ -833,8 +833,6 @@ module Pd::Application
           ],
           principal: [
             :share_ap_scores,
-            :replace_which_course_csp,
-            :replace_which_course_csa,
             :csp_implementation,
             :csa_implementation
           ]
@@ -849,8 +847,6 @@ module Pd::Application
             :csa_phone_screen
           ],
           principal: [
-            :replace_which_course_csd,
-            :replace_which_course_csa,
             :csd_implementation,
             :csa_implementation
           ]
@@ -863,9 +859,7 @@ module Pd::Application
             :csd_which_grades
           ],
           principal: [
-            :replace_which_course_csp,
             :csp_implementation,
-            :replace_which_course_csd,
             :csd_implementation
           ]
         }
@@ -1123,16 +1117,14 @@ module Pd::Application
       # Approval application created, now score corresponding teacher application
       principal_response = principal_approval.sanitize_form_data_hash
 
-      response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd, :replace_which_course_csa).compact.join(', ')
-      # Sub out :: for : because "I don't know:" has a colon on the end
-      replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
+      replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
 
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
           principal_response_first_name: principal_response[:first_name],
           principal_response_last_name: principal_response[:last_name],
+          principal_response_role: principal_response[:role],
           principal_response_email: principal_response[:email],
           principal_school_name: principal_school.try(:name) || principal_response[:school_name],
           principal_school_type: principal_school.try(:school_type),
@@ -1141,8 +1133,6 @@ module Pd::Application
           principal_schedule_confirmed:
             principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
-          principal_diversity_recruitment:
-            principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
           principal_underrepresented_minority_percent:

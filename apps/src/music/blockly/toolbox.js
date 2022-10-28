@@ -219,6 +219,21 @@ export const baseToolbox = {
           }
         }
       ]
+    },
+    {
+      kind: 'category',
+      name: 'Logic',
+      cssConfig: baseCategoryCssConfig,
+      contents: [
+        {
+          kind: 'block',
+          type: 'controls_if'
+        },
+        {
+          kind: 'block',
+          type: 'logic_compare'
+        }
+      ]
     }
   ]
 };
