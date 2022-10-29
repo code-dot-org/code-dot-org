@@ -1405,7 +1405,7 @@
   tutorial_codejumper_name: "Networks: Messages of Kindness"
   tutorial_meeempathy_name: "A Minecraft Tale of Two Villages"
 
-  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
@@ -1972,8 +1972,8 @@
   tutorial_allcancodeapps_shortdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery."
   tutorial_n2y_shortdescription: "Help Bitt Bott explore Earth using direction arrows."
 
-  tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers, and many more!"
-  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -7136,7 +7136,7 @@
   tutorial_googlename _string_detail_programming_languages: "Blocks"
   tutorial_googlelogo_string_detail_programming_languages: "Blocks"
   tutorial_carnegiezillah_string_detail_programming_languages: "Blocks"
-  tutorial_nasachspacejam_string_detail_programming_languages: "JavaScript, P5"
+  tutorial_nasachspacejam_string_detail_programming_languages: "Blocks"
   tutorial_hatchxrsolar_string_detail_programming_languages: "Blocks"
   tutorial_hatchxrspace_string_detail_programming_languages: "Blocks"
   tutorial_hatchxrtrex_string_detail_programming_languages: "Blocks"
