@@ -6,10 +6,6 @@ import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import applabI18n from '@cdo/applab/locale';
 
 const style = {
-  main: {
-    width: '80%',
-    maxWidth: '800px'
-  },
   twoColumns: {
     display: 'flex',
     flexDirection: 'row',
