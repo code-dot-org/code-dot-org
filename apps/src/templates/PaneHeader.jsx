@@ -106,12 +106,12 @@ export const PaneButton = Radium(function(props) {
   } = props;
 
   const buttonLabel = isPressed ? pressedLabel : label;
+  const iconOrLabelHidden = !buttonLabel || (!iconClass && !hiddenImage);
 
   const iconClassNames = classNames(
     moduleStyles.headerButtonIcon,
     isRtl && moduleStyles.headerButtonIconRtl,
-    !iconClass && !hiddenImage && moduleStyles.headerButtonIcon,
-    !buttonLabel && moduleStyles.headerButtonNoLabel
+    iconOrLabelHidden && moduleStyles.headerButtonIconOrLabelHidden
   );
 
   const divClassNames = classNames(
