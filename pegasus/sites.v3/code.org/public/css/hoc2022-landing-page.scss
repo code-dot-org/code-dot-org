@@ -90,7 +90,7 @@ header {
       font-size: 3.5em;
     }
 
-    @media screen and (max-width: $width-lg) {
+    @media screen and (max-width: $width-sm) {
       font-size: 4.5em !important; // overrides brstrap.css
       margin: 0.25em auto -0.25em !important; // overrides brstrap.css
     }
@@ -286,6 +286,16 @@ main {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+
+        .col-25 {
+          @media screen and (max-width: $width-md) {
+            width: 50%;
+          }
+
+          @media screen and (max-width: $width-sm) {
+            width: 100%;
+          }
+        }
       }
     }
   }
