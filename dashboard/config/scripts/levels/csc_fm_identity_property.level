@@ -5,10 +5,12 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
+      "FunctionBlocks",
       "GamelabJr"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zFunctionMachine"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -40,7 +42,7 @@
   "created_at": "2022-10-20T14:43:21.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-20T14:43:21.213+00:00\",\"changed\":[\"cloned from \\\"csc_fm_predict_zero_property\\\"\"],\"cloned_from\":\"csc_fm_predict_zero_property\"},{\"changed_at\":\"2022-10-20 14:43:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 14:59:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 15:00:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 15:00:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:24:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:29:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:32:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:32:41 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 18:41:30 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 19:09:11 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 19:09:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 15:30:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 16:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"disable_param_editing\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-21 16:30:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-20T14:43:21.213+00:00\",\"changed\":[\"cloned from \\\"csc_fm_predict_zero_property\\\"\"],\"cloned_from\":\"csc_fm_predict_zero_property\"},{\"changed_at\":\"2022-10-20 14:43:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 14:59:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 15:00:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 15:00:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:24:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:29:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:32:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 17:32:41 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 18:41:30 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 19:09:11 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-20 19:09:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 15:30:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 16:16:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"disable_param_editing\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-21 16:30:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 17:17:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 17:31:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 17:33:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 17:35:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -50,50 +52,56 @@
         <block type="when_run" movable="false">
           <next>
             <block type="gamelab_makeNewSpriteAnon">
-              <field name="ANIMATION_NAME">"bunny2"</field>
+              <field name="ANIMATION_NAME">"alienBlue"</field>
               <value name="LOCATION">
                 <block type="gamelab_location_picker">
-                  <field name="LOCATION">{"x":196,"y":325}</field>
+                  <field name="LOCATION">{"x":200,"y":234}</field>
                 </block>
               </value>
               <next>
-                <block type="variables_set">
-                  <field name="VAR">input</field>
-                  <value name="VALUE">
-                    <block type="gamelab_int10">
-                      <field name="VALUE">1</field>
+                <block type="gamelab_setPrompt">
+                  <value name="QUESTION">
+                    <block type="text" can_disconnect_from_parent="false">
+                      <field name="TEXT">Pick a number</field>
                     </block>
                   </value>
-                  <next>
-                    <block type="gamelab_spriteSayTime">
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"bunny2"</field>
-                        </block>
-                      </value>
-                      <value name="TEXT1">
-                        <block type="variables_get">
-                          <field name="VAR">input</field>
-                        </block>
-                      </value>
-                      <value name="NUM">
-                        <block type="math_number">
-                          <field name="NUM">4</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_makeBurst">
-                          <field name="EFFECT">"burst"</field>
-                          <field name="ANIMATION_NAME">"pink-ice-cream"</field>
-                          <value name="NUM">
-                            <block type="variables_get">
-                              <field name="VAR">input</field>
-                            </block>
-                          </value>
-                        </block>
-                      </next>
+                  <value name="VAR">
+                    <block type="variables_get" can_disconnect_from_parent="false">
+                      <field name="VAR">input</field>
                     </block>
-                  </next>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_whenPromptAnswered">
+          <value name="VAR">
+            <block type="variables_get" can_disconnect_from_parent="false">
+              <field name="VAR">input</field>
+            </block>
+          </value>
+          <next>
+            <block type="FunctionBlocks_spriteSayVar">
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"alienBlue"</field>
+                </block>
+              </value>
+              <value name="TEXT1">
+                <block type="variables_get">
+                  <field name="VAR">input</field>
+                </block>
+              </value>
+              <next>
+                <block type="FunctionBlocks_representManipulative">
+                  <field name="ANIMATION_NAME">"pink-ice-cream"</field>
+                  <field name="BEHAVIOR">draggable()</field>
+                  <value name="NUM">
+                    <block type="variables_get">
+                      <field name="VAR">input</field>
+                    </block>
+                  </value>
                 </block>
               </next>
             </block>
@@ -127,17 +135,17 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"bunny2"</field>
+              <field name="ANIMATION">"alienBlue"</field>
             </block>
           </value>
           <next>
             <block type="procedures_callnoreturn">
               <mutation name="timesOne"/>
               <next>
-                <block type="gamelab_spriteSayTime">
+                <block type="FunctionBlocks_spriteSayVar" editable="false">
                   <value name="SPRITE">
                     <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"bunny2"</field>
+                      <field name="ANIMATION">"alienBlue"</field>
                     </block>
                   </value>
                   <value name="TEXT1">
@@ -145,15 +153,10 @@
                       <field name="VAR">output</field>
                     </block>
                   </value>
-                  <value name="NUM">
-                    <block type="math_number">
-                      <field name="NUM">4</field>
-                    </block>
-                  </value>
                   <next>
-                    <block type="gamelab_makeBurst">
-                      <field name="EFFECT">"burst"</field>
+                    <block type="FunctionBlocks_representManipulative">
                       <field name="ANIMATION_NAME">"face_icecreamcone"</field>
+                      <field name="BEHAVIOR">draggable()</field>
                       <value name="NUM">
                         <block type="variables_get">
                           <field name="VAR">output</field>

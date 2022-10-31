@@ -56,7 +56,7 @@ export const forLoop = {
       {
         type: 'field_variable',
         name: 'VAR',
-        variable: null
+        variable: 'i'
       },
       {
         type: 'input_value',

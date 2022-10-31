@@ -106,11 +106,14 @@ export const baseToolbox = {
       contents: [
         {
           kind: 'block',
-          type: BlockTypes.NUMBER
+          type: 'math_number'
         },
         {
           kind: 'block',
-          type: BlockTypes.ROUND,
+          type: 'math_round',
+          fields: {
+            OP: 'ROUNDUP'
+          },
           inputs: {
             NUM: {
               shadow: {
@@ -124,7 +127,7 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: BlockTypes.ARITHMETIC,
+          type: 'math_arithmetic',
           inputs: {
             A: {
               shadow: {
@@ -146,7 +149,7 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: BlockTypes.RANDOM,
+          type: 'math_random_int',
           inputs: {
             FROM: {
               shadow: {
@@ -172,53 +175,7 @@ export const baseToolbox = {
       kind: 'category',
       name: 'Variables',
       cssConfig: baseCategoryCssConfig,
-      contents: [
-        {
-          kind: 'button',
-          text: 'Create variable...',
-          callbackKey: 'createVariableHandler'
-        },
-        {
-          kind: 'block',
-          type: BlockTypes.VARIABLES_GET,
-          fields: {
-            var: {
-              name: 'i',
-              type: 'number'
-            }
-          }
-        },
-        {
-          kind: 'block',
-          type: BlockTypes.VARIABLES_GET,
-          fields: {
-            var: {
-              name: 'currentTime',
-              type: 'number'
-            }
-          }
-        },
-        {
-          kind: 'block',
-          type: BlockTypes.VARIABLES_SET,
-          fields: {
-            var: {
-              name: 'i',
-              type: 'number'
-            }
-          },
-          inputs: {
-            value: {
-              shadow: {
-                type: 'math_number',
-                fields: {
-                  NUM: 1
-                }
-              }
-            }
-          }
-        }
-      ]
+      custom: 'VARIABLE'
     },
     {
       kind: 'category',
