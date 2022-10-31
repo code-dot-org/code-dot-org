@@ -74,7 +74,7 @@ const AddSectionDialog = ({
           The Participant Type Picker will be skips if someone only have permissions to create sections for one
           type of participants. See teacherSectionsRedux for more details on how this is set up.
           */}
-        {participantType && (
+        {!participantType && (
           <ParticipantTypePicker
             title={title}
             setParticipantType={setParticipantType}
