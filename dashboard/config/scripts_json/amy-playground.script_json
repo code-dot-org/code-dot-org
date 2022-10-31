@@ -9,8 +9,8 @@
       "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": "amys-playground",
-    "serialized_at": "2022-10-29 00:00:30 UTC",
+    "family_name": "amy-playground",
+    "serialized_at": "2022-10-31 19:19:13 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -200,6 +200,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
+        ],
         "progression": "Glass of Water"
       },
       "bonus": false,
@@ -222,6 +225,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
+        ],
         "progression": "Glass of Water"
       },
       "bonus": false,
@@ -244,6 +250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_solid_predict"
+        ],
         "progression": "Block of Ice"
       },
       "bonus": false,
@@ -266,6 +275,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
+        ],
         "progression": "Block of Ice"
       },
       "bonus": false,
@@ -288,6 +300,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_gas_predict"
+        ],
         "progression": "Cloud of Steam"
       },
       "bonus": false,
@@ -310,6 +325,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+        ],
         "progression": "Cloud of Steam"
       },
       "bonus": false,
@@ -332,6 +350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_your turn"
+        ],
         "progression": "Intro to Sprite Lab"
       },
       "bonus": false,
@@ -354,6 +375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_-2022-2"
+        ],
         "progression": "Intro to Sprite Lab"
       },
       "bonus": false,
@@ -376,6 +400,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L2_-particles"
+        ],
         "progression": "Intro to Sprite Lab"
       },
       "bonus": false,
@@ -398,6 +425,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_lab_location"
+        ],
         "progression": "Intro to Sprite Lab"
       },
       "bonus": false,
@@ -420,6 +450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L4_-particles"
+        ],
         "progression": "Buncha Levels"
       },
       "bonus": false,
@@ -442,6 +475,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L5_-particles"
+        ],
         "progression": "Buncha Levels"
       },
       "bonus": false,
@@ -464,6 +500,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L6_-particles"
+        ],
         "progression": "Buncha Levels"
       },
       "bonus": false,
@@ -486,6 +525,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L8_-particles"
+        ],
         "progression": "Buncha Levels"
       },
       "bonus": false,
@@ -508,6 +550,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L9_-particles"
+        ],
         "progression": "Buncha Levels"
       },
       "bonus": false,
@@ -530,6 +575,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L11_-particles"
+        ],
         "progression": "Buncha Levels"
       },
       "bonus": false,
@@ -552,6 +600,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12_-particles"
+        ],
         "progression": "Buncha Levels"
       },
       "bonus": false,
@@ -574,6 +625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L13A Challenge_-particles"
+        ],
         "progression": "Challenge: States of Matter Under the Microscope"
       },
       "bonus": false,
@@ -596,6 +650,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge_-particles"
+        ],
         "progression": "Challenge: States of Matter Under the Microscope"
       },
       "bonus": false,
@@ -618,6 +675,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge_-particles"
+        ],
         "progression": "Challenge: States of Matter Under the Microscope"
       },
       "bonus": false,
@@ -640,6 +700,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge_-particles"
+        ],
         "progression": "Challenge: States of Matter Under the Microscope"
       },
       "bonus": false,
