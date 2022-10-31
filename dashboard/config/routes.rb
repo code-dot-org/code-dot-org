@@ -281,6 +281,8 @@ Dashboard::Application.routes.draw do
     end
     resources :shared_blockly_functions, path: '/functions'
 
+    get 'helpful_links', to: 'helpful_links#index', as: 'helpful_links'
+
     resources :libraries do
       collection do
         get '/get_updates', to: 'libraries#get_updates'

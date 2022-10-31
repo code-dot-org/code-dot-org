@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
+import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 
 $(function() {
   ReactDOM.render(
-    <SetupGuide />,
+    <SetupInstructions />,
     document.getElementById('setup-status-mount')
   );
   $('.maker-setup a').attr('target', '_blank');
