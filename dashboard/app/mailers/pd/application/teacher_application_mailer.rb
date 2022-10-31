@@ -22,7 +22,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval_teacher_reminder(teacher_application)
+    def administrator_approval_teacher_reminder(teacher_application)
       @application = teacher_application
 
       if @application.regional_partner
@@ -40,7 +40,7 @@ module Pd::Application
       end
     end
 
-    def principal_approval(teacher_application)
+    def administrator_approval(teacher_application)
       @application = teacher_application
 
       mail(
@@ -52,7 +52,7 @@ module Pd::Application
       )
     end
 
-    def principal_approval_completed(teacher_application)
+    def administrator_approval_completed(teacher_application)
       @application = teacher_application
 
       mail(
