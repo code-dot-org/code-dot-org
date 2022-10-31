@@ -1,10 +1,7 @@
 # Utility methods for generating certificate images.
 # Note: requires pegasus_dir to be in scope.
-
 require 'honeybadger/ruby'
 require 'rmagick'
-require 'cdo/pegasus/donor'
-
 # needed for force_8859_to_utf8
 require 'cdo/pegasus/string'
 
@@ -157,8 +154,6 @@ class CertificateImage
       vertical_offset = course == '20-hour' ? -125 : -120
       image = create_certificate_image2(path, name, y: vertical_offset)
     else # all other courses use a certificate image where the course name is also blank
-      course_title ||= fallback_course_title_for(course)
-
       image = Magick::Image.read(path).first
       apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
       # The area in pixels which will display the course title.
@@ -168,7 +163,7 @@ class CertificateImage
     end
 
     if default_random_donor && !donor_name
-      donor = CdoDonor.get_random_donor_by_weight
+      donor = DashboardCdoDonor.get_random_donor_by_weight
       donor_name = donor[:name_s]
     end
 
@@ -183,33 +178,20 @@ class CertificateImage
     image
   end
 
+  def self.accelerated_course?(course)
+    [ScriptConstants::ACCELERATED_NAME, ScriptConstants::TWENTY_HOUR_NAME].include?(course)
+  end
+
+  # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course)
-    hoc_course = ScriptConstants.unit_in_category?(:hoc, course)
-    hoc_course ||= tutorial_codes.any?(course)
-    hoc_course
+    return true if ScriptConstants.unit_in_category?(:hoc, course)
+    return false if accelerated_course?(course)
+    return false if CurriculumHelper.find_matching_course_version(course)
+    true
   end
 
   def self.prefilled_title_course?(course)
     certificate_template_for(course) != 'blank_certificate.png'
-  end
-
-  # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
-  # 2015 this fallback mapping is only ever hit on bulk /certificates pages.
-  def self.fallback_course_title_for(course)
-    case course
-    when ScriptConstants::ARTIST_NAME
-      'Artist'
-    when ScriptConstants::COURSE1_NAME
-      'Course 1'
-    when ScriptConstants::COURSE2_NAME
-      'Course 2'
-    when ScriptConstants::COURSE3_NAME
-      'Course 3'
-    when ScriptConstants::COURSE4_NAME
-      'Course 4'
-    else
-      course
-    end
   end
 
   def self.certificate_template_for(course)
@@ -231,18 +213,14 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
     elsif course == ScriptConstants::OCEANS_NAME
       'oceans_hoc_certificate.png'
-    elsif hoc_course?(course)
-      'hour_of_code_certificate.jpg'
-    elsif ScriptConstants.unit_in_category?(:twenty_hour, course) || course == ScriptConstants::ACCELERATED_NAME
+    elsif accelerated_course?(course)
       # The 20-hour course is referred to as "accelerated" throughout the
       # congrats and certificate pages (see csf_finish_url).
       '20hours_certificate.jpg'
+    elsif hoc_course?(course)
+      'hour_of_code_certificate.jpg'
     else
       'blank_certificate.png'
     end
-  end
-
-  def self.tutorial_codes
-    @@tutorial_codes ||= PEGASUS_DB[:tutorials].all.map {|t| t[:code]}
   end
 end

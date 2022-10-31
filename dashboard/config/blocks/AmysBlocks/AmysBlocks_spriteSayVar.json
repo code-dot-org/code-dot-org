@@ -1,0 +1,17 @@
+{
+  "category": "",
+  "config": {
+    "func": "spriteSayVar",
+    "blockText": "{SPRITE}say{TEXT1}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TEXT1",
+        "field": false
+      }
+    ]
+  }
+}

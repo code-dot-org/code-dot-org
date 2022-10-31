@@ -163,6 +163,10 @@ export default class MusicPlayer {
     );
   }
 
+  clearAllSoundEvents() {
+    this.soundEvents = [];
+  }
+
   stopAndCancelPreviews() {
     StopSound(GROUP_TAG);
     this.playingPreviews = [];
@@ -206,7 +210,19 @@ export default class MusicPlayer {
         this.startPlayingAudioTime +
         this.convertMeasureToSeconds(soundEvent.when);
 
-      if (eventStart >= GetCurrentAudioTime()) {
+      const currentAudioTime = GetCurrentAudioTime();
+
+      // Triggered sounds might have a target play time that is very slightly in
+      // the past, specificially when they use the currentTime passed (slightly
+      // earlier) into the event handler code as the target play time.
+      // To compensate for this delay, if the target play time is within a tenth of
+      // a second of the current play time, then play it.
+      // Note that we still don't play sounds older than that, because they might
+      // have been scheduled for some time ago, and Web Audio will play a
+      // sound immediately if its target time is in the past.
+      const delayCompensation = soundEvent.insideWhenRun ? 0 : 0.1;
+
+      if (eventStart >= currentAudioTime - delayCompensation) {
         soundEvent.uniqueId = PlaySound(
           this.groupPrefix + '/' + soundEvent.id,
           GROUP_TAG,

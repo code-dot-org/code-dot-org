@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2022-10-06 22:42:59 UTC",
+    "family_name": "playground",
+    "serialized_at": "2022-10-28 23:47:00 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -45,6 +47,66 @@
         "lesson_group.key": "",
         "script.name": "csc-playground"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Particles Lesson 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Particles Lesson 2",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Particles Lesson 3",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Particles Lesson 4",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -56,6 +118,68 @@
       "seeding_key": {
         "lesson_activity.key": "d5626dd2-2f3a-4a9b-8327-aad9bb62cb47",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "eed501ac-2a8e-411f-bc1d-f2dfc7956d31",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eed501ac-2a8e-411f-bc1d-f2dfc7956d31",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "873dd67c-9e94-453f-a589-b5de0a7adc18",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "138ebb3c-8c5b-413a-b9a5-f766b2aaf569",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "138ebb3c-8c5b-413a-b9a5-f766b2aaf569",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "b5030105-32de-440e-bf6e-e38ddc6a0fca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5030105-32de-440e-bf6e-e38ddc6a0fca",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground"
+      }
+    },
+    {
+      "key": "73e95bde-bd0f-4b40-a98e-b00f2ab2d9e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73e95bde-bd0f-4b40-a98e-b00f2ab2d9e3",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "csc-playground"
       }
@@ -71,6 +195,111 @@
         "activity_section.key": "9b42483e-ebd3-4d97-8963-30602fc1093f",
         "lesson_activity.key": "d5626dd2-2f3a-4a9b-8327-aad9bb62cb47"
       }
+    },
+    {
+      "key": "025cdd29-5186-4678-972b-7b8a0bffd6da",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "025cdd29-5186-4678-972b-7b8a0bffd6da",
+        "lesson_activity.key": "eed501ac-2a8e-411f-bc1d-f2dfc7956d31"
+      }
+    },
+    {
+      "key": "d2c8a2b9-0454-4beb-a776-966f1bbb9aba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d2c8a2b9-0454-4beb-a776-966f1bbb9aba",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "c8d9ea54-fead-4481-bfcf-dcf55c828520",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c8d9ea54-fead-4481-bfcf-dcf55c828520",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "d8588af2-11d6-4d80-8aa1-b29bc7968640",
+      "position": 3,
+      "properties": {
+        "name": "Activity",
+        "progression_name": "Solid State of Matter"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "97ce6962-031b-4d67-bccb-0f052ccb273e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Liquid State of Matter"
+      },
+      "seeding_key": {
+        "activity_section.key": "97ce6962-031b-4d67-bccb-0f052ccb273e",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "7e672340-f220-4da8-9d18-3381517be1f3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Gas State of Matter"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e672340-f220-4da8-9d18-3381517be1f3",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge: States of Matter Under the Microscope"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49",
+        "lesson_activity.key": "873dd67c-9e94-453f-a589-b5de0a7adc18"
+      }
+    },
+    {
+      "key": "16a489d3-b928-4a01-911b-056f01d7bb39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "16a489d3-b928-4a01-911b-056f01d7bb39",
+        "lesson_activity.key": "138ebb3c-8c5b-413a-b9a5-f766b2aaf569"
+      }
+    },
+    {
+      "key": "06047554-edb7-4852-92be-3207deeffebc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc",
+        "lesson_activity.key": "b5030105-32de-440e-bf6e-e38ddc6a0fca"
+      }
+    },
+    {
+      "key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25",
+        "lesson_activity.key": "73e95bde-bd0f-4b40-a98e-b00f2ab2d9e3"
+      }
     }
   ],
   "script_levels": [
@@ -80,6 +309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "function_machine_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -101,6 +333,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_bookcover_clicksay_-book-recommendation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -114,6 +349,534 @@
       },
       "level_keys": [
         "csc_bookcover_clicksay_-book-recommendation"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d2c8a2b9-0454-4beb-a776-966f1bbb9aba"
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c8d9ea54-fead-4481-bfcf-dcf55c828520"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_Predict"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L2"
+        ],
+        "progression": "Solid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid"
+        ],
+        "progression": "Solid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L3-Solid"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L4"
+        ],
+        "progression": "Solid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L5"
+        ],
+        "progression": "Solid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L6"
+        ],
+        "progression": "Solid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L6"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid"
+        ],
+        "progression": "Liquid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "97ce6962-031b-4d67-bccb-0f052ccb273e"
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L7-Liquid"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L8"
+        ],
+        "progression": "Liquid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L8"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "97ce6962-031b-4d67-bccb-0f052ccb273e"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L8"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L9"
+        ],
+        "progression": "Liquid State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L9"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "97ce6962-031b-4d67-bccb-0f052ccb273e"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L9"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas"
+        ],
+        "progression": "Gas State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "7e672340-f220-4da8-9d18-3381517be1f3"
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L10-Gas"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L11"
+        ],
+        "progression": "Gas State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "7e672340-f220-4da8-9d18-3381517be1f3"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L11"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12"
+        ],
+        "progression": "Gas State of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "7e672340-f220-4da8-9d18-3381517be1f3"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L12"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge: States of Matter Under the Microscope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L13A Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L13A Challenge"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge"
+        ],
+        "progression": "Challenge: States of Matter Under the Microscope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L12 Challenge"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge"
+        ],
+        "progression": "Challenge: States of Matter Under the Microscope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L14 Challenge"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge"
+        ],
+        "progression": "Challenge: States of Matter Under the Microscope"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      },
+      "level_keys": [
+        "csc_Paricles_StatesOfMatter_L15 Challenge"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cdc_particles_physical_intro"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cdc_particles_physical_intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      },
+      "level_keys": [
+        "cdc_particles_physical_intro"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_observer"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_observer"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      },
+      "level_keys": [
+        "csc_particles_phys_observer"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_tinker"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      },
+      "level_keys": [
+        "csc_particles_phys_tinker"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_setup1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      },
+      "level_keys": [
+        "csc_particles_phys_setup1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_observer"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      },
+      "level_keys": [
+        "csc_particles_chem_observer"
       ]
     }
   ],
@@ -140,6 +903,270 @@
         "lesson_group.key": "",
         "script.name": "csc-playground",
         "activity_section.key": "9b42483e-ebd3-4d97-8963-30602fc1093f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L1",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d2c8a2b9-0454-4beb-a776-966f1bbb9aba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_Predict",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c8d9ea54-fead-4481-bfcf-dcf55c828520"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L2",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L3-Solid",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L4",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L5",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L6",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L6"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "d8588af2-11d6-4d80-8aa1-b29bc7968640"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "97ce6962-031b-4d67-bccb-0f052ccb273e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L8",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L8"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "97ce6962-031b-4d67-bccb-0f052ccb273e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L9",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L9"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "97ce6962-031b-4d67-bccb-0f052ccb273e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L10-Gas",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "7e672340-f220-4da8-9d18-3381517be1f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L11",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L11"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "7e672340-f220-4da8-9d18-3381517be1f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L12",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L12"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "7e672340-f220-4da8-9d18-3381517be1f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L13A Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L13A Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L12 Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L12 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L14 Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L14 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_L15 Challenge",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_L15 Challenge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "8d5d27e1-abb9-4f16-9f64-ac10ed044d49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cdc_particles_physical_intro",
+        "script_level.level_keys": [
+          "cdc_particles_physical_intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_observer",
+        "script_level.level_keys": [
+          "csc_particles_phys_observer"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_tinker",
+        "script_level.level_keys": [
+          "csc_particles_phys_tinker"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_setup1",
+        "script_level.level_keys": [
+          "csc_particles_phys_setup1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_observer",
+        "script_level.level_keys": [
+          "csc_particles_chem_observer"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
       }
     }
   ],

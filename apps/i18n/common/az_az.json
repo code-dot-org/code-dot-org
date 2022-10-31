@@ -15,6 +15,7 @@
   "activityHeaderTime": "({activityDuration} dəqiqələr)",
   "actions": "Əmrlər",
   "add": "Əlavə et",
+  "addingToTable": "Əlavə olunur... ",
   "additionalInformationHeader": "Əlavə Məlumat",
   "additionalInformationText": "Daha çox məlumat üçün, [{externalDocumentationUrl}]({externalDocumentationUrl}) ",
   "addNewSection": "Yeni bölmə əlavə edin.",
