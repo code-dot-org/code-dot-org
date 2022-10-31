@@ -17,7 +17,7 @@ social:
 <h1>#CSforGood in your class</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
-  {{hoc_vid_2020 }}
+  {{cs_for_good_vid }}
 </div>
 
 <div class="col-60">
