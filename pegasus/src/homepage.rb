@@ -554,7 +554,7 @@ class Homepage
   end
 
   def self.get_dance_stars
-    stars = [
+    [
       "Beyoncé", "Harry Styles", "Lizzo", "Post Malone", "Disney\'s \"Encanto\"", "Nicky Youre",
       "Katy Perry", "Lil Nas X", "Jonas Brothers", "Panic! At The Disco",
       "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
@@ -564,6 +564,5 @@ class Homepage
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]
-    return stars
   end
 end
