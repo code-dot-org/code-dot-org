@@ -873,6 +873,7 @@ FactoryGirl.define do
     first_name 'Albus'
     last_name 'Dumbledore'
     email 'albus@hogwarts.edu'
+    can_email_you 'Yes'
     confirm_principal true
 
     trait :approved_no do
@@ -881,12 +882,10 @@ FactoryGirl.define do
 
     trait :replace_course_yes_csp do
       replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
     end
 
     trait :replace_course_yes_csd do
       replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
     end
 
     trait :approved_yes do
@@ -912,7 +911,6 @@ FactoryGirl.define do
       other '10'
       committed_to_master_schedule Pd::Application::PrincipalApprovalApplication.options[:committed_to_master_schedule][0]
       replace_course Pd::Application::PrincipalApprovalApplication.options[:replace_course][1]
-      committed_to_diversity 'Yes'
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApprovalApplication.options[:pay_fee][0]
     end
