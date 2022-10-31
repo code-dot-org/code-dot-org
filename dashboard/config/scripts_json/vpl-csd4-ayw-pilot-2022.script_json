@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-26 22:47:27 UTC",
+    "serialized_at": "2022-10-31 02:40:41 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -181,6 +181,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd4-ayw-pilot-2022"
       }
+    },
+    {
+      "key": "6b013bd9-5bf9-43e7-b741-f736775821e1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b013bd9-5bf9-43e7-b741-f736775821e1",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -223,13 +235,259 @@
         "activity_section.key": "0c444e16-9311-4ca3-aa5c-a52ded19cd2e",
         "lesson_activity.key": "48992291-1d13-4074-b2a8-26e2c2f4ff41"
       }
+    },
+    {
+      "key": "a8953c6c-fdb4-4bd8-8f92-d8a8148c6ac0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 4 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8953c6c-fdb4-4bd8-8f92-d8a8148c6ac0",
+        "lesson_activity.key": "6b013bd9-5bf9-43e7-b741-f736775821e1"
+      }
+    },
+    {
+      "key": "69a50d8b-31e8-4b28-85a8-717399fad6f9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Reviewing Summative Assessments"
+      },
+      "seeding_key": {
+        "activity_section.key": "69a50d8b-31e8-4b28-85a8-717399fad6f9",
+        "lesson_activity.key": "6b013bd9-5bf9-43e7-b741-f736775821e1"
+      }
+    },
+    {
+      "key": "d4ecf19f-de9c-4aa4-8065-f1d388eb94ba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Planning Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4ecf19f-de9c-4aa4-8065-f1d388eb94ba",
+        "lesson_activity.key": "6b013bd9-5bf9-43e7-b741-f736775821e1"
+      }
+    },
+    {
+      "key": "7152e527-1549-4ce0-ba2c-5cf9420667d9",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 4 Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "7152e527-1549-4ce0-ba2c-5cf9420667d9",
+        "lesson_activity.key": "6b013bd9-5bf9-43e7-b741-f736775821e1"
+      }
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 4 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-Module 4 Overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "a8953c6c-fdb4-4bd8-8f92-d8a8148c6ac0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-Module 4 Overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reviewing Summative Assessments"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "69a50d8b-31e8-4b28-85a8-717399fad6f9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reviewing Summative Assessments"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "69a50d8b-31e8-4b28-85a8-717399fad6f9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Planning Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "d4ecf19f-de9c-4aa4-8065-f1d388eb94ba"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Planning Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "d4ecf19f-de9c-4aa4-8065-f1d388eb94ba"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 4 Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-WrapUp"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "7152e527-1549-4ce0-ba2c-5cf9420667d9"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-AYW-M4-WrapUp"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-Module 4 Overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-Module 4 Overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "a8953c6c-fdb4-4bd8-8f92-d8a8148c6ac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "69a50d8b-31e8-4b28-85a8-717399fad6f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeAssessmentOverview1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "69a50d8b-31e8-4b28-85a8-717399fad6f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "d4ecf19f-de9c-4aa4-8065-f1d388eb94ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-SummativeNextSteps1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "d4ecf19f-de9c-4aa4-8065-f1d388eb94ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-AYW-M4-WrapUp",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M4-WrapUp"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd4-ayw-pilot-2022",
+        "activity_section.key": "7152e527-1549-4ce0-ba2c-5cf9420667d9"
+      }
+    }
   ],
   "resources": [
     {

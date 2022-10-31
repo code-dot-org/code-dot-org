@@ -3,6 +3,7 @@ function statesOfMatter(behavior) {
 }
 
 function solid(this_sprite) {
+  //console.log(this_sprite);
   layoutGrid();
   withPercentChance(50, function () {
     setProp(this_sprite, "rotation", math_random_int(-1, 1));
