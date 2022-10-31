@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-27 21:57:00 UTC",
+    "serialized_at": "2022-10-28 21:47:35 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -327,6 +327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-Module 3 Overview"
+        ],
         "progression": "Module 3 Overview"
       },
       "bonus": false,
@@ -349,6 +352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview"
+        ],
         "progression": "Reviewing Formative Assessments"
       },
       "bonus": false,
@@ -371,6 +377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1"
+        ],
         "progression": "Reviewing Formative Assessments"
       },
       "bonus": false,
@@ -390,53 +399,12 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Reviewing Formative Assessments"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd3-ayw-pilot-2022",
-        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Reviewing Formative Assessments"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview1"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd3-ayw-pilot-2022",
-        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview1"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps"
+        ],
         "progression": "Planning Next Steps"
       },
       "bonus": false,
@@ -454,11 +422,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-FormativeNextSteps1"
+        ],
         "progression": "Planning Next Steps"
       },
       "bonus": false,
@@ -476,11 +447,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-AYW-M3-WrapUp"
+        ],
         "progression": "Module 3 Wrap Up"
       },
       "bonus": false,
@@ -528,30 +502,6 @@
         "level.key": "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-AYW-M3-FormativeAssessmentOverview1"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd3-ayw-pilot-2022",
-        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "vpl-csd3-ayw-pilot-2022",
-        "activity_section.key": "604b30bd-db7f-4681-be92-c041b034e0cd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview1",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-AYW-M3-FormativeReview1"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
