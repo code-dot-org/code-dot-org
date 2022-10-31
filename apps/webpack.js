@@ -149,7 +149,8 @@ var baseConfig = {
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
-      '@cdo/storybook': path.resolve(__dirname, '.storybook')
+      '@cdo/storybook': path.resolve(__dirname, '.storybook'),
+      serialport: false
     }
   },
   module: {
@@ -306,8 +307,8 @@ function storybookConfig(sbConfig) {
           envConstants.NODE_ENV || 'development'
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
-      }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
+      })
+      //new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
     ]
   };
 }
@@ -464,7 +465,7 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
         DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
+      //new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
       ...plugins
     ],
     watch: watch,
