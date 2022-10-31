@@ -12,7 +12,7 @@
       "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
@@ -43,7 +43,7 @@
   "created_at": "2022-09-27T23:55:26.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-27T23:55:26.032+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_prompt\\\"\"],\"cloned_from\":\"csc_bookcover_prompt\"},{\"changed_at\":\"2022-09-27 23:56:42 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:34:28 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:34:55 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-11 20:09:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:16:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:36:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-27T23:55:26.032+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_prompt\\\"\"],\"cloned_from\":\"csc_bookcover_prompt\"},{\"changed_at\":\"2022-09-27 23:56:42 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:34:28 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:34:55 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-11 20:09:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:16:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:36:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:08:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:27:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:28:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:26:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1410,6 +1410,23 @@
             </value>
           </block>
           <block type="storylab_clearHeadings"/>
+          <block type="storylab_setPromptWithChoice">
+            <value name="QUESTION">
+              <block type="text">
+                <field name="TEXT">Interested?</field>
+              </block>
+            </value>
+            <value name="VAR">
+              <block type="variables_get">
+                <field name="VAR">prompt</field>
+              </block>
+            </value>
+            <value name="A">
+              <block type="text">
+                <field name="TEXT">Learn more</field>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
@@ -1471,7 +1488,7 @@
             </value>
             <value name="VAL">
               <block type="math_number">
-                <field name="NUM">50</field>
+                <field name="NUM">200</field>
               </block>
             </value>
           </block>
@@ -1629,6 +1646,7 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_whenAllPromptsAnswered"/>
           <block type="gamelab_atTime">
             <field name="UNIT">"seconds"</field>
             <value name="N">

@@ -92,7 +92,7 @@ Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. 
 ### Volunteer weekly with these great organizations
 [col-33]
 
-<img src="/images/fit-300/teals/quincy.jpg" style="border-radius: 5px; margin-left: 0px;">
+<img src="/images/fit-300/teals/quincy.jpg" style="border-radius: 5px; margin-left: 0px;" alt="">
 
 [/col-33]
 

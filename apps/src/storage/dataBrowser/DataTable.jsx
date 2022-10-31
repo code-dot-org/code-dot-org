@@ -243,7 +243,7 @@ class DataTable extends React.Component {
                   </th>
                 )}
                 {!this.props.readOnly && (
-                  <th className={dataStyles.headerCell}>Actions</th>
+                  <th className={dataStyles.headerCell}>{msg.actions()}</th>
                 )}
               </tr>
 
@@ -286,6 +286,7 @@ class DataTable extends React.Component {
   }
 }
 
+export const UnconnectedDataTable = DataTable;
 export default connect(
   state => ({
     tableColumns: state.data.tableColumns || [],
