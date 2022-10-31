@@ -52,7 +52,7 @@ export default class SetupInstructions extends React.Component {
           style={{margin: 15, marginBottom: 25}}
           className="btn"
           type="button"
-          value={'Connect to Board'}
+          value={applabI18n.connectToBoard()}
           onClick={() => {
             navigator.serial
               .requestPort({filters: WEB_SERIAL_FILTERS})
@@ -199,9 +199,10 @@ class WindowsDownloads extends React.Component {
         {installer && !error && (
           <Button
             __useDeprecatedTag
-            text={`Download Code.org Maker App for Windows (${
-              installer.version
-            })`}
+            text={applabI18n.downloadMakerAppFor({
+              OS: i18n.windows(),
+              installerVersion: installer.version
+            })}
             icon="download"
             color={Button.ButtonColor.orange}
             size={Button.ButtonSize.large}
@@ -244,7 +245,10 @@ class MacDownloads extends React.Component {
         {installer && !error && (
           <Button
             __useDeprecatedTag
-            text={`Download Code.org Maker App for Mac (${installer.version})`}
+            text={applabI18n.downloadMakerAppFor({
+              OS: i18n.mac(),
+              installerVersion: installer.version
+            })}
             icon="download"
             color={Button.ButtonColor.orange}
             size={Button.ButtonSize.large}
@@ -285,9 +289,10 @@ class LinuxDownloads extends React.Component {
         {installer && !error && (
           <Button
             __useDeprecatedTag
-            text={`Download Code.org Maker App for Linux (${
-              installer.version
-            })`}
+            text={applabI18n.downloadMakerAppFor({
+              OS: i18n.linux(),
+              installerVersion: installer.version
+            })}
             icon="download"
             color={Button.ButtonColor.orange}
             size={Button.ButtonSize.large}
