@@ -161,8 +161,6 @@ main {
     background-size: 550px 550px, 250px 250px, 350px 350px, 150px 150px;
     background-position: 0 0, 140px 60px, 230px 270px, 0px 100px;
 
-
-
     @media screen and (max-width: $width-md) {
       width: 90%;
     }
@@ -282,9 +280,12 @@ main {
     .activities {
       text-align: center;
 
-      .hoc-tiles-container {
-        text-align: left;
+      .featured-activities {
         margin: 0 auto 3em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
       }
     }
   }
