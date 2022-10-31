@@ -22,11 +22,11 @@ export const commands = {
     this.storyLabText.subheading = subheading;
   },
 
-  getHeading(heading) {
+  getHeading() {
     return this.storyLabText.heading;
   },
 
-  getSubheading(subheading) {
+  getSubheading() {
     return this.storyLabText.subheading;
   },
 
