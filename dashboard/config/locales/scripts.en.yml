@@ -9667,3 +9667,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        amy-playground:
+          lessons:
+            lesson-1:
+              name: Particles
+          lesson_groups: {}
+          name: amy-playground
+          title: Amy's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
