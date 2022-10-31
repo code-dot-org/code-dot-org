@@ -23,6 +23,7 @@ module Pd::Application
         principal_first_name: application_hash[:principal_first_name],
         principal_last_name: application_hash[:principal_last_name],
         principal_title: application_hash[:principal_title],
+        principal_role: application_hash[:principal_role],
         principal_email: application_hash[:principal_email],
         school_id: teacher_application.school_id || "-1",
         school_state: teacher_application.school_state,
