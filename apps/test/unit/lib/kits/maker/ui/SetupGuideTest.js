@@ -8,7 +8,7 @@ import applabI18n from '@cdo/applab/locale';
 import experiments from '@cdo/apps/util/experiments';
 
 describe('MakerSetupGuide', () => {
-  before(() => {
+  beforeEach(() => {
     // Stub i18n function before translation tests.
     const i18n = {
       makerSetupCircuitPlaygroundTitle: 'i18n-CP-title',
@@ -22,7 +22,7 @@ describe('MakerSetupGuide', () => {
     }
   });
 
-  after(() => {
+  afterEach(() => {
     sinon.restore();
   });
 
