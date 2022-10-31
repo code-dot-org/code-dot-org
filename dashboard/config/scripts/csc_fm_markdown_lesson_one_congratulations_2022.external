@@ -1,0 +1,16 @@
+name 'csc_fm_markdown_lesson_one_congratulations_2022'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#You completed Lesson One!
+
+Today you were an observer and a tinkerer. You experienced an addition function machine and got an inside look at the code that makes it all work. 
+
+The aliens have agreed to give you the first clue! 
+
+Unscramble these letters: **PCEAS**
+
+
+Space what?! We will have to continue figuring out what these aliens want next lesson. Next lesson you will build your own function machine that does multiplication!
+MARKDOWN
