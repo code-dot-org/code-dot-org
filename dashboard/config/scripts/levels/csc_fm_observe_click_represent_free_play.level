@@ -42,7 +42,7 @@
   "created_at": "2022-10-27T21:58:23.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-27T21:58:23.094+00:00\",\"changed\":[\"cloned from \\\"csc_fm_observe_click_represent\\\"\"],\"cloned_from\":\"csc_fm_observe_click_represent\"},{\"changed_at\":\"2022-10-27 21:59:35 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-27 22:06:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-27T21:58:23.094+00:00\",\"changed\":[\"cloned from \\\"csc_fm_observe_click_represent\\\"\"],\"cloned_from\":\"csc_fm_observe_click_represent\"},{\"changed_at\":\"2022-10-27 21:59:35 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-27 22:06:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:09:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:11:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-28 14:23:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1559,17 +1559,48 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn">
-          <mutation name="addTwo"/>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"purple bunny"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":196,"y":325}</field>
+            </block>
+          </value>
+        </block>
+        <block type="variables_set">
+          <field name="VAR">input</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">0</field>
+            </block>
+          </value>
         </block>
         <block type="procedures_callnoreturn">
           <mutation name="addOne"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="addTwo"/>
         </block>
         <block type="procedures_callnoreturn">
           <mutation name="addThree"/>
         </block>
         <block type="procedures_callnoreturn">
           <mutation name="addFour"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="addFive"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="addSix"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="addSeven"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="addEight"/>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="addNine"/>
         </block>
         <block type="FunctionBlocks_spriteSayVar">
           <value name="SPRITE">
