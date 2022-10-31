@@ -30,12 +30,12 @@ var applyFooter = function() {
   }
   if (window.encrypted_channel_id) {
     var viewCodeLink = document.getElementById("pagefooter_view_code");
-    if (!viewCodeLink.includes(window.encryped_channel_id)) {
+    if (!viewCodeLink.includes(window.encrytped_channel_id)) {
       viewCodeLink.href =
         viewCodeLink.href + "/" + window.encrypted_channel_id + "/view";
     }
     var abuseLink = document.getElementById("pagefooter_report_abuse");
-    if (!abuseLink.includes(window.encryped_channel_id)) {
+    if (!abuseLink.includes(window.encrytped_channel_id)) {
       abuseLink.href =
         abuseLink.href + "?channelId=" + window.encrypted_channel_id;
     }
