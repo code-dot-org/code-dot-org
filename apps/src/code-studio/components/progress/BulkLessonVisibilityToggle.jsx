@@ -57,14 +57,7 @@ BulkLessonVisibilityToggle.propTypes = {
 };
 
 export const UnconnectedBulkLessonVisibilityToggle = BulkLessonVisibilityToggle;
-export default connect(
-  state => ({
-    sectionId: state.teacherSections.selectedSectionId,
-    unitName: state.progress.scriptName
-  }) /*,
-  dispatch => ({
-    toggleHiddenLesson(unitName, sectionId, lessonId, hidden) {
-      dispatch(toggleHiddenLesson(unitName, sectionId, lessonId, hidden));
-    }
-  }) */
-)(BulkLessonVisibilityToggle);
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+  unitName: state.progress.scriptName
+}))(BulkLessonVisibilityToggle);
