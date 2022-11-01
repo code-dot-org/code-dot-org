@@ -19,7 +19,7 @@ theme: responsive
     .wrapper
       %h1=hoc_s(:hoc2022_codeorg_title)
       %p=hoc_s(:hoc2022_codeorg_description)
-    %img{src: "/images/hoc2022-skinny-banner-james-webb-illustration.png", alt: "Illustration of NASA's James Webb telescope"}
+    %img{src: "/images/hoc2022-skinny-banner-james-webb-illustration.png", alt: I18n.t(:hoc2022_nasa_webb_alt_text)}
     %a{href: "/hourofcode2022"}
       %button=I18n.t(:dashboard_announce_learn_more_button)
   != I18n.t(:hoc_overview_subtitle_markdown, markdown: :inline)
