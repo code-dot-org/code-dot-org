@@ -11,6 +11,17 @@ module Api::V1::Pd::Application
       )
     end
 
+    def new_status
+      return 'incomplete' if params[:isSaving]&.try(:to_bool)
+
+      regional_partner_id = @application.form_data_hash['regionalPartnerId']
+
+      return 'awaiting_admin_approval' unless regional_partner_id
+
+      no_admin_approval = RegionalPartner.find(regional_partner_id)&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+      no_admin_approval ? 'unreviewed' : 'awaiting_admin_approval'
+    end
+
     # PATCH /api/v1/pd/application/teacher/<applicationId>
     def update
       form_data_hash = params[:form_data]
@@ -19,17 +30,14 @@ module Api::V1::Pd::Application
         @application.form_data_hash = JSON.parse(form_data_json)
       end
 
-      status = params[:status]
       previous_status = @application.status
-      if status
-        @application.status = status
-      end
+      @application.status = new_status
 
       if @application.save
         render json: @application, status: :ok
 
         # send confirmation email only if user is submitting their application for the first time
-        on_successful_create if previous_status == 'incomplete' && (%w[unreviewed awaiting_admin_approval].include?(status))
+        on_successful_create if previous_status == 'incomplete' && (%w[unreviewed awaiting_admin_approval].include?(@application.status))
       else
         return render json: {errors: @application.errors.full_messages}, status: :bad_request
       end
@@ -43,7 +51,11 @@ module Api::V1::Pd::Application
     end
 
     def change_principal_approval_requirement
-      @application.update!(principal_approval_not_required: params[:principal_approval_not_required].to_bool)
+      not_required = params[:principal_approval_not_required].to_bool
+      @application.status = 'unreviewed' if not_required && @application.status == 'awaiting_admin_approval'
+      @application.status = 'awaiting_admin_approval' if !not_required && @application.status == 'unreviewed'
+
+      @application.update!(principal_approval_not_required: not_required)
       @application.queue_email :principal_approval, deliver_now: true if @application.allow_sending_principal_email?
       render json: {principal_approval: @application.principal_approval_state}
     end

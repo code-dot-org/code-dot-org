@@ -90,13 +90,14 @@ module Api::V1::Pd::Application
 
       PRINCIPAL_APPROVAL_APPLICATION_CLASS.expects(:create_placeholder_and_send_mail).never
 
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
 
       TEACHER_APPLICATION_CLASS.any_instance.stubs(:regional_partner).returns(regional_partner)
 
       sign_in @applicant
 
-      put :create, params: @test_params
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
+      put :create, params: {form_data: application_hash}
       assert_response :success
     end
 
@@ -118,6 +119,34 @@ module Api::V1::Pd::Application
       assert_no_difference "#{TEACHER_APPLICATION_CLASS.name}.count" do
         put :create, params: {form_data: @test_params}
       end
+    end
+
+    test 'submitting an application without RP requiring admin approval has \'unreviewed\' status' do
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
+
+      # TEACHER_APPLICATION_CLASS.any_instance.stubs(:regional_partner).returns(regional_partner)
+
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
+
+      sign_in @applicant
+      put :create, params: {form_data: application_hash}
+      assert_response :success
+
+      assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
+    end
+
+    test 'submitting an application with RP requiring admin approval has \'awaiting admin approval\' status' do
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+
+      TEACHER_APPLICATION_CLASS.any_instance.stubs(:regional_partner).returns(regional_partner)
+
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
+
+      sign_in @applicant
+      put :create, params: {form_data: application_hash}
+      assert_response :success
+
+      assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
     end
 
     test 'creating an application on an existing form renders conflict' do
@@ -149,16 +178,48 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
 
       sign_in @applicant
-      put :create, params: {form_data_hash: @test_params, status: 'incomplete'}
+      put :create, params: {form_data_hash: @test_params, isSaving: true}
       refute TEACHER_APPLICATION_CLASS.last.response_scores
       assert_response :created
     end
 
-    test 'updates course hours, autoscores, and queues email once application is submitted with unreviewed status' do
-      application_hash = build :pd_teacher_application_hash_common, :csp,
-                               cs_how_many_minutes: 45,
-                               cs_how_many_days_per_week: 5,
-                               cs_how_many_weeks_per_year: 30
+    test 'autoscores and queues emails on submit when approval is required' do
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
+
+      Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).once.
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+
+      sign_in @applicant
+      put :create, params: {form_data: application_hash, isSaving: false}
+      assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
+      assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+      assert_response :created
+    end
+
+    test 'autoscores and queues confirmation email without admin email on submit with approval not required' do
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
+
+      Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
+
+      sign_in @applicant
+      put :create, params: {form_data: application_hash, isSaving: false}
+      assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
+      assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+      assert_response :created
+    end
+
+    test 'autoscores and queues emails once submitted with approval required' do
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
       application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
 
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
@@ -169,35 +230,32 @@ module Api::V1::Pd::Application
         returns(mock {|mail| mail.expects(:deliver_now)})
 
       sign_in @applicant
-      put :update, params: {id: application.id, form_data: application_hash, status: 'unreviewed'}
-      assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+      put :update, params: {id: application.id, form_data: application_hash, isSaving: false}
+      assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
+      # assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
 
-    test 'updates course hours, autoscores, and queues email once application is submitted with awaiting_admin_approval status' do
-      application_hash = build :pd_teacher_application_hash_common, :csp,
-                               cs_how_many_minutes: 45,
-                               cs_how_many_days_per_week: 5,
-                               cs_how_many_weeks_per_year: 30
+    test 'autoscores and queues confirmation email without admin email once submitted with approval not required' do
+      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
       application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
 
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
-      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).once.
-        with(instance_of(TEACHER_APPLICATION_CLASS)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
+      Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
 
       sign_in @applicant
-      put :update, params: {id: application.id, form_data: application_hash, status: 'awaiting_admin_approval'}
-      assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
+      put :update, params: {id: application.id, form_data: application_hash, isSaving: false}
+      assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
 
     test 'can submit an empty form if application is incomplete' do
       sign_in @applicant
-      put :create, params: {status: 'incomplete'}
+      put :create, params: {isSaving: true}
 
       assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
       assert_response :created
@@ -209,7 +267,7 @@ module Api::V1::Pd::Application
       original_data = application.form_data_hash
       original_school_info = @applicant.school_info
 
-      put :update, params: {id: application.id, status: 'incomplete'}
+      put :update, params: {id: application.id, isSaving: true}
       application.reload
       assert_equal original_data, application.form_data_hash
       assert_equal original_school_info, @applicant.school_info
