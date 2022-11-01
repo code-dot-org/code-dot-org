@@ -7,19 +7,3 @@ M1_OVERRIDES_SCRIPT=tools/hooks/m1_mac_gemfile_overrides.sh
 if [ -f "$M1_OVERRIDES_SCRIPT" ]; then
   sh $M1_OVERRIDES_SCRIPT "$@"
 fi
-
-# if [ -x tools/hooks/m1_mac_gemfile_overrides.sh ]
-# then
-#   sh tools/hooks/m1_mac_gemfile_overrides.sh "$@"
-# fi
-
-# script_dir=$(dirname $0)
-# echo $script_dir
-# echo "got here"
-
-# echo "Script executed from: ${PWD}"
-
-# BASEDIR=$(dirname $0)
-# echo "Script location: ${BASEDIR}"
-
-# sh tools/hooks/m1_mac_gemfile_overrides.sh "$@"
