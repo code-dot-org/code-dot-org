@@ -190,8 +190,7 @@ Scenario: Teacher starts a new csp application and submits it
 
   # Section 4
   Then I wait until element "h3" contains text "Section 4: Additional Demographic Information and Submission"
-  And I complete Section 3 of the teacher PD application
-  And I press the first "input#agree" element
+  And I complete Section 4 of the teacher PD application
 
   And I press the first "button[type='submit']" element
 
