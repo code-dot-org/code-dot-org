@@ -4,12 +4,6 @@ theme: responsive
 ---
 
 %link{href: "/css/generated/hoc2022-landing-page.css", rel: "stylesheet"}
-%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
-
--# Import HoC activities for each section
-%script{type: "text/javascript", src: "/js/hoc2022-explore-activities.js"}
-%script{type: "text/javascript", src: "/js/hoc2022-play-activities.js"}
-%script{type: "text/javascript", src: "/js/hoc2022-create-activities.js"}
 
 -# Import FontAwesome Pro
 %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
@@ -61,7 +55,7 @@ theme: responsive
           %p=I18n.t(:hoc2022_landing_page_explore_description)
         %figure
           %div
-            %iframe{src: "https://www.youtube.com/embed/WE2s3647awE", allowFullScreen: 'true', frameborder: '0', width: '500', height: '281'}
+            %iframe{src: "https://www.youtube.com/embed/WE2s3647awE", allowFullScreen: 'true', frameborder: '0'}
       %hr
       .activities
         %h2=I18n.t(:try_an_activity)
@@ -99,7 +93,7 @@ theme: responsive
           %p=I18n.t(:hoc2022_landing_page_create_description)
         %figure
           %div
-            %iframe{src: "https://www.youtube.com/embed/lud4bU3YY9U", allowFullScreen: 'true', frameborder: '0', class: "has-border"}
+            %iframe{src: "https://www.youtube.com/embed/lud4bU3YY9U", allowFullScreen: 'true', frameborder: '0'}
       %hr
       .activities
         %h2=I18n.t(:try_an_activity)
