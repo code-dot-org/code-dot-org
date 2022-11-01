@@ -6,10 +6,10 @@
     "submittable": "false",
     "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
-    "long_instructions": "**The `Painter`(#e7e8ea) has a new job, and they need help painting dashed lines between the lanes of traffic.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Write the `TrafficPainter`(#e7e8ea) class and the method(s) you need to solve the problem.\r\n\r\n1. Write the `TrafficPainter`(#e7e8ea) class to be a subclass of the `PainterPlus`(#e7e8ea) class.\r\n\r\n2. Write your method(s) to paint dashed lines between the lanes of traffic.\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nwhile the Painter has paint\r\n   if the Painter can move east\r\n      move\r\n   \r\n   paint with the color\r\n   \r\n   if the Painter can move forward\r\n      move\r\n```\r\n:::\r\n&nbsp;\r\n\r\n3. In `NeighborhoodRunner.java`(#e7e8ea), create a `TrafficPainter`(#e7e8ea) object and use your method(s) to paint the square in The Neighborhood.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/676be4e01a521f3a60106bfd47e58189-image-1666482865614.gif)",
+    "long_instructions": "**The `Painter`(#e7e8ea) has a new job, and they need help painting dashed lines between the lanes of traffic.**\r\n\r\n🎒 **IMPORT:** Import your `PainterPlus`(#e7e8ea) class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* ***here*** *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO:** Write the `TrafficPainter`(#e7e8ea) class and the method(s) you need to solve the problem.\r\n\r\n1. Write the `TrafficPainter`(#e7e8ea) class to be a subclass of the `PainterPlus`(#e7e8ea) class.\r\n\r\n2. Write your method(s) to paint dashed lines between the lanes of traffic.\r\n\r\n::: details [**🔦 Need help with your algorithm?**]\r\n  \r\nHere is one approach to solving this problem.\r\n\r\n```\r\nwhile the Painter has paint\r\n   if the Painter can move east\r\n      move\r\n   \r\n   paint with the color\r\n   \r\n   if the Painter can move forward\r\n      move\r\n```\r\n:::\r\n&nbsp;\r\n\r\n3. In `NeighborhoodRunner.java`(#e7e8ea), create a `TrafficPainter`(#e7e8ea) object and use your method(s) to paint the square in The Neighborhood.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/04ee615263b65c0c6ebd4d428d09fd46-image-1667251890789.gif)",
     "display_name": "The TrafficPainter",
     "bubble_choice_description": "The `Painter` has a new job, and they need help painting dashed lines between the lanes of traffic.",
-    "thumbnail_url": "https://images.code.org/5de2a858fd55d5e65ebb99355e04d388-u1l11-l3b.gif",
+    "thumbnail_url": "https://images.code.org/d8c383282197ac9972cb5ebba530662d-U1L13-L4b.gif",
     "serialized_maze": [
       [
         {
@@ -44,8 +44,18 @@
         },
         {
           "tileType": 1,
-          "value": 8,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -61,16 +71,6 @@
           "tileType": 0,
           "value": 0,
           "assetId": 1
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
         }
       ],
       [
@@ -117,22 +117,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 2
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 3
-        },
-        {
-          "tileType": 0,
-          "value": 0,
           "assetId": 47
         },
         {
           "tileType": 0,
           "value": 0,
           "assetId": 1
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 2
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 3
         }
       ],
       [
@@ -179,22 +179,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 4
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 5
-        },
-        {
-          "tileType": 0,
-          "value": 0,
           "assetId": 2
         },
         {
           "tileType": 0,
           "value": 0,
           "assetId": 3
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 4
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 5
         }
       ],
       [
@@ -239,16 +239,6 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
           "tileType": 0,
           "value": 0,
           "assetId": 4
@@ -257,6 +247,16 @@
           "tileType": 0,
           "value": 0,
           "assetId": 5
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         }
       ],
       [
@@ -301,6 +301,16 @@
           "assetId": 0
         },
         {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
           "tileType": 0,
           "value": 0,
           "assetId": 47
@@ -309,16 +319,6 @@
           "tileType": 0,
           "value": 0,
           "assetId": 1
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
         }
       ],
       [
@@ -365,22 +365,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 2
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 3
-        },
-        {
-          "tileType": 0,
-          "value": 0,
           "assetId": 47
         },
         {
           "tileType": 0,
           "value": 0,
           "assetId": 1
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 2
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 3
         }
       ],
       [
@@ -427,22 +427,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 4
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 5
-        },
-        {
-          "tileType": 0,
-          "value": 0,
           "assetId": 2
         },
         {
           "tileType": 0,
           "value": 0,
           "assetId": 3
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 4
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 5
         }
       ],
       [
@@ -487,16 +487,6 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
           "tileType": 0,
           "value": 0,
           "assetId": 4
@@ -505,6 +495,16 @@
           "tileType": 0,
           "value": 0,
           "assetId": 5
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         }
       ],
       [
@@ -549,6 +549,16 @@
           "assetId": 0
         },
         {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
           "tileType": 0,
           "value": 0,
           "assetId": 47
@@ -557,16 +567,6 @@
           "tileType": 0,
           "value": 0,
           "assetId": 1
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
         }
       ],
       [
@@ -613,22 +613,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 2
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 3
-        },
-        {
-          "tileType": 0,
-          "value": 0,
           "assetId": 47
         },
         {
           "tileType": 0,
           "value": 0,
           "assetId": 1
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 2
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 3
         }
       ],
       [
@@ -675,22 +675,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 4
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 5
-        },
-        {
-          "tileType": 0,
-          "value": 0,
           "assetId": 2
         },
         {
           "tileType": 0,
           "value": 0,
           "assetId": 3
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 4
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 5
         }
       ],
       [
@@ -735,16 +735,6 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
           "tileType": 0,
           "value": 0,
           "assetId": 4
@@ -753,6 +743,16 @@
           "tileType": 0,
           "value": 0,
           "assetId": 5
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         }
       ]
     ],
@@ -764,7 +764,7 @@
         "tabOrder": 0
       }
     },
-    "encrypted_exemplar_sources": "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\nG0HueF+X2jEfhfY=\n",
+    "encrypted_exemplar_sources": "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\nWPa5A5j4u51v6JML8bq9AQn76h/lxMwkqw==\n",
     "encrypted_examples": [
 
     ]
@@ -774,6 +774,6 @@
   "created_at": "2022-10-27T15:02:45.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-10-27T15:02:45.422+00:00\",\"changed\":[\"cloned from \\\"CSA U1L13-L4a_2023\\\"\"],\"cloned_from\":\"CSA U1L13-L4a_2023\"},{\"changed_at\":\"2022-10-27 15:02:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-27 18:53:36 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-28 16:22:13 +0000\",\"changed\":[\"csa_view_mode\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-28 16:25:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-28 16:25:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-30 20:30:53 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-27T15:02:45.422+00:00\",\"changed\":[\"cloned from \\\"CSA U1L13-L4a_2023\\\"\"],\"cloned_from\":\"CSA U1L13-L4a_2023\"},{\"changed_at\":\"2022-10-27 15:02:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-27 18:53:36 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-28 16:22:13 +0000\",\"changed\":[\"csa_view_mode\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-28 16:25:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-28 16:25:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-30 20:30:53 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-31 21:23:12 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-31 21:25:38 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-31 21:27:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-31 21:28:46 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-31 21:30:32 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-31 21:31:37 +0000\",\"changed\":[\"long_instructions\",\"thumbnail_url\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

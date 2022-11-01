@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Navigating Code.org 
 
-#### Welcome to Module 2! This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries.
+##### Welcome to Lesson 2! This lesson is designed to orient you to the Codde.org website and teaching tools. 
 
 <img src="https://images.code.org/65b0f234d50ccf544ff6d54c0b5bbff6-image-1627656763104.jpg" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
 
@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
-### You will begin with a lesson focused on navigating the Code.org learning platform. 
+##### If you already have experience using the Code.org website and teaching tools, you can skip ahead to [Module 2: Preparing to Teach Physical Computing](https://studio.code.org/s/self-paced-pl-physical-computing2). 
 
 ## Let's get started!
 
