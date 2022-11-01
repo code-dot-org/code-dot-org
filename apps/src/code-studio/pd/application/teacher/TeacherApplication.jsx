@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import {assign, isEmpty} from 'lodash';
 import FormController from '../../form_components_func/FormController';
-import AboutYou from './AboutYou';
 import ChooseYourProgram from './ChooseYourProgram';
+import AboutYou from './AboutYou';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import AdditionalDemographicInformation from './AdditionalDemographicInformation';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -14,8 +14,8 @@ import {reload} from '@cdo/apps/utils';
 const submitButtonText = 'Complete and Send';
 const sessionStorageKey = 'TeacherApplication';
 const pageComponents = [
-  AboutYou,
   ChooseYourProgram,
+  AboutYou,
   ProfessionalLearningProgramRequirements,
   AdditionalDemographicInformation
 ];
