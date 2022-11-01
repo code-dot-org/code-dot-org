@@ -8,73 +8,8 @@
     width: 80%;
     max-width: 800px;
   }
-
-  .board-descriptions {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .circuit-playground-description,
-  .microbit-description {
-    width: 45%
-  }
-
-  .maker-setup img {
-    float: right;
-    margin: 0 0 15px 10px;
-  }
-
-  .maker-setup .circuit-playground-description img,
-  .maker-setup .circuit-playground img {
-    border-radius: 50%;
-  }
-
   .validation-children div > p {
     font-size: 14px;
   }
 
--# If in the micro:bit experiment, display both the CP and MB board descriptions
-- if request.params['enableExperiments'] === 'microbit'
-  .maker-setup
-    :markdown
-      # CS Discoveries Maker Toolkit IT Setup
-    .board-descriptions
-      .circuit-playground-description
-        :markdown
-          ## The Circuit Playground
-
-          <center><a href="https://learn.adafruit.com/introducing-circuit-playground/overview"><img src="#{image_url('maker/circuit-playground-200.jpg')}" width=200></a></center>
-
-          The Adafruit [Circuit Playground Express](https://www.adafruit.com/product/3399) (and the older [Circuit Playground Classic](https://www.adafruit.com/product/3000)) is a programmable circuit board with built-in components that make getting started with physical computing quick and fun.
-
-          In unit 6 of [Computer Science Discoveries](https://code.org/educate/csd) students use the Circuit Playground tethered via USB to their computers to allow for online curriculum integration and interactive debugging of programs.
-
-          Please follow the instructions below to connect your board to Code.org.
-      .microbit-description
-        :markdown
-          ## The micro:bit
-
-          <center><a href="https://microbit.org/"><img src="#{image_url('maker/microbit-drawing-green.png')}" width=200></a></center>
-
-          The [micro:bit](https://microbit.org/) is a circuit board designed by the BBC with a variety of sensors and other components, like a compass and an 8 by 8 array of programmable LEDs.
-
-          Please follow the instructions below to connect your board to Code.org.
-    :markdown
-      <div id="setup-status-mount"/>
-- else
-  .maker-setup
-    .circuit-playground
-      :markdown
-        # CS Discoveries Maker Toolkit IT Setup
-
-        ## The Circuit Playground
-
-        <center><a href="https://learn.adafruit.com/introducing-circuit-playground/overview"><img src="#{image_url('maker/circuit-playground-200.jpg')}" width=200></a></center>
-
-        The Adafruit [Circuit Playground Express](https://www.adafruit.com/product/3399) (and the older [Circuit Playground Classic](https://www.adafruit.com/product/3000)) is a programmable circuit board with built-in components that make getting started with physical computing quick and fun.
-
-        In unit 6 of [Computer Science Discoveries](https://code.org/educate/csd) students use the Circuit Playground tethered via USB to their computers to allow for online curriculum integration and interactive debugging of programs.
-
-        Please follow the instructions below to connect your board to Code.org.
-
-        <div id="setup-status-mount"/>
+<div id="maker-setup"/>
