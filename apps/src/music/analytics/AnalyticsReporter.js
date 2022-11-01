@@ -60,12 +60,12 @@ export default class AnalyticsReporter {
         block.type === BlockTypes.PLAY_SAMPLE
       ) {
         // Name of the sound is the third input
-        soundsUsed.push(
+        /*soundsUsed.push(
           block
             .getInput('sound')
             .getFieldRow()[2]
             .getValue()
-        );
+        );*/
       }
     });
 

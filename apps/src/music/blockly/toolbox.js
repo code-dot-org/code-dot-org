@@ -47,12 +47,6 @@ export const baseToolbox = {
     },
     {
       kind: 'category',
-      name: 'Samples',
-      cssConfig: baseCategoryCssConfig,
-      contents: []
-    },
-    {
-      kind: 'category',
       name: 'Events',
       cssConfig: baseCategoryCssConfig,
       contents: [
@@ -196,6 +190,8 @@ export const baseToolbox = {
 };
 
 export const createMusicToolbox = (library, mode) => {
+  return baseToolbox;
+
   const toolbox = {...baseToolbox};
 
   if (!library) {
