@@ -131,13 +131,10 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 }
 
 // Compare function - Moves functional definitions to the end of a block list.
-// Moves "when_run" and setup blocks to the beginning of a block list.
 function reorderBlocks(x, y) {
-  return 'procedures_defnoreturn' === x.blockly_block.type ||
-    ['when_run', 'Dancelab_whenSetup'].includes(y.blockly_block.type)
+  return x.blockly_block.type === 'procedures_defnoreturn'
     ? 1
-    : 'procedures_defnoreturn' === y.blockly_block.type ||
-      ['when_run', 'Dancelab_whenSetup'].includes(x.blockly_block.type)
+    : y.blockly_block.type === 'procedures_defnoreturn'
     ? -1
     : 0;
 }
