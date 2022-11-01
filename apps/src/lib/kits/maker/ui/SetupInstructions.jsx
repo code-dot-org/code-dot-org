@@ -9,7 +9,8 @@ import {
   isCodeOrgBrowser,
   isOSX,
   isWindows,
-  isLinux
+  isLinux,
+  isChromeOS
 } from '../util/browserChecks';
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
@@ -172,8 +173,9 @@ class Downloads extends React.Component {
   render() {
     const {platform} = this.state;
 
-    // Once in the Maker App, there is no need to display Download Instructions
-    if (isCodeOrgBrowser()) {
+    // Once in the Maker App or in Chromebook, there is no need to
+    // display Download Instructions
+    if (isCodeOrgBrowser() || isChromeOS()) {
       return null;
     }
 
