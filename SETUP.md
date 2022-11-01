@@ -88,7 +88,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 
 These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
 
-0. _M1 Mac users only_ Install Rosetta 2.
+0. _(M1 Mac users only)_ Install Rosetta 2.
 
 - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
 - If not, install Rosetta using
