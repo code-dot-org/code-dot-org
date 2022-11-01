@@ -41,6 +41,7 @@ function statesOfMatter2(costume, behaviorStr) {
   } else {
     console.log("Validation error: make sure to include zParticlesModule helper library with this level");
   }
+  
   if(behaviorStr == "solid"){
     helperGrid(costume);
     addBehaviorSimple(({costume: costume}), new Behavior(wobbling, []));
