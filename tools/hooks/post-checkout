@@ -1,2 +1,9 @@
 #!/bin/sh
 ruby tools/hooks/requirements_changed.rb checkout "$@"
+
+# Optional post-checkout hook for managing Gemfile.lock on M1 machines
+# See ./m1_mac_gemfile_overrides.sh for details
+M1_OVERRIDES_SCRIPT=tools/hooks/m1_mac_gemfile_overrides.sh
+if [ -f "$M1_OVERRIDES_SCRIPT" ]; then
+  sh $M1_OVERRIDES_SCRIPT "$@"
+fi

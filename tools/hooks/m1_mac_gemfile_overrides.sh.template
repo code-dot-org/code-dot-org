@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# The following script simplifies Gemfile.lock management for M1 Mac users
+# by automatically switching from libv8 to libv8-node and upgrading mini_racer
+# whenever a new branch is checked out.
+# See https://github.com/code-dot-org/code-dot-org/blob/staging/SETUP.md for details.
+
+# Limitations:
+# 1. Checking out an existing branch which happens to be at the same HEAD as the current HEAD will fool it.
+# 2. Creating a new branch not from the current HEAD will not be detected.
+
+# To use this script:
+# 1. Create a copy of this file in the same directory.
+# 2. Name the new file m1_mac_gemfile_overrides.sh.
+
+# On your next new branch checkout, you should see console output that indicates the script
+# is running as part of the hook, either:
+# "Skipping Gemlock override for this checkout." or
+# "I see you created a new branch, M1 User! Let me update the Gemfile.lock for you..."
+
+# Uncomment to automatically copy over required M1 mods to Gemfile.lock
+# with each new git checkout (for M1 Mac users)
+PREV_HEAD=$1
+NEW_HEAD=$2
+IS_BRANCH_CHECKOUT=$3
+
+# Skip script for file checkouts but do them for new branch checkouts
+# A branch created from the current HEAD will have the same value for parameters $1 and $2
+if [ "$IS_BRANCH_CHECKOUT" == "0" ] || [ "$PREV_HEAD" != "$NEW_HEAD" ]; then
+  echo "Skipping Gemlock override for this checkout."
+  exit;
+fi
+
+echo "I see you created a new branch, M1 User!"
+echo "Let me update the Gemfile.lock for you..."
+perl -pi -e 's/libv8 \(8\.4\.255\.0\)/libv8-node \(15\.14\.0\.0\)/g; s/mini_racer \(0\.3\.1\)/mini_racer \(0\.4\.0\)/g; s/libv8 \(~> 8\.4\.255\)/libv8-node \(~> 15\.14\.0\.0\)/g;' Gemfile.lock
+echo "Done!"

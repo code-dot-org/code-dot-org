@@ -69,6 +69,7 @@ npm-debug.log
 /rebuild-apps
 /rebuild-shared
 /rebuild-code-studio
+/tools/hooks/m1_mac_gemfile_overrides.sh
 /tools/scripts/brokenLinkChecker/node_modules/
 /i18n/locales/*/codeorg-markdown/
 /i18n/locales/*/curriculum_content/
