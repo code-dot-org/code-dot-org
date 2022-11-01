@@ -1,14 +1,15 @@
 import msg from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {frameSizes} from './cdoConstants.js';
+
 export default class BlockSvgFrame {
-  constructor(block, text, className, textColor, headerColor, baseColor) {
+  constructor(block, text, className, textColor, headerColor) {
     this.block_ = block;
     this.text = text || msg.block();
     this.className = className || 'blocklyFrame';
     this.textColor = textColor || color.white;
     this.headerColor = headerColor || color.light_gray;
-    this.baseColor = baseColor || color.lightest_gray;
+    this.baseColor = color.lightest_gray;
 
     this.frameGroup_ = undefined;
     this.frameClipRect_ = undefined;
@@ -18,6 +19,7 @@ export default class BlockSvgFrame {
 
     this.initChildren();
   }
+
   initChildren() {
     const frameX = -frameSizes.MARGIN_SIDE;
     const frameY = -(frameSizes.MARGIN_TOP + frameSizes.HEADER_HEIGHT);
@@ -33,7 +35,7 @@ export default class BlockSvgFrame {
       class: this.className
     });
 
-    var clip = Blockly.utils.dom.createSvgElement(
+    const clip = Blockly.utils.dom.createSvgElement(
       'clipPath',
       {
         id: `frameClip${safeCharBlockId}`

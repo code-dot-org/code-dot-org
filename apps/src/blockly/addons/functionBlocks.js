@@ -27,7 +27,7 @@ export const FUNCTION_BLOCK = {
       msg.function(),
       'blocklyFunctionalFrame'
     );
-    this.setOnChange(function(changeEvent) {
+    this.setOnChange(function() {
       if (!this.isInFlyout) {
         this.functionalSvg_.render(this.svgGroup_, this.RTL);
       }

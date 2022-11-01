@@ -81,20 +81,19 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
     const positionBlock = function(block) {
       const heightWidth = block.blockly_block.getHeightWidth();
-      const hasFrameSvg = block.blockly_block.functionalSvg_ ? true : false;
+      const hasFrameSvg = !!block.blockly_block.functionalSvg_;
       const frameSvgSize = hasFrameSvg ? 40 : 0;
       const frameSvgTop = hasFrameSvg ? 35 : 0;
       const frameSvgMargin = hasFrameSvg ? 16 : 0;
 
       if (isNaN(block.x)) {
-        block.x = blockSpace.RTL
-          ? cursor.x - frameSvgMargin
-          : cursor.x + frameSvgMargin;
+        block.x = cursor.x;
       } else {
-        block.x = blockSpace.RTL
-          ? viewWidth - block.x - frameSvgMargin
-          : block.x + frameSvgMargin;
+        block.x = blockSpace.RTL ? viewWidth - block.x : block.x;
       }
+      blockSpace.RTL
+        ? (block.x -= frameSvgMargin)
+        : (block.x += frameSvgMargin);
 
       if (isNaN(block.y)) {
         block.y = cursor.y + frameSvgTop;
@@ -107,12 +106,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       );
     };
 
-    // Move functional defintions to the end of the block list.
-    blocks.forEach(block => {
-      if (block.blockly_block.type === 'procedures_defnoreturn') {
-        blocks.push(blocks.splice(blocks.indexOf(block), 1)[0]);
-      }
-    });
+    blocks.sort(reorderBlocks);
 
     blocks
       .filter(function(block) {
@@ -134,4 +128,16 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
   // We don't want to save absolute position in the block XML
   blocklyWrapper.Xml.blockToDomWithXY = blocklyWrapper.Xml.blockToDom;
+}
+
+// Compare function - Moves functional definitions to the end of a block list.
+// Moves "when_run" and setup blocks to the beginning of a block list.
+function reorderBlocks(x, y) {
+  return 'procedures_defnoreturn' === x.blockly_block.type ||
+    ['when_run', 'Dancelab_whenSetup'].includes(y.blockly_block.type)
+    ? 1
+    : 'procedures_defnoreturn' === y.blockly_block.type ||
+      ['when_run', 'Dancelab_whenSetup'].includes(x.blockly_block.type)
+    ? -1
+    : 0;
 }
