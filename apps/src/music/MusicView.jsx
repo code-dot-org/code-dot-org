@@ -23,6 +23,8 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {getStaticFilePath} from '@cdo/apps/music/utils';
 import moduleStyles from './music.module.scss';
 import feedbackStyles from './feedback.module.scss';
+import GoogleBlockly from 'blockly/core';
+import FieldPitch from './PitchField';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -39,6 +41,48 @@ const instructionPositionOrder = [
   InstructionsPositions.LEFT,
   InstructionsPositions.RIGHT
 ];
+
+class GenericField extends GoogleBlockly.Field {
+  constructor(value, validator) {
+    super(value, validator);
+
+    this.EDITABLE = true;
+    this.SERIALIZABLE = true;
+  }
+}
+
+GenericField.fromJson = function(options) {
+  const value = Blockly.utils.replaceMessageReferences(options['value']);
+  //return new CustomFields.GenericField(value);
+  return '0';
+};
+
+GenericField.showEditor_ = function() {
+  // Create the widget HTML
+  this.editor_ = this.dropdownCreate_();
+  Blockly.DropDownDiv.getContentDiv().appendChild(this.editor_);
+
+  // Set the dropdown's background colour.
+  // This can be used to make it match the colour of the field.
+  Blockly.DropDownDiv.setColour('white', 'silver');
+
+  // Show it next to the field. Always pass a dispose function.
+  Blockly.DropDownDiv.showPositionedByField(
+    this,
+    this.disposeWidget_.bind(this)
+  );
+};
+
+GenericField.getText_ = function() {
+  if (this.isBeingEdited_) {
+    return '2';
+  }
+  return '3';
+};
+
+GenericField.getEditorText_ = function(value) {
+  return '1';
+};
 
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
@@ -136,6 +180,8 @@ class UnconnectedMusicView extends React.Component {
       this.workspace.updateToolbox(createMusicToolbox(library, 'dropdown'));
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
+
+      window.library = this.state.library;
     });
 
     this.loadInstructions().then(instructions => {
@@ -268,6 +314,10 @@ class UnconnectedMusicView extends React.Component {
 
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
+
+    Blockly.blockly_.fieldRegistry.register('field_generic', GenericField);
+
+    Blockly.blockly_.fieldRegistry.register('field_pitch', FieldPitch);
 
     const container = document.getElementById('blockly-div');
 

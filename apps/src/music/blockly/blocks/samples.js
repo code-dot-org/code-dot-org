@@ -77,9 +77,8 @@ export const playSample = {
         flipRtl: false
       },
       {
-        type: 'input_value',
-        name: 'sample',
-        check: 'Sample'
+        type: 'field_pitch', //'field_generic',
+        name: 'sample'
       },
       {
         type: 'input_value',
