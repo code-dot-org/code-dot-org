@@ -9,8 +9,7 @@ import {
   isCodeOrgBrowser,
   isOSX,
   isWindows,
-  isLinux,
-  isChromeOS
+  isLinux
 } from '../util/browserChecks';
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
@@ -18,10 +17,7 @@ import FontAwesome from '../../../../templates/FontAwesome';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
-import {
-  WEB_SERIAL_FILTERS,
-  shouldUseWebSerial
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {getStore} from '@cdo/apps/redux';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
@@ -40,10 +36,28 @@ const style = {
 export default class SetupInstructions extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  render() {
+    return (
+      <Provider store={getStore()}>
+        <div>
+          <Downloads />
+          <ConnectionInstructions />
+          <Support />
+        </div>
+      </Provider>
+    );
+  }
+}
+
+class ConnectionInstructions extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {webSerialPort: null};
   }
 
-  webSerialButtonRender = () => {
+  renderWebSerialConnectButton = () => {
     // WebSerial requires user input for user to select port.
     // Add a button for user interaction before initiated Setup Checklist
     return (
@@ -65,47 +79,48 @@ export default class SetupInstructions extends React.Component {
     );
   };
 
-  webSerialSetupChecklist = (webSerialPort, shouldDisplaySupport) => {
-    return (
-      <SetupChecklist
-        webSerialPort={webSerialPort}
-        displaySupport={shouldDisplaySupport}
-      />
-    );
+  renderSetupChecklist = webSerialPort => {
+    return <SetupChecklist webSerialPort={webSerialPort} />;
   };
 
   render() {
     const {webSerialPort} = this.state;
 
-    // Chromebooks, render a webSerial selection button on load
-    if (isChromeOS() && shouldUseWebSerial() && !webSerialPort) {
-      return this.webSerialButtonRender();
+    if (isCodeOrgBrowser()) {
+      return this.renderSetupChecklist(webSerialPort);
     }
 
-    // In the Maker App and in Chromebooks when a webSerial connection has been selected
-    // or when web serial is no enabled, skip the download instructions and display checklist
-    if (isCodeOrgBrowser() || isChromeOS()) {
-      return this.webSerialSetupChecklist(webSerialPort, true);
-    }
+    const connectionState = webSerialPort
+      ? this.renderSetupChecklist(webSerialPort)
+      : this.renderWebSerialConnectButton();
 
-    // In Mac/PC browsers, display download instructions and, when webSerial is expected,
-    // the selection button or checklist
-    const webSerialRender = webSerialPort
-      ? this.webSerialSetupChecklist(webSerialPort, false)
-      : this.webSerialButtonRender();
     return (
-      <Provider store={getStore()}>
-        <div>
-          <Downloads />
-          {shouldUseWebSerial() && (
-            <div>
-              <p>{i18n.makerConnectExplanation()}</p>
-              {webSerialRender}
-            </div>
-          )}
-          <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
-        </div>
-      </Provider>
+      <div>
+        <h2>WebSerial</h2>
+        <p>{applabI18n.makerSetupConnectWithWebSerial()}</p>
+        <ol>
+          <li>{applabI18n.makerSetupWebSerialConnectToComputer()}</li>
+          <li>{applabI18n.makerSetupWebSerialConnectToBoardButton()}</li>
+          <li>{applabI18n.makerSetupWebSerialWindowConnect()}</li>
+          <li>{applabI18n.makerSetupWebSerialSuccessfulConnection()}</li>
+        </ol>
+        <SafeMarkdown
+          markdown={applabI18n.makerSetupWebSerialSupportArticle()}
+        />
+        {connectionState}
+      </div>
+    );
+  }
+}
+
+class Support extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>{i18n.support()}</h2>
+        <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
+        <SafeMarkdown markdown={i18n.contactGeneralSupport()} />
+      </div>
     );
   }
 }
@@ -169,8 +184,6 @@ class Downloads extends React.Component {
         {MAC === platform && <MacDownloads />}
         {LINUX === platform && <LinuxDownloads />}
         {CHROMEBOOK === platform && <ChromebookInstructions />}
-        <h2>{i18n.support()}</h2>
-        <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
       </div>
     );
   }
