@@ -8884,8 +8884,40 @@ en:
             Answer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) to let the Code.org curriculum team know how the unit went.
           student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
         csa2-2023:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Attributes
+            lesson-2:
+              name: No-Argument Constructors
+            lesson-3:
+              name: Parameterized Constructors
+            lesson-4:
+              name: Variables
+            lesson-5:
+              name: Accessor Methods
+            lesson-6:
+              name: User Input
+            lesson-7:
+              name: Operators and Expressions
+            lesson-8:
+              name: Mutator Methods
+            lesson-9:
+              name: Printing Objects
+            lesson-10:
+              name: Store Management Project
+            lesson-11:
+              name: FRQ Practice
+            lesson-12:
+              name: Unit 2 Assessment
+            lesson-13:
+              name: Store Management Project [1-Day Version]
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Alternate Lessons
           name: csa2-2023
           title: Class Structure and Design
           description_audience: ''
@@ -9674,6 +9706,28 @@ en:
           lesson_groups: {}
           name: amy-playground
           title: Amy's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        angelina-playground:
+          lessons:
+            lesson-1:
+              name: States of Matter
+            lesson-2:
+              name: OG States of Matter
+          lesson_groups: {}
+          name: angelina-playground
+          title: Angelina's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-pilot-fa2022-timecapsule:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-pilot-fa2022-timecapsule
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''
