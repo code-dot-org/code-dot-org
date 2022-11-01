@@ -25,6 +25,12 @@ module Pd
     }
 
     PAGE_LABELS = {
+      choose_your_program: {
+        program: clean_multiline(
+          "Which professional learning program would you like to participate in for the #{YEAR}
+          school year?"
+        )
+      },
       about_you: {
         country: 'Country',
         first_name: 'First name',
@@ -62,11 +68,7 @@ module Pd
       },
       teaching_background: {
       },
-      choose_your_program: {
-        program: clean_multiline(
-          "Which professional learning program would you like to participate in for the #{YEAR}
-          school year?"
-        ),
+      implementation_plan: {
         csd_which_grades: clean_multiline(
           "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?
            Please note that the CS Discoveries Professional Learning Program

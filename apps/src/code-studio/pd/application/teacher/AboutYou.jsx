@@ -15,8 +15,6 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
-import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
@@ -37,9 +35,6 @@ import {
 } from '../../form_components_func/FormComponent';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 
-const CSD_URL = 'https://code.org/educate/csd';
-const CSP_URL = 'https://code.org/educate/csp';
-const CSA_URL = 'https://code.org/educate/csa';
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
@@ -49,7 +44,6 @@ const US = 'United States';
 const AboutYou = props => {
   const {accountEmail, onChange, errors, data} = props;
   const [regionalPartner] = useRegionalPartner(data);
-  const nominated = queryString.parse(window.location.search).nominated;
 
   useEffect(() => {
     onChange({
@@ -146,45 +140,6 @@ const AboutYou = props => {
     <FormContext.Provider value={props}>
       <LabelsContext.Provider value={PageLabels.aboutYou}>
         <FormGroup>
-          {nominated && (
-            <p>
-              Congratulations on being nominated for a scholarship to cover the
-              costs of the Code.org Professional Learning Program! We will let
-              your local partner know that you’ve been nominated as they
-              consider your application for the regional scholarship or
-              discounts they have available.
-            </p>
-          )}
-
-          <p>
-            Thanks for your interest in the Code.org Professional Learning
-            Program! This application should take 10 - 15 minutes to complete.
-            Fields marked with a <span style={{color: 'red'}}>*</span> are
-            required.
-          </p>
-
-          <h3>Need more information? </h3>
-          <p>
-            If you need more information about the program before you apply,
-            please visit the{' '}
-            <a href={CSD_URL} target="_blank" rel="noopener noreferrer">
-              CS Discoveries
-            </a>
-            ,{' '}
-            <a href={CSP_URL} target="_blank" rel="noopener noreferrer">
-              CS Principles
-            </a>
-            , and <a href={CSA_URL}>CSA</a> landing pages. For additional
-            questions regarding the program or application, please{' '}
-            <RegionalPartnerMiniContactPopupLink
-              sourcePageId="teacher-application-first-page"
-              notes="Please tell me more about the professional learning program for grades 6-12!"
-            >
-              <span style={styles.linkLike}>contact your Regional Partner</span>
-            </RegionalPartnerMiniContactPopupLink>
-            .
-          </p>
-
           <h3>Section 1: {SectionHeaders.aboutYou}</h3>
 
           <LabeledRadioButtons name="country" />
