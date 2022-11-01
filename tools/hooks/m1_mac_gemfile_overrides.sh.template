@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Uncomment to automatically copy over required M1 mods to Gemfile.lock
+# with each new git checkout (for M1 Mac users)
+PREV_HEAD=$1
+NEW_HEAD=$2
+IS_BRANCH_CHECKOUT=$3
+
+if [ "$IS_BRANCH_CHECKOUT" == "0" ] || [ "$PREV_HEAD" != "$NEW_HEAD" ]; then
+  echo "Skipping Gemlock override for this checkout."
+  exit;
+fi
+
+# A branch created from the current HEAD will have the same value for parameters $1 and $2
+# Limitations:
+# 1. Checking out an existing branch which happens to be at the same HEAD as the current HEAD will fool it.
+# 2. Creating a new branch not from the current HEAD will not be detected.
+echo "I see you created a new branch, M1 User!"
+echo "Let me update the Gemfile.lock for you..."
+perl -pi -e 's/libv8 \(8\.4\.255\.0\)/libv8-node \(15\.14\.0\.0\)/g; s/mini_racer \(0\.3\.1\)/mini_racer \(0\.4\.0\)/g; s/libv8 \(~> 8\.4\.255\)/libv8-node \(~> 15\.14\.0\.0\)/g;' Gemfile.lock
+echo "Done!"
