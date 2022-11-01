@@ -12,7 +12,7 @@ module Api::V1::Pd::Application
     end
 
     def new_status
-      return 'incomplete' if params[:isSaving]&.try(:to_bool)
+      return 'incomplete' if params[:isSaving]
 
       regional_partner_id = @application.form_data_hash['regionalPartnerId']
 
