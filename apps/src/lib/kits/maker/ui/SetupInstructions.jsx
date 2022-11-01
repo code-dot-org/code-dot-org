@@ -17,7 +17,10 @@ import FontAwesome from '../../../../templates/FontAwesome';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
-import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {
+  shouldUseWebSerial,
+  WEB_SERIAL_FILTERS
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import {getStore} from '@cdo/apps/redux';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
@@ -93,6 +96,10 @@ class ConnectionInstructions extends React.Component {
     const connectionState = webSerialPort
       ? this.renderSetupChecklist(webSerialPort)
       : this.renderWebSerialConnectButton();
+
+    if (!shouldUseWebSerial()) {
+      return null;
+    }
 
     return (
       <div>
