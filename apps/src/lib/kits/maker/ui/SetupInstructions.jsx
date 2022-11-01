@@ -171,6 +171,12 @@ class Downloads extends React.Component {
 
   render() {
     const {platform} = this.state;
+
+    // Once in the Maker App, there is no need to display Download Instructions
+    if (isCodeOrgBrowser()) {
+      return null;
+    }
+
     return (
       <div>
         <ToggleGroup selected={platform} onChange={this.onPlatformChange}>
