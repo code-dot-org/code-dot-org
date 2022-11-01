@@ -132,11 +132,17 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
 // Compare function - Moves functional definitions to the end of a block list.
 function reorderBlocks(a, b) {
-  return a.blockly_block.type === 'procedures_defnoreturn' &&
+  if (
+    a.blockly_block.type === 'procedures_defnoreturn' &&
     b.blockly_block.type !== 'procedures_defnoreturn'
-    ? 1 // Sort a after b.
-    : b.blockly_block.type === 'procedures_defnoreturn' &&
-      a.blockly_block.type !== 'procedures_defnoreturn'
-    ? -1 // Sort a before b.
-    : 0; // Keep original order.
+  ) {
+    return 1; // Sort a after b.
+  } else if (
+    b.blockly_block.type === 'procedures_defnoreturn' &&
+    a.blockly_block.type !== 'procedures_defnoreturn'
+  ) {
+    return -1; // Sort a before b.
+  } else {
+    return 0; // Keep original order.
+  }
 }
