@@ -309,7 +309,6 @@ function storybookConfig(sbConfig) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
       })
-      //new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
     ]
   };
 }
@@ -466,7 +465,6 @@ function create(options) {
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
         DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0
       }),
-      //new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
       ...plugins
     ],
     watch: watch,
