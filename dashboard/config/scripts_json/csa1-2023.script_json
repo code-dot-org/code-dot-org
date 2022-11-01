@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-28 18:38:23 UTC",
+    "serialized_at": "2022-10-31 17:26:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -349,7 +349,7 @@
     },
     {
       "key": "lesson-20",
-      "name": "FRQ Practice",
+      "name": "SpiralPainter FRQ",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -369,7 +369,7 @@
       "key": "lesson-21",
       "name": "Unit 1 Assessment",
       "absolute_position": 17,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
@@ -5138,7 +5138,7 @@
       "key": "9cf40d9c-e1db-451b-bf09-40bf457467d2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Asphalt Art Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5152,8 +5152,19 @@
       }
     },
     {
-      "key": "5ac59e23-a6db-45bd-9f67-9d5b7809da15",
+      "key": "8dbf331a-668c-43fd-97dc-7805fef1f5b3",
       "position": 5,
+      "properties": {
+        "description": "**Do This:** Introduce the steps students will take each day to complete the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 1 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 2 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 3 steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "8dbf331a-668c-43fd-97dc-7805fef1f5b3",
+        "lesson_activity.key": "2fedd84a-9231-4fc1-aa7b-b63414128f66"
+      }
+    },
+    {
+      "key": "5ac59e23-a6db-45bd-9f67-9d5b7809da15",
+      "position": 6,
       "properties": {
         "description": "Before you begin writing your program, you first need to decide what you will create so you can plan your new subclass and methods to create your design.",
         "remarks": true
@@ -5165,7 +5176,7 @@
     },
     {
       "key": "11e962a7-0c49-476d-a700-47a9ee3e15ea",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their asphalt art design, identify the subclasses they want to create, and write pseudocode for their methods to plan their project on the Asphalt Art Project Planning Guide.",
         "tips": [
@@ -5182,7 +5193,7 @@
     },
     {
       "key": "98897942-24d3-4ede-97fc-0ae26d955b55",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
         "duration": "15",
@@ -5196,7 +5207,7 @@
     },
     {
       "key": "193ac0a1-a051-4624-b1f5-e8258d7d44fc",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "This is a good time to commit our code and save our new subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
         "remarks": true
@@ -5208,7 +5219,7 @@
     },
     {
       "key": "93cd2904-bae2-4c5e-a68c-d88e8791f3a2",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
@@ -5225,7 +5236,7 @@
     },
     {
       "key": "0b3a6815-bea5-41d4-9294-9169818ea61c",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
         "duration": "5",
@@ -5239,7 +5250,7 @@
     },
     {
       "key": "9be45655-9a8e-4e5f-b999-5dfce73d0560",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Asphalt Art Project Planning Guide.",
         "tips": [
@@ -5290,12 +5301,23 @@
       }
     },
     {
-      "key": "0226b09c-f90a-4943-b764-5b6af9872193",
+      "key": "f27a22c7-e267-4cd4-a870-8b4639f5c98e",
       "position": 3,
       "properties": {
-        "description": "Continue to work on your Asphalt Art Project. Be sure to refer to the project requirements and rubric to make sure you include the necessary components.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 2 of the project.",
         "duration": "15",
-        "name": "Development",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "f27a22c7-e267-4cd4-a870-8b4639f5c98e",
+        "lesson_activity.key": "c103d38d-a829-4d4d-8a17-3f55d45d0ebe"
+      }
+    },
+    {
+      "key": "0226b09c-f90a-4943-b764-5b6af9872193",
+      "position": 4,
+      "properties": {
+        "description": "Continue to work on your Asphalt Art Project. Be sure to refer to the project requirements and rubric to make sure you include the necessary components.",
         "remarks": true
       },
       "seeding_key": {
@@ -5305,7 +5327,7 @@
     },
     {
       "key": "57cc00c4-7a8d-427c-b3cd-7a424383b321",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
       },
@@ -5316,7 +5338,7 @@
     },
     {
       "key": "dc3c9d05-b6df-4226-b6cd-356b87c0b798",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "This is a good time to commit our code and save our new subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
         "duration": "15",
@@ -5330,7 +5352,7 @@
     },
     {
       "key": "e47c117c-776b-4d20-83d1-86b52465f550",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
@@ -5347,7 +5369,7 @@
     },
     {
       "key": "a92d69a6-7418-4aa9-adcb-7b0e25a1f436",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
         "remarks": true
@@ -5359,7 +5381,7 @@
     },
     {
       "key": "36161b04-41f0-4df7-8eb9-50e2f04aaa81",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Asphalt Art Project.",
         "tips": [
@@ -5376,7 +5398,7 @@
     },
     {
       "key": "a0ab49a6-8ecf-43c0-87ba-a158529b4cc0",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "You made a lot of progress on your project today! Let's take a moment to reflect on what you have accomplished so far and what you need to focus on next.",
         "duration": "5",
@@ -5390,7 +5412,7 @@
     },
     {
       "key": "0f86bf7f-5694-485d-b13a-516a7eb5d660",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Asphalt Art Project Planning Guide.",
         "tips": [
@@ -5434,12 +5456,23 @@
       }
     },
     {
-      "key": "f05f2165-1d6b-4b6f-8085-516f33beb094",
+      "key": "a23fdc7c-392d-4cf0-9547-bd56dd16b6c1",
       "position": 3,
       "properties": {
-        "description": "You will finish developing your program to create your asphalt art. Be sure to consider the feedback you received from your code review as you work on your program. First, let's revisit the Asphalt Art Project Planning Guide to make sure you have included everything you need to meet the project requirements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
         "duration": "15",
-        "name": "Development",
+        "name": "Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "a23fdc7c-392d-4cf0-9547-bd56dd16b6c1",
+        "lesson_activity.key": "1518b521-c15c-47d3-b7d8-7feca92ca786"
+      }
+    },
+    {
+      "key": "f05f2165-1d6b-4b6f-8085-516f33beb094",
+      "position": 4,
+      "properties": {
+        "description": "You will finish developing your program to create your asphalt art. Be sure to consider the feedback you received from your code review as you work on your program. First, let's revisit the Asphalt Art Project Planning Guide to make sure you have included everything you need to meet the project requirements.",
         "remarks": true
       },
       "seeding_key": {
@@ -5449,9 +5482,9 @@
     },
     {
       "key": "3433643f-48dd-40c0-b9e2-1b5648f84a72",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the guiding questions and rubric on the Asphalt Art Project Planning Guide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the rubric on the Asphalt Art Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "3433643f-48dd-40c0-b9e2-1b5648f84a72",
@@ -5460,7 +5493,7 @@
     },
     {
       "key": "e28c0e98-6071-4a22-bab2-525039ab49b0",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "Use the feedback you received from your code review and self-assessment to finalize your Asphalt Art Project.",
         "remarks": true
@@ -5472,7 +5505,7 @@
     },
     {
       "key": "2b6136e2-e1e9-4bdb-8483-62a893109513",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Asphalt Art Project. Have students submit their projects at the end of the allotted time."
       },
@@ -5483,7 +5516,7 @@
     },
     {
       "key": "1bf29c15-ad28-4657-9d8c-fc50c948422a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Congratulations! You have completed your first project for this class. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
         "duration": "15",
@@ -5497,7 +5530,7 @@
     },
     {
       "key": "9a987bb9-28e4-44f1-a977-14febb82e7ce",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's mural and leave sticky notes noting what they like about the program."
       },
@@ -5508,7 +5541,7 @@
     },
     {
       "key": "295f9307-d05c-4194-b380-77d1106ce511",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Asphalt Art Project Planning Guide.",
         "duration": "10",
@@ -5527,7 +5560,7 @@
     },
     {
       "key": "df88ebdb-8fc0-40f5-931c-637dca08cce0",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -5538,7 +5571,7 @@
     },
     {
       "key": "64e220b2-3e67-4edb-a952-ab6897f21595",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "**Asphalt Art Project:** Use the rubric on the last page of the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -5582,7 +5615,7 @@
       "key": "ccc3aeeb-9d05-4427-be1a-d5635944e306",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the structure of an FRQ.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the structure of an FRQ.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5599,15 +5632,9 @@
       "key": "796a57ba-996b-4324-941e-ebed07f91b33",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SpiralPainter FRQ handout.\n\n**Do This:** Explain the steps for the activity.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Around the World\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the first page of the SpiralPainter FRQ handout. Have students annotate the question at the bottom of the page based on the annotation guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SpiralPainter FRQ handout.\n\n**Do This:** Explain the steps for the activity.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Around the World\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the first page of the SpiralPainter FRQ handout. Have students annotate the question at the bottom of the page based on the annotation guide.",
         "duration": "10",
-        "name": "FRQ Planning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "tip about annotation strategy"
-          }
-        ]
+        "name": "FRQ Planning"
       },
       "seeding_key": {
         "activity_section.key": "796a57ba-996b-4324-941e-ebed07f91b33",
@@ -5660,7 +5687,7 @@
       "key": "29bdd862-94f5-4536-81d5-89cecdf8cd6f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss a potential solution.",
+        "description": "**Do This:** Discuss possible solutions for each station:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station A solution\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station B solution\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station C solution",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5677,7 +5704,7 @@
       "key": "0f55eabe-767d-49a6-8870-931cb51dcb39",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
         "duration": "10",
         "name": "Closing the Loop"
       },
@@ -5703,7 +5730,8 @@
       "key": "d8b9f366-9945-498c-94b0-685c66a756fe",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 1 Assessment on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 1 Assessment on Code Studio.",
+        "progression_name": "Unit 1 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "d8b9f366-9945-498c-94b0-685c66a756fe",
@@ -7419,6 +7447,28 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Unit 1 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Assessment_2023"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023",
+        "activity_section.key": "d8b9f366-9945-498c-94b0-685c66a756fe"
+      },
+      "level_keys": [
+        "CSA Unit 1 Assessment_2023"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
         "level_keys": [
           "CSA U1 Asphalt Art Project 1-Day_2023"
         ],
@@ -8186,6 +8236,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA Unit 1 Assessment_2023",
+        "script_level.level_keys": [
+          "CSA Unit 1 Assessment_2023"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-2023",
+        "activity_section.key": "d8b9f366-9945-498c-94b0-685c66a756fe"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U1 Asphalt Art Project 1-Day_2023",
         "script_level.level_keys": [
           "CSA U1 Asphalt Art Project 1-Day_2023"
@@ -8198,6 +8260,18 @@
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1hTl0QQHn0AlZDqXqFWnTypE6hTh_6jRKWUu8sNA3dIs/edit?usp=sharing",
+      "key": "_exemplar_asphalt_art_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_asphalt_art_project_planning_guide"
+      }
+    },
     {
       "name": "[KEY] Decomposition",
       "url": "https://docs.google.com/document/d/1cFr0Wp8FlWJf4dNnuRKjDT0U2bFEGavtpUtcPqF2hh0/edit?usp=sharing",
@@ -8268,6 +8342,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_investigate_working_with_java_files"
+      }
+    },
+    {
+      "name": "[KEY] SpiralPainter FRQ",
+      "url": "https://docs.google.com/document/d/16qO8yvo_1F5srvDVHL3_EFzzEHW-8ggSiRDjI3jQ_2E/edit?usp=sharing",
+      "key": "_key_spiralpainter_frq",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_spiralpainter_frq"
       }
     },
     {
@@ -8451,6 +8537,31 @@
       }
     },
     {
+      "name": "Asphalt Art Project",
+      "url": "https://docs.google.com/presentation/d/1ZRHKtN5vv3KLNis_RfXmur2yoCqQA5d7ncE7cU805Io/edit?usp=sharing",
+      "key": "asphalt_art_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project"
+      }
+    },
+    {
+      "name": "Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1BOjhftweorWxLnUW6WszrEkXfBVfYJyhONU-T0UnyRI/edit?usp=sharing",
+      "key": "asphalt_art_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
       "name": "Calling Methods",
       "url": "https://youtu.be/CPE_lYGCw3A",
       "key": "calling_methods",
@@ -8582,6 +8693,18 @@
       },
       "seeding_key": {
         "resource.key": "decomposition_and_design"
+      }
+    },
+    {
+      "name": "FRQ Practice",
+      "url": "https://docs.google.com/presentation/d/1vdfMoR8X4eqfVKsWLJ1JIDprNAJmDhdJL9V-NSGQz9s/edit?usp=sharing",
+      "key": "frq_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "frq_practice"
       }
     },
     {
@@ -8831,6 +8954,31 @@
       }
     },
     {
+      "name": "SpiralPainter FRQ",
+      "url": "https://docs.google.com/document/d/1SH4oAQPq1tqBt5fyfUnM4m7cRxnBOjBgKVCdOTrJmHU/edit?usp=sharing",
+      "key": "spiralpainter_frq",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "spiralpainter_frq"
+      }
+    },
+    {
+      "name": "SpiralPainter FRQ Stations",
+      "url": "https://docs.google.com/document/d/1WuRHjdKKv9nA-CqfgyxyRa4ppKn8FXg2dKk6EKpcOZM/edit?usp=sharing",
+      "key": "spiralpainter_frq_stations",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "spiralpainter_frq_stations"
+      }
+    },
+    {
       "name": "The Neighborhood",
       "url": "https://docs.google.com/presentation/d/1zShEU4odisNrMf1__90VklwFDu16Rjysvh-IzF1nRtY/edit?usp=sharing",
       "key": "the_neighborhood",
@@ -9032,6 +9180,18 @@
       },
       "seeding_key": {
         "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 1 Assessment",
+      "url": "https://docs.google.com/presentation/d/1QNPB3DSerZbt9YQDYNpBog4bFxDTMMjvjSuq_zH8Lmw/edit?usp=sharing",
+      "key": "unit_1_assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_assessment"
       }
     },
     {
@@ -9365,6 +9525,24 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-17",
+        "resource.key": "_exemplar_asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "asphalt_art_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
         "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
       }
     },
@@ -9396,6 +9574,36 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "u1l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "resource.key": "_key_spiralpainter_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "resource.key": "frq_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "resource.key": "spiralpainter_frq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "resource.key": "spiralpainter_frq_stations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "resource.key": "unit_1_assessment"
       }
     },
     {
