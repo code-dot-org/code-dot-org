@@ -47,7 +47,7 @@ DEPENDENCIES
   cdo-varnish
     path: cdo-varnish
   chef-client
-  chef_client_updater
+  chef_client_updater (>= 3.3.2)
   ntp
   seven_zip (< 4.0.0)
   ssl_certificate
@@ -68,7 +68,7 @@ GRAPH
   cdo-analytics (0.1.6)
     apt (>= 0.0.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.522)
+  cdo-apps (0.2.526)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
@@ -135,7 +135,7 @@ GRAPH
   chef-client (12.3.4)
     cron (>= 4.2.0)
     logrotate (>= 1.9.0)
-  chef_client_updater (3.11.1)
+  chef_client_updater (3.12.3)
   chocolatey (3.0.0)
   cron (7.0.3)
   logrotate (3.0.4)
