@@ -8,11 +8,11 @@ import {connect} from 'react-redux';
 import $ from 'jquery';
 import i18n from '@cdo/locale';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
 import dom from '../../../dom';
-import commonStyles from '../../../common-styles.module.scss';
-import styles from './js-debugger.module.scss';
+import commonStyles from '../../../commonStyles';
+import styleConstants from '../../../styleConstants';
 import Watchers from '../../../templates/watchers/Watchers';
+import color from '../../../util/color';
 import PaneHeader, {
   PaneSection,
   PaneButton
@@ -415,16 +415,15 @@ class JsDebugger extends React.Component {
   };
 
   render() {
-    const {
-      appType,
-      isAttached,
-      canRunNext,
-      isRunning,
-      debugButtons
-    } = this.props;
+    const {appType, isAttached, canRunNext, isRunning} = this.props;
     const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
+
+    const sliderStyle = {
+      marginLeft: this.props.debugButtons ? 5 : 45,
+      marginRight: 5
+    };
 
     const openStyle = {};
     if (!this.state.open && this.state.transitionType !== 'closing') {
@@ -458,18 +457,18 @@ class JsDebugger extends React.Component {
         <PaneHeader
           id="debug-area-header"
           hasFocus={hasFocus}
-          className={styles.debugAreaHeader}
+          style={styles.debugAreaHeader}
         >
           <span
-            className={classNames(
+            style={[
               this.state.consoleWidth <= MIN_CONSOLE_WIDTH && styles.hidden,
-              styles.noUserSelect,
-              'header-text'
-            )}
+              styles.noUserSelect
+            ]}
+            className="header-text"
           >
             {i18n.debugConsoleHeader()}
           </span>
-          <span className={styles.showHideIcon}>
+          <span style={styles.showHideIcon}>
             <FontAwesome
               icon={
                 this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
@@ -481,20 +480,16 @@ class JsDebugger extends React.Component {
             <PaneSection id="debug-commands-header">
               <FontAwesome
                 id="running-spinner"
-                className={classNames(
-                  'fa-spin',
-                  (!isAttached || canRunNext) && commonStyles.hidden
-                )}
+                style={!isAttached || canRunNext ? commonStyles.hidden : {}}
                 icon="spinner"
+                className="fa-spin"
               />
               <FontAwesome
                 id="paused-icon"
-                className={classNames(
-                  (!isAttached || !canRunNext) && commonStyles.hidden
-                )}
+                style={!isAttached || !canRunNext ? commonStyles.hidden : {}}
                 icon="pause"
               />
-              <span className={classNames('header-text', styles.noUserSelect)}>
+              <span style={styles.noUserSelect} className="header-text">
                 {this.state.open
                   ? i18n.debugCommandsHeaderWhenOpen()
                   : i18n.debugCommandsHeaderWhenClosed()}
@@ -507,13 +502,18 @@ class JsDebugger extends React.Component {
               ref={debugWatchHeader =>
                 (this._debugWatchHeader = debugWatchHeader)
               }
-              className={classNames(
-                styles.debugWatchHeader,
-                this.state.watchersHidden && styles.watchersHidden
-              )}
+              style={
+                this.state.watchersHidden
+                  ? {
+                      borderLeft: 'none',
+                      textAlign: 'right',
+                      marginRight: '30px'
+                    }
+                  : {}
+              }
             >
               <span
-                className={styles.showDebugWatchIcon}
+                style={styles.showDebugWatchIcon}
                 onClick={() => {
                   // reset resizer-overridden styles
                   // (remove once resize logic migrated to React)
@@ -538,7 +538,7 @@ class JsDebugger extends React.Component {
                   }
                 />
               </span>
-              <span className={classNames('header-text', styles.noUserSelect)}>
+              <span style={styles.noUserSelect} className="header-text">
                 {this.state.watchersHidden
                   ? i18n.debugShowWatchHeader()
                   : i18n.debugWatchHeader()}
@@ -566,7 +566,7 @@ class JsDebugger extends React.Component {
           )}
           {this.props.debugSlider && (
             <SpeedSlider
-              className={debugButtons ? styles.sliderDebug : styles.slider}
+              style={sliderStyle}
               hasFocus={hasFocus}
               value={this.props.stepSpeed}
               lineWidth={130}
@@ -589,7 +589,7 @@ class JsDebugger extends React.Component {
             ref={debugConsole => (this._debugConsole = debugConsole)}
           />
         )}
-        <div className={showWatchPane ? styles.displayInitial : styles.hidden}>
+        <div style={{display: showWatchPane ? 'initial' : 'none'}}>
           <div
             id="watchersResizeBar"
             ref={watchersResizeBar =>
@@ -609,6 +609,54 @@ class JsDebugger extends React.Component {
     );
   }
 }
+
+const styles = {
+  debugAreaHeader: {
+    position: 'absolute',
+    top: styleConstants['resize-bar-width'],
+    left: 0,
+    right: 0,
+    textAlign: 'center',
+    lineHeight: '30px'
+  },
+  noPadding: {
+    padding: 0
+  },
+  noUserSelect: {
+    MozUserSelect: 'none',
+    WebkitUserSelect: 'none',
+    msUserSelect: 'none',
+    userSelect: 'none'
+  },
+  showHideIcon: {
+    position: 'absolute',
+    top: 0,
+    left: 8,
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: color.white
+    }
+  },
+  showDebugWatchIcon: {
+    position: 'absolute',
+    top: 0,
+    right: '6px',
+    width: '18px',
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: 'white'
+    }
+  },
+  hidden: {
+    display: 'none'
+  }
+};
 
 export default connect(
   state => ({
