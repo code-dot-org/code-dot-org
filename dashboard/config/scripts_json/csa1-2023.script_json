@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-31 17:26:35 UTC",
+    "serialized_at": "2022-11-01 16:47:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7447,6 +7447,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Assessment_2023"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -8722,7 +8725,7 @@
     },
     {
       "name": "Inheritance",
-      "url": "https://docs.google.com/presentation/d/13vzOb_oPd02FkxXdQ1hRHt62lOEq_aAtjGX_JsHgd6k/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1sZXGQkHJ92D6GmvcToWwFs74gotv7EBtgpZJOzD2LiI/edit?usp=sharing",
       "key": "inheritance",
       "properties": {
         "audience": "Verified Teacher",

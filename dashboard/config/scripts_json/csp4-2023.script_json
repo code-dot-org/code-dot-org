@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-28 05:13:12 UTC",
+    "serialized_at": "2022-11-01 18:20:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4508,6 +4508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L4 Embed Choice_2023"
+        ],
         "progression": "Try the Apps "
       },
       "bonus": false,
@@ -4530,6 +4533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L4 Submit Choice_2023"
+        ],
         "progression": "Make an App"
       },
       "bonus": false,
@@ -5177,6 +5183,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L9 Predict"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2023",
+        "activity_section.key": "d90f1dc9-3315-4e99-b020-e6190c000515"
+      },
+      "level_keys": [
+        "CSP U4L9 Predict"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L9 Predict 2"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2023",
+        "activity_section.key": "d90f1dc9-3315-4e99-b020-e6190c000515"
+      },
+      "level_keys": [
+        "CSP U4L9 Predict 2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "U4 L09 Score Clicker Investigate_2023"
         ],
@@ -5197,9 +5247,9 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 55,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5222,8 +5272,8 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 4,
+      "chapter": 56,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5247,8 +5297,8 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 5,
+      "chapter": 57,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5272,7 +5322,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5297,7 +5347,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5322,7 +5372,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5347,7 +5397,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5372,7 +5422,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5397,7 +5447,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5422,7 +5472,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5447,7 +5497,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5472,7 +5522,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5497,7 +5547,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5522,7 +5572,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5547,7 +5597,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5572,7 +5622,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5597,7 +5647,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5622,7 +5672,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5647,7 +5697,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5672,7 +5722,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5697,7 +5747,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5722,7 +5772,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5747,7 +5797,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5772,7 +5822,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5797,7 +5847,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6433,6 +6483,30 @@
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2023",
         "activity_section.key": "18d5447b-3383-4f2e-904d-8724a1d038dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L9 Predict",
+        "script_level.level_keys": [
+          "CSP U4L9 Predict"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2023",
+        "activity_section.key": "d90f1dc9-3315-4e99-b020-e6190c000515"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L9 Predict 2",
+        "script_level.level_keys": [
+          "CSP U4L9 Predict 2"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp4-2023",
+        "activity_section.key": "d90f1dc9-3315-4e99-b020-e6190c000515"
       }
     },
     {
