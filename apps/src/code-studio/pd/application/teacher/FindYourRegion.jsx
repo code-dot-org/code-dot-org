@@ -179,7 +179,6 @@ const FindYourRegion = props => {
     </FormContext.Provider>
   );
 };
-
 FindYourRegion.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
   data: PropTypes.object.isRequired,

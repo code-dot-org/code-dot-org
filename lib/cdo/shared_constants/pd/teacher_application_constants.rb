@@ -21,7 +21,7 @@ module Pd
       about_you: 'About You',
       teaching_background: 'Teaching Background',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      additional_demographic_information: 'Additional Demographic Information and Submission',
+      additional_demographic_information: 'Additional Demographic Information',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -57,6 +57,20 @@ module Pd
         zip_code: 'Home zip code',
         how_heard: 'How did you hear about this program?'
       },
+      additional_demographic_information: {
+        current_role: 'What is your current role at your school?',
+        previous_yearlong_cdo_pd: clean_multiline(
+          "Have you participated in previous yearlong Code.org Professional Learning Programs?
+           If so, mark the programs you've participated in."
+        ),
+        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
+        csa_phone_screen: clean_multiline(
+          'Are you able to independently write and debug an error-free function (or procedure) with
+          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
+        ),
+        gender_identity: 'Gender identity:',
+        race: 'Race or ethnicity:',
+      },
       teaching_background: {
         principal_role: "Administrator/School Leader's Role",
         principal_title: "Administrator/School Leader's title",
@@ -65,11 +79,7 @@ module Pd
         principal_email: "Administrator/School Leader's email address",
         principal_confirm_email: "Confirm Administrator/School Leader's email address",
         principal_phone_number: "Administrator/School Leader's phone number",
-        current_role: 'What is your current role at your school?',
-        previous_yearlong_cdo_pd: clean_multiline(
-          "Have you participated in previous yearlong Code.org Professional Learning Programs?
-           If so, mark the programs you've participated in."
-        )
+        agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
       },
       implementation_plan: {
         csd_which_grades: clean_multiline(
@@ -83,11 +93,6 @@ module Pd
           is not available for grades K-8. (select all that apply)"
         ),
         csp_how_offer: 'How will you offer CS Principles?',
-        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
-        csa_phone_screen: clean_multiline(
-          'Are you able to independently write and debug an error-free function (or procedure) with
-          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
-        ),
         csa_which_grades: clean_multiline(
           "To which grades does your school plan to offer CSA in the #{YEAR} school year?
           The Code.org CSA curriculum is recommended for those who have successfully completed
@@ -105,13 +110,6 @@ module Pd
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
-        },
-      additional_demographic_information:
-        {
-          gender_identity: 'Gender identity:',
-          race: 'Race or ethnicity:',
-          how_heard: 'How did you hear about this program?',
-          agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',

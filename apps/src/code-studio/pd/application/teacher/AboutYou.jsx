@@ -70,7 +70,6 @@ const AboutYou = props => {
     </FormContext.Provider>
   );
 };
-
 AboutYou.propTypes = {
   data: PropTypes.object.isRequired,
   accountEmail: PropTypes.string.isRequired
