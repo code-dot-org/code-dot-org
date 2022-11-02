@@ -16,7 +16,6 @@ module Api::V1::Pd::Application
 
       @program_manager = create :program_manager
       @partner = @program_manager.regional_partners.first
-      @partner.update!(applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL)
       @application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
     end
 
