@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { addSelectedFeature } from "../redux";
+import I18n from "../i18n";
 
 
 class AddFeatureButton extends Component {
@@ -27,7 +28,7 @@ class AddFeatureButton extends Component {
         onClick={event => this.addFeature(event, column)}
         style={styles.selectFeaturesButton}
       >
-        Add feature
+        {I18n.t("addFeatureButton")}
       </button>
     )
   }

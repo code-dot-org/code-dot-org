@@ -10,6 +10,7 @@ import blueScanner from "@public/images/ai-bot/blue-scanner.png";
 import background from "@public/images/results-background-light.jpg";
 import DataTable from "./DataTable";
 import { TestingAnimationDescription } from "./AnimationDescriptions";
+import I18n from "../i18n";
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -136,7 +137,9 @@ class GenerateResults extends Component {
           backgroundImage: "url(" + background + ")"
         }}
       >
-        <div style={styles.statementWithBackgroundAbsolute}>Testing the model</div>
+        <div style={styles.statementWithBackgroundAbsolute}>
+          {I18n.t("generateResultsHeader")}
+        </div>
 
         <div style={styles.generateResultsContainer}>
           <div
@@ -185,12 +188,12 @@ class GenerateResults extends Component {
             <img
               src={aiBotHead}
               style={styles.trainBotHead}
-              alt="A.I. bot head"
+              alt={I18n.t("aiBotHeadAltText")}
             />
             <img
               src={aiBotBody}
               style={styles.trainBotBody}
-              alt="A.I. bot body"
+              alt={I18n.t("aiBotBodyAltText")}
             />
             <div
               style={{ width: 150, position: "absolute", top: 140, zIndex: -1 }}
@@ -198,7 +201,7 @@ class GenerateResults extends Component {
               <img
                 src={blueScanner}
                 style={{ width: "100%", opacity: tableOpacity }}
-                alt="A.I. bot scanner beam"
+                alt={I18n.t("aiBotBeamAltText")}
               />
             </div>
           </div>

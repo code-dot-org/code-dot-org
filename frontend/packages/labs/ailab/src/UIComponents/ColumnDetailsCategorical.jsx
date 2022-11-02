@@ -7,6 +7,7 @@ import { categeoricalColumnDetailsShape } from "./shapes";
 import {
   getCategoricalColumnDetails
 } from "../selectors/currentColumnSelectors";
+import I18n from "../i18n";
 
 const barData = {
   labels: [],
@@ -54,7 +55,7 @@ class ColumnDetailsCategorical extends Component {
 
     return (
       <div>
-        <div style={styles.bold}>Column information:</div>
+        <div style={styles.bold}>{I18n.t("columnDetailsInformation")}</div>
         <div style={styles.barChart}>
           {barData.labels.length <= maxLabelsInHistogram && (
             <Bar
@@ -66,9 +67,10 @@ class ColumnDetailsCategorical extends Component {
           )}
           {barData.labels.length > maxLabelsInHistogram && (
             <div>
-              {barData.labels.length} values were found in this
-              column. A graph is only shown when there are{" "}
-              {maxLabelsInHistogram} or fewer.
+              {I18n.t("columnDetailsTooManyLabels", {
+                "labelCount": barData.labels.length,
+                "maxLabelCount": maxLabelsInHistogram
+              })}
             </div>
           )}
         </div>

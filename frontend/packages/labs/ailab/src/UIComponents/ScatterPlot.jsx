@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getScatterPlotData } from "../selectors/visualizationSelectors.js";
 import { styles, colors } from "../constants.js";
 import { Scatter } from "react-chartjs-2";
+import I18n from "../i18n";
 
 const scatterDataBase = {
   labels: ["Scatter"],
@@ -82,7 +83,7 @@ class ScatterPlot extends Component {
     return (
       scatterPlotData && (
         <div id="scatter-plot">
-          <div style={styles.bold}>Relationship information:</div>
+          <div style={styles.bold}>{I18n.t("scatterPlotLabel")}</div>
           <div style={styles.scatterPlot}>
             <Scatter
               data={scatterDataCombined}

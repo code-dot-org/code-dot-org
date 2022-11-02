@@ -18,7 +18,7 @@ import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
 import { parseJSON } from "./jsonReaderWrapper";
 import { TestDataLocations } from "./constants";
-import I18n from './i18n';
+import I18n from "./i18n";
 
 export const store = createStore(rootReducer);
 

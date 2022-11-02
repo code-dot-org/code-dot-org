@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { styles } from "../constants";
 import { getNumericalColumnDetails } from "../selectors/currentColumnSelectors";
 import { numericalColumnDetailsShape } from "./shapes"
+import I18n from "../i18n";
 
 class ColumnDetailsNumerical extends Component {
   static propTypes = {
@@ -15,19 +16,17 @@ class ColumnDetailsNumerical extends Component {
 
     return (
       <div>
-        <div style={styles.bold}>Column information:</div>
+        <div style={styles.bold}>{I18n.t("columnDetailsInformation")}</div>
         {!containsOnlyNumbers && (
-          <p style={styles.error}>
-            Numerical columns cannot contain strings.
-          </p>
+          <p style={styles.error}>{I18n.t("columnDetailsNumericalTypeError")}</p>
         )}
         {containsOnlyNumbers && extrema && (
           <div style={styles.contents}>
-            min: {extrema.min}
+            {I18n.t("columnDetailsMinimumValue")} {extrema.min}
             <br />
-            max: {extrema.max}
+            {I18n.t("columnDetailsMaximumValue")} {extrema.max}
             <br />
-            range: {extrema.range}
+            {I18n.t("columnDetailsValueRange")} {extrema.range}
           </div>
         )}
       </div>

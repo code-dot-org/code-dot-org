@@ -9,6 +9,7 @@ import { getDatasetDetails } from "../helpers/datasetDetails";
 import Statement from "./Statement";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 import { modelCardDatasetDetailsShape, trainedModelDetailsShape, modelCardColumnShape } from "./shapes";
+import I18n from "../i18n";
 
 class ModelCard extends Component {
   static propTypes = {
@@ -38,13 +39,13 @@ class ModelCard extends Component {
             src={aiBotBorder}
             className="ailab-image-hover"
             style={styles.summaryScreenBotImage}
-            alt="A.I. bot"
+            alt={I18n.t("aiBotAltText")}
           />
         </div>
         <div id="uitest-model-card" style={styles.modelCardContainer}>
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Accuracy</h5>
+            <h5 style={styles.modelCardHeading}>{I18n.t("modelCardAccuracy")}</h5>
             <div style={styles.modelCardContent}>
               <p style={styles.modelCardDetails}>
                 <span>
@@ -54,7 +55,7 @@ class ModelCard extends Component {
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Intended Use</h5>
+            <h5 style={styles.modelCardHeading}>{I18n.t("modelCardIntendedUse")}</h5>
             <div style={styles.modelCardContent}>
               {trainedModelDetails.potentialUses && (
                 <p style={styles.modelCardDetails}>
@@ -64,7 +65,7 @@ class ModelCard extends Component {
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Limitations and Warnings</h5>
+            <h5 style={styles.modelCardHeading}>{I18n.t("modelCardLimitations")}</h5>
             <div style={styles.modelCardContent}>
               {trainedModelDetails.potentialMisuses && (
                 <p style={styles.modelCardDetails}>
@@ -74,7 +75,7 @@ class ModelCard extends Component {
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>About the Data</h5>
+            <h5 style={styles.modelCardHeading}>{I18n.t("modelCardDatasetDetails")}</h5>
             <div style={styles.modelCardContent}>
               {datasetDetails.description && (
                 <p style={styles.modelCardDetails}>
@@ -83,13 +84,17 @@ class ModelCard extends Component {
               )}
               {datasetDetails.numRows && (
                 <p style={styles.modelCardDetails}>
-                  Dataset size: {datasetDetails.numRows} rows
+                  {I18n.t("modelCardDatasetDetailsSize")}
+                  <br />
+                  {I18n.t(
+                    "modelCardDatasetDetailsSizeCount",
+                    { "rowCount": datasetDetails.numRows})}
                 </p>
               )}
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Features and Label</h5>
+            <h5 style={styles.modelCardHeading}>{I18n.t("modelCardFeaturesAndLabel")}</h5>
             <div style={styles.modelCardContent}>
               <p style={styles.modelCardDetails}>
                 Predict {label.id} based on{" "}
@@ -102,26 +107,30 @@ class ModelCard extends Component {
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Label</h5>
+            <h5 style={styles.modelCardHeading}>{I18n.t("modelCardLabel")}</h5>
             <div style={styles.modelCardContent}>
               <p style={styles.bold}>{label.id}</p>
               {label.description && <p>{label.description}</p>}
               {!label.values && (
                 <p style={styles.modelCardDetails}>
-                  Possible Values:
+                  {I18n.t("modelCardPossibleValues")}
                   <br />
-                  min: {label.min}, max: {label.max}
+                  {I18n.t("modelCardPossibleValuesMinimum")} {label.min}
+                  <br />
+                  {I18n.t("modelCardPossibleValuesMaximum")} {label.max}
                 </p>
               )}
               {label.values && (
                 <p style={styles.modelCardDetails}>
-                  Possible Values: {label.values.join(", ")}
+                  {I18n.t("modelCardPossibleValues")}
+                  <br />
+                  {label.values.join(" ")}
                 </p>
               )}
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Features</h5>
+            <h5 style={styles.modelCardHeading}>{I18n.t("modelCardFeatures")}</h5>
             <div style={styles.modelCardContent}>
               {features.length > 0 &&
                 features.map((feature, index) => {
@@ -131,13 +140,19 @@ class ModelCard extends Component {
                       {feature.description && <p>{feature.description}</p>}
                       {!feature.values && (
                         <p>
-                          Possible Values:
+                          {I18n.t("modelCardPossibleValues")}
                           <br />
-                          min: {feature.min}, max: {feature.max}
+                          {I18n.t("modelCardPossibleValuesMinimum")} {feature.min}
+                          <br />
+                          {I18n.t("modelCardPossibleValuesMaximum")} {feature.max}
                         </p>
                       )}
                       {feature.values && (
-                        <p>Possible Values: {feature.values.join(", ")}</p>
+                        <p>
+                          {I18n.t("modelCardPossibleValues")}
+                          <br />
+                          {feature.values.join(" ")}
+                        </p>
                       )}
                     </div>
                   );

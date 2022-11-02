@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setColumnsByDataType } from "../redux";
 import { ColumnTypes } from "../constants.js";
+import I18n from "../i18n";
 
 class ColumnDataTypeDropdown extends Component {
   static propTypes = {
@@ -31,7 +32,7 @@ class ColumnDataTypeDropdown extends Component {
           {Object.values(ColumnTypes).map((option, index) => {
             return (
               <option key={index} value={option}>
-                {option}
+                {I18n.t(`columnType_${option}`)}
               </option>
             );
           })}

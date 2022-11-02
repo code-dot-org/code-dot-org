@@ -7,6 +7,7 @@ import { UnconnectedStatement } from "./Statement";
 import { setShowResultsDetails, setResultsPhase } from "../redux";
 import ResultsDetails from "./ResultsDetails";
 import ScrollableContent from "./ScrollableContent";
+import I18n from "../i18n";
 
 class Results extends Component {
   static propTypes = {
@@ -37,8 +38,8 @@ class Results extends Component {
         <div id="results" style={styles.panel}>
           <ScrollableContent>
             <div style={styles.largeText}>
-              <div style={styles.resultsHeader}>Result</div>
-              <div style={styles.resultsHeaderAccuracy}>Accuracy</div>
+              <div style={styles.resultsHeader}>{I18n.t("resultsHeader")}</div>
+              <div style={styles.resultsHeaderAccuracy}>{I18n.t("resultsAccuracy")}</div>
             </div>
             {historicResults.map((historicResult, index) => {
               return (
@@ -62,7 +63,7 @@ class Results extends Component {
                         onClick={this.showDetails}
                         style={styles.resultsDetailsButton}
                       >
-                        Details
+                        {I18n.t("resultsDetailsButton")}
                       </button>
                     </div>
                   )}
@@ -74,8 +75,12 @@ class Results extends Component {
                         paddingTop: 40
                       }}
                     >
-                      <div style={styles.resultsHeader}>Previous results</div>
-                      <div style={styles.resultsHeaderAccuracy}>Accuracy</div>
+                      <div style={styles.resultsHeader}>
+                        {I18n.t("resultsPreviousResults")}
+                      </div>
+                      <div style={styles.resultsHeaderAccuracy}>
+                        {I18n.t("resultsAccuracy")}
+                      </div>
                     </div>
                   )}
                 </div>

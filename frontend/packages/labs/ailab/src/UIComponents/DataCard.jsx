@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";
 import { metadataShape } from "./shapes.js";
+import I18n from "../i18n";
 
 class DataCard extends Component {
   static propTypes = {
@@ -23,41 +24,42 @@ class DataCard extends Component {
     const dataLengthLimit = 20000;
     if (dataLength > dataLengthLimit) {
       window.alert(
-        "Warning: Datasets with more than 20,000 rows will slow down the user experience."
+        I18n.t("dataCardWarningLargeDataset", {"rowCount": dataLengthLimit})
       );
     }
 
     const removedRowsMsg =
       removedRowsCount > 0
-        ? removedRowsCount === 1
-          ? `${this.props.removedRowsCount} row was removed because it contained an empty cell.`
-          : `${this.props.removedRowsCount} rows were removed because they contained empty cells.`
+        ? I18n.t("dataCardRemovedRows", {"rowCount": removedRowsCount})
         : null;
 
     return (
       dataLength !== 0 && (
         <div id="data-card" style={{ ...styles.panel, ...styles.rightPanel }}>
-          <div style={styles.largeText}>{name || "Details"}</div>
+          <div style={styles.largeText}>{name || I18n.t("dataCardDefaultHeader")}</div>
           <ScrollableContent>
             {card && (
               <div>
                 <div style={styles.cardRow}>{metadata.card.description}</div>
-                <div>
+                <div style={styles.cardRow}>
                   <span style={styles.italic}>
-                    Source: &nbsp;
+                    {I18n.t("dataCardSource")}
+                    <br />
                     {metadata.card.source}
                   </span>
                 </div>
-                <div>
+                <div style={styles.cardRow}>
                   <span style={styles.italic}>
-                    Rows of data: &nbsp;
+                    {I18n.t("dataCardRowCount")}
+                    <br />
                     {dataLength}
                   </span>
                 </div>
                 {metadata.card.lastUpdated && (
-                  <div>
+                  <div style={styles.cardRow}>
                     <span style={styles.italic}>
-                      Last updated: &nbsp;
+                      {I18n.t("dataCardLastUpdated")}
+                      <br />
                       {metadata.card.lastUpdated}
                     </span>
                   </div>
@@ -65,7 +67,7 @@ class DataCard extends Component {
 
                 {metadata.card.context.potentialUses && (
                   <div style={styles.cardRow}>
-                    <div style={styles.bold}>Potential uses:</div>
+                    <div style={styles.bold}>{I18n.t("dataCardPotentialUses")}</div>
                     <div style={styles.italic}>
                       {metadata.card.context.potentialUses}
                     </div>
@@ -73,7 +75,7 @@ class DataCard extends Component {
                 )}
                 {metadata.card.context.potentialMisuses && (
                   <div style={styles.cardRow}>
-                    <div style={styles.bold}>Potential misuses:</div>
+                    <div style={styles.bold}>{I18n.t("dataCardPotentialMisuses")}</div>
                     <div style={styles.italic}>
                       {metadata.card.context.potentialMisuses}
                     </div>
@@ -85,7 +87,7 @@ class DataCard extends Component {
               <div>
                 <br />
                 <div style={styles.cardRow}>
-                  <div style={styles.bold}>Rows of data:</div>
+                  <div style={styles.bold}>{I18n.t("dataCardRowCount")}</div>
                   {dataLength}
                 </div>
                 <div style={styles.cardRow}>

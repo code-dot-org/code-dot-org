@@ -15,6 +15,7 @@ import {
 import { styles } from "../constants";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 import ScrollableContent from "./ScrollableContent";
+import I18n from "../i18n";
 
 class Predict extends Component {
   static propTypes = {
@@ -40,7 +41,7 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
-        <div style={styles.largeText}>Try it out!</div>
+        <div style={styles.largeText}>{I18n.t("predictHeader")}</div>
         <ScrollableContent>
           <div>
             {this.props.selectedNumericalFeatures.map((feature, index) => {
@@ -51,12 +52,14 @@ class Predict extends Component {
                 <div style={styles.cardRow} key={index}>
                   <label>
                     {feature}
-                    : &nbsp;
+                    &nbsp;
                     <input
                       type="number"
                       onChange={event => this.handleChange(event, feature)}
                       value={this.props.testData[feature] || ""}
-                      placeholder={`min: ${+min}, max: ${+max}`}
+                      placeholder={I18n.t(
+                        "predictPlaceholder",
+                        {"minimum": +min, "maximum": +max})}
                     />
                   </label>
                 </div>
@@ -67,7 +70,7 @@ class Predict extends Component {
             {this.props.selectedCategoricalFeatures.map((feature, index) => {
               return (
                 <div style={styles.cardRow} key={index}>
-                  <div>{feature}: &nbsp;</div>
+                  <div>{feature}&nbsp;</div>
                   <div>
                     <select
                       onChange={event => this.handleChange(event, feature)}
@@ -102,7 +105,7 @@ class Predict extends Component {
             onClick={this.onClickPredict}
             disabled={!this.props.getPredictAvailable}
           >
-            Predict
+            {I18n.t("predictButton")}
           </button>
         </div>
         {this.props.predictedLabel && (
@@ -112,12 +115,13 @@ class Predict extends Component {
                 className="ailab-image-hover"
                 style={styles.predictBot}
                 src={aiBotBorder}
-                alt="A.I. bot"
+                alt={I18n.t("aiBotAltText")}
               />
             </div>
             <div style={styles.predictBotRight}>
-              <div style={styles.statement}>A.I. predicts</div>
-              {this.props.labelColumn}: {this.props.predictedLabel}
+              <div style={styles.statement}>{I18n.t("predictAIBotPredicts")}</div>
+              <div>{this.props.labelColumn}</div>
+              <div>{this.props.predictedLabel}</div>
             </div>
           </div>
         )}

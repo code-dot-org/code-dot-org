@@ -9,6 +9,7 @@ import { getCrossTabData } from "../selectors/visualizationSelectors";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";
 import { crossTabDataShape } from "./shapes";
+import I18n from "../i18n";
 
 class CrossTab extends Component {
   static propTypes = {
@@ -44,18 +45,16 @@ class CrossTab extends Component {
       <div id="cross-tab">
         {crossTabData && !showTable && (
           <div>
-            <div style={styles.bold}>Relationship information:</div>
+            <div style={styles.bold}>{I18n.t("crossTabRelationshipHeader")}</div>
 
-            <div>
-              The currently-selected data is too large to show in a table.
-            </div>
+            <div>{I18n.t("crossTabTooMuchData")}</div>
             <br />
           </div>
         )}
 
         {showTable && (
           <div>
-            <div style={styles.bold}>Relationship information:</div>
+            <div style={styles.bold}>{I18n.t("crossTabRelationshipHeader")}</div>
             <ScrollableContent>
               <table style={styles.crossTabTable}>
                 <thead>

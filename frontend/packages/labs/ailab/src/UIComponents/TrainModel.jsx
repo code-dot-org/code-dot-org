@@ -11,6 +11,7 @@ import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import background from "@public/images/results-background-light.jpg";
 import DataTable from "./DataTable";
 import { TrainingAnimationDescription } from "./AnimationDescriptions";
+import I18n from "../i18n";
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -123,7 +124,7 @@ class TrainModel extends Component {
           backgroundImage: "url(" + background + ")"
         }}
       >
-        <div style={styles.statementWithBackgroundAbsolute}>Training</div>
+        <div style={styles.statementWithBackgroundAbsolute}>{I18n.t("trainModelHeading")}</div>
 
         <div
           style={{
@@ -162,12 +163,12 @@ class TrainModel extends Component {
                 ...styles.trainBotHead,
                 ...(this.state.headOpen && styles.trainBotOpen)
               }}
-              alt="A.I. bot head"
+              alt={I18n.t("aiBotHeadAltText")}
             />
             <img
               src={aiBotBody}
               style={styles.trainBotBody}
-              alt="A.I. bot body"
+              alt={I18n.t("aiBotBodyAltText")}
             />
           </div>
         </div>

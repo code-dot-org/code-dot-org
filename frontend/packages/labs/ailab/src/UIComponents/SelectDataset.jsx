@@ -10,11 +10,12 @@ import {
   getSpecifiedDatasets,
   setHighlightDataset
 } from "../redux";
-import { parseCSV } from "../csvReaderWrapper";
+import { parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
 import { allDatasets, getAvailableDatasets } from "../datasetManifest";
 import { styles } from "../constants";
 import ScrollableContent from "./ScrollableContent";
+import I18n from "../i18n";
 
 class SelectDataset extends Component {
   static propTypes = {
@@ -74,9 +75,13 @@ class SelectDataset extends Component {
 
   getInvalidDataMessage = () => {
     if (this.props.invalidData === "tooFewRows") {
-      return "Please upload a CSV with at least 2 rows.";
+      return I18n.t(
+        "selectDatasetErrorTooFewRows",
+        {"count": MIN_CSV_ROWS, "fileType": "CSV"});
     } else if (this.props.invalidData === "tooFewColumns") {
-      return "Please upload a CSV with at least 2 columns.";
+      return I18n.t(
+        "selectDatasetErrorTooFewColumns",
+        {"count": MIN_CSV_COLUMNS, "fileType": "CSV"});
     } else {
       return null;
     }
@@ -129,7 +134,7 @@ class SelectDataset extends Component {
         {!specifiedDatasets && (
           <div style={styles.contentsCsvButton}>
             <label style={styles.uploadCsvButton}>
-              Upload CSV
+              {I18n.t("selectDatasetUploadFileButton", {"fileType": "CSV"})}
               {/* Setting value to empty here allows us to receive an
                   onChange event for the same file as previously selected,
                   which allows the user to upload a file, then choose an

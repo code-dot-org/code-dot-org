@@ -10,7 +10,7 @@ import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import ModelCard from "./UIComponents/ModelCard";
-import { styles, saveMessages } from "./constants";
+import { styles } from "./constants";
 import { connect } from "react-redux";
 import {
   getPanelButtons,
@@ -23,6 +23,7 @@ import {
 } from "./helpers/navigationValidation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import I18n from "./i18n";
 
 class PanelButtons extends Component {
   static propTypes = {
@@ -51,11 +52,15 @@ class PanelButtons extends Component {
     }
   };
 
+  localizedSaveMessage = (saveStatus) => {
+    return I18n.t(`saveStatus_${saveStatus}`)
+  };
+
   render() {
     const { panelButtons, saveStatus } = this.props;
 
     let loadSaveStatus= this.props.isSaveComplete(saveStatus)
-      ? (saveMessages[saveStatus])
+      ? this.localizedSaveMessage(saveStatus)
       : ( <FontAwesomeIcon icon={faSpinner} />);
 
     return (

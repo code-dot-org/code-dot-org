@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { setLabelColumn } from "../redux";
+import I18n from "../i18n";
 
 
 class SelectLabelButton extends Component {
@@ -28,7 +29,7 @@ class SelectLabelButton extends Component {
         onClick={event => this.setPredictColumn(event, column)}
         style={styles.selectLabelButton}
       >
-        Select label
+        {I18n.t("selectLabelButton")}
       </button>
     )
   }

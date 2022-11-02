@@ -11,6 +11,7 @@ import { getSelectedColumnsDescriptions } from "../selectors";
 import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 import ScrollableContent from "./ScrollableContent";
+import I18n from "../i18n";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -45,8 +46,10 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
+      const labelType = I18n.t("saveModelColumnTypeLabel");
+      const featureType = I18n.t("saveModelColumnTypeFeature");
       const columnType =
-        columnDescription.id === this.props.labelColumn ? "label" : "feature";
+        columnDescription.id === this.props.labelColumn ? labelType : featureType
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -61,26 +64,20 @@ class SaveModel extends Component {
     var fields = [];
     fields.push({
       id: "potentialUses",
-      text: "Intended Use:",
-      description:
-        "Describe the problem you think this model could help solve, or one \
-        potential app someone could make with this model.",
-      placeholder: "Write a brief description."
+      text: I18n.t("potentialUsesLabel"),
+      description: I18n.t("potentialUsesDescription"),
+      placeholder: I18n.t("potentialUsesPlaceholder")
     });
     fields.push({
       id: "potentialMisuses",
-      text: "Limitations and Warnings:",
-      description:
-        `Describe any limitations in how this model was created or how it \
-        should be used. You may say things like "Avoid using this model \
-        for..." or "Be cautious about...". \n
-        Important questions to consider are:`,
+      text: I18n.t("potentialMisusesLabel"),
+      description: I18n.t("potentialMisusesDescription"),
       descriptionDetails: [
-        "Does the data represent all possible users and scenarios?",
-        "Did you gather enough data to be confident in the model's accuracy?",
-        "Are there situations where this model definitely shouldn't be used?"
+        I18n.t("potentialMisusesDescriptionRepresent"),
+        I18n.t("potentialMisusesDescriptionEnough"),
+        I18n.t("potentialMisusesDescriptionSituations")
       ],
-      placeholder: "Write a brief description."
+      placeholder: I18n.t("potentialMisusesPlaceholder")
     });
 
     return fields;
@@ -89,14 +86,13 @@ class SaveModel extends Component {
   render() {
     const nameField = {
       id: "name",
-      text: "Model name:"
+      text: I18n.t("modelNameLabel")
     };
 
     const dataDescriptionField = {
       id: "datasetDescription",
-      text: "About the Data:",
-      placeholder:
-        "How was the data collected? Who collected it? When was it collected?",
+      text: I18n.t("datasetDescriptionLabel"),
+      placeholder: I18n.t("datasetDescriptionPlaceholder"),
       answer: this.props.dataDescription
     };
 
@@ -111,8 +107,9 @@ class SaveModel extends Component {
         <Statement />
         <ScrollableContent tinted={true}>
           <div key={nameField.id} style={styles.cardRow}>
-            <span style={styles.bold}>{nameField.text}</span>{" "}
-            <span style={styles.italic}>(required)</span>
+            <span style={styles.bold}>{nameField.text}</span>
+            &nbsp;
+            <span style={styles.italic}>({I18n.t("saveModelFieldRequired")})</span>
             <div>
               <input
                 id="uitest-model-name-input"
@@ -184,8 +181,9 @@ class SaveModel extends Component {
             >
               <i className={arrowIcon} />
               &nbsp;
-              <span style={styles.bold}>Column Descriptions</span> (
-              {columnCount})
+              <span style={styles.bold}>{I18n.t("saveModelColumnCountLabel")}</span>
+              &nbsp;
+              ({columnCount})
             </span>
             {this.state.showColumnDescriptions && (
               <div style={styles.saveModelToggleContents}>

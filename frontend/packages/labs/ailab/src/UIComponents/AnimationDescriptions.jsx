@@ -1,6 +1,7 @@
 /* React component to handle animation descriptions for screen readers. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import I18n from "../i18n";
 
 class AnimationDescription extends Component {
   static propTypes = {
@@ -13,7 +14,11 @@ class AnimationDescription extends Component {
     return (
       <div id="animation-description" aria-live="polite">
         <div id="animation-description-text" style={{ display: 'none' }}>
-        <p><strong>Animation Description:</strong>{description}</p>
+          <p>
+            <strong>{I18n.t("animationDescriptionsHeader")}</strong>
+            <br />
+            {description}
+          </p>
         </div>
       </div>
     )
@@ -24,7 +29,7 @@ class TrainingAnimationDescription extends Component {
   render() {
     return (
       <AnimationDescription
-        description="Labeled rows from the training dataset go into A.I. bot's open head."
+        description={I18n.t("animationDescriptionsTraining")}
       />
     )
   }
@@ -34,7 +39,7 @@ class TestingAnimationDescription extends Component {
   render() {
     return (
       <AnimationDescription
-        description="A.I. bot scans incoming rows of unlabeled data from the test dataset. As each row moves under A.I. bot's beam, A.I. makes a prediction by adding a value to the label column."
+        description={I18n.t("animationDescriptionsTesting")}
       />
     )
   }

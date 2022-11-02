@@ -6,21 +6,7 @@ import { setResultsTab } from "../redux";
 import { ResultsGrades, styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
-
-const resultsTabs = [
-  {
-    key: ResultsGrades.CORRECT,
-    headerText: "Correct",
-    icon: faCheck,
-    iconStyle: styles.correct
-  },
-  {
-    key: ResultsGrades.INCORRECT,
-    headerText: "Incorrect",
-    icon: faTimes,
-    iconStyle: styles.error
-  }
-];
+import I18n from "../i18n";
 
 class ResultsToggle extends Component {
   static propTypes = {
@@ -39,6 +25,20 @@ class ResultsToggle extends Component {
   };
 
   render() {
+    const resultsTabs = [
+      {
+        key: ResultsGrades.CORRECT,
+        headerText: I18n.t("correctAnswer"),
+        icon: faCheck,
+        iconStyle: styles.correct
+      },
+      {
+        key: ResultsGrades.INCORRECT,
+        headerText: I18n.t("incorrectAnswer"),
+        icon: faTimes,
+        iconStyle: styles.error
+      }
+    ];
     return (
       <div>
         <div style={styles.resultsToggle}>

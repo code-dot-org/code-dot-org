@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import Statement from "./Statement";
 import DataTable from "./DataTable";
 import { styles } from "../constants";
+import I18n from "../i18n";
 
 class DataDisplay extends Component {
   static propTypes = {
@@ -18,6 +19,11 @@ class DataDisplay extends Component {
       return null;
     }
 
+    const rowCount = this.props.data.length;
+    const rowLimit = 100;
+    const rowCountMessage = (rowCount <= rowLimit) ?
+      I18n.t("dataDisplayRowCount", {"rowCount": rowCount}) :
+      I18n.t("dataDisplayRowCountTruncated", {"rowCount": rowCount, "rowLimit": rowLimit});
     return (
       <div id="data-display" style={styles.panel}>
         <Statement />
@@ -25,13 +31,7 @@ class DataDisplay extends Component {
           <DataTable />
         </div>
         <div style={styles.footerText}>
-          There are {this.props.data.length} rows of data.
-          {this.props.data.length > 100 &&
-            <span>
-              &nbsp;
-              (Showing first 100 rows.)
-            </span>
-          }
+          {rowCountMessage}
         </div>
       </div>
     );

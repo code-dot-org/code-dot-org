@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { isRegression, setResultsHighlightRow } from "../redux";
 import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
 import { resultsPropType } from "./shapes";
+import I18n from "../i18n";
 
 class ResultsTable extends Component {
   static propTypes = {
@@ -32,7 +33,10 @@ class ResultsTable extends Component {
       <div style={styles.panel}>
         {this.props.isRegression && (
           <div style={styles.smallTextRight}>
-            {`Predictions are +/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
+            {I18n.t(
+              "resultsTablePredictionRange",
+              {"percentage": REGRESSION_ERROR_TOLERANCE}
+            )}
           </div>
         )}
 
@@ -47,7 +51,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  Features
+                  {I18n.t("resultsTableFeatureHeader")}
                 </th>
                 <th
                   style={{
@@ -55,7 +59,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  Actual
+                  {I18n.t("resultsTableActualValueHeader")}
                 </th>
                 <th
                   style={{
@@ -63,7 +67,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  A.I. Prediction
+                  {I18n.t("resultsTablePredictedValueHeader")}
                 </th>
               </tr>
               <tr>

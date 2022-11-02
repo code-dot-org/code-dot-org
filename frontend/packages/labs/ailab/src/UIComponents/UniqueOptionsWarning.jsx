@@ -6,6 +6,7 @@ import { styles, UNIQUE_OPTIONS_MAX } from "../constants";
 import {
   hasTooManyUniqueOptions
 } from "../selectors/currentColumnSelectors";
+import I18n from "../i18n";
 
 class UniqueOptionsWarning extends Component {
   static propTypes = {
@@ -21,11 +22,10 @@ class UniqueOptionsWarning extends Component {
 
     return (
       <div>
-        <span style={styles.bold}>Note:</span>
-        &nbsp; Categorical columns with more than {
-          UNIQUE_OPTIONS_MAX
-        }{" "}
-        unique values can not be selected as the label or a feature.
+        <div style={styles.bold}>{I18n.t("uniqueOptionsWarningNotice")}</div>
+        <div>
+          {I18n.t("uniqueOptionsWarningMessage", {"valueCount": UNIQUE_OPTIONS_MAX})}
+        </div>
       </div>
     );
   }

@@ -30,12 +30,6 @@ export const ModelNameMaxLength = 150;
 
 export const UNIQUE_OPTIONS_MAX = 50;
 
-export const saveMessages = {
-  success: "Your model was saved!",
-  failure: "There was an error. Your model did not save. Please try again.",
-  piiProfanity: "Your model could not be saved because it contains profanity or personally identifying information (e.g. email, address, phone number)."
-};
-
 export function getFadeOpacity(animationProgress) {
   return animationProgress > 0.95
     ? 1 - (animationProgress - 0.95) / 0.05

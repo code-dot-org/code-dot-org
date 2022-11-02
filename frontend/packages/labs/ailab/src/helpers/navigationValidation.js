@@ -1,4 +1,4 @@
-import I18n from '../i18n'
+import I18n from "../i18n";
 /*
 Validation checks to determine if app set up is ready for machine learning
 training. Panels prompt users to incrementally complete actions in preparation
@@ -160,20 +160,20 @@ export function prevNextButtons(state) {
   if (state.currentPanel === "selectDataset") {
     prev = null;
     next = isPanelAvailable(state, "dataDisplayLabel")
-      ? { panel: "dataDisplayLabel", text: "Continue" }
+      ? { panel: "dataDisplayLabel", text: I18n.t("navigateForward") }
       : isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      ? { panel: "dataDisplayFeatures", text: I18n.t("navigateForward") }
       : null;
   } else if (state.currentPanel === "dataDisplayLabel") {
     prev = isPanelAvailable(state, "selectDataset")
-      ? { panel: "selectDataset", text: "Back" }
+      ? { panel: "selectDataset", text: I18n.t("navigateBack") }
       : null;
     next = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      ? { panel: "dataDisplayFeatures", text: I18n.t("navigateForward") }
       : null;
   } else if (state.currentPanel === "dataDisplayFeatures") {
     prev = isPanelAvailable(state, "dataDisplayLabel")
-      ? { panel: "dataDisplayLabel", text: "Back" }
+      ? { panel: "dataDisplayLabel", text: I18n.t("navigateBack") }
       : null;
     next = isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: I18n.t('trainModelButtonText') }
@@ -181,33 +181,33 @@ export function prevNextButtons(state) {
   } else if (state.currentPanel === "trainModel") {
     if (state.trainedModel) {
       prev = null;
-      next = { panel: "generateResults", text: "Continue" };
+      next = { panel: "generateResults", text: I18n.t("navigateForward") };
     }
   } else if (state.currentPanel === "generateResults") {
     if (state.trainedModel) {
       prev = null;
-      next = { panel: "results", text: "Continue" };
+      next = { panel: "results", text: I18n.t("navigateForward") };
     }
   } else if (state.currentPanel === "results") {
     prev = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Try again" }
+      ? { panel: "dataDisplayFeatures", text: I18n.t("tryAgain") }
       : null;
     next = !isAccuracyAcceptable(state)
       ? null
       : isPanelAvailable(state, "saveModel")
-      ? { panel: "saveModel", text: "Continue" }
-      : { panel: "continue", text: "Finish" };
+      ? { panel: "saveModel", text: I18n.t("navigateForward") }
+      : { panel: "continue", text: I18n.t("navigateDone") };
   } else if (state.currentPanel === "saveModel") {
-    prev = { panel: "results", text: "Back" };
+    prev = { panel: "results", text: I18n.t("navigateBack") };
     next = isPanelAvailable(state, "modelSummary")
-      ? { panel: "modelSummary", text: "Save" }
+      ? { panel: "modelSummary", text: I18n.t("saveProgress") }
       : null;
   } else if (state.currentPanel === "modelSummary") {
     prev = isPanelAvailable(state, "saveModel")
-      ? { panel: "saveModel", text: "Back" }
+      ? { panel: "saveModel", text: I18n.t("navigateBack") }
       : null;
     next = isPanelAvailable(state, "finish")
-      ? { panel: "finish", text: "Finish" }
+      ? { panel: "finish", text: I18n.t("navigateDone") }
       : null;
   }
 

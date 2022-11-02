@@ -20,6 +20,9 @@ export const parseCSV = (csvfile, download, useDefaultColumnDataType) => {
   });
 };
 
+export const MIN_CSV_ROWS = 2;
+export const MIN_CSV_COLUMNS = 2;
+
 const cleanData = (data) => {
   var cleanedData = []
 
@@ -56,16 +59,19 @@ const isCellValid = (cell) => {
 const updateData = (result, useDefaultColumnDataType, userUploadedData) => {
   var data = result.data;
   var cleanedData = cleanData(data);
+
+  if (cleanedData.length < MIN_CSV_ROWS) {
+    store.dispatch(setInvalidData("tooFewRows"));
+    return;
+  } else if (Object.keys(cleanedData[0]).length < MIN_CSV_COLUMNS) {
+    store.dispatch(setInvalidData("tooFewColumns"));
+    return;
+  }
+
   countRemovedRows(data, cleanedData);
   store.dispatch(setImportedData(cleanedData, userUploadedData));
   if (useDefaultColumnDataType) {
     setDefaultColumnDataType(cleanedData);
-  }
-
-  if (cleanedData.length < 2) {
-    store.dispatch(setInvalidData("tooFewRows"));
-  } else if (Object.keys(cleanedData[0]).length < 2) {
-    store.dispatch(setInvalidData("tooFewColumns"));
   }
 }
 
