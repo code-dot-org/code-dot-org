@@ -16,13 +16,14 @@
     "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What do you notice about what the `compareTo()`(#e7e8ea) method returns? Try swapping the `paCity`(#e7e8ea) and `miCity`(#e7e8ea) then run the program to observe the results.\r\n\r\n2. Add the line `System.out.println(txCity.compareTo(paCity));`(#e7e8ea) then run the program. What do you notice about what is printed?\r\n\r\n3. Try comparing different combinations of `String`(#e7e8ea)s. Run the program after each change to observe the results.",
     "encrypted_examples": [
 
-    ]
+    ],
+    "teacher_markdown": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What do you notice about what the `compareTo()`(#e7e8ea) method returns? Try swapping the `paCity`(#e7e8ea) and `miCity`(#e7e8ea) then run the program to observe the results.\r\n\r\n2. Add the line `System.out.println(txCity.compareTo(paCity));`(#e7e8ea) then run the program. What do you notice about what is printed?\r\n\r\n3. Try comparing different combinations of `String`(#e7e8ea)s. Run the program after each change to observe the results."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-02-26T00:28:37.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:37.573+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L1\\\"\"],\"cloned_from\":\"CSA U6L8-L1\"},{\"changed_at\":\"2022-05-06 15:26:37 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 15:28:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 15:30:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:37.573+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L1\\\"\"],\"cloned_from\":\"CSA U6L8-L1\"},{\"changed_at\":\"2022-05-06 15:26:37 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 15:28:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 15:30:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-01 19:06:41 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>
