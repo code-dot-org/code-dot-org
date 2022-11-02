@@ -28,20 +28,6 @@ export const baseToolbox = {
               }
             }
           }
-        },
-        {
-          kind: 'block',
-          type: BlockTypes.PLAY_SOUND,
-          inputs: {
-            measure: {
-              shadow: {
-                type: 'math_number',
-                fields: {
-                  NUM: 1
-                }
-              }
-            }
-          }
         }
       ]
     },
