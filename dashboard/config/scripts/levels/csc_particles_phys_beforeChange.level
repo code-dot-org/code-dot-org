@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "## Particles Before The Change\r\n\r\n- Add 30 wood particle sprites to the `when full piece of wood touches microscope` event. \r\n- Bring a set wood to `solid particle behavior` block.\r\n- Click run and test your code by dragging the wood sprite to touch the microscope.\r\n\r\n\r\n",
+    "long_instructions": "## Particles Before The Change\r\n\r\n- Use the `make 30 new sprites` block to add 30 wood particle sprites to the `when full piece of wood touches microscope` event. \r\n- Add a `set wood to solid particle behavior` block.\r\n- Click run and test your code by dragging the wood sprite to touch the microscope.\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -54,7 +54,7 @@
   "created_at": "2022-10-31T23:35:53.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-31T23:35:53.293+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_MicroscopeView\\\"\"],\"cloned_from\":\"csc_particles_phys_MicroscopeView\"},{\"changed_at\":\"2022-10-31 23:37:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-31T23:35:53.293+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_MicroscopeView\\\"\"],\"cloned_from\":\"csc_particles_phys_MicroscopeView\"},{\"changed_at\":\"2022-10-31 23:37:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 16:02:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 16:04:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 16:05:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1576,6 +1576,39 @@
               <field name="NUM">75</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"ax"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"wood"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setAnimation">
+          <field name="ANIMATION">"wood"</field>
+          <value name="THIS">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"wood"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_makeNumSprites">
+          <field name="ANIMATION_NAME">"wood_particle_2"</field>
+          <value name="NUM">
+            <block type="math_number">
+              <field name="NUM">30</field>
+            </block>
+          </value>
+        </block>
+        <block type="ParticlesBlocks_statesOfMatter2">
+          <field name="COSTUME">"wood_particle_2"</field>
+          <field name="BEHAVIOR">"liquid"</field>
         </block>
       </xml>
     </toolbox_blocks>
