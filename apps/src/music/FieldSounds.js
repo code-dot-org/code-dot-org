@@ -1,6 +1,3 @@
-
-import GoogleBlockly from 'blockly/core';
-
 var CustomFields = CustomFields || {};
 
 /**
@@ -9,7 +6,7 @@ var CustomFields = CustomFields || {};
  * @extends {Blockly.FieldTextInput}
  * @constructor
  */
-class FieldPitch extends Blockly.FieldTextInput {
+class FieldSounds extends Blockly.FieldTextInput {
   /**
    * All pitches available for the picker.
    */
@@ -37,14 +34,14 @@ class FieldPitch extends Blockly.FieldTextInput {
   }
 
   /**
-   * Construct a FieldPitch from a JSON arg object.
+   * Construct a FieldSounds from a JSON arg object.
    * @param {!Object} options A JSON object with options (pitch).
-   * @returns {!FieldPitch} The new field instance.
+   * @returns {!FieldSounds} The new field instance.
    * @package
    * @nocollapse
    */
   static fromJson(options) {
-    return new FieldPitch(options['pitch']);
+    return new FieldSounds(options['pitch']);
   }
 
   /**
@@ -94,7 +91,6 @@ class FieldPitch extends Blockly.FieldTextInput {
    */
   dropdownCreate_() {
     this.newDiv_ = document.createElement('div');
-    const newContent = document.createTextNode('Hi there and greetings!');
 
     const library = window.library;
     const group = library.groups[0];
@@ -166,7 +162,7 @@ class FieldPitch extends Blockly.FieldTextInput {
    * @returns {string|undefined} The respective pitch, or undefined if invalid.
    */
   valueToNote(value) {
-    return FieldPitch.NOTES[Number(value)];
+    return FieldSounds.NOTES[Number(value)];
   }
 
   /**
@@ -176,7 +172,7 @@ class FieldPitch extends Blockly.FieldTextInput {
    */
   noteToValue(text) {
     const normalizedText = text.trim().toUpperCase();
-    const i = FieldPitch.NOTES.indexOf(normalizedText);
+    const i = FieldSounds.NOTES.indexOf(normalizedText);
     return i > -1 ? i : undefined;
   }
 
@@ -251,8 +247,6 @@ class FieldPitch extends Blockly.FieldTextInput {
   }
 }
 
-//Blockly.fieldRegistry.register('field_pitch', FieldPitch);
+CustomFields.FieldSounds = FieldSounds;
 
-CustomFields.FieldPitch = FieldPitch;
-
-export default FieldPitch;
+export default FieldSounds;
