@@ -16,10 +16,8 @@ class FieldSounds extends Blockly.FieldTextInput {
    */
   static NOTES = 'C3 D3 E3 F3 G3 A3 B3 C4 D4 E4 F4 G4 A4'.split(/ /);
 
-  constructor(text, renderFn) {
+  constructor(text) {
     super(text);
-
-    this.renderFn = renderFn;
 
     // Disable spellcheck.
     this.setSpellcheck(false);
@@ -37,6 +35,8 @@ class FieldSounds extends Blockly.FieldTextInput {
      * @private
      */
     this.moveWrapper_ = null;
+
+    //this.EDITABLE = false;
   }
 
   /**
@@ -47,7 +47,7 @@ class FieldSounds extends Blockly.FieldTextInput {
    * @nocollapse
    */
   static fromJson(options) {
-    return new FieldSounds(options.sample, options.renderFn);
+    return new FieldSounds(options.sample);
   }
 
   /**
@@ -98,27 +98,7 @@ class FieldSounds extends Blockly.FieldTextInput {
   dropdownCreate_() {
     this.newDiv_ = document.createElement('div');
 
-    this.renderFn(this.newDiv_);
-
     ReactDOM.render(<SoundsPanel />, this.newDiv_);
-
-    /*
-    const library = window.library;
-    const group = library.groups[0];
-    for (let folder of group.folders) {
-      for (let sound of folder.sounds) {
-        const newLineContainer = document.createElement('div');
-        const newLine = document.createTextNode(folder.name + '/' + sound.name);
-        newLineContainer.appendChild(newLine);
-
-        const playButton = document.createElement('span');
-        playButton.innerHTML = '&nbsp; <i class="fa fa-play-circle"/>';
-        newLineContainer.appendChild(playButton);
-
-        this.newDiv_.appendChild(newLineContainer);
-      }
-    }
-    */
 
     this.newDiv_.style.color = 'white';
     this.newDiv_.style.width = '300px';
