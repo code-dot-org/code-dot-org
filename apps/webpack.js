@@ -377,8 +377,7 @@ var karmaConfig = _.extend({}, baseConfig, {
         'kits',
         'maker',
         'StubChromeSerialPort.js'
-      ),
-      serialport: false
+      )
     })
   }),
   externals: {
@@ -389,12 +388,7 @@ var karmaConfig = _.extend({}, baseConfig, {
     cheerio: 'window',
     'react/addons': true,
     'react/lib/ExecutionEnvironment': true,
-    'react/lib/ReactContext': true,
-
-    // The below are necessary for serialport import to not choke during webpack-ing.
-    fs: '{}',
-    child_process: true,
-    bindings: true
+    'react/lib/ReactContext': true
   },
   plugins: [
     new webpack.ProvidePlugin({
