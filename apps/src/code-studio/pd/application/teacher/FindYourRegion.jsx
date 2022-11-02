@@ -21,6 +21,7 @@ import {
   FormContext,
   getValidationState
 } from '../../form_components_func/FormComponent';
+import {isZipCode} from '@cdo/apps/util/formatValidation';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 
@@ -199,3 +200,15 @@ FindYourRegion.getDynamicallyRequiredFields = data => {
 
   return requiredFields;
 };
+
+FindYourRegion.getErrorMessages = data => {
+  const formatErrors = {};
+
+  if (data.schoolZipCode && !isZipCode(data.schoolZipCode)) {
+    formatErrors.schoolZipCode = 'Must be a valid zip code';
+  }
+
+  return formatErrors;
+};
+
+export default FindYourRegion;
