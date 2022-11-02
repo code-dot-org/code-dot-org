@@ -993,6 +993,24 @@ sk:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: vykonaj efekt {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts"': srdcia
+            '"emojis"': Veselé emodži
+            '"rain"': dážď
+            '"starburst"': Žiara
+            '"glass"': Rozbíjanie skla
+            '"twinkling"': Blikanie
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): je posúvateľný
+            wandering(): túlať sa
+            shrinking(): zmenšovať sa
       gamelab_addBehaviorSimple:
         text: postava {SPRITE} začni {BEHAVIOR}
       gamelab_addTarget:
@@ -1348,7 +1366,6 @@ sk:
             "'sound://category_space/Pillars_SFX.mp3'": piliere
             "'sound://category_space/Southern_ring_SFX.mp3'": južný prstenec
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: prehrať reč {SOUND}
       gamelab_playerBehaviors:

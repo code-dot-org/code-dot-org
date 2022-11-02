@@ -4861,6 +4861,8 @@ zh-TW:
               display_name: 問卷
             lessonGroup-3:
               display_name: 內容
+            lessonGroup-5:
+              display_name: 替代課程
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
