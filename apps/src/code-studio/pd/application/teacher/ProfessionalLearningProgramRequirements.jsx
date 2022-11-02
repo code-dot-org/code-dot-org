@@ -173,95 +173,92 @@ const ProfessionalLearningProgramRequirements = props => {
   };
 
   const renderProgramRequirements = () => {
-    if (!hasNoProgramSelected) {
-      const programConclusion =
-        data.program === PROGRAM_CSA
-          ? 'The program concludes the following summer with a Capstone experience that ' +
-            'serves as an opportunity to prepare for the coming year and further connects ' +
-            'you with the CS Education Community.'
-          : 'The program will conclude in the spring.';
-      return (
-        <div>
-          <p>
-            Code.org’s Professional Learning Program for{' '}
-            {getProgramName(data.program)} is a yearlong program, meant to
-            support you throughout your first year teaching the course. Starting
-            in the summer, the program begins with a week-long workshop to
-            prepare you to start the year. During the school year, Academic Year
-            Workshops will reinforce your skills and provide a community to
-            discuss questions you have during the year. {programConclusion}{' '}
-            Workshops will either be held in-person, virtually, or as a
-            combination of both throughout the year.
-            {hasRegionalPartner && (
-              <span>
-                {' '}
-                Refer to {`${regionalPartner.name}'s `}
-                <a
-                  href={
-                    pegasus(
-                      '/educate/professional-learning/program-information'
-                    ) +
-                    (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  landing page
-                </a>{' '}
-                for more information about the schedule and delivery model in
-                your region.
-              </span>
-            )}
-          </p>
-
-          <LabeledRadioButtonsWithAdditionalTextFields
-            name="committed"
-            textFieldMap={{
-              [TextFields.noExplain]: 'other'
-            }}
-          />
-          {hasRegionalPartner ? (
-            renderAssignedWorkshopList()
-          ) : (
-            <p style={styles.marginBottom}>
-              <strong>
-                Once you have been matched with a partner, they will be in touch
-                regarding Summer Workshop dates.
-              </strong>
-            </p>
+    const programConclusion =
+      data.program === PROGRAM_CSA
+        ? 'The program concludes the following summer with a Capstone experience that ' +
+          'serves as an opportunity to prepare for the coming year and further connects ' +
+          'you with the CS Education Community.'
+        : 'The program will conclude in the spring.';
+    return (
+      <div>
+        <p>
+          Code.org’s Professional Learning Program for{' '}
+          {getProgramName(data.program)} is a yearlong program, meant to support
+          you throughout your first year teaching the course. Starting in the
+          summer, the program begins with a week-long workshop to prepare you to
+          start the year. During the school year, Academic Year Workshops will
+          reinforce your skills and provide a community to discuss questions you
+          have during the year. {programConclusion} Workshops will either be
+          held in-person, virtually, or as a combination of both throughout the
+          year.
+          {hasRegionalPartner && (
+            <span>
+              {' '}
+              Refer to {`${regionalPartner.name}'s `}
+              <a
+                href={
+                  pegasus(
+                    '/educate/professional-learning/program-information'
+                  ) + (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                landing page
+              </a>{' '}
+              for more information about the schedule and delivery model in your
+              region.
+            </span>
           )}
-          <div>
-            {renderCostNote(hasRegionalPartner)}
-            <LabeledSingleCheckbox name="understandFee" />
-            <LabeledRadioButtons name="payFee" />
-            {data.payFee === TextFields.noPayFee && (
-              <LabeledLargeInput name="scholarshipReasons" />
-            )}
-          </div>
+        </p>
 
-          <label className="control-label">Submit your application</label>
-          <LabeledSingleCheckbox
-            name="agree"
-            label={
-              <span>
-                {PageLabels.additionalDemographicInformation.agree.replace(
-                  'my local Code.org Regional Partner',
-                  regionalPartner
-                    ? regionalPartner.name
-                    : 'my local Code.org Regional Partner'
-                )}{' '}
-                <a onClick={openPrivacyDialog}>Learn more.</a>
-              </span>
-            }
-          />
-          <PrivacyDialog
-            show={isPrivacyDialogOpen}
-            onHide={handleClosePrivacyDialog}
-            mode={PrivacyDialogMode.TEACHER_APPLICATION}
-          />
+        <LabeledRadioButtonsWithAdditionalTextFields
+          name="committed"
+          textFieldMap={{
+            [TextFields.noExplain]: 'other'
+          }}
+        />
+        {hasRegionalPartner ? (
+          renderAssignedWorkshopList()
+        ) : (
+          <p style={styles.marginBottom}>
+            <strong>
+              Once you have been matched with a partner, they will be in touch
+              regarding Summer Workshop dates.
+            </strong>
+          </p>
+        )}
+        <div>
+          {renderCostNote(hasRegionalPartner)}
+          <LabeledSingleCheckbox name="understandFee" />
+          <LabeledRadioButtons name="payFee" />
+          {data.payFee === TextFields.noPayFee && (
+            <LabeledLargeInput name="scholarshipReasons" />
+          )}
         </div>
-      );
-    }
+
+        <label className="control-label">Submit your application</label>
+        <LabeledSingleCheckbox
+          name="agree"
+          label={
+            <span>
+              {PageLabels.additionalDemographicInformation.agree.replace(
+                'my local Code.org Regional Partner',
+                regionalPartner
+                  ? regionalPartner.name
+                  : 'my local Code.org Regional Partner'
+              )}{' '}
+              <a onClick={openPrivacyDialog}>Learn more.</a>
+            </span>
+          }
+        />
+        <PrivacyDialog
+          show={isPrivacyDialogOpen}
+          onHide={handleClosePrivacyDialog}
+          mode={PrivacyDialogMode.TEACHER_APPLICATION}
+        />
+      </div>
+    );
   };
 
   return (
@@ -314,12 +311,14 @@ ProfessionalLearningProgramRequirements.processPageData = data => {
 
   return changes;
 };
+
 ProfessionalLearningProgramRequirements.associatedFields = [
   ...Object.keys(PageLabels.professionalLearningProgramRequirements),
   'regionalPartnerId',
   'regionalPartnerGroup',
   'regionalPartnerWorkshopIds'
 ];
+
 ProfessionalLearningProgramRequirements.propTypes = {
   options: PropTypes.object.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
