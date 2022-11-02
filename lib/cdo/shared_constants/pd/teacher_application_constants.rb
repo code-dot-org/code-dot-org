@@ -31,8 +31,18 @@ module Pd
           school year?"
         )
       },
-      about_you: {
+      find_your_region: {
         country: 'Country',
+        school: 'School',
+        school_name: 'School name',
+        school_district_name: 'School district',
+        school_address: 'School address',
+        school_city: 'School city',
+        school_state: 'School state',
+        school_zip_code: 'School zip code',
+        school_type: 'My school is a'
+      },
+      about_you: {
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
@@ -42,14 +52,6 @@ module Pd
         city: 'Home city',
         state: 'Home state',
         zip_code: 'Home zip code',
-        school: 'School',
-        school_name: 'School name',
-        school_district_name: 'School district',
-        school_address: 'School address',
-        school_city: 'School city',
-        school_state: 'School state',
-        school_zip_code: 'School zip code',
-        school_type: 'My school is a',
         principal_role: "Administrator/School Leader's Role",
         principal_title: "Administrator/School Leader's title",
         principal_first_name: "Administrator/School Leader's first name",
