@@ -4,9 +4,11 @@ import queryString from 'query-string';
 import {assign, isEmpty} from 'lodash';
 import FormController from '../../form_components_func/FormController';
 import ChooseYourProgram from './ChooseYourProgram';
+import FindYourRegion from './FindYourRegion';
 import AboutYou from './AboutYou';
-import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import AdditionalDemographicInformation from './AdditionalDemographicInformation';
+import AdministratorInformation from './AdministratorInformation';
+import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {reload} from '@cdo/apps/utils';
 /* global ga */
@@ -15,9 +17,11 @@ const submitButtonText = 'Complete and Send';
 const sessionStorageKey = 'TeacherApplication';
 const pageComponents = [
   ChooseYourProgram,
+  FindYourRegion,
   AboutYou,
-  ProfessionalLearningProgramRequirements,
-  AdditionalDemographicInformation
+  AdditionalDemographicInformation,
+  AdministratorInformation,
+  ProfessionalLearningProgramRequirements
 ];
 const autoComputedFields = [
   'regionalPartnerGroup',

@@ -19,9 +19,10 @@ module Pd
       choose_your_program: 'Choose Your Program',
       find_your_region: 'Find Your Region',
       about_you: 'About You',
+      additional_demographic_information: 'Additional Demographic Information',
+      administrator_information: 'Administrator/School Leader Information',
       teaching_background: 'Teaching Background',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
-      additional_demographic_information: 'Additional Demographic Information',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -71,14 +72,16 @@ module Pd
         gender_identity: 'Gender identity:',
         race: 'Race or ethnicity:',
       },
-      teaching_background: {
+      administrator_information: {
         principal_role: "Administrator/School Leader's Role",
-        principal_title: "Administrator/School Leader's title",
         principal_first_name: "Administrator/School Leader's first name",
         principal_last_name: "Administrator/School Leader's last name",
         principal_email: "Administrator/School Leader's email address",
         principal_confirm_email: "Confirm Administrator/School Leader's email address",
-        principal_phone_number: "Administrator/School Leader's phone number",
+        principal_phone_number: "Administrator/School Leader's phone number"
+      },
+      teaching_background: {
+        principal_title: "Administrator/School Leader's title",
         agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
       },
       implementation_plan: {
