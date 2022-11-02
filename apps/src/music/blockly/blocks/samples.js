@@ -19,7 +19,10 @@ export const playSample = {
     args0: [
       {
         type: 'field_sounds',
-        name: 'sample'
+        name: 'sample',
+        renderFn: parentDiv => {
+          console.log('hi', parentDiv);
+        }
       },
       {
         type: 'input_value',
