@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "## Set Up Your Experiment\r\n\r\n- Add a sprite that will change the physical state of your subject sprite (saw or ax).\r\n- Add another sprite and set the costume to the microscope.\r\n- Set the costume, location, and sizes of both new sprites.\r\n\r\n",
+    "long_instructions": "## Set Up Your Experiment\r\n\r\n**You need to change the physical state of the wood. We can do this by chopping it up with an ax or saw.**\r\n- Add a new sprite and set the costume to the saw or the ax.\r\n- Add another sprite and set the costume to the microscope.\r\n- Set the location and sizes of both new sprites.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -44,14 +44,17 @@
     ],
     "validation_code": "//validation",
     "project_template_level_name": "csc_particles_phys_template",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-10-31T23:19:08.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-31T23:19:08.907+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_setup1\\\"\"],\"cloned_from\":\"csc_particles_phys_setup1\"},{\"changed_at\":\"2022-10-31 23:21:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:23:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "created_at": "2022-10-31T23:19:08.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-10-31T23:19:08.907+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_setup1\\\"\"],\"cloned_from\":\"csc_particles_phys_setup1\"},{\"changed_at\":\"2022-10-31 23:21:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:23:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:31:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

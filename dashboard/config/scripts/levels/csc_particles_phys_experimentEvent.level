@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "## Experiment Event\r\n\r\n- Bring a new `when sprite touches sprite` event block into the workspace.\r\n- Add a change costume block under your new event block.\r\n\r\n",
+    "long_instructions": "## Experiment Event\r\n\r\n**The physical change will happen when the ax or saw \"chops up\" the wood. Let's make that happen!**\r\n- Bring a new `when sprite touches sprite` event block into the workspace.\r\n- Add a `change costume` block under your new event block to change the wood costume to chopped up wood.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -54,7 +54,7 @@
   "created_at": "2022-10-31T23:31:28.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-31T23:31:28.753+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_setup2\\\"\"],\"cloned_from\":\"csc_particles_phys_setup2\"},{\"changed_at\":\"2022-10-31 23:32:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-31T23:31:28.753+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_setup2\\\"\"],\"cloned_from\":\"csc_particles_phys_setup2\"},{\"changed_at\":\"2022-10-31 23:32:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:38:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:56:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1574,6 +1574,27 @@
           <value name="VAL">
             <block type="math_number">
               <field name="NUM">75</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"ax"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"wood"</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setAnimation">
+          <field name="ANIMATION">"wood"</field>
+          <value name="THIS">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"wood"</field>
             </block>
           </value>
         </block>
