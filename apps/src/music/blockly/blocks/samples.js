@@ -1,6 +1,4 @@
 import {BlockTypes} from '../blockTypes';
-import {getStaticFilePath} from '@cdo/apps/music/utils';
-import {PLAY_ICON} from '@cdo/apps/music/constants';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -17,18 +15,10 @@ const isBlockInsideWhenRun = ctx => {
 export const playSample = {
   definition: {
     type: BlockTypes.PLAY_SAMPLE,
-    message0: '%1 play %2 at measure %3',
+    message0: 'play %1 at measure %2',
     args0: [
       {
-        type: 'field_image',
-        src: 'https://code.org/shared/images/play-button.png',
-        width: 15,
-        height: 20,
-        alt: '*',
-        flipRtl: false
-      },
-      {
-        type: 'field_pitch', //'field_generic',
+        type: 'field_sounds',
         name: 'sample'
       },
       {
@@ -60,4 +50,3 @@ export const playSample = {
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
     ');\n'
 };
-
