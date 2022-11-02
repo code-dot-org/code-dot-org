@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-31 21:06:25 UTC",
+    "serialized_at": "2022-11-01 18:06:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -72,6 +72,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**How can I represent the attributes an object should have in a class?**\n\nIn this lesson, students expand on what they learned about classes in the previous unit to declare instance variables to represent an object's attributes. As students learn about instance variables, they discover the difference between `public` and `private` access and identify the need for encapsulation. Students also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass.",
+        "preparation": "* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I represent the attributes an object should have in a class?**\n\nYou previously learned that a class is a blueprint that defines the attributes and behaviors an object should have. In this lesson, you expand on what you learned about classes in the previous unit to declare instance variables to represent an object's attributes. As you learn about instance variables, you discover the difference between `public` and `private` access and identify the need for encapsulation. You also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -261,22 +264,685 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e6c98fe3-f7c5-4711-8372-843f1b37eeb6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6c98fe3-f7c5-4711-8372-843f1b37eeb6",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "754a4e44-a101-4dc2-ab78-34cceaf15d30",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "744deaa3-9084-4d8d-9472-c136ac18f685",
+      "position": 1,
+      "properties": {
+        "description": "In the previous unit, you learned about the characteristics of software engineers and began to develop your software engineering skills. We will be learning more about the structure and design of classes in Java programs and continue to use software engineering characteristics and skills to make design decisions.",
+        "name": "Software Engineering Goals",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "744deaa3-9084-4d8d-9472-c136ac18f685",
+        "lesson_activity.key": "e6c98fe3-f7c5-4711-8372-843f1b37eeb6"
+      }
+    },
+    {
+      "key": "897fc847-8648-4cf2-bf2f-7e2205b79a05",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 2 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nStudents can choose any characteristic or skill they want to improve regardless of whether or not it is an area for improvement. Students can choose a characteristic that is a strength that they want to further develop as an anchor for upcoming units, or they can choose a characteristic that is an area for improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "897fc847-8648-4cf2-bf2f-7e2205b79a05",
+        "lesson_activity.key": "e6c98fe3-f7c5-4711-8372-843f1b37eeb6"
+      }
+    },
+    {
+      "key": "c24a5b38-344b-46f6-b70c-8206917b3cd5",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
+        "duration": "5",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "c24a5b38-344b-46f6-b70c-8206917b3cd5",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "3338e87e-60b2-45f9-a419-83fde23b2a29",
+      "position": 2,
+      "properties": {
+        "description": "In the previous unit, we learned that classes define the attributes and behaviors of an object. We created subclasses of the `Painter` class and wrote methods in these subclasses to give our `Painter` objects new behaviors. Today, we're going to take a look at how we define attributes in a class.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3338e87e-60b2-45f9-a419-83fde23b2a29",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "a73e3ba4-4324-4b86-a561-80251ee99311",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "progression_name": "Predict and Run: Attributes"
+      },
+      "seeding_key": {
+        "activity_section.key": "a73e3ba4-4324-4b86-a561-80251ee99311",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "1e589149-8d89-49cd-b3c0-1b91e8ca0eea",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the classes in the program have `private` variables and that the tester class attempts to access and print the values for these variables. Students also notice the error that is caused by trying to access and print these values and may wonder why these variables are `private`.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The error on this program is intentional so students can see that they cannot directly refer to the instance variables of an object. Prompt students to consider possible causes for this error and ways they might correct it."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1e589149-8d89-49cd-b3c0-1b91e8ca0eea",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *class* and *object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "duration": "15",
+        "name": "Declaring Instance Variables",
+        "progression_name": "Investigate and Modify: Classes and Attributes"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "3930152f-fb05-47b1-a2bd-c813121e03ae",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share the difference between `private` and `public` and what happened in the program when they changed the instance variables. Ask additional guiding questions, such as:\n* *Why do you think the instance variables are `private`?*\n* *Some of the instance variables are repeated in multiple classes. How do you think we could eliminate the redundancies in these classes?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3930152f-fb05-47b1-a2bd-c813121e03ae",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "e934c8ba-8daf-4a74-a389-e91045d9f780",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Instance Variables and Attributes*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e934c8ba-8daf-4a74-a389-e91045d9f780",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "e4b874a6-cf68-4156-8638-4926b0a3ab9c",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that an object gets a copy of the instance variables that are defined in the class when it is instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to practice writing instance variables in a class.",
+        "progression_name": "Skill Building: Declaring Instance Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4b874a6-cf68-4156-8638-4926b0a3ab9c",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "a8869e54-15ed-475f-bb2b-ba8afe251d83",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *inheritance* and how a subclass shares the attributes and behaviors of the superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "duration": "15",
+        "name": "Inheritance Hierarchies",
+        "progression_name": "Investigate and Modify: Refactoring Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8869e54-15ed-475f-bb2b-ba8afe251d83",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "8694fb8d-462c-4bab-89b0-b13307332bae",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***access modifier*** and ***encapsulation***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When would encapsulation be useful?*\n\n**Discussion Goal:** Students share that encapsulation protects the attributes of a class and ensures that only the class can control what is stored. They might also suggest that this prevents accidental or direct access to the attributes, especially in programs where some attributes should not be accessed or modified without some form of verification.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "rompt students to consider attributes that they might not want to be changed by other parts of a program, such as a social security number or student ID. Ask students to consider the implications of these values being `public` and how making instance variables `private` can prevent potential issues."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8694fb8d-462c-4bab-89b0-b13307332bae",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "204ba9c1-7850-409e-b1ef-2bbb7a8f4822",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***DRY principle***.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to consider how they could apply the DRY principle to the example classes.\n\nYou could also prompt students to consider what additional code they would have to write in the `PainterPlus` class if it was not a subclass of the `Painter` class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "204ba9c1-7850-409e-b1ef-2bbb7a8f4822",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***refactor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to create the `Dessert` class and a `Dessert` subclass.",
+        "progression_name": "Practice: The Food Truck",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Check for Understanding and practice level can be used as a formative assessment to gauge understanding of the key terms and declaring instance variables in a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "918a48c6-ee63-4aae-890f-0849880cc978",
+      "position": 13,
+      "properties": {
+        "description": "This is a good time to commit our code and save our `Dessert` classes to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "918a48c6-ee63-4aae-890f-0849880cc978",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "fd413801-af64-4209-9569-e70dedec7b5e",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fd413801-af64-4209-9569-e70dedec7b5e",
+        "lesson_activity.key": "fec0b4f6-7115-43e4-97a9-ecaa891e9795"
+      }
+    },
+    {
+      "key": "dd112dcf-f088-4949-9f37-a078ff560910",
+      "position": 1,
+      "properties": {
+        "description": "We now know how to write classes with instance variables to represent an object's attributes and methods to represent its behaviors! With this knowledge, we can create classes to represent just about any type of object we need for our programs.",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd112dcf-f088-4949-9f37-a078ff560910",
+        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30"
+      }
+    },
+    {
+      "key": "ef92120f-308e-42a6-b1f4-a7a4f01969e5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as instance variables and encapsulation. Students also recall the difference between `public` and `private` access and might also make connections with the attributes in the `Painter` class. They should realize that they now have the knowledge to start designing their own classes from scratch instead of depending only on existing classes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Unit 2 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ef92120f-308e-42a6-b1f4-a7a4f01969e5",
+        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30"
+      }
+    },
+    {
+      "key": "4837304a-6ed5-48a0-9940-6ce8e2bd19a1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "4837304a-6ed5-48a0-9940-6ce8e2bd19a1",
+        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30"
+      }
+    },
+    {
+      "key": "7d25ceac-d6c6-40cd-8e47-eb3684a32df3",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d25ceac-d6c6-40cd-8e47-eb3684a32df3",
+        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30"
+      }
+    },
+    {
+      "key": "a36ff240-7569-4f4f-8e40-23d391cad518",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a36ff240-7569-4f4f-8e40-23d391cad518",
+        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30"
+      }
+    },
+    {
+      "key": "9dcbbc3d-11f7-4e66-8ce8-3881e45b16cb",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dcbbc3d-11f7-4e66-8ce8-3881e45b16cb",
+        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Attributes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L1_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a73e3ba4-4324-4b86-a561-80251ee99311"
+      },
+      "level_keys": [
+        "CSA U2L1-L1_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Classes and Attributes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L2_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569"
+      },
+      "level_keys": [
+        "CSA U2L1-L2_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building: Declaring Instance Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L3_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e4b874a6-cf68-4156-8638-4926b0a3ab9c"
+      },
+      "level_keys": [
+        "CSA U2L1-L3_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Refactoring Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L4_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a8869e54-15ed-475f-bb2b-ba8afe251d83"
+      },
+      "level_keys": [
+        "CSA U2L1-L4_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: The Food Truck"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L5_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0"
+      },
+      "level_keys": [
+        "CSA U2L1-L5_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice: The Food Truck"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L6_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0"
+      },
+      "level_keys": [
+        "CSA U2L1-L6_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L7_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a36ff240-7569-4f4f-8e40-23d391cad518"
+      },
+      "level_keys": [
+        "CSA U2L1-L7_2023"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L1_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L1_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a73e3ba4-4324-4b86-a561-80251ee99311"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L2_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L2_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L3_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L3_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e4b874a6-cf68-4156-8638-4926b0a3ab9c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L4_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L4_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a8869e54-15ed-475f-bb2b-ba8afe251d83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L5_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L5_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L6_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L6_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L7_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L7_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a36ff240-7569-4f4f-8e40-23d391cad518"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/14yfuKXi8y0vL9JSJ6Bd0a1T5w6JSaQVez1xaqHdVA9k/edit?usp=sharing",
+      "key": "_key_u2l1_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "Attributes",
+      "url": "https://docs.google.com/presentation/d/1TDW4lLm9ASPr8BkNfjdEFOWUpgjGXbwpZf8kfWg6qhA/edit?usp=sharing",
+      "key": "attributes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "attributes"
+      }
+    },
+    {
+      "name": "Instance Variables and Attributes",
+      "url": "https://youtu.be/49XzLCs8wgU",
+      "key": "instance_variables_and_attributes",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "name": "U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1xol1ugsQO8w330sOTKis3AB6r0vv0WVjVNBA09JPWtk/edit?usp=sharing",
+      "key": "u2l1_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l1_extra_practice"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "instance_variables_and_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "u2l1_extra_practice"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -285,19 +951,160 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "access_modifier",
+      "word": "access modifier",
+      "definition": "a keyword used to set the visibility of classes, variables, constructors, and methods",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "access_modifier"
+      }
+    },
+    {
+      "key": "dry_principle",
+      "word": "DRY principle",
+      "definition": "a software development principle that stands for \"Don't Repeat Yourself\" which aims to reduce repetition in code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "key": "encapsulation",
+      "word": "encapsulation",
+      "definition": "an object-oriented programming concept where the instance variables of a class are hidden from other classes and can be accessed only through the methods of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "encapsulation"
+      }
+    },
+    {
+      "key": "instance_variable",
+      "word": "instance variable",
+      "definition": "a variable defined in a class that represents an attribute of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "key": "refactor",
+      "word": "refactor",
+      "definition": "to improve the readability, reusability, or structure of program code without altering its functionality",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "refactor"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "access_modifier"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "encapsulation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "refactor"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "0251d959-08e7-47c3-b0eb-ee1649979d38",
+      "properties": {
+        "description": "Differentiate between `public` and `private` access"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "0251d959-08e7-47c3-b0eb-ee1649979d38"
+      }
+    },
+    {
+      "key": "7cab091a-6a9d-4548-8ce9-2eac4d69f823",
+      "properties": {
+        "description": "Declare instance variables to represent attributes of an object"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "7cab091a-6a9d-4548-8ce9-2eac4d69f823"
+      }
+    },
+    {
+      "key": "bfe2c0f3-7a10-4863-a76a-ce52c35fba1c",
+      "properties": {
+        "description": "Refactor code to create class hierarchies with shared attributes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "bfe2c0f3-7a10-4863-a76a-ce52c35fba1c"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.A.3"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
