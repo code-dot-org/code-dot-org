@@ -78,6 +78,7 @@ module Pd::Application
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
     before_validation :set_course_from_program, if: -> {form_data_changed?}
+    before_validation :set_status_from_admin_approval, if: -> {properties_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
     validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
@@ -133,6 +134,23 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
+    end
+
+    def set_status_from_admin_approval
+      # Do not modify status is application is not incomplete.
+      return if status == 'incomplete'
+
+      # Do not modify status if admin approval status has not changed.
+      # Since principal_approval_not_required is a serialized attribute, we cannot use the Dirty
+      # API easily –– instead, use the Dirty API to look at the properties attribute.
+      return if properties_change.include?(nil)
+      return unless properties_change.map(&:keys)&.flatten&.include?('principal_approval_not_required')
+
+      # Do not modify status if the principal approval has already been completed.
+      return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
+
+      self.status = 'awaiting_admin_approval' unless principal_approval_not_required
+      self.status = 'unreviewed' if principal_approval_not_required && status == 'awaiting_admin_approval'
     end
 
     def save_partner
@@ -723,6 +741,12 @@ module Pd::Application
         friendly_status_name
     end
 
+    def allow_status_change_to_unreviewed?
+      # Can change to unreviewed if (a) admin approval is not required
+      #
+      return false if @admin_approval_not_required
+    end
+
     def allow_sending_principal_email?
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
       last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
@@ -1090,12 +1114,13 @@ module Pd::Application
     end
 
     # Called after the application is created. Do any manipulation needed for the form data
-    # hash here, as well as send emails
+    # hash here, as well as send emails and set principal_approval_not_required state based on RP info
     def on_successful_create
       return if status == 'incomplete'
 
       queue_email :confirmation, deliver_now: true
       auto_score!
+      self.principal_approval_not_required = regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
         queue_email :principal_approval, deliver_now: true
       end
