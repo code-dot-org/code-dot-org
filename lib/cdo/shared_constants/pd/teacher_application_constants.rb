@@ -21,6 +21,7 @@ module Pd
       about_you: 'About You',
       additional_demographic_information: 'Additional Demographic Information',
       administrator_information: 'Administrator/School Leader Information',
+      implementation_plan: 'Implementation Plan',
       teaching_background: 'Teaching Background',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
@@ -80,10 +81,6 @@ module Pd
         principal_confirm_email: "Confirm Administrator/School Leader's email address",
         principal_phone_number: "Administrator/School Leader's phone number"
       },
-      teaching_background: {
-        principal_title: "Administrator/School Leader's title",
-        agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
-      },
       implementation_plan: {
         csd_which_grades: clean_multiline(
           "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?
@@ -105,6 +102,10 @@ module Pd
         csa_how_offer: 'How will you offer CSA?',
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         replace_existing: 'Will this course replace an existing computer science course in the master schedule?'
+      },
+      teaching_background: {
+        principal_title: "Administrator/School Leader's title",
+        agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
       },
       professional_learning_program_requirements:
         {

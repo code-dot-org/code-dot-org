@@ -5,12 +5,7 @@ import {
   PageLabels,
   SectionHeaders
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {
-  PROGRAM_CSD,
-  PROGRAM_CSP,
-  PROGRAM_CSA,
-  styles
-} from './TeacherApplicationConstants';
+import {styles} from './TeacherApplicationConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
@@ -71,43 +66,5 @@ ChooseYourProgram.propTypes = {
 ChooseYourProgram.associatedFields = [
   ...Object.keys(PageLabels.chooseYourProgram)
 ];
-
-const uniqueRequiredFields = {
-  [PROGRAM_CSD]: ['csdWhichGrades'],
-  [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
-  [PROGRAM_CSA]: [
-    'csaWhichGrades',
-    'csaHowOffer',
-    'csaAlreadyKnow',
-    'csaPhoneScreen'
-  ]
-};
-
-ChooseYourProgram.getDynamicallyRequiredFields = data => {
-  const requiredFields = [];
-
-  if (data.program) {
-    requiredFields.push(...uniqueRequiredFields[data.program]);
-  }
-
-  return requiredFields;
-};
-
-ChooseYourProgram.processPageData = data => {
-  const changes = {};
-
-  if (data.program) {
-    const otherPrograms = Object.keys(uniqueRequiredFields).filter(
-      program => program !== data.program
-    );
-    otherPrograms.forEach(otherProgram => {
-      uniqueRequiredFields[otherProgram].forEach(field => {
-        changes[field] = undefined;
-      });
-    });
-  }
-
-  return changes;
-};
 
 export default ChooseYourProgram;

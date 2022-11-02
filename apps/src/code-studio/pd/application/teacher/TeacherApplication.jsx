@@ -8,6 +8,7 @@ import FindYourRegion from './FindYourRegion';
 import AboutYou from './AboutYou';
 import AdditionalDemographicInformation from './AdditionalDemographicInformation';
 import AdministratorInformation from './AdministratorInformation';
+import ImplementationPlan from './ImplementationPlan';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {reload} from '@cdo/apps/utils';
@@ -21,6 +22,7 @@ const pageComponents = [
   AboutYou,
   AdditionalDemographicInformation,
   AdministratorInformation,
+  ImplementationPlan,
   ProfessionalLearningProgramRequirements
 ];
 const autoComputedFields = [
