@@ -1,4 +1,4 @@
-import {playSample, playSound, sample} from './blocks/samples';
+import {playSample} from './blocks/samples';
 import {forLoop} from './blocks/control';
 import {triggeredAt, whenRun} from './blocks/events';
 
@@ -6,9 +6,7 @@ import {triggeredAt, whenRun} from './blocks/events';
 const blockList = [
   whenRun,
   triggeredAt,
-  playSound,
   playSample,
-  sample,
   forLoop
 ];
 
