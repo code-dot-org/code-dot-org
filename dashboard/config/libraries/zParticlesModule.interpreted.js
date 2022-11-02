@@ -341,9 +341,11 @@ function README() {
 /***************************************************
 SPECIFIC HELPER CODE FOR VALIDATION (contains things specifically for this CSC module)
 ***************************************************/
+if (typeof validationProps !== 'undefined') {
+    validationProps.particlesValidation = {};
+	validationProps.particlesValidation.events = [];
+}
 
-validationProps.particlesValidation = {};
-validationProps.particlesValidation.events = [];
 
 function particlesREADME() {
   console.log("This library also includes validation helper objects that can be used when writing custom block functions");

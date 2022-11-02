@@ -1006,6 +1006,24 @@ de:
         text: Setup
       Dancelab_whenSetup2:
         text: Setup
+      DansBlocks_setForegroundEffect2:
+        text: führe {EFFECT} aus
+        options:
+          EFFECT:
+            '"bubbles"': Blasen
+            '"confetti"': Konfetti
+            '"hearts"': Herzen
+            '"emojis"': Fröhliche Emojis
+            '"rain"': Regen
+            '"starburst"': Starburst
+            '"glass"': Zerbrochenes Glas
+            '"twinkling"': Zwinkern
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): verschiebbar sein
+            wandering(): wandern
+            shrinking(): schrumpfen
       gamelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       gamelab_addTarget:
@@ -1353,7 +1371,6 @@ de:
             "'sound://category_space/Pillars_SFX.mp3'": Säulen
             "'sound://category_space/Southern_ring_SFX.mp3'": Südring
             "'sound://category_space/Supernova_SFX.mp3'": Supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": Tycho
       gamelab_playSpeech:
         text: Sprache wiedergeben {SOUND}
       gamelab_playerBehaviors:

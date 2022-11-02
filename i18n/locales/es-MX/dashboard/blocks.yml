@@ -235,20 +235,12 @@ es-MX:
             MOVES.XArmsUp: Estirar
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
-      Dancelab_everyMeasuresRange:
-        text: 'repetir cada {N} compases después de {START} '
       Dancelab_everySeconds:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
             '"measures"': compases
             '"seconds"': segundos
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} desde {START} hasta {STOP} '
-        options:
-          UNIT:
-            measures: Compases
-            seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -1008,6 +1000,24 @@ es-MX:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: hacer efecto de {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': corazones
+            '"emojis"': Emoji Feliz
+            '"rain"': lluvia
+            '"starburst"': Explosión de estrellas
+            '"glass"': Rompiendo vidrio
+            '"twinkling"': Parpadeante
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): poder arrastrastrarlos
+            wandering(): deambulando
+            shrinking(): encogiéndose
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
@@ -1341,9 +1351,26 @@ es-MX:
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": corneta de aire
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": cántico
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": patear
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dos silbatos
             "'sound://category_sports/One_Whistle_SFX.mp3'": silbato
       gamelab_playSoundOptionsSpace:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": agujero negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": cúmulo bala
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cangrejo
+            "'sound://category_space/Launch_SFX.mp3'": lanzar
+            "'sound://category_space/Lift_Off.mp3'": despegar
+            "'sound://category_space/Pillars_SFX.mp3'": pilares
+            "'sound://category_space/Southern_ring_SFX.mp3'": anillo del sur
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
       gamelab_playSpeech:
         text: reproducir grabación {SOUND}
       gamelab_playerBehaviors:
@@ -1992,6 +2019,8 @@ es-MX:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         text: establecer marco {BRUSH}
         options:

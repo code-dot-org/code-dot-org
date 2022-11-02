@@ -13,7 +13,7 @@ sk:
       locked: "Vaše konto je zablokované."
       not_found_in_database: "Neplatný e-mail alebo heslo."
       timeout: "Platnosť prihlásenia vypršala. Prosím, prihláste sa znova."
-      unauthenticated: "Je potrebné, aby ste sa prihlásili alebo zaregistrovali."
+      unauthenticated: "Prihláste sa alebo sa zaregistrujte."
       unconfirmed: "Skôr než budete pokračovať, musíte potvrdiť svoj účet."
     mailer:
       confirmation_instructions:
