@@ -9,15 +9,13 @@ import {
   isCodeOrgBrowser,
   isOSX,
   isWindows,
-  isLinux,
-  isChromeOS
+  isLinux
 } from '../util/browserChecks';
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
 import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
 import {Provider} from 'react-redux';
-import experiments from '@cdo/apps/util/experiments';
 import {
   shouldUseWebSerial,
   WEB_SERIAL_FILTERS
@@ -175,7 +173,7 @@ class Downloads extends React.Component {
 
     // Once in the Maker App or in Chromebook, there is no need to
     // display Download Instructions
-    if (isCodeOrgBrowser() || isChromeOS()) {
+    if (isCodeOrgBrowser()) {
       return null;
     }
 
@@ -431,7 +429,7 @@ class ChromebookInstructions extends React.Component {
     return (
       <div>
         <h2>{applabI18n.makerSetupMakerAppForChromebook()}</h2>
-        {experiments.isEnabled('webserial')
+        {shouldUseWebSerial()
           ? this.webSerialSetupInstructions()
           : this.chromeAppSetupInstructions()}
       </div>
