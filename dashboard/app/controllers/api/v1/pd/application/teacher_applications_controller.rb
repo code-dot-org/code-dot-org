@@ -51,11 +51,7 @@ module Api::V1::Pd::Application
     end
 
     def change_principal_approval_requirement
-      not_required = params[:principal_approval_not_required].to_bool
-      @application.status = 'unreviewed' if not_required && @application.status == 'awaiting_admin_approval'
-      @application.status = 'awaiting_admin_approval' if !not_required && @application.status == 'unreviewed'
-
-      @application.update!(principal_approval_not_required: not_required)
+      @application.update!(principal_approval_not_required: params[:principal_approval_not_required].to_bool)
       @application.queue_email :principal_approval, deliver_now: true if @application.allow_sending_principal_email?
       render json: {principal_approval: @application.principal_approval_state}
     end
