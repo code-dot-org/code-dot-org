@@ -8,7 +8,12 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-import {styles} from './TeacherApplicationConstants';
+import {
+  PROGRAM_CSD,
+  PROGRAM_CSP,
+  PROGRAM_CSA,
+  styles
+} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders
@@ -45,6 +50,23 @@ const FindYourRegion = props => {
       )
     });
   }, [regionalPartner, onChange]);
+
+  const getProgramInfo = program => {
+    switch (program) {
+      case PROGRAM_CSD:
+        return {name: 'CS Discoveries', shortName: 'CSD'};
+      case PROGRAM_CSP:
+        return {name: 'CS Principles', shortName: 'CSP'};
+      case PROGRAM_CSA:
+        return {name: 'CSA', shortName: 'CSA'};
+      default:
+        return {name: 'CS Program', shortName: null};
+    }
+  };
+  const programInfo = getProgramInfo(data.program);
+  const isOffered = regionalPartner?.pl_programs_offered?.includes(
+    programInfo.shortName
+  );
 
   const renderInternationalModal = () => {
     return (
@@ -173,7 +195,22 @@ const FindYourRegion = props => {
               <LabeledRadioButtons name="schoolType" />
             </div>
           )}
+
           {renderRegionalPartnerName()}
+          {data.program === PROGRAM_CSA && regionalPartner && !isOffered && (
+            <p style={styles.error}>
+              <strong>
+                The Regional Partner in your region is not offering Computer
+                Science A at this time.{' '}
+              </strong>
+              Code.org will review your application and contact you with options
+              for joining a national cohort of Computer Science A teachers. If
+              accepted into the program, travel may be required to attend a
+              weeklong in-person summer workshop. If so, travel and
+              accommodation will be provided by Code.org. Academic year
+              workshops for the national cohort will be hosted virtually.
+            </p>
+          )}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
