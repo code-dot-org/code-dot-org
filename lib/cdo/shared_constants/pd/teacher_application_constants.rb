@@ -16,9 +16,10 @@ module Pd
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     SECTION_HEADERS = {
-      about_you: 'About You and Your School',
-      teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
+      find_your_region: 'Find Your Region',
+      about_you: 'About You',
+      teaching_background: 'Teaching Background',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
       additional_demographic_information: 'Additional Demographic Information and Submission',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
@@ -43,6 +44,8 @@ module Pd
         school_type: 'My school is a'
       },
       about_you: {
+        completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
+        completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
@@ -52,6 +55,9 @@ module Pd
         city: 'Home city',
         state: 'Home state',
         zip_code: 'Home zip code',
+        how_heard: 'How did you hear about this program?'
+      },
+      teaching_background: {
         principal_role: "Administrator/School Leader's Role",
         principal_title: "Administrator/School Leader's title",
         principal_first_name: "Administrator/School Leader's first name",
@@ -60,15 +66,10 @@ module Pd
         principal_confirm_email: "Confirm Administrator/School Leader's email address",
         principal_phone_number: "Administrator/School Leader's phone number",
         current_role: 'What is your current role at your school?',
-        completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
-        completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
-        how_heard: 'How did you hear about this program?',
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
         )
-      },
-      teaching_background: {
       },
       implementation_plan: {
         csd_which_grades: clean_multiline(
