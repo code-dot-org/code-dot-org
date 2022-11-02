@@ -807,9 +807,15 @@ export default function teacherSections(state = initialState, action) {
 
   if (action.type === CREATE_SECION_BEGIN) {
     const initialSectionData = newSectionData(action.participantType);
-    initialSectionData.courseOfferingId = action.courseOfferingId;
-    initialSectionData.courseVersionId = action.courseVersionId;
-    initialSectionData.unitId = action.unitId;
+    if (action.courseOfferingId) {
+      initialSectionData.courseOfferingId = action.courseOfferingId;
+    }
+    if (action.courseVersionId) {
+      initialSectionData.courseVersionId = action.courseVersionId;
+    }
+    if (action.unitId) {
+      initialSectionData.unitId = action.unitId;
+    }
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
@@ -1015,7 +1021,6 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === ASYNC_LOAD_END) {
-    console.log('goodbye');
     return {
       ...state,
       asyncLoadComplete: true
