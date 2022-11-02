@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SoundsPanel from './SoundsPanel';
+
 var CustomFields = CustomFields || {};
 
 /**
@@ -12,8 +16,10 @@ class FieldSounds extends Blockly.FieldTextInput {
    */
   static NOTES = 'C3 D3 E3 F3 G3 A3 B3 C4 D4 E4 F4 G4 A4'.split(/ /);
 
-  constructor(text) {
+  constructor(text, renderFn) {
     super(text);
+
+    this.renderFn = renderFn;
 
     // Disable spellcheck.
     this.setSpellcheck(false);
@@ -41,7 +47,7 @@ class FieldSounds extends Blockly.FieldTextInput {
    * @nocollapse
    */
   static fromJson(options) {
-    return new FieldSounds(options['pitch']);
+    return new FieldSounds(options.sample, options.renderFn);
   }
 
   /**
@@ -92,6 +98,11 @@ class FieldSounds extends Blockly.FieldTextInput {
   dropdownCreate_() {
     this.newDiv_ = document.createElement('div');
 
+    this.renderFn(this.newDiv_);
+
+    ReactDOM.render(<SoundsPanel />, this.newDiv_);
+
+    /*
     const library = window.library;
     const group = library.groups[0];
     for (let folder of group.folders) {
@@ -107,14 +118,13 @@ class FieldSounds extends Blockly.FieldTextInput {
         this.newDiv_.appendChild(newLineContainer);
       }
     }
+    */
 
     this.newDiv_.style.color = 'white';
     this.newDiv_.style.width = '300px';
     this.newDiv_.style.backgroundColor = 'black';
     this.newDiv_.style.padding = '5px';
     this.newDiv_.style.cursor = 'pointer';
-
-    // <i class="fa fa-play-circle qCTWLmXQgdJSdH_S6xqA"></i>
 
     return this.newDiv_;
   }
