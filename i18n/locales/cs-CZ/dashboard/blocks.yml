@@ -988,6 +988,24 @@ cs:
         text: nastavení
       Dancelab_whenSetup2:
         text: nastavení
+      DansBlocks_setForegroundEffect2:
+        text: proveď efekt {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts"': srdce
+            '"emojis"': Šťastné emotikony
+            '"rain"': déšť
+            '"starburst"': Výbuch hvězdy
+            '"glass"': Tříštění skla
+            '"twinkling"': Zablikání
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): přetažení
+            wandering(): potulování se
+            shrinking(): smršťování
       gamelab_addBehaviorSimple:
         text: sprajt {SPRITE} začne {BEHAVIOR}
       gamelab_addTarget:
@@ -1333,7 +1351,6 @@ cs:
             "'sound://category_space/Pillars_SFX.mp3'": sloupy
             "'sound://category_space/Southern_ring_SFX.mp3'": jižní okruh
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": Tycho
       gamelab_playSpeech:
         text: přehrát řeč {SOUND}
       gamelab_playerBehaviors:

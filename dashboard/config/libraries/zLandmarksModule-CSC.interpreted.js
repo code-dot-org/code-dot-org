@@ -6,7 +6,6 @@ console.log("to the validation code for this level to see more details of what t
 HELPER CODE FOR BLOCKS
 ***************************************************/
 
-
 /***************************************************
 GENERAL HELPER CODE FOR VALIDATION (can be used in multiple validation helper libraries)
 ***************************************************/
@@ -19,7 +18,7 @@ var soundLog;
 var eventSpriteIds;
 var spriteBehaviorsObj;
 
-var DEBUG = false;
+var DEBUG = true;
 
 //Helper function
 //This function is designed to be used in conjunction with code added to the level template (ie: if(DEBUG) { console.log() });
@@ -62,6 +61,7 @@ function getHelperVars() {
 function setupPrevious() {
   if (!validationProps.previous) {
     validationProps.previous = {};
+    validationProps.previous.background = "";
     validationProps.previous.spriteIds = [];
     validationProps.previous.animations = [];
     validationProps.previous.eventLog = [];
@@ -84,6 +84,7 @@ function checkForPreviousObject() {
 //Update previous object.
 //Designed to be called at the very end of level validation
 function updatePrevious() {
+  validationProps.previous.background = getBackground();
   validationProps.previous.spriteIds = spriteIds;
   validationProps.previous.animations = animations;
   validationProps.previous.eventLog = eventLog;
@@ -165,6 +166,8 @@ function drawHand(x, y){
 
 //Call this to draw hands on all unclicked sprites.
 //Designed to be called after the world.frameCount if statement so it happens each tick of the draw loop
+//Dan Note: this doesn't actually check for CLICK events - technically this works for any type of event
+//And: doesn't actually use clickedSprites - do I need it?
 function drawHandsOnUnclickedSprites(){
   if(World.seconds < 1){
     return;
@@ -217,6 +220,25 @@ function checkNumClickedSprites(n) {
   return false;
 }
 
+//Returns true if n unique sprites have been touched over the course of the level
+function checkNumTouchedSprites(n) {
+  if(!validationProps.touchedSprites) {
+    validationProps.touchedSprites = [];
+  }
+
+  var sprites = getSpritesThatTouched();
+  if (sprites != -1){
+    var newTouchedSprite = sprites[1];
+    if (validationProps.touchedSprites.indexOf(newTouchedSprite) == -1) {
+      validationProps.touchedSprites.push(newTouchedSprite);
+    }
+  }
+  if(validationProps.touchedSprites.length >= n) {
+    return true;
+  }
+  return false;
+}
+
 //Returns true if there is a new event this frame.
 //Used as a helper in other functions.
 function checkNewEventThisFrame() {
@@ -243,6 +265,44 @@ function checkSpriteClickedThisFrame(){
     }
   }
   return false;
+}
+
+//Returns true if a sprite was touched this frame.
+function checkSpriteTouchedThisFrame(){
+  if(!validationProps.previous) {
+    console.log("Need to call setupPrevious() to use checkSpriteClickedThisFrame() helper function");
+    return false;
+  }
+  if (checkNewEventHisFrame()) {
+    //If we're here: a new event happened this frame.
+    var currentEvent = eventLog[eventLog.length - 1];
+    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
+    if (currentEvent.includes("Touch")) {
+      return true;
+    }
+  }
+  return false;
+}
+
+//Checks if the background was set to something
+function checkBackgroundChanged(){
+  var background = getBackground();
+  return background !== undefined && background !== "#ffffff";
+}
+
+//Checks if the background changed from the previous version
+function checkNewBackground() {
+  return getBackground() != validationProps.previous.background;
+}
+
+//Checks if a particular sprite was moved from the default (200, 200) location in a level
+function checkMovedSpritePin(spriteId) {
+  var sprite = {id: spriteId};
+  var spriteX = getProp(sprite, "x");
+  var spriteY = getProp(sprite, "y");
+  if(spriteX != 200 || spriteY != 200) {
+    return true;
+  }
 }
 
 /*
@@ -303,6 +363,8 @@ function README() {
   console.log("It also includes the following criteria function designed to be used within addCritera()");
   console.log("-- checkNumClickedSprites(n) - Returns true if n unique sprites have been clicked over the course of the level");
   console.log("-- checkSpriteClickedThisFrame() - Returns true if a sprite was clicked this frame.");
+  console.log("-- checkBackgroundChanged() - Checks if the background was set to something");
+  console.log("-- checkMovedSpritePin(spriteId) - Checks if a particular sprite was moved from the default (200, 200) location in a level");
   console.log("-- getClickedSpriteId() - Returns the spriteId of a sprite clicked this frame, or -1 if not found");
   console.log("-- getSpritesThatTouched() - Returns an array of two spriteIds that touch that frame, or -1 if not found");
   console.log("");
@@ -320,4 +382,464 @@ function libraryREADME() {
   console.log("This library also includes validation helper objects that can be used when writing custom block functions");
   console.log("-- validationProps.landmarksValidation is an object for any particles module specific helpers");
   console.log("-- validationProps.landmarksValidation.events is an array for any particles module specific events");
+}
+
+
+/****************************************************
+SNOWBALLING VALIDATION FUNCTIONS
+Used for lessons that build a project across multiple levels and we want
+to continue validating criteria from previous levels
+****************************************************/
+
+function level1Validation(validateBackground) {
+  if(validateBackground) {
+    addCriteria(function() {
+      if(checkBackgroundChanged()) {
+        //If you made it here: we passed the criteria
+        return true;
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("You need to set a background");
+      }
+      return false;
+    }, "setBackground");  // include i18n feedback string
+  }
+}
+
+function level2Validation(validateNewSprite, validateNewLocation, validateNewSize) {
+  if(validateNewSprite) {
+    //Checks whether a sprite has been created
+    addCriteria(function() {
+      //You can reference global variables from helper library (use the README to remind what those are)
+
+      if(spriteIds.length >= 1) {
+        return true;
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Create a new sprite!");
+      }
+      return false;
+    }, "createNewSprite");  // include i18n feedback string
+  }
+  
+  if(validateNewLocation) {
+    //checks if the sprite was moved from the default (200, 200) location
+    addCriteria(function() {
+      //You can reference global variables from helper library (use the README to remind what those are)
+
+      if(spriteIds.length >= 1) {
+        if(checkMovedSpritePin(spriteIds[0])) {
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Move the sprite!");
+      }
+      return false;
+    }, "moveSpriteLocation");  // include i18n feedback string
+  }
+  
+  if(validateNewSize) {
+    //check for new size property
+    addCriteria(function() {
+      //You can reference global variables from helper library (use the README to remind what those are)
+
+      if(spriteIds.length >= 1) {
+        var sprite = {id: spriteIds[0]};
+        var spriteScale = getProp(sprite, "scale");
+        if(spriteScale != 100) {
+          //If you made it here: we passed the criteria
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Change the sprite size!");
+      }
+      return false;
+    }, "spriteSize");  // include i18n feedback string
+  }
+}
+
+function level3Validation(validateSpriteSay) {
+  if(validateSpriteSay) {
+    //Checks if the first sprite says something
+    addCriteria(function() {
+      //You can reference global variables from helper library (use the README to remind what those are)
+	  if(spriteIds.length >= 1) {
+        var spriteId = spriteIds[0];
+        var speech = getSpeechForSpriteId(spriteId);
+        if(speech != null) {
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("Make the sprite speak!");
+      }
+      return false;
+    }, "saySomething");  // include i18n feedback string
+  }
+}
+
+//check for 2 sprites
+//check not default costume
+//check for a new location
+//check for a new size property
+function level4Validation(validate2Sprites, validate2ndCostume, validate2ndLocation, validate2ndSize, validateMovingBehavior) {
+  if(validate2Sprites) {
+    //Checks whether 2 sprites exist
+    addCriteria(function() {
+      //You can reference global variables from helper library (use the README to remind what those are)
+
+      if(spriteIds.length >= 2) {
+        return true;
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Create 2 sprites!");
+      }
+      return false;
+    }, "create2Sprites");  // include i18n feedback string
+  }
+  
+  if(validate2ndCostume) {
+    //Checks whether the 2nd sprite isn't wearing the default costume
+    addCriteria(function() {
+      if(spriteIds.length >= 2) {
+        var secondSprite = {id: spriteIds[1]};
+        var secondCostume = getProp(secondSprite, "costume");
+        if(secondCostume != "red_shirt_wave2") {
+          //This is only true while red_shirt_wave2 is the default costume for this level
+          //If that ever changes, will need to update this if statement
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Change the sprite to a landmark!");
+      }
+      return false;
+    }, "changeToLandmark");  // include i18n feedback string
+  }
+  
+  if(validate2ndLocation) {
+    //check that the 2nd sprite moved from the default (200, 200) location
+    addCriteria(function() {
+      if(spriteIds.length >= 2) {
+        if(checkMovedSpritePin(spriteIds[1])) {
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Move the sprite!");
+      }
+      return false;
+    }, "moveSpriteLocation");  // include i18n feedback string
+  }
+  
+  if(validate2ndSize) {
+    //checks that 2nd sprite changed sizes
+    addCriteria(function() {
+      if(spriteIds.length >= 2) {
+        var secondSprite = {id: spriteIds[1]};
+        var secondScale = getProp(secondSprite, "scale");
+        if(secondScale != 100) {
+          //If you made it here: we passed the criteria
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Change the sprite size!");
+      }
+      return false;
+    }, "spriteSize");  // include i18n feedback string
+  }
+  
+  if(validateMovingBehavior) {
+    addCriteria(function() {
+      if(interactiveBehaviorFound()) {
+        //If you made it here: we passed the criteria
+        return true;
+      }
+      //If you made it here: we failed the criteria
+      console.log("Make sure to add a behavior!");
+      return false;
+    }, "addBehavior");  // include i18n feedback string
+  }
+}
+
+//check for new touching event
+//check that the sprite says something different from before
+function level5Validation(validateNewTouchingEvent, validateNewSpriteSay) {
+  if(validateNewTouchingEvent) {
+    //checks for a touch event
+    addCriteria(function() {
+      var sprites = getSpritesThatTouched();
+      if(sprites != -1) {
+        //If you made it here: we passed the criteria
+        return true;
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("Move your character so they touch the landmark!");
+      }
+      return false;
+    }, "noTouchEvent");  // include i18n feedback string
+  }
+  if(validateNewSpriteSay) {
+    addCriteria(function() {
+      var sprites = getSpritesThatTouched();
+      if(sprites != -1) {
+        var speechBubble = getSpeechForSpriteId(sprites[0]);
+        if(speechBubble != null && speechBubble != validationProps.previous.speeches[sprites[0]]) {
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("Make sure the sprite says something about the landmark!");
+      }
+      
+      //Use this to keep a record of previous speech bubbles from sprites to make sure the sprite changed what they said when touching the landmark
+      if(spriteIds.length >= 1 && World.frameCount > 1) {
+        validationProps.previous.speeches = {};
+        for(var i = 0; i < spriteIds.length; i++) {
+        	validationProps.previous.speeches[spriteIds[i]] = getSpeechForSpriteId(spriteIds[i]);
+        }
+      }
+      return false;
+    }, "spriteSaySomething");  // include i18n feedback string
+  }
+}
+
+//check that there are 3 sprites
+//check for a new costume
+//check for a new location
+//check for a new size
+function level6Validation(validate3Sprites, validateThirdCostume, validateThirdLocation, validateThirdSize) {
+  if(validate3Sprites) {
+    //Checks whether 3 sprites exist
+    addCriteria(function() {
+      //You can reference global variables from helper library (use the README to remind what those are)
+
+      if(spriteIds.length >= 3) {
+        return true;
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Create 3 sprites!");
+      }
+      return false;
+    }, "create3Sprites");  // include i18n feedback string
+  }
+  if(validateThirdCostume) {
+    //Checks whether the 3rd sprite isn't wearing the default costume
+    addCriteria(function() {
+      if(spriteIds.length >= 3) {
+        var thirdSprite = {id: spriteIds[2]};
+        var thirdCostume = getProp(thirdSprite, "costume");
+        if(thirdCostume != "red_shirt_wave2") {
+          //This is only true while red_shirt_wave2 is the default costume for this level
+          //If that ever changes, will need to update this if statement
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Change the sprite to a landmark!");
+      }
+      return false;
+    }, "changeToLandmark");  // include i18n feedback string
+  }
+  if(validateThirdLocation) {
+    //check that the 3rd sprite moved from the default (200, 200) location
+    addCriteria(function() {
+      if(spriteIds.length >= 3) {
+        if(checkMovedSpritePin(spriteIds[2])) {
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Move the sprite!");
+      }
+      return false;
+    }, "moveSpriteLocation");  // include i18n feedback string
+  }
+  if(validateThirdSize) {
+    //checks that 3rd sprite changed sizes
+    addCriteria(function() {
+      if(spriteIds.length >= 3) {
+        var thirdSprite = {id: spriteIds[2]};
+        var thirdScale = getProp(thirdSprite, "scale");
+        if(thirdScale != 100) {
+          //If you made it here: we passed the criteria
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Change the sprite size!");
+      }
+      return false;
+    }, "spriteSize");  // include i18n feedback string
+  }
+}
+
+//check that the sprite we touch is the 3rd sprite we added
+//Check that the sprite actually spoke this frame, rather than continuing a previous speech bubble
+//*This level relies on the same validation as level 5, so only 2 new validation property to check*
+function level7Validation(validateTouchesThirdSprite, validateSpeechThisFrame) {
+  if(validateTouchesThirdSprite) {
+    addCriteria(function() {
+      var sprites = getSpritesThatTouched();
+      if(sprites != -1 && spriteIds.length >= 3) {
+        //check if the sprite that was touched is the same as 3rd sprite
+        if(sprites[1] == spriteIds[spriteIds[2]])
+        	return true;
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("Move your character so they touch the most recent landmark!");
+      }
+      return false;
+    }, "touchingWrongLandmark");  // include i18n feedback string
+  }
+  if(validateSpeechThisFrame) {
+    //Check that the sprite actually spoke this frame, rather than continuing a previous speech bubble
+    addCriteria(function() {
+      var sprites = getSpritesThatTouched();
+      if(sprites != -1 && spriteIds.length >= 3) {
+        //check if the sprite that was touched is the same as 3rd sprite
+        if(sprites[1] == spriteIds[spriteIds[2]]) {
+          if(strictSpriteSpeechRenderedThisFrame(sprites[0])) {
+            return true;
+          }
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("Move your character so they touch the most recent landmark!");
+      }
+      return false;
+    }, "touchingWrongLandmark");  // include i18n feedback string
+  }
+}
+
+//check that there are 4 sprites
+//check for a new costume
+//check for a new location
+//check for a new size
+function level8Validation(validate4Sprites, validateFourthCostume, validateFourthLocation, validateFourthSize) {
+  if(validate4Sprites) {
+    //Checks whether 4 sprites exist
+    addCriteria(function() {
+      if(spriteIds.length >= 4) {
+        return true;
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Create 4 sprites!");
+      }
+      return false;
+    }, "create4Sprites");  // include i18n feedback string
+  }
+  if(validateFourthCostume) {
+    //Checks whether the 4th sprite isn't wearing the default costume
+    addCriteria(function() {
+      if(spriteIds.length >= 4) {
+        var sprite = {id: spriteIds[3]};
+        var spriteCostume = getProp(sprite, "costume");
+        if(spriteCostume != "red_shirt_wave2") {
+          //This is only true while red_shirt_wave2 is the default costume for this level
+          //If that ever changes, will need to update this if statement
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Change the sprite to a landmark!");
+      }
+      return false;
+    }, "changeToLandmark");  // include i18n feedback string
+  }
+  if(validateFourthLocation) {
+    //check that the 4th sprite moved from the default (200, 200) location
+    addCriteria(function() {
+      if(spriteIds.length >= 4) {
+        if(checkMovedSpritePin(spriteIds[3])) {
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Move the sprite!");
+      }
+      return false;
+    }, "moveSpriteLocation");  // include i18n feedback string
+  }
+  if(validateFourthSize) {
+    //checks that 4th sprite changed sizes
+    addCriteria(function() {
+      if(spriteIds.length >= 4) {
+        var sprite = {id: spriteIds[3]};
+        var spriteScale = getProp(sprite, "scale");
+        if(spriteScale != 100) {
+          //If you made it here: we passed the criteria
+          return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+          console.log("Change the sprite size!");
+      }
+      return false;
+    }, "spriteSize");  // include i18n feedback string
+  }
+}
+
+//check that the sprite touches the 4th sprite we added
+//*This level relies on the same validation as level 5, so only 1 new validation property to check*
+function level9Validation(validateTouchesFourthSprite, validateSpeechThisFrame) {
+  if(validateTouchesFourthSprite) {
+    addCriteria(function() {
+      var sprites = getSpritesThatTouched();
+      if(sprites != -1 && spriteIds.length >= 4) {
+        //check if the sprite that was touched is the 4th sprite
+        if(sprites[1] == spriteIds[3]) {
+        	return true;
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("Move your character so they touch the most recent landmark!");
+      }
+      return false;
+    }, "touchingWrongLandmark");  // include i18n feedback string
+  }
+  if(validateSpeechThisFrame) {
+    //Check that the sprite actually spoke this frame, rather than continuing a previous speech bubble
+    addCriteria(function() {
+      var sprites = getSpritesThatTouched();
+      if(sprites != -1 && spriteIds.length >= 4) {
+        //check if the sprite that was touched is the 4th sprite
+        if(sprites[1] == spriteIds[3]) {
+          if(strictSpriteSpeechRenderedThisFrame(sprites[0])) {
+            return true;
+          }
+        }
+      }
+      //If you made it here: we failed the criteria
+      if(DEBUG) {
+        console.log("Move your character so they touch the most recent landmark!");
+      }
+      return false;
+    }, "touchingWrongLandmark");  // include i18n feedback string
+  }
 }

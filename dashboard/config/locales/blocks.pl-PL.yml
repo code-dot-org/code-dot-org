@@ -6,6 +6,8 @@ pl:
         text: przesuwanie NESW za pomocą klawiszy strzałek
       AmysBlocks_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}powiedz {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -1022,6 +1024,26 @@ pl:
             '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"hammer"': MC Hammer - Nie możesz tego dotknąć
             '"peas"': The Black Eyed Peas - Mam przeczucie
+      DansBlocks_setForegroundEffect2:
+        text: wykonaj efekt {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bąbelki
+            '"confetti"': Konfetti
+            '"hearts"': serca
+            '"emojis"': Szczęśliwe emotikony
+            '"rain"': deszcz
+            '"starburst"': Rozprysk
+            '"glass"': Rozbijające się szkło
+            '"twinkling"': Migotliwy
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): będąc przeciągalnym
+            wandering(): wędrowanie
+            shrinking(): zwężenie
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}powiedz {TEXT1}"
       gamelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       gamelab_addTarget:
@@ -1365,9 +1387,24 @@ pl:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": klakson powietrzny
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": oklaski
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": radosne okrzyki
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": kopnięcie
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dwa gwizdki
             "'sound://category_sports/One_Whistle_SFX.mp3'": gwizdek
       gamelab_playSoundOptionsSpace:
         text: zagraj {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": czarna dziura
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Gromada galaktyk 1E0657-558
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Kasjopeja
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Mgławica Kraba
+            "'sound://category_space/Launch_SFX.mp3'": wystrzelenie
+            "'sound://category_space/Lift_Off.mp3'": wystartowanie
+            "'sound://category_space/Pillars_SFX.mp3'": filary
+            "'sound://category_space/Southern_ring_SFX.mp3'": Mgławica NGC 3132
+            "'sound://category_space/Supernova_SFX.mp3'": Supernowa
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
       gamelab_playerBehaviors:
@@ -2026,6 +2063,8 @@ pl:
         text: załóż Miasto Potworów z [COUNT] [0] potworami
       Outbreak_stopMoving:
         text: potwory zatrzymują się
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         text: dodaj zarys {BRUSH}
         options:
