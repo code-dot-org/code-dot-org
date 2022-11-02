@@ -11,14 +11,19 @@
     "map_reference": "/courses/csd-2022/guides/html-tags",
     "video_key": "csd_weblab_intro_2",
     "encrypted": "false",
-    "mini_rubric": "false",
+    "mini_rubric": "true",
     "validation_enabled": "true",
     "display_name": "Fixing Dialogue",
     "bubble_choice_description": "Help a writer fix their website so each line of dialogue appears on a separate line",
+    "thumbnail_url": "https://images.code.org/5bf8426612c7c7696edddb0b66c73428-dialogue.png",
     "encrypted_examples": [
 
     ],
-    "thumbnail_url": "https://images.code.org/5bf8426612c7c7696edddb0b66c73428-dialogue.png"
+    "rubric_key_concept": "Use correct HTML syntax to create text paragraphs",
+    "rubric_performance_level_1": "All texts is contained within paragraph tags. The resulting webpage matches the preview in the level instructions.",
+    "rubric_performance_level_2": "At least some text has been separated out into a paragraph through proper use of paragraph tags. The resulting webpage partially matches the preview in the level instructions",
+    "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
+    "rubric_performance_level_4": "There are no paragraph tags in the text."
   },
   "game_id": 58,
   "published": true,
@@ -26,6 +31,6 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-29T23:54:52.236+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracB_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - PracB_2023\"},{\"changed_at\":\"2022-09-30 00:47:39 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-30 00:52:34 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-29T23:54:52.236+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracB_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - PracB_2023\"},{\"changed_at\":\"2022-09-30 00:47:39 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-30 00:52:34 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-07 20:57:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-07 21:09:40 +0000\",\"changed\":[\"mini_rubric\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -2,13 +2,15 @@
 .navbar-static-top.footer
   .container{ style: 'padding: 10px;' + (full_width ? 'margin: auto' : '') }
     .row
-      .span8{style: (full_width ? 'max-width: 80%;' : '')}
-        - piped_spaces = full_width ? ' | ' : '&nbsp; | &nbsp;'
+      .span9{style: (full_width ? 'max-width: 80%;' : '')}
+        - piped_spaces = ' | '
         - privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
         - if privacy_updated
           = link_to t('footer.privacy_updated'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
         - else
           = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
+        .dim!= piped_spaces
+        = link_to t('footer.cookie_notice'), CDO.code_org_url('/cookies')
         .dim!= piped_spaces
         = link_to t('footer.translate'), CDO.code_org_url('/translate')
         .dim!= piped_spaces

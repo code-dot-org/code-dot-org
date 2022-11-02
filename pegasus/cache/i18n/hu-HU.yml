@@ -457,6 +457,7 @@ hu-HU:
   homepage_banner_40k_teachers_link: Tudj meg többet
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
+  homepage_slot_text_blurb_hoc_2022: Fedezd fel, játssz és alkoss!
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
   homepage_slot_text_link_about_hoc: A Kódolás Órájáról
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
@@ -2328,6 +2329,8 @@ hu-HU:
   hoc_overview_dance_2019_subtitle: 'Programozz le egy Táncos bulit, és oszd meg barátaiddal.
     Közreműködik Katy Perry, Shawn Mendes, Panic! A diszkóban: Lil Nas X, Jonas Brothers,
     Nicki Minaj és még 34-en!'
+  hoc_overview_hello_world_2022_subtitle: Válassz a négy szórakoztató téma közül,
+    ha interaktív karaktereket akarsz kódolni az általad létrehozott világban.
   hoc_overview_title: Óra Kódolás Tevékenységek a Code.org
   hoc_overview_subtitle: A <a href="https://hourofcode.com">Hour of Code</a> egy globális
     mozgalom, amely több tízmillió diák jut el 180+ országban. Bárki, bárhol szervezhet
@@ -2679,3 +2682,12 @@ hu-HU:
     táblagéphez ér, csillagokat és fénysugarakat bocsát ki kék háttér előtt.
   minecraft_tile_alt: Két Minecraft karakter, Steve és Alex, egy Minecraft vizes jelenetet
     ábrázoló háttér előtt, korallokkal, delfinekkel és hínárral.
+  hoc2022_banner_title: Fedezd fel, játssz és alkoss!
+  hoc2022_banner_description: Fedezd fel az univerzumot, lőj célba, mozogj - az informatika
+    kipróbálásának sokféle útja-módja van!
+  hoc2022_cta_primary: Újdonságok megtekintése
+  hoc2022_cta_secondary: Próbálj ki még több tevékenységet!
+  hoc2022_landing_page_explore_description: Fedezz fel új világokat az informatikával!
+  hoc2022_landing_page_play_description: Tiéd a pálya, rúgj gólt!
+  hoc2022_landing_page_create_title: Létrehoz
+  hoc2022_landing_page_create_description: Készíts valami izgalmasat és csodálatosat!

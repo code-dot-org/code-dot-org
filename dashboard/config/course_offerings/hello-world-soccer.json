@@ -1,7 +1,7 @@
 {
   "key": "hello-world-soccer",
-  "display_name": "hello-world-soccer",
-  "category": "other",
-  "is_featured": false,
+  "display_name": "Hello World: Soccer",
+  "category": "hoc",
+  "is_featured": true,
   "assignable": true
 }

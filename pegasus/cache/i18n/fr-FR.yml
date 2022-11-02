@@ -462,6 +462,7 @@ fr-FR:
   homepage_banner_40k_teachers_link: En savoir plus
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
+  homepage_slot_text_blurb_hoc_2022: Explores, joues, crées !
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
   homepage_slot_text_link_about_hoc: À propos de l'Heure de Code
   homepage_slot_text_link_host: Héberger une Heure de Code
@@ -1363,8 +1364,11 @@ fr-FR:
   coursed-2020_name: Cours D (2020)
   coursee-2020_name: Cours E (2020)
   coursef-2020_name: Cours F (2020)
+  coursea-2021_name: Cours A (2021)
+  courseb-2021_name: Cours B (2021)
   coursec-2021_name: Cours C (2021)
   coursed-2021_name: Cours D (2021)
+  coursea-2022_name: Cours A (2022)
   coursed-2022_name: Cours D (2021)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
@@ -1374,6 +1378,7 @@ fr-FR:
   pre-express-2020_name: Cours rapide pour les primo-lecteurs (2020)
   express-2021_name: Cours Express (2021)
   pre-express-2021_name: Cours rapide pour les primo-lecteurs (2021)
+  express-2022_name: Cours Express (2022)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
   accelerated_name: Cours accéléré
@@ -1601,14 +1606,15 @@ fr-FR:
   projguts_shortdescription: Essaie de modéliser et de simuler en utilisant le jeu
     pierre/papier/ciseaux.
   hourofcode_shortdescription: Apprends à coder avec Mark Zuckerberg et Angry Birds !
-  frozen_shortdescription: Utilisons du code pour rejoindre Anna et Elsa tandis qu’elles
-    explorent la magie et la beauté de la glace.
+  frozen_shortdescription: On va utiliser du code pour rejoindre Anna et Elsa dans
+    leur exploration de la magie et la beauté de la glace.
   starwars_shortdescription: Apprends à programmer des droïdes et crée ton propre
     jeu Star Wars dans une galaxie lointaine, très lointaine.
-  playlab_shortdescription: Programme une histoire ou un jeu avec le Labo !
+  playlab_shortdescription: Crée une histoire ou construis un jeu avec le Labo Jeux !
   infinity_shortdescription: Utilisez le labo pour créer une histoire ou un jeu mettant
     en vedette les personnages de Disney Infiny.
-  artist_shortdescription: Dessine des super images et schémas avec l'Artiste!
+  artist_shortdescription: Dessine des super images et crée des designs cool avec
+    l'Artiste !
   monsterocding_shortdescription: Une aventure de programmation colorée et autoguidée
     pour les enfants.
   allcancode_shortdescription: Un jeu immersif pour guider Marco à l'aide d'un langage
@@ -2364,7 +2370,7 @@ fr-FR:
   user_header_gamelab: Labo Jeux
   user_header_playlab: Labo de jeux
   user_header_dance: Soirée Dansante
-  user_header_spritelab: Le Labo des Lutins
+  user_header_spritelab: Le Labo des Sprites
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Afficher tous les projets...
@@ -2441,6 +2447,8 @@ fr-FR:
   hoc_overview_dance_2019_subtitle: Code une Soirée Dansante à partager avec tes amis.
     Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj, et 34 autres artistes !
+  hoc_overview_hello_world_2022_subtitle: Choisis entre quatre activités amusantes
+    pour programmer des personnages interactifs dans un monde que tu as créé!
   hoc_overview_title: Activités Hour of Code de Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code</a> est un
     mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de
@@ -2510,7 +2518,7 @@ fr-FR:
   hoc2018_mc_educators_box1_title: Coder avec Minecraft
   hoc2018_mc_educators_box1_desc: 'Minecraft : Education Edition offre un programme
     d’études, une formation et du codage dans Minecraft, conformes aux normes.'
-  hoc2018_mc_educators_box1_button: Démarrer
+  hoc2018_mc_educators_box1_button: Commencer
   hoc2018_mc_educators_box2_title: Télécharger le guide de l'animateur
   hoc2018_mc_educators_box2_desc: Cette boîte à outils vous aidera à organiser une
     Hour of Code et à impliquer vos élèves dans l'informatique.
@@ -2809,4 +2817,17 @@ fr-FR:
   outbreak_tile_title: Épidémie
   outbreak_tile_subtitle: Un virus a infecté Monster Town ! Codez un simulateur d'épidémie
     et faites des prédictions sur ce qui arrivera aux voisins de Monster Town.
-  footer_cookie_notice: " Utilisation de cookies"
+  footer_cookie_notice: " Utilisation des cookies"
+  hoc2022_banner_title: Découvrir, jouer, créer !
+  hoc2022_banner_description: 'Explorez l''univers, marquez des buts, bougez : il
+    y a tant de manières d''utiliser l''informatique!'
+  hoc2022_cta_primary: Découvrez les nouveautés
+  hoc2022_cta_secondary: Essayez d'autres activités
+  hoc2022_landing_page_explore_description: Grâce aux sciences informatiques, ouvrez
+    les portes de nouveaux mondes !
+  hoc2022_landing_page_play_description: Montrez de quoi vous êtes capable et marquez
+    des points !
+  hoc2022_landing_page_create_title: Créer
+  hoc2022_landing_page_create_description: Créez des choses hors du commun et merveilleuses
+    !
+  try_it_yourself: Essaie toi-même !

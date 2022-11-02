@@ -2763,7 +2763,11 @@
     }
   },
   "https://studio.code.org/s/allthethings/lessons/43/levels/1": {
-    "short_instructions": "Here are some short instructions for this test AI Lab level."
+    "short_instructions": "Here are some short instructions for this test AI Lab level.",
+    "dynamic_instructions": {
+      "dataDisplayFeatures": "So, **choose one or more columns**.\n\nThey will do the predicting.",
+      "selectTrainer": "So, set up the training."
+    }
   },
   "https://studio.code.org/s/allthethings/lessons/43/levels/2": {
     "short_instructions": "Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.",
@@ -2813,5 +2817,11 @@
   },
   "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
     "long_instructions": "This is a Java Lab level with passing validation."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/3": {
+    "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and no modal function editor."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
+    "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and uses the modal function editor."
   }
 }

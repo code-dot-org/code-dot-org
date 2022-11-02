@@ -5,13 +5,14 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "storylab"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "show_type_hints": true,
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
@@ -32,35 +33,41 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "project_template_level_name": "csc_bookcover_template2",
-    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make sure to connect a `print` block under `when all prompts` answered.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/127ba7699315261b39d9f283f5743072/csc_bookcover_promptanswered.mp3\"}]",
-    "long_instructions": "**Let’s make our program respond to the user once they answer the prompt.**\r\n \r\n##Do This\r\n- Find the print block in the World category and add it under when all prompts answered.\r\n- Run your program and make sure it prints a statement at the top once you’ve answered the prompt.\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make sure to connect a `print` block under `when prompt answered`.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a184d2a330ab2c413b1ceea131030665/csc_bookcover_promptanswered.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"If you need more print blocks drag more under the first one.\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/116e29ce87b11f38e93b0aa014ba82a2/csc_bookcover_promptanswered.mp3\"}]",
+    "long_instructions": "**Let’s make our program respond to the user once they answer the prompt.**\r\n\r\n##Do This\r\n- Add a `print` block under `when prompt answered`. \r\n- Type in a 1-2 sentence synopsis of the book.\r\n- Run your program and make sure it prints a synopsis at the top once you’ve chosen the \"Learn More\" prompt.\r\n\r\n_Extra Challenge: Use the clear headings block to clear space for the synopsis to print at the top of the screen._\r\n\r\n\r\n\r\n\r\n",
     "instructions_icon": "bear",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-09-29T23:12:48.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-09-29T23:12:48.463+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_prompt\\\"\"],\"cloned_from\":\"csc_bookcover_prompt\"},{\"changed_at\":\"2022-09-29 23:15:47 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:18:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:25:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:33:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:49:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "created_at": "2022-09-29T23:12:48.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-09-29T23:12:48.463+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_prompt\\\"\"],\"cloned_from\":\"csc_bookcover_prompt\"},{\"changed_at\":\"2022-09-29 23:15:47 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:18:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:25:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:33:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-29 23:49:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-09-30 15:24:22 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:09:48 +0000\",\"changed\":[\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:16:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-11 20:41:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:18:24 +0000\",\"changed\":[\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-12 17:23:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:28:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:33:33 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:43:53 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:45:07 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:46:31 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:46:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-18 20:57:26 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_showTitleScreen">
-          <value name="TITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
-            </block>
-          </value>
-          <value name="SUBTITLE">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT"/>
             </block>
           </value>
         </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT"/>
+            </block>
+          </value>
+        </block>
+        <block type="storylab_clearHeadings"/>
         <block type="gamelab_setBackgroundImageAs">
           <field name="IMG">"front_of_house"</field>
         </block>
@@ -93,13 +100,6 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_printText">
-          <value name="TEXT">
-            <block type="gamelab_textJoin">
-              <field name="TEXT1"/>
-            </block>
-          </value>
-        </block>
         <block type="gamelab_spriteClicked">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
@@ -108,29 +108,37 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setPromptWith2Choices">
+        <block type="storylab_setPromptWithChoice">
           <value name="QUESTION">
             <block type="text">
-              <field name="TEXT"/>
+              <field name="TEXT">Interested?</field>
             </block>
           </value>
           <value name="VAR">
             <block type="variables_get">
-              <field name="VAR">i</field>
+              <field name="VAR">prompt</field>
             </block>
           </value>
           <value name="A">
             <block type="text">
-              <field name="TEXT"/>
+              <field name="TEXT">Learn more</field>
             </block>
           </value>
-          <value name="B">
+        </block>
+        <block type="gamelab_whenPromptAnswered">
+          <value name="VAR">
+            <block type="variables_get" can_disconnect_from_parent="false">
+              <field name="VAR">prompt</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_printText">
+          <value name="TEXT">
             <block type="text">
               <field name="TEXT"/>
             </block>
           </value>
         </block>
-        <block type="gamelab_whenAllPromptsAnswered"/>
       </xml>
     </toolbox_blocks>
   </blocks>

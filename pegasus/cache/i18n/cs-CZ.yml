@@ -454,6 +454,7 @@ cs-CZ:
   homepage_banner_40k_teachers_link: Zjisti více
   homepage_slot_text_title_hoc: Hodina kódu
   homepage_slot_text_blurb_hoc: Každý se to může naučit. Začni dnes
+  homepage_slot_text_blurb_hoc_2022: Bádejte, hrajte, vytvářejte!
   homepage_slot_text_link_hoc: Vyzkoušej Hodinu Programování
   homepage_slot_text_link_about_hoc: O Hodině kódu
   homepage_slot_text_link_host: Uspořádejte Hodinu kódu
@@ -2267,6 +2268,8 @@ cs-CZ:
   hoc_overview_dance_2019_subtitle: Naprogramuj Dance Party a sdílej ji s kamarády.
     Vystupují Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj a dalších 34 umělců!
+  hoc_overview_hello_world_2022_subtitle: Vyberte si jeden ze čtyř zábavných motivů
+    a naprogramujte interaktivní postavičky ve světě, co si sami vytvoříte.
   hoc_overview_title: Aktivity pro Hodinu kódu od Code.org
   hoc_overview_subtitle: Hodina <a href="https://hourofcode.com">Hour of Code</a>
     je globální hnutí, které dosahuje desítek milionů studentů v 180 a více zemích.
@@ -2616,3 +2619,14 @@ cs-CZ:
     pozadí
   minecraft_tile_alt: Dvě postavičky z Minecraftu, Steve a Alex. Na pozadí se zobrazuje
     vodní scéna z Minecraftu s korály, delfíny a chaluhami.
+  hoc2022_banner_title: Bádejte, hrajte si, tvořte!
+  hoc2022_banner_description: Probádejte vesmír, vstřelte branku, dejte ránu — je
+    tolik způsobů, jak si vyzkoušet počítačovou vědu!
+  hoc2022_cta_primary: Podívejte se, co je nového
+  hoc2022_cta_secondary: Vyzkoušejte další aktivity
+  hoc2022_landing_page_explore_description: Otevřete dveře novým světům s počítačovou
+    vědou!
+  hoc2022_landing_page_play_description: Převezměte pole a skórujte!
+  hoc2022_landing_page_create_title: Vytvořit
+  hoc2022_landing_page_create_description: Udělejte něco podivného a zázračného!
+  try_it_yourself: Vyzkoušejte to sami!

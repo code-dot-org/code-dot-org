@@ -942,6 +942,11 @@ export function makeFooterMenuItems() {
       text: msg.privacyPolicy(),
       link: 'https://code.org/privacy',
       newWindow: true
+    },
+    {
+      text: msg.cookieNotice(),
+      link: 'https://code.org/cookies',
+      newWindow: true
     }
   ];
 
@@ -3192,7 +3197,11 @@ StudioApp.prototype.alertIfAbusiveProject = function() {
       <AbuseError
         i18n={{
           tos: msg.tosLong({url: 'http://code.org/tos'}),
-          contact_us: msg.contactUs({url: 'https://code.org/contact'})
+          contact_us: msg.contactUs({
+            url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+              `Abuse error for project at url: ${window.location.toString()}`
+            )}`
+          })
         }}
       />
     );
@@ -3210,7 +3219,11 @@ StudioApp.prototype.alertIfProfaneOrPrivacyViolatingProject = function() {
       <AbuseError
         i18n={{
           tos: msg.policyViolation(),
-          contact_us: msg.contactUs({url: 'https://code.org/contact'})
+          contact_us: msg.contactUs({
+            url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+              `Abuse error for project at url: ${window.location.toString()}`
+            )}`
+          })
         }}
       />
     );

@@ -1,4 +1,4 @@
-require_relative 'hooks_utils.rb'
+require_relative 'hooks_utils'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 GITHUB_MAX_FILE_SIZE_BYTES = 100_000_000

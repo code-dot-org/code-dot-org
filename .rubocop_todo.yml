@@ -95,11 +95,6 @@ Lint/EmptyClass:
 Lint/EmptyFile:
   Enabled: false
 
-# Offense count: 4
-# This cop supports safe auto-correction (--auto-correct).
-Lint/ErbNewArguments:
-  Enabled: false
-
 # Offense count: 7
 Lint/MissingSuper:
   Enabled: false
@@ -138,10 +133,6 @@ Lint/RescueException:
 # Offense count: 95
 # This cop supports safe auto-correction (--auto-correct).
 Lint/ScriptPermission:
-  Enabled: false
-
-# Offense count: 1
-Lint/SelfAssignment:
   Enabled: false
 
 # Offense count: 1
@@ -214,11 +205,6 @@ Performance/Detect:
 Performance/MethodObjectAsBlock:
   Enabled: false
 
-# Offense count: 29
-# This cop supports safe auto-correction (--auto-correct).
-Performance/StringInclude:
-  Enabled: false
-
 # Offense count: 20
 # This cop supports safe auto-correction (--auto-correct).
 Performance/TimesMap:
@@ -246,11 +232,6 @@ Rails/Date:
 Rails/DeprecatedActiveModelErrorsMethods:
   Enabled: false
 
-# Offense count: 11
-# This cop supports safe auto-correction (--auto-correct).
-Rails/DurationArithmetic:
-  Enabled: false
-
 # Offense count: 478
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: Whitelist, AllowedMethods, AllowedReceivers.
@@ -268,11 +249,6 @@ Rails/FilePath:
 
 # Offense count: 90
 Rails/I18nLocaleTexts:
-  Enabled: false
-
-# Offense count: 11
-# This cop supports safe auto-correction (--auto-correct).
-Rails/IndexWith:
   Enabled: false
 
 # Offense count: 19
@@ -605,11 +581,6 @@ Style/RedundantBegin:
 Style/RedundantCondition:
   Enabled: false
 
-# Offense count: 42
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantFileExtensionInRequire:
-  Enabled: false
-
 # Offense count: 2
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowComments.
@@ -663,11 +634,6 @@ Style/RescueModifier:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: implicit, explicit
 Style/RescueStandardError:
-  Enabled: false
-
-# Offense count: 17
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/SingleArgumentDig:
   Enabled: false
 
 # Offense count: 38

@@ -325,6 +325,7 @@ th-TH:
   homepage_banner_40k_teachers_link: สิ่งที่น่าเรียนรู้ยังมีอีก
   homepage_slot_text_title_hoc: ช่วงเวลาของ Code
   homepage_slot_text_blurb_hoc: ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้
+  homepage_slot_text_blurb_hoc_2022: สำรวจ เล่น สร้าง!
   homepage_slot_text_link_hoc: ลองใช้ Hour of Code
   homepage_slot_text_link_host: จัดงาน Hour of Code
   homepage_slot_text_link_hocserved: "# คน เข้าร่วมแล้ว"
@@ -1686,3 +1687,12 @@ th-TH:
   outbreak_tile_subtitle: Monster Town กำลังติดไวรัส! เขียนโค้ดเครื่องจำลองการแพร่ระบาดของไวรัส
     และคาดการณ์สิ่งที่จะเกิดขึ้นกับเมืองที่อยู่กับเมืองนี้
   footer_cookie_notice: ประกาศเกี่ยวกับคุกกี้
+  hoc2022_banner_title: สำรวจ เล่น สร้าง!
+  hoc2022_banner_description: สำรวจจักรวาล ทำคะแนนตามเป้าหมาย เคลื่อนไหว — มีหลายวิธีที่จะลองใช้วิทยาการคอมพิวเตอร์!
+  hoc2022_cta_primary: ดูว่ามีอะไรใหม่
+  hoc2022_cta_secondary: ลองกิจกรรมเพิ่มเติม
+  hoc2022_landing_page_explore_description: เปิดประตูสู่โลกใหม่ด้วยวิทยาการคอมพิวเตอร์!
+  hoc2022_landing_page_play_description: ลงสนามและทำคะแนนกันเถอะ!
+  hoc2022_landing_page_create_title: สร้าง
+  hoc2022_landing_page_create_description: มาทำส่งประหลาดแต่ยอดเยี่ยมกันเถอะ!
+  try_it_yourself: คราวนี้คุณลองทำดู
