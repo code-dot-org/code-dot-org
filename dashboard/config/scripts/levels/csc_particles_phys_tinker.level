@@ -9,7 +9,8 @@
       "ParticlesBlocks"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zParticlesModule"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -41,6 +42,7 @@
       "upButton",
       "downButton"
     ],
+    "validation_code": "//validation",
     "preload_asset_list": null,
     "encrypted_examples": [
 
@@ -51,7 +53,7 @@
   "created_at": "2022-10-28T18:50:26.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-28T18:50:26.405+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_observer\\\"\"],\"cloned_from\":\"csc_particles_phys_observer\"},{\"changed_at\":\"2022-10-28 18:53:01 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:55:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:55:47 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:56:04 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:58:42 +0000\",\"changed\":[\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 19:05:17 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:21:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:21:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:29:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:32:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:33:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:33:52 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:34:02 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:34:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:32:17 +0000\",\"changed\":[\"long_instructions\",\"authored_hints\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-28T18:50:26.405+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_observer\\\"\"],\"cloned_from\":\"csc_particles_phys_observer\"},{\"changed_at\":\"2022-10-28 18:53:01 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:55:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:55:47 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:56:04 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:58:42 +0000\",\"changed\":[\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 19:05:17 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:21:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:21:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:29:39 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:32:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:33:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:33:52 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:34:02 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:34:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:32:17 +0000\",\"changed\":[\"long_instructions\",\"authored_hints\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 17:22:27 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 23:03:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:04:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:05:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:05:58 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 23:07:11 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,65 +88,55 @@
                             </block>
                           </value>
                           <next>
-                            <block type="gamelab_spriteSay">
-                              <field name="SPEECH">First, bring the solid ice to the microscope for a closer look. </field>
-                              <value name="SPRITE">
-                                <block type="gamelab_allSpritesWithAnimation">
-                                  <field name="ANIMATION">"scientist_2"</field>
+                            <block type="gamelab_makeNewSpriteAnon">
+                              <field name="ANIMATION_NAME">"flame"</field>
+                              <value name="LOCATION">
+                                <block type="gamelab_location_picker">
+                                  <field name="LOCATION">{"x":70,"y":80}</field>
                                 </block>
                               </value>
                               <next>
-                                <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"flame"</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":70,"y":80}</field>
+                                <block type="gamelab_setProp">
+                                  <field name="PROPERTY">"scale"</field>
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"flame"</field>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number">
+                                      <field name="NUM">50</field>
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="gamelab_setProp">
-                                      <field name="PROPERTY">"scale"</field>
-                                      <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"flame"</field>
-                                        </block>
-                                      </value>
-                                      <value name="VAL">
-                                        <block type="math_number">
-                                          <field name="NUM">50</field>
+                                    <block type="gamelab_makeNewSpriteAnon">
+                                      <field name="ANIMATION_NAME">"ice"</field>
+                                      <value name="LOCATION">
+                                        <block type="gamelab_location_picker">
+                                          <field name="LOCATION">{"x":192,"y":234}</field>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="gamelab_makeNewSpriteAnon">
-                                          <field name="ANIMATION_NAME">"ice"</field>
-                                          <value name="LOCATION">
-                                            <block type="gamelab_location_picker">
-                                              <field name="LOCATION">{"x":192,"y":234}</field>
+                                        <block type="gamelab_setProp">
+                                          <field name="PROPERTY">"scale"</field>
+                                          <value name="SPRITE">
+                                            <block type="gamelab_allSpritesWithAnimation">
+                                              <field name="ANIMATION">"ice"</field>
+                                            </block>
+                                          </value>
+                                          <value name="VAL">
+                                            <block type="math_number">
+                                              <field name="NUM">50</field>
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="gamelab_setProp">
-                                              <field name="PROPERTY">"scale"</field>
+                                            <block type="gamelab_addBehaviorSimple">
                                               <value name="SPRITE">
-                                                <block type="gamelab_allSpritesWithAnimation">
-                                                  <field name="ANIMATION">"ice"</field>
-                                                </block>
+                                                <block type="gamelab_getAllSprites"/>
                                               </value>
-                                              <value name="VAL">
-                                                <block type="math_number">
-                                                  <field name="NUM">50</field>
-                                                </block>
+                                              <value name="BEHAVIOR">
+                                                <block type="gamelab_draggable"/>
                                               </value>
-                                              <next>
-                                                <block type="gamelab_addBehaviorSimple">
-                                                  <value name="SPRITE">
-                                                    <block type="gamelab_getAllSprites"/>
-                                                  </value>
-                                                  <value name="BEHAVIOR">
-                                                    <block type="gamelab_draggable"/>
-                                                  </value>
-                                                </block>
-                                              </next>
                                             </block>
                                           </next>
                                         </block>
@@ -163,6 +155,117 @@
               </next>
             </block>
           </statement>
+        </block>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" deletable="false" editable="false">
+              <mutation name="labSetup"/>
+              <next>
+                <block type="gamelab_spriteSay" editable="false">
+                  <field name="SPEECH">First, bring the solid ice to the microscope for a closer look. </field>
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"scientist_2"</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"scientist_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="labSetup"/>
+              <next>
+                <block type="gamelab_spriteSay" deletable="false" editable="false">
+                  <field name="SPEECH">Now, bring the heat to the ice.</field>
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"scientist_2"</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" deletable="false">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"ice"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"science_microscope"</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn" deletable="false">
+              <mutation name="lookInMicroscope"/>
+              <next>
+                <block type="ParticlesBlocks_statesOfMatter2" deletable="false">
+                  <field name="COSTUME">"h2o-01"</field>
+                  <field name="BEHAVIOR">"liquid"</field>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" deletable="false">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"flame"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"ice"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_setAnimation" deletable="false">
+              <field name="ANIMATION">"water_glass"</field>
+              <value name="THIS">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"ice"</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching" deletable="false">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"water_glass"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"science_microscope"</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn" deletable="false">
+              <mutation name="lookInMicroscope"/>
+              <next>
+                <block type="ParticlesBlocks_statesOfMatter2" deletable="false">
+                  <field name="COSTUME">"h2o-01"</field>
+                  <field name="BEHAVIOR">"gas"</field>
+                </block>
+              </next>
+            </block>
+          </next>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation/>
@@ -224,115 +327,6 @@
               </next>
             </block>
           </statement>
-        </block>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="labSetup"/>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_atTime" deletable="false" editable="false">
-          <field name="UNIT">"seconds"</field>
-          <value name="N">
-            <block type="math_number">
-              <field name="NUM">4</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay" deletable="false">
-              <field name="SPEECH">Then bring the heat to the ice.</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"scientist_2"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"scientist_2"</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="labSetup"/>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"ice"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"science_microscope"</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="lookInMicroscope"/>
-              <next>
-                <block type="ParticlesBlocks_statesOfMatter2">
-                  <field name="COSTUME">"h2o-01"</field>
-                  <field name="BEHAVIOR">"solid"</field>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"flame"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"ice"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_setAnimation">
-              <field name="ANIMATION">"water_glass"</field>
-              <value name="THIS">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"ice"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"water_glass"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"science_microscope"</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn">
-              <mutation name="lookInMicroscope"/>
-              <next>
-                <block type="ParticlesBlocks_statesOfMatter2">
-                  <field name="COSTUME">"h2o-01"</field>
-                  <field name="BEHAVIOR">"liquid"</field>
-                </block>
-              </next>
-            </block>
-          </next>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>

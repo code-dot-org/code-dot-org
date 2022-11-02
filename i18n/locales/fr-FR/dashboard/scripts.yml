@@ -6,32 +6,32 @@ fr:
         course1:
           title: Cours 1
           description: Commencer par le Cours 1 pour les jeunes lecteurs. Les élèves créeront des programmes informatiques qui les aideront à apprendre à collaborer avec les autres, à développer des compétences qui les aideront à résoudre des problèmes, et à persister lors de tâches difficiles. À la fin de ce cours, les élèves créent leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les niveaux maternelle et CP.
-          description_short: Commencer par le Cours 1 pour les jeunes lecteurs.
+          description_short: Introduction à l'informatique pour les jeunes lecteurs.
           description_audience: De 4 à 6 ans
           student_description: Commencer par le Cours 1 pour les jeunes lecteurs. Les élèves créeront des programmes informatiques qui les aideront à apprendre à collaborer avec les autres, à développer des compétences qui les aideront à résoudre des problèmes, et à persister lors de tâches difficiles. À la fin de ce cours, les élèves créent leur propre jeu personnalisé ou une histoire qu'ils pourront partager. Recommandé pour les niveaux maternelle et CP.
         course2:
           title: Cours 2
           description: Commencer avec le Cours 2 pour les élèves qui savent lire et n'ont aucune expérience antérieure en matière de programmation. Dans le cadre de ce cours, les élèves créeront des programmes pour résoudre des problèmes et développeront des jeux interactifs ou des histoires qu'ils pourront partager . Recommandé pour les niveaux CE2-CM2.
-          description_short: Commencer avec le Cours 2 pour les élèves qui savent lire.
-          description_audience: 6 ans et + (lecture indispensable)
+          description_short: Introduction à l'informatique pour les élèves qui savent lire.
+          description_audience: À partir de 6 ans (lecture indispensable)
           student_description: Commencer avec le Cours 2 pour les élèves qui savent lire et n'ont aucune expérience antérieure en matière de programmation. Dans le cadre de ce cours, les élèves créeront des programmes pour résoudre des problèmes et développeront des jeux interactifs ou des histoires qu'ils pourront partager . Recommandé pour les niveaux CE2-CM2.
         course3:
           title: Cours 3
           description: Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2 (8-10 ans).
-          description_short: Le Cours 3 fait suite au Cours 2.
+          description_short: Approfondir encore plus ses connaissances de la programmation en développant des jeux et des histoires interactives. Le Cours 3 fait suite au Cours 2.
           description_audience: De 8 à 18 ans
           student_description: Le cours 3 s'adresse aux élèves qui ont suivi le cours 2. Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves pourront créer des histoires interactives et des jeux qu'ils pourront partager avec leurs amis. Recommandé pour les CM1-CM2 (8-10 ans).
         playlab:
           title: Labo de jeux
-          description: Programme une histoire ou un jeu avec le Labo !
-          description_short: Programme une histoire ou un jeu avec le Labo !
-          student_description: Programme une histoire ou un jeu avec le Labo !
+          description: Crée une histoire ou construis un jeu avec le Labo Jeux !
+          description_short: Crée une histoire ou construis un jeu avec le Labo Jeux !
+          student_description: Crée une histoire ou construis un jeu avec le Labo Jeux !
           name: playlab
         artist:
           title: Artiste
-          description: Dessine des super images et schémas avec l'Artiste!
-          description_short: Dessine des super images et schémas avec l'Artiste!
-          student_description: Dessine des super images et schémas avec l'Artiste!
+          description: Dessine des super images et crée des designs cool avec l'Artiste !
+          description_short: Dessine des super images et crée des designs cool avec l'Artiste !
+          student_description: Dessine des super images et crée des designs cool avec l'Artiste !
           name: artiste
         hourofcode:
           title: Labyrinthe classique
@@ -42,13 +42,14 @@ fr:
         frozen:
           title: Code avec Anna et Elsa
           description: Utilisons le code pour rejoindre Anna et Elsa dans leur exploration de la magie et de la beauté de la glace. Tu vas créer des flocons de neige et des motifs en patinant sur la glace et faire un pays des merveilles hivernal que tu pourras partager avec tes amis !
-          description_short: Utilisons du code pour rejoindre Anna et Elsa tandis qu’elles explorent la magie et la beauté de la glace.
+          description_short: On va utiliser du code pour rejoindre Anna et Elsa dans leur exploration de la magie et la beauté de la glace.
           student_description: Utilisons le code pour rejoindre Anna et Elsa dans leur exploration de la magie et de la beauté de la glace. Tu vas créer des flocons de neige et des motifs en patinant sur la glace et faire un pays des merveilles hivernal que tu pourras partager avec tes amis !
           name: frozen
         course4:
           title: Cours 4
           description: Le Cours 4 s'adresse aux élèves qui ont déjà suivi les Cours 2 et 3. Les élèves approfondiront les sujets de programmation introduits aux cours précédents - des solutions souples à des problèmes plus complexes. À la fin de ce cours, les élèves créent des histoires et des jeux interactifs qu'ils peuvent partager avec n'importe qui. Recommandé pour les niveaux CM1-4e.
-          description_audience: De 10 à 18 ans
+          description_short: Construis des programmes plus complexes en utilisant des notions telles que les boucles et les fonctions avec des paramètres. Ce cours fait suite au Cours 3.
+          description_audience: De 9 à 18 ans
           student_description: Le Cours 4 s'adresse aux élèves qui ont déjà suivi les Cours 2 et 3. Les élèves approfondiront les sujets de programmation introduits aux cours précédents - des solutions souples à des problèmes plus complexes. À la fin de ce cours, les élèves créent des histoires et des jeux interactifs qu'ils peuvent partager avec n'importe qui. Recommandé pour les niveaux CM1-4e.
         Course4pre:
           title: Prérequis du Cours 4
@@ -66,9 +67,9 @@ fr:
           student_description: Apprendre la programmation fonctionnelle par l'algèbre.
         infinity:
           title: Labo de Jeux de Disney Infinity
-          description: Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.
-          description_short: Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.
-          student_description: Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.
+          description: Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène les personnages de Disney Infinity.
+          description_short: Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène les personnages de Disney Infinity.
+          student_description: Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène les personnages de Disney Infinity.
           name: infini
         algebrademo:
           title: Démo de l'algèbre
@@ -238,9 +239,9 @@ fr:
           student_description: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
         oceans:
           title: IA pour les Océans
-          description: Découvrez comment L'IA et l'apprentissage automatique peuvent être utilisés pour résoudre les problèmes mondiaux.
-          description_short: Découvrez comment L'IA et l'apprentissage automatique peuvent être utilisés pour résoudre les problèmes mondiaux.
-          student_description: Découvrez comment L'IA et l'apprentissage automatique peuvent être utilisés pour résoudre les problèmes mondiaux.
+          description: Découvre comment L'IA et l'apprentissage automatique peuvent être utilisés pour aider à résoudre les problèmes mondiaux.
+          description_short: Découvre comment L'IA et l'apprentissage automatique peuvent être utilisés pour aider à résoudre les problèmes mondiaux.
+          student_description: Découvre comment L'IA et l'apprentissage automatique peuvent être utilisés pour aider à résoudre les problèmes mondiaux.
           name: océans
         cspunit6:
           description_short: Apprenez à collecter et à utiliser des données dans les applications du Labo des Applis.
@@ -2303,6 +2304,7 @@ fr:
           title: Détecteur de Collision
         dance-2019:
           title: Soirée Dansante (2019)
+          description_short: Avec Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, et 34 autres artistes !
           description: Codez votre propre soirée dansante à partager avec vos amis !
           student_description: Codez votre propre soirée dansante à partager avec vos amis !
           name: dance-2019
@@ -2996,6 +2998,7 @@ fr:
               display_name: Projet de fin de cours
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         courseb-2021:
+          title: Cours B (2021)
           description_short: Une introduction à l'informatique pour les pré-lecteurs. Similaire au cours A, mais avec une profondeur de concept accrue.
           description_audience: 'Âges : 5 à 8 ans'
           lesson_groups:
@@ -3011,6 +3014,7 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Projet de fin de cours
+              description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         coursec-2021:
           title: Cours C (2021)
@@ -3576,6 +3580,7 @@ fr:
               display_name: Événements
             lessonGroup-5:
               display_name: Projet de fin de cours
+          title: Cours A (2022)
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
@@ -3599,6 +3604,7 @@ fr:
               display_name: Les Boucles « Pour »
             end_of_course_project:
               display_name: Projet de fin de cours
+          title: Cours Express (2022)
           description: Apprends l'informatique en essayant les cours ici à ton propre rythme ! Apprends à créer des logiciels, développe des compétences de résolution de problèmes et plonge-toi dans des défis amusants ! Développe des jeux et des projets créatifs à partager avec tes amis, ta famille et tes enseignants.
           student_description: Apprends l'informatique en essayant les cours ici à ton propre rythme ! Apprends à créer des logiciels, développe des compétences de résolution de problèmes et plonge-toi dans des défis amusants ! Développe des jeux et des projets créatifs à partager avec tes amis, ta famille et tes enseignants.
           description_short: 'Une introduction à l''informatique : elle combine le meilleur de notre programme pour l''école primaire à destination des élèves plus âgés.'
@@ -4027,6 +4033,8 @@ fr:
               display_name: Enquête
             lessonGroup-3:
               display_name: Contenu
+            lessonGroup-5:
+              display_name: Leçons alternatives
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

@@ -54,10 +54,12 @@
           "display_name": "Nagłówki i akapity"
         },
         "csd-2022/html": {
-          "display_name": "HTML"
+          "display_name": "HTML",
+          "content": "HTML (Hypertext Markup Language) to język używany do definiowania zawartości stron internetowych. Więcej informacji na temat tagów i atrybutów HTML można znaleźć na stronie [Dokumentacja Web Lab](/docs/weblab/)."
         },
         "csd-2022/html-overview": {
-          "display_name": "Streszczenie"
+          "display_name": "Streszczenie",
+          "content": "HTML (Hypertext Markup Language) to język używany do definiowania zawartości stron internetowych. Więcej informacji na temat tagów i atrybutów HTML można znaleźć na stronie [Dokumentacja Web Lab](/docs/weblab/)."
         },
         "csd-2022/html-tags": {
           "display_name": "Tagi HTML"
@@ -128,7 +130,11 @@
         "csd-2022/velocity": {
           "display_name": "Prędkość"
         },
+        "csd-2022/when-to-make-a-function": {
+          "display_name": "Kiedy utworzyć funkcję?"
+        },
         "csd-2022/which-type-of-chart": {
+          "display_name": "Jaki typ wykresu?",
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         }
       }
