@@ -18,15 +18,12 @@ import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheck
 
 const AdditionalDemographicInformation = props => {
   const {data} = props;
+  const hasNoProgramSelected = data.program === undefined;
 
-  return (
-    <FormContext.Provider value={props}>
-      <LabelsContext.Provider
-        value={PageLabels.additionalDemographicInformation}
-      >
-        <FormGroup>
-          <h3>Section 4: {SectionHeaders.additionalDemographicInformation}</h3>
-
+  const renderContents = () => {
+    if (!hasNoProgramSelected) {
+      return (
+        <>
           <LabeledRadioButtonsWithAdditionalTextFields
             name="currentRole"
             textFieldMap={{[TextFields.otherPleaseList]: 'other'}}
@@ -66,6 +63,20 @@ const AdditionalDemographicInformation = props => {
           </p>
           <LabeledRadioButtons name="genderIdentity" />
           <LabeledCheckBoxes name="race" />
+        </>
+      );
+    }
+  };
+
+  return (
+    <FormContext.Provider value={props}>
+      <LabelsContext.Provider
+        value={PageLabels.additionalDemographicInformation}
+      >
+        <FormGroup>
+          <h3>Section 4: {SectionHeaders.additionalDemographicInformation}</h3>
+
+          {renderContents()}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>

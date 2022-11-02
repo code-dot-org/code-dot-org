@@ -22,8 +22,8 @@ module Pd
       additional_demographic_information: 'Additional Demographic Information',
       administrator_information: 'Administrator/School Leader Information',
       implementation_plan: 'Implementation Plan',
+      professional_learning_program_requirements: 'Program Requirements and Submission',
       teaching_background: 'Teaching Background',
-      professional_learning_program_requirements: 'Professional Learning Program Requirements',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -103,18 +103,18 @@ module Pd
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
         replace_existing: 'Will this course replace an existing computer science course in the master schedule?'
       },
-      teaching_background: {
-        principal_title: "Administrator/School Leader's title",
-        agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
-      },
       professional_learning_program_requirements:
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
-          scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
+          scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
+          agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
+      teaching_background: {
+        principal_title: "Administrator/School Leader's title"
+      },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
         rural_status: 'Rural Status',
