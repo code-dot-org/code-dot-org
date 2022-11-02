@@ -9,7 +9,8 @@ import {
   isCodeOrgBrowser,
   isOSX,
   isWindows,
-  isLinux
+  isLinux,
+  isChromeOS
 } from '../util/browserChecks';
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
@@ -88,7 +89,7 @@ class ConnectionInstructions extends React.Component {
   render() {
     const {webSerialPort} = this.state;
 
-    if (isCodeOrgBrowser()) {
+    if (isCodeOrgBrowser() || (isChromeOS() && !shouldUseWebSerial())) {
       return this.renderSetupChecklist(webSerialPort);
     }
 
@@ -173,7 +174,7 @@ class Downloads extends React.Component {
 
     // Once in the Maker App or in Chromebook, there is no need to
     // display Download Instructions
-    if (isCodeOrgBrowser()) {
+    if (isCodeOrgBrowser() || isChromeOS()) {
       return null;
     }
 
