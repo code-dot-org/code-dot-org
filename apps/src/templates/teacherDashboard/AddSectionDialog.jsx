@@ -47,19 +47,37 @@ const AddSectionDialog = ({
   const {loginType, participantType} = section || {};
   const title = i18n.newSectionUpdated();
 
-  if (!asyncLoadComplete) {
-    return (
-      <BaseDialog
-        useUpdatedStyles
-        fixedWidth={1010}
-        isOpen={isOpen}
-        overflow="hidden"
-        uncloseable
-      >
-        <Spinner size="large" style={{padding: 50}} />
-      </BaseDialog>
-    );
-  }
+  const getDialogContent = () => {
+    if (!asyncLoadComplete) {
+      return <Spinner size="large" style={{padding: 50}} />;
+    }
+    /*
+    The Participant Type Picker will be skips if someone only have permissions to create sections for one
+    type of participants. See teacherSectionsRedux for more details on how this is set up.
+    */
+    if (!participantType) {
+      return (
+        <ParticipantTypePicker
+          title={title}
+          setParticipantType={setParticipantType}
+          handleCancel={handleCancel}
+          availableParticipantTypes={availableParticipantTypes}
+        />
+      );
+    }
+    if (!loginType) {
+      return (
+        <LoginTypePicker
+          title={title}
+          handleImportOpen={beginImportRosterFlow}
+          setRosterProvider={setRosterProvider}
+          setLoginType={setLoginType}
+          handleCancel={handleCancel}
+        />
+      );
+    }
+    return <EditSectionForm title={title} isNewSection={true} />;
+  };
 
   return (
     <BaseDialog
@@ -69,32 +87,7 @@ const AddSectionDialog = ({
       overflow="hidden"
       uncloseable
     >
-      <PadAndCenter>
-        {/*
-          The Participant Type Picker will be skips if someone only have permissions to create sections for one
-          type of participants. See teacherSectionsRedux for more details on how this is set up.
-          */}
-        {!participantType && (
-          <ParticipantTypePicker
-            title={title}
-            setParticipantType={setParticipantType}
-            handleCancel={handleCancel}
-            availableParticipantTypes={availableParticipantTypes}
-          />
-        )}
-        {!loginType && participantType && (
-          <LoginTypePicker
-            title={title}
-            handleImportOpen={beginImportRosterFlow}
-            setRosterProvider={setRosterProvider}
-            setLoginType={setLoginType}
-            handleCancel={handleCancel}
-          />
-        )}
-        {loginType && participantType && (
-          <EditSectionForm title={title} isNewSection={true} />
-        )}
-      </PadAndCenter>
+      <PadAndCenter>{getDialogContent()}</PadAndCenter>
     </BaseDialog>
   );
 };
