@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "add-module-exports",
+    "syntax-async-functions",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
+    ["@babel/plugin-transform-regenerator", {"async": true, "asyncGenerators": true}],
+    ["@babel/plugin-transform-classes", {"loose": true}],
+    ["@babel/plugin-transform-modules-commonjs"]
+  ]
+}
