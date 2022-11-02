@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "## Set Up Your Experiment\r\n\r\n**Now you’re going to code your own physical change project!**\r\n- First, choose a background for your science experiment. \r\n- Then, add a `create new sprite` block and set the costume to the wood stump that will be your subject sprite. \r\n- Change the location by clicking on the pin if needed.\r\n- You may need to add a block to set the size of the wood to 75.\r\n",
+    "long_instructions": "## Set Up Your Experiment\r\n\r\n**Now you’re going to code your own physical change project!**\r\n- First, choose a background for your science experiment. \r\n- Then, add a `make new sprite` block and set the costume to the wood stump that will be your subject sprite. \r\n- Change the location by clicking on the pin if needed.\r\n- You may need to add a block to set the size of the wood to 75.\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -42,18 +42,18 @@
       "upButton",
       "downButton"
     ],
+    "validation_code": "//validation",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "validation_code": "//validation"
+    ]
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-10-28T22:54:47.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-28T22:54:47.530+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_tinker\\\"\"],\"cloned_from\":\"csc_particles_phys_tinker\"},{\"changed_at\":\"2022-10-28 22:55:39 +0000\",\"changed\":[\"long_instructions\",\"authored_hints\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:57:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:58:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:05:54 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:11:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:17:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:19:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 17:22:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 23:10:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-28T22:54:47.530+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_tinker\\\"\"],\"cloned_from\":\"csc_particles_phys_tinker\"},{\"changed_at\":\"2022-10-28 22:55:39 +0000\",\"changed\":[\"long_instructions\",\"authored_hints\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:57:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 22:58:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:05:54 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:11:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:17:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 23:19:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 17:22:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-31 23:10:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 15:18:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
