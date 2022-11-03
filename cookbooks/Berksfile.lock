@@ -1,6 +1,6 @@
 DEPENDENCIES
   apt
-  ark (< 6.0.0)
+  ark
   build-essential
   cdo-analytics
     path: cdo-analytics
@@ -49,7 +49,7 @@ DEPENDENCIES
   chef-client
   chef_client_updater (>= 3.3.2)
   ntp
-  seven_zip (< 4.0.0)
+  seven_zip
   ssl_certificate
     git: https://github.com/code-dot-org/ssl_certificate-cookbook.git
     revision: 839592ab96a661a1ae4c09b5368f014fa39cab0c
@@ -58,10 +58,10 @@ DEPENDENCIES
     path: sudo-user
 
 GRAPH
-  apt (7.4.0)
-  ark (5.1.1)
-    seven_zip (~> 3.2.0)
-  aws_cloudwatch (1.0.2)
+  apt (7.4.2)
+  ark (6.0.4)
+    seven_zip (>= 3.1)
+  aws_cloudwatch (2.0.0)
   build-essential (8.2.1)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
@@ -137,15 +137,16 @@ GRAPH
     logrotate (>= 1.9.0)
   chef_client_updater (3.12.3)
   chocolatey (3.0.0)
-  cron (7.0.3)
-  logrotate (3.0.4)
-  mingw (2.1.3)
+  cron (7.0.4)
+  logrotate (3.0.9)
+  mingw (2.1.4)
     seven_zip (>= 0.0.0)
-  nodejs (7.3.3)
+  nodejs (10.1.0)
     ark (>= 2.0.2)
     chocolatey (>= 3.0)
-  ntp (3.10.2)
-  ohai (5.3.0)
+    yum (>= 7.2)
+  ntp (3.12.2)
+  ohai (5.3.1)
   poise (2.8.2)
   poise-archive (1.5.0)
     poise (~> 2.6)
@@ -155,17 +156,14 @@ GRAPH
   poise-python (1.7.0)
     poise (~> 2.7)
     poise-languages (~> 2.0)
-  postfix (6.0.4)
-  redisio (4.3.2)
-    selinux_policy (>= 2.2.0)
-    ulimit (>= 0.1.2)
-  selinux_policy (2.4.3)
-  seven_zip (3.2.0)
-    windows (>= 0.0.0)
+  postfix (6.0.7)
+  redisio (6.3.0)
+    selinux (>= 0.0.0)
+  selinux (6.0.7)
+  seven_zip (4.2.2)
   ssl_certificate (2.2.0)
   sudo-user (0.1.3)
     ohai (>= 0.0.0)
-  ulimit (1.1.1)
-  windows (7.0.2)
   yarn (0.4.3)
     apt (>= 0.0.0)
+  yum (7.4.0)
