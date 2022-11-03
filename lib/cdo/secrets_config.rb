@@ -17,7 +17,8 @@ module Cdo
     # Generate path to a Secret that was provisioned for a specific CloudFormation Stack. This enables
     # configuration settings to have different values for different deployments that have the same environment type.
     def self.stack_specific_secret_path(key)
-      "CfnStack/#{AWS::CloudFormation.current_stack_name}/#{key}"
+      stack = AWS::CloudFormation.current_stack_name
+      stack ? "CfnStack/#{stack}/#{key}" : nil
     end
 
     # Load a secrets-config hash from specified file.
