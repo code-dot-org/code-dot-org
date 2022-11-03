@@ -1307,6 +1307,11 @@
   resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-1.0.41.tgz#6c18e74b6f9c13f3b43ad7d203fc7adac35b191a"
   integrity sha512-zP+DF69u4PJ705CdIEFsTNt7IRqOsQ+HMWbWyDuGLm9nVNdzZihSsfoGjQ5jbYVonnjNaUfM76C7LyASxOME3w==
 
+"@blockly/plugin-cross-tab-copy-paste@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@blockly/plugin-cross-tab-copy-paste/-/plugin-cross-tab-copy-paste-2.0.2.tgz#f003d732f2f18b3f1e5ed0b9b7fd67e6e2835acc"
+  integrity sha512-QPO5unlkoDai+lWq3yDljvFob31ThRSyoQ8bp0D1FO+G/eorpKpox4JhtzFs4+QCVrBL7C/BqSayfJg/XTFKPg==
+
 "@blockly/plugin-scroll-options@^2.0.13":
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/@blockly/plugin-scroll-options/-/plugin-scroll-options-2.0.13.tgz#b1087bb6fe445b5736c156df201cb71c6228952d"
