@@ -4,7 +4,7 @@ import React from 'react';
 //import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const SoundsPanel = () => {
+const SoundsPanel = ({onSelect}) => {
   const library = window.library;
   const group = library.groups[0];
 
@@ -18,7 +18,11 @@ const SoundsPanel = () => {
                 <div key={soundIndex}>
                   <FontAwesome icon={'play-circle'} onClick={() => {}} />
                   &nbsp;
-                  {folder.name} / {sound.name}
+                  <span
+                    onClick={() => onSelect(folder.name + '/' + sound.name)}
+                  >
+                    {folder.name} / {sound.name}
+                  </span>
                 </div>
               );
             })}
