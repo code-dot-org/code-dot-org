@@ -222,5 +222,22 @@
   "useTwoSetpropBlocks": "Use a `set size` block for each of your sprites. \n <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"flower2_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>",
   "useTwoAtTimeBlocks": "Your program should have two `at seconds` event blocks. The first event will be used to make more sprites and the second event will end the game.\n *To pass this level, try setting each event block to 10 seconds or fewer.*\n<xml><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </block>\n  </value>\n</block><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">10</field>\n    </block>\n  </value>\n</block></xml>",
   "whenToWhile": "Your sprite is moving in all directions, but not smoothly. Change `when` to `while` in each event block. \n <xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">while</title><title name=\"KEY\">???</title></block></xml>",
-  "workspaceAlertError": "Your program stopped because of a problem: {error}"
+  "workspaceAlertError": "Your program stopped because of a problem: {error}",
+  "cscLandmarkTouchAllSprites": "Use the arrow keys to move the tour guide to the landmarks.",
+  "createNewSprite": "Don't forget to make a new sprite.",
+  "noSpeech": "Your sprite didn't say anything yet. ",
+  "cscLandmarkStatueOfLiberty": "Make sure one of your sprites is the Statue of Liberty. ",
+  "cscLandmarkStatueOfLibertyUpperRight": "The Statue of Liberty is in the wrong place - it should be in New York in the upper-right corner of the map.",
+  "cscLandmarkTouchButNoSpeech": "It looks like your sprite reached a landmark, but now it needs to say something! Add a speech block to your event to make your sprite say something.",
+  "cscLandmarkAddAnotherSprite": "You're missing another landmark. Use a new sprite block with a different costume than the first. ",
+  "cscLandmarkGoldenGateBridge": "Make sure one of your sprites the Golden Gate Bridge.",
+  "cscLandmarkGoldenGateBridgeLeft": "The Golden Gate Bridge is in the wrong place - it should be in California on the left side of the map.",
+  "cscLandmarkChangeCostume": "Use a new sprite block with a different costume than the first. ",
+  "cscLandmarkBehavior": "Use a behavior to make your guide move with the arrow keys. ",
+  "cscLandmarkMostRecent": "Move your character so they touch the most recent landmark.",
+  "cscLandmarkVisitAllStorytellers": "Make sure to visit all 3 storytellers and to hear what they have to say.",
+  "cscLandmarkThreeSprites": "Make sure you have at least 3 sprites in your scene. You can use the `create sprite` block to make new sprites.",
+  "cscLandmarkMoveAllSprites": "Make sure to move all your sprites to a new location! Use the pin on the location block to move your sprite. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
+  "cscLandmarkBackgroundStoryteller": "Make sure to change the background when you visit a storyteller.",
+  "cscLandmarkStorytellerMissingSay": "Make sure the storyteller says something when you visit them."
 }
