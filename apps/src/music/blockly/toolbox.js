@@ -167,7 +167,7 @@ export const createMusicToolbox = (library, mode) => {
     return toolbox;
   }
 
-  toolbox.contents[1].contents = [];
+  toolbox.contents[0].contents = [];
 
   // Currently only supports 1 group
   const group = library.groups[0];
