@@ -96,11 +96,31 @@ module Honeybadger
     [error_message, error_lines]
   end
 
+  def self.get_members
+    raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
+    code_org_team_id = 530
+    members = []
+    members_api_response = `curl -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io/v2/teams/#{code_org_team_id}/team_members"`
+    members_parsed_response = JSON.parse members_api_response
+    members_parsed_response['results'].each do |member|
+      members << {
+        id: member['id'],
+        created_at: member['created_at'],
+        is_admin: member['admin'].to_s == "true",
+        name: member['name'],
+        email: member['email']
+      }
+    end
+    puts members
+    members
+  end
+
   # Returns all issues (across cronjobs, dashboard, and pegasus) that have occured since midnight.
   # @return [Array[Hash]] An array of hashes summarizing the recent issues.
   def self.get_recent_issues
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
-    issues = []
+    get_members
+    return []
 
     {cronjobs: 45435, dashboard: 3240, pegasus: 34365}.each do |project, project_id|
       next_url = "/v2/projects/#{project_id}/faults" \
