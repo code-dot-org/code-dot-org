@@ -67,8 +67,8 @@ module Pd
         ),
         csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
         csa_phone_screen: clean_multiline(
-          'Are you able to independently write and debug an error-free function (or procedure) with
-          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
+          'Are you able to independently write a function (or procedure) with one or more
+          parameters and that uses conditional logic, loops, and an array (or list)?'
         ),
         gender_identity: 'Gender identity:',
         race: 'Race or ethnicity:',
