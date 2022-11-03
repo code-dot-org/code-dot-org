@@ -10,89 +10,11 @@ social:
 style_min: false
 ---
 :ruby
-  @header["social"]["twitter:url"] = "https://#{request.host}/learn"
-  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
-  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
-  @header["social"]["og:title"] = hoc_s(:hour_of_code)
-  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
-  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
-
   hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
-:css
-  .noFocusButton:focus {
-    outline: 0;
-  }
+%link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 
-  .noFocusButton {
-    margin-top: 0px;
-  }
-
-  #fullwidth {
-    overflow: hidden;
-    background-size: cover;
-  }
-  .banner {
-    color: black;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  .banner a {
-    color: black;
-    text-decoration: underline;
-    font-family: 'Gotham 5r', sans-serif;
-  }
-  .bannerHeading {
-    font-family: 'Gotham 5r', sans-serif;
-    font-size: 45px;
-    line-height: 45px;
-    padding: 20px 0px 20px 0px;
-  }
-  .bannerBeyond {
-    padding-top: 15px;
-  }
-  .bannerTeachers {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    opacity: 0;
-  }
-
-  /* Center the foreground image when it's below the header text. */
-  @media screen and (max-width: 970px) {
-    #studentImage img {
-      position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
-      height: 278px;
-    }
-  }
-
-- unless ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-  :css
-    @media screen and (min-width: 992px) {
-      #fullwidth {
-        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
-        background-position: 70% 70%;
-      }
-    }
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-      #fullwidth {
-        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
-        background-position: 67% 50%;
-        padding-bottom: 200px;
-      }
-    }
-    /* Use the narrow image for narrower screens */
-    @media screen and (max-width: 767px) {
-      #fullwidth {
-        background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
-        background-position: 50% 80%;
-        padding-bottom: 160px;
-      }
-    }
-
-#fullwidth
+#fullwidth.hoc-banner
   - if request.site == 'code.org'
     = view :header
   - else
@@ -104,31 +26,13 @@ style_min: false
       - else
         = view :mobile_header_responsive
 
-  - if ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-    .banner.container_responsive{style: "display: flex"}
-      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
-      .col-33
-        .bannerHeading= hoc_s(:learn_banner_heading)
-        = hoc_s(:learn_banner_blurb)
-        .bannerBeyond
-          != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
-        .bannerTeachers
-          %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
-          != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
-      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
+  - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
+    %section.banner.hoc-mode
+      = view :learn_banner_text
 
   - else
-    .banner.container_responsive
-      .col-sm-12.col-md-6{style: "text-align: center"}
-        .bannerHeading= hoc_s(:learn_banner_heading)
-        = hoc_s(:learn_banner_blurb)
-        .bannerBeyond
-          != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
-        .bannerTeachers
-          %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
-          != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
-
-  .clear{style: "clear:both"}
+    %section.banner
+      = view :learn_banner_text
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
@@ -163,7 +67,6 @@ style_min: false
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json.html_safe},
       locale: "#{request.locale}",
-      roboticsButtonUrl: "/learn/robotics",
       showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
       disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
       defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}

@@ -21,8 +21,7 @@ module AzureTextToSpeech
       token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
       token_http_request.use_ssl = true
       token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      # TODO: Change read_timeout to write_timeout when we upgrade to Ruby 2.6+.
-      token_http_request.read_timeout = default_timeout
+      token_http_request.write_timeout = default_timeout
       token_request = Net::HTTP::Post.new(token_uri.request_uri, {'Ocp-Apim-Subscription-Key': api_key})
 
       token_http_request.request(token_request)&.body

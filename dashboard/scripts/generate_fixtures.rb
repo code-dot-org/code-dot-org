@@ -49,7 +49,7 @@ scripts_map = {
 
 scripts_map.each do |_script_id, name|
   puts name
-  script = Script.find_by_name name
+  script = Unit.find_by_name name
   @scripts[name] = script.attributes
 
   script.unit_groups&.each do |unit_group|
@@ -107,7 +107,7 @@ File.new("#{prefix}course_offerings.yml", 'w').write(yamlize(@course_offerings))
 File.new("#{prefix}course_versions.yml", 'w').write(yamlize(@course_versions))
 File.new("#{prefix}unit_groups.yml", 'w').write(yamlize(@unit_groups))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
-File.new("#{prefix}script.yml", 'w').write(yamlize(@scripts))
+File.new("#{prefix}unit.yml", 'w').write(yamlize(@scripts))
 File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
 File.new("#{prefix}lesson_group.yml", 'w').write(yamlize(@lesson_groups))
 File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))

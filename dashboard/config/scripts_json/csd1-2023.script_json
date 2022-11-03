@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2022-09-19 21:31:26 UTC",
+    "serialized_at": "2022-10-10 22:15:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1161,13 +1161,7 @@
       "key": "d4b44374-9bc0-4dab-b67c-e6f18d74e9a3",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this warm up is to start students thinking about problem solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.\n\n**Discussion Goal:** The goal of this warm-up is to start students thinking about problem-solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas."
       },
       "seeding_key": {
         "activity_section.key": "d4b44374-9bc0-4dab-b67c-e6f18d74e9a3",
@@ -1407,15 +1401,11 @@
       "key": "c085b90e-fdfe-40c2-bf51-b58ddd1b35b5",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should silently record their ideas in writing for a couple minutes. Afterwards invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list. Record all the different kinds of problems students think of on the board or somewhere else that they'll be clearly visible.",
+        "description": "**Discuss:** Students should silently record their ideas in writing for a couple of minutes. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list. Record all the different kinds of problems students think of on the board or somewhere else that they'll be clearly visible.\n\n**Discussion Goal:** This conversation aims to demonstrate that problems and problem-solving are a part of everyday life. Use this brainstorm to list as many different kinds of problems on the board as you can. This will be useful when you later ask students to select one type of problem that you believe they're particularly good at solving.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Make Categories:** You may want to group problems into larger categories during this conversation and invite students to help you do so. For example, if two suggestions are \"finding my keys\" and \"finding my homework\" suggest a larger category of \"finding lost things\".\r\n\r\n**Real World Problems:** Try to guide students away from too many homework or subject-area type problems (e.g. math problems, word problems, science problems, etc.) by saying you're more interested in real-life problems like solving disagreements, making big decisions, fixing or finding things, getting from one place to another, etc.\r\n"
-          },
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This conversation aims to demonstrate that problems and problem solving are a part of everyday life. Use this brainstorm to list as many different kinds of problems on the board as you can. This will be useful when you later ask students to select one type of problem that you believe they're particularly good at solving.\n"
           }
         ]
       },
@@ -1474,15 +1464,9 @@
       "key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio\n\n**Questions to consider with the video:**\n- How did you follow the problem solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?",
+        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.",
         "name": "The Problem Solving Process\r",
-        "progression_name": "Video: Problem Solving Process",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity.\nThe second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains."
-          }
-        ]
+        "progression_name": "Video: Problem Solving Process"
       },
       "seeding_key": {
         "activity_section.key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
@@ -1516,13 +1500,7 @@
       "key": "51a6545c-7dee-4b95-9d52-e2a9547288e7",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Once students have completed the first section of the activity guide ask them to share with neighbors and then with the class as a whole.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** For this first conversation in particular you're making sure students understand the meaning of the four different steps. While some steps might sometimes be categorized in two ways, use this chance to talk about that ambiguity. Your goal is to use the shared context of the aluminum boats problem to understand this process. Here's a possible set of steps students may come up with. \r\n\r\n**Define:** Understanding the problem when it was assigned, examining available resources, finding problems with their original design before deciding how to fix them, looking at problems with other groups' boats\r\n\r\n**Prepare:** Discussing with team members how to proceed, brainstorming approaches, anticipating possible flaws.\r\n\r\n**Try:** Actually building the boats, running the test\r\n\r\n**Reflect:** Examining the results of their test, comparing their results to their predictions, discussing with group members the reasons the boat sunk eventually.\r\n\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Once students have completed the first section of the activity guide ask them to share with neighbors and then with the class as a whole.\n\n**Discussion Goal:**  For this first conversation in particular you're making sure students understand the meaning of the four different steps. While some steps might sometimes be categorized in two ways, use this chance to talk about that ambiguity. Your goal is to use the shared context of the aluminum boat problem to understand this process. Here's a possible set of steps students may come up with.\n\n* **Define:** Understanding the problem when it was assigned, examining available resources, finding problems with their original design before deciding how to fix them, looking at problems with other groups' boats\n\n* **Prepare:** Discussing with team members how to proceed, brainstorming approaches, anticipating possible flaws.\n\n* **Try:** Actually building the boats, running the test\n\n* **Reflect:** Examining the results of their test, comparing their results to their predictions, and discussing with group members the reasons the boat sunk eventually."
       },
       "seeding_key": {
         "activity_section.key": "51a6545c-7dee-4b95-9d52-e2a9547288e7",
@@ -1545,13 +1523,7 @@
       "key": "d26a7dab-fdd0-4a40-93a2-e202f937e9b4",
       "position": 8,
       "properties": {
-        "description": "**Discuss:** Have students share what they wrote with a neighbor and then once again lead a discussion of the conversations they had. Ask students to talk about the individual steps they're using to solve their chosen problem but also point out instances where the same types of strategies are appearing multiple times.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** All three of these discussions aim to reinforce the meaning of the 4 steps in the problem solving process. In this discussion you might lean more heavily on other students to ensure that the strategies and steps being offered by students seem to fit the definitions of the 4 steps provided on the activity guide.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have students share what they wrote with a neighbor and then once again lead a discussion of the conversations they had. Ask students to talk about the individual steps they're using to solve their chosen problem but also point out instances where the same types of strategies are appearing multiple times.\n\n**Discussion Goal:** All three of these discussions in this lesson aim to reinforce the meaning of the 4 steps in the problem-solving process. In this discussion, you might lean more heavily on other students to ensure that the strategies and steps being offered by students seem to fit the definitions of the 4 steps provided in the activity guide."
       },
       "seeding_key": {
         "activity_section.key": "d26a7dab-fdd0-4a40-93a2-e202f937e9b4",
@@ -1666,13 +1638,7 @@
       "key": "08014d16-e0d7-4e15-97c9-76ce14fa3920",
       "position": 2,
       "properties": {
-        "description": "Allow students to share out individually.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion serves as a review of the problem solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\r\n"
-          }
-        ]
+        "description": "Allow students to share out individually.\n\n**Discussion Goal:** This discussion serves as a review of the problem-solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve."
       },
       "seeding_key": {
         "activity_section.key": "08014d16-e0d7-4e15-97c9-76ce14fa3920",
@@ -1801,14 +1767,8 @@
       "key": "ae3a507f-552e-4aa2-b1c9-72c66cdc0f67",
       "position": 8,
       "properties": {
-        "description": "**Prompt:** You just solved a number of very different problems. With your tables review the notes you took on each of the problems. Be ready to report out on the following questions\n\n* For each step in the problem solving process, what is its purpose? Why is it included?\n* Are there any kinds of problems that the problem solving process is particularly helpful at solving?\n\n**Discuss:** After tables have discussed their responses for several minutes invite the whole class to share their rationale for including each step in the process. Once each step has been discussed, move on to the second question. This question may have many responses and you should allow students to share their thoughts and experiences. If it doesn't arise naturally as you leave the conversation offer some or all of the ideas mentioned in the discussion goals.",
-        "name": "Understanding the Problem Solving Process",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students have practiced using the problem solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\r\n\r\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\r\n\r\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\r\n\r\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\r\n\r\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\r\n\r\n**The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\r\n"
-          }
-        ]
+        "description": "**Prompt:** You just solved a number of very different problems. With your tables review the notes you took on each of the problems. Be ready to report out on the following questions\n\n* For each step in the problem-solving process, what is its purpose? Why is it included?\n* Are there any kinds of problems that the problem-solving process is particularly helpful at solving?\n\n**Discuss:** After tables have discussed their responses for several minutes invite the whole class to share their rationale for including each step in the process. Once each step has been discussed, move on to the second question. This question may have many responses and you should allow students to share their thoughts and experiences. If it doesn't arise naturally as you leave the conversation offer some or all of the ideas mentioned in the discussion goals.\n\n**Discussion Goal:** Students have practiced using the problem-solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem-solving process in general. A sample set of conclusions is below but you should allow students to share their own insights before offering your own.\n\n* **Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\n\n* **Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\n\n* **Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\n\n* **Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\n\n* **The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.",
+        "name": "Understanding the Problem Solving Process"
       },
       "seeding_key": {
         "activity_section.key": "ae3a507f-552e-4aa2-b1c9-72c66cdc0f67",
@@ -1841,13 +1801,7 @@
       "key": "ed90158b-49b9-402e-b7b9-55d30e6bc435",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "There are many different strategies to help define problems, including the questions on the previous lesson's activity guide.  Some potentially useful questions include:\r\n\r\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\r\n* Why the problem exists? (And why does that problem exist?) Keep asking to get to the heart of the problem.\r\n* How could I be able to tell the problem had been solved? What could I observe or measure?\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.\n\n**Discussion Goal:** There are many different strategies to help define problems, including the questions in the previous lesson's activity guide. Some potentially useful questions include:\n\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\n* Why the problem exists? (And why does that problem exist?) Keep asking to get to the heart of the problem.\n* How could I be able to tell the problem had been solved? What could I observe or measure?"
       },
       "seeding_key": {
         "activity_section.key": "ed90158b-49b9-402e-b7b9-55d30e6bc435",
@@ -1893,13 +1847,7 @@
       "key": "9636bf07-7e67-4d7e-8421-27197414ebb8",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Once students have reflected in their journals, they can share out their ideas \"popcorn\" style, with each student who shares an idea calling on a new classmate to share next. Run this conversation as a brainstorm, recording ideas on the board. Note and call out similarities in characteristics.  Students may come up with counter examples for some of the common characteristics.  Remind them that you are brainstorming and that it's important to consider all of the possible ideas, and that they will have more time to think about this question in the lesson.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This warm up starts students thinking about what the defining characteristics of a computer are.  Students do not need to have a definition of a computer, but they should start to think about the different types of computers in their lives and what they have in common.\r\n\r\n**Note:** The programmers pictured are Elizabeth Jean Jennings Bartik and Frances Bilas Spence.  The computer pictured is the ENIAC.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Once students have reflected in their journals, they can share out their ideas \"popcorn\" style, with each student who shares an idea calling on a new classmate to share next. Run this conversation as a brainstorm, recording ideas on the board. Note and call out similarities in characteristics.  Students may come up with counter examples for some of the common characteristics.  Remind them that you are brainstorming and that it's important to consider all of the possible ideas, and that they will have more time to think about this question in the lesson.\n\n**Discussion Goal:** This warm-up starts students thinking about what the defining characteristics of a computer are. Students do not need to have a definition of a computer, but they should start to think about the different types of computers in their lives and what they have in common.\n\n**Note:** The programmers pictured are Elizabeth Jean Jennings Bartik and Frances Bilas Spence. The computer pictured is the ENIAC."
       },
       "seeding_key": {
         "activity_section.key": "9636bf07-7e67-4d7e-8421-27197414ebb8",
@@ -2053,14 +2001,8 @@
       "key": "affe52e5-e02c-4e4e-9812-3f3937a325cf",
       "position": 10,
       "properties": {
-        "description": "**Questions to think about with the video**:\n- What made computers different from machines that came before them?",
-        "progression_name": "Video: What Makes a Computer, a Computer?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "After watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work. Within a problem solving context, computers are designed to solve information problems. Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots). It's okay if students do not come to a particular conclusion about every device they can think of."
-          }
-        ]
+        "description": "**Questions to think about with the video**:\n- What made computers different from machines that came before them?\n\n**Discussion Goal:** After watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work. Within a problem-solving context, computers are designed to solve information problems. Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots). It's okay if students do not come to a particular conclusion about every device they can think of.",
+        "progression_name": "Video: What Makes a Computer, a Computer?"
       },
       "seeding_key": {
         "activity_section.key": "affe52e5-e02c-4e4e-9812-3f3937a325cf",
@@ -2156,13 +2098,7 @@
       "key": "21eddb29-22e3-480e-a619-3d123bfbe8fd",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** After students have had time to each make a recommendation, allow some students to share out the answers that their partner gave them and the recommendation that they made.  Make a list on the board with the \"answers\" next to the \"recommendations\".",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** In today's lesson students will be talking about the concepts of \"input\" and \"output\" in computing.  For this discussion, it's not so important the exact answers and recommendations, but that students can see that this information falls into two different categories.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** After students have had time to each make a recommendation, allow some students to share out the answers that their partner gave them and the recommendation that they made.  Make a list on the board with the \"answers\" next to the \"recommendations\".\n\n**Discussion Goal:** In today's lesson, students will be talking about the concepts of \"input\" and \"output\" in computing. For this discussion, it's not so important the exact answers and recommendations, but that students can see that this information falls into two different categories."
       },
       "seeding_key": {
         "activity_section.key": "21eddb29-22e3-480e-a619-3d123bfbe8fd",
@@ -2285,13 +2221,7 @@
       "key": "72c3d00a-4638-4fd6-a1b7-85854ae343cf",
       "position": 7,
       "properties": {
-        "description": "**Discuss:** Allow students to brainstorm silently, then talk in pairs or small groups before soliciting answers from the entire group.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As students come up with their ideas, ensure that the Internet and sensor data (such as GPS, microphone, and camera), come up.  You may need to prompt students by asking them whether there is anything that a smartphone knows without the user having to tell it.  Although students may not be familiar with every possible sensor on a phone, by the end of the discussion, they should understand that the phone has sensors that it can use to get data without the user's direct input.\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to brainstorm silently, then talk in pairs or small groups before soliciting answers from the entire group.\n\n**Discussion Goal:** As students come up with their ideas, ensure that the Internet and sensor data (such as GPS, microphone, and camera), come up. You may need to prompt students by asking them whether there is anything that a smartphone knows without the user having to tell it. Although students may not be familiar with every possible sensor on a phone, by the end of the discussion, they should understand that the phone has sensors that it can use to get data without the user's direct input."
       },
       "seeding_key": {
         "activity_section.key": "72c3d00a-4638-4fd6-a1b7-85854ae343cf",
@@ -2385,13 +2315,7 @@
       "key": "9c8c0537-1323-4739-b5fb-8ab6290e6418",
       "position": 3,
       "properties": {
-        "description": "Ask students to share out how they thought the app made the decision.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students may have trouble articulating exactly how the app makes its decision.  Encourage discussion and highlight the \"matching\" and \"if/then\" facets of the decision make process.  (e.g. \"The app **compares** the birthdate to today's date.\" / **If** the birthdate is the same as today's date, **then** display \"Happy Birthday!\")\r\n\r\n\r\n"
-          }
-        ]
+        "description": "Ask students to share out how they thought the app made the decision.\n\n**Discussion Goal:** Students may have trouble articulating exactly how the app makes its decision. Encourage discussion and highlight the \"matching\" and \"if/then\" facets of the decision make process. (e.g. \"The app **compares** the birthdate to today's date.\" / **If** the birthdate is the same as today's date, **then** display \"Happy Birthday!\")"
       },
       "seeding_key": {
         "activity_section.key": "9c8c0537-1323-4739-b5fb-8ab6290e6418",
@@ -2450,13 +2374,7 @@
       "key": "c411392e-8b5d-4632-a577-b265863b3834",
       "position": 3,
       "properties": {
-        "description": "**Prompt:**  How does this app use if/then and comparing to turn the input into output?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Allow students to share out their answers, and reinforce that comparing can mean deciding whether any two things are the same, not just numbers.\r\n\r\n"
-          }
-        ]
+        "description": "**Prompt:**  How does this app use if/then and comparing to turn the input into output?\n\n**Discussion Goal:** Allow students to share out their answers, and reinforce that comparing can mean deciding whether any two things are the same, not just numbers."
       },
       "seeding_key": {
         "activity_section.key": "c411392e-8b5d-4632-a577-b265863b3834",
@@ -2479,13 +2397,7 @@
       "key": "8d9c53a7-3380-4e68-9c59-7d6522f6333f",
       "position": 5,
       "properties": {
-        "description": "**Prompt:**  This app uses some different types of processing to make decisions.  What kinds of processing might it use?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Allow students to share out their answers, but make sure that the \"counting\" and the \"find a match\" are highlighted in the discussion.\r\n\r\n"
-          }
-        ]
+        "description": "**Prompt:**  This app uses some different types of processing to make decisions.  What kinds of processing might it use?\n\n**Discussion Goal:** Allow students to share out their answers, but make sure that the \"counting\" and the \"find a match\" are highlighted in the discussion."
       },
       "seeding_key": {
         "activity_section.key": "8d9c53a7-3380-4e68-9c59-7d6522f6333f",
@@ -2688,13 +2600,7 @@
       "key": "fdb1acd1-5c44-4874-b33c-7986f0d03c70",
       "position": 3,
       "properties": {
-        "description": "Ask students to share out what information they thought should be stored and why.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "While it's not important that students agree on the answers, this discussion introduces them to the idea of storing information for later and prompts them to think about what information should and should not be stored in an app. \r\n\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Ask students to share out what information they thought should be stored and why.\n\n**Discussion Goal:** While it's not important that students agree on the answers, this discussion introduces them to the idea of storing information for later and prompts them to think about what information should and should not be stored in an app."
       },
       "seeding_key": {
         "activity_section.key": "fdb1acd1-5c44-4874-b33c-7986f0d03c70",
@@ -2912,13 +2818,7 @@
       "key": "e308db7b-488a-49ba-bcf1-0d91774e8c8f",
       "position": 2,
       "properties": {
-        "description": "**Share:** Time permitting, allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As student share their ideas, ensure that they are using the key vocabulary of the lesson:\n\n**storage** - saving information to use in the future\n\n"
-          }
-        ]
+        "description": "**Share:** Time permitting, allow students to share out their ideas.\n\n**Discussion Goal:** As student share their ideas, ensure that they are using the key vocabulary of the lesson:\n\n* **storage** - saving information to use in the future"
       },
       "seeding_key": {
         "activity_section.key": "e308db7b-488a-49ba-bcf1-0d91774e8c8f",
@@ -4582,6 +4482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Problem Solving Process Video_2023"
+        ],
         "progression": "Video: Problem Solving Process"
       },
       "bonus": false,
@@ -4604,6 +4507,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video_2023"
+        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "bonus": false,
@@ -4626,6 +4532,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser_2023"
+        ],
         "progression": "App: Pet Chooser"
       },
       "bonus": false,
@@ -4648,6 +4557,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Story_2023"
+        ],
         "progression": "App: Story Creator"
       },
       "bonus": false,
@@ -4670,6 +4582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser 2_2023"
+        ],
         "progression": "App: Improved Pet App"
       },
       "bonus": false,
@@ -4692,6 +4607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing bday_2023"
+        ],
         "progression": "App: Is It Your Birthday?"
       },
       "bonus": false,
@@ -4714,6 +4632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing npark_2023"
+        ],
         "progression": "App: National Parks"
       },
       "bonus": false,
@@ -4736,6 +4657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing countries_2023"
+        ],
         "progression": "App: How Many Countries"
       },
       "bonus": false,
@@ -4758,6 +4682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing writers_2023"
+        ],
         "progression": "App: My Famous Birthday"
       },
       "bonus": false,
@@ -4780,6 +4707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing notebook_2023"
+        ],
         "progression": "App: Stamp Notebook"
       },
       "bonus": false,
@@ -4802,6 +4732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing fastest_2023"
+        ],
         "progression": "App: The Fastest Finger"
       },
       "bonus": false,
@@ -4824,6 +4757,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing guess_2023"
+        ],
         "progression": "App: Guess the Number"
       },
       "bonus": false,
@@ -4846,6 +4782,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing live_2023"
+        ],
         "progression": "App: Where Should I Live?"
       },
       "bonus": false,
@@ -4868,6 +4807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage outfit_2023"
+        ],
         "progression": "App: Outfit Picker"
       },
       "bonus": false,
@@ -4890,6 +4832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage friends_2023"
+        ],
         "progression": "App: Friend Finder"
       },
       "bonus": false,
@@ -4912,6 +4857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage movies_2023"
+        ],
         "progression": "App: Choose a Kid's Movie"
       },
       "bonus": false,
@@ -4934,6 +4882,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage video_2023"
+        ],
         "progression": "Video: IOSP Model"
       },
       "bonus": false,
@@ -4956,6 +4907,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Student End of Unit Survey - Unit 1_2023"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4978,6 +4932,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U1 Test_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -96,8 +96,8 @@ module Pd::Application
       self.application_type = nil
     end
 
-    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted?
-    %w(accepted incomplete pending unreviewed waitlisted).each do |attribute|
+    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted? pending_space_availability?
+    %w(accepted incomplete pending unreviewed waitlisted pending_space_availability).each do |attribute|
       define_method(:"#{attribute}?") do
         status == attribute
       end
@@ -326,7 +326,10 @@ module Pd::Application
       numeric_scores = response_scores_hash.values.select do |score|
         score.is_a?(Numeric) || score =~ /^\d+$/
       end
-      numeric_scores.map(&:to_i).reduce(:+)
+
+      return nil if numeric_scores.empty?
+
+      numeric_scores.sum(&:to_i)
     end
 
     def course_name

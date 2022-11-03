@@ -7,6 +7,9 @@
 #   code.org/minecraft
 #   code.org/oceans
 #   code.org/hourofcode/overview
+#   code.org/learn
+#   code.org/prize
+#   code.org/hourofcode2022
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -43,6 +46,9 @@ def get_social_metadata_for_page(request)
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
     hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
     coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
+    hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
+    cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
+    hoc_2022_landing_page: {path: "/shared/images/social-media/hoc2022_social_landing_page.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -59,8 +65,8 @@ def get_social_metadata_for_page(request)
     "hourofcode.com" => {
       "default" => {
         title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2021_cse),
-        image: images[:hoc_cse_social]
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
       }
     },
     "challenge" => {
@@ -133,17 +139,38 @@ def get_social_metadata_for_page(request)
     "learn" => {
       "default" => {
         title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2021_cse),
-        image: images[:hoc_cse_social]
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
       }
     },
     "hoc-overview" => {
       "default" => {
         title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2021_cse),
-        image: images[:hoc_cse_social]
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
       }
-    }
+    },
+    "learn-cdo" => {
+      "default" => {
+        title: hoc_s(:social_hoc_anybody),
+        description: hoc_s(:social_hoc2022_explore_play_create),
+        image: images[:hoc_2022_social]
+      }
+    },
+    "cs-leaders-prize" => {
+      "default" => {
+        title: "CS Leaders Prize - $1 Million for U.S. Schools",
+        description: "Tell us how your school will expand computer science, and you could win $10,000 to make it happen!",
+        image: images[:cs_leaders_prize]
+      }
+    },
+    "hoc-2022-landing-page" => {
+      "default" => {
+        title: hoc_s(:hoc2022_codeorg_title),
+        description: hoc_s(:hoc2022_codeorg_description),
+        image: images[:hoc_2022_landing_page]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -164,6 +191,12 @@ def get_social_metadata_for_page(request)
     page = "learn"
   elsif request.path == "/hourofcode/overview" && request.site == "code.org"
     page = "hoc-overview"
+  elsif request.path == "/learn" && request.site == "code.org"
+    page = "learn-cdo"
+  elsif request.path == "/prize" && request.site == "code.org"
+    page = "cs-leaders-prize"
+  elsif request.path == "/hourofcode2022" && request.site == "code.org"
+    page = "hoc-2022-landing-page"
   else
     return {}
   end
