@@ -88,5 +88,6 @@
   "crossTabRelationshipHeader": "Relationship information",
   "crossTabTooMuchData": "The currently-selected data is too large to show in a table.",
   "uniqueOptionsWarningNotice": "Note",
-  "uniqueOptionsWarningMessage": "Categorical columns with more than {valueCount} unique values can not be selected as the label or a feature."
+  "uniqueOptionsWarningMessage": "Categorical columns with more than {valueCount} unique values can not be selected as the label or a feature.",
+  "predictionStatement": "Predict {output} based on {inputs}"
 }

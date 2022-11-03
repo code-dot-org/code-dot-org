@@ -31,6 +31,8 @@ class ModelCard extends Component {
       datasetDetails
     } = this.props;
     console.log("trainedModelDetails", trainedModelDetails)
+    const predictionStatement = I18n.t("predictionStatement",
+      {"output": label.id, "inputs": selectedFeatures.join(", ")})
     return (
       <div style={styles.panel}>
         <Statement />
@@ -96,14 +98,7 @@ class ModelCard extends Component {
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>{I18n.t("modelCardFeaturesAndLabel")}</h5>
             <div style={styles.modelCardContent}>
-              <p style={styles.modelCardDetails}>
-                Predict {label.id} based on{" "}
-                {selectedFeatures.length > 0 && (
-                  <span>
-                    {selectedFeatures.join(", ")}.
-                  </span>
-                )}
-              </p>
+              <p style={styles.modelCardDetails}>{predictionStatement}</p>
             </div>
           </div>
           <div style={styles.modelCardSubpanel}>
