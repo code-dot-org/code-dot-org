@@ -249,3 +249,17 @@ mk:
           lesson_groups:
             lessonGroup-8:
               display_name: Променливи
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Лупови
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Листи
+            csp_loops:
+              display_name: Лупови

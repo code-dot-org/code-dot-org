@@ -655,6 +655,7 @@ ro:
     print_certificate: Tipărește certificatul
   certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza
     învățarea."
+  certificate_hour_of_code: Oră de Programare
   move_students:
     new_section_dne: Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă
       rugăm să introduceţi un cod aferent unei secţiuni diferite.
@@ -1441,3 +1442,5 @@ ro:
         blocate
       forbidden: Utilizatorul nu poate actualiza starea de blocare a elevului.
   reset_predict_progress_button: Șterge Răspunsul
+  pixelation:
+    binary: Binar

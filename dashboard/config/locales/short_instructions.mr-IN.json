@@ -3426,7 +3426,29 @@
         "ramp_artist_loops62022": "हा जिना काढण्यासाठी तुमचा लूप संपादित करा.",
         "ramp_artist_loops72022": "पॅटर्न शोधा आणि लूप्स वापरून हा कोड लहान करा!",
         "ramp_artist_loops82022": "पॅटर्न शोधा आणि लूप्स वापरून हा कोड लहान करा.",
-        "ramp_artist_loops92022": "एक चौरस काढून हे कोडे सोडवा."
+        "ramp_artist_loops92022": "एक चौरस काढून हे कोडे सोडवा.",
+        "helloworld_food_backgrounds_soccer-2022": "पार्श्वभूमी कशी बदलायची ते पाहूया.",
+        "helloworld_food_backgrounds_space-2022": "पार्श्वभूमी कशी बदलायची ते पाहूया.",
+        "helloworld_food_behaviors_soccer-2022": "वर्तणुकीचा वापर करून स्प्राइट्स अॅनिमेट करायला शिकू या.",
+        "helloworld_food_behaviors_space-2022": "वर्तणुकीचा वापर करून स्प्राइट्स अॅनिमेट करायला शिकू या.",
+        "helloworld_food_click_soccer-2022": "या स्प्राइट्सला कशामुळे बोलता येते?",
+        "helloworld_food_click_space-2022": "या स्प्राइट्सला कशामुळे बोलता येते?",
+        "helloworld_food_costumes_soccer-2022": "स्प्राइट्सचे स्वरूप कसे बदलायचे ते जाणून घेऊया.",
+        "helloworld_food_costumes_space-2022": "स्प्राइट्सचे स्वरूप कसे बदलायचे ते जाणून घेऊया.",
+        "helloworld_food_events_soccer-2022": "स्प्राइट काहीतरी सांगण्यासाठी `व्हेन क्लिक` इव्हेंट वापरा.",
+        "helloworld_food_events_space-2022": "स्प्राइट काहीतरी सांगण्यासाठी `व्हेन क्लिक` इव्हेंट वापरा.",
+        "helloworld_food_freeplay_soccer-2022": "आपल्याला जे हवे आहे ते तयार करण्याची ही वेळ आहे!",
+        "helloworld_food_freeplay_space-2022": "आपल्याला जे हवे आहे ते तयार करण्याची ही वेळ आहे!",
+        "helloworld_food_location_soccer-2022": "प्रत्येक स्प्राईटला एक वेगळे स्थान द्या.",
+        "helloworld_food_location_space-2022": "प्रत्येक स्प्राईटला एक वेगळे स्थान द्या.",
+        "helloworld_food_multi_soccer-2022": "तुमच्या प्रत्येक दोन स्प्राईट्सला काहीतरी सांगायला लावा.",
+        "helloworld_food_multi_space-2022": "तुमच्या प्रत्येक दोन स्प्राईट्सला काहीतरी सांगायला लावा.",
+        "helloworld_food_say_soccer-2022": "मला तुम्हाला जे आवडते ते सांगण्यासाठी `से` ब्लॉक वापरा!",
+        "helloworld_food_say_space-2022": "मला तुम्हाला जे आवडते ते सांगण्यासाठी `से` ब्लॉक वापरा!",
+        "helloworld_food_sizes_soccer-2022": "चला  तर मग स्प्राइट्सचा आकार बदलणे शिकूया.",
+        "helloworld_food_sizes_space-2022": "चला  तर मग स्प्राइट्सचा आकार बदलणे शिकूया.",
+        "helloworld_food_sounds_soccer-2022": "चला तर मग आवाज कसा वाजवायचा ते शिकूया.",
+        "helloworld_food_sounds_space-2022": "चला तर मग आवाज कसा वाजवायचा ते शिकूया."
       }
     }
   }

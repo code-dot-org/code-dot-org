@@ -453,6 +453,7 @@ ru-RU:
   homepage_banner_40k_teachers_link: Узнать больше
   homepage_slot_text_title_hoc: Час кода
   homepage_slot_text_blurb_hoc: Каждый может учиться. Начните сегодня
+  homepage_slot_text_blurb_hoc_2022: Учись, играй, твори!
   homepage_slot_text_link_hoc: Попробуйте Час кода
   homepage_slot_text_link_about_hoc: О Часе кода
   homepage_slot_text_link_host: Провести час кода
@@ -823,6 +824,7 @@ ru-RU:
   volunteer_engineer_submission_distance_16: 16 км
   volunteer_engineer_submission_distance_24: 24 км
   volunteer_engineer_submission_distance_32: 32 км
+  volunteer_engineer_submission_distance_80: 50 миль
   volunteer_engineer_submission_num_volunteers_5: 5 волонтёров
   volunteer_engineer_submission_num_volunteers_10: 10 волонтёров
   volunteer_engineer_submission_num_volunteers_25: 25 волонтёров
@@ -1616,8 +1618,8 @@ ru-RU:
     не умеющих читать (аналог курса А, но с большим разнообразием для учащихся постарше).
   coursec_shortdescription_congrats: Изучите основы компьютерной науки и создавайте
     свои собственные произведения искусства, истории и игры.
-  coursed_shortdescription_congrats: Быстро повтори понятия из курса C, а затем перейди
-    к алгоритмам, вложенным циклам, условным инструкциям и пр.
+  coursed_shortdescription_congrats: Быстро рассмотрим концепции из курса C, затем
+    перейдем к алгоритмам, вложенным циклам, условным выражениям и многому другому.
   coursee_shortdescription_congrats: Быстро повтори понятия из курсов C и D, а затем
     перейди к функциям.
   coursef_shortdescription_congrats: Изучи все понятия в Основах компьютерных наук
@@ -1629,8 +1631,8 @@ ru-RU:
     постарше).
   coursec-2017_shortdescription_congrats: Изучите основы компьютерной науки и создавайте
     свои собственные произведения искусства, истории и игры.
-  coursed-2017_shortdescription_congrats: Быстро повтори понятия из курса C, а затем
-    перейди к алгоритмам, вложенным циклам, условным инструкциям и пр.
+  coursed-2017_shortdescription_congrats: Быстро рассмотрим концепции из курса C,
+    затем перейдем к алгоритмам, вложенным циклам, условным выражениям и многому другому.
   coursee-2017_shortdescription_congrats: Быстро повтори понятия из курсов C и D,
     а затем перейди к функциям.
   coursef-2017_shortdescription_congrats: Изучи все понятия в Основах компьютерных
@@ -1642,8 +1644,8 @@ ru-RU:
     постарше).
   coursec-2018_shortdescription_congrats: Изучите основы компьютерной науки и создавайте
     свои собственные произведения искусства, истории и игры.
-  coursed-2018_shortdescription_congrats: Быстро повтори понятия из курса C, а затем
-    перейди к алгоритмам, вложенным циклам, условным инструкциям и пр.
+  coursed-2018_shortdescription_congrats: Быстро рассмотрим концепции из курса C,
+    затем перейдем к алгоритмам, вложенным циклам, условным выражениям и многому другому.
   coursee-2018_shortdescription_congrats: Быстро повтори понятия из курсов C и D,
     а затем перейди к функциям.
   coursef-2018_shortdescription_congrats: Изучи все понятия в Основах компьютерных
@@ -1655,8 +1657,8 @@ ru-RU:
     постарше).
   coursec-2019_shortdescription_congrats: Изучите основы компьютерной науки и создавайте
     свои собственные произведения искусства, истории и игры.
-  coursed-2019_shortdescription_congrats: Быстро повтори понятия из курса C, а затем
-    перейди к алгоритмам, вложенным циклам, условным инструкциям и пр.
+  coursed-2019_shortdescription_congrats: Быстро рассмотрим концепции из курса C,
+    затем перейдем к алгоритмам, вложенным циклам, условным выражениям и многому другому.
   coursee-2019_shortdescription_congrats: Быстро повтори понятия из курсов C и D,
     а затем перейди к функциям.
   coursef-2019_shortdescription_congrats: Изучи все понятия в Основах компьютерных
@@ -2370,6 +2372,8 @@ ru-RU:
   hoc_overview_dance_2019_subtitle: Напиши программу танцевальной вечеринки и поделись
     ей с друзьями. С участием Кэти Перри, Шона Мендес, группы Panic! At The Disco,
     группы Lil Nas X, братьев Джонас, Никки Минаж и еще 34 артистов!
+  hoc_overview_hello_world_2022_subtitle: Выберите одну из четырех забавных тем для
+    программирования интерактивных персонажей в создаваемом вами мире.
   hoc_overview_title: Занятия Часа кода от Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Час кода</a> – международное
     движение, объединяющее десятки миллионов учащихся более чем из 180 стран. Стать
@@ -2738,3 +2742,17 @@ ru-RU:
     к планшету с сенсорным экраном, излучающему звезды и лучи света на синем фоне
   minecraft_tile_alt: Два персонажа Майнкрафта, Стив и Алекс, на фоне водной сцены
     Майнкрафта с кораллами, дельфинами и водорослями
+  hoc2022_banner_title: Учитесь, играйте, творите!
+  hoc2022_banner_description: Исследуйте всселенную, достигайте целей, двигайтесь
+    вперед — информатика открывает для вас множество новых возможностей!
+  hoc2022_cta_primary: Посмотрите, что нового
+  hoc2022_cta_secondary: Попробуйте другие занятия
+  hoc2022_landing_page_explore_description: Откройте двери в новые миры с помощью
+    информатики!
+  hoc2022_landing_page_play_title: Играть
+  hoc2022_landing_page_play_description: Выходите на поле и забивайте!
+  hoc2022_landing_page_create_title: Создать
+  hoc2022_landing_page_create_description: Сделайте что-нибудь необычное и удивительное!
+  try_it_yourself: Попробуй сам!
+  try_an_activity: Попробовать занятие
+  see_more_activities: Смотреть другие занятия

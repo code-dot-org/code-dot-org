@@ -43,4 +43,19 @@ describe('ReportAbuseForm', () => {
       '123abc'
     );
   });
+
+  it('getChannelIdFromUrl returns the channel id for weblab projects', () => {
+    assert.equal(
+      getChannelIdFromUrl(
+        'https://studio.code.org/report_abuse?channelId=123abc'
+      ),
+      '123abc'
+    );
+    assert.equal(
+      getChannelIdFromUrl(
+        'http://localhost-studio.code.org:3000/report_abuse?channelId=123abc'
+      ),
+      '123abc'
+    );
+  });
 });

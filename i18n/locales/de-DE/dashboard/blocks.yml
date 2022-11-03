@@ -248,20 +248,12 @@ de:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_everyMeasuresRange:
-        text: 'wiederholen Sie alle {N} Takte nach {START} '
       Dancelab_everySeconds:
         text: 'jede {N} {UNIT} '
         options:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
-      Dancelab_everySecondsRange:
-        text: 'jede {N} {UNIT} von {START} bis {STOP} '
-        options:
-          UNIT:
-            measures: Takte
-            seconds: Sekunden
       Dancelab_everyVerseChorus:
         text: 'jede {UNIT} '
         options:
@@ -1014,6 +1006,24 @@ de:
         text: Setup
       Dancelab_whenSetup2:
         text: Setup
+      DansBlocks_setForegroundEffect2:
+        text: führe {EFFECT} aus
+        options:
+          EFFECT:
+            '"bubbles"': Blasen
+            '"confetti"': Konfetti
+            '"hearts"': Herzen
+            '"emojis"': Fröhliche Emojis
+            '"rain"': Regen
+            '"starburst"': Starburst
+            '"glass"': Zerbrochenes Glas
+            '"twinkling"': Zwinkern
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): verschiebbar sein
+            wandering(): wandern
+            shrinking(): schrumpfen
       gamelab_addBehaviorSimple:
         text: "{SPRITE} beginnt {BEHAVIOR}"
       gamelab_addTarget:
@@ -1336,6 +1346,31 @@ de:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": auswählen
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": Knackiger Bass
             "'sound://category_digital/jump_7.mp3'": springen
+      gamelab_playSoundOptionsSoccer:
+        text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": Lufthupe
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": Beifall
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": Gesang
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": Jubel
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": Kick
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": zwei Pfeifen
+            "'sound://category_sports/One_Whistle_SFX.mp3'": Pfeife
+      gamelab_playSoundOptionsSpace:
+        text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": Schwarzes Loch
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": Geschosshaufen
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Krabbennebel
+            "'sound://category_space/Launch_SFX.mp3'": Start
+            "'sound://category_space/Lift_Off.mp3'": Abheben
+            "'sound://category_space/Pillars_SFX.mp3'": Säulen
+            "'sound://category_space/Southern_ring_SFX.mp3'": Südring
+            "'sound://category_space/Supernova_SFX.mp3'": Supernova
       gamelab_playSpeech:
         text: Sprache wiedergeben {SOUND}
       gamelab_playerBehaviors:
@@ -2162,6 +2197,11 @@ de:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       Poetry_whenPromptAnswered:
         text: wenn {VAR} befolgt wurde
       RyanLab_moveForward:
@@ -2419,5 +2459,9 @@ de:
           DIR:
             right: rechts ↻
             left: links ↺
+      storylab_setHeading:
+        text: Überschrift festlegen {HEADING}
+      storylab_setSubheading:
+        text: Unterüberschrift festlegen {SUBHEADING}
       validation_validatedBackground:
         text: setze Hintergund auf {IMG}

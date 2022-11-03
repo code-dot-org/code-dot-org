@@ -120,6 +120,7 @@ tg:
     online: онлайн
     view_course: Намоиш додани дарс
     trynow: 'Маълумоти бештар'
+  certificate_hour_of_code: "Соати рамз"
   gender:
     male: 'Мард'
     female: 'Зан'

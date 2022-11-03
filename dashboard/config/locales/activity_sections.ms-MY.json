@@ -260,6 +260,31 @@
           "name": "Di sebalik Hour of Code",
           "description": "Selepas Hour of Code anda tamat, terdapat banyak cara untuk meneruskan pengajaran sains komputer di bilik darjah K-5 anda. Berikut adalah beberapa idea:\n\n-   **Ajar kursus [Code Studio Computer Science Fundamentals](http://code.org/educate/k5)**. Enam kursus ini direka untuk pelajar muda. Pelajar bekerja dengan cara mereka melalui satu siri teka-teki yang mengajar mereka mengekod dan pendidik mempunyai akses kepada rancangan pengajaran yang menarik yang membantu menjadikan pembelajaran menjadi lebih hidup. Code.org menawarkan pembangunan profesional percuma untuk kursus ini, dalam talian atau bersemuka.\n-   **Jemput pakar sains komputer untuk bercakap dengan kelas anda tentang kerjanya**. Tidak mengenali mana-mana sukarelawan, hubungi beberapa orang di [peta sukarelawan](https://code.org/volunteer/local)."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
+          "tips": [
+            "Anda perlu meluangkan sedikit masa untuk memuatkan hadapan atau memperkenalkan Jam Kod anda. Terutama dengan pelajar muda, adalah lebih baik untuk menyertai secepat mungkin."
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Sokongan Umum",
+          "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Helo Dunia",
+          "progression_name": "Helo Dunia"
+        },
+        "da91f0fe-e142-453f-a093-8e367d0a1454": {
+          "description": "Jika kumpulan atau individu selesai lebih awal, galakkan mereka untuk terus membina projek di peringkat terakhir. Jika pelajar tidak pasti apa lagi yang perlu dilakukan, anda boleh menggesa mereka dengan soalan:\n\n-   Apakah sprite lain yang boleh anda tambahkan pada projek anda?\n-   Pernahkah anda melihat perpustakaan pakaian atau cuba melukis kostum sprite anda sendiri?\n-   Apa lagi yang boleh anda katakan kepada sprite anda?\n-   Apakah yang perlu dilakukan oleh sprite anda apabila mereka diklik?\n-   Menjemput pelajar untuk berkongsi idea dan belajar daripada satu sama lain. Mereka juga boleh mencuba tutorial lain dengan melawati [code.org/learn](https://code.org/learn)."
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Refleksi",
+          "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Menetapkan Pentas\n\nMengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas.\n\n_Katakanlah: “Hari ini kita akan menghabiskan satu jam belajar kod. Adakah sesiapa di sini pernah mendengar istilah \"kod\" sebelum ini? Apakah maksudnya?\"_\n\nPelajar mungkin menyebut bahawa \"kod\" adalah seperti mesej rahsia atau berkaitan dengan komputer dalam beberapa cara."
         },
@@ -645,7 +670,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Raikan",
-          "description": "Jelaskan bahawa anda menghabiskan satu jam pengekodan hari ini, kerana minggu ini ialah Minggu Pendidikan CS, dan berjuta-juta pelajar lain di seluruh dunia juga telah mempelajari satu Jam Kod minggu ini. Tahniah kepada pelajar kerana menjadi sebahagian daripada gerakan sedunia ini.\n\nBeri setiap pelajar [sijil](https://code.org/certificates?script=mc) dengan namanya di atasnya."
+          "description": "Jelaskan bahawa anda menghabiskan satu jam pengekodan hari ini, kerana minggu ini ialah Minggu Pendidikan CS, dan berjuta-juta pelajar lain di seluruh dunia juga telah mempelajari satu Jam Kod minggu ini. Tahniah kepada pelajar kerana menjadi sebahagian daripada gerakan sedunia ini.\n\nBeri setiap pelajar [sijil](https://studio.code.org/certificates/batch?course=bWM=) dengan namanya di atasnya."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "description": "Beritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Galakkan pelajar untuk melawati [code.org/learn](<>) untuk mendapatkan senarai pilihan, atau, jika anda merancang mana-mana aktiviti lanjutan yang berikut, beritahu pelajar perkara yang akan datang seterusnya dalam bilik darjah anda."
@@ -748,6 +773,31 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Baca Blown to Bits**\n\n-   Baca ms 165-169 daripada [Blown to Bits, Chapter 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Jawab soalan yang disediakan dalam panduan membaca dan lembaran kerja [Reading Guide for Encryption](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/) Lembaran Kerja.\n\n**Lebih Banyak Ditiup**\n\n-   Bahagian awal Bab 5 Blown to Bits merujuk kepada kepentingan dan kontroversi sekitar penyulitan selepas 11 September. Pembacaan ini mungkin merupakan alat yang berguna untuk memperkenalkan lagi kesan kriptografi pada banyak aspek kehidupan moden.\n\n-   Minta pelajar menyemak sejarah penyemakan imbas Internet mereka dan mengira kira-kira peratusan yang mereka lakukan dengan andaian bahawa ia adalah \"peribadi.\" Adakah mereka mempunyai cara untuk memastikan perkara ini berlaku? Adakah terdapat mana-mana laman web yang mereka lawati di mana mereka berasa lebih yakin dengan kerahsiaan trafik mereka daripada yang lain? Adakah mereka berasas dalam kesimpulan ini?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Mengatur pentas",
+          "description": "Mengalu-alukan pelajar ke kelas dan memperkenalkan aktiviti hari itu secara ringkas."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "description": "_Dalam aktiviti ini, anda akan berseronok membuat dunia interaktif dengan watak menyeronokkan yang dipanggil sprite. Anda akan dapat membuat sprite berkata sesuatu dengan gelembung pertuturan seperti yang anda lihat dalam novel komik atau grafik, dan anda akan belajar untuk membuat mereka bertindak balas secara automatik apabila anda atau orang lain mengklik padanya._\n\n_Hari ini anda akan menulis \"kod\", yang bermaksud satu set arahan yang boleh difahami oleh komputer. Apabila anda menulis cerita, anda perlu berfikir dengan teliti tentang perkataan yang anda gunakan. Apabila anda menulis kod, anda perlu memikirkan dengan teliti tentang arahan yang anda berikan kepada komputer anda._",
+          "tips": [
+            "Anda perlu meluangkan sedikit masa untuk memuatkan hadapan atau memperkenalkan Jam Kod anda. Terutama dengan pelajar muda, adalah lebih baik untuk menyertai secepat mungkin."
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Sokongan Umum",
+          "description": "Berikut ialah beberapa petua yang sepatutnya membantu pelajar tanpa mengira tahap yang mereka sedang usahakan\n\n-   **Bekerjasama dengan Jiran:** Galakkan pelajar mendaftar masuk dengan jiran apabila mereka tersekat. Bergantung pada umur dan keupayaan pelajar anda, anda mungkin mempertimbangkan untuk memecahkan kelas anda secara rasmi kepada pasangan untuk melengkapkan tutorial menggunakan [pengaturcaraan pasangan](https://youtu.be/vgkahOzFH2Q).\n\n-   **Baca Arahan:** Arahan biasanya memberikan petua berguna tentang cara melengkapkan tahap. Sebelum memberikan jawapan kepada pelajar, pastikan mereka telah melihat dengan teliti arahan, pembayang, video dan sebarang kod permulaan dengan teliti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tersekat? Cari pembayang:** Setiap peringkat termasuk pembayang dengan nasihat tentang cara melepasi tahap, termasuk blok kod yang hendak dicuba.\n\n-   **Luangkan masa dan percubaan anda.** Arahan memberitahu pelajar secara amnya perkara yang perlu dilakukan, tetapi mereka juga harus berasa bebas untuk mencuba idea mereka sendiri."
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Helo Dunia",
+          "progression_name": "Helo Dunia"
+        },
+        "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
+          "description": "Jika kumpulan atau individu selesai lebih awal, galakkan mereka untuk terus membina projek di peringkat terakhir. Jika pelajar tidak pasti apa lagi yang perlu dilakukan, anda boleh menggesa mereka dengan soalan:\n\n-   Apakah sprite lain yang boleh anda tambahkan pada projek anda?\n-   Pernahkah anda melihat perpustakaan pakaian atau cuba melukis kostum sprite anda sendiri?\n-   Apa lagi yang boleh anda katakan kepada sprite anda?\n-   Apakah yang perlu dilakukan oleh sprite anda apabila mereka diklik?\n-   Menjemput pelajar untuk berkongsi idea dan belajar daripada satu sama lain. Mereka juga boleh mencuba tutorial lain dengan melawati [code.org/learn](https://code.org/learn)."
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Refleksi",
+          "description": "#### Taklimat\n\nMinta pelajar membuat refleksi tentang aktiviti hari itu. Apakah yang mereka pelajari tentang pengekodan? Sprite? Peristiwa?\n\nApakah perasaan mereka tentang sains komputer dan pengekodan selepas menghabiskan satu jam meneroka?\n\n#### Langkah seterusnya\n\nBeritahu pelajar bahawa jika mereka menikmati aktiviti hari ini, mereka mempunyai banyak pilihan untuk meneruskan kod. Lawati [Sambungan SK](https://code.org/educate/csc) untuk mendapatkan idea tentang cara mengintegrasikan sains komputer ke dalam mata pelajaran lain atau baca lebih lanjut tentang [tawaran kursus untuk sekolah rendah](https://code.org/educate/curriculum/elementary-school) kami."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Mengatur pentas",
@@ -3351,9 +3401,6 @@
           "tips": [
             "Ingatkan pelajar supaya berkongsi kerja mereka dengan rakan atau keluarga terdekat sahaja. Untuk maklumat lebih lanjut, sila tonton atau tunjukkan kepada kelas **\\*Video - Jeda dan Fikir Dalam Talian**."
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas. \n\n**Tahap Ramalan:** - [Course B, Loops in Artist](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Artis dalam Studio Kod"

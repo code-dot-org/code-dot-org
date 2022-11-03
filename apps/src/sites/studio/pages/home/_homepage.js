@@ -77,6 +77,7 @@ function showHomepage() {
             schoolYear={homepageData.currentSchoolYear}
             specialAnnouncement={specialAnnouncement}
             hasFeedback={homepageData.hasFeedback}
+            showIncubatorBanner={homepageData.showIncubatorBanner}
           />
         )}
         {!isTeacher && (
@@ -87,7 +88,6 @@ function showHomepage() {
             sections={homepageData.sections}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             studentId={homepageData.studentId}
-            isEnglish={isEnglish}
             showVerifiedTeacherWarning={
               homepageData.showStudentAsVerifiedTeacherWarning
             }

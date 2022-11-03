@@ -86,12 +86,12 @@ fr:
     submit: 'Ajouter un indice'
   appname: "Code.org"
   stage: "étape"
-  stage_number: "Leçon %{number} "
+  stage_number: "Leçon %{number}"
   puzzle: "Énigme"
   trophies: "trophées"
   courses: 'Cours'
   courses_page:
-    title_student: "Apprends avec Code Studio"
+    title_student: "Apprendre l'Informatique"
     title_teacher: "Enseigner l'informatique"
   unplugged_activity: 'Activité "Déconnectée"'
   of: "de"
@@ -378,6 +378,7 @@ fr:
       about: "À propos"
       legal: "Confidentialité et mentions légales"
       legal_privacy: "Politique de confidentialité"
+      legal_cookie_notice: " Utilisation des cookies"
       legal_tos: "Conditions Générales d'Utilisation"
     user:
       classroom: 'Page d''accueil de l''enseignant'
@@ -423,13 +424,13 @@ fr:
       poetry_hoc: 'Art du poème'
       scratch: 'Scratch'
       sports: 'Sports'
-      spritelab: 'Le Labo des Lutins'
+      spritelab: 'Le Labo des Sprites'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocs)'
       starwarsblocks_hour: 'Star Wars (blocs)'
       thebadguys: 'Les Bad Guys'
       loading: 'Chargement...'
-      weblab: 'Lab du Web'
+      weblab: 'Labo Web'
       view_all: 'Afficher tous les projets...'
     popup:
       progress_for_user: "progrès de %{name}"
@@ -553,6 +554,7 @@ fr:
     choose_next_course: "Essaye un cours Code Studio en le choisissant ci-dessous"
     print_certificate: "Imprimer le certificat"
   certificate_sponsor_message: "%{sponsor_name} a fait le don généreux de parrainer ton apprentissage."
+  certificate_hour_of_code: "Heure de Code"
   move_students:
     new_section_dne: "Désolé, la section %{new_section_code} n’existe pas. Veuillez saisir un code de section différent."
     section_code_cant_be_current_section: "La section courante ne peut pas être identique à la nouvelle section."
@@ -604,7 +606,7 @@ fr:
     how_it_works: 'Comment ça marche'
     try_hour_of_code: 'Essaie une Heure du Code !'
     store: 'Boutique'
-    cookie_notice: ' Utilisation de cookies'
+    cookie_notice: ' Utilisation des cookies'
   reference_area:
     title: 'Besoin d''aide ?'
     subtitle: 'Regarder les vidéos et les indices'
@@ -695,7 +697,7 @@ fr:
       body: "Regarde une galerie des applications et des images d'artistes créées par nos utilisateurs."
     gamelab:
       title: "Labo Jeux"
-      body: "Le Labo des Jeux est un environnement de programmation où vous pouvez créer des animations simples et des jeux avec des objets et des personnages qui interagissent entre eux."
+      body: "Le Labo Jeux est un environnement de programmation où on peut créer des animations simples et des jeux avec des objets et des personnages qui interagissent entre eux."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
     hoc-encryption:
@@ -703,7 +705,7 @@ fr:
       body: "Les élèves apprendront les techniques pour créer et casser des messages chiffrés."
     weblab:
       title: "Le Labo du Web (beta)"
-      body: "Le Labo du Web est un environnement de programmation où tu peux créer des pages web simples, en utilisant HTML et CSS. Crée tes pages web et partage ton site en quelques instants."
+      body: "Le Labo Web est un environnement de programmation où tu peux créer des pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage ton site en quelques instants."
       audience: "Âge recommandé: 13 ans et plus"
       cta: "Apprendre comment"
     frozen:
@@ -711,8 +713,8 @@ fr:
     starwars:
       title: "Star Wars"
     infinity:
-      title: "Labo de jeu Infinity"
-      body: "Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity."
+      title: "Labo Jeux Infinity"
+      body: "Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène les personnages de Disney Infinity."
     minecraft:
       title: "Minecraft"
       body: "Explore un monde Minecraft à travers son code."
@@ -731,10 +733,10 @@ fr:
       title: "Compression de texte"
       body: "Dans cette leçon, les élèves utiliseront le Widget de Compression de Texte pour compresser le texte en remplaçant des modèles par des symboles."
     unplugged:
-      title: "Leçons en mode \"déconnecté\""
-      audience: "Âge recommandé: 4 ans et plus"
+      title: "Leçons en mode « déconnecté »"
+      audience: "À partir de 4 ans"
       body: "Nous avons compilé une liste de leçons en mode \"déconnecté\" que vous pouvez utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique, que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires à l'un de vos cours d'informatique."
-      body_short: "Si vous n'avez pas d'ordinateur, essayez ces leçons en mode \"déconnecté\" dans votre classe."
+      body_short: "Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode \"déconnecté\" dans votre classe."
     unplugged_conditionals:
       title: "Instructions conditionnelles"
       body: "Découvre les algorithmes et les déclarations conditionnelles, dans cette activité \"déconnectée\", en t’appuyant sur un jeu de cartes."
@@ -1151,3 +1153,12 @@ fr:
   unit_prefix: "Unité %{n}"
   code_org_logo_alt: "Accueil Code.org"
   teacher_feedback: "FeedBack enseignants"
+  lesson_lock:
+    error:
+      no_updates: "Aucune mise à jour à effectuer"
+      missing_params: "Fournir les identifiants de l'utilisateur, le niveau et les codes d'identification d'unité."
+      cannot_view_locked_answers: "Impossible d'afficher les réponses lorsque le système est verrouillé"
+      forbidden: "L'utilisateur ne peut pas modifier les paramètres de verrouillage de l'apprenant"
+  reset_predict_progress_button: "Supprimer la réponse"
+  pixelation:
+    binary: "Binaire"

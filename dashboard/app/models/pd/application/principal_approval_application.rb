@@ -67,7 +67,7 @@ module Pd::Application
           :pacific_islander,
           :american_indian
         ].include? k
-      end.values.map(&:to_f).reduce(:+)
+      end.values.sum(&:to_f)
     end
 
     def placeholder?
@@ -93,6 +93,7 @@ module Pd::Application
     def self.options(year = APPLICATION_CURRENT_YEAR)
       {
         title: COMMON_OPTIONS[:title],
+        can_email_you: [YES, NO],
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
@@ -108,64 +109,6 @@ module Pd::Application
           'No, computer science is new to my school',
           TEXT_FIELDS[:dont_know_explain]
         ],
-        replace_which_course_csp: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csd:  [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        replace_which_course_csa: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
-        ],
-        committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
           'Yes, my school would be able to pay the full program fee.',
           'No, my school would not be able to pay the program fee. We would like to be considered for a scholarship.'
@@ -180,6 +123,7 @@ module Pd::Application
             :first_name,
             :last_name,
             :email,
+            :can_email_you,
             :confirm_principal
           ]
 
@@ -196,20 +140,9 @@ module Pd::Application
               :other,
               :committed_to_master_schedule,
               :replace_course,
-              :committed_to_diversity,
               :understand_fee,
               :pay_fee
             ]
-
-            if hash[:replace_course] == self.class.options(year)[:replace_course][0]
-              if teacher_application&.course == 'csd'
-                required << :replace_which_course_csd
-              elsif teacher_application&.course == 'csp'
-                required << :replace_which_course_csp
-              elsif teacher_application&.course == 'csa'
-                required << :replace_which_course_csa
-              end
-            end
           end
         end
       end
@@ -223,10 +156,6 @@ module Pd::Application
       [
         [:committed_to_master_schedule],
         [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
-        [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
-        [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
-        [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
-        [:replace_which_course_csa, TEXT_FIELDS[:other_please_explain], :replace_which_course_csa_other],
         [:do_you_approve],
         [:contact_invoicing],
         [:contact_invoicing_detail]

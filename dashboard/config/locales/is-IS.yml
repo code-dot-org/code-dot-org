@@ -67,6 +67,7 @@ is:
   previous_page: Fyrri síða
   next_page: Næsta síða
   next_resource: Næstu tilföng
+  done_with_module: Búin(n) með þessa námseiningu
   cancel: Hætta við
   okay: Allt í lagi
   or: eða
@@ -631,6 +632,7 @@ is:
     print_certificate: Prenta skírteini
   certificate_sponsor_message: "%{sponsor_name} studdi við nám þitt með rausnarlegri
     gjöf."
+  certificate_hour_of_code: Klukkustund kóðunar
   move_students:
     new_section_dne: Því miður finnst hópurinn %{new_section_code} ekki. Vinsamlegast
       færðu inn annan kóða fyrir hóp.
@@ -1392,3 +1394,5 @@ is:
   unit_prefix: Eining %{n}
   code_org_logo_alt: Code.org Heimasíða
   teacher_feedback: Endurgjöf kennara
+  pixelation:
+    binary: Tvíundir

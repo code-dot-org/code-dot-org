@@ -228,20 +228,12 @@ ga:
             MOVES.XArmsUp: Síneadh
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-      Dancelab_everyMeasuresRange:
-        text: 'athdhéan gach {N} tomhas tar éis {START} '
       Dancelab_everySeconds:
         text: 'athdhéan gach {N} {UNIT} '
         options:
           UNIT:
             '"measures"': tomhas
             '"seconds"': soicind
-      Dancelab_everySecondsRange:
-        text: 'gach {N} {UNIT} ó {START} go {STOP} '
-        options:
-          UNIT:
-            measures: Tomhas
-            seconds: Soicind
       Dancelab_everyVerseChorus:
         text: 'gach {UNIT} '
         options:
@@ -989,6 +981,19 @@ ga:
         text: socrú
       Dancelab_whenSetupSong:
         text: 'socraigh {SONG} '
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Boilgeoga
+            '"confetti"': Coinfití
+            '"hearts"': croíthe
+            '"rain"': báisteach
+            '"starburst"': Pléascadh Réaltaí
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            wandering(): fánaíocht
+            shrinking(): crapadh
       gamelab_addBehaviorSimple:
         text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -1696,6 +1701,11 @@ ga:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: téigh ar aghaidh
       RyanLab_turnLeft:

@@ -536,6 +536,7 @@ uz:
     choose_next_course: "Quyidagi birini tanlab Code Studio kursini sinab ko'ring"
     print_certificate: "Sertifikatni chop etish"
   certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
+  certificate_hour_of_code: "Dasturlash soati"
   move_students:
     new_section_dne: "Kechirasiz, lekin %{new_section_code} bo'lim mavjud emas. Boshqa bo'lim kodini kiriting."
     section_code_cant_be_current_section: "Joriy bo'lim yangi bo'lim bilan bir xil bo'lishi mumkin emas."
@@ -1103,3 +1104,5 @@ uz:
     this_sprite: "bu sprayt"
   unit_prefix: "Bo'lim %{n}"
   teacher_feedback: "O‘qituvchilarning fikri"
+  pixelation:
+    binary: "Binarli"

@@ -30,7 +30,7 @@ module Rack
       return if accept_langs.nil?
 
       languages_and_qvalues = accept_langs.split(",").map do |l|
-        l += ';q=1.0' unless l =~ /;q=\d+(?:\.\d+)?$/
+        l += ';q=1.0' unless /;q=\d+(?:\.\d+)?$/.match?(l)
         l.split(';q=')
       end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_20_231241) do
+ActiveRecord::Schema.define(version: 2022_10_24_233909) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -276,14 +276,14 @@ ActiveRecord::Schema.define(version: 2022_09_20_231241) do
   end
 
   create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
-    t.integer "code_review_request_id", null: false
+    t.integer "code_review_id", null: false
     t.integer "commenter_id"
     t.boolean "is_resolved", null: false
     t.text "comment", size: :medium
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["code_review_request_id"], name: "index_code_review_comments_on_code_review_request_id"
+    t.index ["code_review_id"], name: "index_code_review_comments_on_code_review_id"
   end
 
   create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -447,7 +447,7 @@ ActiveRecord::Schema.define(version: 2022_09_20_231241) do
     t.integer "course_offering_id"
     t.string "published_state", default: "in_development"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
-    t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true
+    t.index ["course_offering_id", "key", "content_root_type"], name: "index_course_versions_on_offering_id_and_key_and_type", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
   end
 
@@ -892,6 +892,13 @@ ActiveRecord::Schema.define(version: 2022_09_20_231241) do
     t.index ["status"], name: "index_pd_applications_on_status"
     t.index ["type"], name: "index_pd_applications_on_type"
     t.index ["user_id"], name: "index_pd_applications_on_user_id"
+  end
+
+  create_table "pd_applications_status_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "pd_application_id", null: false
+    t.string "status", null: false
+    t.datetime "timestamp", null: false
+    t.integer "position", null: false
   end
 
   create_table "pd_attendances", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -2225,9 +2232,6 @@ ActiveRecord::Schema.define(version: 2022_09_20_231241) do
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
 
-  create_view "code_review_notes", sql_definition: <<-SQL
-      select `code_review_comments`.`id` AS `id`,`code_review_comments`.`code_review_request_id` AS `code_review_request_id`,`code_review_comments`.`commenter_id` AS `commenter_id`,`code_review_comments`.`is_resolved` AS `is_resolved`,`code_review_comments`.`comment` AS `comment`,`code_review_comments`.`deleted_at` AS `deleted_at`,`code_review_comments`.`created_at` AS `created_at`,`code_review_comments`.`updated_at` AS `updated_at` from `code_review_comments`
-  SQL
   create_view "users_view", sql_definition: <<-SQL
       select `users`.`id` AS `id`,`users`.`studio_person_id` AS `studio_person_id`,if((`users`.`provider` = 'migrated'),`authentication_options`.`email`,`users`.`email`) AS `email`,`users`.`parent_email` AS `parent_email`,`users`.`encrypted_password` AS `encrypted_password`,`users`.`reset_password_token` AS `reset_password_token`,`users`.`reset_password_sent_at` AS `reset_password_sent_at`,`users`.`remember_created_at` AS `remember_created_at`,`users`.`sign_in_count` AS `sign_in_count`,`users`.`current_sign_in_at` AS `current_sign_in_at`,`users`.`last_sign_in_at` AS `last_sign_in_at`,`users`.`current_sign_in_ip` AS `current_sign_in_ip`,`users`.`last_sign_in_ip` AS `last_sign_in_ip`,`users`.`created_at` AS `created_at`,`users`.`updated_at` AS `updated_at`,`users`.`username` AS `username`,`users`.`provider` AS `provider`,`users`.`uid` AS `UID`,`users`.`admin` AS `ADMIN`,`users`.`gender` AS `gender`,`users`.`name` AS `name`,`users`.`locale` AS `locale`,`users`.`birthday` AS `birthday`,`users`.`user_type` AS `user_type`,`users`.`school` AS `school`,`users`.`full_address` AS `full_address`,`users`.`school_info_id` AS `school_info_id`,`users`.`total_lines` AS `total_lines`,`users`.`secret_picture_id` AS `secret_picture_id`,`users`.`active` AS `active`,if((`users`.`provider` = 'migrated'),`authentication_options`.`hashed_email`,`users`.`hashed_email`) AS `hashed_email`,`users`.`deleted_at` AS `deleted_at`,`users`.`purged_at` AS `purged_at`,`users`.`secret_words` AS `secret_words`,`users`.`properties` AS `properties`,`users`.`invitation_token` AS `invitation_token`,`users`.`invitation_created_at` AS `invitation_created_at`,`users`.`invitation_sent_at` AS `invitation_sent_at`,`users`.`invitation_accepted_at` AS `invitation_accepted_at`,`users`.`invitation_limit` AS `invitation_limit`,`users`.`invited_by_id` AS `invited_by_id`,`users`.`invited_by_type` AS `invited_by_type`,`users`.`invitations_count` AS `invitations_count`,`users`.`terms_of_service_version` AS `terms_of_service_version`,`users`.`urm` AS `urm`,`users`.`races` AS `races`,`users`.`primary_contact_info_id` AS `primary_contact_info_id` from (`users` left join `authentication_options` on((`users`.`primary_contact_info_id` = `authentication_options`.`id`)))
   SQL

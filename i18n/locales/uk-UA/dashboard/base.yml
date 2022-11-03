@@ -520,6 +520,7 @@ uk:
     choose_next_course: "Спробуйте курс Студії коду, обравши один з варіантів"
     print_certificate: "Друкувати сертифікат"
   certificate_sponsor_message: "%{sponsor_name} зробив щедрий подарунок, щоб спонсорувати ваше навчання. "
+  certificate_hour_of_code: "Година коду"
   move_students:
     new_section_dne: "Вибачте, але групи %{new_section_code} не існує. Вкажіть інший код групи."
     section_code_cant_be_current_section: "Поточна група не може бути такою ж, як нова."
@@ -1077,3 +1078,5 @@ uk:
     link_your_email: "Прив'яжіть вашу ел. пошту"
     not_now: "Не зараз"
   teacher_feedback: "Відгук викладача"
+  pixelation:
+    binary: "Двійкова система"

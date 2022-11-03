@@ -35,23 +35,17 @@ Sdílejte obrázky z události na Facebooku a Twitteru. Přidejte hashtag **#Hou
 
 * * *
 
-## Uspořádejte Večer programování s Hodinou kódu pro celou rodinu a pozvěte rodiče
+## Example plan for a school assembly or event
 
-Zvažte uspořádání večerní události pro děti prvního stupně, kam pozvete rodiče, aby se přidali ke svým dětem při hodině počítačové vědy. Je to vynikající způsob, jak můžete zapojit širší komunitu a povzbudit rodiče, aby podpořili počítačovou vědu ve vaší škole. Naši partneři programu Večer programování pro celou rodinu vytvořili pro tuto událost integrovanou sadu s kontrolními seznamy pro plánování, skriptem pro prezentujícího, zvacími e-maily, plakáty, prezentacemi a dalším materiálem, abyste mohli sandno uspořádat vlastní událost. [Kliknutím sem můžete sadu události stáhnout](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+**Event:** School-wide Computer Science Education Week kick-off assembly
 
-* * *
+**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-## Ukázkový plán školního shromáždění nebo události
+**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
 
-**Událost:** Zahajovací setkání celoškolního Týdne informatiky
+**Location:** School assembly hall (e.g. theater, gym, cafeteria)
 
-**Datum:** {{ campaign_date/start_short }} (začátek Týdne informatiky)
-
-**Čas:** Během školního dne. Nejvhodnější doba pro konání události je dopoledne. Přibližná délka: 1 hodina.
-
-**Místo:** Školní sál, tělocvična, jídelna apod.
-
-## Průběh události
+## Run of Show
 
 | Čas         | Činnost                                                                                                                                    |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |

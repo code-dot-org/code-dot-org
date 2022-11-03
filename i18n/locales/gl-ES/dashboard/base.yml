@@ -441,6 +441,7 @@ gl:
     no_primary_course: "Faga un curso no Code Studio"
     choose_next_course: "Experimenta un dos seguintes cursos do Code Studio"
     print_certificate: "Imprimir certificado"
+  certificate_hour_of_code: "Hora de Código"
   move_students:
     all_students_must_be_in_current_section: "Todo o alumnado debe estar inscrito no teu grupo."
     already_enrolled_in_new_section: "No puedes mover a estes estudantes porque xa están no novo grupo."
@@ -714,3 +715,5 @@ gl:
     accept: 'Acepto'
   page_not_found_title: "Páxina non atopada"
   copy: 'Copiar'
+  pixelation:
+    binary: "Binario"

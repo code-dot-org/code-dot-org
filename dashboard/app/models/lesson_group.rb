@@ -19,9 +19,9 @@
 class LessonGroup < ApplicationRecord
   include SerializedProperties
 
-  belongs_to :script, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
   def script
-    Script.get_from_cache(script_id)
+    Unit.get_from_cache(script_id)
   end
 
   has_many :lessons, -> {order(:absolute_position)}, dependent: :destroy
@@ -177,7 +177,7 @@ class LessonGroup < ApplicationRecord
   def seeding_key(seed_context)
     my_key = {'lesson_group.key': key}
 
-    raise "No Script found for #{self.class}: #{my_key}" unless seed_context.script
+    raise "No Unit found for #{self.class}: #{my_key}" unless seed_context.script
     script_seeding_key = seed_context.script.seeding_key(seed_context)
 
     my_key.merge!(script_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
@@ -247,7 +247,7 @@ class LessonGroup < ApplicationRecord
       copied_lesson = original_lesson.copy_to_unit(destination_script, new_level_suffix)
       raise 'Something went wrong: copied lesson should be in new lesson group' unless copied_lesson.lesson_group == copied_lesson_group
     end
-    Script.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
+    Unit.merge_and_write_i18n(copied_lesson_group.i18n_hash, destination_script.name)
     copied_lesson_group
   end
 end

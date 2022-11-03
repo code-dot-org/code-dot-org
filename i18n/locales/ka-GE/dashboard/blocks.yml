@@ -449,6 +449,11 @@ ka:
         text: დაყენება
       Dancelab_whenSetup2:
         text: დაყენება
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': გულები
+            '"rain"': წვიმა
       gamelab_addBehaviorSimple:
         text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       gamelab_atTime:
@@ -956,6 +961,11 @@ ka:
             '8': '8'
             '9': '9'
             '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: წინ გადაადგილება
       RyanLab_turnLeft:

@@ -47,15 +47,15 @@
         "debugging/gumball/unversioned": {
           "word": "Отстраняване на грешки"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Отстраняване на грешки"
-        },
         "condition/aquatic/unversioned": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
         },
         "conditionals/aquatic/unversioned": {
           "word": "Условия"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отстраняване на грешки"
         },
         "loops/aquatic/unversioned": {
           "word": "Повторения"
@@ -298,11 +298,11 @@
           "word": "Потребител",
           "definition": "Някой, който използва обект, включително софтуер и хардуер."
         },
-        "behavior/coursef/2021": {
-          "word": "Поведение"
-        },
         "algorithm/coursef/2021": {
           "word": "Алгоритъм"
+        },
+        "behavior/coursef/2021": {
+          "word": "Поведение"
         },
         "variable/coursef/2021": {
           "word": "Променлива"

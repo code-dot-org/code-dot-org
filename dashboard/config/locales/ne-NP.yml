@@ -356,6 +356,7 @@ ne:
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
     print_certificate: Print Certificate
+  certificate_hour_of_code: Hour of Code
   move_students:
     new_section_dne: Sorry, but section %{new_section_code} does not exist. Please
       enter a different section code.
@@ -864,3 +865,5 @@ ne:
   cookie_banner:
     accept: I agree
   copy: प्रतिलिपि गर्नुहोस्
+  pixelation:
+    binary: Binary

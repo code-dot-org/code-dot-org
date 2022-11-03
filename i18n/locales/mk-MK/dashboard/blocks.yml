@@ -39,6 +39,7 @@ mk:
             '"ALIEN"': вонземјани
             '"ROBOT"': роботи
           FORMAT:
+            '"diamond"': дијамант
             '"grid"': Мрежа
             '"spiral"': спирала
             '"random"': случајно
@@ -66,6 +67,7 @@ mk:
             '"ALIEN"': вонземјани
             '"ROBOT"': роботи
           LAYOUT:
+            '"diamond"': дијамант
             '"grid"': Мрежа
             '"spiral"': спирала
             '"random"': случајно
@@ -111,6 +113,10 @@ mk:
           GROUP:
             '"ALIEN"': вонземјани
             '"ROBOT"': роботи
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': дијамант
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -135,6 +141,7 @@ mk:
             "'sound://category_animals/bear.mp3'": мечка
             "'sound://category_animals/pig.mp3'": прасе
             "'sound://category_animals/goat.mp3'": коза
+            "'sound://category_animals/rooster.mp3'": петел
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/dolphin.mp3'": делфин
             "'sound://category_animals/chick.mp3'": пиле
@@ -142,6 +149,10 @@ mk:
             "'sound://category_instrumental/harpe_pluck_1.mp3'": харфа
             "'sound://category_retro/retro_game_ui_select_6.mp3'": Одбери
             "'sound://category_digital/jump_7.mp3'": Рипај
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": воздушенрог
       gamelab_randColor:
         text: случајна боја
       gamelab_randomColor:
@@ -153,6 +164,9 @@ mk:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галаксија
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': Мрежа
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ливада
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': сцена
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ѕвезди
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземја
       gamelab_spriteClicked:
         options:
@@ -165,6 +179,8 @@ mk:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ливада
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': сцена
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземја
       Mikelab_whenKeyPressed:
         options:
@@ -187,6 +203,7 @@ mk:
             '"fire"': оган
             '"flowers"': цвеќиња
             '"leaves"': листови
+            '"stars"': ѕвезди
             '"waves"': бранови
       Poetry_makeBurst:
         options:
@@ -229,6 +246,14 @@ mk:
         options:
           DIR:
             "'ahead'": напред
+      craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": песок
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": песок
       craft_placeTorch:
         text: постави факел
       craft_spawnEntity:

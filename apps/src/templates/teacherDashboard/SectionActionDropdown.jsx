@@ -130,7 +130,6 @@ class SectionActionDropdown extends Component {
             )}
           <PrintCertificates
             sectionId={sectionData.id}
-            assignmentName={sectionData.assignmentNames[0]}
             courseVersionName={sectionData.courseVersionName}
           />
           {sectionData.loginType === OAuthSectionTypes.clever && (

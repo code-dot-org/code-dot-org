@@ -415,6 +415,7 @@ sv:
     no_primary_course: "Prova en kurs på Code Studio"
     choose_next_course: "Prova en Code Studio kurs genom att välja en nedan"
     print_certificate: "Skriv ut intyg"
+  certificate_hour_of_code: "Timmen med Kod"
   move_students:
     new_section_dne: "Ledsen, men avsnittet %{new_section_code} existerar inte. Ange koden för ett annat avsnitt."
     section_code_cant_be_current_section: "Det aktuella avsnittet kan inte vara samma som det nya avsnittet."
@@ -859,3 +860,5 @@ sv:
     text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt!"
     link_your_email: "Koppla din e-postadress"
     not_now: "Inte nu"
+  pixelation:
+    binary: "Binära"

@@ -12,7 +12,8 @@
           "type": "warning",
           "visibility": "Teacher-only",
           "dismissible": false,
-          "buttonText": "Check out Bootstrap"
+          "buttonText": "Check out Bootstrap",
+          "key": "a48eb877-ae33-4f8e-99b6-290679837e79"
         }
       ],
       "hideable_lessons": true,
@@ -23,7 +24,7 @@
     },
     "new_name": null,
     "family_name": "algebra",
-    "serialized_at": "2022-08-29 18:13:32 UTC",
+    "serialized_at": "2022-09-28 14:31:22 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
