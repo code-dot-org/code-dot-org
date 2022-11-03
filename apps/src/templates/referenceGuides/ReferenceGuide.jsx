@@ -11,8 +11,14 @@ const referenceGuideShape = PropTypes.shape({
 export default function ReferenceGuide({referenceGuide}) {
   return (
     <div>
-      <EnhancedSafeMarkdown markdown={referenceGuide.content} />
-      <EnhancedSafeMarkdown markdown={i18n.documentationBug()} />
+      <EnhancedSafeMarkdown
+        markdown={referenceGuide.content}
+        className="docs-table"
+      />
+      <EnhancedSafeMarkdown
+        markdown={i18n.documentationBug()}
+        className="docs-table"
+      />
       <CopyrightInfo />
     </div>
   );

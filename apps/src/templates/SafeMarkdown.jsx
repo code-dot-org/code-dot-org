@@ -17,6 +17,7 @@ import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
 import externalLinks from './plugins/externalLinks';
+import '../../style/curriculum/documentation_tables.scss';
 
 /**
  * Basic component for rendering a markdown string as HTML, with sanitization.
@@ -54,9 +55,14 @@ class SafeMarkdown extends React.Component {
       rendered.type === 'div' &&
       !Object.keys(markdownProps).length
     ) {
-      return rendered;
+      return <div className="docs-table">{rendered}</div>;
     } else {
-      return <div {...markdownProps}>{rendered}</div>;
+      console.log('this has more than one child');
+      return (
+        <div className="docs-table" {...markdownProps}>
+          {rendered}
+        </div>
+      );
     }
   }
 }

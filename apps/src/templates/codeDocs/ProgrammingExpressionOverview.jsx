@@ -108,6 +108,7 @@ export default function ProgrammingExpressionOverview({
           <EnhancedSafeMarkdown
             markdown={programmingExpression.content.trim()}
             expandableImages
+            className="docs-table"
           />
         </div>
       )}
@@ -129,6 +130,7 @@ export default function ProgrammingExpressionOverview({
           <EnhancedSafeMarkdown
             markdown={`\`${programmingExpression.syntax}\``}
             expandableImages
+            className="docs-table"
           />
         </div>
       )}
@@ -153,6 +155,7 @@ export default function ProgrammingExpressionOverview({
           <EnhancedSafeMarkdown
             markdown={programmingExpression.tips.trim()}
             expandableImages
+            className="docs-table"
           />
         </div>
       )}
@@ -163,6 +166,7 @@ export default function ProgrammingExpressionOverview({
             markdown={i18n.additionalInformationText({
               externalDocumentationUrl: programmingExpression.externalDocumentation.trim()
             })}
+            className="docs-table"
           />
         </div>
       )}
