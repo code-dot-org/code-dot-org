@@ -604,8 +604,8 @@ export class DetailViewContents extends React.Component {
 
   renderStatusSelect = () => {
     let statusesToHide = [];
-    // Hide "Awaiting Admin Approval" if it is not required
-    if (!this.state.principalApprovalIsRequired) {
+    // Hide "Awaiting Admin Approval" status if it is not currently "awaiting_admin_approval"
+    if (this.state.status !== 'awaiting_admin_approval') {
       statusesToHide.push('awaiting_admin_approval');
     }
     // Hide "Incomplete" if it is not currently "Incomplete"
@@ -624,10 +624,16 @@ export class DetailViewContents extends React.Component {
       <div>
         <FormControl
           componentClass="select"
-          disabled={this.state.locked || !this.state.editing}
+          disabled={
+            this.state.locked ||
+            !this.state.editing ||
+            this.state.status === 'awaiting_admin_approval'
+          }
           title={
             this.state.locked
               ? 'The status of this application has been locked'
+              : this.state.status === 'awaiting_admin_approval'
+              ? 'No status updates can be made while awaiting admin approval'
               : undefined
           }
           value={this.state.status}
