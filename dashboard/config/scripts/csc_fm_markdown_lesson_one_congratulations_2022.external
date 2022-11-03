@@ -1,0 +1,27 @@
+name 'csc_fm_markdown_lesson_one_congratulations_2022'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#You completed Lesson One!
+
+Today you were an observer and a tinkerer. You experienced an addition function machine and got an inside look at the code that makes it all work. 
+
+The aliens have agreed to give you a clue for what they want.
+
+Unscramble these letters: 
+####**PCEAS CIE MRECA**
+
+<img src="https://images.code.org/d98f3428c2d1a1764920853a0f266469-image-1667402661984.23.53 AM.png" style="float:left; width: 15%;"/>
+
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+<br /> 
+
+The aliens want Space Ice Cream! We figured it out!!
+
+Now that we've given the aliens what they want they have agreed to help us build our function machines. Next lesson, you will code your own function machine that does multiplication!
+MARKDOWN

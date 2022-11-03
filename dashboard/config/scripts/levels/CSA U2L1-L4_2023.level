@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA U2L1-Attributes PBT_2023",
+    "long_instructions": "##Investigate and Modify\r\n\r\n✅ **TO DO:** Experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Reset the program by choosing **Start Over** from the **Version History**, then comment out **Lines 8 through 10**.\r\n\r\n2. In `ContentRunner.java`(#e7e8ea), add the following code:\r\n\r\n```\r\nSystem.out.println(ClassInfo.getAttributes(canvas));\r\nSystem.out.println(ClassInfo.getAttributes(findingNemo));\r\nSystem.out.println(ClassInfo.getAttributes(strangerThings));\r\n```\r\n\r\nRun the program to observe the results. Do you notice any redundant instance variables? How can these classes be modified to eliminate the redundant code?\r\n\r\n3. The `Movie`(#e7e8ea) and `TVShow`(#e7e8ea) classes are types of content that can be found on a streaming app, make these subclasses of the `Content`(#e7e8ea) class.\r\n\r\n4. Since subclasses share the attributes and behaviors of the superclass, remove the redundant instance variables from the `Movie`(#e7e8ea) and `TVShow`(#e7e8ea) classes. Run the program to observe the results.",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-11-01T17:30:29.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-11-01T17:30:29.939+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L3d_2023\\\"\"],\"cloned_from\":\"CSA U2L1-L3d_2023\"},{\"changed_at\":\"2022-11-01 17:30:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-01 18:19:01 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 21:05:05 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 21:16:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-02 21:32:39 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

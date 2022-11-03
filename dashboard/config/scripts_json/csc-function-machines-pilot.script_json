@@ -2,16 +2,18 @@
   "script": {
     "name": "csc-function-machines-pilot",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "pilot_experiment": "csc-pilot-fa2022-functionmachine",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csc-function-machines-pilot",
-    "serialized_at": "2022-10-25 21:19:15 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-11-02 19:25:10 UTC",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -253,13 +255,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_fm_tinker_click10"
+          "csc_fm_markdown_workspace_2022"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fm_tinker_click10"
+          "csc_fm_markdown_workspace_2022"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -267,7 +269,7 @@
         "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
       },
       "level_keys": [
-        "csc_fm_tinker_click10"
+        "csc_fm_markdown_workspace_2022"
       ]
     },
     {
@@ -277,13 +279,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_fm_tinker_123"
+          "courseF_pilotVideo_events_-2022-2"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fm_tinker_123"
+          "courseF_pilotVideo_events_-2022-2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -291,7 +293,7 @@
         "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
       },
       "level_keys": [
-        "csc_fm_tinker_123"
+        "courseF_pilotVideo_events_-2022-2"
       ]
     },
     {
@@ -301,13 +303,13 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_fm_tinker_open"
+          "csc_fm_observe_click10_build"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_fm_tinker_open"
+          "csc_fm_observe_click10_build"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -315,11 +317,107 @@
         "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
       },
       "level_keys": [
-        "csc_fm_tinker_open"
+        "csc_fm_observe_click10_build"
       ]
     },
     {
       "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fm_observe_click_build2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_observe_click_build2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      },
+      "level_keys": [
+        "csc_fm_observe_click_build2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fm_observe_click_represent"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_observe_click_represent"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      },
+      "level_keys": [
+        "csc_fm_observe_click_represent"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fm_observe_click_represent_free_play"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_observe_click_represent_free_play"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      },
+      "level_keys": [
+        "csc_fm_observe_click_represent_free_play"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fm_markdown_lesson_one_congratulations_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_markdown_lesson_one_congratulations_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      },
+      "level_keys": [
+        "csc_fm_markdown_lesson_one_congratulations_2022"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -343,7 +441,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -367,7 +465,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -391,7 +489,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -415,7 +513,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -439,11 +537,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fm_markdown_explain_template_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,7 +561,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -484,7 +585,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -508,7 +609,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -532,7 +633,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -556,105 +657,30 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fm_sprite_ice_cream"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "9f716ff5-0075-40b6-97f6-2a4527738e69"
+      },
+      "level_keys": [
+        "csc_fm_sprite_ice_cream"
+      ]
+    },
+    {
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_fm_tinker_repeated_addition"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_fm_tinker_repeated_addition"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
-      },
-      "level_keys": [
-        "csc_fm_tinker_repeated_addition"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_fm_tinker_loop"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_fm_tinker_loop"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
-      },
-      "level_keys": [
-        "csc_fm_tinker_loop"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_fm_tinker_repeated_addition_loop"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_fm_tinker_repeated_addition_loop"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
-      },
-      "level_keys": [
-        "csc_fm_tinker_repeated_addition_loop"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_fm_tinker_addition_to_multiplication"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_fm_tinker_addition_to_multiplication"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
-      },
-      "level_keys": [
-        "csc_fm_tinker_addition_to_multiplication"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 5,
-      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -676,9 +702,9 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -700,9 +726,9 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -724,9 +750,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -748,9 +774,9 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -772,9 +798,9 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -796,9 +822,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -871,9 +897,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fm_tinker_click10",
+        "level.key": "csc_fm_markdown_workspace_2022",
         "script_level.level_keys": [
-          "csc_fm_tinker_click10"
+          "csc_fm_markdown_workspace_2022"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -883,9 +909,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fm_tinker_123",
+        "level.key": "courseF_pilotVideo_events_-2022-2",
         "script_level.level_keys": [
-          "csc_fm_tinker_123"
+          "courseF_pilotVideo_events_-2022-2"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -895,9 +921,57 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fm_tinker_open",
+        "level.key": "csc_fm_observe_click10_build",
         "script_level.level_keys": [
-          "csc_fm_tinker_open"
+          "csc_fm_observe_click10_build"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_observe_click_build2",
+        "script_level.level_keys": [
+          "csc_fm_observe_click_build2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_observe_click_represent",
+        "script_level.level_keys": [
+          "csc_fm_observe_click_represent"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_observe_click_represent_free_play",
+        "script_level.level_keys": [
+          "csc_fm_observe_click_represent_free_play"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csc-function-machines-pilot",
+        "activity_section.key": "b842e6db-9c57-4482-901f-aa32345d0af4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fm_markdown_lesson_one_congratulations_2022",
+        "script_level.level_keys": [
+          "csc_fm_markdown_lesson_one_congratulations_2022"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1027,50 +1101,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_fm_tinker_repeated_addition",
+        "level.key": "csc_fm_sprite_ice_cream",
         "script_level.level_keys": [
-          "csc_fm_tinker_repeated_addition"
+          "csc_fm_sprite_ice_cream"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_fm_tinker_loop",
-        "script_level.level_keys": [
-          "csc_fm_tinker_loop"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_fm_tinker_repeated_addition_loop",
-        "script_level.level_keys": [
-          "csc_fm_tinker_repeated_addition_loop"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_fm_tinker_addition_to_multiplication",
-        "script_level.level_keys": [
-          "csc_fm_tinker_addition_to_multiplication"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-function-machines-pilot",
-        "activity_section.key": "c60713d4-43e0-4974-881c-db7d653f8657"
+        "activity_section.key": "9f716ff5-0075-40b6-97f6-2a4527738e69"
       }
     },
     {

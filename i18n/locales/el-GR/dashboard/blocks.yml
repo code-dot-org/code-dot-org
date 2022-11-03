@@ -979,6 +979,20 @@ el:
         text: αρχικοποίηση
       Dancelab_whenSetup2:
         text: αρχικοποίηση
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Μπουρμπουλήθρες
+            '"confetti"': Κομφετί
+            '"hearts"': καρδιές
+            '"rain"': βροχή
+            '"starburst"': Οδοντωτός σύνδεσμος
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): είναι συρόμενο
+            wandering(): περιπλάνηση
+            shrinking(): συρρικνώνεται
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       gamelab_addTarget:
@@ -1250,7 +1264,7 @@ el:
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": μαύρη τρύπα
-            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": σύγκρουση γαλαξιών
             "'sound://category_space/Carina_SFX.mp3'": Τρόπις
             "'sound://category_space/Cassiopeia_SFX.mp3'": Κασσιόπη
             "'sound://category_space/Crab_nebula_SFX.mp3'": Νεφέλωμα του Καρκίνου
@@ -1259,7 +1273,6 @@ el:
             "'sound://category_space/Pillars_SFX.mp3'": κολώνες
             "'sound://category_space/Southern_ring_SFX.mp3'": νότιος δακτύλιος
             "'sound://category_space/Supernova_SFX.mp3'": σουπερνόβα
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:

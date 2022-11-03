@@ -1,9 +1,9 @@
-@import "color";
-@import "style-constants";
+@use "color.scss";
+@use "style-constants.scss";
 
 .debugAreaHeader {
   position: absolute;
-  top: $resize-bar-width;
+  top: style-constants.$resize-bar-width;
   left: 0;
   right: 0;
   text-align: center;
@@ -26,11 +26,11 @@
   top: 0;
   left: 8px;
   margin: 0;
-  line-height: $workspace-headers-height;
+  line-height: style-constants.$workspace-headers-height;
   font-size: 18px;
   :hover {
     cursor: pointer;
-    color: $white;
+    color: color.$white;
   }
 }
 
@@ -40,16 +40,25 @@
   right: 6px;
   width: 18px;
   margin: 0;
-  line-height: $workspace-headers-height;
+  line-height: style-constants.$workspace-headers-height;
   font-size: 18px;
   &:hover {
     cursor: pointer;
-    color: $white;
+    color: color.$white;
   }
 }
 
 .hidden {
   display: none;
+}
+
+$debug-watch-max-column-width: 200px;
+$debug-header-border-width: 1px;
+
+.debugWatchHeader {
+  width: $debug-watch-max-column-width + $debug-header-border-width;
+  float: right;
+  border-left: $debug-header-border-width solid gray;
 }
 
 .watchersHidden {
@@ -70,18 +79,4 @@
 
 .displayInitial {
   display: initial;
-}
-
-.chevronButton {
-  &:hover {
-    box-shadow: none;
-  }
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  color: $white;
-}
-
-.chevronButtonUnfocused {
-  color: $dark-charcoal;
 }

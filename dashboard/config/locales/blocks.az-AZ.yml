@@ -234,20 +234,12 @@ az:
             MOVES.XArmsUp: Dartmaq
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
-      Dancelab_everyMeasuresRange:
-        text: "{START} sonra hər {N} ölçünü təkrarlayın"
       Dancelab_everySeconds:
         text: 'təkrarla hər '
         options:
           UNIT:
             '"measures"': Ölçülər
             '"seconds"': saniyələr
-      Dancelab_everySecondsRange:
-        text: hər {N} {UNIT} {START} ilə {STOP} arasında
-        options:
-          UNIT:
-            measures: Ölçülər
-            seconds: Saniyələr
       Dancelab_everyVerseChorus:
         text: hər {UNIT}
         options:
@@ -1005,6 +997,26 @@ az:
             '"macklemore90"': Macklemore - Bizi tuta bilməz
             '"hammer"': MC Hammer - Buna toxuna bilməzsiniz.
             '"peas"': hiss etdim
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} effekti elə"
+        options:
+          EFFECT:
+            '"bubbles"': Köpük
+            '"confetti"': konfeti (rəngli bəzəklər)
+            '"hearts"': ürəklər
+            '"emojis"': Xoşbəxt Emojilər
+            '"rain"': yağış
+            '"starburst"': Ulduz partlaması
+            '"glass"': Şüşə sındırmaq
+            '"twinkling"': parıldayan
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): sürüklənən olması
+            wandering(): gəzən
+            shrinking(): |-
+              kiçilmək
+              (ölçüdə və ya miqdarda kiçik olmaq)
       gamelab_addBehaviorSimple:
         text: sprayt {SPRITE} başlayır {BEHAVIOR}
       gamelab_addTarget:
@@ -1991,6 +2003,8 @@ az:
         text: bədheybətin sürətini təyin et
       Outbreak_stopMoving:
         text: canavarlar hərəkət etməyi dayandırırlar
+      ParticlesBlocks_statesOfMatter:
+        text: davranış
       Poetry_addFrame:
         text: "{BRUSH} çərçivə təyin edin"
         options:
