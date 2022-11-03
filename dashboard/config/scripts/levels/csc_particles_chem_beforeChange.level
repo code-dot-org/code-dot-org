@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "## Particles Before The Change\r\n\r\n- Use the `make 60 new sprites` block to add 60 wood particle sprites to the `when wood pile touches microscope` event.\r\n- Add a `set wood to solid particle` behavior block.\r\n- Click run and test your code by dragging the wood sprite to touch the microscope.\r\n\r\n\r\n\r\n",
+    "long_instructions": "## Particles Before The Change\r\n\r\n**Let's get our *before* particles ready!**\r\n- Use the `make 60 new sprites block` to add 60 wood particle sprites to the `when pile of wood touches microscope` event.\r\n- Add a `set wood to solid particle behavior` block.\r\n\r\n**Now, let's finish setting up our microscope view!**\r\n\r\n- Look in the toolbox for the three connected blocks that will *add a microscope eyepiece view sprite*, *set its size to 400*, and *make a new scientist sprite*.\r\n- Add these blocks to the `set wood to solid particle behavior` block.\r\n- Click run and test your code by dragging the pile of wood sprite to touch the microscope.\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -51,7 +51,7 @@
   "created_at": "2022-11-01T23:56:23.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:56:23.257+00:00\",\"changed\":[\"cloned from \\\"csc_particles_chem_microscope\\\"\"],\"cloned_from\":\"csc_particles_chem_microscope\"},{\"changed_at\":\"2022-11-01 23:58:04 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 23:59:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:56:23.257+00:00\",\"changed\":[\"cloned from \\\"csc_particles_chem_microscope\\\"\"],\"cloned_from\":\"csc_particles_chem_microscope\"},{\"changed_at\":\"2022-11-01 23:58:04 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 23:59:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 20:09:25 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 20:11:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 20:13:45 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 20:21:46 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 20:21:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 21:03:16 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 21:04:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 22:19:51 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 22:20:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 22:45:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 22:54:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -82,6 +82,14 @@
             </block>
           </value>
         </block>
+        <block type="gamelab_addBehaviorSimple">
+          <value name="SPRITE">
+            <block type="gamelab_getAllSprites"/>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_draggable"/>
+          </value>
+        </block>
         <block type="gamelab_checkTouching">
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
@@ -103,6 +111,11 @@
             </block>
           </value>
         </block>
+        <block type="gamelab_destroy">
+          <value name="THIS">
+            <block type="gamelab_getAllSprites"/>
+          </value>
+        </block>
         <block type="gamelab_makeNumSprites">
           <field name="ANIMATION_NAME">"wood_particle_2"</field>
           <value name="NUM">
@@ -114,6 +127,39 @@
         <block type="ParticlesBlocks_statesOfMatter2">
           <field name="COSTUME">"wood_particle_2"</field>
           <field name="BEHAVIOR">"liquid"</field>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"microscope_outline"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker">
+              <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_setProp">
+              <field name="PROPERTY">"scale"</field>
+              <value name="SPRITE">
+                <block type="gamelab_allSpritesWithAnimation">
+                  <field name="ANIMATION">"microscope_outline"</field>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <field name="NUM">400</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <field name="ANIMATION_NAME">"sciencetist_3"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <field name="LOCATION">{"x":359,"y":333}</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
         </block>
       </xml>
     </toolbox_blocks>

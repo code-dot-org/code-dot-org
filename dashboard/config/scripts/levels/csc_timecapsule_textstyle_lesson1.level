@@ -38,12 +38,12 @@
     "preload_asset_list": null,
     "default_poem": null
   },
-  "level_num": "custom",
   "game_id": 69,
-  "created_at": "2022-10-31T23:04:52.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-31T23:04:52.858+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_textstyle_2022\\\"\"],\"cloned_from\":\"csc_timecapsule_textstyle_2022\"},{\"changed_at\":\"2022-10-31 23:22:50 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:24:03 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:24:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:25:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:35:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:37:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:39:33 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:42:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "created_at": "2022-10-31T23:04:52.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-10-31T23:04:52.858+00:00\",\"changed\":[\"cloned from \\\"csc_timecapsule_textstyle_2022\\\"\"],\"cloned_from\":\"csc_timecapsule_textstyle_2022\"},{\"changed_at\":\"2022-10-31 23:22:50 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:24:03 +0000\",\"changed\":[\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:24:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:25:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:35:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:37:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:39:33 +0000\",\"changed\":[\"toolbox_blocks\",\"use_default_sprites\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 23:42:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-02 13:09:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-02 13:10:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-02 13:11:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-02 13:54:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-02 14:02:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-02 14:04:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-02 14:17:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -115,7 +115,14 @@
                                                 </block>
                                               </value>
                                               <next>
-                                                <block type="Poetry_animateText" id="S@x}#,et3huqb7}pQ`T^" deletable="false"/>
+                                                <block type="Poetry_animateText" id="S@x}#,et3huqb7}pQ`T^" deletable="false">
+                                                  <next>
+                                                    <block type="Poetry_setBackgroundEffect" id="C{X,e,Hs!rhvXSZ2Z|HI">
+                                                      <field name="EFFECT">"stars"</field>
+                                                      <field name="PALETTE">"rainbow"</field>
+                                                    </block>
+                                                  </next>
+                                                </block>
                                               </next>
                                             </block>
                                           </next>
@@ -140,25 +147,39 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs" id="34,O,DO[Ks-Sn]wilX#|">
-          <field name="IMG">"cave"</field>
+        <block type="Poetry_setBackgroundImageAs" id="Av{+;$G7|8!da_CF^G^a">
+          <field name="IMG">"space_carina_nebula_1"</field>
         </block>
-        <block type="Poetry_setBackgroundEffect" id="C{X,e,Hs!rhvXSZ2Z|HI">
-          <field name="EFFECT">"fadeColors"</field>
-          <field name="PALETTE">"rainbow"</field>
+        <block type="Poetry_setBackgroundEffect" id="s6KjK6_VM*f#6*t3v%hP">
+          <field name="EFFECT">"colors"</field>
+          <field name="PALETTE">"grayscale"</field>
         </block>
-        <block type="Poetry_setFontColor" id="VnS_lv?yh~%K!S_%%WHk">
-          <value name="FILL">
-            <shadow type="colour_picker" id="N?E8-Hy;s,-}t}w=KW3d">
-              <field name="COLOUR">#999999</field>
+        <block type="Poetry_setBackground" id="w,JLT|:Qb_ID/#yT#zO)">
+          <value name="COLOR">
+            <shadow type="colour_picker" id="Jo|7,ch2S74u0vTM`J@#">
+              <field name="COLOUR">#3333ff</field>
             </shadow>
           </value>
         </block>
+        <block type="Poetry_setFontColor" id="C@,w?~tlY%sVDKmA/W%K">
+          <value name="FILL">
+            <shadow type="colour_picker" id="bS3IqE~#(.e:ZHPjUS|~">
+              <field name="COLOUR">#660000</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="Poetry_addTextHighlight" id="NqB!u[1-;:{o]eIZ`c|L">
+          <value name="COLOR">
+            <shadow type="colour_picker" id="Ey:^H5FWX:a_T)GUZ)J:">
+              <field name="COLOUR">#ffff99</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="Poetry_setTextEffect" id="1}P2%`2-LV-XB{/2q[^Z">
+          <field name="EFFECT">"fade"</field>
+        </block>
         <block type="Poetry_setFont" id="Mn;FcPuA:AFgm=K!`)8:">
           <field name="FONT">"Arial"</field>
-        </block>
-        <block type="Poetry_setTextEffect" id="4z/rR=Ga{qoUIZp$0zwz">
-          <field name="EFFECT">"fade"</field>
         </block>
       </xml>
     </toolbox_blocks>
