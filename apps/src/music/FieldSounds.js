@@ -11,10 +11,13 @@ var CustomFields = CustomFields || {};
  * @constructor
  */
 class FieldSounds extends Blockly.FieldTextInput {
-  /**
-   * All pitches available for the picker.
-   */
-  static NOTES = 'C3 D3 E3 F3 G3 A3 B3 C4 D4 E4 F4 G4 A4'.split(/ /);
+  saveState() {
+    return this.getValue();
+  }
+
+  loadState(state) {
+    this.setValue(state);
+  }
 
   constructor(text) {
     super(text);
@@ -22,20 +25,7 @@ class FieldSounds extends Blockly.FieldTextInput {
     // Disable spellcheck.
     this.setSpellcheck(false);
 
-    /**
-     * Click event data.
-     * @type {?Blockly.browserEvents.Data}
-     * @private
-     */
-    this.clickWrapper_ = null;
-
-    /**
-     * Move event data.
-     * @type {?Blockly.browserEvents.Data}
-     * @private
-     */
-    this.moveWrapper_ = null;
-
+    this.SERIALIZABLE = true;
     //this.EDITABLE = false;
   }
 
@@ -57,7 +47,7 @@ class FieldSounds extends Blockly.FieldTextInput {
   showEditor_() {
     super.showEditor_();
 
-    const div = Blockly.WidgetDiv.DIV;
+    const div = Blockly.WidgetDiv.getDiv();
     if (!div.firstChild) {
       // Mobile interface uses Blockly.dialog.setPrompt().
       return;
@@ -76,17 +66,6 @@ class FieldSounds extends Blockly.FieldTextInput {
       this.dropdownDispose_.bind(this)
     );
 
-    // The pitch picker is different from other fields in that it updates on
-    // mousemove even if it's not in the middle of a drag.  In future we may
-    // change this behaviour.  For now, using `bind` instead of
-    // `conditionalBind` allows it to work without a mousedown/touchstart.
-    /*this.clickWrapper_ =
-        Blockly.browserEvents.bind(this.imageElement_, 'click', this,
-        this.hide_);
-    this.moveWrapper_ =
-        Blockly.browserEvents.bind(this.imageElement_, 'mousemove', this,
-        this.onMouseMove);*/
-
     this.updateGraph_();
   }
 
@@ -98,7 +77,14 @@ class FieldSounds extends Blockly.FieldTextInput {
   dropdownCreate_() {
     this.newDiv_ = document.createElement('div');
 
-    ReactDOM.render(<SoundsPanel />, this.newDiv_);
+    ReactDOM.render(
+      <SoundsPanel
+        onSelect={value => {
+          this.setEditorValue_(value);
+        }}
+      />,
+      this.newDiv_
+    );
 
     this.newDiv_.style.color = 'white';
     this.newDiv_.style.width = '300px';
@@ -113,17 +99,7 @@ class FieldSounds extends Blockly.FieldTextInput {
    * Dispose of events belonging to the pitch picker.
    * @private
    */
-  dropdownDispose_() {
-    if (this.clickWrapper_) {
-      Blockly.browserEvents.unbind(this.clickWrapper_);
-      this.clickWrapper_ = null;
-    }
-    if (this.moveWrapper_) {
-      Blockly.browserEvents.unbind(this.moveWrapper_);
-      this.moveWrapper_ = null;
-    }
-    this.imageElement_ = null;
-  }
+  dropdownDispose_() {}
 
   /**
    * Hide the editor and picker.
@@ -132,38 +108,6 @@ class FieldSounds extends Blockly.FieldTextInput {
   hide_() {
     Blockly.WidgetDiv.hide();
     Blockly.DropDownDiv.hideWithoutAnimation();
-  }
-
-  /**
-   * Set the note to match the mouse's position.
-   * @param {!Event} e Mouse move event.
-   */
-  onMouseMove(e) {
-    const bBox = this.imageElement_.getBoundingClientRect();
-    const dy = e.clientY - bBox.top;
-    const note = Blockly.utils.math.clamp(Math.round(13.5 - dy / 7.5), 0, 12);
-    this.imageElement_.style.backgroundPosition = -note * 37 + 'px 0';
-    this.setEditorValue_(note);
-  }
-
-  /**
-   * Convert the machine-readable value (0-12) to human-readable text (C3-A4).
-   * @param {number|string} value The provided value.
-   * @returns {string|undefined} The respective pitch, or undefined if invalid.
-   */
-  valueToNote(value) {
-    return FieldSounds.NOTES[Number(value)];
-  }
-
-  /**
-   * Convert the human-readable text (C3-A4) to machine-readable value (0-12).
-   * @param {string} text The provided pitch.
-   * @returns {number|undefined} The respective value, or undefined if invalid.
-   */
-  noteToValue(text) {
-    const normalizedText = text.trim().toUpperCase();
-    const i = FieldSounds.NOTES.indexOf(normalizedText);
-    return i > -1 ? i : undefined;
   }
 
   /**
@@ -176,7 +120,7 @@ class FieldSounds extends Blockly.FieldTextInput {
     if (this.isBeingEdited_) {
       return super.getText_();
     }
-    return this.valueToNote(this.getValue()) || null;
+    return this.getValue() || null;
   }
 
   /**
@@ -185,7 +129,7 @@ class FieldSounds extends Blockly.FieldTextInput {
    * @returns {string} The text to show on the HTML input.
    */
   getEditorText_(value) {
-    return this.valueToNote(value);
+    return value;
   }
 
   /**
@@ -195,7 +139,7 @@ class FieldSounds extends Blockly.FieldTextInput {
    * @returns {*} The value to store.
    */
   getValueFromEditorText_(text) {
-    return this.noteToValue(text);
+    return text;
   }
 
   /**
@@ -229,11 +173,7 @@ class FieldSounds extends Blockly.FieldTextInput {
     if (opt_newValue === null || opt_newValue === undefined) {
       return null;
     }
-    const note = this.valueToNote(opt_newValue);
-    if (note) {
-      return opt_newValue;
-    }
-    return null;
+    return opt_newValue;
   }
 }
 
