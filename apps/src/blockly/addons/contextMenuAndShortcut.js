@@ -168,4 +168,5 @@ function hasShadowChildren(block) {
   return shadowChildCount(block) > 0;
 }
 
-exports.registerAllContextMenuItems = registerAllContextMenuItems;
+// shortcuts are registered by the CrossTabCopyPaste plugin
+exports.registerAllContextMenuShortcutItems = registerAllContextMenuItems;

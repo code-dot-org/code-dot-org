@@ -24,7 +24,7 @@ import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
-import {registerAllContextMenuItems} from './addons/contextMenuAndShortcut';
+import {registerAllContextMenuShortcutItems} from './addons/contextMenuAndShortcut';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
@@ -196,7 +196,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
-  registerAllContextMenuItems();
+  registerAllContextMenuShortcutItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
