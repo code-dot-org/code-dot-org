@@ -154,29 +154,31 @@ end
 
 And(/^I complete Section 1 of the teacher PD application$/) do
   steps %Q{
-    When I wait until element "h3" contains text "Section 1: About You and Your School"
-      And I press the first "input[name='country']" element
-      And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
-      And I press keys "Severus" for element "input#firstName"
-      And I press keys "Snape" for element "input#lastName"
-      And I press keys "5558675309" for element "input#phone"
-      And I press keys "1501 4th Ave" for element "input#streetAddress"
-      And I press keys "Seattle" for element "input#city"
-      And I select the "Washington" option in dropdown "state"
-      And I press keys "98101" for element "input#zipCode"
-      And I press the first "input[name='previousYearlongCdoPd']" element
-      And I press the first "input[name='currentRole']" element
-      And I press keys "nonexistent" for element "#school input"
+    Then I wait until element "h3" contains text "Section 1: About You and Your School"
+    And I press the first "input[name='country']" element
+    And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
+    And I press keys "Severus" for element "input#firstName"
+    And I press keys "Snape" for element "input#lastName"
+    And I press keys "5558675309" for element "input#phone"
+    And I press keys "1501 4th Ave" for element "input#streetAddress"
+    And I press keys "Seattle" for element "input#city"
+    And I select the "Washington" option in dropdown "state"
+    And I press keys "98101" for element "input#zipCode"
+    And I press the first "input[name='previousYearlongCdoPd']" element
+    And I press the first "input[name='currentRole']" element
+    And I press keys "nonexistent" for element "#school input"
+
     Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
-      And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
-      Then I wait until element "input#schoolName" is visible
-      And I press keys "Code.org" for element "input#schoolName"
-      And I press keys "Code.org District" for element "input#schoolDistrictName"
-      And I press keys "1501 4th Ave" for element "input#schoolAddress"
-      And I press keys "Seattle" for element "input#schoolCity"
-      And I select the "Washington" option in dropdown "schoolState"
-      And I press keys "98101" for element "input#schoolZipCode"
-      And I press the first "input[name='schoolType'][value='Other']" element
+    And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
+    Then I wait until element "input#schoolName" is visible
+    And I press keys "Code.org" for element "input#schoolName"
+    And I press keys "Code.org District" for element "input#schoolDistrictName"
+    And I press keys "1501 4th Ave" for element "input#schoolAddress"
+    And I press keys "Seattle" for element "input#schoolCity"
+    And I select the "Washington" option in dropdown "schoolState"
+    And I press keys "98101" for element "input#schoolZipCode"
+    And I press the first "input[name='schoolType'][value='Other']" element
+
     Then I press keys "Headmaster" for element "input#principalRole"
     And I press keys "Albus" for element "input#principalFirstName"
     And I press keys "Dumbledore" for element "input#principalLastName"
@@ -188,6 +190,7 @@ end
 
 And(/^I complete Section 3 of the teacher PD application$/) do
   steps %Q{
+    Then I wait until element "h3" contains text "Section 3: Professional Learning Program Requirements"
     Then I wait until element "input[name='committed']" is visible
     And I press "input[name='committed']:first" using jQuery
     And I press the first "input#understandFee" element
@@ -197,6 +200,7 @@ end
 
 And(/^I complete Section 4 of the teacher PD application$/) do
   steps %Q{
+    Then I wait until element "h3" contains text "Section 4: Additional Demographic Information and Submission"
     And I press "input[name='genderIdentity']:first" using jQuery
     And I press the first "input[name='race']" element
     And I press the first "input[name='howHeard']" element
