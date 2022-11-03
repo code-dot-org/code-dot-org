@@ -988,6 +988,24 @@ ms:
         text: persediaan
       Dancelab_whenSetup2:
         text: persediaan
+      DansBlocks_setForegroundEffect2:
+        text: lakukan {EFFECT} kesan
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"emojis"': Emoji gembira
+            '"rain"': hujan
+            '"starburst"': Pecahan Cahaya
+            '"glass"': Kaca Pecah
+            '"twinkling"': Berkelip
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): diseret
+            wandering(): merayau
+            shrinking(): mengecil
       gamelab_addBehaviorSimple:
         text: bidadari {SPRITE} bermula {BEHAVIOR}
       gamelab_addTarget:
@@ -1341,7 +1359,6 @@ ms:
             "'sound://category_space/Lift_Off.mp3'": lift off
             "'sound://category_space/Pillars_SFX.mp3'": pillars
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": bunyi tycho
       gamelab_playSpeech:
         text: bermain ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -1983,6 +2000,8 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

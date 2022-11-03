@@ -8230,6 +8230,10 @@ en:
               name: 'Module 3 post-work: The Theater and datasets in Unit 4'
             lesson-3:
               name: 'Module 4 post-work: FRQs and Unit 5'
+            lesson-4:
+              name: 'Module 5 post-work: Unit 5 Project'
+            lesson-5:
+              name: 'Module 6 post-work: String methods in Unit 6'
           lesson_groups: {}
           name: csa-draft-pl
           title: ''
@@ -8410,7 +8414,7 @@ en:
             lesson-1:
               name: Welcome to CSA
             lesson-3:
-              name: CSA Pre-Survey
+              name: Asphalt Art Project [1-Day Version]
             lesson-2:
               name: Java Lab
             lesson-4:
@@ -8456,6 +8460,8 @@ en:
               display_name: Content
             lessonGroup-4:
               display_name: Show What You Know
+            lessonGroup-5:
+              display_name: Alternate Lessons
           name: csa1-2023
           title: Object-Oriented Programming
           description_audience: ''
@@ -8563,7 +8569,17 @@ en:
             -   Revisit summer workshop content about formative assessment by reflecting on how formatively assessing students has played out in classroom culture and routines.
             -   Describe how the use of a data inquiry cycle with student data supports improving access, diversity, and inclusion in CS.
         vpl-csd4-ayw-pilot-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Workshop Opener
+            lesson-2:
+              name: Content Workshop
+            lesson-3:
+              name: Defining Student Success in Summative Assessment
+            lesson-4:
+              name: Closing
+            lesson-5:
+              name: Module 4 Asynchronous Work
           lesson_groups:
             lessonGroup-2:
               display_name: 'Part 1: Synchronous Session'
@@ -8573,8 +8589,18 @@ en:
           title: CS Discoveries Virtual Module 4
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            **Participants will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Gain a deeper understanding of how rubrics are used in the CS Discoveries curriculum.
+            -   Calibrate with their cohort on how to define and measure success in CS Discoveries projects by scoring and discussing a sample student project.
+          student_description: |-
+            **You will:**
+
+            -   Build confidence and skill in core computer science concepts.
+            -   Gain a deeper understanding of how rubrics are used in the CS Discoveries curriculum.
+            -   Calibrate with your cohort on how to define and measure success in CS Discoveries projects by scoring and discussing a sample student project.
         csa-magpie-lab:
           lessons:
             lesson-1:
@@ -8820,6 +8846,14 @@ en:
           lessons:
             lesson-1:
               name: function machines playground
+            lesson-2:
+              name: Particles Lesson 1
+            lesson-3:
+              name: Particles Lesson 2
+            lesson-4:
+              name: Particles Lesson 3
+            lesson-5:
+              name: Particles Lesson 4
           lesson_groups: {}
           name: csc-playground
           title: CSC Playground
@@ -9107,3 +9141,39 @@ en:
             **Estimated Time:** 7.5 hours
           description_short: ''
           description_audience: ''
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+            lesson-2:
+              name: Unit 2 Projects
+            lesson-3:
+              name: Unit 3 Projects
+            lesson-4:
+              name: Unit 4 Projects
+            lesson-5:
+              name: Unit 5 Projects
+            lesson-6:
+              name: Unit 6 Projects
+            lesson-7:
+              name: Unit 7 Projects
+            lesson-8:
+              name: Unit 8 Projects
+          lesson_groups: {}
+          name: csa-examples-22
+          title: CSA Unit Project Examples [2022-2023]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        amy-playground:
+          lessons:
+            lesson-1:
+              name: Particles
+          lesson_groups: {}
+          name: amy-playground
+          title: Amy's Place To Do Stuff
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

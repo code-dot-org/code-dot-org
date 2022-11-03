@@ -230,20 +230,12 @@ sv:
             MOVES.XArmsUp: Sträck dig
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
-      Dancelab_everyMeasuresRange:
-        text: 'upprepa varje {N} takter efter {START} '
       Dancelab_everySeconds:
         text: 'varje {N} {UNIT} '
         options:
           UNIT:
             '"measures"': åtgärder
             '"seconds"': sekunder
-      Dancelab_everySecondsRange:
-        text: 'varje {N} {UNIT} från {START} till {STOP} '
-        options:
-          UNIT:
-            measures: Takter
-            seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'varje {UNIT} '
         options:
@@ -993,6 +985,19 @@ sv:
         text: ställ in
       Dancelab_whenSetup2:
         text: ställ in
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
+            '"starburst"': Stjärnfall
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): vara dragbar
+            shrinking(): krymper
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       gamelab_addTarget:
