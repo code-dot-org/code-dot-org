@@ -51,8 +51,8 @@ module AWS
         select {|tag| tag.key == 'aws:cloudformation:stack-name'}.
         first.
         value
-    rescue Net::OpenTimeout
-      raise "Cannot return current Stack Name. This code is not executing on an AWS EC2 Instance."
+    rescue Net::OpenTimeout # This code is not executing on an AWS EC2 Instance nor in an ECS container or Lambda.
+      nil
     end
 
     # @param [Cdo::CloudFormation::StackTemplate] stack
