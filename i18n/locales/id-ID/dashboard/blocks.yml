@@ -1000,6 +1000,24 @@ id:
             '"macklemore90"': Macklemore - Tak bisa menahan kita
             '"hammer"': MC Hammer - Kamu tak bisa menyentuhnya
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: lakukan efek {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"emojis"': Emoji Bahagia
+            '"rain"': hujan
+            '"starburst"': Semburan bintang
+            '"glass"': Kaca Pecah
+            '"twinkling"': Berkelip
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): yang diseret
+            wandering(): pengembaraan
+            shrinking(): penyusutan
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       gamelab_addTarget:
@@ -1349,7 +1367,6 @@ id:
             "'sound://category_space/Pillars_SFX.mp3'": kepulan
             "'sound://category_space/Southern_ring_SFX.mp3'": nebula cincin
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -1966,6 +1983,8 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

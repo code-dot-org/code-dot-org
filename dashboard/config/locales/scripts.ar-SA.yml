@@ -5487,6 +5487,8 @@ ar:
               display_name: استبيان
             lessonGroup-3:
               display_name: محتوى
+            lessonGroup-5:
+              display_name: دروس بديلة
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
