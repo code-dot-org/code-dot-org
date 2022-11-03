@@ -211,21 +211,6 @@ describe('DetailViewContents', () => {
   });
 
   describe('Edit controls in Teacher', () => {
-    it("cannot make status 'Awaiting Admin Approval' from dropdown if admin approval is not required", () => {
-      const detailView = mountDetailView('Teacher', {
-        applicationData: {
-          ...DEFAULT_APPLICATION_DATA,
-          principal_approval_not_required: true
-        }
-      });
-      expect(
-        detailView
-          .find('#DetailViewHeader select')
-          .find('option')
-          .find('[value="awaiting_admin_approval"]')
-      ).to.have.lengthOf(0);
-    });
-
     it("cannot change status if application is currently in 'Awaiting Admin Approval'", () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
