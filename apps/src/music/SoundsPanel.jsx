@@ -18,9 +18,7 @@ const SoundsPanel = ({onSelect}) => {
                 <div key={soundIndex}>
                   <FontAwesome icon={'play-circle'} onClick={() => {}} />
                   &nbsp;
-                  <span
-                    onClick={() => onSelect(folder.name + '/' + sound.name)}
-                  >
+                  <span onClick={() => onSelect(folder.path + '/' + sound.src)}>
                     {folder.name} / {sound.name}
                   </span>
                 </div>

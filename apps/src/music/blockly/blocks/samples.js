@@ -37,12 +37,8 @@ export const playSample = {
     helpUrl: ''
   },
   generator: ctx =>
-    'MusicPlayer.playSoundAtMeasureByName("' +
-    Blockly.JavaScript.valueToCode(
-      ctx,
-      'sample',
-      Blockly.JavaScript.ORDER_ASSIGNMENT
-    ) +
+    'MusicPlayer.playSoundAtMeasureById("' +
+    ctx.getFieldValue('sample') +
     '", ' +
     Blockly.JavaScript.valueToCode(
       ctx,
