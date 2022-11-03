@@ -10,11 +10,12 @@ import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
 import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
-import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
+// import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
-import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
+// import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 
 class SettingsCog extends Component {
   static propTypes = {
@@ -35,6 +36,7 @@ class SettingsCog extends Component {
 
   open = () => this.setState({open: true});
   close = () => this.setState({open: false});
+  toggleOpen = () => this.setState({open: !this.state.open});
 
   manageAssets = () => {
     this.close();
@@ -122,51 +124,41 @@ class SettingsCog extends Component {
       rootStyle.color = color.dark_charcoal;
     }
 
+    // may want to check out menuitem/<li> rather than buttons
+    // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role
+    // https://www.w3.org/WAI/tutorials/menus/application-menus-code/
     return (
-      <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
-        <FontAwesome
-          className="settings-cog"
-          icon="cog"
-          style={styles.assetsIcon}
-          title={msg.settings()}
-          onClick={this.open}
-        />
-        <PopUpMenu
-          className="settings-cog-menu"
-          targetPoint={this.targetPoint}
-          isOpen={this.state.open}
-          onClose={this.close}
-          showTail={true}
+      <>
+        <button
+          type="button"
+          onClick={this.toggleOpen}
+          style={rootStyle}
+          ref={icon => this.setTargetPoint(icon)}
         >
-          <ManageAssets onClick={this.manageAssets} />
-          {this.areLibrariesEnabled() && (
-            <ManageLibraries onClick={this.manageLibraries} />
-          )}
-          {this.areAIToolsEnabled() && (
-            <ManageModels onClick={this.manageModels} />
-          )}
-          {this.props.showMakerToggle && (
-            <ToggleMaker onClick={this.toggleMakerToolkit} />
-          )}
-        </PopUpMenu>
-        {this.areAIToolsEnabled() && (
-          <ModelManagerDialog
-            isOpen={this.state.managingModels}
-            onClose={this.closeModelManager}
-            autogenerateML={this.props.autogenerateML}
-            levelbuilderModel={this.levelbuilderModel()}
+          <FontAwesome
+            className="settings-cog"
+            icon="cog"
+            style={styles.assetsIcon}
+            title={msg.settings()}
           />
+        </button>
+        {this.state.open && (
+          <>
+            <JavalabDropdown>
+              <button type="button" onClick={this.manageAssets}>
+                Manage Assets
+              </button>
+              <button type="button" onClick={this.manageLibraries}>
+                Manage Libraries
+              </button>
+            </JavalabDropdown>
+          </>
         )}
-        <ConfirmEnableMakerDialog
-          isOpen={this.state.confirmingEnableMaker}
-          handleConfirm={this.confirmEnableMaker}
-          handleCancel={this.hideConfirmation}
-        />
         <LibraryManagerDialog
           isOpen={this.state.managingLibraries}
           onClose={this.closeLibraryManager}
         />
-      </span>
+      </>
     );
   }
 }
@@ -206,7 +198,6 @@ ToggleMaker.propTypes = ManageAssets.propTypes;
 
 const styles = {
   iconContainer: {
-    float: 'right',
     marginRight: 10,
     marginLeft: 10,
     height: '100%',
