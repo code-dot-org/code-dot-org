@@ -1,9 +1,45 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import onClickOutside from 'react-onclickoutside';
-import classNames from 'classnames';
-import style from './dropdown-button.module.scss';
+
+const styles = {
+  main: {
+    display: 'inline-block'
+  },
+  icon: {
+    fontSize: 24,
+    // we want our icon text to be a different size than our button text, which
+    // requires we manually offset to get it centered properly
+    position: 'relative',
+    top: 3
+  },
+  dropdown: {
+    border: `1px solid ${color.charcoal}`,
+    position: 'absolute',
+    // without this, this will be below some content, such as ProgressBubble.
+    zIndex: 1000
+  },
+  anchor: {
+    padding: 10,
+    color: color.charcoal,
+    backgroundColor: color.white,
+    fontFamily: '"Gotham 5r", sans-serif',
+    display: 'block',
+    textDecoration: 'none',
+    lineHeight: '20px',
+    transition: 'background-color .2s ease-out',
+    ':hover': {
+      backgroundColor: color.lightest_gray,
+      cursor: 'pointer'
+    }
+  },
+  nonFirstAnchor: {
+    borderTop: `1px solid ${color.charcoal}`
+  }
+};
 
 /**
  * A button that drops down to a set of clickable links, and closes itself if
@@ -79,38 +115,32 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
     const {dropdownOpen} = this.state;
 
     return (
-      <div className={style.main}>
+      <div style={styles.main}>
         <Button
           __useDeprecatedTag
           text={text}
           size={size}
           onClick={this.toggleDropdown}
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
-          iconClassName={style.icon}
+          iconStyle={styles.icon}
           color={color}
           className={this.props.className}
         >
           {this.props.customText && (
-            <div className={style.main}>{this.props.customText}</div>
+            <div style={styles.main}>{this.props.customText}</div>
           )}
         </Button>
 
         {dropdownOpen && (
-          <div
-            className={style.dropdown}
-            ref={ref => (this.dropdownList = ref)}
-          >
+          <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
             {this.props.children.map((child, index) => (
               <a
                 {...child.props}
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
-                className={classNames(
-                  child.props.className,
-                  style.anchor,
-                  index > 0 && style.nonFirstAnchor
-                )}
                 style={{
+                  ...styles.anchor,
+                  ...(index > 0 && styles.nonFirstAnchor),
                   ...child.props.style
                 }}
               />
@@ -122,4 +152,4 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
   }
 };
 
-export default onClickOutside(DropdownButton);
+export default onClickOutside(Radium(DropdownButton));
