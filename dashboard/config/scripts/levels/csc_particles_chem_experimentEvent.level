@@ -20,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "## Experiment Setup\r\n\r\n**The chemical change will happen when the flame \"burns\" the wood. Let's make that happen!**\r\n\r\n- Bring a new `when sprite touches sprite` event block into the workspace.\r\n- Add a `change costume` block under your new event block to change the pile of wood costume to the charred pile of wood.\r\n\r\n\r\n\r\n",
+    "long_instructions": "## Experiment Event\r\n\r\n**We need all sprites to be movable for the rest of the experiment.**\r\n- Add a `sprites start being draggable` block to the `when run` program code.\r\n\r\n**The chemical change will happen when the flame \"burns\" the wood. Let's make that happen!**\r\n\r\n- Bring a new `when sprite touches sprite` event block into the workspace.\r\n- Add a `change costume` block under your new event block to change the pile of wood costume to the charred pile of wood.\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -51,7 +51,7 @@
   "created_at": "2022-11-01T23:49:39.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:49:39.034+00:00\",\"changed\":[\"cloned from \\\"csc_particles_chem_setup2\\\"\"],\"cloned_from\":\"csc_particles_chem_setup2\"},{\"changed_at\":\"2022-11-01 23:52:36 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 23:53:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:49:39.034+00:00\",\"changed\":[\"cloned from \\\"csc_particles_chem_setup2\\\"\"],\"cloned_from\":\"csc_particles_chem_setup2\"},{\"changed_at\":\"2022-11-01 23:52:36 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 23:53:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 15:41:52 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 19:43:54 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 19:44:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -80,6 +80,14 @@
             <block type="math_number">
               <field name="NUM">0</field>
             </block>
+          </value>
+        </block>
+        <block type="gamelab_addBehaviorSimple">
+          <value name="SPRITE">
+            <block type="gamelab_getAllSprites"/>
+          </value>
+          <value name="BEHAVIOR">
+            <block type="gamelab_draggable"/>
           </value>
         </block>
         <block type="gamelab_checkTouching">
