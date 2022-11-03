@@ -74,9 +74,10 @@ module Pd
         race: 'Race or ethnicity:',
       },
       administrator_information: {
-        principal_role: "Administrator/School Leader's Role",
+        principal_title: "Administrator/School Leader's title",
         principal_first_name: "Administrator/School Leader's first name",
         principal_last_name: "Administrator/School Leader's last name",
+        principal_role: "Administrator/School Leader's Role",
         principal_email: "Administrator/School Leader's email address",
         principal_confirm_email: "Confirm Administrator/School Leader's email address",
         principal_phone_number: "Administrator/School Leader's phone number"
@@ -113,7 +114,6 @@ module Pd
           agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
       teaching_background: {
-        principal_title: "Administrator/School Leader's title"
       },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
@@ -160,7 +160,7 @@ module Pd
         notes_5: "Notes 5",
         alternate_email: "Alternate email",
         school_type: "School type",
-        district_name: PAGE_LABELS[:about_you][:school_district_name],
+        district_name: PAGE_LABELS[:find_your_region][:school_district_name],
         school_city: "School city",
         school_state: "School state",
         school_zip_code: "School zip code",
@@ -173,7 +173,7 @@ module Pd
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
-        how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
+        how_heard: PAGE_LABELS[:about_you][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
         principal_approval_url: "Principal Approval Form URL",
@@ -182,14 +182,14 @@ module Pd
         state: 'Home state',
       },
       principal: {
-        title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
-        first_name: PAGE_LABELS[:about_you][:principal_first_name] + " (provided by principal)",
-        last_name: PAGE_LABELS[:about_you][:principal_last_name] + " (provided by principal)",
-        role: PAGE_LABELS[:about_you][:principal_role] + " (provided by principal)",
-        email: PAGE_LABELS[:about_you][:principal_email] + " (provided by principal)",
+        title: PAGE_LABELS[:administrator_information][:principal_title] + " (provided by principal)",
+        first_name: PAGE_LABELS[:administrator_information][:principal_first_name] + " (provided by principal)",
+        last_name: PAGE_LABELS[:administrator_information][:principal_last_name] + " (provided by principal)",
+        role: PAGE_LABELS[:administrator_information][:principal_role] + " (provided by principal)",
+        email: PAGE_LABELS[:administrator_information][:principal_email] + " (provided by principal)",
         can_email_you: 'Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)',
-        school_name: PAGE_LABELS[:about_you][:school_name] + " (provided by principal)",
-        district_name: PAGE_LABELS[:about_you][:school_district_name] + " (provided by principal)",
+        school_name: PAGE_LABELS[:find_your_region][:school_name] + " (provided by principal)",
+        district_name: PAGE_LABELS[:find_your_region][:school_district_name] + " (provided by principal)",
         do_you_approve: "Do you approve of this teacher participating in Code.org's #{YEAR} Professional Learning Program?",
         total_student_enrollment: "Total student enrollment",
         free_lunch_percent: "Percent of students who are eligible to receive free or reduced lunch (Principal's response)",

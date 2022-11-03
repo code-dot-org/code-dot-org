@@ -4,13 +4,13 @@ import color from '@cdo/apps/util/color';
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
-  PROGRAM_CSA,
-  Year
+  PROGRAM_CSA
 } from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
+  Year
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
@@ -119,7 +119,7 @@ const ImplementationPlan = props => {
           </p>
           <LabeledRadioButtons
             name="enoughCourseHours"
-            label={PageLabels.chooseYourProgram.enoughCourseHours
+            label={PageLabels.implementationPlan.enoughCourseHours
               .replace('{{CS program}}', programInfo.name)
               .replace('{{min hours}}', programInfo.minCourseHours)}
           />

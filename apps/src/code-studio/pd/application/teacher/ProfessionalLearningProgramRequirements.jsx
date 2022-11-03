@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {
   PageLabels,
@@ -242,7 +242,7 @@ const ProfessionalLearningProgramRequirements = props => {
           name="agree"
           label={
             <span>
-              {PageLabels.additionalDemographicInformation.agree.replace(
+              {PageLabels.professionalLearningProgramRequirements.agree.replace(
                 'my local Code.org Regional Partner',
                 regionalPartner
                   ? regionalPartner.name
