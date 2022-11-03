@@ -718,8 +718,6 @@
   learn_banner_beyond_markdown: "Want to keep learning? [Go beyond an hour](%{url})"
   learn_banner_teachers: "Teachers: <a id='teacher_banner_host'>Host an hour</a> or <a id='teacher_banner_howto'>read the How-To Guide</a>"
   learn_banner_teachers_markdown: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{howto_url})"
-  learn_robotics_banner_heading: 'Robotics and Circuits'
-  learn_robotics_banner_blurb: 'Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware.'
 
   tutorial_dance2019_name: "Dance Party"
   tutorial_danceparty_name: "Dance Party"

@@ -692,6 +692,7 @@ ca:
             '"right"': dret
             '"space"': espai
             '"enter"': introduïu
+            '"i"': i
             '"x"': x
       Dancelab_whenPeak:
         text: quan al pic de {RANGE}
@@ -704,6 +705,12 @@ ca:
         text: configuració
       Dancelab_whenSetup2:
         text: configuració
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bombolles
+            '"confetti"': Confeti
+            '"hearts"': cors
       gamelab_addTarget:
         options:
           OPT:
@@ -749,6 +756,7 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"i"': i
             '"x"': x
       gamelab_jumpTo:
         text: "{SPRITE} salta a {LOCATION}"
@@ -763,6 +771,7 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"i"': i
             '"x"': x
       gamelab_makeProjectile:
         options:
@@ -810,7 +819,6 @@ ca:
             "'sound://category_space/Pillars_SFX.mp3'": pilars
             "'sound://category_space/Southern_ring_SFX.mp3'": anell del sud
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -1052,6 +1060,25 @@ ca:
             '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts"': cors
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:

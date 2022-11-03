@@ -5823,6 +5823,8 @@ de:
               display_name: Umfrage
             lessonGroup-3:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

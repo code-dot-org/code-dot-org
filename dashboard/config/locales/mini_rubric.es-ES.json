@@ -732,24 +732,24 @@
         },
         "U4 Model Design 7_2019": {
           "rubric_key_concept": "Selecciona el elemento de entrada adecuado para un determinado tipo de información.",
-          "rubric_performance_level_1": "Todos los elementos demostrados se incluyen en la pantalla y sus propiedades han sido arreglados para que la pantalla parezca muy similar el del ejemplo.",
-          "rubric_performance_level_2": "Casi todos los elementos demostrados se incluyen en la pantalla, incluyendo al menos un elemento escrito, un botón, un aporte escrito, y una casilla de verificación que no se encontraron en el proyecto Estárter.",
-          "rubric_performance_level_3": "Casi todos los elementos demostrados se incluyen en la pantalla, incluyendo al menos un elemento escrito, y un botón que no se encuentren en el proyecto Estárter.",
-          "rubric_performance_level_4": "No hay muchos de los elementos demostrados incluidos en la pantalla."
+          "rubric_performance_level_1": "Todos los elementos mencionados están incluidos en la pantalla, y sus propiedades se han configurado de manera que la pantalla tenga un aspecto muy similar al de la imagen de ejemplo.",
+          "rubric_performance_level_2": "Casi todos los elementos indicados están incluidos en la pantalla, incluyendo al menos un elemento de texto, un botón, una entrada de texto, una imagen y una casilla de verificación que no estaban en el proyecto inicial.",
+          "rubric_performance_level_3": "Algunos de los elementos indicados se incluyen en la pantalla, incluyendo al menos un elemento de texto y un botón que no estaban en el proyecto inicial.",
+          "rubric_performance_level_4": "Muy pocos de los elementos indicados se incluyen en la pantalla."
         },
         "U4 Model Design 7_2021": {
           "rubric_key_concept": "Selecciona el elemento de entrada adecuado para un determinado tipo de información.",
-          "rubric_performance_level_1": "Todos los elementos demostrados se incluyen en la pantalla y sus propiedades han sido arreglados para que la pantalla parezca muy similar el del ejemplo.",
-          "rubric_performance_level_2": "Casi todos los elementos demostrados se incluyen en la pantalla, incluyendo al menos un elemento escrito, un botón, un aporte escrito, y una casilla de verificación que no se encontraron en el proyecto Estárter.",
-          "rubric_performance_level_3": "Casi todos los elementos demostrados se incluyen en la pantalla, incluyendo al menos un elemento escrito, y un botón que no se encuentren en el proyecto Estárter.",
-          "rubric_performance_level_4": "No hay muchos de los elementos demostrados incluidos en la pantalla."
+          "rubric_performance_level_1": "Todos los elementos mencionados están incluidos en la pantalla, y sus propiedades se han configurado de manera que la pantalla tenga un aspecto muy similar al de la imagen de ejemplo.",
+          "rubric_performance_level_2": "Casi todos los elementos indicados están incluidos en la pantalla, incluyendo al menos un elemento de texto, un botón, una entrada de texto, una imagen y una casilla de verificación que no estaban en el proyecto inicial.",
+          "rubric_performance_level_3": "Algunos de los elementos indicados se incluyen en la pantalla, incluyendo al menos un elemento de texto y un botón que no estaban en el proyecto inicial.",
+          "rubric_performance_level_4": "Muy pocos de los elementos indicados se incluyen en la pantalla."
         },
         "U4 Model Design 7_2022": {
           "rubric_key_concept": "Selecciona el elemento de entrada adecuado para un determinado tipo de información.",
-          "rubric_performance_level_1": "Todos los elementos demostrados se incluyen en la pantalla y sus propiedades han sido arreglados para que la pantalla parezca muy similar el del ejemplo.",
-          "rubric_performance_level_2": "Casi todos los elementos demostrados se incluyen en la pantalla, incluyendo al menos un elemento escrito, un botón, un aporte escrito, y una casilla de verificación que no se encontraron en el proyecto Estárter.",
-          "rubric_performance_level_3": "Casi todos los elementos demostrados se incluyen en la pantalla, incluyendo al menos un elemento escrito, y un botón que no se encuentren en el proyecto Estárter.",
-          "rubric_performance_level_4": "No hay muchos de los elementos demostrados incluidos en la pantalla."
+          "rubric_performance_level_1": "Todos los elementos mencionados están incluidos en la pantalla, y sus propiedades se han configurado de manera que la pantalla tenga un aspecto muy similar al de la imagen de ejemplo.",
+          "rubric_performance_level_2": "Casi todos los elementos indicados están incluidos en la pantalla, incluyendo al menos un elemento de texto, un botón, una entrada de texto, una imagen y una casilla de verificación que no estaban en el proyecto inicial.",
+          "rubric_performance_level_3": "Algunos de los elementos indicados se incluyen en la pantalla, incluyendo al menos un elemento de texto y un botón que no estaban en el proyecto inicial.",
+          "rubric_performance_level_4": "Muy pocos de los elementos indicados se incluyen en la pantalla."
         },
         "ml-club app-review submit": {
           "rubric_key_concept": "Creación de una aplicación fácil de usar que utiliza el aprendizaje automático",
@@ -955,23 +955,32 @@
           "rubric_performance_level_4": "La aplicación no recibe información de ninguno de los elementos de la pantalla."
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "rubric_key_concept": "Actualizar las propiedades y el texto de los elementos de diseño mediante código",
+          "rubric_key_concept": "Actualiza las propiedades y el texto de los elementos de diseño mediante código",
           "rubric_performance_level_1": "La aplicación terminada coincide con la descripción, y cada botón actualiza correctamente el icono y el texto",
-          "rubric_performance_level_2": "La aplicación terminada es similar a la descripción, pero tiene al menos un elemento incompleto (por ejemplo, no actualizar el texto o no actualizar el color del icono)",
+          "rubric_performance_level_2": "La aplicación terminada es similar a la descripción, pero tiene al menos un elemento incompleto (por ejemplo, no actualiza el texto o no actualiza el color del icono)",
           "rubric_performance_level_3": "La aplicación terminada puede tener algunos elementos que parecen correctos, pero la mayoría de los elementos no se actualizan correctamente o la aplicación está sólo parcialmente terminada.\n",
           "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
         },
         "CSD U4 - Design Mode Project_2019": {
           "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
-          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo de papel, con solo algunas inconsistencias negables."
+          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
+          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
         },
         "CSD U4 - Design Mode Project_2021": {
           "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
-          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo de papel, con solo algunas inconsistencias negables."
+          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
+          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
         },
         "CSD U4 - Design Mode Project_2022": {
           "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
-          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo de papel, con solo algunas inconsistencias negables."
+          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
+          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
         },
         "CSD U6 - Accelerometer - A_2222": {
           "rubric_key_concept": "Utiliza el acelerómetro en un evento y con datos para crear una aplicación",
@@ -1007,6 +1016,49 @@
           "rubric_performance_level_2": "La aplicación muestra el valor de cada sensor, pero puede que no sea en tiempo real o que los sensores sean de 0-1023 en lugar de 0-10",
           "rubric_performance_level_3": "A la aplicación le falta al menos uno de los valores del sensor",
           "rubric_performance_level_4": "La aplicación no ha sido inicializada"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "Conecta botones externos al Circuit Playground y crea aplicaciones que utilicen botones externos",
+          "rubric_performance_level_1": "El programa coincide en la descripción con 3 eventos que ocultan los cuadrados azules en la aplicación. Los botones están conectados correctamente usando un cable de tierra para señalar cada botón",
+          "rubric_performance_level_2": "Algunos de los botones ocultan los cuadrados azules, pero no todos funcionan correctamente. O bien, los botones están conectados correctamente pero pueden utilizar varios cables de tierra en lugar de uno solo.",
+          "rubric_performance_level_3": "Los botones están enganchados, pero los cuadrados azules no se ocultan al pulsar los botones",
+          "rubric_performance_level_4": "La aplicación no se ha puesto en marcha o no hay botones conectados al Circuit Playground"
+        },
+        "CSDU4 Project Events_2019": {
+          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
+          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
+          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
+          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
+        },
+        "CSDU4 Project Events_2021": {
+          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
+          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
+          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
+          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
+        },
+        "CSDU4 Project Events_2022": {
+          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
+          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
+          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
+          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
+        },
+        "U4 Model Program 5_2019": {
+          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
+          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
+          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
+          "rubric_performance_level_4": "No hay eventos en el prototipo."
+        },
+        "U4 Model Program 5_2021": {
+          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
+          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
+          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
+          "rubric_performance_level_4": "No hay eventos en el prototipo."
+        },
+        "U4 Model Program 5_2022": {
+          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
+          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
+          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
+          "rubric_performance_level_4": "No hay eventos en el prototipo."
         }
       }
     }

@@ -5,7 +5,6 @@ import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
-import RoboticsButton from '@cdo/apps/tutorialExplorer/roboticsButton';
 
 const FAKE_ON_USER_INPUT = () => {};
 const FAKE_ORG_NAME = 'fake org name';
@@ -73,15 +72,6 @@ describe('FilterSet', () => {
         selection={['xyzzy']}
         singleEntry={false}
       />
-    );
-  });
-
-  it('adds a robotics button if a URL is provided', () => {
-    const wrapper = shallow(
-      <FilterSet {...DEFAULT_PROPS} roboticsButtonUrl="https://example.com" />
-    );
-    expect(wrapper).to.containMatchingElement(
-      <RoboticsButton url="https://example.com" />
     );
   });
 

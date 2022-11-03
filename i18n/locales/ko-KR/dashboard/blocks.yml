@@ -989,6 +989,24 @@ ko:
         text: 설정
       Dancelab_whenSetup2:
         text: 설정
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} 효과 연출"
+        options:
+          EFFECT:
+            '"bubbles"': 거품
+            '"confetti"': 색종이
+            '"hearts"': 하트
+            '"emojis"': 해피 이모티콘
+            '"rain"': 비
+            '"starburst"': 스타버스트
+            '"glass"': 산산조각나는 유리
+            '"twinkling"': 반짝거림
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): 드래그 가능
+            wandering(): 배회
+            shrinking(): 축소
       gamelab_addBehaviorSimple:
         text: 스프라이트 {SPRITE} 시작 {BEHAVIOR}
       gamelab_addTarget:
@@ -1336,7 +1354,6 @@ ko:
             "'sound://category_space/Pillars_SFX.mp3'": 기둥
             "'sound://category_space/Southern_ring_SFX.mp3'": 남부 고리
             "'sound://category_space/Supernova_SFX.mp3'": 초신성
-            "'sound://category_sports/One_Whistle_SFX.mp3'": 티코
       gamelab_playSpeech:
         text: 스피치 {SOUND} 재생
       gamelab_playerBehaviors:
@@ -1921,6 +1938,8 @@ ko:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

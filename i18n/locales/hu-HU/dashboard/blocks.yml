@@ -985,6 +985,24 @@ hu:
         text: beállítás
       Dancelab_whenSetup2:
         text: beállítás
+      DansBlocks_setForegroundEffect2:
+        text: készítsen {EFFECT} effektet
+        options:
+          EFFECT:
+            '"bubbles"': Buborékok
+            '"confetti"': Konfetti
+            '"hearts"': szívek
+            '"emojis"': Boldog emojik
+            '"rain"': esős
+            '"starburst"': Csillagrobbanás
+            '"glass"': Üvegtörés
+            '"twinkling"': Csillogás
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): vonszolható
+            wandering(): kóborlás
+            shrinking(): zsugorodás
       gamelab_addBehaviorSimple:
         text: szereplő {SPRITE} elkezd {BEHAVIOR}
       gamelab_addTarget:
@@ -1330,7 +1348,6 @@ hu:
             "'sound://category_space/Pillars_SFX.mp3'": Teremtés Oszlopai
             "'sound://category_space/Southern_ring_SFX.mp3'": Déli Gyűrűs-köd
             "'sound://category_space/Supernova_SFX.mp3'": szupernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": Tycho-kráter
       gamelab_playSpeech:
         text: "{SOUND} beszéd eljátszása"
       gamelab_playerBehaviors:

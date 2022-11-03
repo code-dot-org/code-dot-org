@@ -569,7 +569,8 @@
         },
         "private_and_personal_information_lesson_slides/coursee/2022": {
           "name": "Özel ve Kişisel Bilgiler: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
+          "type": "Sunum Destesi"
         },
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
           "name": "Özel ve Kişisel Bilgiler: Özel ve Kişisel Bilgiler",
@@ -712,7 +713,8 @@
         },
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "Dijital Yollar: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
+          "type": "Sunum Destesi"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "Hissediyorum Yüzler Duygu Görüntüsü",
@@ -830,7 +832,8 @@
         },
         "the_right_app_scenarios/courseb/2022": {
           "name": "Doğru Uygulama Senaryoları",
-          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
+          "type": "Sunum Destesi"
         },
         "the_big_event/courseb/2022": {
           "name": "Büyük Olay",
@@ -1037,7 +1040,8 @@
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Çevrimiçi Mahallemde Güvenlik: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Sunum Destesi"
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
           "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallemim",
@@ -1226,7 +1230,8 @@
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Çevrimiçi Anlamlığa Durdurmak: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
+          "type": "Sunum Destesi"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
           "name": "Çevrimiçi Ortalama Durdurmak: Online Ortalama Durdur",
@@ -2269,6 +2274,9 @@
         },
         "app_presentation_1/csd/2022": {
           "name": "Uygulama Sunumu"
+        },
+        "app_presentation_template/csd/2022": {
+          "type": "Sunum Destesi"
         },
         "project_-_app_presentation/csd/2022": {
           "name": "Proje - Uygulama Sunumu",
@@ -3413,7 +3421,8 @@
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Dijital Yollar: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
+          "type": "Sunum Destesi"
         },
         "feeling_faces_emotion_image/courseb/2021": {
           "name": "Hissediyorum Yüzler Duygu Görüntüsü",
@@ -3530,7 +3539,8 @@
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Doğru Uygulama Senaryoları",
-          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
+          "type": "Sunum Destesi"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Büyük Olay",
@@ -3619,7 +3629,8 @@
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "Çevrimiçi Mahallemde Güvenlik: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Sunum Destesi"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": "Çevrimiçi Mahallemde Güvenlik: Çevrimiçi Mahallemim",
@@ -3867,7 +3878,8 @@
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "Çevrimiçi Anlamlığa Durdurmak: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
+          "type": "Sunum Destesi"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "Çevrimiçi Ortalama Durdurmak: Online Ortalama Durdur",
@@ -4552,7 +4564,8 @@
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
           "name": "Özel ve Kişisel Bilgiler: Ders Slaytları",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
+          "type": "Sunum Destesi"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
           "name": "Özel ve Kişisel Bilgiler: Özel ve Kişisel Bilgiler",
@@ -4901,6 +4914,9 @@
         "app-presentation/csd/2021": {
           "name": "Uygulama Sunumu",
           "type": "Değerlendirme Tablosu"
+        },
+        "app-presentation-template/csd/2021": {
+          "type": "Sunum Destesi"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "Uygulama Sunumu"
