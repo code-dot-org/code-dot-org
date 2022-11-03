@@ -82,9 +82,13 @@ module Cdo
       table.select {|_k, v| v.to_s.match(SECRET_REGEX)}.each do |key, value|
         cdo_secrets.required(*value.to_s.scan(SECRET_REGEX).flatten)
         table[key] = Cdo.lazy do
-          value.is_a?(Secret) ?
-            cdo_secrets.get!(value.key) :
+          stack_specific_secret_path = Cdo::SecretsConfig.stack_specific_secret_path(key)
+          if value.is_a?(Secret)
+            cdo_secrets.get!(stack_specific_secret_path) || cdo_secrets.get!(value.key)
+          else
+            # TODO: do we need to modify this use case as well to get a stack specific secret?
             value.to_s.gsub(SECRET_REGEX) {cdo_secrets.get!($1)}
+          end
         end
 
         # Replace lazy references to the underlying object on first access,
