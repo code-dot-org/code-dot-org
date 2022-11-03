@@ -708,7 +708,6 @@ function getFilters({mobile}) {
         {name: 'computers', text: i18n.filterPlatformComputers()},
         {name: 'android', text: i18n.filterPlatformAndroid()},
         {name: 'ios', text: i18n.filterPlatformIos()},
-        {name: 'screenreader', text: i18n.filterPlatformScreenReader()},
         {
           name: 'robotics',
           text: i18n.filterPlatformRobotics()
@@ -750,6 +749,17 @@ function getFilters({mobile}) {
       ]
     },
     {
+      name: 'accessibility',
+      text: i18n.filterAccessibility(),
+      entries: [
+        {name: 'screenreader', text: i18n.filterAccessibilityScreenReader()},
+        {name: 'tts', text: i18n.filterAccessibilityTTS()},
+        {name: 'keyboard', text: i18n.filterAccessibilityKeyboard()},
+        {name: 'captions', text: i18n.filterAccessibilityCaptions()},
+        {name: 'highcontrast', text: i18n.filterAccessibilityHighContrast()}
+      ]
+    },
+    {
       name: 'programming_language',
       text: i18n.filterProgrammingLanguage(),
       entries: [
@@ -778,7 +788,6 @@ function getFilters({mobile}) {
  * Parse URL parameters to retrieve an override of initialFilters.
  *
  * @param {Array} filters - Array of filterGroup objects.
- * @param {bool} robotics - whether on the robotics page.
  *
  * @return {object} - Returns an object containing arrays of strings.  Each
  *   array is named for a filterGroup name, and each string inside is named
