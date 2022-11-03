@@ -7,6 +7,7 @@ import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/Tea
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
+import FindYourRegion from '../../../../../src/code-studio/pd/application/teacher/FindYourRegion';
 
 describe('TeacherApplication', () => {
   const fakeOptionKeys = Object.values(PageLabels).reduce(
@@ -21,7 +22,10 @@ describe('TeacherApplication', () => {
     apiEndpoint: '/path/to/endpoint',
     options: fakeOptions,
     accountEmail: 'user@email.com',
-    userId: 1
+    userId: 1,
+    errors: [],
+    data: {},
+    onChange: () => {}
   };
 
   beforeEach(() => {
@@ -55,13 +59,15 @@ describe('TeacherApplication', () => {
     sinon.assert.calledThrice(firehoseClient.putRecord);
   });
   it('Does not set schoolId if not provided', () => {
-    const page = mount(<TeacherApplication {...defaultProps} />);
+    const page = mount(<FindYourRegion {...defaultProps} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       undefined
     );
   });
   it('Sets the school dropdown value from props', () => {
-    const page = mount(<TeacherApplication {...defaultProps} schoolId="50" />);
+    const page = mount(
+      <FindYourRegion {...defaultProps} data={{school: '50'}} />
+    );
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '50'
     );
@@ -71,8 +77,13 @@ describe('TeacherApplication', () => {
     sinon
       .stub(window.sessionStorage, 'getItem')
       .withArgs('TeacherApplication')
-      .returns(JSON.stringify({data: {school: '25'}}));
-    const page = mount(<TeacherApplication {...defaultProps} />);
+      .returns({school: '25'});
+    const page = mount(
+      <FindYourRegion
+        {...defaultProps}
+        data={window.sessionStorage.getItem('TeacherApplication')}
+      />
+    );
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );
