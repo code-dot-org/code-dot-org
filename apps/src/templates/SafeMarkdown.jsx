@@ -55,14 +55,9 @@ class SafeMarkdown extends React.Component {
       rendered.type === 'div' &&
       !Object.keys(markdownProps).length
     ) {
-      return <div className="docs-table">{rendered}</div>;
+      return rendered;
     } else {
-      console.log('this has more than one child');
-      return (
-        <div className="docs-table" {...markdownProps}>
-          {rendered}
-        </div>
-      );
+      return <div {...markdownProps}>{rendered}</div>;
     }
   }
 }
