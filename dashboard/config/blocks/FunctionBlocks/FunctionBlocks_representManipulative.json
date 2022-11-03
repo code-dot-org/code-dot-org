@@ -3,7 +3,7 @@
   "config": {
     "func": "representManipulative",
     "inline": true,
-    "blockText": "represent {NUM} new {ANIMATION_NAME} sprites {BEHAVIOR}",
+    "blockText": "represent {NUM} new {ANIMATION_NAME} sprites",
     "color": [
       355,
       ".7",
@@ -16,23 +16,6 @@
       {
         "name": "ANIMATION_NAME",
         "customInput": "costumePicker"
-      },
-      {
-        "name": "BEHAVIOR",
-        "options": [
-          [
-            "being draggable",
-            "draggable()"
-          ],
-          [
-            "wandering",
-            "wandering()"
-          ],
-          [
-            "shrinking",
-            "shrinking()"
-          ]
-        ]
       }
     ]
   }
