@@ -1,65 +1,16 @@
 import GoogleBlockly from 'blockly/core';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 
-/**
- * Adds a copy command to the block context menu. After switching to v7,
- * we can replace this with:
- * https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste
- */
-const registerBlockCopyToStorage = function() {
-  const copyToStorageOption = {
-    displayText: function() {
-      return 'Copy';
-    },
-    preconditionFn: function(scope) {
-      if (scope.block.isDeletable() && scope.block.isMovable()) {
-        return 'enabled';
-      } else {
-        return 'disabled';
-      }
-    },
-    callback: function(scope) {
-      const copyData = Blockly.Xml.domToPrettyText(
-        Blockly.Xml.blockToDom(scope.block)
-      );
-      localStorage.setItem('blocklyStash', copyData);
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
-    id: 'blockCopyToStorage',
-    weight: 0
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(copyToStorageOption);
+const options = {
+  contextMenu: true,
+  shortcut: true
 };
 
-/**
- * Adds a paste command to the block context menu. After switching to v7,
- * we can replace this with:
- * https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste
- */
-const registerBlockPasteFromStorage = function() {
-  const pasteFromStorageOption = {
-    displayText: function() {
-      return 'Paste';
-    },
-    preconditionFn: function(scope) {
-      const copyData = localStorage.getItem('blocklyStash');
-      if (copyData) {
-        return 'enabled';
-      }
-      return 'disabled';
-    },
-    callback: function(scope) {
-      const copyData = localStorage.getItem('blocklyStash');
-      Blockly.Xml.domToBlockSpace(
-        Blockly.mainBlockSpace,
-        Blockly.Xml.textToDom(`<xml>${copyData}</xml>`)
-      );
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: 'blockPasteFromStorage',
-    weight: 0
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(pasteFromStorageOption);
-};
+const plugin = new CrossTabCopyPaste();
+plugin.init(options);
+
+GoogleBlockly.Msg['CROSS_TAB_COPY'] = 'Copy';
+GoogleBlockly.Msg['CROSS_TAB_PASTE'] = 'Paste';
 
 const registerDeletable = function() {
   const deletableOption = {
@@ -190,8 +141,6 @@ const registerUnshadow = function() {
 };
 
 const registerAllContextMenuItems = function() {
-  registerBlockCopyToStorage();
-  registerBlockPasteFromStorage();
   registerDeletable();
   registerMovable();
   registerEditable();
