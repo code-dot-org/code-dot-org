@@ -273,7 +273,7 @@ function checkSpriteTouchedThisFrame(){
     console.log("Need to call setupPrevious() to use checkSpriteClickedThisFrame() helper function");
     return false;
   }
-  if (checkNewEventHisFrame()) {
+  if (checkNewEventThisFrame()) {
     //If we're here: a new event happened this frame.
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
@@ -284,8 +284,21 @@ function checkSpriteTouchedThisFrame(){
   return false;
 }
 
+//Checks if a particular sprite was touched during an event this frame
+function checkThisSpriteTouchedThisFrame(spriteId) {
+  if(checkSpriteTouchedThisFrame()) {
+    var sprites = getSpritesThatTouched();
+    //Check that the sprite we touched (sprites[1]) is the 3rd sprite (spriteIds[2])
+    if(sprites[1] == spriteId) {
+      return true;
+    }
+  }
+  return false;
+}
+
 //Checks if the background was set to something
-function checkBackgroundChanged(){
+//Designed to be implemented in levels without any background block, so setting background for first time
+function checkSetBackground(){
   var background = getBackground();
   return background !== undefined && background !== "#ffffff";
 }
@@ -302,6 +315,71 @@ function checkMovedSpritePin(spriteId) {
   var spriteY = getProp(sprite, "y");
   if(spriteX != 200 || spriteY != 200) {
     return true;
+  }
+}
+
+//Checks if n unique touch events have happened
+//For example: in levels where the sprite needs to visit 2 things, use checkUniqueTouchEvents(2) to validate that level
+//Passing in delayTime will also delay the fail time after each unique event (to give time to visit new sprites)
+function checkUniqueTouchEvents(n, delayTime) {
+  //Create a global variable that will persist through frames of the draw loop
+  if(!validationProps.uniqueTouchEvents) {
+    validationProps.uniqueTouchEvents = [];
+  }
+  //See if any sprites touched this frame
+  var sprites = getSpritesThatTouched();
+  //If we found some sprites that touched:
+  if(sprites != -1) {
+    //sprites is an array of [source sprite, destination sprite]
+    //See if we haven't already touched this destination sprite
+    if(!member(sprites[1], validationProps.uniqueTouchEvents)) {
+      //If we made it here: we've touched a unique sprite, so add it to our global list
+      validationProps.uniqueTouchEvents.push(sprites[1]);
+      if(delayTime) {
+        //Add more time to the timer when there's a unique event
+        var currentFrame = World.frameCount;
+        setFailTime(currentFrame + delayTime);
+      }
+    }
+  }
+  //If our list of unique events is n, then we touched all n people
+  if(validationProps.uniqueTouchEvents.length == n) {
+    return true;
+  }
+  return false;
+}
+
+//Checks if the sprite's size has been changed from the default
+function checkNotDefaultSize(spriteId) {
+  var sprite = {id: spriteId};
+  var spriteScale = getProp(sprite, "scale");
+  if(spriteScale != 100) {
+    return true;
+  } else {
+  	return false;
+  }
+}
+
+//Checks if the sprite has been changed from the default costume
+//Requires the default costume from that level
+function checkNotDefaultCostume(spriteId, defaultCostume) {
+  var sprite = {id: spriteId};
+  var spriteCostume = getProp(sprite, "costume");
+  if(spriteCostume != defaultCostume) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//Checks if the sprite is currently speaking
+//Designed to be used when a sprite is speaking when the program is run, _not_ during an event
+function checkSpriteSpeech(spriteId) {
+  var speech = getSpeechForSpriteId(spriteId);
+  if(speech != null) {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -374,9 +452,10 @@ function README() {
 /***************************************************
 SPECIFIC HELPER CODE FOR VALIDATION (contains things specifically for this CSC module)
 ***************************************************/
-
-validationProps.landmarksValidation = {};
-validationProps.landmarksValidation.events = [];
+if (typeof validationProps !== 'undefined') {
+  validationProps.landmarksValidation = {};
+  validationProps.landmarksValidation.events = [];
+}
 
 function libraryREADME() {
   console.log("This library also includes validation helper objects that can be used when writing custom block functions");
@@ -394,7 +473,7 @@ to continue validating criteria from previous levels
 function level1Validation(validateBackground) {
   if(validateBackground) {
     addCriteria(function() {
-      if(checkBackgroundChanged()) {
+      if(checkSetBackground()) {
         //If you made it here: we passed the criteria
         return true;
       }
