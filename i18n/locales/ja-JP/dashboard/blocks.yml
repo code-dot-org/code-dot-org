@@ -1001,6 +1001,24 @@ ja:
             '"macklemore90"': マックルモアー - Can't Hold Us
             '"hammer"': MC ハマー - U Can't Touch This
             '"peas"': ブラック・アイド・ピーズ - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} 前景エフェクトを実行する"
+        options:
+          EFFECT:
+            '"bubbles"': 泡
+            '"confetti"': 紙吹雪
+            '"hearts"': ハーツ
+            '"emojis"': ハッピー絵文字
+            '"rain"': 雨
+            '"starburst"': スターバースト
+            '"glass"': ガラス割れ
+            '"twinkling"': キラキラ
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): ドラッグ可能
+            wandering(): あちこちに動かす
+            shrinking(): 小さくする
       gamelab_addBehaviorSimple:
         text: スプライト {SPRITE} 開始 {BEHAVIOR}
       gamelab_addTarget:
@@ -1348,7 +1366,6 @@ ja:
             "'sound://category_space/Pillars_SFX.mp3'": 柱
             "'sound://category_space/Southern_ring_SFX.mp3'": 南環
             "'sound://category_space/Supernova_SFX.mp3'": 超新星
-            "'sound://category_sports/One_Whistle_SFX.mp3'": ティーチョ
       gamelab_playSpeech:
         text: ピーチを再生する {SOUND}
       gamelab_playerBehaviors:
@@ -1994,6 +2011,8 @@ ja:
         text: モンスタータウンに{COUNT}人のモンスターをセットアップ
       Outbreak_stopMoving:
         text: モンスターが動くのをやめる
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

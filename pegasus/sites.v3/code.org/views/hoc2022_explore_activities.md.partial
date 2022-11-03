@@ -1,4 +1,4 @@
-{{ featured_tutorial, title: "Hello World: Space", body: "Create intergalactic scenes with characters and sounds that will have you saying, Hello worlds!", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{ featured_tutorial, title: "Hello World: Space", body: "Create intergalactic scenes with characters and sounds that will have you saying, \"Hello worlds!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 
 {{ featured_tutorial, title: "NASA's Space Jam", body: "Create a solar system that really rocks, learning about music, astronomy, and coding in the process!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
 

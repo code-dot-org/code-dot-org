@@ -579,15 +579,13 @@ fr-FR:
 
 '
       BigEvent-Unplugged:
-        markdown: |
-          # Le grand événement
-
-          En informatique, les événements sont des actions que l'ordinateur surveille. Dans cette leçon vous serez différemment selon le bouton qui est préssé.
+        markdown: "# Le Grand Événement\n\nEn informatique, les événements sont des
+          actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
+          selon le bouton sur lequel on appuie. \n"
       BigEvent-Unplugged_2020:
-        markdown: |
-          # Le grand événement
-
-          En informatique, les événements sont des actions que l'ordinateur surveille. Dans cette leçon vous serez différemment selon le bouton qui est préssé.
+        markdown: "# Le Grand Événement\n\nEn informatique, les événements sont des
+          actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
+          selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged:
         markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
           dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
@@ -1317,14 +1315,14 @@ fr-FR:
           ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyMaps-Unplugged:
         markdown: |
-          # Joyeuse carte
+          # Cartes joyeuses
 
-          Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
+          Crée un algorithme pour faire traverser un labyrinthe à ton personnage.
       HappyMaps-Unplugged_2020:
         markdown: |
-          # Joyeuse carte
+          # Cartes joyeuses
 
-          Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
+          Crée un algorithme pour faire traverser un labyrinthe à ton personnage.
       Internet Simulator Setup:
         content1: description ici
         markdown: "# Simulateur Internet de Code.org\n\n_Remarque : Les instructions
@@ -1635,14 +1633,14 @@ fr-FR:
         title: Choix multiple
       MoveItMoveIt-Unplugged:
         markdown: |
-          # Bougé, Bougé
+          # Bouge, Bouge ton corps
 
-          Utiliser une carte et donner les commandes pour atteindre le but.
+          Utilise une carte et donne les commandes pour atteindre l'objectif.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
-          # Bougé, Bougé
+          # Bouge, Bouge ton corps
 
-          Utiliser une carte et donner les commandes pour atteindre le but.
+          Utilise une carte et donne les commandes pour atteindre l'objectif.
       Multi-Screen Apps:
         content1: description ici
       MyLoopyRoboticFriends-Unplugged:
@@ -3862,7 +3860,7 @@ fr-FR:
       courseD_project_exemplars_2020_2021:
         content1: Page du Manuel du Test Markdown
       courseE_EOC_2020:
-        description: Tu as finis le Cours E! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       courseE_multi_bee_functions_predict1:
         answers:
@@ -4522,72 +4520,76 @@ fr-FR:
         - text: Que se passera-t-il si tu exécutes ce programme?
       courseF_multi_artist_variables3a_predict1:
         answers:
-        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+        - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
           correct: true
           feedback: Correct !
         - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
-          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
-            dans la boucle `répéte` pour que cela se produise.
-        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
-          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
-            bloc `tourner` pour que cela se produise.
+          feedback: Incorrect. Il faudrait que la variable « longueur » soit dans
+            la boucle `répéter` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts en faisant des virages de 50 degrés.
+          feedback: Incorrect. Il faudrait mettre la variable « longueur » à l'intérieur
+            du bloc « tourner » pour que cela se produise.
         - text: Je ne sais pas.
-          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
-            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+          feedback: La variable 'longueur' est fixée à 50 et va être utilisé dans
+            le bloc 'avancer de', donc l'artiste dessinera un triangle avec des côtés
+            de 50 pixels.
         questions:
-        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: On a fixé la variable « longueur » à 50. Que se passera-t-il quand
+            tu cliques sur « Démarrer » ?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
-        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+        - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
           correct: true
           feedback: Correct !
         - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
-          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
-            dans la boucle `répéte` pour que cela se produise.
-        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
-          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
-            bloc `tourner` pour que cela se produise.
+          feedback: Incorrect. Il faudrait que la variable « longueur » soit dans
+            la boucle `répéter` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts en faisant des virages de 50 degrés.
+          feedback: Incorrect. Il faudrait mettre la variable « longueur » à l'intérieur
+            du bloc « tourner » pour que cela se produise.
         - text: Je ne sais pas.
-          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
-            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+          feedback: La variable 'longueur' est fixée à 50 et va être utilisé dans
+            le bloc 'avancer de', donc l'artiste dessinera un triangle avec des côtés
+            de 50 pixels.
         questions:
-        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: On a fixé la variable « longueur » à 50. Que se passera-t-il quand
+            tu cliques sur « Démarrer » ?
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
-        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+        - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
           correct: true
           feedback: Correct !
         - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
-          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
-            dans la boucle `répéte` pour que cela se produise.
-        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
-          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
-            bloc `tourner` pour que cela se produise.
+          feedback: Incorrect. Il faudrait que la variable « longueur » soit dans
+            la boucle `répéter` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts en faisant des virages de 50 degrés.
+          feedback: Incorrect. Il faudrait mettre la variable « longueur » à l'intérieur
+            du bloc « tourner » pour que cela se produise.
         - text: Je ne sais pas.
-          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
-            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+          feedback: La variable 'longueur' est fixée à 50 et va être utilisé dans
+            le bloc 'avancer de', donc l'artiste dessinera un triangle avec des côtés
+            de 50 pixels.
         questions:
-        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: On a fixé la variable « longueur » à 50. Que se passera-t-il quand
+            tu cliques sur « Démarrer » ?
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+        - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
           correct: true
           feedback: Correct !
         - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
-          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
-            dans la boucle `répéte` pour que cela se produise.
-        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
-          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
-            bloc `tourner` pour que cela se produise.
+          feedback: Incorrect. Il faudrait que la variable « longueur » soit dans
+            la boucle `répéter` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts en faisant des virages de 50 degrés.
+          feedback: Incorrect. Il faudrait mettre la variable « longueur » à l'intérieur
+            du bloc « tourner » pour que cela se produise.
         - text: Je ne sais pas.
-          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
-            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+          feedback: La variable 'longueur' est fixée à 50 et va être utilisé dans
+            le bloc 'avancer de', donc l'artiste dessinera un triangle avec des côtés
+            de 50 pixels.
         questions:
-        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: On a fixé la variable « longueur » à 50. Que se passera-t-il quand
+            tu cliques sur « Démarrer » ?
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: 'L''abeille bougera jusqu''au nuage et ne fera rien ensuite, peu importe
@@ -4638,36 +4640,37 @@ fr-FR:
             tu cliqueras sur "Démarrer"?
       courseF_multi_bee_for3_predict1:
         answers:
-        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
-            sauf pour une.
+        - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
+            une.
           correct: true
           feedback: Correct !
-        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'L'' abeille avancera et essaiera de ramasser plus de nectar qu''il
             y a sur les fleurs. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
+          plus simple !
         questions:
-        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
-            su "Démarrer"?
+        - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
+            « Démarrer » ?
       courseF_multi_bee_for3_predict1_2018:
         answers:
-        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
-            sauf pour une.
+        - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
+            une.
           correct: true
           feedback: Correct !
-        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'Je ne sais pas.
 
 '
@@ -4676,22 +4679,23 @@ fr-FR:
             fleurs.
 
 '
-        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
+        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
+          plus simple !
         questions:
-        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
-            su "Démarrer"?
+        - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
+            « Démarrer » ?
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
-        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
-            sauf pour une.
+        - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
+            une.
           correct: true
           feedback: Correct !
-        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'Je ne sais pas.
 
 '
@@ -4700,22 +4704,23 @@ fr-FR:
             fleurs.
 
 '
-        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
+        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
+          plus simple !
         questions:
-        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
-            su "Démarrer"?
+        - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
+            « Démarrer » ?
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
-        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
-            sauf pour une.
+        - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
+            une.
           correct: true
           feedback: Correct !
-        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'Je ne sais pas.
 
 '
@@ -4724,10 +4729,11 @@ fr-FR:
             fleurs.
 
 '
-        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
+        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
+          plus simple !
         questions:
-        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
-            su "Démarrer"?
+        - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
+            « Démarrer » ?
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: L' abeille ne collectera pas de nectar ni de miel.
@@ -5136,10 +5142,9 @@ fr-FR:
           * ** [Font Family] (// studio.code.org/docs/weblab/font-family/)** - `font-family: value;`
           * ** [Font Size] (// studio.code.org/docs/weblab/font-size/)** - `font-size: value;`
       BigEvent-Unplugged_2021:
-        markdown: |
-          # Le grand événement
-
-          En informatique, les événements sont des actions que l'ordinateur gère. Dans ce cours, vous réagirez de façon différente selon sur quelle touche on appuie.
+        markdown: "# Le Grand Événement\n\nEn informatique, les événements sont des
+          actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
+          selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged_2021:
         markdown: "# Binaires Bracelets    \nCrée un bracelet qui représente ton nom
           dans un système que les ordinateurs comprennent ! \n  ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
@@ -5291,17 +5296,17 @@ fr-FR:
           que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
       HappyMaps-Unplugged_2021:
         markdown: |
-          # Carte joyeuse
+          # Cartes joyeuses
 
-          Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
+          Crée un algorithme pour faire traverser un labyrinthe à ton personnage.
       Internet-Unplugged_2021:
         markdown: "# Internet   \nConstruis ton propre Internet, dans la salle de
           classe, simplement à l'aide de morceaux de papier.\n"
       MoveItMoveIt-Unplugged_2021:
         markdown: |
-          # Bouge, Bouge
+          # Bouge, Bouge ton corps
 
-          Utiliser une carte et donner les commandes pour atteindre le but.
+          Utilise une carte et donne les commandes pour atteindre l'objectif.
       MyLoopyRoboticFriends-Unplugged_2021:
         markdown: "# Mes Amis Robotiques Loufoques \n   \nRaccourcis tes programmes
           en utilisant des boucles !\n"
@@ -5717,10 +5722,10 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
             on clique sur « Démarrer » ?
       courseE_EOC_2021:
-        description: Tu as finis le Cours E! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de Fin de Cours
       courseE_EOC_examples_2021:
-        description: Tu as finis le Cours E! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de Fin de Cours
       courseE_multi_dance_events_predict1_2021:
         answers:
@@ -5847,42 +5852,43 @@ fr-FR:
             Qu''est-ce qui sera imprimé si l''utilisateur tape « pizza » ? '
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+        - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
           correct: true
           feedback: Correct !
         - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
-          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
-            dans la boucle `répéte` pour que cela se produise.
-        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
-          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
-            bloc `tourner` pour que cela se produise.
-        - text: 'L''ordinateur demandera à l''utilisateur un numéro. '
-          feedback: La variable `longueur` est à 50 et va être utilisée dans le bloc
-            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+          feedback: Incorrect. Il faudrait que la variable « longueur » soit dans
+            la boucle `répéter` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts en faisant des virages de 50 degrés.
+          feedback: Incorrect. Il faudrait mettre la variable « longueur » à l'intérieur
+            du bloc « tourner » pour que cela se produise.
+        - text: L'ordinateur demandera à l'utilisateur d'entrer un nombre.
+          feedback: La variable 'longueur' est fixée à 50 et va être utilisé dans
+            le bloc 'avancer de', donc l'artiste dessinera un triangle avec des côtés
+            de 50 pixels.
         questions:
-        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: On a fixé la variable « longueur » à 50. Que se passera-t-il quand
+            tu cliques sur « Démarrer » ?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
-            sauf pour une.
+        - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
+            une.
           correct: true
           feedback: Correct !
-        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'L''abeille avancera et récoltera un nectar des fleurs numéro 1 et
             4. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        markdown: Ah oui ! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus
-          simple!
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
+          plus simple !
         questions:
-        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
-            su "Démarrer"?
+        - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
+            « Démarrer » ?
       courseF_sprites_predict_multi:
         answers:
         - text: 'Les deux avions se déplaceront d''une case le long de la grille,
@@ -5971,7 +5977,7 @@ fr-FR:
           * **Ne privilégiez que les sites sûrs.
           * **Prenez le temps d'analyser les sites où vous naviguez.
       express_EOC_2021:
-        description: Tu as finis le Cours E ! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de Fin de Cours
       grade2_multi_collector_A_predict1_2021:
         answers:
@@ -5993,10 +5999,10 @@ fr-FR:
             exécute le programme ?
       courseAB_EOC_2021:
         display_name: Projet de Fin de Cours
-        description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
+        description: Tu es parvenu à la dernière leçon ! Choisis un projet à créer.
       courseB_EOC_2021:
         display_name: Projet de Fin de Cours
-        description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
+        description: Tu es parvenu à la dernière leçon ! Choisis un projet à créer.
       courseExpress_EOC_2020:
         description: Tu as atteint la dernière leçon du cours Express ! Choisis un
           projet à créer.
@@ -6019,8 +6025,8 @@ fr-FR:
           de les explorer par eux-mêmes. \n \n"
         display_name: 'Exploration - Exemples de programmes '
       csf_digital_trails_2021:
-        markdown: "# Suivez la piste numérique\n\n## Quelles informations est-il acceptable
-          d'avoir dans votre empreinte numérique ? \n"
+        markdown: "# Suis les Traces Numériques\n\n## Quelles informations est-il
+          sûr d'avoir dans son empreinte numérique ? \n"
       csf_safety_in_my_online_neighborhood_2021:
         markdown: "\n# Mon quartier en ligne\n\n## Comment visiter des endroits en
           ligne en toute sécurité ? "
@@ -6121,8 +6127,8 @@ fr-FR:
           prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       express_EOC_examples_2021:
-        description: 'Vous êtes sur le point de commencer votre projet final. Avant
-          de commencer, prenez le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
+          de commencer, prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       SimonSays-Unplugged_2021:
         markdown: "# Suivez l'algorithme\n\nJouez à un jeu et réfléchissez aux commandes
@@ -16064,10 +16070,9 @@ fr-FR:
         - text: J'ai peur d'être considéré par les autres comme moins compétent dans
             cette classe.
       BigEvent-Unplugged2022:
-        markdown: |
-          # Le grand événement
-
-          En informatique, les événements sont des actions que l'ordinateur surveille. Dans cette leçon vous serez différemment selon le bouton qui est préssé.
+        markdown: "# Le Grand Événement\n\nEn informatique, les événements sont des
+          actions gérées par un ordinateur. Dans cette leçon, tu vas réagir différemment
+          selon le bouton sur lequel on appuie. \n"
       BinaryBracelets-Unplugged2022:
         markdown: "# Binaires Bracelets    Crée un bracelet qui représente ton nom
           dans un système que les ordinateurs comprennent !   ![] (https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
@@ -16234,17 +16239,17 @@ fr-FR:
           que tes camarades de classe peuvent utiliser pour dessiner des images.\n"
       HappyMaps-Unplugged2022:
         markdown: |
-          # Joyeuse carte
+          # Cartes joyeuses
 
-          Crée un algorithme pour déplacer ton personnage à travers un labyrinthe.
+          Crée un algorithme pour faire traverser un labyrinthe à ton personnage.
       Internet-Unplugged2022_2022_pilot_-2022-2:
         markdown: "# L'Internet   Construis ton propre Internet, dans la salle de
           classe, simplement à l'aide de morceaux de papier.\n"
       MoveItMoveIt-Unplugged2022:
         markdown: |
-          # Bougé, Bougé
+          # Bouge, Bouge ton corps
 
-          Utiliser une carte et donner les commandes pour atteindre le but.
+          Utilise une carte et donne les commandes pour atteindre l'objectif.
       MyLoopyRoboticFriends-Unplugged2022:
         markdown: "# Mes Amis Robotiques Loufoques    Raccourcis tes programmes en
           utilisant des boucles !\n"
@@ -16277,10 +16282,10 @@ fr-FR:
           programmeurs de comprendre les besoins des autres et de concevoir des applications
           dans cet esprit!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       courseAB_EOC2022:
-        description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
+        description: Tu es parvenu à la dernière leçon ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       courseB_EOC2022:
-        description: Vous avez fini votre dernier cours ! Choisissez un projet à créer.
+        description: Tu es parvenu à la dernière leçon ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       courseC_multi_artist_prog6_predict12022:
         answers:
@@ -16383,8 +16388,8 @@ fr-FR:
           créer.
         display_name: Projet de fin de cours
       courseD_EOC_examples2022:
-        description: 'Vous êtes sur le point de commencer votre projet final. Avant
-          de commencer, prenez le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
+          de commencer, prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       courseD_multi_artist_nestedLoops9_predict12022:
         answers:
@@ -16580,10 +16585,10 @@ fr-FR:
         - text: Regarde attentivement le code ci-dessous. Que va-t-il se passer quand
             on clique sur « Démarrer » ?
       courseE_EOC2022:
-        description: Tu as finis le Cours E! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       courseE_EOC_examples2022:
-        description: Tu as finis le Cours E! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       courseE_multi_farmer_functions11_predict2022:
         answers:
@@ -16640,8 +16645,8 @@ fr-FR:
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Projet de fin de cours
       courseF_EOC_samples2022:
-        description: 'Vous êtes sur le point de commencer votre projet final. Avant
-          de commencer, prenez le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
+          de commencer, prends le temps d''examiner les exemples de projets. '
         display_name: Projet de fin de cours
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: 'Exploration - Exemples de programmes '
@@ -16700,41 +16705,43 @@ fr-FR:
             Qu''est-ce qui sera imprimé si l''utilisateur tape « pizza » ? '
       courseF_multi_artist_variables3a_predict12022:
         answers:
-        - text: L'artiste dessinera un triangle de 50 pixels de côté.
+        - text: L'artiste dessinera un triangle avec des côtés de 50 pixels.
           correct: true
           feedback: Correct !
         - text: L'artiste dessinera un polygone de 50 côtés avec des côtés de 3 pixels.
-          feedback: Incorrect. La variable "longueur" devrait avoir besoin d'être
-            dans la boucle `répéte` pour que cela se produise.
-        - text: L'artiste dessinera 3 côtés ouverts avec des angles à 50 degrés.
-          feedback: Incorrect. La variable `longueur` devrait être utilisé dans le
-            bloc `tourner` pour que cela se produise.
-        - text: 'L''ordinateur demandera à l''utilisateur un numéro. '
-          feedback: La variable `longueur` est à 50 et va être utilisé dans le bloc
-            `avancer`, donc l'artiste dessinera un triangle avec 50 pixels de côtés.
+          feedback: Incorrect. Il faudrait que la variable « longueur » soit dans
+            la boucle `répéter` pour que cela se produise.
+        - text: L'artiste dessinera 3 côtés ouverts en faisant des virages de 50 degrés.
+          feedback: Incorrect. Il faudrait mettre la variable « longueur » à l'intérieur
+            du bloc « tourner » pour que cela se produise.
+        - text: L'ordinateur demandera à l'utilisateur d'entrer un nombre.
+          feedback: La variable 'longueur' est fixée à 50 et va être utilisé dans
+            le bloc 'avancer de', donc l'artiste dessinera un triangle avec des côtés
+            de 50 pixels.
         questions:
-        - text: Nous avons configuré la variable "longueur" à 50. Que se passera-t-il
-            lorsque tu cliqueras sur "Démarrer"?
+        - text: On a fixé la variable « longueur » à 50. Que se passera-t-il quand
+            tu cliques sur « Démarrer » ?
       courseF_multi_bee_for3_predict12022:
         answers:
-        - text: 'L'' abeille avancera et ramassera tout le nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        - text: L' abeille avancera et ramassera tout le nectar de toutes les fleurs,
-            sauf pour une.
+        - text: 'L''abeille avancera et récoltera tout le nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        - text: L'abeille avancera et récoltera tout le nectar de chaque fleur, sauf
+            une.
           correct: true
           feedback: Correct !
-        - text: 'L'' abeille avancera et ramassera un nectar de chaque fleur. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
+        - text: 'L''abeille avancera et récoltera un nectar de chaque fleur. '
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
         - text: 'L''abeille avancera et récoltera un nectar des fleurs numéro 1 et
             4. '
-          feedback: Incorrect. La boucle `pour` laissera l'abeille ramasser la bonne
-            quantité de nectar, mais c'est configuré pour atteindre 4 fleurs.
-        markdown: Ah! Utiliser la boucle "pour" rend ce puzzle un beaucoup plus simple!
+          feedback: Incorrect. La boucle `pour` laissera l'abeille récolter la bonne
+            quantité de nectar, mais elle n'est configurée que pour atteindre 4 fleurs.
+        markdown: Ah ! L'utilisation de boucles « pour » rend ce casse-tête beaucoup
+          plus simple !
         questions:
-        - text: Lis le code ci-dessous.  Que va-t-il se passer lorsque tu cliqueras
-            su "Démarrer"?
+        - text: Lis le code ci-dessous. Que va-t-il se passer quand tu cliques su
+            « Démarrer » ?
       courseF_sprites_freeplay2022_2022_pilot_-2022-2:
         description: C'est à votre tour de créer ce que vous voulez ! Quel genre de
           projet ferez-vous ?
@@ -16884,11 +16891,11 @@ fr-FR:
       csp-pre-survey-2017 preamble 5 demographics_2022:
         markdown: "### Votre formation en informatique"
       express_EOC2022:
-        description: Tu as finis le Cours E! Choisis un projet à créer.
+        description: Tu es arrivé à la fin du Cours E ! Choisis un projet à créer.
         display_name: Projet de fin de cours
       express_EOC_examples2022:
-        description: 'Vous êtes sur le point de commencer votre projet final. Avant
-          de commencer, prenez le temps d''examiner les exemples de projets. '
+        description: 'Tu es sur le point de te lancer dans ton projet final. Avant
+          de commencer, prends le temps d''examiner les exemples de projets. '
         display_name: 'Exemples de projets '
       grade2_multi_collector_A_predict12022:
         answers:
@@ -16975,3 +16982,9 @@ fr-FR:
       ml-models in applab-choice parent_2022:
         description: Mettez en pratique ce que vous avez appris dans une ou plusieurs
           des activités suivantes.
+      csf_digital_trails:
+        markdown: "# Suis les Traces Numériques\n\n## Quelles informations est-il
+          sûr d'avoir dans son empreinte numérique ? \n"
+      csf_digital_trails2022:
+        markdown: "# Suis les Traces Numériques\n\n## Quelles informations est-il
+          sûr d'avoir dans son empreinte numérique ? \n"

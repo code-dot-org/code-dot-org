@@ -93,7 +93,7 @@ fr:
   trophies: trophées
   courses: Cours
   courses_page:
-    title_student: Apprends avec Code Studio
+    title_student: Apprendre l'Informatique
     title_teacher: Enseigner l'informatique
   unplugged_activity: Activité "Déconnectée"
   of: de
@@ -506,13 +506,13 @@ fr:
       poetry_hoc: Art du poème
       scratch: Scratch
       sports: Sports
-      spritelab: Le Labo des Lutins
+      spritelab: Le Labo des Sprites
       starwars: Star Wars
       starwarsblocks: Star Wars (blocs)
       starwarsblocks_hour: Star Wars (blocs)
       thebadguys: Les Bad Guys
       loading: Chargement...
-      weblab: Lab du Web
+      weblab: Labo Web
       view_all: Afficher tous les projets...
     popup:
       progress_for_user: progrès de %{name}
@@ -884,9 +884,9 @@ fr:
         nos utilisateurs.
     gamelab:
       title: Labo Jeux
-      body: Le Labo des Jeux est un environnement de programmation où vous pouvez
-        créer des animations simples et des jeux avec des objets et des personnages
-        qui interagissent entre eux.
+      body: Le Labo Jeux est un environnement de programmation où on peut créer des
+        animations simples et des jeux avec des objets et des personnages qui interagissent
+        entre eux.
       audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
     hoc-encryption:
@@ -895,8 +895,8 @@ fr:
         chiffrés.
     weblab:
       title: Le Labo du Web (beta)
-      body: Le Labo du Web est un environnement de programmation où tu peux créer
-        des pages web simples, en utilisant HTML et CSS. Crée tes pages web et partage
+      body: Le Labo Web est un environnement de programmation où tu peux créer des
+        pages web simples, en utilisant l'HTML et le CSS. Crée tes pages web et partage
         ton site en quelques instants.
       audience: 'Âge recommandé: 13 ans et plus'
       cta: Apprendre comment
@@ -905,8 +905,8 @@ fr:
     starwars:
       title: Star Wars
     infinity:
-      title: Labo de jeu Infinity
-      body: Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette
+      title: Labo Jeux Infinity
+      body: Utilise le Labo Jeux pour créer une histoire ou un jeu mettant en scène
         les personnages de Disney Infinity.
     minecraft:
       title: Minecraft
@@ -929,14 +929,14 @@ fr:
       body: Dans cette leçon, les élèves utiliseront le Widget de Compression de Texte
         pour compresser le texte en remplaçant des modèles par des symboles.
     unplugged:
-      title: Leçons en mode "déconnecté"
-      audience: 'Âge recommandé: 4 ans et plus'
+      title: Leçons en mode « déconnecté »
+      audience: À partir de 4 ans
       body: Nous avons compilé une liste de leçons en mode "déconnecté" que vous pouvez
         utiliser en classe. Vous pouvez désormais enseigner les bases de l'informatique,
         que vous ayez ou non des ordinateurs dans votre classe ! Essayez d'utiliser
         ces leçons sous forme de cours indépendant ou sous forme de leçons complémentaires
         à l'un de vos cours d'informatique.
-      body_short: Si vous n'avez pas d'ordinateur, essayez ces leçons en mode "déconnecté"
+      body_short: Si vous n'avez pas d'ordinateurs, essayez ces leçons en mode "déconnecté"
         dans votre classe.
     unplugged_conditionals:
       title: Instructions conditionnelles

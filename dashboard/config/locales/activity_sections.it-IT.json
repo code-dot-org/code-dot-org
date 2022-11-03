@@ -2103,13 +2103,20 @@
           "description": "Questi sono alcuni consigli che dovrebbero aiutare gli studenti indipendentemente dal livello a cui stanno lavorando\n\n-   **Collabora con i vicini:** incoraggia gli studenti a controllare con un vicino quando si bloccano. In base all'età e alle capacità dei tuoi studenti, potresti considerare di dividere formalmente la tua classe in coppie, per completare il tutorial utilizzando [pair programming](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Leggi le istruzioni:** le istruzioni forniscono solitamente consigli utili su come completare il livello. Prima di dare la risposta agli studenti, assicurati che abbiano letto attentamente le istruzioni, i suggerimenti, i video e qualsiasi codice per principianti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Sei bloccato? Cerca dei suggerimenti:** oggni include un suggerimento con un consigli su come superare il livello, inclusi quali blocchi del codice da provare. \n\n-   **Prenditi il tuo tempo e prova.** Generalmente le istruzioni informano gli studenti su cosa fare, ma devono anche sentirsi liberi di provare a mettere in pratica le loro idee."
         },
         "3f7d6459-ecb9-4e7a-bf73-8cb15f8e9c4b": {
-          "name": "Ciao Mondo"
+          "name": "Ciao Mondo",
+          "progression_name": "Video - Ciao mondo - Benvenuti nel Laboratorio dei personaggi"
         },
         "5c9fce3b-e030-4ff3-8943-67f13f9dbbf8": {
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
+        "0a9662e0-8661-4cfe-be3c-e5fe52ed582f": {
+          "progression_name": "Video - Ciao mondo - Programmare con gli eventi"
+        },
         "0121aca1-bd15-436e-ac4d-5424f269e25a": {
           "progression_name": "Esercizi per lo sviluppo delle competenze"
+        },
+        "e1fbbc5b-976f-47d0-a9d6-749b9b3c916b": {
+          "progression_name": "Video - Ciao mondo - Crea ciò che vuoi"
         },
         "83a864f0-7f6f-4ef6-8969-b0627bf8ef55": {
           "progression_name": "Tempo di giocare"
