@@ -101,7 +101,9 @@ class CodeWorkspace extends React.Component {
       autogenerateML
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
-    const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
+    const textStyle = showSettingsCog
+      ? {paddingLeft: '2em', textAlign: 'center'}
+      : undefined;
     const chevronStyle = [
       styles.chevron,
       runModeIndicators && isRunning && styles.runningIcon
@@ -114,16 +116,26 @@ class CodeWorkspace extends React.Component {
     );
 
     return [
-      <PaneSection id="toolbox-header" key="toolbox-header">
-        <i
-          id="hide-toolbox-icon"
-          style={[commonStyles.hidden, chevronStyle]}
-          className="fa fa-chevron-circle-right"
-        />
+      <PaneSection
+        id="toolbox-header"
+        key="toolbox-header"
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}
+      >
+        <span>
+          <i
+            id="hide-toolbox-icon"
+            style={[commonStyles.hidden, chevronStyle]}
+            className="fa fa-chevron-circle-right"
+          />
+        </span>
         <span style={textStyle}>
           {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
-        {settingsCog}
+        <span>{settingsCog}</span>
       </PaneSection>,
       <PaneSection
         id="show-toolbox-header"
