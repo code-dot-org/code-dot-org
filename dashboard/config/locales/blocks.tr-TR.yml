@@ -934,6 +934,23 @@ tr:
         text: kurulum
       Dancelab_whenSetup2:
         text: kurulum
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} efekti yap"
+        options:
+          EFFECT:
+            '"bubbles"': Baloncuklar
+            '"confetti"': Konfeti
+            '"hearts"': kalpler
+            '"emojis"': Mutlu Emojiler
+            '"rain"': yağmur
+            '"glass"': Parçalanan Cam
+            '"twinkling"': Parıldama
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): sürüklenebilir olmak
+            wandering(): gezinme
+            shrinking(): küçülme
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} Başlar {BEHAVIOR}
       gamelab_addTarget:
@@ -1265,7 +1282,6 @@ tr:
             "'sound://category_space/Pillars_SFX.mp3'": sütunlar
             "'sound://category_space/Southern_ring_SFX.mp3'": güney halka bulutsusu
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: konuşmayı çal {SOUND}
       gamelab_playerBehaviors:
@@ -1912,6 +1928,8 @@ tr:
         text: canavarları rastgele yerleştir
       Outbreak_stopMoving:
         text: canavarlar hareket etmeyi bırakıyor
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

@@ -2730,6 +2730,8 @@ ga:
               display_name: Suirbhé
             lessonGroup-3:
               display_name: Ábhar
+            lessonGroup-5:
+              display_name: Ceachtanna Malartacha
         csd4-2023:
           lesson_groups:
             lessonGroup-2:

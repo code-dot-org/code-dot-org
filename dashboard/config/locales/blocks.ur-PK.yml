@@ -988,6 +988,22 @@ ur:
         text: سیٹ اپ
       Dancelab_whenSetup2:
         text: سیٹ اپ
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} اثر لگائیں۔"
+        options:
+          EFFECT:
+            '"bubbles"': بُلبُلے
+            '"confetti"': کاغذی لیریاں
+            '"hearts"': دل
+            '"emojis"': خوشی کے ایموجی
+            '"rain"': بارش
+            '"starburst"': اسٹاربسٹ
+            '"glass"': ٹوٹتا ہوا شیشہ
+            '"twinkling"': ٹمٹاتی روشنی
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): ڈریگگایبل ہونے کی وجہ سے
       gamelab_addBehaviorSimple:
         text: سکرائٹ {SPRITE} شروع ہوتا ہے {BEHAVIOR}
       gamelab_addTarget:
@@ -1331,9 +1347,8 @@ ur:
             "'sound://category_space/Launch_SFX.mp3'": شروع کریں
             "'sound://category_space/Lift_Off.mp3'": اوپر اٹھیں
             "'sound://category_space/Pillars_SFX.mp3'": ستون
-            "'sound://category_space/Southern_ring_SFX.mp3'": جنوبی انگوٹی
+            "'sound://category_space/Southern_ring_SFX.mp3'": جنوبی حلقه
             "'sound://category_space/Supernova_SFX.mp3'": سپرنووا
-            "'sound://category_sports/One_Whistle_SFX.mp3'": ٹائیکو
       gamelab_playSpeech:
         text: کلام چلائیں {SOUND}
       gamelab_playerBehaviors:

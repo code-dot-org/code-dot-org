@@ -13,5 +13,5 @@
       }
     ]
   },
-  "variables": [{"name": "currentTime"}]
+  "variables": [{"name": "currentTime"}, {"name": "i"}]
 }

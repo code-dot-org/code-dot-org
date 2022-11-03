@@ -20,5 +20,17 @@ export const commands = {
 
   setSubheading(subheading) {
     this.storyLabText.subheading = subheading;
+  },
+
+  getHeading() {
+    return this.storyLabText.heading;
+  },
+
+  getSubheading() {
+    return this.storyLabText.subheading;
+  },
+
+  getStoryLabText() {
+    return this.storyLabText;
   }
 };

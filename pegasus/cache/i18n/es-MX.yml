@@ -2467,6 +2467,8 @@ es-MX:
   hoc_overview_dance_2019_subtitle: Programa una Fiesta de baile para compartir con
     tus amigos. Con Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas
     Brothers, ¡y muchos más!
+  hoc_overview_hello_world_2022_subtitle: Elige entre cuatro temas divertidos para
+    codificar personajes interactivos en un mundo creado por ti.
   hoc_overview_title: Actividades de la Hora del Código de Code.org
   hoc_overview_subtitle: La <a href="https://hourofcode.com">Hora del Código</a> es
     un movimiento global que llega a decenas de millones de estudiantes en más 180
@@ -2851,8 +2853,12 @@ es-MX:
     hay muchas maneras de probar las ciencias de la computación!'
   hoc2022_cta_primary: Mira las novedades
   hoc2022_cta_secondary: Prueba más actividades
+  hoc2022_landing_page_explore_description: "¡Abre las puertas a nuevos mundos con
+    las ciencias de la computación!"
   hoc2022_landing_page_play_title: Juega
+  hoc2022_landing_page_play_description: "¡Sal al campo y anota!"
   hoc2022_landing_page_create_title: Crear
+  hoc2022_landing_page_create_description: "¡Haz algo extraordinario y maravilloso!"
   try_it_yourself: Inténtalo tú mismo!
   try_an_activity: Prueba una actividad
   see_more_activities: Prueba más actividades

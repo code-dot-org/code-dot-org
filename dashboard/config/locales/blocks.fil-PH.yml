@@ -998,6 +998,24 @@ fil:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: gawin ang {EFFECT} effect
+        options:
+          EFFECT:
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts"': mga puso
+            '"emojis"': Maligayang Emojis
+            '"rain"': ulan
+            '"starburst"': Starburst
+            '"glass"': Nakakabasag na Salamin
+            '"twinkling"': Kumikislap
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): pagiging draggable
+            wandering(): gumagala
+            shrinking(): lumiliit
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
       gamelab_addTarget:
@@ -1355,7 +1373,6 @@ fil:
             "'sound://category_space/Pillars_SFX.mp3'": mga haligi
             "'sound://category_space/Southern_ring_SFX.mp3'": singsing sa timog
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: i-play ang salita {SOUND}
       gamelab_playerBehaviors:
@@ -1978,6 +1995,8 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

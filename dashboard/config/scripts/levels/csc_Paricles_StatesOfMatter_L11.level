@@ -9,7 +9,8 @@
       "ParticlesBlocks"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zParticlesModule"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -19,7 +20,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Let's make 10 new H2O molecules and learn how to make them move like a gas state of matter!**\r\n- Drag a `make _ new sprites` block into the workspace and connect it under when run.\r\n- Connect a `number` block inside the make new sprite block and change the 0 to 5.\r\n- Make sure you select the H2O sprite for the `make 10 new sprites` block.\r\n- Drag a `sprite begins` block and connect it under the `make new sprite` block.\r\n- Drag a `sprite` block and connect it to the top of the `sprite begins` block.\r\n- Make sure you select the H2O sprite for this new block.\r\n- Drag a `wandering` behavior block and connect it to the bottom of the `sprite begins` block.\r\n- Press \"Run\" when you are finished.\r\n\r\n",
+    "long_instructions": "**Let's make 10 new H2O molecules and make them move like a gas state of matter!**\r\n- Drag a `make _ new sprites` block into the workspace and connect it under when run.\r\n- Add a `number` block inside the make new sprite block and change the 0 to 5.\r\n- Make sure you select the H2O sprite for the `make 10 new sprites` block.\r\n- Drag a `sprite begins` block and connect it under the `make new sprite` block.\r\n- Connect an H2O sprite block to the top of the `sprite begins` block and a `gas` behavior block to the bottom of the `sprite begins` block.\r\n- Press \"Run\" when you are finished.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -42,14 +43,18 @@
       "downButton"
     ],
     "project_template_level_name": "csc_Paricles_StatesOfMatter_L11-12 Template",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_code": "//validation"
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-10-25T23:46:14.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-25T23:46:14.462+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L8\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L8\"},{\"changed_at\":\"2022-10-25 23:47:58 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 22:16:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 22:18:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 23:22:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:41:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:50:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "created_at": "2022-10-25T23:46:14.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-10-25T23:46:14.462+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L8\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L8\"},{\"changed_at\":\"2022-10-25 23:47:58 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 22:16:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 22:18:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 23:22:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:41:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:50:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 17:50:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 17:19:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
