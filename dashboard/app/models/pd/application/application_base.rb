@@ -103,8 +103,12 @@ module Pd::Application
       end
     end
 
+    def status_on_submit?
+      unreviewed? || awaiting_admin_approval?
+    end
+
     def set_applied_date
-      self.applied_at = Time.now if applied_at.nil? && (unreviewed? || awaiting_admin_approval?)
+      self.applied_at = Time.now if applied_at.nil? && status_on_submit?
     end
 
     def update_accepted_date
