@@ -106,18 +106,33 @@ const FindYourRegion = props => {
     });
   };
 
-  const renderRegionalPartnerName = () => {
+  const renderRegionalPartnerInfo = () => {
     const content = regionalPartner?.name ? (
-      <>
-        <p>
-          Your Regional Partner will host the full professional learning program
-          and provide ongoing support as you implement what you’ve learned in
-          the classroom!
+      data.program === PROGRAM_CSA && regionalPartner && !isOffered ? (
+        <p style={styles.error}>
+          <strong>
+            The Regional Partner in your region is not offering Computer Science
+            A at this time.{' '}
+          </strong>
+          Code.org will review your application and contact you with options for
+          joining a national cohort of Computer Science A teachers. If accepted
+          into the program, travel may be required to attend a weeklong
+          in-person summer workshop. If so, travel and accommodation will be
+          provided by Code.org. Academic year workshops for the national cohort
+          will be hosted virtually.
         </p>
-        <p>
-          <strong>Your Regional Partner is: {regionalPartner.name}</strong>
-        </p>
-      </>
+      ) : (
+        <>
+          <p>
+            Your Regional Partner will host the full professional learning
+            program and provide ongoing support as you implement what you’ve
+            learned in the classroom!
+          </p>
+          <p>
+            <strong>Your Regional Partner is: {regionalPartner.name}</strong>
+          </p>
+        </>
+      )
     ) : (
       <>
         <p>
@@ -141,7 +156,7 @@ const FindYourRegion = props => {
           Participants are assigned to a program hosted by one of our Regional
           Partners based on their school's geographic location.
         </p>
-        {content}
+        {data.school && content}
       </>
     );
   };
@@ -196,21 +211,7 @@ const FindYourRegion = props => {
             </div>
           )}
 
-          {renderRegionalPartnerName()}
-          {data.program === PROGRAM_CSA && regionalPartner && !isOffered && (
-            <p style={styles.error}>
-              <strong>
-                The Regional Partner in your region is not offering Computer
-                Science A at this time.{' '}
-              </strong>
-              Code.org will review your application and contact you with options
-              for joining a national cohort of Computer Science A teachers. If
-              accepted into the program, travel may be required to attend a
-              weeklong in-person summer workshop. If so, travel and
-              accommodation will be provided by Code.org. Academic year
-              workshops for the national cohort will be hosted virtually.
-            </p>
-          )}
+          {renderRegionalPartnerInfo()}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
