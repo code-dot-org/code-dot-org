@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-10-28T23:46:54.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -13,7 +9,8 @@
       "ParticlesBlocks"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zParticlesModule"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -45,10 +42,20 @@
       "upButton",
       "downButton"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_code": "//validation"
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-28T23:46:54.648+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_observer\\\"\"],\"cloned_from\":\"csc_particles_phys_observer\"}]"
+  "created_at": "2022-10-28T23:46:54.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-10-28T23:46:54.648+00:00\",\"changed\":[\"cloned from \\\"csc_particles_phys_observer\\\"\"],\"cloned_from\":\"csc_particles_phys_observer\"},{\"changed_at\":\"2022-10-31 17:23:22 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-10-19T18:19:39.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -70,8 +66,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
-    "long_instructions": "Create a program that asks the user for a number greater than 0, then prints out a countdown starting at that number and going down when it reaches 0: instead of printing 0, it prints \"BLASTOFF!\"\r\n\r\nFor example, if the user types in 5, the program will print:\r\n\r\n5\r\n\r\n4\r\n\r\n3\r\n\r\n2\r\n\r\n1\r\n\r\nBLASTOFF!\r\n\r\n\r\n# Do This\r\n<span style=\"background-color:yellow\"> NEEDS UPDATE <span></span>\r\n1. At the start of the loop, update the conditional statement for the while loop runs as long as the `counter` is greater than 0.\r\n* Inside the loop, add code that:\r\n  * Prints the number in the countdown\r\n  * Decreases the value stored in the variable `counter` by 1\r\n* After the loop, add code to print `\"Blastoff!\"` after the loop is done running.\r\n\r\n",
+    "long_instructions": "Create a program that asks the user for a number greater than 0, then prints out a countdown starting at that number and going down when it reaches 0: instead of printing 0, it prints \"BLASTOFF!\"\r\n\r\nFor example, if the user types in 5, the program will print:\r\n\r\n5\r\n\r\n4\r\n\r\n3\r\n\r\n2\r\n\r\n1\r\n\r\nBLASTOFF!\r\n\r\n\r\n# Do This\r\n\r\n1. At the start of the loop, update the conditional statement for the while loop runs as long as the `counter` is greater than 0.\r\n* Inside the loop, add code that:\r\n  * Prints the number in the countdown\r\n  * Decreases the value stored in the variable `counter` by 1\r\n* After the loop, add code to print `\"Blastoff!\"` after the loop is done running.\r\n\r\n",
     "parent_level_id": 18069,
     "mini_rubric": "false",
     "encrypted": "false",
@@ -90,9 +85,13 @@
     "encrypted_examples": "ZVjX7dlUrzUcZ7cCyw6bkDPU75h15xn3RpP/iTkR1lcY936CRkBeAowCzjmn\neE4ZhKO3sPjEpzQtd7KZqacZeQ==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-10-19T18:19:39.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:19:39.562+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Practice While Choice B\\\"\"],\"cloned_from\":\"U5 Loops Practice While Choice B\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:19:39.562+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Practice While Choice B\\\"\"],\"cloned_from\":\"U5 Loops Practice While Choice B\"},{\"changed_at\":\"2022-11-03 20:17:06 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

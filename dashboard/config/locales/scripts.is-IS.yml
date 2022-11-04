@@ -3094,6 +3094,8 @@ is:
               display_name: Könnun
             lessonGroup-3:
               display_name: Innihald
+            lessonGroup-5:
+              display_name: Annað kennsluefni
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
