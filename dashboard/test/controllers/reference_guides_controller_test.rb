@@ -8,7 +8,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
     @unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    @offering = CourseOffering.add_course_offering(@unit_group)
+    CourseOffering.add_course_offering(@unit_group)
     # category
     @reference_guide = create :reference_guide, course_version: @unit_group.course_version
     # subcategory
