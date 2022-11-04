@@ -139,6 +139,7 @@ class UnconnectedMusicView extends React.Component {
       setInterval(this.updateTimer, 1000 / 30);
 
       window.library = this.state.library;
+      window.playPreview = this.player.previewSound.bind(this.player);
     });
 
     this.loadInstructions().then(instructions => {
