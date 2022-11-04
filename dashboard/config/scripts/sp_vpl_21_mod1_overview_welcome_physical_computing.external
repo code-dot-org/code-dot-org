@@ -5,9 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Welcome! 
 
-## Welcome to Teaching Computer Science Discoveries! 
-
-#### This free self-paced professional learning is designed for educators who want to get started teaching Computer Science Discoveries. After completing these online modules, you'll be ready to start teaching CS Discoveries with your students.
+#### This free self-paced professional learning module is designed for educators who want to get started teaching Code.org curricula. 
 
 <img src="https://images.code.org/8f8f1dae36b39433164cf3752db52472-image-1628784411625.jpg" alt="Two students laughing next to a laptop" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
 
@@ -16,10 +14,10 @@ markdown <<MARKDOWN
 
 * ##### Learn how to navigate the Code.org website and teacher tools.
 * ##### Set up your course in the Code.org learning platform.
-* ##### Gain a high level understanding of the content, tools, and pedagogy included in CS Discoveries.
-* ##### Prepare to begin teaching CS Discoveries with your students. 
+* ##### Gain a high level understanding of the content, tools, and pedagogy included in the curriculum.
+* ##### Prepare to begin teaching Code.org curricula with your students. 
 
-### **Suggested time to complete the course:** 3 hours
+### **Suggested time to complete:** 3 hours
 
 <div style="clear:both"/>
 
@@ -31,13 +29,11 @@ markdown <<MARKDOWN
 
 ## Module 1
 
-#### You will begin with a module focused on orienting you to Code.org, CS Discoveries, and this professional learning experience. 
+#### You will begin with a lesson focused on Introducing you to Code.org.
 
-#### **In Module 1, you will:**
+#### **In Lesson 1, you will:**
 
-* ##### Get an introduction to Code.org and CS Discoveries.
-* ##### Learn how to engage in this professional learning course.
-
+* ##### Get an introduction to Code.org's mission.
 
 #### **Suggested time to complete the module:** 10 minutes
 
