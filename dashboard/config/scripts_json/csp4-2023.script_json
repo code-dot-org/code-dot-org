@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-01 18:20:36 UTC",
+    "serialized_at": "2022-11-02 20:44:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -89,8 +89,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To begin the lesson students explore sample apps similar to the ones they'll be able to build by the end of the unit. Then students complete an unplugged activity with plastic baggies and sticky notes to build a mental model of how variables are used to move and store information. The lesson ends with a synthesizing discussion and students adding key vocabulary to their journal.",
-        "preparation": "* Collect for each pair of students:\n\t* 3 sandwich baggies\n\t* packs of red and yellow stickies\n\t* pens / pencils\n\t* 1 dry erase marker per four students (pairs can share)\n* Review the sample apps shown in the warm up\n* Review the rules and vocabulary used in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "The warm up activity is designed to provide context for the coming unit and motivate the reasons students will want to learn the concepts covered in Unit 4. The subsequent activity provides students a physical mental model they will be able to use when they start programming with variables in the subsequent lessons.",
+        "preparation": "* Collect for each pair of students:\n\t* 3 sandwich baggies\n\t* packs of red and yellow stickies\n\t* pens / pencils\n\t* 1 dry erase marker per four students (pairs can share)\n* Review the sample apps shown in the warm up\n* Review the rules and vocabulary used in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1TZvyLbvsl81_-bcmkwT-opTU6AhNvbvXho-leSIMsj8/edit?usp=sharing)",
         "student_overview": "Develop a mental model for how information is stored and processed by programs.",
         "unplugged": true
       },
@@ -109,9 +108,8 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students work with partners to investigate several versions of the \"Thermostat App\" to understand how variables store and update information. To begin, students examine a version of the app where the temperature displayed changes each time a button is clicked. The next two versions of the app demonstrate how variables can store strings. Students learn about the patterns they are observing, specifically \"Counter Pattern with Event\" and \"Variables with String Concatenation Pattern\". To conclude the lesson, students review and discuss the programming patterns that they will make use of in the programs they write. ",
-        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "After building a conceptual model for variables in the previous lesson, students investigate three working examples of apps that make use of variables. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with variables will come in the following lesson.",
+        "overview": "In this lesson, students work with partners to investigate several versions of the \"Thermostat App\" to understand how variables store and update information. These investigations involve reading code, discussing parts of the code, and modifying the existing code. To begin, students examine a version of the app where the temperature displayed changes each time a button is clicked. The next two versions of the app demonstrate how variables can store strings. Students learn about the patterns they are observing, specifically \"Counter Pattern with Event\" and \"Variables with String Concatenation Pattern\". To conclude the lesson, students review and discuss the programming patterns that they will make use of in the programs they write. ",
+        "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1jl1LrZ0MuDLSbGfjBymgxFB491GumdVxocs2gRxdAMA/edit?usp=sharing)",
         "student_overview": "Investigate and modify sample apps that use variables and learn common programming patterns with variables."
       },
       "seeding_key": {
@@ -129,9 +127,8 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about variables. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
-        "preparation": "* Review the video in the level progression that covers global vs. local variables. This is a tricky topic.\n* Review other programming levels to be better prepared to support students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is students primary opportunity to get hands on with variables in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
+        "overview": "In this lesson, students spend most of their time practicing using the skills and processes they have learned about variables. For this lesson, it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson, students are encouraged to work independently. At the conclusion of the lesson, students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
+        "preparation": "* Review the video in the level progression that covers global vs. local variables. This is a tricky topic.\n* Review other programming levels to be better prepared to support students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1CCrKtFHF5qGRxGCjO4xV98V4Q3e_hal78I3uS4DHlwE/edit?usp=sharing)",
         "student_overview": "Practice programming with variables through a set of programming puzzles."
       },
       "seeding_key": {
@@ -149,9 +146,8 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Photo Liker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Photo Liker app. At the beginning of the lesson, students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT. At the end, students submit their apps which can be assessed using a provided rubric.",
+        "preparation": "* Review the different steps students will be asked to complete as they build the app\n* Review the information covered in the slides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-variables-lessons-1-4/36474) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n* If you are teaching this virtually, consider checking our [Virtual Modifications](https://docs.google.com/document/d/1bPkVDFdJsQyphT29OOotUXa0lsZ7YHwXKQJhDfH3KZo/edit?usp=sharing)",
         "student_overview": "Practice making an app that uses variables and programming patterns with variables."
       },
       "seeding_key": {
@@ -387,21 +383,8 @@
   ],
   "lesson_activities": [
     {
-      "key": "fd311346-6cfe-4ebe-a959-e834b44d7921",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fd311346-6cfe-4ebe-a959-e834b44d7921",
-        "lesson.key": "Variables Explore",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "a1f10700-fb57-4b3b-8101-11f46dd7ac6b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Set Up"
       },
@@ -414,7 +397,7 @@
     },
     {
       "key": "e0597c33-28d4-450c-9052-3c4a5c475bb2",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -428,7 +411,7 @@
     },
     {
       "key": "3d92cf6b-9b56-430e-8713-7e84c10032a7",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -442,7 +425,7 @@
     },
     {
       "key": "4ea22675-a085-4083-bdf2-5b95666d0282",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -455,21 +438,8 @@
       }
     },
     {
-      "key": "f840d8a9-719c-43d9-8740-f953e5a9fef4",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f840d8a9-719c-43d9-8740-f953e5a9fef4",
-        "lesson.key": "Variables Investigate",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "ba2f58fc-0c20-403a-af99-a42332d98938",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Set Up"
       },
@@ -482,7 +452,7 @@
     },
     {
       "key": "61eb83fb-6b10-4ab3-800c-072292f64c60",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -496,7 +466,7 @@
     },
     {
       "key": "4bf74d7f-ac58-45e7-8f01-33080db9b5ef",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -510,7 +480,7 @@
     },
     {
       "key": "ea4fc6c7-87bb-4acb-a034-c954ed3ba4ac",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -523,21 +493,8 @@
       }
     },
     {
-      "key": "2b580bb2-2eb2-42bd-a7be-807d7054295a",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2b580bb2-2eb2-42bd-a7be-807d7054295a",
-        "lesson.key": "Variables Practice",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "0e6bcc70-abd6-4213-9fde-0553a665272d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Set Up"
       },
@@ -550,7 +507,7 @@
     },
     {
       "key": "5d8869b6-78a5-42a9-8373-cbda61c0dc1e",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -563,7 +520,7 @@
     },
     {
       "key": "850d3f33-1b86-4cd1-b726-6de8ace8f56e",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -577,7 +534,7 @@
     },
     {
       "key": "7f27f52a-ef73-4b60-ae69-a6978419f789",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -590,21 +547,8 @@
       }
     },
     {
-      "key": "6b962659-d69b-4735-8971-c792049ee76a",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6b962659-d69b-4735-8971-c792049ee76a",
-        "lesson.key": "Variables Make",
-        "lesson_group.key": "csp_variables",
-        "script.name": "csp4-2023"
-      }
-    },
-    {
       "key": "9a8c8f2d-1496-449b-ad46-f9ded269092e",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Set Up"
       },
@@ -617,7 +561,7 @@
     },
     {
       "key": "07ad7f3a-9b8a-4c6b-9e08-8ec7510a7938",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -631,7 +575,7 @@
     },
     {
       "key": "88706942-4ca1-4b6f-b818-f12efd490492",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -645,7 +589,7 @@
     },
     {
       "key": "beedc763-37bd-4e17-a285-8517f0726e54",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1274,17 +1218,6 @@
   ],
   "activity_sections": [
     {
-      "key": "3fec947c-46ba-4b9d-a454-0f363fc0bb8d",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1TZvyLbvsl81_-bcmkwT-opTU6AhNvbvXho-leSIMsj8/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "3fec947c-46ba-4b9d-a454-0f363fc0bb8d",
-        "lesson_activity.key": "fd311346-6cfe-4ebe-a959-e834b44d7921"
-      }
-    },
-    {
       "key": "7abe3d9d-4fd1-4609-949e-56915968c7dd",
       "position": 1,
       "properties": {
@@ -1459,17 +1392,6 @@
       }
     },
     {
-      "key": "c54eefa1-7e39-4dfa-b214-19fea76129e5",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1jl1LrZ0MuDLSbGfjBymgxFB491GumdVxocs2gRxdAMA/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "c54eefa1-7e39-4dfa-b214-19fea76129e5",
-        "lesson_activity.key": "f840d8a9-719c-43d9-8740-f953e5a9fef4"
-      }
-    },
-    {
       "key": "65a355f6-edb0-4bcd-9c94-09a84434cb6b",
       "position": 1,
       "properties": {
@@ -1555,7 +1477,7 @@
       "key": "bcfb1718-f2ae-4a11-98ed-ac57ecd2a32e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This is a predict level where students must first make a prediction about how [`Math.round`(#FFB74D)](/docs/applab/mathRound/) works before they can run the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
         "duration": "10",
         "name": "Investigation #2: Thermostat App v.2",
         "progression_name": "Investigation #2: Thermostat App v.2"
@@ -1580,7 +1502,7 @@
       "key": "2b9a69bd-10bf-401a-8411-ae268335acaa",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
         "duration": "8",
         "name": "Investigation #3: Thermostat App v.3",
         "progression_name": "Investigation #3: Thermostat App v.3"
@@ -1728,17 +1650,6 @@
       "seeding_key": {
         "activity_section.key": "8b080bb6-dcbb-4702-9d88-7d98e8f7272a",
         "lesson_activity.key": "ea4fc6c7-87bb-4acb-a034-c954ed3ba4ac"
-      }
-    },
-    {
-      "key": "8e91ea25-96b2-4097-9219-5de7ee6c88ac",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1CCrKtFHF5qGRxGCjO4xV98V4Q3e_hal78I3uS4DHlwE/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "8e91ea25-96b2-4097-9219-5de7ee6c88ac",
-        "lesson_activity.key": "2b580bb2-2eb2-42bd-a7be-807d7054295a"
       }
     },
     {
@@ -1944,17 +1855,6 @@
       "seeding_key": {
         "activity_section.key": "ee323b02-24a7-4f8c-9861-dad6e390f378",
         "lesson_activity.key": "7f27f52a-ef73-4b60-ae69-a6978419f789"
-      }
-    },
-    {
-      "key": "80143938-7430-4f9f-825e-754f0ca18e44",
-      "position": 1,
-      "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1bPkVDFdJsQyphT29OOotUXa0lsZ7YHwXKQJhDfH3KZo/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "80143938-7430-4f9f-825e-754f0ca18e44",
-        "lesson_activity.key": "6b962659-d69b-4735-8971-c792049ee76a"
       }
     },
     {
@@ -4058,6 +3958,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Investigation #2: Thermostat App v.2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L2 Predict"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "bcfb1718-f2ae-4a11-98ed-ac57ecd2a32e"
+      },
+      "level_keys": [
+        "CSP U4L2 Predict"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "U4 L02 Thermostat App v2_2023"
         ],
@@ -4078,8 +4000,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 4,
+      "chapter": 9,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4103,8 +4025,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 5,
+      "chapter": 10,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4128,8 +4050,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 6,
+      "chapter": 11,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4153,7 +4075,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4178,7 +4100,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4203,7 +4125,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4228,7 +4150,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4253,7 +4175,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4278,7 +4200,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -4303,7 +4225,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -4328,7 +4250,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4353,7 +4275,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4378,7 +4300,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4403,7 +4325,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -4428,7 +4350,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 12,
       "activity_section_position": 2,
       "assessment": true,
@@ -4453,7 +4375,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4478,7 +4400,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4503,7 +4425,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4528,7 +4450,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4553,7 +4475,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4578,7 +4500,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4603,7 +4525,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4628,7 +4550,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4575,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4678,7 +4600,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4703,7 +4625,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4728,7 +4650,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4753,7 +4675,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4778,7 +4700,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4803,7 +4725,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4828,7 +4750,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4853,7 +4775,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4878,7 +4800,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4903,7 +4825,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4928,7 +4850,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4953,7 +4875,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4978,7 +4900,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5003,7 +4925,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5028,7 +4950,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5053,7 +4975,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -5078,7 +5000,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 14,
       "activity_section_position": 2,
       "assessment": true,
@@ -5103,7 +5025,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5128,7 +5050,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5153,7 +5075,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5178,11 +5100,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L9 Predict"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -5200,11 +5125,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L9 Predict 2"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -5222,7 +5150,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5247,7 +5175,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5272,7 +5200,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5297,7 +5225,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5322,7 +5250,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5347,7 +5275,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5372,7 +5300,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5397,7 +5325,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5422,7 +5350,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5447,7 +5375,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5472,7 +5400,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5497,7 +5425,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5522,7 +5450,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5547,7 +5475,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5572,7 +5500,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5597,7 +5525,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5622,7 +5550,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5647,7 +5575,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5672,7 +5600,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5697,7 +5625,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5722,7 +5650,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5747,7 +5675,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5772,7 +5700,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5797,7 +5725,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5822,7 +5750,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5847,7 +5775,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5943,6 +5871,18 @@
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2023",
         "activity_section.key": "fc6987c2-9c5b-42bd-8900-d3439974b96a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L2 Predict",
+        "script_level.level_keys": [
+          "CSP U4L2 Predict"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2023",
+        "activity_section.key": "bcfb1718-f2ae-4a11-98ed-ac57ecd2a32e"
       }
     },
     {

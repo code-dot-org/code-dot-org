@@ -1,0 +1,16 @@
+{
+  "category": "Experimental",
+  "config": {
+    "color": [
+      120,
+      0.6,
+      0.6
+    ],
+    "func": "addEightBlock",
+    "blockText": "addEight",
+    "args": [
+
+    ],
+    "eventBlock": false
+  }
+}
