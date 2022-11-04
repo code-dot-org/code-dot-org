@@ -9370,12 +9370,14 @@ en:
               name: Local Storytellers
             lesson-4:
               name: Local Landmarks - Unplugged
+            lesson-5:
+              name: Local Storytellers
           lesson_groups: {}
           name: csc-landmarks-pilot
-          title: ''
+          title: Mapping Landmarks (Fall 2022 Pilot)
           description_audience: ''
           description_short: ''
-          description: 'Winter 2022 Pilot module - Historical Landmark and Mapping Module '
+          description: ''
           student_description: ''
         csc-playground:
           lessons:
@@ -9460,6 +9462,8 @@ en:
               name: Where is it coming from?
             lesson-3:
               name: What Do They Want?
+            lesson-4:
+              name: The Secret Message
           lesson_groups: {}
           name: csc-function-machines-pilot
           title: Function Machines Pilot Module
@@ -9728,7 +9732,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-pilot-fa2022-timecapsule
-          title: ''
+          title: Time Capsules (Fall 2022 Pilot)
           description_audience: ''
           description_short: ''
           description: ''
@@ -9737,7 +9741,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-pilot-fa2022-ecosystem
-          title: ''
+          title: Ecosystems (Fall 2022 Pilot)
           description_audience: ''
           description_short: ''
           description: ''
