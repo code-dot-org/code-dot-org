@@ -64,7 +64,7 @@ tr:
           description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren.
           student_description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren.
         infinity:
-          title: Disney Infinity Play Lab
+          title: Disney Infinity Play Laboratuarı
           description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
           description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
           student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
@@ -2272,7 +2272,7 @@ tr:
           description_short: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin.
           lesson_groups:
             k5_getting_started:
-              display_name: İlk adım
+              display_name: Başlarken
             k5_basic_concepts:
               display_name: Temel Kodlama Kavramları ve Öğretme Pratikleri
             k5_diving_deeper:
@@ -2741,7 +2741,7 @@ tr:
           description_short: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin.
           lesson_groups:
             k5_getting_started_1:
-              display_name: İlk adım
+              display_name: Başlarken
             k5_basic_concepts_1:
               display_name: Temel Kodlama Kavramları ve Öğretme Pratikleri
             k5_diving_deeper_1:
@@ -3742,7 +3742,7 @@ tr:
         cs4all-invasive-species:
           lessons:
             lesson-21:
-              name: İlk adım
+              name: Başlarken
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4119,6 +4119,8 @@ tr:
               display_name: Anket
             lessonGroup-3:
               display_name: İçerik
+            lessonGroup-5:
+              display_name: Alternatif Dersler
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

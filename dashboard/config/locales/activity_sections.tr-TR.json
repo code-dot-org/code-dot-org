@@ -95,11 +95,11 @@
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Dönüt Alın",
-          "description": "Öğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
+          "description": "Öğrencilerden günün etkinlikleri hakkında geri dönüşler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://code.org/certificates?script=mc) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://studio.code.org/certificates/batch?course=bWM=) verin."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Sonraki Adımlar",
@@ -121,7 +121,7 @@
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
-          "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama”, “olaylar”, “döngüler” ve “hata ayıklama” pratiği yapacaklarını söyleyin.\n\nAşağıdaki tanımları paylaşın:\n\n-   **Kodlama**, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n\n-   **Hata ayıklama**, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.\n\n-   **İşlev**, bir şeyin olmasına neden olan bir eylemdir.\n\n-   **Programlama**, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız."
+          "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama”, “işlevler” ve “hata ayıklama” pratiği yapacaklarını söyleyin.\n\nAşağıdaki tanımları paylaşın:\n\n-   **Kodlama**, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n\n-   **Hata ayıklama**, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.\n\n-   **İşlev**, bir şeyin olmasına neden olan bir kod parçasıdır.\n\n-   **Programlama**, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız."
         },
         "4fd098be-b798-4e23-b091-e90c95344d97": {
           "tips": [
@@ -145,11 +145,11 @@
         },
         "ae17edd9-ad82-47dc-95f5-368b58084998": {
           "name": "Dönüt Alın",
-          "description": "Öğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
+          "description": "Öğrencilerden günün etkinlikleri hakkında geri dönüşler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://code.org/certificates?script=mc) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://studio.code.org/certificates/batch?course=bWM=) verin."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Sonraki Adımlar",
@@ -247,7 +247,7 @@
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Dönüt Alın",
-          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi okuma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
+          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi çalışma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Tebrik Edin",
@@ -320,7 +320,7 @@
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Dönüt Alın",
-          "description": "Öğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
+          "description": "Öğrencilerden günün etkinlikleri hakkında geri dönüşler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Tebrik Edin",
@@ -418,7 +418,7 @@
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Dönüt Alın",
-          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi okuma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
+          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi çalışma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Tebrik Edin",
@@ -488,7 +488,7 @@
           "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](<>) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
-          "description": "#### Dönüt Alın\n\nÖğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler?\n\n-   Bir kareyi oluşturan iç açılar nelerdir? Peki ya bir üçgeni?\n-   Kağıdınıza basit bir şeklin taslağını çizin ve bunu çizmek için kullanılan kodu düşünün. Şeklin yanına bu kodu yazabilir misiniz? \n\nGeçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Tebrik Edin\n\nBu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](https://code.org/certificates) verin.\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Öğrencileri diğer seçenekler için code.org/learn adresine yönlendirin veya takip eden ekstra etkinliklerinden herhangi birini planlıyorsanız, öğrencilere sırada ne işleyeceğinizi söyleyin."
+          "description": "#### Dönüt Alın\n\nÖğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler?\n\n-   Bir kareyi oluşturan iç açılar nelerdir? Peki ya bir üçgeni?\n-   Kağıdınıza basit bir şeklin taslağını çizin ve bunu çizmek için kullanılan kodu düşünün. Şeklin yanına bu kodu yazabilir misiniz? \n\nGeçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Tebrik Edin\n\nBu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](https://studio.code.org/certificates/batch) verin.\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Öğrencileri diğer seçenekler için code.org/learn adresine yönlendirin veya takip eden ekstra etkinliklerinden herhangi birini planlıyorsanız, öğrencilere sırada ne işleyeceğinizi söyleyin."
         },
         "532c3e19-487f-44e0-97ff-a71886e169f2": {
           "description": "#### Hour of Code Ötesi\n\nHour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://studio.code.org/courses?view=teacher) sayfasını ziyaret edin.**\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın.\n\nÖğrencilerin daha iyi öğrenmesi için bu aktiviteleri kullanın. Sınıf dışı aktiviteler veya başka bilgi zenginleştirme aracı olarak kullanılabilir.\n\n**Fotokopi Makinesi**\n\n-   Öğrencilere iki kağıt parçası verin.\n-   Bir kağıda yalnızca düz çizgiler kullanarak basit bir resim çizin.\n-   İkinci kağıda bu resmin yeniden oluşturulmasına yönelik talimatları ve düz ilerleme ve çeşitli açılarda dönme komutlarını çizin.\n-   Talimat kağıtlarını değiş tokuş yapın ve yalnızca verilen talimatları kullanarak resmi yeniden oluşturmaya çalışın."
@@ -519,7 +519,7 @@
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Dönüt Alın",
-          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi okuma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
+          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi çalışma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Tebrik Edin",
@@ -681,7 +681,7 @@
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Dönüt Alın",
-          "description": "Öğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
+          "description": "Öğrencilerden günün etkinlikleri hakkında geri dönüşler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Tebrik Edin",
@@ -915,11 +915,11 @@
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Dönüt Alın",
-          "description": "Öğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
+          "description": "Öğrencilerden günün etkinlikleri hakkında geri dönüşler alın. Kodlama, Programlama, Hata ayıklama hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?"
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://code.org/certificates?script=mc) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://studio.code.org/certificates/batch?course=bWM=) verin."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Sonraki Adımlar",
@@ -955,7 +955,7 @@
         },
         "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
           "name": "Dönüt Alın",
-          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi okuma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
+          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi çalışma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
         },
         "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
           "name": "Tebrik Edin",
@@ -1171,7 +1171,7 @@
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
-          "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama” ve “hata ayıklama” pratiği yapacaklarını söyleyin.\nAşağıdaki tanımları paylaşın:\n\n-   Kodlama, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n-   Programlama, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız.\n-   Bir olay bir şeyin olmasını sağlayan eylemdir.\n-   Hata ayıklama, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.",
+          "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama”, “olaylar” ve “hata ayıklama” pratiği yapacaklarını söyleyin.\nAşağıdaki tanımları paylaşın:\n\n-   Kodlama, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n-   Programlama, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız.\n-   Bir olay bir şeyin olmasını sağlayan eylemdir.\n-   Hata ayıklama, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.",
           "tips": [
             "Hour of Code etkinliğinizi önden tanıtmak için çok zaman harcamak istemeyeceksiniz. Özellikle genç öğrencilerle, mümkün olduğunca çabuk bir şekilde pratiğe geçmek çok daha mantıklıdır. Başlangıçta çok fazla açıklama eğlenceyi bozar. Eğlence buradaki en önemli şeydir!"
           ]
@@ -1184,14 +1184,14 @@
           "description": "Öğrencilerinizden [Kendi Spor Oyununuzu Kodlayın](https://studio.code.org/s/sports/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) ya da [Star Wars](https://code.org/starwars) öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Kendi Spor Oyununuzu Kodlayın](https://studio.code.org/s/sports/lessons/1/levels/1) öğreticisi, bağımsız bir meydan okuma veya bir eşli programlama etkinliği olarak son derece etkilidir."
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
-          "description": "Bu bulmaca dizisinin sonunda öğrencilerin, kendi benzersiz oyunlarını yapma fırsatı olacaktır. Oyunu daha çetrefilli yapmak için öğrencilerin yeni yolları denemesini sağlayın. Örneğin, tek seferde birçok top ile oynamayı deneyin veya top duvardan her sektiğinde daha fazla top fırlatın.\n\nBir grubun veya kişinin erken bitirmesi durumunda, bu grup veya kişi, [code.org/learn](<>) adresini ziyaret ederek bir başka eğitime geçebilir.",
+          "description": "Bu bulmaca dizisinin sonunda öğrencilerin, kendi benzersiz oyunlarını yapma fırsatı olacaktır. Oyunu daha zorlayıcı yapmak için öğrencilerin yeni yolları denemesini sağlayın. Örneğin, tek seferde birçok top ile oynamayı deneyin veya top duvardan her sektiğinde daha fazla top fırlatın.\n\nBir grubun veya kişinin erken bitirmesi durumunda, bu grup veya kişi, [code.org/learn](<>) adresini ziyaret ederek bir başka eğitime geçebilir.",
           "tips": [
             "Öğrencilere, çalışmalarını yalnızca yakın arkadaşları ve aileleri ile paylaşmasını hatırlatın. Daha fazla bilgi için sınıfa  [Dur ve Çevrimiçi Düşün](https://www.youtube.com/watch?v=rgbZAWnOWOo) adlı videoyu gösterebilirsiniz.."
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
           "name": "Değerlendirme",
-          "description": "**Sıçrama Olayları - Nasıl Olur?** sunum destesini öğrencilere sunun. İlk önce ikinci slayttaki olayların doğru sırasını günlüklerine kaydetmelerine izin verin. Üçüncü slaydı ortaya çıkarmadan önce birkaç öğrenciyi yanıtlarını paylaşmaya teşvik edin. Doğru sıralamayı sınıfla tartışın.",
+          "description": "**Sıçrama Olayları - Nasıl Olur?** sunum destesini öğrencilere sunun. İlk önce ikinci slayttaki olayların doğru sırasını günlüklerine kaydetmelerine izin verin. Üçüncü slaytı ortaya çıkarmadan önce birkaç öğrenciyi yanıtlarını paylaşmaya teşvik edin. Doğru sıralamayı sınıfla tartışın.",
           "tips": [
             "Bu derste tanıtılmasına rağmen, \"Sıçrama Olayları - Nasıl Oluyor?\" sunum destesi, donanım ve yazılım arasındaki ilişkiyi ifade etmek için daha genel olarak uygulanabilir. Özellikle son slayt, girdi-çıktı sırasını basitleştirip sınıfınız için bir poster haline getirilebilir."
           ]
@@ -1200,7 +1200,7 @@
           "description": "**Doğru Sıralama: D, B, A, C**"
         },
         "11b82689-57e5-404f-8846-51e10f2642d0": {
-          "description": "#### Dönüt Alın\n\nÖğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama ve Olaylar hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Tebrik Edin\n\nBu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](https://code.org/certificates) verin.\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn](https://code.org/certificates) adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
+          "description": "#### Dönüt Alın\n\nÖğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama ve Olaylar hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Tebrik Edin\n\nBu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](https://studio.code.org/certificates/batch) verin.\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn](https://studio.code.org/certificates/batch) adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
         },
         "e9c48a39-952e-44be-8955-9d012bfa89c1": {
           "description": "#### Hour of Code Ötesi\n\nHour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://studio.code.org/courses?view=teacher)** sayfasını ziyaret edin.\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın."
@@ -1221,7 +1221,7 @@
           "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama” ve “hata ayıklama” pratiği yapacaklarını söyleyin.\n\nAşağıdaki tanımları paylaşın:\n\n-   **Kodlama**, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n-   **Programlama**, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız.\n-   **Hata ayıklama**, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.\n\nÖğrencilerden lise mezuniyetinden sonra ne yapmak istediklerini düşünmelerini isteyin. Öğrencilerden hayatlarının bir sonraki adımında bilgisayar kullanmalarını gerektireceğine inanıyorlarsa ellerini kaldırmalarını isteyin. Herkes elini kaldırmalı, çünkü bilgisayarlar her yerde... Bilgisayarlar artık telefonlarımızda, arabalarımızda, hatta mikrodalga fırınlarımız ve bulaşık makinelerimizde!\n\nÖğrencilerden Amerika Birleşik Devletleri'nde kaç tane K12 okulu olduğunu tahmin etmelerini isteyin. Doğru cevap 100.000 civarında olmalıdır. Şimdi öğrencilerden bu K12 okullarından kaçının bilgisayar bilimi dersi sunduğunu tahmin etmelerini isteyin. Her 4 okuldan 1'inde, belki daha az. Bu, ABD nüfusunun %25'inden daha azının okulda bilgisayar bilimi öğrenme fırsatına sahip olduğu anlamına geliyor. Öğrencilere şu soruyu yöneltin: Bu durum, bilgisayar deneyimi çok az veya hiç olmayan, genç bir kişinin hayallerindeki işe girme veya ideal üniversitelerine girme yeteneğini nasıl etkiler? Ve bu sorun sadece ABD'de değil, tüm dünyada devam eden bir sorun.\n\nDünyanın dört bir yanında, tıpkı öğrencileriniz gibi gençlerin, bilgisayar bilimleri eğitimindeki haksız erişim eksikliğine farkındalık getirmenin bir yolu olarak Hour of Code uygulamasına katıldığını açıklayın. Sınıfınız, yalnızca BB'nin temellerini öğrenmek ve eğlenmek için değil, aynı zamanda BB'nin herkes için önemi hakkında konuşmak için sesinizi duyurmanızı sağlayacak."
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
-          "name": "Disney Infinity Play Lab",
+          "name": "Disney Infinity Play Laboratuarı",
           "description": "Öğrencilerinizden [Disney Infinity Oyun Laboratuvarı](https://studio.code.org/s/infinity/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Ortaokul ve lise öğrencileri için, ücretsiz oynamaya ve uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [code.org/learn](http://code.org/learn) adresinde [Flappy Oyunu Yapın](https://studio.code.org/s/flappy) ve yeni beta aracımız [AppLab](https://code.org/educate/applab) dahil olmak üzere ücretsiz içerik oluşturmaya izin veren birçok başka öğretici bulunmaktadır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
@@ -1234,7 +1234,7 @@
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Dönüt Alın",
-          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi okuma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
+          "description": "\"Dön ve Konuş\" etkinliğini tanıtın. Öğrencilerden geri bildirim için oyunlarını, uygulamalarını veya nihai ürünlerini bir arkadaşlarıyla paylaşmalarını isteyin. Ardından partnerlerinin uygulamasını veya oyununu kontrol etmelerini söyleyin. Birkaç gruptan deneyimlerini paylaşmalarını isteyin: Bugün uygulamaların ve oyunların nasıl çalıştığı hakkında ne öğrendiniz? Bilgisayar bilimi çalışma fırsatına sahip olduğunuz için kendinizi nasıl hissediyorsunuz?"
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Tebrik Edin",
@@ -1260,7 +1260,7 @@
           ]
         },
         "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
-          "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama” ve “hata ayıklama” pratiği yapacaklarını söyleyin.\nAşağıdaki tanımları paylaşın:\n\n-   Kodlama, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n-   Programlama, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız.\n-   Bir olay bir şeyin olmasını sağlayan eylemdir.\n-   Hata ayıklama, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.",
+          "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama”, “olaylar” ve “hata ayıklama” pratiği yapacaklarını söyleyin.\nAşağıdaki tanımları paylaşın:\n\n-   Kodlama, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n-   Programlama, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız.\n-   Bir olay bir şeyin olmasını sağlayan eylemdir.\n-   Hata ayıklama, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.",
           "tips": [
             "Hour of Code etkinliğinizi önden tanıtmak için çok zaman harcamak istemeyeceksiniz. Özellikle genç öğrencilerle, mümkün olduğunca çabuk bir şekilde pratiğe geçmek çok daha mantıklıdır. Başlangıçta çok fazla açıklama eğlenceyi bozar. Eğlence buradaki en önemli şeydir!"
           ]
@@ -1273,14 +1273,14 @@
           "description": "Öğrencilerinizden [Kendi Basketbol Oyununuzu Kodlayın](https://studio.code.org/s/basketball/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) ya da [Star Wars](https://code.org/starwars) öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Kendi Basketbol Oyununuzu Kodlayın](https://studio.code.org/s/basketball/lessons/1/levels/1) öğreticisi, bağımsız bir meydan okuma veya bir eşli programlama etkinliği olarak son derece etkilidir."
         },
         "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
-          "description": "Bu bulmaca dizisinin sonunda öğrencilerin, kendi benzersiz oyunlarını yapma fırsatı olacaktır. Oyunu daha çetrefilli yapmak için öğrencilerin yeni yolları denemesini sağlayın. Örneğin, tek seferde birçok top ile oynamayı deneyin veya top duvardan her sektiğinde daha fazla top fırlatın.\n\nBir grubun veya kişinin erken bitirmesi durumunda, bu grup veya kişi, [code.org/learn](<>) adresini ziyaret ederek bir başka eğitime geçebilir.",
+          "description": "Bu bulmaca dizisinin sonunda öğrencilerin, kendi benzersiz oyunlarını yapma fırsatı olacaktır. Oyunu daha zorlayıcı yapmak için öğrencilerin yeni yolları denemesini sağlayın. Örneğin, tek seferde birçok top ile oynamayı deneyin veya top duvardan her sektiğinde daha fazla top fırlatın.\n\nBir grubun veya kişinin erken bitirmesi durumunda, bu grup veya kişi, [code.org/learn](<>) adresini ziyaret ederek bir başka eğitime geçebilir.",
           "tips": [
             "Öğrencilere çalışmalarını yakın arkadaşları veya aileleri dışında kimseyle paylaşmamalarını hatırlatın. Daha fazla bilgi için sınıfa [Dur ve Çevrimiçi Düşün](https://www.youtube.com/watch?v=rgbZAWnOWOo) videosunu izletin veya gösterin."
           ]
         },
         "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
           "name": "Değerlendirme",
-          "description": "**Sıçrama Olayları - Nasıl Olur?** sunum destesini öğrencilere sunun. İlk önce ikinci slayttaki olayların doğru sırasını günlüklerine kaydetmelerine izin verin. Üçüncü slaydı ortaya çıkarmadan önce birkaç öğrenciyi yanıtlarını paylaşmaya teşvik edin. Doğru sıralamayı sınıfla tartışın.",
+          "description": "**Sıçrama Olayları - Nasıl Olur?** sunum destesini öğrencilere sunun. İlk önce ikinci slayttaki olayların doğru sırasını günlüklerine kaydetmelerine izin verin. Üçüncü slaytı ortaya çıkarmadan önce birkaç öğrenciyi yanıtlarını paylaşmaya teşvik edin. Doğru sıralamayı sınıfla tartışın.",
           "tips": [
             "Bu derste tanıtılmasına rağmen, \"Sıçrama Olayları - Nasıl Oluyor?\" sunum destesi, donanım ve yazılım arasındaki ilişkiyi ifade etmek için daha genel olarak uygulanabilir. Özellikle son slayt, girdi-çıktı sırasını basitleştirip sınıfınız için bir poster haline getirilebilir."
           ]
@@ -1289,10 +1289,10 @@
           "description": "**Doğru Sıralama: D, B, A, C**"
         },
         "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
-          "description": "#### Dönüt Alın\n\nÖğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama ve Olaylar hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Tebrik Edin\n\nBu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](https://code.org/certificates) verin.\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn](https://code.org/certificates) adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
+          "description": "#### Dönüt Alın\n\nÖğrencilerden günün etkinlikleri hakkında dönütler alın. Kodlama, Programlama, Hata ayıklama ve Olaylar hakkında ne öğrendiler? Geçirmiş oldukları bir saat sonrasında bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Tebrik Edin\n\nBu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](https://studio.code.org/certificates/batch) verin.\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn](https://studio.code.org/certificates/batch) adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
         },
         "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
-          "description": "#### Hour of Code Ötesi\n\nHour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://studio.code.org/courses?view=teacher)** sayfasını ziyaret edin.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın.\n\n#### Beni Top Oynamaya Çıkar\n\nBir top oyunu oynamaları için öğrencileri dışarı çıkarın. Etkinliklerin ve eylemlerin kaydını tutun. Örneğin, basketbolda top sürmemek, top taşıma faulüne neden olur ve diğer takım topu alır. Futbolda, topu dışarı atmak, diğer takımın topu almasına neden olur. Gol atmak bir puan kazandırır! Eğer öğrencileriniz buna aşırı ilgi gösteriyorsa, daha fazla etkinlik uydurun. Bir takımın kaptanı bir puan kazandığında, tüm öğrencilerin \"Yuppi\" diye bağırmasını sağlayın. Eğer bir öğrenci art arda iki defa gol atarsa, herkesin zemine yatıp yuvarlanmasını sağlayın."
+          "description": "#### Hour of Code Ötesi\n\nHour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://studio.code.org/courses?view=teacher)** sayfasını ziyaret edin.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın.\n\n#### Beni Top Oynamaya Çıkar\n\nBir top oyunu oynamaları için öğrencileri dışarı çıkarın. Etkinliklerin ve eylemlerin kaydını tutun. Örneğin, basketbolda top sürmemek, top taşıma faulüne neden olur ve diğer takım topu alır. Futbolda, topu dışarı atmak, diğer takımın topu almasına ve oyuna sokmasına neden olur. Gol atmak bir puan kazandırır! Eğer öğrencileriniz buna aşırı ilgi gösteriyorsa, daha fazla etkinlik oluşturun. Bir takımın kaptanı bir puan kazandığında, tüm öğrencilerin \"Yuppi\" diye bağırmasını sağlayın. Eğer bir öğrenci art arda iki defa gol atarsa, herkesin zemine yatıp yuvarlanmasını sağlayın."
         },
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
           "name": "Hazırlık Aşaması",
@@ -1389,7 +1389,7 @@
           ]
         },
         "468ba876-6a73-42cb-94c6-a8dfa5bff320": {
-          "description": "Bugün, aslında bir bilgisayarın anlayabildiği talimatlar dizisi anlamına gelen \"kod\" ile yaratıcılıklarını ortaya çıkaracaklarını açıklayın. Tıpkı bir şeyi boyarken seçtiğiniz rengin veya bir yazı yazarken seçtiğiniz kelimelerin yaratıcılığınızın bir ifadesi olması gibi, yazacağınız kodu ve insanların onunla nasıl etkileşime geçeceğiniz seçmeniz de yaratıcılığınızı ifade etmek için bir fırsat olabilir!\n\n**Kalk ve dans et:** Bugün kodlama ile dansın nasıl yaratıcı bir biçimde bir araya getirilebileceğini göreceklerini duyurun. Öğrencilerinizi havaya sokmak için, onlardan 10 saniye boyunca floss, dab veya yaratıcı bir dans hareketi yapmalarını isteyin. Başlamak için bu [r dans-partisi-çalma-listesi]'nden bir şarkı seçebilirsiniz. Sınıfınızın hareketlerini videoya kaydedin.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+          "description": "Bugün, aslında bir bilgisayarın anlayabildiği talimatlar dizisi anlamına gelen \"kod\" ile yaratıcılıklarını ortaya çıkaracaklarını açıklayın. Tıpkı bir şeyi boyarken seçtiğiniz rengin veya bir yazı yazarken seçtiğiniz kelimelerin yaratıcılığınızın bir ifadesi olması gibi, yazacağınız kodu ve insanların onunla nasıl etkileşime geçebileceğini seçmeniz de yaratıcılığınızı ifade etmek için bir fırsat olabilir!\n\n**Kalk ve dans et:** Bugün kodlama ile dansı nasıl yaratıcı bir biçimde bir araya getirilebileceğini göreceklerini duyurun. Öğrencilerinizi havaya sokmak için, onlardan 10 saniye boyunca sallanma, alkış tutma veya yaratıcı bir dans hareketi yapmalarını isteyin. Başlamak için bu [r dans-partisi-çalma-listesi]'nden bir şarkı seçebilirsiniz. Sınıfınızın hareketlerini videoya kaydedin.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
         },
         "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe": {
           "name": "Müzik Filtreleme",
@@ -1410,7 +1410,7 @@
           "description": "#### Seviye 3\n\n-   İkinci bir mor \"bir kez yap\" bloğu getirin. Çalışma alanınızda bir \"ayılar bir kez yapar\" bloğu ve \"kediler bir kez yapar\" bloğu olmalıdır. Her ikisi de yeşil bir \"basıldığında\" olay bloğuna bağlanmalıdır.\n-   Çalıştır seçeneğine bastıktan sonra ok düğmelerine bastığınızdan emin olun, aksi takdirde dansçılar hareket etmeyecektir."
         },
         "e07e7231-6932-46d6-9f35-7c8ec34fb25d": {
-          "description": "#### Seviye 4\n\n-   Seviye 4-5, dansı müzikle senkronize etmekle ilgilidir. \n-   'sonraki önlemler' olay blokları da yeni bir kod dizisi başlatır ve 'kurulum' bloğunun içine bağlanmamalıdır.\n-   Mor 'sonsuza kadar yap' bloğunu yeşil 'ölçü sonra' olay bloğunun altına bağlamak, karakterin belirttiğiniz ölçü sayısından sonra bir dans hareketi yapmasını sağlamalıdır.\n-   \"Sonsuza kadar yap\" bloğu, önceki seviyelerde görülen \"bir kere yap\" bloklarından farklı çalışır."
+          "description": "#### Seviye 4\n\n-   Seviye 4-5, dansı müzikle senkronize etmekle ilgilidir. \n-   'ölçüden sonra' olay blokları da yeni bir kod dizisi başlatır ve 'kurulum' bloğunun içine bağlanmamalıdır.\n-   Mor 'sonsuza kadar yap' bloğunu yeşil 'ölçüden sonra' olay bloğunun altına bağlamak, karakterin belirttiğiniz ölçü sayısından sonra bir dans hareketi yapmasını sağlamalıdır.\n-   \"Sonsuza kadar yap\" bloğu, önceki seviyelerde görülen \"bir kere yap\" bloklarından farklı çalışır."
         },
         "42f6ef23-a698-4d94-a9d6-917a7dda0fa6": {
           "description": "#### Seviye 5\n\n-   İkinci bir yeşil olay bloğu getirin. Çalışma alanınızda '4 ölçü sonra' bloğu ve '6 ölçü sonra' bloğu olmalıdır. Her ikisinin de altına bağlı bir mor blok olmalıdır."
@@ -1427,10 +1427,10 @@
           ]
         },
         "165b8450-bd88-42b3-b955-2e8ecd1dc93f": {
-          "description": "#### Seviye 8\n\n-   Bir önceki seviyede olduğu gibi, programınızda dansçıları yaptıktan sonra sadece 'tonu ayarla (renk)' bloğunu kullandığınızdan emin olun. Örneğin, bu bloğu programınızın `kurulum` alanına ilk adım olarak yerleştirmenizin hiçbir etkisi olmayacaktır."
+          "description": "#### Seviye 8\n\n-   Bir önceki seviyede olduğu gibi, programınızda dansçıları yaptıktan _sonra_ sadece 'deniz mavisine ayarla (renk)' bloğunu kullandığınızdan emin olun. Örneğin, bu bloğu programınızın `kurulum` alanına ilk adım olarak yerleştirmenizin hiçbir etkisi olmayacaktır."
         },
         "e04d58b1-6687-4e9b-ae31-1796d5232ce2": {
-          "description": "#### Seviye 9\n\n-   Doğru kodla, farklı renkler, boyutlar veya dans hareketleri arasında dansçı döngüsünü görmelisiniz.\n-   \"Her 2 ölçü\" bloğunun içine bağlı bir deniz mavisi \"değiştir\", bir deniz mavisi \"rastgele\" bloğu veya mor bir \"sonsuza kadar yap\" bloğu olduğundan emin olun.\n-   \"Sonsuza kadar yap\" bloklarının (Sonraki), (Önceki) veya (Rastgele) olarak ayarlandığından emin olun. Aksi takdirde, dansçı sadece set hareketini tekrar tekrar yapacaktır.\n-   **Öğrencilerin bu seviyede yazdığı kodun doğruluğunun kontrol edilmediğini** unutmayın. Bu, programı değiştirmeseler bile her zaman seviyeyi geçecekleri anlamına gelir. Öğrenciler, kodlarını kendileri için ilginç olan şekillerde denemekten çekinmemelidir. Öğrencilerin devam etmek için “Bitir” düğmesini tıklamaları gerekir.\n-   'Her 2 ölçü' bloğunda yeni dansçılar yapmak, programınızın aynı konum(lar)da birden fazla aynı dansçı oluşturmasına neden olur ve istenmeyen sonuçlara yol açabilir!"
+          "description": "#### Seviye 9\n\n-   Doğru kodla, farklı renkler, boyutlar veya dans hareketleri arasında dansçı döngüsünü görmelisiniz.\n-   \"Her 2 ölçü\" bloğunun içine bağlı bir deniz mavisi \"değiştir\", bir deniz mavisi \"rastgele\" bloğu veya mor bir \"sonsuza kadar yap\" bloğu olduğundan emin olun.\n-   \"Sonsuza kadar yap\" bloklarının (Sonraki), (Önceki) veya (Rastgele) olarak ayarlandığından emin olun. Aksi takdirde, dansçı sadece set hareketini tekrarlayacaktır.\n-   **Öğrencilerin bu seviyede yazdığı kodun doğruluğunun kontrol edilmediğini** unutmayın. Bu, programı değiştirmeseler bile her zaman seviyeyi geçecekleri anlamına gelir. Öğrenciler, kodlarını kendileri için ilginç olan şekillerde denemekten çekinmemelidir. Öğrencilerin devam etmek için “Bitir” düğmesini tıklamaları gerekir.\n-   'Her 2 ölçü' bloğunda yeni dansçılar yapmak, programınızın aynı konum(lar)da birden fazla aynı dansçı oluşturmasına neden olur ve istenmeyen sonuçlara yol açabilir!"
         },
         "8ab0ecdc-93e2-4959-a1d8-2aaad168be42": {
           "description": "#### Seviye 10\n\n-   Bu son seviye çok açık uçludur. Eğitimin kendisi, öğrencilere kendi dansları üzerinde çalışmaya devam etmeleri için yeterli zaman vermek üzere tasarlanmıştır.\n-   **Paylaşmayı Teşvik Edin:** Öğrencilerin bağlantısı olan cep telefonları varsa, projelerinin bağlantısını kendi telefonlarına veya bir arkadaşlarına hızlı bir şekilde kısa mesaj gönderebilirler. Okul politikanız izin veriyorsa, bu konuda onları teşvik edin.\n-   **Yaratıcılığı Teşvik Edin:** Bu ders boyunca yaratıcılık çok önemli, ama bu sefer gerçekten pek çok başka yere göre çok daha fazla önem taşıyor!"
@@ -1509,7 +1509,7 @@
           "progression_name": "Yapay Zekaya Yeni Bir Kelime Öğretin"
         },
         "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
-          "description": "Öğrencilerin başarılarını kutlamaları için [sertifikaları yazdırın](https://code.org/certificates?script=oceans).\n\nDersin sonunda öğrencileri, bilgisayar bilimi maceralarını sürdürmenin daha fazla yolu hakkında fikir edinebilecekleri [Code.org/learn](http://Code.org/learn) adresine gitmeye teşvik edin."
+          "description": "Öğrencilerin başarılarını kutlamaları için [sertifikaları yazdırın](https://studio.code.org/certificates/batch?course=b2NlYW5z).\n\nDersin sonunda öğrencileri, bilgisayar bilimi maceralarını sürdürmenin daha fazla yolu hakkında fikir edinebilecekleri [Code.org/learn](http://Code.org/learn) adresine gitmeye teşvik edin."
         },
         "be0db11e-cb8e-4658-844c-73a9faafa36d": {
           "description": "#### Mountain Zebra National Park'daki Hayvanları Sınıflandırmaya Yardım Edin\n\nSnapshot Safari, Güney Afrika'ya yüzlerce gizli kamera yerleştirdi ve nadir hayvanların milyonlarca görüntüsünü yakaladı. Öğrenciler, bu görüntülerdeki farklı hayvanları sınıflandırarak nesli tükenmekte olan Dağ Zebrasının korunmasına yardımcı olabilir. Projeyi [buradan](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/about/research) okuyabilir veya denemek için aşağıdaki linke tıklayabilirsiniz!\n\n[Snapshot Mountain Zebra - Zooniverse](https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&workflow=11445)"
@@ -1535,7 +1535,7 @@
           "name": "Asıl Faaliyet (Yeni)"
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "197fed33-dc42-4fc0-8d20-e84b09292caa": {
           "name": "Hazırlık Aşaması",
@@ -7792,7 +7792,7 @@
           "progression_name": "Meydan okuma"
         },
         "92a73697-24cd-48cc-ba19-2889073f4ad1": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "6aa2ee53-e19e-4f39-b28b-698cae041a4c": {
           "tips": [
@@ -9152,7 +9152,7 @@
           ]
         },
         "e397d996-dc5b-42de-89ef-703458ff0392": {
-          "name": "İlk adım",
+          "name": "Başlarken",
           "tips": [
             null
           ]
@@ -9168,7 +9168,7 @@
           ]
         },
         "71fa0ffd-0409-4796-976e-b36b4c811ad4": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "9680a7eb-64bc-464e-a2fd-3b0e82681ed9": {
           "name": "Isınmak"
@@ -9864,7 +9864,7 @@
           ]
         },
         "ecb1a1f9-d63d-4386-b991-bc3a954a2648": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "8044eba7-f12f-4ff5-b1b7-a2ee795043cf": {
           "name": "Isınmak",
@@ -9873,7 +9873,7 @@
           ]
         },
         "3a7eb86f-0db6-4e77-b6ae-b126fb389834": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "f0da6b6d-7815-4cb8-bb39-ebca0481b983": {
           "name": "Isınmak"
@@ -9889,13 +9889,13 @@
           ]
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "a26024c1-74e8-4da6-81b3-b0f43b4a9df3": {
           "name": "Isınmak"
         },
         "4c4844c5-1cfc-4e21-b5fe-688b84f55ab3": {
-          "name": "Özet",
+          "name": "Paketlemek",
           "tips": [
             null
           ]
@@ -9904,7 +9904,7 @@
           "name": "Isınmak"
         },
         "43fde334-6c07-4b1b-b23d-4b67f5fbfbc0": {
-          "name": "Özet",
+          "name": "Paketlemek",
           "progression_name": "Yansıma"
         },
         "b46cfe31-9b5e-4820-b368-fc8a4fa139a7": {
@@ -10755,7 +10755,7 @@
           ]
         },
         "043ff201-5128-4934-9f35-d5985053c306": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "1e237958-7dc7-4186-a533-1e95192be751": {
           "name": "Isınmak"
@@ -10766,7 +10766,7 @@
           ]
         },
         "4ec6831d-0286-4e77-9b91-c33286b71b1b": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "6e0d3112-2574-4cfa-895b-861975d37691": {
           "name": "Isınmak"
@@ -10778,7 +10778,7 @@
           "progression_name": "Bir Yapay Zeka Uygulaması Tasarlayın - Yapay Zeka Laboratuvarı"
         },
         "62d8c1fd-083d-4e27-a12a-50ce87426ed8": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "b6d6a46b-62ad-4765-ab2b-735affc8c53c": {
           "name": "Isınmak"
@@ -10790,7 +10790,7 @@
           "progression_name": "Bir Yapay Zeka Uygulaması Tasarlayın - Uygulama Laboratuvarı"
         },
         "2fd8da1c-c18a-42c8-a248-841c97595686": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "4dc744de-d6ab-4c2d-b789-0ce346684f5c": {
           "name": "Isınmak"
@@ -10801,7 +10801,7 @@
           ]
         },
         "4515c61f-9295-4142-9558-03649dd85bda": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "5d04c580-a932-46bd-86c4-649793eac948": {
           "name": "Yansıma"
@@ -20577,7 +20577,7 @@
           ]
         },
         "c9458a29-f135-4840-aae0-37c35f2bfa52": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "847d4606-cf5c-4060-ab5c-2870853447a3": {
           "name": "Isınmak"
@@ -20588,7 +20588,7 @@
           ]
         },
         "892bacbf-54ca-4447-8e4e-c711765fcd7d": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "934317da-7e33-4f20-ad76-9f06d203b1a6": {
           "name": "Isınmak"
@@ -20600,7 +20600,7 @@
           "progression_name": "Bir Yapay Zeka Uygulaması Tasarlayın - Yapay Zeka Laboratuvarı"
         },
         "065f7419-b028-4610-b0c4-671f2ec86590": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "9e4ffdd6-9a34-453b-953c-23f4e0516b0f": {
           "name": "Isınmak"
@@ -20612,7 +20612,7 @@
           "progression_name": "Bir Yapay Zeka Uygulaması Tasarlayın - Uygulama Laboratuvarı"
         },
         "2df922c9-a79a-4e9f-a4e5-003cee501451": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "73c0c357-7096-42d6-b457-e88276905578": {
           "name": "Isınmak"
@@ -20623,7 +20623,7 @@
           ]
         },
         "1f35f92d-5556-4137-a1e6-38c31a3a719f": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "f5c2056c-f519-4991-a58b-f22058fbaa9d": {
           "name": "Yansıma",
@@ -20829,7 +20829,7 @@
           ]
         },
         "0b2efd87-9305-4f69-b54f-ad720a636f39": {
-          "name": "İlk adım"
+          "name": "Başlarken"
         },
         "a23e57c3-d624-46df-bc76-87d7e4c16ad9": {
           "tips": [
@@ -20842,7 +20842,7 @@
           ]
         },
         "743d6e6b-6320-4157-962e-5789b717aa34": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "9afae521-da27-48d1-9d5f-e90c8690923f": {
           "name": "Isınmak"
@@ -22663,7 +22663,7 @@
           "progression_name": "Meydan okuma"
         },
         "957a684d-5930-4823-99fa-0af6c5701b6f": {
-          "name": "Özet"
+          "name": "Paketlemek"
         },
         "b9716428-aedc-4578-8328-379b70cb0d50": {
           "tips": [
