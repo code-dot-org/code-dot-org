@@ -16,8 +16,8 @@ module Api::V1::Pd::Application
     end
 
     PRINCIPAL_APPROVAL_EMAILS = [
-      :administrator_approval_completed,
-      :administrator_approval_completed_partner
+      :principal_approval_completed,
+      :principal_approval_completed_partner
     ]
 
     setup do
