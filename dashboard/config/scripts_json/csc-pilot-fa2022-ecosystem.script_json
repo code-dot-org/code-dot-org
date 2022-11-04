@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-ecosystem",
-    "serialized_at": "2022-11-01 23:13:06 UTC",
+    "serialized_at": "2022-11-03 23:01:22 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1144,6 +1144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_1"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
@@ -1166,6 +1169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ecosystems_helloworld_say_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1188,6 +1194,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_location_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1210,6 +1219,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_click_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1232,6 +1244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_1"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -1254,6 +1269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bunny_adaptation_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1276,6 +1294,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_giraffe_evo_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1298,6 +1319,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_movement_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1320,6 +1344,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_explain_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1342,6 +1369,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_bugs_behaviors_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1364,6 +1394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gray_csc_ecosystems_survival_choice_1"
+        ],
         "progression": "Choice Level"
       },
       "bonus": false,
@@ -1386,6 +1419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo_1"
+        ],
         "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
@@ -1408,6 +1444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ecosystem_lesson1_freeplay_1"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1430,6 +1469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1452,6 +1494,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1474,6 +1519,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1496,6 +1544,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_growth_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1518,6 +1569,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_1_2"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1540,6 +1594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1562,6 +1619,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1584,6 +1644,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_2_2"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1606,6 +1669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_3_2"
+        ],
         "progression": "Multiple Choice"
       },
       "bonus": false,
@@ -1628,6 +1694,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_freeplay_2"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1650,6 +1719,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_3"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1672,6 +1744,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_variable_markdown_3"
+        ],
         "progression": "Solution 1 - Fishing Limits"
       },
       "bonus": false,
@@ -1694,6 +1769,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution1_3"
+        ],
         "progression": "Solution 1 - Fishing Limits"
       },
       "bonus": false,
@@ -1716,6 +1794,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution1b_3"
+        ],
         "progression": "Solution 1 - Fishing Limits"
       },
       "bonus": false,
@@ -1738,6 +1819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_multi_3"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1760,6 +1844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution2_3"
+        ],
         "progression": "Solution 2 - Off Limits"
       },
       "bonus": false,
@@ -1782,6 +1869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_cfu_3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1804,6 +1894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution3A_3"
+        ],
         "progression": "Solution 3 - Fishing Season"
       },
       "bonus": false,
@@ -1826,6 +1919,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_solution3B_3"
+        ],
         "progression": "Solution 3 - Fishing Season"
       },
       "bonus": false,
@@ -1848,6 +1944,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_cfu2_parent_3"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1870,6 +1969,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_unbalanced_freeplay_3"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
