@@ -9,6 +9,7 @@ import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
@@ -103,7 +104,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
-  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
+  // blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
@@ -167,15 +168,25 @@ function initializeBlocklyWrapper(blocklyInstance) {
     'field_dropdown',
     CdoFieldDropdown
   );
+  // may want to override fieldnumber for standard blockly -- how do we make sure string is right?
+  // //  make sure this string is right
+  // blocklyWrapper.blockly_.fieldRegistry.unregister('field_text_input');
+  // blocklyWrapper.blockly_.fieldRegistry.register(
+  //   'field_text_input',
+  //   CdoFieldTextInput
+  // );
 
   // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
+  // should these just be settable properties?
   // Additions for when our wrapper is accessed in /apps code
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
+  // blocklyWrapper.FieldTextInput = CdoFieldTextInput;
+  blocklyWrapper.FieldNumber = CdoFieldNumber;
   blocklyWrapper.FieldVariable = CdoFieldVariable;
 
   blocklyWrapper.blockly_.registry.register(
