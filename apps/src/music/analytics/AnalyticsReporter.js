@@ -3,12 +3,10 @@ import {
   track,
   Identify,
   identify,
-  setUserId,
   setSessionId,
   flush
 } from '@amplitude/analytics-browser';
 import {BlockTypes} from '@cdo/apps/music/blockly/blockTypes';
-import {hashString} from '@cdo/apps/utils';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -54,9 +52,10 @@ export default class AnalyticsReporter {
       return;
     }
 
-    if (userId) {
-      setUserId(hashString(userId));
-    }
+    // Temporarily disabled, pending user privacy compliance discussions.
+    // if (userId) {
+    //   setUserId(hashString(userId));
+    // }
 
     this.identifyObj.set('userType', userType);
     this.identifyObj.set('signInState', signInState);
