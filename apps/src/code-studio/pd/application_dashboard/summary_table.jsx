@@ -38,19 +38,34 @@ export class SummaryTable extends React.Component {
       locked: 0,
       all: 0
     };
-    const categoryRows = Object.keys(this.props.data).map((status, i) => {
+
+    const statusesInOrder = [
+      'incomplete',
+      'reopened',
+      'awaiting_admin_approval',
+      'unreviewed',
+      'pending',
+      'pending_space_availability',
+      'accepted',
+      'declined',
+      'withdrawn'
+    ];
+
+    const categoryRows = statusesInOrder.map((status, i) => {
       const statusData = this.props.data[status];
-      totals.locked += statusData.locked;
-      totals.all += statusData.total;
+      const currentLocked = statusData?.locked || 0;
+      const currentTotal = statusData?.total || 0;
+      totals.locked += currentLocked;
+      totals.all += currentTotal;
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
             {getApplicationStatuses(this.props.applicationType)[status] ||
               _.upperFirst(status)}
           </td>
-          {this.showLocked && <td>{statusData.locked}</td>}
-          {this.showLocked && <td>{statusData.total - statusData.locked}</td>}
-          <td>{statusData.total}</td>
+          {this.showLocked && <td>{currentLocked}</td>}
+          {this.showLocked && <td>{currentTotal - currentLocked}</td>}
+          <td>{currentTotal}</td>
         </tr>
       );
     });

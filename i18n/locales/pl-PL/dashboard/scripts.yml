@@ -5048,6 +5048,8 @@ pl:
               display_name: Treści
             lessonGroup-4:
               display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
           name: csa1-2023
           title: Programowanie obiektowe
         csa2-2023:
@@ -5078,6 +5080,9 @@ pl:
           name: vpl-csd3-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 3
         vpl-csd4-ayw-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Moduł 4 Praca asynchroniczna
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 4
         csa-magpie-lab:
@@ -5200,6 +5205,10 @@ pl:
           name: self-paced-pl-physical-computing2
         emmas-playground:
           name: emmas-playground
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Co to za dźwięk?
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -5275,3 +5284,21 @@ pl:
           student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
         self-paced-pl-csa3-2023:
           title: 'Moduł 3: Wsparcie przy programowaniu tekstowym'
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: Jednostka 1 Projekty
+            lesson-2:
+              name: Jednostka 2 Projekty
+            lesson-3:
+              name: Jednostka 3 Projekty
+            lesson-4:
+              name: Jednostka 4 Projekty
+            lesson-5:
+              name: Jednostka 5 Projekty
+            lesson-6:
+              name: Jednostka 6 Projekty
+            lesson-7:
+              name: Jednostka 7 Projekty
+            lesson-8:
+              name: Jednostka 8 Projekty

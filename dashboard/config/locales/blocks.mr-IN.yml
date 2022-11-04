@@ -907,6 +907,23 @@ mr:
         text: सेटअप
       Dancelab_whenSetup2:
         text: सेटअप
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} इफेक्ट करा"
+        options:
+          EFFECT:
+            '"bubbles"': फुगे
+            '"confetti"': कॉन्फेटी
+            '"hearts"': हृदये
+            '"emojis"': हॅपी इमोजी
+            '"rain"': पाऊस
+            '"glass"': तुटलेल्या काचा
+            '"twinkling"': ट्विंकलिंग
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): ड्रॅग करण्यायोग्य
+            wandering(): भटकणे
+            shrinking(): आकार कमी होणे
       gamelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} सुरू होते {BEHAVIOR}
       gamelab_addTarget:
@@ -1263,7 +1280,6 @@ mr:
             "'sound://category_space/Pillars_SFX.mp3'": खांब
             "'sound://category_space/Southern_ring_SFX.mp3'": दक्षिण रिंग
             "'sound://category_space/Supernova_SFX.mp3'": सुपरनोवा
-            "'sound://category_sports/One_Whistle_SFX.mp3'": टायको
       gamelab_playSpeech:
         text: भाषण प्ले करा {SOUND}
       gamelab_playerBehaviors:
