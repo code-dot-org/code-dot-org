@@ -6,11 +6,16 @@ $button-height-large: 40px;
 $button-height-narrow: 40px;
 $button-height-small: 20px;
 
+/* stylelint-disable selector-pseudo-class-no-unknown */
 div,
 button,
 a,
 a:link,
-a:visited {
+a:visited,
+// Global .header a styles override application.scss.
+:global(.header) a:link,
+:global(.header) a:visited {
+  /* stylelint-enable selector-pseudo-class-no-unknown */
   &.main {
     display: inline-block;
     font-size: 12px;
