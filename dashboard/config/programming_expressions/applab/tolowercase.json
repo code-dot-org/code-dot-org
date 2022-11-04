@@ -24,7 +24,8 @@
       "description": "The string to copy and convert to all lower case."
     }
   ],
+  "return_value": "A copy of the string converted to all lower case.",
   "short_description": "Returns a new string that is the original *string* converted to all lower case letters.",
-  "syntax": "A copy of the string converted to all lower case.",
+  "syntax": "[string].toLowerCase()\n",
   "tips": "- [toUpperCase()](/docs/applab/toUpperCase) copies and converts a string to all upper case."
 }
