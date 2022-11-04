@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import classNames from 'classnames';
+import moduleStyles from './instructions.module.scss';
 
 export default class Instructions extends React.Component {
   static propTypes = {
     instructions: PropTypes.object,
     baseUrl: PropTypes.string.isRequired,
-    analyticsReporter: PropTypes.object.isRequired
+    analyticsReporter: PropTypes.object.isRequired,
+    vertical: PropTypes.bool,
+    right: PropTypes.bool
   };
 
   state = {
@@ -47,36 +51,35 @@ export default class Instructions extends React.Component {
     const previousPanel = this.getPreviousPanel();
     const nextPanel = this.getNextPanel();
 
+    const progressText = instructions
+      ? `${this.state.currentPanel + 1}/${instructions.groups[0].panels.length}`
+      : '';
+
     return (
       <div
         id="instructions"
-        style={{
-          backgroundColor: '#222',
-          width: '100%',
-          height: '100%',
-          borderRadius: 4,
-          backgroundSize: '100% 200%',
-          padding: 10,
-          boxSizing: 'border-box',
-          position: 'relative',
-          fontSize: 14,
-          lineHeight: 1.5
-        }}
+        className={classNames(
+          moduleStyles.instructions,
+          this.props.vertical && moduleStyles.vertical
+        )}
       >
         {instructions?.groups[0].panels.map((panel, index) => {
           return (
             <div
               key={index}
-              style={{
-                position: 'absolute',
-                top: 10,
-                opacity: index === this.state.currentPanel ? 1 : 0,
-                pointerEvents:
-                  index === this.state.currentPanel ? 'auto' : 'none'
-              }}
+              className={classNames(
+                moduleStyles.item,
+                index === this.state.currentPanel && moduleStyles.visible,
+                this.props.vertical && moduleStyles.itemVertical
+              )}
             >
               {panel.imageSrc && (
-                <div style={{float: 'left', width: 140, position: 'relative'}}>
+                <div
+                  className={classNames(
+                    moduleStyles.imageContainer,
+                    !this.props.vertical && moduleStyles.horizontal
+                  )}
+                >
                   <img
                     src={
                       baseUrl +
@@ -84,17 +87,18 @@ export default class Instructions extends React.Component {
                       '/' +
                       panel.imageSrc
                     }
-                    style={{height: 70, cursor: 'pointer'}}
+                    className={classNames(
+                      moduleStyles.image,
+                      !this.props.vertical && moduleStyles.fixedHeight
+                    )}
                     onClick={() => this.imageClicked()}
                   />
                   {this.state.showBigImage && (
                     <div
-                      style={{
-                        position: 'absolute',
-                        width: 440,
-                        top: 0,
-                        left: 0
-                      }}
+                      className={classNames(
+                        moduleStyles.bigImage,
+                        this.props.right && moduleStyles.bigImageRight
+                      )}
                     >
                       <img
                         src={
@@ -103,14 +107,6 @@ export default class Instructions extends React.Component {
                           '/' +
                           panel.imageSrc
                         }
-                        style={{
-                          width: '100%',
-                          position: 'absolute',
-                          border: '10px black solid',
-                          borderRadius: 4,
-                          zIndex: 80,
-                          cursor: 'pointer'
-                        }}
                         onClick={() => this.imageClicked()}
                       />
                     </div>
@@ -118,49 +114,40 @@ export default class Instructions extends React.Component {
                 </div>
               )}
               <div
-                style={{
-                  float: 'left',
-                  width: 'calc(100% - 290px)',
-                  height: 70,
-                  overflowY: 'auto'
-                }}
+                className={classNames(
+                  moduleStyles.text,
+                  this.props.vertical && moduleStyles.textVertical
+                )}
               >
                 {panel.text}
               </div>
             </div>
           );
         })}
-        <div
-          style={{
-            bottom: 4,
-            right: 4,
-            position: 'absolute'
-          }}
-        >
-          <button
-            type="button"
-            onClick={() => this.changePanel(false)}
-            style={{
-              fontSize: 13,
-              padding: '4px 8px',
-              opacity: previousPanel !== null ? 1 : 0,
-              pointerEvents: previousPanel !== null ? 'auto' : 'none'
-            }}
-          >
-            Previous
-          </button>
-          <button
-            type="button"
-            onClick={() => this.changePanel(true)}
-            style={{
-              fontSize: 13,
-              padding: '4px 8px',
-              opacity: nextPanel !== null ? 1 : 0,
-              pointerEvents: nextPanel !== null ? 'auto' : 'none'
-            }}
-          >
-            Next
-          </button>
+        <div className={moduleStyles.bottom}>
+          <div className={moduleStyles.progressText}>{progressText}</div>
+          <div>
+            <button
+              type="button"
+              onClick={() => this.changePanel(false)}
+              className={classNames(
+                moduleStyles.button,
+                previousPanel !== null && moduleStyles.buttonActive
+              )}
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              onClick={() => this.changePanel(true)}
+              className={classNames(
+                moduleStyles.button,
+                nextPanel !== null && moduleStyles.buttonActive
+              )}
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     );

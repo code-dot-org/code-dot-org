@@ -4,7 +4,7 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
     "long_instructions": "##Style and Documentation\r\n\r\n1. What do you notice about the way this code is written? Is it easy to read? Why or why not?\r\n\r\n2. Can you easily tell what the program is supposed to do without running it?\r\n\r\n3. What would you tell this programmer to help improve their code?",
     "serialized_maze": [
@@ -356,13 +356,16 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-10-14T21:54:47.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-14T21:54:47.596+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L5d_2023\\\"\"],\"cloned_from\":\"CSA U1L7-L5d_2023\"},{\"changed_at\":\"2022-10-14 21:54:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 18:59:28 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 20:00:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 20:00:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-14T21:54:47.596+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L5d_2023\\\"\"],\"cloned_from\":\"CSA U1L7-L5d_2023\"},{\"changed_at\":\"2022-10-14 21:54:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 18:59:28 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 20:00:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-17 20:00:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-26 15:01:53 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

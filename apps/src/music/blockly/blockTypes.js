@@ -4,12 +4,5 @@ export const BlockTypes = {
   PLAY_SOUND: 'play_sound',
   PLAY_SAMPLE: 'play_sample',
   SAMPLE: 'sample',
-  LOOP_FROM_TO: 'loop_from_to',
-  FOR_LOOP: 'for_loop',
-  NUMBER: 'number',
-  ROUND: 'round',
-  ARITHMETIC: 'arithmetic',
-  RANDOM: 'random',
-  VARIABLES_GET: 'variables_get',
-  VARIABLES_SET: 'variables_set'
+  FOR_LOOP: 'for_loop'
 };

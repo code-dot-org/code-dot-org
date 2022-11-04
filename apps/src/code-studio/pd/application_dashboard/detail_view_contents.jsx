@@ -59,9 +59,8 @@ const DEFAULT_NOTES =
   'Strengths:\nWeaknesses:\nPotential red flags to follow-up on:\nOther notes:';
 
 const WORKSHOP_REQUIRED = `Please assign a summer workshop to this applicant before setting this
-                          applicant's status to "Accepted - No Cost Registration" or "Registration Sent".
-                          These statuses will trigger an automated email with a registration link to their
-                          assigned workshop.`;
+                          applicant's status to "Accepted". This status will trigger an automated
+                          email with a registration link to their assigned workshop.`;
 
 export class DetailViewContents extends React.Component {
   static propTypes = {
@@ -245,9 +244,7 @@ export class DetailViewContents extends React.Component {
       this.props.applicationData.regional_partner_id &&
       this.props.applicationData.update_emails_sent_by_system &&
       !workshopAssigned &&
-      ['accepted_no_cost_registration', 'registration_sent'].includes(
-        event.target.value
-      )
+      'accepted' === event.target.value
     ) {
       this.setState({
         cantSaveStatusReason: WORKSHOP_REQUIRED,
@@ -606,22 +603,37 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    // Only show incomplete in the dropdown if the application is incomplete
+    let statusesToHide = [];
+    // Hide "Awaiting Admin Approval" status if it is not currently "awaiting_admin_approval"
+    if (this.state.status !== 'awaiting_admin_approval') {
+      statusesToHide.push('awaiting_admin_approval');
+    }
+    // Hide "Incomplete" if it is not currently "Incomplete"
+    if (this.state.status !== 'incomplete') {
+      statusesToHide.push('incomplete');
+    }
+
     const statuses = _.omit(
       getApplicationStatuses(
         this.props.viewType,
         this.props.applicationData.update_emails_sent_by_system
       ),
-      this.state.status === 'incomplete' ? [] : ['incomplete']
+      statusesToHide
     );
     const selectControl = (
       <div>
         <FormControl
           componentClass="select"
-          disabled={this.state.locked || !this.state.editing}
+          disabled={
+            this.state.locked ||
+            !this.state.editing ||
+            this.state.status === 'awaiting_admin_approval'
+          }
           title={
             this.state.locked
               ? 'The status of this application has been locked'
+              : this.state.status === 'awaiting_admin_approval'
+              ? 'No status updates can be made while awaiting admin approval'
               : undefined
           }
           value={this.state.status}
@@ -1150,10 +1162,10 @@ export class DetailViewContents extends React.Component {
           {!this.state.principalApprovalIsRequired && (
             <p>
               If you would like to require principal approval for this teacher,
-              please click “Make required." If this application is unreviewed,
-              pending, or waitlisted, then clicking this button will also send
-              an email to the principal asking for approval, given one hasn't
-              been sent in the past 5 days.
+              please click “Make required." If this application is Unreviewed,
+              Pending, or Pending Space Availability, then clicking this button
+              will also send an email to the principal asking for approval,
+              given one hasn't been sent in the past 5 days.
             </p>
           )}
           <PrincipalApprovalButtons

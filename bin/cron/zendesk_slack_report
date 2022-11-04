@@ -46,7 +46,7 @@ MONITORING_GROUPS = {
   'product' => ['Product'],
   'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
-  'student-learning' => ['*Labs', 'CSA Engineering'],
+  'student-learning' => ['Student Learning'],
   'teacher-tools' => ['Teacher Tools']
 }
 

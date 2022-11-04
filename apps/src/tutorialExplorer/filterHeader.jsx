@@ -4,7 +4,6 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import BackButton from './backButton';
 import FilterGroupHeaderSelection from './filterGroupHeaderSelection';
 import {getResponsiveValue} from './responsive';
 import {Sticky} from 'react-sticky';
@@ -17,7 +16,6 @@ export default class FilterHeader extends React.Component {
     selection: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string))
       .isRequired,
     onUserInputFilter: PropTypes.func.isRequired,
-    backButton: PropTypes.bool,
     filteredTutorialsCount: PropTypes.number.isRequired,
     showingModalFilters: PropTypes.bool.isRequired,
     showModalFilters: PropTypes.func.isRequired,
@@ -54,8 +52,6 @@ export default class FilterHeader extends React.Component {
 
     return (
       <div style={styles.header}>
-        {this.props.backButton && <BackButton />}
-
         <Sticky>
           {({style}) => (
             <div

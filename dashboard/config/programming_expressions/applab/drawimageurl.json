@@ -11,12 +11,12 @@
     },
     {
       "name": "Example: Squish",
-      "description": "**Example: Squish** Copy and canvas image, alter the image width, and output to a second canvas.\n",
+      "description": "Copy and canvas image, alter the image width, and output to a second canvas.\n",
       "code": "```\n// Copy and canvas image, alter the image width, and output to a second canvas.\ncreateCanvas('canvas1');\ndrawImageURL(\"http://studio.code.org/blockly/media/skins/studio/octopus_thumb.png\");\nbutton(\"id\", \"Squish\");\nsetPosition('id', 100, 0);\nonEvent(\"id\", \"click\", function() {\n  var canvasData=getImageData(0, 0, 100, 100);\n  canvasData.width=400;\n  createCanvas('canvas2', 100, 100);\n  setPosition('canvas2', 0, 150);\n  setActiveCanvas('canvas2');\n  putImageData(canvasData, 0, 0);\n});\n```"
     },
     {
       "name": "Example: Greyscale",
-      "description": "**Example: Greyscale** Change an image to greyscale by averaging the non-white RGB values.\n",
+      "description": "Change an image to greyscale by averaging the non-white RGB values.\n",
       "code": "```\n// Change an image to greyscale by averaging the non-white RGB values.\ncreateCanvas('canvas1');\ndrawImageURL(\"https://studio.code.org/blockly/media/skins/bee/static_avatar.png\");\nbutton(\"id\", \"Greyscale\");\nsetPosition('id', 200, 0);\nonEvent(\"id\", \"click\", function() {\n  var imageData = getImageData(0, 0, 175, 200);\n  putImageData(makeBlackAndWhite(imageData), 0, 225);\n});\n\nfunction makeBlackAndWhite(thisImageData){\n    for(var y=0; y < thisImageData.height; y++) {\n      for(var x=0; x < thisImageData.width; x++) {\n        if (getRed(thisImageData, x, y)!=0 && getGreen(thisImageData, x, y)!=0 && getBlue(thisImageData, x, y)!=0) {\n          var newRGB=(getRed(thisImageData, x, y)+getGreen(thisImageData, x, y)+getBlue(thisImageData, x, y) ) / 3;\n          setRGB(thisImageData, x, y, newRGB, newRGB, newRGB);\n         }\n      }\n    }\n  return thisImageData;\n}\n```"
     }
   ],
