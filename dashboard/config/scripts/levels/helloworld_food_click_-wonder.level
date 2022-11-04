@@ -36,8 +36,7 @@
     "edit_code": "false",
     "helper_libraries": [
       "NativeSpriteLab",
-      "zHelloWorldValidation",
-      "zValidationHelperFunctions"
+      "zStorybookModule-CSC"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -64,7 +63,7 @@
     "short_instructions": "What makes these sprites talk?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the sprites while the program is running.\",\"hint_id\":\"hw_click_sprites\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5ccdc39ffb113caab99c572f56a16df/helloworld_food_click.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to change any of the code in this level.\",\"hint_id\":\"hw_no_changes\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ec039212f05e3efb2779a92da1ee94a/helloworld_food_click.mp3\"}]",
     "instructions_icon": "bear",
-    "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel4();",
+    "validation_code": "if (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(150); // Frames to wait before failing student\r\n  setDelayTime(240); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  addCriteria(function() {\r\n    return checkNumClickedSprites(2);\r\n  }, \"clickAllSprites\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\ndrawHandsOnUnclickedSprites();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
     "skip_autosave": true,
     "preload_asset_list": null,
     "encrypted_examples": [
@@ -77,7 +76,7 @@
   "level_num": "custom",
   "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:10.690+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click\\\"\"],\"cloned_from\":\"helloworld_food_click\"},{\"changed_at\":\"2022-10-19 22:12:36 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-19 22:14:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-19 22:15:20 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-30T16:38:10.690+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click\\\"\"],\"cloned_from\":\"helloworld_food_click\"},{\"changed_at\":\"2022-10-19 22:12:36 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-19 22:14:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-19 22:15:20 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-03 17:55:31 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
