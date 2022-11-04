@@ -181,6 +181,8 @@ def restore_redacted_files
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
           plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+        elsif File.fnmatch('i18n/locales/original/blockly-mooc/*lab.json', original_path)
+          plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
@@ -527,7 +529,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = %w(applab calc eval gamelab netsim weblab)
+  untranslated_apps = %w(calc eval netsim)
 
   PegasusLanguages.get_locale.each do |prop|
     next unless prop[:locale_s] != 'en-US'

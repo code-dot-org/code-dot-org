@@ -32,6 +32,7 @@ def sync_in
   redact_level_content
   redact_block_content
   redact_script_and_course_content
+  redact_all_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
@@ -583,6 +584,19 @@ def redact_level_content
 
   Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
     redact_level_file(source_path)
+  end
+end
+
+def redact_all_labs_content
+  puts "Redacting all *labs content"
+
+  Dir.glob(File.join(I18N_SOURCE_DIR, "blockly-mooc", "*lab.json")).each do |source_path|
+    puts source_path
+    backup_path = source_path.sub("source", "original")
+    puts backup_path
+    FileUtils.mkdir_p(File.dirname(backup_path))
+    FileUtils.cp(source_path, backup_path)
+    RedactRestoreUtils.redact(source_path, source_path, ['link'])
   end
 end
 
