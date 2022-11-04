@@ -37,6 +37,7 @@ import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
 import ContainedLevelResetButton from './ContainedLevelResetButton';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -133,10 +134,12 @@ class TopInstructions extends Component {
     this.isViewingAsStudent = this.props.viewAs === ViewType.Participant;
     this.isViewingAsTeacher = this.props.viewAs === ViewType.Instructor;
 
+    const studentUserIdIncluded = !!queryParams('user_id');
+
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
       this.props.readOnlyWorkspace &&
-      window.location.search.includes('user_id');
+      studentUserIdIncluded;
 
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
@@ -507,7 +510,9 @@ class TopInstructions extends Component {
             hidden={tabSelected !== TabType.INSTRUCTIONS}
           />
           {!this.props.inLessonPlan && tabSelected === TabType.INSTRUCTIONS && (
-            <ContainedLevelResetButton />
+            <ContainedLevelResetButton
+              teacherViewingStudentWork={this.state.teacherViewingStudentWork}
+            />
           )}
         </div>
       );

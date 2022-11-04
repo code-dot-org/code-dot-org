@@ -473,6 +473,7 @@ ca:
           title: 'Minecraft: Viatge aquàtic'
           description_short: Minecraft torna amb una activitat del tot nova de l'Hora
             del Codi!
+          name: aquàtic
         cspplayground:
           lesson_groups:
             csp_variables:

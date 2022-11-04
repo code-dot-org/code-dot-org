@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const styles = {
   icon: {
@@ -14,7 +15,8 @@ function CollapserIcon({
   onClick,
   collapsedIconClass,
   expandedIconClass,
-  style
+  style,
+  className
 }) {
   const iconClass = isCollapsed ? collapsedIconClass : expandedIconClass;
 
@@ -23,7 +25,7 @@ function CollapserIcon({
       id={id}
       onClick={onClick}
       role="button"
-      className={iconClass + ' fa'}
+      className={classNames(iconClass + ' fa', className)}
       style={{...style, ...styles.icon}}
     />
   );
@@ -35,7 +37,8 @@ CollapserIcon.propTypes = {
   isCollapsed: PropTypes.bool.isRequired,
   collapsedIconClass: PropTypes.string,
   expandedIconClass: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
+  className: PropTypes.string
 };
 
 CollapserIcon.defaultProps = {

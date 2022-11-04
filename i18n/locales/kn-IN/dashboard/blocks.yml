@@ -313,6 +313,21 @@ kn:
             '"x"': x
             '"y"': 'y'
             '"1"': '1'
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
+        options:
+          EFFECT:
+            '"hearts"': ಹೃದಯಗಳು
+            '"emojis"': ಖುಷಿಯ ಎಮೋಜಿಗಳು
+            '"rain"': ಮಳೆ
+            '"glass"': ಗ್ಲಾಸ್ ಒಡೆಯುವುದು
+            '"twinkling"': ಟ್ವಿಂಕಲ್ ಆಗುವುದು
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): ಡ್ರ್ಯಾಗ್ ಮಾಡಬಹುದಾದ
+            wandering(): ಅಲೆದಾಡುವುದು
+            shrinking(): ಕುಗ್ಗುತ್ತಿರುವ
       gamelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       gamelab_addTarget:
@@ -600,7 +615,6 @@ kn:
             "'sound://category_space/Pillars_SFX.mp3'": ಸ್ತಂಭಗಳು
             "'sound://category_space/Southern_ring_SFX.mp3'": ಸದರ್ನ್ ರಿಂಗ್
             "'sound://category_space/Supernova_SFX.mp3'": ಸೂಪರ್‌ನೋವಾ
-            "'sound://category_sports/One_Whistle_SFX.mp3'": ಟೈಕೋ
       gamelab_playSpeech:
         text: "{SOUND} ಸ್ಪೀಚ್ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playerBehaviors:

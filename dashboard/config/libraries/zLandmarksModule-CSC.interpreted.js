@@ -6,7 +6,6 @@ console.log("to the validation code for this level to see more details of what t
 HELPER CODE FOR BLOCKS
 ***************************************************/
 
-
 /***************************************************
 GENERAL HELPER CODE FOR VALIDATION (can be used in multiple validation helper libraries)
 ***************************************************/
@@ -19,7 +18,7 @@ var soundLog;
 var eventSpriteIds;
 var spriteBehaviorsObj;
 
-var DEBUG = false;
+var DEBUG = true;
 
 //Helper function
 //This function is designed to be used in conjunction with code added to the level template (ie: if(DEBUG) { console.log() });
@@ -62,6 +61,7 @@ function getHelperVars() {
 function setupPrevious() {
   if (!validationProps.previous) {
     validationProps.previous = {};
+    validationProps.previous.background = "";
     validationProps.previous.spriteIds = [];
     validationProps.previous.animations = [];
     validationProps.previous.eventLog = [];
@@ -84,6 +84,7 @@ function checkForPreviousObject() {
 //Update previous object.
 //Designed to be called at the very end of level validation
 function updatePrevious() {
+  validationProps.previous.background = getBackground();
   validationProps.previous.spriteIds = spriteIds;
   validationProps.previous.animations = animations;
   validationProps.previous.eventLog = eventLog;
@@ -165,6 +166,8 @@ function drawHand(x, y){
 
 //Call this to draw hands on all unclicked sprites.
 //Designed to be called after the world.frameCount if statement so it happens each tick of the draw loop
+//Dan Note: this doesn't actually check for CLICK events - technically this works for any type of event
+//And: doesn't actually use clickedSprites - do I need it?
 function drawHandsOnUnclickedSprites(){
   if(World.seconds < 1){
     return;
@@ -217,6 +220,25 @@ function checkNumClickedSprites(n) {
   return false;
 }
 
+//Returns true if n unique sprites have been touched over the course of the level
+function checkNumTouchedSprites(n) {
+  if(!validationProps.touchedSprites) {
+    validationProps.touchedSprites = [];
+  }
+
+  var sprites = getSpritesThatTouched();
+  if (sprites != -1){
+    var newTouchedSprite = sprites[1];
+    if (validationProps.touchedSprites.indexOf(newTouchedSprite) == -1) {
+      validationProps.touchedSprites.push(newTouchedSprite);
+    }
+  }
+  if(validationProps.touchedSprites.length >= n) {
+    return true;
+  }
+  return false;
+}
+
 //Returns true if there is a new event this frame.
 //Used as a helper in other functions.
 function checkNewEventThisFrame() {
@@ -243,6 +265,122 @@ function checkSpriteClickedThisFrame(){
     }
   }
   return false;
+}
+
+//Returns true if a sprite was touched this frame.
+function checkSpriteTouchedThisFrame(){
+  if(!validationProps.previous) {
+    console.log("Need to call setupPrevious() to use checkSpriteClickedThisFrame() helper function");
+    return false;
+  }
+  if (checkNewEventThisFrame()) {
+    //If we're here: a new event happened this frame.
+    var currentEvent = eventLog[eventLog.length - 1];
+    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
+    if (currentEvent.includes("Touch")) {
+      return true;
+    }
+  }
+  return false;
+}
+
+//Checks if a particular sprite was touched during an event this frame
+function checkThisSpriteTouchedThisFrame(spriteId) {
+  if(checkSpriteTouchedThisFrame()) {
+    var sprites = getSpritesThatTouched();
+    //Check that the sprite we touched (sprites[1]) is the 3rd sprite (spriteIds[2])
+    if(sprites[1] == spriteId) {
+      return true;
+    }
+  }
+  return false;
+}
+
+//Checks if the background was set to something
+//Designed to be implemented in levels without any background block, so setting background for first time
+function checkSetBackground(){
+  var background = getBackground();
+  return background !== undefined && background !== "#ffffff";
+}
+
+//Checks if the background changed from the previous version
+function checkNewBackground() {
+  return getBackground() != validationProps.previous.background;
+}
+
+//Checks if a particular sprite was moved from the default (200, 200) location in a level
+function checkMovedSpritePin(spriteId) {
+  var sprite = {id: spriteId};
+  var spriteX = getProp(sprite, "x");
+  var spriteY = getProp(sprite, "y");
+  if(spriteX != 200 || spriteY != 200) {
+    return true;
+  }
+}
+
+//Checks if n unique touch events have happened
+//For example: in levels where the sprite needs to visit 2 things, use checkUniqueTouchEvents(2) to validate that level
+//Passing in delayTime will also delay the fail time after each unique event (to give time to visit new sprites)
+function checkUniqueTouchEvents(n, delayTime) {
+  //Create a global variable that will persist through frames of the draw loop
+  if(!validationProps.uniqueTouchEvents) {
+    validationProps.uniqueTouchEvents = [];
+  }
+  //See if any sprites touched this frame
+  var sprites = getSpritesThatTouched();
+  //If we found some sprites that touched:
+  if(sprites != -1) {
+    //sprites is an array of [source sprite, destination sprite]
+    //See if we haven't already touched this destination sprite
+    if(!member(sprites[1], validationProps.uniqueTouchEvents)) {
+      //If we made it here: we've touched a unique sprite, so add it to our global list
+      validationProps.uniqueTouchEvents.push(sprites[1]);
+      if(delayTime) {
+        //Add more time to the timer when there's a unique event
+        var currentFrame = World.frameCount;
+        setFailTime(currentFrame + delayTime);
+      }
+    }
+  }
+  //If our list of unique events is n, then we touched all n people
+  if(validationProps.uniqueTouchEvents.length == n) {
+    return true;
+  }
+  return false;
+}
+
+//Checks if the sprite's size has been changed from the default
+function checkNotDefaultSize(spriteId) {
+  var sprite = {id: spriteId};
+  var spriteScale = getProp(sprite, "scale");
+  if(spriteScale != 100) {
+    return true;
+  } else {
+  	return false;
+  }
+}
+
+//Checks if the sprite has been changed from the default costume
+//Requires the default costume from that level
+function checkNotDefaultCostume(spriteId, defaultCostume) {
+  var sprite = {id: spriteId};
+  var spriteCostume = getProp(sprite, "costume");
+  if(spriteCostume != defaultCostume) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//Checks if the sprite is currently speaking
+//Designed to be used when a sprite is speaking when the program is run, _not_ during an event
+function checkSpriteSpeech(spriteId) {
+  var speech = getSpeechForSpriteId(spriteId);
+  if(speech != null) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /*
@@ -303,6 +441,8 @@ function README() {
   console.log("It also includes the following criteria function designed to be used within addCritera()");
   console.log("-- checkNumClickedSprites(n) - Returns true if n unique sprites have been clicked over the course of the level");
   console.log("-- checkSpriteClickedThisFrame() - Returns true if a sprite was clicked this frame.");
+  console.log("-- checkBackgroundChanged() - Checks if the background was set to something");
+  console.log("-- checkMovedSpritePin(spriteId) - Checks if a particular sprite was moved from the default (200, 200) location in a level");
   console.log("-- getClickedSpriteId() - Returns the spriteId of a sprite clicked this frame, or -1 if not found");
   console.log("-- getSpritesThatTouched() - Returns an array of two spriteIds that touch that frame, or -1 if not found");
   console.log("");
@@ -312,9 +452,10 @@ function README() {
 /***************************************************
 SPECIFIC HELPER CODE FOR VALIDATION (contains things specifically for this CSC module)
 ***************************************************/
-
-validationProps.landmarksValidation = {};
-validationProps.landmarksValidation.events = [];
+if (typeof validationProps !== 'undefined') {
+  validationProps.landmarksValidation = {};
+  validationProps.landmarksValidation.events = [];
+}
 
 function libraryREADME() {
   console.log("This library also includes validation helper objects that can be used when writing custom block functions");

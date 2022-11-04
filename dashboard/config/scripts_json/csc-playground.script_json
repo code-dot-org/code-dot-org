@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "playground",
-    "serialized_at": "2022-10-31 23:50:47 UTC",
+    "serialized_at": "2022-11-03 00:33:30 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -287,6 +287,7 @@
       "key": "06047554-edb7-4852-92be-3207deeffebc",
       "position": 1,
       "properties": {
+        "progression_name": "Physical Change Introduction"
       },
       "seeding_key": {
         "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc",
@@ -294,9 +295,21 @@
       }
     },
     {
-      "key": "df654ebb-ae95-49cd-95f0-38dcf0835512",
+      "key": "7a922e22-8fd3-4ad1-b577-b92c5f13b6ad",
       "position": 2,
       "properties": {
+        "progression_name": "Physical Change Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a922e22-8fd3-4ad1-b577-b92c5f13b6ad",
+        "lesson_activity.key": "b5030105-32de-440e-bf6e-e38ddc6a0fca"
+      }
+    },
+    {
+      "key": "df654ebb-ae95-49cd-95f0-38dcf0835512",
+      "position": 3,
+      "properties": {
+        "progression_name": "Your Turn To Experiment"
       },
       "seeding_key": {
         "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512",
@@ -304,12 +317,67 @@
       }
     },
     {
-      "key": "6222262e-e7ee-4cdd-abdb-981fd62339b1",
-      "position": 1,
+      "key": "fadb31fa-301f-4d5e-8c22-b24c2db2af96",
+      "position": 4,
+      "properties": {
+        "progression_name": "Physical Change CFU"
+      },
+      "seeding_key": {
+        "activity_section.key": "fadb31fa-301f-4d5e-8c22-b24c2db2af96",
+        "lesson_activity.key": "b5030105-32de-440e-bf6e-e38ddc6a0fca"
+      }
+    },
+    {
+      "key": "accd2d34-dfda-48cd-a656-de40547ad5eb",
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
+        "activity_section.key": "accd2d34-dfda-48cd-a656-de40547ad5eb",
+        "lesson_activity.key": "b5030105-32de-440e-bf6e-e38ddc6a0fca"
+      }
+    },
+    {
+      "key": "6222262e-e7ee-4cdd-abdb-981fd62339b1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Chemical Change Introduction"
+      },
+      "seeding_key": {
         "activity_section.key": "6222262e-e7ee-4cdd-abdb-981fd62339b1",
+        "lesson_activity.key": "ca86a411-b5e9-43f4-a1a3-5ecf24fa6786"
+      }
+    },
+    {
+      "key": "07f5003f-54b5-4cca-9cb5-cdc69417593d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Chemical Change Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "07f5003f-54b5-4cca-9cb5-cdc69417593d",
+        "lesson_activity.key": "ca86a411-b5e9-43f4-a1a3-5ecf24fa6786"
+      }
+    },
+    {
+      "key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Your Turn To Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5",
+        "lesson_activity.key": "ca86a411-b5e9-43f4-a1a3-5ecf24fa6786"
+      }
+    },
+    {
+      "key": "ef4b8952-4911-4dea-a104-f992859f57ad",
+      "position": 4,
+      "properties": {
+        "progression_name": "Chemical Change CFU"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef4b8952-4911-4dea-a104-f992859f57ad",
         "lesson_activity.key": "ca86a411-b5e9-43f4-a1a3-5ecf24fa6786"
       }
     },
@@ -341,6 +409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
+        ],
         "progression": "Glass of Water"
       },
       "bonus": false,
@@ -363,6 +434,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
+        ],
         "progression": "Glass of Water"
       },
       "bonus": false,
@@ -385,6 +459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_solid_predict"
+        ],
         "progression": "Block of Ice"
       },
       "bonus": false,
@@ -407,6 +484,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
+        ],
         "progression": "Block of Ice"
       },
       "bonus": false,
@@ -429,6 +509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_gas_predict"
+        ],
         "progression": "Cloud of Steam"
       },
       "bonus": false,
@@ -451,6 +534,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+        ],
         "progression": "Cloud of Steam"
       },
       "bonus": false,
@@ -473,6 +559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_your turn"
+        ],
         "progression": "Your Turn To Experiment!"
       },
       "bonus": false,
@@ -495,6 +584,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_-2022-2"
+        ],
         "progression": "Your Turn To Experiment!"
       },
       "bonus": false,
@@ -517,6 +609,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_setbackground"
+        ],
         "progression": "Your Turn To Experiment!"
       },
       "bonus": false,
@@ -539,6 +634,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_createSprites"
+        ],
         "progression": "Your Turn To Experiment!"
       },
       "bonus": false,
@@ -561,6 +659,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_magnifyingCutout"
+        ],
         "progression": "Your Turn To Experiment!"
       },
       "bonus": false,
@@ -583,6 +684,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_Paricles_StatesOfMatter_addBehavior"
+        ],
         "progression": "Your Turn To Experiment!"
       },
       "bonus": false,
@@ -605,6 +709,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "states of matter matching"
+        ],
         "progression": "Matching States of Matter"
       },
       "bonus": false,
@@ -627,6 +734,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cdc_particles_physical_intro2"
+        ],
+        "progression": "Physical Change Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -645,12 +756,10 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_observer"
-        ]
+        "progression": "Physical Change Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -660,7 +769,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "7a922e22-8fd3-4ad1-b577-b92c5f13b6ad"
       },
       "level_keys": [
         "csc_particles_phys_observer"
@@ -669,12 +778,10 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_tinker"
-        ]
+        "progression": "Physical Change Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -684,7 +791,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "7a922e22-8fd3-4ad1-b577-b92c5f13b6ad"
       },
       "level_keys": [
         "csc_particles_phys_tinker"
@@ -693,12 +800,10 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_setup1"
-        ]
+        "progression": "Your Turn To Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -708,7 +813,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       },
       "level_keys": [
         "csc_particles_phys_setup1"
@@ -717,9 +822,10 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Your Turn To Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -729,7 +835,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       },
       "level_keys": [
         "csc_particles_phys_setup2"
@@ -738,9 +844,10 @@
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Your Turn To Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -750,7 +857,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       },
       "level_keys": [
         "csc_particles_phys_experimentEvent"
@@ -759,9 +866,10 @@
     {
       "chapter": 20,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Your Turn To Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -771,7 +879,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       },
       "level_keys": [
         "csc_particles_phys_MicroscopeView"
@@ -780,9 +888,10 @@
     {
       "chapter": 21,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "progression": "Your Turn To Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -792,7 +901,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       },
       "level_keys": [
         "csc_particles_phys_beforeChange"
@@ -801,9 +910,10 @@
     {
       "chapter": 22,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Your Turn To Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -813,7 +923,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       },
       "level_keys": [
         "csc_particles_phys_afterChange"
@@ -822,9 +932,54 @@
     {
       "chapter": 23,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_backToLab"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
+      },
+      "level_keys": [
+        "csc_particles_phys_backToLab"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 11,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_backToLab2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
+      },
+      "level_keys": [
+        "csc_particles_phys_backToLab2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Physical Change CFU"
       },
       "bonus": false,
       "seeding_key": {
@@ -834,15 +989,15 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "fadb31fa-301f-4d5e-8c22-b24c2db2af96"
       },
       "level_keys": [
         "csc_physical_change"
       ]
     },
     {
-      "chapter": 24,
-      "position": 11,
+      "chapter": 26,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -855,18 +1010,22 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
+        "activity_section.key": "accd2d34-dfda-48cd-a656-de40547ad5eb"
       },
       "level_keys": [
         "cdc_particles_physical_intro"
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_chemical_intro"
+        ],
+        "progression": "Chemical Change Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -883,11 +1042,12 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Chemical Change Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -897,18 +1057,19 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "6222262e-e7ee-4cdd-abdb-981fd62339b1"
+        "activity_section.key": "07f5003f-54b5-4cca-9cb5-cdc69417593d"
       },
       "level_keys": [
         "csc_particles_chem_observe"
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Chemical Change Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -918,14 +1079,212 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "6222262e-e7ee-4cdd-abdb-981fd62339b1"
+        "activity_section.key": "07f5003f-54b5-4cca-9cb5-cdc69417593d"
       },
       "level_keys": [
         "csc_particles_chem_debug"
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_setup1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_setup1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_setup2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_setup2"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_experimentEvent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_experimentEvent"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_microscope"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_microscope"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_beforeChange"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_beforeChange"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_afterChange"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_afterChange"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 10,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_backToLab"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_backToLab"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 11,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Turn To Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_backToLab2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      },
+      "level_keys": [
+        "csc_particles_chem_backToLab2"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Chemical Change CFU"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_chemical_change_cfu"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "ef4b8952-4911-4dea-a104-f992859f57ad"
+      },
+      "level_keys": [
+        "csc_chemical_change_cfu"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -949,7 +1308,55 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_chem_observe2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_observe2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      },
+      "level_keys": [
+        "csc_particles_chem_observe2"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_chem_observe2a"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_chem_observe2a"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      },
+      "level_keys": [
+        "csc_particles_chem_observe2a"
+      ]
+    },
+    {
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -973,7 +1380,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1175,7 +1582,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "7a922e22-8fd3-4ad1-b577-b92c5f13b6ad"
       }
     },
     {
@@ -1187,7 +1594,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "7a922e22-8fd3-4ad1-b577-b92c5f13b6ad"
       }
     },
     {
@@ -1199,7 +1606,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       }
     },
     {
@@ -1211,7 +1618,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       }
     },
     {
@@ -1223,7 +1630,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       }
     },
     {
@@ -1235,7 +1642,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       }
     },
     {
@@ -1247,7 +1654,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       }
     },
     {
@@ -1259,7 +1666,31 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_backToLab",
+        "script_level.level_keys": [
+          "csc_particles_phys_backToLab"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_backToLab2",
+        "script_level.level_keys": [
+          "csc_particles_phys_backToLab2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
       }
     },
     {
@@ -1271,7 +1702,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "06047554-edb7-4852-92be-3207deeffebc"
+        "activity_section.key": "fadb31fa-301f-4d5e-8c22-b24c2db2af96"
       }
     },
     {
@@ -1283,7 +1714,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "df654ebb-ae95-49cd-95f0-38dcf0835512"
+        "activity_section.key": "accd2d34-dfda-48cd-a656-de40547ad5eb"
       }
     },
     {
@@ -1307,7 +1738,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "6222262e-e7ee-4cdd-abdb-981fd62339b1"
+        "activity_section.key": "07f5003f-54b5-4cca-9cb5-cdc69417593d"
       }
     },
     {
@@ -1319,7 +1750,115 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "csc-playground",
-        "activity_section.key": "6222262e-e7ee-4cdd-abdb-981fd62339b1"
+        "activity_section.key": "07f5003f-54b5-4cca-9cb5-cdc69417593d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_setup1",
+        "script_level.level_keys": [
+          "csc_particles_chem_setup1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_setup2",
+        "script_level.level_keys": [
+          "csc_particles_chem_setup2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_experimentEvent",
+        "script_level.level_keys": [
+          "csc_particles_chem_experimentEvent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_microscope",
+        "script_level.level_keys": [
+          "csc_particles_chem_microscope"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_beforeChange",
+        "script_level.level_keys": [
+          "csc_particles_chem_beforeChange"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_afterChange",
+        "script_level.level_keys": [
+          "csc_particles_chem_afterChange"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_backToLab",
+        "script_level.level_keys": [
+          "csc_particles_chem_backToLab"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_backToLab2",
+        "script_level.level_keys": [
+          "csc_particles_chem_backToLab2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c1b47c93-0608-4eab-ae60-cba33fdef2c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_chemical_change_cfu",
+        "script_level.level_keys": [
+          "csc_chemical_change_cfu"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "ef4b8952-4911-4dea-a104-f992859f57ad"
       }
     },
     {
@@ -1327,6 +1866,30 @@
         "level.key": "csc_particles_chem_observer",
         "script_level.level_keys": [
           "csc_particles_chem_observer"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_observe2",
+        "script_level.level_keys": [
+          "csc_particles_chem_observe2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "c4b317dd-2f3c-444c-88ed-b1e3c7f12f25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_chem_observe2a",
+        "script_level.level_keys": [
+          "csc_particles_chem_observe2a"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",

@@ -253,6 +253,11 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': y
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង
       gamelab_atTime:
         options:
           UNIT:
