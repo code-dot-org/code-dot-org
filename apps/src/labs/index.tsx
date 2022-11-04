@@ -1,13 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createAppOptions } from './AppOptions'
-import { LabManager } from './Components'
-
-// import LabLab from "./LabLab";
-
-// export default function init(appOptions: any, mountElement: HTMLElement) {
-//   new LabLab(appOptions, mountElement);
-// }
+import { LabManager } from './LabManager'
 
 export default function init(appOptions: any, mountElement: HTMLElement) {
   console.log(appOptions)

@@ -8,43 +8,27 @@ const droplet = require('../../../lib/droplet/droplet-full')
 import '../../../lib/droplet/droplet.min.css'
 
 import React, { useEffect } from 'react'
+import { DropletCategory } from '../blocks'
 import './droplet.scss'
 
-type DropletBlock = {
-  block: string
-  title: string
-}
-
-type DropletCategory = {
-  name: string
-  color: string
-  blocks: DropletBlock[]
-}
-
-// TODO: make blocks/categories configurable
-const forBlock: DropletBlock = {
-  block: 'for (var i = 0; i < 4; i++) {\n  __;\n}',
-  title: 'repeat some code'
-}
-
-const loopsCategory: DropletCategory = {
-  name: 'loops',
-  color: 'blue',
-  blocks: [forBlock]
-}
-
 class Droplet {
+  blocks: DropletCategory[]
   container: HTMLElement
   editor: any // TODO: wrap droplet.Editor in a type?
 
   constructor() {
+    this.blocks = []
     this.container = document.createElement('div')
+  }
+
+  setBlocks(blocks: DropletCategory[]) {
+    this.blocks = blocks
   }
 
   setEditor() {
     this.editor = new droplet.Editor(this.container, {
       mode: 'javascript',
-      palette: [loopsCategory]
+      palette: this.blocks
     })
   }
 
@@ -67,8 +51,18 @@ class Droplet {
 // TODO: where/when should this actually be created?
 let dropletInst: Droplet = new Droplet()
 
-const DropletEditor = () => {
+type DropletEditorProps = {
+  blocks: DropletCategory[]
+}
+
+// new bug: droplet no longer resizes when panel widths change :(
+const DropletEditor = ({ blocks }: DropletEditorProps) => {
   const ref = React.createRef<HTMLDivElement>()
+
+  // does this break if block loading is async?
+  useEffect(() => {
+    dropletInst.setBlocks(blocks)
+  }, [blocks])
 
   useEffect(() => {
     if (ref.current) {

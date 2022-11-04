@@ -9,3 +9,14 @@
     flex: 1;
   }
 }
+
+.instructions {
+  max-height: 100px;
+  overflow-y: scroll;
+  border: 1px solid gray;
+}
+
+.console {
+  height: 100px;
+  overflow-y: scroll;
+}
