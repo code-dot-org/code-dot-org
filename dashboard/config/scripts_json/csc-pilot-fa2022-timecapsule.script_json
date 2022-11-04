@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-timecapsule",
-    "serialized_at": "2022-11-02 14:36:00 UTC",
+    "serialized_at": "2022-11-03 23:15:25 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -867,6 +867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_-2022-2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -964,6 +967,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_timecapsule_practice events"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1111,6 +1117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_time capsule_l1_freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
