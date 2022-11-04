@@ -15,8 +15,15 @@ module Api::V1::Pd::Application
       @applicant = create :teacher
 
       @program_manager = create :program_manager
-      @partner = @program_manager.regional_partners.first
-      @application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
+      partner = @program_manager.regional_partners.first
+      partner.update!(applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL)
+      @hash_with_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
+      @application = create TEACHER_APPLICATION_FACTORY, regional_partner: partner
+
+      program_manager_without_admin_approval = create :program_manager
+      partner_without_admin_approval = program_manager_without_admin_approval.regional_partners.first
+      partner_without_admin_approval.update!(applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL)
+      @hash_without_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner_without_admin_approval.id
     end
 
     setup do
@@ -91,12 +98,9 @@ module Api::V1::Pd::Application
       # TODO: This expectation passes in all tests regardless of regional partner settings.
       Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
 
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
-
       sign_in @applicant
 
-      put :create, params: {form_data: application_hash}
+      put :create, params: {form_data: @hash_without_admin_approval}
       assert_response :success
     end
 
@@ -121,21 +125,15 @@ module Api::V1::Pd::Application
     end
 
     test 'submitting an application without RP requiring admin approval has \'unreviewed\' status' do
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
-
       sign_in @applicant
-      put :create, params: {form_data: application_hash}
+      put :create, params: {form_data: @hash_without_admin_approval}
       assert_response :success
       assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
     end
 
     test 'submitting an application with RP requiring admin approval has \'awaiting admin approval\' status' do
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
-
       sign_in @applicant
-      put :create, params: {form_data: application_hash}
+      put :create, params: {form_data: @hash_with_admin_approval}
       assert_response :success
       assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
     end
@@ -175,9 +173,6 @@ module Api::V1::Pd::Application
     end
 
     test 'autoscores and queues emails on submit when approval is required' do
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
-
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
@@ -186,32 +181,27 @@ module Api::V1::Pd::Application
         returns(mock {|mail| mail.expects(:deliver_now)})
 
       sign_in @applicant
-      put :create, params: {form_data: application_hash, isSaving: false}
+      put :create, params: {form_data: @hash_with_admin_approval, isSaving: false}
       assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :created
     end
 
     test 'autoscores and queues only confirmation email on submit when approval is not required' do
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
-
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
       Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
 
       sign_in @applicant
-      put :create, params: {form_data: application_hash, isSaving: false}
+      put :create, params: {form_data: @hash_without_admin_approval, isSaving: false}
       assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :created
     end
 
     test 'autoscores and queues emails once submitted with approval required' do
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
-      application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval, user: @applicant, status: 'incomplete'
 
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
@@ -221,16 +211,14 @@ module Api::V1::Pd::Application
         returns(mock {|mail| mail.expects(:deliver_now)})
 
       sign_in @applicant
-      put :update, params: {id: application.id, form_data: application_hash, isSaving: false}
+      put :update, params: {id: application.id, form_data: @hash_with_admin_approval, isSaving: false}
       assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
     end
 
-    test 'autoscores and queues only confirmation email  with approval not required' do
-      regional_partner = create :regional_partner, applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL
-      application_hash = build :pd_teacher_application_hash, regional_partner_id: regional_partner.id
-      application = create :pd_teacher_application, form_data_hash: application_hash, user: @applicant, status: 'incomplete'
+    test 'autoscores and queues only confirmation email with approval not required' do
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_without_admin_approval, user: @applicant, status: 'incomplete'
 
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).once.
         with(instance_of(TEACHER_APPLICATION_CLASS)).
@@ -238,7 +226,7 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplicationMailer.expects(:principal_approval).never
 
       sign_in @applicant
-      put :update, params: {id: application.id, form_data: application_hash, isSaving: false}
+      put :update, params: {id: application.id, form_data: @hash_without_admin_approval, isSaving: false}
       assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
       assert_response :ok
@@ -275,7 +263,7 @@ module Api::V1::Pd::Application
     end
 
     test 'change_principal_approval_requirement can set principal_approval_not_required to false' do
-      application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval, user: @applicant, status: 'incomplete'
       sign_in @program_manager
       application.update!(principal_approval_not_required: true)
 
