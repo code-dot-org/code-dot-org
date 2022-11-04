@@ -67,7 +67,6 @@ style_min: false
     var tutorialExplorerManager = new window.TutorialExplorerManager({
       tutorials: #{tutorials_contents.to_json.html_safe},
       locale: "#{request.locale}",
-      roboticsButtonUrl: "/learn/robotics",
       showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
       disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
       defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
