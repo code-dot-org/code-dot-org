@@ -21,7 +21,16 @@ const AdditionalDemographicInformation = props => {
   const hasNoProgramSelected = data.program === undefined;
 
   const renderContents = () => {
-    if (!hasNoProgramSelected) {
+    if (hasNoProgramSelected) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 1 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else {
       return (
         <>
           <LabeledRadioButtonsWithAdditionalTextFields

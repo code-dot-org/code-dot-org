@@ -57,6 +57,7 @@ WhichGradesSelector.propTypes = {
 const ImplementationPlan = props => {
   const {data} = props;
   const programInfo = getProgramInfo(data.program);
+  const hasNoProgramSelected = data.program === undefined;
 
   const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${
     programInfo.name
@@ -76,12 +77,19 @@ const ImplementationPlan = props => {
     showScholarshipEligibilityWarning = true;
   }
 
-  return (
-    <FormContext.Provider value={props}>
-      <LabelsContext.Provider value={PageLabels.implementationPlan}>
-        <FormGroup>
-          <h3>Section 6: {SectionHeaders.implementationPlan}</h3>
-
+  const renderContents = () => {
+    if (hasNoProgramSelected) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 1 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else {
+      return (
+        <>
           {data.program === PROGRAM_CSD && (
             <WhichGradesSelector
               courseName="csdWhichGrades"
@@ -130,6 +138,18 @@ const ImplementationPlan = props => {
               [TextFields.iDontKnowExplain]: 'other'
             }}
           />
+        </>
+      );
+    }
+  };
+
+  return (
+    <FormContext.Provider value={props}>
+      <LabelsContext.Provider value={PageLabels.implementationPlan}>
+        <FormGroup>
+          <h3>Section 6: {SectionHeaders.implementationPlan}</h3>
+
+          {renderContents()}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
