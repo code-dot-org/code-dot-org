@@ -87,6 +87,13 @@ These steps may need to change over time as 3rd party tools update to have versi
   - If not, install Rosetta using
     - `softwareupdate --install-rosetta` (launches the Rosetta installer) or
     - `/usr/sbin/softwareupdate --install-rosetta --agree-to-license` (skips installer and license agreement)
+  - Follow these steps to enable Rosetta:
+    - Select the app (Terminal) in Finder from Applications/Utilities.
+    - Right-click on the app (Terminal) and select `Get Info`.
+    - In `General`, check the `Open using Rosetta` checkbox.
+    - Close the Terminal and open it again.
+    - To verify that you are using a Rosetta terminal, run the command `arch` from the command line and it should output `i386`. The native terminal without Rosetta would output `arm64` for the above command. If you still do not see `i386` in the terminal then try restarting your machine. 
+
 
 1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
 
