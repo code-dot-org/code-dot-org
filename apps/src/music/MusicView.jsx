@@ -2,9 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {parseElement as parseXmlElement} from '../xml';
 import queryString from 'query-string';
 import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
 import Instructions from './Instructions';
@@ -15,23 +15,30 @@ import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
 import InputContext from './InputContext';
-import {Triggers} from './constants';
+import {PLAY_ICON, STOP_ICON, Triggers} from './constants';
 import {musicLabDarkTheme} from './blockly/themes';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-
-  // The maximum is inclusive and the minimum is inclusive.
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+import {getStaticFilePath} from '@cdo/apps/music/utils';
+import moduleStyles from './music.module.scss';
+import feedbackStyles from './feedback.module.scss';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
 var hooks = {};
+
+const InstructionsPositions = {
+  TOP: 'TOP',
+  LEFT: 'LEFT',
+  RIGHT: 'RIGHT'
+};
+
+const instructionPositionOrder = [
+  InstructionsPositions.TOP,
+  InstructionsPositions.LEFT,
+  InstructionsPositions.RIGHT
+];
 
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
@@ -82,8 +89,10 @@ class UnconnectedMusicView extends React.Component {
       startPlayingAudioTime: null,
       currentAudioElapsedTime: 0,
       updateNumber: 0,
-      timelineAtTop: !!getRandomIntInclusive(0, 1),
-      showInstructions: true
+      timelineAtTop: false,
+      showInstructions: true,
+      instructionsPosIndex: 1,
+      feedbackClicked: false
     };
   }
 
@@ -121,14 +130,12 @@ class UnconnectedMusicView extends React.Component {
 
     document.body.addEventListener('keyup', this.handleKeyUp);
 
-    this.initBlockly();
-
-    setInterval(this.updateTimer, 1000 / 30);
-
     this.loadLibrary().then(library => {
       this.setState({library});
+      this.initBlockly();
       this.workspace.updateToolbox(createMusicToolbox(library, 'dropdown'));
       this.player.initialize(library);
+      setInterval(this.updateTimer, 1000 / 30);
     });
 
     this.loadInstructions().then(instructions => {
@@ -215,6 +222,43 @@ class UnconnectedMusicView extends React.Component {
       }
     );
 
+    Blockly.blockly_.Extensions.register('preview_extension', function() {
+      this.getField('image').setOnClickHandler(function() {
+        if (self.state.isPlaying) {
+          return;
+        }
+        const id = this.getSourceBlock()
+          .getField('sound')
+          .getValue();
+
+        if (self.player.isPreviewPlaying(id)) {
+          self.player.stopAndCancelPreviews();
+          this.setValue(getStaticFilePath(PLAY_ICON));
+        } else {
+          this.setValue(getStaticFilePath(STOP_ICON));
+          self.player.previewSound(id, () => {
+            this.setValue(getStaticFilePath(PLAY_ICON));
+          });
+        }
+      });
+    });
+
+    Blockly.blockly_.Extensions.register(
+      'clear_preview_on_change_extension',
+      function() {
+        this.setOnChange(function(event) {
+          if (
+            event.blockId === this.id &&
+            event.type === Blockly.blockly_.Events.BLOCK_CHANGE &&
+            event.name === 'sound' &&
+            self.player.isPreviewPlaying(event.oldValue)
+          ) {
+            self.player.stopAndCancelPreviews();
+          }
+        });
+      }
+    );
+
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
         init: function() {
@@ -237,14 +281,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.resizeBlockly();
 
-    const xml = parseXmlElement(
-      `<xml><block type="${
-        BlockTypes.WHEN_RUN
-      }" deletable="false" x="30" y="30"></block><block type="${
-        BlockTypes.TRIGGERED_AT
-      }" deletable="false" x="500" y="30"></block></xml>`
-    );
-    Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, xml);
+    // Set initial blocks.
+    this.loadCode();
 
     Blockly.addChangeListener(Blockly.mainBlockSpace, this.onBlockSpaceChange);
 
@@ -257,6 +295,19 @@ class UnconnectedMusicView extends React.Component {
     });
   };
 
+  clearCode = () => {
+    // Default code.
+    const defaultCode = require('@cdo/static/music/defaultCode.json');
+
+    Blockly.blockly_.serialization.workspaces.load(defaultCode, this.workspace);
+
+    this.setPlaying(false);
+
+    this.player.clearAllSoundEvents();
+
+    this.saveCode();
+  };
+
   onBlockSpaceChange = e => {
     // A drag event can leave the blocks in a temporarily unusable state,
     // e.g. when a disabled variable is dragged into a slot, it can still
@@ -265,6 +316,7 @@ class UnconnectedMusicView extends React.Component {
     // usable then.
     // It's possible that other events should similarly be ignored here.
     if (e.type === Blockly.blockly_.Events.BLOCK_DRAG) {
+      this.player.stopAndCancelPreviews();
       return;
     }
 
@@ -287,6 +339,27 @@ class UnconnectedMusicView extends React.Component {
     // This is a way to tell React to re-render the scene, notably
     // the timeline.
     this.setState({updateNumber: this.state.updateNumber + 1});
+
+    this.saveCode();
+  };
+
+  saveCode = () => {
+    const code = Blockly.blockly_.serialization.workspaces.save(this.workspace);
+    const codeJson = JSON.stringify(code);
+    localStorage.setItem('musicLabSavedCode', codeJson);
+  };
+
+  loadCode = () => {
+    const existingCode = localStorage.getItem('musicLabSavedCode');
+    if (existingCode) {
+      const exitingCodeJson = JSON.parse(existingCode);
+      Blockly.blockly_.serialization.workspaces.load(
+        exitingCodeJson,
+        this.workspace
+      );
+    } else {
+      this.clearCode();
+    }
   };
 
   onResize = () => {
@@ -312,11 +385,14 @@ class UnconnectedMusicView extends React.Component {
   };
 
   resizeBlockly = () => {
-    var blocklyArea = document.getElementById('blockly-area');
-    var blocklyDiv = document.getElementById('blockly-div');
+    if (!this.workspace) {
+      return;
+    }
 
-    blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
-    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+    const blocklyDiv = document.getElementById('blockly-div');
+
+    blocklyDiv.style.width = '100%';
+    blocklyDiv.style.height = '100%';
     Blockly.svgResize(this.workspace);
   };
 
@@ -341,6 +417,12 @@ class UnconnectedMusicView extends React.Component {
     //console.log('Playhead position: ' + this.player.getPlayheadPosition());
     this.inputContext.onTrigger(id);
     this.callUserGeneratedCode(hooks.triggeredAtButton);
+  };
+
+  toggleInstructions = () => {
+    this.setState({
+      showInstructions: !this.state.showInstructions
+    });
   };
 
   executeSong = () => {
@@ -424,6 +506,13 @@ class UnconnectedMusicView extends React.Component {
     if (event.key === 'i') {
       this.setState({showInstructions: !this.state.showInstructions});
     }
+    if (event.key === 'n') {
+      this.setState({
+        instructionsPosIndex:
+          (this.state.instructionsPosIndex + 1) %
+          instructionPositionOrder.length
+      });
+    }
     Triggers.map(trigger => {
       if (event.key === trigger.keyboardKey) {
         this.playTrigger(trigger.id);
@@ -449,155 +538,143 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
-  render() {
-    // The tutorial has a width:height ratio of 16:9.
-    const aspectRatio = 16 / 9;
+  onFeedbackClicked = () => {
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
+      '_blank'
+    );
 
-    // Let's minimize the tutorial width at 320px.
-    const minAppWidth = 320;
+    this.setState({feedbackClicked: true});
+  };
 
-    // Let's maximize the tutorial width at 1280px.
-    const maxAppWidth = 1280;
-
-    // Leave space above the small footer.
-    const reduceAppHeight = 36;
-
-    let containerWidth;
-
-    // Constrain tutorial to maximum width.
-    const maxContainerWidth = Math.min(this.state.appWidth, maxAppWidth);
-
-    // Use the smaller of the space allocated for the app and the window height,
-    // and leave space above the small footer.
-    const maxContainerHeight =
-      Math.min(this.state.appHeight, this.state.windowHeight) - reduceAppHeight;
-
-    if (maxContainerWidth / maxContainerHeight > aspectRatio) {
-      // Constrain by height.
-      containerWidth = maxContainerHeight * aspectRatio;
-    } else {
-      // Constrain by width.
-      containerWidth = maxContainerWidth;
+  renderInstructions(position) {
+    if (position === InstructionsPositions.TOP) {
+      return (
+        <div
+          id="instructions-area"
+          className={classNames(
+            moduleStyles.instructionsArea,
+            moduleStyles.instructionsTop
+          )}
+        >
+          <Instructions
+            instructions={this.state.instructions}
+            baseUrl={baseUrl}
+            analyticsReporter={this.analyticsReporter}
+          />
+          <div
+            id="share-area"
+            className={classNames(
+              moduleStyles.shareArea,
+              moduleStyles.shareTop
+            )}
+          >
+            <SharePlaceholder analyticsReporter={this.analyticsReporter} />
+          </div>
+        </div>
+      );
     }
 
-    // Constrain tutorial to minimum width;
-    if (containerWidth < minAppWidth) {
-      containerWidth = minAppWidth;
-    }
+    return (
+      <div
+        className={classNames(
+          moduleStyles.instructionsArea,
+          moduleStyles.instructionsSide,
+          position === InstructionsPositions.LEFT
+            ? moduleStyles.instructionsLeft
+            : moduleStyles.instructionsRight
+        )}
+      >
+        <Instructions
+          instructions={this.state.instructions}
+          baseUrl={baseUrl}
+          analyticsReporter={this.analyticsReporter}
+          vertical={true}
+          right={position === InstructionsPositions.RIGHT}
+        />
+      </div>
+    );
+  }
 
+  renderTimelineArea(timelineAtTop, instructionsOnRight) {
     const songData = {
       events: this.player.getSoundEvents()
     };
 
-    const blocklyAreaHeight = this.state.showInstructions
-      ? 'calc(100% - 300px)'
-      : 'calc(100% - 200px)';
-
-    const blocklyAreaTop = this.state.showInstructions
-      ? this.state.timelineAtTop
-        ? 300
-        : 100
-      : this.state.timelineAtTop
-      ? 200
-      : 0;
-
-    const timelinePosition = this.state.showInstructions
-      ? this.state.timelineAtTop
-        ? {top: 100}
-        : {bottom: 0}
-      : this.state.timelineAtTop
-      ? {top: 0}
-      : {bottom: 0};
-
     return (
       <div
-        id="music-lab-container"
-        style={{
-          position: 'relative',
-          backgroundColor: 'black',
-          color: 'white',
-          width: '100%',
-          height: 'calc(100% - 0px)',
-          borderRadius: 4,
-          padding: 0,
-          boxSizing: 'border-box',
-          overflow: 'hidden',
-          userSelect: 'none'
-        }}
+        id="timeline-area"
+        className={classNames(
+          moduleStyles.timelineArea,
+          timelineAtTop ? moduleStyles.timelineTop : moduleStyles.timelineBottom
+        )}
       >
-        {this.state.showInstructions && (
-          <div>
-            <div
-              id="instructions-area"
-              style={{
-                float: 'left',
-                color: 'white',
-                width: 'calc(100% - 150px)',
-                height: 90,
-                backgroundColor: 'black',
-                borderRadius: 4,
-                padding: 0,
-                boxSizing: 'border-box',
-                marginRight: 10
-              }}
-            >
-              <Instructions
-                instructions={this.state.instructions}
-                baseUrl={baseUrl}
-                analyticsReporter={this.analyticsReporter}
-              />
-            </div>
-            <div id="share-area" style={{width: 140, float: 'left'}}>
-              <SharePlaceholder analyticsReporter={this.analyticsReporter} />
-            </div>
+        <Controls
+          isPlaying={this.state.isPlaying}
+          setPlaying={this.setPlaying}
+          playTrigger={this.playTrigger}
+          top={timelineAtTop}
+          startOverClicked={this.clearCode}
+          toggleInstructions={this.toggleInstructions}
+          instructionsOnRight={instructionsOnRight}
+        />
+        <Timeline
+          isPlaying={this.state.isPlaying}
+          songData={songData}
+          currentAudioElapsedTime={this.state.currentAudioElapsedTime}
+          convertMeasureToSeconds={measure =>
+            this.player.convertMeasureToSeconds(measure)
+          }
+          currentMeasure={this.player.getCurrentMeasure()}
+          sounds={this.getCurrentGroupSounds()}
+        />
+        {!this.state.feedbackClicked && (
+          <div
+            className={feedbackStyles.feedbackButton}
+            onClick={this.onFeedbackClicked}
+          >
+            Tell us what you think
           </div>
         )}
-        <div
-          id="blockly-area"
-          style={{
-            float: 'left',
-            width: '100%',
-            height: blocklyAreaHeight,
-            position: 'absolute',
-            top: blocklyAreaTop,
-            borderRadius: 4,
-            overflow: 'hidden'
-          }}
-        >
-          <div id="blockly-div" />
+      </div>
+    );
+  }
+
+  render() {
+    const instructionsPosition =
+      instructionPositionOrder[this.state.instructionsPosIndex];
+
+    return (
+      <div id="music-lab-container" className={moduleStyles.container}>
+        {this.state.showInstructions &&
+          instructionsPosition === InstructionsPositions.TOP &&
+          this.renderInstructions(InstructionsPositions.TOP)}
+
+        {this.state.timelineAtTop &&
+          this.renderTimelineArea(
+            true,
+            instructionsPosition === InstructionsPositions.RIGHT
+          )}
+
+        <div className={moduleStyles.middleArea}>
+          {this.state.showInstructions &&
+            instructionsPosition === InstructionsPositions.LEFT &&
+            this.renderInstructions(InstructionsPositions.LEFT)}
+
+          <div id="blockly-area" className={moduleStyles.blocklyArea}>
+            <div id="blockly-div" />
+          </div>
+
+          {this.state.showInstructions &&
+            instructionsPosition === InstructionsPositions.RIGHT &&
+            this.renderInstructions(InstructionsPositions.RIGHT)}
         </div>
 
-        <div
-          id="timeline-area"
-          style={{
-            height: 200,
-            width: '100%',
-            boxSizing: 'border-box',
-            position: 'absolute',
-            display: 'flex',
-            flexDirection: this.state.timelineAtTop
-              ? 'column-reverse'
-              : 'column',
-            ...timelinePosition
-          }}
-        >
-          <Controls
-            isPlaying={this.state.isPlaying}
-            setPlaying={this.setPlaying}
-            playTrigger={this.playTrigger}
-            top={this.state.timelineAtTop}
-          />
-          <Timeline
-            isPlaying={this.state.isPlaying}
-            songData={songData}
-            currentAudioElapsedTime={this.state.currentAudioElapsedTime}
-            convertMeasureToSeconds={measure =>
-              this.player.convertMeasureToSeconds(measure)
-            }
-            currentMeasure={this.player.getCurrentMeasure()}
-            sounds={this.getCurrentGroupSounds()}
-          />
-        </div>
+        {!this.state.timelineAtTop &&
+          this.renderTimelineArea(
+            false,
+            instructionsPosition === InstructionsPositions.RIGHT
+          )}
       </div>
     );
   }

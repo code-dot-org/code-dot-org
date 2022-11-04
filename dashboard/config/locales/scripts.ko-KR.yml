@@ -4802,6 +4802,8 @@ ko:
               display_name: 설문조사
             lessonGroup-3:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4851,3 +4853,77 @@ ko:
           lesson_groups:
             lessonGroup-3:
               display_name: '챕터 2: 물리적 프로토타입 만들기'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: 무슨 소리죠?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: 설문조사
+            csp_unit1_2020:
+              display_name: '단원 1: 디지털 정보'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '단원 2: 인터넷'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 단원 1 - 앱 설계 소개
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: 변수
+            csp_conditionals:
+              display_name: 조건
+            csp_functions:
+              display_name: 함수
+            csp_project:
+              display_name: 프로젝트
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: 리스트
+            csp_loops:
+              display_name: 반복
+            csp_traversals:
+              display_name: " 트래버스"
+            csp_project:
+              display_name: 프로젝트
+            lessonGroup-5:
+              display_name: 과정 후 설문조사
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: '단원 6: 알고리즘'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: 매개변수 및 반환값
+            csp_libraries:
+              display_name: 라이브러리
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: PT 만들기
+            lessonGroup-3:
+              display_name: 과정 후 설문조사
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: '단원 9: 데이터'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: '단원 10: 사이버보안 및 세계적 영향'
+            lessonGroup-2:
+              display_name: 과정 후 설문조사
+        csp-post-survey-2023:
+          title: CS 원리 과정 후 설문 조사

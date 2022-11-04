@@ -537,7 +537,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Fêtez ça",
-          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://code.org/certificates?script=mc) à son nom."
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](https://studio.code.org/certificates/batch?course=bWM=) à son nom."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Prochaines étapes",
@@ -2683,7 +2683,7 @@
         "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
           "name": "Vocabulaire-clé: ",
           "description": "-   **empreinte numérique** : un enregistrement de ce que vous faites en ligne, y compris les sites que vous visitez et les choses que vous partagez\n-   **permanent** : quelque chose qui dure pour toujours\n-   **informations privées** : informations vous concernant qui peuvent être utilisées pour identifier qui vous êtes\n-   **trace** : un chemin ou une piste\n\n**Avant la leçon** : découpez les [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) à l'avance, en gardant les carrés pour chaque animal en deux piles distinctes.\n\n**Dites** : _Aujourd'hui, nous allons regarder une vidéo intitulée \"Suivez la piste numérique\". L'un d'entre vous a-t-il déjà entendu parler du mot « sentier » ?_\n\nInvitez les élèves à répondre et définissez le parcours comme _un chemin ou une piste que quelqu'un peut suivre_. ([Slide 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
-          "progression_name": "Vidéo :  Suivez la piste numérique"
+          "progression_name": "Vidéo : Suis les Traces Numérique"
         },
         "f49f8c12-9094-46d3-ace0-c593eef41ab9": {
           "description": "**Montrez** leur la vidéo [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) sur la [Slide 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). Pendant qu'ils regardent, demandez aux élèves de prêter une attention particulière aux types d'informations qu'il est acceptable ou non de partager en ligne.\n\n**Dites** : _Dans la vidéo, Feet parlait d'une empreinte numérique. Qu'est-ce qu'une empreinte numérique ?_\n\nInvitez les élèves à répondre. Précisez qu'une **empreinte numérique** est _un enregistrement (ou une trace) de ce que vous faites en ligne, y compris les sites que vous visitez et les choses que vous partagez_. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Demandez** : _Quelles informations Feet dit de NE PAS partager en ligne ?_\n\nUne fois que les élèves ont fini de partager, projetez [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) et revoyez: _Informations personnelles_ telles que _passes-temps, choses préférées._\n\nDéfinissez **informations privées** comme _des informations vous concernant qui peuvent être utilisées pour identifier qui vous êtes_. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Demandez** : _Quelles informations Feet juge-t-il acceptables de partager en ligne ?_\n\nUne fois que les élèves ont eu l'occasion de partager, projetez [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) et passez en revue : _Informations personnelles_ telles que _passes-temps, préférences._ "
@@ -2720,10 +2720,10 @@
           "description": "**Distribuer :** pour vous assurer que les élèves comprennent l'idée de trouver et de corriger les erreurs (débogage), distribuez la **\\*Fiche de travail** et demandez-leur de le finir deux par deux.\n\n(_Facultatif :_ Si vous souhaitez faire avancer l'activité plus rapidement, n'hésitez pas à la terminer en classe à la place.)\n\n**Transition :** _Maintenant, il est temps de jouer au jeu !_ "
         },
         "b7c83d71-c594-47f1-a2e1-ee50d4b56224": {
-          "progression_name": "Vidéo Move it, move it - Activité hors ligne"
+          "progression_name": "Vidéo Bouge, Bouge ton corps - Activité déconnectée"
         },
         "750a4241-a4da-4eca-a95b-f3157e20f199": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "description": "**Distribuer :** Remettez à chaque groupe de 2-3 élèves une **\\*Activité de carte**, ainsi que les feuilles vierges pour la grille au sol. Laissez-les soit découper les moitiés de chaque carte, soit de plier les feuilles en deux pour que chaque carte soit clairement visible (sans distraction).\n\n**Configuration :** Dans chaque groupe, chaque joueur recevra une tâche.\n\n-   Joueur 1 : Choisissez/configurez la carte à jouer\n-   Joueur 2 : Programmeur\n-   Joueur 3 : Walking Machine\n\n**Instructions pour la classe :**\n\n1.  Décidez de la répartition des tâches.\n\n2.  Demandez au joueur 1 de placer une grille sur le sol, faite de morceaux de papier (comme indiqué sur l'une des cartes Move It), sauf avec le papier gemme face au sol.\n\n3.  Le joueur 3 commencera par se mettre sur la page avec la rose des vents.\n\n4.  Le joueur 2 guidera ensuite le joueur 3 pas à pas, à travers le labyrinthe de papier en utilisant les signaux de bras fournis.\n\n5.  Lorsque le joueur 2 donnera le signal « STOP », le joueur 3 retournera la page sur laquelle il se trouve. Si cette page est un joyau, alors c'est réussi pour le labyrinthe !\n\n6.  S'il reste du temps, laissez tout le monde changer de position et recommencez !\n\nNotez que les règles ne sont pas la chose la plus importante ici. Demandez-leur s'ils ont des questions, sachant que s'ils ne jouent pas au pied de la lettre ce n'est pas grave. Ce qu'il faut, c'est qu'ils arrivent à passer des instructions immédiates à deux ou trois instructions avant que la Walking Machine ne bouge. "
         },
         "8c941561-9506-4101-ad8a-d14a51edb181": {
@@ -2767,6 +2767,9 @@
         },
         "eabe75fb-4111-49c1-900c-dd18d6ec996d": {
           "description": "Cette leçon apprendra aux élèves à utiliser Code.org pour résoudre des puzzles en ligne.\n\nRegardez la **\\*Programmation en binôme** - vidéo des élèves avec vos élèves, puis attribuez-les à des groupes de deux. Cela devrait les aider à bien démarrer. "
+        },
+        "29e7cac9-8b1a-4fd2-942f-10682a04aab3": {
+          "progression_name": "Vidéo - Intro au Labyrinthe : Programmer avec des blocs"
         },
         "9d92fd5d-fcda-41d3-b081-b6be47316a2b": {
           "description": "Les enseignants jouent un rôle essentiel dans l'enseignement de l'informatique en contribuant à une ambiance de classe basée sur la collaboration et le dynamisme. Lors des activités en ligne, le rôle de l'enseignant est avant tout celui d'encourager et de soutenir. Les cours en ligne sont censés être centrés sur l'élève, les enseignants doivent donc éviter d'intervenir lorsque les élèves sont bloqués. Voici quelques idées sur la façon de procéder :\n\n-   Utilisez la programmation en binôme si possible.\n-   Encouragez les élèves ayant des questions ou problèmes à commencer par demander à leur camarade.\n-   Les questions sans réponse peuvent être transmises à un groupe proche, qui connaît peut-être déjà la solution.\n-   Rappelez aux élèves d'utiliser le processus de débogage avant d'approcher.\n-   Demandez-leur de décrire le problème qu'ils voient. Qu'est-ce que c'est censé faire ? Qu'est ce que ça fait ? Qu'est-ce que ça veut dire ?\n-   Rappelez aux élèves qui s'énervent parce qu'ils n'y arrivent pas que c'est une étape sur la voie de l'apprentissage et que la persévérance sera payante.\n-   Si un élève est toujours bloqué après tout cela, posez des questions suggestives pour l'amener à repérer une erreur par lui-même. "
@@ -3935,7 +3938,7 @@
           "tips": [
             "Tout comme lorsque les élèves écrivent ou communiquent verbalement, il est important de définir des attentes sur l'utilisation appropriée des mots dans cette activité. Les élèves doivent comprendre qu'ils sont responsables du code qu'ils écrivent, y compris de tout texte qui s'affiche à l'écran. Le texte doit être respectueux et sûr. Ils peuvent s'entraîner à ne pas partager d'informations personnelles dans leurs programmes, surtout s'ils souhaitent les partager avec d'autres.\nNotez que les informations saisies dans une invite Sprite Lab ne sont pas enregistrées à long terme. Les mots et messages tapés par les utilisateurs de ces applications disparaissent une fois l'application réinitialisée. "
           ],
-          "progression_name": "Vidéo : Texte et invites "
+          "progression_name": "Vidéo : Texte et Invites "
         },
         "515ecad5-bd7d-46e5-b210-53f7e7a3d43b": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -4001,7 +4004,7 @@
           "progression_name": "Prévision"
         },
         "5b229241-270d-40a7-b79f-40b950f5c494": {
-          "progression_name": " Les Variables dans Artiste"
+          "progression_name": " Les Variables dans l'Artiste"
         },
         "84a9b36a-0025-40e0-a586-3a4b7922202d": {
           "progression_name": "Développement des Compétences"
@@ -4039,7 +4042,7 @@
           "progression_name": "Revoir"
         },
         "12c6a686-7a0e-42d5-bdf5-b8d3827addcc": {
-          "progression_name": "Exploration: Boucles « Pour »"
+          "progression_name": "Exploration : Boucles « Pour »"
         },
         "76edcfa5-1645-4da7-935c-1a2e53367409": {
           "progression_name": "Video: Les Boucles « Pour »"
@@ -4476,7 +4479,7 @@
           "description": "### Aperçu\n\nProjetez un puzzle de la leçon. Montrez à la classe comment cliquer sur l'image et la placer au bon endroit par glisser-déposer. Faites délibérément des erreurs telles que cliquer sur l'arrière-plan ou déposer l'image avant qu'elle ne soit au bon endroit. Demandez de l'aide à des volontaires de la classe lorsque vous rencontrez ces problèmes. "
         },
         "f3d9ff95-5a31-4d0d-b1f5-7934be9edf02": {
-          "name": "Apprends à Faire Glisser et Déposer",
+          "name": "Apprendre à Faire Glisser et Déposer",
           "description": "**Objectif :** Cela apprendra aux élèves à utiliser Code.org pour résoudre des énigmes en ligne.\n\nCette étape a été conçue pour donner aux étudiants la possibilité de pratiquer la coordination œil-main, le clic et les compétences de glisser-déposer. Les élèves joueront également avec la séquence. "
         },
         "e9117446-0648-4712-9bab-f477cc4a7763": {
@@ -4522,7 +4525,7 @@
         },
         "025dd978-5154-4bab-ae59-60537c40fe9d": {
           "name": "Programmation Happy Maps ",
-          "progression_name": "Vidéo : Happy Maps - Activité hors ligne"
+          "progression_name": "Vidéo : Happy Maps - Activité déconnectée"
         },
         "c0c3f787-1bdf-4d94-8727-baa1f58abc9a": {
           "description": "Dans cet exercice, la classe aura des cartes avec un espace de départ (flurb) et un espace de fin (fruit) prédéfinis. Les élèves devront obtenir les flurbs aux fruits sur chaque carte, en utilisant les flèches.\n\n**Modèle :** Sélectionnez l'une des cartes intermédiaires dans la feuille de calcul Happy Maps Cards (par exemple, #3). Affichez-le pour la classe et résolvez le puzzle ensemble.\n\nDemandez aux élèves de regarder le puzzle, puis de réfléchir deux par deux et de partager leur solution sur la façon dont ils pourraient faire (vibrer) le fruit.\n\n**Réfléchissez :** Ce flurb doit suivre deux étapes pour atteindre le fruit. Travaillez avec votre voisin pour vous mettre d'accord sur ces deux étapes.\n\n**Groupes de deux :** Demandez aux élèves de discuter avec leur voisin pendant environ 90 secondes.\n\n**Partagez :** Demandez à quelques élèves de décrire leur algorithme à la classe. Déplacez votre doigt le long de la carte affichée pendant que les élèves lisent leurs étapes. Une fois que vous avez une solution, demandez si quelqu'un d'autre a une autre idée qui marcherait aussi.\n\nMaintenant, dites aux élèves que l'étape magique consistant à transformer un algorithme en programme se produit lorsque le code est écrit à l'aide de symboles. Les élèves voient-ils des symboles à l'écran ?\n\n**Réfléchissez :** Mettez les élèves au défi d'encoder l'algorithme qu'ils ont créé auparavant en symboles et d'écrire ces symboles dans leur journal (ou sur une feuille de papier).\n\n**Groupes de deux :** une fois que les élèves ont écrit leurs symboles, demandez-leur d'en discuter avec un camarade pour voir s'ils peuvent suivre leurs instructions réciproques.\n\n**Partagez :** Demandez à des volontaires de venir dessiner leurs flèches au tableau. Si le code d'origine ne fonctionne pas, passez du temps à déboguer avec toute la classe. Il faut qu'ils se familiarisent avec l'idée de \"débogage\" des leçons précédentes, alors utilisez bien le vocabulaire qu'il faut.\n\nUne fois que le code bien écrit au tableau, félicitez la classe pour avoir écrit leur premier programme ensemble ! "
@@ -4592,7 +4595,7 @@
           "description": "Si vous recherchez des énigmes supplémentaires à couvrir avec votre classe, voici quelques énigmes de \"prédiction\" qui vous permettront de parcourir le code existant avec vos élèves pour prédire ce que _Scrat_ fera. C'est une bonne idée de les aborder ensemble avant de laisser les élèves explorer avec leur ordinateur.\n\n#### Niveaux de prédiction :\n\n-   [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n-   [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
         },
         "5a6e89f3-31fc-40a6-8fb3-75b80d302373": {
-          "progression_name": " Programmation en Binôme "
+          "progression_name": "Vidéo : Programmation en Binôme "
         },
         "12694952-dd7c-472d-a1e5-a328dbe61d45": {
           "progression_name": "Développement des Compétences"
@@ -4659,7 +4662,7 @@
           "description": "### Révision des Happy maps\n\nCe cours porte sur l'activité Happy Maps du début de l'année. Les élèves pourraient bénéficier d'un rafraîchissement rapide avant de se lancer dans les choses difficiles.\n\n**Afficher :**\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-13.07.53.png)\n\n\\*\\* Modèle : \\*\\* Sélectionnez l'une des cartes de votre classe au derniers cours.\n\nDemandez aux élèves de regarder le puzzle et d'y réfléchir à deux, puis de proposer leur solution pour savoir comment ils pourraient obtenir le Flurb aux fruits (en utilisant les symboles de la dernière fois).\n\n\\*\\* Réflexion : \\*\\* Vous souvenez-vous d'avoir écrit des programmes pour faire fructifier les Flurbs ? À quoi ressemblerait ce programme codé avec des flèches ?\n\n\\*\\* Binômes : \\*\\* Demandez aux élèves de discuter pendant environ 90 secondes.\n\n\\*\\* Partager : \\*\\* Demandez à un élève d'utiliser ses doigts pour pointer dans la direction des flèches qu'il a choisies pour résoudre ce casse-tête."
         },
         "f4b5bbc4-74da-43c9-bd66-e359671c6767": {
-          "name": "Les Boucles Heureuses",
+          "name": "Les Boucles Joyeuses",
           "progression_name": "Activité hors ligne Happy Loops"
         },
         "1c68d086-8945-44cc-87c9-0148f470d2fc": {
@@ -4836,6 +4839,9 @@
         },
         "d4ae83fa-5b36-4796-ba7c-a838ca5a2f66": {
           "description": "#### Une série d'événements\n\nVoyons si nous pouvons trouver un modèle ici :\n\n-   _Quand vous appuyez sur un interrupteur, les lumières s'allument._\n-   _Lorsque vous appuyez sur un appareil, une application démarre._\n-   _Quand le réveil sonne, vous sortez du lit._\n-   _Quand (événement)_, _(action)_.\n\nEn informatique, les **événements** provoquent d'autres actions. Notre nouveau mot de vocabulaire aujourd'hui est **événement**. Normalement, lorsque nous entendons « événement », nous pensons à :\n\n-   Excursion\n-   Concurrence\n-   Fête d'anniversaire\n\nNous apprenons aujourd'hui un nouveau sens pour le mot événement. Concentrons-nous sur les événements qui provoquent d'autres actions, comme le fait d'appuyer sur un interrupteur pour allumer les lumières ou d'appuyer sur un bouton pour faire bouger un personnage dans un jeu. "
+        },
+        "bad82d8b-8e16-4d89-bad6-d2d9581d3f01": {
+          "progression_name": "Le Grand Événement - Activité déconnectée "
         },
         "1cf3f2c2-cbae-48d6-b12c-579dea91d4ee": {
           "name": "Le Grand Événement",
@@ -5320,7 +5326,8 @@
           "name": "Vocabulaire"
         },
         "8816065c-5d3c-4cc9-95a3-f96c88edbb62": {
-          "name": "Le Grand Événement"
+          "name": "Le Grand Événement",
+          "progression_name": "Le Grand Événement - Activité déconnectée "
         },
         "81ac2e94-8470-41a8-a506-505bf1bd3fac": {
           "tips": [
@@ -8246,7 +8253,7 @@
           "description": "**Partager :** Après avoir donné aux élèves le temps de faire des recherches en ligne, laissez-les partager leurs réponses."
         },
         "b4c82606-44ed-49c1-9ac1-5a672b1a5c00": {
-          "name": "Lab du Web",
+          "name": "Labo Web",
           "tips": [
             "**Guide de programmation des niveaux:** Des conseils supplémentaires pour la programmation des niveaux sont fournis dans le [Guide CSD de programmation des niveaux](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Ce document comprend des stratégies et des bonnes pratiques pour faciliter la programmation des niveaux avec les élèves."
           ]
@@ -8279,7 +8286,7 @@
           ]
         },
         "182d547b-f695-4867-b5ad-ee0729c99752": {
-          "name": "Lab du Web"
+          "name": "Labo Web"
         },
         "0feb5701-3698-4b18-8ae0-949fe203656f": {
           "tips": [
@@ -14315,7 +14322,7 @@
           "progression_name": "Prévision"
         },
         "114f0276-db5c-466e-ad8a-a6488a93f019": {
-          "progression_name": " Les Variables dans Artiste"
+          "progression_name": " Les Variables dans l'Artiste"
         },
         "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
           "progression_name": "Développement des Compétences"
@@ -14430,7 +14437,7 @@
           "progression_name": "Revoir"
         },
         "aec92f2d-9b44-43b4-a418-3aebaf5af709": {
-          "progression_name": "Exploration: Boucles « Pour »"
+          "progression_name": "Exploration : Boucles « Pour »"
         },
         "671c8e13-e78c-49f3-867b-45e7643d0026": {
           "progression_name": "Video: Les Boucles « Pour »"
@@ -14727,7 +14734,7 @@
         "4c778537-489f-4c5c-913b-38cbf385737c": {
           "name": "Vocabulaire-clé: ",
           "description": "-   **empreinte numérique** : un enregistrement de ce que vous faites en ligne, y compris les sites que vous visitez et les choses que vous partagez\n-   **permanent** : quelque chose qui dure pour toujours\n-   **informations privées** : informations vous concernant qui peuvent être utilisées pour identifier qui vous êtes\n-   **trace** : un chemin ou une piste\n\n**Avant la leçon** : découpez les [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) à l'avance, en gardant les carrés pour chaque animal en deux piles distinctes.\n\n**Dites** : _Aujourd'hui, nous allons regarder une vidéo intitulée \"Suivez la piste numérique\". L'un d'entre vous a-t-il déjà entendu parler du mot « sentier » ?_\n\nInvitez les élèves à répondre et définissez le parcours comme _un chemin ou une piste que quelqu'un peut suivre_. ([Slide 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
-          "progression_name": "Vidéo :  Suivez la piste numérique"
+          "progression_name": "Vidéo : Suis les Traces Numérique"
         },
         "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
           "description": "**Montrez** leur la vidéo [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) sur la [Slide 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). Pendant qu'ils regardent, demandez aux élèves de prêter une attention particulière aux types d'informations qu'il est acceptable ou non de partager en ligne.\n\n**Dites** : _Dans la vidéo, Feet parlait d'une empreinte numérique. Qu'est-ce qu'une empreinte numérique ?_\n\nInvitez les élèves à répondre. Précisez qu'une **empreinte numérique** est _un enregistrement (ou une trace) de ce que vous faites en ligne, y compris les sites que vous visitez et les choses que vous partagez_. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Demandez** : _Quelles informations Feet dit de NE PAS partager en ligne ?_\n\nUne fois que les élèves ont fini de partager, projetez [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) et revoyez: _Informations personnelles_ telles que _passes-temps, choses préférées._\n\nDéfinissez **informations privées** comme _des informations vous concernant qui peuvent être utilisées pour identifier qui vous êtes_. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Demandez** : _Quelles informations Feet juge-t-il acceptables de partager en ligne ?_\n\nUne fois que les élèves ont eu l'occasion de partager, projetez [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) et passez en revue : _Informations personnelles_ telles que _passes-temps, préférences._ "
@@ -14764,10 +14771,10 @@
           "description": "**Distribuer :** pour vous assurer que les élèves comprennent l'idée de trouver et de corriger les erreurs (débogage), distribuez la **\\*Fiche de travail** et demandez-leur de le finir deux par deux.\n\n(_Facultatif :_ Si vous souhaitez faire avancer l'activité plus rapidement, n'hésitez pas à la terminer en classe à la place.)\n\n**Transition :** _Maintenant, il est temps de jouer au jeu !_ "
         },
         "b87acbf5-a0a2-4c86-a344-3fbf143431f6": {
-          "progression_name": "Vidéo Move it, move it - Activité hors ligne"
+          "progression_name": "Vidéo Bouge, Bouge ton corps - Activité déconnectée"
         },
         "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "description": "**Distribuer :** Remettez à chaque groupe de 2-3 élèves une **\\*Activité de carte**, ainsi que les feuilles vierges pour la grille au sol. Laissez-les soit découper les moitiés de chaque carte, soit de plier les feuilles en deux pour que chaque carte soit clairement visible (sans distraction).\n\n**Configuration :** Dans chaque groupe, chaque joueur recevra une tâche.\n\n-   Joueur 1 : Choisissez/configurez la carte à jouer\n-   Joueur 2 : Programmeur\n-   Joueur 3 : Walking Machine\n\n**Instructions pour la classe :**\n\n1.  Décidez de la répartition des tâches.\n\n2.  Demandez au joueur 1 de placer une grille sur le sol, faite de morceaux de papier (comme indiqué sur l'une des cartes Move It), sauf avec le papier gemme face au sol.\n\n3.  Le joueur 3 commencera par se mettre sur la page avec la rose des vents.\n\n4.  Le joueur 2 guidera ensuite le joueur 3 pas à pas, à travers le labyrinthe de papier en utilisant les signaux de bras fournis.\n\n5.  Lorsque le joueur 2 donnera le signal « STOP », le joueur 3 retournera la page sur laquelle il se trouve. Si cette page est un joyau, alors c'est réussi pour le labyrinthe !\n\n6.  S'il reste du temps, laissez tout le monde changer de position et recommencez !\n\nNotez que les règles ne sont pas la chose la plus importante ici. Demandez-leur s'ils ont des questions, sachant que s'ils ne jouent pas au pied de la lettre ce n'est pas grave. Ce qu'il faut, c'est qu'ils arrivent à passer des instructions immédiates à deux ou trois instructions avant que la Walking Machine ne bouge. "
         },
         "93f8de74-6246-4227-8418-08d5c736633b": {
@@ -14811,6 +14818,9 @@
         },
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
           "description": "Cette leçon apprendra aux élèves à utiliser Code.org pour résoudre des puzzles en ligne.\n\nRegardez la **\\*Programmation en binôme** - vidéo des élèves avec vos élèves, puis attribuez-les à des groupes de deux. Cela devrait les aider à bien démarrer. "
+        },
+        "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
+          "progression_name": "Vidéo - Intro au Labyrinthe : Programmer avec des blocs"
         },
         "b9d126ca-d582-403d-a4dc-45c555d65700": {
           "description": "Les enseignants jouent un rôle essentiel dans l'enseignement de l'informatique en contribuant à une ambiance de classe basée sur la collaboration et le dynamisme. Lors des activités en ligne, le rôle de l'enseignant est avant tout celui d'encourager et de soutenir. Les cours en ligne sont censés être centrés sur l'élève, les enseignants doivent donc éviter d'intervenir lorsque les élèves sont bloqués. Voici quelques idées sur la façon de procéder :\n\n-   Utilisez la programmation en binôme si possible.\n-   Encouragez les élèves ayant des questions ou problèmes à commencer par demander à leur camarade.\n-   Les questions sans réponse peuvent être transmises à un groupe proche, qui connaît peut-être déjà la solution.\n-   Rappelez aux élèves d'utiliser le processus de débogage avant d'approcher.\n-   Demandez-leur de décrire le problème qu'ils voient. Qu'est-ce que c'est censé faire ? Qu'est ce que ça fait ? Qu'est-ce que ça veut dire ?\n-   Rappelez aux élèves qui s'énervent parce qu'ils n'y arrivent pas que c'est une étape sur la voie de l'apprentissage et que la persévérance sera payante.\n-   Si un élève est toujours bloqué après tout cela, posez des questions suggestives pour l'amener à repérer une erreur par lui-même. "
@@ -15263,7 +15273,7 @@
           "description": "### Aperçu\n\nProjetez un puzzle de la leçon. Montrez à la classe comment cliquer sur l'image et la placer au bon endroit par glisser-déposer. Faites délibérément des erreurs telles que cliquer sur l'arrière-plan ou déposer l'image avant qu'elle ne soit au bon endroit. Demandez de l'aide à des volontaires de la classe lorsque vous rencontrez ces problèmes. "
         },
         "e1c4af11-08ae-4ddd-90dc-da28738444fb": {
-          "name": "Apprends à Faire Glisser et Déposer",
+          "name": "Apprendre à Faire Glisser et Déposer",
           "description": "**Objectif :** Cela apprendra aux élèves à utiliser Code.org pour résoudre des énigmes en ligne.\n\nCette étape a été conçue pour donner aux étudiants la possibilité de pratiquer la coordination œil-main, le clic et les compétences de glisser-déposer. Les élèves joueront également avec la séquence. "
         },
         "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
@@ -15309,7 +15319,7 @@
         },
         "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
           "name": "Programmation Happy Maps ",
-          "progression_name": "Vidéo : Happy Maps - Activité hors ligne"
+          "progression_name": "Vidéo : Happy Maps - Activité déconnectée"
         },
         "7beae8bf-6b0e-41da-9397-06b0c9fb0b52": {
           "description": "Dans cet exercice, la classe aura des cartes avec un espace de départ (flurb) et un espace de fin (fruit) prédéfinis. Les élèves devront obtenir les flurbs aux fruits sur chaque carte, en utilisant les flèches.\n\n**Modèle :** Sélectionnez l'une des cartes intermédiaires dans la feuille de calcul Happy Maps Cards (par exemple, #3). Affichez-le pour la classe et résolvez le puzzle ensemble.\n\nDemandez aux élèves de regarder le puzzle, puis de réfléchir deux par deux et de partager leur solution sur la façon dont ils pourraient faire (vibrer) le fruit.\n\n**Réfléchissez :** Ce flurb doit suivre deux étapes pour atteindre le fruit. Travaillez avec votre voisin pour vous mettre d'accord sur ces deux étapes.\n\n**Groupes de deux :** Demandez aux élèves de discuter avec leur voisin pendant environ 90 secondes.\n\n**Partagez :** Demandez à quelques élèves de décrire leur algorithme à la classe. Déplacez votre doigt le long de la carte affichée pendant que les élèves lisent leurs étapes. Une fois que vous avez une solution, demandez si quelqu'un d'autre a une autre idée qui marcherait aussi.\n\nMaintenant, dites aux élèves que l'étape magique consistant à transformer un algorithme en programme se produit lorsque le code est écrit à l'aide de symboles. Les élèves voient-ils des symboles à l'écran ?\n\n**Réfléchissez :** Mettez les élèves au défi d'encoder l'algorithme qu'ils ont créé auparavant en symboles et d'écrire ces symboles dans leur journal (ou sur une feuille de papier).\n\n**Groupes de deux :** une fois que les élèves ont écrit leurs symboles, demandez-leur d'en discuter avec un camarade pour voir s'ils peuvent suivre leurs instructions réciproques.\n\n**Partagez :** Demandez à des volontaires de venir dessiner leurs flèches au tableau. Si le code d'origine ne fonctionne pas, passez du temps à déboguer avec toute la classe. Il faut qu'ils se familiarisent avec l'idée de \"débogage\" des leçons précédentes, alors utilisez bien le vocabulaire qu'il faut.\n\nUne fois que le code bien écrit au tableau, félicitez la classe pour avoir écrit leur premier programme ensemble ! "
@@ -15379,7 +15389,7 @@
           "description": "Si vous recherchez des énigmes supplémentaires à couvrir avec votre classe, voici quelques énigmes de \"prédiction\" qui vous permettront de parcourir le code existant avec vos élèves pour prédire ce que _Scrat_ fera. C'est une bonne idée de les aborder ensemble avant de laisser les élèves explorer avec leur ordinateur.\n\n#### Niveaux de prédiction :\n\n-   [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n-   [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
         },
         "97ccc4b6-92d5-4c46-94a4-3289d38f068d": {
-          "progression_name": " Programmation en Binôme "
+          "progression_name": "Vidéo : Programmation en Binôme "
         },
         "487f446a-7245-403f-827c-e1e94663c256": {
           "progression_name": "Développement des Compétences"
@@ -15446,7 +15456,7 @@
           "description": "### Révision des Happy maps\n\nCe cours porte sur l'activité Happy Maps du début de l'année. Les élèves pourraient bénéficier d'un rafraîchissement rapide avant de se lancer dans les choses difficiles.\n\n**Afficher :**\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-13.07.53.png)\n\n\\*\\* Modèle : \\*\\* Sélectionnez l'une des cartes de votre classe au derniers cours.\n\nDemandez aux élèves de regarder le puzzle et d'y réfléchir à deux, puis de proposer leur solution pour savoir comment ils pourraient obtenir le Flurb aux fruits (en utilisant les symboles de la dernière fois).\n\n\\*\\* Réflexion : \\*\\* Vous souvenez-vous d'avoir écrit des programmes pour faire fructifier les Flurbs ? À quoi ressemblerait ce programme codé avec des flèches ?\n\n\\*\\* Binômes : \\*\\* Demandez aux élèves de discuter pendant environ 90 secondes.\n\n\\*\\* Partager : \\*\\* Demandez à un élève d'utiliser ses doigts pour pointer dans la direction des flèches qu'il a choisies pour résoudre ce casse-tête."
         },
         "8c303a82-3674-4b12-bb78-bcd85a423249": {
-          "name": "Les Boucles Heureuses",
+          "name": "Les Boucles Joyeuses",
           "progression_name": "Activité hors ligne Happy Loops"
         },
         "bed588e7-0f5d-4308-8088-167306b5af81": {
@@ -15623,6 +15633,9 @@
         },
         "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6": {
           "description": "#### Une série d'événements\n\nVoyons si nous pouvons trouver un modèle ici :\n\n-   _Quand vous appuyez sur un interrupteur, les lumières s'allument._\n-   _Lorsque vous appuyez sur un appareil, une application démarre._\n-   _Quand le réveil sonne, vous sortez du lit._\n-   _Quand (événement)_, _(action)_.\n\nEn informatique, les **événements** provoquent d'autres actions. Notre nouveau mot de vocabulaire aujourd'hui est **événement**. Normalement, lorsque nous entendons « événement », nous pensons à :\n\n-   Excursion\n-   Concurrence\n-   Fête d'anniversaire\n\nNous apprenons aujourd'hui un nouveau sens pour le mot événement. Concentrons-nous sur les événements qui provoquent d'autres actions, comme le fait d'appuyer sur un interrupteur pour allumer les lumières ou d'appuyer sur un bouton pour faire bouger un personnage dans un jeu. "
+        },
+        "14f82c4a-fa73-4426-adb6-b32b5f14f3be": {
+          "progression_name": "Le Grand Événement - Activité déconnectée "
         },
         "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
           "name": "Le Grand Événement",
@@ -16115,7 +16128,8 @@
           "description": "Cette leçon contient un mot de vocabulaire nouveau et important :\n\n-   **Événement** - _Dites-le avec moi : É-vé-ne-ment._\n\nUn événement est une action qui provoque quelque chose. "
         },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
-          "name": "Le Grand Événement"
+          "name": "Le Grand Événement",
+          "progression_name": "Le Grand Événement - Activité déconnectée "
         },
         "67fb7588-f699-4cf5-9a67-065456c6baee": {
           "description": "-   *Vous souvenez-vous avoir guidé _Red_ de \"Angry Birds\" au cochon dans les puzzles du labyrinthe ?*\n    -   *Dans cet exercice, vous saviez à l'avance exactement où vous vouliez que _Red_ aille, afin que vous puissiez créer un programme qui a pris _Red_ du début à la fin sans aucune interruption.*\n    -   _Dans la plupart des programmes réels, nous ne pouvons pas faire cela car nous voulons avoir des options, en fonction des besoins de l'utilisateur._\n        -   _Dites que je veux que mon personnage bouge uniquement lorsque mon doigt est sur l'écran de mon téléphone. J'aurais besoin de programmer le personnage pour qu'il ne bouge que lorsque je pose mon doigt sur l'écran de mon téléphone._\n        -   _Placer mon doigt sur l'écran deviendrait alors un événement qui dit à mon personnage de bouger._\n\nDans les leçons précédentes, nous avons créé des algorithmes qui nous permettaient de contrôler un ami ou un autre personnage pendant plusieurs étapes à la fois. C'était amusant et utile, mais que se passe-t-il lorsque vous ne savez pas à l'avance tout ce que vous voulez que votre ami fasse ? C'est ici qu'interviennent les événements !",
@@ -17729,7 +17743,7 @@
           "tips": [
             "Tout comme lorsque les élèves écrivent ou communiquent verbalement, il est important de définir des attentes sur l'utilisation appropriée des mots dans cette activité. Les élèves doivent comprendre qu'ils sont responsables du code qu'ils écrivent, y compris de tout texte qui s'affiche à l'écran. Le texte doit être respectueux et sûr. Ils peuvent s'entraîner à ne pas partager d'informations personnelles dans leurs programmes, surtout s'ils souhaitent les partager avec d'autres.\nNotez que les informations saisies dans une invite Sprite Lab ne sont pas enregistrées à long terme. Les mots et messages tapés par les utilisateurs de ces applications disparaissent une fois l'application réinitialisée. "
           ],
-          "progression_name": "Vidéo : Texte et invites "
+          "progression_name": "Vidéo : Texte et Invites "
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -17762,7 +17776,7 @@
           "progression_name": "Prévision"
         },
         "536186e7-e25b-4cd2-b93e-27b935a8f69c": {
-          "progression_name": " Les Variables dans Artiste"
+          "progression_name": " Les Variables dans l'Artiste"
         },
         "79a73c29-5877-4ffc-8570-fad97926f939": {
           "progression_name": "Développement des Compétences"
@@ -17800,7 +17814,7 @@
           "progression_name": "Revoir"
         },
         "7d22dea9-9b88-47a4-a697-1c836bf6f2e5": {
-          "progression_name": "Exploration: Boucles « Pour »"
+          "progression_name": "Exploration : Boucles « Pour »"
         },
         "387d8104-557d-4700-bdef-2c8ea2855b07": {
           "progression_name": "Video: Les Boucles « Pour »"
@@ -22524,7 +22538,7 @@
           ]
         },
         "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
-          "name": "Lab du Web"
+          "name": "Labo Web"
         },
         "01cbfd4f-3493-48d9-beb3-04018d4272f3": {
           "progression_name": "Exploration"
@@ -22554,7 +22568,7 @@
           ]
         },
         "e1f6d250-92c8-4b01-b970-698a4eb24f7b": {
-          "name": "Lab du Web"
+          "name": "Labo Web"
         },
         "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497": {
           "tips": [

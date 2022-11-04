@@ -1,13 +1,15 @@
 @import "color.scss";
 @import "./theme/tokens-dark";
+@import "./music.module.scss";
 
 .controlsContainer {
   display: flex;
   justify-content: center;
   background-color: $gray-800;
   z-index: 70;
-  border-radius: 4px;
-  margin: 5px 0;
+  border-radius: $default-border-radius;
+  margin: $default-spacing 0;
+  position: relative;
 }
 
 .controlButtons {
@@ -31,4 +33,12 @@
 
 .iconButton {
   cursor: pointer;
+  font-size: 30px;
+}
+
+.startOverButton {
+  background-color: rgba(0 0 0 / 0);
+  color: $white;
+  font-size: 14px;
+  padding: 0 8px;
 }

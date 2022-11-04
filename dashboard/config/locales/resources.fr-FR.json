@@ -101,7 +101,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2022": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications pour les leçons virtuelles "
         },
         "password_power-up_if_then_scenarios/coursed/2022": {
           "name": "Mot de passe puissant : Si .. alors... scénarios",
@@ -112,9 +112,11 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
+          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
         },
         "password_power-up_lesson_quiz_1/coursed/2022": {
+          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2022": {
@@ -280,7 +282,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursef/2022": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications pour les leçons virtuelles "
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
           "name": "Le pouvoir des mots : quiz de la leçon ",
@@ -420,7 +422,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursee/2022": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications pour les leçons virtuelles "
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
@@ -499,7 +501,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications pour les leçons virtuelles "
         },
         "digital_trails_animal_tracks/courseb/2022": {
           "name": "Sentiers numériques : traces d'animaux ",
@@ -523,15 +525,15 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "move_it_move_it/courseb/2022": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
         },
         "move_it_move_it_1/courseb/2022": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
         },
         "move_it_move_it_2/courseb/2022": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "move_it_move_it_3/courseb/2022": {
@@ -788,7 +790,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications pour les leçons virtuelles "
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "name": "Sécurité dans mon quartier en ligne : diapositives de la leçon ",
@@ -951,7 +953,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2022": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications pour les leçons virtuelles "
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Dire STOP à la méchanceté en ligne : diapositives de la leçon ",
@@ -2697,7 +2699,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursef/2021": {
-          "name": "Modifications de cours virtuels ",
+          "name": "Modifications pour les leçons virtuelles ",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "exploring_apps/coursef/2021": {
@@ -2910,7 +2912,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
-          "name": "Modifications de cours virtuels ",
+          "name": "Modifications pour les leçons virtuelles ",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "digital-trails-animal-tracks/courseb/2021": {
@@ -2935,15 +2937,15 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "mimi-activity/courseb/2021": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Bouge, Bouge",
+          "name": "Bouge, Bouge ton corps",
           "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
@@ -3097,7 +3099,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
-          "name": "Modifications de cours virtuels ",
+          "name": "Modifications pour les leçons virtuelles ",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
@@ -3306,7 +3308,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
-          "name": "Modifications de cours virtuels ",
+          "name": "Modifications pour les leçons virtuelles ",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
@@ -3486,7 +3488,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
-          "name": "Modifications de cours virtuels ",
+          "name": "Modifications pour les leçons virtuelles ",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
@@ -3498,9 +3500,11 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2021": {
@@ -3843,7 +3847,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursee/2021": {
-          "name": "Modifications de cours virtuels ",
+          "name": "Modifications pour les leçons virtuelles ",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
         "follow_the_algorithm/coursee/2021": {

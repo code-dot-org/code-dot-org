@@ -179,12 +179,6 @@ ca:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
-      Dancelab_everySecondsRange:
-        text: 'cada {N} {UNIT} des de {START} a {STOP} '
-        options:
-          UNIT:
-            measures: Mesures
-            seconds: Segons
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
         options:
@@ -698,6 +692,7 @@ ca:
             '"right"': dret
             '"space"': espai
             '"enter"': introduïu
+            '"i"': i
             '"x"': x
       Dancelab_whenPeak:
         text: quan al pic de {RANGE}
@@ -710,6 +705,12 @@ ca:
         text: configuració
       Dancelab_whenSetup2:
         text: configuració
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Bombolles
+            '"confetti"': Confeti
+            '"hearts"': cors
       gamelab_addTarget:
         options:
           OPT:
@@ -755,6 +756,7 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"i"': i
             '"x"': x
       gamelab_jumpTo:
         text: "{SPRITE} salta a {LOCATION}"
@@ -769,6 +771,7 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"i"': i
             '"x"': x
       gamelab_makeProjectile:
         options:
@@ -797,7 +800,25 @@ ca:
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": botzina d'aire
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplaudiment
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": cant
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": xut
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": dos xiulets
             "'sound://category_sports/One_Whistle_SFX.mp3'": xiulet
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": forat negre
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": clúster de bales
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cranc
+            "'sound://category_space/Launch_SFX.mp3'": llançar
+            "'sound://category_space/Lift_Off.mp3'": aixecar
+            "'sound://category_space/Pillars_SFX.mp3'": pilars
+            "'sound://category_space/Southern_ring_SFX.mp3'": anell del sud
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
@@ -1039,6 +1060,25 @@ ca:
             '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts"': cors
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:

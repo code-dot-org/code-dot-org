@@ -230,20 +230,12 @@ ro:
             MOVES.XArmsUp: Mâini sus
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
-      Dancelab_everyMeasuresRange:
-        text: 'repetă fiecare {N} măsuri după {START} '
       Dancelab_everySeconds:
         text: 'la fiecare {N} {UNIT} '
         options:
           UNIT:
             '"measures"': măsuri
             '"seconds"': secunde
-      Dancelab_everySecondsRange:
-        text: 'la fiecare {N} {UNIT} de la {START} la {STOP} '
-        options:
-          UNIT:
-            measures: Măsuri
-            seconds: Secunde
       Dancelab_everyVerseChorus:
         text: 'la fiecare {UNIT} '
         options:
@@ -999,6 +991,24 @@ ro:
         text: configurare
       Dancelab_whenSetup2:
         text: configurare
+      DansBlocks_setForegroundEffect2:
+        text: realizează efectul {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Baloane
+            '"confetti"': Confeti
+            '"hearts"': inimi
+            '"emojis"': Emoji-uri Vesele
+            '"rain"': ploaie
+            '"starburst"': Accelerare
+            '"glass"': Cioburi de Sticlă
+            '"twinkling"': Licărire
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): fiind draggable
+            wandering(): rătăcit
+            shrinking(): micșorare
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} începe {BEHAVIOR}
       gamelab_addTarget:
@@ -1322,8 +1332,29 @@ ro:
             "'sound://category_digital/jump_7.mp3'": sari
       gamelab_playSoundOptionsSoccer:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": claxon pnematic
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauze
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": cântec
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": aclamare
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": lovitură
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": două fluiere
+            "'sound://category_sports/One_Whistle_SFX.mp3'": fluier
       gamelab_playSoundOptionsSpace:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": gaura neagră
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": grup de buline
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": casiopeea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebuloasa crabului
+            "'sound://category_space/Launch_SFX.mp3'": lansare
+            "'sound://category_space/Lift_Off.mp3'": lansare
+            "'sound://category_space/Pillars_SFX.mp3'": stâlpi
+            "'sound://category_space/Southern_ring_SFX.mp3'": inel sudic
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
       gamelab_playSpeech:
         text: reprodu discursul {SOUND}
       gamelab_playerBehaviors:
@@ -2199,7 +2230,7 @@ ro:
         text: dacă stă pe {TYPE}{STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": coral roșu
+            "'blueCoralBlock'": coral albastru
             "'redCoralBlock'": coral roșu
             "'sand'": nisip
             "'wool_blue'": apă adâncă
@@ -2270,5 +2301,9 @@ ro:
           DIR:
             right: dreapta ↻
             left: stânga ↺
+      storylab_setHeading:
+        text: stabilește titlul {HEADING}
+      storylab_setSubheading:
+        text: stabilește subtitlul {SUBHEADING}
       validation_validatedBackground:
         text: setează fundalul cu {IMG}

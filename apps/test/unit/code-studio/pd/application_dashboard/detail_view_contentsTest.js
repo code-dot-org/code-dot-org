@@ -73,9 +73,12 @@ describe('DetailViewContents', () => {
     school_stats: {}
   };
 
-  // Nobody is able to set an application status to incomplete from detail view
-  const getApplicationStatusesWithoutIncomplete = (type, addAutoEmail = true) =>
-    _.omit(getApplicationStatuses(type, addAutoEmail), ['incomplete']);
+  // Nobody is able to set an application status to incomplete or to awaiting_admin_approval from detail view
+  const getSelectableApplicationStatuses = (type, addAutoEmail = true) =>
+    _.omit(getApplicationStatuses(type, addAutoEmail), [
+      'incomplete',
+      'awaiting_admin_approval'
+    ]);
 
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
@@ -142,7 +145,7 @@ describe('DetailViewContents', () => {
       // lock button is disabled for all statuses except "finalized"
       // statuses in the constant are an object {value: label}
       Object.keys(
-        getApplicationStatusesWithoutIncomplete(applicationType.toLowerCase())
+        getSelectableApplicationStatuses(applicationType.toLowerCase())
       ).forEach(status => {
         const statusIsFinal = ApplicationFinalStatuses.includes(status);
         detailView
@@ -208,7 +211,29 @@ describe('DetailViewContents', () => {
   });
 
   describe('Edit controls in Teacher', () => {
-    it(`cannot make status incomplete from dropdown`, () => {
+    it("cannot change status if application is currently in 'Awaiting Admin Approval'", () => {
+      const detailView = mountDetailView('Teacher', {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'awaiting_admin_approval'
+        }
+      });
+
+      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
+        .to.be.true;
+    });
+
+    it("cannot make status 'Awaiting Admin Approval' from dropdown", () => {
+      const detailView = mountDetailView('Teacher');
+      expect(
+        detailView
+          .find('#DetailViewHeader select')
+          .find('option')
+          .find('[value="awaiting_admin_approval"]')
+      ).to.have.lengthOf(0);
+    });
+
+    it("cannot make status 'Incomplete' from dropdown", () => {
       const detailView = mountDetailView('Teacher');
       expect(
         detailView
@@ -218,7 +243,7 @@ describe('DetailViewContents', () => {
       ).to.have.lengthOf(0);
     });
 
-    it(`incomplete status is in dropdown if teacher application is incomplete`, () => {
+    it('incomplete status is in dropdown if teacher application is incomplete', () => {
       const detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
@@ -461,13 +486,12 @@ describe('DetailViewContents', () => {
         .last()
         .simulate('click');
 
-      // Dropdown is still disabled
-      // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
+      // Dropdown is no longer disabled
       expect(
         getLastRow()
           .find('Select')
           .prop('disabled')
-      ).to.equal(true);
+      ).to.equal(false);
 
       // Click "Save"
       detailView
@@ -524,7 +548,7 @@ describe('DetailViewContents', () => {
     }
 
     for (const applicationStatus of _.difference(
-      Object.keys(getApplicationStatusesWithoutIncomplete('teacher')),
+      Object.keys(getSelectableApplicationStatuses('teacher')),
       ScholarshipStatusRequiredStatuses
     )) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
@@ -557,7 +581,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatusesWithoutIncomplete('teacher', true)
+        getSelectableApplicationStatuses('teacher', true)
       );
       var i = 0;
       options.forEach(option => {
@@ -578,7 +602,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatusesWithoutIncomplete('teacher', false)
+        getSelectableApplicationStatuses('teacher', false)
       );
       var i = 0;
       options.forEach(option => {

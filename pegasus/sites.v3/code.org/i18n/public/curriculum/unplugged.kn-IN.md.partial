@@ -21,8 +21,9 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2022-23
-The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
+## ಸಿಎಸ್ ಮೂಲಭೂತ ಅಂಶಗಳಲ್ಲಿ ಅನ್‌ಪ್ಲಗ್ಡ್ ಪಾಠಗಳು 2022-23
+
+<a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS ಫಂಡಮೆಂಟಲ್ಸ್‌ 2022-23</a> ನಲ್ಲಿ ಈ ಮುಂದಿನ ಅಧ್ಯಾಯಗಳನ್ನು ನೋಡಬಹುದು. <br><br>
 
 <style>
 table, th, td {
@@ -104,29 +105,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. ಪ್ರೋಗ್ರಾಂ ಬರೆಯುವ ವೇಳೆಯಲ್ಲಿ ನಮಗೆ ಅಗತ್ಯವಿರುವ ಎಲ್ಲಾ ಮಾಹಿತಿಯೂ ನಮಗೆ ಲಭ್ಯವಿರುವುದಿಲ್ಲ. ಕೆಲವೊಮ್ಮೆ ನೀವು ಒಂದು ಸನ್ನಿವೇಶದಲ್ಲಿ ನಿಮ್ಮ ಕೋಡ್ ರನ್ ಮಾಡಿದಾಗ ಯಾವ ಪರಿಸ್ಥಿತಿಯು ನಿಜವಾಗಲಿದೆ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲದಿದ್ದರೂ ಸಹ ಇನ್ನೊಂದಕ್ಕಿಂತ ವಿಭಿನ್ನವಾದದ್ದನ್ನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ. ಅಲ್ಲಿಯೇ ಕಂಡೀಷನಲ್ಸ್‌ ಉಪಯುಕ್ತವಾಗುತ್ತವೆ. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. ಪ್ರೋಗ್ರಾಂ ಬರೆಯುವ ವೇಳೆಯಲ್ಲಿ ನಮಗೆ ಅಗತ್ಯವಿರುವ ಎಲ್ಲಾ ಮಾಹಿತಿಯೂ ನಮಗೆ ಲಭ್ಯವಿರುವುದಿಲ್ಲ. ಕೆಲವೊಮ್ಮೆ ನೀವು ಒಂದು ಸನ್ನಿವೇಶದಲ್ಲಿ ನಿಮ್ಮ ಕೋಡ್ ರನ್ ಮಾಡಿದಾಗ ಯಾವ ಪರಿಸ್ಥಿತಿಯು ನಿಜವಾಗಲಿದೆ ಎಂದು ನಿಮಗೆ ತಿಳಿದಿಲ್ಲದಿದ್ದರೂ ಸಹ ಇನ್ನೊಂದಕ್ಕಿಂತ ವಿಭಿನ್ನವಾದದ್ದನ್ನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ. ಅಲ್ಲಿಯೇ ಕಂಡೀಷನಲ್ಸ್‌ ಉಪಯುಕ್ತವಾಗುತ್ತವೆ. ನಿಮ್ಮ ಕೋಡ್ ರನ್ ಆಗುವಾಗ ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಟ್ರೂ ಆಗಿರುವ ಮಾಹಿತಿಯನ್ನು ಆಧರಿಸಿ ನಿರ್ಧಾರವನ್ನು ಮಾಡಲು ಕಂಡೀಷನಲ್ಸ್‌ ಕಂಪ್ಯೂಟರ್‌ಗೆ ಅನುವು ಮಾಡುತ್ತದೆ.+</td><td>ಕಂಡೀಷನಲ್ಸ್</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
   </tr>
   <tr>
     <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. ಫಂಕ್ಷನ್ಸ್ (ಕೆಲವೊಮ್ಮೆ ಪ್ರಕ್ರಿಯೆಗಳು ಎನ್ನಲಾಗುತ್ತದೆ) ನೀವು ನಿಮ್ಮ ದೊಡ್ಡ ಪ್ರೋಗ್ರಾಂ ಅಡಿಯಲ್ಲಿ ಪದೇ ಪದೇ ಬಳಸಬಹುದಾದ ಚಿಕ್ಕ ಚಿಕ್ಕ ಪ್ರೋಗ್ರಾಂಗಳಾಗಿವೆ. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - ಸಾಂಗ್‌ರೈಟಿಂಗ್‌</a><br><small>ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನಲ್ಲಿ ಒಂದು ಪ್ರಮುಖ ಸ್ಟ್ರಕ್ಚರ್‌ಗಳು ಎಂದರೆ ಫಂಕ್ಷನ್‌ ಆಗಿದೆ. ಫಂಕ್ಷನ್ಸ್ (ಕೆಲವೊಮ್ಮೆ ಪ್ರಕ್ರಿಯೆಗಳು ಎನ್ನಲಾಗುತ್ತದೆ) ನೀವು ನಿಮ್ಮ ದೊಡ್ಡ ಪ್ರೋಗ್ರಾಂ ಅಡಿಯಲ್ಲಿ ಪದೇ ಪದೇ ಬಳಸಬಹುದಾದ ಚಿಕ್ಕ ಚಿಕ್ಕ ಪ್ರೋಗ್ರಾಂಗಳಾಗಿವೆ. ಕೋಡ್‌ನ ತುಣುಕುಗಳನ್ನು ಸಂಯೋಜಿಸಿ ಫಂಕ್ಷನ್‌ಗಳನ್ನಾಗಿಸುವುದು ಏಕೆ ಇಂತಹ ಸಹಾಯಕ ಅಭ್ಯಾಸ ಎಂಬುದನ್ನು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಲು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಈ ಅಧ್ಯಾಯ ಸಹಾಯ ಮಾಡುತ್ತದೆ.</td><td>ಫಂಕ್ಷನ್‌ಗಳು</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - ಅಕ್ಸೆಸಿಬಿಲಿಟಿಗಾಗಿ ವಿನ್ಯಾಸ ಮಾಡುವುದು</a><br><small>ಈ ಅಧ್ಯಾಯದಲ್ಲಿ, ವಿದ್ಯಾರ್ಥಿಗಳು ಅಕ್ಸೆಸಿಬಿಲಿಟಿ ಮತ್ತು ತಾದಾತ್ಮ್ಯದ ಮೌಲ್ಯದ ಬಗ್ಗೆ ಹೈಪೊಥೆಟಿಕಲ್‌ ಆಪ್‌ಗಳಿಗಾಗಿ ವಿನ್ಯಾಸ ಮಾಡುವ ಅಕ್ಸೆಸಿಬಲ್‌ ಪರಿಹಾರಗಳು ಮತ್ತು ಬ್ರೇನ್‌ಸ್ಟಾರ್ಮಿಂಗ್‌ ಮೂಲಕ ಕಲಿತುಕೊಳ್ಳುತ್ತಾರೆ.</td><td>ಕಂಪ್ಯೂಟಿಂಗ್‌ನ ಪರಿಣಾಮಗಳು</td><td><img src="/images/e18.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - ಡಿಜಿಟಲ್ ಹಂಚಿಕೊಳ್ಳುವಿಕೆ</a><br><i>*ಪೂರೈಕೆಗಳು: ಸ್ಮಾರ್ಟ್‌ಫೋನ್‌ ಅಥವಾ ಟ್ಯಾಬ್ಲೆಟ್‌</i><br><small>ಹಕ್ಕುಸ್ವಾಮ್ಯ ಮತ್ತು ಕ್ರಿಯಾಶೀಲತೆಯಲ್ಲಿ ತಂಡವು ಕಂಪ್ಯೂಟರ್‌ ಸೈನ್ಸ್‌ ಫಂಡಮೆಂಟಲ್ಸ್‌ ಆಧರಿಸಿ, ನಿರ್ದಿಷ್ಟವಾಗಿ ಡಿಜಿಟಲ್‌ ಪರಿಸರದಲ್ಲಿ ಮಾಲೀಕತ್ವ ಮತ್ತು ಹಕ್ಕುಸ್ವಾಮ್ಯವನ್ನು ಗೌರವಿಸುವ ಸವಾಲುಗಳು ಮತ್ತು ಪ್ರಯೋಜನಗಳನ್ನು ಅರ್ಥ ಮಾಡಿಕೊಳ್ಳಲು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಈ ಅಧ್ಯಾಯ ಇದೆ. ಕಲಾಕಾರರ ಹಕ್ಕುಗಳನ್ನು ಗೌರವಿಸಲು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಬೇಕು. ಇದು ನೈತಿಕ ಡಿಜಿಟಲ್‌ ನಾಗರಿಕರಾಗಲು ಒಂದು ಪ್ರಮುಖ ಭಾಗವಾಗಿರುತ್ತದೆ.</td><td>ಡಿಜಿಟಲ್‌ ಪೌರತ್ವ</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+    <th rowspan="3" id="t06">ಕೋರ್ಸ್ F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -ಬ್ಲಾಂಕ್ ಸ್ಪೇಸ್ ಸ್ಟೋರಿಗಳು</a><br><i>*ಪೂರೈಕೆಗಳು: 6 ಎನ್ವಲಪ್‌ಗಳು (ಇದಕ್ಕೂ ಸೂಕ್ತವಾಗಿದೆ:ಕಾಗದ ಅಥವಾ ಇಂಡೆಕ್ಸ್‌ ಕಾರ್ಡ್‌ಗಳು,ಅರ್ಧ ಮಡಚಿರುವುದು)</i><br><small>ಬಳಕೆದಾರರಿಂದ ಇನ್‌ಪುಟ್‌ ಅನ್ನು ಕಂಪ್ಯೂಟರ್‌ಗಳು ಹೇಗೆ ತೆಗೆದುಕೊಳ್ಳುತ್ತವೆ ಮತ್ತು ಸ್ಟೋರ್ ಮಾಡುತ್ತವೆ ಮತ್ತು ಪ್ರೋಗ್ರಾಮ್ ರನ್ ಆದಾಗ ನಂತರ ಹೇಗೆ ಬಳಸುತ್ತವೆ ಎಮಬುದನ್ನು ತಿಳಿದುಕೊಳ್ಳಲು ಸಂದರ್ಭವಾಗಿ ಬಿಟ್ಟ ಸ್ಥಳ ತುಂಬಿರಿ ಸ್ಟೋರಿಗಳನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳು ಬಳಸುತ್ತಾರೆ (ಮ್ಯಾಡ್‌ ಲಿಬ್ಸ್® ಗೆ ಸಮಾನ).
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. ಈ ಹೊಸ ರಚನೆಗಳು ವಿದ್ಯಾರ್ಥಿಗಳು ಹೆಚ್ಚು ಶಕ್ತಿಯುತ ಮತ್ತು ಕ್ರಿಯಾತ್ಮಕ ಕೋಡ್ ರಚಿಸಲು ಅವಕಾಶ ನೀಡುತ್ತವೆ.</td><td>ಲೂಪ್‌ಗಳಿಗೆ</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. ಈ ಪಾಠದಲ್ಲಿ, ವಿದ್ಯಾರ್ಥಿಗಳು ಸಂಪರ್ಕಗಳು, ಯುಆರ್‌ಎಲ್‌ ಗಳು, ಐಪಿ ಅಡ್ರೆಸ್‌ ಗಳು ಮತ್ತು ಡಿಎನ್‌ಎಸ್ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳುವಾಗ ಇಂಟರ್ನೆಟ್ ಮೂಲಕ ಮುಂದುವರಿಯುವಂತೆ ತೋರಿಸುತ್ತಾರೆ.</td><td>ಡೇಟಾ</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+<td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.19 - ಇಂಟರ್‌ನೆಟ್</a><br><small>ಬಹಳ ಜನರು ಪ್ರತಿದಿನ ಇಂಟರ್‌ನೆಟ್ ಅನ್ನು ಬಳಸುತ್ತಿದ್ದರೂ, ಅದು ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂದು ಬಹಳ ಜನರಿಗೆ ತಿಳಿದಿಲ್ಲ. ಈ ಪಾಠದಲ್ಲಿ, ವಿದ್ಯಾರ್ಥಿಗಳು ಸಂಪರ್ಕಗಳು, ಯುಆರ್‌ಎಲ್‌ ಗಳು, ಐಪಿ ಅಡ್ರೆಸ್‌ ಗಳು ಮತ್ತು ಡಿಎನ್‌ಎಸ್ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳುವಾಗ ಇಂಟರ್ನೆಟ್ ಮೂಲಕ ಮುಂದುವರಿಯುವಂತೆ ತೋರಿಸುತ್ತಾರೆ.</td><td>ಡೇಟಾ</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 

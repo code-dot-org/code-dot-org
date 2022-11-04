@@ -1,7 +1,7 @@
 /** @file Tests for our johnny-five Led wrapper */
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import five from '@code-dot-org/johnny-five-deprecated';
+import five from '@code-dot-org/johnny-five';
 import {makeStubBoard} from '../makeStubBoard';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 
