@@ -741,12 +741,6 @@ module Pd::Application
         friendly_status_name
     end
 
-    def allow_status_change_to_unreviewed?
-      # Can change to unreviewed if (a) admin approval is not required
-      #
-      return false if @admin_approval_not_required
-    end
-
     def allow_sending_principal_email?
       response = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
       last_principal_approval_email = emails.where(email_type: 'principal_approval').order(:created_at).last
