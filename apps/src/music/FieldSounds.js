@@ -11,6 +11,17 @@ var CustomFields = CustomFields || {};
  * @constructor
  */
 class FieldSounds extends Blockly.FieldTextInput {
+  constructor(options) {
+    super(options.currentValue);
+
+    this.options = options;
+
+    // Disable spellcheck.
+    this.setSpellcheck(false);
+
+    this.SERIALIZABLE = true;
+  }
+
   saveState() {
     return this.getValue();
   }
@@ -19,25 +30,15 @@ class FieldSounds extends Blockly.FieldTextInput {
     this.setValue(state);
   }
 
-  constructor(text) {
-    super(text);
-
-    // Disable spellcheck.
-    this.setSpellcheck(false);
-
-    this.SERIALIZABLE = true;
-    //this.EDITABLE = false;
-  }
-
   /**
    * Construct a FieldSounds from a JSON arg object.
-   * @param {!Object} options A JSON object with options (pitch).
+   * @param {!Object} options A JSON object with options.
    * @returns {!FieldSounds} The new field instance.
    * @package
    * @nocollapse
    */
   static fromJson(options) {
-    return new FieldSounds(options.sample);
+    return new FieldSounds(options);
   }
 
   /**
@@ -79,6 +80,10 @@ class FieldSounds extends Blockly.FieldTextInput {
 
     ReactDOM.render(
       <SoundsPanel
+        library={this.options.getLibrary()}
+        onPreview={value => {
+          this.options.playPreview(value);
+        }}
         onSelect={value => {
           this.setEditorValue_(value);
         }}

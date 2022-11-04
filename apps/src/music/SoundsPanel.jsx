@@ -1,11 +1,10 @@
-//import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 //import styles from './soundsPanel.module.scss';
 //import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const SoundsPanel = ({onSelect}) => {
-  const library = window.library;
+const SoundsPanel = ({library, onSelect, onPreview}) => {
   const group = library.groups[0];
 
   return (
@@ -16,7 +15,10 @@ const SoundsPanel = ({onSelect}) => {
             {folder.sounds.map((sound, soundIndex) => {
               return (
                 <div key={soundIndex}>
-                  <FontAwesome icon={'play-circle'} onClick={() => {}} />
+                  <FontAwesome
+                    icon={'play-circle'}
+                    onClick={() => onPreview(folder.path + '/' + sound.src)}
+                  />
                   &nbsp;
                   <span onClick={() => onSelect(folder.path + '/' + sound.src)}>
                     {folder.name} / {sound.name}
@@ -31,13 +33,10 @@ const SoundsPanel = ({onSelect}) => {
   );
 };
 
-/*
-BeatPad.propTypes = {
-  triggers: PropTypes.array.isRequired,
-  playTrigger: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired,
-  isPlaying: PropTypes.bool.isRequired
+SoundsPanel.propTypes = {
+  library: PropTypes.object.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  onPreview: PropTypes.func.isRequired
 };
-*/
 
 export default SoundsPanel;

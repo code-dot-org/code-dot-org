@@ -20,8 +20,9 @@ export const playSample = {
       {
         type: 'field_sounds',
         name: 'sample',
-        renderFn: parentDiv => {
-          console.log('hi', parentDiv);
+        getLibrary: () => window.library,
+        playPreview: value => {
+          window.playPreview(value, () => {});
         }
       },
       {
