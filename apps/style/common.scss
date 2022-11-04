@@ -1026,13 +1026,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   user-select: none;
 }
 
-.readonly {
-  #headers,
-  #design-headers {
-    background-color: $charcoal;
-  }
-}
-
 #headers,
 .purple-header {
   #show-toolbox-icon,
