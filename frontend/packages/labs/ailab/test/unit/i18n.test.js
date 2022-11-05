@@ -3,6 +3,7 @@ import MessageFormat from "messageformat";
 
 let testTranslations = new MessageFormat('en').compile({
   "hello": "hello {name}",
+  "simple": "simpleValue",
   "nested": {
     "one": {
       "two": {
@@ -24,6 +25,22 @@ describe('I18n.t', () => {
     I18n.reset();
     I18n.initI18n(testTranslations);
     expect(I18n.t("hello", {"name": "test"})).toEqual("hello test");
+  });
+
+  describe('with default', () => {
+    test('returns default when string not found', async () => {
+      I18n.reset();
+      I18n.initI18n(testTranslations);
+      expect(I18n.t("keyDoesNotExist", {"default": "testDefault"}))
+        .toEqual("testDefault");
+    });
+
+    test('returns string given good key', async () => {
+      I18n.reset();
+      I18n.initI18n(testTranslations);
+      expect(I18n.t("simple", {"default": "testDefault"}))
+        .toEqual("simpleValue");
+    });
   });
 
   describe('with scope', () => {
