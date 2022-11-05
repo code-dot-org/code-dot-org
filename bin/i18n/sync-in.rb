@@ -87,26 +87,30 @@ def localize_standards
 end
 
 # This function localizes all content in studio.code.org/docs
+# Localizes all the content for each Programming Expression in each of the listed Environments.
 def localize_docs
   puts "Preparing /docs content"
-  # docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
-  # programming_env_docs = {}
-  # For each programming environment, name is used as key, title is used as name,
-  ProgrammingEnvironment.all.sort.each do |env| # env as short for environment
-    env_name = env.name
-    docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env_name + ".json")
+
+  # currently supporting translations for applab, gamelab and weblab. NOT tranlating javalab and spritelab.
+  # javalab documentations exists in a different table because it has a different structure, more align with java.
+  environments = %w(applab gamelab weblab)
+
+  ### Localize Programming Environments
+  # For each programming environment, name is used as key, title is used as name
+  ProgrammingEnvironment.all.sort.each do |env|
+    next unless environments.include?(env.name)
+    docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env.name + ".json")
     programming_env_docs = {}
-    # Skip javalab
-    # javalab documentations exists in a different table because it has a different structure, more align with java.
-    next if env_name == 'javalab'
-    programming_env_docs[env_name] = {
+    programming_env_docs[env.name] = {
       'name' => env.properties["title"],
       'description' => env.properties["description"],
       'categories' => {},
     }
+
+    ### Localize Categories for Navigation
     # Programming environment has a method defined in the programming_environment model that returns the
     # categories for navigation. The method is used to obtain the current categories existing in the database.
-    categories_data = programming_env_docs[env_name]["categories"]
+    categories_data = programming_env_docs[env.name]["categories"]
     env.categories_for_navigation.each do |category_for_navigation|
       category_key = category_for_navigation[:key]
       categories_data.store(
@@ -115,6 +119,9 @@ def localize_docs
           'expressions' => {}
         }
       )
+
+      ### localize Programming Expressions
+      # expression_docs.properties["syntax"] is not translated as it is the JavaScript exprerssion syntax
       expressions_data = categories_data[category_key]["expressions"]
       category_for_navigation[:docs].each do |expression|
         expression_key = expression[:key]
@@ -126,11 +133,13 @@ def localize_docs
             'palette_params' => ({} unless expression_docs.properties["palette_params"].nil?),
             'return_value' => expression_docs.properties["return_value"],
             'short_description' => expression_docs.properties["short_description"],
-            # 'syntax' => expression_docs.properties["syntax"], Syntax is not translated as it is JavaScript syntax
             'tips' => expression_docs.properties["tips"]
           }.compact
         )
-        # Programming expresions may have 0 or more examples
+
+        ### Localize Examples
+        # Programming expresions may have 0 or more examples.
+        # Only example["name"] and example["description"] are translated. example["code"] is NOT translated.
         example_docs = expressions_data[expression_key]["examples"]
         expression_docs.properties['examples']&.each do |example|
           unless example["name"].nil_or_empty? && example["description"].nil_or_empty?
@@ -138,17 +147,18 @@ def localize_docs
               example["name"], {
                 'name' => (example["name"] if example["name"]),
                 'description' => (example["description"] if example["description"]),
-                # 'code' => example["code"] Code translations are not currently supported
               }.compact
             )
           end
         end
-        # Programming expresions may have 0 or more parameters
+
+        ### localize Parameters
+        # Programming expresions may have 0 or more parameters.
+        # Parameter name (param["name"]) is not translated as it needs to match the JavaScript expression syntax.
         param_docs = expressions_data[expression_key]["palette_params"]
         expression_docs.properties["palette_params"]&.each do |param|
           param_docs.store(
             param["name"], {
-              # 'name' => param["name"], # expression parameters are not translated as they are JavaScript syntax
               'type' => (param["type"] if param["type"]),
               'description' => (param["description"] if param["description"])
             }.compact
@@ -156,15 +166,13 @@ def localize_docs
         end
       end
     end
+
+    # For each Programmin Environment, generate a file containing the string.
     FileUtils.mkdir_p(File.dirname(docs_content_file))
     File.open(docs_content_file, "w") do |file|
       file.write(JSON.pretty_generate(programming_env_docs.compact))
     end
   end
-  # FileUtils.mkdir_p(File.dirname(docs_content_file))
-  # File.open(docs_content_file, "w") do |file|
-  #   file.write(JSON.pretty_generate(programming_env_docs.compact))
-  # end
 end
 
 def localize_level_and_project_content
@@ -609,7 +617,7 @@ def redact_level_file(source_path)
 end
 
 def redact_docs
-  puts "Redacting docs content"
+  puts "Redacting /docs content"
   Dir.glob(File.join(I18N_SOURCE_DIR, "docs", "*.json")).each do |source|
     backup = source.sub("source", "original")
     FileUtils.mkdir_p(File.dirname(backup))
