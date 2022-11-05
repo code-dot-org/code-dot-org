@@ -1005,6 +1005,24 @@ zh-TW:
         text: 設定
       Dancelab_whenSetup2:
         text: 設定
+      DansBlocks_setForegroundEffect2:
+        text: 製作{EFFECT}效果
+        options:
+          EFFECT:
+            '"bubbles"': 氣泡
+            '"confetti"': 紙屑
+            '"hearts"': 愛心
+            '"emojis"': 快樂表情
+            '"rain"': 下雨
+            '"starburst"': 星爆
+            '"glass"': 破碎玻璃
+            '"twinkling"': 閃爍
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): 可拖曳
+            wandering(): 徘徊
+            shrinking(): 縮小
       gamelab_addBehaviorSimple:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
       gamelab_addTarget:
@@ -1347,7 +1365,6 @@ zh-TW:
             "'sound://category_space/Pillars_SFX.mp3'": 創生之柱
             "'sound://category_space/Southern_ring_SFX.mp3'": 南環星雲
             "'sound://category_space/Supernova_SFX.mp3'": 超新星
-            "'sound://category_sports/One_Whistle_SFX.mp3'": 第谷
       gamelab_playSpeech:
         text: 游戲言語{SOUND}
       gamelab_playerBehaviors:
@@ -2001,6 +2018,8 @@ zh-TW:
         text: 隨機佈局怪物
       Outbreak_stopMoving:
         text: 怪物停止移動
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

@@ -876,6 +876,15 @@
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
           "type": "Clave de Respuesta"
         },
+        "all_resources/express/2022": {
+          "url": "/s/exprés-2022/recursos"
+        },
+        "all_standards/express/2022": {
+          "url": "/s/exprés-2022/normas"
+        },
+        "all_vocabulary/express/2022": {
+          "url": "/s/exprés-2022/vocab"
+        },
         "debugging_guide/express/2022": {
           "name": "Guia de Depuración",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
@@ -1670,6 +1679,15 @@
           "name": "Proyecto - Hacer una Recomendación",
           "type": "Diapositivas"
         },
+        "all_resources_5/csd/2022": {
+          "url": "/s/csd1-2022/recursos"
+        },
+        "all_standards_5/csd/2022": {
+          "url": "/s/csd1-2022/normas"
+        },
+        "all_vocabulary_5/csd/2022": {
+          "url": "/s/csd1-2022/vocabulario"
+        },
         "aluminum_boats/csd/2022": {
           "name": "Barcos de Aluminio",
           "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
@@ -1852,6 +1870,7 @@
           "type": "Guía de Actividad"
         },
         "intro_to_problem_solving_newspapers_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Periódicos)",
           "url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/template/preview",
           "type": "Diapositivas"
         },
@@ -1866,6 +1885,7 @@
           "type": "Guía de Actividad"
         },
         "intro_to_problem_solving_spaghetti_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Espagueti)",
           "url": "https://docs.google.com/presentation/d/1v2LAJj8kTaRiuwCREkTpaoEWpw469czx3FaClScE2vQ/template/preview",
           "type": "Diapositivas"
         },
@@ -1884,6 +1904,8 @@
           "type": "Guía de Actividad"
         },
         "intro_to_problem_solving_paper_towels_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Torres de Papel)",
+          "url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/template/preview",
           "type": "Diapositivas"
         },
         "exploring_problem_solving_-_animal_theme/csd/2022": {
@@ -1902,6 +1924,8 @@
           "type": "Recurso"
         },
         "exploring_problem_solving_animals_/csd/2022": {
+          "name": "Explorando la Resolución de Problemas (Animales)",
+          "url": "https://docs.google.com/presentation/d/1QGTKTq86hJ8TLZl3mc4_WucYHE4sHkgSVp9Bif56Sxk/template/preview",
           "type": "Diapositivas"
         },
         "exploring_problem_solving_-_games_theme/csd/2022": {
@@ -1915,6 +1939,8 @@
           "type": "Guía de Actividad"
         },
         "exploring_problem_solving_games_/csd/2022": {
+          "name": "Exploración de la Resolución de Problemas (Juegos)",
+          "url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/template/preview",
           "type": "Diapositivas"
         },
         "cs_in_entertainment/csd/2022": {
@@ -6390,6 +6416,15 @@
         "sample_marked_rubrics_4/csd/2021": {
           "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
           "type": "Ejemplo"
+        },
+        "all_resources_5/csd/2021": {
+          "url": "/s/csd5-2021/resources"
+        },
+        "all_standards_5/csd/2021": {
+          "url": "/s/csd5-2021/standards"
+        },
+        "all_vocabulary_5/csd/2021": {
+          "url": "/s/csd5-2021/vocabulario"
         },
         "unit-5-data-society/csd/2021": {
           "type": "Diapositivas"

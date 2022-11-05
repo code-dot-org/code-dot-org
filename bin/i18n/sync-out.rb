@@ -392,6 +392,23 @@ def distribute_translations(upload_manifests)
       sanitize_file_and_write(loc_file, destination)
     end
 
+    ### Merge ml-playground datasets into apps' ailab JSON
+    Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
+      ailab_path = "apps/i18n/ailab/#{js_locale}.json"
+      name = File.basename(loc_file, '.json')
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      external_translations = JSON.parse(File.read(loc_file))
+      next if external_translations.empty?
+
+      # Merge new translations
+      existing_translations = JSON.parse(File.read(ailab_path))
+      existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
+      existing_translations['datasets'][name] = external_translations
+      sanitize_data_and_write(existing_translations, ailab_path)
+    end
+
     ### Animation library
     spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
     if file_changed?(locale, spritelab_animation_translation_path)

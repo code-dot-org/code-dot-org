@@ -14564,151 +14564,247 @@ es-ES:
           Después de terminar tu proyecto, querrás reflexionar sobre si tu juego ha resultado como habías planeado, y sobre las formas en que podrías mejorar tu proceso para la próxima vez.
       CSD U4 test feature match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '"Siempre me olvido las gafas de leer".'
+        - text: '"No me gusta que las aplicaciones sean demasiado aburridas".'
+        - text: '"A menudo me olvido de revisar mi teléfono, por lo que pierdo mis
+            notificaciones"'
+        - text: '"Mis amigos creen que es divertido cambiar mi configuración, ¡pero
+            es molesto!"'
+        - text: '"Soy daltónico, así que muchos colores me parecen iguales".'
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Texto grande
+        - text: Muchos colores
+        - text: Alertas sonoras
+        - text: Bloqueo de contraseña
+        - text: Opción en blanco y negro
       CSD U4 test feature match_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '"Siempre me olvido las gafas de leer".'
+        - text: '"No me gusta que las aplicaciones sean demasiado aburridas".'
+        - text: '"A menudo me olvido de revisar mi teléfono, por lo que pierdo mis
+            notificaciones"'
+        - text: '"Mis amigos creen que es divertido cambiar mi configuración, ¡pero
+            es molesto!"'
+        - text: '"Soy daltónico, así que muchos colores me parecen iguales".'
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Texto grande
+        - text: Muchos colores
+        - text: Alertas sonoras
+        - text: Bloqueo de contraseña
+        - text: Opción en blanco y negro
       CSD U4 test feature match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: '"Siempre me olvido las gafas de leer".'
+        - text: '"No me gusta que las aplicaciones sean demasiado aburridas".'
+        - text: '"A menudo me olvido de revisar mi teléfono, por lo que pierdo mis
+            notificaciones"'
+        - text: '"Mis amigos creen que es divertido cambiar mi configuración, ¡pero
+            es molesto!"'
+        - text: '"Soy daltónico, así que muchos colores me parecen iguales".'
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Texto grande
+        - text: Muchos colores
+        - text: Alertas sonoras
+        - text: Bloqueo de contraseña
+        - text: Opción en blanco y negro
       CSD U4 test needs multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Entrevistando usuarios y haciéndoles preguntas directas sobre sus
+            necesidades
+        - text: Utilizando eventos para cambiar una pantalla cuando el usuario pulsa
+            un determinado botón
+          correct: true
+        - text: Observando al usuario interactuar con una aplicación y registrando
+            dónde tiene problemas
+        - text: Creando prototipos en papel y digitales para realizar pruebas de usuario
+        - text: Investigando las aplicaciones actuales y viendo cómo esas aplicaciones
+            responden a las necesidades de los usuarios
         questions:
-        - {}
+        - text: De las siguientes, ¿qué estrategia NO ayudará a un diseñador a comprender
+            mejor las necesidades del usuario?
       CSD U4 test needs multi_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Entrevistando usuarios y haciéndoles preguntas directas sobre sus
+            necesidades
+        - text: Utilizando eventos para cambiar una pantalla cuando el usuario pulsa
+            un determinado botón
+          correct: true
+        - text: Observando al usuario interactuar con una aplicación y registrando
+            dónde tiene problemas
+        - text: Creando prototipos en papel y digitales para realizar pruebas de usuario
+        - text: Investigando las aplicaciones actuales y viendo cómo esas aplicaciones
+            responden a las necesidades de los usuarios
         questions:
-        - {}
+        - text: De las siguientes, ¿qué estrategia NO ayudará a un diseñador a comprender
+            mejor las necesidades del usuario?
       CSD U4 test needs multi_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Entrevistando usuarios y haciéndoles preguntas directas sobre sus
+            necesidades
+        - text: Utilizando eventos para cambiar una pantalla cuando el usuario pulsa
+            un determinado botón
+          correct: true
+        - text: Observando al usuario interactuar con una aplicación y registrando
+            dónde tiene problemas
+        - text: Creando prototipos en papel y digitales para realizar pruebas de usuario
+        - text: Investigando las aplicaciones actuales y viendo cómo esas aplicaciones
+            responden a las necesidades de los usuarios
         questions:
-        - {}
+        - text: De las siguientes, ¿qué estrategia NO ayudará a un diseñador a comprender
+            mejor las necesidades del usuario?
       CSD U4 test prioritize multi:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Fácil, porque podrás completar más de ellos en la misma cantidad de
+            tiempo.
+          correct: true
+        - text: Fácil, porque no te desanimarás al mejorar tu aplicación.
+        - text: Difícil, porque normalmente las cosas difíciles son más importantes.
+        - text: Difícil, porque una vez que los tengas hechos, los fáciles no te molestarán.
+        - text: Debes hacerlos en el orden en que los encontraste, sin importar si
+            son fáciles o difíciles.
         questions:
-        - {}
+        - text: Una vez clasificadas las cuestiones en función de su urgencia y dificultad,
+            ¿qué cuestiones deben abordarse en primer lugar y por qué?
       CSD U4 test prioritize multi_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Fácil, porque podrás completar más de ellos en la misma cantidad de
+            tiempo.
+          correct: true
+        - text: Fácil, porque no te desanimarás al mejorar tu aplicación.
+        - text: Difícil, porque normalmente las cosas difíciles son más importantes.
+        - text: Difícil, porque una vez que los tengas hechos, los fáciles no te molestarán.
+        - text: Debes hacerlos en el orden en que los encontraste, sin importar si
+            son fáciles o difíciles.
         questions:
-        - {}
+        - text: Una vez clasificadas las cuestiones en función de su urgencia y dificultad,
+            ¿qué cuestiones deben abordarse en primer lugar y por qué?
       CSD U4 test prioritize multi_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Fácil, porque podrás completar más de ellos en la misma cantidad de
+            tiempo.
+          correct: true
+        - text: Fácil, porque no te desanimarás al mejorar tu aplicación.
+        - text: Difícil, porque normalmente las cosas difíciles son más importantes.
+        - text: Difícil, porque una vez que los tengas hechos, los fáciles no te molestarán.
+        - text: Debes hacerlos en el orden en que los encontraste, sin importar si
+            son fáciles o difíciles.
         questions:
-        - {}
+        - text: Una vez clasificadas las cuestiones en función de su urgencia y dificultad,
+            ¿qué cuestiones deben abordarse en primer lugar y por qué?
       CSD U4 test testing multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Dar más pistas en la prueba de usuario para ayudar a los usuarios
+            a entender mejor los botones
+        - text: Encuentra usuarios que sean mejores con la tecnología y utilízalos
+            para las pruebas
+        - text: Utiliza al equipo de diseño como usuarios en las pruebas, porque ellos
+            entienden mejor la aplicación
+        - text: Rediseña las pruebas para que los usuarios no tengan que descubrir
+            esa parte de la aplicación
+        - text: Rediseña la aplicación para facilitar el uso de los botones y realizar
+            más pruebas con los usuarios
+          correct: true
         questions:
-        - {}
+        - text: Durante las pruebas de usuario de una nueva aplicación, los usuarios
+            no pudieron averiguar qué botones debían pulsar, aunque el equipo de diseño
+            pensó que era obvio.  ¿Cuál es la MEJOR manera para que el equipo de diseño
+            resuelva este problema?
       CSD U4 test testing multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Dar más pistas en la prueba de usuario para ayudar a los usuarios
+            a entender mejor los botones
+        - text: Encuentra usuarios que sean mejores con la tecnología y utilízalos
+            para las pruebas
+        - text: Utiliza al equipo de diseño como usuarios en las pruebas, porque ellos
+            entienden mejor la aplicación
+        - text: Rediseña las pruebas para que los usuarios no tengan que descubrir
+            esa parte de la aplicación
+        - text: Rediseña la aplicación para facilitar el uso de los botones y realizar
+            más pruebas con los usuarios
+          correct: true
         questions:
-        - {}
+        - text: Durante las pruebas de usuario de una nueva aplicación, los usuarios
+            no pudieron averiguar qué botones debían pulsar, aunque el equipo de diseño
+            pensó que era obvio.  ¿Cuál es la MEJOR manera para que el equipo de diseño
+            resuelva este problema?
       CSD U4 test testing multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Dar más pistas en la prueba de usuario para ayudar a los usuarios
+            a entender mejor los botones
+        - text: Encuentra usuarios que sean mejores con la tecnología y utilízalos
+            para las pruebas
+        - text: Utiliza al equipo de diseño como usuarios en las pruebas, porque ellos
+            entienden mejor la aplicación
+        - text: Rediseña las pruebas para que los usuarios no tengan que descubrir
+            esa parte de la aplicación
+        - text: Rediseña la aplicación para facilitar el uso de los botones y realizar
+            más pruebas con los usuarios
+          correct: true
         questions:
-        - {}
+        - text: Durante las pruebas de usuario de una nueva aplicación, los usuarios
+            no pudieron averiguar qué botones debían pulsar, aunque el equipo de diseño
+            pensó que era obvio.  ¿Cuál es la MEJOR manera para que el equipo de diseño
+            resuelva este problema?
       CSD U4 wireframe test multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
+        - text: Al usuario le gusta la combinación de colores
+        - text: El usuario piensa que la aplicación es una buena idea
+        - text: El usuario entiende cómo iniciar sesión
+          correct: true
+        - text: La marca del teléfono del usuario
+        - text: El usuario puede navegar por todas las pantallas
+          correct: true
         questions:
-        - {}
+        - text: Si tuviera la oportunidad de probar este esquema con los usuarios,
+            ¿qué DOS cosas serían las más importantes a tener en cuenta?
+        markdown: |
+          <img src="https://images.code.org/0f2f4d728bc3c3328b4ee3ea31caa562-image-1559246095187.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/f1334f18a893b084ad80be45231c818e-image-1559246106816.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/6df005697b26dca114fcfc7eec4a2556-image-1559246110092.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U4 wireframe test multi_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
+        - text: Al usuario le gusta la combinación de colores
+        - text: El usuario piensa que la aplicación es una buena idea
+        - text: El usuario entiende cómo iniciar sesión
+          correct: true
+        - text: La marca del teléfono del usuario
+        - text: El usuario puede navegar por todas las pantallas
+          correct: true
         questions:
-        - {}
+        - text: Si tuviera la oportunidad de probar este esquema con los usuarios,
+            ¿qué DOS cosas serían las más importantes a tener en cuenta?
+        markdown: |
+          <img src="https://images.code.org/0f2f4d728bc3c3328b4ee3ea31caa562-image-1559246095187.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/f1334f18a893b084ad80be45231c818e-image-1559246106816.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/6df005697b26dca114fcfc7eec4a2556-image-1559246110092.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U4 wireframe test multi_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - correct: true
+        - text: Al usuario le gusta la combinación de colores
+        - text: El usuario piensa que la aplicación es una buena idea
+        - text: El usuario entiende cómo iniciar sesión
+          correct: true
+        - text: La marca del teléfono del usuario
+        - text: El usuario puede navegar por todas las pantallas
+          correct: true
         questions:
-        - {}
+        - text: Si tuviera la oportunidad de probar este esquema con los usuarios,
+            ¿qué DOS cosas serían las más importantes a tener en cuenta?
+        markdown: |
+          <img src="https://images.code.org/0f2f4d728bc3c3328b4ee3ea31caa562-image-1559246095187.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/f1334f18a893b084ad80be45231c818e-image-1559246106816.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/6df005697b26dca114fcfc7eec4a2556-image-1559246110092.png" style="float:left; width:150px; margin:10px;border: solid;">
+
+          <img src="https://images.code.org/67db4444236c97d345c69bf6decb3047-image-1559246113075.png" style="float:left; width:150px; margin:10px;border: solid;">
       CSD U5 test clean multi:
         answers:
         - text: No, es deshonesto cambiar los datos antes de ponerlos en un gráfico.
@@ -14992,38 +15088,54 @@ es-ES:
             más útiles al escribir este programa?
       CSD U6 test debugging multi:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: El botón derecho está roto en la placa.
+          correct: true
+        - text: Los altavoces del ordenador no funcionan.
+        - text: El nombre del archivo de la canción triste es incorrecto.
+        - text: La placa no está conectada al ordenador.
+        - text: El manejador de eventos no tiene los parámetros correctos.
         questions:
-        - {}
+        - text: Un equipo está creando un prototipo que reproduce un sonido feliz
+            en el ordenador cuando se pulsa el botón izquierdo de la placa y una canción
+            triste en el ordenador cuando se pulsa el botón derecho de la placa. La
+            canción feliz funciona, pero la triste no. Elige un problema de HARDWARE
+            que pueda estar causando este fallo.
       CSD U6 test debugging multi_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: El botón derecho está roto en la placa.
+          correct: true
+        - text: Los altavoces del ordenador no funcionan.
+        - text: El nombre del archivo de la canción triste es incorrecto.
+        - text: La placa no está conectada al ordenador.
+        - text: El manejador de eventos no tiene los parámetros correctos.
         questions:
-        - {}
+        - text: Un equipo está creando un prototipo que reproduce un sonido feliz
+            en el ordenador cuando se pulsa el botón izquierdo de la placa y una canción
+            triste en el ordenador cuando se pulsa el botón derecho de la placa. La
+            canción feliz funciona, pero la triste no. Elige un problema de HARDWARE
+            que pueda estar causando este fallo.
       CSD U6 test debugging multi_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: El botón derecho está roto en la placa.
+          correct: true
+        - text: Los altavoces del ordenador no funcionan.
+        - text: El nombre del archivo de la canción triste es incorrecto.
+        - text: La placa no está conectada al ordenador.
+        - text: El manejador de eventos no tiene los parámetros correctos.
         questions:
-        - {}
+        - text: Un equipo está creando un prototipo que reproduce un sonido feliz
+            en el ordenador cuando se pulsa el botón izquierdo de la placa y una canción
+            triste en el ordenador cuando se pulsa el botón derecho de la placa. La
+            canción feliz funciona, pero la triste no. Elige un problema de HARDWARE
+            que pueda estar causando este fallo.
       CSD U6 test events multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: I sólo
+        - text: II sólo
+        - text: I y II
+        - text: I y III
+          correct: true
+        - text: I, II, y III
         questions:
         - text: "¿Qué debe saber un programador al crear un controlador de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
@@ -15031,76 +15143,120 @@ es-ES:
             Qué debe hacer el programa cuando se activa el evento"
       CSD U6 test events multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: I sólo
+        - text: II sólo
+        - text: I y II
+        - text: I y III
+          correct: true
+        - text: I, II, y III
         questions:
-        - {}
+        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
+            Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
+            Qué debe hacer el programa cuando se dispara el evento"
       CSD U6 test events multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: I sólo
+        - text: II sólo
+        - text: I y II
+        - text: I y III
+          correct: true
+        - text: I, II, y III
         questions:
-        - {}
+        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
+            Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
+            Qué debe hacer el programa cuando se dispara el evento"
       CSD U6 test hardware multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: El hardware debe ser controlado físicamente por una persona, y el
+            software puede ser controlado con código.
+        - text: El hardware permite que el software interactúe con el mundo físico
+            de muchas maneras diferentes.
+          correct: true
+        - text: El hardware es el tipo de software utilizado en los prototipos físicos.
+        - text: El hardware y el software trabajan juntos para que los dispositivos
+            informáticos sean útiles.
+          correct: true
+        - text: En los dispositivos informáticos, el hardware controla la salida y
+            el software la entrada.
         questions:
-        - {}
+        - text: "¿Qué DOS RESPUESTAS describen mejor la relación entre el hardware
+            (dispositivos físicos) y el software (programas)?"
       CSD U6 test hardware multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: El hardware debe ser controlado físicamente por una persona, y el
+            software puede ser controlado con código.
+        - text: El hardware permite que el software interactúe con el mundo físico
+            de muchas maneras diferentes.
+          correct: true
+        - text: El hardware es el tipo de software utilizado en los prototipos físicos.
+        - text: El hardware y el software trabajan juntos para que los dispositivos
+            informáticos sean útiles.
+          correct: true
+        - text: En los dispositivos informáticos, el hardware controla la salida y
+            el software la entrada.
         questions:
-        - {}
+        - text: "¿Qué DOS RESPUESTAS describen mejor la relación entre el hardware
+            (dispositivos físicos) y el software (programas)?"
       CSD U6 test hardware multi2_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: El hardware debe ser controlado físicamente por una persona, y el
+            software puede ser controlado con código.
+        - text: El hardware permite que el software interactúe con el mundo físico
+            de muchas maneras diferentes.
+          correct: true
+        - text: El hardware es el tipo de software utilizado en los prototipos físicos.
+        - text: El hardware y el software trabajan juntos para que los dispositivos
+            informáticos sean útiles.
+          correct: true
+        - text: En los dispositivos informáticos, el hardware controla la salida y
+            el software la entrada.
         questions:
-        - {}
+        - text: "¿Qué DOS RESPUESTAS describen mejor la relación entre el hardware
+            (dispositivos físicos) y el software (programas)?"
       CSD U6 test parameters multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pueden utilizarse con dispositivos físicos o hardware.
+        - text: Pueden utilizarse dentro de un bucle `for`.
+        - text: Pueden utilizarse como solución general para problemas con diferentes
+            detalles específicos.
+          correct: true
+        - text: Pueden utilizarse para ejecutar el mismo código en muchos lugares
+            diferentes del programa.
+        - text: Pueden utilizarse para detectar cuándo el usuario ha proporcionado
+            información.
         questions:
-        - {}
+        - text: "¿Qué hace que las funciones con parámetros sean más útiles que las
+            funciones sin parámetros?"
       CSD U6 test parameters multi_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pueden utilizarse con dispositivos físicos o hardware.
+        - text: Pueden utilizarse dentro de un bucle `for`.
+        - text: Pueden utilizarse como solución general para problemas con diferentes
+            detalles específicos.
+          correct: true
+        - text: Pueden utilizarse para ejecutar el mismo código en muchos lugares
+            diferentes del programa.
+        - text: Pueden utilizarse para detectar cuándo el usuario ha proporcionado
+            información.
         questions:
-        - {}
+        - text: "¿Qué hace que las funciones con parámetros sean más útiles que las
+            funciones sin parámetros?"
       CSD U6 test parameters multi_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pueden utilizarse con dispositivos físicos o hardware.
+        - text: Pueden utilizarse dentro de un bucle `for`.
+        - text: Pueden utilizarse como solución general para problemas con diferentes
+            detalles específicos.
+          correct: true
+        - text: Pueden utilizarse para ejecutar el mismo código en muchos lugares
+            diferentes del programa.
+        - text: Pueden utilizarse para detectar cuándo el usuario ha proporcionado
+            información.
         questions:
-        - {}
+        - text: "¿Qué hace que las funciones con parámetros sean más útiles que las
+            funciones sin parámetros?"
       CSD User Centered Design Post-Project Test_2022:
         title: 'Diseño Centrado en el Usuario: Prueba Fin de Proyecto'
       CSD Web Development Post-Project Test_pilot_2022:
@@ -15322,13 +15478,18 @@ es-ES:
         - {}
       Student End of Unit Survey - Q1_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 'todos los conceptos '
+          correct: true
+        - text: la mayoría de los conceptos, pero no todos
+          correct: true
+        - text: aproximadamente la mitad de los conceptos, pero no todos
+          correct: true
+        - text: algunos de los conceptos, pero no la mayoría
+          correct: true
+        - text: muy pocos o ninguno de los conceptos
+          correct: true
         questions:
-        - {}
+        - text: Pensando en lo que he aprendido en esta unidad, siento que entiendo...
       Student End of Unit Survey - Q2_2022:
         answers:
         - text: Totalmente de acuerdo
@@ -15346,7 +15507,7 @@ es-ES:
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - {}
+        - text: Puedo ser realmente yo mismo en esta clase de informática.
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - text: Totalmente de acuerdo
@@ -15821,7 +15982,7 @@ es-ES:
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - {}
+        - text: Puedo ser realmente yo mismo en esta clase de informática.
       comfortable-in-cs-class:
         answers:
         - text: Totalmente de acuerdo
@@ -16684,6 +16845,26 @@ es-ES:
           **Instrucciones para desbloquear la encuesta para los estudiantes:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
 
           Si los alumnos hacen clic en el enlace y ven un mensaje de error sobre que la encuesta está bloqueada, sigue los pasos de las instrucciones anteriores para desbloquear la encuesta para los alumnos.
+
+
+        markdown: |+
+          # Encuesta de Fin de Curso en Descubrimientos de Informática
+
+          **Tu opinión es importante para nosotros** La utilizamos para:
+
+          * Comprender tu experiencia
+          * Realizar mejoras en el curso
+
+          ¡Gracias por dedicar tu tiempo a mejorar Descubrimientos de Informática!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2022/lockable/1/levels/1/page/1" target="top">Pulsa aquí para completar la Encuesta Fin de Curso en Descubrimientos de Informática (CS)</a>
+
+          (se abre en una pestaña nueva)
+
+          <br>
+
+
+
 
 
       csd-post-survey-q26:
@@ -25521,6 +25702,10 @@ es-ES:
           **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       CSD Student End of Unit Survey - Unit 1_2022:
         title: "¡Encuesta de fin de unidad en Descubrimientos de Informática!"
       CSD U3 - Design a Game 1 - ExampleChoice_2022:
@@ -25547,26 +25732,46 @@ es-ES:
           **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una encuesta rápida para el profesor
 
           ## [Pulsa aquí para ver la encuesta del profesorado](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd3-2022:
         teacher_markdown: |
           **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
         teacher_markdown: |
           **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
         teacher_markdown: |-
           **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para ver la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
         teacher_markdown: |
           **Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor.
 
           ## [Pulsa aquí para ver la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       courseF_groups_freeplay_2022_pilot_-2022-2:
         description: "¡Ahora puedes usar lo que has aprendido para hacer lo que quieras!
           ¡Crea un programa interactivo con muchos sprites!"
@@ -25914,3 +26119,24 @@ es-ES:
           <small>
           <em>Code.org se toma en serio tu privacidad.</em> Tus respuestas aquí, se mantendrán  <strong>anónimas</strong>. El profesor puede ver las respuestas de toda la clase, pero sin nombres.
           </small>
+      Student End of Unit Survey - Intro+TeacherMD_csd6-2022:
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
+        teacher_markdown: |
+          **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
+
+          ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6)
+      Student End of Unit Survey_csd2-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd3-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd4-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd5-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd6-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd7-2022:
+        title: "¡Encuesta Final de la Unidad!"
