@@ -17,22 +17,22 @@ require_relative '../animation_assets/manifest_builder'
 
 def sync_in
   puts "Sync in starting"
-  # Services::I18n::CurriculumSyncUtils.sync_in
-  # HocSyncUtils.sync_in
-  # localize_level_and_project_content
-  # localize_block_content
-  # localize_animation_library
-  # localize_shared_functions
-  # localize_course_offerings
-  # localize_standards
+  Services::I18n::CurriculumSyncUtils.sync_in
+  HocSyncUtils.sync_in
+  localize_level_and_project_content
+  localize_block_content
+  localize_animation_library
+  localize_shared_functions
+  localize_course_offerings
+  localize_standards
   localize_docs
-  # puts "Copying source files"
-  # I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-  # redact_level_content
+  puts "Copying source files"
+  I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  redact_level_content
   redact_docs
-  # redact_block_content
-  # redact_script_and_course_content
-  # localize_markdown_content
+  redact_block_content
+  redact_script_and_course_content
+  localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
   puts "Sync in failed from the error: #{e}"
