@@ -167,7 +167,7 @@ def restore_redacted_files
       elsif original_path.starts_with? "i18n/locales/original/course_content"
         # Course content should be merged with existing content, so existing
         # data doesn't get lost
-        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly', 'startHtml'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
