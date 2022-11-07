@@ -115,6 +115,7 @@ class FieldSounds extends Blockly.FieldTextInput {
         }}
         onSelect={value => {
           this.setEditorValue_(value);
+          this.hide_();
         }}
       />,
       this.newDiv_
