@@ -1,4 +1,4 @@
-const hbNotify = require("../honeybadgerNotify.js");
+const hbNotify = require("../honeybadgerNotify");
 const chai = require("chai");
 const sinon = require("sinon");
 const Honeybadger = require("honeybadger");
@@ -60,7 +60,7 @@ const CUSTOM_EVENT = {
 
 const MALFORMED_EVENT = "malformed event";
 
-describe("#handler", function() {
+describe("honeybadgerNotify.handler", function() {
   beforeEach(function() {
     sinon.stub(Honeybadger, "notify");
   });

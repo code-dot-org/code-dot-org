@@ -6,7 +6,7 @@ var AWS = require('aws-sdk');
 var autoscaling = new AWS.AutoScaling();
 
 exports.handler = function (event, context) {
-  console.log('REQUEST RECEIVED:\\n', JSON.stringify(event));
+  console.log('REQUEST RECEIVED:\n', JSON.stringify(event));
   if (event.RequestType == 'Delete') {
     response.send(event, context, response.SUCCESS);
     return;

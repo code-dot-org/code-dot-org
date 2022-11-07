@@ -5,7 +5,7 @@ process.env.ATHENA_DB = "athena_db";
 process.env.ATHENA_TABLE = "athena_table";
 process.env.ATHENA_OUTPUT = "athena_output";
 
-describe("handler", () => {
+describe("s3PartitionCloudFrontLog.handler", () => {
   let sandbox;
   let s3;
   let glue;
