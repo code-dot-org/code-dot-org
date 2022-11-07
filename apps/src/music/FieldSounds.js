@@ -108,7 +108,7 @@ class FieldSounds extends Blockly.FieldTextInput {
             // there's a new highlighted play button, and
             // no need to reset this status.
             if (this.playingPreview === value) {
-              this.playingPreview = false;
+              this.playingPreview = null;
             }
             this.renderContent();
           });
