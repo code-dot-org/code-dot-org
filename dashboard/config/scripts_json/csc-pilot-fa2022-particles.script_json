@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-particles",
-    "serialized_at": "2022-11-04 19:45:22 UTC",
+    "serialized_at": "2022-11-07 18:31:06 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1016,14 +1016,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_particles_gas_predict"
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
         ],
         "progression": "States of Matter"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_particles_gas_predict"
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
         ],
         "lesson.key": "Particles Lesson 1",
         "lesson_group.key": "",
@@ -1031,38 +1031,13 @@
         "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
       },
       "level_keys": [
-        "csc_particles_gas_predict"
+        "csc_Paricles_StatesOfMatter_Predict_-particles"
       ]
     },
     {
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
-        ],
-        "progression": "States of Matter"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
-        ],
-        "lesson.key": "Particles Lesson 1",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
-      },
-      "level_keys": [
-        "csc_Particles_StatesOfMatter_L10-Gas_-particles"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1085,20 +1060,20 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_Paricles_StatesOfMatter_Predict_-particles"
+          "csc_particles_solid_predict"
         ],
         "progression": "States of Matter"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_Predict_-particles"
+          "csc_particles_solid_predict"
         ],
         "lesson.key": "Particles Lesson 1",
         "lesson_group.key": "",
@@ -1106,38 +1081,13 @@
         "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
       },
       "level_keys": [
-        "csc_Paricles_StatesOfMatter_Predict_-particles"
+        "csc_particles_solid_predict"
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "states of matter matching"
-        ],
-        "progression": "States of Matter"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "states of matter matching"
-        ],
-        "lesson.key": "Particles Lesson 1",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
-      },
-      "level_keys": [
-        "states of matter matching"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1160,20 +1110,20 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_particles_solid_predict"
+          "csc_particles_gas_predict"
         ],
         "progression": "States of Matter"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_particles_solid_predict"
+          "csc_particles_gas_predict"
         ],
         "lesson.key": "Particles Lesson 1",
         "lesson_group.key": "",
@@ -1181,7 +1131,57 @@
         "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
       },
       "level_keys": [
-        "csc_particles_solid_predict"
+        "csc_particles_gas_predict"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+        ],
+        "progression": "States of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+        ],
+        "lesson.key": "Particles Lesson 1",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
+      },
+      "level_keys": [
+        "csc_Particles_StatesOfMatter_L10-Gas_-particles"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "states of matter matching"
+        ],
+        "progression": "States of Matter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "states of matter matching"
+        ],
+        "lesson.key": "Particles Lesson 1",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
+      },
+      "level_keys": [
+        "states of matter matching"
       ]
     },
     {
@@ -1365,6 +1365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_physical change"
+        ],
         "progression": "Vanishing Act"
       },
       "bonus": false,
@@ -1412,6 +1415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cdc_particles_physical_intro2"
+        ],
         "progression": "Physical Changes"
       },
       "bonus": false,
@@ -1559,6 +1565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_afterChange"
+        ],
         "progression": "Before & After Physical Change"
       },
       "bonus": false,
@@ -1581,6 +1590,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_beforeChange"
+        ],
         "progression": "Before & After Physical Change"
       },
       "bonus": false,
@@ -1653,6 +1665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_chemical change"
+        ],
         "progression": "Vanishing Act Part 2"
       },
       "bonus": false,
@@ -1700,6 +1715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_chemical_intro"
+        ],
         "progression": "Chemical Changes"
       },
       "bonus": false,
@@ -1847,6 +1865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_afterChange_chem"
+        ],
         "progression": "Before & After Chemical Change"
       },
       "bonus": false,
@@ -1869,6 +1890,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_particles_phys_beforeChange_chem"
+        ],
         "progression": "Before & After Chemical Change"
       },
       "bonus": false,
@@ -1939,6 +1963,54 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "csc_Paricles_StatesOfMatter_Predict_-particles",
+        "script_level.level_keys": [
+          "csc_Paricles_StatesOfMatter_Predict_-particles"
+        ],
+        "lesson.key": "Particles Lesson 1",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid_-particles",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
+        ],
+        "lesson.key": "Particles Lesson 1",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_solid_predict",
+        "script_level.level_keys": [
+          "csc_particles_solid_predict"
+        ],
+        "lesson.key": "Particles Lesson 1",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_Particles_StatesOfMatter_L3-Solid_-particles",
+        "script_level.level_keys": [
+          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
+        ],
+        "lesson.key": "Particles Lesson 1",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_particles_gas_predict",
         "script_level.level_keys": [
           "csc_particles_gas_predict"
@@ -1963,57 +2035,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L7-Liquid_-particles",
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L7-Liquid_-particles"
-        ],
-        "lesson.key": "Particles Lesson 1",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_Paricles_StatesOfMatter_Predict_-particles",
-        "script_level.level_keys": [
-          "csc_Paricles_StatesOfMatter_Predict_-particles"
-        ],
-        "lesson.key": "Particles Lesson 1",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "states of matter matching",
         "script_level.level_keys": [
           "states of matter matching"
-        ],
-        "lesson.key": "Particles Lesson 1",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_Particles_StatesOfMatter_L3-Solid_-particles",
-        "script_level.level_keys": [
-          "csc_Particles_StatesOfMatter_L3-Solid_-particles"
-        ],
-        "lesson.key": "Particles Lesson 1",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "d8ccd2cb-d8c2-4bef-8b7a-5dfc382da43b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_particles_solid_predict",
-        "script_level.level_keys": [
-          "csc_particles_solid_predict"
         ],
         "lesson.key": "Particles Lesson 1",
         "lesson_group.key": "",
