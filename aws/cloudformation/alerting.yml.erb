@@ -28,7 +28,7 @@ Resources:
         Variables:
           HONEYBADGER_API_KEY: !Ref HoneybadgerApiKey
       Handler: honeybadgerNotify.handler
-      Runtime: nodejs10.x
+      Runtime: nodejs14.x
       Timeout: 30
       Role: !GetAtt BasicLambdaRole.Arn
 

@@ -71,55 +71,58 @@ const SNAPSHOTS = [
   }
 ];
 
-describe("#getSnapshotsToDelete", function() {
-  it("should return the 3 oldest snapshots out of 8 eligible and 3 ineligible snapshots", () => {
-    const expected = [
-      "production-snapshot-2",
-      "production-snapshot-3",
-      "production-snapshot-1"
-    ];
-    const idsToDelete = app
-      .getSnapshotsToDelete(SNAPSHOTS)
-      .map(s => s.DBClusterSnapshotIdentifier);
+describe('PruneAuroraBackups', () => {
 
-    assert.deepEqual(idsToDelete, expected);
+  describe("#getSnapshotsToDelete", function() {
+    it("should return the 3 oldest snapshots out of 8 eligible and 3 ineligible snapshots", () => {
+      const expected = [
+        "production-snapshot-2",
+        "production-snapshot-3",
+        "production-snapshot-1"
+      ];
+      const idsToDelete = app
+        .getSnapshotsToDelete(SNAPSHOTS)
+        .map(s => s.DBClusterSnapshotIdentifier);
+  
+      assert.deepEqual(idsToDelete, expected);
+    });
   });
-});
-
-describe("#isSnapshotDeletionEligible", function() {
-  it("should accept eligible snapshot", () => {
-    const s = {
-      DBClusterSnapshotIdentifier: "production-snapshot-0",
-      Status: "available",
-      SnapshotType: "manual"
-    };
-    assert(app.isSnapshotDeletionEligible(s));
-  });
-
-  it("should reject snapshot that isn't 'available'", () => {
-    const s = {
-      DBClusterSnapshotIdentifier: "production-snapshot-0",
-      Status: "creating",
-      SnapshotType: "manual"
-    };
-    assert.isFalse(app.isSnapshotDeletionEligible(s));
-  });
-
-  it('should reject snapshot marked with "retain"', () => {
-    const s = {
-      DBClusterSnapshotIdentifier: "production-snapshot-0-retain",
-      Status: "available",
-      SnapshotType: "manual"
-    };
-    assert.isFalse(app.isSnapshotDeletionEligible(s));
-  });
-
-  it("should reject automatic snapshot", () => {
-    const s = {
-      DBClusterSnapshotIdentifier: "production-snapshot-0",
-      Status: "available",
-      SnapshotType: "automatic"
-    };
-    assert.isFalse(app.isSnapshotDeletionEligible(s));
+  
+  describe("#isSnapshotDeletionEligible", function() {
+    it("should accept eligible snapshot", () => {
+      const s = {
+        DBClusterSnapshotIdentifier: "production-snapshot-0",
+        Status: "available",
+        SnapshotType: "manual"
+      };
+      assert(app.isSnapshotDeletionEligible(s));
+    });
+  
+    it("should reject snapshot that isn't 'available'", () => {
+      const s = {
+        DBClusterSnapshotIdentifier: "production-snapshot-0",
+        Status: "creating",
+        SnapshotType: "manual"
+      };
+      assert.isFalse(app.isSnapshotDeletionEligible(s));
+    });
+  
+    it('should reject snapshot marked with "retain"', () => {
+      const s = {
+        DBClusterSnapshotIdentifier: "production-snapshot-0-retain",
+        Status: "available",
+        SnapshotType: "manual"
+      };
+      assert.isFalse(app.isSnapshotDeletionEligible(s));
+    });
+  
+    it("should reject automatic snapshot", () => {
+      const s = {
+        DBClusterSnapshotIdentifier: "production-snapshot-0",
+        Status: "available",
+        SnapshotType: "automatic"
+      };
+      assert.isFalse(app.isSnapshotDeletionEligible(s));
+    });
   });
 });
