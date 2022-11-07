@@ -1,8 +1,8 @@
 @dashboard_db_access
-@eyes
 
 Feature: Teacher Application
 
+@eyes
 Scenario: Teacher starts a new application and submits it
   Given I create a teacher named "Severus"
   And I am on "http://studio.code.org/pd/application/teacher"
@@ -92,6 +92,7 @@ Scenario: Teacher starts a new application and submits it
   Then I see no difference for "Principal approval confirmation form"
   Then I close my eyes
 
+@eyes
 Scenario: Teacher saves, re-opens, and submits an application
   Given I create a teacher named "Severus"
   And I am on "http://studio.code.org/pd/application/teacher"
