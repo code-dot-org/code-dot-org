@@ -9,7 +9,7 @@ module Pd
 
     PRINCIPAL_APPROVAL_STATE = {
       not_required: 'Not required',
-      in_progress: 'Incomplete - Principal email sent on ',
+      in_progress: 'Incomplete - Admin email sent on ',
       complete: 'Complete - '
     }
 
@@ -21,7 +21,7 @@ module Pd
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
       additional_demographic_information: 'Additional Demographic Information and Submission',
-      school_stats_and_principal_approval_section: 'Principal Approval and School Information'
+      school_stats_and_principal_approval_section: 'Administrator Approval and School Information'
     }
 
     PAGE_LABELS = {
