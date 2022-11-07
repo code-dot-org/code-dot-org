@@ -66,8 +66,6 @@ class FieldSounds extends Blockly.FieldTextInput {
       this,
       this.dropdownDispose_.bind(this)
     );
-
-    this.updateGraph_();
   }
 
   /**
@@ -81,6 +79,7 @@ class FieldSounds extends Blockly.FieldTextInput {
     ReactDOM.render(
       <SoundsPanel
         library={this.options.getLibrary()}
+        currentValue={this.getValue()}
         onPreview={value => {
           this.options.playPreview(value);
         }}
@@ -154,19 +153,6 @@ class FieldSounds extends Blockly.FieldTextInput {
    */
   render_() {
     super.render_();
-    this.updateGraph_();
-  }
-
-  /**
-   * Redraw the pitch picker with the current pitch.
-   * @private
-   */
-  updateGraph_() {
-    if (!this.imageElement_) {
-      return;
-    }
-    const i = this.getValue();
-    this.imageElement_.style.backgroundPosition = -i * 37 + 'px 0';
   }
 
   /**
