@@ -730,7 +730,7 @@ def run_feature(browser, feature, options)
 
   # Force Applitools eyes to use a consistent host OS identifier for now
   # BrowserStack was reporting Windows 6.0 and 6.1, causing different baselines
-  run_environment['APPLITOOLS_HOST_OS'] = browser['mobile'] ? 'iOS 11.3' : 'Windows 6x'
+  run_environment['APPLITOOLS_HOST_OS'] = browser['name'] ? "#{browser['platformName']} #{browser['platformVersion']}" : 'Windows 6x'
 
   max_reruns = how_many_reruns?(test_run_string)
 
