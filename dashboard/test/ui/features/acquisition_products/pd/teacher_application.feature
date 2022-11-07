@@ -120,11 +120,7 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I press the first "button#next" element
 
   # Section 3
-  Then I wait until element "h3" contains text "Section 3: Professional Learning Program Requirements"
-  Then I wait until element "input[name='committed']" is visible
-  And I press "input[name='committed']:first" using jQuery
-  And I press the first "input#understandFee" element
-  And I click selector "input[name='payFee']" if I see it
+  And I complete Section 3 of the teacher PD application
   And I press the first "button#next" element
 
   # Section 4
