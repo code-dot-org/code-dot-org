@@ -5,5 +5,8 @@
     "yes": "Sí",
     "no": "No",
     "run": "Executa",
-    "finish": "Finalitza"
+    "finish": "Finalitza",
+    "blue": "Blau",
+    "green": "Verd",
+    "red": "Vermell"
 }

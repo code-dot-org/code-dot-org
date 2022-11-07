@@ -231,20 +231,12 @@ is:
             MOVES.XArmsUp: Teygja
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
-      Dancelab_everyMeasuresRange:
-        text: 'endurtaka hverja {N} takta eftir {START} '
       Dancelab_everySeconds:
         text: 'á {N} {UNIT} fresti '
         options:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
-      Dancelab_everySecondsRange:
-        text: 'á {N} {UNIT} fresti frá {START} til {STOP} '
-        options:
-          UNIT:
-            measures: Taktar
-            seconds: Sekúndur
       Dancelab_everyVerseChorus:
         text: 'á {UNIT} fresti '
         options:
@@ -992,6 +984,18 @@ is:
         text: uppstilling
       Dancelab_whenSetup2:
         text: uppstilling
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Sápukúlur
+            '"confetti"': Skraut
+            '"hearts"': hjörtu
+            '"rain"': regn
+            '"starburst"': Stjörnublossi
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): er hægt að draga
       gamelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       gamelab_addTarget:

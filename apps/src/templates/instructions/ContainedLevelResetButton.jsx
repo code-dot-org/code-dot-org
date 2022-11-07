@@ -11,6 +11,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 export const UnconnectedContainedLevelResetButton = ({
+  teacherViewingStudentWork,
   userId,
   queryUserProgress,
   hasLevelResults,
@@ -30,7 +31,10 @@ export const UnconnectedContainedLevelResetButton = ({
     });
   };
 
-  if (userRoleInCourse !== CourseRoles.Instructor) {
+  if (
+    userRoleInCourse !== CourseRoles.Instructor ||
+    teacherViewingStudentWork
+  ) {
     return null;
   }
   return (
@@ -59,6 +63,7 @@ export const UnconnectedContainedLevelResetButton = ({
 };
 
 UnconnectedContainedLevelResetButton.propTypes = {
+  teacherViewingStudentWork: PropTypes.bool,
   userId: PropTypes.number,
   queryUserProgress: PropTypes.func.isRequired,
   hasLevelResults: PropTypes.bool,

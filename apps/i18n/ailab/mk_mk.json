@@ -1,2 +1,161 @@
 {
+  "datasets": {
+    "shoe_survey_toy": {
+      "fields": {
+        "shoe": {
+          "id": "кондура"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "onion": {
+          "id": "кромид"
+        },
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "грав\n"
+        },
+        "lime": {
+          "id": "лимета"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "mushrooms": {
+          "id": "печурки"
+        },
+        "lobster": {
+          "id": "јастог"
+        },
+        "bacon": {
+          "id": "сланина"
+        },
+        "cheese": {
+          "id": "сирење"
+        },
+        "meat": {
+          "id": "месо"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "music": {
+          "id": "музика"
+        },
+        "food": {
+          "id": "храна"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Опис"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "strawberry": {
+          "id": "јагода"
+        },
+        "lime": {
+          "id": "лимета"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "tomato": {
+          "id": "домат"
+        },
+        "avocado": {
+          "id": "авокадо"
+        },
+        "fruit": {
+          "id": "овошје"
+        },
+        "beans": {
+          "id": "грав\n"
+        },
+        "cheese": {
+          "id": "сирење"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "school": {
+          "id": "училиште"
+        },
+        "health": {
+          "id": "здравје"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "lamb": {
+          "id": "јагне"
+        },
+        "onion": {
+          "id": "кромид"
+        },
+        "cheese": {
+          "id": "сирење"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Name": {
+          "id": "Име"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "people": {
+          "id": "луѓе"
+        },
+        "rhino": {
+          "id": "носорог"
+        },
+        "elephant": {
+          "id": "слон"
+        },
+        "alligator": {
+          "id": "алигатор"
+        },
+        "trees": {
+          "id": "дрвја"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "onion": {
+          "id": "кромид"
+        },
+        "ginger": {
+          "id": "ѓумбир"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Постигувања"
+        }
+      }
+    }
+  }
 }

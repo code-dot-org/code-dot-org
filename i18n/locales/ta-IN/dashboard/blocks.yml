@@ -941,6 +941,23 @@ ta:
         text: செட்அப்
       Dancelab_whenSetup2:
         text: செட்அப்
+      DansBlocks_setForegroundEffect2:
+        text: விளைவு {EFFECT}செய்ய
+        options:
+          EFFECT:
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+            '"hearts"': இதயங்கள்
+            '"emojis"': மகிழ்ச்சியான எமோஜிகள்
+            '"rain"': மழை
+            '"glass"': நொறுங்கும் கண்ணாடி
+            '"twinkling"': மின்னும்
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): இழுக்கப்படக்கூடியது
+            wandering(): அலைந்து திரிதல்
+            shrinking(): சுருங்குகிறது
       gamelab_addBehaviorSimple:
         text: ஸ்பிரைட்{SPRITE}தொடக்கம்{BEHAVIOR}
       gamelab_addTarget:
@@ -1290,7 +1307,6 @@ ta:
             "'sound://category_space/Pillars_SFX.mp3'": தூண்கள்
             "'sound://category_space/Southern_ring_SFX.mp3'": தெற்கு வளையம்
             "'sound://category_space/Supernova_SFX.mp3'": சூப்பர்நோவா
-            "'sound://category_sports/One_Whistle_SFX.mp3'": டைக்கோ
       gamelab_playSpeech:
         text: பேச்சு விளையாடு {SOUND}
       gamelab_playerBehaviors:

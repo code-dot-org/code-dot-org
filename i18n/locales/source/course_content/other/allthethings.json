@@ -2817,5 +2817,11 @@
   },
   "https://studio.code.org/s/allthethings/lessons/44/levels/12": {
     "long_instructions": "This is a Java Lab level with passing validation."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/3": {
+    "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and no modal function editor."
+  },
+  "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
+    "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and uses the modal function editor."
   }
 }

@@ -165,7 +165,7 @@ def restore_redacted_files
       elsif original_path.starts_with? "i18n/locales/original/course_content"
         # Course content should be merged with existing content, so existing
         # data doesn't get lost
-        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly', 'startHtml'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
@@ -388,6 +388,23 @@ def distribute_translations(upload_manifests)
       basename = File.basename(loc_file, '.json')
       destination = "apps/i18n/#{basename}/#{js_locale}.json"
       sanitize_file_and_write(loc_file, destination)
+    end
+
+    ### Merge ml-playground datasets into apps' ailab JSON
+    Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
+      ailab_path = "apps/i18n/ailab/#{js_locale}.json"
+      name = File.basename(loc_file, '.json')
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      external_translations = JSON.parse(File.read(loc_file))
+      next if external_translations.empty?
+
+      # Merge new translations
+      existing_translations = JSON.parse(File.read(ailab_path))
+      existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
+      existing_translations['datasets'][name] = external_translations
+      sanitize_data_and_write(existing_translations, ailab_path)
     end
 
     ### Animation library

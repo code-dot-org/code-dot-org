@@ -114,8 +114,6 @@ const FormController = props => {
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
     applicationId
   );
-  const applicationStatusOnSave = 'incomplete';
-  const applicationStatusOnSubmit = 'unreviewed';
 
   // do this once on mount only
   useEffect(() => {
@@ -340,13 +338,13 @@ const FormController = props => {
    *
    * @returns {Object}
    */
-  const serializeFormData = (formData, status) => {
+  const serializeFormData = (formData, isSaving) => {
     if (!formData) {
       throw new Error(`formData cannot be undefined`);
     }
     return {
       form_data: formData,
-      status: status,
+      isSaving: isSaving,
       ...serializeAdditionalData()
     };
   };
@@ -370,14 +368,14 @@ const FormController = props => {
     setSaving(false);
   };
 
-  const makeRequest = applicationStatus => {
+  const makeRequest = isSaving => {
     const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData(data, applicationStatus))
+        data: JSON.stringify(serializeFormData(data, isSaving))
       });
 
     return updatedApplicationId
@@ -403,7 +401,7 @@ const FormController = props => {
       onSuccessfulSave(response);
     };
 
-    makeRequest(applicationStatusOnSave)
+    makeRequest(true)
       .done(data => handleSuccessfulSave(data))
       .fail(data => handleRequestFailure(data));
   };
@@ -441,7 +439,7 @@ const FormController = props => {
       onSuccessfulSubmit(data);
     };
 
-    makeRequest(applicationStatusOnSubmit)
+    makeRequest(false)
       .done(data => handleSuccessfulSubmit(data))
       .fail(data => handleRequestFailure(data));
   };
