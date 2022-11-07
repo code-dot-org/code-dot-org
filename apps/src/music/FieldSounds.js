@@ -76,6 +76,22 @@ class FieldSounds extends Blockly.FieldTextInput {
   dropdownCreate_() {
     this.newDiv_ = document.createElement('div');
 
+    this.renderContent();
+
+    this.newDiv_.style.color = 'white';
+    this.newDiv_.style.width = '300px';
+    this.newDiv_.style.backgroundColor = 'black';
+    this.newDiv_.style.padding = '5px';
+    this.newDiv_.style.cursor = 'pointer';
+
+    return this.newDiv_;
+  }
+
+  renderContent() {
+    if (!this.newDiv_) {
+      return;
+    }
+
     ReactDOM.render(
       <SoundsPanel
         library={this.options.getLibrary()}
@@ -89,21 +105,15 @@ class FieldSounds extends Blockly.FieldTextInput {
       />,
       this.newDiv_
     );
-
-    this.newDiv_.style.color = 'white';
-    this.newDiv_.style.width = '300px';
-    this.newDiv_.style.backgroundColor = 'black';
-    this.newDiv_.style.padding = '5px';
-    this.newDiv_.style.cursor = 'pointer';
-
-    return this.newDiv_;
   }
 
   /**
    * Dispose of events belonging to the pitch picker.
    * @private
    */
-  dropdownDispose_() {}
+  dropdownDispose_() {
+    this.newDiv_ = null;
+  }
 
   /**
    * Hide the editor and picker.
@@ -153,6 +163,7 @@ class FieldSounds extends Blockly.FieldTextInput {
    */
   render_() {
     super.render_();
+    this.renderContent();
   }
 
   /**
