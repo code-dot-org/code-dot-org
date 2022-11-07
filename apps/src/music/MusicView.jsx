@@ -14,7 +14,6 @@ import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
-import InputContext from './InputContext';
 import {PLAY_ICON, STOP_ICON, Triggers} from './constants';
 import {musicLabDarkTheme} from './blockly/themes';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
@@ -25,8 +24,6 @@ import moduleStyles from './music.module.scss';
 import feedbackStyles from './feedback.module.scss';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
-
-var hooks = {};
 
 const InstructionsPositions = {
   TOP: 'TOP',
@@ -64,8 +61,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.codeAppRef = document.getElementById('codeApp');
     this.player = new MusicPlayer();
-    this.inputContext = new InputContext();
     this.analyticsReporter = new AnalyticsReporter();
+    this.codeHooks = {};
 
     // We have seen on Android devices that window.innerHeight will always be the
     // same whether in landscape or portrait orientation.  Given that we tell
@@ -414,9 +411,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playTrigger = id => {
-    //console.log('Playhead position: ' + this.player.getPlayheadPosition());
-    this.inputContext.onTrigger(id);
-    this.callUserGeneratedCode(hooks.triggeredAtButton);
+    const hook = this.codeHooks[this.triggerIdToEvent(id)];
+    if (hook) {
+      this.callUserGeneratedCode(hook);
+    }
   };
 
   toggleInstructions = () => {
@@ -426,26 +424,38 @@ class UnconnectedMusicView extends React.Component {
   };
 
   executeSong = () => {
-    var generator = Blockly.Generator.blockSpaceToCode.bind(
-      Blockly.Generator,
-      'JavaScript'
-    );
+    Blockly.getGenerator().init(this.workspace);
 
-    const events = {
-      whenRunButton: {code: generator(BlockTypes.WHEN_RUN)},
-      triggeredAtButton: {code: generator(BlockTypes.TRIGGERED_AT)}
-    };
+    const events = {};
 
-    CustomMarshalingInterpreter.evalWithEvents(
-      {MusicPlayer: this.player, InputContext: this.inputContext},
-      events
-    ).hooks.forEach(hook => {
-      //console.log('hook', hook);
-      hooks[hook.name] = hook.func;
+    this.workspace.getTopBlocks().forEach(block => {
+      if (block.type === BlockTypes.WHEN_RUN) {
+        events.whenRunButton = {
+          code: Blockly.JavaScript.blockToCode(block)
+        };
+      }
+
+      if (block.type === BlockTypes.TRIGGERED_AT) {
+        const id = block.getFieldValue('trigger');
+        events[this.triggerIdToEvent(id)] = {
+          code: Blockly.JavaScript.blockToCode(block)
+        };
+      }
     });
 
-    this.callUserGeneratedCode(hooks.whenRunButton);
+    this.codeHooks = {};
+
+    CustomMarshalingInterpreter.evalWithEvents(
+      {MusicPlayer: this.player},
+      events
+    ).hooks.forEach(hook => {
+      this.codeHooks[hook.name] = hook.func;
+    });
+
+    this.callUserGeneratedCode(this.codeHooks.whenRunButton);
   };
+
+  triggerIdToEvent = id => `triggeredAtButton-${id}`;
 
   playSong = () => {
     this.player.stopSong();
@@ -465,7 +475,6 @@ class UnconnectedMusicView extends React.Component {
 
   stopSong = () => {
     this.player.stopSong();
-    this.inputContext.clearTriggers();
 
     // Clear the events list, and hence the visual timeline, of any
     // user-triggered sounds.
