@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Experiment with inputs and outputs
+# Get to know the Circuit Playground
 
 ##### The first to engaging with the Physical Computing Unit is to set up your Circuit Playground. This module will walk you through the steps of setting up your board along with providing you opportunities to try some of the board features. 
 

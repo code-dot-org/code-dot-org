@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-03 23:46:11 UTC",
+    "serialized_at": "2022-11-06 16:14:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -472,7 +472,7 @@
       "key": "e934c8ba-8daf-4a74-a389-e91045d9f780",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Instance Variables and Attributes*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Instance Variables and Attributes*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n**Do This:** Explain the syntax for declaring an instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The instance variable is `private`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The data type for the instance variable and introduce the `double` data type\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -822,7 +822,7 @@
       "key": "43d0a74b-39ca-4e16-95e8-547bc692864c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***default value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How should we decide what the default values should be for an object's instance variables?*\n\n**Discussion Goal:** Students share suggestions for making these decisions and may share examples to support their suggestions. Students should realize that they should establish values for what they would consider a \"default object\" if the user does not specify values, such as the `Painter` object starting at (0, 0) or a new profile page on a social media app starting with a default profile image.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***default value***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that if a no-argument constructor is not written in the class, Java will automatically provide one and assign the default values for the data type.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How should we decide what the default values should be for an object's instance variables?*\n\n**Discussion Goal:** Students share suggestions for making these decisions and may share examples to support their suggestions. Students should realize that they should establish values for what they would consider a \"default object\" if the user does not specify values, such as the `Painter` object starting at (0, 0) or a new profile page on a social media app starting with a default profile image.",
         "tips": [
           {
             "type": "teachingTip",
@@ -859,6 +859,17 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding on Level 4, then continue to Level 5 to write a new class with instance variables and a no-argument constructor. On Level 6, students write a no-argument constructor in the `Dessert` class.",
+        "progression_name": "Practice: Writing a Class"
+      },
+      "seeding_key": {
+        "activity_section.key": "24fd5b6c-5778-4946-a023-a1285cb60c26",
+        "lesson_activity.key": "83ba7039-7de8-4a47-b7c8-d7f88b3dba9b"
+      }
+    },
+    {
+      "key": "f7579bbb-cef6-4691-b8ef-4ac5f8e56767",
+      "position": 11,
+      "properties": {
         "progression_name": "Practice: The Food Truck",
         "tips": [
           {
@@ -868,13 +879,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "24fd5b6c-5778-4946-a023-a1285cb60c26",
+        "activity_section.key": "f7579bbb-cef6-4691-b8ef-4ac5f8e56767",
         "lesson_activity.key": "83ba7039-7de8-4a47-b7c8-d7f88b3dba9b"
       }
     },
     {
       "key": "bd2dde87-f83a-4596-b3e6-4ae4cfde9130",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
         "remarks": true
@@ -886,7 +897,7 @@
     },
     {
       "key": "dd80693e-756d-44ff-ac2a-adcf7cee7fd8",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class to the Backpack.",
         "tips": [
@@ -1161,6 +1172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1_2023"
+        ],
         "progression": "Predict and Run: No-Argument Constructors"
       },
       "bonus": false,
@@ -1183,6 +1197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_2023"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -1205,6 +1222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_2023"
+        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -1227,7 +1247,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Practice: The Food Truck"
+        "level_keys": [
+          "CSA U2L2-L4_2023"
+        ],
+        "progression": "Practice: Writing a Class"
       },
       "bonus": false,
       "seeding_key": {
@@ -1249,7 +1272,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice: The Food Truck"
+        "level_keys": [
+          "CSA U2L2-L5_2023"
+        ],
+        "progression": "Practice: Writing a Class"
       },
       "bonus": false,
       "seeding_key": {
@@ -1268,7 +1294,7 @@
     {
       "chapter": 13,
       "position": 6,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Practice: The Food Truck"
@@ -1281,7 +1307,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-2023",
-        "activity_section.key": "24fd5b6c-5778-4946-a023-a1285cb60c26"
+        "activity_section.key": "f7579bbb-cef6-4691-b8ef-4ac5f8e56767"
       },
       "level_keys": [
         "CSA U2L2-L6_2023"
@@ -1293,6 +1319,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1464,7 +1493,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-2023",
-        "activity_section.key": "24fd5b6c-5778-4946-a023-a1285cb60c26"
+        "activity_section.key": "f7579bbb-cef6-4691-b8ef-4ac5f8e56767"
       }
     },
     {
