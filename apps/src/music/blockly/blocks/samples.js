@@ -12,14 +12,14 @@ const isBlockInsideWhenRun = ctx => {
   return false;
 };
 
-export const playSample = {
+export const playSound = {
   definition: {
-    type: BlockTypes.PLAY_SAMPLE,
+    type: BlockTypes.PLAY_SOUND,
     message0: 'play %1 at measure %2',
     args0: [
       {
         type: 'field_sounds',
-        name: 'sample',
+        name: 'sound',
         getLibrary: () => window.library,
         playPreview: (id, onStop) => {
           window.playPreview(id, onStop);
@@ -39,7 +39,7 @@ export const playSample = {
   },
   generator: ctx =>
     'MusicPlayer.playSoundAtMeasureById("' +
-    ctx.getFieldValue('sample') +
+    ctx.getFieldValue('sound') +
     '", ' +
     Blockly.JavaScript.valueToCode(
       ctx,

@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import queryString from 'query-string';
-import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
+import {baseToolbox} from './blockly/toolbox';
 import Instructions from './Instructions';
 import SharePlaceholder from './SharePlaceholder';
 import Controls from './Controls';
@@ -134,7 +134,6 @@ class UnconnectedMusicView extends React.Component {
     this.loadLibrary().then(library => {
       this.setState({library});
       this.initBlockly();
-      this.workspace.updateToolbox(createMusicToolbox(library, 'dropdown'));
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
 
@@ -524,21 +523,6 @@ class UnconnectedMusicView extends React.Component {
         this.playTrigger(trigger.id);
       }
     });
-    if (event.key === 'd') {
-      this.workspace.updateToolbox(
-        createMusicToolbox(this.state.library, 'dropdown')
-      );
-    }
-    if (event.key === 'v') {
-      this.workspace.updateToolbox(
-        createMusicToolbox(this.state.library, 'valueSample')
-      );
-    }
-    if (event.key === 'p') {
-      this.workspace.updateToolbox(
-        createMusicToolbox(this.state.library, 'playSample')
-      );
-    }
     if (event.code === 'Space') {
       this.setPlaying(!this.state.isPlaying);
     }
