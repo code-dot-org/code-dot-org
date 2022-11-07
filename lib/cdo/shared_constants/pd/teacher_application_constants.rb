@@ -23,7 +23,6 @@ module Pd
       administrator_information: 'Administrator/School Leader Information',
       implementation_plan: 'Implementation Plan',
       professional_learning_program_requirements: 'Program Requirements and Submission',
-      teaching_background: 'Teaching Background',
       school_stats_and_principal_approval_section: 'Principal Approval and School Information'
     }
 
@@ -113,8 +112,6 @@ module Pd
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
           agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
-      teaching_background: {
-      },
       school_stats_and_principal_approval_section: {
         title_i_status: 'Title I status',
         rural_status: 'Rural Status',
