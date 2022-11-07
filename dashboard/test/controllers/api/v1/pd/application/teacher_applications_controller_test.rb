@@ -20,8 +20,8 @@ module Api::V1::Pd::Application
       @hash_with_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
       @application = create TEACHER_APPLICATION_FACTORY, regional_partner: partner
 
-      program_manager_without_admin_approval = create :program_manager
-      partner_without_admin_approval = program_manager_without_admin_approval.regional_partners.first
+      @program_manager_without_admin_approval = create :program_manager
+      partner_without_admin_approval = @program_manager_without_admin_approval.regional_partners.first
       partner_without_admin_approval.update!(applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL)
       @hash_without_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner_without_admin_approval.id
     end
@@ -253,6 +253,33 @@ module Api::V1::Pd::Application
       assert_response :ok
     end
 
+    test 'making principal approval required updates status to \'awaiting_admin_approval\'' do
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_without_admin_approval, user: @applicant, status: 'unreviewed'
+      sign_in @program_manager_without_admin_approval
+
+      post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: false}
+      assert_response :success
+      assert_equal 'awaiting_admin_approval', application.reload.status
+    end
+
+    test 'making principal approval not required only updates status to \'unreviewed\' if it was \'awaiting_admin_approval\'' do
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval, user: @applicant, status: 'awaiting_admin_approval'
+      sign_in @program_manager
+
+      post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: true}
+      assert_response :success
+      assert_equal 'unreviewed', application.reload.status
+    end
+
+    test 'making principal approval not required does not change status if it was not \'awaiting_admin_approval\'' do
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval, user: @applicant, status: 'pending'
+      sign_in @program_manager
+
+      post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: true}
+      assert_response :success
+      assert_equal 'pending', application.reload.status
+    end
+
     test 'change_principal_approval_requirement can set principal_approval_not_required to true' do
       sign_in @program_manager
 
@@ -267,7 +294,7 @@ module Api::V1::Pd::Application
       sign_in @program_manager
       application.update!(principal_approval_not_required: true)
 
-      assert_equal true, application.principal_approval_not_required
+      assert application.principal_approval_not_required
       post :change_principal_approval_requirement, params: {id: application.id, principal_approval_not_required: false}
       assert_response :success
       refute application.reload.principal_approval_not_required
