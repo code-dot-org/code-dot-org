@@ -1,0 +1,7 @@
+name 'csc_bookcover_survey_L2'
+title 'Book Cover Survey Lesson 2'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'book covers_l2_q1'
