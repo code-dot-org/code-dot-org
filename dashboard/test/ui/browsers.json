@@ -26,7 +26,7 @@
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "platformVersion": "11.3",
+    "platformVersion": "15.4",
     "browserName": "safari",
     "deviceName": "iPhone Simulator",
     "mobile": true,
