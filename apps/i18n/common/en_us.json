@@ -917,6 +917,7 @@
   "explainRestrictedSectionWordAndPicture": "If set to ‘yes,’ students will not be able to join this section using the section code. You can still add students to the section manually on the Manage Students tab.",
   "explainRestrictedSectionLearnMore": "Learn More",
   "exploreDataset": "Visualize {datasetName}",
+  "exploreProfessionalLearning": "Explore Professional Learning",
   "export": "Export",
   "exportForWeb": "Export for web",
   "extrasStageNChallenges": "Lesson {lessonNumber} Challenges",
