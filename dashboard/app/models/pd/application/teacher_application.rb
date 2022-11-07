@@ -63,18 +63,16 @@ module Pd::Application
     # These statuses are considered "decisions", and will queue an email that will be sent by cronjob the next morning
     # In these decision emails, status and email_type are the same.
     AUTO_EMAIL_STATUSES = %w(
-      accepted_no_cost_registration
+      accepted
       declined
-      waitlisted
-      registration_sent
+      pending_space_availability
     )
 
     # If the regional partner's emails are SENT_BY_SYSTEM, the application must
     # have an assigned workshop to be set to one of these statuses because they
     # trigger emails with a link to the workshop registration form
     WORKSHOP_REQUIRED_STATUSES = %w(
-      accepted_no_cost_registration
-      registration_sent
+      accepted
     )
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
@@ -85,7 +83,6 @@ module Pd::Application
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
-    before_save :set_total_course_hours, if: -> {form_data_changed?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
     before_save :log_status, if: -> {status_changed?}
 
@@ -136,27 +133,6 @@ module Pd::Application
 
     def set_course_from_program
       self.course = PROGRAMS.key(program)
-    end
-
-    def set_total_course_hours
-      hash = sanitize_form_data_hash
-      minutes = hash[:cs_how_many_minutes]
-      days_per_week = hash[:cs_how_many_days_per_week]
-      weeks_per_year = hash[:cs_how_many_weeks_per_year]
-
-      if minutes && days_per_week && weeks_per_year
-        update_form_data_hash(
-          {
-            cs_total_course_hours: [minutes, days_per_week, weeks_per_year].map(&:to_i).reduce(:*) / 60
-          }
-        )
-      else
-        update_form_data_hash(
-          {
-            cs_total_course_hours: nil
-          }
-        )
-      end
     end
 
     def save_partner
@@ -350,14 +326,11 @@ module Pd::Application
         unreviewed
         incomplete
         reopened
+        awaiting_admin_approval
         pending
-        waitlisted
+        pending_space_availability
         declined
-        accepted_not_notified
-        accepted_notified_by_partner
-        accepted_no_cost_registration
-        registration_sent
-        paid
+        accepted
         withdrawn
       )
     end
@@ -421,10 +394,6 @@ module Pd::Application
 
     def effective_regional_partner_name
       regional_partner&.name || 'Code.org'
-    end
-
-    def accepted?
-      status.start_with? 'accepted'
     end
 
     # @override
@@ -501,16 +470,10 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
-        previous_used_curriculum: [
-          'CS Discoveries',
-          'CS Principles',
-          'Both',
-          'Neither'
-        ],
-
         previous_yearlong_cdo_pd: [
           'CS Discoveries',
           'CS Principles',
+          'Computer Science A (CSA)',
           'Exploring Computer Science',
           'CS in Algebra',
           'CS in Science',
@@ -611,10 +574,10 @@ module Pd::Application
           'We will offer both non-AP Java introductory and AP-level courses'
         ],
 
-        plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year})",
-          "No, I don’t plan to teach this course this year (#{year})",
-          TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
+        enough_course_hours: [
+          YES,
+          NO,
+          "I don't know yet."
         ],
 
         pay_fee: [
@@ -629,8 +592,9 @@ module Pd::Application
           'Regional Partner website',
           'Regional Partner email',
           'Regional Partner event or workshop',
-          'From a teacher',
-          'From an administrator',
+          'Teacher',
+          'District administrator',
+          'Conference',
           TEXT_FIELDS[:other_with_text]
         ],
 
@@ -649,25 +613,6 @@ module Pd::Application
           "No, this course will be added to the schedule in addition to an existing computer science course",
           "No, computer science is new to my school",
           TEXT_FIELDS[:i_dont_know_explain]
-        ],
-        replace_which_course: [
-          'CodeHS',
-          'Codesters',
-          'Computer Applications (ex: using Microsoft programs)',
-          'CS Fundamentals',
-          'CS in Algebra',
-          'CS in Science',
-          'Exploring Computer Science',
-          'Globaloria',
-          'ICT',
-          'My CS',
-          'Project Lead the Way - Computer Science',
-          'Robotics',
-          'ScratchEd',
-          'Typing',
-          'Technology Foundations',
-          'We’ve created our own course',
-          TEXT_FIELDS[:other_please_explain]
         ]
       }
     end
@@ -684,6 +629,7 @@ module Pd::Application
         city
         state
         zip_code
+        principal_role
         principal_first_name
         principal_last_name
         principal_email
@@ -691,14 +637,10 @@ module Pd::Application
         principal_phone_number
         completing_on_behalf_of_someone_else
         current_role
-        previous_used_curriculum
         previous_yearlong_cdo_pd
 
         program
-        cs_how_many_minutes
-        cs_how_many_days_per_week
-        cs_how_many_weeks_per_year
-        plan_to_teach
+        enough_course_hours
         replace_existing
 
         gender_identity
@@ -730,6 +672,7 @@ module Pd::Application
         elsif hash[:program] == PROGRAMS[:csa]
           required << :csa_which_grades
           required << :csa_how_offer
+          required << :csa_already_know
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -755,13 +698,10 @@ module Pd::Application
         [:cs_offered_at_school, TEXT_FIELDS[:other_please_list]],
         [:cs_opportunities_at_school, TEXT_FIELDS[:other_please_list]],
         [:csd_course_hours_per_week, TEXT_FIELDS[:other_please_list]],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain], :plan_to_teach_other],
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
-        [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
-        [:replace_which_course, TEXT_FIELDS[:other_please_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -790,8 +730,8 @@ module Pd::Application
 
       # Do we allow manually sending/resending the principal email?
 
-      # Only if this teacher application is currently unreviewed, pending, or waitlisted.
-      return false unless unreviewed? || pending? || waitlisted?
+      # Only if this teacher application is currently awaiting_admin_approval, pending, or pending_space_availability.
+      return false unless awaiting_admin_approval? || pending? || pending_space_availability?
 
       # Only if the principal approval is required.
       return false if principal_approval_not_required
@@ -810,9 +750,9 @@ module Pd::Application
 
       # Do we allow the cron job to send a reminder email to the teacher?
 
-      # Only if this teacher application is currently unreviewed or pending.
-      # (Unlike allow_sending_principal_email?, don't allow for waitlisted.)
-      return false unless unreviewed? || pending?
+      # Only if this teacher application is currently awaiting_admin_approval or pending.
+      # (Unlike allow_sending_principal_email?, don't allow for pending_space_availability.)
+      return false unless awaiting_admin_approval? || pending?
 
       # Only if we haven't already sent one.
       return false if reminder_emails.any?
@@ -884,8 +824,6 @@ module Pd::Application
           ],
           principal: [
             :share_ap_scores,
-            :replace_which_course_csp,
-            :replace_which_course_csa,
             :csp_implementation,
             :csa_implementation
           ]
@@ -900,8 +838,6 @@ module Pd::Application
             :csa_phone_screen
           ],
           principal: [
-            :replace_which_course_csd,
-            :replace_which_course_csa,
             :csd_implementation,
             :csa_implementation
           ]
@@ -914,9 +850,7 @@ module Pd::Application
             :csd_which_grades
           ],
           principal: [
-            :replace_which_course_csp,
             :csp_implementation,
-            :replace_which_course_csd,
             :csd_implementation
           ]
         }
@@ -1027,12 +961,9 @@ module Pd::Application
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
       elsif course == 'csa'
+        meets_minimum_criteria_scores[:csa_already_know] = responses[:csa_already_know] == options[:csa_already_know].first ? YES : NO
         meets_minimum_criteria_scores[:csa_which_grades] =
           (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
-      end
-
-      if responses[:plan_to_teach].in? options[:plan_to_teach].first(2)
-        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(1)) ? YES : NO
       end
 
       meets_minimum_criteria_scores[:replace_existing] =
@@ -1052,6 +983,9 @@ module Pd::Application
       elsif course == 'csp'
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
           responses[:previous_yearlong_cdo_pd].include?('CS Principles') ? NO : YES
+      elsif course == 'csa'
+        meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] =
+          responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)') ? NO : YES
       end
 
       # Section 4
@@ -1174,16 +1108,14 @@ module Pd::Application
       # Approval application created, now score corresponding teacher application
       principal_response = principal_approval.sanitize_form_data_hash
 
-      response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd, :replace_which_course_csa).compact.join(', ')
-      # Sub out :: for : because "I don't know:" has a colon on the end
-      replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
+      replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
 
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
           principal_response_first_name: principal_response[:first_name],
           principal_response_last_name: principal_response[:last_name],
+          principal_response_role: principal_response[:role],
           principal_response_email: principal_response[:email],
           principal_school_name: principal_school.try(:name) || principal_response[:school_name],
           principal_school_type: principal_school.try(:school_type),
@@ -1192,8 +1124,6 @@ module Pd::Application
           principal_schedule_confirmed:
             principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
-          principal_diversity_recruitment:
-            principal_response.values_at(:committed_to_diversity, :committed_to_diversity_other).compact.join(" "),
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
           principal_underrepresented_minority_percent:

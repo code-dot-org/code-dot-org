@@ -26,7 +26,6 @@ export default class SharePlaceholder extends React.Component {
         style={{
           backgroundColor: '#222',
           width: 140,
-          height: '100%',
           borderRadius: 4,
           padding: 10,
           boxSizing: 'border-box',

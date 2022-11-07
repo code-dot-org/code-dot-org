@@ -28,14 +28,8 @@ export const triggeredAt = {
         variable: 'currentTime'
       }
     ],
-    message1: '%1',
-    args1: [
-      {
-        type: 'input_statement',
-        name: 'code'
-      }
-    ],
     inputsInline: true,
+    nextStatement: null,
     colour: 230,
     tooltip: 'at trigger',
     extensions: ['dynamic_trigger_extension']
@@ -45,12 +39,8 @@ export const triggeredAt = {
       ctx.getFieldValue('var'),
       Blockly.Names.NameType.VARIABLE
     );
-    const triggerId = ctx.getFieldValue('trigger');
     return `
       ${varName} = MusicPlayer.getPlayheadPosition();
-      if ('${triggerId}' === InputContext.getCurrentTriggerId()) { 
-        ${Blockly.JavaScript.statementToCode(ctx, 'code')}
-      }
       \n`;
   }
 };

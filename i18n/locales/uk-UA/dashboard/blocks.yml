@@ -230,20 +230,12 @@ uk:
             MOVES.XArmsUp: Руки вгору
             MOVES.ThisOrThat: Це або те
             MOVES.Rest: Немає
-      Dancelab_everyMeasuresRange:
-        text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
         text: 'повторювати кожні {N} {UNIT} '
         options:
           UNIT:
             '"measures"': кроків
             '"seconds"': секунди
-      Dancelab_everySecondsRange:
-        text: 'кожні {N} {UNIT} з {START} до {STOP} '
-        options:
-          UNIT:
-            measures: Кроки
-            seconds: Секунди
       Dancelab_everyVerseChorus:
         text: 'кожні {UNIT} '
         options:
@@ -997,6 +989,20 @@ uk:
         text: налаштування
       Dancelab_whenSetup2:
         text: налаштування
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Бульбашки
+            '"confetti"': Конфеті
+            '"hearts"': серця
+            '"rain"': дощ
+            '"starburst"': Вибухаюча зірка
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): будучи перетягуваним
+            wandering(): бродіння
+            shrinking(): стиснення
       gamelab_addBehaviorSimple:
         text: спрайт {SPRITE} починає {BEHAVIOR}
       gamelab_addTarget:

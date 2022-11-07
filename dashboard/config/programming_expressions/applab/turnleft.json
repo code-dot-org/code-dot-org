@@ -11,17 +11,17 @@
     },
     {
       "name": "Example: Square",
-      "description": "**Example: Square** Draw a square with left turns only. \n",
+      "description": "Draw a square with left turns only. \n",
       "code": "```\n// Draw a square with left turns only.\nmoveForward();\nturnLeft();\nmoveForward();\nturnLeft();\nmoveForward();\nturnLeft();\nmoveForward();\nturnLeft(); \n```"
     },
     {
       "name": "Example: Checkmark",
-      "description": "**Example: Checkmark** Draw a checkmark with left turns using angle parameters. \n",
+      "description": "Draw a checkmark with left turns using angle parameters. \n",
       "code": "```\n// Draw a checkmark with left turns using angle parameters. \nturnLeft(120);\nmoveForward(100);\nturnLeft(270);\nmoveForward(25);\n```"
     },
     {
       "name": "Example: House",
-      "description": "**Example: House** Draw a house with left turns only. \n",
+      "description": "Draw a house with left turns only. \n",
       "code": "```\n// Draw a house with left turns only.\nturnLeft(45);\nmoveForward(50);\nturnLeft(90);\nmoveForward(50);\nturnLeft(45);\nmoveForward(75);\nturnLeft(-270); // same as turnLeft(90);\nmoveForward(70);\nturnLeft(90);\nmoveForward(75);\n```",
       "image": "https://images.code.org/db1170b1ee761ac5f4541a6aa8a72748-image-1445625001095.gif"
     }

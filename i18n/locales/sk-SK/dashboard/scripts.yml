@@ -3282,6 +3282,8 @@ sk:
               display_name: Dotazník
             lessonGroup-3:
               display_name: Obsah
+            lessonGroup-5:
+              display_name: Alternatívne lekcie
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

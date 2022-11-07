@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "short_instructions": "Instructions",
-    "long_instructions": "# Crack a Caesar cipher!\r\n\r\nThis tool lets you play with text and do Caesar ciphers. You can use this to either encrypt a message or decrypt it.\r\n\r\n# Do this\r\n- Load a **Sample message** from the message dropdown. This will load a message that has been encrypted with a Caesar cipher.\r\n\r\n![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)\r\n\r\n- Using the buttons in the Caesar substitution tab, you can shift the alphabet forwards or backwards to try to unscramble the message.\r\n\r\n![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)\r\n\r\nSee how long it takes you to crack the cipher! Is this a good method of encrypting secret data?\r\n\r\n<img src=\"http://code.org/api/hour/begin_encryption.png\">\r\n\r\n",
+    "long_instructions": "# Crack a Caesar cipher!\r\n\r\nThis tool lets you play with text and do Caesar ciphers. You can use this to either encrypt a message or decrypt it.\r\n\r\n# Do this\r\n- Load a **Sample message** from the message dropdown. This will load a message that has been encrypted with a Caesar cipher.\r\n\r\n![](https://images.code.org/347139486c8c729bf3c6e72ce67da878-image-1476286380409.gif)\r\n\r\n- Using the buttons in the Caesar substitution tab, you can shift the alphabet forwards or backwards to try to unscramble the message.\r\n\r\n![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)\r\n\r\nSee how long it takes you to crack the cipher! Is this a good method of encrypting secret data?",
     "skip_dialog": true,
     "href": "frequency/frequency.html",
     "cipher": "caesar",

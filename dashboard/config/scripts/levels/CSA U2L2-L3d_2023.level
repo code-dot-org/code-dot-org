@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**A clothing designer sells custom apparel, and they have created a `Shirt`(#e7e8ea) class to represent the shirts they create.**\r\n\r\n✅ **TO DO:** Write a no-argument constructor the `Shirt`(#e7e8ea) class and instantiate a `Shirt`(#e7e8ea) object.\r\n\r\n1. In the `Shirt`(#e7e8ea) class, write a no-argument constructor to assign default values to the instance variables:\r\n\r\n   **(a)** Assign a default name to the instance variable `size`(#e7e8ea), such as `\"small\"`(#e7e8ea)\r\n\r\n   **(b)** Assign a default value to the instance variable `price`(#e7e8ea), such as `5.99`(#e7e8ea)\r\n\r\n2. In `ClothesRunner.java`(#e7e8ea):\r\n\r\n   **(a)** Instantiate a `Shirt`(#e7e8ea) object\r\n   \r\n   **(b)** Print the constructor for the `Shirt`(#e7e8ea) object to the console using `ClassInfo.getConstructors(nameOfObject)`(#e7e8ea)\r\n   \r\n   **(c)** Print the values assigned to the instance variables for the `Shirt`(#e7e8ea) object to the console by calling the `printShirtInfo()`(#e7e8ea) method\r\n   \r\n\r\n💡 **TIP:** Check out **Help & Tips** tab ⬆️ for help with writing a no-argument constructor and instantiating objects.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/no-argument-constructors",
+      "/courses/csa-2023/guides/instantiating-objects"
+    ],
+    "display_name": "The Shirt Class",
+    "bubble_choice_description": "A clothing designer sells custom apparel, and they have created a `Shirt` class to represent the shirts they create.",
+    "thumbnail_url": "https://images.code.org/d1a4be4e76f35fb45c38b556089c1e77-tshirt.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-11-03T19:21:17.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-11-03T19:21:17.792+00:00\",\"changed\":[\"cloned from \\\"CSA U2L2-L3c_2023\\\"\"],\"cloned_from\":\"CSA U2L2-L3c_2023\"},{\"changed_at\":\"2022-11-03 19:21:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-06 21:26:51 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

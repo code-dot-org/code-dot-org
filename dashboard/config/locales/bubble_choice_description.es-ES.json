@@ -656,12 +656,12 @@
         "CSD U6 - Screen Inputs - PracC_2222": "Crea una aplicación que utilice controles deslizantes para mover el cursor por un mapa",
         "CSD U6 - Screen Inputs - PracD_2222": "Esta aplicación pretende hacer una serie de preguntas secretas para desbloquear la pantalla final, pero cada pregunta tiene un error.",
         "CSD U6 - Screen Outputs - A_2222": "Sin utilizar el Modo Diseño, recrea el diseño de una aplicación utilizando los bloques setProperty y setText",
-        "CSD U6 - Screen Outputs - ChalA_2222": "Aprende a utilizar la propiedad hidden para mostrar y ocultar elementos de diseño",
-        "CSD U6 - Screen Outputs - ChalB_2222": "Crear una aplicación que utilice caras emoji para describir diferentes emociones",
-        "CSD U6 - Screen Outputs - ChalC_2222": "Crear un tema personalizado de Laboratorio de Aplicaciones para los elementos de etiquetas y botones en la pantalla",
-        "CSD U6 - Screen Outputs - ChalD_2222": "Aprende a utilizar el bloque playSpeech creando una aplicación \"About Me\".",
-        "CSD U6 - Screen Outputs - ChalE_2222": "Crear un prototipo de aplicación que pueda utilizarse en una campaña de marketing en redes sociales",
-        "CSD U6 - Screen Outputs - ChalF_2222": "Crear un prototipo de aplicación que pueda utilizarse para promocionar un negocio local",
+        "CSD U6 - Screen Outputs - ChalA_2222": "Aprende a utilizar la propiedad `hidden` para mostrar y ocultar elementos de diseño",
+        "CSD U6 - Screen Outputs - ChalB_2222": "Crea una aplicación que utilice caras emoji para describir diferentes emociones",
+        "CSD U6 - Screen Outputs - ChalC_2222": "Crea un tema personalizado de Laboratorio de Aplicaciones para los elementos de etiquetas y botones en la pantalla",
+        "CSD U6 - Screen Outputs - ChalD_2222": "Aprende a utilizar el bloque playSpeech creando una aplicación \"Sobre Mi\".",
+        "CSD U6 - Screen Outputs - ChalE_2222": "Crea un prototipo de aplicación que pueda utilizarse para una campaña de marketing en redes sociales",
+        "CSD U6 - Screen Outputs - ChalF_2222": "Crea un prototipo de aplicación que pueda utilizarse para promocionar un negocio local",
         "CSD U6 - Screen Outputs - PracA_2222": "Cambia el fondo de tu aplicación con un botón",
         "CSD U6 - Screen Outputs - PracB_2222": "Actualizar la imagen del icono con un clic de botón",
         "CSD U6 - Screen Outputs - PracC_2222": "Ayuda a corregir los errores para que la aplicación aparezca correctamente",
@@ -706,7 +706,14 @@
         "CSD U6 - Sensors - PA_2222": "Utiliza el sensor de temperatura para crear una aplicación de termómetro",
         "CSD U6 - Sensors - PB_2222": "Utiliza el sensor de temperatura para detectar cuando alguien sopla las velas de una tarjeta",
         "CSD U6 - Sensors - PC_2222": "Utiliza el sensor de luz y el zumbador para crear ruidos de ciencia ficción y simular un theremín",
-        "CSD U6 - Sensors - PD_2222": "Utiliza el sensor de sonido para crear un medidor de volumen interactivo"
+        "CSD U6 - Sensors - PD_2222": "Utiliza el sensor de sonido para crear un medidor de volumen interactivo",
+        "CSD U6 - Physical Input - ChalA_2222": "Crea un prototipo de dispositivo que simule un evento cuando dos objetos se tocan. Por ejemplo, dos personas enamoradas, cuando se tocan, el Circuit Playground se vuelve rojo (para representar el amor)",
+        "CSD U6 - Physical Input - ChalB_2222": "Crea un prototipo de dispositivo para simular un sistema de alarma que detecte cuando alguien abre una caja.",
+        "CSD U6 - Physical Input - ChalC_2222": "Utilizando otros materiales conductores, como clips, papel de aluminio o lengüetas metálicas, se simulan los botones o interruptores con los que estamos más familiarizados.",
+        "CSD U6 - Physical Input - PA_2222": "Crea una aplicación que simule un juego de whack-a-mole, en el que se pulsan 3 botones externos para ganar puntos",
+        "CSD U6 - Physical Input - PB_2222": "Crea una aplicación que utilice 3 botones externos para cambiar el color de fondo de la pantalla.",
+        "CSD U6 - Physical Input - PC_2222": "Crea una aplicación que utilice 3 botones externos para tocar notas musicales, como un mini-piano",
+        "CSD U6 - Physical Input - PD_2222": "Explora qué otros materiales se pueden utilizar para crear botones, como clips o papel de aluminio"
       }
     }
   }
