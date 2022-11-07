@@ -43,12 +43,14 @@ class AssetBucket < BucketHelper
     channel = ChannelToken.find_by(storage_id: src_owner_id, storage_app_id: src_storage_app_id)
     return unless channel
 
+    # For a template-backed level, the level associated with the channel
+    # is the template level
     level = Level.cache_find(channel.level_id)
-    return unless level
+    return unless level&.starter_assets
 
     dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
 
-    (level&.project_template_level&.starter_assets || level.starter_assets || []).map do |friendly_name, uuid_name|
+    level.starter_assets.map do |friendly_name, uuid_name|
       src = "#{@bucket}/#{LevelStarterAssetsController::S3_PREFIX}#{uuid_name}"
       dest = s3_path dest_owner_id, dest_storage_app_id, friendly_name
       s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
