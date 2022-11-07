@@ -27,6 +27,7 @@ CodeprojectsCertificate:
     <%- if rack_env?(:production) -%>
     SubjectAlternativeNames:
       - www.<%= CDO.codeprojects_hostname %>
+      - static.<%= CDO.codeprojects_hostname %>
     <%- end -%>
     ValidationMethod: DNS
     DomainValidationOptions:
