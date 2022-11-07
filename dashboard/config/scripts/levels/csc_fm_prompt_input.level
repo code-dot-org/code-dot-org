@@ -40,7 +40,7 @@
   "created_at": "2022-10-21T14:20:50.000Z",
   "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-21T14:20:50.478+00:00\",\"changed\":[\"cloned from \\\"csc_fm_prompt_block\\\"\"],\"cloned_from\":\"csc_fm_prompt_block\"},{\"changed_at\":\"2022-10-21 14:21:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:28:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:29:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:31:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 14:01:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-21T14:20:50.478+00:00\",\"changed\":[\"cloned from \\\"csc_fm_prompt_block\\\"\"],\"cloned_from\":\"csc_fm_prompt_block\"},{\"changed_at\":\"2022-10-21 14:21:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:28:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:29:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-21 14:31:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-10-26 14:01:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-11-03 19:09:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -49,25 +49,25 @@
       <xml>
         <block type="when_run" deletable="false" movable="false" editable="false">
           <next>
-            <block type="gamelab_setBackgroundImageAs">
+            <block type="gamelab_setBackgroundImageAs" deletable="false">
               <field name="IMG">"space"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon">
+                <block type="gamelab_makeNewSpriteAnon" deletable="false">
                   <field name="ANIMATION_NAME">"alienBlue"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker">
+                    <block type="gamelab_location_picker" deletable="false">
                       <field name="LOCATION">{"x":200,"y":200}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_setPrompt">
+                    <block type="gamelab_setPrompt" deletable="false">
                       <value name="QUESTION">
-                        <block type="text" can_disconnect_from_parent="false">
+                        <block type="text" deletable="false" can_disconnect_from_parent="false">
                           <field name="TEXT">Pick a number</field>
                         </block>
                       </value>
                       <value name="VAR">
-                        <block type="variables_get" can_disconnect_from_parent="false">
+                        <block type="variables_get" deletable="false" can_disconnect_from_parent="false">
                           <field name="VAR">???</field>
                         </block>
                       </value>
