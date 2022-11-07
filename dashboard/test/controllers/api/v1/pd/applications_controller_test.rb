@@ -1049,7 +1049,7 @@ module Api::V1::Pd
         "Teacher's gender identity",
         "Teacher's race",
         "How did you hear about this program? (Teacher's response)",
-        "Principal Approval Form URL",
+        "Administrator/School Leader Approval Form URL",
         "Home street address",
         "Home city",
         "Home state",
