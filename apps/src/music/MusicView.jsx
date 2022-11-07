@@ -22,6 +22,7 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {getStaticFilePath} from '@cdo/apps/music/utils';
 import moduleStyles from './music.module.scss';
 import feedbackStyles from './feedback.module.scss';
+import {AnalyticsContext} from './context';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -88,23 +89,23 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
-      instructionsPosIndex: 1,
-      feedbackClicked: false
+      instructionsPosIndex: 1
     };
   }
 
   componentDidMount() {
-    this.analyticsReporter.onSessionStart();
+    this.analyticsReporter.startSession().then(() => {
+      this.analyticsReporter.setUserProperties(
+        this.props.userId,
+        this.props.userType,
+        this.props.signInState
+      );
+    });
     // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
     window.addEventListener('beforeunload', () =>
-      this.analyticsReporter.onSessionEnd()
-    );
-    this.analyticsReporter.setUserProperties(
-      this.props.userId,
-      this.props.userType,
-      this.props.signInState
+      this.analyticsReporter.endSession()
     );
 
     const windowWidth = Math.max(window.innerWidth, window.innerHeight);
@@ -401,6 +402,7 @@ class UnconnectedMusicView extends React.Component {
   setPlaying = play => {
     if (play) {
       this.playSong();
+      this.analyticsReporter.onButtonClicked('play');
     } else {
       this.stopSong();
     }
@@ -411,13 +413,21 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playTrigger = id => {
+    if (!this.state.isPlaying) {
+      return;
+    }
+    this.analyticsReporter.onButtonClicked('trigger', {id});
     const hook = this.codeHooks[this.triggerIdToEvent(id)];
     if (hook) {
       this.callUserGeneratedCode(hook);
     }
   };
 
-  toggleInstructions = () => {
+  toggleInstructions = fromKeyboardShortcut => {
+    this.analyticsReporter.onButtonClicked('show-hide-instructions', {
+      showing: !this.state.showInstructions,
+      fromKeyboardShortcut
+    });
     this.setState({
       showInstructions: !this.state.showInstructions
     });
@@ -513,7 +523,7 @@ class UnconnectedMusicView extends React.Component {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
     if (event.key === 'i') {
-      this.setState({showInstructions: !this.state.showInstructions});
+      this.toggleInstructions(true);
     }
     if (event.key === 'n') {
       this.setState({
@@ -548,12 +558,11 @@ class UnconnectedMusicView extends React.Component {
   };
 
   onFeedbackClicked = () => {
+    this.analyticsReporter.onButtonClicked('feedback');
     window.open(
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
-
-    this.setState({feedbackClicked: true});
   };
 
   renderInstructions(position) {
@@ -569,7 +578,6 @@ class UnconnectedMusicView extends React.Component {
           <Instructions
             instructions={this.state.instructions}
             baseUrl={baseUrl}
-            analyticsReporter={this.analyticsReporter}
           />
           <div
             id="share-area"
@@ -578,7 +586,7 @@ class UnconnectedMusicView extends React.Component {
               moduleStyles.shareTop
             )}
           >
-            <SharePlaceholder analyticsReporter={this.analyticsReporter} />
+            <SharePlaceholder />
           </div>
         </div>
       );
@@ -597,7 +605,6 @@ class UnconnectedMusicView extends React.Component {
         <Instructions
           instructions={this.state.instructions}
           baseUrl={baseUrl}
-          analyticsReporter={this.analyticsReporter}
           vertical={true}
           right={position === InstructionsPositions.RIGHT}
         />
@@ -623,8 +630,11 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
-          startOverClicked={this.clearCode}
-          toggleInstructions={this.toggleInstructions}
+          startOverClicked={() => {
+            this.clearCode();
+            this.analyticsReporter.onButtonClicked('start-over');
+          }}
+          toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
         <Timeline
@@ -637,14 +647,12 @@ class UnconnectedMusicView extends React.Component {
           currentMeasure={this.player.getCurrentMeasure()}
           sounds={this.getCurrentGroupSounds()}
         />
-        {!this.state.feedbackClicked && (
-          <div
-            className={feedbackStyles.feedbackButton}
-            onClick={this.onFeedbackClicked}
-          >
-            Tell us what you think
-          </div>
-        )}
+        <div
+          className={feedbackStyles.feedbackButton}
+          onClick={this.onFeedbackClicked}
+        >
+          Tell us what you think
+        </div>
       </div>
     );
   }
@@ -654,37 +662,39 @@ class UnconnectedMusicView extends React.Component {
       instructionPositionOrder[this.state.instructionsPosIndex];
 
     return (
-      <div id="music-lab-container" className={moduleStyles.container}>
-        {this.state.showInstructions &&
-          instructionsPosition === InstructionsPositions.TOP &&
-          this.renderInstructions(InstructionsPositions.TOP)}
-
-        {this.state.timelineAtTop &&
-          this.renderTimelineArea(
-            true,
-            instructionsPosition === InstructionsPositions.RIGHT
-          )}
-
-        <div className={moduleStyles.middleArea}>
+      <AnalyticsContext.Provider value={this.analyticsReporter}>
+        <div id="music-lab-container" className={moduleStyles.container}>
           {this.state.showInstructions &&
-            instructionsPosition === InstructionsPositions.LEFT &&
-            this.renderInstructions(InstructionsPositions.LEFT)}
+            instructionsPosition === InstructionsPositions.TOP &&
+            this.renderInstructions(InstructionsPositions.TOP)}
 
-          <div id="blockly-area" className={moduleStyles.blocklyArea}>
-            <div id="blockly-div" />
+          {this.state.timelineAtTop &&
+            this.renderTimelineArea(
+              true,
+              instructionsPosition === InstructionsPositions.RIGHT
+            )}
+
+          <div className={moduleStyles.middleArea}>
+            {this.state.showInstructions &&
+              instructionsPosition === InstructionsPositions.LEFT &&
+              this.renderInstructions(InstructionsPositions.LEFT)}
+
+            <div id="blockly-area" className={moduleStyles.blocklyArea}>
+              <div id="blockly-div" />
+            </div>
+
+            {this.state.showInstructions &&
+              instructionsPosition === InstructionsPositions.RIGHT &&
+              this.renderInstructions(InstructionsPositions.RIGHT)}
           </div>
 
-          {this.state.showInstructions &&
-            instructionsPosition === InstructionsPositions.RIGHT &&
-            this.renderInstructions(InstructionsPositions.RIGHT)}
+          {!this.state.timelineAtTop &&
+            this.renderTimelineArea(
+              false,
+              instructionsPosition === InstructionsPositions.RIGHT
+            )}
         </div>
-
-        {!this.state.timelineAtTop &&
-          this.renderTimelineArea(
-            false,
-            instructionsPosition === InstructionsPositions.RIGHT
-          )}
-      </div>
+      </AnalyticsContext.Provider>
     );
   }
 }
