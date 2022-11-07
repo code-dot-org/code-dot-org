@@ -16,6 +16,8 @@ class FieldSounds extends Blockly.FieldTextInput {
 
     this.options = options;
 
+    this.playingPreview = null;
+
     // Disable spellcheck.
     this.setSpellcheck(false);
 
@@ -96,8 +98,20 @@ class FieldSounds extends Blockly.FieldTextInput {
       <SoundsPanel
         library={this.options.getLibrary()}
         currentValue={this.getValue()}
+        playingPreview={this.playingPreview}
         onPreview={value => {
-          this.options.playPreview(value);
+          this.playingPreview = value;
+          this.renderContent();
+          this.options.playPreview(value, () => {
+            // We might already be playing another preview
+            // when we are trying to stop.  In which case,
+            // there's a new highlighted play button, and
+            // no need to reset this status.
+            if (this.playingPreview === value) {
+              this.playingPreview = false;
+            }
+            this.renderContent();
+          });
         }}
         onSelect={value => {
           this.setEditorValue_(value);

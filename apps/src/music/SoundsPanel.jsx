@@ -11,7 +11,21 @@ const getSoundRowClassName = (currentValue, folderPath, soundSrc) => {
   }
 };
 
-const SoundsPanel = ({library, currentValue, onSelect, onPreview}) => {
+const getPreviewClassName = (playingPreview, folderPath, soundSrc) => {
+  if (playingPreview === folderPath + '/' + soundSrc) {
+    return styles.previewPlaying;
+  } else {
+    return styles.preview;
+  }
+};
+
+const SoundsPanel = ({
+  library,
+  currentValue,
+  playingPreview,
+  onSelect,
+  onPreview
+}) => {
   const group = library.groups[0];
 
   return (
@@ -45,6 +59,11 @@ const SoundsPanel = ({library, currentValue, onSelect, onPreview}) => {
                   <div className={styles.soundRowRight}>
                     <FontAwesome
                       icon={'play-circle'}
+                      className={getPreviewClassName(
+                        playingPreview,
+                        folder.path,
+                        sound.src
+                      )}
                       onClick={() => onPreview(folder.path + '/' + sound.src)}
                     />
                   </div>
@@ -61,6 +80,7 @@ const SoundsPanel = ({library, currentValue, onSelect, onPreview}) => {
 SoundsPanel.propTypes = {
   library: PropTypes.object.isRequired,
   currentValue: PropTypes.string.isRequired,
+  playingPreview: PropTypes.string,
   onSelect: PropTypes.func.isRequired,
   onPreview: PropTypes.func.isRequired
 };

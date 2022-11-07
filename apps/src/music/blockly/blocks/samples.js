@@ -21,8 +21,8 @@ export const playSample = {
         type: 'field_sounds',
         name: 'sample',
         getLibrary: () => window.library,
-        playPreview: value => {
-          window.playPreview(value, () => {});
+        playPreview: (id, onStop) => {
+          window.playPreview(id, onStop);
         }
       },
       {
