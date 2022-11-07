@@ -47,3 +47,13 @@
   width: 15px;
   margin-right: 15px;
 }
+
+.preview {
+  color: $gray-300;
+}
+
+.previewPlaying {
+  color: $gray-600;
+  pointer-events: none;
+  cursor: default;
+}
