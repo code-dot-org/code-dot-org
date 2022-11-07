@@ -44,19 +44,17 @@ function showHomepage() {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
   }
 
+  // remove courseOfferingId, courseVersionId, and unitId params so that if we
+  // navigate back we don't get the create section dialog again
   let courseOfferingId;
   let courseVersionId;
   let unitId;
   if (query.courseOfferingId) {
     courseOfferingId = parseInt(query.courseOfferingId, 10);
-    // remove courseId/unitId params so that if we navigate back we don't get
-    // this dialog again
     updateQueryParam('courseOfferingId', undefined, true);
   }
   if (query.courseVersionId) {
     courseVersionId = parseInt(query.courseVersionId, 10);
-    // remove courseId/unitId params so that if we navigate back we don't get
-    // this dialog again
     updateQueryParam('courseVersionId', undefined, true);
   }
   if (query.unitId) {
