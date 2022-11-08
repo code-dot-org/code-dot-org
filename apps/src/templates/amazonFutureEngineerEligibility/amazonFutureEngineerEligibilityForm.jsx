@@ -1,7 +1,7 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button, Checkbox} from 'react-bootstrap';
 import _ from 'lodash';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
@@ -62,12 +62,20 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       awsEducate: false,
       consentAFE: false,
       consentCSTA: false,
+      gradeBand: [false, false, false],
+      professionalRole: '',
       errors: {}
     };
   }
 
   handleChange = change => {
     this.setState(change);
+  };
+
+  handleMultiSelect = index => {
+    let gradeBand = this.state.gradeBand;
+    gradeBand[index] = !gradeBand[index];
+    this.setState(gradeBand);
   };
 
   resetSchool = () =>
@@ -273,6 +281,42 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                     : null
                 }
               />
+              <p>What grade bands do you teach?</p>
+              <div>
+                <Checkbox
+                  id={'gradeBand-k5'}
+                  checked={false}
+                  onChange={() => this.handleMultiSelect(0)}
+                >
+                  K-5
+                </Checkbox>
+                <Checkbox
+                  id={'gradeBand-68'}
+                  checked={false}
+                  onChange={() => this.handleMultiSelect(1)}
+                >
+                  6-8
+                </Checkbox>
+                <Checkbox
+                  id={'gradeBand-912'}
+                  checked={false}
+                  onChange={() => this.handleMultiSelect(2)}
+                >
+                  9-12
+                </Checkbox>
+              </div>
+              <p>What is your current role?</p>
+              <select>
+                <option>K-12 Teacher</option>
+                <option>Pre-Service Teacher</option>
+                <option>School Administrator</option>
+                <option>District Administrator</option>
+                <option>State Department of Education</option>
+                <option>Higher Education Faculty</option>
+                <option>Non-Profit</option>
+                <option>Corporate</option>
+                <option>Other</option>
+              </select>
             </div>
           )}
           <SingleCheckbox
