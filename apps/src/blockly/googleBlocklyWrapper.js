@@ -10,6 +10,7 @@ import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldNumber from './addons/cdoFieldNumber';
+import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
@@ -104,10 +105,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
-  // blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
-  blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
   blocklyWrapper.wrapReadOnlyProperty('fish_locale');
   blocklyWrapper.wrapReadOnlyProperty('Flyout');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
@@ -168,13 +167,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     'field_dropdown',
     CdoFieldDropdown
   );
-  // may want to override fieldnumber for standard blockly -- how do we make sure string is right?
-  // //  make sure this string is right
-  // blocklyWrapper.blockly_.fieldRegistry.unregister('field_text_input');
-  // blocklyWrapper.blockly_.fieldRegistry.register(
-  //   'field_text_input',
-  //   CdoFieldTextInput
-  // );
+  //  make sure this string is right
+  blocklyWrapper.blockly_.fieldRegistry.unregister('field_number');
+  blocklyWrapper.blockly_.fieldRegistry.register(
+    'field_number',
+    CdoFieldNumber
+  );
+  blocklyWrapper.blockly_.fieldRegistry.unregister('field_text_input');
+  blocklyWrapper.blockly_.fieldRegistry.register(
+    'field_text_input',
+    CdoFieldTextInput
+  );
 
   // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
@@ -185,8 +188,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
-  // blocklyWrapper.FieldTextInput = CdoFieldTextInput;
   blocklyWrapper.FieldNumber = CdoFieldNumber;
+  blocklyWrapper.FieldTextInput = CdoFieldTextInput;
   blocklyWrapper.FieldVariable = CdoFieldVariable;
 
   blocklyWrapper.blockly_.registry.register(
