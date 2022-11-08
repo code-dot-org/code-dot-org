@@ -1,11 +1,11 @@
 import { createSelector } from 'reselect';
-import { getLabelColumn, getData, getColumnsByDataType } from "../selectors.js";
+import {getLabelColumn, getData, getColumnsByDataType, getDatasetId} from "../selectors.js";
 import {
   getCurrentColumn,
   currentColumnIsCategorical,
   currentColumnIsNumerical
 } from './currentColumnSelectors.js';
-import { getUniqueOptions } from "../helpers/columnDetails.js";
+import { getUniqueOptions, getLocalizedColumnName } from "../helpers/columnDetails.js";
 import { areArraysEqual } from "../helpers/utils.js";
 import { ColumnTypes } from "../constants.js";
 
@@ -15,14 +15,16 @@ export const getScatterPlotData = createSelector(
     (state, props) => labelColumnIsNumerical(state, props),
     getCurrentColumn,
     currentColumnIsNumerical,
-    getData
+    getData,
+    getDatasetId
   ],
   (
     labelColumn,
     labelColumnIsNumerical,
     currentColumn,
     currentColumnIsNumerical,
-    data
+    data,
+    datasetId
   ) => {
     if (!labelColumn || !currentColumn) {
       return null;
@@ -42,8 +44,8 @@ export const getScatterPlotData = createSelector(
       coordinates.push({ x: row[currentColumn], y: row[labelColumn] });
     }
 
-    const label = labelColumn;
-    const feature = currentColumn;
+    const label = getLocalizedColumnName(datasetId, labelColumn);
+    const feature = getLocalizedColumnName(datasetId, currentColumn);
 
     return {
       label,
