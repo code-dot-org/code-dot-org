@@ -39,7 +39,7 @@ fr:
         Custom: Artiste
         CustomStudio: Labo de jeux
         Gamelab: Labo Jeux
-        Spritelab: Le Labo des Lutins
+        Spritelab: Le Labo des Sprites
     trophy:
       name:
         Bronze: Bronze
@@ -575,7 +575,7 @@ fr:
         Unplug10: Internet
         Unplug11: Résumé et ouverture
         C1_happy_maps_unplugged: Cartes Joyeuses
-        C1_moveitmoveit_unplugged: Bouge, Bouge
+        C1_moveitmoveit_unplugged: Bouge, Bouge ton corps
         C1_bigevent_unplugged: Le Grand Evénement
         C1_getting_loopy: Tourner en Rond
         C1_pair_programming: Programmation en Binôme
@@ -664,7 +664,7 @@ fr:
         frozen_intro: Introduction à l'Heure de Code
         frozen_loops: Introduction aux Boucles
         frozen_functions: Introduction aux Fonctions
-        playlab_intro: Introduction au Labo de jeux
+        playlab_intro: Introduction au Labo Jeux
         playlab_events: Évènements du Labo de jeux
         playlab_repeat_forever: Répétition à l’infinie du Labo de jeux
         tutorial_puzzle_challenge: Tutoriel Défi du puzzle
@@ -843,7 +843,7 @@ fr:
         hoc_dance_properties_2019: Soirée Dansante 2019 - Propriétés
         csd_what_computers_do: Que font les ordinateurs?
         csf_my_online_neighborhood_2020: Mon Quartier en Ligne
-        csf_follow_the_digital_trail: Suivez la Traînée Digitale
+        csf_follow_the_digital_trail: Suis la Piste Numérique
         csf_private_and_personal_information: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
         csd_what_computers_are: Qu'est ce qu'un Ordinateur ?
         codebreak_e01: 'Code Break 1.0: Algorithmes avec Hill Harper'
@@ -873,8 +873,8 @@ fr:
         csf21pilot_prompts: 'Labo des sprites : Texte et Invites'
         outbreak_mike: CodeBytes Episode 3 avec Mike - Simulateur d'épidémie
         csd_ml_import_model: Importer un modèle IA
-        playlab_2021: Introduction au Labo de jeux
-        playlab_2021_reader: Introduction au Labo de jeux
+        playlab_2021: Introduction au Labo Jeux
+        playlab_2021_reader: Introduction au Labo Jeux
         PL_CSD_TeacherTips_Advise: Conseils aux enseignants - Conseils destinés aux
           nouveaux enseignants
         PL_CSD_TeacherTips_IntroToCSD: Conseils aux enseignants - Cours d'initiation
@@ -908,7 +908,7 @@ fr:
         CSA-PL-debugging-temp: Initiation au débogage dans Java Lab - temp
         csd_u6_circuit_playground: L'Informatique Physique
         csd_u6_input_output: Entrée et Sortie
-        PL_CS_Journeys_Overview: Voyages CS
+        PL_CS_Journeys_Overview: Voyages Informatiques
         csp_applab_parameters: Fonctions avec Paramètres
         CSA-PL-intro-to-arrays: Tableaux unidimensionnels (1D)
         CS_Changing_Everything: L'informatique est en Train de Tout Changer

@@ -232,20 +232,12 @@ uz:
             MOVES.XArmsUp: Cho'zilmoq
             MOVES.ThisOrThat: U yoki bu
             MOVES.Rest: Hech biri
-      Dancelab_everyMeasuresRange:
-        text: "{START} dan so'ng har {N} o'lchovda takrorlash"
       Dancelab_everySeconds:
         text: har {N} {UNIT} takrorlash
         options:
           UNIT:
             '"measures"': o'lchovlar
             '"seconds"': soniyalar
-      Dancelab_everySecondsRange:
-        text: " {START} dan {STOP} gacha har {N} {UNIT} "
-        options:
-          UNIT:
-            measures: O'lchovlar
-            seconds: Soniyalar
       Dancelab_everyVerseChorus:
         text: 'har {UNIT} '
         options:
@@ -999,6 +991,20 @@ uz:
         text: o'rnatish
       Dancelab_whenSetup2:
         text: o'rnatish
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Pufakchalar
+            '"confetti"': Konfetti
+            '"hearts"': yurak
+            '"rain"': yomg‘ir
+            '"starburst"': Yulduzlar to'plami
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): sudranuvchan
+            wandering(): daydish
+            shrinking(): kichrayish
       gamelab_addBehaviorSimple:
         text: " {SPRITE}  {BEHAVIOR} harakatini boshlaydi"
       gamelab_allSpritesWithAnimation:

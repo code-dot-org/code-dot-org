@@ -988,6 +988,24 @@ he:
         text: הגדרה
       Dancelab_whenSetup2:
         text: הגדרה
+      DansBlocks_setForegroundEffect2:
+        text: בצע אפקט {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts"': לבבות
+            '"emojis"': אמוג'י שמחים
+            '"rain"': גשום
+            '"starburst"': כוכבים
+            '"glass"': זכוכית מתנפצת
+            '"twinkling"': הבהוב
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): ניתנת לגרירה
+            wandering(): לשוטט
+            shrinking(): להתכווץ
       gamelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       gamelab_addTarget:
@@ -1275,7 +1293,6 @@ he:
             "'sound://category_space/Pillars_SFX.mp3'": עמודים
             "'sound://category_space/Southern_ring_SFX.mp3'": הטבעת הדרומית
             "'sound://category_space/Supernova_SFX.mp3'": סופרנובה
-            "'sound://category_sports/One_Whistle_SFX.mp3'": טיכו
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:

@@ -197,12 +197,6 @@ ku:
         options:
           UNIT:
             '"measures"': پێوانەکان
-      Dancelab_everySecondsRange:
-        text: 'سەرجەم {N} {UNIT} لە {START} تا {STOP} '
-        options:
-          UNIT:
-            measures: پێوانەکان
-            seconds: چرکە
       Dancelab_everyVerseChorus:
         text: 'هەر {UNIT} '
         options:
@@ -826,6 +820,15 @@ ku:
         text: دامەزراندن
       Dancelab_whenSetup2:
         text: دامەزراندن
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': بڵق
+            '"confetti"': بڕشتی کاغەز
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): دەتوانرێ بجوڵێنرێ
       gamelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
