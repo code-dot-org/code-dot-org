@@ -6,6 +6,7 @@ import { isRegression, setResultsHighlightRow } from "../redux";
 import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
 import { resultsPropType } from "./shapes";
 import I18n from "../i18n";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class ResultsTable extends Component {
   static propTypes = {
@@ -14,7 +15,8 @@ class ResultsTable extends Component {
     results: resultsPropType,
     isRegression: PropTypes.bool,
     setResultsHighlightRow: PropTypes.func,
-    resultsHighlightRow: PropTypes.number
+    resultsHighlightRow: PropTypes.number,
+    datasetId: PropTypes.string
   };
 
   getRowCellStyle = index => {
@@ -26,7 +28,7 @@ class ResultsTable extends Component {
   };
 
   render() {
-    const { setResultsHighlightRow } = this.props;
+    const { setResultsHighlightRow, datasetId } = this.props;
     const featureCount = this.props.selectedFeatures.length;
 
     return (
@@ -81,7 +83,7 @@ class ResultsTable extends Component {
                       }}
                       key={index}
                     >
-                      {feature}
+                      {getLocalizedColumnName(datasetId, feature)}
                     </th>
                   );
                 })}
@@ -92,7 +94,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableSecondHeader
                   }}
                 >
-                  {this.props.labelColumn}
+                  {getLocalizedColumnName(datasetId, this.props.labelColumn)}
                 </th>
                 <th
                   style={{
@@ -101,7 +103,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableSecondHeader
                   }}
                 >
-                  {this.props.labelColumn}
+                  {getLocalizedColumnName(datasetId, this.props.labelColumn)}
                 </th>
               </tr>
             </thead>
@@ -142,7 +144,8 @@ export default connect(
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
     isRegression: isRegression(state),
-    resultsHighlightRow: state.resultsHighlightRow
+    resultsHighlightRow: state.resultsHighlightRow,
+    datasetId: state.metadata.name
   }),
   dispatch => ({
     setResultsHighlightRow(column) {
