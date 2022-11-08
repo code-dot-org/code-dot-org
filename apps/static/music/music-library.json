@@ -111,7 +111,7 @@
               "length": 2,
               "type": "lead"
             },
-            {"name": "Swish", "src": "swish", "length": 2},
+            {"name": "Swish", "src": "swish", "length": 2, "type": "fx"},
             {
               "name": "Groovy Beat 2",
               "src": "groovy_alternate_beat",

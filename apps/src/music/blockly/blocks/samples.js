@@ -23,7 +23,8 @@ export const playSound = {
         getLibrary: () => window.library,
         playPreview: (id, onStop) => {
           window.playPreview(id, onStop);
-        }
+        },
+        currentValue: 'pop/cafe_beat'
       },
       {
         type: 'input_value',

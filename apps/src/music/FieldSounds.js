@@ -99,9 +99,12 @@ class FieldSounds extends Blockly.FieldTextInput {
         library={this.options.getLibrary()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
-        onPreview={value => {
+        onPreview={(e, value) => {
           this.playingPreview = value;
           this.renderContent();
+
+          e.stopPropagation();
+
           this.options.playPreview(value, () => {
             // We might already be playing another preview
             // when we are trying to stop.  In which case,
