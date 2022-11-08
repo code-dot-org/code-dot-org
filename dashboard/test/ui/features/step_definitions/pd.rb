@@ -2,7 +2,7 @@ Given(/^I am a workshop administrator with some applications of each type and st
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a workshop admin
+    And I make the teacher a workshop admin
     And I create some fake applications of each type and status
   }
 end
@@ -11,7 +11,7 @@ Given(/^I am a workshop administrator$/) do
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
   steps %Q{
     And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a workshop admin
+    And I make the teacher a workshop admin
   }
 end
 
@@ -172,11 +172,8 @@ And(/^I make the teacher named "([^"]*)" a workshop organizer$/) do |name|
   user.permission = UserPermission::WORKSHOP_ORGANIZER
 end
 
-And(/^I make the teacher named "([^"]*)" a workshop admin$/) do |name|
-  require_rails_env
-
-  user = find_test_user_by_name(name)
-  user.permission = UserPermission::WORKSHOP_ADMIN
+And(/^I make the teacher a workshop admin$/) do
+  browser_request(url: '/api/test/workshop_admin_access', method: 'POST')
 end
 
 And(/^I complete Section 2 of the teacher PD application$/) do
