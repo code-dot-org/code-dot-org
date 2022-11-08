@@ -107,49 +107,56 @@ const FindYourRegion = props => {
   };
 
   const renderRegionalPartnerInfo = () => {
-    const content = regionalPartner?.name ? (
-      data.program === PROGRAM_CSA && regionalPartner && !isOffered ? (
-        <p style={styles.error}>
-          <strong>
-            The Regional Partner in your region is not offering Computer Science
-            A at this time.{' '}
-          </strong>
-          Code.org will review your application and contact you with options for
-          joining a national cohort of Computer Science A teachers. If accepted
-          into the program, travel may be required to attend a weeklong
-          in-person summer workshop. If so, travel and accommodation will be
-          provided by Code.org. Academic year workshops for the national cohort
-          will be hosted virtually.
-        </p>
-      ) : (
+    let content;
+    if (regionalPartner?.name) {
+      if (data.program === PROGRAM_CSA && regionalPartner && !isOffered) {
+        content = (
+          <p style={styles.error}>
+            <strong>
+              The Regional Partner in your region is not offering Computer
+              Science A at this time.{' '}
+            </strong>
+            Code.org will review your application and contact you with options
+            for joining a national cohort of Computer Science A teachers. If
+            accepted into the program, travel may be required to attend a
+            weeklong in-person summer workshop. If so, travel and accommodation
+            will be provided by Code.org. Academic year workshops for the
+            national cohort will be hosted virtually.
+          </p>
+        );
+      } else {
+        content = (
+          <>
+            <p>
+              Your Regional Partner will host the full professional learning
+              program and provide ongoing support as you implement what you’ve
+              learned in the classroom!
+            </p>
+            <p>
+              <strong>Your Regional Partner is: {regionalPartner.name}</strong>
+            </p>
+          </>
+        );
+      }
+    } else {
+      content = (
         <>
           <p>
-            Your Regional Partner will host the full professional learning
-            program and provide ongoing support as you implement what you’ve
-            learned in the classroom!
+            <strong>
+              There is no Regional Partner in your region at this time
+            </strong>
           </p>
           <p>
-            <strong>Your Regional Partner is: {regionalPartner.name}</strong>
+            Code.org will review your application and contact you with options
+            for joining the program hosted by a Regional Partner from a
+            different region. Please note that we are not able to guarantee a
+            space for you with another Regional Partner, and you will be
+            responsible for the costs associated with traveling to that location
+            if a virtual option is not available.
           </p>
         </>
-      )
-    ) : (
-      <>
-        <p>
-          <strong>
-            There is no Regional Partner in your region at this time
-          </strong>
-        </p>
-        <p>
-          Code.org will review your application and contact you with options for
-          joining the program hosted by a Regional Partner from a different
-          region. Please note that we are not able to guarantee a space for you
-          with another Regional Partner, and you will be responsible for the
-          costs associated with traveling to that location if a virtual option
-          is not available.
-        </p>
-      </>
-    );
+      );
+    }
     return (
       <>
         <p>

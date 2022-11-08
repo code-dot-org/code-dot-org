@@ -58,12 +58,14 @@ describe('TeacherApplication', () => {
     formControllerProps.onSuccessfulSubmit();
     sinon.assert.calledThrice(firehoseClient.putRecord);
   });
+
   it('Does not set schoolId if not provided', () => {
     const page = mount(<FindYourRegion {...defaultProps} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       undefined
     );
   });
+
   it('Sets the school dropdown value from props', () => {
     const page = mount(
       <FindYourRegion {...defaultProps} data={{school: '50'}} />
@@ -72,6 +74,7 @@ describe('TeacherApplication', () => {
       '50'
     );
   });
+
   it('Sets the school dropdown value from storage', () => {
     window.sessionStorage.getItem.restore();
     sinon
@@ -88,6 +91,7 @@ describe('TeacherApplication', () => {
       '25'
     );
   });
+
   it('Reports to google analytics', () => {
     mount(<TeacherApplication {...defaultProps} />);
     sinon.assert.called(window.ga);
