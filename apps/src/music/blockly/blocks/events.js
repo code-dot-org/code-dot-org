@@ -16,7 +16,7 @@ export const whenRun = {
 export const triggeredAt = {
   definition: {
     type: BlockTypes.TRIGGERED_AT,
-    message0: '%1 triggered at time %2',
+    message0: '%1 triggered at %2',
     args0: [
       {
         type: 'input_dummy',
