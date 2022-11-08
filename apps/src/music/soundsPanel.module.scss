@@ -5,36 +5,47 @@
   user-select: none;
 }
 
-.folderRowFirst {
-  font-size: 16px;
-  margin-bottom: 6px;
-  padding: 6px;
+%folder {
+  margin-top: 10px;
   background-color: $gray-900;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 6px;
 }
 
-.folderRow {
-  font-size: 16px;
+.folderFirst {
+  @extend %folder;
+  margin-top: 0;
+}
+
+.folder {
+  @extend %folder;
   margin-top: 6px;
+}
+
+.folderName {
+  font-size: 18px;
+  padding: 6px 0;
   margin-bottom: 6px;
-  padding: 6px;
-  background-color: $gray-900;
+  border-bottom: solid 1px $gray-800;
+  margin-right: 12px;
+}
+
+%sound-row {
+  overflow: hidden;
+  padding: 4px 0;
+  &:hover {
+    background-color: $gray-800;
+  }
 }
 
 .soundRow {
-  &:hover {
-    background-color: $gray-800;
-  }
-  overflow: hidden;
-  padding: 2px 6px;
+  @extend %sound-row;
 }
 
 .soundRowSelected {
+  @extend %sound-row;
   background-color: $gray-700;
-  &:hover {
-    background-color: $gray-800;
-  }
-  overflow: hidden;
-  padding: 2px 6px;
 }
 
 .soundRowLeft {
