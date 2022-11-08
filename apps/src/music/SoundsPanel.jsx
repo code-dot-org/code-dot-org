@@ -77,7 +77,7 @@ const SoundsPanel = ({
                         folder.path,
                         sound.src
                       )}
-                      onClick={() => onPreview(folder.path + '/' + sound.src)}
+                      onClick={e => onPreview(e, folder.path + '/' + sound.src)}
                     />
                   </div>
                 </div>
