@@ -12,41 +12,6 @@ export const baseToolbox = {
   contents: [
     {
       kind: 'category',
-      name: 'Play',
-      cssConfig: baseCategoryCssConfig,
-      contents: [
-        {
-          kind: 'block',
-          type: BlockTypes.PLAY_SAMPLE,
-          inputs: {
-            measure: {
-              shadow: {
-                type: 'math_number',
-                fields: {
-                  NUM: 1
-                }
-              }
-            }
-          }
-        },
-        {
-          kind: 'block',
-          type: BlockTypes.PLAY_SOUND,
-          inputs: {
-            measure: {
-              shadow: {
-                type: 'math_number',
-                fields: {
-                  NUM: 1
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      kind: 'category',
       name: 'Samples',
       cssConfig: baseCategoryCssConfig,
       contents: []
@@ -202,7 +167,7 @@ export const createMusicToolbox = (library, mode) => {
     return toolbox;
   }
 
-  toolbox.contents[1].contents = [];
+  toolbox.contents[0].contents = [];
 
   // Currently only supports 1 group
   const group = library.groups[0];
@@ -274,7 +239,7 @@ export const createMusicToolbox = (library, mode) => {
     }
 
     // Add to samples category
-    toolbox.contents[1].contents.push(category);
+    toolbox.contents[0].contents.push(category);
   }
 
   return toolbox;

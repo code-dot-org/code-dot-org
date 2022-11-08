@@ -38,6 +38,7 @@ export default class FunctionEditor {
  */
 export function flyoutCategory(workspace) {
   // TODO: Add "Create a Function" button
+  const newFunctionDefinitionBlock = newDefinitionBlock();
   console.warn('The modal function editor has not been fully implemented yet.');
   // Find all user-created procedure definitions in the workspace.
   // allProcedures returns a pair of arrays, but we only need the first.
@@ -47,7 +48,7 @@ export function flyoutCategory(workspace) {
   // https://developers.google.com/blockly/reference/js/blockly.procedures_namespace.allprocedures_1_function.md
   const allWorkspaceProcedures = Blockly.Procedures.allProcedures(workspace)[0];
   const functionCallBlocks = allCallBlocks(allWorkspaceProcedures);
-  return functionCallBlocks;
+  return [newFunctionDefinitionBlock, ...functionCallBlocks];
 }
 
 export function allCallBlocks(procedures) {

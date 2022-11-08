@@ -29,6 +29,7 @@ fa:
         text: "[GROUP][0] هر [N][1] بار \nبین [MOVE1][2] و [MOVE2][3] تغییر موضع می‌دهد"
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -80,6 +81,7 @@ fa:
         text: "[GROUP][0] برای همیشه [MOVE][1][DIR][2] را انجام می‌دهد"
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -136,6 +138,7 @@ fa:
         text: تغییر [GROUP][0][PROPERTY][1] به اندازه [VAL][2]
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -156,6 +159,7 @@ fa:
         text: "[GROUP][0] برای یکبار [MOVE][1][DIR][2] را انجام دهد"
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -299,6 +303,7 @@ fa:
         text: '[GROUP][0] به [LOCATION][1] پرش می‌کند'
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -324,6 +329,7 @@ fa:
         text: '[GROUP][0] را به شکل [FORMAT][1] طراحی کن'
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -571,7 +577,7 @@ fa:
         text: تنظیم سرعت رقص [SPRITE][0] روی [SPEED][1]
         options:
           SPEED:
-            '1': normal
+            '1': عادی
             '2': سریع
             '4': بسیار سریع
             '0.5': آرام
@@ -580,6 +586,7 @@ fa:
         text: تنظیم سرعت رقص [GROUP][0] روی [SPEED][1]
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -591,7 +598,7 @@ fa:
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
           SPEED:
-            '1': normal
+            '1': عادی
             '2': سریع
             '4': بسیار سریع
             '0.5': آرام
@@ -651,6 +658,7 @@ fa:
         text: '[GROUP][0][PROPERTY][1] را روی [VAL][2] تنظیم کن'
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -682,6 +690,7 @@ fa:
         text: '[GROUP][0][PROPERTY][1] را بهم بریز'
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -705,6 +714,7 @@ fa:
         text: تنظیم مقدار رنگ [THIS][0] به [VAL][1]
         options:
           THIS:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -719,6 +729,7 @@ fa:
         text: تنظیم مقدار رنگ [THIS][0] به [VAL][1]
         options:
           THIS:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -741,6 +752,7 @@ fa:
         text: تنظیم مشاهده [THIS][0] به [VISIBILITY][1]
         options:
           THIS:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -772,6 +784,7 @@ fa:
         text: "[GROUP][0] بعد از [RANGE][2] ، [PROPERTY][1] را شروع میکند"
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -812,6 +825,7 @@ fa:
         text: "[GROUP][0] بعد از [RANGE][2] ، [PROPERTY][1] را متوقف می‌سازد"
         options:
           GROUP:
+            sprites: همه
             '"ALIEN"': فضایی ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
@@ -940,6 +954,22 @@ fa:
             '"macklemore90"': ترانه Can't Hold Us از Macklemore
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': آهنگ The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: اجرای افکت [EFFECT][0]
+        options:
+          EFFECT:
+            '"bubbles"': حباب (افکت)
+            '"confetti"': کاغذ رنگی (افکت)
+            '"hearts"': قلب
+            '"emojis"': شکلک خوشحال (افکت)
+            '"rain"': بارانی
+            '"starburst"': استارباست (افکت)
+            '"glass"': شیشه شکسته (افکت)
+            '"twinkling"': چشمک زن (افکت)
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): قابل کشیدن باشد
       gamelab_addBehaviorSimple:
         text: اسپرایت [SPRITE][0] ، [BEHAVIOR][1] را شروع می‌کند
       gamelab_addTarget:
@@ -1160,6 +1190,7 @@ fa:
           EFFECT:
             '"burst"': انفجار
             '"pop"': ترکیدن (افکت)
+            '"rain"': بارانی
             '"spiral"': مارپیچ
       gamelab_makeNewSpriteAnon:
         text: یک اسپرایت جدید [ANIMATION_NAME][0] در محل [LOCATION][1] بساز
@@ -1238,6 +1269,7 @@ fa:
             "'sound://category_nature/thunderstorm_1.mp3'": صدای رعد و برق
             "'sound://category_animals/chick.mp3'": جوجه
             "'sound://category_animals/dog.mp3'": سگ
+            "'sound://category_animals/tiger.mp3'": ببر
             "'sound://category_collect/trill_stings.mp3'": صدای سازهای زهی
             "'sound://category_instrumental/harpe_pluck_1.mp3'": ساز چنگ
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": صدای ضربه زدن
@@ -1275,7 +1307,6 @@ fa:
             "'sound://category_space/Pillars_SFX.mp3'": صدای سحابی عقاب
             "'sound://category_space/Southern_ring_SFX.mp3'": صدای حلقه جنوبی (فضا)
             "'sound://category_space/Supernova_SFX.mp3'": صدا ابرنواختر
-            "'sound://category_sports/One_Whistle_SFX.mp3'": صدای یک سوت
             "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": صدای کهکشان مارپیچی
       gamelab_playSpeech:
         text: '[SOUND][0] را پخش کن'
@@ -1396,7 +1427,7 @@ fa:
           SIZE:
             '1': خیلی آهسته
             '3': آرام
-            '5': normal
+            '5': عادی
             '7': سریع
             '9': خیلی سریع
       gamelab_setTint:
@@ -1604,11 +1635,13 @@ fa:
         text: تغییر [SELECT][0][COSTUME][1] به [COSTUME2][2]
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
       Mikelab_groupChangePropBy:
         text: تغییر [PROPERTY][0] به [SELECT][1] [COSTUME][2] به اندازه [VAL][3]
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
           PROPERTY:
             '"scale"': اندازه
@@ -1634,6 +1667,7 @@ fa:
         text: '[SELECT][0][COSTUME][1] را حذف کن'
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
       Mikelab_groupDisplace:
         text: تمام [COSTUME][0] ، [COSTUME2][1] را از حرکت باز میدارند
@@ -1655,21 +1689,25 @@ fa:
         text: رفتارهای [SELECT][0][COSTUME][1] را متوقف کن
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
       Mikelab_groupRemoveBehaviorSimple:
         text: "[SELECT][0][COSTUME][1] [BEHAVIOR][2] را متوقف میکند"
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
       Mikelab_groupRemoveTint:
         text: رنگ [SELECT][0][COSTUME][1] را حذف کن
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
       Mikelab_groupSetProp:
         text: '[PROPERTY][0] [SELECT][1][COSTUME][2] را روی [VAL][3] تنظیم کن'
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
           PROPERTY:
             '"scale"': اندازه
@@ -1681,6 +1719,7 @@ fa:
         text: رنگ [SELECT][0][COSTUME][1] را به [COLOR][2] تغییر بده
         options:
           SELECT:
+            '"all"': همه
             '"this"': این
       Mikelab_groupWhenClickedOn:
         text: وقتی [COSTUME][0] کلیک شد
@@ -1911,6 +1950,8 @@ fa:
         text: شهر هیولاها را با [COUNT][0] هیولا بساز
       Outbreak_stopMoving:
         text: هیولاها متوقف می‌شوند
+      ParticlesBlocks_statesOfMatter:
+        text: "[BEHAVIOR][0]"
       Poetry_addFrame:
         text: قاب را روی [BRUSH][0] تنظیم کن
         options:
@@ -1952,6 +1993,7 @@ fa:
           EFFECT:
             '"burst"': انفجار
             '"pop"': ترکیدن (افکت)
+            '"rain"': بارانی
             '"spiral"': مارپیچ
       Poetry_makeNewSpriteAnon:
         text: یک اسپرایت جدید [ANIMATION_NAME][0] در محل [LOCATION][1] بساز
@@ -2016,6 +2058,7 @@ fa:
             '"fadeColors"': یخ زدن (افکت)
             '"hearts"': قلب
             '"space"': حس سرعت (افکت)
+            '"rain"': بارانی
             '"ripples"': حرکت موجی (افکت)
             '"colors"': تغییر رنگ (افکت)
             '"stars"': ستاره‌ای (افکت)
@@ -2055,6 +2098,7 @@ fa:
             '"confetti"': کاغذ رنگی (افکت)
             '"hearts"': قلب
             '"emojis"': شکلک خوشحال (افکت)
+            '"rain"': بارانی
             '"starburst"': استارباست (افکت)
             '"glass"': شیشه شکسته (افکت)
             '"twinkling"': چشمک زن (افکت)
@@ -2180,7 +2224,7 @@ fa:
         text: "[PORTION][0] هیولاها [RATE][1] شروع به [BEHAVIOR][2] می‌کنند"
         options:
           PORTION:
-            '1': all
+            '1': همه
             '0.75': بیشتر
             '0.5': نصف
             '0.25': چندتا از
@@ -2199,7 +2243,7 @@ fa:
         text: "[PORTION][0] هیولاها شروع به [BEHAVIOR][1] می‌کنند"
         options:
           PORTION:
-            '1': all
+            '1': همه
             '0.75': بیشتر
             '0.5': نصف
             '0.25': چندتا از

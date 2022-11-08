@@ -1085,11 +1085,16 @@ fa:
             lessonGroup-8:
               display_name: متغیرها
         csd-playground:
+          name: csd-playground
           lessons:
             lesson-7:
               name: معرفی اسپرایت ها
         csd-post-survey-2022:
           title: پرسشنامه پسادوره یافته های cs
+        self-paced-pl-csd5-2022:
+          title: آموزش هوش مصنوعی و یادگیری ماشینی
+        csa-draft-pl:
+          name: csa-draft-pl
         soccer:
           name: فوتبال
         csa1-2023:

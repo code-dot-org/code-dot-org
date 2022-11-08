@@ -369,6 +369,11 @@ sl:
             '"enter"': vnesi
             '"x"': x
             '"y"': y
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"hearts"': srca
+            '"rain"': dež
       gamelab_atTime:
         options:
           UNIT:

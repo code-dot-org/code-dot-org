@@ -9,7 +9,8 @@
       "ParticlesBlocks"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zParticlesModule"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -42,14 +43,18 @@
       "downButton"
     ],
     "project_template_level_name": "csc_Paricles_StatesOfMatter_Challenge-Template",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_code": "//validation"
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-10-28T17:53:58.000Z",
-  "user_id": 1196,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-10-28T17:53:58.394+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L12 Challenge\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L12 Challenge\"},{\"changed_at\":\"2022-10-28 17:57:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:01:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 19:17:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 19:19:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "created_at": "2022-10-28T17:53:58.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2022-10-28T17:53:58.394+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L12 Challenge\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L12 Challenge\"},{\"changed_at\":\"2022-10-28 17:57:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 18:01:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 19:17:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-28 19:19:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 17:19:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

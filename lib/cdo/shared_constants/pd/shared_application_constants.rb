@@ -5,7 +5,7 @@ module Pd
     APPLICATION_TYPES = [
       TEACHER_APPLICATION = 'Teacher'.freeze,
       FACILITATOR_APPLICATION = 'Facilitator'.freeze,
-      PRINCIPAL_APPROVAL_APPLICATION = 'Principal Approval'.freeze
+      PRINCIPAL_APPROVAL_APPLICATION = 'Administrator Approval'.freeze
     ].freeze
 
     APPLICATION_YEARS = [
