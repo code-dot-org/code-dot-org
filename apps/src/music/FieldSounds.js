@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SoundsPanel from './SoundsPanel';
+import GoogleBlockly from 'blockly/core';
 
 var CustomFields = CustomFields || {};
 
@@ -10,18 +11,14 @@ var CustomFields = CustomFields || {};
  * @extends {Blockly.FieldTextInput}
  * @constructor
  */
-class FieldSounds extends Blockly.FieldTextInput {
+class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
     super(options.currentValue);
 
     this.options = options;
-
     this.playingPreview = null;
-
-    // Disable spellcheck.
-    this.setSpellcheck(false);
-
     this.SERIALIZABLE = true;
+    this.CURSOR = 'default';
   }
 
   saveState() {
@@ -50,11 +47,6 @@ class FieldSounds extends Blockly.FieldTextInput {
   showEditor_() {
     super.showEditor_();
 
-    const div = Blockly.WidgetDiv.getDiv();
-    if (!div.firstChild) {
-      // Mobile interface uses Blockly.dialog.setPrompt().
-      return;
-    }
     // Build the DOM.
     const editor = this.dropdownCreate_();
     Blockly.DropDownDiv.getContentDiv().appendChild(editor);
@@ -106,10 +98,12 @@ class FieldSounds extends Blockly.FieldTextInput {
           e.stopPropagation();
 
           this.options.playPreview(value, () => {
-            // We might already be playing another preview
-            // when we are trying to stop.  In which case,
-            // there's a new highlighted play button, and
-            // no need to reset this status.
+            // If the user starts another preview while one is
+            // already playing, it will have started playing before
+            // we get this stop event.  We want to wait until the
+            // new preview stops before we reactivate the button, and
+            // so we don't clear out this.playingPreview unless the
+            // stop event coming in is for the actively playing preview.
             if (this.playingPreview === value) {
               this.playingPreview = null;
             }
@@ -117,7 +111,7 @@ class FieldSounds extends Blockly.FieldTextInput {
           });
         }}
         onSelect={value => {
-          this.setEditorValue_(value);
+          this.setValue(value);
           this.hide_();
         }}
       />,

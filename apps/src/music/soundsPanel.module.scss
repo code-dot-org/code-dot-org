@@ -50,7 +50,7 @@
 
 .soundRowLeft {
   width: 15px;
-  margin-right: 4px;
+  margin: 0 4px;
   float: left;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .soundRowMiddle {
-  width: calc(100% - 19px - 30px);
+  width: calc(100% - 23px - 30px);
   float: left;
 }
 
