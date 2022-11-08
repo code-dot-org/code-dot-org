@@ -1077,7 +1077,7 @@ export class DetailViewContents extends React.Component {
           )}
           {this.multiAnswerQuestionFields[key]['principal'] && (
             <p>
-              Principal Response:{' '}
+              Administrator Response:{' '}
               {this.formatAnswer(
                 key,
                 this.props.applicationData.form_data[
@@ -1110,7 +1110,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderModifyPrincipalApprovalSection = () => {
-    // principal_approval_state can be 'Not required', 'Incomplete - Principal email sent on ...', or 'Complete - ...'
+    // principal_approval_state can be 'Not required', 'Incomplete - Admin email sent on ...', or 'Complete - ...'
     // If 'Complete,' this function will not be run.
     // If 'Incomplete', we show a link to the application and a button to re-send the request,
     // and a button to change the principal approval requirement.
@@ -1129,10 +1129,10 @@ export class DetailViewContents extends React.Component {
 
       return (
         <div>
-          <h3>Principal Approval</h3>
+          <h3>Administrator Approval</h3>
           <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p id="principal-approval-link">
-            Link to principal approval form:{' '}
+            Link to administrator approval form:{' '}
             <a
               id="principal-approval-url"
               href={principalApprovalUrl}
@@ -1158,14 +1158,14 @@ export class DetailViewContents extends React.Component {
     } else {
       return (
         <div>
-          <h3>Principal Approval</h3>
+          <h3>Administrator Approval</h3>
           {!this.state.principalApprovalIsRequired && (
             <p>
-              If you would like to require principal approval for this teacher,
-              please click “Make required." If this application is Unreviewed,
-              Pending, or Pending Space Availability, then clicking this button
-              will also send an email to the principal asking for approval,
-              given one hasn't been sent in the past 5 days.
+              If you would like to require administrator approval for this
+              teacher, please click “Make required." If this application is
+              Unreviewed, Pending, or Pending Space Availability, then clicking
+              will also send an email to the administrator asking for approval,
+              this button given one hasn't been sent in the past 5 days.
             </p>
           )}
           <PrincipalApprovalButtons
@@ -1264,7 +1264,7 @@ export class DetailViewContents extends React.Component {
       return (
         <div>
           <p>Teacher Response: {teacher_response}</p>
-          <p>Principal Presponse: {principal_response}</p>
+          <p>Administrator Presponse: {principal_response}</p>
         </div>
       );
     } else {

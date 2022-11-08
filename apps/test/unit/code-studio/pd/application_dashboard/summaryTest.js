@@ -10,16 +10,14 @@ import sinon from 'sinon';
 
 describe('Summary', () => {
   const dataWithoutIncompleteApps = {
-    unreviewed: {locked: 0, total: 0},
     reopened: {locked: 0, total: 0},
+    awaiting_admin_approval: {locked: 0, total: 0},
+    unreviewed: {locked: 0, total: 0},
     pending: {locked: 0, total: 0},
-    waitlisted: {locked: 0, total: 0},
+    pending_space_availability: {locked: 0, total: 0},
+    accepted: {locked: 0, total: 0},
     declined: {locked: 0, total: 0},
-    accepted_not_notified: {locked: 0, total: 0},
-    accepted_notified_by_partner: {locked: 0, total: 0},
-    accepted_no_cost_registration: {locked: 0, total: 0},
-    registration_sent: {locked: 0, total: 0},
-    paid: {locked: 0, total: 0}
+    withdrawn: {locked: 0, total: 0}
   };
 
   const data = {

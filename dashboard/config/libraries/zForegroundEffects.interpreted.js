@@ -129,6 +129,8 @@ function setForegroundEffect2(option) {
   }
 }
 
+/** Creates a rain effect with 20 drops on the screen
+*/
 function rainEffect() {
   push();
   stroke(
@@ -151,6 +153,8 @@ function rainEffect() {
   pop();
 }
 
+/** Creates a bubble effect that float up from the bottom
+*/
 function bubbleEffect() {
   push();
   noStroke();
@@ -173,7 +177,8 @@ function bubbleEffect() {
     removeBehaviorSimple(({name: "effectSprite"}), new Behavior(bubbleEffect, []));
   }
 }
-
+/** Creates a heart effect with hearts on the screen that shrink in size
+*/
 function heartEffect() {
   for(var hearts_j = 0; hearts_j < hearts.length; hearts_j++) {
    	var heart = hearts[hearts_j];
@@ -192,7 +197,8 @@ function heartEffect() {
 	removeBehaviorSimple(({name: "effectSprite"}), new Behavior(heartEffect, []));
   }
 }
-
+/** Creates a confetti effect with confetti that falls from the top of the screen
+*/
 function confettiEffect() {
 	push();
   	noStroke();
@@ -217,7 +223,8 @@ function confettiEffect() {
     }
   	pop();
 }
-
+/** Creates several starts on the screen that twinkle then fade out
+*/
 function starburstEffect() {
 	push();
     noStroke();
