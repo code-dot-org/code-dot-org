@@ -3818,13 +3818,14 @@ en:
         denny-science-copy:
           lesson_groups: {}
         dance-2019:
-          title: Dance Party (2019)
+          title: Dance Party
           description_audience: ''
-          description_short: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+          description_short: Code a Dance Party to share with friends and family. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's "Encanto," and more!
           description: Code your own dance party to share with your friends!
           lesson_groups: {}
           student_description: Code your own dance party to share with your friends!
           name: dance-2019
+          lessons: {}
         k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals (2019)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
@@ -3842,13 +3843,14 @@ en:
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2019
         dance-extras-2019:
-          title: Keep On Dancing (2019)
+          title: Keep On Dancing
           description: Go beyond the first hour with extended project ideas.
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description_audience: ''
           lesson_groups: {}
           student_description: Go beyond the first hour with extended project ideas.
           name: dance-extras-2019
+          lessons: {}
         csp10-pilot:
           title: Cybersecurity and Global Impacts
           description_audience: ''
@@ -9369,12 +9371,14 @@ en:
               name: Local Storytellers
             lesson-4:
               name: Local Landmarks - Unplugged
+            lesson-5:
+              name: Local Storytellers
           lesson_groups: {}
           name: csc-landmarks-pilot
-          title: ''
+          title: Mapping Landmarks (Fall 2022 Pilot)
           description_audience: ''
           description_short: ''
-          description: 'Winter 2022 Pilot module - Historical Landmark and Mapping Module '
+          description: ''
           student_description: ''
         csc-playground:
           lessons:
@@ -9459,6 +9463,8 @@ en:
               name: Where is it coming from?
             lesson-3:
               name: What Do They Want?
+            lesson-4:
+              name: The Secret Message
           lesson_groups: {}
           name: csc-function-machines-pilot
           title: Function Machines Pilot Module
@@ -9727,7 +9733,36 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-pilot-fa2022-timecapsule
-          title: ''
+          title: Time Capsules (Fall 2022 Pilot)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-pilot-fa2022-ecosystem:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-pilot-fa2022-ecosystem
+          title: Ecosystems (Fall 2022 Pilot)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csp-playground:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Variables EIPM (Erik)
+          name: csp-playground
+          title: CSP Playground
+          description_audience: Curriculum Writers
+          description_short: For staging updates to lessons or levels between curriculum versions
+          description: ''
+          student_description: ''
+        csc-pilot-fa2022-particles:
+          lessons: {}
+          lesson_groups: {}
+          name: csc-pilot-fa2022-particles
+          title: 'Particles '
           description_audience: ''
           description_short: ''
           description: ''

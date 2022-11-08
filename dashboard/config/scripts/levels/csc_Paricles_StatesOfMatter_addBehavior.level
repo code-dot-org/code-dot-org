@@ -10,6 +10,7 @@
     ],
     "helper_libraries": [
       "NativeSpriteLab",
+      "zCriterionValidationLibrary",
       "zParticlesModule"
     ],
     "use_default_sprites": "false",
@@ -20,7 +21,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "## Add Sprite Behavior\r\n\r\n**The water particles behave very differently depending on their state of matter!**\r\n- Drag out a `set H2O sprite to particle behavior` block and connect it to the `make new sprite` block.\r\n- Select one of the particle states in this behavior block.\r\n- Press run the see the particles moving in the state you selected.\r\n- Change the behavior and then press run again to observe the different movements.\r\n\r\n**Experiment with the three different states of matter!**\r\n- Continue to play with the three states of matter behavior until you are comfortable with what the particles are doing in each state.",
+    "long_instructions": "## Add Sprite Behavior\r\n\r\n**The water particles behave very differently depending on their state of matter!**\r\n- Drag out a `set H2O sprite to particle behavior` block and connect it to the `make new sprite` block.\r\n- Select one of the particle states in this behavior block.\r\n- Press run the see the particles moving in the state behavior you selected.\r\n\r\n**Experiment with the three different states of matter!**\r\n- Continue to play with the three states of matter behavior until you are comfortable with what the particles are doing in each state.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -43,7 +44,7 @@
       "downButton"
     ],
     "project_template_level_name": "csc_Paricles_StatesOfMatter_experiment-Template",
-    "validation_code": "//validation",
+    "validation_code": "//validation\r\n\r\nif(World.frameCount == 1) {\r\n  setFailTime(150);\r\n  setDelayTime(90);\r\n  setupPrevious(); \r\n\r\n  addCriteria(function() {\r\n    //check for an added behavior\r\n    return itemBehaviorFound();\r\n  }, \"debugBehaviors\");\r\n\r\n}\r\ngetHelperVars();\r\n// drawHandsOnUnclickedSprites() //uncomment on levels where the user needs to click sprites to advance\r\ncheck();\r\nupdatePrevious();",
     "preload_asset_list": null,
     "encrypted_examples": [
 
@@ -54,7 +55,7 @@
   "created_at": "2022-10-31T18:31:09.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-31T18:31:09.233+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_magnifyingCutout\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_magnifyingCutout\"},{\"changed_at\":\"2022-10-31 18:39:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 18:39:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 18:41:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 20:08:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 21:23:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-31T18:31:09.233+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_magnifyingCutout\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_magnifyingCutout\"},{\"changed_at\":\"2022-10-31 18:39:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 18:39:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 18:41:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 20:08:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-31 21:23:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 16:11:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-01 16:12:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-02 22:30:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-03 19:19:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-11-08 00:09:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 00:10:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -75,11 +76,32 @@
         <block type="gamelab_setBackgroundImageAs">
           <field name="IMG">"background_microscope"</field>
         </block>
+        <block type="gamelab_makeNumSprites">
+          <field name="ANIMATION_NAME">"h2o-01"</field>
+          <value name="NUM">
+            <block type="math_number">
+              <field name="NUM">3</field>
+            </block>
+          </value>
+        </block>
         <block type="gamelab_makeNewSpriteAnon">
           <field name="ANIMATION_NAME">"h2o-01"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker">
               <field name="LOCATION">{"x":200,"y":200}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"microscope_outline"</field>
+            </block>
+          </value>
+          <value name="VAL">
+            <block type="math_number">
+              <field name="NUM">400</field>
             </block>
           </value>
         </block>

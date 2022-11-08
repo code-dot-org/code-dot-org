@@ -45,6 +45,7 @@
   codeorg_homepage_hoc2022_body: 'Explore the universe, score a goal, bust a move — there are so many ways to try computer science.'
   hoc2022_codeorg_title: 'Celebrate Hour of Code with NASA and more'
   hoc2022_codeorg_description: 'The 10th Hour of Code is out of this world! Come explore, play, and create with us.'
+  social_hoc2022_dance: "Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's \"Encanto,\" and more!"
 
   social_hoc2021_cse: "During the #HourOfCode, we're celebrating #CSEverywhere. Discover the connections!"
 
@@ -718,8 +719,6 @@
   learn_banner_beyond_markdown: "Want to keep learning? [Go beyond an hour](%{url})"
   learn_banner_teachers: "Teachers: <a id='teacher_banner_host'>Host an hour</a> or <a id='teacher_banner_howto'>read the How-To Guide</a>"
   learn_banner_teachers_markdown: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{howto_url})"
-  learn_robotics_banner_heading: 'Robotics and Circuits'
-  learn_robotics_banner_blurb: 'Got robots or physical computing kits? Use them with the activities below and make a tangible Hour of Code for students of any age! Some activities even offer a simulator so you can get started without any hardware.'
 
   tutorial_dance2019_name: "Dance Party"
   tutorial_danceparty_name: "Dance Party"
@@ -7136,7 +7135,7 @@
   tutorial_googlename _string_detail_programming_languages: "Blocks"
   tutorial_googlelogo_string_detail_programming_languages: "Blocks"
   tutorial_carnegiezillah_string_detail_programming_languages: "Blocks"
-  tutorial_nasachspacejam_string_detail_programming_languages: "JavaScript, P5"
+  tutorial_nasachspacejam_string_detail_programming_languages: "Blocks"
   tutorial_hatchxrsolar_string_detail_programming_languages: "Blocks"
   tutorial_hatchxrspace_string_detail_programming_languages: "Blocks"
   tutorial_hatchxrtrex_string_detail_programming_languages: "Blocks"

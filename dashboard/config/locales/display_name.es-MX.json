@@ -1898,7 +1898,14 @@
         "CSD U6 - Sensors - PA_2222": "Aplicación de Termómetro",
         "CSD U6 - Sensors - PB_2222": "Tarjeta de Cumpleaños Interactiva",
         "CSD U6 - Sensors - PC_2222": "Theremín de Luz",
-        "CSD U6 - Sensors - PD_2222": "Medidor de Volumen"
+        "CSD U6 - Sensors - PD_2222": "Medidor de Volumen",
+        "CSD U6 - Physical Input - ChalA_2222": "Reacciones Físicas",
+        "CSD U6 - Physical Input - ChalB_2222": "Prototipo de Sistema de Alarma",
+        "CSD U6 - Physical Input - ChalC_2222": "Crea Tu Propio Botón",
+        "CSD U6 - Physical Input - PA_2222": "Whack-A-Mole",
+        "CSD U6 - Physical Input - PB_2222": "Cambiador de Color",
+        "CSD U6 - Physical Input - PC_2222": "Mini-Piano",
+        "CSD U6 - Physical Input - PD_2222": "Materiales Conductores"
       }
     }
   }
