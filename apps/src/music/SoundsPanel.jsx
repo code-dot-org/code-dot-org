@@ -19,6 +19,20 @@ const getPreviewClassName = (playingPreview, folderPath, soundSrc) => {
   }
 };
 
+const getIcon = type => {
+  const typeToIcon = {
+    beat: 'volume-up',
+    bass: 'headphones',
+    lead: 'music',
+    fx: 'asterisk'
+  };
+  return typeToIcon[type];
+};
+
+const getIconClassName = type => {
+  return styles['icon-' + type];
+};
+
 const SoundsPanel = ({
   library,
   currentValue,
@@ -46,13 +60,15 @@ const SoundsPanel = ({
                     sound.src
                   )}
                   key={soundIndex}
+                  onClick={() => onSelect(folder.path + '/' + sound.src)}
                 >
-                  <div
-                    className={styles.soundRowLeft}
-                    onClick={() => onSelect(folder.path + '/' + sound.src)}
-                  >
-                    {sound.name}
+                  <div className={styles.soundRowLeft}>
+                    <FontAwesome
+                      icon={getIcon(sound.type)}
+                      className={getIconClassName(sound.type)}
+                    />
                   </div>
+                  <div className={styles.soundRowMiddle}>{sound.name}</div>
                   <div className={styles.soundRowRight}>
                     <FontAwesome
                       icon={'play-circle'}

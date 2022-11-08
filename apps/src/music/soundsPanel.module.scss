@@ -49,7 +49,29 @@
 }
 
 .soundRowLeft {
-  width: calc(100% - 30px);
+  width: 15px;
+  margin-right: 4px;
+  float: left;
+}
+
+.icon-beat {
+  color: #fc55ff;
+}
+
+.icon-bass {
+  color: #00c0ff;
+}
+
+.icon-lead {
+  color: #00ff02;
+}
+
+.icon-fx {
+  color: #ff0;
+}
+
+.soundRowMiddle {
+  width: calc(100% - 19px - 30px);
   float: left;
 }
 
