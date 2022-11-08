@@ -9,7 +9,7 @@ const initI18n = (i18n = {}) => {
   messages = {...mf.compile(uiStrings), ...i18n};
 };
 
-const t = (key, options) => {
+const t = (key, options = {}) => {
   if (!messages) {
     throw "I18n must be initialized before calling t";
   }
@@ -25,14 +25,12 @@ const t = (key, options) => {
   });
 
   if (scopedMessages === undefined) {
-    console.warn("Couldn't find string for given key", key, options, scopedMessages);
     return defaultValue;
   }
 
   // All strings should be represented by a Function. If it isn't, the scope probaly needs to be
   // defined.
   if (!(scopedMessages[key] instanceof Function)) {
-    console.warn("Given key doesn't point to a single string", key, options, scopedMessages);
     return defaultValue;
   }
 
