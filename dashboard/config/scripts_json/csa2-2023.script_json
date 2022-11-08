@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-06 16:14:18 UTC",
+    "serialized_at": "2022-11-07 22:37:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,12 +116,27 @@
       }
     },
     {
-      "key": "lesson-4",
-      "name": "Variables",
+      "key": "lesson-6",
+      "name": "Constructors and Inheritance",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Variables",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -133,21 +148,6 @@
     {
       "key": "lesson-5",
       "name": "Accessor Methods",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023"
-      }
-    },
-    {
-      "key": "lesson-6",
-      "name": "User Input",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -155,7 +155,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-6",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-2023"
       }
@@ -347,6 +347,18 @@
       "seeding_key": {
         "lesson_activity.key": "c066a3a7-45fa-4d38-82fd-f1a42875dc93",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "395e1ba4-946e-47ef-b9a8-82a999067589",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "395e1ba4-946e-47ef-b9a8-82a999067589",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-2023"
       }
@@ -988,6 +1000,16 @@
         "activity_section.key": "b7041e82-0262-41b2-8cdb-f7e7342fccee",
         "lesson_activity.key": "c066a3a7-45fa-4d38-82fd-f1a42875dc93"
       }
+    },
+    {
+      "key": "f9d49b90-477e-4a3d-bafc-60c533935ade",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f9d49b90-477e-4a3d-bafc-60c533935ade",
+        "lesson_activity.key": "395e1ba4-946e-47ef-b9a8-82a999067589"
+      }
     }
   ],
   "script_levels": [
@@ -1297,6 +1319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_2023"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -1907,6 +1932,13 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.5"
       }
     }
   ],
