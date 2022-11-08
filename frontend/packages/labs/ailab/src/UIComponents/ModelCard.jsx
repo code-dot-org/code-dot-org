@@ -10,6 +10,7 @@ import Statement from "./Statement";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 import { modelCardDatasetDetailsShape, trainedModelDetailsShape, modelCardColumnShape } from "./shapes";
 import I18n from "../i18n";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class ModelCard extends Component {
   static propTypes = {
@@ -31,8 +32,11 @@ class ModelCard extends Component {
       datasetDetails
     } = this.props;
     console.log("trainedModelDetails", trainedModelDetails)
+    const localizedLabel = getLocalizedColumnName(datasetDetails.name, label.id);
+    const localizedFeatures =
+      selectedFeatures.map(feature => getLocalizedColumnName(datasetDetails.name, feature));
     const predictionStatement = I18n.t("predictionStatement",
-      {"output": label.id, "inputs": selectedFeatures.join(", ")})
+      {"output": localizedLabel, "inputs": localizedFeatures.join(", ")})
     return (
       <div style={styles.panel}>
         <Statement />
@@ -104,7 +108,7 @@ class ModelCard extends Component {
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>{I18n.t("modelCardLabel")}</h5>
             <div style={styles.modelCardContent}>
-              <p style={styles.bold}>{label.id}</p>
+              <p style={styles.bold}>{localizedLabel}</p>
               {label.description && <p>{label.description}</p>}
               {!label.values && (
                 <p style={styles.modelCardDetails}>
