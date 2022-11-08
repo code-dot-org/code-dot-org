@@ -135,7 +135,7 @@ export const commands = {
     this.validationFrames.fail = frames;
   },
   setDelayTime(frames) {
-    this.validationFrames.pass = frames;
+    this.validationFrames.delay = frames;
   },
   getFailTime() {
     return this.validationFrames.fail;

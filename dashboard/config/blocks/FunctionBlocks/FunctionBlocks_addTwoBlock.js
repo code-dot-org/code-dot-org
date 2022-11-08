@@ -1,4 +1,13 @@
 function addTwoBlock() {
-    input = input + 2;
-    output = input;
+  //For Validation
+  if(typeof checkValidation === 'function' && checkValidation()) {
+    var newEventObj = {
+      blockName: 'addTwo',
+      input: input
+    };
+    addFunctionEvent(newEventObj);
+  }
+  //Function
+  input = input + 2;
+  output = input;
 }

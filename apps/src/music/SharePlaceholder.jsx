@@ -1,52 +1,52 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {AnalyticsContext} from './context';
 
-export default class SharePlaceholder extends React.Component {
-  static propTypes = {
-    analyticsReporter: PropTypes.any.isRequired
-  };
+const SharePlaceholder = () => {
+  const [shareShowing, setShareShowing] = useState(false);
+  const analyticsReporter = useContext(AnalyticsContext);
 
-  state = {
-    shareShowing: false
-  };
-
-  shareClicked = () => {
-    if (!this.state.shareShowing) {
-      this.props.analyticsReporter.onButtonClicked('share');
+  const shareClicked = () => {
+    if (!shareShowing) {
+      analyticsReporter.onButtonClicked('share');
     }
-    this.setState({shareShowing: true});
+    setShareShowing(true);
   };
 
-  render() {
-    return (
-      <div
-        id="share-placeholder"
-        onClick={this.shareClicked}
-        style={{
-          backgroundColor: '#222',
-          width: 140,
-          borderRadius: 4,
-          padding: 10,
-          boxSizing: 'border-box',
-          position: 'relative',
-          textAlign: 'center',
-          cursor: this.state.shareShowing ? 'auto' : 'pointer'
-        }}
-      >
-        {!this.state.shareShowing && (
-          <div>
-            <FontAwesome icon={'share-square-o'} />
-            &nbsp; Share
-          </div>
-        )}
-        {this.state.shareShowing && (
-          <div>
-            <FontAwesome icon={'clock-o'} />
-            &nbsp; Sharing is under construction. Check back soon.
-          </div>
-        )}
-      </div>
-    );
-  }
-}
+  return (
+    <div
+      id="share-placeholder"
+      onClick={shareClicked}
+      style={{
+        backgroundColor: '#222',
+        width: 140,
+        borderRadius: 4,
+        padding: 10,
+        boxSizing: 'border-box',
+        position: 'relative',
+        textAlign: 'center',
+        cursor: shareShowing ? 'auto' : 'pointer'
+      }}
+    >
+      {!shareShowing && (
+        <div>
+          <FontAwesome icon={'share-square-o'} />
+          &nbsp; Share
+        </div>
+      )}
+      {shareShowing && (
+        <div>
+          <FontAwesome icon={'clock-o'} />
+          &nbsp; Sharing is under construction. Check back soon.
+        </div>
+      )}
+    </div>
+  );
+};
+
+SharePlaceholder.propTypes = {
+  analyticsReporter: PropTypes.any.isRequired
+};
+
+export default SharePlaceholder;
