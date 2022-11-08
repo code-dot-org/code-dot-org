@@ -39,7 +39,6 @@ const US = 'United States';
 const FindYourRegion = props => {
   const {onChange, errors, data} = props;
   const resetCountry = () => onChange({country: US});
-  const exitApplication = () => (window.location = PD_RESOURCES_URL);
   const [regionalPartner] = useRegionalPartner(data);
   useEffect(() => {
     onChange({
@@ -93,7 +92,7 @@ const FindYourRegion = props => {
           <Button onClick={resetCountry} bsStyle="primary">
             Continue as United States Teacher
           </Button>
-          <Button onClick={exitApplication}>Exit Application</Button>
+          <Button href={PD_RESOURCES_URL}>Exit Application</Button>
         </Modal.Footer>
       </Modal>
     );
