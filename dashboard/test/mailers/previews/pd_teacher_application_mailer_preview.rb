@@ -10,7 +10,6 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     principal_approval_completed
     principal_approval_completed_partner
     accepted_no_cost_registration
-    registration_sent
     registration_reminder
     declined
     waitlisted
