@@ -79,7 +79,7 @@ module Api::V1::Pd
       role = params[:role]
       regional_partner_value = params[:regional_partner_value]
 
-      applications = get_applications_by_role(role.to_sym).where(status: COHORT_VIEW_STATUSES)
+      applications = get_applications_by_role(role.to_sym).where(status: COHORT_CALCULATOR_STATUSES)
 
       unless regional_partner_value.nil? || regional_partner_value == REGIONAL_PARTNERS_ALL
         applications = applications.where(regional_partner_id: regional_partner_value == REGIONAL_PARTNERS_NONE ? nil : regional_partner_value)
