@@ -161,7 +161,7 @@ export class QuickViewTable extends React.Component {
         {
           property: 'principal_approval_state',
           header: {
-            label: 'Princ Approval State',
+            label: 'Admin Approval State',
             transforms: [sortable]
           },
           cell: {
@@ -183,7 +183,7 @@ export class QuickViewTable extends React.Component {
         {
           property: 'principal_approval_not_required',
           header: {
-            label: 'Princ Approval Required',
+            label: 'Admin Approval Required',
             transforms: [sortable]
           },
           cell: {
