@@ -5,6 +5,33 @@ import {FatalErrorType} from './constants';
 import logToCloud from '../logToCloud';
 import {Buffer} from 'buffer';
 
+import testImageAccess from '../code-studio/url_test';
+import firehoseClient from '../lib/util/firehose';
+
+function tempLog(event, data = null) {
+  //console.log(event, data || "");
+
+  firehoseClient.putRecord(
+    {
+      study: 'weblab_loading_investigation_2022',
+      event: event,
+      data: data,
+      is_cros: /\bCrOS\b/.test(navigator.userAgent)
+    },
+    {includeUserId: true}
+  );
+}
+
+function testReach() {
+  testImageAccess(
+    'https://downloads.computinginthecore.org/favicon.ico' +
+      '?' +
+      Math.random(),
+    () => tempLog('reach', true),
+    () => tempLog('reach', false)
+  );
+}
+
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
   logToCloud.PageAction.BrambleFilesystemResetSuccess,
@@ -46,6 +73,13 @@ export default class CdoBramble {
   }
 
   init() {
+    let initState = 'none';
+    tempLog('init');
+    setTimeout(() => {
+      tempLog('after20', initState);
+    }, 20 * 1000);
+    testReach();
+
     this.Bramble.load('#bramble', this.config());
 
     this.Bramble.on('readyStateChange', (_, newState) => {
@@ -54,6 +88,8 @@ export default class CdoBramble {
           this.mount();
           this.invokeAll(this.onMountableCallbacks);
         });
+        tempLog('mountable');
+        initState = 'mountable';
       }
     });
 
@@ -63,6 +99,8 @@ export default class CdoBramble {
       this.brambleProxy = brambleProxy;
       this.configureProxy();
       this.invokeAll(this.onReadyCallbacks);
+      tempLog('ready');
+      initState = 'ready';
     });
   }
 
@@ -687,6 +725,7 @@ export default class CdoBramble {
     console.error(`Bramble error. ${error}`);
     const {message, code} = error;
     this.logAction(PageAction.BrambleError, {error: message});
+    tempLog('error', {message, code});
 
     this.api.openFatalErrorDialog(
       message,
