@@ -15,7 +15,6 @@ export const getLabelColumn = state => state.labelColumn;
 export const getMetadata = state => state.metadata;
 export const getDatasetId = state => state.metadata.name;
 export const getTrainedModelDetails = state => state.trainedModelDetails;
-import { getLocalizedColumnName } from "./helpers/columnDetails.js";
 
 export const getCategoricalColumns = createSelector(
   [getColumnsByDataType],
@@ -99,8 +98,7 @@ export const getSelectedColumnsDescriptions = createSelector(
           column,
           metadata,
           trainedModelDetails
-        ),
-        localizedName: getLocalizedColumnName(metadata.name, column)
+        )
       };
     });
   }

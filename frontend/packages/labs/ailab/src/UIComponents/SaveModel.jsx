@@ -12,6 +12,7 @@ import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 import ScrollableContent from "./ScrollableContent";
 import I18n from "../i18n";
+import { getLocalizedColumnName, getLocalizedColumnDescription } from "../helpers/columnDetails.js";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -21,7 +22,8 @@ class SaveModel extends Component {
     labelColumn: PropTypes.string,
     columnDescriptions: PropTypes.array,
     dataDescription: PropTypes.string,
-    isUserUploadedDataset: PropTypes.bool
+    isUserUploadedDataset: PropTypes.bool,
+    datasetId: PropTypes.string
   };
 
   constructor(props) {
@@ -46,6 +48,7 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
+      const datasetId = this.props.datasetId;
       const labelType = I18n.t("saveModelColumnTypeLabel");
       const featureType = I18n.t("saveModelColumnTypeFeature");
       const columnType =
@@ -54,8 +57,8 @@ class SaveModel extends Component {
         id: columnDescription.id,
         isColumn: true,
         columnType,
-        answer: columnDescription.description,
-        localizedName: columnDescription.localizedName
+        answer: getLocalizedColumnDescription(datasetId, columnDescription.description),
+        localizedName: getLocalizedColumnName(datasetId, columnDescription.id)
       });
     }
     return fields;
@@ -230,7 +233,8 @@ export default connect(
     labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnsDescriptions(state),
     dataDescription: getDatasetDescription(state),
-    isUserUploadedDataset: isUserUploadedDataset(state)
+    isUserUploadedDataset: isUserUploadedDataset(state),
+    datasetId: state.metadata && state.metadata.name
   }),
   dispatch => ({
     setTrainedModelDetail(field, value, isColumn) {
