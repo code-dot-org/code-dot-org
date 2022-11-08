@@ -81,21 +81,32 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
     const positionBlock = function(block) {
       const heightWidth = block.blockly_block.getHeightWidth();
+      const hasFrameSvg = !!block.blockly_block.functionalSvg_;
+      const frameSvgSize = hasFrameSvg ? 40 : 0;
+      const frameSvgTop = hasFrameSvg ? 35 : 0;
+      const frameSvgMargin = hasFrameSvg ? 16 : 0;
 
       if (isNaN(block.x)) {
         block.x = cursor.x;
       } else {
         block.x = blockSpace.RTL ? viewWidth - block.x : block.x;
       }
+      blockSpace.RTL
+        ? (block.x -= frameSvgMargin)
+        : (block.x += frameSvgMargin);
 
       if (isNaN(block.y)) {
-        block.y = cursor.y;
-        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
+        block.y = cursor.y + frameSvgTop;
+        cursor.y +=
+          heightWidth.height + verticalSpaceBetweenBlocks + frameSvgSize;
       }
+
       block.blockly_block.moveTo(
         new Blockly.utils.Coordinate(block.x, block.y)
       );
     };
+
+    blocks.sort(reorderBlocks);
 
     blocks
       .filter(function(block) {
@@ -117,4 +128,21 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
   // We don't want to save absolute position in the block XML
   blocklyWrapper.Xml.blockToDomWithXY = blocklyWrapper.Xml.blockToDom;
+}
+
+// Compare function - Moves functional definitions to the end of a block list.
+function reorderBlocks(a, b) {
+  if (
+    a.blockly_block.type === 'procedures_defnoreturn' &&
+    b.blockly_block.type !== 'procedures_defnoreturn'
+  ) {
+    return 1; // Sort a after b.
+  } else if (
+    b.blockly_block.type === 'procedures_defnoreturn' &&
+    a.blockly_block.type !== 'procedures_defnoreturn'
+  ) {
+    return -1; // Sort a before b.
+  } else {
+    return 0; // Keep original order.
+  }
 }
