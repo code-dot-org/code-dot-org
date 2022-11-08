@@ -28,7 +28,7 @@ const t = (key, options = {}) => {
     return defaultValue;
   }
 
-  // All strings should be represented by a Function. If it isn't, the scope probaly needs to be
+  // All strings should be represented by a Function. If it isn't, the scope probably needs to be
   // defined.
   if (!(scopedMessages[key] instanceof Function)) {
     return defaultValue;
