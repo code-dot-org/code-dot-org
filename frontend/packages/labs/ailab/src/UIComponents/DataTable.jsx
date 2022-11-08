@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTableData, setCurrentColumn, setHighlightColumn } from "../redux";
 import { styles } from "../constants";
-import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class DataTable extends Component {
