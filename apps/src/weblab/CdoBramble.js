@@ -8,9 +8,8 @@ import {Buffer} from 'buffer';
 import testImageAccess from '../code-studio/url_test';
 import firehoseClient from '../lib/util/firehose';
 
+// Some temporary logging to diagnose possible loading issues.
 function tempLog(event, data = null) {
-  //console.log(event, data || "");
-
   firehoseClient.putRecord(
     {
       study: 'weblab_loading_investigation_2022',
@@ -22,13 +21,21 @@ function tempLog(event, data = null) {
   );
 }
 
+// Test for whether we can reach the servers hosting the downloadable
+// JS and saving work.  Images are used to avoid CORS restrictions.
 function testReach() {
   testImageAccess(
     'https://downloads.computinginthecore.org/favicon.ico' +
       '?' +
       Math.random(),
-    () => tempLog('reach', true),
-    () => tempLog('reach', false)
+    () => tempLog('reachDownloads', true),
+    () => tempLog('reachDownloads', false)
+  );
+
+  testImageAccess(
+    'https://codeprojects.org/favicon.ico' + '?' + Math.random(),
+    () => tempLog('reachProjects', true),
+    () => tempLog('reachProjects', false)
   );
 }
 
@@ -73,11 +80,19 @@ export default class CdoBramble {
   }
 
   init() {
-    let initState = 'none';
+    // This variable contains the current initialization state.
+    // We log it after 20 seconds.
+    let currentInitState = 'none';
+
+    // Temporarily log the state.
     tempLog('init');
+
+    // Temporarily log the current state after 20 seconds.
     setTimeout(() => {
-      tempLog('after20', initState);
+      tempLog('after20', currentInitState);
     }, 20 * 1000);
+
+    // Temporarily test domain reachability.
     testReach();
 
     this.Bramble.load('#bramble', this.config());
@@ -88,8 +103,10 @@ export default class CdoBramble {
           this.mount();
           this.invokeAll(this.onMountableCallbacks);
         });
+
+        // Temporarily log and store the state.
         tempLog('mountable');
-        initState = 'mountable';
+        currentInitState = 'mountable';
       }
     });
 
@@ -99,8 +116,10 @@ export default class CdoBramble {
       this.brambleProxy = brambleProxy;
       this.configureProxy();
       this.invokeAll(this.onReadyCallbacks);
+
+      // Temporarily log and store the state.
       tempLog('ready');
-      initState = 'ready';
+      currentInitState = 'ready';
     });
   }
 
@@ -709,6 +728,9 @@ export default class CdoBramble {
         this.logAction(PageAction.BrambleFilesystemResetFailed, {
           error: err.message
         });
+
+        // Temporarily log the error.
+        tempLog('fileresetfail', err.message);
       } else {
         this.logAction(PageAction.BrambleFilesystemResetSuccess);
       }
@@ -725,6 +747,8 @@ export default class CdoBramble {
     console.error(`Bramble error. ${error}`);
     const {message, code} = error;
     this.logAction(PageAction.BrambleError, {error: message});
+
+    // Temporarily log the error.
     tempLog('error', {message, code});
 
     this.api.openFatalErrorDialog(
