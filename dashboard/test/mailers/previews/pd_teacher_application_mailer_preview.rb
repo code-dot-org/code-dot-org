@@ -5,6 +5,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
 
   %w(
     confirmation
+    awaiting_admin_approval
     principal_approval_teacher_reminder
     principal_approval
     principal_approval_completed
@@ -15,22 +16,24 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     declined
     waitlisted
   ).each do |mail_type|
+    is_awaiting_admin_approval = mail_type == 'awaiting_admin_approval'
     define_method "#{mail_type}__with_partner".to_sym do
-      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true)
+      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, is_awaiting_admin_approval: is_awaiting_admin_approval)
     end
     define_method "#{mail_type}__without_partner".to_sym do
-      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false)
+      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false, is_awaiting_admin_approval: is_awaiting_admin_approval)
     end
   end
 
   private
 
-  def build_application(matched: true, partner_contact_info: true)
+  def build_application(matched: true, is_awaiting_admin_approval: true, partner_contact_info: true)
     # Build user explicitly (instead of create) so it's not saved
     school_info = build :school_info, school: School.first
     user = build :teacher, email: 'rubeus@hogwarts.co.uk', school_info: school_info
     application_hash = build TEACHER_APPLICATION_HASH_FACTORY, school: School.first
-    application = build TEACHER_APPLICATION_FACTORY, user: user, course: 'csp', form_data: application_hash.to_json
+    status = is_awaiting_admin_approval ? 'awaiting_admin_approval' : 'unreviewed'
+    application = build TEACHER_APPLICATION_FACTORY, user: user, course: 'csp', form_data: application_hash.to_json, status: status
 
     if matched
       regional_partner = build :regional_partner, name: 'We Teach Code'

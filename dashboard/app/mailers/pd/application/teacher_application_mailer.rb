@@ -22,6 +22,10 @@ module Pd::Application
       end
     end
 
+    def awaiting_admin_approval(teacher_application)
+      confirmation(teacher_application)
+    end
+
     def principal_approval_teacher_reminder(teacher_application)
       @application = teacher_application
 
