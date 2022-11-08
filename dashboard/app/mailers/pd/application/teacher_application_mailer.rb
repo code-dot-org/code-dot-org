@@ -105,16 +105,6 @@ module Pd::Application
       )
     end
 
-    def waitlisted(teacher_application)
-      @application = teacher_application
-
-      mail(
-        to: @application.formatted_applicant_email,
-        reply_to: @application.formatted_partner_contact_email,
-        subject: "Your Professional Learning Program application status"
-      )
-    end
-
     protected
 
     # Remove empty params. This can happen when the regional partner contact info is missing
