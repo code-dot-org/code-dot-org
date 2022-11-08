@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2019-02-18T07:05:02.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -54,14 +50,27 @@
     "execute_palette_apis_only": "false",
     "instructions_important": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.625); display: block;\">\r\n  <div class=\"screen\" tabindex=\"1\" id=\"helloScreen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(0, 173, 188);\">\r\n    <label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; word-wrap: break-word; color: rgb(255, 255, 255); max-width: 320px; width: 215px; height: 80px; position: absolute; left: 55px; top: 70px; font-size: 75px;\" id=\"label1\">Hello!</label>\r\n    <img data-canonical-image-url=\"icon://fa-smile-o\" id=\"smileyFace\" style=\"height: 185px; width: 185px; position: absolute; left: 65px; top: 155px; margin: 0px;\" data-icon-color=\"#ffffff\"/> \r\n      </div>\r\n</div>",
     "parent_level_id": 13555,
     "name_suffix": "_2019",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "libraries_enabled": "false",
+    "validation_enabled": "false",
+    "widget_mode": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
-  "notes": ""
+  "created_at": "2019-02-18T07:05:02.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-11-04 18:03:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

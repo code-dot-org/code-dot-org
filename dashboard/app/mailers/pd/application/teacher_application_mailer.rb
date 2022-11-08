@@ -84,16 +84,6 @@ module Pd::Application
       )
     end
 
-    def registration_sent(teacher_application)
-      @application = teacher_application
-
-      mail(
-        to: @application.formatted_applicant_email,
-        reply_to: @application.formatted_partner_contact_email,
-        subject: "Register for the #{@application.effective_regional_partner_name} #{@application.course_name} Summer Workshop"
-      )
-    end
-
     # Reminder email sent to teachers who have not enrolled in a workshop within
     # two weeks of being accepted into the program.
     def registration_reminder(teacher_application)
@@ -107,16 +97,6 @@ module Pd::Application
     end
 
     def declined(teacher_application)
-      @application = teacher_application
-
-      mail(
-        to: @application.formatted_applicant_email,
-        reply_to: @application.formatted_partner_contact_email,
-        subject: "Your Professional Learning Program application status"
-      )
-    end
-
-    def waitlisted(teacher_application)
       @application = teacher_application
 
       mail(

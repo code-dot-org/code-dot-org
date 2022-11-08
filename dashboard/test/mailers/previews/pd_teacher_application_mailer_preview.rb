@@ -9,11 +9,9 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     principal_approval
     principal_approval_completed
     principal_approval_completed_partner
-    accepted_registration
-    registration_sent
+    accepted_no_cost_registration
     registration_reminder
     declined
-    waitlisted
   ).each do |mail_type|
     define_method "#{mail_type}__with_partner".to_sym do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true)
