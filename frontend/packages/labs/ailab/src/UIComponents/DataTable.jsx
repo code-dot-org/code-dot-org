@@ -165,7 +165,7 @@ class DataTable extends Component {
 export default connect(
   (state, props) => ({
     data: getTableData(state, props.useResultsData),
-    datasetId: state.metadata.name,
+    datasetId: state.metadata && state.metadata.name,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,

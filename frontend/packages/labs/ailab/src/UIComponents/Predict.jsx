@@ -143,7 +143,7 @@ export default connect(
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
     getPredictAvailable: getPredictAvailable(state),
     extremaByColumn: getExtremaByColumn(state),
-    datasetId: state.metadata.name
+    datasetId: state.metadata && state.metadata.name
   }),
   dispatch => ({
     setTestData(feature, value) {

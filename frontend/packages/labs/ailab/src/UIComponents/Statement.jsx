@@ -153,7 +153,7 @@ export default connect(
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
-    datasetId: state.metadata.name
+    datasetId: state.metadata && state.metadata.name
   }),
   dispatch => ({
     setLabelColumn(labelColumn) {

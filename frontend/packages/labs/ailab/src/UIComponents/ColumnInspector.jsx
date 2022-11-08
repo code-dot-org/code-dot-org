@@ -100,6 +100,6 @@ export default connect(
   state => ({
     currentColumnDetails: getCurrentColumnDetails(state),
     currentPanel: state.currentPanel,
-    datasetId: state.metadata.name
+    datasetId: state.metadata && state.metadata.name
   })
 )(ColumnInspector);

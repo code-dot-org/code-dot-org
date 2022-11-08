@@ -145,7 +145,7 @@ export default connect(
     labelColumn: state.labelColumn,
     isRegression: isRegression(state),
     resultsHighlightRow: state.resultsHighlightRow,
-    datasetId: state.metadata.name
+    datasetId: state.metadata && state.metadata.name
   }),
   dispatch => ({
     setResultsHighlightRow(column) {
