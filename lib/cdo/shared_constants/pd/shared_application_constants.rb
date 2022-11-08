@@ -18,7 +18,7 @@ module Pd
       YEAR_24_25 = '2024-2025'.freeze
     ].freeze
 
-    APPLICATION_CURRENT_YEAR = YEAR_22_23
+    APPLICATION_CURRENT_YEAR = YEAR_23_24
 
     COHORT_CALCULATOR_STATUSES = %w(
       accepted
