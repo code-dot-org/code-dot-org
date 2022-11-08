@@ -28,6 +28,7 @@ def sync_in
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_external_sources
   redact_level_content
   redact_block_content
   redact_script_and_course_content
@@ -109,6 +110,31 @@ def localize_docs
   end
 end
 
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def localize_external_sources
+  puts "Preparing external sources"
+  external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
+
+  # ml-playground files
+  # These are overwritten in this format so the properties that use
+  # arrays have unique identifiers for translation.
+  dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
+  Dir.glob(dataset_files).each do |dataset_file|
+    original_dataset = JSON.parse(File.read(dataset_file))
+
+    # Currently only including fields for translation.
+    # Use field id as unique identifier.
+    fields_as_hash = original_dataset["fields"].map {|field| [field["id"], field]}.to_h
+    final_dataset = {
+      "fields" => fields_as_hash
+    }
+
+    File.open(dataset_file, "w") do |f|
+      f.write(JSON.pretty_generate(final_dataset))
+    end
+  end
+end
+
 def localize_level_and_project_content
   variable_strings = {}
   parameter_strings = {}
@@ -134,6 +160,7 @@ def get_i18n_strings(level)
       teacher_markdown
       placeholder
       title
+      start_html
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end
@@ -511,6 +538,7 @@ def select_redactable(i18n_strings)
     long_instructions
     short_instructions
     teacher_markdown
+    start_html
   )
 
   redactable = i18n_strings.select do |key, _|
@@ -545,7 +573,7 @@ def redact_level_file(source_path)
     file.write(JSON.pretty_generate(redactable_data))
   end
 
-  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
+  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly', 'startHtml'])
 
   File.open(source_path, 'w') do |source_file|
     source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))

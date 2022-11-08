@@ -147,6 +147,10 @@ my:
         options:
           KEY:
             '"x"': "×"
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"rain"': မိုးရွာသည်
       gamelab_checkTouching:
         options:
           CONDITION:

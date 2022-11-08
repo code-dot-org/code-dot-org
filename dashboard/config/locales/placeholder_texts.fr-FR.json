@@ -261,8 +261,8 @@
           "1f258d88a70309efc1435ef5daa277a0": "Merci d'avoir discuté avec moi aujourd'hui ! "
         },
         "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fête son anniversaire ?",
-          "d1210f945885351b13feb9bbb868aeef": "Quel âge auront-ils ? ",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "C'est l'anniversaire de qui ?",
+          "d1210f945885351b13feb9bbb868aeef": "Quel âge va-t-il ou elle avoir ? ",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_apps_madlib": {
@@ -277,8 +277,8 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fête son anniversaire ?",
-          "d1210f945885351b13feb9bbb868aeef": "Quel âge auront-ils ? ",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "C'est l'anniversaire de qui ?",
+          "d1210f945885351b13feb9bbb868aeef": "Quel âge va-t-il ou elle avoir ? ",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_editable_madlib": {
@@ -303,15 +303,15 @@
         },
         "courseF_text_choice_events": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question",
-          "c529a06c3f8518b63ff6dfac482b335c": "Donnez un nom à cette planète :",
+          "c529a06c3f8518b63ff6dfac482b335c": "Nomme cette planète :",
           "44506356d48394cd903b579df9de9117": ", terrien(ne) !"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fête son anniversaire ?",
-          "d1210f945885351b13feb9bbb868aeef": "Quel âge auront-ils ? "
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "C'est l'anniversaire de qui ?",
+          "d1210f945885351b13feb9bbb868aeef": "Quel âge va-t-il ou elle avoir ? "
         },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
@@ -343,7 +343,7 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_text_choice_interview": {
-          "5bd698afd23bccde289bb0b4aa72a518": "Donnez un nom au robot.",
+          "5bd698afd23bccde289bb0b4aa72a518": "Donne un nom au robot.",
           "34088af1fb721900963462375b3bbe23": "le robot !"
         },
         "courseF_label_predict": {
@@ -576,13 +576,13 @@
           "78574118d153534fd0925a2f5ca25e79": "Quelle chose ?"
         },
         "courseF_apps_card2022": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fête son anniversaire ?",
-          "d1210f945885351b13feb9bbb868aeef": "Quel âge auront-ils ? ",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "C'est l'anniversaire de qui ?",
+          "d1210f945885351b13feb9bbb868aeef": "Quel âge va-t-il ou elle avoir ? ",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_apps_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fête son anniversaire ?",
-          "d1210f945885351b13feb9bbb868aeef": "Quel âge auront-ils ? ",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "C'est l'anniversaire de qui ?",
+          "d1210f945885351b13feb9bbb868aeef": "Quel âge va-t-il ou elle avoir ? ",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_apps_chatbot2022": {
@@ -638,8 +638,8 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_editable_card_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fête son anniversaire ?",
-          "d1210f945885351b13feb9bbb868aeef": "Quel âge auront-ils ? ",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "C'est l'anniversaire de qui ?",
+          "d1210f945885351b13feb9bbb868aeef": "Quel âge va-t-il ou elle avoir ? ",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_editable_chatbot_-2022-2": {
@@ -677,7 +677,7 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
         "courseF_text_choice_events_-2022-2": {
-          "c529a06c3f8518b63ff6dfac482b335c": "Donnez un nom à cette planète :",
+          "c529a06c3f8518b63ff6dfac482b335c": "Nomme cette planète :",
           "44506356d48394cd903b579df9de9117": ", terrien(ne) !",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"
         },
@@ -686,11 +686,11 @@
         },
         "courseF_text_choice_interview_-2022-2": {
           "34088af1fb721900963462375b3bbe23": "le robot !",
-          "5bd698afd23bccde289bb0b4aa72a518": "Donnez un nom au robot."
+          "5bd698afd23bccde289bb0b4aa72a518": "Donne un nom au robot."
         },
         "courseF_text_choice_multiprompt_-2022-2": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Qui fête son anniversaire ?",
-          "d1210f945885351b13feb9bbb868aeef": "Quel âge auront-ils ? "
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "C'est l'anniversaire de qui ?",
+          "d1210f945885351b13feb9bbb868aeef": "Quel âge va-t-il ou elle avoir ? "
         },
         "courseF_text_choice_title_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question"

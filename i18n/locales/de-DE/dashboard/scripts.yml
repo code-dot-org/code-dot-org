@@ -4194,6 +4194,8 @@ de:
               display_name: Umfrage
             lessonGroup-3:
               display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         csa2-2023: {}
         csa3-2023: {}
         csa4-2023: {}
@@ -4338,3 +4340,5 @@ de:
         self-paced-pl-csa1-2023: {}
         self-paced-pl-csa2-2023: {}
         self-paced-pl-csa3-2023: {}
+        csa-examples-22: {}
+        amy-playground: {}

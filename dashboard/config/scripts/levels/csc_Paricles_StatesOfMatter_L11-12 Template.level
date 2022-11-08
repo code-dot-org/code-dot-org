@@ -5,7 +5,8 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "ParticlesBlocks"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -33,24 +34,21 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Drag a block from your toolbox and connect it the code under `when run`.\\n\\n![](https://images.code.org/2aae680ee8d91999b5e4db064b42e18f-image-1666134725335.gif)\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3d7df2ccb3c403c729306e5fbd91665b/csc_landmarks_makesprite.mp3\"}]",
-    "start_animations": "{\"orderedKeys\":[\"ee34e941-a828-4e74-82e2-6be265ff189d\",\"aeb7954c-02ab-4fbd-b405-49ba066ec206\",\"08cb773a-8472-422d-aa5e-47cc665eba4b\",\"ff09fe25-b4b1-4158-91a0-4d6d6df9c8db\"],\"propsByKey\":{\"ff09fe25-b4b1-4158-91a0-4d6d6df9c8db\":{\"name\":\"scientist_1\",\"frameCount\":1,\"frameSize\":{\"x\":266,\"y\":315},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-10-26T22:12:27.000Z\",\"pngLastModified\":\"2022-10-26T22:12:26.000Z\",\"version\":\"IPxxBGTd5ktdOnbwexJbPFasrt41bP5R\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/IPxxBGTd5ktdOnbwexJbPFasrt41bP5R/scientist_1.png\",\"sourceSize\":{\"x\":266,\"y\":315}},\"08cb773a-8472-422d-aa5e-47cc665eba4b\":{\"name\":\"scientist_2\",\"frameCount\":1,\"frameSize\":{\"x\":267,\"y\":333},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-10-26T22:12:53.000Z\",\"pngLastModified\":\"2022-10-26T22:12:53.000Z\",\"version\":\"kLWTDu.L0vW9M6gv7t0jU7d.nR9k1TTa\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/kLWTDu.L0vW9M6gv7t0jU7d.nR9k1TTa/scientist_2.png\",\"sourceSize\":{\"x\":267,\"y\":333}},\"aeb7954c-02ab-4fbd-b405-49ba066ec206\":{\"name\":\"h2o\",\"frameCount\":1,\"frameSize\":{\"x\":392,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-10-26T22:19:56.000Z\",\"pngLastModified\":\"2022-10-26T22:19:55.000Z\",\"version\":\"mWMBfjk1ooFceh2gkdEwILwYVqr7Cod1\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/mWMBfjk1ooFceh2gkdEwILwYVqr7Cod1/h2o.png\",\"sourceSize\":{\"x\":392,\"y\":400}},\"ee34e941-a828-4e74-82e2-6be265ff189d\":{\"name\":\"grid\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:49 UTC\",\"pngLastModified\":\"2021-01-19 23:53:49 UTC\",\"version\":\"L5A9oBn2qdFNAsfGkqGOxWon837dlpa8\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/L5A9oBn2qdFNAsfGkqGOxWon837dlpa8/category_backgrounds/background_grid.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
+    "start_animations": "{\"orderedKeys\":[\"4d31c0fe-ad56-41f6-b610-21c8a3255b05\",\"f9a86312-dc6e-4e38-bbd4-9b9d92277e63\",\"526e896c-8f93-4428-86bd-5209e40c882a\",\"b63bcbff-b0d5-45ec-9325-f668eacab50f\",\"2e23094b-6c30-48ee-92a1-bfcfeb2073e1\"],\"propsByKey\":{\"2e23094b-6c30-48ee-92a1-bfcfeb2073e1\":{\"name\":\"background_microscope\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-27T22:13:24.000Z\",\"pngLastModified\":\"2022-10-27T22:13:23.000Z\",\"version\":\"S2B.tqD3WyOluemvxOYAocr3OEF7KKVH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S2B.tqD3WyOluemvxOYAocr3OEF7KKVH/background_microscope.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b63bcbff-b0d5-45ec-9325-f668eacab50f\":{\"name\":\"background_science_lab\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2022-10-27T22:13:09.000Z\",\"pngLastModified\":\"2022-10-27T22:13:09.000Z\",\"version\":\"BWqVIw.cSXAxNjAQA1H0V6hNrJkGrp_q\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/BWqVIw.cSXAxNjAQA1H0V6hNrJkGrp_q/background_science_lab.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"526e896c-8f93-4428-86bd-5209e40c882a\":{\"name\":\"h2o\",\"frameCount\":1,\"frameSize\":{\"x\":392,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-10-26T22:19:56.000Z\",\"pngLastModified\":\"2022-10-26T22:19:55.000Z\",\"version\":\"mWMBfjk1ooFceh2gkdEwILwYVqr7Cod1\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/mWMBfjk1ooFceh2gkdEwILwYVqr7Cod1/h2o.png\",\"sourceSize\":{\"x\":392,\"y\":400}},\"f9a86312-dc6e-4e38-bbd4-9b9d92277e63\":{\"name\":\"microscope_outline\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-10-27T23:43:59.000Z\",\"pngLastModified\":\"2022-10-27T23:43:59.000Z\",\"version\":\"qkmA0AucLfLcJVIPk7F731taNGYRZ4Db\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/qkmA0AucLfLcJVIPk7F731taNGYRZ4Db/microscope_outline.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"4d31c0fe-ad56-41f6-b610-21c8a3255b05\":{\"name\":\"scientist_2\",\"frameCount\":1,\"frameSize\":{\"x\":267,\"y\":333},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2022-10-26T22:12:53.000Z\",\"pngLastModified\":\"2022-10-26T22:12:53.000Z\",\"version\":\"kLWTDu.L0vW9M6gv7t0jU7d.nR9k1TTa\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/kLWTDu.L0vW9M6gv7t0jU7d.nR9k1TTa/scientist_2.png\",\"sourceSize\":{\"x\":267,\"y\":333}}}}\r\n\r\n",
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "upButton",
       "downButton"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-10-25T23:45:47.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-10-25T23:45:47.000Z",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-25T23:45:47.573+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L8-9 Template\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L8-9 Template\"},{\"changed_at\":\"2022-10-25 23:45:55 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 17:13:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 17:14:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 23:20:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-10-25T23:45:47.573+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_L8-9 Template\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_L8-9 Template\"},{\"changed_at\":\"2022-10-25 23:45:55 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 17:13:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 17:14:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-26 23:20:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:35:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:36:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:48:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-27 23:51:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -69,7 +67,7 @@
     <toolbox_blocks>
       <xml>
         <block type="gamelab_makeNewSpriteAnon">
-          <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
+          <field name="ANIMATION_NAME">"h2o"</field>
           <value name="LOCATION">
             <block type="gamelab_location_picker">
               <field name="LOCATION">{"x":363,"y":337}</field>
@@ -80,23 +78,25 @@
           <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"red_shirt_wave2"</field>
+              <field name="ANIMATION">"h2o"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_makeNumSprites">
-          <field name="ANIMATION_NAME">"red_shirt_wave2"</field>
+          <field name="ANIMATION_NAME">"h2o"</field>
+        </block>
+        <block type="gamelab_setProp">
+          <field name="PROPERTY">"scale"</field>
         </block>
         <block type="math_number">
           <field name="NUM">0</field>
         </block>
         <block type="gamelab_allSpritesWithAnimation">
-          <field name="ANIMATION">"red_shirt_wave2"</field>
+          <field name="ANIMATION">"h2o"</field>
         </block>
         <block type="gamelab_addBehaviorSimple"/>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <field name="VAR" id="wandering">wandering</field>
+        <block type="ParticlesBlocks_statesOfMatter">
+          <field name="BEHAVIOR">new Behavior(solid, [])</field>
         </block>
       </xml>
     </toolbox_blocks>

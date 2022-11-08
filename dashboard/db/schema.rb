@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_03_141047) do
+ActiveRecord::Schema.define(version: 2022_10_24_233909) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -892,6 +892,13 @@ ActiveRecord::Schema.define(version: 2022_10_03_141047) do
     t.index ["status"], name: "index_pd_applications_on_status"
     t.index ["type"], name: "index_pd_applications_on_type"
     t.index ["user_id"], name: "index_pd_applications_on_user_id"
+  end
+
+  create_table "pd_applications_status_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "pd_application_id", null: false
+    t.string "status", null: false
+    t.datetime "timestamp", null: false
+    t.integer "position", null: false
   end
 
   create_table "pd_attendances", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
