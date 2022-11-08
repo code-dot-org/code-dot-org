@@ -1,3 +1,5 @@
+import I18n from "../i18n";
+
 /* Helper functions for getting information about a column and its data. */
 
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "../constants.js";
@@ -115,4 +117,13 @@ export function getColumnDataToSave(state, column) {
     columnData.min = min;
   }
   return columnData;
+}
+
+export function getLocalizedColumnName(datasetId, columnId) {
+  return I18n.t("id",
+    {
+      scope: ["datasets", datasetId, "fields", columnId],
+      "default": columnId
+    }
+  );
 }

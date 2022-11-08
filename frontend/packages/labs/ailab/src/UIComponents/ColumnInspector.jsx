@@ -18,6 +18,7 @@ import SelectLabelButton from "./SelectLabelButton";
 import UniqueOptionsWarning from "./UniqueOptionsWarning";
 import { currentColumnInspectorShape } from "./shapes";
 import I18n from "../i18n";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -27,7 +28,7 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const { currentColumnDetails, currentPanel } = this.props;
+    const { currentColumnDetails, currentPanel, datasetId } = this.props;
 
     const selectingFeatures = currentPanel === "dataDisplayFeatures";
     const selectingLabel = currentPanel === "dataDisplayLabel";
@@ -42,12 +43,8 @@ class ColumnInspector extends Component {
     }
 
     const localizedDataType = I18n.t(`columnType_${currentColumnDetails.dataType}`)
-    const localizedColumnName = I18n.t("id",
-      {
-        scope: ["datasets", this.props.datasetId, "fields", currentColumnDetails.id],
-        "default": currentColumnDetails.id
-      }
-    );
+    const localizedColumnName = getLocalizedColumnName(datasetId, currentColumnDetails.id);
+
     return (
       currentColumnDetails && (
         <div
@@ -57,7 +54,7 @@ class ColumnInspector extends Component {
             ...styles.rightPanel
           }}
         >
-          <div style={styles.largeText}>{currentColumnDetails.id}</div>
+          <div style={styles.largeText}>{localizedColumnName}</div>
           <ScrollableContent>
             <div style={styles.cardRow}>
               <span style={styles.bold}>{I18n.t("columnInspectorDataType")}</span>

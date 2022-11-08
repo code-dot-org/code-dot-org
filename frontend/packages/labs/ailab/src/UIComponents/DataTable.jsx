@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { getTableData, setCurrentColumn, setHighlightColumn } from "../redux";
 import { styles } from "../constants";
 import I18n from "../i18n";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class DataTable extends Component {
   static propTypes = {
@@ -123,12 +124,7 @@ class DataTable extends Component {
                   onMouseEnter={() => this.setHighlightColumn(columnId)}
                   onMouseLeave={() => this.setHighlightColumn(undefined)}
                 >
-                  {I18n.t("id",
-                    {
-                      scope: ["datasets", this.props.datasetId, "fields", columnId],
-                      "default": columnId
-                    }
-                  )}
+                  {getLocalizedColumnName(this.props.datasetId, columnId)}
                 </th>
               );
             })}
