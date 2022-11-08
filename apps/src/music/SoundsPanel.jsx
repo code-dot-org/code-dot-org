@@ -32,14 +32,11 @@ const SoundsPanel = ({
     <div className={styles.soundsPanel}>
       {group.folders.map((folder, folderIndex) => {
         return (
-          <div key={folderIndex}>
-            <div
-              className={
-                folderIndex === 0 ? styles.folderRowFirst : styles.folderRow
-              }
-            >
-              {folder.name}
-            </div>
+          <div
+            className={folderIndex === 0 ? styles.folderFirst : styles.folder}
+            key={folderIndex}
+          >
+            <div className={styles.folderName}>{folder.name}</div>
             {folder.sounds.map((sound, soundIndex) => {
               return (
                 <div
