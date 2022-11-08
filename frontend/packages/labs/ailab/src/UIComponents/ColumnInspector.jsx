@@ -22,7 +22,8 @@ import I18n from "../i18n";
 class ColumnInspector extends Component {
   static propTypes = {
     currentColumnDetails: currentColumnInspectorShape,
-    currentPanel: PropTypes.string
+    currentPanel: PropTypes.string,
+    datasetId: PropTypes.string
   };
 
   render() {
@@ -41,6 +42,12 @@ class ColumnInspector extends Component {
     }
 
     const localizedDataType = I18n.t(`columnType_${currentColumnDetails.dataType}`)
+    const localizedColumnName = I18n.t("id",
+      {
+        scope: ["datasets", this.props.datasetId, "fields", currentColumnDetails.id],
+        "default": currentColumnDetails.id
+      }
+    );
     return (
       currentColumnDetails && (
         <div
@@ -95,6 +102,7 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnDetails: getCurrentColumnDetails(state),
-    currentPanel: state.currentPanel
+    currentPanel: state.currentPanel,
+    datasetId: state.metadata.name
   })
 )(ColumnInspector);
