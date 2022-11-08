@@ -4,11 +4,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTableData, setCurrentColumn, setHighlightColumn } from "../redux";
 import { styles } from "../constants";
+import I18n from "../i18n";
 
 class DataTable extends Component {
   static propTypes = {
     currentPanel: PropTypes.string,
     data: PropTypes.array,
+    datasetId: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
     setCurrentColumn: PropTypes.func,
@@ -121,7 +123,12 @@ class DataTable extends Component {
                   onMouseEnter={() => this.setHighlightColumn(columnId)}
                   onMouseLeave={() => this.setHighlightColumn(undefined)}
                 >
-                  {columnId}
+                  {I18n.t("id",
+                    {
+                      scope: ["datasets", this.props.datasetId, "fields", columnId],
+                      "default": columnId
+                    }
+                  )}
                 </th>
               );
             })}
@@ -163,6 +170,7 @@ class DataTable extends Component {
 export default connect(
   (state, props) => ({
     data: getTableData(state, props.useResultsData),
+    datasetId: state.metadata.name,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,
