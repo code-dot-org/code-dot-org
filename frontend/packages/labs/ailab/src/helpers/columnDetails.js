@@ -120,7 +120,15 @@ export function getColumnDataToSave(state, column) {
 }
 
 export function getLocalizedColumnName(datasetId, columnId) {
-  return I18n.t("id",
+  return getLocalizedColumnField(datasetId, columnId, "id");
+}
+
+export function getLocalizedColumnDescription(datasetId, columnId) {
+  return getLocalizedColumnField(datasetId, columnId, "description");
+}
+
+function getLocalizedColumnField(datasetId, columnId, field) {
+  return I18n.t(field,
     {
       scope: ["datasets", datasetId, "fields", columnId],
       "default": columnId
