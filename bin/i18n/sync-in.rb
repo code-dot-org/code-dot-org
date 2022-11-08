@@ -588,12 +588,10 @@ def redact_level_content
 end
 
 def redact_all_labs_content
-  puts "Redacting all *labs content"
+  puts "Redacting *labs content"
 
   Dir.glob(File.join(I18N_SOURCE_DIR, "blockly-mooc", "*lab.json")).each do |source_path|
-    puts source_path
     backup_path = source_path.sub("source", "original")
-    puts backup_path
     FileUtils.mkdir_p(File.dirname(backup_path))
     FileUtils.cp(source_path, backup_path)
     RedactRestoreUtils.redact(source_path, source_path, ['link'])
