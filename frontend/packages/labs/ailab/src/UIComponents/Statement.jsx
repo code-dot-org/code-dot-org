@@ -7,6 +7,7 @@ import { styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import I18n from "../i18n";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class Statement extends Component {
   static propTypes = {
@@ -17,7 +18,8 @@ class Statement extends Component {
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
     setLabelColumn: PropTypes.func,
-    removeSelectedFeature: PropTypes.func
+    removeSelectedFeature: PropTypes.func,
+    datasetId: PropTypes.string
   };
 
   removeLabel = () => {
@@ -29,9 +31,10 @@ class Statement extends Component {
   };
 
   labelHTML = (label , currentPanel) => {
+    const localizedLabel = getLocalizedColumnName(this.props.datasetId, label);
     return (
       <div style={styles.statementLabel}>
-        {label || "____"}
+        {(label && localizedLabel) || "____"}
         {label && currentPanel === "dataDisplayLabel" && (
           <div
             id="uitest-remove-statement-label"
@@ -55,10 +58,11 @@ class Statement extends Component {
     return (
       <span>
         {selectedFeatures.map((selectedFeature, index) => {
+          const localizedName = getLocalizedColumnName(this.props.datasetId, selectedFeature);
           return (
             <span key={index}>
               <div style={styles.statementFeature}>
-                {selectedFeature}
+                {localizedName}
                 {currentPanel === "dataDisplayFeatures" && (
                   <div
                     id="uitest-remove-statement-feature"
@@ -148,7 +152,8 @@ export default connect(
     data: state.data,
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
-    selectedFeatures: state.selectedFeatures
+    selectedFeatures: state.selectedFeatures,
+    datasetId: state.metadata.name
   }),
   dispatch => ({
     setLabelColumn(labelColumn) {
