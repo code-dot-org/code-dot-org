@@ -6,6 +6,8 @@ en:
         text: moving NESW with arrow keys
       AmysBlocks_setPromptWithChoices:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
+      AmysBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
       BadGuys_makeNewBadGuysSprite:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       BadGuys_setSizeAll_dropdown:
@@ -1030,6 +1032,45 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Microscope has [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      DansBlocks_setForegroundEffect2:
+        text: do [EFFECT][0] effect
+        options:
+          EFFECT:
+            '"bubbles"': bubbles
+            '"confetti"': confetti
+            '"hearts"': hearts
+            '"emojis"': happy emojis
+            '"rain"': rain
+            '"starburst"': starburst
+            '"glass"': shattering glass
+            '"twinkling"': twinkling
+      DansBlocks_setMicroscope:
+        text: Set Microscope to [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Communicate [VAR1][0] with [SPRITE1COSTUME][1]
+      FunctionBlocks_makeManipulative2:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites  [BEHAVIOR][2]
+      FunctionBlocks_representManipulative:
+        text: represent [NUM][0] new [ANIMATION_NAME][1] sprites [BEHAVIOR][2]
+        options:
+          BEHAVIOR:
+            draggable(): being draggable
+            wandering(): wandering
+            shrinking(): shrinking
+      FunctionBlocks_spriteSayVar:
+        text: "[SPRITE][0]say[TEXT1][1]"
       gamelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       gamelab_addTarget:
@@ -1382,7 +1423,7 @@ en:
             "'sound://category_space/Pillars_SFX.mp3'": pillars
             "'sound://category_space/Southern_ring_SFX.mp3'": southern ring
             "'sound://category_space/Supernova_SFX.mp3'": supernova
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tycho
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
             "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": whirlpool galaxy
       gamelab_playSpeech:
         text: play speech [SOUND][0]
@@ -2074,6 +2115,41 @@ en:
         text: setup Monster Town with[COUNT][0]monsters
       Outbreak_stopMoving:
         text: monsters stop moving
+      ParticlesBlocks_getMicroscope:
+        text: Microscope has [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        text: Set Microscope to [INPUT1][0]
+        options:
+          INPUT1:
+            '1': lemon juice
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): solid
+            new Behavior(liquid, []): liquid
+            new Behavior(wandering, []): gas
+      ParticlesBlocks_statesOfMatter2:
+        text: Set [COSTUME][0] to [BEHAVIOR][1] behavior
+        options:
+          BEHAVIOR:
+            '"solid"': 'solid particle '
+            '"liquid"': liquid particle
+            '"gas"': gas particle
+      ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] Set [COSTUME][0] to [BEHAVIOR][1] behavior"
+        options:
+          BEHAVIOR:
+            '"solid"': 'solid particle '
+            '"liquid"': liquid particle
+            '"gas"': gas particle
       Poetry_addFrame:
         text: set frame to [BRUSH][0]
         options:

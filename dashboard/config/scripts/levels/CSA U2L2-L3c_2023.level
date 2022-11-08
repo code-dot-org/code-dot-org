@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**An artist wants to sell their work on an app, and the software engineer has created a `Painting`(#e7e8ea) class to represent the paintings.**\r\n\r\n✅ **TO DO:** Write a no-argument constructor the `Painting`(#e7e8ea) class and instantiate a `Painting`(#e7e8ea) object.\r\n\r\n1. In the `Painting`(#e7e8ea) class, write a no-argument constructor to assign default values to the instance variables:\r\n\r\n   **(a)** Assign a default name to the instance variable `title`(#e7e8ea), such as `\"new painting\"`(#e7e8ea)\r\n\r\n   **(b)** Assign a default value to the instance variable `year`(#e7e8ea), such as `2022`(#e7e8ea)\r\n\r\n2. In `ArtRunner.java`(#e7e8ea):\r\n\r\n   **(a)** Instantiate a `Painting`(#e7e8ea) object\r\n   \r\n   **(b)** Print the constructor for the `Painting`(#e7e8ea) object to the console using `ClassInfo.getConstructors(nameOfObject)`(#e7e8ea)\r\n   \r\n   **(c)** Print the values assigned to the instance variables for the `Painting`(#e7e8ea) object to the console by calling the `printPaintingInfo()`(#e7e8ea) method\r\n   \r\n\r\n💡 **TIP:** Check out **Help & Tips** tab ⬆️ for help with writing a no-argument constructor and instantiating objects.\r\n\r\n📝 **COMMENT:** Be sure to add comments to note what your code does.\r\n\r\n🖥️ **TEST:** Test your program to check if your code achieves the expected result.\r\n\r\n🎉 **RUN:** Run your program to see the result of your code!\r\n\r\n## 🎯 Goal\r\n\r\nimage/gif or console output",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/no-argument-constructors",
+      "/courses/csa-2023/guides/instantiating-objects"
+    ],
+    "display_name": "The Painting Class",
+    "bubble_choice_description": "An artist wants to sell their work on an app, and the software engineer has created a `Painting` class to represent the paintings.",
+    "thumbnail_url": "https://images.code.org/74d20a08c9c353e657eadf25651b413f-artwork.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-11-03T19:21:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-11-03T19:21:06.801+00:00\",\"changed\":[\"cloned from \\\"CSA U2L2-L3b_2023\\\"\"],\"cloned_from\":\"CSA U2L2-L3b_2023\"},{\"changed_at\":\"2022-11-03 19:21:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-11-06 21:23:02 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
