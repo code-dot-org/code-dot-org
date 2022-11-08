@@ -54,7 +54,8 @@ class SaveModel extends Component {
         id: columnDescription.id,
         isColumn: true,
         columnType,
-        answer: columnDescription.description
+        answer: columnDescription.description,
+        localizedName: columnDescription.localizedName
       });
     }
     return fields;
@@ -191,7 +192,7 @@ class SaveModel extends Component {
                   return (
                     <div key={field.id} style={styles.cardRow}>
                       <div>
-                        <span style={styles.bold}>{field.id}</span> (
+                        <span style={styles.bold}>{field.localizedName}</span> (
                         {field.columnType})
                       </div>
                       {this.props.isUserUploadedDataset && (
