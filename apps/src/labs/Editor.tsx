@@ -5,28 +5,21 @@ import DropletEditor from "./droplet/Droplet"
 export type EditorOptions = {
   show: boolean
   setShowEditor: (show: boolean) => void
-  code: string
-  setCode: (newCode: string) => void
 }
 
 // is this a weird way to initialize/set a default for context?
 export let EditorContext: React.Context<EditorOptions>
 EditorContext = React.createContext<EditorOptions>({
   show: true,
-  setShowEditor: (show) => { },
-  code: '',
-  setCode: (newCode) => { }
+  setShowEditor: (show) => { }
 })
 
 export const useEditor: () => EditorOptions = () => {
   const [show, setShowEditor] = useState<boolean>(true)
-  const [code, setCode] = useState<string>('')
 
   return {
     show,
-    setShowEditor,
-    code,
-    setCode
+    setShowEditor
   }
 }
 

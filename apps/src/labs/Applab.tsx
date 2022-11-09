@@ -3,6 +3,7 @@ import { BlockFactory, DropletCategory } from './blocks'
 import { Visualization, RunButton, Instructions, EditorToggle, Console } from './Components'
 import { Editor, EditorContext, EditorType } from './Editor'
 import { PanelDirection, PanelManager } from "./Panels"
+import { fetchAssets, fetchProject } from './projectApi'
 import { Lab } from './types'
 
 const LeftPanel = () => {
@@ -49,4 +50,10 @@ export default class Applab implements Lab {
   }
 
   panels = [<LeftPanel />, <RightPanel editorType={this.editorType} blockFactory={this.blockFactory} />]
+
+  loadProjectData = (channelId: string) => {
+    // get project, assets, etc from server
+    return Promise.all([fetchProject(channelId), fetchAssets(channelId)])
+      .then(([project, assets]) => Promise.resolve({ project, assets }))
+  }
 }
