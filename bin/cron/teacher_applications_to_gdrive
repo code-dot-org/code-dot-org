@@ -27,7 +27,7 @@ def get_rows
     if app.sanitize_form_data_hash[:principal_underrepresented_minority_percent]
       urm_percent = app.sanitize_form_data_hash[:principal_underrepresented_minority_percent].to_f
     end
-    accepted_statuses = %w(accepted_no_cost_registration accepted_notified_by_partner registration_sent paid accepted_not_notified)
+    accepted_statuses = %w(accepted)
     accepted = accepted_statuses.include?(app.status) ? 1 : 0
 
     races = app.sanitize_form_data_hash[:race]
