@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "dance-2019",
-    "serialized_at": "2022-11-02 13:13:55 UTC",
+    "serialized_at": "2022-11-07 20:24:13 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -37,7 +37,7 @@
   "lessons": [
     {
       "key": "Dance Party",
-      "name": "Dance Party (2019)",
+      "name": "Dance Party",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
