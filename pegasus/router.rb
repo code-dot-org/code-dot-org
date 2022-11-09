@@ -447,7 +447,12 @@ class Documents < Sinatra::Base
     def resolve_template(subdir, extnames, uri, is_document = false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
-        found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), uri, extnames)
+        # Negotiate for a locale specific partial
+        found = []
+        ["#{uri}.#{request.locale}", uri].each do |search_uri|
+          found = MultipleExtnameFileUtils.find_with_extnames(content_dir(dir, subdir), search_uri, extnames)
+          break unless found.empty?
+        end
         return found.first unless found.empty?
       end
 
