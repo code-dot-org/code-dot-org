@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-function-machines-pilot",
-    "serialized_at": "2022-11-07 19:58:58 UTC",
+    "serialized_at": "2022-11-08 17:17:50 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2244,6 +2244,18 @@
       }
     },
     {
+      "name": "[Key] Lesson 4 Note Catcher",
+      "url": "https://docs.google.com/document/d/1NSAQvmb8scPRAZeOe2QROa_IfhLJkomYfHud9C9Ns8M/template/preview",
+      "key": "_key_lesson_4_note_catcher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_key_lesson_4_note_catcher"
+      }
+    },
+    {
       "name": "Freeze Dry Machine",
       "url": "https://studio.code.org/projects/spritelab/gI_omUMR_Xhe2vcCK2u1jpowVf40PUJAdijWG8a6c-k",
       "key": "freeze_dry_machine",
@@ -2350,6 +2362,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "lesson_2_note_catcher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_lesson_4_note_catcher"
       }
     },
     {

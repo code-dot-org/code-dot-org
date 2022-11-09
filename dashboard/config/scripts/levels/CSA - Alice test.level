@@ -24,16 +24,13 @@
         "isVisible": true,
         "tabOrder": 1
       }
-    },
-    "encrypted_examples": [
-
-    ]
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-11-08T06:02:58.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-11-08T06:02:58.340+00:00\",\"changed\":[\"cloned from \\\"CSA U5L13-L1_2022\\\"\"],\"cloned_from\":\"CSA U5L13-L1_2022\"},{\"changed_at\":\"2022-11-08 06:03:02 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:05:06 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:09:08 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:10:50 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-11-08T06:02:58.340+00:00\",\"changed\":[\"cloned from \\\"CSA U5L13-L1_2022\\\"\"],\"cloned_from\":\"CSA U5L13-L1_2022\"},{\"changed_at\":\"2022-11-08 06:03:02 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:05:06 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:09:08 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 06:10:50 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-08 15:18:44 +0000\",\"changed\":[],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>
