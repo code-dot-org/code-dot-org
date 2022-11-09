@@ -52,7 +52,7 @@ const AddSectionDialog = ({
       return <Spinner size="large" style={{padding: 50}} />;
     }
     /*
-    The Participant Type Picker will be skips if someone only have permissions to create sections for one
+    The Participant Type Picker will be skipped if someone only have permissions to create sections for one
     type of participants. See teacherSectionsRedux for more details on how this is set up.
     */
     if (!participantType) {
