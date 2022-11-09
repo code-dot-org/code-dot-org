@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-fa2022-particles",
-    "serialized_at": "2022-11-07 18:31:06 UTC",
+    "serialized_at": "2022-11-09 00:07:31 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -413,9 +413,9 @@
       "key": "a892003a-a66e-453c-a779-0c893fcde9f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Vanishing Act Part 1 & 2’ Slides, or display Level 1 on Code Studio to the class.",
-        "name": "Vanishing Act",
-        "progression_name": "Vanishing Act"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Vanishing Act Part 1 & 2’ Slides",
+        "name": "Physical Changes",
+        "progression_name": "Physical Changes"
       },
       "seeding_key": {
         "activity_section.key": "a892003a-a66e-453c-a779-0c893fcde9f8",
@@ -449,10 +449,10 @@
       "key": "993e4173-5c05-4bb9-b9bc-828d59da98f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Level 2 - Wood” Slide\n\n**Do This:** Show Level 2 to the class and either follow along with you on their own devices or engage the class in whole group observation. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Level 1: Physical Changes” Slide\n\n**Do This:** Show Level 1 to the class and discuss the examples listed and ask for ideas for additional examples. ",
         "duration": "15",
         "name": "Physical Changes",
-        "progression_name": "Investigate: Wood"
+        "progression_name": "Physical Changes Information"
       },
       "seeding_key": {
         "activity_section.key": "993e4173-5c05-4bb9-b9bc-828d59da98f8",
@@ -460,8 +460,20 @@
       }
     },
     {
-      "key": "6a213db2-1c3e-4e7f-9c1d-4e672ee54179",
+      "key": "6aca8b54-2485-41b2-be88-7aa65f237fcf",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Level 2: Investigate Wood Experiment’ Slide. Test out the experiment by dragging the wood to the microscope before and after chopping it smaller with the saw.",
+        "progression_name": "Physical Changes Wood Experiment "
+      },
+      "seeding_key": {
+        "activity_section.key": "6aca8b54-2485-41b2-be88-7aa65f237fcf",
+        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
+      }
+    },
+    {
+      "key": "6a213db2-1c3e-4e7f-9c1d-4e672ee54179",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1)  There was a physical change when the log was cut up into kindle (the wood got smaller) **but** \n2) the state of matter didn’t change at all. The wood and kindle are still solid matter under the microscope. ",
         "tips": [
@@ -477,23 +489,12 @@
       }
     },
     {
-      "key": "6aca8b54-2485-41b2-be88-7aa65f237fcf",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Other Physical Changes’ Slide, or display Level 3 on Code Studio to the class.",
-        "progression_name": "Physical Changes"
-      },
-      "seeding_key": {
-        "activity_section.key": "6aca8b54-2485-41b2-be88-7aa65f237fcf",
-        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
-      }
-    },
-    {
       "key": "27f2f4b2-4590-4d35-8061-f64384de3079",
       "position": 4,
       "properties": {
-        "description": "[Remarks about Other Physical Changes]",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Level 3: Vanishing Act' Slide",
+        "name": "Vanishing Act 1 - Disappearing Water",
+        "progression_name": "Vanishing Act"
       },
       "seeding_key": {
         "activity_section.key": "27f2f4b2-4590-4d35-8061-f64384de3079",
@@ -504,8 +505,9 @@
       "key": "c4769ee8-0a2b-4e7a-bef9-93263e2485cf",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Water” Slide\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole group observation. ",
-        "progression_name": "Investigate: Water"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Experiment Preview” Slide\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole group observation. This is an finished example of the project students will be coding in Levels 5-10.",
+        "name": "Code Your Own Experiment",
+        "progression_name": "Investigate: Water Experiment"
       },
       "seeding_key": {
         "activity_section.key": "c4769ee8-0a2b-4e7a-bef9-93263e2485cf",
@@ -527,7 +529,8 @@
       "key": "bb313eea-95ea-4b93-bed6-57c6eaf51297",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Functions” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Functions” slide",
+        "progression_name": "Lab Set Up"
       },
       "seeding_key": {
         "activity_section.key": "bb313eea-95ea-4b93-bed6-57c6eaf51297",
@@ -538,7 +541,7 @@
       "key": "e0eabd54-3171-4b08-9aba-eb6ede5760aa",
       "position": 8,
       "properties": {
-        "description": "Let’s talk about functions in code. You will be working with some new functions today. \n\nFirst, let’s remember that code is a set of instructions you give the computer. \n\nFunctions are chunks of code that get reused over and over in a program. Usually, you have to define your own functions, but since we’re still learning, these functions are defined for you. That’s a lot of code ready for you! \n\nWhen you drag this block _(point to the green LabSetup block)_ to your workspace, all the code inside it will run _(point to the code nested inside the LabSetup function on the right of the slide)_.\n\nThere are other functions that you’ll use for this project. Let’s take a closer look at this one. \n",
+        "description": "We will start coding our experiment by adding a function block that includes everything needed for a lab setup. Let’s talk about functions in code. You will be working with two new functions today: `LabSetup` and `MicroscopeSetup`\n\nFirst, let’s remember that code is a set of instructions you give the computer. \n\nFunctions are chunks of code that get reused over and over in a program. Usually, you have to define your own functions, but since we’re still learning, these functions are defined for you. That’s a lot of code ready for you! \n\nWhen you drag this block _(point to the green LabSetup block)_ to your workspace, all the code inside it will run _(point to the code nested inside the LabSetup function on the right of the slide)_.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -589,9 +592,7 @@
       "key": "639e496c-184b-475d-8b26-857ebefbc8d1",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Create Your Own Model Slide” ",
-        "duration": "20",
-        "name": "Create Your Own Model"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Create Your Own Model Slide” \n\n**Do This:** Read the directions on the slide and allow students independent time or pair programming time to complete the rest of the level progression. \n"
       },
       "seeding_key": {
         "activity_section.key": "639e496c-184b-475d-8b26-857ebefbc8d1",
@@ -599,10 +600,26 @@
       }
     },
     {
-      "key": "b6dd38b1-0950-43de-b700-80df5e0792c6",
+      "key": "65d4af46-c122-4259-8c28-2a50953e8c86",
       "position": 13,
       "properties": {
-        "description": "**Do This:** Read the directions on the slide and allow students independent time or pair programming time to complete the rest of the level progression. ",
+        "progression_name": "Create Your Experiment",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "On level 9, students will be using a second function called `MicroscopeSetup`. It is recommended to direct students to look \"inside\" this function whenever they use it in their experiment by clicking \"Edit\" on the function block.\n\nStudents should discuss with a neighbor what this new function is doing for their program or you may choose to have a full class discussion about this function just as you did for the `LabSetup` function earlier."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86",
+        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
+      }
+    },
+    {
+      "key": "b6dd38b1-0950-43de-b700-80df5e0792c6",
+      "position": 14,
+      "properties": {
         "tips": [
           {
             "type": "teachingTip",
@@ -616,75 +633,8 @@
       }
     },
     {
-      "key": "89889bfb-da6d-4181-b505-a86465fc0bf5",
-      "position": 14,
-      "properties": {
-        "progression_name": "Setup Your Experiment"
-      },
-      "seeding_key": {
-        "activity_section.key": "89889bfb-da6d-4181-b505-a86465fc0bf5",
-        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
-      }
-    },
-    {
-      "key": "8fc48ffa-d627-4f17-b2f2-59c59c55ca4e",
-      "position": 15,
-      "properties": {
-        "progression_name": "Video: Events in Sprite Lab"
-      },
-      "seeding_key": {
-        "activity_section.key": "8fc48ffa-d627-4f17-b2f2-59c59c55ca4e",
-        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
-      }
-    },
-    {
-      "key": "65d4af46-c122-4259-8c28-2a50953e8c86",
-      "position": 16,
-      "properties": {
-        "progression_name": "Create Your Experiment",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students will be using a second function in this program called `MicroscopeSetup`. It is recommended to direct students to look \"inside\" this function whenever they use it in their experiment by clicking \"Edit\" on the function block.\n\nStudents should discuss with a neighbor what this new function is doing for their program or you may choose to have a full class discussion about this function just as you did for the `LabSetup` function earlier."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86",
-        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
-      }
-    },
-    {
-      "key": "0f5e7944-0864-44d1-8d13-61c6eff183f0",
-      "position": 17,
-      "properties": {
-        "progression_name": "Before & After Physical Change",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "It is recommended to bring the class back together to discuss the science behind the physical change that happens when adding heat to water and the resulting gas particles.\n\nDepending on how you would like your class to run, you may choose to have this discussion before level 10 or after."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0f5e7944-0864-44d1-8d13-61c6eff183f0",
-        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
-      }
-    },
-    {
-      "key": "e8776ee3-efc3-47af-8e11-28ed7af8380d",
-      "position": 18,
-      "properties": {
-        "progression_name": "Check In: Physical Change"
-      },
-      "seeding_key": {
-        "activity_section.key": "e8776ee3-efc3-47af-8e11-28ed7af8380d",
-        "lesson_activity.key": "a7847dc7-01ad-4573-b878-bc60496c5dcb"
-      }
-    },
-    {
       "key": "66a7bd74-d3d0-4e37-a01b-2c71068173fa",
-      "position": 19,
+      "position": 15,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1366,34 +1316,9 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_particles_physical change"
-        ],
-        "progression": "Vanishing Act"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_physical change"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "a892003a-a66e-453c-a779-0c893fcde9f8"
-      },
-      "level_keys": [
-        "csc_particles_physical change"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csc_particles_phys_observe2"
         ],
-        "progression": "Investigate: Wood"
+        "progression": "Physical Changes Information"
       },
       "bonus": false,
       "seeding_key": {
@@ -1410,15 +1335,12 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 3,
+      "chapter": 16,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "cdc_particles_physical_intro2"
-        ],
-        "progression": "Physical Changes"
+        "progression": "Physical Changes Wood Experiment "
       },
       "bonus": false,
       "seeding_key": {
@@ -1435,6 +1357,28 @@
       ]
     },
     {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vanishing Act"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_physical change"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "27f2f4b2-4590-4d35-8061-f64384de3079"
+      },
+      "level_keys": [
+        "csc_particles_physical change"
+      ]
+    },
+    {
       "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
@@ -1443,7 +1387,7 @@
         "level_keys": [
           "csc_particles_phys_observer"
         ],
-        "progression": "Investigate: Water"
+        "progression": "Investigate: Water Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -1465,60 +1409,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_setup1"
-        ],
-        "progression": "Setup Your Experiment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_phys_setup1"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "89889bfb-da6d-4181-b505-a86465fc0bf5"
-      },
-      "level_keys": [
-        "csc_particles_phys_setup1"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_pilotVideo_events_-2022-2"
-        ],
-        "progression": "Video: Events in Sprite Lab"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_pilotVideo_events_-2022-2"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "8fc48ffa-d627-4f17-b2f2-59c59c55ca4e"
-      },
-      "level_keys": [
-        "courseF_pilotVideo_events_-2022-2"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_particles_phys_experimentEvent"
-        ],
-        "progression": "Create Your Experiment"
+        "progression": "Lab Set Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1528,16 +1419,16 @@
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+        "activity_section.key": "bb313eea-95ea-4b93-bed6-57c6eaf51297"
       },
       "level_keys": [
         "csc_particles_phys_experimentEvent"
       ]
     },
     {
-      "chapter": 22,
-      "position": 8,
-      "activity_section_position": 2,
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1560,40 +1451,56 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc_particles_phys_afterChange"
-        ],
-        "progression": "Before & After Physical Change"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_phys_afterChange"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "0f5e7944-0864-44d1-8d13-61c6eff183f0"
-      },
-      "level_keys": [
-        "csc_particles_phys_afterChange"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 10,
+      "chapter": 21,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc_particles_phys_beforeChange"
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_setup1"
         ],
-        "progression": "Before & After Physical Change"
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      },
+      "level_keys": [
+        "csc_particles_phys_setup1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events_-2022-2"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_events_-2022-2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Create Your Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -1603,22 +1510,41 @@
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "0f5e7944-0864-44d1-8d13-61c6eff183f0"
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
       },
       "level_keys": [
         "csc_particles_phys_beforeChange"
       ]
     },
     {
+      "chapter": 24,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Create Your Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_afterChange"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      },
+      "level_keys": [
+        "csc_particles_phys_afterChange"
+      ]
+    },
+    {
       "chapter": 25,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csc_physical_change"
-        ],
-        "progression": "Check In: Physical Change"
+        "progression": "Create Your Experiment"
       },
       "bonus": false,
       "seeding_key": {
@@ -1628,7 +1554,7 @@
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "e8776ee3-efc3-47af-8e11-28ed7af8380d"
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
       },
       "level_keys": [
         "csc_physical_change"
@@ -1866,31 +1792,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc_particles_phys_afterChange_chem"
-        ],
-        "progression": "Before & After Chemical Change"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_particles_phys_afterChange_chem"
-        ],
-        "lesson.key": "Chemical Changes",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "76e3157b-b37b-4bea-b6d8-613988d72cee"
-      },
-      "level_keys": [
-        "csc_particles_phys_afterChange_chem"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "csc_particles_phys_beforeChange_chem"
         ],
         "progression": "Before & After Chemical Change"
@@ -1907,6 +1808,31 @@
       },
       "level_keys": [
         "csc_particles_phys_beforeChange_chem"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_particles_phys_afterChange_chem"
+        ],
+        "progression": "Before & After Chemical Change"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_particles_phys_afterChange_chem"
+        ],
+        "lesson.key": "Chemical Changes",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "76e3157b-b37b-4bea-b6d8-613988d72cee"
+      },
+      "level_keys": [
+        "csc_particles_phys_afterChange_chem"
       ]
     },
     {
@@ -2131,18 +2057,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_physical change",
-        "script_level.level_keys": [
-          "csc_particles_physical change"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "a892003a-a66e-453c-a779-0c893fcde9f8"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc_particles_phys_observe2",
         "script_level.level_keys": [
           "csc_particles_phys_observe2"
@@ -2167,6 +2081,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csc_particles_physical change",
+        "script_level.level_keys": [
+          "csc_particles_physical change"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "27f2f4b2-4590-4d35-8061-f64384de3079"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csc_particles_phys_observer",
         "script_level.level_keys": [
           "csc_particles_phys_observer"
@@ -2179,30 +2105,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_phys_setup1",
-        "script_level.level_keys": [
-          "csc_particles_phys_setup1"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "89889bfb-da6d-4181-b505-a86465fc0bf5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_pilotVideo_events_-2022-2",
-        "script_level.level_keys": [
-          "courseF_pilotVideo_events_-2022-2"
-        ],
-        "lesson.key": "Particles Lesson 2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "8fc48ffa-d627-4f17-b2f2-59c59c55ca4e"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc_particles_phys_experimentEvent",
         "script_level.level_keys": [
           "csc_particles_phys_experimentEvent"
@@ -2210,7 +2112,7 @@
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+        "activity_section.key": "bb313eea-95ea-4b93-bed6-57c6eaf51297"
       }
     },
     {
@@ -2227,14 +2129,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_phys_afterChange",
+        "level.key": "csc_particles_phys_setup1",
         "script_level.level_keys": [
-          "csc_particles_phys_afterChange"
+          "csc_particles_phys_setup1"
         ],
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "0f5e7944-0864-44d1-8d13-61c6eff183f0"
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_pilotVideo_events_-2022-2",
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events_-2022-2"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
       }
     },
     {
@@ -2246,7 +2160,19 @@
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "0f5e7944-0864-44d1-8d13-61c6eff183f0"
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_particles_phys_afterChange",
+        "script_level.level_keys": [
+          "csc_particles_phys_afterChange"
+        ],
+        "lesson.key": "Particles Lesson 2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-fa2022-particles",
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
       }
     },
     {
@@ -2258,7 +2184,7 @@
         "lesson.key": "Particles Lesson 2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-fa2022-particles",
-        "activity_section.key": "e8776ee3-efc3-47af-8e11-28ed7af8380d"
+        "activity_section.key": "65d4af46-c122-4259-8c28-2a50953e8c86"
       }
     },
     {
@@ -2371,9 +2297,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_phys_afterChange_chem",
+        "level.key": "csc_particles_phys_beforeChange_chem",
         "script_level.level_keys": [
-          "csc_particles_phys_afterChange_chem"
+          "csc_particles_phys_beforeChange_chem"
         ],
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
@@ -2383,9 +2309,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_particles_phys_beforeChange_chem",
+        "level.key": "csc_particles_phys_afterChange_chem",
         "script_level.level_keys": [
-          "csc_particles_phys_beforeChange_chem"
+          "csc_particles_phys_afterChange_chem"
         ],
         "lesson.key": "Chemical Changes",
         "lesson_group.key": "",
@@ -2425,6 +2351,7 @@
       "key": "lesson_slides",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1QhkLmvbGn84F8SnGaI47tWNrxZxQuErFfdvKXgtPbaY/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
