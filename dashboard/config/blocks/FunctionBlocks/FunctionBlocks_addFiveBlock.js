@@ -1,11 +1,11 @@
 function addFiveBlock() {
     //For Validation
     if(typeof checkValidation === 'function' && checkValidation()) {
-      var newEventObj = {
-        blockName: 'addTwo',
+      var newBlockObj = {
+        blockName: 'addFive',
         input: input
       };
-      addFunctionEvent(newEventObj);
+      addFunctionBlock(newBlockObj);
     }
     input = input + 5;
     output = input;
