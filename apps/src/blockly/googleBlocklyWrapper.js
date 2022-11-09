@@ -71,7 +71,7 @@ const BlocklyWrapper = function(blocklyInstance) {
   /**
    * Override core Blockly fields with Code.org customized versions,
    * and sets the field on our wrapper for use by our code.
-   * @param {array} fields (elements are arrays of shape [fieldRegistryName, fieldClassName, fieldClass])
+   * @param {array} overrides (elements are arrays of shape [fieldRegistryName, fieldClassName, fieldClass])
    */
   this.overrideFields = function(overrides) {
     overrides.forEach(override => {
@@ -179,6 +179,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
+  // elements in this list should be structured as follows:
+  // [field registry name for field, class name of field being overridden, class to use as override]
   const fieldOverrides = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
