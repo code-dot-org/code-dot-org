@@ -69,21 +69,22 @@ const BlocklyWrapper = function(blocklyInstance) {
   };
 
   /**
-   * Overrides core Blockly fields with Code.org customized overrides,
+   * Override core Blockly fields with Code.org customized versions,
    * and sets the field on our wrapper for use by our code.
-   * @param {array} overrides (elements are arrays of shape [fieldName, fieldClass])
+   * @param {array} fields (elements are arrays of shape [fieldRegistryName, fieldClassName, fieldClass])
    */
   this.overrideFields = function(overrides) {
     overrides.forEach(override => {
-      const fieldName = override[0];
-      const fieldClass = override[1];
+      const fieldRegistryName = override[0];
+      const fieldClassName = override[1];
+      const fieldClass = override[2];
 
       // Force Google Blockly to use our custom versions of fields
-      this.blockly_.fieldRegistry.unregister(fieldName);
-      this.blockly_.fieldRegistry.register(fieldName, fieldClass);
+      this.blockly_.fieldRegistry.unregister(fieldRegistryName);
+      this.blockly_.fieldRegistry.register(fieldRegistryName, fieldClass);
 
       // Add each field for when our wrapper is accessed in /apps code
-      this[fieldName] = fieldClass;
+      this[fieldClassName] = fieldClass;
     });
   };
 };
@@ -179,14 +180,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
   const fieldOverrides = [
-    ['field_variable', CdoFieldVariable],
-    ['field_dropdown', CdoFieldDropdown],
+    ['field_variable', 'FieldVariable', CdoFieldVariable],
+    ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
     // Overrides required for a customization of FieldTextInput
-    // and its child classes
-    ['field_input', CdoFieldTextInput],
-    ['field_number', CdoFieldNumber],
-    ['field_angle', CdoFieldAngle],
-    ['field_multilinetext', CdoFieldMultilineInput]
+    // and its child classes.
+    ['field_input', 'FieldTextInput', CdoFieldTextInput],
+    ['field_number', 'FieldNumber', CdoFieldNumber],
+    ['field_angle', 'FieldAngle', CdoFieldAngle],
+    ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput]
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
