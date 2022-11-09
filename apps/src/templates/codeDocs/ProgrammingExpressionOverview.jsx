@@ -166,6 +166,13 @@ export default function ProgrammingExpressionOverview({
           />
         </div>
       )}
+      <div>
+        <p />
+        <p>
+          Found a bug in the documentation? Let us know at{' '}
+          <a href="mailto:support@code.org">support@code.org</a>.
+        </p>
+      </div>
     </div>
   );
 }
