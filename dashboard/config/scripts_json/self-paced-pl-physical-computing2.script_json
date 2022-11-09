@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-06 19:12:01 UTC",
+    "serialized_at": "2022-11-08 16:06:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -346,6 +346,17 @@
       },
       "seeding_key": {
         "activity_section.key": "07353cff-eca0-4ee8-97da-cf299dfe8392",
+        "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
+      }
+    },
+    {
+      "key": "67be6002-bae2-4f68-8a44-e29681d0e901",
+      "position": 7,
+      "properties": {
+        "progression_name": "AYW Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "67be6002-bae2-4f68-8a44-e29681d0e901",
         "lesson_activity.key": "7ded9506-66a3-41bc-ae2c-7a5c79caa542"
       }
     }
@@ -1206,6 +1217,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture"
+        ],
         "progression": "The role of the teacher"
       },
       "bonus": false,
@@ -1570,6 +1584,29 @@
       },
       "level_keys": [
         "SP-VPL-PC-22-mod2-WrapUp"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "AYW Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 3_2022-test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "67be6002-bae2-4f68-8a44-e29681d0e901"
+      },
+      "level_keys": [
+        "VPL - CSD - M7 - U6L2 Level 3_2022-test"
       ]
     }
   ],
@@ -2160,6 +2197,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-physical-computing2",
         "activity_section.key": "07353cff-eca0-4ee8-97da-cf299dfe8392"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - M7 - U6L2 Level 3_2022-test",
+        "script_level.level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 3_2022-test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-physical-computing2",
+        "activity_section.key": "67be6002-bae2-4f68-8a44-e29681d0e901"
       }
     }
   ],
