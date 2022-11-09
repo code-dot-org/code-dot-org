@@ -3,7 +3,7 @@
     "data": {
       "programming_environments": {
         "weblab": {
-          "name": "Lab du Web",
+          "name": "Labo Web",
           "categories": {
             "html_tags": {
               "name": "Balises HTML"
@@ -71,7 +71,7 @@
           }
         },
         "spritelab": {
-          "name": "Le Labo des Lutins",
+          "name": "Le Labo des Sprites",
           "description": "Sprite Lab est un environnement de programmation Blockly où vous pouvez créer des projets interactifs.",
           "categories": {
             "sprites": {

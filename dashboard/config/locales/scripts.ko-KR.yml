@@ -4802,6 +4802,8 @@ ko:
               display_name: 설문조사
             lessonGroup-3:
               display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 대체 레슨
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

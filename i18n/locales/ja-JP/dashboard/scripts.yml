@@ -3891,6 +3891,8 @@ ja:
               display_name: アンケート
             lessonGroup-3:
               display_name: 内容
+            lessonGroup-5:
+              display_name: 代替レッスン
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

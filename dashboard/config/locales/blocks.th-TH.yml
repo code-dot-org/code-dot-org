@@ -991,6 +991,24 @@ th:
         text: การตั้งค่า
       Dancelab_whenSetup2:
         text: การตั้งค่า
+      DansBlocks_setForegroundEffect2:
+        text: ใช้เอฟเฟกต์ {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': ฟองสบู่
+            '"confetti"': กระดาษสี
+            '"hearts"': หัวใจ
+            '"emojis"': อีโมจิมีความสุข
+            '"rain"': มีฝน
+            '"starburst"': ดาวกระจาย
+            '"glass"': กระจกแตก
+            '"twinkling"': ระยิบระยับ
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): ลากได้
+            wandering(): เคลื่อนที่
+            shrinking(): หดตัว
       gamelab_addBehaviorSimple:
         text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
       gamelab_addTarget:
@@ -1338,7 +1356,6 @@ th:
             "'sound://category_space/Pillars_SFX.mp3'": เสาหลัก
             "'sound://category_space/Southern_ring_SFX.mp3'": วงแหวนทางใต้
             "'sound://category_space/Supernova_SFX.mp3'": ซุปเปอร์โนวา
-            "'sound://category_sports/One_Whistle_SFX.mp3'": ไทโช
       gamelab_playSpeech:
         text: เล่นเสียงพูด {SOUND}
       gamelab_playerBehaviors:
@@ -1903,6 +1920,8 @@ th:
         text: สัตว์ประหลาดเริ่มสวมหน้ากาก
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:

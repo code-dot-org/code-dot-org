@@ -996,6 +996,24 @@ zh-CN:
         options:
           SONG:
             '"peas"': 黑眼豆豆合唱团 - 我有一种感觉
+      DansBlocks_setForegroundEffect2:
+        text: 制作{EFFECT}效果
+        options:
+          EFFECT:
+            '"bubbles"': 气泡
+            '"confetti"': 彩纸屑
+            '"hearts"': 心
+            '"emojis"': 快乐表情
+            '"rain"': 下雨
+            '"starburst"': 星爆
+            '"glass"': 破碎玻璃
+            '"twinkling"': 闪烁
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): 可拖拽
+            wandering(): 徘徊
+            shrinking(): 收缩
       gamelab_addBehaviorSimple:
         text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
       gamelab_addTarget:
@@ -1337,7 +1355,6 @@ zh-CN:
             "'sound://category_space/Pillars_SFX.mp3'": 创生之柱
             "'sound://category_space/Southern_ring_SFX.mp3'": 南环星云
             "'sound://category_space/Supernova_SFX.mp3'": 超新星
-            "'sound://category_sports/One_Whistle_SFX.mp3'": 第谷
       gamelab_playSpeech:
         text: 游戏言语{SOUND}
       gamelab_playerBehaviors:
@@ -1975,6 +1992,8 @@ zh-CN:
         text: 将怪兽的速度设置为{VAL}
       Outbreak_stopMoving:
         text: 怪物停止移动
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         text: 设置帧率为 {BRUSH}
         options:

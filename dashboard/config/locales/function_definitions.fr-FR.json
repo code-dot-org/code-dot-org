@@ -1026,7 +1026,7 @@
         "NEW Course 4 Artist Params 15": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -1034,13 +1034,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -1186,7 +1186,7 @@
         "New Artist Project": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -1194,13 +1194,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -3355,7 +3355,7 @@
         "courseF_artist_fwp9": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -3363,13 +3363,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -3794,7 +3794,7 @@
         "CourseD_EOC_artist": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -3802,13 +3802,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -3849,7 +3849,7 @@
         "Course E: Frozen Project_examples_2021": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -3857,13 +3857,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -3912,7 +3912,7 @@
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -3926,7 +3926,7 @@
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -3962,7 +3962,7 @@
         "CourseD_EOC_artist_2021": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -3976,7 +3976,7 @@
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -4012,7 +4012,7 @@
         "CourseD_EOC_artist_example2021": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -4020,13 +4020,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -4047,7 +4047,7 @@
             }
           },
           "draw a house": {
-            "name": "dessine une maison",
+            "name": "dessiner une maison",
             "parameters": {
               "length": "longueur"
             }
@@ -4448,7 +4448,7 @@
           },
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -4456,13 +4456,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -4499,7 +4499,7 @@
         "CourseD_EOC_artist2022": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -4507,13 +4507,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
@@ -4549,7 +4549,7 @@
         "CourseD_EOC_artist_example20212022": {
           "draw a star": {
             "name": "dessine une étoile",
-            "description": "dessine une étoile en respectant le bon nombre de pointes et la longueur de côté indiquée.",
+            "description": "dessiner une étoile d'un nombre de branches donné et avec des côtés d'une longueur donnée",
             "parameters": {
               "points": "points",
               "length": "longueur"
@@ -4557,13 +4557,13 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessiner un cercle d'un rayon donné",
             "parameters": {
               "radius": "rayon"
             }
           },
           "draw a pinwheel": {
-            "name": "dessiner une girouette",
+            "name": "dessiner un moulin à vent",
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
