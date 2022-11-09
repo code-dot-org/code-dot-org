@@ -7,7 +7,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
-    @unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
+    @unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(@unit_group)
     # category
     @reference_guide = create :reference_guide, course_version: @unit_group.course_version
@@ -146,6 +146,27 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     end
 
     assert ReferenceGuide.find_by_course_version_id_and_key(@unit_group.course_version.id, key).position > old_last_position
+  end
+
+  test 'redirect to index of latest version in course family' do
+    sign_in @levelbuilder
+
+    get :index, params: {
+      course_course_name: @reference_guide.course_version.course_offering.key
+    }
+    assert_response :redirect
+    assert_redirected_to "/courses/#{@reference_guide_subcategory.course_offering_version}/guides"
+  end
+
+  test 'redirect to latest version in course family' do
+    sign_in @levelbuilder
+
+    get :show, params: {
+      course_course_name: @reference_guide.course_version.course_offering.key,
+      key: @reference_guide.key,
+    }
+    assert_response :redirect
+    assert_redirected_to "/courses/#{@reference_guide_subcategory.course_offering_version}/guides/#{@reference_guide.key}"
   end
 
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
