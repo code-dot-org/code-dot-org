@@ -98,7 +98,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
         // Position RTLs with coordinates from the left.
         block.x = viewWidth - block.x;
       }
-      // Adjust for Svg Frames for function defintion blocks
+      // Adjust for Svg Frames for function definition blocks
       if (!blockSpace.RTL) {
         block.x += frameSvgMargin;
       } else {

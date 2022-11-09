@@ -518,13 +518,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     trashcan.init();
 
     if (options.useModalFunctionEditor) {
-      // Customize auto-populated Functions toolbox category
+      // Customize auto-populated Functions toolbox category.
       workspace.registerToolboxCategoryCallback(
         'PROCEDURE',
         functionsFlyoutCategory
       );
     }
-    // Customize function defintion blocks
+    // Customize function definition blocks.
     Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
       FUNCTION_BLOCK.init;
     return workspace;

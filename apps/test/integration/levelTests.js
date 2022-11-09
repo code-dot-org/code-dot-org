@@ -49,7 +49,7 @@ var example = {
   levelFile: 'levels',
   // id of the level within the levels file
   levelId: '5_5',
-  // a complete level defintion, can be used instead of levelFile/levelId
+  // a complete level definition, can be used instead of levelFile/levelId
   levelDefinition: {},
   // a set of tests
   tests: [
