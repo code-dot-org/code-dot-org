@@ -272,9 +272,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     this.removeUnusedBlockFrame();
   };
 
+  // overridden dispose function definition at https://github.com/google/blockly/blob/develop/core/block_svg.ts#L863
   const googleBlocklyDispose = blocklyWrapper.BlockSvg.prototype.dispose;
-  blocklyWrapper.BlockSvg.prototype.dispose = function() {
-    googleBlocklyDispose.call(this);
+  // if param healStack is true, then tries to heal any gap by connecting the next
+  // statement with the previous statement
+  // if param animate is true, shows a disposal animation and sound
+  blocklyWrapper.BlockSvg.prototype.dispose = function(healStack, animate) {
+    googleBlocklyDispose.call(this, healStack, animate);
     this.removeUnusedBlockFrame();
   };
 
