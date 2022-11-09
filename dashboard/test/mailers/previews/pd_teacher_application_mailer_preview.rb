@@ -27,7 +27,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
   define_method "confirmation_awaiting_admin_approval__with_partner".to_sym do
     Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: true, is_awaiting_admin_approval: true)
   end
-  define_method "#confirmation_awaiting_admin_approval__without_partner".to_sym do
+  define_method "confirmation_awaiting_admin_approval__without_partner".to_sym do
     Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: false, is_awaiting_admin_approval: true)
   end
 
