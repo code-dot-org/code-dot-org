@@ -5,7 +5,6 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
 
   %w(
     confirmation
-    awaiting_admin_approval
     principal_approval_teacher_reminder
     principal_approval
     principal_approval_completed
@@ -16,13 +15,20 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     declined
     waitlisted
   ).each do |mail_type|
-    is_awaiting_admin_approval = mail_type == 'awaiting_admin_approval'
     define_method "#{mail_type}__with_partner".to_sym do
-      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, is_awaiting_admin_approval: is_awaiting_admin_approval)
+      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, is_awaiting_admin_approval: false)
     end
     define_method "#{mail_type}__without_partner".to_sym do
-      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false, is_awaiting_admin_approval: is_awaiting_admin_approval)
+      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false, is_awaiting_admin_approval: false)
     end
+  end
+
+  # We also use the confirmation email for awaiting admin approval
+  define_method "confirmation_awaiting_admin_approval__with_partner".to_sym do
+    Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: true, is_awaiting_admin_approval: true)
+  end
+  define_method "#confirmation_awaiting_admin_approval__without_partner".to_sym do
+    Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: false, is_awaiting_admin_approval: true)
   end
 
   private
