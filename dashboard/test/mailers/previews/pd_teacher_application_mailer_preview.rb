@@ -9,7 +9,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     principal_approval
     principal_approval_completed
     principal_approval_completed_partner
-    accepted_no_cost_registration
+    accepted
     registration_reminder
     declined
   ).each do |mail_type|
