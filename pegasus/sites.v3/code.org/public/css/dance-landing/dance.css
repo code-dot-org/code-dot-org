@@ -12,7 +12,7 @@
 div[dir='rtl'] .img-dance-stars{
   left: auto;
   right: 70px;
-} 
+}
 .desktop-only, .tablet-only, .mobile-only {
   display: none;
 }
@@ -85,7 +85,7 @@ a.translate-link:hover {
 div[dir='rtl'] .dance-chevron-icon{
   float: right;
   line-height: 20px;
-} 
+}
 .dance-thumbnail-tile-img {
   width: 100%;
 }
@@ -162,7 +162,7 @@ a:hover {
   .img-container {
     /* This background is only visible on mobile width.  It's covered by an image
      * on wider widths. */
-    background: url(/images/dance-hoc/dance_party_2019_tutorial_hero.png);
+    background: url(/images/dance-hoc/dance_party_2022_tutorial_hero.png);
     margin: 5px;
     border-radius: 5px;
     background-size: cover;

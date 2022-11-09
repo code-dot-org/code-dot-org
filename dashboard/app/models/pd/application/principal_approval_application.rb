@@ -42,10 +42,15 @@ module Pd::Application
 
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
+    after_create :update_teacher_app_status
 
     # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
       application_year
+    end
+
+    def update_teacher_app_status
+      teacher_application.update!(status: 'unreviewed') if teacher_application.status == 'awaiting_admin_approval'
     end
 
     def self.next_year(year)
