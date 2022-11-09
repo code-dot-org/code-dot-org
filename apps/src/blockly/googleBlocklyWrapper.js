@@ -6,9 +6,11 @@ import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldMultilineInput from './addons/CdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
@@ -54,6 +56,7 @@ const BlocklyWrapper = function(blocklyInstance) {
       }
     });
   };
+
   this.wrapSettableProperty = function(propertyName) {
     Object.defineProperty(this, propertyName, {
       get: function() {
@@ -62,6 +65,25 @@ const BlocklyWrapper = function(blocklyInstance) {
       set: function(newValue) {
         this.blockly_[propertyName] = newValue;
       }
+    });
+  };
+
+  /**
+   * Overrides core Blockly fields with Code.org customized overrides,
+   * and sets the field on our wrapper for use by our code.
+   * @param {array} overrides (elements are arrays of shape [fieldName, fieldClass])
+   */
+  this.overrideFields = function(overrides) {
+    overrides.forEach(override => {
+      const fieldName = override[0];
+      const fieldClass = override[1];
+
+      // Force Google Blockly to use our custom versions of fields
+      this.blockly_.fieldRegistry.unregister(fieldName);
+      this.blockly_.fieldRegistry.register(fieldName, fieldClass);
+
+      // Add each field for when our wrapper is accessed in /apps code
+      this[fieldName] = fieldClass;
     });
   };
 };
@@ -156,41 +178,25 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  // Force Google Blockly to use our custom versions of fields
-  blocklyWrapper.blockly_.fieldRegistry.unregister('field_variable');
-  blocklyWrapper.blockly_.fieldRegistry.register(
-    'field_variable',
-    CdoFieldVariable
-  );
-  blocklyWrapper.blockly_.fieldRegistry.unregister('field_dropdown');
-  blocklyWrapper.blockly_.fieldRegistry.register(
-    'field_dropdown',
-    CdoFieldDropdown
-  );
-  //  make sure this string is right
-  blocklyWrapper.blockly_.fieldRegistry.unregister('field_number');
-  blocklyWrapper.blockly_.fieldRegistry.register(
-    'field_number',
-    CdoFieldNumber
-  );
-  blocklyWrapper.blockly_.fieldRegistry.unregister('field_text_input');
-  blocklyWrapper.blockly_.fieldRegistry.register(
-    'field_text_input',
-    CdoFieldTextInput
-  );
+  const fieldOverrides = [
+    ['field_variable', CdoFieldVariable],
+    ['field_dropdown', CdoFieldDropdown],
+    // Overrides required for a customization of FieldTextInput
+    // and its child classes
+    ['field_input', CdoFieldTextInput],
+    ['field_number', CdoFieldNumber],
+    ['field_angle', CdoFieldAngle],
+    ['field_multilinetext', CdoFieldMultilineInput]
+  ];
+  blocklyWrapper.overrideFields(fieldOverrides);
 
   // Overrides applied directly to core blockly
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
 
-  // should these just be settable properties?
-  // Additions for when our wrapper is accessed in /apps code
+  // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
-  blocklyWrapper.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
-  blocklyWrapper.FieldNumber = CdoFieldNumber;
-  blocklyWrapper.FieldTextInput = CdoFieldTextInput;
-  blocklyWrapper.FieldVariable = CdoFieldVariable;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
