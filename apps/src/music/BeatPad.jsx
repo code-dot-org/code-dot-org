@@ -27,6 +27,7 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
             onClick={() => playTrigger(triggers[j].id)}
             key={triggers[j].id}
             colorClassName={classNames(isPlaying && enabledClasses[j])}
+            disabled={!isPlaying}
           />
         );
       }
@@ -58,11 +59,11 @@ const BeatPad = ({triggers, playTrigger, onClose, isPlaying}) => {
   );
 };
 
-const TriggerButton = ({label, onClick, colorClassName}) => {
+const TriggerButton = ({label, onClick, colorClassName, disabled}) => {
   return (
     <div
       className={classNames(styles.triggerButton, colorClassName)}
-      onClick={onClick}
+      onClick={disabled ? null : onClick}
     >
       {label}
     </div>
@@ -72,7 +73,8 @@ const TriggerButton = ({label, onClick, colorClassName}) => {
 TriggerButton.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  colorClassName: PropTypes.string
+  colorClassName: PropTypes.string,
+  disabled: PropTypes.bool
 };
 
 BeatPad.propTypes = {

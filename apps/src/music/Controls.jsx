@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import classNames from 'classnames';
 import FontAwesome from '../templates/FontAwesome';
 import {Triggers} from '@cdo/apps/music/constants';
 import moduleStyles from './controls.module.scss';
 import BeatPad from './BeatPad';
+import {AnalyticsContext} from './context';
 
 const Controls = ({
   isPlaying,
@@ -21,6 +22,8 @@ const Controls = ({
       setBeatPadShowing(true);
     }
   }, [isPlaying]);
+
+  const analyticsReporter = useContext(AnalyticsContext);
 
   const renderStartOver = () => {
     return (
@@ -49,6 +52,9 @@ const Controls = ({
           playTrigger={playTrigger}
           onClose={() => {
             setBeatPadShowing(false);
+            analyticsReporter.onButtonClicked('show-hide-beatpad', {
+              showing: false
+            });
           }}
           isPlaying={isPlaying}
         />
@@ -66,9 +72,12 @@ const Controls = ({
     </div>
   );
 
-  const beatPadIconSection = renderIconButton('th', () =>
-    setBeatPadShowing(!isShowingBeatPad)
-  );
+  const beatPadIconSection = renderIconButton('th', () => {
+    analyticsReporter.onButtonClicked('show-hide-beatpad', {
+      showing: !isShowingBeatPad
+    });
+    setBeatPadShowing(!isShowingBeatPad);
+  });
   const infoIconSection = renderIconButton('info-circle', toggleInstructions);
 
   const [leftIcon, rightIcon] = instructionsOnRight

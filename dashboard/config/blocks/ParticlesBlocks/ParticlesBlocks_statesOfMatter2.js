@@ -33,14 +33,17 @@ function helperGrid(costume) {
 }
 
 function statesOfMatter2(costume, behaviorStr) {
-  if(validationProps.particlesValidation) {
-  	validationProps.particlesValidation.events.push({
-      costume: costume,
-      behavior: behaviorStr
-    });
-  } else {
-    console.log("Validation error: make sure to include zParticlesModule helper library with this level");
+  if (typeof validationProps !== 'undefined') {
+    if(validationProps.particlesValidation) {
+      validationProps.particlesValidation.events.push({
+        costume: costume,
+        behavior: behaviorStr
+      });
+    } else {
+      console.log("Validation error: make sure to include zParticlesModule helper library with this level");
+    }
   }
+  
   if(behaviorStr == "solid"){
     helperGrid(costume);
     addBehaviorSimple(({costume: costume}), new Behavior(wobbling, []));
