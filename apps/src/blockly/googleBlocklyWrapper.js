@@ -273,8 +273,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   const googleBlocklyDispose = blocklyWrapper.BlockSvg.prototype.dispose;
-  blocklyWrapper.BlockSvg.prototype.dispose = function() {
-    googleBlocklyDispose.call(this);
+  blocklyWrapper.BlockSvg.prototype.dispose = function(healStack, animate) {
+    googleBlocklyDispose.call(this, healStack, animate);
     this.removeUnusedBlockFrame();
   };
 
