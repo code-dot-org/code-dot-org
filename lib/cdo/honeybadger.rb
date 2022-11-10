@@ -3,6 +3,7 @@ require_relative 'env'
 
 # Honeybadger extensions for command error logging
 module Honeybadger
+  @@code_org_team_id = 530
   # Notify Honeybadger of a new release. This noops for adhoc and development
   # environments. For API information, run `bundle exec honeybadger help deploy`
   # or https://github.com/honeybadger-io/honeybadger-ruby#deployment-tracking-via-command-line.
@@ -122,5 +123,33 @@ module Honeybadger
     end
 
     issues
+  end
+
+  def self.get_members
+    raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
+    members = []
+    members_api_response = `curl -s -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io/v2/teams/#{@@code_org_team_id}/team_members"`
+    members_parsed_response = JSON.parse members_api_response
+    results = members_parsed_response['results']
+    if results.nil?
+      return members
+    end
+
+    members_parsed_response['results'].each do |member|
+      members << {
+        id: member['id'],
+        created_at: member['created_at'],
+        role: member['admin'].to_s == "true" ? "admin" : "user",
+        name: member['name'],
+        email: member['email'],
+      search_key: member['email']
+      }
+    end
+    members
+  end
+
+  def delete_member(member_id)
+    raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
+    `curl -s -u #{CDO.honeybadger_api_token}: -X DELETE "https://app.honeybadger.io/v2/teams/#{@@code_org_team_id}/team_members/#{member_id}"`
   end
 end
