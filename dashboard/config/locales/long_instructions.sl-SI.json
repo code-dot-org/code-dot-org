@@ -225,7 +225,7 @@
         "K-1 Bee Loops 5": "Uporabi \"ponovi\" zanke, da dobiš nektar in narediš med!",
         "K-1 Maze Loops 2": "Uporabi `ponovi` blok, da me pripelješ do prašička!",
         "K-1 Maze Loops 8": "Uporabi \"ponovi\" zanko, da me pripelješ do prašička.",
-        "MC HOC 2016 SCORE LEVEL": "Nekatere igre hranijo rezultat. Igraj se \"Ulovi me\" igro z Železnimi Golemi in uporabi <xml>  <block type=\"craft_addScore\">\n    <title name=\"SCORE\">1</title>\n  </block></xml> blok, da si daš eno točko, ko jih uloviš. \n\n Doseži 5 točk, da zmagaš!",
+        "MC HOC 2016 SCORE LEVEL": "Nekatere igre hranijo rezultat. Igraj se \"Ulovi me\" igro z Železnimi Golemi in uporabi   \n    1\n   blok, da si daš eno točko, ko jih uloviš. \n\n Doseži 5 točk, da zmagaš!",
         "NEW Course 4 Artist Vars 4": "Poskusi ponovno! Ali lahko nastaviš spremenljivko `length`(dolžina) na 60, da narediš ta kul vzorec s šesterokotniki?",
         "NEW Course 4 Artist Vars 6": "Nariši ta vzorec petkotnikov s 100 pikslov stranicami, tako da nastaviš dolžino `length` na pravo vrednost in premakneš `length` spremenljivko na vsa pravilna mesta. Si opazil/a, da je bilo potrebno nastaviti `length` le enkrat in koda uporablja pravo vrednost povsod?",
         "NEW Course 4 Bee For Loops 3": "\"For\" zanka to naredi precej bolj enostavno! Vsa potrebna koda je tu, poglej, kako je sestavljena skupaj, nato pritisni \"Zaženi\", da vidiš, kako deluje.",
