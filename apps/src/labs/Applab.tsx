@@ -28,7 +28,6 @@ const RightPanel = ({ blockFactory, editorType }: RightPanelProps) => {
 
   return <PanelManager dir={PanelDirection.Vertical}>
     <Instructions />
-    <EditorToggle />
     {showEditor && <Editor type={editorType} blockFactory={blockFactory} />}
     <Console />
   </PanelManager>

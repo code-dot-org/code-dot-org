@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { AppOptions, App } from "./AppOptions"
+import { EditorToggle } from "./Components"
 import { useEditor, EditorContext } from "./Editor"
 import labFactory from "./labFactory"
 import { PanelManager } from "./Panels"
@@ -55,6 +56,7 @@ export const LabManager = (props: LabManagerProps) => {
                 {fakeChannelIds.map(id => <option value={id}>{id}</option>)}
               </select>
             </label>
+            <EditorToggle />
           </div>
           {/* TODO: should direction of this outermost PanelManager be configurable? defaults to horizontal */}
           <PanelManager leftWeight={Number(leftWeight)}>
