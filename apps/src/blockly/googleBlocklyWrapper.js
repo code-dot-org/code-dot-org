@@ -10,7 +10,7 @@ import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
-import CdoFieldMultilineInput from './addons/CdoFieldMultilineInput';
+import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
