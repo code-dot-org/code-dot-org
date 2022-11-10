@@ -1,5 +1,7 @@
 /* Mock state to be used across the testing suite. */
 
+import MessageFormat from "messageformat";
+
 export const regressionState = {
   data: [
     {
@@ -149,7 +151,12 @@ export const allNumericalState = {
 
 export const premadeDatasetName = 'bats_eat_mozzies';
 export const batDatasetDescription = 'Count of bats and mosquitios';
+export const batDatasetDescriptionLocalized = 'Localized How many mosquitoes there are.';
 export const mosquitoDescription = 'How many mosquitoes there are.';
+export const batDatasetUses = 'People can have a fun time learning about bats';
+export const batDatasetUsesLocalized = 'Localized People can have a fun time learning about bats';
+export const batDatasetMisuses = 'Hunters could use this information to avoid bats';
+export const batDatasetMisusesLocalized = 'Localized Hunters could use this information to avoid bats';
 
 export const premadeDatasetState = {
   ...allNumericalState,
@@ -157,7 +164,11 @@ export const premadeDatasetState = {
   metadata: {
     name: premadeDatasetName,
     card: {
-      description: batDatasetDescription
+      description: batDatasetDescription,
+      context: {
+        potentialUses: batDatasetUses,
+        potentialMisuses: batDatasetMisuses
+      }
     },
     defaultLabelColumn: 'mosquitoCount',
     fields: [
@@ -174,6 +185,25 @@ export const premadeDatasetState = {
     ]
   }
 }
+
+export const premadeDatasetTranslations = new MessageFormat('en').compile({
+  datasets: {
+    bats_eat_mozzies: {
+      fields: {
+        mosquitoCount: {
+          description: "mosquitoCount description"
+        }
+      },
+      card: {
+        description: batDatasetDescriptionLocalized,
+        context: {
+          potentialUses: batDatasetUsesLocalized,
+          potentialMisuses: batDatasetMisusesLocalized
+        }
+      }
+    }
+  }
+});
 
 export const playDatasetDescription = "Survey of the weather, temperature and whether it was a good day to play outside.";
 

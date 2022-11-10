@@ -8,7 +8,7 @@ import { getPercentCorrect } from "../helpers/accuracy";
 import { getDatasetDetails } from "../helpers/datasetDetails";
 import Statement from "./Statement";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
-import { modelCardDatasetDetailsShape, trainedModelDetailsShape, modelCardColumnShape } from "./shapes";
+import { datasetDetailsShape, trainedModelDetailsShape, modelCardColumnShape } from "./shapes";
 import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
@@ -19,7 +19,7 @@ class ModelCard extends Component {
     percentCorrect: PropTypes.string,
     label: modelCardColumnShape,
     features: PropTypes.arrayOf(PropTypes.string),
-    datasetDetails: modelCardDatasetDetailsShape
+    datasetDetails: datasetDetailsShape
   };
 
   render() {
