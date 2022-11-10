@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import {getSingleBlockXml} from './cdoUtils.js';
 
 /**
  * Adds a keyboard shortcut that will store copy information for a block
@@ -22,9 +23,7 @@ const blockCopyToStorageShortcut = function() {
       // which may beep or otherwise indicate
       // an error due to the lack of a selection.
       e.preventDefault();
-      const blockText = Blockly.Xml.domToPrettyText(
-        Blockly.Xml.blockToDom(Blockly.selected)
-      );
+      const blockText = getSingleBlockXml(Blockly.selected);
       localStorage.setItem('blocklyStash', blockText);
       return true;
     }
@@ -84,9 +83,7 @@ const blockCutToStorageShortcut = function() {
       // which may beep or otherwise indicate
       // an error due to the lack of a selection.
       e.preventDefault();
-      const blockText = Blockly.Xml.domToPrettyText(
-        Blockly.Xml.blockToDom(Blockly.selected)
-      );
+      const blockText = getSingleBlockXml(Blockly.selected);
       localStorage.setItem('blocklyStash', blockText);
       localStorage.getItem('blocklyStash');
       Blockly.Events.setGroup(true);

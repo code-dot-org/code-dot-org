@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import {getSingleBlockXml} from './cdoUtils.js';
 
 /**
  * Adds a copy command to the block context menu. After switching to v7,
@@ -18,9 +19,7 @@ const registerBlockCopyToStorage = function() {
       }
     },
     callback: function(scope) {
-      const copyData = Blockly.Xml.domToPrettyText(
-        Blockly.Xml.blockToDom(scope.block)
-      );
+      let copyData = getSingleBlockXml(scope.block);
       localStorage.setItem('blocklyStash', copyData);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,

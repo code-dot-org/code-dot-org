@@ -89,3 +89,29 @@ export function getField(type) {
   }
   return field;
 }
+
+/**
+ * Returns xml string for a block, after removing any next block
+ * connected to it. Used by context menu options and shortcuts.
+ * This should not be used elsewhere as it is scheduled for deletion
+ * once we implement @blockly/plugin-cross-tab-copy-paste
+ * @param {block}
+ * @returns {string}
+ */
+export function getSingleBlockXml(block) {
+  let blockStackXml = Blockly.Xml.domToPrettyText(
+    Blockly.Xml.blockToDom(block)
+  );
+  // Remove whitespace from indentation.
+  blockStackXml = blockStackXml.replace(/\s+/g, ' ');
+  let blockXml = blockStackXml;
+  if (block.getNextBlock()) {
+    let nextBlockXml = Blockly.Xml.domToPrettyText(
+      Blockly.Xml.blockToDom(block.getNextBlock())
+    );
+    // Remove whitespace from indentation.
+    nextBlockXml = nextBlockXml.replace(/\s+/g, ' ');
+    blockXml = blockXml.replace(nextBlockXml, '');
+  }
+  return blockXml;
+}
