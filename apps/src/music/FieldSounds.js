@@ -25,6 +25,25 @@ class FieldSounds extends GoogleBlockly.Field {
     return new FieldSounds(options);
   }
 
+  initView() {
+    this.createBorderRect_();
+    this.createTextElement_();
+    if (this.borderRect_) {
+      this.borderRect_.classList.add('blocklyDropdownRect');
+    }
+  }
+
+  applyColour() {
+    const style = this.sourceBlock_.style;
+    if (this.borderRect_) {
+      this.borderRect_.setAttribute('stroke', style.colourTertiary);
+      this.borderRect_.setAttribute('fill', 'transparent');
+    }
+    if (this.textElement_) {
+      this.textElement_.style.fill = 'white';
+    }
+  }
+
   showEditor_() {
     super.showEditor_();
 
