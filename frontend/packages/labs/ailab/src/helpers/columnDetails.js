@@ -69,7 +69,7 @@ export function getColumnDescription(columnId, metadata, trainedModelDetails) {
     const field = metadata.fields.find(field => {
       return field.id === columnId;
     });
-    return field.description;
+    return getLocalizedColumnDescription(metadata.name, columnId, field.description)
   }
 
   // Try using a user-entered column description if available.
@@ -120,18 +120,18 @@ export function getColumnDataToSave(state, column) {
 }
 
 export function getLocalizedColumnName(datasetId, columnId) {
-  return getLocalizedColumnField(datasetId, columnId, "id");
+  return getLocalizedColumnAttr(datasetId, columnId, "id", columnId);
 }
 
-export function getLocalizedColumnDescription(datasetId, columnId) {
-  return getLocalizedColumnField(datasetId, columnId, "description");
+function getLocalizedColumnDescription(datasetId, columnId, description) {
+  return getLocalizedColumnAttr(datasetId, columnId, "description", description);
 }
 
-function getLocalizedColumnField(datasetId, columnId, field) {
-  return I18n.t(field,
+function getLocalizedColumnAttr(datasetId, columnId, attribute, fallback) {
+  return I18n.t(attribute,
     {
       scope: ["datasets", datasetId, "fields", columnId],
-      "default": columnId
+      default: fallback
     }
   );
 }

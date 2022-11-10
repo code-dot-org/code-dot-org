@@ -19,6 +19,8 @@ import {
   mosquitoDescription
 } from './testData';
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "../../src/constants.js";
+import I18n from "../../src/i18n";
+import MessageFormat from "messageformat";
 
 describe("column data types", () => {
   test("column is categorical", async () => {
@@ -121,6 +123,29 @@ describe("getColumnDescription", () => {
       {}
     );
     expect(result).toEqual(mosquitoDescription);
+  });
+
+  test("gets localized description", async () => {
+    const localizedDescription = "localizedValue";
+    const testTranslations = new MessageFormat('en').compile({
+      datasets: {
+        bats_eat_mozzies: {
+          fields: {
+            mosquitoCount: {
+              description: localizedDescription
+            }
+          }
+        }
+      }
+    });
+
+    I18n.reset();
+    I18n.initI18n(testTranslations);
+    const result = getColumnDescription(
+      "mosquitoCount",
+      premadeDatasetState.metadata,
+      {});
+    expect(result).toEqual(localizedDescription);
   });
 
   test("no description", async () => {

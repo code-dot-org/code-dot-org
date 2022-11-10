@@ -12,7 +12,7 @@ import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 import ScrollableContent from "./ScrollableContent";
 import I18n from "../i18n";
-import { getLocalizedColumnName, getLocalizedColumnDescription } from "../helpers/columnDetails.js";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -57,7 +57,7 @@ class SaveModel extends Component {
         id: columnDescription.id,
         isColumn: true,
         columnType,
-        answer: getLocalizedColumnDescription(datasetId, columnDescription.description),
+        answer: columnDescription.description,
         localizedName: getLocalizedColumnName(datasetId, columnDescription.id)
       });
     }
