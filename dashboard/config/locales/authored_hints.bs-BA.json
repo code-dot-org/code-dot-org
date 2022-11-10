@@ -30,7 +30,7 @@
         },
         "CourseD_Dance_Party_04": {
           "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš promjeniti efekat pozadine negdje oko sedmog takta pjesme.\n\n_Level se završava nakon 9 taktova._",
-          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod ???\"taktova\" događaja."
         },
         "CourseD_Dance_Party_06": {
           "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš imati barem dva plesača.\n\n_Level se završava nakon 5 taktova._",
@@ -76,7 +76,7 @@
         },
         "Dance_Party_04": {
           "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš promjeniti efekat pozadine negdje oko sedmog takta pjesme.\n\n_Level se završava nakon 9 taktova._",
-          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod ???\"taktova\" događaja."
         },
         "Dance_Party_06": {
           "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš imati barem dva plesača.\n\n_Level se završava nakon 5 taktova._",
