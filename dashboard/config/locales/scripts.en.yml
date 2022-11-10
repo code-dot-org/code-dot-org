@@ -3818,7 +3818,7 @@ en:
         denny-science-copy:
           lesson_groups: {}
         dance-2019:
-          title: Dance Party (2019)
+          title: Dance Party
           description_audience: ''
           description_short: Code a Dance Party to share with friends and family. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's "Encanto," and more!
           description: Code your own dance party to share with your friends!
@@ -3843,13 +3843,14 @@ en:
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2019
         dance-extras-2019:
-          title: Keep On Dancing (2019)
+          title: Keep On Dancing
           description: Go beyond the first hour with extended project ideas.
           description_short: Go beyond the Hour of Code with this follow-up activity to Code.org's Dance Party tutorial.
           description_audience: ''
           lesson_groups: {}
           student_description: Go beyond the first hour with extended project ideas.
           name: dance-extras-2019
+          lessons: {}
         csp10-pilot:
           title: Cybersecurity and Global Impacts
           description_audience: ''
@@ -8852,7 +8853,7 @@ en:
             lesson-14:
               name: Expanding Conditions
             lesson-15:
-              name: Edge Cases
+              name: Methods with Parameters
             lesson-16:
               name: Open Source Code
             lesson-17:

@@ -57,9 +57,9 @@
     "encrypted": "false",
     "libraries_enabled": "false",
     "widget_mode": "false",
-    "preload_asset_list": null,
     "project_template_level_name": "CSD U6 - Screen Inputs - SB2 template_2022",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -67,7 +67,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-26T18:53:35.680+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 Level 3\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 Level 3\"},{\"changed_at\":\"2022-11-04 21:45:07 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"makerlab_enabled\",\"callout_json\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-26T18:53:35.680+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 Level 3\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 Level 3\"},{\"changed_at\":\"2022-11-04 21:45:07 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"makerlab_enabled\",\"callout_json\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2022-11-07 16:53:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
