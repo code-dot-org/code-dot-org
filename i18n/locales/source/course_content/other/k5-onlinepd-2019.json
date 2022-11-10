@@ -89,7 +89,7 @@
     }
   },
   "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/4": {
-    "long_instructions": "Watch the video below, which explains a program that young students will write in <a href=\"https://studio.code.org/s/coursea-2019\" target=\"blank\">Course A</a>. On the next page, you'll get to write a similar program of your own!"
+    "long_instructions": "Watch the video below, which explains a program that young students will write in [][0]Course A[][1]. On the next page, you'll get to write a similar program of your own!"
   },
   "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/5": {
     "short_instructions": "Try this one yourself from the beginning.",
@@ -1002,6 +1002,6 @@
     }
   },
   "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/7": {
-    "long_instructions": "> **If you enjoyed this course, sign up for an in-person workshop:**\n>\n> <a href=\"http://code.org/professional-development-workshops\" target=\"blank\">Sign up now</a> to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area."
+    "long_instructions": "> **If you enjoyed this course, sign up for an in-person workshop:**\n>\n> [][0]Sign up now[][1] to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area."
   }
 }

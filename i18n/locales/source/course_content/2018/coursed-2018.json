@@ -147,7 +147,7 @@
     "short_instructions": "Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the net.",
     "long_instructions": "Get to the hoop!     \n\nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net.",
     "authored_hints": {
-      "courseD_bounce_events1s_a": "You need to add the `move left` block to the `when left arrow` event to make this game work:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+      "courseD_bounce_events1s_a": "You need to add the `move left` block to the `when left arrow` event to make this game work:\n\n [][0] [][1]\n    [][2]\n      [][3]\n    [][4]\n  [][5]\n\n   </xml>",
       "courseD_bounce_events1s_b": "Don't forget to press \"Run\" and get the hand to the basket in order to solve this puzzle."
     }
   },

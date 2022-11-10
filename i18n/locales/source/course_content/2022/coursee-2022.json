@@ -468,7 +468,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2022/lessons/5/levels/1": {
-    "long_instructions": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"Hello, world! My name is Rikki, and here are some things I'd to share about me!\"_\n\n**Explore:** Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**.",
+    "long_instructions": "[][0] _\"Hello, world! My name is Rikki, and here are some things I'd to share about me!\"_\n\n**Explore:** Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**.",
     "behavior_descriptions": {
       "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
       "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
@@ -916,7 +916,7 @@
   },
   "https://studio.code.org/s/coursee-2022/lessons/8/levels/2": {
     "short_instructions": "Now take your shape and draw two or three in a row!",
-    "long_instructions": "[][0] _“Now, let’s draw more than one.”_\n\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \n\n-   If you jump forward by **less** than the width of your shape, they might overlap\n-   If you jump forward by **more** than the width of your shape, you will get a gap\n\n<hr/>\n\nYour row might end up straight like with these:\n\n[][1]\n[][2]\n[][3]\n<br/>  <br/>\n\nOr, your shapes might move around like one of these: \n\n[][4]\n[][5]\n[][6]",
+    "long_instructions": "[][0] _“Now, let’s draw more than one.”_\n\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \n\n-   If you jump forward by **less** than the width of your shape, they might overlap\n-   If you jump forward by **more** than the width of your shape, you will get a gap\n\n<hr/>\n\nYour row might end up straight like with these:\n\n[][1]\n[][2]\n[][3]\n[][4]  [][5]\n\nOr, your shapes might move around like one of these: \n\n[][6]\n[][7]\n[][8]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Snowflake #1_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseD_artist_project2_a": "Remember that `move forward` draws a line, while `jump forward` does not.",
