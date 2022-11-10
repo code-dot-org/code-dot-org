@@ -22,11 +22,11 @@ class Services::RegistrationReminder
   # reminder email now.
   # @return [Enumerable<Pd::Application::ApplicationBase>]
   def self.applications_needing_first_reminder
-    # The 'accepted' email was sent at least two weeks ago
+    # The 'accepted' email was sent at least one week ago
     # No 'registration_reminder' has been sent yet.
     # Not enrolled in a workshop since the 'accepted' email was sent
     applications_awaiting_enrollment.
-      where("accepted.sent_at <= ?", 2.weeks.ago).
+      where("accepted.sent_at <= ?", 1.week.ago).
       where("registration_reminder.id is null")
   end
 
