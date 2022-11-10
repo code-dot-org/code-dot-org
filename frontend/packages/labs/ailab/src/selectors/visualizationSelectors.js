@@ -96,7 +96,8 @@ export const getCrossTabData = createSelector(
     getCurrentColumn,
     currentColumnIsCategorical,
     getData,
-    (state, props) => getUniqueOptionsLabelColumn(state, props)
+    (state, props) => getUniqueOptionsLabelColumn(state, props),
+    getDatasetId
   ],
   (
     labelColumn,
@@ -104,7 +105,8 @@ export const getCrossTabData = createSelector(
     currentColumn,
     currentColumnIsCategorical,
     data,
-    uniqueOptionsLabelColumn
+    uniqueOptionsLabelColumn,
+    datasetId
   ) => {
     if (!labelColumn || !currentColumn) {
       return null;
@@ -164,11 +166,13 @@ export const getCrossTabData = createSelector(
     // to generate the header at the top of the CrossTab UI.
     const uniqueLabelValues =  uniqueOptionsLabelColumn;
 
+    const localizedLabelColumn = getLocalizedColumnName(datasetId, labelColumn);
+    const localizedCurrentColumn = getLocalizedColumnName(datasetId, currentColumn);
     return {
       results,
       uniqueLabelValues,
-      featureNames: [currentColumn],
-      labelName: labelColumn
+      featureNames: [localizedCurrentColumn],
+      labelName: localizedLabelColumn
     };
   }
 )
