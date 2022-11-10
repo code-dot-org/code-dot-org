@@ -26,7 +26,7 @@
         },
         "CourseD_Dance_Party_04": {
           "validation": "**Com passo aquest nivell?**\n\n-   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.\n\n_Aquest nivell acaba després de 10 mesures._",
-          "challenges": "**Repte opcional**\n\nCanvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"mesures\"</title></block></xml>."
+          "challenges": "**Repte opcional**\n\nCanvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de ???\"mesures\"."
         },
         "CourseD_Dance_Party_06": {
           "validation": "**Com passo aquest nivell?**\n\n-   Has de tenir com a mínim dos dansaires.\n\n_Aquest nivell acaba després de 6 mesures._",
@@ -84,7 +84,7 @@
         },
         "Dance_Party_04": {
           "validation": "**Com passo aquest nivell?**\n\n-   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.\n\n_Aquest nivell acaba després de 10 mesures._",
-          "challenges": "**Repte opcional**\n\nCanvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"mesures\"</title></block></xml>."
+          "challenges": "**Repte opcional**\n\nCanvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de ???\"mesures\"."
         },
         "Dance_Party_06": {
           "validation": "**Com passo aquest nivell?**\n\n-   Has de tenir com a mínim dos dansaires.\n\n_Aquest nivell acaba després de 6 mesures._",
@@ -144,6 +144,186 @@
         },
         "CourseE_HOC 2018 Level_9b2022": {
           "voyage_aquatic_9a": "Quin escull de corall més preciós! El corall blau està bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!"
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click": "Connecteu un bloc `diu` sota un bloc d'esdeveniment `quan feu clic a`:\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
+        },
+        "coursee_helloworld_say": {
+          "hello-world-first-solution-pizza": "Per fer que la pizza digui alguna cosa, connecti els blocs de codi com aquest:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "Podeu canviar el fons connectant un bloc `set background` sota un bloc d'esdeveniment `quan es clica`:\n\n\n    \"when\"\n    \n      \n        \"cuteanimals_hippo\"\n      \n    \n    \n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        \"gradient\\_30\"\n      \n    \n  \n"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "_Nota:_ Per donar a un sprite un comportament, cal utilitzar un bloc `sprite begins` amb un dels blocs de comportament verd, com ara `spinning dreta`.\n\n\n            \n              \n                \"cuteanimals_rooster_hello\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Feu clic als sprites mentre s'està executant el programa.",
+          "hw_no_changes": "No cal canviar cap del codi en aquest nivell."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "Proveu de connectar un bloc de `canvi de costume` sota un bloc d'esdeveniment `quan es clica`.\n\n\n    \"when\"\n    \n      \n        \"\"cuteanimals_sheep\"\n      \n    \n    \n      \\<block type=\"gamelab_setAnimation\">\n        \"\"cuteanimals_sheep\"\n        \n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            \"\"cuteanimals_goat_hello\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "Connecteu un bloc `diu` sota un bloc d'esdeveniment `quan feu clic a`:\n\n\n    \"when\"\n    \n      \n        \"cuteanimals_seahorse\"\n      \n    \n    \n      \\<block type=\"gamelab_spriteSay\">\n        Hello, ocean!\n        \n          \n            \"cuteanimals\\_seahorse\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "Per canviar la ubicació d'un sprite, feu clic al pin del bloc d'ubicació i, a continuació, feu clic a on voleu que vagi.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Assegureu-vos que els vestits coincideixin en cada bloc.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Per fer que l'ós digui alguna cosa, connecteu els blocs de codi així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "Per establir la mida d'un sprite només una vegada, podeu utilitzar aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"cuteanimals_tiger\"\n        \n      \n      \n        \\<block type=\"math_number\">\n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Si voleu canviar la mida d'un sprite una vegada i una altra (amb esdeveniments), utilitzeu aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"cuteanimals_cheetah_hello\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "Podeu canviar el fons connectant un bloc `set background` sota un bloc d'esdeveniment `quan es clica`:\n\n\n    \"when\"\n    \n      \n        \"emoji_35_1\"\n      \n    \n    \n      \n        \"gradient_17_1\"\n      \n    \n  \n"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "_Nota:_ Per donar a un sprite un comportament, cal utilitzar un bloc `sprite begins` amb un dels blocs de comportament verd, com ara `spinning dreta`.\n\n\n            \n              \n                \"emoji_05_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Feu clic als sprites mentre s'està executant el programa.",
+          "hw_no_changes": "No cal canviar cap del codi en aquest nivell."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "Proveu de connectar un bloc de `canvi de costume` sota un bloc d'esdeveniment `quan es clica`.\n\n\n    \"when\"\n    \n      \n        \"emoji_18_1\"\n      \n    \n    \n      \n        \"emoji_25_1\"\n        \n          \n            \"emoji_18_1\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "Connecteu un bloc `diu` sota un bloc d'esdeveniment `quan feu clic a`:\n\n\n    \"when\"\n    \n      \n        \"emoji_06_1\"\n      \n    \n    \n      \n        Look at that!\n        \n          \n            \"emoji_06_1\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "Per canviar la ubicació d'un sprite, feu clic al pin del bloc d'ubicació i, a continuació, feu clic a on voleu que vagi.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "Assegureu-vos que els vestits coincideixin per a cada sprite.\n\n      Look at me!\n      \n        \n          \"emoji_14_1\"\n        \n      \n    "
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Per fer que l'emoji digui alguna cosa, connecti els blocs de codi així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "Per establir la mida d'un sprite només una vegada, podeu utilitzar aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"emoji_17_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Si voleu canviar la mida d'un sprite una vegada i una altra (amb esdeveniments), utilitzeu aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"emoji_33_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "Podeu canviar el fons connectant un bloc `set background` sota un bloc d'esdeveniment `quan es clica`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "Podeu canviar el fons connectant un bloc `set background` sota un bloc d'esdeveniment `quan es clica`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "Podeu canviar el fons connectant un bloc `set background` sota un bloc d'esdeveniment `quan es clica`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_Nota:_ Per donar a un sprite un comportament, cal utilitzar un bloc `sprite begins` amb un dels blocs de comportament verd, com ara `spinning dreta`.\n\n\n            \n              \n                \"face_burger_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "_Nota:_ Per donar a un sprite un comportament, cal utilitzar un bloc `sprite begins` amb un dels blocs de comportament verd, com ara `spinning dreta`.\n\n\n            \n              \n                \"face_burger_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "_Nota:_ Per donar a un sprite un comportament, cal utilitzar un bloc `sprite begins` amb un dels blocs de comportament verd, com ara `spinning dreta`.\n\n\n            \n              \n                \"space_astronaut_cat\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_food_click": {
+          "hw_click_sprites": "Feu clic als sprites mentre s'està executant el programa.",
+          "hw_no_changes": "No cal canviar cap del codi en aquest nivell."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Feu clic als sprites mentre s'està executant el programa.",
+          "hw_no_changes": "No cal canviar cap del codi en aquest nivell."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Feu clic als sprites mentre s'està executant el programa.",
+          "hw_no_changes": "No cal canviar cap del codi en aquest nivell."
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "Proveu de connectar un bloc de `canvi de costume` sota un bloc d'esdeveniment `quan es clica`.\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        \"face_taco_1\"\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "Proveu de connectar un bloc de `canvi de costume` sota un bloc d'esdeveniment `quan es clica`.\n\n\n    \"when\"\n    \n      \n        \"soccer_player_2\"\n      \n    \n    \n      \n        \"soccer_player_3\"\n        \n          \n            \"soccer_player_2\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "Proveu de connectar un bloc de `canvi de costume` sota un bloc d'esdeveniment `quan es clica`.\n\n\n    \"when\"\n    \n      \n        \"space_astronaut_3\"\n      \n    \n    \n      \n        \"space_astronaut_2\"\n        \n          \n            \"space_astronaut_3\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "Connecteu un bloc `diu` sota un bloc d'esdeveniment `quan feu clic a`:\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "Connecteu un bloc `diu` sota un bloc d'esdeveniment `quan feu clic a`:\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "Connecteu un bloc `diu` sota un bloc d'esdeveniment `quan feu clic a`:\n\n\n    \"when\"\n    \n      \n        \"space_alien_ship\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"space_alien_ship\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "Per canviar la ubicació d'un sprite, feu clic al pin del bloc d'ubicació i, a continuació, feu clic a on voleu que vagi.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "Per canviar la ubicació d'un sprite, feu clic al pin del bloc d'ubicació i, a continuació, feu clic a on voleu que vagi.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "Per canviar la ubicació d'un sprite, feu clic al pin del bloc d'ubicació i, a continuació, feu clic a on voleu que vagi.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "Assegureu-vos que els vestits coincideixin per a cada sprite.\n\n      Hello, broccoli!\n      \n        \n          \"face_carrot_1\"\n        \n      \n    "
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "Assegureu-vos que els vestits coincideixin per a cada sprite.\n\n      Goal!\n      \n        \n          \"soccer\\_ball\"\n        \n      \n    "
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "Assegureu-vos que els vestits coincideixin per a cada sprite.\n\n      Hello, alien!\n      \n        \n          \"face_carrot_1\"\n        \n      \n    "
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Per fer que la pizza digui alguna cosa, connecti els blocs de codi com aquest:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Per fer que el sprite digui alguna cosa, connecti els blocs de codi així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Per fer que el sprite digui alguna cosa, connecti els blocs de codi així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "Per establir la mida d'un sprite només una vegada, podeu utilitzar aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Si voleu canviar la mida d'un sprite una vegada i una altra (amb esdeveniments), utilitzeu aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "Per establir la mida d'un sprite només una vegada, podeu utilitzar aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Si voleu canviar la mida d'un sprite una vegada i una altra (amb esdeveniments), utilitzeu aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "Per establir la mida d'un sprite només una vegada, podeu utilitzar aquest bloc:\n\n\n  \"when\"\n  \n    \n      \"space_astronaut_1\"\n    \n  \n  \n    \n      \"scale\"\n      \n        \n          \"space_astronaut_1\"\n        \n      \n      \n        \n          50\n        \n      \n    \n  \n",
+          "storyboard_changePropBy": "Si voleu canviar la mida d'un sprite una vegada i una altra (amb esdeveniments), utilitzeu aquest bloc:\n\n\n  \"when\"\n  \n    \n      \"space_satellite\"\n    \n  \n  \n    \\<block type=\"gamelab_changePropBy\">\n      \"scale\"\n      \n        \n          \"space_satellite\"\n        \n      \n      \n        \\<block type=\"math_number\" can_disconnect_from\\_parent=\"false\">\n          10\n        \n      \n    \n  \n"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "Podeu canviar el fons connectant un bloc `set background` sota un bloc d'esdeveniment `quan es clica`:\n\n\n    \"when\"\n    \n      \n        \"retroship_21\"\n      \n    \n    \n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        \"background_landscape11_1\"\n      \n    \n  \n"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "_Nota:_ Per donar a un sprite un comportament, cal utilitzar un bloc `sprite begins` amb un dels blocs de comportament verd, com ara `spinning dreta`.\n\n\n            \n              \n                \"retrocreature_09_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Feu clic als sprites mentre s'està executant el programa.",
+          "hw_no_changes": "No cal canviar cap del codi en aquest nivell."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "Proveu de connectar un bloc de `canvi de costume` sota un bloc d'esdeveniment `quan es clica`.\n\n\n    \"when\"\n    \n      \n        \"retrocreature_07_1\"\n      \n    \n    \n      \n        \"retrocreature_20_1\"\n        \n          \n            \"retrocreature_07_1\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "Connecteu un bloc `diu` sota un bloc d'esdeveniment `quan feu clic a`:\n\n\n    \"when\"\n    \n      \n        \"retro_powerup_heart\"\n      \n    \n    \n      \n        POWERUP!\n        \n          \n            \"retro_powerup_heart\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "Per canviar la ubicació d'un sprite, feu clic al pin del bloc d'ubicació i, a continuació, feu clic a on voleu que vagi.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "Assegureu-vos que els vestits coincideixin per a cada sprite.\n\n      Hello!\n      \n        \n          \"retrocreature\\_16\"\n        \n      \n    "
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Per fer que la criatura digui alguna cosa, connecteu els blocs de codi així:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "Per establir la mida d'un sprite només una vegada, podeu utilitzar aquest bloc:\n\n\n    \"scale\"\n    \n      \n        \"retro_purple_burst\"\n      \n    \n    \n      \n        50\n      \n    \n  ",
+          "hw_retro_changePropBy": "Si voleu canviar la mida d'un sprite una vegada i una altra (amb esdeveniments), utilitzeu aquest bloc:\n\n\n      \"scale\"\n      \n        \n          \"retrocreature_11_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
         }
       }
     }
