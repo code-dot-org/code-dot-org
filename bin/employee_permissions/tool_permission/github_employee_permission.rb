@@ -1,7 +1,7 @@
 require_relative '../../../lib/cdo/honeybadger'
 require_relative '../../employee_permissions/tool_permission/code_org_employee_permission'
 class GithubEmployeePermission < CodeOrgEmployeePermission
-  @@github_token = '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'
+  @@github_token = ''
   @@org_name = 'code-dot-org'
 
   def self.get_teams
