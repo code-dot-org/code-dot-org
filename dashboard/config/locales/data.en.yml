@@ -717,6 +717,7 @@ en:
         PL_Equity_in_CS_Education: Equity in CS Education
         csc_fm_pilot: Function Machines (Pilot)
         csc_fm_pilot_v2: 'Function Machines Intro '
+        csc-sprite-lab-pixel-editor: Draw Your Own Sprite
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
