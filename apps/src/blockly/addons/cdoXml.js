@@ -67,17 +67,22 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     const blockWidth = blocks[0]
       ? blocks[0].blockly_block.getHeightWidth().width
       : 0;
-    const padding = 16;
+    // Add padding if we are in a workspace.
+    const padding = viewWidth ? 16 : 0;
     const verticalSpaceBetweenBlocks = 10;
 
+    // The cursor is used to position blocks that don't have explicit x/y coordinates
     let cursor = {
-      x: blockSpace.RTL
-        ? viewWidth
-          ? viewWidth - padding
-          : blockWidth + padding
-        : padding,
+      x: padding,
       y: padding
     };
+    if (blockSpace.RTL && viewWidth) {
+      // Position the cursor from the right of the workspace.
+      cursor.x = viewWidth - padding;
+    } else if (blockSpace.RTL && !viewWidth) {
+      // Position the cursor from the right of the block.
+      cursor.x = blockWidth - padding;
+    }
 
     const positionBlock = function(block) {
       const heightWidth = block.blockly_block.getHeightWidth();
@@ -86,14 +91,19 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       const frameSvgTop = hasFrameSvg ? 35 : 0;
       const frameSvgMargin = hasFrameSvg ? 16 : 0;
 
+      // If the block doesn't already have coordinates, use the cursor.
       if (isNaN(block.x)) {
         block.x = cursor.x;
-      } else {
-        block.x = blockSpace.RTL ? viewWidth - block.x : block.x;
+      } else if (blockSpace.RTL) {
+        // Position RTLs with coordinates from the left.
+        block.x = viewWidth - block.x;
       }
-      blockSpace.RTL
-        ? (block.x -= frameSvgMargin)
-        : (block.x += frameSvgMargin);
+      // Adjust for Svg Frames for function definition blocks
+      if (!blockSpace.RTL) {
+        block.x += frameSvgMargin;
+      } else {
+        block.x -= frameSvgMargin;
+      }
 
       if (isNaN(block.y)) {
         block.y = cursor.y + frameSvgTop;
