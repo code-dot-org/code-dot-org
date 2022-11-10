@@ -6,7 +6,3 @@ Ridley::Chef::Cookbook::Metadata.from_file('metadata.rb').dependencies.keys.each
   next unless File.directory? path
   cookbook cookbook, path: path
 end
-
-# Pin specific dependency versions:
-cookbook 'seven_zip', '< 4.0.0' # 4.0.0 requires Chef 16
-cookbook 'ark', '< 6.0.0' # 6.0 0 requires Chef 15.3
