@@ -9,9 +9,6 @@ const options = {
 const plugin = new CrossTabCopyPaste();
 plugin.init(options);
 
-GoogleBlockly.Msg['CROSS_TAB_COPY'] = 'Copy';
-GoogleBlockly.Msg['CROSS_TAB_PASTE'] = 'Paste';
-
 const registerDeletable = function() {
   const deletableOption = {
     displayText: function(scope) {
