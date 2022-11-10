@@ -2451,8 +2451,8 @@ tr:
       5:
         text: 3) Sağdaki alan çalışma bölgesidir ve programımızı burada oluşturacağız.
       6:
-        text: Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın
-          üst kısmında bulabilirsiniz.
+        text: Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergelerini
+          ekranın üst kısmında bulabilirsiniz.
       7:
         text: Başlangıç için bir tavuğu kodlayacağız. "ileri hareket et" komutunu
           çalışma alanına taşıyalım. "Çalıştır" a tıklayınca tavuk ileri doğru bir
@@ -2743,15 +2743,15 @@ tr:
       8:
         text: Orta alan Ajan'ın anlayabileceği komutları içeren bir araç kutusu.
       9:
-        text: Ve sağ tarafta, çalışma alanı. Agent'ı kullanmak için komutları biriktireceğin
-          yer.
+        text: Ve sağ tarafta, çalışma alanı. Ajan'ı kontrol etmek için yazdığın programın
+          komutlarını biriktireceğin yer.
       10:
-        text: Ajan, yürüyebilir, baskı plakalarını, döndürebilir ve etkinleştirebilir.
+        text: Ajan, yürüyebilir,  döndürebilir ve baskı plakalarını etkinleştirebilir.
           Aynı zamanda blokları yok edebilir ve blokları yerleştirebilir. Bu minecraft
           rayları gibi bir bloğu yerleştirdiğinde, kendi altına yerleştirir.
       11:
-        text: Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın
-          üst kısmında bulabilirsiniz.
+        text: Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergelerini
+          ekranın üst kısmında bulabilirsiniz.
       12:
         text: Tekrar denemek isterseniz, her şeyi sıfırlamak için mavi sıfırlama düğmesine
           basabilirsiniz. Eğer bir kod bloğunu silmeniz gerekiyorsa çalışma alanından
@@ -3372,7 +3372,7 @@ tr:
       4:
         text: Orta alanda, kodlama komutlarını bulabileceğiniz araç kutunuz var.
       5:
-        text: Ve büyük alanda sağda çalışma alanınız var. Bu, programınızı oluşturmaya
+        text: Ve  sağdaki büyük alan senin çalışma alanın. Bu, programınızı oluşturmaya
           ve hareketlerinizi kontrol etmeye yönelik komutları biriktireceğiniz yer.
       6:
         text: Her bir seviyenin talimatları sayfanın üstündedir. Uzun ve kısa talimatlar
@@ -3608,8 +3608,8 @@ tr:
           var. Burada dansçılarınızı göreceksiniz.
       7:
         image: notes/hoc_dance_warmup_2019_7.png
-        text: Bu orta alan araç kutusudur. Derste ilerledikçe bu alanca yeni kod blokları
-          bulunacaktır.
+        text: Bu orta alan araç kutusudur. Derste ilerledikçe bu alanda yeni kod blokları
+          kullanılır olacaktır.
       8:
         image: notes/hoc_dance_warmup_2019_8.png
         text: Sağdaki alan çalışma alanıdır. Programınızı yapmak için blokları araç
@@ -3636,8 +3636,8 @@ tr:
           programınızdaki dansçıları oyun alanında göreceksiniz ve müzik çalacak.
       13:
         text: 'Kendi kendinize deneyin! Ve eğer sıkıştığınızı düşünüyorsanız, sorun
-          yok, sadece ayağa kalk ve hareket etmeye başla. Ve siz fakına varmada kendi
-          dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? '
+          yok, sadece ayağa kalk ve hareket etmeye başla. Ve siz farkına varmadan
+          kendi dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? '
     hoc_dance_events_2019:
       1:
         text: 'Kod Saati | Dans Partisi: Olaylar'

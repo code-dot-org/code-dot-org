@@ -237,7 +237,7 @@ tr:
           description_short: Bir hikaye oluşturmak veya bir oyun yaratmak için Gumball Lab kullanın!
           student_description: Bir hikaye oluşturmak veya bir oyun yaratmak için Gumball Lab kullanın!
         starwars:
-          title: 'Star Wars: Galaksiyi Kod ile Yapmak (Javascript)'
+          title: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (JavaScript)'
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           student_description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
@@ -3382,6 +3382,7 @@ tr:
           student_description: BBK Ü6 Oyun Alanı. Sorular için Dan Schneider'a bakın
         hello-world-food:
           name: merhaba-dünya-yemekleri
+          title: 'Merhaba dünya: Gıda'
         csa-u7-dev:
           lesson_groups:
             lessonGroup-2:
@@ -3470,6 +3471,8 @@ tr:
           description_audience: 6-12. sınıflar
         poem-art-2021:
           title: Şiir Sanatı
+        hello-world-food-2021:
+          title: 'Merhaba dünya: Gıda'
         explore-data-1-2021:
           title: Veri görselleştirmeleri
         counting-csc-2021:
@@ -4121,6 +4124,19 @@ tr:
               display_name: İçerik
             lessonGroup-5:
               display_name: Alternatif Dersler
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Değişkenler
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+            lessonGroup-4:
+              display_name: Alternatif Dersler
+        hello-world-space-2022:
+          title: 'Merhaba dünya: Evren'
+        hello-world-soccer-2022:
+          title: 'Merhaba Dünya: Futbol'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4244,3 +4260,7 @@ tr:
               display_name: Kurs-Sonrası Anketi
         csp-post-survey-2023:
           title: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi
+        csp-playground:
+          title: CSP Oyun Alanı
+          description_audience: Mufredat Yazarları
+          description_short: Müfredat sürümleri değişirken derslerin veya seviyelerin güncellemelerini hazırlamak için
