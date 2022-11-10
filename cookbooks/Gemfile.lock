@@ -789,6 +789,7 @@ DEPENDENCIES
   berkshelf
   chef (= 16.18.0)
   chefspec
+  json (>= 2.3.0)
   kitchen-docker
   kitchen-dokken
   kitchen-ec2
