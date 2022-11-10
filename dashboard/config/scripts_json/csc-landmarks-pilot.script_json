@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-landmarks-pilot",
-    "serialized_at": "2022-11-04 17:44:04 UTC",
+    "serialized_at": "2022-11-08 17:27:28 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -55,7 +55,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Local Landmarks - Unplugged",
+      "name": "Local Landmarks - Unplugged Project Planning",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -91,7 +91,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Local Storytellers",
+      "name": "Local Storytellers -Coding Your Project",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -109,7 +109,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "Local Storytellers",
+      "name": "Project Share Out",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1220,6 +1220,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_-wonder"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1242,6 +1245,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_demo_usa_map"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1264,6 +1270,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1286,6 +1295,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_location"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1308,6 +1320,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_size"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1330,6 +1345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_behavior"
+        ],
         "progression": "Stop to Learn - Landmarks"
       },
       "bonus": false,
@@ -1352,6 +1370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmark_explain"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1374,6 +1395,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place1"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1396,6 +1420,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_2022"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1418,6 +1445,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1440,6 +1470,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place2"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1462,6 +1495,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches2"
+        ],
         "progression": "Skill Building - Map Setup"
       },
       "bonus": false,
@@ -1484,6 +1520,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_freeplay"
+        ],
         "progression": "Free Play - Landmarks"
       },
       "bonus": false,
@@ -1506,6 +1545,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_survey_L1"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -1528,6 +1570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_background"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1550,6 +1595,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite_-usa-map"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1572,6 +1620,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_location_-usa-map"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1594,6 +1645,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place1_-usa-map"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1616,6 +1670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_place2_-usa-map"
+        ],
         "progression": "Landmarks & Events"
       },
       "bonus": false,
@@ -1638,6 +1695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches1_-usa-map"
+        ],
         "progression": "Landmarks & Events"
       },
       "bonus": false,
@@ -1660,6 +1720,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches2_-usa-map"
+        ],
         "progression": "Landmarks & Events"
       },
       "bonus": false,
@@ -1682,6 +1745,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_makesprite3"
+        ],
         "progression": "Landmarks & Events"
       },
       "bonus": false,
@@ -1704,6 +1770,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_touches3"
+        ],
         "progression": "Landmarks & Events"
       },
       "bonus": false,
@@ -1726,6 +1795,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_freeplay_-usa-map"
+        ],
         "progression": "Landmarks & Events"
       },
       "bonus": false,
@@ -1748,6 +1820,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_survey_L3"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -1770,6 +1845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_demo"
+        ],
         "progression": "Project Demonstration"
       },
       "bonus": false,
@@ -1792,6 +1870,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_predict"
+        ],
         "progression": "Code Prediction"
       },
       "bonus": false,
@@ -1814,6 +1895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_background"
+        ],
         "progression": "Programming Storytellers"
       },
       "bonus": false,
@@ -1836,6 +1920,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_tell2"
+        ],
         "progression": "Programming Storytellers"
       },
       "bonus": false,
@@ -1858,6 +1945,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_sotires_debug"
+        ],
         "progression": "Programming Storytellers"
       },
       "bonus": false,
@@ -1880,6 +1970,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_stories_details"
+        ],
         "progression": "Programming Storytellers"
       },
       "bonus": false,
@@ -1902,6 +1995,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_landmarks_survey_L4"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -2308,10 +2404,11 @@
   "resources": [
     {
       "name": "Activity Guide Planning",
-      "url": "https://docs.google.com/document/d/1cWsERLbWga8sO4STIPCoU2tMhTQTJeQa_A1jAASuI1c/view",
+      "url": "https://docs.google.com/document/d/1cWsERLbWga8sO4STIPCoU2tMhTQTJeQa_A1jAASuI1c/template/preview",
       "key": "activity_guide_planning",
       "properties": {
         "audience": "Verified Teacher",
+        "download_url": "https://docs.google.com/document/d/1cWsERLbWga8sO4STIPCoU2tMhTQTJeQa_A1jAASuI1c/export/pdf",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -2320,10 +2417,11 @@
     },
     {
       "name": "Activity Guide Planning",
-      "url": "https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/view",
+      "url": "https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/template/preview",
       "key": "activity_guide_planning_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1vRR0wk6Gma_uwKLAvXnHsB775bnWOaKtkJZQtKuzeWA/export/pdf",
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -2344,10 +2442,11 @@
     },
     {
       "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/1NQ8RV3VFLGnERpfgqFEUMU_a0-vGeKTvnilGFdVHlU0/edit#slide=id.gb5df23a5d7_0_0",
+      "url": "https://docs.google.com/presentation/d/1NQ8RV3VFLGnERpfgqFEUMU_a0-vGeKTvnilGFdVHlU0/template/preview",
       "key": "lesson_slides",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1NQ8RV3VFLGnERpfgqFEUMU_a0-vGeKTvnilGFdVHlU0/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2355,35 +2454,12 @@
       }
     },
     {
-      "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/1NQ8RV3VFLGnERpfgqFEUMU_a0-vGeKTvnilGFdVHlU0/edit#slide=id.gb5df23a5d7_0_0",
-      "key": "lesson_slides_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_slides_1"
-      }
-    },
-    {
-      "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/1NQ8RV3VFLGnERpfgqFEUMU_a0-vGeKTvnilGFdVHlU0/view",
-      "key": "lesson_slides_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_slides_2"
-      }
-    },
-    {
       "name": "Local Landmarks Map Reflection & Observation",
-      "url": "https://docs.google.com/document/d/1EBmhoM1MaBAhb46T7LKx2gFktTxxniZJJkNzZd0iXYc/view",
+      "url": "https://docs.google.com/document/d/1EBmhoM1MaBAhb46T7LKx2gFktTxxniZJJkNzZd0iXYc/template/preview",
       "key": "local_landmarks_map_reflection_observation",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1EBmhoM1MaBAhb46T7LKx2gFktTxxniZJJkNzZd0iXYc/export/pdf",
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -2401,7 +2477,7 @@
     {
       "seeding_key": {
         "lesson.key": "US Landmarks",
-        "resource.key": "lesson_slides_2"
+        "resource.key": "lesson_slides"
       }
     },
     {
@@ -2419,7 +2495,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "resource.key": "lesson_slides_2"
+        "resource.key": "lesson_slides"
       }
     },
     {
@@ -2437,13 +2513,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "resource.key": "lesson_slides_1"
+        "resource.key": "lesson_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "lesson_slides_2"
+        "resource.key": "lesson_slides"
       }
     },
     {
