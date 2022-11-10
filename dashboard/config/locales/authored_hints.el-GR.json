@@ -274,7 +274,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "CourseD_Dance_2020_02": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "CourseD_Dance_2020_03": {
@@ -303,7 +303,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?** \n\n-   Απλά πατήστε το κουμπί «Τέλος»!",
           "repeat_every_ideas": "**Χρειάζεστε ιδέες?**\n\n-   Αλλάζετε επανειλημμένα το μέγεθος ενός χορευτή για να το κάνετε να αυξηθεί.\n-   Αλλάζετε επανειλημμένα την περιστροφή ενός χορευτή για να τον κάνετε να στροβιλιστεί.\n-   Αλλάζετε επανειλημμένα την οριζόντια ή κάθετη θέση ενός χορευτή για να τον μετακινήσετε κατά μήκος της οθόνης.\n\n _Μπορείτε επίσης να χρησιμοποιήσετε αρνητικούς αριθμούς για να δημιουργήσετε το αντίθετο αποτέλεσμα!_",
-          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Το εναλλακτικό μπλοκ βρίσκεται στην κατηγορία «Χορευτές»."
@@ -320,7 +320,7 @@
         },
         "CourseD_Dance_Party_04": {
           "validation": "\\*\\* Πώς μπορώ να περάσω αυτό επίπεδο; \\*\\*\n\n-   Θα πρέπει να κάνετε το εφέ φόντου να αλλάξει κάποια στιγμή κατά τη διάρκεια του έβδομου μέτρου του τραγουδιού.\n\n_Αυτό το επίπεδο τελειώνει μετά από 10 μέτρα._",
-          "challenges": "**Προαιρετική Δοκιμασία**\n\nΑλλάξτε το εφέ φόντου σε διαφορετικά σημεία του τραγουδιού συνδέοντας στο νέο μπλοκ\\* κάτω από τα <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> γεγονότα."
+          "challenges": "**Προαιρετική Δοκιμασία**\n\nΑλλάξτε το εφέ φόντου σε διαφορετικά σημεία του τραγουδιού συνδέοντας στο νέο μπλοκ\\* κάτω από τα ???\"measures\" γεγονότα."
         },
         "CourseD_Dance_Party_06": {
           "validation": "\\*\\* Πώς μπορώ να περάσω αυτό επίπεδο; \\*\\*\n\n-   Πρέπει να έχετε τουλάχιστον δύο χορευτές.\n\n_Αυτό το επίπεδο τελειώνει μετά από 6 μέτρα._",
@@ -362,7 +362,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "Dance_2019_02": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "Dance_2019_03": {
@@ -391,7 +391,7 @@
         "Dance_2019_09": {
           "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?** \n\n-   Απλά πατήστε το κουμπί «Τέλος»!",
           "repeat_every_ideas": "**Χρειάζεστε ιδέες?**\n\n-   Αλλάζετε επανειλημμένα το μέγεθος ενός χορευτή για να το κάνετε να αυξηθεί.\n-   Αλλάζετε επανειλημμένα την περιστροφή ενός χορευτή για να τον κάνετε να στροβιλιστεί.\n-   Αλλάζετε επανειλημμένα την οριζόντια ή κάθετη θέση ενός χορευτή για να τον μετακινήσετε κατά μήκος της οθόνης.\n\n _Μπορείτε επίσης να χρησιμοποιήσετε αρνητικούς αριθμούς για να δημιουργήσετε το αντίθετο αποτέλεσμα!_",
-          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "\\*\\* Πώς μπορώ να περάσω αυτό επίπεδο; \\*\\*\n\n-   Βεβαιωθείτε ότι εμφανίζεται στην οθόνη ένας χορευτής.\n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
@@ -405,7 +405,7 @@
         },
         "Dance_Party_04": {
           "validation": "\\*\\* Πώς μπορώ να περάσω αυτό επίπεδο; \\*\\*\n\n-   Θα πρέπει να κάνετε το εφέ φόντου να αλλάξει κάποια στιγμή κατά τη διάρκεια του έβδομου μέτρου του τραγουδιού.\n\n_Αυτό το επίπεδο τελειώνει μετά από 10 μέτρα._",
-          "challenges": "**Προαιρετική Δοκιμασία**\n\nΑλλάξτε το εφέ φόντου σε διαφορετικά σημεία του τραγουδιού συνδέοντας στο νέο μπλοκ\\* κάτω από τα <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> γεγονότα."
+          "challenges": "**Προαιρετική Δοκιμασία**\n\nΑλλάξτε το εφέ φόντου σε διαφορετικά σημεία του τραγουδιού συνδέοντας στο νέο μπλοκ\\* κάτω από τα ???\"measures\" γεγονότα."
         },
         "Dance_Party_05": {
           "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής σας χρειάζεται να μετακινηθεί μέσα από τουλάχιστον 4 διαφορετικές χορευτικές κινήσεις πριν τελειώσει το επίπεδο. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 12 μέτρα.\\_"
@@ -696,7 +696,7 @@
           "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n\n-   Να χρησιμοποιήσει την συνάρτηση\n-   Να κινηθεί εμπρός κατά 100 + 75 pixels\n-   Να χρησιμοποιήσει την συνάρτηση"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n\n-   Να χρησιμοποιήσει την συνάρτηση\n-   Να κινηθεί εμπρός κατά 100 + 75 pixels\n-   Να χρησιμοποιήσει την συνάρτηση"
+          "courseD_artist_functions2_a": "Το πρόγραμμά σου πρέπει:\n- Να χρησιμοποιήσει την συνάρτηση\n- Να κινηθεί εμπρός κατά 100 + 75 pixels\n- Να χρησιμοποιήσει την συνάρτηση"
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -772,7 +772,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "CourseD_Dance_2020_03_2021": {
@@ -801,7 +801,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?** \n\n-   Απλά πατήστε το κουμπί «Τέλος»!",
           "repeat_every_ideas": "**Χρειάζεστε ιδέες?**\n\n-   Αλλάζετε επανειλημμένα το μέγεθος ενός χορευτή για να το κάνετε να αυξηθεί.\n-   Αλλάζετε επανειλημμένα την περιστροφή ενός χορευτή για να τον κάνετε να στροβιλιστεί.\n-   Αλλάζετε επανειλημμένα την οριζόντια ή κάθετη θέση ενός χορευτή για να τον μετακινήσετε κατά μήκος της οθόνης.\n\n _Μπορείτε επίσης να χρησιμοποιήσετε αρνητικούς αριθμούς για να δημιουργήσετε το αντίθετο αποτέλεσμα!_",
-          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Το εναλλακτικό μπλοκ βρίσκεται στην κατηγορία «Χορευτές»."
@@ -813,26 +813,26 @@
           "voyage_aquatic_9a": "Τι πανέμορφος κοραλλιογενής ύφαλος! Το μπλε κοράλλι είναι ο **σωστός** δρόμος που πρέπει να ακολουθήσετε. Βεβαιωθείτε ότι το κόκκινο κοράλλι δεν είναι **αριστερά**!"
         },
         "CourseF_outbreak1": {
-          "step1": "Χρησιμοποιήστε αυτά τα κομμάτια πάζλ για να δημιουργήστε τους χαρακτήρες σας:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Χαρακτήρες** της εργαλειοθήκης.",
-          "step2": "Αλλάξτε το μέγεθος των χαρακτήρων με αυτό το κομμάτι παζλ: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>\n\nΒρίσκεται στην κατηγορία **Ενέργειες** στην εργαλειοθήκη.",
-          "step3": "Κάντε όλους του χαρακτήρες να ξεκινούν να περιφέρονται με αυτό: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Ενέργειες** της εργαλειοθήκης."
+          "step1": "Χρησιμοποιήστε αυτά τα κομμάτια πάζλ για να δημιουργήστε τους χαρακτήρες σας:\n\n\n      \"healthy\"\n      \n        \n          10\n        \n      \n    \n\n\n      \"sick\"\n      \n        \n          1\n        \n      \n    \n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Χαρακτήρες** της εργαλειοθήκης.",
+          "step2": "Αλλάξτε το μέγεθος των χαρακτήρων με αυτό το κομμάτι παζλ: \"scale\"50\n\nΒρίσκεται στην κατηγορία **Ενέργειες** στην εργαλειοθήκη.",
+          "step3": "Κάντε όλους του χαρακτήρες να ξεκινούν να περιφέρονται με αυτό: wandering\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Ενέργειες** της εργαλειοθήκης."
         },
         "CourseF_outbreak2": {
-          "hint1": "Κάντε κλικ στο \"+\" στο κομμάτι πάζλ γεγονός. Γεμίστε το άδειο σημείο στο \"αλλαγή εμφάνισης\" κομμάτι παζλ με το κομμάτι πάζλ \"υποκείμενο\" που βρίσκεται μέσα.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Κάντε κλικ στο \"+\" στο κομμάτι πάζλ γεγονός. Γεμίστε το άδειο σημείο στο \"αλλαγή εμφάνισης\" κομμάτι παζλ με το κομμάτι πάζλ \"υποκείμενο\" που βρίσκεται μέσα.\n\n\"when\"\"healthy\"\"sick\"\"sick\""
         },
         "CourseF_outbreak3": {
-          "hint1": "Για να δώσετε μάσκες σε τέρατα, χρησιμοποιήστε το κομμάτι παζλ \"αλλαγή εμφάνισης\" με ένα γεγονός \"όταν κάνω κλικ επάνω τους\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nΒεβαιωθείτε ότι σύρατε το μικρό κόκκινο κομμάτι πάζλ \"που έχουμε κάνει κλικ επάνω του\" επίσης!",
-          "hint2": "Ο νέος κώδικας για αυτό το επίπεδο θα πρέπει να μοιάζει κάτι σαν και το παρακάτω:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Για να δώσετε μάσκες σε τέρατα, χρησιμοποιήστε το κομμάτι παζλ \"αλλαγή εμφάνισης\" με ένα γεγονός \"όταν κάνω κλικ επάνω τους\":\n\n\"when\"\"healthy\"\"healthy\\_mask\"\n\nΒεβαιωθείτε ότι σύρατε το μικρό κόκκινο κομμάτι πάζλ \"που έχουμε κάνει κλικ επάνω του\" επίσης!",
+          "hint2": "Ο νέος κώδικας για αυτό το επίπεδο θα πρέπει να μοιάζει κάτι σαν και το παρακάτω:\n\n\"when\"\"healthy\"\"healthy_mask\"\\<block type=\"gamelab_clickedSpritePointer\">\"when\"\"sick\"\"sick_mask\"\\<block type=\"gamelab_clickedSpritePointer\">"
         },
         "CourseF_outbreak4": {
-          "challenge": "## Ψάχνετε για μια επιπρόσθετη πρόκληση;\n\nΜπορείτε επίσης να κάνετε τα  τέρατα να κινούνται γρηγορότερα ή πιο αργά.\n\n1.  Πατήστε \"Επεξεργασία\" σε αυτό το κομμάτι παζλ <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Αυξήστε ή μειώστε τον αριθμό σε αυτό το κομμάτι παζλ\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nΓια να κάνετε τα τέρατα να κινούνται πιο αργά, επιλέξτε ένα δεκαδικό ψηφίο όπως \"0,5\" ή \"0,25\". Για να τα κάνετε να κινούνται γρηγορότερα, επιλέξτε έναν οποιοδήποτε αριθμό μεγαλύτερο του 1."
+          "challenge": "## Ψάχνετε για μια επιπρόσθετη πρόκληση;\n\nΜπορείτε επίσης να κάνετε τα  τέρατα να κινούνται γρηγορότερα ή πιο αργά.\n\n1.  Πατήστε \"Επεξεργασία\" σε αυτό το κομμάτι παζλ wandering\n2.  Αυξήστε ή μειώστε τον αριθμό σε αυτό το κομμάτι παζλ\n\nthis sprite1\n\n\nΓια να κάνετε τα τέρατα να κινούνται πιο αργά, επιλέξτε ένα δεκαδικό ψηφίο όπως \"0,5\" ή \"0,25\". Για να τα κάνετε να κινούνται γρηγορότερα, επιλέξτε έναν οποιοδήποτε αριθμό μεγαλύτερο του 1."
         },
         "CourseF_outbreak6": {
-          "hint2": "Βεβαιωθείτε ότι μετακινήσατε τα άλλα κομμάτια παζλ στο εσωτερικό του κομματιού παζλ \"αν πιθανότητα\":\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Θα χρειαστεί να προσθέσετε 3 περισσότερα γεγονότα \"όταν ακουμπάει\" για να ελέγξετε όλους τους δυνατούς συνδυασμούς \"αγγιγμάτων\" ανάμεσα σε υγιή και μολυσμένους χαρακτήρες.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>[0]"
+          "hint2": "Βεβαιωθείτε ότι μετακινήσατε τα άλλα κομμάτια παζλ στο εσωτερικό του κομματιού παζλ \"αν πιθανότητα\":\n\n    \"when\"\n    \n      \n        \"healthy\"\n      \n    \n    \n      \n        \"sick\"\n      \n    \n    \n      \n      90\n        \n          \n            \"sick\"\n            \n              \n            \n          \n        \n      \n    \n  \n",
+          "hint1": "Θα χρειαστεί να προσθέσετε 3 περισσότερα γεγονότα \"όταν ακουμπάει\" για να ελέγξετε όλους τους δυνατούς συνδυασμούς \"αγγιγμάτων\" ανάμεσα σε υγιή και μολυσμένους χαρακτήρες.\n\n\n      \"when\"\n      \n        \n          \"healthy_mask\"\n        \n      \n      \n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          \"sick\"\n        \n      \n      \n      75\n      \n    \n      \"when\"\n      \n        \n          \"healthy\"\n        \n      \n      \n        \n          \"sick_mask\"\n        \n      \n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      25\n      \n    \n      \"when\"\n      \n        \n          \"healthy_mask\"\n        \n      \n      \n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          \"sick_mask\"\n        \n      \n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      10\n      \n    [0]"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Εμβόλια\n\nΜπορείτε να προσομοιώσετε τον εμβολιασμό των τεράτων όταν κάνετε κλικ πάνω τους. Για να το κάνετε αυτό, χρησιμοποιήστε το κομμάτι μπλοκ \"αλλαγή εμφάνισης\" με αυτό το γεγονός:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Εμβόλια\n\nΜπορείτε να προσομοιώσετε τον εμβολιασμό των τεράτων όταν κάνετε κλικ πάνω τους. Για να το κάνετε αυτό, χρησιμοποιήστε το κομμάτι μπλοκ \"αλλαγή εμφάνισης\" με αυτό το γεγονός:\n\n\n      \"when\"\n      \n        \n          \"healthy\\_mask\"\n        \n      \n    ",
           "verionhistory": "Κολλήσατε; Μπορείτε πάντα να επαναφέρετε τον κώδικά σας κάνοντας κλικ στο \"Ιστορικό εκδοχών\" που ακολουθεί και έπειτα επιλέγοντας \"Εκκίνηση Ξανά\"."
         },
         "Function intro Ryan_2021": {
@@ -923,7 +923,7 @@
           "challenges": "\\*\\* Προαιρετικές Δοκιμασίες \\*\\*\n\n-   Επιλέξτε να παίξετε ένα διαφορετικό τραγούδι.\n-   Μετακινήστε τον χορευτή σας σε μια νέα θέση.\n-   Δημιουργήστε περισσότερους από έναν χορευτή."
         },
         "CourseD_Dance_2020_022022": {
-          "validation": "\\*\\* Πώς μπορώ να περάσω αυτό το επίπεδο; \\*\\* \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n\\_ Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα.\\_",
+          "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο;** \n\n-   Ο χορευτής πρέπει να εκτελέσει μια κίνηση.\n\n-   Θα πρέπει να πατήσετε ένα πλήκτρο βέλους. \n\n_Αυτό το επίπεδο τελειώνει μετά από 4 μέτρα._",
           "challenges": "\\*\\* Προαιρετική Πρόκληση \\*\\*\n\n-   Χρησιμοποιήστε περισσότερα από ένα [blockly block] [0] μπλοκ."
         },
         "CourseD_Dance_2020_032022": {
@@ -952,7 +952,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**Πώς μπορώ να περάσω αυτό το επίπεδο?** \n\n-   Απλά πατήστε το κουμπί «Τέλος»!",
           "repeat_every_ideas": "**Χρειάζεστε ιδέες?**\n\n-   Αλλάζετε επανειλημμένα το μέγεθος ενός χορευτή για να το κάνετε να αυξηθεί.\n-   Αλλάζετε επανειλημμένα την περιστροφή ενός χορευτή για να τον κάνετε να στροβιλιστεί.\n-   Αλλάζετε επανειλημμένα την οριζόντια ή κάθετη θέση ενός χορευτή για να τον μετακινήσετε κατά μήκος της οθόνης.\n\n _Μπορείτε επίσης να χρησιμοποιήσετε αρνητικούς αριθμούς για να δημιουργήσετε το αντίθετο αποτέλεσμα!_",
-          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "\\*\\* Προαιρετική δοκιμασία \\*\\*\n\n-   Μπορείτε επίσης να χρησιμοποιήσετε αυτή το νέο μπλοκ εκδηλώσεων μέσα από έναν κατάλογο με χορευτικές κινήσεις αλλάζοντας την κίνηση στο `(Τυχαίο)`, `(Επόμενο)` ή `(Προηγούμενο)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Το εναλλακτικό μπλοκ βρίσκεται στην κατηγορία «Χορευτές»."
@@ -970,26 +970,26 @@
           "voyage_aquatic_9a": "Τι πανέμορφος κοραλλιογενής ύφαλος! Το μπλε κοράλλι είναι ο **σωστός** δρόμος που πρέπει να ακολουθήσετε. Βεβαιωθείτε ότι το κόκκινο κοράλλι δεν είναι **αριστερά**!"
         },
         "CourseF_outbreak1_-2022-2": {
-          "step1": "Χρησιμοποιήστε αυτά τα κομμάτια πάζλ για να δημιουργήστε τους χαρακτήρες σας:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Χαρακτήρες** της εργαλειοθήκης.",
-          "step2": "Αλλάξτε το μέγεθος των χαρακτήρων με αυτό το κομμάτι παζλ: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>\n\nΒρίσκεται στην κατηγορία **Ενέργειες** στην εργαλειοθήκη.",
-          "step3": "Κάντε όλους του χαρακτήρες να ξεκινούν να περιφέρονται με αυτό: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Ενέργειες** της εργαλειοθήκης."
+          "step1": "Χρησιμοποιήστε αυτά τα κομμάτια πάζλ για να δημιουργήστε τους χαρακτήρες σας:\n\n\n      \"healthy\"\n      \n        \n          10\n        \n      \n    \n\n\n      \"sick\"\n      \n        \n          1\n        \n      \n    \n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Χαρακτήρες** της εργαλειοθήκης.",
+          "step2": "Αλλάξτε το μέγεθος των χαρακτήρων με αυτό το κομμάτι παζλ: \"scale\"50\n\nΒρίσκεται στην κατηγορία **Ενέργειες** στην εργαλειοθήκη.",
+          "step3": "Κάντε όλους του χαρακτήρες να ξεκινούν να περιφέρονται με αυτό: wandering\n\nΑυτό το κομμάτι παζλ βρίσκεται στην κατηγορία **Ενέργειες** της εργαλειοθήκης."
         },
         "CourseF_outbreak2_-2022-2": {
-          "hint1": "Κάντε κλικ στο \"+\" στο κομμάτι πάζλ γεγονός. Γεμίστε το άδειο σημείο στο \"αλλαγή εμφάνισης\" κομμάτι παζλ με το κομμάτι πάζλ \"υποκείμενο\" που βρίσκεται μέσα.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Κάντε κλικ στο \"+\" στο κομμάτι πάζλ γεγονός. Γεμίστε το άδειο σημείο στο \"αλλαγή εμφάνισης\" κομμάτι παζλ με το κομμάτι πάζλ \"υποκείμενο\" που βρίσκεται μέσα.\n\n\"when\"\"healthy\"\"sick\"\"sick\""
         },
         "CourseF_outbreak3_-2022-2": {
-          "hint1": "Για να δώσετε μάσκες σε τέρατα, χρησιμοποιήστε το κομμάτι παζλ \"αλλαγή εμφάνισης\" με ένα γεγονός \"όταν κάνω κλικ επάνω τους\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nΒεβαιωθείτε ότι σύρατε το μικρό κόκκινο κομμάτι πάζλ \"που έχουμε κάνει κλικ επάνω του\" επίσης!",
-          "hint2": "Ο νέος κώδικας για αυτό το επίπεδο θα πρέπει να μοιάζει κάτι σαν και το παρακάτω:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Για να δώσετε μάσκες σε τέρατα, χρησιμοποιήστε το κομμάτι παζλ \"αλλαγή εμφάνισης\" με ένα γεγονός \"όταν κάνω κλικ επάνω τους\":\n\n\"when\"\"healthy\"\"healthy\\_mask\"\n\nΒεβαιωθείτε ότι σύρατε το μικρό κόκκινο κομμάτι πάζλ \"που έχουμε κάνει κλικ επάνω του\" επίσης!",
+          "hint2": "Ο νέος κώδικας για αυτό το επίπεδο θα πρέπει να μοιάζει κάτι σαν και το παρακάτω:\n\n\"when\"\"healthy\"\"healthy_mask\"\\<block type=\"gamelab_clickedSpritePointer\">\"when\"\"sick\"\"sick_mask\"\\<block type=\"gamelab_clickedSpritePointer\">"
         },
         "CourseF_outbreak4_-2022-2": {
-          "challenge": "## Ψάχνετε για μια επιπρόσθετη πρόκληση;\n\nΜπορείτε επίσης να κάνετε τα  τέρατα να κινούνται γρηγορότερα ή πιο αργά.\n\n1.  Πατήστε \"Επεξεργασία\" σε αυτό το κομμάτι παζλ <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Αυξήστε ή μειώστε τον αριθμό σε αυτό το κομμάτι παζλ\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nΓια να κάνετε τα τέρατα να κινούνται πιο αργά, επιλέξτε ένα δεκαδικό ψηφίο όπως \"0,5\" ή \"0,25\". Για να τα κάνετε να κινούνται γρηγορότερα, επιλέξτε έναν οποιοδήποτε αριθμό μεγαλύτερο του 1."
+          "challenge": "## Ψάχνετε για μια επιπρόσθετη πρόκληση;\n\nΜπορείτε επίσης να κάνετε τα  τέρατα να κινούνται γρηγορότερα ή πιο αργά.\n\n1.  Πατήστε \"Επεξεργασία\" σε αυτό το κομμάτι παζλ wandering\n2.  Αυξήστε ή μειώστε τον αριθμό σε αυτό το κομμάτι παζλ\n\nthis sprite1\n\n\nΓια να κάνετε τα τέρατα να κινούνται πιο αργά, επιλέξτε ένα δεκαδικό ψηφίο όπως \"0,5\" ή \"0,25\". Για να τα κάνετε να κινούνται γρηγορότερα, επιλέξτε έναν οποιοδήποτε αριθμό μεγαλύτερο του 1."
         },
         "CourseF_outbreak6_-2022-2": {
-          "hint2": "Βεβαιωθείτε ότι μετακινήσατε τα άλλα κομμάτια παζλ στο εσωτερικό του κομματιού παζλ \"αν πιθανότητα\":\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Θα χρειαστεί να προσθέσετε 3 περισσότερα γεγονότα \"όταν ακουμπάει\" για να ελέγξετε όλους τους δυνατούς συνδυασμούς \"αγγιγμάτων\" ανάμεσα σε υγιή και μολυσμένους χαρακτήρες.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>[0]"
+          "hint2": "Βεβαιωθείτε ότι μετακινήσατε τα άλλα κομμάτια παζλ στο εσωτερικό του κομματιού παζλ \"αν πιθανότητα\":\n\n    \"when\"\n    \n      \n        \"healthy\"\n      \n    \n    \n      \n        \"sick\"\n      \n    \n    \n      \n      90\n        \n          \n            \"sick\"\n            \n              \n            \n          \n        \n      \n    \n  \n",
+          "hint1": "Θα χρειαστεί να προσθέσετε 3 περισσότερα γεγονότα \"όταν ακουμπάει\" για να ελέγξετε όλους τους δυνατούς συνδυασμούς \"αγγιγμάτων\" ανάμεσα σε υγιή και μολυσμένους χαρακτήρες.\n\n\n      \"when\"\n      \n        \n          \"healthy_mask\"\n        \n      \n      \n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          \"sick\"\n        \n      \n      \n      75\n      \n    \n      \"when\"\n      \n        \n          \"healthy\"\n        \n      \n      \n        \n          \"sick_mask\"\n        \n      \n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      25\n      \n    \n      \"when\"\n      \n        \n          \"healthy_mask\"\n        \n      \n      \n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          \"sick_mask\"\n        \n      \n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      10\n      \n    [0]"
         },
         "CourseF_outbreak7_-2022-2": {
-          "whenclicked": "## Εμβόλια\n\nΜπορείτε να προσομοιώσετε τον εμβολιασμό των τεράτων όταν κάνετε κλικ πάνω τους. Για να το κάνετε αυτό, χρησιμοποιήστε το κομμάτι μπλοκ \"αλλαγή εμφάνισης\" με αυτό το γεγονός:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Εμβόλια\n\nΜπορείτε να προσομοιώσετε τον εμβολιασμό των τεράτων όταν κάνετε κλικ πάνω τους. Για να το κάνετε αυτό, χρησιμοποιήστε το κομμάτι μπλοκ \"αλλαγή εμφάνισης\" με αυτό το γεγονός:\n\n\n      \"when\"\n      \n        \n          \"healthy\\_mask\"\n        \n      \n    ",
           "verionhistory": "Κολλήσατε; Μπορείτε πάντα να επαναφέρετε τον κώδικά σας κάνοντας κλικ στο \"Ιστορικό εκδοχών\" που ακολουθεί και έπειτα επιλέγοντας \"Εκκίνηση Ξανά\"."
         },
         "Function intro Ryan2022": {
@@ -1055,6 +1055,186 @@
         },
         "courseE_artist_functions82022": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
+        },
+        "coursee_helloworld_say": {
+          "hello-world-first-solution-pizza": "Για να κάνετε την πίτσα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n\n    \"when\"\n    \n      \n        \"cuteanimals_hippo\"\n      \n    \n    \n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        \"gradient\\_30\"\n      \n    \n  \n"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n\n            \n              \n                \"cuteanimals_rooster_hello\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n\n    \"when\"\n    \n      \n        \"\"cuteanimals_sheep\"\n      \n    \n    \n      \\<block type=\"gamelab_setAnimation\">\n        \"\"cuteanimals_sheep\"\n        \n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            \"\"cuteanimals_goat_hello\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n\n    \"when\"\n    \n      \n        \"cuteanimals_seahorse\"\n      \n    \n    \n      \\<block type=\"gamelab_spriteSay\">\n        Hello, ocean!\n        \n          \n            \"cuteanimals\\_seahorse\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Βεβαιωθείτε ότι τα κοστούμια ταιριάζουν σε κάθε τετράγωνο.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Για να κάνετε την αρκούδα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"cuteanimals_tiger\"\n        \n      \n      \n        \\<block type=\"math_number\">\n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"cuteanimals_cheetah_hello\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n\n    \"when\"\n    \n      \n        \"emoji_35_1\"\n      \n    \n    \n      \n        \"gradient_17_1\"\n      \n    \n  \n"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n\n            \n              \n                \"emoji_05_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n\n    \"when\"\n    \n      \n        \"emoji_18_1\"\n      \n    \n    \n      \n        \"emoji_25_1\"\n        \n          \n            \"emoji_18_1\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n\n    \"when\"\n    \n      \n        \"emoji_06_1\"\n      \n    \n    \n      \n        Look at that!\n        \n          \n            \"emoji_06_1\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n\n      Look at me!\n      \n        \n          \"emoji_14_1\"\n        \n      \n    "
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Για να κάνετε το emoji να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"emoji_17_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"emoji_33_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n\n            \n              \n                \"face_burger_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n\n            \n              \n                \"face_burger_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n\n            \n              \n                \"space_astronaut_cat\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_food_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        \"face_taco_1\"\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n\n    \"when\"\n    \n      \n        \"soccer_player_2\"\n      \n    \n    \n      \n        \"soccer_player_3\"\n        \n          \n            \"soccer_player_2\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n\n    \"when\"\n    \n      \n        \"space_astronaut_3\"\n      \n    \n    \n      \n        \"space_astronaut_2\"\n        \n          \n            \"space_astronaut_3\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n\n    \"when\"\n    \n      \n        \"space_alien_ship\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"space_alien_ship\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_location_space-2022": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n\n      Hello, broccoli!\n      \n        \n          \"face_carrot_1\"\n        \n      \n    "
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n\n      Goal!\n      \n        \n          \"soccer\\_ball\"\n        \n      \n    "
+        },
+        "helloworld_food_multi_space-2022": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n\n      Hello, alien!\n      \n        \n          \"face_carrot_1\"\n        \n      \n    "
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Για να κάνετε την πίτσα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Για να κάνετε το sprite να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Για να κάνετε το sprite να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
+        },
+        "helloworld_food_sizes_space-2022": {
+          "storyboard_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n\n  \"when\"\n  \n    \n      \"space_astronaut_1\"\n    \n  \n  \n    \n      \"scale\"\n      \n        \n          \"space_astronaut_1\"\n        \n      \n      \n        \n          50\n        \n      \n    \n  \n",
+          "storyboard_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n\n  \"when\"\n  \n    \n      \"space_satellite\"\n    \n  \n  \n    \\<block type=\"gamelab_changePropBy\">\n      \"scale\"\n      \n        \n          \"space_satellite\"\n        \n      \n      \n        \\<block type=\"math_number\" can_disconnect_from\\_parent=\"false\">\n          10\n        \n      \n    \n  \n"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "Μπορείτε να αλλάξετε το φόντο συνδέοντας ένα μπλοκ `set background` κάτω από ένα μπλοκ συμβάντων «όταν κλικαρίσει\\`:\n\n\n    \"when\"\n    \n      \n        \"retroship_21\"\n      \n    \n    \n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        \"background_landscape11_1\"\n      \n    \n  \n"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "_Σημείωση:_ Για να δώσετε σε ένα sprite μια συμπεριφορά, πρέπει να χρησιμοποιήσετε ένα μπλοκ `sprite begins` με ένα από τα μπλοκ πράσινης συμπεριφοράς, όπως το \\`sprining right'.\n\n\n            \n              \n                \"retrocreature_09_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Κάντε κλικ στα sprites ενώ εκτελείται το πρόγραμμα.",
+          "hw_no_changes": "Δεν χρειάζεται να αλλάξετε οποιονδήποτε από τον κώδικα σε αυτό το επίπεδο."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "Δοκιμάστε να συνδέσετε ένα μπλοκ «αλλαγή κοστουμιών» κάτω από ένα μπλοκ συμβάντων «όταν κλικαρισμένη\\`».\n\n\n    \"when\"\n    \n      \n        \"retrocreature_07_1\"\n      \n    \n    \n      \n        \"retrocreature_20_1\"\n        \n          \n            \"retrocreature_07_1\"\n          \n        \n      \n    \n  \n"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "Συνδέστε ένα μπλοκ «λένε» κάτω από ένα «όταν κάνετε κλικ» μπλοκ συμβάντων:\n\n\n    \"when\"\n    \n      \n        \"retro_powerup_heart\"\n      \n    \n    \n      \n        POWERUP!\n        \n          \n            \"retro_powerup_heart\"\n          \n        \n      \n    \n  "
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "Για να αλλάξετε τη θέση ενός sprite, κάντε κλικ στην καρφίτσα στο μπλοκ τοποθεσίας και, στη συνέχεια, κάντε κλικ στο σημείο όπου θέλετε να πάει.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "Σιγουρέψου ότι τα κοστούμια ταιριάζουν με κάθε ξωτικό.\n\n      Hello!\n      \n        \n          \"retrocreature\\_16\"\n        \n      \n    "
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Για να κάνετε το πλάσμα να πει κάτι, συνδέστε τα μπλοκ κώδικα ως εξής:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "Για να ορίσετε το μέγεθος ενός sprite μόνο μία φορά, μπορείτε να χρησιμοποιήσετε αυτό το μπλοκ:\n\n\n    \"scale\"\n    \n      \n        \"retro_purple_burst\"\n      \n    \n    \n      \n        50\n      \n    \n  ",
+          "hw_retro_changePropBy": "Αν θέλετε να αλλάξετε το μέγεθος ενός sprite ξανά και ξανά (με συμβάντα), χρησιμοποιήστε αυτό το μπλοκ:\n\n\n      \"scale\"\n      \n        \n          \"retrocreature_11_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
         }
       }
     }
