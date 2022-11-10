@@ -31,21 +31,15 @@
   margin-right: 12px;
 }
 
-%sound-row {
+.soundRow {
   overflow: hidden;
   padding: 4px 0;
   &:hover {
     background-color: $gray-800;
   }
-}
-
-.soundRow {
-  @extend %sound-row;
-}
-
-.soundRowSelected {
-  @extend %sound-row;
-  background-color: $gray-700;
+  &Selected {
+    background-color: $gray-700;
+  }
 }
 
 .soundRowLeft {
@@ -84,9 +78,9 @@
 
 .preview {
   color: $gray-300;
-}
 
-.previewPlaying {
-  color: $gray-600;
-  cursor: default;
+  &Playing {
+    color: $gray-600;
+    cursor: default;
+  }
 }

@@ -1,23 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './soundsPanel.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-
-const getSoundRowClassName = (currentValue, folderPath, soundSrc) => {
-  if (currentValue === folderPath + '/' + soundSrc) {
-    return styles.soundRowSelected;
-  } else {
-    return styles.soundRow;
-  }
-};
-
-const getPreviewClassName = (playingPreview, folderPath, soundSrc) => {
-  if (playingPreview === folderPath + '/' + soundSrc) {
-    return styles.previewPlaying;
-  } else {
-    return styles.preview;
-  }
-};
 
 const getIcon = type => {
   const typeToIcon = {
@@ -31,6 +16,61 @@ const getIcon = type => {
 
 const getIconClassName = type => {
   return styles['icon-' + type];
+};
+
+const SoundsPanelRow = ({
+  currentValue,
+  playingPreview,
+  folder,
+  sound,
+  onSelect,
+  onPreview
+}) => {
+  const soundPath = folder.path + '/' + sound.src;
+  const isSelected = soundPath === currentValue;
+  const isPlayingPreview = playingPreview === soundPath;
+
+  return (
+    <div
+      className={classNames(
+        styles.soundRow,
+        isSelected && styles.soundRowSelected
+      )}
+      onClick={() => onSelect(folder.path + '/' + sound.src)}
+    >
+      <div className={styles.soundRowLeft}>
+        <FontAwesome
+          icon={getIcon(sound.type)}
+          className={getIconClassName(sound.type)}
+        />
+      </div>
+      <div className={styles.soundRowMiddle}>{sound.name}</div>
+      <div className={styles.soundRowRight}>
+        <FontAwesome
+          icon={'play-circle'}
+          className={classNames(
+            styles.preview,
+            isPlayingPreview && styles.previewPlaying
+          )}
+          onClick={e => {
+            if (!isPlayingPreview) {
+              onPreview(folder.path + '/' + sound.src);
+            }
+            e.stopPropagation();
+          }}
+        />
+      </div>
+    </div>
+  );
+};
+
+SoundsPanelRow.propTypes = {
+  currentValue: PropTypes.string.isRequired,
+  playingPreview: PropTypes.string,
+  folder: PropTypes.object.isRequired,
+  sound: PropTypes.object.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  onPreview: PropTypes.func.isRequired
 };
 
 const SoundsPanel = ({
@@ -53,39 +93,15 @@ const SoundsPanel = ({
             <div className={styles.folderName}>{folder.name}</div>
             {folder.sounds.map((sound, soundIndex) => {
               return (
-                <div
-                  className={getSoundRowClassName(
-                    currentValue,
-                    folder.path,
-                    sound.src
-                  )}
+                <SoundsPanelRow
                   key={soundIndex}
-                  onClick={() => onSelect(folder.path + '/' + sound.src)}
-                >
-                  <div className={styles.soundRowLeft}>
-                    <FontAwesome
-                      icon={getIcon(sound.type)}
-                      className={getIconClassName(sound.type)}
-                    />
-                  </div>
-                  <div className={styles.soundRowMiddle}>{sound.name}</div>
-                  <div className={styles.soundRowRight}>
-                    <FontAwesome
-                      icon={'play-circle'}
-                      className={getPreviewClassName(
-                        playingPreview,
-                        folder.path,
-                        sound.src
-                      )}
-                      onClick={e => {
-                        if (playingPreview !== folder.path + '/' + sound.src) {
-                          onPreview(folder.path + '/' + sound.src);
-                        }
-                        e.stopPropagation();
-                      }}
-                    />
-                  </div>
-                </div>
+                  currentValue={currentValue}
+                  playingPreview={playingPreview}
+                  folder={folder}
+                  sound={sound}
+                  onSelect={onSelect}
+                  onPreview={onPreview}
+                />
               );
             })}
           </div>
