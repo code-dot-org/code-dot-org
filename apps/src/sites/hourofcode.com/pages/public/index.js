@@ -126,8 +126,7 @@ $(document).ready(function() {
       $('#continue-btn').hide();
       $('#submit-btn').show();
     } else if (
-      $('#hoc-event-type').val() === 'out_of_school' ||
-      $('#hoc-event-type').val() === 'after_school'
+      ['out_of_school', 'after_school'].includes($('#hoc-event-type').val())
     ) {
       // out of school, either US or non-US
       $('#school-autocomplete').hide();
@@ -244,10 +243,7 @@ function validateFields() {
     $('#event-type-error').hide();
   }
 
-  if (
-    $('#hoc-event-type').val() === 'out_of_school' ||
-    $('#hoc-event-type').val() === 'after_school'
-  ) {
+  if (['out_of_school', 'after_school'].includes($('#hoc-event-type').val())) {
     if ($('#organization-name').val() === '') {
       $('#organization-name-error').show();
       return false;
