@@ -28,8 +28,11 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import AnalyticsReporter from '../AnalyticsReporter';
 import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 import GetVerifiedBanner from './GetVerifiedBanner';
+
+const SAVE = 'section details saved';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -39,6 +42,7 @@ class EditSectionForm extends Component {
     title: PropTypes.string.isRequired,
     //Whether the user is adding a brand new section or editing an existing one.
     isNewSection: PropTypes.bool,
+    analyticsReporter: new AnalyticsReporter(),
 
     //Comes from redux
     initialUnitId: PropTypes.number,
@@ -66,6 +70,7 @@ class EditSectionForm extends Component {
   };
 
   onSaveClick = () => {
+    this.analyticsReporter.onButtonClicked(SAVE);
     const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.unitId;
