@@ -36,11 +36,16 @@ theme: responsive
   %img.right{src: "/images/hoc2022-landing-page-banner-right.svg", alt: I18n.t(:hoc2022_landing_page_banner_alt_right)}
 
 %main
-  -# Hiding the NASA banner until post-launch due to mktg reasons
-  -# %aside
+  %aside
     %img{src: "/images/nasa-logo.svg", alt: "NASA logo"}
-    %h1
-      Copy from NASA goes here
+    .wrapper
+      %h1
+        Join NASA for a special Hour of Code feature about
+        %em
+          computer science in space
+        !
+      %p
+        Airing 9am EST, December 5th on NASA STEM's YouTube channel.
     %a{href: "#", target: "_blank", rel: "noopener noreferrer"}
       %button
         Learn more
