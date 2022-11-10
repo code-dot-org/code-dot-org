@@ -46,6 +46,7 @@ function schoolDropdownOnChange(field, event) {
 }
 
 $(document).ready(function() {
+  console.log('im getting here!');
   const hocEventLocationElement = document.getElementById(
     'hoc-event-location-selector'
   );
@@ -125,7 +126,10 @@ $(document).ready(function() {
       $('#hoc-entire-school').show();
       $('#continue-btn').hide();
       $('#submit-btn').show();
-    } else if ($('#hoc-event-type').val() === 'out_of_school') {
+    } else if (
+      $('#hoc-event-type').val() === 'out_of_school' ||
+      $('#hoc-event-type').val() === 'after_school'
+    ) {
       // out of school, either US or non-US
       $('#school-autocomplete').hide();
       $('#organization-name-field').show();
@@ -241,7 +245,10 @@ function validateFields() {
     $('#event-type-error').hide();
   }
 
-  if ($('#hoc-event-type').val() === 'out_of_school') {
+  if (
+    $('#hoc-event-type').val() === 'out_of_school' ||
+    $('#hoc-event-type').val() === 'after_school'
+  ) {
     if ($('#organization-name').val() === '') {
       $('#organization-name-error').show();
       return false;
