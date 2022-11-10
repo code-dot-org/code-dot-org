@@ -42,6 +42,8 @@ is:
   hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
   hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
     play, and create with us.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
@@ -1026,11 +1028,6 @@ is:
     eða <a id=''teacher_banner_howto''>lesið Leiðarvísinn</a>'
   learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
     the How-To Guide](%{howto_url})'
-  learn_robotics_banner_heading: Þjarkar og rafrásir
-  learn_robotics_banner_blurb: Eru til vélmenni eða sett fyrir forritun vélbúnaðar?
-    Notaðu þennan búnað með verkefnunum hér fyrir neðan og búðu til áþreifanlega Klukkustund
-    kóðunar fyrir nemendur á öllum aldri! Sum verkefnin eru meira að segja með herma
-    svo það er hægt að byrja án nokkurs vélbúnaðar.
   tutorial_dance2019_name: Danspartý
   tutorial_danceparty_name: Danspartý
   tutorial_chibitronics_name: 'Chibitronics: Ljómandi saga'
@@ -10451,7 +10448,7 @@ is:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11219,7 +11216,7 @@ is:
   tutorial_googlesuperhero_string_detail_programming_languages: Kubbar
   tutorial_googlename _string_detail_programming_languages: Kubbar
   tutorial_carnegiezillah_string_detail_programming_languages: Kubbar
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Kubbar
   tutorial_hatchxrsolar_string_detail_programming_languages: Kubbar
   tutorial_hatchxrspace_string_detail_programming_languages: Kubbar
   tutorial_hatchxrtrex_string_detail_programming_languages: Kubbar

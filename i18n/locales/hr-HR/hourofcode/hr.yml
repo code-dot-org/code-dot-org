@@ -7,42 +7,45 @@ hr:
     prosinca 2015
   coming_soon: Uskoro
   campaign_date_start_short: 5. prosinca
-  campaign_date_start_long: 7. prosinca
+  campaign_date_start_long: 5. prosinca
   campaign_date_short: 5. - 11. prosinca
-  campaign_date_full: 7. - 13. prosinca
-  campaign_date_year: '2022'
-  campaign_date_full_year: 6.-12. prosinca, 2021.
+  campaign_date_full: 5. - 11. prosinca
+  campaign_date_year: '2021'
+  campaign_date_full_year: 5.-11. prosinca, 2022.
   nonus_campaign_date_start_short: Lis. 1
   nonus_campaign_date_start_long: Listopad 1
   nonus_campaign_date_short: Lis. 1 - Pro. 18
-  nonus_campaign_date_full: Listopad 1 - Prosinac 12
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: Listopad 1, 2021 - Prosinac 12, 2021
+  nonus_campaign_date_full: Listopad 1 - Prosinac 18
+  nonus_campaign_date_year: '2021'
+  nonus_campaign_date_full_year: Listopad 1, 2022 - Prosinac 18, 2022
   latam_campaign_date_start_short: Lis. 1
   latam_campaign_date_start_long: Listopad 1
   latam_campaign_date_short: Lis. 1 - Pro. 18
-  latam_campaign_date_full: Listopad 1 - Prosinac 12
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: Listopad 1, 2021 - Prosinac 12, 2021
+  latam_campaign_date_full: Listopad 1 - Prosinac 18
+  latam_campaign_date_year: '2021'
+  latam_campaign_date_full_year: Listopad 1, 2022 - Prosinac 18, 2022
   europe_campaign_date_start_short: Pro. 6
   europe_campaign_date_start_long: Prosinac 6
   europe_campaign_date_short: Pro. 6-12
   europe_campaign_date_full: Prosinac 6-12
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2021'
   europe_campaign_date_full_year: Prosinac 6-12, 2021
   africa_campaign_date_start_short: Lis. 1
   africa_campaign_date_start_long: Listopad 1
   africa_campaign_date_short: Pro. 6-12
   africa_campaign_date_full: Prosinac 6-12
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: Prosinac 6-12, 2021
-  hoc2022_header: Explore, Play, Create!
-  social_hoc2022_explore_play_create: Use computer science to explore, play, and create!
-  codeorg_homepage_hoc2022_body: Explore the universe, score a goal, bust a move —
-    there are so many ways to try computer science.
-  hoc2022_codeorg_title: Celebrate Hour of Code with NASA and more
-  hoc2022_codeorg_description: The 10th Hour of Code is out of this world! Come explore,
-    play, and create with us.
+  hoc2022_header: Istražite, igrajte se, stvarajte!
+  social_hoc2022_explore_play_create: Koristite računalnu znanost za istraživanje,
+    igranje i stvaranje!
+  codeorg_homepage_hoc2022_body: Istražite svemir, zabijte gol, poništite potez —
+    toliko je načina da isprobate računalne znanosti
+  hoc2022_codeorg_title: Proslavite Sat kodiranja s NASA-om i još mnogo toga
+  hoc2022_codeorg_description: 10. sat kodiranja je izvan ovoga svijeta! Dođite istraživati,
+    igrati se i stvarati s nama.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: Učite danas, gradite svjetlije sutra.
@@ -497,24 +500,25 @@ hr:
   front_join_us_n_students_served: "# sudionika"
   front_join_us_challenge: Win a video chat for your classroom with a celebrity!
   front_join_us_learn_more: Learn more
-  cta_see_whats_new: See what's new
-  cta_try_more_activities: Try more activities
-  cta_try_an_activity: Try an activity
-  hoc_homepage_join_the_movement_heading: Join the movement
-  hoc_homepage_join_the_movement_description: Hour of Code is available year-round,
-    but every year in December your class can join millions of students around the
-    world celebrating Computer Science Education Week with the Hour of Code. Registration
-    for the annual celebration starts each year in October.
-  hoc_homepage_what_is_hoc_subhead: One-hour tutorials in over 45 languages. No experience
-    needed. Hour of Code activities are available for free year-round.
-  hoc_homepage_what_is_hoc_description: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    This grassroots campaign is supported by over 400 partners and 200,000 educators
-    worldwide.
-  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Read our How-to guide](%{howto_guide_url})
-    to plan an event for your class."
-  hoc_homepage_highlights_heading: Hour of Code highlights
-  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  cta_see_whats_new: Pogledajte što je novo
+  cta_try_more_activities: Isprobajte više aktivnosti
+  cta_try_an_activity: Isprobajte aktivnost
+  hoc_homepage_join_the_movement_heading: Pridružite se pokretu
+  hoc_homepage_join_the_movement_description: Sat kodiranja dostupan je tijekom cijele
+    godine, ali svake godine u prosincu vaš se razred može pridružiti milijunima učenika
+    diljem svijeta koji slave Tjedan računalnih znanosti uz Sat kodiranja. Prijave
+    za godišnju proslavu počinju svake godine u listopadu.
+  hoc_homepage_what_is_hoc_subhead: Jednosatne lekcije na više od 45 jezika. Iskustvo
+    nije potrebno. Aktivnosti Sata kodiranja dostupne su besplatno tijekom cijele
+    godine.
+  hoc_homepage_what_is_hoc_description: Sat kodiranja jednosatni je uvod u računalnu
+    znanost uz korištenje zabavnih vodiča koji pokazuju da svatko može naučiti osnove.
+    Ovu masovnu kampanju podržava više od 400 partnera i 200 000 edukatora diljem
+    svijeta.
+  hoc_homepage_what_is_hoc_cta_how_to_guide: "[Pročitajte naš vodič s uputama](%{howto_guide_url})
+    kako biste isplanirali događaj za svoj razred."
+  hoc_homepage_highlights_heading: Izdvajamo iz Sata kodiranja
+  hoc_homepage_organized_by: Sat kodiranja organiziraju [Code.org](%{codeorg_url}).
   signup_closed: Registration for the Hour of Code is now closed. Please check again
     in October to sign up for the next Hour of Code.
   signup_registration_not_required: Za sudjelovanje se ne morate registrirati! Aktivnosti
@@ -1011,10 +1015,8 @@ hr:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright %{current_year} Code.org. Sva prava pridržana.
-  footer_trademark_message: Hour of Code ™ i Hora del Código® zaštitni su znakovi
-    tvrtke Code.org. Amazon Web Services i logotip "Powered by AWS" zaštitni su znakovi
-    tvrtke Amazon.com, Inc. ili njenih podružnica u Sjedinjenim Državama i/ili drugim
-    zemljama.
+  footer_trademark_message: Hour of Code® i Hora del Código® zaštitni su znakovi tvrtke
+    Code.org.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partneri i savjetnici
   footer_menu_contact: Kontaktiraj nas
@@ -1033,9 +1035,6 @@ hr:
     ili <a id='teacher_banner_howto'>pročitajte Kako-da vodič</a>
   learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
     the How-To Guide](%{howto_url})'
-  learn_robotics_banner_heading: Robotika i sklopovi
-  learn_robotics_banner_blurb: Imate robote? Iskoristite ih u navedenim djelatnostima
-    i napravite lako shvatljiv Sat kodiranja za učenike svih dobi!
   tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -10487,7 +10486,7 @@ hr:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11255,7 +11254,7 @@ hr:
   tutorial_googlesuperhero_string_detail_programming_languages: Blokovi
   tutorial_googlename _string_detail_programming_languages: Blokovi
   tutorial_carnegiezillah_string_detail_programming_languages: Blokovi
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Blokovi
   tutorial_hatchxrsolar_string_detail_programming_languages: Blokovi
   tutorial_hatchxrspace_string_detail_programming_languages: Blokovi
   tutorial_hatchxrtrex_string_detail_programming_languages: Blokovi
