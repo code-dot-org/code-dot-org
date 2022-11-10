@@ -105,7 +105,7 @@
   "madlibNoSprites": "Tu alerta está funcionando. Si está haciendo lo que esperabas, puedes empezar a añadir sprites a tu proyecto. ¿De qué trata tu historia o poema?",
   "madlibPrintVariable": "Parece que el chatbot está respondiendo, pero no imprimió lo que escribiste en las alertas. Asegúrate de que la etiqueta **variable** correcta está conectada a tu bloque `imprimir`.",
   "madlibPrintWhenAnswered": "En este momento sólo estás imprimiendo el texto una vez. Asegúrate de que el bloque `imprimir` está debajo de un bloque `cuando responda`. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">alimento</title></block></value></block></xml>",
-  "madlibTitleVariable": "Parece que has añadido una Pantalla de Título a tu programa, pero no has incluido el texto de la alerta. ",
+  "madlibTitleVariable": "Parece que has añadido una Pantalla de Título a tu programa, pero no has incluido el texto de la alerta.",
   "makeSpritesWithEvent": "Hay que hacer más sprites cuando se detecta el evento.",
   "moveOnlyClickedSpriteWithBehavior": "Todos los sprites se han movido, en lugar de hacerlo sólo el que se ha pulsado. Prueba a utilizar el bloque \"sprite pulsado\" con un bloque \"sprite comienza\". Asegúrate de elegir un comportamiento que haga que el sprite se mueva.",
   "moreSprites": "Tienes que hacer más sprites.",
