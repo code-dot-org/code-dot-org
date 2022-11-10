@@ -4,3 +4,10 @@ submittable 'true'
 anonymous 'true'
 
 page
+level 'book covers_l2_q1'
+level 'book covers_l2_q2'
+level 'book covers_l2_q3’
+level 'book covers_l2_q4’
+level 'book covers_l2_q5’
+level 'book covers_l2_q6’
+level ‘time_capsule_l3_q7’
