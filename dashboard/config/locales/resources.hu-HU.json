@@ -184,6 +184,18 @@
         "cs_fundamentals_final_project/coursee/2022": {
           "type": "Rubrika"
         },
+        "all_resources/courseb/2022": {
+          "url": "/s/courseb-2022/resources"
+        },
+        "all_standards/courseb/2022": {
+          "url": "/s/courseb-2022/standards"
+        },
+        "all_vocabulary/courseb/2022": {
+          "url": "/s/courseb-2022/vocab"
+        },
+        "common_core_and_ngss_guidance/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
         "curriculum_guide/courseb/2022": {
           "name": "Tanterv útmutató"
         },
@@ -192,6 +204,9 @@
         },
         "teacher_forum/courseb/2022": {
           "name": "Tanári fórum"
+        },
+        "virtual_lesson_modifications/courseb/2022": {
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
         },
         "move_it_move_it/courseb/2022": {
           "name": "Gyerünk, gyerünk!"
@@ -1353,7 +1368,8 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Versek listája",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
         "curriculum_guide_1/coursef/2021": {
           "name": "Tanterv útmutató"
@@ -1417,14 +1433,42 @@
         "rubric-csf-final-projects/coursef/2021": {
           "type": "Rubrika"
         },
+        "2021_change_log/courseb/2021": {
+          "name": "2021 Változások listája"
+        },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Common Core és NGSS útmutató",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "Tanfolyami szójegyzés",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Tantárgyak közötti kiterjesztések"
+        },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "CSTA (számítástechnika-tanárok egyesülete) leképezése",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
+        },
         "curriculum_guide_1/courseb/2021": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "Hibakeresési útmutató"
         },
         "implementation_guide/courseb/2021": {
           "name": "Bevezetési Útmutató"
         },
+        "lesson_type_guide/courseb/2021": {
+          "name": "Lecketípus útmutató"
+        },
         "teacher_forum_1/courseb/2021": {
           "name": "Tanári fórum"
+        },
+        "virtual_lesson_modifications/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "Gyerünk, gyerünk!"
@@ -1474,8 +1518,12 @@
           "name": "A nagy esemény",
           "type": "Videó"
         },
+        "course_vocabulary/coursea/2021": {
+          "name": "Tanfolyami szójegyzés"
+        },
         "curriculum_guide_1/coursea/2021": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "implementation_guide/coursea/2021": {
           "name": "Bevezetési Útmutató"
@@ -1517,8 +1565,12 @@
         "unplugged-video-big-event/coursea/2021": {
           "name": "A nagy esemény"
         },
+        "course_vocabulary/coursec/2021": {
+          "name": "Tanfolyami szójegyzés"
+        },
         "curriculum_guide_1/coursec/2021": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "implementation_guide/coursec/2021": {
           "name": "Bevezetési Útmutató"
@@ -1574,8 +1626,12 @@
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Bináris karkötők"
         },
+        "course_vocabulary/coursed/2021": {
+          "name": "Tanfolyami szójegyzés"
+        },
         "curriculum_guide_1/coursed/2021": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "implementation_guide/coursed/2021": {
           "name": "Bevezetési Útmutató"
@@ -1704,7 +1760,8 @@
           "type": "Videó"
         },
         "curriculum_guide_1/coursee/2021": {
-          "name": "Tanterv útmutató"
+          "name": "Tanterv útmutató",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "implementation_guide/coursee/2021": {
           "name": "Bevezetési Útmutató"
