@@ -23,6 +23,7 @@ import moduleStyles from './music.module.scss';
 import feedbackStyles from './feedback.module.scss';
 import FieldSounds from './FieldSounds';
 import {AnalyticsContext} from './context';
+import Globals from './globals';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -134,8 +135,8 @@ class UnconnectedMusicView extends React.Component {
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
 
-      window.library = this.state.library;
-      window.playPreview = this.player.previewSound.bind(this.player);
+      Globals.setLibrary(this.state.library);
+      Globals.setPlayer(this.player);
     });
 
     this.loadInstructions().then(instructions => {
