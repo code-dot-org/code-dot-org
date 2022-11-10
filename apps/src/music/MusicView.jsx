@@ -14,12 +14,11 @@ import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
-import {PLAY_ICON, STOP_ICON, Triggers} from './constants';
+import {Triggers} from './constants';
 import {musicLabDarkTheme} from './blockly/themes';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {getStaticFilePath} from '@cdo/apps/music/utils';
 import moduleStyles from './music.module.scss';
 import feedbackStyles from './feedback.module.scss';
 import FieldSounds from './FieldSounds';
@@ -185,32 +184,6 @@ class UnconnectedMusicView extends React.Component {
   };
 
   initBlockly = () => {
-    var self = this;
-
-    Blockly.blockly_.Extensions.register('dynamic_menu_extension', function() {
-      this.getInput('sound').appendField(
-        new Blockly.FieldDropdown(function() {
-          var options = [['anything', 'anything']];
-          if (self.state.groupPanel && self.state.groupPanel !== 'main') {
-            const folders = self.getCurrentGroupSounds();
-            options = folders
-              .map(folder => {
-                return folder.sounds.map(sound => {
-                  return [
-                    folder.name + '/' + sound.name,
-                    folder.path + '/' + sound.src
-                  ];
-                });
-              })
-              .flat(1);
-          }
-
-          return options;
-        }),
-        'sound'
-      );
-    });
-
     Blockly.blockly_.Extensions.register(
       'dynamic_trigger_extension',
       function() {
@@ -220,43 +193,6 @@ class UnconnectedMusicView extends React.Component {
           }),
           'trigger'
         );
-      }
-    );
-
-    Blockly.blockly_.Extensions.register('preview_extension', function() {
-      this.getField('image').setOnClickHandler(function() {
-        if (self.state.isPlaying) {
-          return;
-        }
-        const id = this.getSourceBlock()
-          .getField('sound')
-          .getValue();
-
-        if (self.player.isPreviewPlaying(id)) {
-          self.player.stopAndCancelPreviews();
-          this.setValue(getStaticFilePath(PLAY_ICON));
-        } else {
-          this.setValue(getStaticFilePath(STOP_ICON));
-          self.player.previewSound(id, () => {
-            this.setValue(getStaticFilePath(PLAY_ICON));
-          });
-        }
-      });
-    });
-
-    Blockly.blockly_.Extensions.register(
-      'clear_preview_on_change_extension',
-      function() {
-        this.setOnChange(function(event) {
-          if (
-            event.blockId === this.id &&
-            event.type === Blockly.blockly_.Events.BLOCK_CHANGE &&
-            event.name === 'sound' &&
-            self.player.isPreviewPlaying(event.oldValue)
-          ) {
-            self.player.stopAndCancelPreviews();
-          }
-        });
       }
     );
 
