@@ -23,7 +23,7 @@ export default class TeacherResources extends Component {
             title={i18n.professionalLearning()}
             description={i18n.professionalLearningDescription()}
             image="professionallearning.png"
-            buttonText={i18n.learnMore()}
+            buttonText={i18n.exploreProfessionalLearning()}
             link="/my-professional-learning"
           />
           <ImageResourceCard
@@ -31,7 +31,7 @@ export default class TeacherResources extends Component {
             callout={i18n.newExclame()}
             description={i18n.csJourneysDescription()}
             image="csjourneys.png"
-            buttonText={i18n.learnMore()}
+            buttonText={i18n.learnMoreCsJourneys()}
             link={pegasus('/csjourneys')}
           />
           <ImageResourceCard

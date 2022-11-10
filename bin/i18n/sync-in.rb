@@ -24,9 +24,11 @@ def sync_in
   localize_animation_library
   localize_shared_functions
   localize_course_offerings
+  localize_standards
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_external_sources
   redact_level_content
   redact_block_content
   redact_script_and_course_content
@@ -35,6 +37,53 @@ def sync_in
 rescue => e
   puts "Sync in failed from the error: #{e}"
   raise e
+end
+
+# Takes strings describing and naming Framework, StandardCategory, and Standard
+# and places them in the source pool to be sent to crowdin.
+def localize_standards
+  puts "Preparing standards content"
+  standards_content_path = File.join(I18N_SOURCE_DIR, "standards")
+
+  frameworks = {}
+
+  # Localize all frameworks.
+  Framework.all.each do |framework|
+    frameworks[framework.shortcode] = {
+      'name' => framework.name,
+      'categories' => {},
+      'standards' => {}
+    }
+  end
+
+  # Localize all categories.
+  StandardCategory.all.each do |category|
+    framework = category.framework
+
+    categories = frameworks[framework.shortcode]['categories']
+    categories[category.shortcode] = {
+      'description' => category.description
+    }
+  end
+
+  # Localize all standards.
+  Standard.all.each do |standard|
+    framework = standard.framework
+
+    standards = frameworks[framework.shortcode]['standards']
+    standards[standard.shortcode] = {
+      'description' => standard.description
+    }
+  end
+
+  FileUtils.mkdir_p(standards_content_path)
+
+  # Then, for each framework, generate a file for it.
+  frameworks.keys.each do |framework|
+    File.open(File.join(standards_content_path, "#{framework}.json"), "w") do |file|
+      file.write(JSON.pretty_generate(frameworks[framework]))
+    end
+  end
 end
 
 # This function localizes all content in studio.code.org/docs
@@ -58,6 +107,31 @@ def localize_docs
   FileUtils.mkdir_p(File.dirname(docs_content_file))
   File.open(docs_content_file, "w") do |file|
     file.write(JSON.pretty_generate(programming_env_docs))
+  end
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def localize_external_sources
+  puts "Preparing external sources"
+  external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
+
+  # ml-playground files
+  # These are overwritten in this format so the properties that use
+  # arrays have unique identifiers for translation.
+  dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
+  Dir.glob(dataset_files).each do |dataset_file|
+    original_dataset = JSON.parse(File.read(dataset_file))
+
+    # Currently only including fields for translation.
+    # Use field id as unique identifier.
+    fields_as_hash = original_dataset["fields"].map {|field| [field["id"], field]}.to_h
+    final_dataset = {
+      "fields" => fields_as_hash
+    }
+
+    File.open(dataset_file, "w") do |f|
+      f.write(JSON.pretty_generate(final_dataset))
+    end
   end
 end
 
@@ -86,6 +160,7 @@ def get_i18n_strings(level)
       teacher_markdown
       placeholder
       title
+      start_html
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end
@@ -169,12 +244,14 @@ def get_i18n_strings(level)
       i18n_strings['function_definitions'] = Hash.new unless functions.empty?
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
+        # The name is used to uniquely identify the function. Skip if there is no name.
+        next unless name
         description = function.at_xpath('./mutation/description')
         parameters = function.xpath('./mutation/arg').map do |parameter|
           [parameter["name"], parameter["name"]]
         end.to_h
         function_definition = Hash.new
-        function_definition["name"] = name.content if name
+        function_definition["name"] = name.content
         function_definition["description"] = description.content if description
         function_definition["parameters"] = parameters unless parameters.empty?
         i18n_strings['function_definitions'][name.content] = function_definition
@@ -311,7 +388,7 @@ def localize_level_content(variable_strings, parameter_strings)
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
   # which relies on running a shell command
   Dir.chdir(Rails.root) do
-    Script.all.each do |script|
+    Unit.all.each do |script|
       next unless ScriptConstants.i18n? script.name
       script_strings = {}
       script.script_levels.each do |script_level|
@@ -346,7 +423,7 @@ def localize_level_content(variable_strings, parameter_strings)
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if Script.unit_in_category?('hoc', script.name)
+        if Unit.unit_in_category?('hoc', script.name)
           File.join(level_content_directory, "Hour of Code")
         elsif script.unversioned?
           File.join(level_content_directory, "other")
@@ -461,6 +538,7 @@ def select_redactable(i18n_strings)
     long_instructions
     short_instructions
     teacher_markdown
+    start_html
   )
 
   redactable = i18n_strings.select do |key, _|
@@ -495,7 +573,7 @@ def redact_level_file(source_path)
     file.write(JSON.pretty_generate(redactable_data))
   end
 
-  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
+  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly', 'startHtml'])
 
   File.open(source_path, 'w') do |source_file|
     source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))

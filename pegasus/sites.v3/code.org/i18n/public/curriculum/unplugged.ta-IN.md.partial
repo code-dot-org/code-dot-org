@@ -21,8 +21,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2022-23
-The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
+## CS அடிப்படைகள் 2022-23 இல் இணைக்கப்படாத பாடங்கள்
+பின்வரும் பாடங்களை இல் காணலாம் <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer-mark="crw">CSஅடிப்படைகள் 2022-23</a>. <br><br>
 
 <style>
 table, th, td {
@@ -104,29 +104,28 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. ஒரு புரொகிராமை எழுதும்போது நமக்குத் தேவையான அனைத்து தகவல்களும் எப்போதும் நம்மிடம் இருக்காது. உங்கள் குறியீடு இயங்கும் போது எந்த சூழ்நிலை சரியாக இருக்கும் என்று உங்களுக்குத் தெரியாவிட்டாலும், சில நேரங்களில் நீங்கள் ஒரு சூழ்நிலையில் இருந்து மற்றொரு சூழ்நிலைக்கு வித்தியாசமாக ஏதாவது செய்ய விரும்புவீர்கள். இங்குதான் நிபந்தனைகள் வருகின்றன. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
-
-  </tr>
-  <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. ஃபன்க்‌ஷன்கள் (சில நேரங்களில் நடைமுறைகள் என்று அழைக்கப்படுகின்றன) உங்கள் பெரிய புரொகிராமின் உள்ளே நீங்கள் மீண்டும் மீண்டும் பயன்படுத்தக்கூடிய சிறிய புரொகிராம்களாகும். This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
-  </tr>
-    </tr>
-         <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. ஒரு புரொகிராமை எழுதும்போது நமக்குத் தேவையான அனைத்து தகவல்களும் எப்போதும் நம்மிடம் இருக்காது. உங்கள் குறியீடு இயங்கும் போது எந்த சூழ்நிலை சரியாக இருக்கும் என்று உங்களுக்குத் தெரியாவிட்டாலும், சில நேரங்களில் நீங்கள் ஒரு சூழ்நிலையில் இருந்து மற்றொரு சூழ்நிலைக்கு வித்தியாசமாக ஏதாவது செய்ய விரும்புவீர்கள். இங்குதான் நிபந்தனைகள் வருகின்றன. உங்கள் குறியீடு இயக்கப்படும் எந்த நேரத்திலும் உண்மையாக இருக்கும் தகவலின் அடிப்படையில் கணினியை முடிவெடுக்க நிபந்தனைகள் அனுமதிக்கின்றன.+</td><td>நிபந்தனைகள்</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</ td>
+</tr>
+   <tr>
+     <th rowspan="3" id="t05">பாடம் E</th>
+     <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - பாடல் எழுதுதல்</a><br><small>மிக அற்புதமான கட்டமைப்புகளில் ஒன்று கணினி அறிவியல் உலகில் செயல்பாடு உள்ளது. ஃபன்க்‌ஷன்கள் (சில நேரங்களில் நடைமுறைகள் என்று அழைக்கப்படுகின்றன) உங்கள் பெரிய புரொகிராமின் உள்ளே நீங்கள் மீண்டும் மீண்டும் பயன்படுத்தக்கூடிய சிறிய புரொகிராம்களாகும். இந்த பாடம் மாணவர்களுக்கு உள்ளுணர்வுடன் குறியீட்டின் துகள்களை செயல்பாடுகளாக இணைப்பது ஏன் மிகவும் பயனுள்ள நடைமுறையாக இருக்கும் என்பதைப் புரிந்துகொள்ள உதவும்.</td><td>செயல்பாடுகள்</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - அணுகலுக்கான வடிவமைப்பு</a><br><small>இந்தப் பாடத்தில், கற்பனையான பயன்பாடுகளுக்கான அணுகக்கூடிய தீர்வுகளை மூளைச்சலவை செய்து வடிவமைப்பதன் மூலம் அணுகல்தன்மை மற்றும் பச்சாதாபத்தின் மதிப்பை மாணவர்கள் அறிந்துகொள்வார்கள்.</td><td>கணினியின் தாக்கங்கள்</td><td><img src="/images/e18.png" width = "90%"></td>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - டிஜிட்டல் பகிர்வு</a><br><i>*சப்ளைகள்: ஸ்மார்ட்போன் அல்லது டேப்லெட்</i><br><small>காப்பிரைட் மற்றும் கிரியேட்டிவிட்டியில் குழுவால் கணினி அறிவியல் அடிப்படைகளுக்கு கடன் கொடுக்கப்பட்டது, இந்த பாடம் மாணவர்களுக்கு உரிமை மற்றும் பதிப்புரிமையை மதிக்கும் சவால்கள் மற்றும் நன்மைகளை, குறிப்பாக டிஜிட்டல் சூழலில் புரிந்துகொள்ள உதவுகிறது. நெறிமுறை டிஜிட்டல் குடிமகனாக இருப்பதன் முக்கிய அங்கமாக கலைஞர்களின் உரிமைகளை மதிக்க மாணவர்கள் ஊக்குவிக்கப்பட வேண்டும்.</td><td>டிஜிட்டல் குடியுரிமை</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+   </tr>
+     </tr>
+          <tr>
+     <th rowspan="3" id="t06">பாடம் F</th>
+            <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -வெற்று விண்வெளிக் கதைகள்</a><br><i>*சப்ளைகள்: 6 உறைகள் (மேலும் பொருத்தமானது: காகிதம் அல்லது குறியீட்டு அட்டைகள், பாதியாக மடிக்கப்பட்டது)</i><br><small>கணினிகள் எவ்வாறு செயல்படுகின்றன என்பதைப் புரிந்துகொள்வதற்கான சூழலாக மாணவர்கள் நிரப்பு-இன்-தி-வெற்றுக் கதைகளைப் பயன்படுத்துவார்கள் (மேட் லிப்ஸ்® போன்றது) ஒரு பயனரிடமிருந்து உள்ளீட்டைச் சேமித்து, பின்னர் ஒரு நிரல் இயங்கும் போது அதைப் பயன்படுத்தவும்.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. இந்த பாடத்தில், மாணவர்கள் இணையம் வழியாக வேலை செய்வதாக பாசாங்கு செய்வார்கள், அந்த எல்லா நேரங்களிலும் இணைப்புகள், URLகள், IP முகவரிகள் மற்றும் DNS போன்றவற்றை அறிந்து கொள்வார்கள்.</td><td>தரவு</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>   </tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. இந்தப் புதிய கட்டமைப்புகள் மாணவர்களை மிகவும் சக்திவாய்ந்த மற்றும் ஆற்றல்மிக்க குறியீட்டை உருவாக்க அனுமதிக்கும்.</td><td>சுழல்களுக்கு</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - இணையம்</a><br><small>பலர் பயன்படுத்தினாலும் தினசரி இணையம், அது எப்படி வேலை செய்கிறது என்பது பலருக்குத் தெரியாது. இந்த பாடத்தில், மாணவர்கள் இணையம் வழியாக வேலை செய்வதாக பாசாங்கு செய்வார்கள், அந்த எல்லா நேரங்களிலும் இணைப்புகள், URLகள், IP முகவரிகள் மற்றும் DNS போன்றவற்றை அறிந்து கொள்வார்கள்.</td><td>தரவு</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>   </tr>
 </table>
 
 <p style="clear:both"></p>

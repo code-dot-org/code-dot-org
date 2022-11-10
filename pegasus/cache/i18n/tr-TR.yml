@@ -2127,6 +2127,7 @@ tr-TR:
     <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan
     birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir.
   starwars_shortcode: yıldız
+  hourofcode_shortcode: kod
   flappy_shortcode: kanat çırp
   header_home: Ana Sayfa
   header_my_dashboard: Kontrol panelim
@@ -2192,7 +2193,7 @@ tr-TR:
   user_header_gamelab: Oyun Laboratuvarı
   user_header_playlab: Oyun Laboratuvarı
   user_header_dance: Dans Partisi
-  user_header_spritelab: Kukla Laboratuvarı
+  user_header_spritelab: Hareketli Nesne Laboratuvarı
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Tüm projeleri görüntüle...
@@ -2265,6 +2266,8 @@ tr-TR:
   hoc_overview_dance_2019_subtitle: Arkadaşlarınızla paylaşmak için bir Dans Partisi
     kodlayın. Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj ve 34 daha fazlası!
+  hoc_overview_hello_world_2022_subtitle: Yarattığınız bir dünyada etkileşimli karakterleri
+    kodlamak için dört eğlenceli temadan birini seçin.
   hoc_overview_title: Code.org'dan Kod Saati Aktiviteleri
   hoc_overview_subtitle: <a href="https://hourofcode.com">Kod Saati</a>, 180 ülkede
     milyonlaca öğrenciye ulaşan küresel bir harekettir. Herhangi bir kişi, herhangi
@@ -2462,8 +2465,8 @@ tr-TR:
   hoc2018_aquatic_video3: Minecraft Su Yolculuğu - Koşullar
   hoc2018_aquatic_video4: Minecraft Su Yolculuğu - Tebrikler
   hoc2018_dance_video1: Dans Kutlaması - Tanıtım
-  hoc2018_dance_video2: Dans Kutlaması - Etkinlikler
-  hoc2018_dance_video3: Dans Kutlaması - Özellikler
+  hoc2018_dance_video2: Dans Partisi - Etkinlikler
+  hoc2018_dance_video3: Dans Partisi - Özellikler
   hoc2018_dance_video4: Dans Kutlaması - Tebrikler
   dance_box_higher_power_line_1: Coldplay'in "Higher Power" şarkısına bir dans kodlayın
     ve grubu canlı izleme şansı yakalayın!
@@ -2619,3 +2622,14 @@ tr-TR:
     yayan bir dokunmatik tablete dokunan işaret parmağı olan kahverengi bir el
   minecraft_tile_alt: İki Minecraft karakteri, Steve ve Alex, mercan, yunuslar ve
     yosun ile sulu bir Minecraft sahnesini gösteren bir arka planda
+  hoc2022_banner_title: Keşfet, Oyna, Yarat!
+  hoc2022_banner_description: 'Evreni keşfedin, bir gol atın, bir hamle yapın: Bilgisayar
+    bilimini denemenin pek çok yolu var!'
+  hoc2022_cta_primary: Yeniliklere bakın
+  hoc2022_cta_secondary: Daha fazla aktivite deneyin
+  hoc2022_landing_page_explore_description: Bilgisayar bilimi ile yeni dünyaların
+    kapılarını açın!
+  hoc2022_landing_page_play_description: Sahaya çık ve puan al!
+  hoc2022_landing_page_create_title: Oluştur
+  hoc2022_landing_page_create_description: Tuhaf ve muhteşem bir şey yap!
+  try_it_yourself: Kendiniz deneyin!

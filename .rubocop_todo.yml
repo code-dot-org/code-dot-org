@@ -95,11 +95,6 @@ Lint/EmptyClass:
 Lint/EmptyFile:
   Enabled: false
 
-# Offense count: 4
-# This cop supports safe auto-correction (--auto-correct).
-Lint/ErbNewArguments:
-  Enabled: false
-
 # Offense count: 7
 Lint/MissingSuper:
   Enabled: false
@@ -138,10 +133,6 @@ Lint/RescueException:
 # Offense count: 95
 # This cop supports safe auto-correction (--auto-correct).
 Lint/ScriptPermission:
-  Enabled: false
-
-# Offense count: 1
-Lint/SelfAssignment:
   Enabled: false
 
 # Offense count: 1
@@ -643,11 +634,6 @@ Style/RescueModifier:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: implicit, explicit
 Style/RescueStandardError:
-  Enabled: false
-
-# Offense count: 17
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Style/SingleArgumentDig:
   Enabled: false
 
 # Offense count: 38

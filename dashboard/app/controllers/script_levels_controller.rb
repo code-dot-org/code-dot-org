@@ -1,34 +1,19 @@
 require 'cdo/script_config'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
-require 'cdo/script_constants'
 
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
   include VersionRedirectOverrider
-
-  # Default s-maxage to use for script level pages which are configured as
-  # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
-  DEFAULT_PUBLIC_PROXY_MAX_AGE = 3.minutes
-
-  # Default max-age to use for script level pages which are configured as
-  # publicly cacheable. Used if the DCDO.public_max_age is not defined.
-  # This is set to twice the proxy max-age because of a bug in CloudFront.
-  DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
+  include CachedUnitHelper
 
   before_action :disable_session_for_cached_pages
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
 
-  def disable_session_for_cached_pages
-    if ScriptLevelsController.cachable_request?(request)
-      request.session_options[:skip] = true
-    end
-  end
-
   # Return true if request is one that can be publicly cached.
-  def self.cachable_request?(request)
+  def cachable_request?(request)
     script = ScriptLevelsController.get_script(request)
     script && ScriptConfig.allows_public_caching_for_script(script.name) &&
       !ScriptConfig.uncached_script_level_path?(request.path)
@@ -36,7 +21,7 @@ class ScriptLevelsController < ApplicationController
 
   def reset
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id])
+    @script = Unit.get_from_cache(params[:script_id])
     prevent_caching
 
     # delete the client state and other session state if the user is not signed in
@@ -88,12 +73,12 @@ class ScriptLevelsController < ApplicationController
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
     if @script.redirect_to?
-      new_script = Script.get_from_cache(@script.redirect_to)
+      new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if Script.family_names.include?(params[:script_id])
+      if Unit.family_names.include?(params[:script_id])
         session[:show_unversioned_redirect_warning] = true unless new_script.is_course
-        Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
+        Unit.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
       # avoid a redirect loop if the string substitution failed
@@ -204,7 +189,7 @@ class ScriptLevelsController < ApplicationController
       section.toggle_hidden_lesson(lesson, should_hide)
     else
       # We don't have a lesson id, implying we instead want to toggle the hidden state of this script
-      script = Script.get_from_cache(script_id)
+      script = Unit.get_from_cache(script_id)
       return head :bad_request if script.nil?
       section.toggle_hidden_script(script, should_hide)
     end
@@ -215,7 +200,7 @@ class ScriptLevelsController < ApplicationController
   def lesson_extras
     authorize! :read, ScriptLevel
 
-    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    @script = Unit.get_from_cache(params[:script_id], raise_exceptions: false)
     raise ActiveRecord::RecordNotFound unless @script
 
     if @script.can_be_instructor?(current_user)
@@ -235,7 +220,7 @@ class ScriptLevelsController < ApplicationController
     @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
-      @script_level = Script.cache_find_script_level params[:id]
+      @script_level = Unit.cache_find_script_level params[:id]
       @level = @script_level.level
     elsif params[:level_name]
       @level = Level.find_by_name params[:level_name]
@@ -248,7 +233,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    @lesson = Script.get_from_cache(
+    @lesson = Unit.get_from_cache(
       params[:script_id]
     ).lesson_by_relative_position(
       params[:lesson_position].to_i
@@ -289,7 +274,7 @@ class ScriptLevelsController < ApplicationController
     require_levelbuilder_mode
     authorize! :read, ScriptLevel
 
-    script = Script.get_from_cache(params[:script_id])
+    script = Unit.get_from_cache(params[:script_id])
 
     lesson =
       if params[:lesson_position]
@@ -303,40 +288,19 @@ class ScriptLevelsController < ApplicationController
 
   def self.get_script(request)
     script_id = request.params[:script_id]
-    script = Script.get_from_cache(script_id, raise_exceptions: false)
-    if script.nil? && Script.family_names.include?(script_id)
+    script = Unit.get_from_cache(script_id, raise_exceptions: false)
+    if script.nil? && Unit.family_names.include?(script_id)
       # Due to a programming error, we have been inadvertently passing user: nil
-      # to Script.get_unit_family_redirect_for_user . Since end users may be
+      # to Unit.get_unit_family_redirect_for_user . Since end users may be
       # depending on this incorrect behavior, and we are trying to deprecate this
       # codepath anyway, the current plan is to not fix this bug.
-      script = Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+      script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
     end
     raise ActiveRecord::RecordNotFound unless script
     script
   end
 
   private
-
-  # Configure http caching for the given script. Caching is disabled unless the
-  # Gatekeeper configuration for 'script' specifies that it is publicly
-  # cachable, in which case the max-age and s-maxage headers are set based the
-  # 'public-max-age' DCDO configuration value.  Because of a bug in Amazon Cloudfront,
-  # we actually set max-age to twice the value of s-maxage, to avoid Cloudfront serving
-  # stale content which has to be revalidated by the client. The details of the bug are
-  # described here:
-  # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
-  def configure_caching(script)
-    if script && ScriptConfig.allows_public_caching_for_script(script.name) &&
-      !ScriptConfig.uncached_script_level_path?(request.path)
-      max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
-      proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
-      response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
-      return true
-    else
-      prevent_caching
-      return false
-    end
-  end
 
   def next_script_level
     user_or_session_level || @script.starting_level
@@ -479,7 +443,7 @@ class ScriptLevelsController < ApplicationController
   end
 
   def present_level
-    # All database look-ups should have already been cached by Script::unit_cache_from_db
+    # All database look-ups should have already been cached by Unit::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
 
@@ -573,8 +537,8 @@ class ScriptLevelsController < ApplicationController
 
     # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
     # none are assigned.
-    redirect_script = Script.latest_assigned_version(script.family_name, current_user)
-    redirect_script ||= Script.latest_stable_version(script.family_name, locale: locale)
+    redirect_script = Unit.latest_assigned_version(script.family_name, current_user)
+    redirect_script ||= Unit.latest_stable_version(script.family_name, locale: locale)
 
     # Do not redirect if we are already on the correct script.
     return nil if redirect_script == script

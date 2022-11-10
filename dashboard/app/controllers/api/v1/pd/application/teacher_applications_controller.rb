@@ -11,6 +11,17 @@ module Api::V1::Pd::Application
       )
     end
 
+    def new_status
+      return 'incomplete' if ActiveModel::Type::Boolean.new.cast(params[:isSaving])
+
+      regional_partner_id = @application.form_data_hash['regionalPartnerId']
+
+      return 'awaiting_admin_approval' unless regional_partner_id
+
+      no_admin_approval = RegionalPartner.find(regional_partner_id)&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
+      no_admin_approval ? 'unreviewed' : 'awaiting_admin_approval'
+    end
+
     # PATCH /api/v1/pd/application/teacher/<applicationId>
     def update
       form_data_hash = params[:form_data]
@@ -19,19 +30,16 @@ module Api::V1::Pd::Application
         @application.form_data_hash = JSON.parse(form_data_json)
       end
 
-      status = params[:status]
       previous_status = @application.status
-      if status
-        @application.status = status
-      end
+      @application.status = new_status
 
       if @application.save
         render json: @application, status: :ok
 
         # send confirmation email only if user is submitting their application for the first time
-        on_successful_create if previous_status == 'incomplete' && status == 'unreviewed'
+        on_successful_create if previous_status == 'incomplete' && @application.status_on_submit?
       else
-        return render json: {errors: @application.errors.full_messages}, status: :bad_request
+        render json: {errors: @application.errors.full_messages}, status: :bad_request
       end
     end
 

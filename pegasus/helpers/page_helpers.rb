@@ -1,5 +1,4 @@
 require 'active_support/core_ext/string/indent'
-require 'cdo/pegasus/donor'
 
 def page_title_with_tagline
   title = @header['title'] || @config[:page_default_title].to_s

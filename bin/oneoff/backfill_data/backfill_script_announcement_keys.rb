@@ -10,7 +10,7 @@ require_relative '../../../dashboard/config/environment'
 def backfill_script_announcement_keys
   raise unless Rails.application.config.levelbuilder_mode
 
-  Script.all.each do |script|
+  Unit.all.each do |script|
     next unless script.announcements
 
     # Create UUID key for each announcement

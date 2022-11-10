@@ -27,7 +27,7 @@
       "name": "condition",
       "type": "boolean expression",
       "required": true,
-      "description": "An expression that evaluates to true or false. Comparison operators include **<, <=, ==, >, >=** or **!=**. Boolean operators include **&&, ||** or **!**."
+      "description": "An expression that evaluates to true or false. Comparison operators include <, <=, ==, >, >= or !=. Boolean operators include &&, || or !."
     },
     {
       "name": "statement",

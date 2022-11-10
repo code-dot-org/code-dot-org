@@ -2351,6 +2351,8 @@ de-DE:
   hoc_overview_dance_2019_subtitle: Programmiere eine Tanzparty, die du mit deinen
     Freunden teilen kannst. Mit Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 weiteren!
+  hoc_overview_hello_world_2022_subtitle: Wähle aus unseren lustigen Themen aus und
+    programmiere interaktiver Charakter in einer Welt, die du erschaffen hast.
   hoc_overview_title: Hour of Code Aktivitäten von Code.org
   hoc_overview_subtitle: Die <a href="https://hourofcode.com">Hour of Code</a> ist
     eine weltweite Bewegung, die Millionen von Schülern in über 180 Länder erreicht.
@@ -2720,3 +2722,13 @@ de-DE:
     aussendet
   minecraft_tile_alt: Zwei Minecraft-Charaktere, Steve und Alex, vor einem Hintergrund,
     der eine Minecraft-Szene mit Korallen, Delfinen und Seetang zeigt
+  hoc2022_banner_title: Entdecken, spielen und erschaffen!
+  hoc2022_banner_description: Das Universum erforschen, Tore erzielen und loslegen,
+    es gibt viele Möglichkeiten, Informatik auszuprobieren!
+  hoc2022_cta_primary: Das ist neu
+  hoc2022_cta_secondary: Mehr Aktivitäten
+  hoc2022_landing_page_explore_description: Mit Informatik Türen zu neuen Welten öffnen!
+  hoc2022_landing_page_play_description: Übernimm das Feld und sammle Punkte!
+  hoc2022_landing_page_create_title: Erstellen
+  hoc2022_landing_page_create_description: Mach etwas Verrücktes und Wunderbares!
+  try_it_yourself: Versuche es selbst!

@@ -3,7 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# About CS Discoveries
+# About Physical Computing
+
+# PLACEHOLDER FOR INFO ABOUT PHYSICAL COMPUTING AND EQUITY - TO BE PULLED FROM MARKETING MATERIALS
 
 ##### CS Discoveries is Code.org's computer science curriculum designed for 6 - 10th grade students. It is mapped to <a href="https://www.csteachers.org/page/standards" target="blank" rel="noopener noreferrer">CSTA standards</a> and covers topics such as artificial intelligence, problem solving, programming, physical computing, user centered design, and data, while inspiring students as they build their own websites, apps, animations, games, and physical computing systems.
 
@@ -14,8 +16,7 @@ markdown <<MARKDOWN
 <div style="clear:both"/>
 
 
-## Why should you teach CS Discoveries?
-
+## Why should you teach Physical Computing?
 * ##### **Engaging Curriculum:** Our team designed the CS Discoveries curriculum to support students and teachers new to the discipline. The curriculum includes daily lesson plans made up of inquiry-based activities, videos, assessments, and computing tools, allowing teachers to guide and learn alongside students as they discover core computing concepts throughout the course.
 
 * ##### **A Focus on Emerging Technologies:** The CS Discoveries curriculum features a unit on artificial intelligence (AI) and machine learning (ML). As these technologies touch more and more of our daily lives, they have become an essential part of foundational computer science education. The unit focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and offline activities and full-group discussions.
