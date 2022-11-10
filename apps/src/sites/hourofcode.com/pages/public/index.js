@@ -128,7 +128,8 @@ $(document).ready(function() {
     } else if (
       ['out_of_school', 'after_school'].includes($('#hoc-event-type').val())
     ) {
-      // out of school, either US or non-US
+      // out of school (Organization/Company) and after school (After School Program),
+      // either US or non-US, require the same fields
       $('#school-autocomplete').hide();
       $('#organization-name-field').show();
       $('#hoc-event-location-field').show();
