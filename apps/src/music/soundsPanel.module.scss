@@ -5,22 +5,17 @@
   user-select: none;
 }
 
-%folder {
-  margin-top: 10px;
+.folder {
   background-color: $gray-900;
   overflow: hidden;
   border-radius: 4px;
   padding: 6px;
-}
-
-.folderFirst {
-  @extend %folder;
-  margin-top: 0;
-}
-
-.folder {
-  @extend %folder;
-  margin-top: 6px;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:not(:first-child) {
+    margin-top: 6px;
+  }
 }
 
 .folderName {
