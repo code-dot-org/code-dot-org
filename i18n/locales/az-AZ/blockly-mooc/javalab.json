@@ -22,6 +22,7 @@
   "codeReviewDisabledMessage": "Kod baxışı deaktiv edilib. Müəlliminiz bu funksiyanı aktivləşdirmək üçün sizi kodu nəzərdən keçirən qrupa yerləşdirməlidir.",
   "codeReviewForYou": "Kod Baxışınız",
   "codeReviewingPeer": "Kod Baxışı {peerName}",
+  "commentProfanityFound": "Şeirinizdə uyğun olmayan dil var, ona görə də saxlanmayacaq. {wordCount, plural,one {word} other {words}} \"{words}\"-i silmək üçün şeirinizi yeniləyin.",
   "commentUpdateError": "Sorğunuz işlənərkən xəta baş verdi, yenidən cəhd edin.",
   "commit": "Öhdəlik götürmək",
   "commitAndSave": "Tapşırıq və Saxla",

@@ -725,3 +725,5 @@ hr:
     link_your_email: "Povežite svoj e-mail"
     not_now: "Ne sada"
   code_org_logo_alt: "Početna stranica Code.org"
+  pixelation:
+    binary: "Binarno"

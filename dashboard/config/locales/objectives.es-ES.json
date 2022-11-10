@@ -50,6 +50,12 @@
         "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
           "description": "Identificar los lugares a los que acudir para seguir aprendiendo informática y codificación"
         },
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
+        },
         "3e5eebcd-2140-4152-8654-410468108ab6": {
           "description": "Definir \"codificación\" e \"informática\""
         },
@@ -142,6 +148,12 @@
         },
         "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
           "description": "Explica los puntos débiles y los fallos de seguridad de los cifrados de sustitución"
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
         },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Crea una animación interactiva utilizando sprites y eventos."
@@ -475,6 +487,12 @@
         },
         "ea8b6be7-f51c-420f-a295-ec02488a066f": {
           "description": "Utilice variables junto con las indicaciones."
+        },
+        "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
+          "description": "Crea un juego de clicker en el Laboratorio de Sprite en el que los sprites pueden ser eliminados para obtener puntos"
+        },
+        "9da7b378-c4e9-4184-b58a-61dfdad47357": {
+          "description": "Crea una variable que almacene información y cambie con el tiempo"
         },
         "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
           "description": "Realizar y probar una predicción modificando variables de simulación"
@@ -898,6 +916,12 @@
         },
         "fc585f17-d535-4c1d-aaba-65e878894373": {
           "description": "Acciones Utilice variables para contener palabras y frases."
+        },
+        "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
+          "description": "Crea un juego de clicker en el Laboratorio de Sprite en el que los sprites pueden ser eliminados para obtener puntos"
+        },
+        "54f59612-1695-4ba2-bbf4-c03862b02924": {
+          "description": "Crea una variable que almacene información y cambie con el tiempo"
         },
         "75953ae5-c4fa-40d3-85e1-deb508c32847": {
           "description": "Asignar valores a las variables existentes."

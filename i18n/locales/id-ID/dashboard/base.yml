@@ -1156,3 +1156,5 @@ id:
       cannot_view_locked_answers: "Tidak dapat melihat jawaban saat terkunci"
       forbidden: "Pengguna tidak dapat memperbarui status siswa yang dapat dikunci"
   reset_predict_progress_button: "Hapus Jawaban"
+  pixelation:
+    binary: "Binary"

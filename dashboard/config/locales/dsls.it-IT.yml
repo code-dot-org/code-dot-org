@@ -17366,19 +17366,11 @@ it-IT:
             Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Lo zombie oltrepasserà il bivio corretto e finirà per andare avanti
-            e indietro per sempre.
-          correct: true
+        - correct: true
           feedback: Corretto!
         - text: Lo zombie raggiungerà il girasole.
-          feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
-            andare avanti e indietro per sempre.
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
-          feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
-            andare avanti e indietro per sempre.
         - text: Lo zombie resterà bloccato alla fine del percorso di avanzamento.
-          feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
-            e finirà per andare avanti e indietro per sempre.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?

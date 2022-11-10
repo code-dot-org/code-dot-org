@@ -35,6 +35,11 @@
           "purpose": "本課堂介紹核心的電腦科學概念：編寫程式與程式設計（使用積木），以及簡單的除錯技巧。",
           "student_overview": "在本課堂中，學生會獲得電腦科學的新手體驗，並使用基本的積木程式碼製作遊戲。本課堂專門為中間年級（10-16 歲）的學生所設計，但是在使用提供的年齡差異建議後，也適用於年齡較小或較大的學生。"
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "overview": "在本課中，學生將在精靈圖實驗室通過程式設計學習電腦科學的基礎知識。精靈圖實驗室是一個可以用來創建富有想像力的有趣項目的工具。學生將學習創建和動畫化精靈圖，並使用事件使它們互動。 \n\n本課有多個版本。每個版本教授相同的概念，但擁有不同的圖像，以吸引不同的學生。更多資訊請訪問[Hello World著陸頁。](https://code.org/helloworld)",
+          "preparation": "-   通過玩謎題為你的課堂尋找任何潛在的問題領域。\n-   使用[CS Connections](https://code.org/educate/csc)的資源，在初始教程之後制定更多的電腦科學學習計劃。",
+          "purpose": "本課程旨在幫助學生在精靈圖實驗室中創建簡單的程式設計項目。通過這項技能，學生可以創建任何主題的項目，如另一個學校主題或與他們個人相關的東西。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路。"
+        },
         "hourofcode/Maze": {
           "name": "迷宮",
           "overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂專門為年齡較小（4-10 歲）的學生所設計，但是在使用提供的年齡差異建議後，也適用於年齡較大的學生。",
@@ -90,7 +95,7 @@
         "aquatic/Aquatic": {
           "name": "Minecraft: 水上巡航",
           "overview": "在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。",
-          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程： [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個人[Print one](https://code.org/certificates?script=mc)，使之在一小時玩程式結束時更簡單。",
+          "preparation": "### 一小時玩程式前一週\n\n-   複習[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便於開始計劃一小時玩程式活動。\n-   如果你想要得到禮物或課堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己複習並完成線上教程： [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)\n-   在要求學生完成之前，記得先測試一下。檢查自己的技術設備，並決定是否需要在編寫代碼前進行故障檢查。\n\n### 一小時玩程式前一天\n\n-   在本課程計畫結束時，列印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己編制。\n-   每個完成活動的學生都應該收到一張證書。提前為每個人[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在一小時玩程式結束時更簡單。",
           "purpose": "本課介紹編碼和程式設計（使用模組）的核心電腦科學概念，以及簡單的調試技術和條件語句。這組難題建立循環知識的基礎上，將鞏固相關知識，並引入條件語句。通過將這兩個概念結合在一起，學生將能夠探索在令人興奮的新環境中創造有趣和創新項目的潛力。",
           "student_overview": "在本課中，所有年齡段的學員都將在一個安全的支持性環境中獲得程式設計和電腦科學的入門經驗。"
         },
@@ -100,6 +105,11 @@
           "preparation": "-   檢驗兩個版本的小工具",
           "purpose": "「加密」是用來轉換訊息的流程，用來把原始訊息「隱藏」，任何非預期接收者都無法看到內容。加密已不再僅僅用於軍事或間諜用途。我們每天在網際網路上都會使用加密技術，主要用於進行商業交易。沒有加密技術，我們的經濟便可能會逐漸陷入停頓。\n\n本課堂會讓學生第一次嘗試這種思考方式，開始用運算工具來為訊息加密。運算工具可大大增加我們用來加密資訊的演算法強度與複雜程度，但使用相同的工具，也可提高我們破解加密的能力。要開發強大的加密技術，我們就需要知道哪些問題是電腦「難以」解決的問題。這樣，我們就可以運用這些知識為訊息加密。你可能需要閱讀_Blown to Bits_第 5 章的全部內容做為資源。書中提供相關社會情景，你可能需要把這些內容帶到課室中。",
           "student_overview": "本課堂會向學生介紹，需要使用加密與簡單技術破解秘密訊息。學生會自己嘗試破解一條訊息，這個訊息以經典的凱撒密碼，以及隨機替換式密碼加密。學生應該要深深明白，在這個運算工具強大的世代，加密技術將需要變得更成熟。本課堂最重要的一點，是瞭解在我們每天的一切網路生活中，加密怎樣和為甚麼扮演著重要角色，並瞭解製作良好的加密技術不是小事。學生會嘗試瞭解：我們面對強大的運算工具，而這些工具可用來破解加密內容，因此必須考慮如何製作強大的加密方式。在網際網路上傳送位元時需要保持私密，對所有上網的人來說都非常重要。"
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "overview": "在本課中，學生將在精靈圖實驗室通過程式設計學習電腦科學的基礎知識。精靈圖實驗室是一個可以用來創建富有想像力的有趣項目的工具。學生將學習創建和動畫化精靈圖，並使用事件使它們互動。 \n\n本課有多個版本。每個版本教授相同的概念，但擁有不同的圖像，以吸引不同的學生。更多資訊請訪問[Hello World著陸頁。](https://code.org/helloworld)",
+          "preparation": "-   通過玩謎題為你的課堂尋找任何潛在的問題領域。\n-   使用[CS Connections](https://code.org/educate/csc)的資源，在初始教程之後制定更多的電腦科學學習計劃。",
+          "purpose": "本課程旨在幫助學生在精靈圖實驗室中創建簡單的程式設計項目。通過這項技能，學生可以創建任何主題的項目，如另一個學校主題或與他們個人相關的東西。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路。"
         },
         "hello-world-animals-2021/Hello World": {
           "overview": "在本課中，學生將在精靈圖實驗室通過程式設計學習電腦科學的基礎知識。精靈圖實驗室是一個可以用來創建富有想像力的有趣項目的工具。學生將學習創建和動畫化精靈圖，並使用事件使它們互動。 \n\n本課有多個版本。每個版本教授相同的概念，但擁有不同的圖像，以吸引不同的學生。更多資訊請訪問[Hello World著陸頁。](https://code.org/helloworld)",
@@ -4052,6 +4062,9 @@
         },
         "allthethings/Java Lab": {
           "name": "Java 實驗室"
+        },
+        "allthethings/lesson-48": {
+          "name": "詩歌"
         },
         "coursef-2021/lesson-6": {
           "name": "Sprite Lab 簡介"

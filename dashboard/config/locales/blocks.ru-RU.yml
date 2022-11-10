@@ -2,6 +2,8 @@
 ru:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: перемещение NESW с помощью клавиш со стрелками
       AmysBlocks_setPromptWithChoices:
         text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора
           {A}{B}{C}
@@ -233,20 +235,12 @@ ru:
             MOVES.XArmsUp: Стрейч
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
-      Dancelab_everyMeasuresRange:
-        text: 'повторять каждые {N} тактов после {START} '
       Dancelab_everySeconds:
         text: 'каждые {N} {UNIT} '
         options:
           UNIT:
             '"measures"': такты
             '"seconds"': секунд
-      Dancelab_everySecondsRange:
-        text: 'каждые {N} {UNIT} от {START} до {STOP} '
-        options:
-          UNIT:
-            measures: Такты
-            seconds: Секунды
       Dancelab_everyVerseChorus:
         text: 'каждые {UNIT} '
         options:
@@ -1009,6 +1003,24 @@ ru:
             '"macklemore90"': Маклемор - Не Может Нас Удержать
             '"hammer"': MC Хаммер - Ты Не Можешь Трогать Это
             '"peas"': Черноглазый Горошек - У меня Есть это Чувство
+      DansBlocks_setForegroundEffect2:
+        text: выполнить эффект  {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Пузыри
+            '"confetti"': Конфетти
+            '"hearts"': сердца
+            '"emojis"': Счастливые эмодзи
+            '"rain"': дождь
+            '"starburst"': Вспышка звёздообразования
+            '"glass"': Разбивающееся стекло
+            '"twinkling"': Мерцание
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): допускающий перетаскивание
+            wandering(): хождение
+            shrinking(): сжимание
       gamelab_addBehaviorSimple:
         text: Спрайт {SPRITE} начинает {BEHAVIOR}
       gamelab_addTarget:
@@ -1346,6 +1358,34 @@ ru:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": причудливый
               бас
             "'sound://category_digital/jump_7.mp3'": прыгнуть
+      gamelab_playSoundOptionsSoccer:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": рожок
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": аплодисменты
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": пение
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ликование
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": удар по мячу
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": два свистка
+            "'sound://category_sports/One_Whistle_SFX.mp3'": свисток
+      gamelab_playSoundOptionsSpace:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": черная дыра
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": скопление галактик
+              Пуля
+            "'sound://category_space/Carina_SFX.mp3'": киль
+            "'sound://category_space/Cassiopeia_SFX.mp3'": кассиопея
+            "'sound://category_space/Crab_nebula_SFX.mp3'": крабовидная туманность
+            "'sound://category_space/Galactic_center_SFX.mp3'": центр галактики
+            "'sound://category_space/Launch_SFX.mp3'": запуск
+            "'sound://category_space/Lift_Off.mp3'": отрыв
+            "'sound://category_space/Pillars_SFX.mp3'": столпы
+            "'sound://category_space/Southern_ring_SFX.mp3'": южная кольцевая туманность
+            "'sound://category_space/Supernova_SFX.mp3'": сверхновая
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": галактика водоворот
       gamelab_playSpeech:
         text: воспроизвести речь {SOUND}
       gamelab_playerBehaviors:
@@ -1444,6 +1484,8 @@ ru:
             '100': большой
       gamelab_setPrompt:
         text: запросить у пользователя {QUESTION} переменную {VAR}
+      gamelab_setPromptWith2Choices:
+        text: запрос пользователя {QUESTION} для переменной {VAR} с вариантами {A}{B}
       gamelab_setPromptWithChoices:
         text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора
           {A}{B}{C}
@@ -2021,6 +2063,8 @@ ru:
         text: задать для Города монстров {COUNT}монстров
       Outbreak_stopMoving:
         text: монстры перестают двигаться
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         text: установите кадр на {BRUSH}
         options:
@@ -2526,6 +2570,14 @@ ru:
           DIR:
             right: направо ↻
             left: налево ↺
+      storylab_clearHeadings:
+        text: понятные заголовки
+      storylab_setHeading:
+        text: установить заголовок {HEADING}
+      storylab_setPromptWithChoice:
+        text: запрос пользователя {QUESTION} для переменной {VAR} с вариантами {A}
+      storylab_setSubheading:
+        text: установить подзаголовок {SUBHEADING}
       validation_validatedBackground:
         text: установить фон для {IMG}
       validation_validatedSound:

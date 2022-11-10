@@ -1156,3 +1156,5 @@ hu:
       cannot_view_locked_answers: "Zárolt állapotban a válaszokat nem lehet megtekinteni"
       forbidden: "A felhasználó nem frissítheti a tanuló zárolható állapotát"
   reset_predict_progress_button: "Válasz törlése"
+  pixelation:
+    binary: "Bináris"

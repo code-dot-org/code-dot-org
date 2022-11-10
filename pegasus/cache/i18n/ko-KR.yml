@@ -1936,6 +1936,7 @@ ko-KR:
     Sia, Keith Urban, Ciara 등 25팀과 함께합니다!
   hoc_overview_dance_2019_subtitle: 댄스 파티를 코딩해서 친구들과 공유하세요. Katy Perry, Shawn Mendes,
     Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj 등 34팀이 함께합니다!
+  hoc_overview_hello_world_2022_subtitle: 4개의 재미있는 주제를 골라 당신이 만든 세계에서 상호적인 캐릭터를 코딩하세요.
   hoc_overview_title: Code.org의 아워오브코드 활동
   hoc_overview_subtitle: <a href="https://hourofcode.com">아워오브코드</a>는 180개 이상의 국가에서
     수천만 명에 이르는 학생과 함께 하는 전 세계적인 운동입니다.  누구든지 어디에서나 아워오브코드 이벤트를 개최하거나 또는 45개 이상 언어로
@@ -2224,3 +2225,12 @@ ko-KR:
   top_hoc_tutorial_applab_alt_text: 파란색 배경에 별과 광선을 발산하는 터치 스크린 태블릿을 집게 손가락으로 터치하는
     갈색 손
   minecraft_tile_alt: 산호와 돌고래, 해초로 구성된 수중 마인크래프트 장면을 배경으로 둔 두 마인크래프트 캐릭터 스티브와 알렉스
+  hoc2022_banner_title: 탐구하고, 놀고, 창의력을 발휘하세요!
+  hoc2022_banner_description: 우주를 탐구하고, 골을 넣고, 바로 시작하세요. 컴퓨터과학을 체험해볼 수 있는 방법은 아주 많습니다!
+  hoc2022_cta_primary: 새로운 내용 보기
+  hoc2022_cta_secondary: 더 많은 활동 시도해보기
+  hoc2022_landing_page_explore_description: 컴퓨터 과학의 새로운 세계로 향하는 문을 열어보세요!
+  hoc2022_landing_page_play_description: 필드와 점수를 장악해 보세요!
+  hoc2022_landing_page_create_title: 만들기
+  hoc2022_landing_page_create_description: 이상하고도 아름다운 무언가를 만들어보세요!
+  try_it_yourself: 혼자 힘으로 해보세요!

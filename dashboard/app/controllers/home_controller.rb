@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   include UsersHelper
   include SurveyResultsHelper
   include TeacherApplicationHelper
+  include IncubatorHelper
 
   # Don't require an authenticity token on set_locale because we post to that
   # action from publicly cached page without a valid token. The worst case impact
@@ -104,7 +105,7 @@ class HomeController < ApplicationController
 
     @homepage_data = {}
     @homepage_data[:isEnglish] = request.language == 'en'
-    @homepage_data[:locale] = Script.locale_english_name_map[request.locale]
+    @homepage_data[:locale] = Unit.locale_english_name_map[request.locale]
     @homepage_data[:localeCode] = request.locale
     @homepage_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     @homepage_data[:providers] = current_user.providers
@@ -191,6 +192,7 @@ class HomeController < ApplicationController
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner
         teachers_school = current_user.school_info.school

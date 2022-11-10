@@ -561,7 +561,7 @@
           "courseA_collector_loops1_1": "Вы видите несколько новых блоков на панели инструментов? Не волнуйтесь, мы покажем как их использовать позже."
         },
         "courseA_collector_loops3": {
-          "gradek_adventurer_loops2_1": "Это число показывает, сколько блоков можно использовать в этой головоломке."
+          "gradek_adventurer_loops2_1": "Это число показывает, сколько блоков можно использовать в этой задаче."
         },
         "courseA_collector_loops3_2018": {
           "gradek_adventurer_loops2_1": "Это число показывает, сколько блоков можно использовать в этой головоломке."
@@ -573,19 +573,19 @@
           "gradek_adventurer_loops2_1": "Это число показывает, сколько блоков можно использовать в этой головоломке."
         },
         "courseA_collector_preLoops2": {
-          "courseA_collector_loops1_1": "Видишь несколько новых блоков в наборе инструментов? Не волнуйся, позже мы покажем, как ими пользоваться."
+          "courseA_collector_loops1_1": "Видите несколько новых блоков в наборе инструментов? Не волнуйтесь, позже будет показано, как их использовать."
         },
         "courseA_collector_preLoops3": {
-          "courseA_collector_loops1_1": "Видишь несколько новых блоков в наборе инструментов? Не волнуйся, позже мы покажем, как ими пользоваться."
+          "courseA_collector_loops1_1": "Видите несколько новых блоков в наборе инструментов? Не волнуйтесь, позже будет показано, как их использовать."
         },
         "courseA_collector_preLoops4": {
-          "courseA_collector_loops1_1": "Видишь несколько новых блоков в наборе инструментов? Не волнуйся, позже мы покажем, как ими пользоваться."
+          "courseA_collector_loops1_1": "Видите несколько новых блоков в наборе инструментов? Не волнуйтесь, позже будет показано, как их использовать."
         },
         "courseA_collector_preLoops5": {
-          "courseA_collector_loops1_1": "Видишь несколько новых блоков в наборе инструментов? Не волнуйся, позже мы покажем, как ими пользоваться."
+          "courseA_collector_loops1_1": "Видите несколько новых блоков в наборе инструментов? Не волнуйтесь, позже будет показано, как их использовать."
         },
         "courseA_collector_preLoops6": {
-          "courseA_collector_loops1_1": "Видишь несколько новых блоков в наборе инструментов? Не волнуйся, позже мы покажем, как ими пользоваться."
+          "courseA_collector_loops1_1": "Видите несколько новых блоков в наборе инструментов? Не волнуйтесь, позже будет показано, как их использовать."
         },
         "courseA_maze_ramp2_2019": {
           "courseC_maze_programming2_1": "Это набор инструментов. В нем ты найдешь дополнительные блоки для решения головоломок."
@@ -777,7 +777,7 @@
           "courseC_artist_loopsPrePre1a_1": "Начни с того, чтобы использовать этот блок, чтобы подвести художника к центру экрана."
         },
         "courseC_collector_prog1": {
-          "courseC_collector_prog1_1": "Видишь несколько новых блоков в наборе инструментов? Не волнуйся, позже мы покажем, как ими пользоваться."
+          "courseC_collector_prog1_1": "Видите несколько новых блоков в наборе инструментов? Не волнуйтесь, позже будет показано, как их использовать."
         },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "Вы видите несколько новых блоков на панели инструментов? Не волнуйтесь, мы покажем как их использовать позже."
@@ -2611,6 +2611,79 @@
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Перетащи блоки с панели инструментов в свою рабочую область."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Используйте этот блок, чтобы выбрать новый фон."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Используйте этот блок, чтобы выбрать новый фон."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Используйте этот блок с одним из указанных ниже поведений."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Используйте этот блок с одним из указанных ниже поведений."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Нажмите здесь, чтобы запустить код."
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Добавьте этот блок события в ваше рабочее пространство."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Добавьте этот блок события в ваше рабочее пространство."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Нажмите здесь, чтобы добавить в ваш проект костюмы."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Нажмите здесь, чтобы добавить в ваш проект костюмы."
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "булавка"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "булавка"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "булавка"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "булавка"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Используйте этот блок, чтобы заставить спрайтов говорить.",
+          "hello_world_make_sprite": "Испольуйте этот блок, чтобы создать спрайта."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Используйте этот блок, чтобы заставить спрайтов говорить.",
+          "hello_world_make_sprite": "Испольуйте этот блок, чтобы создать спрайта."
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Новый блок!",
+          "hello_world_new_block": "Новый блок!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Новый блок!",
+          "hello_world_new_block": "Новый блок!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Новый блок!"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Сначала щелкните здесь!"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Нажмите здесь, чтобы посмотреть, как выполняется код!"
         }
       }
     }

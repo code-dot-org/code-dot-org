@@ -1498,3 +1498,5 @@ vi:
       cannot_view_locked_answers: Không thể xem câu trả lời ở trạng thái khóa
       forbidden: Người dùng không thể cập nhật trạng thái khóa của học sinh
   reset_predict_progress_button: Xóa câu trả lời
+  pixelation:
+    binary: Nhị phân

@@ -1286,3 +1286,5 @@ ko:
       cannot_view_locked_answers: 잠겨있는 동안에는 답을 볼 수 없습니다
       forbidden: 사용자는 학생의 잠금 상태를 업데이트할 수 없습니다
   reset_predict_progress_button: 답 삭제
+  pixelation:
+    binary: 2진

@@ -313,6 +313,21 @@ kn:
             '"x"': x
             '"y"': 'y'
             '"1"': '1'
+      DansBlocks_setForegroundEffect2:
+        text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
+        options:
+          EFFECT:
+            '"hearts"': ಹೃದಯಗಳು
+            '"emojis"': ಖುಷಿಯ ಎಮೋಜಿಗಳು
+            '"rain"': ಮಳೆ
+            '"glass"': ಗ್ಲಾಸ್ ಒಡೆಯುವುದು
+            '"twinkling"': ಟ್ವಿಂಕಲ್ ಆಗುವುದು
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): ಡ್ರ್ಯಾಗ್ ಮಾಡಬಹುದಾದ
+            wandering(): ಅಲೆದಾಡುವುದು
+            shrinking(): ಕುಗ್ಗುತ್ತಿರುವ
       gamelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       gamelab_addTarget:
@@ -575,6 +590,31 @@ kn:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": ಆಯ್ದ
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": ಕ್ವಿರ್ಕಿ ಬಾಸ್
             "'sound://category_digital/jump_7.mp3'": ಜಂಪ್
+      gamelab_playSoundOptionsSoccer:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": ಏರ್‌ಹಾರ್ನ್‌
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": ಮೆಚ್ಚುಗೆ
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": ಚಾಂಟ್
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ಉತ್ಸಾಹ
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": ಕಿಕ್
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": ಎರಡು ಸಿಳ್ಳೆಗಳು
+            "'sound://category_sports/One_Whistle_SFX.mp3'": ಶಿಳ್ಳೆ
+      gamelab_playSoundOptionsSpace:
+        text: "{SOUND} ಧ್ವನಿ ಪ್ಲೇ ಮಾಡಿ"
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ಬ್ಲ್ಯಾಕ್‌ ಹೋಲ್
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ಬುಲೆಟ್ ಕ್ಲಸ್ಟರ್
+            "'sound://category_space/Carina_SFX.mp3'": ಕರಿನಾ
+            "'sound://category_space/Cassiopeia_SFX.mp3'": ಕ್ಯಾಸಿಯೋಪಿಯಾ
+            "'sound://category_space/Crab_nebula_SFX.mp3'": ಕ್ರ್ಯಾಬ್‌ ನೆಬ್ಯುಲಾ
+            "'sound://category_space/Launch_SFX.mp3'": ಬಿಡುಗಡೆ
+            "'sound://category_space/Lift_Off.mp3'": ಎತ್ತುವುದು
+            "'sound://category_space/Pillars_SFX.mp3'": ಸ್ತಂಭಗಳು
+            "'sound://category_space/Southern_ring_SFX.mp3'": ಸದರ್ನ್ ರಿಂಗ್
+            "'sound://category_space/Supernova_SFX.mp3'": ಸೂಪರ್‌ನೋವಾ
       gamelab_playSpeech:
         text: "{SOUND} ಸ್ಪೀಚ್ ಪ್ಲೇ ಮಾಡಿ"
       gamelab_playerBehaviors:
@@ -1324,5 +1364,9 @@ kn:
           DIR:
             right: ಬಲ ↻
             left: ಎಡ ↺
+      storylab_setHeading:
+        text: ಶೀರ್ಷಿಕೆ ನಿಗದಿಸಿ {HEADING}
+      storylab_setSubheading:
+        text: ಸಬ್‌ಹೆಡಿಂಗ್‌ ಸೆಟ್ ಮಾಡಿ {SUBHEADING}
       validation_validatedBackground:
         text: "{IMG} ಗೆ ಹಿನ್ನೆಲೆಯನ್ನು ನಿಗದಿಸಿ"

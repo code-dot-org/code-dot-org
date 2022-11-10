@@ -47,11 +47,11 @@
         "debugging/gumball/unversioned": {
           "word": "Foutopsporing"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "Foutopsporing"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "Voorwaardelijke instructies"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Foutopsporing"
         },
         "loops/aquatic/unversioned": {
           "word": "Lussen"

@@ -38,11 +38,11 @@
         "debugging/gumball/unversioned": {
           "word": "מציאת טעויות"
         },
-        "debugging/aquatic/unversioned": {
-          "word": "מציאת טעויות"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "תנאים"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "מציאת טעויות"
         },
         "loops/aquatic/unversioned": {
           "word": "חזרות"

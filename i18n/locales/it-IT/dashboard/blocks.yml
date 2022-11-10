@@ -2,26 +2,30 @@
 it:
   data:
     blocks:
+      AmysBlocks_moving_with_arrow_keys:
+        text: muovi NESW con i tasti freccia
       AmysBlocks_setPromptWithChoices:
         text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       BadGuys_makeNewBadGuysSprite:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: imposta la dimensione di tutti i personagi a  {SIZE}
         options:
           SIZE:
             '0.50': extra piccolo
             '0.75': piccolo
             '1.00': mediamente
             '2.00': grande
-            '3.00': extra large
+            '3.00': Extra Large
       BadGuys_setSize_dropdown:
+        text: imposta la dimensione di {SPRITE} a {SIZE}
         options:
           SIZE:
             '0.50': extra piccolo
             '0.75': piccolo
             '1.00': mediamente
             '2.00': grande
-            '3.00': extra large
+            '3.00': Extra Large
       Dancelab_alternateMoves:
         text: "{GROUP} alternano ogni {N} battute \ntra {MOVE1} e {MOVE2}"
         options:
@@ -236,20 +240,12 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
-      Dancelab_everyMeasuresRange:
-        text: 'ripeti ogni {N} battute dopo {START} '
       Dancelab_everySeconds:
         text: 'ripeti ogni {N} {UNIT} '
         options:
           UNIT:
             '"measures"': misure
             '"seconds"': secondi
-      Dancelab_everySecondsRange:
-        text: 'ogni {N} {UNIT} da {START} fino a {STOP} '
-        options:
-          UNIT:
-            measures: Battute
-            seconds: Secondi
       Dancelab_everyVerseChorus:
         text: 'ogni {UNIT} '
         options:
@@ -306,6 +302,10 @@ it:
           UNIT:
             '"measures"': misure
             '"seconds"': secondi
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} salta {LOCATION}"
         options:
@@ -1005,6 +1005,24 @@ it:
         text: quando si clicca su "Esegui"
       Dancelab_whenSetup2:
         text: quando si clicca su "Esegui"
+      DansBlocks_setForegroundEffect2:
+        text: crea effetto {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bolle
+            '"confetti"': Coriandoli
+            '"hearts"': cuori
+            '"emojis"': Emojis Allegre
+            '"rain"': pioggia
+            '"starburst"': Esplosione di stelle
+            '"glass"': Vetro infranto
+            '"twinkling"': Scintillante
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): trascinabile
+            wandering(): movimento casuale
+            shrinking(): contrazione
       gamelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
       gamelab_addTarget:
@@ -1326,6 +1344,31 @@ it:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": seleziona
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": basso stravagante
             "'sound://category_digital/jump_7.mp3'": salta
+      gamelab_playSoundOptionsSoccer:
+        text: riproduci il suono {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": sirena
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applauso
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": cantilena
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": tifare
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": calcio
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": due fischi
+            "'sound://category_sports/One_Whistle_SFX.mp3'": fischio
+      gamelab_playSoundOptionsSpace:
+        text: riproduci il suono {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": buco nero
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": ammasso proiettile
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del granchio
+            "'sound://category_space/Launch_SFX.mp3'": lancio
+            "'sound://category_space/Lift_Off.mp3'": decollo
+            "'sound://category_space/Pillars_SFX.mp3'": pilastri
+            "'sound://category_space/Southern_ring_SFX.mp3'": anello sud
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
       gamelab_playSpeech:
         text: riproduci discorso {SOUND}
       gamelab_playerBehaviors:
@@ -1895,6 +1938,8 @@ it:
         text: coordinata x di {SPRITE}
       Mikelab_yLocationOf:
         text: coordinata y di {SPRITE}
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         text: imposta la cornice a {BRUSH}
         options:
@@ -2317,5 +2362,9 @@ it:
           DIR:
             right: destra ↻
             left: sinistra ↺
+      storylab_setHeading:
+        text: imposta intestazione {HEADING}
+      storylab_setSubheading:
+        text: imposta intestazione secondaria {SUBHEADING}
       validation_validatedBackground:
         text: imposta lo sfondo {IMG}

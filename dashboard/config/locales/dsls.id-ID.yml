@@ -12801,18 +12801,11 @@ id-ID:
             "Jalankan"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombie akan melewati jalan yang benar dan akhirnya bolak-balik selamanya.
-          correct: true
+        - correct: true
           feedback: Benar!
         - text: Zombi akan berhasil sampai ke bunga matahari.
-          feedback: Salah. Zombie akan melewati jalan yang benar dan akhirnya bolak-balik
-            selamanya.
         - text: Zombi akan belok kanan di jalur pertama dan berputar-putar selamanya.
-          feedback: Salah. Zombie akan melewati jalan yang benar dan akhirnya bolak-balik
-            selamanya.
         - text: Zombi akan terpaku di akhir jalan lurus.
-          feedback: Dalam kode ini, zombie akan melewati jalan yang benar dan akhirnya
-            bolak-balik selamanya.
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Jalankan"?

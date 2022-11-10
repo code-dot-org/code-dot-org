@@ -5684,7 +5684,26 @@
         "ramp_artist_loops92022": "画一个边长200像素的正方形来通过这关。",
         "simconfig_-2022-2": "# 更改和预测\n\n找一个控制这个模拟的变量改动一下，并预测这个改动会如何影响结果。\n\n写下预测，运行 5 次，并写下发现。预测准确吗？",
         "simcustom_-2022-2": "# 定制\n\n这是另一个版本的模拟。尝试对精灵图服装或下面的代码做一些更改。尽情定制自己的模拟！",
-        "simstarter_-2022-2": "# 收集数据\n\n运行 5 次这个模拟。每次，都用收集数据的活动指南来记录：\n\n-   大象收集了多少个苹果？\n-   河马收集了多少个苹果？\n-   收集所有苹果花了多少时间？"
+        "simstarter_-2022-2": "# 收集数据\n\n运行 5 次这个模拟。每次，都用收集数据的活动指南来记录：\n\n-   大象收集了多少个苹果？\n-   河马收集了多少个苹果？\n-   收集所有苹果花了多少时间？",
+        "helloworld_food_backgrounds_soccer-2022": "_我们还可以用事件做什么？让我们学习如何改变背景。_\n\n_你可能已经注意到了这些模块：_ \n<xml><block type=\"gamelab_setBackgroundImageAs\"><title name=\"IMG\">\"gradient_10_1\"</title></block></xml>\n\n<xml><block type=\"gamelab_setBackground\"><value name=\"COLOR\"><block type=\"colour_picker\"><title name=\"COLOUR\">#ffffff</title></block></value></block></xml>\n\n-   在事件下放置另一个`set background`模块，通过点击精灵图来改变场景。\n\n_额外挑战：_通过点击多个精灵图，多次改变背景！",
+        "helloworld_food_backgrounds_space-2022": "_我们还可以用事件做什么？让我们学习如何改变背景。_\n\n_你可能已经注意到了这些模块：_ \n<xml><block type=\"gamelab_setBackgroundImageAs\"><title name=\"IMG\">\"gradient_10_1\"</title></block></xml>\n\n<xml><block type=\"gamelab_setBackground\"><value name=\"COLOR\"><block type=\"colour_picker\"><title name=\"COLOUR\">#ffffff</title></block></value></block></xml>\n\n-   在事件下放置另一个`set background`模块，通过点击精灵图来改变场景。\n\n_额外挑战：_通过点击多个精灵图，多次改变背景！",
+        "helloworld_food_behaviors_soccer-2022": "_让我们学习用行为来动画化精灵图。行为是程序运行时反复发生的动作。_\n\n-   使用工具箱底部的新模块来动画化其中一个精灵图。\n\n_挑战：_使用**事件**使得当精灵图被点击时精灵图开始一个行为。",
+        "helloworld_food_behaviors_space-2022": "_让我们学习用行为来动画化精灵图。行为是程序运行时反复发生的动作。_\n\n-   使用工具箱底部的新模块来动画化其中一个精灵图。\n\n_挑战：_使用**事件**使得当精灵图被点击时精灵图开始一个行为。",
+        "helloworld_food_click_soccer-2022": "_这里有什么不同？你能让这些精灵图说话吗？_\n\n-   阅读代码。你注意到了什么？\n-   点击_\"运行\"_按钮。\n-   点击精灵图。",
+        "helloworld_food_costumes_soccer-2022": "_让我们学习改变精灵图的外观。_\n\n-   使用新的`change costume`模块，当精灵图被点击时改变精灵图的服装。\n-   记住，当用户与你的精灵图互动时，`事件`将导致某些事情发生。\n\n_额外挑战：_多次改变一个精灵图的服装，或改变多个精灵图的服装。",
+        "helloworld_food_costumes_space-2022": "_让我们学习改变精灵图的外观。_\n\n-   使用新的`change costume`模块，当精灵图被点击时改变精灵图的服装。\n-   记住，当用户与你的精灵图互动时，`事件`将导致某些事情发生。\n\n_额外挑战：_多次改变一个精灵图的服装，或改变多个精灵图的服装。",
+        "helloworld_food_events_soccer-2022": "_让我们使一个精灵图在你点击它的时候说点什么！_\n\n-   在`when clicked`模块下连接一个`say`模块。\n-   在每个代码模块中选择相同的服装。\n-   按_\"运行\"_按钮。\n-   点击精灵图让它说点什么。\n\n_额外挑战：_使两个精灵图在被点击时都说点什么！",
+        "helloworld_food_events_space-2022": "_让我们使一个精灵图在你点击它的时候说点什么！_\n\n-   在`when clicked`模块下连接一个`say`模块。\n-   在每个代码模块中选择相同的服装。\n-   按_\"运行\"_按钮。\n-   点击精灵图让它说点什么。\n\n_额外挑战：_使两个精灵图在被点击时都说点什么！",
+        "helloworld_food_location_soccer-2022": "_给每个精灵一个不同的位置。_\n\n-   使用定位模块上的针脚移动精灵图到不同的位置。\n-   完成后按_\"运行\"_。",
+        "helloworld_food_location_space-2022": "_给每个精灵一个不同的位置。_\n\n-   使用定位模块上的针脚移动精灵图到不同的位置。\n-   完成后按_\"运行\"_。",
+        "helloworld_food_multi_soccer-2022": "_让我们聊天！让你的两个精灵图都说点什么。_\n\n-   添加代码使每个精灵图都说点什么。\n-   完成后按_\"运行\"_。",
+        "helloworld_food_multi_space-2022": "_让我们聊天！让你的两个精灵图都说点什么。_\n\n-   添加代码使每个精灵图都说点什么。\n-   完成后按_\"运行\"_。",
+        "helloworld_food_say_soccer-2022": "_你好，世界！我是一个精灵。使用“说”模块让我说任何你喜欢的话_\n\n-   将`创建新精灵`模块拖到工作区，并在`当运行时`下连接它。\n-   连接一个`说`模块 _到_`创建新精灵`模块下。\n-   确保在每个代码模块中选择相同的_服装_。\n-   完成后点击 _\"运行\"_。",
+        "helloworld_food_say_space-2022": "_你好，世界！我是一个精灵。使用“说”模块让我说任何你喜欢的话_\n\n-   将`创建新精灵`模块拖到工作区，并在`当运行时`下连接它。\n-   连接一个`说`模块 _到_`创建新精灵`模块下。\n-   确保在每个代码模块中选择相同的_服装_。\n-   完成后点击 _\"运行\"_。",
+        "helloworld_food_sizes_soccer-2022": "_让我们学习改变精灵图的大小。_\n\n-   使用工具箱中的新模块来改变精灵图的大小。 \n-   确保选择不是100的尺寸。\n\n_挑战：_使用**事件**使得当精灵图被点击时改变精灵图的大小。",
+        "helloworld_food_sizes_space-2022": "_让我们学习改变精灵图的大小。_\n\n-   使用工具箱中的新模块来改变精灵图的大小。 \n-   确保选择不是100的尺寸。\n\n_挑战：_使用**事件**使得当精灵图被点击时改变精灵图的大小。",
+        "helloworld_food_sounds_soccer-2022": "_让我们学习如何播放声音。_\n\n-   使用工具箱中的新模块来播放声音。\n\n_挑战：_使用**事件**在精灵图被点击时播放声音。",
+        "helloworld_food_sounds_space-2022": "_让我们学习如何播放声音。_\n\n-   使用工具箱中的新模块来播放声音。\n\n_挑战：_使用**事件**在精灵图被点击时播放声音。"
       }
     }
   }

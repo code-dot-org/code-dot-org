@@ -165,7 +165,7 @@ def restore_redacted_files
       elsif original_path.starts_with? "i18n/locales/original/course_content"
         # Course content should be merged with existing content, so existing
         # data doesn't get lost
-        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly', 'startHtml'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
@@ -390,6 +390,23 @@ def distribute_translations(upload_manifests)
       sanitize_file_and_write(loc_file, destination)
     end
 
+    ### Merge ml-playground datasets into apps' ailab JSON
+    Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
+      ailab_path = "apps/i18n/ailab/#{js_locale}.json"
+      name = File.basename(loc_file, '.json')
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      external_translations = JSON.parse(File.read(loc_file))
+      next if external_translations.empty?
+
+      # Merge new translations
+      existing_translations = JSON.parse(File.read(ailab_path))
+      existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
+      existing_translations['datasets'][name] = external_translations
+      sanitize_data_and_write(existing_translations, ailab_path)
+    end
+
     ### Animation library
     spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
     if file_changed?(locale, spritelab_animation_translation_path)
@@ -447,6 +464,56 @@ def distribute_translations(upload_manifests)
       loc_data = JSON.parse(File.read(loc_file))
       loc_data = wrap_with_locale(loc_data, locale, basename)
       sanitize_data_and_write(loc_data, destination)
+    end
+
+    ### Standards
+    Dir.glob("i18n/locales/#{locale}/standards/*.json") do |loc_file|
+      # For every framework, we place the frameworks and categories in their
+      # respective places.
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      # These JSON files contain the framework name, a set of categories, and a
+      # set of standards.
+      loc_data = JSON.parse(File.read(loc_file))
+      framework = File.basename(loc_file, '.json')
+
+      # Frameworks
+      destination = "dashboard/config/locales/frameworks.#{locale}.json"
+      framework_data = File.exist?(destination) ?
+        parse_file(destination).dig(locale, "data", "frameworks") || {} :
+        {}
+      framework_data[framework] = {
+        "name" => loc_data["name"]
+      }
+      framework_data = wrap_with_locale(framework_data, locale, "frameworks")
+      sanitize_data_and_write(framework_data, destination)
+
+      # Standard Categories
+      destination = "dashboard/config/locales/standard_categories.#{locale}.json"
+      category_data = File.exist?(destination) ?
+        parse_file(destination).dig(locale, "data", "standard_categories") || {} :
+        {}
+      (loc_data["categories"] || {}).keys.each do |category|
+        category_data[category] = {
+          "description" => loc_data["categories"][category]["description"]
+        }
+      end
+      category_data = wrap_with_locale(category_data, locale, "standard_categories")
+      sanitize_data_and_write(category_data, destination)
+
+      # Standards
+      destination = "dashboard/config/locales/standards.#{locale}.json"
+      standard_data = File.exist?(destination) ?
+        parse_file(destination).dig(locale, "data", "standards") || {} :
+        {}
+      (loc_data["standards"] || {}).keys.each do |standard|
+        standard_data[standard] = {
+          "description" => loc_data["standards"][standard]["description"]
+        }
+      end
+      standard_data = wrap_with_locale(standard_data, locale, "standards")
+      sanitize_data_and_write(standard_data, destination)
     end
 
     ### Pegasus

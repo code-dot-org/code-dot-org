@@ -265,6 +265,25 @@
           "name": "Setelah Satu Jam Kode",
           "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan][2]."
         },
+        "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
+          "name": "Melakukan Persiapan",
+          "description": "Sambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu."
+        },
+        "bdde2027-d08e-4f64-b95d-ab104da3edd9": {
+          "tips": [
+            null
+          ]
+        },
+        "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
+          "name": "Dukungan Umum"
+        },
+        "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
+          "name": "Halo Dunia",
+          "progression_name": "Halo Dunia"
+        },
+        "f5756484-7296-4391-99e2-7b2678653934": {
+          "name": "Bayangan"
+        },
         "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
           "description": "#### Melakukan Persiapan\n\nSambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu.\n\n_Katakan: “Hari ini kita akan belajar coding selama satu jam. Adakah di sini yang pernah mendengar istilah \"code\" sebelumnya? Apa artinya?\"_\n\nSiswa mungkin menjawab bahwa \"code\" adalah semacam pesan rahasia, atau ada kaitannya dengan komputer."
         },
@@ -648,7 +667,7 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://code.org/certificates?script=mc) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Langkah berikutnya",
@@ -752,6 +771,25 @@
         },
         "cec5b790-610d-4bb9-8868-a71c39f63329": {
           "description": "**Membaca Blown to Bits**\n\n-   Baca hal. 165-169 dari [Blown to Bits, Bab 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf).\n-   Jawab pertanyaan yang tersedia dalam panduan membaca dan lembar kerja Lembar Kerja [Panduan Membaca untuk Enkripsi]12]\t\t\n\n**Selengkapnya tentang Blown to Bits**\n\n-   Bagian awal Bab 5 dari Blown to Bits menyinggung signifikansi dan kontroversi seputar enkripsi setelah peristiwa 11 September. Bacaan ini bisa menjadi alat yang bermanfaat untuk lebih memperkenalkan dampak kriptografi terhadap berbagai aspek kehidupan modern.\n\n-   Minta siswa untuk melihat kembali riwayat penelusuran Internetnya dan menghitung secara kasar persentase tindakan mereka berdasarkan asumsi bahwa internet itu bersifat “pribadi.” Apakah mereka yakin bahwa memang seperti itu? Adakah situs web yang mereka kunjungi yang mereka percayai kerahasiaan lalu lintasnya dibanding situs web lain? Apakah kesimpulan mereka ini kuat?"
+        },
+        "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
+          "name": "Melakukan Persiapan",
+          "description": "Sambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu."
+        },
+        "3711e1c5-c206-4510-b260-99ee8f061a4c": {
+          "tips": [
+            null
+          ]
+        },
+        "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
+          "name": "Dukungan Umum"
+        },
+        "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
+          "name": "Halo Dunia",
+          "progression_name": "Halo Dunia"
+        },
+        "574954ea-9128-428b-9965-b0d34518c11d": {
+          "name": "Bayangan"
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Melakukan Persiapan",
@@ -3435,9 +3473,6 @@
           "tips": [
             "Ingatkan murid agar hanya membagikan karya mereka kepada teman dekat atau keluarga. Untuk informasi selengkapnya, tonton atau tunjukkan **\\*Jeda dan Berpikir Secara Online - Video** di hadapan kelas."
           ]
-        },
-        "f413261b-0a85-4534-bbfd-cc3928eac9ad": {
-          "description": "Kami sudah menyertakan level prediksi pilihan ganda yang mungkin saja sulit bagi murid prabaca. Level-level ini bersifat opsional sebagai bahan tinjauan Anda dan murid di kelas untuk membantu mempersiapkan puzzle yang akan datang. Alternatif lain, level-level ini dapat digunakan setelah menyelesaikan tahap ini sebagai tinjauan kembali bagi murid di kelas.**Level Prediksi:** - [Kursus B, Loop dalam Artis](https://studio.code.org/levels/8745)"
         },
         "3ca1573a-dd46-4103-98ec-b71d8b50033b": {
           "progression_name": "Video: Artis di Code Studio"

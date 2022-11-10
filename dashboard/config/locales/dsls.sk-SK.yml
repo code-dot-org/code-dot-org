@@ -6226,8 +6226,14 @@ sk-SK:
         title: 'Záverečný test: Vývoj webových stránok'
       CSD games cake challenge choice_2021:
         display_name: Náročnejšie úlohy
+        description: |2-
+
+          Uprav si ju podľa seba
+
+          Doteraz sme postupovali podľa plánu na vytvorenie hry, ktorý vytvoril niekto iný, takže teraz je čas vytvoriť si vlastný. Aké ďalšie funkcie alebo úlohy chceš vytvoriť?
       CSD games platform challenge choice_2021:
         display_name: Náročnejšie úlohy
+        description: Vylepši si hru pomocou týchto úloh!
       CSD web draw loop practice choice_2021:
         display_name: Cvičenie
         description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
@@ -6318,6 +6324,26 @@ sk-SK:
         content1: Sem pridať popis
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: Sem pridať popis
+        markdown: |
+          # Vytvorenie skákacej plošinovky
+
+          Pri vytváraní skákacej plošinovky budeš používať proces riešenia problémov.
+
+          ## Definovanie
+
+          Problém je pre túto hru jasne definovaný, pretože už poznáš ukážkovú verziu.  Možno však budeš chcieť urobiť nejaké zmeny. Uisti sa, že všetky nové prvky pre tvoju hru sú jasne definované.
+
+          ## Príprava
+
+          Skôr ako začneš programovať, treba vyplniť sprievodcu projektom. Pripraví ťa na projekt a výrazne ti uľahčí programovanie.
+
+          ## Skúšanie
+
+          Keď začneš kódovať, vyskúšaš si svoj plán. Pri programovaní nezabudni používať všetky zdroje, ktoré máš k dispozícii, ako sú dokumentácia a karta Pomoc a tipy.
+
+          ## Zamyslenie
+
+          Po dokončení projektu sa zamysli nad tým, či tvoja hra dopadla podľa tvojho plánu, a nad spôsobmi, ako by sa dal tvoj postup nabudúce vylepšiť.
       CSD U5 Encryption 1:
         content1: Sem pridať popis
       CSD U5 Encryption 1_2018:
@@ -7266,6 +7292,26 @@ sk-SK:
         description: Veľa precvičuj!
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: Sem pridať popis
+        markdown: |
+          # Vytvorenie skákacej plošinovky
+
+          Pri vytváraní skákacej plošinovky budeš používať proces riešenia problémov.
+
+          ## Definovanie
+
+          Problém je pre túto hru jasne definovaný, pretože už poznáš ukážkovú verziu.  Možno však budeš chcieť urobiť nejaké zmeny. Uisti sa, že všetky nové prvky pre tvoju hru sú jasne definované.
+
+          ## Príprava
+
+          Skôr ako začneš programovať, treba vyplniť sprievodcu projektom. Pripraví ťa na projekt a výrazne ti uľahčí programovanie.
+
+          ## Skúšanie
+
+          Keď začneš kódovať, vyskúšaš si svoj plán. Pri programovaní nezabudni používať všetky zdroje, ktoré máš k dispozícii, ako sú dokumentácia a karta Pomoc a tipy.
+
+          ## Zamyslenie
+
+          Po dokončení projektu sa zamysli nad tým, či tvoja hra dopadla podľa tvojho plánu, a nad spôsobmi, ako by sa dal tvoj postup nabudúce vylepšiť.
       CSD U4 test feature match:
         answers:
         - {}
@@ -7721,8 +7767,14 @@ sk-SK:
         title: 'Záverečný test: Vývoj webových stránok'
       CSD games cake challenge choice_2022:
         display_name: Náročnejšie úlohy
+        description: |2-
+
+          Uprav si ju podľa seba
+
+          Doteraz sme postupovali podľa plánu na vytvorenie hry, ktorý vytvoril niekto iný, takže teraz je čas vytvoriť si vlastný. Aké ďalšie funkcie alebo úlohy chceš vytvoriť?
       CSD games platform challenge choice_2022:
         display_name: Náročnejšie úlohy
+        description: Vylepši si hru pomocou týchto úloh!
       CSD web draw loop practice choice_2022:
         display_name: Cvičenie
         description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
@@ -17088,18 +17140,11 @@ sk-SK:
         - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_multi_maze_until10_predict22022:
         answers:
-        - text: Zombík minie správnu cestu a bude chodiť donekonečna hore dole.
-          correct: true
+        - correct: true
           feedback: Správne!
         - text: Zombík sa dostane k slnečnici.
-          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
-            hore dole.
         - text: Zombík sa na prvej ceste otočí doprava a donekonečna bude chodiť dokola.
-          feedback: Nesprávne. Zombík minie správnu cestu a bude chodiť donekonečna
-            hore dole.
         - text: Zombík sa zasekne na konci cesty vpred.
-          feedback: Pri tomto kóde zombík minie správnu cestu a bude chodiť donekonečna
-            hore dole.
         questions:
         - text: Pozorne si prezri tento kód.  Čo sa stane, keď klikneš "Spustiť"?
       courseD_multi_maze_until2_predict12022:
@@ -17555,11 +17600,11 @@ sk-SK:
       CSD web conditionals practice choice_2021:
         description: V týchto aktivitách si precvičíš používanie logických hodnôt
           a podmienených príkazov.
-        display_name: Podmienky (cvičenia)
+        display_name: Podmienky – cvičenia
       CSD web conditionals practice choice_2022:
         description: V týchto aktivitách si precvičíš používanie logických hodnôt
           a podmienených príkazov.
-        display_name: Podmienky (cvičenia)
+        display_name: Podmienky – cvičenia
       CSD web keyboard practice choice_2021:
         description: V týchto aktivitách si precvičíš zadávanie vstupov pomocou klávesnice.
         display_name: Precvičenie zadávania vstupov pomocou klávesnice
@@ -17856,3 +17901,157 @@ sk-SK:
         description: Pridaj do svojej rybej scény ďalšie ryby alebo si vytvor niečo
           nové.
         display_name: Pohyb sprajtov – úlohy
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
+        markdown: |
+          # Naplánuj si svoj projekt
+
+          Pozri si sprievodcu projektom, ktorý už bol pre teba vyplnený.
+
+          * Opisuje sprievodca projektom tie isté sprajty, ktoré máš vymyslené?
+          * Používa na ukladanie informácií rovnaké premenné?
+          * Opisuje tie isté funkcie ako ty?
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022:
+        markdown: |
+          # Naplánuj si svoj projekt
+
+          Pozri si sprievodcu projektom, ktorý už bol pre teba vyplnený.
+
+          * Opisuje sprievodca projektom tie isté sprajty, ktoré máš vymyslené?
+          * Používa na ukladanie informácií rovnaké premenné?
+          * Opisuje tie isté funkcie ako ty?
+      CSD games collisions practice choice_2021:
+        description: Precvič si používanie nových blokov kolízie sprajtov.
+        display_name: Kolízie – cvičenia
+      CSD games collisions practice choice_2022:
+        description: Precvič si používanie nových blokov kolízie sprajtov.
+        display_name: Kolízie – cvičenia
+      CSD games functions challenge choice_2021:
+        description: Vylepši svoju hru a vyskúšaj si tieto úlohy s funkciami.
+        display_name: Funkcie – úlohy
+      CSD games functions challenge choice_2022:
+        description: Vylepši svoju hru a vyskúšaj si tieto úlohy s funkciami.
+        display_name: Funkcie – úlohy
+      CSD games functions practice choice_2021:
+        description: Precvič si používanie funkcií a zisti viac o tom, prečo sú také
+          užitočné.
+        display_name: Funkcie – cvičenia
+      CSD games functions practice choice_2022:
+        description: Precvič si používanie funkcií a zisti viac o tom, prečo sú také
+          užitočné.
+        display_name: Funkcie – cvičenia
+      CSD games movement2 challenge choice_2021:
+        description: Vyskúšaj tieto nové bloky a úlohy s rýchlosťou a počítadlom.
+        display_name: Zložité pohyby sprajtu – úlohy
+      CSD games movement2 challenge choice_2022:
+        description: Vyskúšaj tieto nové bloky a úlohy s rýchlosťou a počítadlom.
+        display_name: Zložité pohyby sprajtu – úlohy
+      CSD games movement2 practice choice_2021:
+        description: Precvič si používanie nových spôsobov pohybu sprajtov.
+        display_name: Pohyb sprajtov – cvičenia
+      CSD games movement2 practice choice_2022:
+        description: Precvič si používanie nových spôsobov pohybu sprajtov.
+        display_name: Pohyb sprajtov – cvičenia
+      aiml-ch1-pulse-survey_2021:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-ch1-pulse-survey_2022:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-intro-pulse-survey_2021:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-intro-pulse-survey_2022:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) a vyplň dotazník Odporúčanie topánok.
+      ml-models-shoe survey_2022:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) a vyplň dotazník Odporúčanie topánok.
+      ml-model card-medical-1-2021:
+        markdown: |
+          # ER Recommender V1
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # ER Recommender V1
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-2_2022:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # AI Medical Recommender
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # AI Medical Recommender
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Odporúčanie domáceho zvieratka – karta modelu
+
+          **S partnerom:** Ako dokážete rozlíšiť kategorické vlastnosti a číselné vlastnosti na karte modelu?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2022:
+        markdown: |+
+          # Odporúčanie domáceho zvieratka – karta modelu
+
+          **S partnerom:** Ako dokážete rozlíšiť kategorické vlastnosti a číselné vlastnosti na karte modelu?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+

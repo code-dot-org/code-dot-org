@@ -228,20 +228,12 @@ el:
             MOVES.XArmsUp: Τεντώσου
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
-      Dancelab_everyMeasuresRange:
-        text: 'επαναλάβετε κάθε [Ν] [0] μέτρα μετά [START] [1] '
       Dancelab_everySeconds:
         text: 'κάθε {N} {UNIT} '
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
-      Dancelab_everySecondsRange:
-        text: 'κάθε {N} {UNIT} από {START} να {STOP} '
-        options:
-          UNIT:
-            measures: Μέτρα
-            seconds: Δευτερόλεπτα
       Dancelab_everyVerseChorus:
         text: 'κάθε {UNIT} '
         options:
@@ -987,6 +979,20 @@ el:
         text: αρχικοποίηση
       Dancelab_whenSetup2:
         text: αρχικοποίηση
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Μπουρμπουλήθρες
+            '"confetti"': Κομφετί
+            '"hearts"': καρδιές
+            '"rain"': βροχή
+            '"starburst"': Οδοντωτός σύνδεσμος
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): είναι συρόμενο
+            wandering(): περιπλάνηση
+            shrinking(): συρρικνώνεται
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       gamelab_addTarget:
@@ -1242,6 +1248,31 @@ el:
             "'sound://category_animals/dog.mp3'": σκύλος
             "'sound://category_animals/tiger.mp3'": τίγρης
             "'sound://category_digital/jump_7.mp3'": πήδα
+      gamelab_playSoundOptionsSoccer:
+        text: παίξεΉχο {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": αεροτενόρος
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": χειροκρότημα
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": ρυθμικό τραγούδι
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ζητωκραυγάσματα
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": κλωτσιά
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": δύο σφυριξιές
+            "'sound://category_sports/One_Whistle_SFX.mp3'": σφυρίχτρα
+      gamelab_playSoundOptionsSpace:
+        text: παίξεΉχο {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": μαύρη τρύπα
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": σύγκρουση γαλαξιών
+            "'sound://category_space/Carina_SFX.mp3'": Τρόπις
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Κασσιόπη
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Νεφέλωμα του Καρκίνου
+            "'sound://category_space/Launch_SFX.mp3'": εκτόξευση
+            "'sound://category_space/Lift_Off.mp3'": απογείωση
+            "'sound://category_space/Pillars_SFX.mp3'": κολώνες
+            "'sound://category_space/Southern_ring_SFX.mp3'": νότιος δακτύλιος
+            "'sound://category_space/Supernova_SFX.mp3'": σουπερνόβα
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -2019,5 +2050,9 @@ el:
           DIR:
             right: δεξιά ↻
             left: αριστερά ↺
+      storylab_setHeading:
+        text: ορίστε επικεφαλίδα {HEADING}
+      storylab_setSubheading:
+        text: ορίστε υποκεφαλίδα {SUBHEADING}
       validation_validatedBackground:
         text: Ορισμός φόντου σε {IMG}

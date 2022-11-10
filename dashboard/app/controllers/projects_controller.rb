@@ -333,7 +333,8 @@ class ProjectsController < ApplicationController
       game_display_name: data_t("game.name", @game.name),
       app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
-      disallowed_html_tags: disallowed_html_tags
+      disallowed_html_tags: disallowed_html_tags,
+      blocklyVersion: params[:blocklyVersion]
     )
 
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
@@ -481,7 +482,7 @@ class ProjectsController < ApplicationController
   end
 
   def get_from_cache(key)
-    if Script.should_cache?
+    if Unit.should_cache?
       @@project_level_cache[key] ||= Level.find_by_key(key)
     else
       Level.find_by_key(key)

@@ -240,20 +240,12 @@ ar:
             MOVES.Rest: لا شيء
       Dancelab_eval:
         text: تقييم{CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'كرر كل {N} بعد التدابير {START} '
       Dancelab_everySeconds:
         text: 'كل {N} {UNIT} '
         options:
           UNIT:
             '"measures"': اجرائات
             '"seconds"': ثوان
-      Dancelab_everySecondsRange:
-        text: 'كل {N} {UNIT} من {START} إلى {STOP} '
-        options:
-          UNIT:
-            measures: الإجراءات
-            seconds: ثوان
       Dancelab_everyVerseChorus:
         text: 'كل {UNIT} '
         options:
@@ -1017,6 +1009,24 @@ ar:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: عمل {EFFECT} تأثير
+        options:
+          EFFECT:
+            '"bubbles"': فقاعات
+            '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب
+            '"emojis"': رموز تعبيرية سعيدة
+            '"rain"': مطر
+            '"starburst"': النجمي
+            '"glass"': زجاج محطم
+            '"twinkling"': وميض
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): كونها قابلة للسحب
+            wandering(): التحرك
+            shrinking(): الانقباض
       gamelab_addBehaviorSimple:
         text: العفريت {SPRITE} يبدا {BEHAVIOR}
       gamelab_addTarget:
@@ -1338,6 +1348,31 @@ ar:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": تحديد
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": باس ملتوي
             "'sound://category_digital/jump_7.mp3'": قفز
+      gamelab_playSoundOptionsSoccer:
+        text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": بوق هوائي
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": تصفيق
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": نشيد
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": ابتهاج
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": ركلة
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": صافرتان
+            "'sound://category_sports/One_Whistle_SFX.mp3'": صافرة
+      gamelab_playSoundOptionsSpace:
+        text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": ثقب أسود
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": كتلة رصاص
+            "'sound://category_space/Carina_SFX.mp3'": كارينا
+            "'sound://category_space/Cassiopeia_SFX.mp3'": كاسيوبيا
+            "'sound://category_space/Crab_nebula_SFX.mp3'": كراب نيبولا
+            "'sound://category_space/Launch_SFX.mp3'": إطلاق
+            "'sound://category_space/Lift_Off.mp3'": انطلاق
+            "'sound://category_space/Pillars_SFX.mp3'": ركائز
+            "'sound://category_space/Southern_ring_SFX.mp3'": الحلقة الجنوبية
+            "'sound://category_space/Supernova_SFX.mp3'": سوبرنوفا
       gamelab_playSpeech:
         text: ألعاب النطق {SOUND}
       gamelab_playerBehaviors:
@@ -1932,6 +1967,8 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2330,5 +2367,9 @@ ar:
           DIR:
             right: إلى اليمين ↻
             left: إلى اليسار ↺
+      storylab_setHeading:
+        text: ضبط عنوان {HEADING}
+      storylab_setSubheading:
+        text: ضبط عنوان فرعي  {SUBHEADING}
       validation_validatedBackground:
         text: تعيين الخلفية إلى {IMG}

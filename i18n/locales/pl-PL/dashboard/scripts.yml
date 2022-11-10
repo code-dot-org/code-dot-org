@@ -4021,6 +4021,9 @@ pl:
           name: csc-things
           title: CSC Zrzut mózgu
           description: To dopiero prace w toku :)
+          lessons:
+            lesson-2:
+              name: okładka książki
         poetry-hoc2:
           name: poetry-hoc2
           title: Poezja Godziny Kodowania v2
@@ -4498,6 +4501,9 @@ pl:
           name: cs4all-invasive-species
           title: 'Gatunek inwazyjny '
           description_short: To jest grant badawczy finansowany przez NSF dla CS4All
+          lessons:
+            lesson-21:
+              name: Pierwsze kroki
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4690,6 +4696,9 @@ pl:
           title: Witaj świecie
         csd-playground:
           name: csd-playground
+          lessons:
+            lesson-7:
+              name: Wprowadzenie do Duszków
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -4905,6 +4914,8 @@ pl:
               display_name: Laboratorium Magpie
             lessonGroup-3:
               display_name: Laboratorium gwiazd
+            lessonGroup-5:
+              display_name: Data Lab
           name: csa-labs-2022
           title: Laboratoria AP CSA College Board
           lessons:
@@ -4918,6 +4929,10 @@ pl:
               name: Aktywność otwarta
             lesson-16:
               name: Aktywność otwarta
+            lesson-17:
+              name: Dane, dane, dane!
+            lesson-18:
+              name: Projektowanie i implementacja własnej klasy
             lesson-19:
               name: Zbierając to wszystko razem...
             lesson-20:
@@ -5002,10 +5017,30 @@ pl:
           description_short: Uczniowie przygotowują się do egzaminu AP CSA, ćwicząc odpowiedzi na pytania wielokrotnego wyboru i pytania otwarte.
         csa1-2023:
           lessons:
+            lesson-1:
+              name: Witamy w CSP
+            lesson-3:
+              name: Ankieta wstępna CSA
             lesson-2:
               name: Java Lab
             lesson-6:
               name: Pętle
+            lesson-8:
+              name: Metody pisania
+            lesson-11:
+              name: Strategie debugowania
+            lesson-12:
+              name: Dekompozycja i projektowanie
+            lesson-13:
+              name: Dwukierunkowe instrukcje wyboru
+            lesson-15:
+              name: Skrajne przypadki
+            lesson-16:
+              name: Otwarty kod źródłowy
+            lesson-20:
+              name: Praktyka FRQ
+            lesson-21:
+              name: Jednostka 1 - Sprawdzian
           lesson_groups:
             lessonGroup-2:
               display_name: Ankieta
@@ -5013,6 +5048,8 @@ pl:
               display_name: Treści
             lessonGroup-4:
               display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Lekcje alternatywne
           name: csa1-2023
           title: Programowanie obiektowe
         csa2-2023:
@@ -5037,21 +5074,52 @@ pl:
           name: csa8-2023
           title: Wyszukiwanie i porządkowanie
         vpl-csd3-ayw-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Równość i dane
           name: vpl-csd3-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 3
         vpl-csd4-ayw-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Moduł 4 Praca asynchroniczna
           name: vpl-csd4-ayw-pilot-2022
           title: Odkrycia informatyki wirtualny moduł 4
+        csa-magpie-lab:
+          lessons:
+            lesson-1:
+              name: Eksperymentuj z istniejącymi chatbotami
+            lesson-2:
+              name: Pracuj z kodem Magpie
+            lesson-3:
+              name: Praca z API dla Magpie i String
+            lesson-4:
+              name: Modyfikuj odpowiedzi
+            lesson-5:
+              name: Użyj tablic, aby uzyskać losowe odpowiedzi
+          title: AP CSA Magpie Lab
+        emma:
+          lessons:
+            lesson-1:
+              name: ćwiczenia
         csa-consumer-review-lab:
           lessons:
             lesson-5:
               name: Aktywność otwarta
         csa-data-lab:
           lessons:
+            lesson-1:
+              name: Dane, dane, dane!
+            lesson-2:
+              name: Projektowanie i implementacja własnej klasy
             lesson-3:
               name: Zbierając to wszystko razem...
             lesson-4:
               name: Aktywność otwarta
+        hello-world-space-2022:
+          title: 'Witaj świecie: kosmos'
+        hello-world-soccer-2022:
+          title: 'Witaj świecie: piłka nożna'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5088,6 +5156,7 @@ pl:
               display_name: 'Rozdział 1: Obrazy i animacje'
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie gier'
+          title: Interaktywne animacje i gry
         csd6-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5120,5 +5189,116 @@ pl:
           lessons:
             lesson-1:
               name: Zabytki USA
+            lesson-3:
+              name: Lokalni gawędziarze
           name: csc-landmarks-pilot
           description: Moduł pilotażowy zima 2022 r. – Moduł historycznych zabytków i punktów orientacyjnych na mapie
+        csc-playground:
+          name: csd-playground
+          title: Plac Zabaw CSP
+        self-paced-pl-physical-computing1:
+          name: self-paced-pl-physical-computing1
+        self-paced-pl-physical-computing2:
+          lessons:
+            lesson-5:
+              name: Ta lekcja wymaga nazwy
+          name: self-paced-pl-physical-computing2
+        emmas-playground:
+          name: emmas-playground
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: Co to za dźwięk?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Ankieta
+            csp_unit1_2020:
+              display_name: 'Jednostka 1: Informacje cyfrowe'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Jednostka 2: Internet'
+          title: Internet ('21-'22)
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Zmienne
+            csp_conditionals:
+              display_name: Zdania z warunkami
+            csp_functions:
+              display_name: Funkcje
+            csp_project:
+              display_name: Projekt
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Listy
+            csp_loops:
+              display_name: Pętle
+            csp_traversals:
+              display_name: Przejścia
+            csp_project:
+              display_name: Projekt
+            lessonGroup-5:
+              display_name: Ankieta po odbyciu kursu
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Jednistka 6: Algorytmy'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametry i wartości zwracane
+            csp_libraries:
+              display_name: Biblioteki
+            lessonGroup-3:
+              display_name: Ankieta po odbyciu kursu
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Twórz PT
+            lessonGroup-3:
+              display_name: Ankieta po odbyciu kursu
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Jednostka 9: Dane'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
+            lessonGroup-2:
+              display_name: Ankieta po odbyciu kursu
+        csp-post-survey-2023:
+          title: Zasady informatyki Ankieta po kursie
+          description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
+          student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
+        self-paced-pl-csa3-2023:
+          title: 'Moduł 3: Wsparcie przy programowaniu tekstowym'
+        csa-examples-22:
+          lessons:
+            lesson-1:
+              name: Jednostka 1 Projekty
+            lesson-2:
+              name: Jednostka 2 Projekty
+            lesson-3:
+              name: Jednostka 3 Projekty
+            lesson-4:
+              name: Jednostka 4 Projekty
+            lesson-5:
+              name: Jednostka 5 Projekty
+            lesson-6:
+              name: Jednostka 6 Projekty
+            lesson-7:
+              name: Jednostka 7 Projekty
+            lesson-8:
+              name: Jednostka 8 Projekty

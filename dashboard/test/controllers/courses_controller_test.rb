@@ -45,8 +45,8 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CoursesQueryCountTests < ActionController::TestCase
     setup do
-      Script.stubs(:should_cache?).returns true
-      Script.clear_cache
+      Unit.stubs(:should_cache?).returns true
+      Unit.clear_cache
       UnitGroup.clear_cache
 
       @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
@@ -65,8 +65,8 @@ class CoursesControllerTest < ActionController::TestCase
 
   class CachedQueryCounts < ActionController::TestCase
     setup do
-      Script.stubs(:should_cache?).returns true
-      Script.clear_cache
+      Unit.stubs(:should_cache?).returns true
+      Unit.clear_cache
       UnitGroup.clear_cache
 
       offering = create :course_offering, key: 'csx'
@@ -563,7 +563,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 'unit2', alternate_unit_group_unit.default_script.name
     assert_equal 'my_experiment', alternate_unit_group_unit.experiment_name
 
-    default_unit = Script.find_by(name: 'unit2')
+    default_unit = Unit.find_by(name: 'unit2')
     expected_position = unit_group.default_unit_group_units.find_by(script: default_unit).position
     assert_equal expected_position, alternate_unit_group_unit.position,
       'an alternate unit must have the same position as the default unit it replaces'

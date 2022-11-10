@@ -29,7 +29,7 @@
       "description": "The boolean expression to invert the result of."
     }
   ],
-  "return_value": "Boolean (true/false) value.",
+  "return_value": "Returns false if the expression is true; otherwise, returns true.",
   "short_description": "Returns false if the expression is true; otherwise, returns true.",
   "syntax": "!expression",
   "tips": "- Some complex decisions can sometimes be rewritten to use an ! operator. It is fine to choose whichever reads clearest."

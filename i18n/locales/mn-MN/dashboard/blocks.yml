@@ -228,20 +228,12 @@ mn:
             MOVES.XArmsUp: Сунгах
             MOVES.ThisOrThat: Энэ эсвэл тэр
             MOVES.Rest: Байхгүй
-      Dancelab_everyMeasuresRange:
-        text: "{START}-н дараа {N} арга хэмжээ бүрийг давтах "
       Dancelab_everySeconds:
         text: "{N} {UNIT} бүрийг давтах "
         options:
           UNIT:
             '"measures"': арга хэмжээ
             '"seconds"': секундууд
-      Dancelab_everySecondsRange:
-        text: "{N} {UNIT} бүр нь {START}-с {STOP} хүртгэл байна"
-        options:
-          UNIT:
-            measures: Арга хэмжээ
-            seconds: Секунд
       Dancelab_everyVerseChorus:
         text: "{UNIT} бүр "
         options:
@@ -989,6 +981,18 @@ mn:
         text: тохиргоо
       Dancelab_whenSetup2:
         text: тохиргоо
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': зүрхнүүд
+            '"rain"': бороотой
+            '"starburst"': Оддын тэсрэлт
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): татаж болохуйц
       gamelab_addBehaviorSimple:
         text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
       gamelab_allSpritesWithAnimation:
@@ -1219,6 +1223,10 @@ mn:
             "'sound://category_animals/dolphin.mp3'": далайн гахай
             "'sound://category_animals/dog.mp3'": нохой
             "'sound://category_digital/jump_7.mp3'": үсрэх
+      gamelab_playSoundOptionsSoccer:
+        text: хөгжимтоглох {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: хөгжимтоглох {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:

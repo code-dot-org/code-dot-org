@@ -50,7 +50,8 @@
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
         },
         "aquatic/Aquatic": {
-          "name": "Minecraft: Suvga sayohat"
+          "name": "Minecraft: Suvga sayohat",
+          "overview": "Barcha yoshdagi o'quvchilar ushbu darsda xavfsiz hamda qo'llab-quvvatlovchi bo'lgan muhitda kodlash va kompyuter savodxonligi tajribasiga ega bo'lishadi. Bu darsni o'qish yoshiga yetgan (6+ yosh) har qanday o'quvchilar uchun dars juda foydali. Ehtimol, yoshroq o'quvchilar darslarni tugatmaslar, lekin soatlab boshqotirmalar ustida ishlash juda qiziqarli bo'ladi. O'rta maktab o'quvchilari o'quv qo'llanmasini tugatishlari aniqroq va oxirida bepul o'yin bosqichida o'ynash uchun vaqtlari bo'ladi."
         },
         "hoc-encryption/Simple Encryption": {
           "name": "Oddiy Shifrlash",

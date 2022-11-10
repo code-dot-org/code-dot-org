@@ -4386,7 +4386,29 @@
         "ramp_artist_loops72022": "Suche nach einem Muster und verkürze diesen Code, indem du Schleifen verwendest!",
         "ramp_artist_loops82022": "Suche nach einem Muster und verkürze diesen Code, indem du Schleifen verwendest!",
         "ramp_artist_loops92022": "Löse dieses Rätsel, indem du ein Quadrat zeichnest.",
-        "simcustom_-2022-2": "Versuche ein paar Änderungen an den Sprite-Kostümen oder dem Code unten vorzunehmen."
+        "simcustom_-2022-2": "Versuche ein paar Änderungen an den Sprite-Kostümen oder dem Code unten vorzunehmen.",
+        "helloworld_food_backgrounds_soccer-2022": "Lerne, wie du den Hintergrund ändern kannst.",
+        "helloworld_food_backgrounds_space-2022": "Lerne, wie du den Hintergrund ändern kannst.",
+        "helloworld_food_behaviors_soccer-2022": "Lernen wir, Sprites mit Verhaltensweisen zu animieren.  ",
+        "helloworld_food_behaviors_space-2022": "Lernen wir, Sprites mit Verhaltensweisen zu animieren.  ",
+        "helloworld_food_click_soccer-2022": "Wie kannst du diese Sprites sprechen lassen?",
+        "helloworld_food_click_space-2022": "Wie kannst du diese Sprites sprechen lassen?",
+        "helloworld_food_costumes_soccer-2022": "Lass uns lernen, wie du das Aussehen von Sprites änderst.",
+        "helloworld_food_costumes_space-2022": "Lass uns lernen, wie du das Aussehen von Sprites änderst.",
+        "helloworld_food_events_soccer-2022": "Verwende das Ereignis `beim Klicken`, um das Sprite etwas sagen zu lassen.",
+        "helloworld_food_events_space-2022": "Verwende das Ereignis `beim Klicken`, um das Sprite etwas sagen zu lassen.",
+        "helloworld_food_freeplay_soccer-2022": "Jetzt wird es Zeit, etwas zu kreieren, was dir Spaß macht! ",
+        "helloworld_food_freeplay_space-2022": "Jetzt wird es Zeit, etwas zu kreieren, was dir Spaß macht! ",
+        "helloworld_food_location_soccer-2022": "Gib jedem Sprite eine andere Position.",
+        "helloworld_food_location_space-2022": "Gib jedem Sprite eine andere Position.",
+        "helloworld_food_multi_soccer-2022": "Lasse jeden deiner zwei Sprites etwas sagen. ",
+        "helloworld_food_multi_space-2022": "Lasse jeden deiner zwei Sprites etwas sagen. ",
+        "helloworld_food_say_soccer-2022": "Mit dem Baustein `sagen`, kannst du mich sagen lassen, was du willst!",
+        "helloworld_food_say_space-2022": "Mit dem Baustein `sagen`, kannst du mich sagen lassen, was du willst!",
+        "helloworld_food_sizes_soccer-2022": "Lass uns lernen, wie du die Größe von Sprites änderst.",
+        "helloworld_food_sizes_space-2022": "Lass uns lernen, wie du die Größe von Sprites änderst.",
+        "helloworld_food_sounds_soccer-2022": "Lass uns lernen, wie Töne wiedergegeben werden.",
+        "helloworld_food_sounds_space-2022": "Lass uns lernen, wie Töne wiedergegeben werden."
       }
     }
   }

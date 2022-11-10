@@ -17,9 +17,9 @@ module LevelsHelper
   include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
-    if script_level.script.name == Script::HOC_NAME
+    if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
-    elsif script_level.script.name == Script::FLAPPY_NAME
+    elsif script_level.script.name == Unit::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
       if script_level.lesson.numbered_lesson?
@@ -260,7 +260,7 @@ module LevelsHelper
     end
 
     if @script
-      view_options(script_name: @script.name)
+      view_options(script_name: @script.name, unit_year: @script.get_course_version&.key)
     end
 
     unless params[:share]
@@ -604,7 +604,7 @@ module LevelsHelper
     level_options = l.localized_blockly_level_options(@script).dup
     app_options[:level] = level_options
 
-    # Script-dependent option
+    # Unit-dependent option
     script = @script
     app_options[:scriptId] = script.id if script
     app_options[:scriptName] = script.name if script
@@ -724,14 +724,14 @@ module LevelsHelper
     # These would ideally also go in _javascript_strings.html right now, but it can't
     # deal with params.
     {
-      thank_you: URI.escape(I18n.t('footer.thank_you')),
+      thank_you: ERB::Util.url_encode(I18n.t('footer.thank_you')),
       help_from_html: I18n.t('footer.help_from_html'),
-      art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-      code_from_html: URI.escape(I18n.t('footer.code_from_html')),
+      art_from_html: ERB::Util.url_encode(I18n.t('footer.art_from_html', current_year: Time.now.year)),
+      code_from_html: ERB::Util.url_encode(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      trademark: ERB::Util.url_encode(I18n.t('footer.trademark', current_year: Time.now.year)),
       built_on_github: I18n.t('footer.built_on_github'),
-      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
+      google_copyright: ERB::Util.url_encode(I18n.t('footer.google_copyright'))
     }
   end
 

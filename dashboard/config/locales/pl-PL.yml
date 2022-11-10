@@ -329,6 +329,7 @@ pl:
   teacher_mailer:
     new_teacher_subject: Witaj na Code.org!
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
+    verified_teacher_subject: Weryfikacja nauczyciela Code.org — sukces
   section:
     your_section:
       one: 'Twoja sekcja:'
@@ -1336,6 +1337,8 @@ pl:
         not_listed: Preferowanego terminu nie ma na liście
         none: Wolę nie odpowiadać
       school_country:
+        barbados: Barbados
+        belize: Belize
         canada: Kanada
         chile: Chile
         colombia: Kolumbia
@@ -1479,3 +1482,22 @@ pl:
       cannot_view_locked_answers: Nie można wyświetlić odpowiedzi, gdy jest zablokowany
       forbidden: Użytkownik nie może zaktualizować stanu blokady ucznia
   reset_predict_progress_button: Usuń odpowiedź
+  pixelation:
+    raw_format: Format wiersza
+    raw_format_alt: Wyświetl bity bez formatowania
+    readable_format: Czytelny format
+    readable_format_alt: Wyświetl bity oddzielone pikselami
+    save_image: Zapisz obraz
+    actual_size: Aktualny rozmiar
+    image_file_format_header: Format pliku obrazu
+    image_file_format_width: 'Szerokość: 1 bajt'
+    image_file_format_height: 'Wysokość: 1 bajt'
+    image_file_format_bits_per_pixel: 'Bity na piksel: 1 bajt'
+    image_file_format_data_a: n bitów danych pikseli
+    image_file_format_data_b: n = Szerokość * Wysokość * Bity na piksel
+    image_width: Szerokość obrazu
+    image_height: Wysokość obrazu
+    bits_per_pixel_header: Bity na piksel
+    binary: Binarny
+    hexadecimal: Szesnastkowy
+    pixel_format_header: Format pikseli
