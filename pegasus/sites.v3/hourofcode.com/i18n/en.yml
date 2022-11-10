@@ -465,6 +465,7 @@
   signup_send_posters_address_placeholder: 'This address will not be shared on our map'
 
   signup_event_type_in_school: 'School'
+  signup_event_type_after_school: 'After school program'
   signup_event_type_out_of_school: 'Organization/Company'
   signup_event_type_at_home: 'Home'
 
