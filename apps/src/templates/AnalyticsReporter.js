@@ -14,8 +14,6 @@ export default class AnalyticsReporter {
     // TODO: API Key
     init(API_KEY);
     this.sessionStartTime = null;
-    this.maxInstructionsSeen = 1;
-    this.currentInstructionsPage = 1;
     this.blockStats = {};
   }
 
@@ -52,8 +50,6 @@ export default class AnalyticsReporter {
     this.sessionStartTime = null;
     const payload = {
       durationSeconds: duration / 1000,
-      mostInstructionsVisited: this.maxInstructionsSeen,
-      lastInstructionsVisited: this.currentInstructionsPage,
       blockStats: this.blockStats
     };
     track('Session end', payload);
