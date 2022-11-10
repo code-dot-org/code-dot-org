@@ -662,7 +662,7 @@ it:
         CSF_a_b_artist_loops: Cicli con l'artista
         CSF_artist_angles: Angoli con l'Artista
         CSF_collector_k1_blocks: La collezionista
-        CSF_collector_repeat_loops: 'La collezionista: Cicli (istruzioni di ripetizione)'
+        CSF_collector_repeat_loops: La collezionista - Cicli (istruzioni di ripetizione)
         CSF_collector_text_blocks: La collezionista
         CSF_create_functions: Creazione di funzioni
         CSF_debugging_k1_blocks: Correzione errori (debugging)

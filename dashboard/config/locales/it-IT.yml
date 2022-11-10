@@ -841,6 +841,8 @@ it:
       title: Ballando col codice
     hello-world:
       title: Ciao Mondo
+      body: Scegli tra i seguenti quattro temi divertenti per programmare dei personaggi
+        interattivi in un mondo creato da te.
     poem-art:
       title: L'arte della poesia
       body: Esprimiti! Usa il codice per animare le poesie.
