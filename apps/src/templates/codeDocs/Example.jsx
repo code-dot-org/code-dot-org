@@ -5,7 +5,7 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 export default function Example({example, programmingEnvironmentName}) {
   const content = (
     <>
-      {example.name && <h3>{example.name}</h3>}
+      {example.name && <h3>{example.name} EXAMPLE TEXT</h3>}
       {example.description && (
         <EnhancedSafeMarkdown markdown={example.description} />
       )}
@@ -25,7 +25,8 @@ export default function Example({example, programmingEnvironmentName}) {
               src={embedUrl}
               style={{
                 ...styles.embeddedApp,
-                ...embeddedIdeStyles[programmingEnvironmentName]
+                ...embeddedIdeStyles[programmingEnvironmentName],
+                overflow: 'scroll'
               }}
             />
             {example.image && <img src={example.image} />}
@@ -44,7 +45,8 @@ export default function Example({example, programmingEnvironmentName}) {
               src={embedUrl}
               style={{
                 width: '100%',
-                height: Number(example.embed_app_with_code_height) || 310
+                height: Number(example.embed_app_with_code_height) || 310,
+                overflow: 'scroll'
               }}
             />
           </div>
@@ -87,7 +89,8 @@ const embeddedIdeStyles = {
   gamelab: {
     width: 450,
     height: 781,
-    transform: 'scale(0.5)'
+    transform: 'scale(0.5)',
+    overflow: 'scroll'
   }
 };
 
@@ -100,6 +103,7 @@ const embeddedIdeContainerStyles = {
   gamelab: {
     width: '240px',
     height: '400px',
-    paddingTop: '20px'
+    paddingTop: '20px',
+    overflow: 'scroll'
   }
 };

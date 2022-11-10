@@ -30,7 +30,7 @@ export default class ReadOnlyBlockSpace extends React.Component {
       this.container,
       this.props.block,
       {
-        noScrolling: true,
+        noScrolling: false,
         rtl: this.props.isRtl
       }
     );
