@@ -46,7 +46,6 @@ function schoolDropdownOnChange(field, event) {
 }
 
 $(document).ready(function() {
-  console.log('im getting here!');
   const hocEventLocationElement = document.getElementById(
     'hoc-event-location-selector'
   );
