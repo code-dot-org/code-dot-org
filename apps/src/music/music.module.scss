@@ -61,12 +61,20 @@ $default-spacing: 5px;
   display: flex;
   flex-direction: row;
   max-height: calc(100% - $timeline-area-height);
+
+  .topButtonsContainer {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+  }
 }
 
 .blocklyArea {
   border-radius: $default-border-radius;
   overflow: hidden;
   flex: 1;
+  position: relative;
 }
 
 .timelineArea {
