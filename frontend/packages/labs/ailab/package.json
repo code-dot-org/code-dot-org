@@ -7,7 +7,6 @@
     "url": "git+ssh://git@github.com/code-dot-org/ml-playground.git"
   },
   "jest": {
-    "silent": true,
     "moduleNameMapper": {
       ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif)$": "identity-obj-proxy",
       "^@public(.*)$": "<rootDir>/public/$1"
