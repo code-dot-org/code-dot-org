@@ -1,13 +1,4 @@
 import GoogleBlockly from 'blockly/core';
-import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-
-const options = {
-  contextMenu: true,
-  shortcut: true
-};
-
-const plugin = new CrossTabCopyPaste();
-plugin.init(options);
 
 const registerDeletable = function() {
   const deletableOption = {
@@ -165,5 +156,4 @@ function hasShadowChildren(block) {
   return shadowChildCount(block) > 0;
 }
 
-// shortcuts are registered by the CrossTabCopyPaste plugin
-exports.registerAllContextMenuShortcutItems = registerAllContextMenuItems;
+exports.registerAllContextMenuItems = registerAllContextMenuItems;

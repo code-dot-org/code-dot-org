@@ -24,11 +24,20 @@ import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
-import {registerAllContextMenuShortcutItems} from './addons/contextMenuAndShortcut';
+import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused from './addons/blockSvgUnused';
 import {ToolboxType} from './constants';
 import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
+
+const options = {
+  contextMenu: true,
+  shortcut: true
+};
+
+const plugin = new CrossTabCopyPaste();
+plugin.init(options);
 
 const BLOCK_PADDING = 7; // Calculated from difference between block height and text height
 
@@ -87,7 +96,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
-  blocklyWrapper.wrapReadOnlyProperty('ContextMenuAndShortcut');
+  blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
@@ -196,7 +205,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRendererZelos,
     true /* opt_allowOverrides */
   );
-  registerAllContextMenuShortcutItems();
+  registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {

@@ -37,7 +37,7 @@ describe('Google Blockly Wrapper', () => {
       'BlockSvg',
       'common_locale',
       'Connection',
-      'ContextMenuAndShortcut',
+      'ContextMenu',
       'contractEditor',
       'createSvgElement',
       'Css',
