@@ -1,8 +1,8 @@
 require pegasus_dir 'forms/hoc_signup_2020'
 
 # HOC Sign up form for 2022.
-# Most of the logic hasn't changed since the 2017 form, but the 2020 form added
-# support for "at_home" as an event type.
+# Most of the logic hasn't changed since the 2020 form, but the 2022 form added support for "after_school" as an event type,
+# requiring we override the normalize() function to include it in the event_type_s validation (see below).
 class HocSignup2022 < HocSignup2020
   def self.normalize(data)
     Honeybadger.context({data: data})
