@@ -87,21 +87,24 @@ def localize_standards
   end
 end
 
-# This function localizes all content in studio.code.org/docs
-# Localizes all the content for each Programming Expression in each of the listed Environments.
+# This function localizes content in studio.code.org/docs
 def localize_docs
   puts "Preparing /docs content"
 
-  # currently supporting translations for applab, gamelab and weblab. NOT tranlating javalab and spritelab.
+  # TODO: Adding spritelab and Javalab to translation pipeline
+  # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
   # javalab documentations exists in a different table because it has a different structure, more align with java.
-  environments = %w(applab gamelab weblab)
+  # spritlab uses blockly blocks which are translatable, unlike JavaScript blocks. This requires translating the
+  # Programming Expression name
+  localized_environments = %w(applab gamelab weblab)
+
+  docs_content_file = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
+  programming_env_docs = {}
 
   ### Localize Programming Environments
   # For each programming environment, name is used as key, title is used as name
   ProgrammingEnvironment.all.sort.each do |env|
-    next unless environments.include?(env.name)
-    docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env.name + ".json")
-    programming_env_docs = {}
+    next unless localized_environments.include?(env.name)
     programming_env_docs[env.name] = {
       'name' => env.properties["title"],
       'description' => env.properties["description"],
@@ -167,12 +170,11 @@ def localize_docs
         end
       end
     end
-
-    # For each Programmin Environment, generate a file containing the string.
-    FileUtils.mkdir_p(File.dirname(docs_content_file))
-    File.open(docs_content_file, "w") do |file|
-      file.write(JSON.pretty_generate(programming_env_docs.compact))
-    end
+  end
+  # Generate a file containing the string of all Programming Environments.
+  FileUtils.mkdir_p(File.dirname(docs_content_file))
+  File.open(docs_content_file, "w") do |file|
+    file.write(JSON.pretty_generate(programming_env_docs.compact))
   end
 end
 
@@ -648,12 +650,12 @@ end
 
 def redact_docs
   puts "Redacting /docs content"
-  Dir.glob(File.join(I18N_SOURCE_DIR, "docs", "*.json")).each do |source|
-    backup = source.sub("source", "original")
-    FileUtils.mkdir_p(File.dirname(backup))
-    FileUtils.cp(source, backup)
-    RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink', 'rawtext'])
-  end
+
+  source = File.join(I18N_SOURCE_DIR, "docs", "programming_environments.json")
+  backup = source.sub("source", "original")
+  FileUtils.mkdir_p(File.dirname(backup))
+  FileUtils.cp(source, backup)
+  RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
 end
 
 def redact_level_content
