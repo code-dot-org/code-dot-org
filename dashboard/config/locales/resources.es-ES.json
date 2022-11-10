@@ -115,6 +115,15 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
+        "all_resources/coursed/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards/coursed/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary/coursed/2022": {
+          "name": "Todo el Vocabulario"
+        },
         "common_core_and_ngss_guidance/coursed/2022": {
           "name": "Guia de Common Core y NGSS (para EEUU)",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
@@ -336,6 +345,15 @@
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
           "type": "Guía de Proyecto"
         },
+        "all_resources/coursef/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards/coursef/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary/coursef/2022": {
+          "name": "Todo el Vocabulario"
+        },
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Guia de Common Core y NGSS (para EEUU)",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
@@ -507,6 +525,15 @@
           "name": "Guía del Proyecto de Fin de Curso",
           "type": "Guía de Actividad"
         },
+        "all_resources/coursee/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards/coursee/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary/coursee/2022": {
+          "name": "Todo el Vocabulario"
+        },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Guia de Common Core y NGSS (para EEUU)",
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
@@ -665,12 +692,15 @@
           "type": "Guía de Actividad"
         },
         "all_resources/courseb/2022": {
+          "name": "Todos los Recursos",
           "url": "/s/coursob-2022/recursos"
         },
         "all_standards/courseb/2022": {
+          "name": "Todos los Estándares",
           "url": "/s/coursob-2022/normas"
         },
         "all_vocabulary/courseb/2022": {
+          "name": "Todo el Vocabulario",
           "url": "/s/coursob-2022/vocab"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
@@ -877,12 +907,15 @@
           "type": "Clave de Respuesta"
         },
         "all_resources/express/2022": {
+          "name": "Todos los Recursos",
           "url": "/s/exprés-2022/recursos"
         },
         "all_standards/express/2022": {
+          "name": "Todos los Estándares",
           "url": "/s/exprés-2022/normas"
         },
         "all_vocabulary/express/2022": {
+          "name": "Todo el Vocabulario",
           "url": "/s/exprés-2022/vocab"
         },
         "debugging_guide/express/2022": {
@@ -986,12 +1019,15 @@
           "type": "Guía de Proyecto"
         },
         "all_resources/pre-express/2022": {
+          "name": "Todos los Recursos",
           "url": "/s/pre-exprés-2022/recursos"
         },
         "all_standards/pre-express/2022": {
+          "name": "Todos los Estándares",
           "url": "/s/pre-exprés-2022/normas"
         },
         "all_vocabulary/pre-express/2022": {
+          "name": "Todo el Vocabulario",
           "url": "/s/pre-exprés-2022/vocab"
         },
         "debugging_guide/pre-express/2022": {
@@ -1034,12 +1070,15 @@
           "type": "Vídeo"
         },
         "all_resources/coursea/2022": {
+          "name": "Todos los Recursos",
           "url": "/s/coursoa-2022/recursos"
         },
         "all_standards/coursea/2022": {
+          "name": "Todos los Estándares",
           "url": "/s/coursoa-2022/normas"
         },
         "all_vocabulary/coursea/2022": {
+          "name": "Todo el Vocabulario",
           "url": "/s/coursoa-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
@@ -1231,6 +1270,15 @@
           "name": "Proyecto de Artista - Guía de Planificación",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Clave de Respuesta"
+        },
+        "all_resources/coursec/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards/coursec/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary/coursec/2022": {
+          "name": "Todo el Vocabulario"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
           "name": "Guia de Common Core y NGSS (para EEUU)",
@@ -1433,8 +1481,23 @@
           "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
           "type": "Recursos de la lección"
         },
+        "csd_curriculum_guide/csd/2022": {
+          "name": "Guía del Plan de Estudios de CSD"
+        },
+        "csd_implementation_guide/csd/2022": {
+          "name": "Guía de Aplicación de CSD"
+        },
         "teacher_forum/csd/2022": {
           "name": "Foro de profesores"
+        },
+        "all_resources_3/csd/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards_3/csd/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary_3/csd/2022": {
+          "name": "Todo el Vocabulario"
         },
         "csd_guide_to_using_resources/csd/2022": {
           "name": "Guía del CSD para el Uso de los Recursos",
@@ -1680,12 +1743,15 @@
           "type": "Diapositivas"
         },
         "all_resources_5/csd/2022": {
+          "name": "Todos los Recursos",
           "url": "/s/csd1-2022/recursos"
         },
         "all_standards_5/csd/2022": {
+          "name": "Todos los Estándares",
           "url": "/s/csd1-2022/normas"
         },
         "all_vocabulary_5/csd/2022": {
+          "name": "Todo el Vocabulario",
           "url": "/s/csd1-2022/vocabulario"
         },
         "aluminum_boats/csd/2022": {
@@ -1943,6 +2009,26 @@
           "url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/template/preview",
           "type": "Diapositivas"
         },
+        "csd_guide_to_debugging/csd/2022": {
+          "name": "Guía de Depuración de CSD",
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+        },
+        "csd_guide_to_differentiation/csd/2022": {
+          "name": "Guía de Diferenciación de CSD",
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+        },
+        "all_code_1/csd/2022": {
+          "name": "Todos los Códigos"
+        },
+        "all_resources_1/csd/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards_1/csd/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary_1/csd/2022": {
+          "name": "Todo el Vocabulario"
+        },
         "cs_in_entertainment/csd/2022": {
           "name": "Informática en el Entretenimiento",
           "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
@@ -1954,7 +2040,7 @@
           "type": "Ejemplo"
         },
         "programming_for_entertainment/csd/2022": {
-          "name": "Programación para entretenimiento",
+          "name": "Programación para el Entretenimiento",
           "type": "Diapositivas"
         },
         "drawing_shapes/csd/2022": {
@@ -2372,6 +2458,22 @@
         "project_-_design_a_game/csd/2022": {
           "name": "Proyecto - Diseñar un juego",
           "type": "Diapositivas"
+        },
+        "all_code/csd/2022": {
+          "name": "Todos los Códigos",
+          "url": "/s/csd2-2022/código"
+        },
+        "all_resources/csd/2022": {
+          "name": "Todos los Recursos",
+          "url": "/s/csd2-2022/recursos"
+        },
+        "all_standards/csd/2022": {
+          "name": "Todos los Estándares",
+          "url": "/s/csd2-2022/normas"
+        },
+        "all_vocabulary/csd/2022": {
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd2-2022/vocabulario"
         },
         "exploring_web_pages/csd/2022": {
           "name": "Exploración de páginas web",
@@ -2795,6 +2897,18 @@
           "name": "Revisión de compañeros y ajustes finales",
           "type": "Diapositivas"
         },
+        "all_code_2/csd/2022": {
+          "name": "Todos los Códigos"
+        },
+        "all_resources_2/csd/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards_2/csd/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary_2/csd/2022": {
+          "name": "Todo el Vocabulario"
+        },
         "designing_with_empathy/csd/2022": {
           "type": "Guía de Actividad"
         },
@@ -3057,6 +3171,18 @@
         "project_-_app_presentation/csd/2022": {
           "name": "Proyecto - Presentación de la aplicación",
           "type": "Diapositivas"
+        },
+        "all_code_4/csd/2022": {
+          "name": "Todos los Códigos"
+        },
+        "all_resources_6/csd/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards_6/csd/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary_6/csd/2022": {
+          "name": "Todo el Vocabulario"
         },
         "computer_science_is_changing_everything/csd/2022": {
           "name": "Las Ciencias de la Computación están cambiando todo",
@@ -3352,6 +3478,18 @@
         },
         "prototype_an_innovation_example_3/csd/2022": {
           "type": "Ejemplo"
+        },
+        "all_code_3/csd/2022": {
+          "name": "Todos los Códigos"
+        },
+        "all_resources_4/csd/2022": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards_4/csd/2022": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary_4/csd/2022": {
+          "name": "Todo el Vocabulario"
         },
         "ai_what_is_machine_learning_/csd/2022": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -3721,7 +3859,8 @@
           "url": "https://curriculum.code.org/csd-18/unit3/standards/"
         },
         "teacher_forum_2/csd/2018": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd3"
         },
         "vocabulary_2/csd/2018": {
           "name": "Vocabulario",
@@ -4059,7 +4198,8 @@
           "url": "https://curriculum.code.org/csd/unit3/standards/"
         },
         "teacher_forum_2/csd/2017": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd3"
         },
         "vocabulary_2/csd/2017": {
           "name": "Vocabulario",
@@ -5734,10 +5874,34 @@
           "type": "Rúbrica"
         },
         "csd_curriculum_guide/csd/2021": {
+          "name": "Guía del Plan de Estudios de CSD",
+          "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
           "type": "Recurso"
         },
         "csd_implementation_guide/csd/2021": {
+          "name": "Guía de Aplicación de CSD",
+          "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
           "type": "Recurso"
+        },
+        "csd_guide_to_debugging/csd/2021": {
+          "name": "Guía de Depuración de CSD",
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+        },
+        "csd_guide_to_differentiation/csd/2021": {
+          "name": "Guía de Diferenciación de CSD",
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+        },
+        "all_code_5/csd/2021": {
+          "name": "Todos los Códigos"
+        },
+        "all_resources_7/csd/2021": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards_7/csd/2021": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary_7/csd/2021": {
+          "name": "Todo el Vocabulario"
         },
         "classifying_fish/csd/2021": {
           "type": "Guía de Actividad"
@@ -5979,6 +6143,18 @@
         "teacher_forum/csd/2021": {
           "name": "Foro de profesores"
         },
+        "all_code_3/csd/2021": {
+          "name": "Todos los Códigos"
+        },
+        "all_resources_4/csd/2021": {
+          "name": "Todos los Recursos"
+        },
+        "all_standards_4/csd/2021": {
+          "name": "Todos los Estándares"
+        },
+        "all_vocabulary_4/csd/2021": {
+          "name": "Todo el Vocabulario"
+        },
         "unit-4-the-design-process/csd/2021": {
           "type": "Diapositivas"
         },
@@ -6177,15 +6353,19 @@
           "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview"
         },
         "all_code_4/csd/2021": {
+          "name": "Todos los Códigos",
           "url": "/s/csd6-2021/código"
         },
         "all_resources_6/csd/2021": {
+          "name": "Todos los Recursos",
           "url": "/s/csd6-2021/recursos"
         },
         "all_standards_6/csd/2021": {
+          "name": "Todos los Estándares",
           "url": "/s/csd6-2021/normas"
         },
         "all_vocabulary_6/csd/2021": {
+          "name": "Todo el Vocabulario",
           "url": "/s/csd6-2021/vocabulario"
         },
         "circuit_playground_1/csd/2021": {
@@ -6418,12 +6598,15 @@
           "type": "Ejemplo"
         },
         "all_resources_5/csd/2021": {
+          "name": "Todos los Recursos",
           "url": "/s/csd5-2021/resources"
         },
         "all_standards_5/csd/2021": {
+          "name": "Todos los Estándares",
           "url": "/s/csd5-2021/standards"
         },
         "all_vocabulary_5/csd/2021": {
+          "name": "Todo el Vocabulario",
           "url": "/s/csd5-2021/vocabulario"
         },
         "unit-5-data-society/csd/2021": {
@@ -6610,7 +6793,24 @@
           "type": "Ejemplo"
         },
         "teacher_forum_1/csd/2021": {
-          "name": "Foro de profesores"
+          "name": "Foro de profesores",
+          "url": "https://forum.code.org/c/csd3"
+        },
+        "all_code_1/csd/2021": {
+          "name": "Todos los Códigos",
+          "url": "/s/csd3-2021/código"
+        },
+        "all_resources_2/csd/2021": {
+          "name": "Todos los Recursos",
+          "url": "/s/csd3-2021/recursos"
+        },
+        "all_standards_2/csd/2021": {
+          "name": "Todos los Estándares",
+          "url": "/s/csd3-2021/estándares"
+        },
+        "all_vocabulary_2/csd/2021": {
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd3-2021/vocabulario"
         },
         "cs-entertainment-activity/csd/2021": {
           "name": "Informática en el Entretenimiento",
@@ -7150,15 +7350,19 @@
           "type": "Guía de Actividad"
         },
         "all_code_2/csd/2021": {
+          "name": "Todos los Códigos",
           "url": "/s/csd2-2021/código"
         },
         "all_resources_3/csd/2021": {
+          "name": "Todos los Recursos",
           "url": "/s/csd2-2021/recursos"
         },
         "all_standards_3/csd/2021": {
+          "name": "Todos los Estándares",
           "url": "/s/csd2-2021/normas"
         },
         "all_vocabulary_3/csd/2021": {
+          "name": "Todo el Vocabulario",
           "url": "/s/csd2-2021/vocabulario"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
