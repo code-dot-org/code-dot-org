@@ -181,7 +181,7 @@ def restore_redacted_files
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
           plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
-        elsif File.fnmatch('i18n/locales/original/blockly-mooc/*lab.json', original_path)
+        elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
           plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
