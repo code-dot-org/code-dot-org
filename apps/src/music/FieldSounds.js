@@ -85,11 +85,9 @@ class FieldSounds extends GoogleBlockly.Field {
         library={this.options.getLibrary()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
-        onPreview={(e, value) => {
+        onPreview={value => {
           this.playingPreview = value;
           this.renderContent();
-
-          e.stopPropagation();
 
           this.options.playPreview(value, () => {
             // If the user starts another preview while one is
