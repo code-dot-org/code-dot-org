@@ -587,6 +587,7 @@ def redact_level_content
   end
 end
 
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
 def redact_labs_content
   puts "Redacting *labs content"
 
