@@ -1,4 +1,5 @@
 import {BlockTypes} from '../blockTypes';
+import Globals from '../../globals';
 
 // Examine chain of parents to see if one is 'when_run'.
 const isBlockInsideWhenRun = ctx => {
@@ -20,9 +21,9 @@ export const playSound = {
       {
         type: 'field_sounds',
         name: 'sound',
-        getLibrary: () => window.library,
+        getLibrary: () => Globals.getLibrary(),
         playPreview: (id, onStop) => {
-          window.playPreview(id, onStop);
+          Globals.getPlayer().previewSound(id, onStop);
         },
         currentValue: 'pop/cafe_beat'
       },
