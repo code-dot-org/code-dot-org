@@ -10,6 +10,11 @@
   }
 }
 
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
 .weightInput {
   width: 25px;
 }
@@ -23,4 +28,18 @@
 .console {
   height: 100px;
   overflow-y: scroll;
+  border: 1px solid gray;
+}
+
+.visualization {
+  display: grid;
+  grid: repeat(3, 100px) / auto-flow;
+  gap: 5px;
+  padding: 0 10px;
+
+  & > img {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+  }
 }

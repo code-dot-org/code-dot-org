@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { BlockFactory } from './blocks'
 import DropletEditor from "./droplet/Droplet"
+import { UserOptionsContext } from './LabManager'
 
 export type EditorOptions = {
   show: boolean
@@ -37,10 +38,11 @@ type EditorProps = {
 
 export const Editor = (props: EditorProps) => {
   const { type, blockFactory } = props
+  const { project } = useContext(UserOptionsContext)
 
   // probably a better way to do this?
   if (type === EditorType.Droplet) {
-    return <DropletEditor blocks={blockFactory()} />
+    return <DropletEditor blocks={blockFactory()} code={project?.code} />
   }
 
   return null

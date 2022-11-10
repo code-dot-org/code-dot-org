@@ -2,13 +2,16 @@ import React, { useContext } from 'react'
 import { BlockFactory, DropletCategory } from './blocks'
 import { Visualization, RunButton, Instructions, EditorToggle, Console } from './Components'
 import { Editor, EditorContext, EditorType } from './Editor'
+import { UserOptionsContext } from './LabManager'
 import { PanelDirection, PanelManager } from "./Panels"
 import { fetchAssets, fetchProject } from './projectApi'
 import { Lab } from './types'
 
 const LeftPanel = () => {
-  return <PanelManager dir={PanelDirection.Vertical} key="left">
-    <Visualization />
+  const { assets } = useContext(UserOptionsContext)
+
+  return <PanelManager dir={PanelDirection.Vertical}>
+    <Visualization assets={assets || []} />
     <RunButton />
   </PanelManager>
 }
@@ -23,7 +26,7 @@ type RightPanelProps = {
 const RightPanel = ({ blockFactory, editorType }: RightPanelProps) => {
   const { show: showEditor } = useContext(EditorContext)
 
-  return <PanelManager dir={PanelDirection.Vertical} key="right">
+  return <PanelManager dir={PanelDirection.Vertical}>
     <Instructions />
     <EditorToggle />
     {showEditor && <Editor type={editorType} blockFactory={blockFactory} />}
@@ -49,7 +52,7 @@ export default class Applab implements Lab {
     ]
   }
 
-  panels = [<LeftPanel />, <RightPanel editorType={this.editorType} blockFactory={this.blockFactory} />]
+  panels = [<LeftPanel key="left" />, <RightPanel key="right" editorType={this.editorType} blockFactory={this.blockFactory} />]
 
   loadProjectData = (channelId: string) => {
     // get project, assets, etc from server

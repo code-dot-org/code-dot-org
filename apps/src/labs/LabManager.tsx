@@ -3,7 +3,7 @@ import { AppOptions, App } from "./AppOptions"
 import { useEditor, EditorContext } from "./Editor"
 import labFactory from "./labFactory"
 import { PanelManager } from "./Panels"
-import { Asset, Project, projects } from "./projectApi"
+import { Asset, Project, fakeChannelIds } from "./projectApi"
 import useProject from "./useProject"
 
 type LabManagerProps = {
@@ -24,7 +24,7 @@ type UserOptions = {
   assets?: Asset[]
 }
 
-let UserOptionsContext: React.Context<UserOptions>
+export let UserOptionsContext: React.Context<UserOptions>
 UserOptionsContext = React.createContext<UserOptions>({
   project: undefined,
   assets: undefined
@@ -32,13 +32,12 @@ UserOptionsContext = React.createContext<UserOptions>({
 
 export const LabManager = (props: LabManagerProps) => {
   const { panels, loadProjectData } = labFactory(props.appOptions)
-  const { project, assets } = useProject(props.appOptions.channel, loadProjectData)
+  const { project, assets, fakeChannelId, setFakeChannelId } = useProject(props.appOptions.channel, loadProjectData)
   const { show, setShowEditor } = useEditor()
 
   // Using a text input to test panel resizing. Changing leftWeight makes the
   // left panel bigger/smaller by setting the element's flex property.
-  const [leftWeight, setLeftWeight] = useState<string>('1');
-
+  const [leftWeight, setLeftWeight] = useState<string>('0');
 
   return (
     <AppOptionsContext.Provider value={props.appOptions}>
@@ -52,8 +51,8 @@ export const LabManager = (props: LabManagerProps) => {
             </label>
             <label>
               {`Switch channel: `}
-              <select>
-                {projects.map(p => <option value={p.channelId}>{p.channelId}</option>)}
+              <select value={fakeChannelId} onChange={e => setFakeChannelId(e.target.value)}>
+                {fakeChannelIds.map(id => <option value={id}>{id}</option>)}
               </select>
             </label>
           </div>

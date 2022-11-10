@@ -32,11 +32,15 @@ class Droplet {
     })
   }
 
-  render(ref: HTMLDivElement) {
+  render(ref: HTMLDivElement, code?: string) {
     ref.appendChild(this.container)
 
     if (!this.editor) {
       this.setEditor()
+    }
+
+    if (code !== undefined) {
+      this.editor.setValue(code)
     }
 
     // TODO: clean this up
@@ -53,10 +57,11 @@ let dropletInst: Droplet = new Droplet()
 
 type DropletEditorProps = {
   blocks: DropletCategory[]
+  code?: string
 }
 
 // new bug: droplet no longer resizes when panel widths change :(
-const DropletEditor = ({ blocks }: DropletEditorProps) => {
+const DropletEditor = ({ blocks, code }: DropletEditorProps) => {
   const ref = React.createRef<HTMLDivElement>()
 
   // does this break if block loading is async?
@@ -66,9 +71,9 @@ const DropletEditor = ({ blocks }: DropletEditorProps) => {
 
   useEffect(() => {
     if (ref.current) {
-      dropletInst.render(ref.current)
+      dropletInst.render(ref.current, code)
     }
-  }, [ref.current])
+  }, [ref.current, code])
 
   return (
     <div className="dropletContainer">
