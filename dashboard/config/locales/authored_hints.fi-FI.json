@@ -133,7 +133,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Paina \"Valmis\"-painiketta!",
           "repeat_every_ideas": "**Tarvitsetko ideoita?**\n\n-   Voit toistuvasti muuttaa tanssijan kokoa niin, että se kasvaa.\n-   Voit toistuvasti muuttaa tanssijan kiertoa niin, että se pyörii.\n-   Voit toistuvasti muuttaa tanssijan vaaka- tai pystyasentoa niin, että se liikkuu näytössä.\n\n_Voit myös käyttää negatiivisia numeroita saadaksesi vastareaktion aikaan!_",
-          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
@@ -150,7 +150,7 @@
         },
         "CourseD_Dance_Party_04": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.\n\n_Tämä taso päättyy 10 tahdin jälkeen._",
-          "challenges": "**Vapaaehtoinen haaste**\n\nMuuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> alle."
+          "challenges": "**Vapaaehtoinen haaste**\n\nMuuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien ???\"measures\" alle."
         },
         "CourseD_Dance_Party_06": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Sinulla täytyy olla vähintään kaksi tanssijaa.\n\n_Tämä taso päättyy 6 tahdin jälkeen._",
@@ -221,7 +221,7 @@
         "Dance_2019_09": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Paina \"Valmis\"-painiketta!",
           "repeat_every_ideas": "**Tarvitsetko ideoita?**\n\n-   Voit toistuvasti muuttaa tanssijan kokoa niin, että se kasvaa.\n-   Voit toistuvasti muuttaa tanssijan kiertoa niin, että se pyörii.\n-   Voit toistuvasti muuttaa tanssijan vaaka- tai pystyasentoa niin, että se liikkuu näytössä.\n\n_Voit myös käyttää negatiivisia numeroita saadaksesi vastareaktion aikaan!_",
-          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Varmista, että tanssija näkyy ruudulla.\n\n_Tämä taso päättyy 4 tahdin jälkeen._",
@@ -235,7 +235,7 @@
         },
         "Dance_Party_04": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Taustaefektin täytyy muuttua joskus kappaleen seitsemännen tahdin jälkeen.\n\n_Tämä taso päättyy 10 tahdin jälkeen._",
-          "challenges": "**Vapaaehtoinen haaste**\n\nMuuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> alle."
+          "challenges": "**Vapaaehtoinen haaste**\n\nMuuta taustaefektiä kappaleen eri vaiheissa yhdistämällä uusi blokki tapahtumien ???\"measures\" alle."
         },
         "Dance_Party_05": {
           "validation": "**Miten läpäisen tämän tason?** \n\n-   Tanssijasi täytyy käydä läpi vähintään 4 erilaista tanssiliikettä ennen kuin taso muuttuu. \n\n_Tämä taso päättyy 12 mittayksikön jälkeen._"
@@ -464,7 +464,7 @@
           "courseD_artist_functions2_a": "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Sinun ohjelma olisi: \n\n-   Käytä funktiota \n-   Siirrä eteenpäin 100 + 75 kuvapistettä\n-   Käytä funktiota"
+          "courseD_artist_functions2_a": "Sinun ohjelma olisi: \n- Käytä funktiota \n- Siirrä eteenpäin 100 + 75 kuvapistettä\n- Käytä funktiota"
         },
         "CourseD_Dance_2020_01_2021": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Varmista, että tanssija näkyy ruudulla.\n\n_Tämä taso päättyy 4 tahdin jälkeen._",
@@ -500,7 +500,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Paina \"Valmis\"-painiketta!",
           "repeat_every_ideas": "**Tarvitsetko ideoita?**\n\n-   Voit toistuvasti muuttaa tanssijan kokoa niin, että se kasvaa.\n-   Voit toistuvasti muuttaa tanssijan kiertoa niin, että se pyörii.\n-   Voit toistuvasti muuttaa tanssijan vaaka- tai pystyasentoa niin, että se liikkuu näytössä.\n\n_Voit myös käyttää negatiivisia numeroita saadaksesi vastareaktion aikaan!_",
-          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
@@ -951,7 +951,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**Kuinka ylitän tämän tason?**\n\n-   Paina \"Valmis\"-painiketta!",
           "repeat_every_ideas": "**Tarvitsetko ideoita?**\n\n-   Voit toistuvasti muuttaa tanssijan kokoa niin, että se kasvaa.\n-   Voit toistuvasti muuttaa tanssijan kiertoa niin, että se pyörii.\n-   Voit toistuvasti muuttaa tanssijan vaaka- tai pystyasentoa niin, että se liikkuu näytössä.\n\n_Voit myös käyttää negatiivisia numeroita saadaksesi vastareaktion aikaan!_",
-          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Vapaaehtoinen haaste**\n\n-   Voit myös käydä läpi tanssiliikkeitä tämän uuden tapahtuman blokin avulla määrittämällä liikkeen asetukseen `(Satunnainen)`, `(Seuraava)`, tai `(Edellinen)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Vaihtoehtoinen lohko on Tanssijat-luokassa."
