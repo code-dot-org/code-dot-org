@@ -21,8 +21,8 @@ import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {getStaticFilePath} from '@cdo/apps/music/utils';
 import moduleStyles from './music.module.scss';
-import feedbackStyles from './feedback.module.scss';
 import {AnalyticsContext} from './context';
+import TopButtons from './TopButtons';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
@@ -630,10 +630,6 @@ class UnconnectedMusicView extends React.Component {
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
           top={timelineAtTop}
-          startOverClicked={() => {
-            this.clearCode();
-            this.analyticsReporter.onButtonClicked('start-over');
-          }}
           toggleInstructions={() => this.toggleInstructions(false)}
           instructionsOnRight={instructionsOnRight}
         />
@@ -647,12 +643,6 @@ class UnconnectedMusicView extends React.Component {
           currentMeasure={this.player.getCurrentMeasure()}
           sounds={this.getCurrentGroupSounds()}
         />
-        <div
-          className={feedbackStyles.feedbackButton}
-          onClick={this.onFeedbackClicked}
-        >
-          Tell us what you think
-        </div>
       </div>
     );
   }
@@ -680,6 +670,9 @@ class UnconnectedMusicView extends React.Component {
               this.renderInstructions(InstructionsPositions.LEFT)}
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
+              <div className={moduleStyles.topButtonsContainer}>
+                <TopButtons clearCode={this.clearCode} />
+              </div>
               <div id="blockly-div" />
             </div>
 
