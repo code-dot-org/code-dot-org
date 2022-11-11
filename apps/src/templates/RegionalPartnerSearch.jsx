@@ -137,6 +137,8 @@ class RegionalPartnerSearch extends Component {
 
     let workshopCollections = [
       {
+        key: 'CSD',
+        name: ActiveCourseWorkshops.CSD,
         heading: `${ActiveCourseWorkshops.CSD} Workshops`,
         workshops:
           partnerInfo &&
@@ -145,6 +147,8 @@ class RegionalPartnerSearch extends Component {
           )
       },
       {
+        key: 'CSP',
+        name: ActiveCourseWorkshops.CSP,
         heading: `${ActiveCourseWorkshops.CSP} Workshops`,
         workshops:
           partnerInfo &&
@@ -153,6 +157,8 @@ class RegionalPartnerSearch extends Component {
           )
       },
       {
+        key: 'CSA',
+        name: ActiveCourseWorkshops.CSA,
         heading: `${ActiveCourseWorkshops.CSA} Workshops`,
         workshops:
           partnerInfo &&
@@ -308,31 +314,58 @@ class RegionalPartnerSearch extends Component {
                   collection => collection.workshops.length === 0
                 ) &&
                   workshopCollections.map((collection, collectionIndex) => {
-                    // If the partner is not offering CSA workshops, we display a different message
-                    if (
-                      collection.workshops.length === 0 &&
-                      collection.heading ===
-                        `${ActiveCourseWorkshops.CSA} Workshops`
-                    ) {
-                      return (
-                        <div
-                          key={collectionIndex}
-                          style={{
-                            ...styles.workshopCollection,
-                            ...workshopCollectionStyle
-                          }}
-                        >
-                          <h4>{collection.heading}</h4>
-                          <div>
-                            This Regional Partner is not offering CSA workshops
-                            at this time, but Code.org has a solution for you!
-                            Please complete the professional learning
-                            application, and a Code.org staff member will be in
-                            touch.
+                    // If no current workshops for a course
+                    if (collection.workshops.length === 0) {
+                      if (
+                        !partnerInfo.pl_programs_offered.includes(
+                          collection.key
+                        )
+                      ) {
+                        // If a program is offered but a workshop hasn't been scheduled yet
+                        return (
+                          <div
+                            key={collectionIndex}
+                            style={{
+                              ...styles.workshopCollection,
+                              ...workshopCollectionStyle
+                            }}
+                          >
+                            <h4>
+                              {collection.name} Workshop details are coming
+                              soon!
+                            </h4>
+                            <div>
+                              The Regional Partner is hard at work locking down
+                              the details of the workshops for this program. You
+                              can still apply and the Regional Partner will
+                              inform you when the workshop details are
+                              available.
+                            </div>
                           </div>
-                        </div>
-                      );
+                        );
+                      } else {
+                        // If a program is not offered
+                        return (
+                          <div
+                            key={collectionIndex}
+                            style={{
+                              ...styles.workshopCollection,
+                              ...workshopCollectionStyle
+                            }}
+                          >
+                            <h4>{collection.heading}</h4>
+                            <div>
+                              This Regional Partner is not offering{' '}
+                              {collection.name} workshops at this time. Code.org
+                              will review your application and contact you with
+                              options for joining the program hosted by a
+                              Regional Partner from a different region.
+                            </div>
+                          </div>
+                        );
+                      }
                     } else if (collection.workshops.length > 0) {
+                      // If workshops present for the given course
                       return (
                         <div
                           key={collectionIndex}
