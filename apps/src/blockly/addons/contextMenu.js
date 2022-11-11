@@ -18,7 +18,7 @@ const registerBlockCopyToStorage = function() {
       }
     },
     callback: function(scope) {
-      let copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
+      const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
       localStorage.setItem('blocklyStash', copyData);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,

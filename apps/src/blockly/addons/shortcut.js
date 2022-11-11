@@ -22,8 +22,8 @@ const blockCopyToStorageShortcut = function() {
       // which may beep or otherwise indicate
       // an error due to the lack of a selection.
       e.preventDefault();
-      const blockText = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
-      localStorage.setItem('blocklyStash', blockText);
+      const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
+      localStorage.setItem('blocklyStash', copyData);
       return true;
     }
   };
