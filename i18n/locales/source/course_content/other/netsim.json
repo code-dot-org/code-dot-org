@@ -46,7 +46,7 @@
     "long_instructions": "# Introduction to DNS\n\nIn this version of the simulator you can't see the other students' addresses.  Instead, one of you must act as a name service, to help share addresses with each other. From the DNS tab in the left column, one person can take over as DNS.\n\nYour teacher will hand out more specific instructions for this activity."
   },
   "https://studio.code.org/s/netsim/lessons/9/levels/1": {
-    "short_instructions": "In this version of the Internet Simulator, a Domain Name System (DNS) is provided for you and knows the IP addresses of all connected computers. Send a message in the form GET [hostname] to the DNS service at address <yourRouterNumber>.15 to get a student's address.",
+    "short_instructions": "In this version of the Internet Simulator, a Domain Name System (DNS) is provided for you and knows the IP addresses of all connected computers. Send a message in the form GET [hostname] to the DNS service at address [][0].15 to get a student's address.",
     "long_instructions": "# Domain Name System (DNS)\n\nIn this version of the Internet Simulator, a Domain Name System (DNS) is provided for you and knows the IP addresses of all connected computers. You can only see the hostnames of other connected computers.\\\n[][0]\n\nThe address of the DNS is always \\<yourRouterNumber>.15. Send a message with protocol `GET [hostname]`, for example `GET Bob2`, to the DNS to get another student's address. You can keep track of the responses in the Notes section in the DNS tab.\\\n[][1]\n\nYour teacher will hand out more specific instructions for this activity."
   },
   "https://studio.code.org/s/netsim/lessons/10/levels/1": {
