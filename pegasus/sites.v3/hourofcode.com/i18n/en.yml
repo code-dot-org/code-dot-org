@@ -465,6 +465,7 @@
   signup_send_posters_address_placeholder: 'This address will not be shared on our map'
 
   signup_event_type_in_school: 'School'
+  signup_event_type_after_school: 'After school program'
   signup_event_type_out_of_school: 'Organization/Company'
   signup_event_type_at_home: 'Home'
 
@@ -7170,6 +7171,24 @@
   tutorial_nasapackage_string_detail_programming_languages: "Blocks"
   tutorial_nasalunar_string_detail_programming_languages: "Blocks, JavaScript"
   tutorial_meeestate_string_detail_programming_languages: "Blocks, Python"
+  tutorial_imagipixelart_longdescription: "Learn Python and create your own colorful animations in this 1 hour crash course!"
+  tutorial_imagipixelart_name: "Code your own pixel art!"
+  tutorial_imagipixelart_string_detail_grades: "Grades 2-8"
+  tutorial_imagipixelart_string_detail_platforms: ""
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: "All modern browsers, iPad, Android tablets, Windows phone, Android phone, iPhone"
+  tutorial_kcjhealth_longdescription: "Learn about data visualization, algorithmic art and coding, while exploring SDG #3 'Good Health and Well-Being'."
+  tutorial_kcjhealth_name: "The Health & Well-Being Challenge"
+  tutorial_kcjhealth_string_detail_grades: "Grades 6+"
+  tutorial_kcjhealth_string_detail_platforms: ""
+  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_platforms: "All modern browsers"
+  tutorial_msftwakanda_longdescription: "Shuri, Okoye, and Riri must band together to help Wakanda. Code your own action-packed activity inspired by Marvel Studios' 'Black Panther: Wakanda Forever'!"
+  tutorial_msftwakanda_name: "Long Live Wakanda"
+  tutorial_msftwakanda_string_detail_grades: "Grades 6+"
+  tutorial_msftwakanda_string_detail_platforms: ""
+  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_platforms: "All modern browsers"
 
   school_not_found_heading: "We couldn't find your school. Please enter more information."
   school_name: "School name"

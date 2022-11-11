@@ -252,5 +252,19 @@
   "cscBookcoverMissingPrompt": "You clicked a sprite, but it didn't have a prompt.\nYou need to add a prompt block to your workspace.",
   "cscBookcoverPromptNotInEvent": "You added a print block to your code, but you didn't attach it to an event block.\nMake sure the print block is attached under a `when prompt answered` event block.",
   "cscBookcoverMissingPrintInPromptEvent": "You answered the prompt, but nothing printed to the screen.\nMake sure to add a `print` block under the `when prompt answered` event block",
-  "cscBookcoverNoPromptAnswered": "Make sure to click the sprite and answer the prompt to see what happens."
+  "cscBookcoverNoPromptAnswered": "Make sure to click the sprite and answer the prompt to see what happens.",
+  "cscFunctionsClickSprite": "Make sure to click the sprite to see what the function does!",
+  "cscFunctionsNoFunctionBlock": "Make sure to add a function block to your code!",
+  "cscFunctionsClickNoSay": "You clicked a sprite, but it didn't say anything yet.\nUse the `sprite say` block to have your sprite say something",
+  "cscFunctionsNotInEvent": "You added a function block to your code, but not to your event.\nMake sure to add your function block under the `when sprite clicked` event",
+  "cscParticlesWrongMatterType": "Make sure you selected the correct state of matter!",
+  "cscParticlesNoParticleBlockOnEvent": "It looks like you added an event but still need to add the particle behavior to this event.",
+  "cscParticlesNoTouchWaterToMicroscope": "It looks like you have added code but still need to test it by dragging the glass of water over to the microscope.",
+  "cscParticlesNoEmptyGlassToMicroscope": "It looks like you have added code but still need to test it by heating the glass of water and then dragging the \"empty\" glass over to the microscocpe",
+  "cscParticlesNoLemonJuiceToMicroscope": "It looks like you have added code but still need to test it by dragging the glass of lemon juice over to the microscope.",
+  "cscParticlesNoChangedSubstanceToMicroscope": "It looks like you have added code but still need to test it by changing the lemon juice and then dragging the changed substance over to the microscocpe",
+  "cscParticlesIncorrectMatter": "Make sure you selected the correct state of matter for both particles in your new substance.",
+  "cscParticlesCompleteAllTouches": "Make sure you go through all of the steps of this experiment. First, look at the particles of the water under the microscope, then change the state of the water with the flame, and finally look at the particles of the “empty” glass under the microscope",
+  "cscParticlesCompleteAllChemTouches": "Make sure you go through all of the steps of this experiment: First, look at the particles of the lemon juice under the microscope, then cause the chemical change with the baking soda, and finally look at the particles of the new substance under the microscope",
+  "cscParticlesNoLabSetupBlock": "Make sure you add the LabSetup block to your program."
 }

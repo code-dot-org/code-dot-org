@@ -36,7 +36,8 @@
     "storybook:test": "grunt storybookTest"
   },
   "resolutions": {
-    "uglifyjs-webpack-plugin/uglify-js": "3.5.1"
+    "uglifyjs-webpack-plugin/uglify-js": "3.5.1",
+    "firmata": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -55,7 +56,6 @@
     "@code-dot-org/blockly": "4.0.5",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "1.0.5",
-    "@code-dot-org/johnny-five-deprecated": "0.11.1-cdo.2",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
     "@code-dot-org/js-numbers": "0.1.0-cdo.0",
     "@code-dot-org/maze": "2.16.0",
@@ -113,7 +113,7 @@
     "firebase": "^2.4.2",
     "firebase-bolt": "^0.8.0",
     "firebase-mock": "^1.0.5",
-    "firmata": "0.16.0",
+    "firmata": "^2.2.0",
     "glob": "5.0.14",
     "grunt": "^1.4.1",
     "grunt-cli": "1.4.3",
