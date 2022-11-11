@@ -1190,7 +1190,7 @@ tr:
       5:
         text: "3) Sağdaki alan çalışma bölgesidir ve programımızı burada oluşturacağız."
       6:
-        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergelerini ekranın üst kısmında bulabilirsiniz."
       7:
         text: "Başlangıç için bir tavuğu kodlayacağız. \"ileri hareket et\" komutunu çalışma alanına taşıyalım. \"Çalıştır\" a tıklayınca tavuk ileri doğru bir adım atar. Daha sonra bir tane daha \"ileri hareket et\" bloğunu birinci \"ileri hareket et\" bloğunun altına getiriyorum ve daha sonra bırakıyorum. İki blok birbirine yapışıyor. Tekrar \"Çalıştır\" ı tıklarsam tavuk iki adım atar."
       8:
@@ -1338,11 +1338,11 @@ tr:
       8:
         text: "Orta alan Ajan'ın anlayabileceği komutları içeren bir araç kutusu."
       9:
-        text: "Ve sağ tarafta, çalışma alanı. Agent'ı kullanmak için komutları biriktireceğin yer."
+        text: "Ve sağ tarafta, çalışma alanı. Ajan'ı kontrol etmek için yazdığın programın komutlarını biriktireceğin yer."
       10:
-        text: "Ajan, yürüyebilir, baskı plakalarını, döndürebilir ve etkinleştirebilir. Aynı zamanda blokları yok edebilir ve blokları yerleştirebilir. Bu minecraft rayları gibi bir bloğu yerleştirdiğinde, kendi altına yerleştirir."
+        text: "Ajan, yürüyebilir,  döndürebilir ve baskı plakalarını etkinleştirebilir. Aynı zamanda blokları yok edebilir ve blokları yerleştirebilir. Bu minecraft rayları gibi bir bloğu yerleştirdiğinde, kendi altına yerleştirir."
       11:
-        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergeleri ekranın üst kısmında bulabilirsiniz."
+        text: "Ne yapmanız gerektiğini unutursanız her bir seviyenin yönergelerini ekranın üst kısmında bulabilirsiniz."
       12:
         text: "Tekrar denemek isterseniz, her şeyi sıfırlamak için mavi sıfırlama düğmesine basabilirsiniz. Eğer bir kod bloğunu silmeniz gerekiyorsa çalışma alanından alet kutusuna sürükleyin. Ajan'ı hareket ettirmek için çalıştıra basmayı unutmayın. Tamam, durmayın ve ilk birkaç seviyeyi deneyin. İyi şanslar!"
     mc_2017_repeat:
@@ -1624,7 +1624,7 @@ tr:
       4:
         text: "Orta alanda, kodlama komutlarını bulabileceğiniz araç kutunuz var."
       5:
-        text: "Ve büyük alanda sağda çalışma alanınız var. Bu, programınızı oluşturmaya ve hareketlerinizi kontrol etmeye yönelik komutları biriktireceğiniz yer."
+        text: "Ve  sağdaki büyük alan senin çalışma alanın. Bu, programınızı oluşturmaya ve hareketlerinizi kontrol etmeye yönelik komutları biriktireceğiniz yer."
       6:
         text: "Her bir seviyenin talimatları sayfanın üstündedir. Uzun ve kısa talimatlar arasında değişiklik yapmak için artı işaretine tıklayın."
       7:
@@ -1776,7 +1776,7 @@ tr:
         text: "Ekranınızın üç ana kısma ayrıldığını göreceksiniz. Solda oyun alanı var. Burada dansçılarınızı göreceksiniz."
       7:
         image: 'notes/hoc_dance_warmup_2019_7.png'
-        text: "Bu orta alan araç kutusudur. Derste ilerledikçe bu alanca yeni kod blokları bulunacaktır."
+        text: "Bu orta alan araç kutusudur. Derste ilerledikçe bu alanda yeni kod blokları kullanılır olacaktır."
       8:
         image: 'notes/hoc_dance_warmup_2019_8.png'
         text: "Sağdaki alan çalışma alanıdır. Programınızı yapmak için blokları araç kutusundan çalışma alanına sürükleyebilirsiniz."
@@ -1793,7 +1793,7 @@ tr:
         image: 'notes/hoc_dance_warmup_2019_12.png'
         text: "Oyun alanının üzerinde, müziği seçmeniz için bir menü var. Burada seçebileceğiniz tonlarca müzik var, yani favori müziklerinizi bulmada iyi eğlenceler. Bu oyun alanının altında çalıştır düğmesi var. Bu çalıştırma düğmesine bastığınızda, programınızdaki dansçıları oyun alanında göreceksiniz ve müzik çalacak."
       13:
-        text: "Kendi kendinize deneyin! Ve eğer sıkıştığınızı düşünüyorsanız, sorun yok, sadece ayağa kalk ve hareket etmeye başla. Ve siz fakına varmada kendi dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? "
+        text: "Kendi kendinize deneyin! Ve eğer sıkıştığınızı düşünüyorsanız, sorun yok, sadece ayağa kalk ve hareket etmeye başla. Ve siz farkına varmadan kendi dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? "
     hoc_dance_events_2019:
       1:
         text: "Kod Saati | Dans Partisi: Olaylar"
