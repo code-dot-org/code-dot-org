@@ -504,7 +504,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Paano ako makakapasa sa lebel na ito?**\n\n-   Pindutin lamang ang button na \"Finish\" o “Tapos Na”!",
           "repeat_every_ideas": "**Nangangailangan ng ilang ideya?**\n\n-   Paulit-ulit na baguhin ang laki ng dancer para lumaki ito.\n-   Paulit na baguhin ang rotation ng isang dancer para mapaikot ito.\n-   Paulit na baguhin ang pahiga o patayong posisyon ng dancer para mapagalaw ito sa buong screen.\n\n_Pwede ka ring gumamit ng negatibong mga numero para lumikha ng taliwas na epekto!_",
-          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Ang kahaliling block ay nasa kategorya ng \"Mga Dancer\"."
@@ -580,7 +580,7 @@
         "Dance_2019_09": {
           "validation": "**Paano ako makakapasa sa lebel na ito?**\n\n-   Pindutin lamang ang button na \"Finish\" o “Tapos Na”!",
           "repeat_every_ideas": "**Nangangailangan ng ilang ideya?**\n\n-   Paulit-ulit na baguhin ang laki ng dancer para lumaki ito.\n-   Paulit na baguhin ang rotation ng isang dancer para mapaikot ito.\n-   Paulit na baguhin ang pahiga o patayong posisyon ng dancer para mapagalaw ito sa buong screen.\n\n_Pwede ka ring gumamit ng negatibong mga numero para lumikha ng taliwas na epekto!_",
-          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "\"**Paano ako makakapasa sa lebel na ito?**\n\n-   Tiyakin na magpapakita ang dancer sa screen.\n\n_Magwawakas ang lebel na ito matapos ang 4 na measure._",
@@ -1007,8 +1007,8 @@
           "courseA_collector_loops_challenge1_c": "Mayroong 6 na mga batong-hiyas ang nasa kanang gilid ng kuweba, ngunit kailangan mo lang gumalaw at magkolekta ng 5 beses. Alam mo ba kung bakit?"
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
-          "courseB_collector_loops_challenge1_d": "Subukan ito!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n\n  \n  \n  \nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
+          "courseB_collector_loops_challenge1_d": "Subukan ito!\n\n\n\n\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_a": "Kung mayroong problema, huwag matakot na magsimla ulit. Huwat susuko!"
@@ -1026,15 +1026,15 @@
           "courseB_maze_seq_challenge1_b": "Subukang gumalaw pakanluran para makapagsimula."
         },
         "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "course1_playlab_events_challenge2": {
-          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n \n  \n    2\n    \n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  ",
+          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n\n  \n    6\n    \n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  ",
+          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n  \n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "Magsimula sa pamamagitan ng paggawa ng naka-nest na loop para malikha ang apat na mga octagon. Lumiko nang 45 degrees para magawa ang octagon. Tumalon, pagkatapos ay lumiko nang 90 degrees pagkatapos nang bawat isa.",
@@ -1085,20 +1085,20 @@
           "courseF_bee_fwp_challenge1_d": "Sa loob ng `for loop` maaaring gugustuhin mong gumawa ng `move forward` pagkatapos ay gumawa ng `get nectar` nang **counter na beses. Pagkatapos ng `for loop`, maaari ka lang gumagawa ng `move backward` nang \\*\\*length na beses**.\n\nMaaaring kakailanganin mong basahin ang pahiwatig nang iilang ulit para maunawaan ito. Ang bahagi na **bold** ay isang pahiwatig tungkol sa kung paano gamitin ang dalawang `repeat` na mga loop na kakailanganin mo."
         },
         "courseA_artist_loops2": {
-          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type=\"when_run\"/></xml> na bloke para makita kung ano ang mangyayari.",
-          "courseA_artist_loops2_b": "Gamitin ang blokeng ito <block type=\"simple_move_right\"/> para malutas ang palaisipang ito."
+          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa  na bloke para makita kung ano ang mangyayari.",
+          "courseA_artist_loops2_b": "Gamitin ang blokeng ito  para malutas ang palaisipang ito."
         },
         "courseA_artist_loops2_2018": {
-          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type=\"when_run\"/></xml> na bloke para makita kung ano ang mangyayari.",
-          "courseA_artist_loops2_b": "Gamitin ang blokeng ito <block type=\"simple_move_right\"/> para malutas ang palaisipang ito."
+          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa  na bloke para makita kung ano ang mangyayari.",
+          "courseA_artist_loops2_b": "Gamitin ang blokeng ito  para malutas ang palaisipang ito."
         },
         "courseA_artist_loops2_2019": {
-          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type=\"when_run\"/></xml> na bloke para makita kung ano ang mangyayari.",
-          "courseA_artist_loops2_b": "Gamitin ang blokeng ito <block type=\"simple_move_right\"/> para malutas ang palaisipang ito."
+          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa  na bloke para makita kung ano ang mangyayari.",
+          "courseA_artist_loops2_b": "Gamitin ang blokeng ito  para malutas ang palaisipang ito."
         },
         "courseA_artist_loops2_2020": {
-          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type=\"when_run\"/></xml> na bloke para makita kung ano ang mangyayari.",
-          "courseA_artist_loops2_b": "Gamitin ang blokeng ito <block type=\"simple_move_right\"/> para malutas ang palaisipang ito."
+          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa  na bloke para makita kung ano ang mangyayari.",
+          "courseA_artist_loops2_b": "Gamitin ang blokeng ito  para malutas ang palaisipang ito."
         },
         "courseA_artist_loops3": {
           "courseA_artist_loops3_a": "Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.",
@@ -1118,39 +1118,39 @@
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob ng <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> na loop."
+          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob ng 5 na loop."
         },
         "courseA_artist_loops4_2018": {
           "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob ng <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> na loop."
+          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob ng 5 na loop."
         },
         "courseA_artist_loops4_2019": {
           "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob ng <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> na loop."
+          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob ng 5 na loop."
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob ng <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> na loop."
+          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob ng 5 na loop."
         },
         "courseA_artist_loops5": {
-          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!",
+          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa ??? na mga bloke para makumpleto ang palaisipang ito!",
           "courseA_artist_loops5_b": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob nang ???\nna loop."
         },
         "courseA_artist_loops5_2018": {
-          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!",
+          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa ??? na mga bloke para makumpleto ang palaisipang ito!",
           "courseA_artist_loops5_b": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob nang ???\nna loop."
         },
         "courseA_artist_loops5_2019": {
-          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!",
+          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa ??? na mga bloke para makumpleto ang palaisipang ito!",
           "courseA_artist_loops5_b": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob nang ???\nna loop."
         },
         "courseA_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!",
+          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa ??? na mga bloke para makumpleto ang palaisipang ito!",
           "courseA_artist_loops5_b": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob nang ???\nna loop."
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "Hindi matukoy kung paano gumawa ng bundok? Subukang paglaruan ang mga blokeng ito para makita kung ano ang maiguhit ng bawat isa.",
@@ -1171,22 +1171,22 @@
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.",
           "courseA_artist_loops7_b": "Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.",
-          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
+          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang \n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
         },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_a": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.",
           "courseA_artist_loops7_b": "Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.",
-          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
+          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang \n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
         },
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.",
           "courseA_artist_loops7_b": "Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.",
-          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
+          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang \n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.",
           "courseA_artist_loops7_b": "Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.",
-          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
+          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang \n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "Subukang patakbuhin ang code para makita kung ana ang naisulat para sa iyo.",
@@ -1210,141 +1210,141 @@
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
-          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
+          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n5\n na loop.",
           "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern."
         },
         "courseA_artist_loops9_2018": {
           "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
-          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
+          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n5\n na loop.",
           "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern."
         },
         "courseA_artist_loops9_2019": {
           "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
-          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
+          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n5\n na loop.",
           "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern."
         },
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
-          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
+          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n5\n na loop.",
           "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern."
         },
         "courseA_artist_loops_challenge2a": {
-          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito <xml>  <block type=\"simple_move_up_left\"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
+          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito    ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
           "courseA_artist_loops_challenge2_b": "Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!",
           "courseA_artist_loops_challenge2_c": "Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito."
         },
         "courseA_artist_loops_challenge2a_2018": {
-          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito <xml>  <block type=\"simple_move_up_left\"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
+          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito    ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
           "courseA_artist_loops_challenge2_b": "Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!",
           "courseA_artist_loops_challenge2_c": "Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito."
         },
         "courseA_artist_loops_challenge2a_2019": {
-          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito <xml>  <block type=\"simple_move_up_left\"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
+          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito    ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
           "courseA_artist_loops_challenge2_b": "Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!",
           "courseA_artist_loops_challenge2_c": "Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito."
         },
         "courseA_artist_loops_challenge2a_2020": {
-          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito <xml>  <block type=\"simple_move_up_left\"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
+          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito    ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
           "courseA_artist_loops_challenge2_b": "Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!",
           "courseA_artist_loops_challenge2_c": "Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito."
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  ",
           "courseA_collector_loops1_b": "Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan."
         },
         "courseA_collector_loops1_2018": {
-          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  ",
           "courseA_collector_loops1_b": "Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan."
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  ",
           "courseA_collector_loops1_b": "Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan."
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  ",
           "courseA_collector_loops1_b": "Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan."
         },
         "courseA_collector_loops2": {
           "courseA_collector_loops2_a": "Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.",
-          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  "
         },
         "courseA_collector_loops2_2018": {
           "courseA_collector_loops2_a": "Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.",
-          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  "
         },
         "courseA_collector_loops2_2019": {
           "courseA_collector_loops2_a": "Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.",
-          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  "
         },
         "courseA_collector_loops2_2020": {
           "courseA_collector_loops2_a": "Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.",
-          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  "
         },
         "courseA_collector_loops3": {
-          "courseA_collector_loops3_a": "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!",
-          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop."
+          "courseA_collector_loops3_a": "Subukang gumamit ng ??? na loop!",
+          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng ??? na loop."
         },
         "courseA_collector_loops3_2018": {
-          "courseA_collector_loops3_a": "Subukang gumamit ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!",
-          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop."
+          "courseA_collector_loops3_a": "Subukang gumamit ng ??? na loop!",
+          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng ??? na loop."
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop."
+          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng ??? na loop."
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop."
+          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng ??? na loop."
         },
         "courseA_collector_loops4": {
           "courseA_collector_loops4_a": "Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.",
-          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang ??? na loop!"
         },
         "courseA_collector_loops4_2018": {
           "courseA_collector_loops4_a": "Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.",
-          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang ??? na loop!"
         },
         "courseA_collector_loops4_2019": {
           "courseA_collector_loops4_a": "Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.",
-          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang ??? na loop!"
         },
         "courseA_collector_loops4_2020": {
           "courseA_collector_loops4_a": "Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.",
-          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang ??? na loop!"
         },
         "courseA_collector_loops5": {
           "courseA_collector_loops5_a": "Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.",
           "courseA_collector_loops5_b": "Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.",
-          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
+          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa ??? na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
         },
         "courseA_collector_loops5_2018": {
           "courseA_collector_loops5_a": "Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.",
           "courseA_collector_loops5_b": "Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.",
-          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
+          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa ??? na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
         },
         "courseA_collector_loops5_2019": {
           "courseA_collector_loops5_a": "Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.",
           "courseA_collector_loops5_b": "Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.",
-          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
+          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa ??? na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
         },
         "courseA_collector_loops5_2020": {
           "courseA_collector_loops5_a": "Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.",
           "courseA_collector_loops5_b": "Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.",
-          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
+          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa ??? na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
         },
         "courseA_collector_loops6": {
           "courseA_collector_loops6_a": "Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.",
-          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop, isa pagkatapos ng isa pa."
+          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 ??? na loop, isa pagkatapos ng isa pa."
         },
         "courseA_collector_loops6_2018": {
           "courseA_collector_loops6_a": "Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.",
-          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop, isa pagkatapos ng isa pa."
+          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 ??? na loop, isa pagkatapos ng isa pa."
         },
         "courseA_collector_loops6_2019": {
           "courseA_collector_loops6_a": "Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.",
-          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop, isa pagkatapos ng isa pa."
+          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 ??? na loop, isa pagkatapos ng isa pa."
         },
         "courseA_collector_loops6_2020": {
           "courseA_collector_loops6_a": "Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.",
-          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop, isa pagkatapos ng isa pa."
+          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 ??? na loop, isa pagkatapos ng isa pa."
         },
         "courseA_collector_loops7": {
           "courseA_collector_loops7_a": "Kung hindi mo matukoy kung ano ang susunod, subukang patakbuhin ang code para makita kung saan makarating si Laurel."
@@ -1380,43 +1380,43 @@
         },
         "courseA_collector_loops9": {
           "courseA_collector_loops9_a": "Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. ",
-          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
+          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong ??? na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
         },
         "courseA_collector_loops9_2018": {
           "courseA_collector_loops9_a": "Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. ",
-          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
+          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong ??? na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
         },
         "courseA_collector_loops9_2019": {
           "courseA_collector_loops9_a": "Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. ",
-          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
+          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong ??? na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
         },
         "courseA_collector_loops9_2020": {
           "courseA_collector_loops9_a": "Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. ",
-          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
+          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong ??? na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
         },
         "courseA_collector_loops_challenge1": {
           "courseA_collector_loops_challenge1_a": "Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.",
           "courseA_collector_loops_challenge1_b": "Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.",
           "courseA_collector_loops_challenge1_c": "Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?",
-          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n\n\n\n\n\n\n\n\n\n\n\n\n"
         },
         "courseA_collector_loops_challenge1_2018": {
           "courseA_collector_loops_challenge1_a": "Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.",
           "courseA_collector_loops_challenge1_b": "Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.",
           "courseA_collector_loops_challenge1_c": "Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?",
-          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n\n\n\n\n\n\n\n\n\n\n\n\n"
         },
         "courseA_collector_loops_challenge1_2019": {
           "courseA_collector_loops_challenge1_a": "Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.",
           "courseA_collector_loops_challenge1_b": "Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.",
           "courseA_collector_loops_challenge1_c": "Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?",
-          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n\n\n\n\n\n\n\n\n\n\n\n\n"
         },
         "courseA_collector_loops_challenge1_2020": {
           "courseA_collector_loops_challenge1_a": "Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.",
           "courseA_collector_loops_challenge1_b": "Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.",
           "courseA_collector_loops_challenge1_c": "Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?",
-          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n\n\n\n\n\n\n\n\n\n\n\n\n"
         },
         "courseA_collector_loops_challenge2kp": {
           "courseA_collector_loops_challenge2kp_b": "Subukan ang landas na ito para makarating sa isang solusyon.",
@@ -1435,7 +1435,7 @@
           "courseA_collector_loops_challenge2kp_a": "Maaari ka bang gumamit ng mga loop para malutas ang palaisipang ito?"
         },
         "courseA_collector_preLoops7": {
-          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  "
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "Kung ikaw ay hindi makausad, subukang lutasin ang palaisipan sa 2 mga bahagi, isa parte bago ang kanto at isa pagkatapos ng kanto."
@@ -1456,8 +1456,8 @@
           "courseA_harvester_seq2_b": "Subukang isulat ang mga hakbang sa papel para mahanap ang solusyon!"
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng \n\n",
+          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: "
         },
         "courseA_maze_seq10": {
           "courseA_maze_seq10_a": "Kung ikaw ay nagkaproblema, subukang isulat muna ang mga hakbang sa isang pirasong papel.",
@@ -1482,34 +1482,34 @@
         "courseA_maze_seq13": {
           "courseA_maze_seq13_a": "Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.",
           "courseA_maze_seq13_b": "Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.",
-          "courseA_maze_seq13_c": "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+          "courseA_maze_seq13_c": "Ang mga \n na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
         },
         "courseA_maze_seq13_2018": {
           "courseA_maze_seq13_a": "Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.",
           "courseA_maze_seq13_b": "Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.",
-          "courseA_maze_seq13_c": "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+          "courseA_maze_seq13_c": "Ang mga \n na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
         },
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.",
           "courseA_maze_seq13_b": "Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.",
-          "courseA_maze_seq13_c": "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+          "courseA_maze_seq13_c": "Ang mga \n na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
         },
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.",
           "courseA_maze_seq13_b": "Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.",
-          "courseA_maze_seq13_c": "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+          "courseA_maze_seq13_c": "Ang mga \n na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng \n\n",
+          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: "
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng \n\n",
+          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: "
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng \n\n",
+          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: "
         },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "Ang programang ito ay kulang ng 1 bloke. Maaari mo bang matukoy kung alin sa mga ito?",
@@ -1518,7 +1518,7 @@
         "courseA_maze_seq3": {
           "courseA_maze_seq3_a": "Ang 1 sa mga bloke ay nagpapagalaw sa ion sa maling direksyon. Maaari mo bang matukoy kung alin dito at palitan ito sa tamang bloke?",
           "courseA_maze_seq3_b": "Subukang gamitin ang pindutan na hakbang para makahanap kung saan nagkamali ang programa. Ang unang hakbang ba? Ang pangalawa?",
-          "courseA_maze_seq3_c": "Ang <xml><block type=\"maze_moveNorth\"/></xml> na blokeng ito ay parang hindi nagpapagalaw sa ibon sa tamang direksyon. Maaari mo ba itong palitan ng ibang bloke?"
+          "courseA_maze_seq3_c": "Ang  na blokeng ito ay parang hindi nagpapagalaw sa ibon sa tamang direksyon. Maaari mo ba itong palitan ng ibang bloke?"
         },
         "courseA_maze_seq4": {
           "courseA_maze_seq4_a": "Kung ikaw ay nahihirapan, subukang tukuyin kung ano ang tamang landas at pagkatapos tanggalin ang blokeng hindi tumugma.",
@@ -1630,48 +1630,48 @@
           "courseA_playLab_events2_b": "Narito ang code na kailangan mo para makumpleto ang palaisipang ito:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">1</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2018": {
-          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2019": {
-          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge1_2020": {
-          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2": {
-          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n \n  \n    2\n    \n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  ",
+          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n\n  \n    6\n    \n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  ",
+          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n  \n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "courseA_playlab_events_challenge2_2018": {
-          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n \n  \n    2\n    \n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  ",
+          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n\n  \n    6\n    \n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  ",
+          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n  \n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "courseA_playlab_events_challenge2_2019": {
-          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n \n  \n    2\n    \n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  ",
+          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n\n  \n    6\n    \n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  ",
+          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n  \n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "courseA_playlab_events_challenge2_2020": {
-          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n \n  \n    2\n    \n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  ",
+          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n\n  \n    6\n    \n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  ",
+          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n  \n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "courseB_artist_loops2": {
           "courseB_artist_loops2_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke."
@@ -1827,23 +1827,23 @@
         },
         "courseB_collector_loops_challenge1": {
           "courseB_collector_loops_challenge1_b": "Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
-          "courseB_collector_loops_challenge1_d": "Subukan ito!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n\n  \n  \n  \nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
+          "courseB_collector_loops_challenge1_d": "Subukan ito!\n\n\n\n\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2018": {
           "courseB_collector_loops_challenge1_b": "Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
-          "courseB_collector_loops_challenge1_d": "Subukan ito!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n\n  \n  \n  \nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
+          "courseB_collector_loops_challenge1_d": "Subukan ito!\n\n\n\n\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2019": {
           "courseB_collector_loops_challenge1_b": "Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
-          "courseB_collector_loops_challenge1_d": "Subukan ito!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n\n  \n  \n  \nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
+          "courseB_collector_loops_challenge1_d": "Subukan ito!\n\n\n\n\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2020": {
           "courseB_collector_loops_challenge1_b": "Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
-          "courseB_collector_loops_challenge1_d": "Subukan ito!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n\n  \n  \n  \nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
+          "courseB_collector_loops_challenge1_d": "Subukan ito!\n\n\n\n\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_a": "Kung mayroong problema, huwag matakot na magsimla ulit. Huwat susuko!"
@@ -2018,7 +2018,7 @@
           "courseD_artist_functions2_a": "Ang iyong programa ay dapat:\n\n-   Gamitin ang function\n-   Gumalawa pasulong nang 100 + 75 pixels\n-   Gamitin ang function"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Ang iyong programa ay dapat:\n\n-   Gamitin ang function\n-   Gumalawa pasulong nang 100 + 75 pixels\n-   Gamitin ang function"
+          "courseD_artist_functions2_a": "Ang iyong programa ay dapat:\n- Gamitin ang function\n- Gumalawa pasulong nang 100 + 75 pixels\n- Gamitin ang function"
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -2198,7 +2198,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**Paano ako makakapasa sa lebel na ito?**\n\n-   Pindutin lamang ang button na \"Finish\" o “Tapos Na”!",
           "repeat_every_ideas": "**Nangangailangan ng ilang ideya?**\n\n-   Paulit-ulit na baguhin ang laki ng dancer para lumaki ito.\n-   Paulit na baguhin ang rotation ng isang dancer para mapaikot ito.\n-   Paulit na baguhin ang pahiga o patayong posisyon ng dancer para mapagalaw ito sa buong screen.\n\n_Pwede ka ring gumamit ng negatibong mga numero para lumikha ng taliwas na epekto!_",
-          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Ang kahaliling block ay nasa kategorya ng \"Mga Dancer\"."
@@ -2340,8 +2340,8 @@
           "mc_9_c": "Gamitin ang `place torch` para maglagay ng sulo sa puwang kung saan ka nakatayo."
         },
         "courseA_artist_loops2_2021": {
-          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type=\"when_run\"/></xml> na bloke para makita kung ano ang mangyayari.",
-          "courseA_artist_loops2_b": "Gamitin ang blokeng ito <block type=\"simple_move_right\"/> para malutas ang palaisipang ito."
+          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa  na bloke para makita kung ano ang mangyayari.",
+          "courseA_artist_loops2_b": "Gamitin ang blokeng ito  para malutas ang palaisipang ito."
         },
         "courseA_artist_loops3_2021": {
           "courseA_artist_loops3_a": "Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.",
@@ -2349,12 +2349,12 @@
         },
         "courseA_artist_loops4_2021": {
           "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob ng <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> na loop."
+          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob ng 5 na loop."
         },
         "courseA_artist_loops5_2021": {
-          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!",
+          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa ??? na mga bloke para makumpleto ang palaisipang ito!",
           "courseA_artist_loops5_b": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob nang ???\nna loop."
         },
         "courseA_artist_loops6_2021": {
           "courseA_artist_loops6_a": "Hindi matukoy kung paano gumawa ng bundok? Subukang paglaruan ang mga blokeng ito para makita kung ano ang maiguhit ng bawat isa.",
@@ -2363,7 +2363,7 @@
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_a": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.",
           "courseA_artist_loops7_b": "Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.",
-          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
+          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang \n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_a": "Subukang patakbuhin ang code para makita kung ana ang naisulat para sa iyo.",
@@ -2372,37 +2372,37 @@
         },
         "courseA_artist_loops9_2021": {
           "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
-          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
+          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n5\n na loop.",
           "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern."
         },
         "courseA_artist_loops_challenge2a_2021": {
-          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito <xml>  <block type=\"simple_move_up_left\"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
+          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito    ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
           "courseA_artist_loops_challenge2_b": "Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!",
           "courseA_artist_loops_challenge2_c": "Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito."
         },
         "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  ",
           "courseA_collector_loops1_b": "Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan."
         },
         "courseA_collector_loops2_2021": {
           "courseA_collector_loops2_a": "Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.",
-          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  "
         },
         "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop."
+          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng ??? na loop."
         },
         "courseA_collector_loops4_2021": {
           "courseA_collector_loops4_a": "Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.",
-          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang ??? na loop!"
         },
         "courseA_collector_loops5_2021": {
           "courseA_collector_loops5_a": "Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.",
           "courseA_collector_loops5_b": "Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.",
-          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
+          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa ??? na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
         },
         "courseA_collector_loops6_2021": {
           "courseA_collector_loops6_a": "Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.",
-          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop, isa pagkatapos ng isa pa."
+          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 ??? na loop, isa pagkatapos ng isa pa."
         },
         "courseA_collector_loops7_2021": {
           "courseA_collector_loops7_a": "Kung hindi mo matukoy kung ano ang susunod, subukang patakbuhin ang code para makita kung saan makarating si Laurel."
@@ -2414,13 +2414,13 @@
         },
         "courseA_collector_loops9_2021": {
           "courseA_collector_loops9_a": "Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. ",
-          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
+          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong ??? na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
         },
         "courseA_collector_loops_challenge1_2021": {
           "courseA_collector_loops_challenge1_a": "Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.",
           "courseA_collector_loops_challenge1_b": "Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.",
           "courseA_collector_loops_challenge1_c": "Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?",
-          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n\n\n\n\n\n\n\n\n\n\n\n\n"
         },
         "courseA_collector_loops_challenge2kp_2021": {
           "courseA_collector_loops_challenge2kp_b": "Subukan ang landas na ito para makarating sa isang solusyon.",
@@ -2443,11 +2443,11 @@
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.",
           "courseA_maze_seq13_b": "Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.",
-          "courseA_maze_seq13_c": "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+          "courseA_maze_seq13_c": "Ang mga \n na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng \n\n",
+          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: "
         },
         "courseA_maze_seq5_2021": {
           "1": "Subukang isulat ang mga hakbang sa papel para mahanap ang solusyon!"
@@ -2485,15 +2485,15 @@
           "courseA_playLab_events2_b": "Narito ang code na kailangan mo para makumpleto ang palaisipang ito:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">1</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playlab_events_challenge1_2021": {
-          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge2_2021": {
-          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n \n  \n    2\n    \n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  ",
+          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n\n  \n    6\n    \n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  ",
+          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n  \n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "courseB_artist_loops2_2021": {
           "courseB_artist_loops2_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke."
@@ -2535,8 +2535,8 @@
         },
         "courseB_collector_loops_challenge1_2021": {
           "courseB_collector_loops_challenge1_b": "Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
-          "courseB_collector_loops_challenge1_d": "Subukan ito!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n\n  \n  \n  \nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
+          "courseB_collector_loops_challenge1_d": "Subukan ito!\n\n\n\n\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_maze_seq8_2021": {
           "courseB_maze_seq8_b": "Mayroong dalawang mga pamamaraan para malutas ang palaisipang ito!"
@@ -2718,8 +2718,8 @@
           "hw_retro_changePropBy": "Kung gusto mong baguhin ang laki ng tiyanak nang paulit-ulit (kasama ang mga event), gamitin ang block na ito:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "May **lokasyon** ang bawat tiyanak. Maaari mong itakda ang lokasyon sa pamamagitan ng pag-click sa pin sa block na ito:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   I-click ang pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) sa block ng lokasyon pagkatapos ay pumili ng bagong posisyon para sa tiyanak mo sa screen.\n-   Pindutin ang \"Run\" na button kapag tapos na ang code mo.",
-          "remove_hint": "Maaari mong alisin ang isang tiyanak sa tiyak na numero ng linya. Maaari kang magdagdag ng bagong tiyanak upang pumalit dito:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "May **lokasyon** ang bawat tiyanak. Maaari mong itakda ang lokasyon sa pamamagitan ng pag-click sa pin sa block na ito:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   I-click ang pin ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) sa block ng lokasyon pagkatapos ay pumili ng bagong posisyon para sa tiyanak mo sa screen.\n-   Pindutin ang \"Run\" na button kapag tapos na ang code mo.",
+          "remove_hint": "Maaari mong alisin ang isang tiyanak sa tiyak na numero ng linya. Maaari kang magdagdag ng bagong tiyanak upang pumalit dito:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Maghanap ng isang block sa background na tulad nito:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nat maghanap ng text effect na block tulad nito:\n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nIkonekta ang mga block na ito sa `kapag pinagana` sa Workspace mo.",
@@ -2731,14 +2731,14 @@
           "more_events_hint": "Maaari kang gumamit ng higit sa isang event sa programa mo. Subukang gumamit ng dalawang events na may magkaibang effect upang tumugma sa mga bagong linya sa tula.\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Hanapin ang block na ito:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\no ang block na ito:\n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nIkonekta ito sa `kapag pinagana` sa Workspace mo.",
-          "more_code": "Magdagdag ng higit pang mga effect at kulay upang sumama sa tunog na pinili mo.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Hanapin ang block na ito:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\no ang block na ito:\n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nIkonekta ito sa `kapag pinagana` sa Workspace mo.",
+          "more_code": "Magdagdag ng higit pang mga effect at kulay upang sumama sa tunog na pinili mo.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Magdagdag ng `nagsisimula ang tiyanak` na block sa code mo. Tiyaking nagawa mo na ang tiyanak na binibigyan mo ng pag-uugali.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Magdagdag ng `nagsisimula ang tiyanak` na block sa code mo. Tiyaking nagawa mo na ang tiyanak na binibigyan mo ng pag-uugali.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Hanapin ang block na ito at i-click ang `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nAno ang mangyayari kapag ang numero ay `25`?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Hanapin ang block na ito at i-click ang `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nAno ang mangyayari kapag ang numero ay `25`?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "iceage_free_play": {
           "iceage_free_play_a": "Magagawa mo bang mag-away ng Ice Crystal sina Sid at Manny?",
@@ -2869,7 +2869,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**Paano ako makakapasa sa lebel na ito?**\n\n-   Pindutin lamang ang button na \"Finish\" o “Tapos Na”!",
           "repeat_every_ideas": "**Nangangailangan ng ilang ideya?**\n\n-   Paulit-ulit na baguhin ang laki ng dancer para lumaki ito.\n-   Paulit na baguhin ang rotation ng isang dancer para mapaikot ito.\n-   Paulit na baguhin ang pahiga o patayong posisyon ng dancer para mapagalaw ito sa buong screen.\n\n_Pwede ka ring gumamit ng negatibong mga numero para lumikha ng taliwas na epekto!_",
-          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Opsyonal na Hamon**\n\n-   Pwede mo ring gamitin itong bagong event block para umikot sa listahan ng mga galaw ng sayaw sa pamamagitan ng pagtakda sa galaw sa `(Random)`, `(Kasunod)`, o `(Nauna)`.\n\n    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Ang kahaliling block ay nasa kategorya ng \"Mga Dancer\"."
@@ -3026,8 +3026,8 @@
           "mc_9_c": "Gamitin ang `place torch` para maglagay ng sulo sa puwang kung saan ka nakatayo."
         },
         "courseA_artist_loops22022": {
-          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa <xml><block type=\"when_run\"/></xml> na bloke para makita kung ano ang mangyayari.",
-          "courseA_artist_loops2_b": "Gamitin ang blokeng ito <block type=\"simple_move_right\"/> para malutas ang palaisipang ito."
+          "courseA_artist_loops2_a": "Hindi matukoy kung paano iguhit ang linya? Magsimulang maglakip ng mga bloke sa  na bloke para makita kung ano ang mangyayari.",
+          "courseA_artist_loops2_b": "Gamitin ang blokeng ito  para malutas ang palaisipang ito."
         },
         "courseA_artist_loops32022": {
           "courseA_artist_loops3_a": "Mabagal nasundan ang programa gamit ang iyong mga daliri para makita kung saan ito nagkamali.",
@@ -3035,12 +3035,12 @@
         },
         "courseA_artist_loops42022": {
           "courseA_artist_loops4_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob ng <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> na loop."
+          "courseA_artist_loops4_b": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob ng 5 na loop."
         },
         "courseA_artist_loops52022": {
-          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga bloke para makumpleto ang palaisipang ito!",
+          "courseA_artist_loops5_a": "Subukang gamitin ang natutunan mo tungkol sa ??? na mga bloke para makumpleto ang palaisipang ito!",
           "courseA_artist_loops5_b": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke.",
-          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang <xml><block type=\"simple_move_right\"/></xml> na bloke, subukang ilagay ito sa loob nang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\nna loop."
+          "courseA_artist_loops5_c": "Dahil maaari ka lang gumamit ng isang  na bloke, subukang ilagay ito sa loob nang ???\nna loop."
         },
         "courseA_artist_loops62022": {
           "courseA_artist_loops6_a": "Hindi matukoy kung paano gumawa ng bundok? Subukang paglaruan ang mga blokeng ito para makita kung ano ang maiguhit ng bawat isa.",
@@ -3049,7 +3049,7 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_a": "Hindi mo matukoy kung saan ilagay ang loop? Subukang magsulat ng code sa bawat hakbang at maghanap ng pattern.",
           "courseA_artist_loops7_b": "Magsulat ng code para sa isang wave muna, pagkatapos ay ulitin iyan para maiguhit ang dalawa pang iba.",
-          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
+          "courseA_artist_loops7_c": "Tandaan na maaari kang maglagay nang higit sa isang bloke sa isang \n\n<title name=\"TIMES\">???</title>\n</block></xml> na loop."
         },
         "courseA_artist_loops82022": {
           "courseA_artist_loops8_a": "Subukang patakbuhin ang code para makita kung ana ang naisulat para sa iyo.",
@@ -3058,37 +3058,37 @@
         },
         "courseA_artist_loops92022": {
           "courseA_artist_loops9_a": "Magdagdag ng isa pang bloke sa iyong code na ibinigay sa iyo iguhit ang natitirang mga hagdanan.",
-          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> na loop.",
+          "courseA_artist_loops9_b": "Ang bloke na idagdag mo ay dapay ilagay sa loob ng \n5\n na loop.",
           "courseA_artist_loops9_c": "Kung hindi mo matukoy kung saan ilagay ang loop, subukang magsulat ng iyong code sa bawat hakbang at maghanap ng mga pattern."
         },
         "courseA_artist_loops_challenge2a2022": {
-          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito <xml>  <block type=\"simple_move_up_left\"/></xml> ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
+          "courseA_artist_loops_challenge2_a": "Ang mga bloke gaya nito    ay hinahayaan ang iyong artista na gumalawa nang pahilig!",
           "courseA_artist_loops_challenge2_b": "Kapag tapos ka na sa isang tolda, `jump` pataas nang dalawang ulit para makapunto sa kasunod!",
           "courseA_artist_loops_challenge2_c": "Lahat ng iyong mga bloke ay kailangang nasa loob ng isang loop para matapos ang palaisipang ito."
         },
         "courseA_collector_loops12022": {
-          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  ",
           "courseA_collector_loops1_b": "Isang simpleng solusyon ay gumalawa papuntang Silangan nang 2 beses, pagkatapos ay kunin ang kayamanan."
         },
         "courseA_collector_loops22022": {
           "courseA_collector_loops2_a": "Kailangan mong gumalaw bago ka makakolekta ng anumang kayamanan.",
-          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Pagkatapos mong makalipat sa isang parisukat na may kayamanan, gamitin ang blokeng ito para mapulot ito.\n  "
         },
         "courseA_collector_loops32022": {
-          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop."
+          "courseA_collector_loops3_b": "Tandaan, maaari kang maglagay ng higit sa 1 bloke sa loob ng ??? na loop."
         },
         "courseA_collector_loops42022": {
           "courseA_collector_loops4_a": "Para baguhin kung gaano kalayo ang pupuntahan ni Laurel, baguhin ang bilang ng beses na papatakbuhin ang loop.",
-          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop!"
+          "courseA_collector_loops4_b": "Huwag kalimutan na si Laurel ay kakailangan maglakad pababa para magkolekta ng mga kayamanan pagkatapos niyang matapos ang ??? na loop!"
         },
         "courseA_collector_loops52022": {
           "courseA_collector_loops5_a": "Kung hindi mo matukoy ang tamang sagot kaagan, subukang gumamit ng pirasong papel para matukoy kung anong mga arrow ang kakailanganin mo at maghanap ng pattern.",
           "courseA_collector_loops5_b": "Subukang hatiin ang problema sa 2 mga bahagi, gumalaw pagiid at pagkatapos ay pababa.",
-          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
+          "courseA_collector_loops5_c": "Gugustuhin mong magsimula sa ??? na loop na nagpapagalaw kay Laurel pakanluran at nagkokolekta ng kayamanan."
         },
         "courseA_collector_loops62022": {
           "courseA_collector_loops6_a": "Matukoy mo ba kung ano ang mali? Subukang patakbuhin ang code nang ilang beses para makita kung ano ang nangyayari.",
-          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na loop, isa pagkatapos ng isa pa."
+          "courseA_collector_loops6_b": "Ang pinakamaikling solusyon ay mayroong 2 ??? na loop, isa pagkatapos ng isa pa."
         },
         "courseA_collector_loops72022": {
           "courseA_collector_loops7_a": "Kung hindi mo matukoy kung ano ang susunod, subukang patakbuhin ang code para makita kung saan makarating si Laurel."
@@ -3100,13 +3100,13 @@
         },
         "courseA_collector_loops92022": {
           "courseA_collector_loops9_a": "Kung hindi mo matukoy ang pinakamainam na lugar para gumamit ng mga loop, subukang i-code ang bawat hakbang at maghanap ng pattern. ",
-          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
+          "courseA_collector_loops9_b": "Subukang maglagay ng 2 sa iyong ??? na mga loop sa loobo ng isa pang loop para mapaikli ang iyong code!"
         },
         "courseA_collector_loops_challenge12022": {
           "courseA_collector_loops_challenge1_a": "Subukang baguhit ang mga numero sa bawat loop kung may bagay na parang may problema.",
           "courseA_collector_loops_challenge1_b": "Hindi mo kailangang gumamit ng loop kung gagawin mo lang ang isang bagay nang isang beses.",
           "courseA_collector_loops_challenge1_c": "Mayroon 6 na mga hiyas sa kanang bahagi ng kuweba kapag nagsimula ka na, ngunit kailangan mo lang kumuha ng mga yaman nang 5 beses habang gumagalaw papuntang Timog. Alam mo ba kung bakit?",
-          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_collector_loops_challenge1_d": "Ang panimulang programa ay hindi nagkokolekta sa huling 2 mga hiyas. Subukang idagdag ang code na ito sa pinakadulo:\n\n\n\n\n\n\n\n\n\n\n\n\n"
         },
         "courseA_collector_loops_challenge2kp2022": {
           "courseA_collector_loops_challenge2kp_b": "Subukan ang landas na ito para makarating sa isang solusyon.",
@@ -3123,13 +3123,13 @@
           "courseA_maze_seq10_b": "Kailanganin mong pumunta sa 3 mga direksyon para malutas ang palaisipang ito."
         },
         "courseA_maze_seq12022": {
-          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: <xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "Kung ikaw ay nakakaranas ng problema para makapunta sa ibon na gumalaw, siguraduhing ang mga bloke ay nasa tamang lugar sa baba ng \n\n",
+          "courseA_maze_seq1_b": "Ang ibon ay kailangang gumalaw papuntang Kanluran nang 3 beses para makapunta sa baboy. Gamitin ang blokeng ito: "
         },
         "courseA_maze_seq132022": {
           "courseA_maze_seq13_a": "Kung ang landas na kailangan mo ay malabo, gamitin ang iyong daliri para bakasan ang iyong daan mula sa ibon papunta sa baboy.",
           "courseA_maze_seq13_b": "Huwag matakot na makagawa ng pagkakamali! Subukang magdagdag ng mga bloke at patakbuhin ang code para makita kung ano ang mangyayari.",
-          "courseA_maze_seq13_c": "Ang mga <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
+          "courseA_maze_seq13_c": "Ang mga \n na blokeng ito ay makakatulong sa iyo na makalapit sa baboy."
         },
         "courseA_maze_seq52022": {
           "1": "Subukang isulat ang mga hakbang sa papel para mahanap ang solusyon!"
@@ -3152,15 +3152,15 @@
           "courseA_playLab_events2_b": "Narito ang code na kailangan mo para makumpleto ang palaisipang ito:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">1</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_playlab_events_challenge12022": {
-          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+          "courseA_playlab_events_challenge1_a": "Ipakita si Waddles ang Pingguwino kapag na-click mo ang Robin!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Ipakita si Boo ang Multo kapag na-click mo si Waddles!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Ipakita si Jayden ang Fuzzy na Halimaw kapag na-click mo si Boo!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Ipakita si Spiff ang Robot kapag na-click mo ang halimaw!\n \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge22022": {
-          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+          "courseA_playlab_events_challenge2_a": "Maaari mong mapaawit ang ibon.\n \n  \n    2\n    \n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n\n  ",
+          "courseA_playlab_events_challenge2_b": "Maaari mong patunogin ang robot.\n\n  \n    6\n    \n\n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  ",
+          "courseA_playlab_events_challenge2_c": "Maaari mong mapaungol ang galit na halimaw.\n\n  \n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "courseB_artist_loops22022": {
           "courseB_artist_loops2_a": "Kung gusto mong ulitin ang iyong loop nang higit pa sa 4 na beses, maaari mong baguhin ang numero na nasa taas ng bloke."
@@ -3202,8 +3202,8 @@
         },
         "courseB_collector_loops_challenge12022": {
           "courseB_collector_loops_challenge1_b": "Magsimula sa pamamagitan ng pag-loop sa sumusunod na mga utos:\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
-          "courseB_collector_loops_challenge1_d": "Subukan ito!\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "courseB_collector_loops_challenge1_c": "Gumalaw papuntang Silangan sa pagitan ng bawat landas.\n\n  \n  \n  \nMagagawa mo ito sa 14 na mga bloke lang. Mag-click para sa isa pang pahiwatig para makita ang solusyon.",
+          "courseB_collector_loops_challenge1_d": "Subukan ito!\n\n\n\n\n\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_maze_seq82022": {
           "courseB_maze_seq8_b": "Mayroong dalawang mga pamamaraan para malutas ang palaisipang ito!"
