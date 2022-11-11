@@ -4,6 +4,8 @@ hi:
     blocks:
       AmysBlocks_setPromptWithChoices:
         text: उपयोगकर्ता को {QUESTION} वेरिएबल {VAR} के लिए विकल्पों {A}{B}{C} के साथ सुझाव दें
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE} {TEXT1} बोलता है"
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       BadGuys_setSizeAll_dropdown:
@@ -989,6 +991,13 @@ hi:
             '"macklemore90"': मैकलमोर - कांट होल्ड अस
             '"hammer"': एम सी हैमर - यू कांट टच दिस
             '"peas"': द ब्लैक आइड पीस - आई गॉट अ फीलिंग
+      DansBlocks_getMicroscope:
+        text: माइक्रोस्कोप में {INPUT1}है
+        options:
+          INPUT1:
+            '1': नींबू का रस
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:
@@ -1001,12 +1010,20 @@ hi:
             '"starburst"': स्टारबर्स्ट
             '"glass"': टूटता गिलास
             '"twinkling"': टिमटिमाना
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): ड्रैग करने योग्य हो रहा है
-            wandering(): घूमना
-            shrinking(): सिकुड़ना
+          INPUT1:
+            '1': नींबू का रस
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: "{VAR1} को {SPRITE1COSTUME}के साथ संवाद करें"
+      FunctionBlocks_makeManipulative2:
+        text: "{BEHAVIOR} में {NUM} नया {ANIMATION_NAME} बनाएं"
+      FunctionBlocks_representManipulative:
+        text: "{NUM} दर्शाता है नया {ANIMATION_NAME} स्प्राइटस [BEHAVIOR][2]"
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE} {TEXT1} बोलता है"
       gamelab_addBehaviorSimple:
         text: स्प्राइट {SPRITE} {BEHAVIOR} शुरू होता है
       gamelab_addTarget:
@@ -1351,6 +1368,7 @@ hi:
             "'sound://category_space/Pillars_SFX.mp3'": पिलर्स
             "'sound://category_space/Southern_ring_SFX.mp3'": दक्षिणी रिंग
             "'sound://category_space/Supernova_SFX.mp3'": सुपरनोवा
+            "'sound://category_space/Tycho_SFX.mp3'": टाईको
       gamelab_playSpeech:
         text: प्ले स्पीच {SOUND}
       gamelab_playerBehaviors:
@@ -1991,6 +2009,38 @@ hi:
         text: मोन्स्टर टाउन को{COUNT}मोन्स्टर्स के साथ सेटअप करें
       Outbreak_stopMoving:
         text: मोन्स्टर रुकते हैं
+      ParticlesBlocks_getMicroscope:
+        text: माइक्रोस्कोप में {INPUT1}है
+        options:
+          INPUT1:
+            '1': नींबू का रस
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': नींबू का रस
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_statesOfMatter:
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): ठोस
+            new Behavior(liquid, []): द्रव
+            new Behavior(wandering, []): गैस
+      ParticlesBlocks_statesOfMatter2:
+        text: "{COSTUME} को {BEHAVIOR} behavior"
+        options:
+          BEHAVIOR:
+            '"solid"': 'ठोस कण '
+            '"liquid"': तरल कण
+            '"gas"': गैस कण
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'ठोस कण '
+            '"liquid"': तरल कण
+            '"gas"': गैस कण
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2061,6 +2111,20 @@ hi:
             '"sound://category_achievements/peaceful_win_1.mp3"': जित
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': चक्कर
             '"sound://category_achievements/peaceful_win_6.mp3"': पवन झंकार
+      Poetry_playSoundOptionsSpace:
+        text: प्लेसाउंड {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": बुलेट क्लस्टर
+            "'sound://category_space/Carina_SFX.mp3'": करीना
+            "'sound://category_space/Cassiopeia_SFX.mp3'": कैसिओपेआ
+            "'sound://category_space/Crab_nebula_SFX.mp3'": क्रैब नेबुला
+            "'sound://category_space/Launch_SFX.mp3'": जारी करें
+            "'sound://category_space/Lift_Off.mp3'": लिफ्ट ऑफ
+            "'sound://category_space/Pillars_SFX.mp3'": पिलर्स
+            "'sound://category_space/Southern_ring_SFX.mp3'": दक्षिणी रिंग
+            "'sound://category_space/Supernova_SFX.mp3'": सुपरनोवा
+            "'sound://category_space/Tycho_SFX.mp3'": टाईको
       Poetry_setAuthor:
         text: लेखक {AUTHOR} सेट करें
       Poetry_setBackground:
@@ -2449,6 +2513,16 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      storylab_setForegroundEffect2:
+        text: "{EFFECT} आगे का इफेक्ट डालें"
+        options:
+          EFFECT:
+            '"bubbles"': बुलबुले
+            '"confetti"': कॉन्फेटी
+            '"hearts"': दिल
+            '"rain"': बारिश
+            '"starburst"': स्टारबर्स्ट
+            '"twinkling"': टिमटिमाना
       storylab_setHeading:
         text: शीर्षक सेट करें {HEADING}
       storylab_setSubheading:
