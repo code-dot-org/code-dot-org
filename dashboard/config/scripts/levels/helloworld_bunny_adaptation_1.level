@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-11-01T23:04:45.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -40,8 +36,7 @@
     "edit_code": "false",
     "helper_libraries": [
       "NativeSpriteLab",
-      "zHelloWorldValidation",
-      "zValidationHelperFunctions"
+      "zCriterionValidationLibrary"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -70,11 +65,16 @@
     "instructions_icon": "rabbit",
     "skip_autosave": true,
     "encrypted_examples": "zujiLcgLPEVcrIleBuQtrFe3pvGECL7MGT/q3SuShZEr7GZAf4utUhPkrkn4\n7juBjRTYs0L1EjsMzGQ2scGWmg==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "validation_code": "if(World.frameCount == 1) {\r\n  setFailTime(150); //Set the length of the fail bar to 150 frames\r\n  setDelayTime(90); //Set the delay once a student passes a level to 90 frames\r\n  setupPrevious(); //Required for certain validation functions\r\n\r\n  addCriteria(function() {\r\n    //If we haven't had any events but the background is desert or snowy, then we made a mistake and validation should return FALSE\r\n    //This checks for that condition, then wraps it in an if-statement so if we find that a student did this: it'll return false automatically\r\n    return !(eventLog.length == 0 && (getBackground() == \"desert\" || getBackground() == \"background_landscape_28\"));\r\n  }, \"cscEcosystemsBackgroundOnWhenRun\");\r\n  \r\n  addCriteria(function() {\r\n    //Check we clicked both sprites\r\n    return checkNumClickedSprites(2);\r\n  }, \"clickAllSprites\");\r\n  \r\n  addCriteria(function() {\r\n    //Check when we click the first sprite, there's a new background\r\n    return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewBackground();\r\n  }, \"cscEcosystemsChangeBackground\");\r\n  \r\n  addCriteria(function() {\r\n    //Check when we click the second sprite, there's a new background\r\n    return checkThisSpriteClickedThisFrame(spriteIds[1]) && checkNewBackground();\r\n  }, \"cscEcosystemsChangeBackground\");\r\n  \r\n  addCriteria(function() {\r\n    //Check when we click the first sprite, check it's the correct background\r\n    return checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewBackground() && getBackground() == \"desert\";\r\n  }, \"cscEcosystemsWrongBunnyBackground\");\r\n  \r\n  addCriteria(function() {\r\n    //Check when we click the second sprite, check it's the correct background\r\n    return checkThisSpriteClickedThisFrame(spriteIds[1]) && checkNewBackground() && getBackground() == \"background_landscape_28\";\r\n  }, \"cscEcosystemsWrongBunnyBackground\");\r\n  \r\n  \r\n\r\n}\r\ngetHelperVars(); //Required for certain validation functions\r\ndrawHandsOnUnclickedSprites(); //This draws the little hands on any sprites that haven't been clicked\r\ncheck(); //Checks the actual validation\r\nif(checkNewEventThisFrame()) {\r\n  extendFailTime(45); //This extends the fail time by 45 frames, so the user has time to interact with the level and not feel rushed\r\n}\r\nupdatePrevious(); //Required for certain validation functions"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-11-01T23:04:45.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:45.697+00:00\",\"changed\":[\"cloned from \\\"helloworld_bunny_adaptation_ecosystems\\\"\"],\"cloned_from\":\"helloworld_bunny_adaptation_ecosystems\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:04:45.697+00:00\",\"changed\":[\"cloned from \\\"helloworld_bunny_adaptation_ecosystems\\\"\"],\"cloned_from\":\"helloworld_bunny_adaptation_ecosystems\"},{\"changed_at\":\"2022-11-10 16:51:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-10 20:36:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 20:39:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 20:40:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 20:42:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 20:43:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 20:45:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 20:49:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"validation_code\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-11-10 22:49:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-11 00:03:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-11 00:26:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -149,7 +149,7 @@
     <toolbox_blocks>
       <xml>
         <block type="gamelab_setBackgroundImageAs">
-          <field name="IMG">"meadow"</field>
+          <field name="IMG">"desert"</field>
         </block>
         <block type="gamelab_setBackgroundImageAs">
           <field name="IMG">"background_landscape_28"</field>

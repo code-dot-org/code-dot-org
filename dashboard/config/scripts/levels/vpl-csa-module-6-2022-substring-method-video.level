@@ -1,7 +1,7 @@
 <StandaloneVideo>
   <config><![CDATA[{
   "properties": {
-    "video_key": "CSA-PL-conditionals",
+    "video_key": "csa-pl-intro-to-strings",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-11-09T17:09:34.165+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-if-statements-video_2023\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-if-statements-video_2023\"},{\"changed_at\":\"2022-11-09 17:14:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-11-09T17:09:34.165+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-if-statements-video_2023\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-if-statements-video_2023\"},{\"changed_at\":\"2022-11-09 17:14:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-11-10 15:24:43 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
