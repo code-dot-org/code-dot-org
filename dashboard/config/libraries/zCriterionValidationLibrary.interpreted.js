@@ -230,7 +230,7 @@ function drawHand(x, y){
 
 /**
 Displays animated hands on sprites that need to be clicked to complete a level
-@see [Sprite Click Example](https://levelbuilder-studio.code.org/levels/41269)
+@see [Click Here for Sprite Click Example](https://levelbuilder-studio.code.org/levels/41269)
 @example
 if(World.frameCount == 1) {
   setFailTime(150);
@@ -271,9 +271,28 @@ function drawHandsOnUnclickedSprites(){
   }
 }
 
+/**
+Extends the fail time in a level, such as when the user interacts with a sprite.
+@see [Click here for example - extending after answering prompt](https://levelbuilder-studio.code.org/levels/41449/)
+@see [Click here for example - extending whenever a click event happens regardless of validation](https://levelbuilder-studio.code.org/levels/41451/)
+@param {number} n - the amount of frames to extend the fail time by.
+@returns {boolean} always returns true so it can be used within the `return` part of criterion commands.
+@example
+//Extends the fail time by 45 frames (1.5 seconds)
+addCriteria(function() {
+   return checkAtLeastNPromptsAnswered(1) && extendFailTime(45);
+ }, "cscFunctionsPromptNotAnswered");
+*/
+function extendFailTime(n) {
+  var currentFailTime = getFailTime();
+  setFailTime(currentFailTime + n);
+  //var currentFrame = World.frameCount;
+  //var framesLeft = currentFailTime - currentFrame;
+  return true;
+}
+
 // NEWSECTION
 // # <a name="spriteValidation">Sprite Validation</a>
-
 
 /***************************************************
 SPRITE VALIDATION
@@ -284,7 +303,7 @@ SPRITE VALIDATION
  * Checks if a particular sprite was moved from the default (200, 200) location in a level
  * @param spriteId - the sprite to check if it was touched, usually accessed via spriteIds[] array
  * @returns {boolean} true if the specific sprite was moved before the level started, and false otherwise
- * @see [Check if we move the sprite](https://levelbuilder-studio.code.org/levels/41259/)
+ * @see [Click here for example - Check if we move the sprite](https://levelbuilder-studio.code.org/levels/41259/)
  * @example
  addCriteria(function() {
    return spriteIds.length >= 1 && checkMovedSpritePin(spriteIds[0]);
@@ -305,7 +324,7 @@ function checkMovedSpritePin(spriteId) {
  * Checks if the sprite's size has been changed from the default. *Not* designed to be used in an event.
  * @param spriteId - the sprite to check the size, usually accessed via spriteIds[] array
  * @returns {boolean} true if the specific sprite is not still the default size, and false otherwise
- * @see [Check if we resized a sprite](https://levelbuilder-studio.code.org/levels/41221/)
+ * @see [Click here for example - Check if we resized a sprite](https://levelbuilder-studio.code.org/levels/41221/)
  * @example
  * addCriteria(function() {
     return checkNotDefaultSize(spriteIds[0]);
@@ -328,7 +347,7 @@ function checkNotDefaultSize(spriteId) {
  * @param spriteId - the sprite to check the costume, usually accessed via spriteIds[] array
  * @param {string} defaultCostume - the default costume in the level. This can be accessed by dragging out a sprite block, then viewing the code and looking at the costume that is generated
  * @returns {boolean} true if the specific sprite is not the default costume, and false otherwise
- * @see [Add a landmark](https://levelbuilder-studio.code.org/levels/41276/)
+ * @see [Click here for example - Add a landmark](https://levelbuilder-studio.code.org/levels/41276/)
  * @example
  //Checks whether the second sprite is not the default costume
  addCriteria(function() {
@@ -352,7 +371,7 @@ function checkNotDefaultCostume(spriteId, defaultCostume) {
  * Checks if a particular sprite was speaking when the program started running. _Not_ designed to be used in an event.
  * @param spriteId - the sprite to check if it is speaking, usually accessed via spriteIds[] array
  * @returns {boolean} true if the specific sprite is speaking when the program is run, and false otherwise
- * @see [Make your characters say something](https://levelbuilder-studio.code.org/levels/41231/)
+ * @see [Click here for example - Make your characters say something](https://levelbuilder-studio.code.org/levels/41231/)
  * @example
  * addCriteria(function() {
     return checkSpriteSpeech(spriteIds[0]);
@@ -378,7 +397,7 @@ EVENT VALIDATION
  *  Checks for the number of **unique** sprites that have been clicked over the course of the entire level.
  * @param {number} n - number of unique click events to test for
  * @returns {boolean} true if at least n sprites have been clicked throughout the level, false otherwise
- * @see [Click 2 sprites level](https://levelbuilder-studio.code.org/levels/41269/)
+ * @see [Click here for example - Click 2 sprites level](https://levelbuilder-studio.code.org/levels/41269/)
  * @example
  * addCriteria(function() {
     return checkNumClickedSprites(2);
@@ -406,7 +425,7 @@ function checkNumClickedSprites(n) {
  *  Checks for the number of **unique** sprites that have been touched over the course of the entire level.
  * @param {number} n - number of unique click events to test for
  * @returns {boolean} true if at least n sprites have been touched throughout the level, false otherwise
- * @see [Touch all landmarks level](https://levelbuilder-studio.code.org/levels/41466/)
+ * @see [Click here for example - Touch all landmarks level](https://levelbuilder-studio.code.org/levels/41466/)
  * @example
  * addCriteria(function() {
     return checkNumTouchedSprites(2);
@@ -503,7 +522,7 @@ function checkSpriteTouchedThisFrame(){
  *  Checks if a particular sprite was touched this frame
  * @param spriteId - the sprite to check if it was touched, usually accessed via spriteIds[] array
  * @returns {boolean} true if the specific sprite was touched this frame, and false otherwise
- * @see [Check touching most recent landmark](https://levelbuilder-studio.code.org/levels/41281/)
+ * @see [Click here for example - Check touching most recent landmark](https://levelbuilder-studio.code.org/levels/41281/)
  * @example
  * addCriteria(function() {
     return spriteIds.length >= 3 && checkThisSpriteTouchedThisFrame(spriteIds[2]);
@@ -524,7 +543,7 @@ function checkThisSpriteTouchedThisFrame(spriteId) {
  *  Checks if a particular sprite was clicked this frame
  * @param spriteId - the sprite to check if it was touched, usually accessed via spriteIds[] array
  * @returns {boolean} true if the specific sprite was clicked this frame, and false otherwise
- * @see [Check if Hank says something when clicked](https://levelbuilder-studio.code.org/levels/41265/)
+ * @see [Click here for example - Check if Hank says something when clicked](https://levelbuilder-studio.code.org/levels/41265/)
  * @example
  * addCriteria(function() {
     return spriteIds.length >= 2 && checkThisSpriteClickedThisFrame(spriteIds[1]);
@@ -542,7 +561,7 @@ function checkThisSpriteClickedThisFrame(spriteId) {
 /**
  * Checks if the background changed from the previous version. Designed to be used to check with an event
  * @returns {boolean} true if the background changed from the previous frame
- * @see [Check if storytellers change background](https://levelbuilder-studio.code.org/levels/41464/)
+ * @see [Click here for example - Check if storytellers change background](https://levelbuilder-studio.code.org/levels/41464/)
  * @example
  * //For second sprite: check that the background changed when we touch the sprite
   addCriteria(function() {
@@ -654,6 +673,99 @@ function getSpritesThatTouched(){
   return -1;
 }
 
+/**
+ * Updates current sprite speech for given sprite id. Meant to be called every frame, similar to getHelperVars()
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @see [Click here - checking if a sprite speaks with a prompt](https://levelbuilder-studio.code.org/levels/42305/)
+ @example
+ if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious();
+
+  addCriteria(function() {
+    //Check that a sprite started speaking the same frame a prompt was answered
+    return checkPromptUpdatedThisFrame() && checkNewSpriteSpeakThisFrame(spriteIds[0]);
+  }, "cscFunctionsAddSpeachToPrompt");
+}
+getHelperVars();
+trackSpriteSpeech(spriteIds[0]); // <-------------
+check();
+updatePrevSpriteSpeech(spriteIds[0]);
+updatePrevious();
+ */
+function trackSpriteSpeech(spriteId) {
+  if(!validationProps.spriteSpeeches) {
+    validationProps.spriteSpeeches = {};
+  }
+  if(!validationProps.previous.spriteSpeeches) {
+    validationProps.previous.spriteSpeeches = {};
+  }
+  
+  validationProps.spriteSpeeches[spriteId] = getSpeechForSpriteId(spriteIds[0]);
+}
+
+/**
+ * Keeps track of previous frame sprite speech. Meant to be called just before the end of the validation loop, similar to updatePrevious();
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @see [Click here - checking if a sprite speaks with a prompt](https://levelbuilder-studio.code.org/levels/42305/)
+ @example
+ if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious();
+
+  addCriteria(function() {
+    //Check that a sprite started speaking the same frame a prompt was answered
+    return checkPromptUpdatedThisFrame() && checkNewSpriteSpeakThisFrame(spriteIds[0]);
+  }, "cscFunctionsAddSpeachToPrompt");
+}
+getHelperVars();
+trackSpriteSpeech(spriteIds[0]);
+check();
+updatePrevSpriteSpeech(spriteIds[0]); // <-------------
+updatePrevious();
+ */
+function updatePrevSpriteSpeech(spriteId) {
+  if(!validationProps.spriteSpeeches) {
+    validationProps.spriteSpeeches = {};
+  }
+  if(!validationProps.previous.spriteSpeeches) {
+    validationProps.previous.spriteSpeeches = {};
+  }
+  
+  validationProps.previous.spriteSpeeches[spriteId] = validationProps.spriteSpeeches[spriteId];
+}
+
+/**
+ * Checks if the sprite's speech changed this frame, either because started speaking or because saying something new
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @see [Click here - checking if a sprite speaks with a prompt](https://levelbuilder-studio.code.org/levels/42305/)
+ @example
+ if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious();
+
+  addCriteria(function() {
+    //Check that a sprite started speaking the same frame a prompt was answered
+    return checkPromptUpdatedThisFrame() && checkNewSpriteSpeakThisFrame(spriteIds[0]); // <-------------
+  }, "cscFunctionsAddSpeachToPrompt");
+}
+getHelperVars();
+trackSpriteSpeech(spriteIds[0]);
+check();
+updatePrevSpriteSpeech(spriteIds[0]); 
+updatePrevious();
+ */
+function checkNewSpriteSpeakThisFrame(spriteId) {
+  if(!validationProps.spriteSpeeches) {
+    console.log("Validation error - in order to use checkNewSpriteSpeakThisFrame, you must also call trackSpriteSpeech() and updatePrevSpriteSpeech(). See documentation for more information.");
+    return false;
+  }
+  return validationProps.spriteSpeeches[spriteId] != validationProps.previous.spriteSpeeches[spriteId];
+}
+
 // NEWSECTION
 // # <a name="promptPrintValidation">Prompt & Print Validation</a>
 
@@ -667,8 +779,8 @@ PROMPT AND PRINT VALIDATION
  * Checks if there are at least n things printed using the print block
  * @param {number} n - the number of print statements to check for
  * @returns {boolean} true if at least _n_ print logs are detected
- * @see [Check for prints when run](https://levelbuilder-studio.code.org/levels/41262/)
- * @see [Check for prints after an event](https://levelbuilder-studio.code.org/levels/41267)
+ * @see [Click here for example - Check for prints when run](https://levelbuilder-studio.code.org/levels/41262/)
+ * @see [Click here for example - Check for prints after an event](https://levelbuilder-studio.code.org/levels/41267)
  * @example
  addCriteria(function() {
    return checkAtLeastNPrints(1);
@@ -696,7 +808,7 @@ function checkAtLeastNPrompts(n) {
    detect the 3 prompts.
  * @param {number} n - the number of prompts to check for
  * @returns {boolean} true if at least _n_ prompts are detected
- * @see [Check for a prompt after a click event](https://levelbuilder-studio.code.org/levels/41267/)
+ * @see [Click here for example - Check for a prompt after a click event](https://levelbuilder-studio.code.org/levels/41267/)
  * @example
  addCriteria(function() {
    return checkAtLeastNPromptsAnswered(1);
@@ -720,6 +832,57 @@ function checkAtLeastNPromptsAnswered(n) {
   return nonNullKeys >= n;
 }
 
+/**
+ * Checks that all the prompt variables have been set by a student in the level (ie: are not still ???). This function can be called in multiple criteria functions, especially if multiple prompts are used in a level (ie: once when the first prompt is answered, then again when the second prompt is answered).
+ * @returns {boolean} true if all prompt variables are not ???; false if any of them are ???
+ * @see [Click here for example - check the prompt variable changed](https://levelbuilder-studio.code.org/levels/42304/)
+ * @example
+ addCriteria(function() {
+   return checkAllPromptVariablesSet();
+ }, "cscFunctionsUpdatePromptVariable");
+ */
+function checkAllPromptVariablesSet() {
+  var keys = Object.keys(promptVars);
+  for(var i = 0; i < keys.length; i++) {
+    var variableName = keys[i];
+    //If any of the variable names haven't been set (ie: are still "___"), immediately return false.
+    if(variableName == "___") {
+      return false;
+    }
+  }
+  //If we made it here: all of the variable names have been set, so return true
+  return true;
+}
+
+/**
+ * Checks if a prompt was answered this frame. If the level has a `when [X] answered` block, this will be true and we can validate if other things happened with the event
+ * @returns {boolean} true if a prompt was asked or answered this frame; false otherwise
+ * @see [Click here for example - checking when a prompt has been answered](https://levelbuilder-studio.code.org/levels/42305/)
+ * @example
+ addCriteria(function() {
+   //Assumes there's a variable called output.
+   //This will be true if someone answered a prompt and the output variable got updated to not be 0 (assuming it was 0 before)
+   return checkPromptUpdatedThisFrame() && output != 0;
+ }, "");
+ */
+function checkPromptUpdatedThisFrame() {
+  var keys = Object.keys(promptVars);
+  var prevKeys = Object.keys(validationProps.previous.promptVars);
+  if(keys.length != prevKeys.length) {
+    //means a prompt was asked this frame
+    return false;
+  }
+  for(var i = 0; i < keys.length; i++) {
+    var variableName = keys[i];
+    if(promptVars[variableName] != validationProps.previous.promptVars[variableName]) {
+      //If we made it here: one of our variable names changed this frame
+      return true;
+    }
+  }
+  //If we made it here: none of our variable names changed
+  return false;
+}
+
 // NEWSECTION
 //# <a name="worldValidation">World Validation</a>
 
@@ -731,7 +894,7 @@ WORLD VALIDATION
 /**
  * Checks if the background was set to something. Designed to be implemented in levels without any background block, so setting background for first time
  * @returns {boolean} true if the background exists
- * @see [Check background in first level](https://levelbuilder-studio.code.org/levels/41257/)
+ * @see [Click here for example - Check background in first level](https://levelbuilder-studio.code.org/levels/41257/)
  * @example
  * addCriteria(function() {
    return checkSetBackground();
@@ -740,4 +903,82 @@ WORLD VALIDATION
 function checkSetBackground(){
   var background = getBackground();
   return background !== undefined && background !== "#ffffff";
+}
+
+// NEWSECTION
+//# <a name="variableFunction">Variable and Function Validation</a>
+
+/***************************************************
+VARIABLE & FUNCTION VALIDATION
+***************************************************/
+
+/**
+ * Updates value of a student variable. Meant to be called every frame, similar to getHelperVars()
+ @see [Click here for example level](https://levelbuilder-studio.code.org/levels/42308/)
+ */
+function trackStudentVariable(variableName) {
+  if(!validationProps.variableValues) {
+    validationProps.variableValues = {};
+    validationProps.variableIndices = {};
+  }
+  if(!validationProps.previous.variableValues) {
+    validationProps.previous.variableValues = {};
+  }
+  
+  validationProps.variableValues[variableName] = window[variableName];
+  
+  /*
+  //Thought I needed this, but I don't! Way simpler!
+  var windowKeys = Object.keys(window);
+  if(!validationProps.variableValues[variableName]) {
+    //variable name doesn't exist, so go searching for it.
+    var firstFunctionIndex = windowKeys.indexOf("trackStudentVariable");
+    var lastFunctionIndex = windowKeys.indexOf("math_random_int");
+    if(lastFunctionIndex == -1) {
+      console.log("Validation error: make sure to enable 'Make shared functions and behaviors available'.");
+      return false;
+    }
+    for(var i = firstFunctionIndex + 1; i < lastFunctionIndex - 1; i++) {
+      if(windowKeys[i] == variableName) {
+        validationProps.variableValues[variableName] = windowKeys[i];
+        validationProps.variableIndices[variableName] = i;
+        return;
+      }
+    }
+    //If we made it here: didn't find the variable, to leave both as undefined
+    validationProps.variableValues[variableName] = undefined;
+    validationProps.variableIndices[variableName] = undefined;
+  } else {
+    //we've found the variable before, so just need to update it.
+    validationProps.variableValues[variableName] = windowKeys[validationProps.variableIndices[variableName]];
+  }
+  */
+}
+
+/**
+ * Keeps track of previous frame variable. Meant to be called just before the end of the validation loop, similar to updatePrevious();
+ @see [Click here for example level](https://levelbuilder-studio.code.org/levels/42308/)
+ */
+function updateStudentVariable(variableName) {
+  if(!validationProps.variableValues) {
+    validationProps.variableValues = {};
+    validationProps.variableIndices = {};
+  }
+  if(!validationProps.previous.variableValues) {
+    validationProps.previous.variableValues = {};
+  }
+  
+  validationProps.previous.variableValues[variableName] = validationProps.variableValues[variableName];
+}
+
+/**
+ * Checks if the variable changed this frame
+ @see [Click here for example level](https://levelbuilder-studio.code.org/levels/42308/)
+ */
+function checkStudentVariableChangedThisFrame(variableName) {
+  if(!validationProps.variableValues) {
+    console.log("Validation error - in order to use checkStudentVariableChangedThisFrame, you must also call trackStudentVariable() and updateStudentVariable(). See documentation for more information.");
+    return false;
+  }
+  return validationProps.variableValues[variableName] != validationProps.previous.variableValues[variableName];
 }

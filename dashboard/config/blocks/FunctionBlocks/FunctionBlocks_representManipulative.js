@@ -29,7 +29,6 @@ function representManipulative(var1, s1costume, behavior) {
     var spriteId = createNewSprite({name: "manipulative" + counter_i}, s1costume, {"x": x, "y": y});
     setProp(({id: spriteId}), "isManipulative", 47);
     //makeNewSpriteAnon(s1costume, {"x": x, "y": y});
-    console.log();
     x += 40;
     if(x >= 400) {
       x = 20;
