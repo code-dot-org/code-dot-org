@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-11-01T23:05:12.000Z",
-  "level_num": "custom",
-  "user_id": 18528,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -25,7 +21,7 @@
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2",
     "short_instructions": "Simulate your ecosystem falling out of balance when the fish do not eat enough algae and it takes over the environment damaging the coral reef.",
-    "long_instructions": "**When there is too much algae it damages the coral reef. Simulate your ecosystem falling out of balance when the fish do not eat enough algae.**\r\n\r\nDo This: \r\n- Connect an `if` block under the `when fish touches algae` event block.\r\n- Place two `change costume` blocks inside of the `if` block and set them to change from healthy coral to sick coral.\r\n\r\n\r\n",
+    "long_instructions": "**When there is too much algae it damages the coral reef. Simulate your ecosystem falling out of balance.**\r\n\r\nDo This: \r\n- Connect an `if` block under the `when fish touches algae` event block.\r\n- Place two `change costume` blocks inside of the `if` block and set them to change from healthy coral to sick coral.\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -46,8 +42,12 @@
     "encrypted_examples": "gV2OfUCY+45bsynGf07uQTIpEMh39JWJeJDbC6Ggnb52skJEIyBmkMR/oPKb\nH6ty5D0353tjKrnHzQub1YRe2g==\n",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:12.395+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_2022\"}]",
+  "created_at": "2022-11-01T23:05:12.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:12.395+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_coral_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_coral_2022\"},{\"changed_at\":\"2022-11-10 19:25:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
