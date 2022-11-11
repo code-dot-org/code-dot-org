@@ -11,6 +11,7 @@
   "genericSuccess": "סיימתם את השלב הזה! לחצו על \"המשך לשלב הבא\".",
   "moveSpriteLocation": "הדמויות שלך באותו המקום. יש להזיז אחד מהן בעזרת בלוק ה\"מיקום\".\n\n<xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
   "noBehavior": "הדמות שלכם צריכה התנהגות.",
+  "noSound": "עליכם להשמיע צליל.",
   "noSprites": "יש ליצור דמות.",
   "object": "נשוא",
   "objectSprite": "דמות הנשוא",

@@ -105,7 +105,7 @@
   "madlibNoSprites": "Twój monit działa. Jeśli robi to, czego się spodziewałeś, możesz zacząć dodawać duszki do swojego projektu. O czym jest twoja historia lub wiersz? \n",
   "madlibPrintVariable": "Wygląda na to, że chatbot reaguje, ale nie wydrukował tego, co wpisałeś w monicie. Upewnij się, że właściwa etykieta **zmienna** jest połączona z blokiem „drukuj”. ",
   "madlibPrintWhenAnswered": "W tej chwili drukujesz tekst tylko raz. Upewnij się, że blok „drukuj” znajduje się pod blokiem „kiedy odpowiedziano”. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">pożywienie</title></block></value></block></xml>",
-  "madlibTitleVariable": "Wygląda na to, że dodałeś ekran tytułowy do swojego programu, ale nie zawierał on tekstu z monitu. ",
+  "madlibTitleVariable": "Wygląda na to, że dodałeś ekran tytułowy do swojego programu, ale nie zawierał on tekstu z monitu.",
   "makeSpritesWithEvent": "Musisz utworzyć więcej duszków po wykryciu zdarzenia.",
   "moveOnlyClickedSpriteWithBehavior": "Wszystkie duszki poruszyły się, a nie tylko ten, który został kliknięty. Spróbuj użyć bloku „kliknięty duszek” z blokiem „duszek zaczyna”. Upewnij się, że wybrałeś zachowanie, które sprawi, że duszek się poruszy!",
   "moreSprites": "Musisz utworzyć więcej duszków.",
