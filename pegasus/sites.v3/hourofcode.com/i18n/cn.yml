@@ -40,6 +40,8 @@ cn:
   codeorg_homepage_hoc2022_body: 探索宇宙，进球得分，跳舞 — 尝试计算机科学的方法如此之多。
   hoc2022_codeorg_title: 与NASA等一起庆祝编程一小时
   hoc2022_codeorg_description: 第10次编程一小时非常好！来和我们一起探索、玩耍和创造吧。
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  马上开始学习，打造更美好的明天。"
@@ -490,6 +492,7 @@ cn:
   signup_special_event_details_placeholder: 请描述这一活动的特殊之处
   signup_send_posters_address_placeholder: 此地址不会在我们的地图上被共享
   signup_event_type_in_school: 在一所学校
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: 学校之外
   signup_event_type_at_home: Home
   signup_submit_census_label: 提交
@@ -775,8 +778,6 @@ cn:
   learn_banner_teachers: 教师：<a id='teacher_banner_host'> 主持一个小时</a>或<a id='teacher_banner_howto'>
     阅读操作指南</a>
   learn_banner_teachers_markdown: "  教师：[主持一小时] (%{host_url}) 或 [阅读指南] (%{howto_url})"
-  learn_robotics_banner_heading: 机器人
-  learn_robotics_banner_blurb: 有机器人？使用机器人执行下面的活动，为不同年龄的学生打造充实的“编程一小时”！
   tutorial_dance2019_name: 舞蹈派对
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -8489,7 +8490,7 @@ cn:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -9255,7 +9256,7 @@ cn:
   tutorial_googlesuperhero_string_detail_programming_languages: 方块
   tutorial_googlename _string_detail_programming_languages: 方块
   tutorial_carnegiezillah_string_detail_programming_languages: 方块
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: 方块
   tutorial_hatchxrsolar_string_detail_programming_languages: 方块
   tutorial_hatchxrspace_string_detail_programming_languages: 方块
   tutorial_hatchxrtrex_string_detail_programming_languages: 方块
@@ -9290,6 +9291,29 @@ cn:
   tutorial_nasapackage_string_detail_programming_languages: 方块
   tutorial_nasalunar_string_detail_programming_languages: Blocks, JavaScript
   tutorial_meeestate_string_detail_programming_languages: 方块，Python
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: 小学二年级到初中二年级
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: 六年级以上
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_platforms: 所有高版本浏览器
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: 六年级以上
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_platforms: 所有高版本浏览器
   school_not_found_heading: 我们找不到你的学校。请输入更多信息。
   school_name: 学校名
   school_name_error: 必须填写学校名字

@@ -1,37 +1,37 @@
 ---
-title: Hour of Code How-to Guide
+title: راهنمای کاربردی Hour of Code
 ---
 
 {{ signup_button }}
 
 # چگونه برای ساعت کد نویسی تان را برنامه ریزی کنید
 
-### Join the movement and introduce your students to computer science with these steps.
+### به این حرکت ملحق شوید و دانش‌آموزان خودتون رو با این گامها با علوم کامپیوتر آشنا کنید.
 
-Students today should learn how to create technology, not just use it.
+امروز دانش‌آموزان علاوه بر استفاده از فناوری باید یاد بگیرن فناوری چطور خلق میشه.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+امتحان Hour of Code یه راه ساده و جالب برای آشنا کردن دانش‌آموزان با علوم کامپیوتره. شایدم برای اولین بار! فعالیتی رو پیدا کنید که مناسب وضعیتتون باشه، حالا چه فعالیت حین ساعت درس، چه بعد از مدرسه و چه حضوری و چه مجازی. بعد از طی گامهای زیر نگاهی به [راهنمای مشارکت برای کسانی که هنوز سوالی دارند]({{ localized_files/participation_guide }}) بندازید:
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [راهنمای ویدئویی نحوه استفاده از Hour of Code رو ببینید](#how-to-video)
+- [فعالیت‌ها و آموزش‌ها رو کاوش کنید ](#explore-activities)
+- [برنامه روزانه خودتون رو طراحی کنید](#create-your-plan)
 - [ساعت کدنویسی را ترویج کنید](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [چگونه Hour of Code رو قدرتمند آغاز کنیم](#how-to-start)
+- [شروع به کدنویسی کنید](#code)
+- [موفقیت دانش آموزانتون رو جشن بگیرید](#celebrate)
 - [سایر منابع ساعت کدنویسی برای مدرسان](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. راهنمای ویدئویی نحوه استفاده از Hour of Code رو ببینید <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. فعالیت‌ها و آموزش‌ها رو کاوش کنید 
 
 ما تعداد زیادی [ آموزش های راهنمای دانش آموزان](%= resolve_url('/learn') %) جذاب را برای تمام گروه های سنی و سطوح تجربه ارائه می کنیم. استفاده از آموزش های خودخوان در بین دانش آموزان پرطرفدار است، با این حال خیلی از فعالیت ها شامل برنامه ی درسی برای معلم هاست تا بحث را هدایت کنند و فعالیت را توسعه دهند.
 
@@ -43,7 +43,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. برنامه روزانه خودتون رو طراحی کنید
 
 ### به تکنولوژی های مورد نیازتان فکر کنید - کامپیوتر ها اختیاری هستند!
 
@@ -56,13 +56,13 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ### یک روز و ساعت را انتخاب کنید
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. اما شما میتوانید در هر روز سال یک «ساعت کدنویسی» داشته باشید.
+مردم سراسر جهان در هفته‌ی آموزش علوم کامپیوتر (5 تا 11 دسامبر) زمانی که آخرین آموزش‌ها و فعالیت‌ها منتشر می شوند به جشن «ساعت کدنویسی» (Hour of Code) می‌پیوندند. اما شما میتوانید در هر روز سال یک «ساعت کدنویسی» داشته باشید.
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. برنامه Hour of Code خود را اطلاع رسانی کنید
 
 حالا که شما رویدادتان را برنامه ریزی کرده اید، زمان ترویج آن است.
 
@@ -72,11 +72,11 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. همیچنین، این راهی است که به داوطلبان اطرافتان خبر برسانید که مدرسه ی شما در این رویداد شرکت میکند. داوطلبان یک منبع خوب هستند و که میتوانند به کلاس شما بیایند و درباره ی علوم کامپیوتر صحبت کنند و به دانش آموزانتان در فعالیت های «ساعت کدنویسی کمک کنند».
+زمانی که [ثبت نام رویداد Hour of Code](/#join) را انجام میدید، یک ایمیل سودمند دریافت می کنید که شامل اخبار و نکاتی برای میزبانی موفقیت آمیز یک رویداد Hour of Code هست. همیچنین، این راهی است که به داوطلبان اطرافتان خبر برسانید که مدرسه ی شما در این رویداد شرکت میکند. داوطلبان یک منبع خوب هستند و که میتوانند به کلاس شما بیایند و درباره ی علوم کامپیوتر صحبت کنند و به دانش آموزانتان در فعالیت های «ساعت کدنویسی کمک کنند».
 
 ### دانش آموزانتان را هیجان زده کنید 
 
-رویداد را با اشتراک گذاری [ویدیو های الهام بخش ](/promote/resources)که افراد متنوع و راه های خلاقی که علوم کامپیوتر میتواند در آنها استفاده شود را برجسته می کنند. Or print inspirational posters for your classroom! دانش آموزان بیشتربرای شرکت در یک موضوع هیجان خواهند داشت اگر که ببینند افرادی وجود خواهد داشت که آن ها را تشویق کنند.
+رویداد را با اشتراک گذاری [ویدیو های الهام بخش ](/promote/resources)که افراد متنوع و راه های خلاقی که علوم کامپیوتر میتواند در آنها استفاده شود را برجسته می کنند. یا پوسترهای الهام‌بخش برای کلاستان چاپ کنید! دانش آموزان بیشتربرای شرکت در یک موضوع هیجان خواهند داشت اگر که ببینند افرادی وجود خواهد داشت که آن ها را تشویق کنند.
 
 {{ promote_new_posters }}
 
@@ -86,7 +86,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. چگونه Hour of Code رو قدرتمند آغاز کنیم
 
 زمانی که جشن «ساعت کدنویسی» فرا برسد، اطمینان حاصل کنید که رویدادتان زا با استفاده از این ابزار ها و نکات، قوی شروع کنید.
 
@@ -97,21 +97,21 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 - فیلم اصلی راه اندازی code.org با حضور بیل گیتس، مارک زاکربرگ و ستاره ی بسکتبال، کریس بوش. (نسخه هاي [١ دقيقه اي](https://www.youtube.com/watch?v=qYZF6oIZtfc)، [٥ دقيقه اي](https://www.youtube.com/watch?v=nKIu9yen5nc)، و [٩ دقيقه اي](https://www.youtube.com/watch?v=dU1xS07N-FA) موجود است)
 - [منابع](%= resolve_url('https://code.org/inspire') %) و [ویدیوهای](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)الهام بخش بیشتری پیدا کنید.
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+اگر شما و دانش آموزانتان در علم کامپیوتر تازه‌وارد هم باشید مشکلی نیست. در اینجا ایده‌هایی برای آشنایی شما با فعالیت‌های Hour of Code هست:
 
 - راه های تاثیر تکنولوژی بر زندگی ما را توضیح دهید، با مثال هایی که هم دخترها و هم پسرها به آنها علاقمند هستند (بحث در مورد نجات زندگی اشخاص، کمک به مردم، ایجاد ارتباط بین مردم، و غیره).
 - با کمک کلاس، چیزهایی که در زندگی روزمره از کد استفاده میکنند را لیست کنید.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- در [ اينجا]({{ urls/girls }}) نكاتی را برای مشتاق كردن دختران به علم كامپيوتر ببينيد
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. کدنویسی کنید!
 
 دانش آموزان را به فعالیت هدایت کنید
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- لینک آموزش رو روی وایت‌برد بنویسید. لینک رو از [راهنمای دوره آموزشی انتخابی شما]({{ urls/learn }}) پیدا کنید.
 
 اگر در حین آموزش سوالی برای کسی پیش آمد ایرادی ندارد اگر پاسخ دهید:
 
@@ -128,7 +128,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. موفقیت دانش آموزانتون رو جشن بگیرید
 
 [col-33]
 
@@ -151,6 +151,6 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ### مرحله بعد از ساعت كدنويسي چيست؟
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+علوم کامپیوتر با Hour of Code تموم نمیشه! [ببینید چطور میتونید](/beyond) علوم کامپیوتر رو میان دانش‌آموزان و کلاستون ببرید.
 
 {{ signup_button }}

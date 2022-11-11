@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 生徒たちに何をするのか指示する
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- ホワイトボードにチュートリアルへのリンクを書きましょう。[あなたが選択したチュートリアルの情報]({{ urls/learn }})にあるリンクを探してください。
 
 生徒たちが困っていたら以下のように声をかけてみてもよいです
 
@@ -151,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### Hour of Codeを終えたら？
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+コンピューターサイエンスはHour of Codeで終わりではありません！コンピューターサイエンスを学校や生徒たちに普及させる方法は[こちら](/beyond)をご覧ください。
 
 サインアップ
