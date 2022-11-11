@@ -146,7 +146,7 @@ addCriteria(function() {
 }, "noFunctionBlocks");
 */
 function checkNewFunctionBlockThisFrame() {
-  if(checkNewEventThisFrame()) {
+  if(checkNewEventThisFrame() || checkPromptUpdatedThisFrame()) {
     // If we're here: a new event happened this frame
     // Now check that the function block array also grew in size compared to the previous frame
     if(validationProps.functions.blocks.length > validationProps.functions.previous.blocks.length) {
