@@ -50,8 +50,7 @@ export default class SetupChecklist extends Component {
 
   static propTypes = {
     webSerialPort: PropTypes.object,
-    stepDelay: PropTypes.number,
-    displaySupport: PropTypes.bool
+    stepDelay: PropTypes.number
   };
 
   fail(selector) {
@@ -365,13 +364,6 @@ export default class SetupChecklist extends Component {
             </ValidationStep>
           )}
         </div>
-        {this.props.displaySupport && (
-          <div>
-            <h2>{i18n.support()}</h2>
-            <SafeMarkdown markdown={i18n.debugMakerToolkit()} />
-            {this.contactSupport()}
-          </div>
-        )}
       </div>
     );
   }
