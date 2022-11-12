@@ -223,7 +223,7 @@
   "useTwoAtTimeBlocks": "Your program should have two `at seconds` event blocks. The first event will be used to make more sprites and the second event will end the game.\n *To pass this level, try setting each event block to 10 seconds or fewer.*\n<xml><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </block>\n  </value>\n</block><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">10</field>\n    </block>\n  </value>\n</block></xml>",
   "whenToWhile": "Your sprite is moving in all directions, but not smoothly. Change `when` to `while` in each event block. \n <xml><block type=\"gamelab_keyPressed\"><title name=\"CONDITION\">while</title><title name=\"KEY\">???</title></block></xml>",
   "workspaceAlertError": "Your program stopped because of a problem: {error}",
-  "cscLandmarkTouchAllSprites": "Use the arrow keys to move the tour guide to the landmarks.",
+  "cscLandmarkTouchAllSprites": "Use the arrow keys to move the tour guide to both of the landmarks.",
   "createNewSprite": "Don't forget to make a new sprite.",
   "noSpeech": "Your sprite didn't say anything yet.",
   "cscLandmarkStatueOfLiberty": "Make sure one of your sprites is the Statue of Liberty.",
@@ -253,6 +253,10 @@
   "cscBookcoverPromptNotInEvent": "You added a print block to your code, but you didn't attach it to an event block.\nMake sure the print block is attached under a `when prompt answered` event block.",
   "cscBookcoverMissingPrintInPromptEvent": "You answered the prompt, but nothing printed to the screen.\nMake sure to add a `print` block under the `when prompt answered` event block",
   "cscBookcoverNoPromptAnswered": "Make sure to click the sprite and answer the prompt to see what happens.",
+  "cscFunctionsClickSprite": "Make sure to click the sprite to see what the function does!",
+  "cscFunctionsNoFunctionBlock": "Make sure to add a function block to your code!",
+  "cscFunctionsClickNoSay": "You clicked a sprite, but it didn't say anything yet.\nUse the `sprite say` block to have your sprite say something",
+  "cscFunctionsNotInEvent": "You added a function block to your code, but not to your event.\nMake sure to add your function block under the `when sprite clicked` event",
   "cscParticlesWrongMatterType": "Make sure you selected the correct state of matter!",
   "cscParticlesNoParticleBlockOnEvent": "It looks like you added an event but still need to add the particle behavior to this event.",
   "cscParticlesNoTouchWaterToMicroscope": "It looks like you have added code but still need to test it by dragging the glass of water over to the microscope.",
@@ -261,5 +265,9 @@
   "cscParticlesNoChangedSubstanceToMicroscope": "It looks like you have added code but still need to test it by changing the lemon juice and then dragging the changed substance over to the microscocpe",
   "cscParticlesIncorrectMatter": "Make sure you selected the correct state of matter for both particles in your new substance.",
   "cscParticlesCompleteAllTouches": "Make sure you go through all of the steps of this experiment. First, look at the particles of the water under the microscope, then change the state of the water with the flame, and finally look at the particles of the “empty” glass under the microscope",
-  "cscParticlesCompleteAllChemTouches": "Make sure you go through all of the steps of this experiment: First, look at the particles of the lemon juice under the microscope, then cause the chemical change with the baking soda, and finally look at the particles of the new substance under the microscope"
+  "cscParticlesCompleteAllChemTouches": "Make sure you go through all of the steps of this experiment: First, look at the particles of the lemon juice under the microscope, then cause the chemical change with the baking soda, and finally look at the particles of the new substance under the microscope",
+  "cscParticlesNoLabSetupBlock": "Make sure you add the LabSetup block to your program.",
+  "cscLandmarkMissingEvent": "Make sure to add in your event block and say block. Then use the arrow keys to move the tour guide to the landmarks.",
+  "spriteSayUp": "Your sprite didn't say anything when you pressed the up arrow.",
+  "spriteSayDown": "Your sprite didn't say anything when you pressed the down arrow."
 }
