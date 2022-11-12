@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-11-01T23:05:09.000Z",
-  "level_num": "custom",
-  "user_id": 18528,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -25,7 +21,7 @@
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template_2",
     "short_instructions": "Add another event to simulate how the fish eat the algae in the ocean to keep the rest of the system balanced. ",
-    "long_instructions": "Do This: \r\n- Add a new `when fish touches algae` event\r\n- Connect a blue `remove` block under your new event.\r\n- Click on the blue plus sign on the `when touches` event and drag out an algae block to snap to the `remove` block.\r\n- Press \"Run\" to check that when a fish touches an algae it disappears. This models the food chain!\r\n\r\n![](https://images.code.org/7f74d1a14d5d77c49739e237ff64bc2e-image-1650493635553.gif)",
+    "long_instructions": "**Next, build code that removes the algae one at a time when the fish touches it.**\r\n\r\nDo This: \r\n- Add a new `when fish touches algae` event\r\n- Connect a blue `remove` block under your new event.\r\n- Click on the blue plus sign on the `when touches` event and drag out an algae block to snap to the `remove` block.\r\n- Press \"Run\" to check that when a fish touches an algae it disappears. This models the food chain!\r\n\r\n![](https://images.code.org/7f74d1a14d5d77c49739e237ff64bc2e-image-1650493635553.gif)",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -46,8 +42,12 @@
     "encrypted_examples": "PrQNNFm0jHKTa9wibEY7uQknQsVL5TYqJyNcPi4c5f0alTMe+9HzFpNZwlvT\nN5WDHtC4/cBq7cX8ZBrsg/GPHg==\n",
     "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:09.260+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_2022\"}]",
+  "created_at": "2022-11-01T23:05:09.000Z",
+  "level_num": "custom",
+  "user_id": 18528,
+  "audit_log": "[{\"changed_at\":\"2022-11-01T23:05:09.260+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_2022\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_2022\"},{\"changed_at\":\"2022-11-10 19:00:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

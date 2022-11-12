@@ -1,13 +1,17 @@
 function addTwoBlock() {
-  //For Validation
-  if(typeof checkValidation === 'function' && checkValidation()) {
-    var newEventObj = {
-      blockName: 'addTwo',
-      input: input
-    };
-    addFunctionEvent(newEventObj);
-  }
+    //For Validation
+    if(typeof checkValidation === 'function' && checkValidation()) {
+      var newBlockObj = {
+        blockName: 'addTwo',
+        input: input
+      };
+      addFunctionBlock(newBlockObj);
+    }
   //Function
-  input = input + 2;
-  output = input;
+  if(typeof output === 'undefined') {
+      output = input;
+    }
+    //This structure makes validation code easier
+    input = output;
+    output = input + 2;
 }
