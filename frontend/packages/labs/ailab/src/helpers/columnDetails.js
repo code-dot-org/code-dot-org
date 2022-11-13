@@ -69,7 +69,7 @@ export function getColumnDescription(columnId, metadata, trainedModelDetails) {
     const field = metadata.fields.find(field => {
       return field.id === columnId;
     });
-    return getLocalizedColumnDescription(metadata.name, columnId, field.description)
+    return getLocalizedColumnDescription(metadata.name, columnId, field.description);
   }
 
   // Try using a user-entered column description if available.

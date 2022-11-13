@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import {getLabelColumn, getData, getColumnsByDataType, getDatasetId} from "../selectors.js";
+import { getLabelColumn, getData, getColumnsByDataType, getDatasetId } from "../selectors.js";
 import {
   getCurrentColumn,
   currentColumnIsCategorical,

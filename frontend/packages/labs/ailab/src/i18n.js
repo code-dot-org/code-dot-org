@@ -9,6 +9,15 @@ const initI18n = (i18n = {}) => {
   messages = {...mf.compile(uiStrings), ...i18n};
 };
 
+/**
+ *
+ * @param key {string} The ID of the translated string to return.
+ * @param options {Object} Contains options for modifying the lookup of the string.
+ * @param options["default"] {string} The string to return if no translation is found.
+ * @param options["scope"] {string[]} If the key is in a nested structure, you must define the path
+ * to it.
+ * @returns {string} The translated string. undefined if not found.
+ */
 const t = (key, options = {}) => {
   if (!messages) {
     throw "I18n must be initialized before calling t";
@@ -20,7 +29,7 @@ const t = (key, options = {}) => {
   let scopedMessages = messages;
   scope.forEach(s => {
     if (scopedMessages !== undefined) {
-      scopedMessages = scopedMessages[s]
+      scopedMessages = scopedMessages[s];
     }
   });
 

@@ -34,8 +34,8 @@ class Statement extends Component {
     const localizedLabel = getLocalizedColumnName(this.props.datasetId, label);
     return (
       <div style={styles.statementLabel}>
-        {(label && localizedLabel) || "____"}
-        {label && currentPanel === "dataDisplayLabel" && (
+        {localizedLabel || "____"}
+        {localizedLabel && currentPanel === "dataDisplayLabel" && (
           <div
             id="uitest-remove-statement-label"
             onClick={() => this.removeLabel()}

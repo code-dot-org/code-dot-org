@@ -13,17 +13,17 @@ export function getDatasetDetails(state) {
   return datasetDetails;
 }
 
-function getPotentialUses(state) {
+function getCardContextAttr(state, attr) {
   if (
     state.metadata &&
     state.metadata.name &&
     state.metadata.card &&
     state.metadata.card.context &&
-    state.metadata.card.context.potentialUses
+    state.metadata.card.context[attr]
   ) {
     const datasetId = state.metadata.name;
-    const fallback = state.metadata.card.context.potentialUses;
-    return I18n.t("potentialUses",
+    const fallback = state.metadata.card.context[attr];
+    return I18n.t(attr,
       {
         scope: ["datasets", datasetId, "card", "context"],
         default: fallback
@@ -32,25 +32,12 @@ function getPotentialUses(state) {
   }
   return undefined;
 }
+function getPotentialUses(state) {
+  return getCardContextAttr(state, "potentialUses");
+}
 
 function getPotentialMisuses(state) {
-  if (
-    state.metadata &&
-    state.metadata.name &&
-    state.metadata.card &&
-    state.metadata.card.context &&
-    state.metadata.card.context.potentialMisuses
-  ) {
-    const datasetId = state.metadata.name;
-    const fallback = state.metadata.card.context.potentialMisuses;
-    return I18n.t("potentialMisuses",
-      {
-        scope: ["datasets", datasetId, "card", "context"],
-        default: fallback
-      }
-    );
-  }
-  return undefined;
+  return getCardContextAttr(state, "potentialMisuses");
 }
 
 export function getDatasetDescription(state) {
