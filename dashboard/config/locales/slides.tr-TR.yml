@@ -2079,7 +2079,7 @@ tr:
       1:
         text: 'Merhaba, ben Star Wars: Güç Uyanıyor''un yapımcısı Kathleen Kennedy.
           Bugün starlarımızdan biri olan BB-8 ile çalışıyor olacaksınız. BB-8 küresel
-          bir droiddir. Yaptığı her şey, her hareketi bir bilgisayar yazılımı ile
+          bir droiddir. Yaptığı her şey ve her hareketi bir bilgisayar yazılımı ile
           kontrol edilmektedir. Bilgisayar bilimleri, pazarlamadan sağlık hizmetine
           ve film yapımcılığına kadar her endüstriyi etkiler. Hatta, Güç Uyanıyor
           gibi bir filmin yapımında yüzlerce bilgisayar mühendisi beraber çalıştı.'
@@ -2433,15 +2433,16 @@ tr:
     mc_2016_intro:
       1:
         text: Merhaba, benim adım Jens ve Minecraft'ta baş yaratıcı tasarımcıyım.
-          Önümüzdeki bir saatte kendi Minecraft oyununu yapacaksın. Minecraft'a benzeyecek
+          Önümüzdeki saatte kendi Minecraft oyununu yapacaksın. Minecraft'a benzeyecek
           ama dünya durmuş durumda. Koyunlar hareket etmiyor, tavuklar yumurtlamıyor
           ve zombiler oldukları yerde duruyorlar. Kod ekleyerek Minecraft dünyasının
           çalışmasını sağlamak sana bağlı.
       2:
         text: Merhaba benim adım Melissa ve Minecraft'ta kullanıcı araştırmacısıyım.
-          Benim asıl ilgimi çeken insanların teknolojiyle nasıl etkileşim kurdukları,
-          bu nedenle bilgisayar mühendisliğini psikolojiyle birleştirmek ve insanların
-          nasıl düşünüp davrandıklarını gözlemlemek için benim için harika bir meslek.
+          Benim asıl ilgimi çeken insanların nasıl düşündüğü ve teknolojiyle nasıl
+          etkileşim kurdukları. Bu nedenle bilgisayar mühendisliğini psikolojiyle
+          birleştirmek ve insanların nasıl düşünüp davrandıklarını gözlemlemek benim
+          için harika bir meslek.
       3:
         text: Ekranınızın üç ana kısıma ayrıldığını göreceksiniz. 1) Sol tarafta Minecraft
           oyunu var. Şu anda dünya donmuş durumda ama biz bunu kod yazarak düzelteceğiz.
@@ -2457,15 +2458,16 @@ tr:
         text: Başlangıç için bir tavuğu kodlayacağız. "ileri hareket et" komutunu
           çalışma alanına taşıyalım. "Çalıştır" a tıklayınca tavuk ileri doğru bir
           adım atar. Daha sonra bir tane daha "ileri hareket et" bloğunu birinci "ileri
-          hareket et" bloğunun altına getiriyorum ve daha sonra bırakıyorum. İki blok
-          birbirine yapışıyor. Tekrar "Çalıştır" ı tıklarsam tavuk iki adım atar.
+          hareket et" bloğunun altına getiriyorum blok ışıldayana kadar. Bloğu bırakıyorum
+          ve iki blok birbirine yapışıyor. Tekrar "Çalıştır" ı tıklarsam tavuk iki
+          adım atar.
       8:
         text: Eğer bir bloğu silmek isterseniz, dizilmiş komutlardan çıkarıp alet
           kutusuna sürüklemeniz yeterli.
       9:
         text: '"Çalıştır"ı tıkladıktan sonra oyunu sıfırlamak ve tekrar başlatmak
-          için "Sıfırla" düğmesini tıklayabilirsin. Şimdi Minecraft''ın kendi versiyonunu
-          yapmak için sıra sende. İyi eğlenceler!'
+          için "Sıfırla" düğmesini her zaman tıklayabilirsin. Şimdi Minecraft''ın
+          kendi versiyonunu yapmak için sıra sende. İyi eğlenceler!'
     mc_2016_loops:
       1:
         text: Merhaba, ben Lisa. Minecraft'ta yazılım geliştiriciyim ve oyun içindeki
@@ -2712,7 +2714,7 @@ tr:
       2:
         text: Bir dakika - parkurda bir delik var! (çığlık çığlığa)
       3:
-        text: 'Herkes iyi mi? Stampy: Ah problemi anlıyorum. Bak! Ray’da bir delik
+        text: 'Herkes iyi mi? Stampy: Ah problemi anlıyorum. Bak! Parkurda bir delik
           var. Stacy: Gerçekten mi Stampy? Lizzy: Belkide tamir etmek için blokları
           toplamalıyız. Preston: Hadi bunu bir yarışa çevirelim. İlk geri dönen kazanır.
           Stacy: Tamam, işaret edince, hazır ol BAŞLA! Tamam, bu toprak parçalarından
@@ -2720,7 +2722,7 @@ tr:
           Aynı. Lizzy: Bende. Stacy: Tamam, bu cidden garip. Stampy sen kazabiliyor
           musun? Stampy: Kazamıyorum! Stacy: Tamam, herkes sakin olsun. Stampy: Oyun
           bozuldu mu? Stacy: Eğer öyleyse nasıl düzelteceğiz? Lizzy: Bilmiyorum. Stampy:
-          MineCraft codunun nasıl yazılacağını bilen biri var mı?'
+          MineCraft kodunun nasıl yazılacağını bilen biri var mı?'
       4:
         text: "(puff) Preston: Bu ne? Stampy: Bunlardan birini daha önce hiç görmedim.
           Lizzy: Çok sevimli! Stacy: Ev...evcilleştirebilinir mi? Preston: Tamam,
@@ -2732,7 +2734,7 @@ tr:
       6:
         text: Ancak yardımınıza ihtiyacım olacak. Eğitimi yapmaya başlayın, kodlamayı
           öğrenmeye başlayın, ben birkaç seviye sonra size yetişirim, tamam mı? Bana
-          şans dileyin! Bence bu yönden. Ah! Kaktüs! Ben iyiyim!
+          şans dileyin! Bence bu taraftan. Ah! Kaktüs! Ben iyiyim!
       7:
         text: Kod Saati meydan okumasını tamamlamak için Ajan'ı programlamak için
           kod yazmanız gerekmekte. Yolunuzdaki tüm engelleri kaldırmak için Ajan ile
