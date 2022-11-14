@@ -1,5 +1,6 @@
 import React from 'react';
 import ResourcesDropdown from './ResourcesDropdown';
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 const migratedSampleResources = [
   {
@@ -14,20 +15,30 @@ const migratedSampleResources = [
   }
 ];
 
-export default {
-  title: 'ResourcesDropdown',
-  component: ResourcesDropdown
-};
+export default storybook => {
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
 
-// Template
-const Template = args => (
-  <ResourcesDropdown resources={migratedSampleResources} {...args} />
-);
-
-export const MigratedTeacherResources = Template.bind({});
-MigratedTeacherResources.args = {};
-
-export const MigratedStudentResources = Template.bind({});
-MigratedStudentResources.args = {
-  studentFacing: true
+  storybook.storiesOf('ResourcesDropdown', module).addStoryTable([
+    {
+      name: 'migrated teacher resources',
+      story: () => (
+        <div>
+          <ResourcesDropdown resources={migratedSampleResources} />
+        </div>
+      )
+    },
+    {
+      name: 'migrated student resources',
+      story: () => (
+        <div>
+          <ResourcesDropdown
+            resources={migratedSampleResources}
+            studentFacing={true}
+          />
+        </div>
+      )
+    }
+  ]);
 };
