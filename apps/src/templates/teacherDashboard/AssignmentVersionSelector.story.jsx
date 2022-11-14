@@ -3,40 +3,30 @@ import {action} from '@storybook/addon-actions';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
+export default {
+  title: 'AssignmentVersionSelector',
+  component: AssignmentVersionSelector
+};
+
 const styles = {
   dropdown: {
     padding: '0.3em'
   }
 };
 
-export default storybook => {
-  storybook.storiesOf('AssignmentVersionSelector', module).addStoryTable([
-    {
-      name: 'with popup menu',
-      story: () => {
-        return (
-          <AssignmentVersionSelector
-            dropdownStyle={styles.dropdown}
-            onChangeVersion={action('onChangeVersion')}
-            courseVersions={courseOfferings['1'].course_versions}
-            selectedCourseVersionId={1}
-          />
-        );
-      }
-    },
-    {
-      name: 'with popup menu, disabled',
-      story: () => {
-        return (
-          <AssignmentVersionSelector
-            dropdownStyle={styles.dropdown}
-            onChangeVersion={action('onChangeVersion')}
-            courseVersions={courseOfferings['1'].course_versions}
-            selectedCourseVersionId={1}
-            disabled
-          />
-        );
-      }
-    }
-  ]);
+const Template = args => (
+  <AssignmentVersionSelector
+    dropdownStyle={styles.dropdown}
+    onChangeVersion={action('onChangeVersion')}
+    courseVersions={courseOfferings['1'].course_versions}
+    selectedCourseVersionId={1}
+    {...args}
+  />
+);
+
+export const Enabled = Template.bind({});
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true
 };
