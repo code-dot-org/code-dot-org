@@ -65,7 +65,11 @@
           "rubric_performance_level_4": "No hay eventos en el prototipo."
         },
         "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Concepto clave"
+          "rubric_key_concept": "Concepto clave",
+          "rubric_performance_level_1": "Hice x, y, y z.",
+          "rubric_performance_level_2": "Hice `x` e `y`",
+          "rubric_performance_level_3": "Hice `x` o `y`",
+          "rubric_performance_level_4": "No hice `x`, `y` o `z`"
         },
         "CDU U6 Playground Sound Board_2019": {
           "rubric_key_concept": "Crear y modificar arreglos, desarrollar software para controlar una variedad de dispositivos físicos.",
@@ -1065,6 +1069,20 @@
           "rubric_performance_level_2": "Algunos de los botones ocultan los cuadrados azules, pero no todos funcionan correctamente. O bien, los botones están conectados correctamente pero pueden utilizar varios cables de tierra en lugar de uno solo.",
           "rubric_performance_level_3": "Los botones están enganchados, pero los cuadrados azules no se ocultan al pulsar los botones",
           "rubric_performance_level_4": "La aplicación no se ha puesto en marcha o no hay botones conectados al Circuit Playground"
+        },
+        "allthethings-mini-rubric": {
+          "rubric_key_concept": "Este es el concepto clave de esta mini-rúbrica.",
+          "rubric_performance_level_1": "¡Lo has hecho muy bien!",
+          "rubric_performance_level_2": "Lo has hecho bien.",
+          "rubric_performance_level_3": "Lo hiciste bien.",
+          "rubric_performance_level_4": "No has hecho nada."
+        },
+        "allthethings-mini-rubric-weblab": {
+          "rubric_key_concept": "Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo.",
+          "rubric_performance_level_1": "Lo que hay que hacer para superarse.",
+          "rubric_performance_level_2": "Lo que hay que hacer para reunirse.",
+          "rubric_performance_level_3": "Lo que hay que hacer para acercarse.",
+          "rubric_performance_level_4": "En realidad no has hecho nada."
         }
       }
     }

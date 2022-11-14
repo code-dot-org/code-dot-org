@@ -26,7 +26,7 @@
         },
         "CourseD_Dance_Party_04": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.\n\n_See ühik lõppeb peale 10 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"ühikud\"</title></block></xml> sündmuse alla."
+          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki ???\"ühikud\" sündmuse alla."
         },
         "CourseD_Dance_Party_06": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Pead kasutama vähemalt kahte tantsijat\n\n_See tase lõppeb peale 6 ühikut._",
@@ -90,7 +90,7 @@
         },
         "Dance_Party_04": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Sa pead muutma taustaefekti kusagil laulu 7 ühiku juures.\n\n_See ühik lõppeb peale 10 ühikut._",
-          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"ühikud\"</title></block></xml> sündmuse alla."
+          "challenges": "**Lisaväljakutse**\n\nMuuda taustaefekti loo erinevate osade juures, ühendades uue ploki ???\"ühikud\" sündmuse alla."
         },
         "Dance_Party_06": {
           "validation": "**Kuidas ma siit tasemelt läbi saan?**\n\n-   Pead kasutama vähemalt kahte tantsijat\n\n_See tase lõppeb peale 6 ühikut._",

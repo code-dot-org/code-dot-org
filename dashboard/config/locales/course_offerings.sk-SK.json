@@ -57,7 +57,10 @@
         "halloween": "halloween",
         "step": "krok",
         "csa5-exemplars": "csa5-exemplars",
-        "soccer": "futbal"
+        "soccer": "futbal",
+        "hello-world-space": "Ahoj Svet: Vesmír",
+        "hello-world-soccer": "Ahoj Svet: Futbal",
+        "playground": "ihrisko"
       }
     }
   }

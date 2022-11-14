@@ -397,33 +397,59 @@
         "cs_fundamentals_final_project/coursee/2022": {
           "name": "CS asoslari yakuniy loyihasi"
         },
+        "2022_change_log/courseb/2022": {
+          "name": "2022 o'zgartirishlar jurnali",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/courseb/2022": {
+          "name": "Hamma manbalar",
+          "url": "/s/kurs-2022/resurslar"
+        },
+        "all_standards/courseb/2022": {
+          "name": "Barcha standartlar",
+          "url": "/s/kurs-2022/standartlari"
+        },
+        "all_vocabulary/courseb/2022": {
+          "name": "Hamma Lug‘at",
+          "url": "/s/coursea-2022/lugat"
+        },
         "common_core_and_ngss_guidance/courseb/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+          "name": "Umumiy yadro va NGSS qo'llanmasi",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
+          "type": "Resurslar"
         },
         "cross-curricular_extension_activities/courseb/2022": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "name": "O'quv mashg'ulotlarini kengaytirish bo'yicha tadbirlar",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Resurslar"
         },
         "curriculum_guide/courseb/2022": {
-          "name": "O‘quv qo‘llanma"
+          "name": "O‘quv qo‘llanma",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/courseb/2022": {
           "name": "Debaglash bo'yicha yo'riqlar",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Resurslar"
         },
         "implementation_guide/courseb/2022": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Resurslar"
         },
         "lesson_type_guide/courseb/2022": {
           "name": "Dars turi yo'rigi",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Resurslar"
         },
         "teacher_forum/courseb/2022": {
           "name": "O‘qituvchilar forumi",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Resurslar"
         },
         "virtual_lesson_modifications/courseb/2022": {
-          "name": "Virtual dars modifikatsiyalari"
+          "name": "Virtual dars modifikatsiyalari",
+          "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view"
         },
         "digital_trails_animal_tracks/courseb/2022": {
           "type": "Talabalarga tarqatma materiallar"
@@ -432,43 +458,69 @@
           "type": "Talabalarga tarqatma materiallar"
         },
         "move_it_move_it/courseb/2022": {
-          "name": "Move It, Move It (Harakatlan)"
+          "name": "Move It, Move It (Harakatlan)",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Xaritali mashg'ulot"
         },
         "move_it_move_it_1/courseb/2022": {
           "name": "Move It, Move It (Harakatlan)"
         },
         "move_it_move_it_2/courseb/2022": {
-          "name": "Move It, Move It (Harakatlan)"
+          "name": "Move It, Move It (Harakatlan)",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "move_it_move_it_3/courseb/2022": {
-          "name": "Move It, Move It (Harakatlan)"
+          "name": "Move It, Move It (Harakatlan)",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
+          "type": "O'qituvchi uchun video"
         },
         "20_20_20_rule/courseb/2022": {
-          "name": "20/20/20 Qoidasi"
+          "name": "20/20/20 Qoidasi",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Resurslar"
         },
         "drag_and_drop_practice/courseb/2022": {
-          "name": "Drag&Drop amaliyoti"
+          "name": "Drag&Drop amaliyoti",
+          "url": "https://studio.code.org/s/jigsaw"
         },
         "feeling_faces/courseb/2022": {
-          "name": "Feeling Faces"
+          "name": "Feeling Faces",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Hissiyot rasmlari"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
-          "name": "Code.org sinf bilan ishlash"
+          "name": "Code.org sinf bilan ishlash",
+          "url": "https://youtu.be/4Wugxc80fNU"
         },
         "pair_programming/courseb/2022": {
-          "name": "Juftlikda dasturlash"
+          "name": "Juftlikda dasturlash",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Talaba videosi"
         },
         "unplugged_blockly_blocks_grades_k-1_/courseb/2022": {
-          "name": "Kompyutersiz mashq. Blockly bloklari (4-7 yosh)"
+          "name": "Kompyutersiz mashq. Blockly bloklari (4-7 yosh)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Manipulyatiyalar"
         },
         "wiggles_-_gonoodle/courseb/2022": {
+          "name": "GonoOdle- tebralinishi",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Video"
         },
         "compass_rose/courseb/2022": {
-          "name": "Compass Atirgul"
+          "name": "Compass Atirgul",
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
+          "type": "Qollanma"
+        },
+        "feeling_faces_-_emotion_image/courseb/2022": {
+          "name": "Yuzlar hissi- hissiyot tasviri",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Resurslar"
         },
         "happy_map_game_pieces/courseb/2022": {
-          "name": "Quvnoq harita Game Pieces"
+          "name": "Quvnoq harita Game Pieces",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Manipulyatiyalar"
         },
         "stevie_and_the_big_project/courseb/2022": {
           "name": "Stivi va Katta loyiha"
@@ -605,33 +657,59 @@
           "name": "Pauza qiling va o'ylang",
           "type": "Video"
         },
+        "2022_change_log/coursea/2022": {
+          "name": "2022 o'zgartirishlar jurnali",
+          "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
+        },
+        "all_resources/coursea/2022": {
+          "name": "Hamma manbalar",
+          "url": "/s/kurs-2022/resurslar"
+        },
+        "all_standards/coursea/2022": {
+          "name": "Barcha standartlar",
+          "url": "/s/kurs-2022/standartlar"
+        },
+        "all_vocabulary/coursea/2022": {
+          "name": "Hamma Lug‘at",
+          "url": "/s/coursea-2022/lugat"
+        },
         "common_core_and_ngss_guidance/coursea/2022": {
-          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+          "name": "Umumiy yadro va NGSS qo'llanmasi",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
+          "type": "Resurslar"
         },
         "cross-curricular_extension_activities/coursea/2022": {
-          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+          "name": "O'quv mashg'ulotlarini kengaytirish bo'yicha tadbirlar",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Resurslar"
         },
         "curriculum_guide/coursea/2022": {
-          "name": "O‘quv qo‘llanma"
+          "name": "O‘quv qo‘llanma",
+          "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview"
         },
         "debugging_guide/coursea/2022": {
           "name": "Debaglash bo'yicha yo'riqlar",
-          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Resurslar"
         },
         "implementation_guide/coursea/2022": {
           "name": "Implementation Guide",
-          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Resurslar"
         },
         "lesson_type_guide/coursea/2022": {
           "name": "Dars turi yo'rigi",
-          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Resurslar"
         },
         "teacher_forum/coursea/2022": {
           "name": "O‘qituvchilar forumi",
-          "url": "https://forum.code.org/c/csf/"
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Resurslar"
         },
         "virtual_lesson_modifications/coursea/2022": {
-          "name": "Virtual dars modifikatsiyalari"
+          "name": "Virtual dars modifikatsiyalari",
+          "url": "https://docs.google.com/document/d/1yaXgv2_aX3vMhK1HAZbaSu1Cg3yKD4HgfqRu4_pGtYY/view"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
           "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
@@ -1860,6 +1938,11 @@
         },
         "vocabulary_3/csd/2017": {
           "name": "Lug‘at"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         },
         "2021_change_log/coursef/2021": {
           "name": "2021 o'zgarishlar Logi",

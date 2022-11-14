@@ -291,7 +291,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   เพียงกดปุ่ม \"สำเร็จ\"!",
           "repeat_every_ideas": "**ต้องการไอเดียหรือเปล่า?**\n\n-   เปลี่ยนขนาดของนักเต้นซ้ำหลายครัั้งเพื่อทำให้เติบโตขึ้น\n-   เปลี่ยนการหมุนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เกิดการหมุน\n-   เปลี่ยนตำแหน่งแนวตั้งหรือแนวนอนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เคลื่อนที่ไปบนหน้าจอ\n\n_คุณสามารถใช้จำนวนติดลบเพื่อสร้างเอฟเฟกต์ตรงกันข้ามได้อีกด้วย!_",
-          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "บล็อกสำรองอยู่ในหมวดหมู่ “นักเต้น”"
@@ -385,7 +385,7 @@
         "Dance_2019_09": {
           "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   เพียงกดปุ่ม \"สำเร็จ\"!",
           "repeat_every_ideas": "**ต้องการไอเดียหรือเปล่า?**\n\n-   เปลี่ยนขนาดของนักเต้นซ้ำหลายครัั้งเพื่อทำให้เติบโตขึ้น\n-   เปลี่ยนการหมุนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เกิดการหมุน\n-   เปลี่ยนตำแหน่งแนวตั้งหรือแนวนอนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เคลื่อนที่ไปบนหน้าจอ\n\n_คุณสามารถใช้จำนวนติดลบเพื่อสร้างเอฟเฟกต์ตรงกันข้ามได้อีกด้วย!_",
-          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   ต้องมีนักเต้นอยู่บนหน้าจอ\n\n_เลเวลนี้จะสิ้นสุดลงหลังผ่านไป 4 ห้องเพลง_",
@@ -815,7 +815,7 @@
         },
         "course1_collector_loops_challenge4": {
           "courseB_collector_loops_challenge2_a": "ถ้าทำอะไรพลาดไป อย่ากลัวที่จะเริ่มต้นใหม่ อย่ายอมแพ้นะ!",
-          "courseB_collector_loops_challenge2_b": "ถ้าคุณทำตามรูปแบบนี้ซ้ำหลายรอบ ลอเรลจะไม่เดินชนกำแพงที่อยู่ด้านล่างของถ้ำเลย!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
+          "courseB_collector_loops_challenge2_b": "ถ้าคุณทำตามรูปแบบนี้ซ้ำหลายรอบ ลอเรลจะไม่เดินชนกำแพงที่อยู่ด้านล่างของถ้ำเลย!\n\n\n            \n              \n                \n                  \n                    \n                      \n                        \n                          \n                        \n                      \n                    \n                  \n                \n              \n            \n          ",
           "courseB_collector_loops_challenge2_c": "ลองใช้บล็อก `ทำซ้ำ` เพื่อเก็บกองสมบัติกองสุดท้ายให้หมดดูสิ!",
           "courseB_collector_loops_challenge2_d": "ลองใช้วิธีนี้สิ:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -875,20 +875,20 @@
           "courseE_bee_functions_challenge1_a": "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
         },
         "courseA_artist_loops2": {
-          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
+          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อกเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_artist_loops2_b": "ใช้บล็อกนี้ เพื่อแก้ปริศนาในด่านนี้"
         },
         "courseA_artist_loops2_2018": {
-          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
+          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อกเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_artist_loops2_b": "ใช้บล็อกนี้ เพื่อแก้ปริศนาในด่านนี้"
         },
         "courseA_artist_loops2_2019": {
-          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
+          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อกเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_artist_loops2_b": "ใช้บล็อกนี้ เพื่อแก้ปริศนาในด่านนี้"
         },
         "courseA_artist_loops2_2020": {
-          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
+          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อกเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_artist_loops2_b": "ใช้บล็อกนี้ เพื่อแก้ปริศนาในด่านนี้"
         },
         "courseA_artist_loops3": {
           "courseA_artist_loops3_a": "ลองลากตามรอยช้าๆไปตามโปรแกรม ด้วยการใช้นิ้วมือของคุณ เพื่อดูว่ามีอะไรไม่ถูกต้อง",
@@ -908,39 +908,39 @@
         },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
+          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n5"
         },
         "courseA_artist_loops4_2018": {
           "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
+          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n5"
         },
         "courseA_artist_loops4_2019": {
           "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
+          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n5"
         },
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
+          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n5"
         },
         "courseA_artist_loops5": {
-          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
+          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก??? เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
           "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n???"
         },
         "courseA_artist_loops5_2018": {
-          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
+          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก??? เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
           "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n???"
         },
         "courseA_artist_loops5_2019": {
-          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
+          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก??? เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
           "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n???"
         },
         "courseA_artist_loops5_2020": {
-          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
+          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก??? เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
           "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n???"
         },
         "courseA_artist_loops6": {
           "courseA_artist_loops6_a": "คิดไม่ออก..วิธีที่จะวาดเนินเขาหรือเปล่า?  ลองเล่นกับบล็อกต่างๆ ดูสักนิด เพื่อดูว่าแต่ละบล็อกวาดอะไร",
@@ -961,22 +961,22 @@
         "courseA_artist_loops7": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops8": {
           "courseA_artist_loops8_a": "ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง",
@@ -1000,87 +1000,87 @@
         },
         "courseA_artist_loops9": {
           "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
-          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
+          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป5\n ",
           "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
         },
         "courseA_artist_loops9_2018": {
           "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
-          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
+          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป5\n ",
           "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
         },
         "courseA_artist_loops9_2019": {
           "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
-          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
+          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป5\n ",
           "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
         },
         "courseA_artist_loops9_2020": {
           "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
-          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
+          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป5\n ",
           "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
         },
         "courseA_collector_loops1": {
-          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  ",
           "courseA_collector_loops1_b": "วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ"
         },
         "courseA_collector_loops1_2018": {
-          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  ",
           "courseA_collector_loops1_b": "วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ"
         },
         "courseA_collector_loops1_2019": {
-          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  ",
           "courseA_collector_loops1_b": "วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ"
         },
         "courseA_collector_loops1_2020": {
-          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  ",
           "courseA_collector_loops1_b": "วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ"
         },
         "courseA_collector_loops2": {
           "courseA_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
-          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  "
         },
         "courseA_collector_loops2_2018": {
           "courseA_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
-          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  "
         },
         "courseA_collector_loops2_2019": {
           "courseA_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
-          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  "
         },
         "courseA_collector_loops2_2020": {
           "courseA_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
-          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  "
         },
         "courseA_collector_loops3": {
-          "courseA_collector_loops3_a": "ลองใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>ดู!",
-          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_collector_loops3_a": "ลองใช้บล็อกลูป ???ดู!",
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป???"
         },
         "courseA_collector_loops3_2018": {
-          "courseA_collector_loops3_a": "ลองใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>ดู!",
-          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_collector_loops3_a": "ลองใช้บล็อกลูป ???ดู!",
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป???"
         },
         "courseA_collector_loops3_2019": {
-          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป???",
           "courseA_collector_loops3_a": "ลองใช้ลูป\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nดูสิ!"
         },
         "courseA_collector_loops3_2020": {
-          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป???",
           "courseA_collector_loops3_a": "ลองใช้ลูป\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nดูสิ!"
         },
         "courseA_collector_loops4": {
           "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
-          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>เรียบร้อยแล้ว!"
+          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ???เรียบร้อยแล้ว!"
         },
         "courseA_collector_loops4_2018": {
           "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
-          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>เรียบร้อยแล้ว!"
+          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ???เรียบร้อยแล้ว!"
         },
         "courseA_collector_loops4_2019": {
           "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
-          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>เรียบร้อยแล้ว!"
+          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ???เรียบร้อยแล้ว!"
         },
         "courseA_collector_loops4_2020": {
           "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
-          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>เรียบร้อยแล้ว!"
+          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ???เรียบร้อยแล้ว!"
         },
         "courseA_collector_loops5": {
           "courseA_collector_loops5_a": "ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด",
@@ -1104,19 +1104,19 @@
         },
         "courseA_collector_loops6": {
           "courseA_collector_loops6_a": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา"
+          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป ??? จำนวนสองบล็อกวางไว้ให้ตามกันมา"
         },
         "courseA_collector_loops6_2018": {
           "courseA_collector_loops6_a": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา"
+          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป ??? จำนวนสองบล็อกวางไว้ให้ตามกันมา"
         },
         "courseA_collector_loops6_2019": {
           "courseA_collector_loops6_a": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา"
+          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป ??? จำนวนสองบล็อกวางไว้ให้ตามกันมา"
         },
         "courseA_collector_loops6_2020": {
           "courseA_collector_loops6_a": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา"
+          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป ??? จำนวนสองบล็อกวางไว้ให้ตามกันมา"
         },
         "courseA_collector_loops7": {
           "courseA_collector_loops7_a": "ถ้าคุณไม่สามารถคิดออกว่าอะไรจะเกิดขึ้นถัดมา ลองเรียกใช้งานโค้ดเพื่อดูว่าเมื่อจบแล้วลอเรลได้อะไรบ้าง"
@@ -1191,40 +1191,40 @@
           "courseA_collector_loops_challenge1_d": "โปรแกรมเริ่มต้นจะไม่เก็บรวบรวมเพชร 2 เม็ดสุดท้าย ลองเพิ่มโค้ดนี้ที่ท้ายสุด:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
         "courseA_collector_preLoops7": {
-          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  "
         },
         "courseA_harvester_loops1": {
-          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n"
         },
         "courseA_harvester_loops1_2019": {
-          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n"
         },
         "courseA_harvester_loops1_2020": {
-          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n"
         },
         "courseA_harvester_loops2": {
-          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> ",
+          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก \n\n  <block type=\"harvester_corn\"/>\n</xml> ",
           "courseA_harvester_loops2_b": "หากยังเจอปัญหาอยู่ ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ"
         },
         "courseA_harvester_loops2_2019": {
-          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> ",
+          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก \n\n  <block type=\"harvester_corn\"/>\n</xml> ",
           "courseA_harvester_loops2_b": "หากยังเจอปัญหาอยู่ ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ"
         },
         "courseA_harvester_loops2_2020": {
-          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> ",
+          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก \n\n  <block type=\"harvester_corn\"/>\n</xml> ",
           "courseA_harvester_loops2_b": "หากยังเจอปัญหาอยู่ ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ"
         },
         "courseA_harvester_loops3": {
-          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
-          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
+          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (\n    4\n  ) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
         },
         "courseA_harvester_loops3_2019": {
-          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
-          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
+          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (\n    4\n  ) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
         },
         "courseA_harvester_loops3_2020": {
-          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
-          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
+          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (\n    4\n  ) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
         },
         "courseA_harvester_loops4": {
           "courseA_harvester_loops4_a": "ไม่ต้องกังวลที่จะกดปุ่ม `เริ่ม` เพื่อดูว่าจะเกิดอะไรขึ้น!",
@@ -1240,32 +1240,32 @@
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว",
-          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
+          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  \n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
           "courseA_harvester_loops5_c": "ใช้เส้นทางนี้เพื่อเดินไปเก็บข้าวโพดให้หมด"
         },
         "courseA_harvester_loops5_2019": {
           "courseA_harvester_loops5_a": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว",
-          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
+          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  \n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
           "courseA_harvester_loops5_c": "ใช้เส้นทางนี้เพื่อเดินไปเก็บข้าวโพดให้หมด"
         },
         "courseA_harvester_loops5_2020": {
           "courseA_harvester_loops5_a": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว",
-          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
+          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  \n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
           "courseA_harvester_loops5_c": "ใช้เส้นทางนี้เพื่อเดินไปเก็บข้าวโพดให้หมด"
         },
         "courseA_harvester_loops5a": {
           "courseA_harvester_loops5a_a": "คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว",
-          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้` และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` ",
           "courseA_harvester_loops5a_c": "ใช้เส้นทางนี้เพื่อเดินไปตามเส้นทางสองทิศทาง"
         },
         "courseA_harvester_loops5a_2019": {
           "courseA_harvester_loops5a_a": "คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว",
-          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้` และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` ",
           "courseA_harvester_loops5a_c": "ใช้เส้นทางนี้เพื่อเดินไปตามเส้นทางสองทิศทาง"
         },
         "courseA_harvester_loops5a_2020": {
           "courseA_harvester_loops5a_a": "คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว",
-          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้` และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` ",
           "courseA_harvester_loops5a_c": "ใช้เส้นทางนี้เพื่อเดินไปตามเส้นทางสองทิศทาง"
         },
         "courseA_harvester_loops5b": {
@@ -1296,15 +1296,15 @@
           "courseA_harvester_loops6_b": "นี่คือเส้นทางที่คุณควรใช้ เพื่อเก็บข้าวโพดทั้งหมด"
         },
         "courseA_harvester_loops7": {
-          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
+          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
           "courseA_harvester_loops7_b": "ให้ใช้ลูปสองลูปเพื่อเดินไปตามเส้นทางที่ให้มานี้"
         },
         "courseA_harvester_loops7_2019": {
-          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
+          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
           "courseA_harvester_loops7_b": "ให้ใช้ลูปสองลูปเพื่อเดินไปตามเส้นทางที่ให้มานี้"
         },
         "courseA_harvester_loops7_2020": {
-          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
+          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
           "courseA_harvester_loops7_b": "ให้ใช้ลูปสองลูปเพื่อเดินไปตามเส้นทางที่ให้มานี้"
         },
         "courseA_harvester_loops9": {
@@ -1359,55 +1359,55 @@
           "courseA_harvester_seq1_b": "เกษตรกรต้องเดินไปทางทิศตะวันออกสามครั้งเพื่อไปให้ถึงฝักข้าวโพด ให้ใช้บล็อกนี้\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2": {
-          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก <xml><block type=\"harvester_corn\"/></xml> เพื่อเก็บข้าวโพด!",
+          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก  เพื่อเก็บข้าวโพด!",
           "courseA_harvester_seq2_b": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
         },
         "courseA_harvester_seq2_2019": {
-          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก <xml><block type=\"harvester_corn\"/></xml> เพื่อเก็บข้าวโพด!",
+          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก  เพื่อเก็บข้าวโพด!",
           "courseA_harvester_seq2_b": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
         },
         "courseA_harvester_seq2_2020": {
-          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก <xml><block type=\"harvester_corn\"/></xml> เพื่อเก็บข้าวโพด!",
+          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก  เพื่อเก็บข้าวโพด!",
           "courseA_harvester_seq2_b": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
         },
         "courseA_harvester_seq3": {
-          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n",
           "courseA_harvester_seq3_b": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
         },
         "courseA_harvester_seq3_2019": {
-          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n",
           "courseA_harvester_seq3_b": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
         },
         "courseA_harvester_seq3_2020": {
-          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n",
           "courseA_harvester_seq3_b": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
         },
         "courseA_harvester_seq4": {
           "courseA_harvester_seq4_a": "ช่องว่างระหว่างเกษตรกรกับฝักข้าวโพดมีด้วยกันกี่ช่อง? บล็อกที่ต่อกันอยู่แล้วในที่พื้นที่ทำงานของคุณมีอยู่แล้วกี่บล็อก?",
-          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n<xml><block type=\"maze_moveEast\"/></xml>\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \n<xml><block type=\"harvester_corn\"/></xml>หนึ่งบล็อก"
+          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \nหนึ่งบล็อก"
         },
         "courseA_harvester_seq4_2019": {
           "courseA_harvester_seq4_a": "ช่องว่างระหว่างเกษตรกรกับฝักข้าวโพดมีด้วยกันกี่ช่อง? บล็อกที่ต่อกันอยู่แล้วในที่พื้นที่ทำงานของคุณมีอยู่แล้วกี่บล็อก?",
-          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n<xml><block type=\"maze_moveEast\"/></xml>\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \n<xml><block type=\"harvester_corn\"/></xml>หนึ่งบล็อก"
+          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \nหนึ่งบล็อก"
         },
         "courseA_harvester_seq4_2020": {
           "courseA_harvester_seq4_a": "ช่องว่างระหว่างเกษตรกรกับฝักข้าวโพดมีด้วยกันกี่ช่อง? บล็อกที่ต่อกันอยู่แล้วในที่พื้นที่ทำงานของคุณมีอยู่แล้วกี่บล็อก?",
-          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n<xml><block type=\"maze_moveEast\"/></xml>\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \n<xml><block type=\"harvester_corn\"/></xml>หนึ่งบล็อก"
+          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \nหนึ่งบล็อก"
         },
         "courseA_harvester_seq5": {
           "courseA_harvester_seq5_a": "บล็อกไหนที่ทำให้เกษตรกรเคลื่อนที่ไปผิดทิศทาง",
           "courseA_harvester_seq5_b": "คุณต้องเอาบล็อกออกไปบล็อกหนึ่ง",
-          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n"
         },
         "courseA_harvester_seq5_2019": {
           "courseA_harvester_seq5_a": "บล็อกไหนที่ทำให้เกษตรกรเคลื่อนที่ไปผิดทิศทาง",
           "courseA_harvester_seq5_b": "คุณต้องเอาบล็อกออกไปบล็อกหนึ่ง",
-          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n"
         },
         "courseA_harvester_seq5_2020": {
           "courseA_harvester_seq5_a": "บล็อกไหนที่ทำให้เกษตรกรเคลื่อนที่ไปผิดทิศทาง",
           "courseA_harvester_seq5_b": "คุณต้องเอาบล็อกออกไปบล็อกหนึ่ง",
-          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n"
         },
         "courseA_harvester_seq6": {
           "courseA_harvester_seq6_a": "หากคุณคิดไม่ออก ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ มันอาจจะช่วยให้คุณหาเส้นทางที่ถูกต้องได้"
@@ -1491,8 +1491,8 @@
           "1": "โค้ดของคุณควรเป็นแบบนี้:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก \n\n",
+          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n"
         },
         "courseA_maze_seq10": {
           "courseA_maze_seq10_a": "ถ้ารู้สึกว่าปัญหานี้ยาก ให้ลองเขียนขั้นตอนต่างๆลงบนกระดาษสักแผ่นหนึ่งก่อน"
@@ -1515,49 +1515,49 @@
         "courseA_maze_seq13": {
           "courseA_maze_seq13_a": "หากเส้นทางที่คุณเลือกใช้ไม่ชัดเจน ลองใช้นิ้วลากเป็นเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู",
           "courseA_maze_seq13_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้น",
-          "courseA_maze_seq13_c": "บล็อก <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
+          "courseA_maze_seq13_c": "บล็อก \n\n เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
         },
         "courseA_maze_seq13_2018": {
           "courseA_maze_seq13_a": "หากเส้นทางที่คุณเลือกใช้ไม่ชัดเจน ลองใช้นิ้วลากเป็นเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู",
           "courseA_maze_seq13_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้น",
-          "courseA_maze_seq13_c": "บล็อก <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
+          "courseA_maze_seq13_c": "บล็อก \n\n เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
         },
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "หากเส้นทางที่คุณเลือกใช้ไม่ชัดเจน ลองใช้นิ้วลากเป็นเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู",
           "courseA_maze_seq13_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้น",
-          "courseA_maze_seq13_c": "บล็อก <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
+          "courseA_maze_seq13_c": "บล็อก \n\n เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
         },
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "หากเส้นทางที่คุณเลือกใช้ไม่ชัดเจน ลองใช้นิ้วลากเป็นเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู",
           "courseA_maze_seq13_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้น",
-          "courseA_maze_seq13_c": "บล็อก <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
+          "courseA_maze_seq13_c": "บล็อก \n\n เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก \n\n",
+          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก \n\n",
+          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก \n\n",
+          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n"
         },
         "courseA_maze_seq5": {
           "courseA_maze_seq5_a": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
         },
         "courseA_maze_seq5_2018": {
           "1": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!",
-          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n"
         },
         "courseA_maze_seq5_2019": {
           "1": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!",
-          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n"
         },
         "courseA_maze_seq5_2020": {
           "1": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!",
-          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n"
         },
         "courseA_maze_seq5_copy": {
           "courseA_maze_seq5_a": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
@@ -1792,13 +1792,13 @@
         },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_a": "ถ้าทำอะไรพลาดไป อย่ากลัวที่จะเริ่มต้นใหม่ อย่ายอมแพ้นะ!",
-          "courseB_collector_loops_challenge2_b": "ถ้าคุณทำตามรูปแบบนี้ซ้ำหลายรอบ ลอเรลจะไม่เดินชนกำแพงที่อยู่ด้านล่างของถ้ำเลย!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
+          "courseB_collector_loops_challenge2_b": "ถ้าคุณทำตามรูปแบบนี้ซ้ำหลายรอบ ลอเรลจะไม่เดินชนกำแพงที่อยู่ด้านล่างของถ้ำเลย!\n\n\n            \n              \n                \n                  \n                    \n                      \n                        \n                          \n                        \n                      \n                    \n                  \n                \n              \n            \n          ",
           "courseB_collector_loops_challenge2_c": "ลองใช้บล็อก `ทำซ้ำ` เพื่อเก็บกองสมบัติกองสุดท้ายให้หมดดูสิ!",
           "courseB_collector_loops_challenge2_d": "ลองใช้วิธีนี้สิ:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_iceage_loops1": {
           "courseB_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseB_iceage_loops10": {
           "courseB_iceage_loops10_a": "ระวังแผ่นน้ำแข็งที่แตกร้าว เจ้ากระรอกเขี้ยวดาบสแกรทอาจจะตกลงไปในน้ำได้!",
@@ -1817,11 +1817,11 @@
         },
         "courseB_iceage_loops1_2019": {
           "courseB_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseB_iceage_loops1_2020": {
           "courseB_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseB_iceage_loops2": {
           "courseB_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
@@ -1839,16 +1839,16 @@
           "courseB_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
         },
         "courseB_iceage_loops3": {
-          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
         },
         "courseB_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
         },
         "courseB_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
         },
         "courseB_iceage_loops4": {
           "courseB_iceage_loops4_a": "ลองเขียนขั้นตอนต่าง ๆที่เจ้ากระรอกเขี้ยวดาบสแกรทน่าจะใช้เพื่อไปให้ถึงลูกโอ็คลงบนกระดาษ คุณเห็นรูปแบบอะไรไหม?",
@@ -1968,19 +1968,19 @@
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n"
         },
         "courseB_starWars_prog1_2018": {
           "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n"
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n"
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "ให้แบ่งปัญหาออกเป็นสองส่วน ส่วนแรกไปเอากองโลหะกองหนึ่งให้ได้ แล้วหาวิธีไปเอาอีกกองหนึ่ง"
@@ -2012,19 +2012,19 @@
         },
         "courseB_starWars_prog4": {
           "courseB_starWars_prog4_a": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป",
-          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog4_2018": {
           "courseB_starWars_prog4_a": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป",
-          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog4_2019": {
           "courseB_starWars_prog4_a": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป",
-          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
           "courseB_starWars_prog4_a": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป",
-          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog5": {
           "courseB_starWars_prog5_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
@@ -2052,19 +2052,19 @@
         },
         "courseB_starWars_prog6": {
           "courseB_starWars_prog6_a": "รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง",
-          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog6_2018": {
           "courseB_starWars_prog6_a": "รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง",
-          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog6_2019": {
           "courseB_starWars_prog6_a": "รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง",
-          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
           "courseB_starWars_prog6_a": "รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง",
-          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog7": {
           "courseB_starWars_prog7_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
@@ -2429,32 +2429,32 @@
           "courseC_artist_loopsPrePre1a_b": "เคลื่อนที่ไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:\n![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)"
         },
         "courseC_artist_loopsPrePre1a_2018": {
-          "courseC_artist_loopsPrePre1a_a": "บล็อกที่คุณต้องใช้บล็อกแรกคือ:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block></xml>",
-          "courseC_artist_loopsPrePre1a_b": "เคลื่อนที่ไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:\n\n<xml><block type=\"draw_move_by_constant\">\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
+          "courseC_artist_loopsPrePre1a_a": "บล็อกที่คุณต้องใช้บล็อกแรกคือ:\n\n  \n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "เคลื่อนที่ไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:\n\n\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
         },
         "courseC_artist_loopsPrePre1a_2019": {
-          "courseC_artist_loopsPrePre1a_a": "บล็อกที่คุณต้องใช้บล็อกแรกคือ:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block></xml>",
-          "courseC_artist_loopsPrePre1a_b": "เคลื่อนที่ไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:\n\n<xml><block type=\"draw_move_by_constant\">\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
+          "courseC_artist_loopsPrePre1a_a": "บล็อกที่คุณต้องใช้บล็อกแรกคือ:\n\n  \n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "เคลื่อนที่ไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:\n\n\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
         },
         "courseC_artist_loopsPrePre1a_2020": {
-          "courseC_artist_loopsPrePre1a_a": "บล็อกที่คุณต้องใช้บล็อกแรกคือ:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block></xml>",
-          "courseC_artist_loopsPrePre1a_b": "เคลื่อนที่ไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:\n\n<xml><block type=\"draw_move_by_constant\">\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
+          "courseC_artist_loopsPrePre1a_a": "บล็อกที่คุณต้องใช้บล็อกแรกคือ:\n\n  \n\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "เคลื่อนที่ไปข้างหน้า 50 พิกเซล ใช้บล็อกนี้:\n\n\n\n<title name=\"DIR\">moveForward</title>\n<title name=\"VALUE\">50</title>\n</block></xml>"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "**หากคุณใช้บล็อก<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
-          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>"
+          "courseC_artist_prog2_a": "**หากคุณใช้บล็อกmoveForward100 ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
+          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อกturnRight90"
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "**หากคุณใช้บล็อก<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
-          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>"
+          "courseC_artist_prog2_a": "**หากคุณใช้บล็อกmoveForward100 ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
+          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อกturnRight90"
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "**หากคุณใช้บล็อก<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
-          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>"
+          "courseC_artist_prog2_a": "**หากคุณใช้บล็อกmoveForward100 ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
+          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อกturnRight90"
         },
         "courseC_artist_prog2_2020": {
-          "courseC_artist_prog2_a": "**หากคุณใช้บล็อก<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
-          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>"
+          "courseC_artist_prog2_a": "**หากคุณใช้บล็อกmoveForward100 ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
+          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อกturnRight90"
         },
         "courseC_artist_prog3": {
           "courseC_artist_prog3_a": "เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มีด้านยาวด้านละ 100 พิกเซล\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า",
@@ -2565,38 +2565,38 @@
           "courseC_artist_prog7_e": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog2": {
-          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
+          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก moveForward สี่บล็อกหรือใช้บล็อก ??? เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
           "courseC_collector_prog2_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog2_2018": {
-          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
+          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก moveForward สี่บล็อกหรือใช้บล็อก ??? เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
           "courseC_collector_prog2_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog2_2019": {
-          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
+          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก moveForward สี่บล็อกหรือใช้บล็อก ??? เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
           "courseC_collector_prog2_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog2_2020": {
-          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
+          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก moveForward สี่บล็อกหรือใช้บล็อก ??? เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
           "courseC_collector_prog2_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog3": {
-          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml>\\<block type=\"\"เมื่อเรียกใช้งาน\"/\"></block></xml>เท่านั้น",
+          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อกเท่านั้น",
           "courseC_collector_prog3_b": "ลองใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?",
           "courseC_collector_prog3_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
         },
         "courseC_collector_prog3_2018": {
-          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml>\\<block type=\"\"เมื่อเรียกใช้งาน\"/\"></block></xml>เท่านั้น",
+          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อกเท่านั้น",
           "courseC_collector_prog3_b": "ลองใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?",
           "courseC_collector_prog3_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
         },
         "courseC_collector_prog3_2019": {
-          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml>\\<block type=\"\"เมื่อเรียกใช้งาน\"/\"></block></xml>เท่านั้น",
+          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อกเท่านั้น",
           "courseC_collector_prog3_b": "ลองใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?",
           "courseC_collector_prog3_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
         },
         "courseC_collector_prog3_2020": {
-          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml>\\<block type=\"\"เมื่อเรียกใช้งาน\"/\"></block></xml>เท่านั้น",
+          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อกเท่านั้น",
           "courseC_collector_prog3_b": "ลองใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?",
           "courseC_collector_prog3_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
         },
@@ -2781,20 +2781,20 @@
           "courseC_flappy_events9_a": "ต่อบล็อก `ตั้งค่า คะแนนเป็น 0` เข้ากับอีเวนท์ `เมื่อผ่านสิ่งกีดขวาง` เพื่อที่จะผ่านด่านนี้ไป"
         },
         "courseC_harvester_loops1": {
-          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=\"harvester_pumpkin\"/></xml>ในการเก็บรวบรวมฟักทอง",
-          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก <xml><block type=\"harvester_pumpkin\"/></xml> เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
+          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้ในการเก็บรวบรวมฟักทอง",
+          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก  เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
         },
         "courseC_harvester_loops1_2018": {
-          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=\"harvester_pumpkin\"/></xml>ในการเก็บรวบรวมฟักทอง",
-          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก <xml><block type=\"harvester_pumpkin\"/></xml> เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
+          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้ในการเก็บรวบรวมฟักทอง",
+          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก  เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
         },
         "courseC_harvester_loops1_2019": {
-          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=\"harvester_pumpkin\"/></xml>ในการเก็บรวบรวมฟักทอง",
-          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก <xml><block type=\"harvester_pumpkin\"/></xml> เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
+          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้ในการเก็บรวบรวมฟักทอง",
+          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก  เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
         },
         "courseC_harvester_loops1_2020": {
-          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=\"harvester_pumpkin\"/></xml>ในการเก็บรวบรวมฟักทอง",
-          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก <xml><block type=\"harvester_pumpkin\"/></xml> เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
+          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้ในการเก็บรวบรวมฟักทอง",
+          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก  เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
         },
         "courseC_harvester_loops2": {
           "courseC_harvester_loops2_a": "หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน",
@@ -3021,19 +3021,19 @@
           "courseC_maze_programming1_0": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_a": "การใช้บล็อก <xml><block type=\"maze_moveForward\"/></xml> นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type=\"when_run\"/></xml>",
+          "courseC_maze_programming2_a": "การใช้บล็อก  นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก",
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_a": "การใช้บล็อก <xml><block type=\"maze_moveForward\"/></xml> นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type=\"when_run\"/></xml>",
+          "courseC_maze_programming2_a": "การใช้บล็อก  นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก",
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_a": "การใช้บล็อก <xml><block type=\"maze_moveForward\"/></xml> นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type=\"when_run\"/></xml>",
+          "courseC_maze_programming2_a": "การใช้บล็อก  นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก",
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_a": "การใช้บล็อก <xml><block type=\"maze_moveForward\"/></xml> นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type=\"when_run\"/></xml>",
+          "courseC_maze_programming2_a": "การใช้บล็อก  นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก",
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming3": {
@@ -3186,7 +3186,7 @@
         "courseC_starWars_loops4_copy": {
           "courseC_starWars_loops4_c": "คลิกที่ลูกศรเล็กๆที่อยู่ติดกับคำว่า \"ซ้าย\" บนบล็อกหัน จะช่วยให้คุณสามารถเปลี่ยนเป็น \"ขวา\" ได้",
           "courseC_starWars_loops4_a": "ให้ใช้บล็อก `ทำซ้ำ` สองบล็อก",
-          "courseC_starWars_loops4_b": "ลูป `ทำซ้ำ` แต่ละลูปจะมีเพียงคำสั่งหนึ่งเดียวอยู่ภายใน คือ `ไปข้างหน้า`"
+          "courseC_starWars_loops4_b": "ลูป `ทำซ้ำ` แต่ละลูปจะมีเพียงคำสั่งหนึ่งเดียวอยู่ภายใน คือ ` ไปข้างหน้า `"
         },
         "courseC_starWars_loops5": {
           "courseC_starWars_loops5_b": "การที่จะเคลื่อนที่ไปด้านล่างได้นั้น คุณต้องหันก่อนแล้วเคลื่อนที่ไปข้างหน้า",
@@ -3194,7 +3194,7 @@
         },
         "courseC_starWars_loops5_copy": {
           "courseC_starWars_loops5_b": "การที่จะเคลื่อนที่ไปด้านล่างได้นั้น คุณต้องหันก่อนแล้วเคลื่อนที่ไปข้างหน้า",
-          "courseC_starWars_loops5_a": "โซลูชั่นที่ดีที่สุด คือดารใช้บล็อกหันหนึ่งครั้ง ตามด้วยบล็อก `ไปข้างหน้า` หนึ่งบล็อก แล้วตามด้วยบล็อกหันอีกหนึ่งครั้ง จบด้วยลูปหนึ่งลูป"
+          "courseC_starWars_loops5_a": "โซลูชั่นที่ดีที่สุด คือดารใช้บล็อกหันหนึ่งครั้ง ตามด้วยบล็อก ` ไปข้างหน้า ` หนึ่งบล็อก แล้วตามด้วยบล็อกหันอีกหนึ่งครั้ง จบด้วยลูปหนึ่งลูป"
         },
         "courseC_starWars_loops6": {
           "courseC_starWars_loops6_a": "ลองเขียนขั้นตอนการเคลื่อนไหวทั้งหมดลงบนกระดาษและมองหารูปแบบดู",
@@ -3718,7 +3718,7 @@
         },
         "courseD_bee_conditionals5_copy": {
           "courseD_bee_conditionals5_hintVid1": "ต้องการให้ช่วยอะไรไหมก่อนที่คุณจะเริ่ม? ลองดูวิดีโอซิ!",
-          "courseD_bee_conditionals5_a": "ให้คิดว่าทุกด้านของเส้นทางสี่เหลี่ยมผืนผ้าเป็นเส้นทางโดยตัวของมันเอง แล้วใช้ลูปซ้อนกันด้วยการใช้บล็อก `ทำซ้ำ` อยู่ด้านนอกและบล็อก\\` ขณะที่ยังมีทางข้างหน้า ' ลูปอยู่ข้างใน ให้ถามว่ามีวิถีทางกี่ทางที่ผึ้งต้องบินถ้าผึ้งต้องการบินไปมาทุกด้านที่มีดอกไม้?",
+          "courseD_bee_conditionals5_a": "ให้คิดว่าทุกด้านของเส้นทางสี่เหลี่ยมผืนผ้าเป็นเส้นทางโดยตัวของมันเอง แล้วใช้ลูปซ้อนกันด้วยการใช้บล็อก `ทำซ้ำ` อยู่ด้านนอกและบล็อก` ขณะที่ยังมีทางข้างหน้า ' ลูปอยู่ข้างใน ให้ถามว่ามีวิถีทางกี่ทางที่ผึ้งต้องบินถ้าผึ้งต้องการบินไปมาทุกด้านที่มีดอกไม้?",
           "courseD_bee_conditionals5_hintVid2": "ดูวิดีโอเรื่องนี้เพื่อช่วยในการแก้ปริศนา"
         },
         "courseD_bee_conditionals6": {
@@ -3921,7 +3921,7 @@
         },
         "courseD_iceage_loops1": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseD_iceage_loops10": {
           "courseB_iceage_loops10_a": "ระวังแผ่นน้ำแข็งที่แตกร้าว เจ้ากระรอกเขี้ยวดาบสแกรทอาจจะตกลงไปในน้ำได้!",
@@ -3940,11 +3940,11 @@
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseD_iceage_loops2": {
           "courseD_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
@@ -3962,7 +3962,7 @@
           "courseD_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
         },
         "courseD_iceage_loops3": {
-          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
           "courseB_iceage_loops3_b": "ในการทำซ้ำโค้ดนั้น ให้ลากลูป `ทำซ้ำ`ออกมาจากกล่องเครื่องมือ แล้วใส่บล็อกที่คุณต้องการทำซ้ำไว้ภายใน"
         },
         "courseD_iceage_loops3_2019": {
@@ -4420,7 +4420,7 @@
           "courseD_artist_functions2_c": "คุณต้องใช้บล็อกสีเขียว \"วาดสี่เหลี่ยมจัตุรัส\" เพื่อ \"เรียก\" ฟังก์ชันของคุณ ไม่เช่นนั้น โค้ดในฟังก์ชันของคุณจะไม่ทำงาน\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n-   ใช้ฟังก์ชัน\n-   ย้ายไปข้างหน้า 100+75 พิกเซล\n-   ใช้ฟังก์ชัน"
+          "courseD_artist_functions2_a": "โปรแกรมของคุณควร:\n\n - ใช้ฟังก์ชัน\n - ย้ายไปข้างหน้า 100+75 พิกเซล\n - ใช้ฟังก์ชัน"
         },
         "courseE_artist_functions6": {
           "grade4_artist_functions_windows0_c": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้นถึงแม้ว่าคุณยังจะแก้ปริศนาไม่ออกก็ตาม"
@@ -4521,7 +4521,7 @@
           "courseF_bee_for5_b": "ใช้ตัวแปร ‘ตัวนับ’ ในแต่ละลูปเพื่อให้ผึ้งบินใกล้ไกลต่างกันระหว่างดอกไม้แต่ละดอก"
         },
         "courseF_bee_functions6": {
-          "courseF_bee_functions6_a": "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n<xml>\n  <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get nectar make honey</title>\n    <statement name=\"STACK\">\n\n    </statement>\n\n  </block>\n</xml>"
+          "courseF_bee_functions6_a": "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!\n\n  \n    \n    get nectar make honey\n    \n\n    </statement>\n\n  </block>\n</xml>"
         },
         "courseF_bee_functions8a": {
           "courseF_bee_functions8a_a": "หากปริศนาดูเหมือนว่าจะท้าทายเกินไป ให้ลองสร้างฟังก์ชั่นทีละเล็กทีละน้อยในแต่ละครั้ง  \n\nเพิ่มบล็อกบางอย่างแล้วลองเอาออก เพิ่มใหม่แล้วลองอีกครั้ง  ในไม่ช้า คุณจะได้รับความสำเร็จ!"
@@ -4613,7 +4613,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   เพียงกดปุ่ม \"สำเร็จ\"!",
           "repeat_every_ideas": "**ต้องการไอเดียหรือเปล่า?**\n\n-   เปลี่ยนขนาดของนักเต้นซ้ำหลายครัั้งเพื่อทำให้เติบโตขึ้น\n-   เปลี่ยนการหมุนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เกิดการหมุน\n-   เปลี่ยนตำแหน่งแนวตั้งหรือแนวนอนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เคลื่อนที่ไปบนหน้าจอ\n\n_คุณสามารถใช้จำนวนติดลบเพื่อสร้างเอฟเฟกต์ตรงกันข้ามได้อีกด้วย!_",
-          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "บล็อกสำรองอยู่ในหมวดหมู่ “นักเต้น”"
@@ -4764,8 +4764,8 @@
           "mc_9_c": "ให้ใช้บล็อก `วางคบไฟ`เพื่อวางคบไฟไว้ตรงที่คุณยืนอยู่"
         },
         "courseA_artist_loops2_2021": {
-          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
+          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อกเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_artist_loops2_b": "ใช้บล็อกนี้ เพื่อแก้ปริศนาในด่านนี้"
         },
         "courseA_artist_loops3_2021": {
           "courseA_artist_loops3_a": "ลองลากตามรอยช้าๆไปตามโปรแกรม ด้วยการใช้นิ้วมือของคุณ เพื่อดูว่ามีอะไรไม่ถูกต้อง",
@@ -4773,12 +4773,12 @@
         },
         "courseA_artist_loops4_2021": {
           "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
+          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n5"
         },
         "courseA_artist_loops5_2021": {
-          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
+          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก??? เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
           "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n???"
         },
         "courseA_artist_loops6_2021": {
           "courseA_artist_loops6_a": "คิดไม่ออก..วิธีที่จะวาดเนินเขาหรือเปล่า?  ลองเล่นกับบล็อกต่างๆ ดูสักนิด เพื่อดูว่าแต่ละบล็อกวาดอะไร",
@@ -4787,7 +4787,7 @@
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_a": "ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง",
@@ -4796,24 +4796,24 @@
         },
         "courseA_artist_loops9_2021": {
           "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
-          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
+          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป5\n ",
           "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
         },
         "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  ",
           "courseA_collector_loops1_b": "วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ"
         },
         "courseA_collector_loops2_2021": {
           "courseA_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
-          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  "
         },
         "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>",
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป???",
           "courseA_collector_loops3_a": "ลองใช้ลูป\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nดูสิ!"
         },
         "courseA_collector_loops4_2021": {
           "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
-          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>เรียบร้อยแล้ว!"
+          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ???เรียบร้อยแล้ว!"
         },
         "courseA_collector_loops5_2021": {
           "courseA_collector_loops5_a": "ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด",
@@ -4822,7 +4822,7 @@
         },
         "courseA_collector_loops6_2021": {
           "courseA_collector_loops6_a": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา"
+          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป ??? จำนวนสองบล็อกวางไว้ให้ตามกันมา"
         },
         "courseA_collector_loops7_2021": {
           "courseA_collector_loops7_a": "ถ้าคุณไม่สามารถคิดออกว่าอะไรจะเกิดขึ้นถัดมา ลองเรียกใช้งานโค้ดเพื่อดูว่าเมื่อจบแล้วลอเรลได้อะไรบ้าง"
@@ -4843,15 +4843,15 @@
           "courseA_collector_loops_challenge1_d": "โปรแกรมเริ่มต้นจะไม่เก็บรวบรวมเพชร 2 เม็ดสุดท้าย ลองเพิ่มโค้ดนี้ที่ท้ายสุด:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
         },
         "courseA_harvester_loops1_2021": {
-          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n"
         },
         "courseA_harvester_loops2_2021": {
-          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> ",
+          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก \n\n  <block type=\"harvester_corn\"/>\n</xml> ",
           "courseA_harvester_loops2_b": "หากยังเจอปัญหาอยู่ ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ"
         },
         "courseA_harvester_loops3_2021": {
-          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
-          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
+          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (\n    4\n  ) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
         },
         "courseA_harvester_loops4_2021": {
           "courseA_harvester_loops4_a": "ไม่ต้องกังวลที่จะกดปุ่ม `เริ่ม` เพื่อดูว่าจะเกิดอะไรขึ้น!",
@@ -4859,12 +4859,12 @@
         },
         "courseA_harvester_loops5_2021": {
           "courseA_harvester_loops5_a": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว",
-          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
+          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  \n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
           "courseA_harvester_loops5_c": "ใช้เส้นทางนี้เพื่อเดินไปเก็บข้าวโพดให้หมด"
         },
         "courseA_harvester_loops5a_2021": {
           "courseA_harvester_loops5a_a": "คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว",
-          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้` และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` ",
           "courseA_harvester_loops5a_c": "ใช้เส้นทางนี้เพื่อเดินไปตามเส้นทางสองทิศทาง"
         },
         "courseA_harvester_loops5b_2021": {
@@ -4877,7 +4877,7 @@
           "courseA_harvester_loops6_b": "นี่คือเส้นทางที่คุณควรใช้ เพื่อเก็บข้าวโพดทั้งหมด"
         },
         "courseA_harvester_loops7_2021": {
-          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
+          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
           "courseA_harvester_loops7_b": "ให้ใช้ลูปสองลูปเพื่อเดินไปตามเส้นทางที่ให้มานี้"
         },
         "courseA_harvester_loops9_2021": {
@@ -4898,21 +4898,21 @@
           "courseA_harvester_seq1_b": "เกษตรกรต้องเดินไปทางทิศตะวันออกสามครั้งเพื่อไปให้ถึงฝักข้าวโพด ให้ใช้บล็อกนี้\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq2_2021": {
-          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก <xml><block type=\"harvester_corn\"/></xml> เพื่อเก็บข้าวโพด!",
+          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก  เพื่อเก็บข้าวโพด!",
           "courseA_harvester_seq2_b": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
         },
         "courseA_harvester_seq3_2021": {
-          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n",
           "courseA_harvester_seq3_b": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
         },
         "courseA_harvester_seq4_2021": {
           "courseA_harvester_seq4_a": "ช่องว่างระหว่างเกษตรกรกับฝักข้าวโพดมีด้วยกันกี่ช่อง? บล็อกที่ต่อกันอยู่แล้วในที่พื้นที่ทำงานของคุณมีอยู่แล้วกี่บล็อก?",
-          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n<xml><block type=\"maze_moveEast\"/></xml>\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \n<xml><block type=\"harvester_corn\"/></xml>หนึ่งบล็อก"
+          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \nหนึ่งบล็อก"
         },
         "courseA_harvester_seq5_2021": {
           "courseA_harvester_seq5_a": "บล็อกไหนที่ทำให้เกษตรกรเคลื่อนที่ไปผิดทิศทาง",
           "courseA_harvester_seq5_b": "คุณต้องเอาบล็อกออกไปบล็อกหนึ่ง",
-          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n"
         },
         "courseA_harvester_seq6_2021": {
           "courseA_harvester_seq6_a": "หากคุณคิดไม่ออก ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ มันอาจจะช่วยให้คุณหาเส้นทางที่ถูกต้องได้"
@@ -4951,15 +4951,15 @@
         "courseA_maze_seq13_2021": {
           "courseA_maze_seq13_a": "หากเส้นทางที่คุณเลือกใช้ไม่ชัดเจน ลองใช้นิ้วลากเป็นเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู",
           "courseA_maze_seq13_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้น",
-          "courseA_maze_seq13_c": "บล็อก <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
+          "courseA_maze_seq13_c": "บล็อก \n\n เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก \n\n",
+          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n"
         },
         "courseA_maze_seq5_2021": {
           "1": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!",
-          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n"
         },
         "courseA_maze_seq5_dani": {
           "courseA_maze_seq5_a": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
@@ -5039,7 +5039,7 @@
         },
         "courseB_iceage_loops1_2021": {
           "courseB_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseB_iceage_loops2_2021": {
           "courseB_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
@@ -5047,8 +5047,8 @@
           "courseB_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
         },
         "courseB_iceage_loops3_2021": {
-          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
         },
         "courseB_iceage_loops4_2021": {
           "courseB_iceage_loops4_a": "ลองเขียนขั้นตอนต่าง ๆที่เจ้ากระรอกเขี้ยวดาบสแกรทน่าจะใช้เพื่อไปให้ถึงลูกโอ็คลงบนกระดาษ คุณเห็นรูปแบบอะไรไหม?",
@@ -5086,7 +5086,7 @@
         },
         "courseB_starWars_prog1_2021": {
           "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n"
         },
         "courseB_starWars_prog2_2021": {
           "courseB_starWars_prog2_a": "ให้แบ่งปัญหาออกเป็นสองส่วน ส่วนแรกไปเอากองโลหะกองหนึ่งให้ได้ แล้วหาวิธีไปเอาอีกกองหนึ่ง"
@@ -5097,7 +5097,7 @@
         },
         "courseB_starWars_prog4_2021": {
           "courseB_starWars_prog4_a": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป",
-          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog5_2021": {
           "courseB_starWars_prog5_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
@@ -5107,7 +5107,7 @@
         },
         "courseB_starWars_prog6_2021": {
           "courseB_starWars_prog6_a": "รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง",
-          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog7_2021": {
           "courseB_starWars_prog7_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
@@ -5187,8 +5187,8 @@
           "courseC_artist_loops6a_a": "เมื่อต้องการออกแบบให้เหมือนตัวอย่างข้างต้น ให้กระโดดไปข้างหน้าให้น้อยกว่า 75 พิกเซล โดยอยู่ระหว่างสติกเกอร์แต่ละอัน"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "**หากคุณใช้บล็อก<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
-          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>"
+          "courseC_artist_prog2_a": "**หากคุณใช้บล็อกmoveForward100 ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
+          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อกturnRight90"
         },
         "courseC_artist_prog3_2021": {
           "courseC_artist_prog3_a": "เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มีด้านยาวด้านละ 100 พิกเซล\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า",
@@ -5218,11 +5218,11 @@
           "courseC_artist_prog7_e": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog2_2021": {
-          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
+          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก moveForward สี่บล็อกหรือใช้บล็อก ??? เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
           "courseC_collector_prog2_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog3_2021": {
-          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml>\\<block type=\"\"เมื่อเรียกใช้งาน\"/\"></block></xml>เท่านั้น",
+          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อกเท่านั้น",
           "courseC_collector_prog3_b": "ลองใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?",
           "courseC_collector_prog3_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
         },
@@ -5272,8 +5272,8 @@
           "courseC_flappy_events9_a": "ต่อบล็อก `ตั้งค่า คะแนนเป็น 0` เข้ากับอีเวนท์ `เมื่อผ่านสิ่งกีดขวาง` เพื่อที่จะผ่านด่านนี้ไป"
         },
         "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=\"harvester_pumpkin\"/></xml>ในการเก็บรวบรวมฟักทอง",
-          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก <xml><block type=\"harvester_pumpkin\"/></xml> เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
+          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้ในการเก็บรวบรวมฟักทอง",
+          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก  เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
         },
         "courseC_harvester_loops2_2021": {
           "courseC_harvester_loops2_a": "หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน",
@@ -5332,7 +5332,7 @@
           "courseC_maze_programming1_0": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_a": "การใช้บล็อก <xml><block type=\"maze_moveForward\"/></xml> นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type=\"when_run\"/></xml>",
+          "courseC_maze_programming2_a": "การใช้บล็อก  นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก",
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming3_2021": {
@@ -5545,7 +5545,7 @@
         },
         "courseD_iceage_loops1_2021": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseD_iceage_loops2_2021": {
           "courseD_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
@@ -6235,7 +6235,7 @@
           "courseD_bounce_events12s_b": "พยายามทำให้การยิงแต่ละครั้งมีค่า 2 แต้มและเปลี่ยนโลโก้ทีมเป็นโลโก้จากบ้านเกิดของคุณ!"
         },
         "courseD_bounce_events1s_2021": {
-          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n  \n    \n      \n    \n  \n\n   </xml>",
           "courseD_bounce_events1s_b": "อย่าลืมกด “เริ่ม\" แล้วเอามือไปที่ตะกร้าเพื่อไขปริศนานี้"
         },
         "courseD_bounce_events2s_2021": {
@@ -6696,7 +6696,7 @@
           "NEW_Course_4_Bee_For_Loops_7_a": "ลองใช้ตัวแปรตัวนับเพื่อคิดเลขดู\n\nคุณต้องทำอะไรกับตัวนับเมื่ออยู่ที่ดอกไม้แต่ละดอกเพื่อให้เท่ากับปริมาณน้ำหวานที่คุณต้องรวบรวม"
         },
         "OPD-K5-events-2": {
-          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+          "courseC_flappy_events1_a": "[][0]"
         },
         "OPD-K5-forloops-1": {
           "courseF_bee_for1_b": "คุณจะต้องใช้บล็อกสองบล็อกในลูป 'ทำซ้ำ' เพื่อรวบรวมน้ำหวานให้ได้ทั้งหมด"
@@ -6721,8 +6721,8 @@
           "courseF_bee_for7_c": "อย่าลืมใช้ตัวแปร `ตัวนับ` ในลูป `ทำซ้ำ` ของคุณ"
         },
         "OPD-K5-projects-2": {
-          "courseE_playLab_scaffold1_a": "บล็อก \\`กำหนดตัวละคร 1 เป็นภาพ ???’ นำมาใช้เพื่อเพิ่มตัวละครบนเวทีได้",
-          "courseE_playLab_scaffold1_b": "วางบล็อก `กำหนดตัวละคร` ไว้ใต้ \\`เมื่อเล่น’ เพื่อให้ตัวละครของคุณปรากฏที่จุดเริ่มต้นของโปรแกรม",
+          "courseE_playLab_scaffold1_a": "บล็อก `กำหนดตัวละคร 1 เป็นภาพ ???’ นำมาใช้เพื่อเพิ่มตัวละครบนเวทีได้",
+          "courseE_playLab_scaffold1_b": "วางบล็อก `กำหนดตัวละคร` ไว้ใต้ `เมื่อเล่น’ เพื่อให้ตัวละครของคุณปรากฏที่จุดเริ่มต้นของโปรแกรม",
           "courseE_playLab_scaffold1_c": "ใช้ `กำหนดพื้นหลัง ???` เพื่อเลือกพื้นหลังสำหรับฉากของคุณ"
         },
         "OPD-K5-projects-3": {
@@ -6733,7 +6733,7 @@
           "courseE_playLab_scaffold4_a": "ใช้ `ทำแต้ม` เพื่อเพิ่มแต้ม และ `ลบแต้ม` เพื่อลบแต้มออกหนึ่งแต้ม"
         },
         "OPD-K5-variables-6": {
-          "courseF_artist_variables4_b": "<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"variables_set\">\n        <title name=\"VAR\">length</title>\n        <value name=\"VALUE\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">50</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat_ext\">\n            <value name=\"TIMES\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">3</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat_ext\">\n                <value name=\"TIMES\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">3</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">120</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"jump\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">length</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">90</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"jump\">\n                            <title name=\"DIR\">jumpForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">length</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\">\n                                <title name=\"DIR\">turnLeft</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_variables4_b": "[blockly block][0]"
         },
         "course1_artist_loops_challenge1": {
           "courseA_artist_loops_challenge1_b": "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)",
@@ -7910,7 +7910,7 @@
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "ลองนึกถึงปัญหานี้โดยแยกย่อยออกเป็นหลาย ๆ ส่วน ให้เวลากับมันหน่อย คุณไม่จำเป็นต้องแก้ปัญหานี้ให้ได้ตั้งแต่ลองครั้งแรกหรอกนะ!",
           "course_starWars_loops8_b": "ลองมองว่าครึ่งแรกของปัญหานี้เป็นเหมือนกับปัญหาขั้นบันได คุณเคยแก้ปัญหาคล้าย ๆ กับแบบนี้มาก่อนไหม",
-          "course_starWars_loops8_c": "ลองดูที่เส้นทางนี้\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "ลองดูที่เส้นทางนี้\n\n[][0]"
         },
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "ลองนึกถึงปัญหานี้โดยแยกย่อยออกเป็นหลาย ๆ ส่วน ให้เวลากับมันหน่อย คุณไม่จำเป็นต้องแก้ปัญหานี้ให้ได้ตั้งแต่ลองครั้งแรกหรอกนะ!",
@@ -8247,15 +8247,15 @@
           "courseD_bounce_events12s_b": "พยายามทำให้การยิงแต่ละครั้งมีค่า 2 แต้มและเปลี่ยนโลโก้ทีมเป็นโลโก้จากบ้านเกิดของคุณ!"
         },
         "courseD_bounce_events1s_2018": {
-          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n  \n    \n      \n    \n  \n\n   </xml>",
           "courseD_bounce_events1s_b": "อย่าลืมกด “เริ่ม\" แล้วเอามือไปที่ตะกร้าเพื่อไขปริศนานี้"
         },
         "courseD_bounce_events1s_2019": {
-          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n  \n    \n      \n    \n  \n\n   </xml>",
           "courseD_bounce_events1s_b": "อย่าลืมกด “เริ่ม\" แล้วเอามือไปที่ตะกร้าเพื่อไขปริศนานี้"
         },
         "courseD_bounce_events1s_2020": {
-          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n  \n    \n      \n    \n  \n\n   </xml>",
           "courseD_bounce_events1s_b": "อย่าลืมกด “เริ่ม\" แล้วเอามือไปที่ตะกร้าเพื่อไขปริศนานี้"
         },
         "courseD_bounce_events2s_2018": {
@@ -9628,7 +9628,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**จะผ่านเลเวลนี้ไปได้อย่างไร?**\n\n-   เพียงกดปุ่ม \"สำเร็จ\"!",
           "repeat_every_ideas": "**ต้องการไอเดียหรือเปล่า?**\n\n-   เปลี่ยนขนาดของนักเต้นซ้ำหลายครัั้งเพื่อทำให้เติบโตขึ้น\n-   เปลี่ยนการหมุนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เกิดการหมุน\n-   เปลี่ยนตำแหน่งแนวตั้งหรือแนวนอนของนักเต้นซ้ำหลายครั้งเพื่อทำให้เคลื่อนที่ไปบนหน้าจอ\n\n_คุณสามารถใช้จำนวนติดลบเพื่อสร้างเอฟเฟกต์ตรงกันข้ามได้อีกด้วย!_",
-          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**ตัวเลือกความท้าทาย**\n\n-   คุณสามารถใช้บล็อกเหตุการณ์ใหม่นี้เพื่อเคลื่อนดูรายการท่าเต้นตามการกำหนดค่าของท่าเต้นไปยัง `(สุ่ม)` `(ถัดไป)` หรือ `(ก่อนหน้า)`\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "บล็อกสำรองอยู่ในหมวดหมู่ “นักเต้น”"
@@ -9796,8 +9796,8 @@
           "mc_9_c": "ให้ใช้บล็อก `วางคบไฟ`เพื่อวางคบไฟไว้ตรงที่คุณยืนอยู่"
         },
         "courseA_artist_loops22022": {
-          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อก<xml><block type=\"when_run\"/></xml>เพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_artist_loops2_b": "ใช้บล็อกนี้ <xml><block type=\"simple_move_right\"/></xml>เพื่อแก้ปริศนาในด่านนี้"
+          "courseA_artist_loops2_a": "ไม่สามารถคิดออกว่าวิธีการวาดเส้นทำได้อย่างไร  ให้เริ่มด้วยการต่อบล็อกต่างๆ เข้าไปกับบล็อกเพื่อดูว่าเกิดอะไรขึ้น",
+          "courseA_artist_loops2_b": "ใช้บล็อกนี้ เพื่อแก้ปริศนาในด่านนี้"
         },
         "courseA_artist_loops32022": {
           "courseA_artist_loops3_a": "ลองลากตามรอยช้าๆไปตามโปรแกรม ด้วยการใช้นิ้วมือของคุณ เพื่อดูว่ามีอะไรไม่ถูกต้อง",
@@ -9805,12 +9805,12 @@
         },
         "courseA_artist_loops42022": {
           "courseA_artist_loops4_a": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml>"
+          "courseA_artist_loops4_b": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n5"
         },
         "courseA_artist_loops52022": {
-          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
+          "courseA_artist_loops5_a": "ลองใช้สิ่งที่คุณได้เรียนรู้เกี่ยวกับบล็อก??? เพื่อทำให้ปริศนานี้เสร็จสมบูรณ์!",
           "courseA_artist_loops5_b": "ถ้าคุณต้องการให้ลูปซ้ำมากกว่า 4 ครั้งคุณสามารถเปลี่ยนหมายเลขที่ด้านบนของบล็อกได้",
-          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อก<xml><block type=\"simple_move_right\"/></xml>ได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_artist_loops5_c": "เนื่องจากคุณสามารถใข้บล็อกได้เพียงครั้งเดียว ลองวางมันไว้ภายในบล็อกลูป\n???"
         },
         "courseA_artist_loops62022": {
           "courseA_artist_loops6_a": "คิดไม่ออก..วิธีที่จะวาดเนินเขาหรือเปล่า?  ลองเล่นกับบล็อกต่างๆ ดูสักนิด เพื่อดูว่าแต่ละบล็อกวาดอะไร",
@@ -9819,7 +9819,7 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_a": "คิดไม่ออกว่าจะวางลูปไว้ที่ไหน? ลองเขียนโค้ดทีละขั้นตอนและค้นหารูปแบบดู",
           "courseA_artist_loops7_b": "เขียนรหัสสำหรับคลื่นหนึ่งลูกก่อน แล้วดูว่าคุณสามารถทำซ้ำเพื่อที่จะวาดอีกสองลูกได้ไหม",
-          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป<xml>\\<block type=\"\"controls\\_repeat\"\">\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
+          "courseA_artist_loops7_c": "โปรดจำไว้ว่าคุณสามารถใส่บล็อกได้มากกว่าหนึ่งบล็อกไว้ในลูป\n\n<title name=\"\"TIMES\"\">???</title>\n</block></xml>"
         },
         "courseA_artist_loops82022": {
           "courseA_artist_loops8_a": "ลองเรียกใช้งานโค้ด เพื่อดูสิ่งที่ถูกเขียนขึ้นไว้แล้วว่า ทำอะไรให้คุณบ้าง",
@@ -9828,7 +9828,7 @@
         },
         "courseA_artist_loops92022": {
           "courseA_artist_loops9_a": "เพิ่มบล็อกอีกหนึ่งบล็อกให้กับโค้ดที่ให้มา เพื่อวาดส่วนที่เหลือของบันได",
-          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป<xml>\\<block type=\"\"controls_repeat_simplified\\_dropdown\"\">\\<title name=\"\"TIMES\"\" config=\"\"3-10\"\">5</title></block>\n</xml> ",
+          "courseA_artist_loops9_b": "บล็อกที่คุณเพิ่มควรไปอยู่ภายในของลูป5\n ",
           "courseA_artist_loops9_c": "ถ้าคุณไม่สามารถหาตำแหน่งที่จะวางลูปไว้ ให้ลองเขียนโค้ดทีละขั้นตอนและมองหารูปแบบ"
         },
         "courseA_artist_loops_challenge2a2022": {
@@ -9837,20 +9837,20 @@
           "courseA_artist_loops_challenge2_c": "บล็อกทั้งหมดของคุณจะต้องอยู่ภายในลูปเพื่อไขปริศนานี้ให้เสร็จ"
         },
         "courseA_collector_loops12022": {
-          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_a": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  ",
           "courseA_collector_loops1_b": "วิธีการแก้ปัญหาง่ายๆ คือไปทางตะวันออก 2 ครั้งแล้วเก็บสมบัติ"
         },
         "courseA_collector_loops22022": {
           "courseA_collector_loops2_a": "คุณต้องขยับเดินเข้าไปก่อนที่คุณจะสามารถเก็บรวบรวมสมบัติได้",
-          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "หลังจากที่คุณได้มาอยู่ที่ตารางที่มีสมบัติแล้ว ให้ใช้บล็อกนี้เพื่อเก็บสมบัติ\n  "
         },
         "courseA_collector_loops32022": {
           "courseA_collector_loops3_a": "ลองใช้ลูป\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nดูสิ!",
-          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseA_collector_loops3_b": "โปรดจำไว้ว่า คุณสามารถใส่บล็อกมากกว่าหนึ่งบล็อกภายในบล็อกลูป???"
         },
         "courseA_collector_loops42022": {
           "courseA_collector_loops4_a": "เพื่อที่จะเปลี่ยนให้ลอเรลไปไกลได้เท่าใดนั้น ให้เปลี่ยนจำนวนครั้งของรอบที่ลูปต้องวนซ้ำ",
-          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>เรียบร้อยแล้ว!"
+          "courseA_collector_loops4_b": "อย่าลืมว่า ลอเรลต้องเดินลงไปเพื่อเก็บสมบัติหลังจากเธอเสร็จจากการวนลูปทำซ้ำ???เรียบร้อยแล้ว!"
         },
         "courseA_collector_loops52022": {
           "courseA_collector_loops5_a": "ถ้าคุณไม่สามารถหาคำตอบได้ทันที ให้ลองใช้กระดาษสักแผ่นหนึ่งเพื่อที่จะลองวาดดูว่าลูกศรใดที่คุณจะต้องใช้และมองหารูปแบบว่าเป็นแบบใด",
@@ -9859,7 +9859,7 @@
         },
         "courseA_collector_loops62022": {
           "courseA_collector_loops6_a": "ไม่สามารถหาได้ว่ามีอะไรผิดปกติ ลองเรียกใช้งานโค้ดครั้งหนึ่งหรือสองครั้งเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> จำนวนสองบล็อกวางไว้ให้ตามกันมา"
+          "courseA_collector_loops6_b": "โซลูชั่นที่สั้นที่สุด ได้จากการใช้บล็อกลูป ??? จำนวนสองบล็อกวางไว้ให้ตามกันมา"
         },
         "courseA_collector_loops72022": {
           "courseA_collector_loops7_a": "ถ้าคุณไม่สามารถคิดออกว่าอะไรจะเกิดขึ้นถัดมา ลองเรียกใช้งานโค้ดเพื่อดูว่าเมื่อจบแล้วลอเรลได้อะไรบ้าง"
@@ -9884,15 +9884,15 @@
           "courseA_collector_loops_challenge2kp_a": "คุณใช้ลูปเพื่อไขปริศนานี้ได้ไหม"
         },
         "courseA_harvester_loops12022": {
-          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n<xml><block type=\"harvester_corn\"/></xml>"
+          "courseA_harvester_loops1_a": "เมื่อคุณเดินมาถึงฝักข้าวโพด ให้ใช้บล็อกนี้ในการเก็บข้าวโพด\n\n"
         },
         "courseA_harvester_loops22022": {
-          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก <xml>\n\n  <block type=\"harvester_corn\"/>\n</xml> ",
+          "courseA_harvester_loops2_a": "โค้ดของคุณต้องใช้บล็อก  `เคลื่อนที่ไปทางทิศตะวันตก` อย่างบล็อกนี้ **สี่** บล็อก\n\n\n\nและบล็อก `เก็บข้าวโพด` อย่างบล็อกนี้ **สี่** บล็อก \n\n  <block type=\"harvester_corn\"/>\n</xml> ",
           "courseA_harvester_loops2_b": "หากยังเจอปัญหาอยู่ ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ"
         },
         "courseA_harvester_loops32022": {
-          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
-          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
+          "courseA_harvester_loops3_a": "ให้ใช้บล็อก `ทำซ้ำ` แบบนี้เพื่อช่วยคุณ!\n\n\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "เมื่อต้องการทำซ้ำโค้ด ให้ลากลูป `ทำซ้ำ` ออกมาจากกล่องเครื่องมือ (\n    4\n  ) แล้วใส่บล็อกที่คุณต้องการไว้ภายในลูปนั้น "
         },
         "courseA_harvester_loops42022": {
           "courseA_harvester_loops4_a": "ไม่ต้องกังวลที่จะกดปุ่ม `เริ่ม` เพื่อดูว่าจะเกิดอะไรขึ้น!",
@@ -9900,12 +9900,12 @@
         },
         "courseA_harvester_loops52022": {
           "courseA_harvester_loops5_a": "หากคุณติดขัด ทำอะไรไม่ถูก ให้ลองแบ่งการแก้ปริศนาออกเป็น 2 ส่วน ส่วนหนึ่งก่อนที่จะมาถึงหัวมุม และอีกส่วนหนึ่งหลังจากที่ผ่านหัวมุมไปแล้ว",
-          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
+          "courseA_harvester_loops5_b": "โค้ดที่เสร็จแล้วของคุณจะมีบล็อกลูป `ทำซ้ำ`  \n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml>หนึ่งลูป บล็อก `เคลื่อนไปทางใต้`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> **หนึ่ง** บล็อกและบล็อก `เคลื่อนไปทางตะวันออก`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> อีก **หนึ่ง** บล็อก",
           "courseA_harvester_loops5_c": "ใช้เส้นทางนี้เพื่อเดินไปเก็บข้าวโพดให้หมด"
         },
         "courseA_harvester_loops5a2022": {
           "courseA_harvester_loops5a_a": "คุณต้องการใช้ลูป`ทำซ้ำ` อีกอันหนึ่งหลังจากใช้ไปอันหนึ่งแล้ว",
-          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_b": "ลูปหนึ่งจะทำซ้ำ `เคลื่อนไปทางใต้` และอีกอันหนึ่งจะทำซ้ำ`เคลื่อนไปทางตะวันออก` ",
           "courseA_harvester_loops5a_c": "ใช้เส้นทางนี้เพื่อเดินไปตามเส้นทางสองทิศทาง"
         },
         "courseA_harvester_loops5b2022": {
@@ -9918,7 +9918,7 @@
           "courseA_harvester_loops6_b": "นี่คือเส้นทางที่คุณควรใช้ เพื่อเก็บข้าวโพดทั้งหมด"
         },
         "courseA_harvester_loops72022": {
-          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
+          "courseA_harvester_loops7_a": "คุณต้องใช้บล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>สองบล็อกมาต่อกัน!",
           "courseA_harvester_loops7_b": "ให้ใช้ลูปสองลูปเพื่อเดินไปตามเส้นทางที่ให้มานี้"
         },
         "courseA_harvester_loops92022": {
@@ -9939,21 +9939,21 @@
           "courseA_bee_seq1_a": "ใช้บล็อกอันนี้เพื่อให้เกษตรกรเก็บข้าวโพด\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
         },
         "courseA_harvester_seq22022": {
-          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก <xml><block type=\"harvester_corn\"/></xml> เพื่อเก็บข้าวโพด!",
+          "courseA_harvester_seq2_a": "อย่าลืมใช้บล็อก  เพื่อเก็บข้าวโพด!",
           "courseA_harvester_seq2_b": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!"
         },
         "courseA_harvester_seq32022": {
-          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_a": "คุณจำได้ไหมว่าได้ใช้บล็อกนี้ด้วยหรือเปล่า?\n\n",
           "courseA_harvester_seq3_b": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
         },
         "courseA_harvester_seq42022": {
           "courseA_harvester_seq4_a": "ช่องว่างระหว่างเกษตรกรกับฝักข้าวโพดมีด้วยกันกี่ช่อง? บล็อกที่ต่อกันอยู่แล้วในที่พื้นที่ทำงานของคุณมีอยู่แล้วกี่บล็อก?",
-          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n<xml><block type=\"maze_moveEast\"/></xml>\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \n<xml><block type=\"harvester_corn\"/></xml>หนึ่งบล็อก"
+          "courseA_harvester_seq4_b": "คุณต้องใช้บล็อก `เคลื่อนที่ไปทางทิศตะวันออก` \n\nห้าบล็อกและบล็อก `เก็บข้าวโพด` \nหนึ่งบล็อก"
         },
         "courseA_harvester_seq52022": {
           "courseA_harvester_seq5_a": "บล็อกไหนที่ทำให้เกษตรกรเคลื่อนที่ไปผิดทิศทาง",
           "courseA_harvester_seq5_b": "คุณต้องเอาบล็อกออกไปบล็อกหนึ่ง",
-          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+          "courseA_harvester_seq5_c": "โยนบล็อกนี้ทิ้งขยะไป\n\n"
         },
         "courseA_harvester_seq62022": {
           "courseA_harvester_seq6_a": "หากคุณคิดไม่ออก ให้ลองพูดขั้นตอนต่างๆ ออกมาดังๆ มันอาจจะช่วยให้คุณหาเส้นทางที่ถูกต้องได้"
@@ -9990,17 +9990,17 @@
           "courseA_maze_seq10_b": "คุณต้องเคลื่อนไหวไปถึงสามทิศทางที่ต่างกันเพื่อแก้ปริศนาข้อนี้"
         },
         "courseA_maze_seq12022": {
-          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก <xml>\n<block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "หากคุณมีปัญหาในการทำให้เจ้านกเคลื่อนไหว ให้ตรวจสอบให้แน่ใจว่าบล็อกเหล่านี้ได้ถูกต่ออย่างถูกต้องกับบล็อก \n\n",
+          "courseA_maze_seq1_b": "ต้องให้เจ้านกนี่เคลื่อนที่ไปทางทิศตะวันตก 3 ครั้งเพื่อไปให้ถึงเจ้าหมูนั่น โดยใช้บล็อกอันนี้: \n\n"
         },
         "courseA_maze_seq132022": {
           "courseA_maze_seq13_a": "หากเส้นทางที่คุณเลือกใช้ไม่ชัดเจน ลองใช้นิ้วลากเป็นเส้นทางของคุณจากเจ้านกไปยังเจ้าหมู",
           "courseA_maze_seq13_b": "ไม่ต้องกลัวว่าคุณจะทำผิด! ลองเพิ่มบล็อกเข้าไปและเรียกโค้ดมาใช้งาน เพื่อดูว่าจะเกิดอะไรขึ้น",
-          "courseA_maze_seq13_c": "บล็อก <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
+          "courseA_maze_seq13_c": "บล็อก \n\n เหล่านี้จะช่วยให้คุณเข้าใกล้เจ้าหมูได้ยื่งขึ้น"
         },
         "courseA_maze_seq52022": {
           "1": "ลองขีดๆเขียนๆ ขั้นตอนลงบนแผ่นกระดาษ เพื่อหาวิธีแก้ปัญหานี้ดู!",
-          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "คุณต้องลองใช้บล็อกนี้ดู:\n\n"
         },
         "courseA_maze_seq5a2022": {
           "1": "ลองเปล่งเสียงขั้นตอนต่างๆ ออกมาดัง ๆ และดูซิว่ามันจะช่วยให้คุณพบคำตอบได้ง่ายขึ้นไหม"
@@ -10173,7 +10173,7 @@
         },
         "courseB_iceage_loops12022": {
           "courseB_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseB_iceage_loops22022": {
           "courseB_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
@@ -10181,8 +10181,8 @@
           "courseB_iceage_loops2_c": "ลองไปตามเส้นทางนี้ดู เพื่อพาเจ้ากระรอกเขี้ยวดาบไปให้ถึงลูกโอ๊ค"
         },
         "courseB_iceage_loops32022": {
-          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
-          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
+          "courseB_iceage_loops3_a": "ให้ใช้บล็อกใหม่บล็อกนี้!\n\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "การทำซ้ำโค้ดนั้น ให้ลากเอาบล็อกลูป `ทำซ้ำ` \n\n<title name=\"TIMES\">???</title>\n</block></xml>ออกมา แล้วใส่บล็อกที่คุณต้องการไว้ภายใน"
         },
         "courseB_iceage_loops42022": {
           "courseB_iceage_loops4_a": "ลองเขียนขั้นตอนต่าง ๆที่เจ้ากระรอกเขี้ยวดาบสแกรทน่าจะใช้เพื่อไปให้ถึงลูกโอ็คลงบนกระดาษ คุณเห็นรูปแบบอะไรไหม?",
@@ -10289,7 +10289,7 @@
         },
         "courseB_starWars_prog12022": {
           "courseB_starWars_prog1_a": "ลองเพิ่มบล็อกทีละบล็อกจากนั้นเรียกใช้งานโค้ดของคุณเพื่อดูว่าเกิดอะไรขึ้น",
-          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "คุณจะต้องเคลื่อนที่ไปทางทิศตะวันออกเพื่อแก้ปริศนาด่านนี้ คุณคิดว่าจะต้องไปไกลเท่าใด?\n"
         },
         "courseB_starWars_prog22022": {
           "courseB_starWars_prog2_a": "ให้แบ่งปัญหาออกเป็นสองส่วน ส่วนแรกไปเอากองโลหะกองหนึ่งให้ได้ แล้วหาวิธีไปเอาอีกกองหนึ่ง"
@@ -10300,7 +10300,7 @@
         },
         "courseB_starWars_prog42022": {
           "courseB_starWars_prog4_a": "สร้างโค้ดทีละชิ้น เรียกใช้งานเพื่อดูว่าคุณจะต้องทำอย่างไรต่อไป",
-          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog4_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog52022": {
           "courseB_starWars_prog5_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
@@ -10310,7 +10310,7 @@
         },
         "courseB_starWars_prog62022": {
           "courseB_starWars_prog6_a": "รูปแบบที่เห็นอยู่นี้ เป็นรูปแบบขั้นบันได ที่มีการเคลื่อนไหวสองครั้งในแต่ละทิศทาง",
-          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+          "courseB_starWars_prog6_b": "ลองใช้บล็อกลูป `ทำซ้ำ` เพื่อให้ได้โค้ดที่สั้นลง\n  \n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog72022": {
           "courseB_starWars_prog7_a": "รูปแบบดูจะไปเหมือนกับปริศนาที่แล้วใช่ไหม",
@@ -10430,8 +10430,8 @@
           "courseC_artist_loops6a_a": "เมื่อต้องการออกแบบให้เหมือนตัวอย่างข้างต้น ให้กระโดดไปข้างหน้าให้น้อยกว่า 75 พิกเซล โดยอยู่ระหว่างสติกเกอร์แต่ละอัน"
         },
         "courseC_artist_prog22022": {
-          "courseC_artist_prog2_a": "**หากคุณใช้บล็อก<xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
-          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อก<xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>"
+          "courseC_artist_prog2_a": "**หากคุณใช้บล็อกmoveForward100 ฉันก็จะวาดเส้นขี้นมาเส้นหนึ่ง**",
+          "courseC_artist_prog2_b": "มีปัญหาในการเลี้ยวมุมไหม? ให้ใช้บล็อกturnRight90"
         },
         "courseC_artist_prog32022": {
           "courseC_artist_prog3_a": "เมื่อต้องการสร้างหน้าต่างนี้ ก็แค่เพียงวาดสี่เหลี่ยมจัตุรัสที่มีด้านยาวด้านละ 100 พิกเซล\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า\n\\-หัน\n\\-ไปข้างหน้า",
@@ -10475,11 +10475,11 @@
           "courseC_collector_prog1_b": "วิธีที่ง่ายที่สุดคือการก้าวไปข้างหน้าหนึ่งก้าว แล้วรวบรวมสมบัติ"
         },
         "courseC_collector_prog22022": {
-          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> สี่บล็อกหรือใช้บล็อก <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
+          "courseC_collector_prog2_a": "คุณสามารถใช้บล็อก moveForward สี่บล็อกหรือใช้บล็อก ??? เพื่อทำให้โปรแกรมของคุณให้สั้นลง",
           "courseC_collector_prog2_b": "อย่ากลัวที่จะทำผิดพลาด! ลองเพิ่มบล็อกดู และเรียกใช้งานโค้ดเพื่อดูว่าจะเกิดอะไรขึ้น แม้ว่าคุณจะไม่คิดว่าคุณแก้ปริศนาได้แล้วก็ตาม"
         },
         "courseC_collector_prog32022": {
-          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อก<xml>\\<block type=\"\"เมื่อเรียกใช้งาน\"/\"></block></xml>เท่านั้น",
+          "courseC_collector_prog3_a": "โปรแกรมจะเรียกใช้งานบล็อกที่เชื่อมต่อกับบล็อกเท่านั้น",
           "courseC_collector_prog3_b": "ลองใช้ปุ่ม  \"ขั้นตอน \" เพื่อเรียกใช้งานโค้ดของคุณทีละหนึ่งบรรทัดในแต่ละครั้ง คุณเห็นไหมว่ารหัสไม่ถูกต้องตรงไหน?",
           "courseC_collector_prog3_c": "หากคุณมีปัญหาในการแก้ปริศนานี้ ลองเขียนขั้นตอนต่างๆลงบนกระดาษ"
         },
@@ -10539,8 +10539,8 @@
           "courseC_flappy_events9_a": "ต่อบล็อก `ตั้งค่า คะแนนเป็น 0` เข้ากับอีเวนท์ `เมื่อผ่านสิ่งกีดขวาง` เพื่อที่จะผ่านด่านนี้ไป"
         },
         "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้<xml><block type=\"harvester_pumpkin\"/></xml>ในการเก็บรวบรวมฟักทอง",
-          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก <xml><block type=\"harvester_pumpkin\"/></xml> เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
+          "courseC_harvester_loops1_a": "เมื่อคุณได้มาถึงที่ปลูกฟักทองแล้ว ให้ใช้ในการเก็บรวบรวมฟักทอง",
+          "courseC_harvester_loops1_b": "คุณสามารถใช้ลูปกับบล็อก  เพื่อเก็บฟักทองมากกว่าหนึ่งผลจากจตุรัส"
         },
         "courseC_harvester_loops22022": {
           "courseC_harvester_loops2_a": "หากคุณคิดไม่ออก ให้ลองเขียนขั้นตอนลงบนกระดาษและมองหารูปแบบที่ซ้ำๆ กัน",
@@ -10632,7 +10632,7 @@
           "courseC_maze_programming1_0": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming22022": {
-          "courseC_maze_programming2_a": "การใช้บล็อก <xml><block type=\"maze_moveForward\"/></xml> นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก<xml><block type=\"when_run\"/></xml>",
+          "courseC_maze_programming2_a": "การใช้บล็อก  นั้นให้ลากบล็อกจากกล่องเครื่องมือออกไปยังพื้นที่ทำงานและเชื่อมต่อเข้ากับบล็อก",
           "courseC_maze_programming2_b": "ให้แน่ใจว่าบล็อกทั้งหมดมีการต่อติดกันอย่างสมบูรณฺ์ แล้วให้คลิก \"เริ่ม\" อีกครั้งหนึ่ง"
         },
         "courseC_maze_programming32022": {
@@ -10877,7 +10877,7 @@
           "courseD_bounce_events12s_b": "พยายามทำให้การยิงแต่ละครั้งมีค่า 2 แต้มและเปลี่ยนโลโก้ทีมเป็นโลโก้จากบ้านเกิดของคุณ!"
         },
         "courseD_bounce_events1s2022": {
-          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_a": "คุณต้องเพิ่มบล็อก ‘ย้ายซ้าย’ ไปที่เหตุการณ์ ‘เมื่อลูกศรซ้าย’ เพื่อให้เกมนี้ทำงานได้:\n\n  \n    \n      \n    \n  \n\n   </xml>",
           "courseD_bounce_events1s_b": "อย่าลืมกด “เริ่ม\" แล้วเอามือไปที่ตะกร้าเพื่อไขปริศนานี้"
         },
         "courseD_bounce_events2s2022": {
@@ -11013,7 +11013,7 @@
         },
         "courseD_iceage_loops12022": {
           "courseD_iceage_loops1_a": "ระวังรอยแยกในน้ำแข็ง เจ้ากระรอกเขี้ยวดาบสแกรทจะพลาดหล่นลงไปได้!",
-          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "คุณจะต้องใช้บล็อกอันนี้:\n"
         },
         "courseD_iceage_loops22022": {
           "courseD_iceage_loops2_a": "แบ่งปริศนานี้เป็นสองส่วน ส่วนหนึ่งก่อนถึงหัวมุมและอีกส่วนหนึ่งหลังจากผ่านหัวมุมไปแล้ว",
@@ -11447,6 +11447,12 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "คุณสามารถใช้บล็อกนี้เพื่อตั้งค่าขนาดของสไปร์ทเพียงครั้งเดียวได้:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "หากคุณต้องการเปลี่ยนขนาดของสไปร์ทหลายๆครั้ง(ด้วยอีเวนต์) ให้ใช้บล็อกนี้:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "เพื่อให้ผีสาดพูดอะไรบางอย่างเชื่อมต่อบล็อกของรหัสเช่นนี้:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "เพื่อให้ผีสาดพูดอะไรบางอย่างเชื่อมต่อบล็อกของรหัสเช่นนี้:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

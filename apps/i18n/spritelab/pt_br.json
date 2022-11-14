@@ -97,7 +97,7 @@
   "madlibNoSprites": "Seu prompt está funcionando. Se ele estiver fazendo o que você esperava, você pode começar a adicionar fadas ao seu projeto. Qual é o tema da sua história ou poema?",
   "madlibPrintVariable": "Parece que o chatbot está respondendo, mas ele não imprime o que você digita no prompt. Certifique-se de que a **varible*label correta está vinculada ao seu bloco de impressão ‘pirint’.",
   "madlibPrintWhenAnswered": "Neste momento, você está imprimindo o texto apenas uma vez. Certifique-se de que um bloco ‘print’ está sob um bloco ‘when ansewered’. <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">food</title></block></value></block></xml>",
-  "madlibTitleVariable": "Parece que você adicionou uma tela de título ao seu programa, mas ela não tem texto do prompt. ",
+  "madlibTitleVariable": "\nParece que você adicionou uma tela de título ao seu programa, mas ela não tem texto do prompt.",
   "moreSprites": "Você precisa fazer mais sprites",
   "moveBothWays": "Sua fada deve se mover em uma direção e em em seguida em outra direção.",
   "moveSpriteByDrag": "Seu código parece ótimo! Para arrastar sua fada, clique nela com o programa em execução.",

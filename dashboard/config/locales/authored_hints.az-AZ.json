@@ -2884,7 +2884,7 @@
           "cat_xml": "Kostyumların hər blokda uyğun olduğundan əmin olun."
         },
         "helloworld_animals_say": {
-          "hello-world-first-solution-bear": "Ayıya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\nblok"
+          "hello-world-first-solution-bear": "Ayıya bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_say": {
           "hello-world-first-solution-emoji": "Emojiyə bir şey dedirtmək üçün, kod bloklarını bu formada birləşdirin:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -4345,19 +4345,19 @@
           "courseD_bounce_events12s_b": "Hər atışı 2 xal dəyərində etməyə və  komandanın loqosunu ,öz doğma şəhərinizin komandasının loqosu ilə əvəz etməyə çalışın"
         },
         "courseD_bounce_events1s_2018": {
-          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n   \n     \n       \n     \n   \n\n    </xml>",
           "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
         },
         "courseD_bounce_events1s_2019": {
-          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n   \n     \n       \n     \n   \n\n    </xml>",
           "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
         },
         "courseD_bounce_events1s_2020": {
-          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n   \n     \n       \n     \n   \n\n    </xml>",
           "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
         },
         "courseD_bounce_events1s_2021": {
-          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n   \n     \n       \n     \n   \n\n    </xml>",
           "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
         },
         "courseD_bounce_events2s_2018": {
@@ -5522,7 +5522,7 @@
           "courseD_bounce_events12s_b": "Hər atışı 2 xal dəyərində etməyə və  komandanın loqosunu ,öz doğma şəhərinizin komandasının loqosu ilə əvəz etməyə çalışın"
         },
         "courseD_bounce_events1s2022": {
-          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n  <xml> <block type=\"bounce_whenLeft\" silinebilir=\"false\" x=\"20\" y=\"20\">\n     \\<növbəti>\n       <block type=\"bounce_moveLeft\"/>\n     </next>\n   </block>\n\n    </xml>",
+          "courseD_bounce_events1s_a": "Bu oyunun işləməsi üçün 'sola hərəkət et' blokunu 'solda ox' hadisəsinə əlavə etməlisiniz:\n\n   \n     \n       \n     \n   \n\n    </xml>",
           "courseD_bounce_events1s_b": "Bu tapmacanı həll etmək üçün \"Run\" düyməsini sıxmağı və əlinizi səbətə aparmağı unutmayın."
         },
         "courseD_bounce_events2s2022": {

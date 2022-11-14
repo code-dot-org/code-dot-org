@@ -61,7 +61,7 @@
   },
   "https://studio.code.org/s/course4/lessons/3/levels/1": {
     "short_instructions": "Help me draw a box. (Each line is 200 pixels long) ",
-    "long_instructions": "Help me draw a box.\\\n(Each line is 200 pixels long) \n\n<br/><br/>"
+    "long_instructions": "Help me draw a box.\\\n(Each line is 200 pixels long) \n\n[][0][][1]"
   },
   "https://studio.code.org/s/course4/lessons/3/levels/2": {
     "short_instructions": "Can you use a loop to draw the greyed out square?  (Each side is 300px long)",
@@ -116,7 +116,7 @@
   },
   "https://studio.code.org/s/course4/lessons/3/levels/11": {
     "short_instructions": "Click here to see the full instructions again!\n\nHere is the code for an interesting shape.  What happens when you repeat it multiple times, turning between each iteration?   Notice that the turns in this shape add up to 420 degrees, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly 60 degrees to the right of where you began.",
-    "long_instructions": "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Play time:**  Here is the code for an interesting shape.   \n\nWhat happens when you repeat it multiple times, turning between each iteration?   \n\nNotice that the turns in this shape add up to _420 degrees_, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly _60 degrees_ to the _right_ of where you began.\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>Repeat 4</b></summary>\n<br/>\n\nIf you want to come full circle in just 4 repetitions, you need the artist to turn a total of **360 degrees/4 = 90 degrees** each time.  You can do that by adding an extra `turn right by 30 degrees` block to the outer loop (since **60+30 = 90**.)\n\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repeat 6</b></summary>\n<br/>\n\nWhen you repeat the shape as-is 6 times, you get a total rotation of **6x60 degrees** which is a full **360 degree** cycle.\n\n<img src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repeat 12</b></summary>\n\n<br/>\n\nIf you want to repeat the image 12 times, you need the artist to turn a total of **360 degrees/12 = 30 degrees** each iteration.  That means you will need to adjust the artist back a bit with `turn left by 30 degrees` before you repeat the shape again.\n\n<br/><br/>\n<img src=\"https://images.code.org/ad254952522674496918561096817c66-image-1440132424792.44.01.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n\n</details>\n</h4>\n\nNow it's your turn!  Can you recreate each image by repeating the starting shape?  "
+    "long_instructions": "<img src=\"https://images.code.org/c876143212d195192013582f57c6df04-image-1445625392518.36.18.png\" width=\"150px;\" style=\"mix-blend-mode: multiply;\" />\n\n**Play time:**  Here is the code for an interesting shape.   \n\nWhat happens when you repeat it multiple times, turning between each iteration?   \n\nNotice that the turns in this shape add up to _420 degrees_, which means that when your artist is done drawing, it will be facing a different direction than when you started.  That new direction is exactly _60 degrees_ to the _right_ of where you began.\n\n<hr/>\n\n<h4>\n<details>\n<summary><b>Repeat 4</b></summary>\n<br/>\n\nIf you want to come full circle in just 4 repetitions, you need the artist to turn a total of **360 degrees/4 = 90 degrees** each time.  You can do that by adding an extra `turn right by 30 degrees` block to the outer loop (since **60+30 = 90**.)\n\n<br/>\n<img src=\"https://images.code.org/9da67a628ed72e87520a02a0d917e2af-image-1440132370113.44.12.png\" width=\"500px;\" style=\"mix-blend-mode: multiply;\" />\n<br/><br/>\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repeat 6</b></summary>\n<br/>\n\nWhen you repeat the shape as-is 6 times, you get a total rotation of **6x60 degrees** which is a full **360 degree** cycle.\n\n<img src=\"https://images.code.org/b79f96b87097ce3afe8a6a5608d04e36-image-1440132287456.44.27.png\"  width=\"500px;\"  style=\"mix-blend-mode: multiply;\" />\n</details>\n</h4>\n\n<h4>\n<details>\n<summary><b>Repeat 12</b></summary>\n\n<br/>\n\nIf you want to repeat the image 12 times, you need the artist to turn a total of **360 degrees/12 = 30 degrees** each iteration.  That means you will need to adjust the artist back a bit with `turn left by 30 degrees` before you repeat the shape again.\n\n[][0][][1]\n[][2]\n\n</details>\n</h4>\n\nNow it's your turn!  Can you recreate each image by repeating the starting shape?  "
   },
   "https://studio.code.org/s/course4/lessons/3/levels/12": {
     "short_instructions": "Now for a challenge!  Feel free to use trial and error. You are not expected to get the image perfect the first time.   Want to see more hints?  Click here!",
@@ -468,7 +468,7 @@
   },
   "https://studio.code.org/s/course4/lessons/10/levels/11": {
     "short_instructions": "Free-Play Inspiration: You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.\n\nNeed a hint? Click here.",
-    "long_instructions": "<br/><br/>\n<img src=\"https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png\" width=\"250px\"/>\\\n<br/><br/>\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.",
+    "long_instructions": "[][0][][1]\n[][2]\\\n[][3][][4]\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! If this picture inspires you, try to make something similar. Otherwise, create something all your own.",
     "authored_hints": {
       "Course_4_Artist_For_Loops_inspire_a": "The foundation of this code is the same as the solution to the previous challenge puzzle...with a couple of changes.",
       "Course_4_Artist_For_Loops_inspire_b": "Try a `for` loop that goes from 3 to 10 with an increment of 1.",
@@ -605,7 +605,7 @@
   },
   "https://studio.code.org/s/course4/lessons/12/levels/8": {
     "short_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  Can you build this function using this `draw a square 20` function that we created for you?",
-    "long_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  \n\nCan you build this function using this `draw a square 20` function that we created for you?\n<br/><br/>\n\n_Note: See that we've changed the pen to be much thinner. Click \"edit\" on the `draw a square 20` function to see how!_",
+    "long_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  \n\nCan you build this function using this `draw a square 20` function that we created for you?\n[][0][][1]\n\n_Note: See that we've changed the pen to be much thinner. Click \"edit\" on the `draw a square 20` function to see how!_",
     "function_definitions": {
       "draw a line of  squares": {
         "name": "draw a line of  squares",
@@ -1236,7 +1236,7 @@
   },
   "https://studio.code.org/s/course4/lessons/15/levels/11": {
     "short_instructions": "It's free play time! Have fun with all the blocks in your tool box. ",
-    "long_instructions": "It's free play time! Have fun with all the blocks in your tool box.\\\n<br/>\n\n<h5>\n<details>\n<summary><b>Need some ideas?</b></summary>\n\t<br>\n\t<h5>\n\t\t<ul>\n        \t<li><strong>Tag</strong> - Have character 2 patrol and use your arrow keys to make character 1 chase until they collide. </li>\n            <li><strong>Whack-a-Sprite</strong> - Have a character constantly pop up at a random location. Award points for clicking the sprite before it disappears. </li>\n            <li><strong>Best Guess</strong> - Make both characters disappear, change location to a random spot, then reappear as a random character.  Click on the first one and get a point...but if you click on the second one you LOSE a point! </li>\n        </ul>\n\t</h5>\n\n</details>\n</h5>",
+    "long_instructions": "It's free play time! Have fun with all the blocks in your tool box.\\\n[][0]\n\n<h5>\n<details>\n<summary><b>Need some ideas?</b></summary>\n\t<br>\n\t<h5>\n\t\t<ul>\n        \t<li><strong>Tag</strong> - Have character 2 patrol and use your arrow keys to make character 1 chase until they collide. </li>\n            <li><strong>Whack-a-Sprite</strong> - Have a character constantly pop up at a random location. Award points for clicking the sprite before it disappears. </li>\n            <li><strong>Best Guess</strong> - Make both characters disappear, change location to a random spot, then reappear as a random character.  Click on the first one and get a point...but if you click on the second one you LOSE a point! </li>\n        </ul>\n\t</h5>\n\n</details>\n</h5>",
     "placeholder_texts": {
       "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
       "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
@@ -1410,7 +1410,7 @@
   },
   "https://studio.code.org/s/course4/lessons/18/levels/1": {
     "short_instructions": "Use the blocks below to have the artist draw \"01010101\" in binary in the first row.",
-    "long_instructions": "Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n\n<hr/>\n\nWe've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.\n\n<b>Use the blocks below to have the artist draw \"01010101\" in binary in the first row.</b>",
+    "long_instructions": "Binary is a way of representing information using only two options. In this case, [][0]off[][1] and [][2]on[][3].\n[][4]\nHere, we're going to use the number [][5]0[][6] as code for \"off\" and the number [][7]1[][8] as code for \"on\".\n\n<hr/>\n\nWe've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.\n\n[][9]Use the blocks below to have the artist draw \"01010101\" in binary in the first row.[][10]",
     "function_definitions": {
       "draw bit": {
         "name": "draw bit"
@@ -1538,7 +1538,7 @@
   },
   "https://studio.code.org/s/course4/lessons/18/levels/10": {
     "short_instructions": "Click here to see hints.",
-    "long_instructions": "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\" width=\"250px\"/>\n\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! \n\nIf this picture inspires you, try to make something similar. Otherwise, create something all your own. \n<br/>",
+    "long_instructions": "<img src=\"https://images.code.org/0a30f23ff6138828d053267719d34fa8-image-1444435986654.00.22.png\" width=\"250px\"/>\n\n**Free-Play Inspiration:** You've now learned everything you need to know to make a pattern like this! \n\nIf this picture inspires you, try to make something similar. Otherwise, create something all your own. \n[][0]",
     "authored_hints": {
       "Course_4_Artist_Binary_Free_Play_2b_a": "This code uses two `for loops`. One counts up from 1 to 8, the other counts down from 8 to 1.",
       "Course_4_Artist_Binary_Free_Play_2b_b": "Each `for loop` has three repeats.  The first draws the leftmost set of 1s, the second draws the 0s in the middle and the third draws the 1s on the right.",
@@ -1700,7 +1700,7 @@
   },
   "https://studio.code.org/s/course4/lessons/20/levels/4": {
     "short_instructions": "Solve this puzzle using the fewest number of blocks possible.",
-    "long_instructions": "**For-Loops Super Challenge:** Solve this puzzle with the fewest number of blocks possible.\\\n<br/>",
+    "long_instructions": "**For-Loops Super Challenge:** Solve this puzzle with the fewest number of blocks possible.\\\n[][0]",
     "authored_hints": {
       "Course_4_SCFL_2_a": "Take a look at this option for movement:  \n\n[][0]",
       "Course_4_SCFL_2_b": "Notice that there are three points during each iteration of this `for` loop where you stop to interact with objects.",

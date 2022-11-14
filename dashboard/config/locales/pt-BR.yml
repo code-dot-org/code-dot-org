@@ -426,6 +426,7 @@ pt:
       educate_beyond: Além do Code.org
       educate_inspire: Inspire um Estudante
       educate_community: Comunidade On-Line
+      educate_requirements: Requisitos Técnicos
       educate_tools: Vídeos e ferramentas
       about_us: Quem Somos
       about_leadership: Liderança
@@ -724,6 +725,7 @@ pt:
     code_from_html: A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Powered by Amazon Web Services
+    built_on_github: Construído no GitHub da Microsoft
     google_copyright: "© Google Inc. usado com permissão. Google Classroom é uma marca
       registrada de Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE
@@ -737,6 +739,7 @@ pt:
     tos_short: Termos
     tos: Termos de Serviço
     privacy: Política de Privacidade
+    privacy_updated: Política de Privacidade Atualizada
     secure: Versão Segura
     report_abuse: Reportar abuso
     built_on_code_studio: Criado no Code Studio
@@ -825,6 +828,8 @@ pt:
       title: Festa dançante
     hello-world:
       title: Olá Mundo
+      body: Selecione entre quatro temas divertidos para codificar os personagens
+        interativos em um mundo criado por você.
     poem-art:
       title: Arte poética
     hoc:

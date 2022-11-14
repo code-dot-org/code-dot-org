@@ -459,16 +459,44 @@
           "description": "**Haqiqiy hayot: Zip ni Siqish**\n\n-   Turli xil tarkibdagi matnli fayllar yordamida zip bilan tajriba qiling.  Kichik fayllar uchun natijalar katta hajmdagi fayllar kabi yaxshi emasmi? (Mac-larda Finder-da faylning haqiqiy bayt sonini ko‘rish uchun fayl uchun “get info”-ni tanlang, chunki Finder displeyi undan kam bo‘lgan har qanday fayl uchun 4KB-ni ko‘rsatadi.)\n    -   Ogohlantirish: natijalar farq qilishi mumkin.  Zip matn bilan juda yaxshi ishlaydi, lekin u boshqa fayllarni yaxshi siqmasligi mumkin, chunki ular allaqachon siqilgan yoki matnli hujjatlar singari ichki shablonlarga ega emas.\n\n**Qo‘shimcha topshiriq:  LZW algoritmini o‘rganing**\n\n-   .zip shu asosda siqiladi [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   Matnni siqish vositasi g’oyasi LZW (zip) algoritmiga o‘xshash bo‘lsa-da, siqish va dekompressiya yo‘lini kuzatish biroz qiyin.  LZW haqida ko‘proq bilib olish va ushbu algoritm jarayonida nima sodir bo‘lishi ba’zi odamlar uchun ajoyib kengaytma loyihasi bo‘ladi."
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": ""
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
           "progression_name": "Monster Town-ga xush kelibsiz!"
         },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
         "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
           "progression_name": "Malaka orttirish"
         },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": ""
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Kirish",
@@ -605,13 +633,29 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Wrap Up"
         },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
         },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "",
+          "description": ""
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": ""
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": ""
+        },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": ""
         },
         "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
           "progression_name": "Getters and Setters"
@@ -1360,6 +1404,9 @@
             null
           ]
         },
+        "f26ccabe-2b34-481f-b142-b6227421df3e": {
+          "name": "O'rganing"
+        },
         "f8419af8-d199-4cb6-b4dc-ea619a1ea802": {
           "progression_name": "Namunaviy loyihalar"
         },
@@ -1678,6 +1725,9 @@
         "6ef6c719-244f-449d-9d81-75283f9d48e4": {
           "description": "Raqamli almashinuv va ijodiy huquqlar bo‘yicha ko‘proq darslarni topish uchun [Copyright & Creativity ](https://copyrightandcreativity.org)sahifasiga tashrif buyuring."
         },
+        "b032e6b2-4dfd-431c-a938-06a8bd4a8056": {
+          "name": "O'rganing"
+        },
         "e43bfad4-b411-4e0d-a59c-2e4764fd9c65": {
           "progression_name": "Loyihangizni yarating"
         },
@@ -1702,6 +1752,20 @@
         "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9": {
           "name": "O‘ylamoq"
         },
+        "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
+          "name": "Asosiy Lug‘at: ",
+          "description": "**raqamli iz**: onlayn bajariyotgan ishlaringiz, shu jumladan tashrif buyurgan saytlar va siz baham ko‘rgan narsalaringiz haqidagi yozuv\n\n-   **doimiy**: abadiy davom etadigan narsa\n-   **shaxsiy ma'lumotlar**: kimligingizni aniqlash uchun ishlatilishi mumkin bo'lgan siz haqingizda ma'lumot\n-   **trail**: yo'l yoki iz\n\n**Darsdan oldin**: Har bir hayvon uchun kvadratchalarni ikkita alohida qoziqda saqlang, [Raqamli iz kvadratlarini](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) oldindan kesib oling.\n\n**Say**: _Bugun biz \"Raqamli izni kuzatib boring\" deb nomlangan videoni tomosha qilamiz. Sizlardan birortangiz \"iz\" so'zini ilgari eshitganmi?_\n\nTalabalarni javob berishga taklif qiling va izni \\_kimdir kuzatib borishi mumkin bo'lgan yo'l yoki iz deb belgilang. ([3-slayd](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
+          "progression_name": "Video: Raqamli Trail ni kuzatib boring"
+        },
+        "f49f8c12-9094-46d3-ace0-c593eef41ab9": {
+          "description": "**So'rang**: _Feet qanday ma'lumotlarni onlayn baham ko'rishni ma'qul deb hisoblaydi?_\n\\_\n\nTalabalar baham ko'rish imkoniyatiga ega bo'lgandan so'ng,  [6-slayd](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) loyihani ko'rib chiqing: _Shaxsiy ma'lumotlar_, masalan, shaxsning _to'liq ismi, manzili, telefon raqami, yoshi, tug'ilgan kuni, maktab nomi._\n\n**shaxsiy ma'lumot**ni _siz haqingizda kimligingizni aniqlash uchun ishlatilishi mumkin bo'lgan ma'lumot_ deb belgilang. ([7-slayd](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**So'rang**: _Feet qanday ma'lumotlarni onlayn baham ko'rishni ma'qul deb hisoblaydi?_\n\nTalabalar fikr almashish imkoniyatiga ega bo'lgandan so'ng,  [8-slayd](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) loyihani ko'rib chiqing: _Shaxsiy ma'lumotlar_, masalan, _xobbi, sevimli narsalar._"
+        },
+        "778c23f8-9c3f-4835-ba75-fa003924bec2": {
+          "description": "**Deb aytadi**: Bugun biz internetda o'zimiz haqida doimiy iz qoldiradigan raqamli izlar haqida bilib oldik. Endi onlayn almashish uchun yaxshi va nima emas, nima ma'lumot haqida o'ylash uchun bir zum ajrating.\n\n\\*\\* bor\\*\\* talabalar [Animal Tracks Student Handout] da pauza & Think Moment yakunlash[0]. Yo'nalishlarni ovoz chiqarib o'qing va talabalarga mustaqil ravishda aks ettirishni bajarishga imkon bering. ([Slide 13](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56eaf833bc_0_443))\n\n\\*\\*\\*\\* talabalarni o'z aksini sinf bilan baham ko'rishga taklif qiling. talaba ta'lim baholash uchun tarqatma materiallar to'plash."
+        },
+        "f0504c5c-cc2d-4190-94dd-bf0aecfb4b21": {
+          "description": "Talabalarga uyda o'qishni yaxshilash uchun taqdim etishingiz mumkin bo'lgan qo'shimcha oila manbalari quyida bor:\n\n-   [\\*\\* Oila faoliyati\\*\\*](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8)\n-   [\\*\\*Oilaviy maslahatlar\\*\\*](https://www.commonsense.org/education/family-tips/k-5-digital-footprint-and-identity)"
+        },
         "0d42ae11-f1d5-498b-b68f-f559173be646": {
           "tips": [
             null
@@ -1724,27 +1788,76 @@
         "d08fa292-1f72-4045-ba8c-26822c11b020": {
           "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n**X‘s and O‘s**\n\n-   Sinf uchun tick-tack-toe taxtasini chizish. \n\n-   Bitta X va bitta O ni taxtaning biron bir joyiga qo‘ying. \n\n-   Sinfdoshlardan sinf sifatida qo‘l imo-ishoralari yordamida X ni O ga etkazishlarini so‘rang. \n\n    \\*\\* X, O va O‘qlar \\*\\* \n\n-   Yuqoridagi mashqlarga o‘xshash, ammo o‘quvchilar dasturlarini imo-ishoralar o‘rniga o‘qlar yordamida oldindan yozib qo‘ying. \n\n-   Buni guruhlarga bo‘lib amalga oshirish mumkin. \n\n-   Guruhlar sinf uchun o‘z yechimlarini baham ko‘rishlari mumkin."
         },
+        "c45a137d-663a-42d6-9d99-793f0b4344a1": {
+          "name": "Kompyuter laboratoriyasida o'zini tutish",
+          "description": "Kompyuter labaratoriyasiga kirganlarida taxminan ozlarini qanday tutishlari kerakligini korib chiqing"
+        },
         "07c53b76-81d0-4254-bbce-a04c4dac3f38": {
           "tips": [
-            null
+            "-   Laboratoriyada tinch jismlardan foydalaning\n-   Esingizda bo'lsin, saqich yoki konfet chaynamaslik kerak\n-   Qo'llaringizni tozalang\n-   Hamkoringiz bilan bitta kompyuterda o'tiring\n-   Birinchi \"haydovchi\" sichqonchaga etib borishiga ishonch hosil qiling\n-   Hafsalangiz pir bo'lganda, kompyuter yoki monitorni urmang yoki silkitmang\n-   **\\*20/20/20 qoidasiga rioya qiling**\n-   Har 20-30 daqiqada **\\*Wiggles** bilan qanday kurashish mumkin (GoNoodle-ga bepul kirishni talab qiladi)\n-   O'qituvchidan so'rashdan oldin sherigingizdan so'rang\n-   Har-kim  sheriklarini eshitishi uchun ovoz balandligini pasaytiring\n-   His-tuyg'ular va echimlarni kuzatib borish uchun jurnalingizdan foydalaning"
           ]
+        },
+        "0ceaaefd-393c-4336-b8b2-1d20539cdeb6": {
+          "description": "**Muhokama:**\n\nTalabalar qoidalarni tushunishlariga ishonch hosil qilish uchun kompyuter laboratoriyasidan kutilayotgan narsalar haqida  muhokama qiling. Muhokama uchun ba'zi mavzular quyidagilarni o'z ichiga olishi mumkin:\n\n-   Kompyuter sinfida yugurish normalmi?\n-   Kompyuter xonasida bo'lganimizda qanchalik baland ovozda yurishimiz kerak?\n-   Agar jumboqda qotib qolsangiz-chi?\n-   Xafa bo'lganingizda, kompyuterni urish sizga yordam beradimi?\n-   Kompyuter sinfiga bormoqchi bo'lganimizda, qanday tayyorgarlik ko'rishimiz kerak?"
+        },
+        "e531ebf8-2467-42ba-a02a-c4ec421830a2": {
+          "description": "Bo'lajak onlayn dars bilan bog'lanmagan darsni ulash uchun sizning sinfingiz bilan bog'liq quyidagi tadbirlardan birini tanlang."
+        },
+        "639fc6b3-1389-409a-bbd4-9c939562fefb": {
+          "name": "Qog'oz bloklari yordamida blokdan chiqarigan faoliyat",
+          "description": "**Model:** “Move it, move it – Xarita faoliyati”dan “move it, move it” darsidan xaritani tanlang. \\*\\*Manipulyativlarning harakat qismlaridan foydalanib, talabalarga ushbu tuzilmani yangi usulda qanday kodlash kerakligini ko'rsating.\n\n**Juftlash/o‘ylab ko‘ring:** Keyin boshqa xaritani tanlang va o‘quvchilar maqsadga erishish uchun “robot” qaysi bloklarni o‘qishi kerakligini dasturlashtiring.\n\nUlar bloklar yuqoridan pastgacha borishi kerakligini va hammasi tegishi kerakligini tushunishlariga ishonch hosil qiling!\n\n**Ulashish:** Talabalar bir-birlarining javoblarini tekshirishlari va yuzaga kelishi mumkin bo‘lgan savollar yoki xatolarini hal qilishlari kerak.\n\n#### -Yoki-"
+        },
+        "70a01b4d-3336-46f9-8145-d43897a76bd2": {
+          "name": "Unplugged strelkalar yordamida onlayn faoliyat",
+          "description": "**Model:** Tegishli onlayn darajalardan boshqotirma torting. Talabalarga belgilar yordamida _Angry Bird_ ni cho'chqaga qanday olib borishni ko'rsating. O'qlarni \"Shimoliy\", \"Janubiy\", \"Sharq\" va \"G'arb\" nomini o'zgartirish foydali bo'lishi mumkin. Dasturga ega bo'lgach, uni barmog'ingiz (yoki ko'rsatkich) bilan kuzatib boring va dastur ishga tushganda qush qanday sayohat qilishini ko'rsating.\n\n**Juftlash/o‘ylab ko‘ring:** Keyin osonroq boshqotirmaga qayting va o‘quvchilarni mustaqil ravishda dasturlar (strelkalar yordamida) yozishga harakat qiling.\n\n**Ulashish:** Talabalarni o‘z dasturlarini boshqa guruhlar bilan baham ko‘rishga undash va ular bir xil yoki boshqacha yechimlar topganligini bilish. Kimdir jumboqni yechishning boshqa usulini o'ylab topishi mumkinmi?"
         },
         "70f8bf21-fc6d-4fac-b850-7c1a1694ce57": {
           "name": "Jahldor qushlar bilan tartiblash",
           "tips": [
-            null
+            "Talabalarga sinfdoshlarga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingiz kreslosida o'tirmang\n-   Sinfdoshning klaviaturasidan foydalanmang\n-   Sinfdoshning sichqonchasiga tegmang\n-   Sinfdoshingiz sizga echimni baland ovozda tasvirlab bera olishiga ishonch hosil qiling"
           ]
+        },
+        "eabe75fb-4111-49c1-900c-dd18d6ec996d": {
+          "description": "Ushbu dars talabalarga onlayn jumboqlarni bajarish uchun Code.org saytidan qanday foydalanishni o'rgatadi.\n\n**\\\\ \\* Pair Programming** - talabalar videosini  tomosha qiling, keyin ularni juftlarga tayinlang. Bu talabalarga to'g'ri yo'nalishda boshlashga yordam berishi kerak."
+        },
+        "29e7cac9-8b1a-4fd2-942f-10682a04aab3": {
+          "progression_name": "Video - Maze Intro: Bloklar bilan dasturlash"
+        },
+        "9d92fd5d-fcda-41d3-b081-b6be47316a2b": {
+          "description": "  O‘qituvchilar informatika ta’limida va hamkorlikdagi  jonli sinf muhitini qo‘llab-quvvatlashda muhim rol o‘ynaydi. Onlayn faoliyat davomida o‘qituvchining roli birinchi navbatda rag‘batlantirish va qo‘llab-quvvatlashdan iborat. Onlayn darslar o‘quvchilarga yo‘naltirilgan bo‘lishi kerak, shuning uchun o‘qituvchilar talabalar qiynalganda, ularga mashq javobini aytmasligi kerak. Buni qanday qilish haqida ba‘zi fikrlar: \n\n-   Mashg‘ulot davomida iloji boricha juft dasturlashdan foydalaning. \n-   Talabalarni sheriklaridan so‘rab boshlash uchun savollar / misollar bilan rag‘batlantiring. \n-   Javob berilmagan savollaryondagi guruhga yetkazilishi mumkin, ular yechimini allaqachon bilishi mumkin. O‘quvchilarni, siz kelishingizdan avval debug jarayonidan foydanalishga undang. \n-   Talabalar ko‘rayotgan muammolarini aytib berishsin. Nima qilish kerak? Bu nima qiladi? Bu sizga nimani aytadi? \n-   Siqilayotgan o‘quvchilarga umidsizlik o‘rganish yo‘lidagi qadam ekanligini va qat’iyat o‘z samarasini berishini eslatib qo‘ying.Agar talaba bularning barchasidan keyin ham qiynalsa, talabani o‘zi xatoni tuzatish yo‘lini topishi uchun yetakchi savollarni bering. "
         },
         "63f75f65-45a9-4de8-9cc0-6b402647ccc1": {
           "progression_name": "Malaka orttirish"
         },
         "a51bc70a-8cae-4398-8259-5b5bd6138f18": {
-          "name": "Reflection"
+          "name": "Reflection",
+          "description": "Talabalarga kun davomida duch kelgan ba'zi narsalarni qayta ishlashga yordam berish uchun jurnal bering.\n\n**Ko'rsatmalar:**\n\n-   Jurnal sahifangiz burchagiga bugungi darsga qanday munosabatda bo'lganingizni ko'rsatadigan **\\*Feeding Faces**-dan birini chizing.\n-   Kompyuter laboratoriyasiga borishga tayyorlanish ketma-ketligini chiza olasizmi?\n-   “Qilish” va “Qilmang” kompyuter laboratoriyasini chizish."
+        },
+        "19d08333-6bd9-4a9c-b56c-101b9afc37a1": {
+          "description": "Agar talabalar boshqotirmalarni erta tugatsalar, ularga o'zlarining Reflection Journalida  boshqotirmalarini o'ylab topishga vaqt ajrating."
+        },
+        "bf265275-2fce-435d-b4fe-6680f7e45367": {
+          "description": "### Yopishqoq ma'lumotlarni sharhlash (15-20 daqiqa)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informatika + matematika**\n\n[Sticky Data Intrepreting](https://docs.google.com/document/d/1TJo-CP8G8HewzH-2SbSNlgBjbPV8qzNImOVZdwDHyYo/edit?usp=sharing) – bu oʻqituvchilar hamjamiyatimiz tomonidan yozilgan Common Core Math standartlariga moslashtirilgan ixtiyoriy faoliyatdir. Talabalar ma'lumotlarni tartibga solish, ko'rsatish va izohlash uchun qog'oz manipulyatorlaridan foydalanadilar.\n\n_Manzil qilingan standartlar:_\n\n-   **CCSS.MATH.CONTENT.1.MD.C.4:** Uchtagacha toifadagi ma'lumotlarni tartibga solish, taqdim etish va sharhlash; ma'lumotlar nuqtalarining umumiy soni, har bir toifada nechta va bir turkumda boshqasiga qaraganda qancha ko'p yoki kamroq ekanligi haqida savollar bering va ularga javob oling."
         },
         "c05c857d-b5f3-4136-b505-f9ab43799bcb": {
+          "name": "Kompyutersiz o‘tiladigan mashg‘ulotlar",
+          "description": "Ushbu dars talabalar  birinchi onlayn faoliyatga qadar bo'lgan haftalarda o'rgangan ko'plab ulanmagan g'oyalarga tayanadi. Sizning sinfingiz onlayn ishlarida ulardan foyda olishlari uchun ushbu tushunchalarni (masalan, qat'iylik, algoritmlar va dasturlar) to'liq doira atrofida olib kelishingiz muhimdir.",
           "tips": [
-            null
+            "Agar sizning sinfingiz allaqachon tub yo'nalishlarni o'rgangan bo'lsa, “Yuqoriga” va “Pastga” ni “Shimoliy” va “Janubiy” ga o'zgartirish muammo bo'lmasligi kerak. Lekin ular yo'q bo'lsa, biz Code.org Compass Rose bilan qulay ishchi varaqni taqdim etdik, siz talabalarni kemada olish uchun foydalanishingiz mumkin. Ushbu konvertatsiya bolalar bog'chasi va birinchi sinfga qaratilgan deyarli barcha onlayn jumboqlar uchun qulay bo'ladi.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nTalabalar ushbu harflarni o'zlarining onlayn dasturlarida yo'nalish o'qlari yonida ko'rishlarini bildiring.  "
           ]
+        },
+        "5e33d83e-2309-46d8-ac85-73e908e6bde5": {
+          "description": "\\*\\* Displey: \\*\\* Talabalarga ushbu darsdan oldin darslarda tugatgan “Move It, Move It” mashqidan olingan rasmni ko'rsating. \n\n\\*\\* Muhokama qiling: \\*\\* Talabalardan “Move It, Move It” da ishlatilgan belgilarni eslashlarini so'rang.    \n\n-   \\_Agar “Shimoliy” o'qni ko'rganingizda nima qilgan bo'lardingiz? \\_\n-   \\_“ Sharq” o'qi haqida nima deyish mumkin? \\_\n\n**O‘tish:** O‘quvchilaringiz “Move it, Move it” so‘zini eslab qolganiga qanoatlansangiz, “Ko‘prik” faoliyatiga o‘tishingiz mumkin.."
+        },
+        "dd9246d9-8533-4e27-8a28-f1991a19c86e": {
+          "description": "Ushbu mashg'ulot \"Move It\", \"Move It\" dan ajratilgan tushunchalarni talabalar o'tayotgan onlayn dunyoga olib kirishga yordam beradi. Sinfingiz bilan ishlash uchun quyidagilardan \\_ birini\\_ tanlang:"
+        },
+        "9b3f3413-3010-4c0a-86e4-92145569ea72": {
+          "name": "Qog'oz bloklari yordamida ulanmagan faoliyat",
+          "description": "**Tarqatish:** Talabalarga “E →” (Sharq) va “W ←” (G‘arb) kabi asosiy buyruqlar bilan **\\*Manipulyatsiyalarni** bering.\n\n**Display:** **\\*Map Activity**-dan xaritani tanlang va sinf ko‘rishi uchun uni ko‘rsating.\n\n**Model:** Boshlanish joyidan boshlab, har bir blok nima qilishini o‘quvchilarga ko‘rsatkich  barmog‘ingizdan foydalaning. Ularga `E →` o'ng strelkaga qanday mos kelishini va \"robot\"ni bir qadam o'ngga siljitishini ko'rsating. Qolgan uchtasining har biri uchun xuddi shunday qiling.\n\n**O'ylab ko'ring:** Shu nuqtada sinf o'qlar yordamida maqsadga qanday erishishni bilishi kerak. Blockly bloklari yordamida maqsadga qanday erishasiz?\n\n**Juftlash:** Endi o‘quvchilarga Blokli bloklar qog‘ozidan foydalanib, o‘z stollaridan dastur tuzishlarini so‘rang. Ular bloklar yuqoridan pastgacha borishi kerakligini va  barchasi ulanishi kerakligini tushunishlariga ishonch hosil qiling!\n\n**Ulashing:** Juftlik hamkorlari bilan javoblarini muhokama qiling. Hamma bir xil narsani oldimi?\n\n### -Yoki-"
+        },
+        "2c1b88e4-7ed1-4880-8113-f728a664f182": {
+          "name": "Strelkalar yordamida onlayn jumboqlar"
         },
         "75c9132a-969b-4198-8b79-cee2349158bf": {
           "name": "Jahldor qushlar bilan dasturlash"
@@ -1773,14 +1886,19 @@
           "description": "Kichik guruhlarda talabalarga qog‘ozga o‘zlarining labirintlarini yasashga ruxsat bering va ularni yechish uchun boshqa talabalar yoki guruhlarga dasturlar yozishni taklif qiling. Qo‘shimcha ko‘ngil ochish uchun talabalar bilan cho‘chqa va qush kabi hayotiy labirintlarni yarating."
         },
         "4709a0b0-10cf-444a-95c2-79194cef926d": {
-          "name": "Kirish"
+          "name": "Kirish",
+          "description": "#### Lug'at\n\nUshbu darsda uchta yangi va muhim lug'at so'zlari mavjud:\n\n-   **Bug** - _Men bilan takrorlang: Buhh-g._\n\nNoto'g'ri ketayotgan narsa. Xato.\n\n-   **Debugging** - _Buni men bilan takrorlang: Dee-bug-ing._\n\nXatolarni topish va tuzatish uchun.\n\n-   **Doimiylik** - _Men bilan takrorlang: Purr-siss-tense._ \n\nTaslim bolmaslik. Qatiyligini i har xil yollar bilan, xar hil vaqtlarda sinab korsangiz yana ham yahshi ishlaydi."
+        },
+        "cf252e6b-3a51-4e06-959e-e45d962462c4": {
+          "description": "#### Nosozliklarni tuzatish, qat'iylik va umidsizlik\n\n**Muhokama qiling:** Talabalarni bugungi onlayn mashg‘ulotlarga tayyorlang, agar ular code da xatolik bor deb hisoblasa, nima qilishlarini so‘rang. Aniqrog'i, ular o'zlariga nima hohlashsadi?\n\n-   Birinchi qadamda hammasi to'g'rimi?\n-   Ikkinchisi-chi? Uchinchisi?\n-   Dasturim qayerda xatoga yo'l qo'ydi?\n-   Bu menga nima deydi?\n\n**Tezkor**: **Nosozliklarni tuzatish** asabiylashishi mumkin! Ammo qat'iyatlilik bizga uni yengib o'tishga yordam beradi. Xafagarchilikka qarshi turish uchun qanday ishlarni qilishimiz kerak?\n\nJavoblarga misol:\n\n-   10 gacha sanang\n-   Chuqur nafas oling\n-   Biz topgan xatolar haqidagi jurnal\n-   Xatolar haqida sherik bilan gaplashing\n-   Yordam so'rang\n\n**O'tish:** O'quvchilaringizga umidsizlik kodlashning bir qismi ekanligini bildirib qo'ying. Hamma xatolarga duch keladi! Agar ular xatolik bor deb o'ylasalar, lekin uni darhol topa olmasalar yoki tuzata olmasalar ham  yaxshi bo'ladi. Yuqorida sanab o'tilganlarga o'xshash strategiyalardan foydalanish ularga umidsizlikka qarshi turishga va har qanday muammoni hal qilishga yordam beradi!"
         },
         "e4f833fe-43bb-4538-8ceb-e014712357b2": {
-          "name": "Terimchi bilan dasturlash"
+          "name": "Terimchi bilan dasturlash",
+          "description": "Bu vaqtda talabalar dasturlash muhiti bilan allaqachon tanish bo'lishi kerak. Ushbu darsda e'tiborga olish kerak bo'lgan ba'zi yangi narsalar - debugging process jarayonidagi chalkashliklar yoki terim mashinasi makkajo'xori yetib kelganida \"jo'xori terish\" blokidan foydalanishni eslamaslikdir."
         },
         "90d01840-ab32-4ff1-9603-1a400df6c870": {
           "tips": [
-            null
+            "Talabalarga sinfdoshlarga yordam berishning to'g'ri yo'lini ko'rsating:\n\n-   Sinfdoshingiz kreslosida o'tirmang\n-   Sinfdoshning klaviaturasidan foydalanmang\n-   Sinfdoshning sichqonchasiga tegmang\n-   Sinfdoshingiz sizga echimni baland ovozda tasvirlab bera olishiga ishonch hosil qiling"
           ]
         },
         "49fbb767-771c-46d4-82ed-25acdc22cc34": {
@@ -2893,6 +3011,9 @@
         },
         "7a945439-a8e0-438c-a2a3-7e81b6832618": {
           "progression_name": "Mening onlayn qo‘shnilarim"
+        },
+        "11cff0b0-c89c-4fa0-978f-787e3b4e4c27": {
+          "description": "**Ayting**: _Endi biz internetda xavfsiz qolish qoidalarini eslab qolishimizga yordam beradigan qisqa she'r o'rganamiz. Avval she'rni o'qiyman, keyin birga o'qiymiz._\n\n**Loyiha** [7-slayd](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_196) va she'rni ovoz chiqarib o'qiyotganda she'r harakatlarini modellashtiring. Bu uchta xavfsizlik qoidalarining har biriga mos keladigan turli harakatlarga ega bo'lgan qo'ng'iroq va javob she'ri.\n\n**She'rni o'quvchilaringiz bilan birga ovoz chiqarib o'qing**. Talabalar o'qiyotganda, ular harakatlar bilan birga kuzatib borishlari kerak. She'r o'quvchilardan biri o'qituvchi rolini o'ynashi va sinfning unga javob berishi uchun ham yaxshi ishlaydi.\n\n\\*\\* Xavfsizlik, bu qoidalar! Muallif: Jenni Pritchett\\*\\*\n\n_Biz xavfsiz bo'lishimiz kerak_\n\n_Biz qachon onlayn bo'lsak_\n\n_Shunday qilib, biz ushbu qoidalarga amal qilamiz_\n\n_Maroqli vaqt o'tkazish uchun!_\n\n[1 barmogʻingizni koʻtaring] \\*Har doim ota-onangizdan soʻrang! \\*\n\n[2 barmogʻingizni koʻtaring] \\*Faqat oʻzingiz bilgan odamlar bilan gaplashing! \\*\n\n[3 barmogʻingizni yuqoriga koʻtaring] _Sizga mos saytlarga qoʻshiling!_\n\n_Va biz xavfsiz bo'lamiz_\n\n_Qayerga borsak ham!_\n\nEslatma: [She'r plakati](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) haftalik she'ringiz uchun yoki kompyuter yoki qurilma vaqtini boshlash uchun muntazam dastur sifatida foydalanish uchun ajoyib."
         },
         "5e98b1b4-ab1d-4607-8234-fb70c37ae557": {
           "name": "Kirish"
@@ -10421,9 +10542,38 @@
           "progression_name": "Reflection"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
           "tips": [
-            null
+            ""
           ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

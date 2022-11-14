@@ -36,7 +36,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Brúigh an cnaipe \"Críochnaigh\", sin an méid!",
           "repeat_every_ideas": "**An dteastaíonn cúpla smaoineamh nua uait?**\n\n-   Athraigh méid an damhsóra laistigh de lúb le cur ag fás é.\n-   Athraigh rothlú an damhsóra laistigh de lúb le cur ar casadh é.\n\n_Agus is féidir uimhreacha diúltacha a úsáid chun a mhalairt d'éifeacht a fháil!_",
-          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Tá an bloc malartach sa gcatagóir \"Damhsóirí\"."
@@ -130,7 +130,7 @@
         "Dance_2019_09": {
           "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Brúigh an cnaipe \"Críochnaigh\", sin an méid!",
           "repeat_every_ideas": "**An dteastaíonn cúpla smaoineamh nua uait?**\n\n-   Athraigh méid an damhsóra laistigh de lúb le cur ag fás é.\n-   Athraigh rothlú an damhsóra laistigh de lúb le cur ar casadh é.\n\n_Agus is féidir uimhreacha diúltacha a úsáid chun a mhalairt d'éifeacht a fháil!_",
-          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Deimhnigh go bhfuil damhsóir ar an scáileán.\n\n_Tagann an leibhéal seo chun críche tar éis 4 thomhas._",
@@ -435,7 +435,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Brúigh an cnaipe \"Críochnaigh\", sin an méid!",
           "repeat_every_ideas": "**An dteastaíonn cúpla smaoineamh nua uait?**\n\n-   Athraigh méid an damhsóra laistigh de lúb le cur ag fás é.\n-   Athraigh rothlú an damhsóra laistigh de lúb le cur ar casadh é.\n\n_Agus is féidir uimhreacha diúltacha a úsáid chun a mhalairt d'éifeacht a fháil!_",
-          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Tá an bloc malartach sa gcatagóir \"Damhsóirí\"."
@@ -551,7 +551,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**Cén chaoi a gcríochnóidh mé an leibhéal seo?**\n\n-   Brúigh an cnaipe \"Críochnaigh\", sin an méid!",
           "repeat_every_ideas": "**An dteastaíonn cúpla smaoineamh nua uait?**\n\n-   Athraigh méid an damhsóra laistigh de lúb le cur ag fás é.\n-   Athraigh rothlú an damhsóra laistigh de lúb le cur ar casadh é.\n\n_Agus is féidir uimhreacha diúltacha a úsáid chun a mhalairt d'éifeacht a fháil!_",
-          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Dúshlán Roghnach**\n\n-   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Tá an bloc malartach sa gcatagóir \"Damhsóirí\"."

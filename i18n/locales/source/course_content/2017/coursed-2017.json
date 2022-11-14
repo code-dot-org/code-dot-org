@@ -513,7 +513,7 @@
   },
   "https://studio.code.org/s/coursed-2017/lessons/6/levels/2": {
     "short_instructions": "Now take your shape and draw two or three in a row!",
-    "long_instructions": "[][0] _“Now, let’s draw more than one.”_\n\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \n\n-   If you jump forward by **less** than the width of your shape, they might overlap\n-   If you jump forward by **more** than the width of your shape, you will get a gap\n\n<hr/>\n\nYour row might end up straight like with these:\n\n[][1]\n[][2]\n[][3]\n<br/>  <br/>\n\nOr, your shapes might move around like one of these: \n\n[][4]\n[][5]\n[][6]",
+    "long_instructions": "[][0] _“Now, let’s draw more than one.”_\n\nNow take your shape and draw two or three in a row by jumping forward some number of pixels.  \n\n-   If you jump forward by **less** than the width of your shape, they might overlap\n-   If you jump forward by **more** than the width of your shape, you will get a gap\n\n<hr/>\n\nYour row might end up straight like with these:\n\n[][1]\n[][2]\n[][3]\n[][4]  [][5]\n\nOr, your shapes might move around like one of these: \n\n[][6]\n[][7]\n[][8]",
     "authored_hints": {
       "courseD_artist_project2_a": "Remember that `move forward` draws a line, while `jump forward` does not.",
       "courseD_artist_project2_b": "After you draw and move the first time, you can repeat the code by adding a loop around the outside."
