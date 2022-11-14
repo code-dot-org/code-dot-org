@@ -1018,9 +1018,9 @@
           "rubric_performance_level_4": "La aplicación no recibe información de ninguno de los elementos de la pantalla."
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "rubric_key_concept": "Actualizar las propiedades y el texto de los elementos de diseño mediante código",
+          "rubric_key_concept": "Actualiza las propiedades y el texto de los elementos de diseño mediante código",
           "rubric_performance_level_1": "La aplicación terminada coincide con la descripción, y cada botón actualiza correctamente el icono y el texto",
-          "rubric_performance_level_2": "La aplicación terminada es similar a la descripción, pero tiene al menos un elemento incompleto (por ejemplo, no actualizar el texto o no actualizar el color del icono)",
+          "rubric_performance_level_2": "La aplicación terminada es similar a la descripción, pero tiene al menos un elemento incompleto (por ejemplo, no actualiza el texto o no actualiza el color del icono)",
           "rubric_performance_level_3": "La aplicación terminada puede tener algunos elementos que parecen correctos, pero la mayoría de los elementos no se actualizan correctamente o la aplicación está sólo parcialmente terminada.\n",
           "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
         },
@@ -1058,6 +1058,13 @@
           "rubric_performance_level_2": "La aplicación muestra el valor de cada sensor, pero puede que no sea en tiempo real o que los sensores sean de 0-1023 en lugar de 0-10",
           "rubric_performance_level_3": "A la aplicación le falta al menos uno de los valores del sensor",
           "rubric_performance_level_4": "La aplicación no ha sido inicializada"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "Conecta botones externos al Circuit Playground y crea aplicaciones que utilicen botones externos",
+          "rubric_performance_level_1": "El programa coincide en la descripción con 3 eventos que ocultan los cuadrados azules en la aplicación. Los botones están conectados correctamente usando un cable de tierra para señalar cada botón",
+          "rubric_performance_level_2": "Algunos de los botones ocultan los cuadrados azules, pero no todos funcionan correctamente. O bien, los botones están conectados correctamente pero pueden utilizar varios cables de tierra en lugar de uno solo.",
+          "rubric_performance_level_3": "Los botones están enganchados, pero los cuadrados azules no se ocultan al pulsar los botones",
+          "rubric_performance_level_4": "La aplicación no se ha puesto en marcha o no hay botones conectados al Circuit Playground"
         }
       }
     }

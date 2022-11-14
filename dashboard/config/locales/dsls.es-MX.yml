@@ -15172,38 +15172,54 @@ es-MX:
             útiles al escribir este programa?
       CSD U6 test debugging multi:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: El botón derecho está roto en la placa.
+          correct: true
+        - text: Los altavoces del ordenador no funcionan.
+        - text: El nombre del archivo de la canción triste es incorrecto.
+        - text: La placa no está conectada al ordenador.
+        - text: El manejador de eventos no tiene los parámetros correctos.
         questions:
-        - {}
+        - text: Un equipo está creando un prototipo que reproduce un sonido feliz
+            en el ordenador cuando se pulsa el botón izquierdo de la placa y una canción
+            triste en el ordenador cuando se pulsa el botón derecho de la placa. La
+            canción feliz funciona, pero la triste no. Elige un problema de HARDWARE
+            que pueda estar causando este fallo.
       CSD U6 test debugging multi_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: El botón derecho está roto en la placa.
+          correct: true
+        - text: Los altavoces del ordenador no funcionan.
+        - text: El nombre del archivo de la canción triste es incorrecto.
+        - text: La placa no está conectada al ordenador.
+        - text: El manejador de eventos no tiene los parámetros correctos.
         questions:
-        - {}
+        - text: Un equipo está creando un prototipo que reproduce un sonido feliz
+            en el ordenador cuando se pulsa el botón izquierdo de la placa y una canción
+            triste en el ordenador cuando se pulsa el botón derecho de la placa. La
+            canción feliz funciona, pero la triste no. Elige un problema de HARDWARE
+            que pueda estar causando este fallo.
       CSD U6 test debugging multi_2022:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: El botón derecho está roto en la placa.
+          correct: true
+        - text: Los altavoces del ordenador no funcionan.
+        - text: El nombre del archivo de la canción triste es incorrecto.
+        - text: La placa no está conectada al ordenador.
+        - text: El manejador de eventos no tiene los parámetros correctos.
         questions:
-        - {}
+        - text: Un equipo está creando un prototipo que reproduce un sonido feliz
+            en el ordenador cuando se pulsa el botón izquierdo de la placa y una canción
+            triste en el ordenador cuando se pulsa el botón derecho de la placa. La
+            canción feliz funciona, pero la triste no. Elige un problema de HARDWARE
+            que pueda estar causando este fallo.
       CSD U6 test events multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: I sólo
+        - text: II sólo
+        - text: I y II
+        - text: I y III
+          correct: true
+        - text: I, II, y III
         questions:
         - text: "¿Qué debe saber un programador al crear un controlador de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
@@ -15211,76 +15227,120 @@ es-MX:
             Qué debe hacer el programa cuando se activa el evento"
       CSD U6 test events multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: I sólo
+        - text: II sólo
+        - text: I y II
+        - text: I y III
+          correct: true
+        - text: I, II, y III
         questions:
-        - {}
+        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
+            Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
+            Qué debe hacer el programa cuando se dispara el evento"
       CSD U6 test events multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: I sólo
+        - text: II sólo
+        - text: I y II
+        - text: I y III
+          correct: true
+        - text: I, II, y III
         questions:
-        - {}
+        - text: "¿Qué necesita saber un programador al crear un escuchador de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. El evento que activará el cambio  \n&nbsp;&nbsp;&nbsp;II.
+            Cuando se activará el evento en el programa    \n&nbsp;&nbsp;&nbsp;III.
+            Qué debe hacer el programa cuando se dispara el evento"
       CSD U6 test hardware multi2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: El hardware debe ser controlado físicamente por una persona, y el
+            software puede ser controlado con código.
+        - text: El hardware permite que el software interactúe con el mundo físico
+            de muchas maneras diferentes.
+          correct: true
+        - text: El hardware es el tipo de software utilizado en los prototipos físicos.
+        - text: El hardware y el software trabajan juntos para que los dispositivos
+            informáticos sean útiles.
+          correct: true
+        - text: En los dispositivos informáticos, el hardware controla la salida y
+            el software la entrada.
         questions:
-        - {}
+        - text: "¿Qué DOS RESPUESTAS describen mejor la relación entre el hardware
+            (dispositivos físicos) y el software (programas)?"
       CSD U6 test hardware multi2_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: El hardware debe ser controlado físicamente por una persona, y el
+            software puede ser controlado con código.
+        - text: El hardware permite que el software interactúe con el mundo físico
+            de muchas maneras diferentes.
+          correct: true
+        - text: El hardware es el tipo de software utilizado en los prototipos físicos.
+        - text: El hardware y el software trabajan juntos para que los dispositivos
+            informáticos sean útiles.
+          correct: true
+        - text: En los dispositivos informáticos, el hardware controla la salida y
+            el software la entrada.
         questions:
-        - {}
+        - text: "¿Qué DOS RESPUESTAS describen mejor la relación entre el hardware
+            (dispositivos físicos) y el software (programas)?"
       CSD U6 test hardware multi2_2022:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - correct: true
-        - {}
+        - text: El hardware debe ser controlado físicamente por una persona, y el
+            software puede ser controlado con código.
+        - text: El hardware permite que el software interactúe con el mundo físico
+            de muchas maneras diferentes.
+          correct: true
+        - text: El hardware es el tipo de software utilizado en los prototipos físicos.
+        - text: El hardware y el software trabajan juntos para que los dispositivos
+            informáticos sean útiles.
+          correct: true
+        - text: En los dispositivos informáticos, el hardware controla la salida y
+            el software la entrada.
         questions:
-        - {}
+        - text: "¿Qué DOS RESPUESTAS describen mejor la relación entre el hardware
+            (dispositivos físicos) y el software (programas)?"
       CSD U6 test parameters multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pueden utilizarse con dispositivos físicos o hardware.
+        - text: Pueden utilizarse dentro de un bucle `for`.
+        - text: Pueden utilizarse como solución general para problemas con diferentes
+            detalles específicos.
+          correct: true
+        - text: Pueden utilizarse para ejecutar el mismo código en muchos lugares
+            diferentes del programa.
+        - text: Pueden utilizarse para detectar cuándo el usuario ha proporcionado
+            información.
         questions:
-        - {}
+        - text: "¿Qué hace que las funciones con parámetros sean más útiles que las
+            funciones sin parámetros?"
       CSD U6 test parameters multi_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pueden utilizarse con dispositivos físicos o hardware.
+        - text: Pueden utilizarse dentro de un bucle `for`.
+        - text: Pueden utilizarse como solución general para problemas con diferentes
+            detalles específicos.
+          correct: true
+        - text: Pueden utilizarse para ejecutar el mismo código en muchos lugares
+            diferentes del programa.
+        - text: Pueden utilizarse para detectar cuándo el usuario ha proporcionado
+            información.
         questions:
-        - {}
+        - text: "¿Qué hace que las funciones con parámetros sean más útiles que las
+            funciones sin parámetros?"
       CSD U6 test parameters multi_2022:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Pueden utilizarse con dispositivos físicos o hardware.
+        - text: Pueden utilizarse dentro de un bucle `for`.
+        - text: Pueden utilizarse como solución general para problemas con diferentes
+            detalles específicos.
+          correct: true
+        - text: Pueden utilizarse para ejecutar el mismo código en muchos lugares
+            diferentes del programa.
+        - text: Pueden utilizarse para detectar cuándo el usuario ha proporcionado
+            información.
         questions:
-        - {}
+        - text: "¿Qué hace que las funciones con parámetros sean más útiles que las
+            funciones sin parámetros?"
       CSD User Centered Design Post-Project Test_2022:
         title: 'Diseño Centrado en el Usuario: Prueba Fin de Proyecto'
       CSD Web Development Post-Project Test_pilot_2022:
@@ -15501,13 +15561,18 @@ es-MX:
         - {}
       Student End of Unit Survey - Q1_2022:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: 'todos los conceptos '
+          correct: true
+        - text: la mayoría de los conceptos, pero no todos
+          correct: true
+        - text: aproximadamente la mitad de los conceptos, pero no todos
+          correct: true
+        - text: algunos de los conceptos, pero no la mayoría
+          correct: true
+        - text: muy pocos o ninguno de los conceptos
+          correct: true
         questions:
-        - {}
+        - text: Pensando en lo que he aprendido en esta unidad, siento que entiendo...
       Student End of Unit Survey - Q2_2022:
         answers:
         - text: Totalmente de acuerdo
@@ -15525,7 +15590,7 @@ es-MX:
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - {}
+        - text: Puedo ser realmente yo mismo en esta clase de informática.
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - text: Totalmente de acuerdo
@@ -16000,7 +16065,7 @@ es-MX:
         - text: Totalmente en desacuerdo
           correct: true
         questions:
-        - {}
+        - text: Puedo ser realmente yo mismo en esta clase de informática.
       comfortable-in-cs-class:
         answers:
         - text: Totalmente de acuerdo
@@ -16716,6 +16781,26 @@ es-MX:
           **Instrucciones para los estudiantes acerca de como desbloquear la encuesta:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
 
           Si los estudiantes hacen clic en el enlace y ven un mensaje de error que indica que la encuesta está bloqueada, siga los pasos de las instrucciones anteriores para desbloquear la encuesta para los estudiantes.
+
+        markdown: |+
+          # Encuesta de Fin de Curso en Descubrimientos de Informática
+
+          **Tu opinión es importante para nosotros** La utilizamos para:
+
+          * Comprender tu experiencia
+          * Realizar mejoras en el curso
+
+          ¡Gracias por dedicar tu tiempo a mejorar Descubrimientos de Informática!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2022/lockable/1/levels/1/page/1" target="top">Pulsa aquí para completar la Encuesta Fin de Curso en Descubrimientos de Informática (CS)</a>
+
+          (se abre en una pestaña nueva)
+
+          <br>
+
+
+
+
 
       csd-post-survey-q26:
         answers:
@@ -24980,6 +25065,10 @@ es-MX:
           **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       CSD U3 - Design a Game 1 - ExampleChoice_2022:
         description: |-
           Ahora que tienes todos los conocimientos necesarios, ¡es el momento de crear tu propio juego!
@@ -25004,26 +25093,46 @@ es-MX:
           **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una encuesta rápida para el profesor
 
           ## [Pulsa aquí para ver la encuesta del profesorado](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd3-2022:
         teacher_markdown: |
           **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd4-2022:
         teacher_markdown: |
           **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd5-2022:
         teacher_markdown: |-
           **Encuesta del profesor al finalizar la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
 
           ## [Pulsa aquí para ver la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
         teacher_markdown: |
           **Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor.
 
           ## [Pulsa aquí para ver la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
       courseF_groups_freeplay_2022_pilot_-2022-2:
         description: "¡Ahora puedes usar lo que has aprendido para hacer lo que quieras!
           ¡Crea un programa interactivo con muchos sprites!"
@@ -25287,3 +25396,24 @@ es-MX:
           <small>
           <em>Code.org se toma en serio tu privacidad.</em> Tus respuestas aquí, se mantendrán  <strong>anónimas</strong>. El profesor puede ver las respuestas de toda la clase, pero sin nombres.
           </small>
+      Student End of Unit Survey - Intro+TeacherMD_csd6-2022:
+        markdown: |
+          ### Por favor, dedica un momento a responder a estas **tres preguntas rápidas**.
+
+          En Code.org nos tomamos muy en serio tu privacidad. Tus respuestas aquí se mantendrán <strong>anónimas</strong>. Tu profesor puede ver las respuestas de toda la clase, pero sin nombres.
+        teacher_markdown: |
+          **Encuesta del profesor al final de la unidad:** Mientras tus alumnos completan la encuesta, te agradeceríamos que completaras una rápida encuesta para el profesor
+
+          ## [Pulsa aquí para la encuesta del profesor](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6)
+      Student End of Unit Survey_csd2-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd3-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd4-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd5-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd6-2022:
+        title: "¡Encuesta Final de la Unidad!"
+      Student End of Unit Survey_csd7-2022:
+        title: "¡Encuesta Final de la Unidad!"

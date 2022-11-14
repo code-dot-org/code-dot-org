@@ -206,12 +206,6 @@ te:
           UNIT:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
-      Dancelab_everySecondsRange:
-        text: 'ప్రతిదీ {N} {UNIT} నుండి {START} వరకు {STOP} '
-        options:
-          UNIT:
-            measures: మెజర్స్
-            seconds: సెకండ్లు
       Dancelab_everyVerseChorus:
         text: 'ప్రతి {UNIT} '
         options:
@@ -845,6 +839,11 @@ te:
         text: సెటప్
       Dancelab_whenSetup2:
         text: సెటప్
+      DansBlocks_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
       gamelab_atTime:
         options:
           UNIT:

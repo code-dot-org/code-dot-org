@@ -11,20 +11,75 @@
           "path": "pop",
           "imageSrc": "thumbnail.png",
           "sounds": [
-            { "name": "Cafe Beat", "src": "cafe_beat", "length": 2},
-            { "name": "Acoustic Bass", "src": "acoustic_bass" , "length": 2},
-            { "name": "Bold Beat", "src": "bold_beat", "length": 2},
-            { "name": "Strings", "src": "strings", "length": 1},
-            { "name": "Clap", "src": "clap", "length": 0.25},
-            { "name": "Hey!", "src": "hey", "length": 0.5},
-            { "name": "Rhythm Guitar", "src": "rhythm_guitar", "length": 2},
-            { "name": "Picked Guitar", "src": "picked_guitar", "length": 2},
-            { "name": "Shake Beat", "src": "shake_beat", "length": 2},
-            { "name": "Sugar Beat", "src": "sugar_beat", "length": 2},
-            { "name": "Boom Bass", "src": "boom_bass", "length": 2},
-            { "name": "Acoustic Bass 2", "src": "acoustic_alternate_bass", "length": 2},
-            { "name": "Bold Beat 2", "src": "bold_alternate_beat", "length": 2},
-            { "name": "Sugar Beat 2", "src": "sugar_alternate_beat", "length": 2}
+            {
+              "name": "Cafe Beat",
+              "src": "cafe_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Acoustic Bass",
+              "src": "acoustic_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Bold Beat",
+              "src": "bold_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {"name": "Strings", "src": "strings", "length": 1, "type": "lead"},
+            {"name": "Clap", "src": "clap", "length": 0.25, "type": "fx"},
+            {"name": "Hey!", "src": "hey", "length": 0.5, "type": "fx"},
+            {
+              "name": "Rhythm Guitar",
+              "src": "rhythm_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Picked Guitar",
+              "src": "picked_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Shake Beat",
+              "src": "shake_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Sugar Beat",
+              "src": "sugar_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Boom Bass",
+              "src": "boom_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Acoustic Bass 2",
+              "src": "acoustic_alternate_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Bold Beat 2",
+              "src": "bold_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Sugar Beat 2",
+              "src": "sugar_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            }
           ]
         },
         {
@@ -32,17 +87,67 @@
           "path": "dance",
           "imageSrc": "thumbnail.png",
           "sounds": [
-            { "name": "Disco Beat", "src": "disco_beat", "length": 2},
-            { "name": "Funky Bass", "src": "funky_bass", "length": 2},
-            { "name": "Groovy Beat", "src": "groovy_beat", "length": 2},
-            { "name": "Lucky Guitar", "src": "lucky_guitar", "length": 2},
-            { "name": "Swish", "src": "swish", "length": 2},
-            { "name": "Groovy Beat 2", "src": "groovy_alternate_beat", "length": 2},
-            { "name": "Reggaeton Beat", "src": "reggaeton_beat", "length": 2},
-            { "name": "Syncopated Beat", "src": "syncopated_beat", "length": 2},
-            { "name": "Reggaeton Bass", "src": "reggaeton_bass", "length": 2},
-            { "name": "Reggaeton Bass 2", "src": "reggaeton_alternate_bass", "length": 2},
-            { "name": "Reggaeton Beat 2", "src": "reggaeton_alternate_beat", "length": 2}
+            {
+              "name": "Disco Beat",
+              "src": "disco_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Funky Bass",
+              "src": "funky_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Groovy Beat",
+              "src": "groovy_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Lucky Guitar",
+              "src": "lucky_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {"name": "Swish", "src": "swish", "length": 2, "type": "fx"},
+            {
+              "name": "Groovy Beat 2",
+              "src": "groovy_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Reggaeton Beat",
+              "src": "reggaeton_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Syncopated Beat",
+              "src": "syncopated_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Reggaeton Bass",
+              "src": "reggaeton_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Reggaeton Bass 2",
+              "src": "reggaeton_alternate_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Reggaeton Beat 2",
+              "src": "reggaeton_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            }
           ]
         },
         {
@@ -50,18 +155,68 @@
           "path": "rock",
           "imageSrc": "thumbnail.png",
           "sounds": [
-            { "name": "Amped Bass", "src": "amped_bass", "length": 2},
-            { "name": "Arena Beat", "src": "arena_beat", "length": 2},
-            { "name": "Riff Guitar", "src": "riff_guitar", "length": 2},
-            { "name": "Gutter Beat", "src": "gutter_beat", "length": 2},
-            { "name": "Power Guitar", "src": "power_guitar", "length": 2},
-            { "name": "Punk Beat", "src": "punk_beat", "length": 2},
-            { "name": "Shredded Guitar", "src": "shredded_guitar", "length": 2},
-            { "name": "Crash", "src": "crash", "length": 2},
-            { "name": "Feedback", "src": "feedback", "length": 1},
-            { "name": "Amped Bass 2", "src": "amped_alternate_bass", "length": 1},
-            { "name": "Punk Beat 2", "src": "punk_alternate_beat", "length": 2},
-            { "name": "Arena Beat 2", "src": "arena_alternate_beat", "length": 2}
+            {
+              "name": "Amped Bass",
+              "src": "amped_bass",
+              "length": 2,
+              "type": "bass"
+            },
+            {
+              "name": "Arena Beat",
+              "src": "arena_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Riff Guitar",
+              "src": "riff_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Gutter Beat",
+              "src": "gutter_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Power Guitar",
+              "src": "power_guitar",
+              "length": 2,
+              "type": "lead"
+            },
+            {
+              "name": "Punk Beat",
+              "src": "punk_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Shredded Guitar",
+              "src": "shredded_guitar",
+              "length": 2,
+              "type": "beat"
+            },
+            {"name": "Crash", "src": "crash", "length": 2, "type": "fx"},
+            {"name": "Feedback", "src": "feedback", "length": 1, "type": "fx"},
+            {
+              "name": "Amped Bass 2",
+              "src": "amped_alternate_bass",
+              "length": 1,
+              "type": "fx"
+            },
+            {
+              "name": "Punk Beat 2",
+              "src": "punk_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Arena Beat 2",
+              "src": "arena_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            }
           ]
         },
         {
@@ -69,15 +224,45 @@
           "path": "hiphop",
           "imageSrc": "thumbnail.png",
           "sounds": [
-            { "name": "Vinyl Beat", "src": "vinyl_beat", "length": 2},
-            { "name": "Brass", "src": "brass", "length": 0.25},
-            { "name": "Horns", "src": "horns", "length": 2},
-            { "name": "Piano Chords", "src": "piano_chords", "length": 4},
-            { "name": "Relaxed Beat", "src": "relaxed_beat", "length": 4},
-            { "name": "Sub Beat", "src": "sub_beat", "length": 2},
-            { "name": "Hats Beat", "src": "hats_beat", "length": 4},
-            { "name": "Swoosh", "src": "swoosh", "length": 2},
-            { "name": "Relaxed Beat 2", "src": "relaxed_alternate_beat", "length": 2}
+            {
+              "name": "Vinyl Beat",
+              "src": "vinyl_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {"name": "Brass", "src": "brass", "length": 0.25, "type": "lead"},
+            {"name": "Horns", "src": "horns", "length": 2, "type": "lead"},
+            {
+              "name": "Piano Chords",
+              "src": "piano_chords",
+              "length": 4,
+              "type": "lead"
+            },
+            {
+              "name": "Relaxed Beat",
+              "src": "relaxed_beat",
+              "length": 4,
+              "type": "beat"
+            },
+            {
+              "name": "Sub Beat",
+              "src": "sub_beat",
+              "length": 2,
+              "type": "beat"
+            },
+            {
+              "name": "Hats Beat",
+              "src": "hats_beat",
+              "length": 4,
+              "type": "beat"
+            },
+            {"name": "Swoosh", "src": "swoosh", "length": 2, "type": "fx"},
+            {
+              "name": "Relaxed Beat 2",
+              "src": "relaxed_alternate_beat",
+              "length": 2,
+              "type": "beat"
+            }
           ]
         }
       ]

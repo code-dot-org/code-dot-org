@@ -181,6 +181,8 @@ def restore_redacted_files
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
           plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+        elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
+          plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
@@ -390,6 +392,23 @@ def distribute_translations(upload_manifests)
       sanitize_file_and_write(loc_file, destination)
     end
 
+    ### Merge ml-playground datasets into apps' ailab JSON
+    Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
+      ailab_path = "apps/i18n/ailab/#{js_locale}.json"
+      name = File.basename(loc_file, '.json')
+      relative_path = loc_file.delete_prefix(locale_dir)
+      next unless file_changed?(locale, relative_path)
+
+      external_translations = JSON.parse(File.read(loc_file))
+      next if external_translations.empty?
+
+      # Merge new translations
+      existing_translations = JSON.parse(File.read(ailab_path))
+      existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
+      existing_translations['datasets'][name] = external_translations
+      sanitize_data_and_write(existing_translations, ailab_path)
+    end
+
     ### Animation library
     spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
     if file_changed?(locale, spritelab_animation_translation_path)
@@ -510,7 +529,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = %w(applab calc eval gamelab netsim weblab)
+  untranslated_apps = %w(calc eval netsim)
 
   PegasusLanguages.get_locale.each do |prop|
     next unless prop[:locale_s] != 'en-US'

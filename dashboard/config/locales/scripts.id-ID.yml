@@ -5593,6 +5593,8 @@ id:
               display_name: Survei
             lessonGroup-3:
               display_name: Konten
+            lessonGroup-5:
+              display_name: Pelajaran Alternatif
         csd1-2023:
           lesson_groups:
             lessonGroup-2:

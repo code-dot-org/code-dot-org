@@ -2689,6 +2689,30 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nový blok!"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Sem pridaj blok „playSound“"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Sem pridaj blok „playSound“"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
         }
       }
     }

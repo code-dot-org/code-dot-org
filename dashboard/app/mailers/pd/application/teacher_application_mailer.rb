@@ -1,6 +1,6 @@
 module Pd::Application
   class TeacherApplicationMailer < ActionMailer::Base
-    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Jared Fritz <jared@code.org>'
+    CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Becky Kenemuth <teacher@code.org>'
     default from: 'Code.org <noreply@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
 
@@ -29,13 +29,13 @@ module Pd::Application
         mail(
           to: @application.formatted_applicant_email,
           reply_to: @application.formatted_partner_contact_email,
-          subject: "REMINDER: Action Needed: Your principal has not yet submitted your approval form"
+          subject: "REMINDER - Action Needed: Your application needs Administrator/School Leader approval"
         )
       else
         mail(
           from: 'Code.org <teacher@code.org>',
           to: @application.formatted_applicant_email,
-          subject: "REMINDER: Action Needed: Your principal has not yet submitted your approval form"
+          subject: "REMINDER - Action Needed: Your application needs Administrator/School Leader approval"
         )
       end
     end
@@ -47,7 +47,7 @@ module Pd::Application
         to: @application.formatted_principal_email,
         cc: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Action Needed: Your teacher has applied to" \
+        subject: "Action Needed: #{@application.applicant_full_name} has applied to" \
             " #{@application.effective_regional_partner_name}'s Professional Learning Program!"
       )
     end
@@ -67,29 +67,20 @@ module Pd::Application
       @application = teacher_application
 
       mail(
-        from: 'Jared Fritz <teacher@code.org>',
+        from: 'Becky Kenemuth <teacher@code.org>',
         to: @application.formatted_partner_contact_email || CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
-        subject: 'A principal has completed the principal approval form'
+        subject: "#{@application.applicant_full_name} has received Administrator/School Leader approval!"
       )
     end
 
-    def accepted_no_cost_registration(teacher_application)
+    def accepted(teacher_application)
       @application = teacher_application
+      congrats_from = @application.regional_partner ? "#{@application.effective_regional_partner_name} and " : ""
 
       mail(
         to: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Congratulations from #{@application.effective_regional_partner_name} and Code.org!"
-      )
-    end
-
-    def registration_sent(teacher_application)
-      @application = teacher_application
-
-      mail(
-        to: @application.formatted_applicant_email,
-        reply_to: @application.formatted_partner_contact_email,
-        subject: "Register for the #{@application.effective_regional_partner_name} #{@application.course_name} Summer Workshop"
+        subject: "Congratulations from #{congrats_from}Code.org!"
       )
     end
 
@@ -106,16 +97,6 @@ module Pd::Application
     end
 
     def declined(teacher_application)
-      @application = teacher_application
-
-      mail(
-        to: @application.formatted_applicant_email,
-        reply_to: @application.formatted_partner_contact_email,
-        subject: "Your Professional Learning Program application status"
-      )
-    end
-
-    def waitlisted(teacher_application)
       @application = teacher_application
 
       mail(

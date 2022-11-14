@@ -4,16 +4,6 @@ import xml from './xml';
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
 
-// Used for custom field type ClampedNumber(,)
-// Captures two optional arguments from the type string
-// Allows:
-//   ClampedNumber(x,y)
-//   ClampedNumber( x , y )
-//   ClampedNumber(,y)
-//   ClampedNumber(x,)
-//   ClampedNumber(,)
-const CLAMPED_NUMBER_REGEX = /^ClampedNumber\(\s*([\d.]*)\s*,\s*([\d.]*)\s*\)$/;
-
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
@@ -356,7 +346,7 @@ exports.mathBlockXml = function(type, inputs, titles) {
 };
 
 /**
- * Generate xml for a functional defintion
+ * Generate xml for a functional definition
  * @param {string} name The name of the function
  * @param {string} outputType Function's output type
  * @param {Object<string, string>[]} argList Name and type for each arg
@@ -774,11 +764,8 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
-      const field = new BlocklyField(
-        '',
-        getFieldInputChangeHandler(blockly, inputConfig.type)
-      );
+      const {type} = inputConfig;
+      const field = Blockly.cdoUtils.getField(type);
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(field, inputConfig.name);
@@ -793,26 +780,6 @@ const STANDARD_INPUT_TYPES = {
     }
   }
 };
-
-/**
- * Given a type string for a field input, returns an appropriate change handler function
- * for that type, which customizes the input field and provides validation on blur.
- * @param {Blockly} blockly
- * @param {string} type
- * @returns {?function}
- */
-function getFieldInputChangeHandler(blockly, type) {
-  const clampedNumberMatch = type.match(CLAMPED_NUMBER_REGEX);
-  if (clampedNumberMatch) {
-    const min = parseFloat(clampedNumberMatch[1]);
-    const max = parseFloat(clampedNumberMatch[2]);
-    return Blockly.FieldTextInput.clampedNumberValidator(min, max);
-  } else if ('Number' === type) {
-    return blockly.FieldTextInput.numberValidator;
-  } else {
-    return undefined;
-  }
-}
 
 const groupInputsByRow = function(inputs, inputTypes = STANDARD_INPUT_TYPES) {
   const inputRows = [];
