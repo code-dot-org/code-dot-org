@@ -143,7 +143,7 @@ const blockPasteFromStorageShortcut = function() {
       // an error due to the lack of a selection.
       e.preventDefault();
       const copyData = localStorage.getItem('blocklyStash');
-      Blockly.mainBlockSpace.pasteBlock_(false, JSON.parse(copyData));
+      Blockly.mainBlockSpace.paste(JSON.parse(copyData));
       return true;
     }
   };

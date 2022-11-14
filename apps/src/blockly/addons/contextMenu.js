@@ -47,7 +47,7 @@ const registerBlockPasteFromStorage = function() {
     },
     callback: function(scope) {
       const copyData = localStorage.getItem('blocklyStash');
-      Blockly.mainBlockSpace.pasteBlock_(false, JSON.parse(copyData));
+      Blockly.mainBlockSpace.paste(JSON.parse(copyData));
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'blockPasteFromStorage',
