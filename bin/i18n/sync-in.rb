@@ -161,7 +161,6 @@ def get_i18n_strings(level)
       teacher_markdown
       placeholder
       title
-      start_html
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end
@@ -539,7 +538,6 @@ def select_redactable(i18n_strings)
     long_instructions
     short_instructions
     teacher_markdown
-    start_html
   )
 
   redactable = i18n_strings.select do |key, _|
@@ -574,7 +572,7 @@ def redact_level_file(source_path)
     file.write(JSON.pretty_generate(redactable_data))
   end
 
-  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly', 'startHtml'])
+  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
 
   File.open(source_path, 'w') do |source_file|
     source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
