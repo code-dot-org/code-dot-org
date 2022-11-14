@@ -8513,6 +8513,10 @@ en:
               name: 'Module 2 post-work: Understanding Unit 4 content'
             lesson-4:
               name: 'Module 4 post-work: 2D Arrays in Unit 5 and FRQs'
+            lesson-5:
+              name: 'Module 5 post-work: The Unit 5 Project'
+            lesson-6:
+              name: 'Module 6 post-work: String methods in Unit 6'
         csa-labs-2022:
           lesson_groups:
             lessonGroup-2:
@@ -8851,7 +8855,7 @@ en:
             lesson-13:
               name: Two-Way Selection Statements
             lesson-14:
-              name: Expanding Conditions
+              name: Instantiating Objects
             lesson-15:
               name: Methods with Parameters
             lesson-16:
@@ -8913,6 +8917,8 @@ en:
               name: Unit 2 Assessment
             lesson-13:
               name: Store Management Project [1-Day Version]
+            lesson-14:
+              name: The this Keyword
           lesson_groups:
             lessonGroup-2:
               display_name: Content
