@@ -148,6 +148,28 @@ export const baseToolbox = {
               }
             }
           }
+        },
+        {
+          kind: 'block',
+          type: 'math_modulo',
+          inputs: {
+            DIVIDEND: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 3
+                }
+              }
+            },
+            DIVISOR: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 2
+                }
+              }
+            }
+          }
         }
       ]
     },
