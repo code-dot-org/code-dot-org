@@ -1,6 +1,6 @@
 name 'CSA U2L3-L3_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Parameterized Constructors'
+description 'Write a parameterized constructor in a class that assigns specific values to the instance variables.'
 
 sublevels
 level 'CSA U2L3-L3a_2023'
