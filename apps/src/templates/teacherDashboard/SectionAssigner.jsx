@@ -52,7 +52,6 @@ class SectionAssigner extends Component {
           <TeacherSectionSelector
             sections={sections}
             onChangeSection={this.onChangeSection}
-            selectedSection={selectedSection}
             forceReload={forceReload}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
