@@ -47,8 +47,23 @@ describe('AddSectionDialog', () => {
       setLoginType,
       setParticipantType,
       handleCancel,
-      availableParticipantTypes: ['student']
+      availableParticipantTypes: ['student'],
+      asyncLoadComplete: true
     };
+  });
+
+  it('shows loading screen if data isnt fully loaded', () => {
+    const wrapper = shallow(
+      <AddSectionDialog
+        {...defaultProps}
+        availableParticipantTypes={['student', 'teacher', 'facilitator']}
+        asyncLoadComplete={false}
+      />
+    );
+    expect(wrapper.find('Spinner').length).to.equal(1);
+    expect(wrapper.find('LoginTypePicker').length).to.equal(0);
+    expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
+    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
   });
 
   it('if login type is set but audience has not shows audience picker', () => {
@@ -62,6 +77,7 @@ describe('AddSectionDialog', () => {
         availableParticipantTypes={['student', 'teacher', 'facilitator']}
       />
     );
+    expect(wrapper.find('Spinner').length).to.equal(0);
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(1);
     expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
@@ -78,6 +94,7 @@ describe('AddSectionDialog', () => {
         section={sectionWithLoginAndParticipantType}
       />
     );
+    expect(wrapper.find('Spinner').length).to.equal(0);
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
     expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
