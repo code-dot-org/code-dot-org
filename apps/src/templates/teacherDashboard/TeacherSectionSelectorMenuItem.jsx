@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
 import FontAwesome from './../FontAwesome';
 import color from '../../util/color';
@@ -10,7 +10,7 @@ import {
   unassignSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-function TeacherSectionSelectorMenuItem({
+export function UnconnectedTeacherSectionSelectorMenuItem({
   section,
   onClick,
   courseId,
@@ -47,11 +47,11 @@ function TeacherSectionSelectorMenuItem({
   const onAssignClick = e => {
     e.preventDefault();
     e.stopPropagation();
-    console.log(section);
     setIsPending(true);
     if (section.isAssigned) {
       unassignSection(section.id).then(() => setIsPending(false));
     } else {
+      console.log('hello');
       assignToSection(
         section.id,
         courseId,
@@ -81,7 +81,6 @@ function TeacherSectionSelectorMenuItem({
             ? `Unassign course from ${section.name}`
             : `Assign course to ${section.name}`
         }
-        aria-role="button"
       >
         {getIcon()}
       </span>
@@ -91,7 +90,7 @@ function TeacherSectionSelectorMenuItem({
   );
 }
 
-TeacherSectionSelectorMenuItem.propTypes = {
+UnconnectedTeacherSectionSelectorMenuItem.propTypes = {
   section: sectionForDropdownShape,
   onClick: PropTypes.func.isRequired,
   courseId: PropTypes.number,
@@ -126,4 +125,4 @@ export default connect(
     assignToSection,
     unassignSection
   }
-)(TeacherSectionSelectorMenuItem);
+)(UnconnectedTeacherSectionSelectorMenuItem);

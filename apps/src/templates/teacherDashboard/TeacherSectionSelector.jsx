@@ -30,11 +30,6 @@ export default class TeacherSectionSelector extends Component {
     targetPoint: {top: 0, left: 0}
   };
 
-  handleMouseDown = e => {
-    // Prevent the native dropdown menu from opening.
-    e.preventDefault();
-  };
-
   handleKeyDown = e => {
     if (e.key === 'Enter') {
       this.handleClick();
@@ -75,7 +70,6 @@ export default class TeacherSectionSelector extends Component {
   render() {
     const {
       sections,
-      selectedSection,
       courseOfferingId,
       courseVersionId,
       courseId,
@@ -102,7 +96,6 @@ export default class TeacherSectionSelector extends Component {
           ref={div => (this.select = div)}
           style={styles.dropdown}
           tabIndex="0"
-          aria-role="button"
         >
           <span>{dropdownText}</span>
           <FontAwesome style={{marginTop: 3}} icon="caret-down" />
@@ -119,8 +112,8 @@ export default class TeacherSectionSelector extends Component {
                 section={section}
                 onClick={() => this.chooseMenuItem(section)}
                 key={section.id}
-                courseId={this.props.courseId}
-                scriptId={this.props.scriptId}
+                courseId={courseId}
+                scriptId={unitId}
                 courseOfferingId={this.props.courseOfferingId}
                 courseVersionId={this.props.courseVersionId}
               />
