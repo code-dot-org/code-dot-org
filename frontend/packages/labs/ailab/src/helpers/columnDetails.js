@@ -1,3 +1,5 @@
+import I18n from "../i18n";
+
 /* Helper functions for getting information about a column and its data. */
 
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "../constants.js";
@@ -67,7 +69,7 @@ export function getColumnDescription(columnId, metadata, trainedModelDetails) {
     const field = metadata.fields.find(field => {
       return field.id === columnId;
     });
-    return field.description;
+    return getLocalizedColumnDescription(metadata.name, columnId, field.description);
   }
 
   // Try using a user-entered column description if available.
@@ -115,4 +117,21 @@ export function getColumnDataToSave(state, column) {
     columnData.min = min;
   }
   return columnData;
+}
+
+export function getLocalizedColumnName(datasetId, columnId) {
+  return getLocalizedColumnAttr(datasetId, columnId, "id", columnId);
+}
+
+function getLocalizedColumnDescription(datasetId, columnId, description) {
+  return getLocalizedColumnAttr(datasetId, columnId, "description", description);
+}
+
+function getLocalizedColumnAttr(datasetId, columnId, attribute, fallback) {
+  return I18n.t(attribute,
+    {
+      scope: ["datasets", datasetId, "fields", columnId],
+      default: fallback
+    }
+  );
 }

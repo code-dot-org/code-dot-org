@@ -16,6 +16,7 @@ import { styles } from "../constants";
 import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 import ScrollableContent from "./ScrollableContent";
 import I18n from "../i18n";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class Predict extends Component {
   static propTypes = {
@@ -27,7 +28,8 @@ class Predict extends Component {
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     getPredictAvailable: PropTypes.bool,
-    extremaByColumn: PropTypes.object
+    extremaByColumn: PropTypes.object,
+    datasetId: PropTypes.string
   };
 
   handleChange = (event, feature) => {
@@ -39,6 +41,7 @@ class Predict extends Component {
   };
 
   render() {
+    const { datasetId, labelColumn, predictedLabel } = this.props;
     return (
       <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
         <div style={styles.largeText}>{I18n.t("predictHeader")}</div>
@@ -51,7 +54,7 @@ class Predict extends Component {
               return (
                 <div style={styles.cardRow} key={index}>
                   <label>
-                    {feature}
+                    {getLocalizedColumnName(datasetId, feature)}
                     &nbsp;
                     <input
                       type="number"
@@ -70,7 +73,7 @@ class Predict extends Component {
             {this.props.selectedCategoricalFeatures.map((feature, index) => {
               return (
                 <div style={styles.cardRow} key={index}>
-                  <div>{feature}&nbsp;</div>
+                  <div>{getLocalizedColumnName(datasetId, feature)}&nbsp;</div>
                   <div>
                     <select
                       onChange={event => this.handleChange(event, feature)}
@@ -120,8 +123,8 @@ class Predict extends Component {
             </div>
             <div style={styles.predictBotRight}>
               <div style={styles.statement}>{I18n.t("predictAIBotPredicts")}</div>
-              <div>{this.props.labelColumn}</div>
-              <div>{this.props.predictedLabel}</div>
+              <div>{getLocalizedColumnName(datasetId, labelColumn)}</div>
+              <div>{getLocalizedColumnName(datasetId, predictedLabel)}</div>
             </div>
           </div>
         )}
@@ -139,7 +142,8 @@ export default connect(
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
     getPredictAvailable: getPredictAvailable(state),
-    extremaByColumn: getExtremaByColumn(state)
+    extremaByColumn: getExtremaByColumn(state),
+    datasetId: state.metadata && state.metadata.name
   }),
   dispatch => ({
     setTestData(feature, value) {

@@ -73,9 +73,11 @@ export const modelCardColumnShape = PropTypes.shape({
   values: PropTypes.array
 });
 
-export const modelCardDatasetDetailsShape = PropTypes.shape({
+export const datasetDetailsShape = PropTypes.shape({
   description: PropTypes.string,
   isUserUploaded: PropTypes.bool.isRequired,
   name: PropTypes.string,
-  numRows: PropTypes.number.isRequired
+  numRows: PropTypes.number.isRequired,
+  potentialUses: PropTypes.string,
+  potentialMisuses: PropTypes.string
 });
