@@ -988,6 +988,7 @@ kn:
     google_oauth:
       login_with_google: 'Google ನೊಂದಿಗೆ Maker ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಲಾಗಿನ್ ಮಾಡಿ'
       enter_code: 'ನಿಮ್ಮ ಡೀಫಾಲ್ಟ್ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ನೀವು Google ಮೂಲಕ ಲಾಗ್ ಇನ್ ಮಾಡಿದಾಗ ಒದಗಿಸಿದ ಕೋಡ್ ಅನ್ನು ನಮೂದಿಸಿ.'
+  code_org_logo_alt: "Code.org ಲೋಗೋ"
   teacher_feedback: "ಶಿಕ್ಷಕರ ಪ್ರತಿಕ್ರಿಯೆ"
   lesson_lock:
     error:
