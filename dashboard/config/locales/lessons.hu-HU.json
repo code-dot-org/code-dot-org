@@ -266,6 +266,9 @@
         "courseb-2022/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
         },
+        "courseb-2022/Programming with Harvester": {
+          "name": "Programozás az aratóval"
+        },
         "courseb-2022/Getting Loopy": {
           "name": "Ciklikusság"
         },
@@ -298,6 +301,9 @@
         "pre-express-2022/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével",
           "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
+        },
+        "pre-express-2022/Programming with Harvester": {
+          "name": "Programozás az aratóval"
         },
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Királyi csata eseményekkel"
@@ -471,6 +477,9 @@
         },
         "coursea-2018/Programming: Happy Maps": {
           "name": "Vidám térképek"
+        },
+        "coursea-2018/Programming in Harvester": {
+          "name": "Programozás az aratóval"
         },
         "coursea-2018/Going Places Safely": {
           "name": "Biztonságos utazás"
@@ -757,6 +766,9 @@
         "courseb-2019/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
         },
+        "courseb-2019/Programming in Harvester": {
+          "name": "Programozás az aratóval"
+        },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Ciklikusság"
         },
@@ -852,6 +864,9 @@
         },
         "pre-express-2019/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével"
+        },
+        "pre-express-2019/Programming in Harvester": {
+          "name": "Programozás az aratóval"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Betüző méh"
@@ -1582,7 +1597,7 @@
           "name": "Kurzus Projekt vége"
         },
         "courseb-2021/Digital Trails": {
-          "name": "Digitális útonalak",
+          "name": "Digitális nyomvonalak",
           "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEzt a leckét eredetileg a Common Sense Education készítette. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAmit online csinálsz, az mindig online marad? A diákok megtanulják, hogy az általuk online megosztott információk digitális lábnyomot hagynak maguk után. Az, hogy ez az útvonal egy keskeny ösvény lesz-e, vagy egy széles út, káros lesz-e számukra, vagy hasznos, attól függ, hogy hogyan kezelik ezt a lábnyomot. A tanulók összehasonlíthatják a különféle nyomvonalakat, és elsajátíthatják a kritikus gondolkodást, ami alapján képesek lesznek megfelelő döntéseket hozni arról, hogy milyen információkat hagynak maguk után a digiális úton.",
           "preparation": "-   Az oktatási anyagokat áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása.",
           "purpose": "A Common Sense digitális állampolgársági tanterve a gyermekekkel, a médiával és a technológiával kapcsolatos legújabb kitatások alapján hat fő témakörrel foglalkozik. Ez a lecke a digitális lábnyomra és identitásra összpontosít. A tanulók megismerik az online megosztás előnyeit és kockázatait, és felfedezik, hogy a digitális személyiség hogyan befolyásolhatja az önismeretet, hírnevet, és a kapcsolatokat.",
@@ -1590,6 +1605,9 @@
         },
         "courseb-2021/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2021/Programming in Harvester": {
+          "name": "Programozás az aratóval"
         },
         "courseb-2021/Loops: Getting Loopy": {
           "name": "Ciklikusság"
@@ -1703,6 +1721,9 @@
         "pre-express-2021/Programming with Rey and BB-8": {
           "name": "Programozás Rey és BB-8 segítségével",
           "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
+        },
+        "pre-express-2021/Programming in Harvester": {
+          "name": "Programozás az aratóval"
         },
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Királyi csata eseményekkel"
@@ -1887,6 +1908,9 @@
         },
         "courseb-2020/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2020/Programming in Harvester": {
+          "name": "Programozás az aratóval"
         },
         "courseb-2020/Loops: Getting Loopy": {
           "name": "Ciklikusság"

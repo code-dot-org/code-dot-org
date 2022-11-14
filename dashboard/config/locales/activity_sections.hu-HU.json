@@ -2004,14 +2004,20 @@
         },
         "ea9709a3-a840-4f3d-b165-90a63ee3c36a": {
           "name": "Kulcsszavak: ",
+          "description": "-   **digitális lábnyom**: lista az online tevékenységiedről, beleértve a felkeresett webhelyeket és az általad megosztott tartalmaidat\n-   **állandóság**: valami, ami örökké tart\n-   **személyes információ**: rólad szóló információ, ami alapján beazonosítható vagy\n-   **nyomvonal**: ösvény vagy útvonal\n\n**A lecke előtt**: Vágd ki a négyzeteket a [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) táblából, az egyes állatok négyzeteit külön kupacokba rendezve.\n\n**Mondd**: _Ma egy videót fogunk megnézni, aminek a címe \"Kövesd a digitális nyomvonalról\".  Hallott már valaki közületek a \"nyomvonalról\"?_\n\nKérd meg a tanulókat, hogy döntsék el, hogy a nyomvonal _egy ösvény vagy egy útvonal, amin követhető vagy_. ([Slide 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
           "progression_name": "Videó: Digitális nyomok követése"
         },
+        "f49f8c12-9094-46d3-ace0-c593eef41ab9": {
+          "description": "**Megtekintés** a [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) video on [Slide 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). A videó közben a tanulók nagyon figyeljenek azokra az információkra, melyek alkalmasak az online megosztásra és melyek nem.\n\n**Mondd**: \\_A videóban a digitális lábnyomról van szó. Mi a digitális lábnyom? \\_\n\nBeszéld meg a tanulókkal, hogy egy **digitális lábnyom** egy _adat (vagy nyom) arról, amit a gyerek online csinál, beleértve a meglátogatott webhelyeket és az általa megosztott dolgokat_! ([Slide 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))\n\n**Kérdés**: \\_Milyen információkat NEM szabad online megosztani? \\_\n\nMiután a diákoknak lehetőségük volt megosztásra, indulhat a [Slide 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) és tisztázzátok: _Személyes információ_ például a _teljes név, lakcím, telefonszám, az életkor, a születésnap, de az iskola neve is._\n\nDefiniáld a **személyes információt**: \\_információk rólad, amelyek felhasználhatók annak azonosítására, hogy pontosan ki vagy. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Kérdés**: \\_Milyen információk alkalmasak online megosztásra? \\_\n\nMiután a tanulóknak lehetőségük volt megosztásra, indulhat a [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) és tisztázzátok: _Személyes adat_ például a _hobbi, a kedvenc dolgok._"
+        },
         "0d42ae11-f1d5-498b-b68f-f559173be646": {
+          "name": "Hol rontottam el?",
           "tips": [
             null
           ]
         },
         "2f04713f-ee5f-4ad7-8696-b8b8b6683fb6": {
+          "description": "**Beszéljétek meg:** Kérdezd meg a diákokat, hogy szerintük te hogyan érzed magad, ha nem tudnak válaszolni egy kérdésedre. Azt sugallhatják, hogy \"őrült” vagy \"szomorú”. Ahelyett, hogy azt mondanád, hogy \"nem”, írd le, hogy kissé őrültnek érezted magad, egy kicsit szomorúnak, és kissé zavartnak. Amikor ezeket az érzelmeket összerakod, \"frusztrációnak” nevezett érzést kapsz. Amikor \"frusztrált” vagy, őrült vagy, szomorú, vagy zavart - és kísértésbe eshetsz, hogy feladd -, de a frusztráció természetes érzés, és arra utal, hogy tanulni készülsz valamit! Ahelyett, hogy abbahagynád, gyakorold a kitartást! Próbálkozz újra és újra. Néhány alkalom után meg fogod érteni, hogy a hibakeresés megoldja a problémáidat!",
           "tips": [
             null
           ]
@@ -2079,6 +2085,9 @@
           "name": "Bevezető",
           "description": "#### Szójegyzék\n\nEz a lecke három új és fontos fogalmat tartalmaz:\n\n-   **Bug** - _Mondd velem: bogárka._\n\nValami, ami rosszul működik. Egy hiba.\n\n-   **Debugging** - _Mondd velem: bogártalanítás._\n\nMagyarul hibakeresés. Meg kell találáni a hibát és javítani kell.\n\n-   **Perzisztencia** - _Mondd velem: perzisztencia._ \n\nMagyarul kitartás. Sokféleképpen kell próbálkozni, különböző módszereket kipróbálva, akár többször is."
         },
+        "e4f833fe-43bb-4538-8ceb-e014712357b2": {
+          "name": "Programozás az aratóval"
+        },
         "90d01840-ab32-4ff1-9603-1a400df6c870": {
           "tips": [
             null
@@ -2104,6 +2113,9 @@
         },
         "aed1d975-8125-46e1-b0dd-6c636c59a8f2": {
           "name": "Tükrözés"
+        },
+        "72a55c86-9f78-4968-bac1-a2e6b3278fa1": {
+          "name": "Ismételd utánam"
         },
         "d9e76adf-9b37-4e7d-b1b2-0910919aa6d3": {
           "progression_name": "Videó: Elszabadul a pörgés"
@@ -3108,6 +3120,9 @@
         },
         "951923b1-6912-477c-b97f-b4f9d6f71f62": {
           "name": "Bevezető"
+        },
+        "4751f547-860d-4156-abbd-9730989185de": {
+          "name": "Programozás az aratóval"
         },
         "30e8181b-a550-477d-9dd7-c9eb8ed6a671": {
           "tips": [
@@ -13087,14 +13102,20 @@
         },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
           "name": "Kulcsszavak: ",
+          "description": "-   **digitális lábnyom**: lista az online tevékenységiedről, beleértve a felkeresett webhelyeket és az általad megosztott tartalmaidat\n-   **állandóság**: valami, ami örökké tart\n-   **személyes információ**: rólad szóló információ, ami alapján beazonosítható vagy\n-   **nyomvonal**: ösvény vagy útvonal\n\n**A lecke előtt**: Vágd ki a négyzeteket a [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) táblából, az egyes állatok négyzeteit külön kupacokba rendezve.\n\n**Mondd**: _Ma egy videót fogunk megnézni, aminek a címe \"Kövesd a digitális nyomvonalról\".  Hallott már valaki közületek a \"nyomvonalról\"?_\n\nKérd meg a tanulókat, hogy döntsék el, hogy a nyomvonal _egy ösvény vagy egy útvonal, amin követhető vagy_. ([Slide 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))",
           "progression_name": "Videó: Digitális nyomok követése"
         },
+        "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
+          "description": "**Megtekintés** a [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) video on [Slide 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). A videó közben a tanulók nagyon figyeljenek azokra az információkra, melyek alkalmasak az online megosztásra és melyek nem.\n\n**Mondd**: \\_A videóban a digitális lábnyomról van szó. Mi a digitális lábnyom? \\_\n\nBeszéld meg a tanulókkal, hogy egy **digitális lábnyom** egy _adat (vagy nyom) arról, amit a gyerek online csinál, beleértve a meglátogatott webhelyeket és az általa megosztott dolgokat_! ([Slide 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))\n\n**Kérdés**: \\_Milyen információkat NEM szabad online megosztani? \\_\n\nMiután a diákoknak lehetőségük volt megosztásra, indulhat a [Slide 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) és tisztázzátok: _Személyes információ_ például a _teljes név, lakcím, telefonszám, az életkor, a születésnap, de az iskola neve is._\n\nDefiniáld a **személyes információt**: \\_információk rólad, amelyek felhasználhatók annak azonosítására, hogy pontosan ki vagy. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Kérdés**: \\_Milyen információk alkalmasak online megosztásra? \\_\n\nMiután a tanulóknak lehetőségük volt megosztásra, indulhat a [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) és tisztázzátok: _Személyes adat_ például a _hobbi, a kedvenc dolgok._"
+        },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "name": "Hol rontottam el?",
           "tips": [
             null
           ]
         },
         "7d459337-19c7-4d00-a1de-ec2286ea373c": {
+          "description": "**Beszéljétek meg:** Kérdezd meg a diákokat, hogy szerintük te hogyan érzed magad, ha nem tudnak válaszolni egy kérdésedre. Azt sugallhatják, hogy \"őrült” vagy \"szomorú”. Ahelyett, hogy azt mondanád, hogy \"nem”, írd le, hogy kissé őrültnek érezted magad, egy kicsit szomorúnak, és kissé zavartnak. Amikor ezeket az érzelmeket összerakod, \"frusztrációnak” nevezett érzést kapsz. Amikor \"frusztrált” vagy, őrült vagy, szomorú, vagy zavart - és kísértésbe eshetsz, hogy feladd -, de a frusztráció természetes érzés, és arra utal, hogy tanulni készülsz valamit! Ahelyett, hogy abbahagynád, gyakorold a kitartást! Próbálkozz újra és újra. Néhány alkalom után meg fogod érteni, hogy a hibakeresés megoldja a problémáidat!",
           "tips": [
             null
           ]
@@ -13161,6 +13182,9 @@
         "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
           "name": "Bevezető"
         },
+        "478f0185-2792-46bb-8d0d-e88788ebb722": {
+          "name": "Programozás az aratóval"
+        },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
             null
@@ -13186,6 +13210,9 @@
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "Tükrözés"
+        },
+        "8d66f089-ec12-474c-9410-cff9a1d9042a": {
+          "name": "Ismételd utánam"
         },
         "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
           "progression_name": "Videó: Elszabadul a pörgés"
@@ -14021,7 +14048,11 @@
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Tükrözés"
         },
+        "67688952-e1da-43b1-a7d0-f2889dec7e48": {
+          "name": "Hol rontottam el?"
+        },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
+          "description": "**Beszéljétek meg:** Kérdezd meg a diákokat, hogy szerintük te hogyan érzed magad, ha nem tudnak válaszolni egy kérdésedre. Azt sugallhatják, hogy \"őrült” vagy \"szomorú”. Ahelyett, hogy azt mondanád, hogy \"nem”, írd le, hogy kissé őrültnek érezted magad, egy kicsit szomorúnak, és kissé zavartnak. Amikor ezeket az érzelmeket összerakod, \"frusztrációnak” nevezett érzést kapsz. Amikor \"frusztrált” vagy, őrült vagy, szomorú, vagy zavart - és kísértésbe eshetsz, hogy feladd -, de a frusztráció természetes érzés, és arra utal, hogy tanulni készülsz valamit! Ahelyett, hogy abbahagynád, gyakorold a kitartást! Próbálkozz újra és újra. Néhány alkalom után meg fogod érteni, hogy a hibakeresés megoldja a problémáidat!",
           "tips": [
             null
           ]
@@ -15189,6 +15220,9 @@
         },
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
           "name": "Bevezető"
+        },
+        "0684b025-9c16-437c-936c-d9743cad2d94": {
+          "name": "Programozás az aratóval"
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [

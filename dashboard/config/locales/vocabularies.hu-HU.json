@@ -257,15 +257,23 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
+        "algorithm/coursed/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
         "program/coursed/2022": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "bug/coursed/2022": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursed/2022": {
           "word": "Hibakeresés"
         },
         "programming/coursed/2022": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "persistence/coursed/2022": {
           "word": "Kitartás"
@@ -322,18 +330,31 @@
         "define/coursee/2022": {
           "word": "Meghatározás"
         },
+        "algorithm/courseb/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/courseb/2022": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
         "debugging/courseb/2022": {
           "word": "Hibakeresés"
         },
+        "drag/courseb/2022": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
         "drop/courseb/2022": {
-          "word": "Spárga"
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "program/courseb/2022": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/courseb/2022": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "persistence/courseb/2022": {
           "word": "Kitartás"
@@ -341,6 +362,13 @@
         "event/courseb/2022": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "algorithm/express/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/express/2022": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/express/2022": {
           "word": "Hibakeresés"
@@ -350,7 +378,8 @@
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/express/2022": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "behavior/express/2022": {
           "word": "Viselkedés"
@@ -371,8 +400,20 @@
         "define/express/2022": {
           "word": "Meghatározás"
         },
+        "drag/pre-express/2022": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
         "drop/pre-express/2022": {
-          "word": "Spárga"
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
+        },
+        "algorithm/pre-express/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/pre-express/2022": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/pre-express/2022": {
           "word": "Hibakeresés"
@@ -382,7 +423,8 @@
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/pre-express/2022": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "persistence/pre-express/2022": {
           "word": "Kitartás"
@@ -391,6 +433,9 @@
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
+        "algorithm/coursea/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
         "debugging/coursea/2022": {
           "word": "Hibakeresés"
         },
@@ -398,15 +443,32 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
+        "drag/coursea/2022": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
         "drop/coursea/2022": {
-          "word": "Spárga"
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
+        },
+        "bug/coursea/2022": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "programming/coursea/2022": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "event/coursea/2022": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "algorithm/coursec/2022": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/coursec/2022": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursec/2022": {
           "word": "Hibakeresés"
@@ -419,7 +481,8 @@
           "word": "Kitartás"
         },
         "programming/coursec/2022": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "event/coursec/2022": {
           "word": "Esemény",
@@ -436,6 +499,10 @@
         },
         "processing/csd/2022": {
           "word": "Feldolgozás"
+        },
+        "bug/csd/2022": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/csd/2022": {
           "word": "Hibakeresés"
@@ -512,18 +579,31 @@
         "define/coursef/2021": {
           "word": "Meghatározás"
         },
+        "algorithm/courseb/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/courseb/2021": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
         "debugging/courseb/2021": {
           "word": "Hibakeresés"
         },
+        "drag/courseb/2021": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
         "drop/courseb/2021": {
-          "word": "Spárga"
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
         },
         "program/courseb/2021": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/courseb/2021": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "persistence/courseb/2021": {
           "word": "Kitartás"
@@ -532,6 +612,9 @@
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
+        "algorithm/coursea/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
         "debugging/coursea/2021": {
           "word": "Hibakeresés"
         },
@@ -539,15 +622,32 @@
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
+        "drag/coursea/2021": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
         "drop/coursea/2021": {
-          "word": "Spárga"
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
+        },
+        "bug/coursea/2021": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "programming/coursea/2021": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "event/coursea/2021": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "algorithm/coursec/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/coursec/2021": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursec/2021": {
           "word": "Hibakeresés"
@@ -557,7 +657,8 @@
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/coursec/2021": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "event/coursec/2021": {
           "word": "Esemény",
@@ -566,15 +667,23 @@
         "binary/coursec/2021": {
           "word": "Bináris"
         },
+        "algorithm/coursed/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
         "program/coursed/2021": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "bug/coursed/2021": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/coursed/2021": {
           "word": "Hibakeresés"
         },
         "programming/coursed/2021": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "persistence/coursed/2021": {
           "word": "Kitartás"
@@ -589,6 +698,13 @@
         "conditionals/coursed/2021": {
           "word": "Feltételek"
         },
+        "algorithm/express/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/express/2021": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
         "debugging/express/2021": {
           "word": "Hibakeresés"
         },
@@ -597,7 +713,8 @@
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/express/2021": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "behavior/express/2021": {
           "word": "Viselkedés"
@@ -618,8 +735,20 @@
         "define/express/2021": {
           "word": "Meghatározás"
         },
+        "drag/pre-express/2021": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
         "drop/pre-express/2021": {
-          "word": "Spárga"
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
+        },
+        "algorithm/pre-express/2021": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/pre-express/2021": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/pre-express/2021": {
           "word": "Hibakeresés"
@@ -629,7 +758,8 @@
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
         },
         "programming/pre-express/2021": {
-          "word": "Programozás"
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
         },
         "persistence/pre-express/2021": {
           "word": "Kitartás"
@@ -659,6 +789,10 @@
         },
         "user_interface/csd/2021": {
           "word": "Felhasználói felület"
+        },
+        "bug/csd/2021": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
         },
         "debugging/csd/2021": {
           "word": "Hibakeresés"
