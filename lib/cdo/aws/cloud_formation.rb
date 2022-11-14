@@ -7,6 +7,7 @@ require 'yaml'
 require 'erb'
 require 'digest'
 require 'highline'
+require 'aws-sdk-ec2'
 
 module AWS
   # Manages configuration and deployment of AWS CloudFormation stacks.
