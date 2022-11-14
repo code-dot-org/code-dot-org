@@ -28,7 +28,7 @@ social:
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Hello World", description: "Hello World is the perfect first step for classrooms before trying the open-ended projects within our new curriculum, CS Connections! After learning some coding basics, students will be able to progress to CS Connections' cross-curricular projects.", button_text: "Learn more", url: "/educate/csc" }}
+{{ teacher_info, heading: "టీచర్ సమా", శీర్షిక: "హల్లో వర్ల్డ్ తర్వాత నేర్చుకోవడం కొనసాగించడం ఎలా", వివరణ: "మా నూతన పాఠ్యప్రణాళిక, CS కనెక్షన్లు లోపల ఓపెన్-ఎండెడ్ ప్రాజెక్టులను ప్రయత్నించడానికి ముందు క్లాసు రూముల కోసం హల్లో వర్ల్డ్ ఒక పరిపూర్ణమైన మొదటి స్టెప్! After learning some coding basics, students will be able to progress to CS Connections' cross-curricular projects.", button_text: "Learn more", url: "/educate/csc" }}
 
 ## Featured Student Creations
 

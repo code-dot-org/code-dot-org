@@ -20,8 +20,8 @@ W informatyce 101, pierwszy program, który tworzy wielu uczniów, jest prosty i
 
 # Wybierz swój motyw Hello World
 
-{{spritelab_module, title: „NOWOŚĆ! Space", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-{{spritelab_module, title: „NOWOŚĆ! Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
+{{spritelab_module, title: "NOWOŚĆ! Przestrzeń", color: "#d41f33", image: "images/csc/helloworld/helloworldspacetheme.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{spritelab_module, title: "NOWOŚĆ! Soccer", color: "#3ba467", image: "images/csc/helloworld/helloworldsoccertheme.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 {{ spritelab_module, title: "Żywność", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
 {{ spritelab_module, title: "Zwierzęta", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
 {{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
