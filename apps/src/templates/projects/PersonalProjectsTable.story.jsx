@@ -3,6 +3,8 @@ import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './Perso
 import {stubFakePersonalProjectData} from './generateFakeProjects';
 import {Provider} from 'react-redux';
 import {reduxStore} from '@cdo/storybook/decorators';
+import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 
 export default {
   title: 'PersonalProjectsTable',
@@ -10,7 +12,7 @@ export default {
 };
 
 const Template = args => (
-  <Provider store={reduxStore()}>
+  <Provider store={reduxStore({publishDialog, deleteDialog})}>
     <PersonalProjectsTable {...args} />
   </Provider>
 );
