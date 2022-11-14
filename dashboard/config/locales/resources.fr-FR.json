@@ -112,11 +112,9 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
-          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
         },
         "password_power-up_lesson_quiz_1/coursed/2022": {
-          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2022": {
@@ -591,20 +589,20 @@
           "type": "Vidéo"
         },
         "getting_loopy/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://youtu.be/JoKTqHCni0M"
         },
         "getting_loopy_1/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "getting_loopy_2/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "Évaluation"
         },
         "getting_loopy_3/courseb/2022": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "cs_fundamentals_main_activity_tips/courseb/2022": {
@@ -2652,7 +2650,8 @@
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Liste de poèmes",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         },
         "2021_change_log/coursef/2021": {
           "name": "Journal des modifications 2021 ",
@@ -3003,20 +3002,20 @@
           "type": "Vidéo"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
           "type": "Évaluation"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "Tourner en Rond",
+          "name": "Affaire bouclée",
           "url": "https://youtu.be/JoKTqHCni0M"
         },
         "csf-lesson-recommend/courseb/2021": {
@@ -3500,11 +3499,9 @@
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_lesson_slides/coursed/2021": {

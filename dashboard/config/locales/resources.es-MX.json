@@ -912,13 +912,16 @@
           "type": "Guía de respuestas"
         },
         "all_resources/express/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/exprés-2022/recursos"
         },
         "all_standards/express/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/exprés-2022/normas"
         },
         "all_vocabulary/express/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/exprés-2022/vocab"
         },
         "debugging_guide/express/2022": {
           "name": "Guia de Depuración",
@@ -1853,13 +1856,16 @@
           "type": "Diapositivas"
         },
         "all_resources_5/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd1-2022/recursos"
         },
         "all_standards_5/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd1-2022/normas"
         },
         "all_vocabulary_5/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd1-2022/vocabulario"
         },
         "aluminum_boats/csd/2022": {
           "name": "Barcos de aluminio",
@@ -2045,6 +2051,7 @@
           "type": "Guía de Actividades"
         },
         "intro_to_problem_solving_newspapers_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Periódicos)",
           "url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/template/preview",
           "type": "Diapositivas"
         },
@@ -2059,6 +2066,7 @@
           "type": "Guía de Actividades"
         },
         "intro_to_problem_solving_spaghetti_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Espagueti)",
           "url": "https://docs.google.com/presentation/d/1v2LAJj8kTaRiuwCREkTpaoEWpw469czx3FaClScE2vQ/template/preview",
           "type": "Diapositivas"
         },
@@ -2077,6 +2085,8 @@
           "type": "Guía de Actividades"
         },
         "intro_to_problem_solving_paper_towels_/csd/2022": {
+          "name": "Introducción a la Resolución de Problemas (Torres de Papel)",
+          "url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/template/preview",
           "type": "Diapositivas"
         },
         "exploring_problem_solving_-_animal_theme/csd/2022": {
@@ -2095,6 +2105,8 @@
           "type": "Recurso"
         },
         "exploring_problem_solving_animals_/csd/2022": {
+          "name": "Explorando la Resolución de Problemas (Animales)",
+          "url": "https://docs.google.com/presentation/d/1QGTKTq86hJ8TLZl3mc4_WucYHE4sHkgSVp9Bif56Sxk/template/preview",
           "type": "Diapositivas"
         },
         "exploring_problem_solving_-_games_theme/csd/2022": {
@@ -2108,6 +2120,8 @@
           "type": "Guía de Actividades"
         },
         "exploring_problem_solving_games_/csd/2022": {
+          "name": "Exploración de la Resolución de Problemas (Juegos)",
+          "url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/template/preview",
           "type": "Diapositivas"
         },
         "csd_guide_to_debugging/csd/2022": {
@@ -2575,16 +2589,20 @@
           "type": "Diapositivas"
         },
         "all_code/csd/2022": {
-          "name": "Todo el Código"
+          "name": "Todo el Código",
+          "url": "/s/csd2-2022/código"
         },
         "all_resources/csd/2022": {
-          "name": "Todos los Recursos"
+          "name": "Todos los Recursos",
+          "url": "/s/csd2-2022/recursos"
         },
         "all_standards/csd/2022": {
-          "name": "Todos los Estándares"
+          "name": "Todos los Estándares",
+          "url": "/s/csd2-2022/normas"
         },
         "all_vocabulary/csd/2022": {
-          "name": "Todo el Vocabulario"
+          "name": "Todo el Vocabulario",
+          "url": "/s/csd2-2022/vocabulario"
         },
         "exploring_web_pages/csd/2022": {
           "name": "Exploración de Páginas Web",

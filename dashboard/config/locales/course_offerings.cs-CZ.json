@@ -54,7 +54,10 @@
         "coursee-ramp": "coursee-ramp",
         "csa5-exemplars": "csa5-exemplars",
         "katie-practice": "katie-practice",
-        "soccer": "fotbal"
+        "soccer": "fotbal",
+        "hello-world-space": "Hello World: Prostora",
+        "hello-world-soccer": "Hello World: Fotbal",
+        "playground": "hřiště"
       }
     }
   }

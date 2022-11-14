@@ -477,7 +477,7 @@
         },
         "CourseD_Dance_2020_02": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en -block."
         },
         "CourseD_Dance_2020_03": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
@@ -505,7 +505,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
           "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
@@ -547,7 +547,7 @@
         },
         "Dance_2019_02": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en -block."
         },
         "Dance_2019_03": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
@@ -575,7 +575,7 @@
         "Dance_2019_09": {
           "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
           "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Pass på at en danser vises på skjermen.\n\n-   dette nivået slutter etter 4 takter.\\*",
@@ -924,16 +924,16 @@
           "courseB_collector_loops_challenge2_a": "Hvis noe går galt, ikke vær redd for å starte på nytt. Ikke gi opp!"
         },
         "courseB_maze_seq1": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
+          "courseB_maze_seq1_a": "Koble blokker til  for å få fuglen til å flytte på seg!"
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
+          "courseB_maze_seq1_a": "Koble blokker til  for å få fuglen til å flytte på seg!"
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
+          "courseB_maze_seq1_a": "Koble blokker til  for å få fuglen til å flytte på seg!"
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
+          "courseB_maze_seq1_a": "Koble blokker til  for å få fuglen til å flytte på seg!"
         },
         "courseB_maze_seq8": {
           "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
@@ -948,20 +948,20 @@
           "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+          "courseC_artist_prog2_a": "_\"Hvis du bruker flyttFremover100-blokken, vil jeg tegne en linje.\"_",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk snuHøyre90-blokken."
         },
         "courseC_artist_prog2_2018": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+          "courseC_artist_prog2_a": "_\"Hvis du bruker flyttFremover100-blokken, vil jeg tegne en linje.\"_",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk snuHøyre90-blokken."
         },
         "courseC_artist_prog2_2019": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+          "courseC_artist_prog2_a": "_\"Hvis du bruker flyttFremover100-blokken, vil jeg tegne en linje.\"_",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk snuHøyre90-blokken."
         },
         "courseC_artist_prog2_2020": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+          "courseC_artist_prog2_a": "_\"Hvis du bruker flyttFremover100-blokken, vil jeg tegne en linje.\"_",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk snuHøyre90-blokken."
         },
         "courseC_flappy_events1": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1019,10 +1019,10 @@
           "courseD_artist_ramp11a": "For å tegne en side må du bruke `flytt fremover med 100 piksler`-blokken og endre 100 til 200."
         },
         "courseD_bee_conditionals4": {
-          "courseD_bee_conditionals4_c": "Ved å bruke blokken <xml><block type=\"maze_untilBlocked\"/></xml> går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
+          "courseD_bee_conditionals4_c": "Ved å bruke blokken  går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
         },
         "courseD_bee_conditionals4_2018": {
-          "courseD_bee_conditionals4_c": "Ved å bruke blokken <xml><block type=\"maze_untilBlocked\"/></xml> går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
+          "courseD_bee_conditionals4_c": "Ved å bruke blokken  går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
         },
         "courseD_bee_conditionals4_copy": {
           "courseD_bee_conditionals4_c": "Ved å bruke blokken <xml><block type=\"maze_untilBlocked\"/></xml> går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
@@ -1089,7 +1089,7 @@
           "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Ditt program skal:\n\n-   Bruke Funksjon\n-   Flytte seg fremover 100 + 75 piksler\n-   Bruke Funksjon"
+          "courseD_artist_functions2_a": "Ditt program skal:\n- Bruke Funksjon\n- Flytte seg fremover 100 + 75 piksler\n- Bruke Funksjon"
         },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1283,7 +1283,7 @@
         },
         "CourseD_Dance_2020_02_2021": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en -block."
         },
         "CourseD_Dance_2020_03_2021": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
@@ -1311,7 +1311,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
           "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."
@@ -1411,8 +1411,8 @@
           "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!",
-          "courseB_maze_seq1_b": "Dra tre av disse <xml><block type=\"maze_moveSouth\"/></xml> pilene sammen med  <xml><block type=\"when_run\"/></xml> blokken for å få Scrat til eikenøtten"
+          "courseB_maze_seq1_a": "Koble blokker til  for å få fuglen til å flytte på seg!",
+          "courseB_maze_seq1_b": "Dra tre av disse  pilene sammen med   blokken for å få Scrat til eikenøtten"
         },
         "courseB_maze_seq8_2021": {
           "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!",
@@ -1420,8 +1420,8 @@
           "courseB_maze_seq8_c": "Vet du ikke hvilken vei å gå? Prøv denne ruten!"
         },
         "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+          "courseC_artist_prog2_a": "_\"Hvis du bruker flyttFremover100-blokken, vil jeg tegne en linje.\"_",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk snuHøyre90-blokken."
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1437,7 +1437,7 @@
           "courseD_artist_nestedLoops9_c": "Bruk to \"løkke i løkke\":\n\n-   Gjenta åtte ganger.\n-   Tegn et kvadrat.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre.\n-   Gjenta åtte ganger.\n-   Tegn en trekant.\n-   Hopp fremover 50 piksler.\n-   Snu 45 grader mot høyre."
         },
         "courseD_bee_conditionals4_dani": {
-          "courseD_bee_conditionals4_c": "Ved å bruke blokken <xml><block type=\"maze_untilBlocked\"/></xml> går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
+          "courseD_bee_conditionals4_c": "Ved å bruke blokken  går du fremover og sjekker om det finnes en blomst. Hvis det finnes en blomst, hva skal bien gjøre?"
         },
         "courseD_bee_conditionals5_dani": {
           "courseD_bee_conditionals5_a": "Tenk på hver side av den rektangulære veien som en vei i seg selv. Sett opp en løkke i løkke med en \"gjenta\"-blokk og en \"så lenge det finnes vei foran\"-blokk på innsiden. Hvor mange veier må bien fly ned hvis bien må innom hver side som har en blomst?",
@@ -1511,7 +1511,7 @@
         },
         "courseB_maze_seq4_2021": {
           "courseB_maze_seq4_a": "Prøv å legg til en instruksjon av gangen til du kommer til eikenøtten",
-          "courseB_maze_seq4_b": "Du vil bruke <xml><block type=\"maze_moveEast\"/></xml> blokken til å løse denne oppgaven"
+          "courseB_maze_seq4_b": "Du vil bruke  blokken til å løse denne oppgaven"
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "Hvis du står fast prøv å tegn ruten på papir",
@@ -1537,7 +1537,7 @@
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "Den korteste ruten er ikke sikker fungere denne gangen.",
-          "courseB_maze_seq_challenge1_b": "Prøv å bruke <xml><block type=\"maze_moveWest\"/></xml> blokken til å begynne med."
+          "courseB_maze_seq_challenge1_b": "Prøv å bruke  blokken til å begynne med."
         },
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Du trenger ikke legge til eller fjerne blokker for å løse denne oppgaven.",
@@ -1625,14 +1625,14 @@
           "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
         },
         "courseB_maze_seq12022": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
+          "courseB_maze_seq1_a": "Koble blokker til  for å få fuglen til å flytte på seg!"
         },
         "courseB_maze_seq82022": {
           "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
         },
         "courseC_artist_prog22022": {
-          "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
-          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">snuHøyre</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>-blokken."
+          "courseC_artist_prog2_a": "_\"Hvis du bruker flyttFremover100-blokken, vil jeg tegne en linje.\"_",
+          "courseC_artist_prog2_b": "Vanskelig å runde hjørnet? Bruk snuHøyre90-blokken."
         },
         "courseC_flappy_events12022": {
           "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
@@ -1659,7 +1659,7 @@
         },
         "CourseD_Dance_2020_022022": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Danseren må foreta en bevegelse.\n-   Du må trykke på en piltast.\n\n_Denne oppgaven slutter etter 4 takter._",
-          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block."
+          "challenges": "**Valgfri utfordring**\n\nBruk mer enn en -block."
         },
         "CourseD_Dance_2020_032022": {
           "validation": "**Hvordan fullfører jeg denne oppgaven?**\n\n-   Begge danserne må utføre en bevegelse.\n-   Du må bruke piltastene.\n\n_Denne oppgaven slutter etter 6 takter._",
@@ -1687,7 +1687,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Bare trykk på \"Fullfør\" knappen!",
           "repeat_every_ideas": "**Trenger du noen ideer?**\n\n-   Endre danserens størrelse gjentatte ganger for å få den til å vokse.\n-   Endre danserens rotasjon gjentatte ganger for å få den til å spinne.\n\n_Du kan også bruke negative tall for å skape en motsatt effekt!_",
-          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**Valgfri utfordring**\n\n-   Du kan også bruke denne nye hendelsesblokken for å gå gjennom en liste av bevegelser ved å sette bevegelsen til '(Tilfeldig)','(Neste)', eller '(Forrige)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "Variasjonsblokka er i \"Dansere\" kategorien."

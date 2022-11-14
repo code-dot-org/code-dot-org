@@ -286,7 +286,7 @@ fr:
         C1_happy_maps_unplugged: Cartes Joyeuses
         C1_moveitmoveit_unplugged: Bouge, Bouge ton corps
         C1_bigevent_unplugged: Le Grand Evénement
-        C1_getting_loopy: Tourner en Rond
+        C1_getting_loopy: Affaire bouclée
         C1_pair_programming: Programmation en Binôme
         C1_maze_intro_sequencing: Introduction au séquencement du labyrinthe
         C1_maze_debugging: Débogage du labyrinthe
@@ -353,7 +353,7 @@ fr:
         C4_unplugged_forloops: Les Boucles « Pour »
         C4_unplugged_parameters: La composition de chansons avec des paramètres
         C4_unplugged_binary: Binaire
-        CSF_a_b_artist_loops: Les Boucles dans Artiste
+        CSF_a_b_artist_loops: Les Boucles dans l'Artiste
         CSF_artist_angles: Angles dans l’Artiste
         CSF_collector_k1_blocks: 'Fondamentaux de l’Informatique : La Collectionneuse'
         CSF_collector_repeat_loops: Les Boucles Répéter dans la Collectionneuse

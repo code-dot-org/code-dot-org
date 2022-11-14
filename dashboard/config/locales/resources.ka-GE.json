@@ -46,6 +46,9 @@
         "cross-curricular_extension_activities/coursed/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
+        "curriculum_guide/coursed/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "debugging_guide/coursed/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
@@ -148,6 +151,9 @@
         "cross-curricular_extension_activities/coursef/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
+        "curriculum_guide/coursef/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "debugging_guide/coursef/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
@@ -206,13 +212,17 @@
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "cs_fundamentals_final_project/coursef/2022": {
-          "name": "CS საფუძვლების ფინალური პროექტი"
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "type": "რუბრიკა"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
         "cross-curricular_extension_activities/coursee/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursee/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "debugging_guide/coursee/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
@@ -271,13 +281,17 @@
           "type": "ვიდეო"
         },
         "cs_fundamentals_final_project/coursee/2022": {
-          "name": "CS საფუძვლების ფინალური პროექტი"
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "type": "რუბრიკა"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
         "cross-curricular_extension_activities/courseb/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/courseb/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "debugging_guide/courseb/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
@@ -426,7 +440,8 @@
         },
         "cs_fundamentals_final_project/express/2022": {
           "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
         "debugging_guide/pre-express/2022": {
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
@@ -459,6 +474,9 @@
         },
         "common_core_and_ngss_guidance/coursea/2022": {
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "curriculum_guide/coursea/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "debugging_guide/coursea/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
@@ -550,6 +568,9 @@
         },
         "cross-curricular_extension_activities/coursec/2022": {
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "curriculum_guide/coursec/2022": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "debugging_guide_1/coursec/2022": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
@@ -657,6 +678,9 @@
         "computer_science_practices/csd/2022": {
           "type": "არეკვლა"
         },
+        "create_a_representation_2/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "interpreting_data/csd/2022": {
           "name": "მონაცემთა ინტერპრეტაცია"
         },
@@ -714,6 +738,9 @@
         "make_a_recommendation/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "intro_to_problem_solving/csd/2022": {
           "name": "შესავალი პრობლემების გადაწყვეტაში"
         },
@@ -752,7 +779,8 @@
           "type": "თანატოლის კომენტარი"
         },
         "apps_and_problem_solving_2/csd/2022": {
-          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+          "name": "აპლიკაციები და პრობლემების გადაჭრა",
+          "type": "რუბრიკა"
         },
         "project_-_propose_an_app/csd/2022": {
           "name": "პროექტი - შემოგვთავაზეთ აპლიკაცია"
@@ -794,6 +822,9 @@
         "text/csd/2022": {
           "name": "ტექსტი"
         },
+        "captioned_scenes/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "ვიდეო"
         },
@@ -812,6 +843,9 @@
         },
         "sprite_movement_1/csd/2022": {
           "name": "სპრაიტების მოძრაობა"
+        },
+        "animated_scene/csd/2022": {
+          "type": "რუბრიკა"
         },
         "boolean_expressions/csd/2022": {
           "name": "ბულის ტიპის გამოთქმები",
@@ -833,6 +867,9 @@
         },
         "interactive_card_2/csd/2022": {
           "type": "თანატოლის კომენტარი"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "რუბრიკა"
         },
         "project_-_interactive_card/csd/2022": {
           "name": "პროექტი - ინტერაქტიული ბარათი"
@@ -856,11 +893,17 @@
         "collision_detection_2/csd/2022": {
           "name": "შეჯახების აღმოჩენა"
         },
+        "side_scroller/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "complex_sprite_movement/csd/2022": {
           "name": "სპრაიტების რთული მოძრაობა"
         },
         "collisions/csd/2022": {
           "name": "შეჯახებები"
+        },
+        "flyer_game/csd/2022": {
+          "type": "რუბრიკა"
         },
         "functions/csd/2022": {
           "name": "ფუნქციები",
@@ -880,6 +923,9 @@
         },
         "make_your_own_game_2/csd/2022": {
           "type": "თანატოლის კომენტარი"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "რუბრიკა"
         },
         "project_-_design_a_game/csd/2022": {
           "name": "პროექტი - შექმენით თამაშის დიზაინი"
@@ -902,6 +948,9 @@
         "headings/csd/2022": {
           "name": "სათაურები"
         },
+        "html_web_page/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "html_web_page_2/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
@@ -922,6 +971,9 @@
         "styling_text_with_css/csd/2022": {
           "name": "ტექსტის გასტილვა CSS-ით"
         },
+        "your_personal_style/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "your_personal_style_1/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
@@ -940,6 +992,9 @@
         "personal_web_page/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
+        "personal_web_page_1/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "publishing_your_website/csd/2022": {
           "type": "ვიდეო"
         },
@@ -955,6 +1010,9 @@
         "classes/csd/2022": {
           "name": "კლასები"
         },
+        "website_for_a_purpose/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "website_for_a_purpose_1/csd/2022": {
           "type": "თანატოლის კომენტარი"
         },
@@ -965,7 +1023,8 @@
           "name": "მომხმარებლის მოთხოვნილებების განსაზღვრა"
         },
         "paper_prototypes/csd/2022": {
-          "name": "ქაღალდის პროტოტიპები"
+          "name": "ქაღალდის პროტოტიპები",
+          "type": "რუბრიკა"
         },
         "design_mode/csd/2022": {
           "name": "დიზაინის რეჟიმი"
@@ -986,12 +1045,14 @@
           "name": "აპლიკაციების ტესტირება"
         },
         "app_presentation/csd/2022": {
-          "name": "აპლიკაციის პრეზენტაცია"
+          "name": "აპლიკაციის პრეზენტაცია",
+          "type": "რუბრიკა"
         },
         "app_presentation_1/csd/2022": {
           "name": "აპლიკაციის პრეზენტაცია"
         },
         "computer_science_is_changing_everything/csd/2022": {
+          "name": "კომპიუტერული მეცნიერება ცვლის ყველაფერს",
           "type": "ვიდეო"
         },
         "the_internet_of_things/csd/2022": {
@@ -1016,8 +1077,14 @@
           "name": "ცვლადები",
           "type": "ვიდეო"
         },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "input_output_devices/csd/2022": {
           "type": "ვიდეო"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "რუბრიკა"
         },
         "introduction_to_arrays/csd/2022": {
           "name": "შესავალი მასივებში",
@@ -1040,6 +1107,12 @@
         "functions_5/csd/2022": {
           "name": "ფუნქციები"
         },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "რუბრიკა"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "რუბრიკა"
+        },
         "ai_what_is_machine_learning_/csd/2022": {
           "type": "ვიდეო"
         },
@@ -1050,7 +1123,11 @@
         "finding_patterns_in_data/csd/2022": {
           "type": "ვიდეო"
         },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI ლაბორატორიის შესავალი"
+        },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI ლაბორატორიის შესავალი",
           "type": "ვიდეო"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
@@ -1065,11 +1142,21 @@
         "if-statements_in_app_lab/csd/2022": {
           "type": "ვიდეო"
         },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "რიცხვითი მონაცემები AI ლაბში",
           "type": "ვიდეო"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "ვიდეო"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "რუბრიკა"
         },
         "creating_a_survey_in_google_forms/csd/2022": {
           "type": "ვიდეო"
@@ -1079,6 +1166,9 @@
         },
         "view_and_download_survey_data/csd/2022": {
           "type": "ვიდეო"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "რუბრიკა"
         },
         "lesson_plans/courseb/2018": {
           "name": "გაკვეთილის გეგმები"
@@ -1248,6 +1338,9 @@
         "vocabulary/csd/2018": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursea/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursea/2019": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -1259,6 +1352,9 @@
         },
         "vocabulary/coursea/2019": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/courseb/2019": {
           "name": "გაკვეთილის გეგმები"
@@ -1272,6 +1368,9 @@
         "vocabulary/courseb/2019": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursed/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursed/2019": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -1284,6 +1383,9 @@
         "vocabulary/coursed/2019": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursef/2019": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -1295,6 +1397,9 @@
         },
         "vocabulary/coursef/2019": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursee/2019": {
           "name": "გაკვეთილის გეგმები"
@@ -1319,6 +1424,9 @@
         },
         "vocabulary/express/2019": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursec/2019": {
           "name": "გაკვეთილის გეგმები"
@@ -1485,6 +1593,11 @@
         "vocabulary_3/csd/2017": {
           "name": "ლექსიკონი"
         },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
+        },
         "2021_change_log/coursef/2021": {
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
@@ -1499,6 +1612,9 @@
         },
         "csta_standards_mapping/coursef/2021": {
           "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "debugging_guide/coursef/2021": {
           "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
@@ -1605,7 +1721,8 @@
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
         "2021_change_log/courseb/2021": {
           "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
@@ -1623,6 +1740,7 @@
           "url": "https://studio.code.org/s/courseb-2021/standards"
         },
         "curriculum_guide_1/courseb/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "debugging_guide/courseb/2021": {
@@ -1739,6 +1857,7 @@
           "url": "https://studio.code.org/s/coursea-2021/standards"
         },
         "curriculum_guide_1/coursea/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "debugging_guide/coursea/2021": {
@@ -1851,6 +1970,7 @@
           "url": "https://studio.code.org/s/coursec-2021/standards"
         },
         "curriculum_guide_1/coursec/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "debugging_guide_1/coursec/2021": {
@@ -1960,6 +2080,7 @@
           "url": "https://studio.code.org/s/coursed-2021/standards"
         },
         "curriculum_guide_1/coursed/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "debugging_guide/coursed/2021": {
@@ -2126,7 +2247,8 @@
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
         "course_vocabulary/pre-express/2021": {
           "url": "https://studio.code.org/s/pre-express-2021/vocab"
@@ -2179,6 +2301,7 @@
           "url": "https://studio.code.org/s/coursee-2021/standards"
         },
         "curriculum_guide_1/coursee/2021": {
+          "name": "კურიკულუმის გზამკვლევი",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "debugging_guide/coursee/2021": {
@@ -2254,7 +2377,8 @@
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "CS საფუძვლების ფინალური პროექტი",
-          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "ვიდეო"
@@ -2266,7 +2390,11 @@
         "finding_patterns_in_data/csd/2021": {
           "type": "ვიდეო"
         },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI ლაბორატორიის შესავალი"
+        },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI ლაბორატორიის შესავალი",
           "type": "ვიდეო"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
@@ -2281,17 +2409,30 @@
         "if-statements_in_app_lab/csd/2021": {
           "type": "ვიდეო"
         },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "რიცხვითი მონაცემები AI ლაბში"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "რიცხვითი მონაცემები AI ლაბში",
           "type": "ვიდეო"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "ვიდეო"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "რუბრიკა"
         },
         "cleaning_survey_data/csd/2021": {
           "type": "ვიდეო"
         },
         "view_and_download_survey_data/csd/2021": {
           "type": "ვიდეო"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "teacher_forum/csd/2021": {
           "name": "მასწავლებლის ფორუმი"
@@ -2303,7 +2444,8 @@
           "type": "არეკვლა"
         },
         "paper-prototypes/csd/2021": {
-          "name": "ქაღალდის პროტოტიპები"
+          "name": "ქაღალდის პროტოტიპები",
+          "type": "რუბრიკა"
         },
         "design_mode/csd/2021": {
           "name": "დიზაინის რეჟიმი"
@@ -2318,7 +2460,8 @@
           "name": "დიზაინის რეჟიმი"
         },
         "app-presentation/csd/2021": {
-          "name": "აპლიკაციის პრეზენტაცია"
+          "name": "აპლიკაციის პრეზენტაცია",
+          "type": "რუბრიკა"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "აპლიკაციის პრეზენტაცია"
@@ -2327,6 +2470,7 @@
           "type": "ვიდეო"
         },
         "innovation-video-1-1/csd/2021": {
+          "name": "კომპიუტერული მეცნიერება ცვლის ყველაფერს",
           "type": "ვიდეო"
         },
         "how_computers_word_hardware_software/csd/2021": {
@@ -2341,6 +2485,9 @@
         },
         "functions_2/csd/2021": {
           "name": "ფუნქციები"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "introduction_to_arrays/csd/2021": {
           "name": "შესავალი მასივებში",
@@ -2357,6 +2504,9 @@
           "name": "როგორ მუშაობს კომპიუტერი: სქემები და ლოგიკა",
           "type": "ვიდეო"
         },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "representing-information-1/csd/2021": {
           "name": "ინფორმაციის წარმოდგენა"
         },
@@ -2365,6 +2515,9 @@
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "რიცხვების წარმოდგენა"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "რუბრიკა"
         },
         "interpreting-data-exemplar-2019/csd/2021": {
           "name": "მონაცემთა ინტერპრეტაცია"
@@ -2414,6 +2567,9 @@
         "make-a-recommendation-peer-review-2019/csd/2021": {
           "type": "თანატოლის კომენტარი"
         },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "teacher_forum_1/csd/2021": {
           "name": "მასწავლებლის ფორუმი"
         },
@@ -2439,6 +2595,9 @@
         "sprites_1/csd/2021": {
           "name": "სპრაიტები"
         },
+        "captioned-scenes/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "ვიდეო"
         },
@@ -2451,6 +2610,9 @@
         "animating-sprites/csd/2021": {
           "name": "სპრაიტების მოძრაობა",
           "type": "ვიდეო"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "boolean_expressions/csd/2021": {
           "name": "ბულის ტიპის გამოთქმები",
@@ -2467,6 +2629,9 @@
         "interactive-card-1-2-3-4/csd/2021": {
           "type": "თანატოლის კომენტარი"
         },
+        "interactive_card/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "velocity_1/csd/2021": {
           "name": "სიჩქარე",
           "type": "ვიდეო"
@@ -2480,6 +2645,12 @@
         "collision_detection/csd/2021": {
           "name": "შეჯახების აღმოჩენა"
         },
+        "side-scroller-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "calling_and_defining_functions/csd/2021": {
           "name": "ფუნქციები",
           "type": "ვიდეო"
@@ -2489,6 +2660,9 @@
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "type": "თანატოლის კომენტარი"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "რუბრიკა"
         },
         "problem-solving-process-1/csd/2021": {
           "type": "ვიდეო"
@@ -2519,7 +2693,8 @@
           "type": "თანატოლის კომენტარი"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+          "name": "აპლიკაციები და პრობლემების გადაჭრა",
+          "type": "რუბრიკა"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "ვიდეო"
@@ -2532,6 +2707,9 @@
         },
         "video_debugging/csd/2021": {
           "type": "ვიდეო"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "html-web-page/csd/2021": {
           "type": "თანატოლის კომენტარი"
@@ -2550,6 +2728,9 @@
           "name": "შესავალი CSS-ში - ნაწილი 2",
           "type": "ვიდეო"
         },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "რუბრიკა"
+        },
         "your-personal-style-1/csd/2021": {
           "type": "თანატოლის კომენტარი"
         },
@@ -2561,6 +2742,9 @@
         },
         "personal-web-page-1/csd/2021": {
           "type": "თანატოლის კომენტარი"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "რუბრიკა"
         },
         "publishing_your_website/csd/2021": {
           "type": "ვიდეო"
@@ -2576,6 +2760,9 @@
         },
         "classes/csd/2021": {
           "name": "კლასები"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "რუბრიკა"
         },
         "website-for-a-purpose/csd/2021": {
           "type": "თანატოლის კომენტარი"
@@ -2604,6 +2791,9 @@
         "vocabulary/express/2020": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/courseb/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/courseb/2020": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -2615,6 +2805,9 @@
         },
         "vocabulary/courseb/2020": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursed/2020": {
           "name": "გაკვეთილის გეგმები"
@@ -2628,6 +2821,9 @@
         "vocabulary/coursed/2020": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursec/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursec/2020": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -2639,6 +2835,9 @@
         },
         "vocabulary/coursec/2020": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursee/2020": {
           "name": "გაკვეთილის გეგმები"
@@ -2652,6 +2851,9 @@
         "vocabulary/coursee/2020": {
           "name": "ლექსიკონი"
         },
+        "curriculum_guide/coursea/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
+        },
         "lesson_plans/coursea/2020": {
           "name": "გაკვეთილის გეგმები"
         },
@@ -2663,6 +2865,9 @@
         },
         "vocabulary/coursea/2020": {
           "name": "ლექსიკონი"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "კურიკულუმის გზამკვლევი"
         },
         "lesson_plans/coursef/2020": {
           "name": "გაკვეთილის გეგმები"

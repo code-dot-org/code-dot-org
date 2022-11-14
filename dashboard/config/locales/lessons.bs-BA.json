@@ -20,20 +20,26 @@
         "gumball/Gumball Play Lab": {
           "name": "Slatkiši Play Lab"
         },
-        "dance/Dance Party": {
-          "name": "Plesna zabava"
-        },
         "mc/Hour of Code 2015": {
           "name": "Sata Kodiranja Minecraft-a"
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "infinity/Infinity": {
           "name": "Disney Beskonačni Laboratorij Igranja"
         },
         "Hour of Code/Hour of Code 2013": {
           "name": "Sat Kodiranja 2013"
+        },
+        "dance-2019/Dance Party": {
+          "name": "Plesna zabava"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Petlje"

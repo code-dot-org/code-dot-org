@@ -254,8 +254,7 @@ fr:
       My Loopy Robotic Friends - Unplugged Activity: Mes amis robotiques Loopy - Activité
         hors ligne
       My Online Neighborhood: Mon Quartier en Ligne
-      My Robotic Friends - Unplugged Activity: Mes amis robotiques - Activité hors
-        ligne
+      My Robotic Friends - Unplugged Activity: Mes amis robotiques - Activité déconnectée
       Naming Variables: Nommer les variables
       Nested Loops with the Bee: Boucles imbriquées avec l'abeille
       New Challenge Introduction: Introduction de nouveau défi
@@ -353,6 +352,7 @@ fr:
       The Big Event - Unplugged Activity: Le Grand Événement - Activité déconnectée
       The Draw Loop: La Boucle Dessiner
       The Harvester: L'Agricultrice
+      The Right App - Unplugged Activity: La Bonne Appli - Activité Déconnectée
       Tour of Design Mode: Visite du mode création
       Train an AI to Clean the Ocean: Entraîner l'IA pour rendre l'océan propre
       Using the Grid: Utiliser la grille
@@ -401,7 +401,7 @@ fr:
       'Video: Follow The Digital Trail': 'Vidéo : Suis les Traces Numérique'
       'Video: For Loops': 'Video: Les Boucles « Pour »'
       'Video: Functions': 'Vidéo: Les Fonctions'
-      'Video: Getting Loopy': 'Vidéo : Faire des boucles '
+      'Video: Getting Loopy': 'Vidéo : Affaire bouclée'
       'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité déconnectée'
       'Video: Harvesting with Conditionals': 'Vidéo : Récolter avec les Conditions'
       'Video: How to Create a Simple Function': 'Vidéo : Comment créer une fonction
@@ -454,7 +454,7 @@ fr:
       'Video: Publishing Your Website': 'Vidéo : Publier votre site web'
       'Video: Repeat Blocks': 'Video: Les blocs `Répéter`'
       'Video: Repeat Blocks with BB-8': 'Vidéo : Les blocs « répéter » avec BB-8'
-      'Video: Repeat Blocks with the Artist': 'Vidéo : Répéter les blocs avec l''Artiste '
+      'Video: Repeat Blocks with the Artist': 'Vidéo : Les Blocs Répéter avec l''Artiste '
       'Video: Repeat Until Blocks': 'Video: Les blocs Répéter Jusqu’à'
       'Video: Repeat Until Statements': 'Vidéo : Instructions Répéter Jusqu''à '
       'Video: Sprite Movement': 'Vidéo : Animer un sprite'
@@ -463,9 +463,9 @@ fr:
       'Video: Text and Prompts': 'Vidéo : Texte et invites '
       'Video: The Animation Tab': 'Vidéo : L’onglet Animation'
       'Video: The Artist in Code Studio': 'Vidéo : L''Artiste dans Code Studio '
-      'Video: The Big Event - Unplugged Activity': 'Vidéo : Le grand événement – Activité
-        hors ligne'
-      'Video: The Collector': 'Vidéo : La collectionneuse'
+      'Video: The Big Event - Unplugged Activity': 'Le Grand Événement - Activité
+        déconnectée '
+      'Video: The Collector': 'Vidéo : La Collectionneuse'
       'Video: The Harvester': 'Vidéo : L''Agricultrice'
       'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
       'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans

@@ -42,6 +42,8 @@ ar:
   hoc2022_codeorg_title: احتفل بساعة البرمجة مع ناسا وأكثر
   hoc2022_codeorg_description: ساعة البرمجة العاشرة مذهلة! تعالَ واستكشف والعب وابتكر
     معنا.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: نتعلم اليوم، لنبني غداً مشرقاً
@@ -1012,10 +1014,6 @@ ar:
     ساعة</a> or <a id=''teacher_banner_howto''>أو قراءة الدليل الإرشادي</a>'
   learn_banner_teachers_markdown: 'المعلمون: [استضافة حدث لمدة ساعة](%{host_url})
     أو [قراءة الدليل الإرشادي](%{howto_url})'
-  learn_robotics_banner_heading: الروبوتات والدوائر
-  learn_robotics_banner_blurb: هل لديك روبوتات أو مجموعات حوسبة مادية؟ استخدمها مع
-    الأنشطة أدناه وقدِّم ساعة برمجة حقيقية للطلاب في أي فئة عمرية! حتى أن بعض الأنشطة
-    تقدم جهاز محاكاة حتى تتمكن من البدء دون أي أجهزة.
   tutorial_dance2019_name: حفلة الرقص 2019
   tutorial_danceparty_name: حفلة رقص
   tutorial_chibitronics_name: 'Chibitronics: قصة مضيئة'
@@ -10412,7 +10410,7 @@ ar:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11195,7 +11193,7 @@ ar:
   tutorial_googlesuperhero_string_detail_programming_languages: القطع البرمجية
   tutorial_googlename _string_detail_programming_languages: القطع البرمجية
   tutorial_carnegiezillah_string_detail_programming_languages: القطع البرمجية
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: القطع البرمجية
   tutorial_hatchxrsolar_string_detail_programming_languages: القطع البرمجية
   tutorial_hatchxrspace_string_detail_programming_languages: القطع البرمجية
   tutorial_hatchxrtrex_string_detail_programming_languages: القطع البرمجية

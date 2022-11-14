@@ -336,7 +336,7 @@
           "Course_4_Artist_For_Loops_inspire_a": "הבסיס של הקוד הזה הוא כמו הפתרון של החידה הקודמת...עם כמה שינויים.",
           "Course_4_Artist_For_Loops_inspire_b": "נסה להשתמש בלולאת 'עבור' אשר סופרת מ-3 עד 10 עם תוספת קבועה של 1.",
           "Course_4_Artist_For_Loops_inspire_c": "ישנן שתי חזרות של אותה לולאת חזרה בתוך לולא ה-for, אבל החזרה השניה פונה לכיוון ההפוך.",
-          "Course_4_Artist_For_Loops_inspire_d": "**פתרון**\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\" inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"math_arithmetic\" inline=\"true\">\n                <title name=\"OP\">מינוס</title>\n                <value name=\"A\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">סופר</title>\n                  </block>\n                </value>\n                <value name=\"B\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">1</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_move\" inline=\"true\">\n                <title name=\"DIR\">זוז קדימה</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">40</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">פנה ימינה</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">חילוק</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">360</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">סופר</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">1</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">40</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_arithmetic\" inline=\"true\">\n                            <title name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">360</title>\n                              </block>\n                            </value>\n                            <value name=\"B\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "Course_4_Artist_For_Loops_inspire_d": "**פתרון**\n\n            3\n          \n        \n        \n          \n            10\n          \n        \n        \n          \n            1\n          \n        \n        \n          \n            \n              \n                מינוס\n                \n                  \n                    סופר\n                  \n                \n                \n                  \n                    1\n                  \n                \n              \n            \n            \n              \n                זוז קדימה\n                \n                  \n                    40\n                  \n                \n                \n                  \n                    פנה ימינה\n                    \n                      \n                        חילוק\n                        \n                          \n                            360\n                          \n                        \n                        \n                          \n                            סופר\n                          \n                        \n                      \n                    \n                  \n                \n              \n            \n            \n              \n                \n                  \n                    MINUS\n                    \n                      \n                        counter\n                      \n                    \n                    \n                      \n                        1\n                      \n                    \n                  \n                \n                \n                  \n                    moveForward\n                    \n                      \n                        40\n                      \n                    \n                    \n                      \n                        turnLeft\n                        \n                          \n                            DIVIDE\n                            \n                              \n                                360\n                              \n                            \n                            \n                              \n                                counter\n                              \n                            \n                          \n                        \n                      \n                    \n                  \n                \n              \n            \n          \n        \n      "
         },
         "Course 4 Artist Functions Inspiration": {
           "Course_4_Artist_Functions_Inspiration_a": "התחילו עם הקוד מהחידה הקודמת והוסיפו 'פנה ימינה' בשלוש מעלות לתוך הלולאה.",
@@ -373,7 +373,7 @@
         },
         "CourseD_Dance_2020_02": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   הרקדן חייב לבצע צעד\n-   עליכם ללחוץ על מקש חץ כלשהו\n\n_שלב זה נגמר אחרי 4 תיבות._",
-          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n<xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>"
+          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n"
         },
         "CourseD_Dance_2020_03": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   כל רקדן צריך לבצע צעד ריקוד\n-   אתם חייבים ללחוץ על מקשי החיצים\n\n_שלב זה נגמר אחרי 6 תיבות._",
@@ -401,7 +401,7 @@
         "CourseD_Dance_2020_09": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   פשוט לחצו על המקש \"סיים\"!",
           "repeat_every_ideas": "**צריכים רעיונות?**\n\n-   שנו שוב ושוב את גודלו של רקדן כדי לגרום לו לגדול\n-   שנו שוב ושוב את הזווית של רקדן כדי לגרום לו להסתובב\n\n_אתם יכולים להשתמש גם במספרים שליליים כדי ליצור אפקט הפוך!_",
-          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "הבלוק החלופי נמצא בקטגוריית ה\"שחקנים\"."
@@ -418,7 +418,7 @@
         },
         "CourseD_Dance_Party_04": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   עליכם לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר\n\n-   שלב זה נגמר אחרי 9 תיבות",
-          "challenges": "**אתגר רשות**\n\nשנו את אפקט הרקע בנקודות שונות במהלך השיר דרך חיבור הבלוק החדש מתחת ל-\n<block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">״תיבות״</title></block></xml>"
+          "challenges": "**אתגר רשות**\n\nשנו את אפקט הרקע בנקודות שונות במהלך השיר דרך חיבור הבלוק החדש מתחת ל-\n???״תיבות״"
         },
         "CourseD_Dance_Party_06": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   אתם צריכים שיהיו לכם לפחות שני רקדנים\n\n-   שלב זה נגמר אחרי 5 תיבות.",
@@ -467,7 +467,7 @@
         },
         "Dance_2019_02": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   הרקדן חייב לבצע צעד\n-   עליכם ללחוץ על מקש חץ כלשהו\n\n_שלב זה נגמר אחרי 4 תיבות._",
-          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n<xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>"
+          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n"
         },
         "Dance_2019_03": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   כל רקדן צריך לבצע צעד ריקוד\n-   אתם חייבים ללחוץ על מקשי החיצים\n\n_שלב זה נגמר אחרי 6 תיבות._",
@@ -495,7 +495,7 @@
         "Dance_2019_09": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   פשוט לחצו על המקש \"סיים\"!",
           "repeat_every_ideas": "**צריכים רעיונות?**\n\n-   שנו שוב ושוב את גודלו של רקדן כדי לגרום לו לגדול\n-   שנו שוב ושוב את הזווית של רקדן כדי לגרום לו להסתובב\n\n_אתם יכולים להשתמש גם במספרים שליליים כדי ליצור אפקט הפוך!_",
-          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   ודאו שמופיע רקדן על גבי המסך\n\n-   שלב זה נגמר אחרי 4 תיבות",
@@ -509,7 +509,7 @@
         },
         "Dance_Party_04": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   עליכם לגרום לאפקט הרקע להשתנות מתישהו לפני התיבה השביעית בשיר\n\n-   שלב זה נגמר אחרי 9 תיבות",
-          "challenges": "**אתגר רשות**\n\nשנו את אפקט הרקע בנקודות שונות במהלך השיר דרך חיבור הבלוק החדש מתחת ל-\n<block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">״תיבות״</title></block></xml>"
+          "challenges": "**אתגר רשות**\n\nשנו את אפקט הרקע בנקודות שונות במהלך השיר דרך חיבור הבלוק החדש מתחת ל-\n???״תיבות״"
         },
         "Dance_Party_05": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   הרקדן שלכם צריך להחליף לפחות 4 צעדי ריקוד לפני שהשלב נגמר\n\n_שלב זה נגמר אחרי 12 תיבות._"
@@ -899,7 +899,7 @@
           "courseD_bee_conditionals_challenge1_a": "התוכלו למצוא את הדרך אשר מגיעה לכל פרח וחלת דבש בלי להתקע בעצים? הדרך הטובה ביותר היא ספירלה.\n\n**אתם יכולים לפתור את השלב בלי לפנות שמאלה כלל.**"
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "כמו שהשתמשתם בבלוק 'אם בפרח', הקוד בתוכו 'כל עוד צוף > 0' ירוץ רק אם הדבורה הגיעה לפרח. ההבדל המשמעותי זה שהקוד בתוכו ירוץ בלולאה כל עוד לא נותר עוד צוף בפרח. נסה את התבנית הבאה:\n\n  \n    nectarRemaining\n    \\>\n    0                    \n                      \n                    \n  "
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "הקוד המקורי יכול לעבוד נהדר - רק אם היה אוצר אחד בלבד בכל ערימה!"
@@ -1027,8 +1027,8 @@
           "courseA_harvester_seq5_b": "אתם צריכים למחוק בלוק אחד."
         },
         "courseA_maze_seq1": {
-          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק \n  \n",
+          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n"
         },
         "courseA_maze_seq13": {
           "courseA_maze_seq13_b": "אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה."
@@ -1043,16 +1043,16 @@
           "courseA_maze_seq13_b": "אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה."
         },
         "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק \n  \n",
+          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק \n  \n",
+          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק \n  \n",
+          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "יש בלוק 1 חסר בתוכנית הזו. תוכלו לגלות מיהו הבלוק החסר? ",
@@ -1061,7 +1061,7 @@
         "courseA_maze_seq3": {
           "courseA_maze_seq3_a": "1 מהבלוקים מזיז את הציפור בכיוון הלא נכון. תוכלו לגלות מיהו הבלוק ולהחליף אותו בבלוק המתאים? ",
           "courseA_maze_seq3_b": "נסו להשתמש בכפתור צעד כדי למצוא איפה התוכנית משתבשת. האם זה בצעד הראשון? אולי השני? ",
-          "courseA_maze_seq3_c": "לא נראה שהבלוק <xml><block type=\"maze_moveNorth\"/></xml> מזיז את הציפור בכיוון הנכון. התוכלו להחליף אותו בבלוק אחר? "
+          "courseA_maze_seq3_c": "לא נראה שהבלוק  מזיז את הציפור בכיוון הנכון. התוכלו להחליף אותו בבלוק אחר? "
         },
         "courseB_Scrat_ramp1_2018": {
           "2": "אל תפחדו לטעות! נסו משהו, ואם זה לא מצליח, נסו משהו אחר!"
@@ -1075,26 +1075,26 @@
         "courseB_collector_loops_challenge2a": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
           "courseB_collector_loops_challenge2a_b": "תסתכל על האפשרות הזו לעבור את המבוך. אתה רואה תבנית שאתה יכול לחזור עליה?",
-          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type=\"collector_collect\"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
+          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג  בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
         },
         "courseB_collector_loops_challenge2a_2018": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
           "courseB_collector_loops_challenge2a_b": "תסתכל על האפשרות הזו לעבור את המבוך. אתה רואה תבנית שאתה יכול לחזור עליה?",
-          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type=\"collector_collect\"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
+          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג  בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
         },
         "courseB_collector_loops_challenge2a_2019": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
           "courseB_collector_loops_challenge2a_b": "תסתכל על האפשרות הזו לעבור את המבוך. אתה רואה תבנית שאתה יכול לחזור עליה?",
-          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type=\"collector_collect\"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
+          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג  בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
         },
         "courseB_collector_loops_challenge2a_2020": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
           "courseB_collector_loops_challenge2a_b": "תסתכל על האפשרות הזו לעבור את המבוך. אתה רואה תבנית שאתה יכול לחזור עליה?",
-          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type=\"collector_collect\"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
+          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג  בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
         },
         "courseB_iceage_loops1": {
           "courseB_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseB_iceage_loops10": {
           "courseB_iceage_loops10_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!"
@@ -1107,11 +1107,11 @@
         },
         "courseB_iceage_loops1_2019": {
           "courseB_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseB_iceage_loops1_2020": {
           "courseB_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseB_iceage_loops2": {
           "courseB_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
@@ -1156,16 +1156,16 @@
           "courseB_iceage_loops9_c": "סקראט צריך ללכת בדרך המובילה אל הבלוט."
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט לזוז!",
-          "courseB_maze_seq1_b": "גרור את שלושת החצים <xml><block type=\"maze_moveSouth\"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט להגיע אל הבלוט."
+          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק  כדי לגרום לסקראט לזוז!",
+          "courseB_maze_seq1_b": "גרור את שלושת החצים  החוצה וחבר אותם אל הבלוק  כדי לגרום לסקראט להגיע אל הבלוט."
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט לזוז!",
-          "courseB_maze_seq1_b": "גרור את שלושת החצים <xml><block type=\"maze_moveSouth\"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט להגיע אל הבלוט."
+          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק  כדי לגרום לסקראט לזוז!",
+          "courseB_maze_seq1_b": "גרור את שלושת החצים  החוצה וחבר אותם אל הבלוק  כדי לגרום לסקראט להגיע אל הבלוט."
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט לזוז!",
-          "courseB_maze_seq1_b": "גרור את שלושת החצים <xml><block type=\"maze_moveSouth\"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט להגיע אל הבלוט."
+          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק  כדי לגרום לסקראט לזוז!",
+          "courseB_maze_seq1_b": "גרור את שלושת החצים  החוצה וחבר אותם אל הבלוק  כדי לגרום לסקראט להגיע אל הבלוט."
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_a": "אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר."
@@ -1865,7 +1865,7 @@
         },
         "courseD_iceage_loops1": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseD_iceage_loops10": {
           "courseB_iceage_loops10_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!"
@@ -1878,11 +1878,11 @@
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseD_iceage_loops2": {
           "courseD_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
@@ -2101,7 +2101,7 @@
           "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n\n-   להשתמש בפונקציה\n-   לזוז קידמה 100 + 75 פיקסלים\n-   להשתמש בפונקציה"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n\n-   להשתמש בפונקציה\n-   לזוז קידמה 100 + 75 פיקסלים\n-   להשתמש בפונקציה"
+          "courseD_artist_functions2_a": "התוכנית שלך זקוקה:\n- להשתמש בפונקציה\n- לזוז קידמה 100 + 75 פיקסלים\n- להשתמש בפונקציה"
         },
         "courseE_artist_functions6": {
           "grade4_artist_functions_windows0_c": "אל תפחדו לטעות! הוסיפו בלוקים, הריצו את הקוד וראו מה יקרה, גם אם עדיין לא סיימתם לפתור את החידה."
@@ -2282,7 +2282,7 @@
         },
         "CourseD_Dance_2020_02_2021": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   הרקדן חייב לבצע צעד\n-   עליכם ללחוץ על מקש חץ כלשהו\n\n_שלב זה נגמר אחרי 4 תיבות._",
-          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n<xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>"
+          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n"
         },
         "CourseD_Dance_2020_03_2021": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   כל רקדן צריך לבצע צעד ריקוד\n-   אתם חייבים ללחוץ על מקשי החיצים\n\n_שלב זה נגמר אחרי 6 תיבות._",
@@ -2310,7 +2310,7 @@
         "CourseD_Dance_2020_09_2021": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   פשוט לחצו על המקש \"סיים\"!",
           "repeat_every_ideas": "**צריכים רעיונות?**\n\n-   שנו שוב ושוב את גודלו של רקדן כדי לגרום לו לגדול\n-   שנו שוב ושוב את זווית הסיבוב של רקדן כדי לגרום לו להסתובב\n\n_אתם יכולים להשתמש גם במספרים שליליים כדי ליצור אפקט הפוך!_",
-          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "הבלוק החלופי נמצא בקטגוריית ה\"שחקנים\"."
@@ -2325,22 +2325,22 @@
           "voyage_aquatic_9a": "רואים את הבלוקים של השוניות האדומות והכחולות? היעזרו בהם כציוני דרך לפניות ימינה ושמאלה בתוך השונית."
         },
         "CourseF_outbreak1": {
-          "step1": "השתמשו בבלוקים הבאים ליצירת הדמויות שלכם:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nבלוק זה נמצא בקטגוריית **דמויות** שבארגז הכלים.",
-          "step2": "שנו את גודל הדמויות באמצעות בלוק זה:\n<xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>\n\nהוא נמצא בקטגוריית **פעולות** שבארגז הכלים.",
-          "step3": "גרמו לכל דמות להתחיל לשוטט באמצעות:\n<xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nהבלוק הזה נמצא בקטגוריית **פעולות** שבארגז הכלים."
+          "step1": "השתמשו בבלוקים הבאים ליצירת הדמויות שלכם:\n\n\n      \"healthy\"\n      \n        \n          10\n        \n      \n    \n\n\n      \"sick\"\n      \n        \n          1\n        \n      \n    \n\nבלוק זה נמצא בקטגוריית **דמויות** שבארגז הכלים.",
+          "step2": "שנו את גודל הדמויות באמצעות בלוק זה:\n\"scale\"50\n\nהוא נמצא בקטגוריית **פעולות** שבארגז הכלים.",
+          "step3": "גרמו לכל דמות להתחיל לשוטט באמצעות:\nwandering.\n\nהבלוק הזה נמצא בקטגוריית **פעולות** שבארגז הכלים."
         },
         "CourseF_outbreak2": {
-          "hint1": "לחצו על הכפתור `+` בבלוק האירוע. מלאו את האזור הריק שבבלוק `שנה תחפושת` עם בלוק ה`נושא` שנמצא בפנים.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "לחצו על הכפתור `+` בבלוק האירוע. מלאו את האזור הריק שבבלוק `שנה תחפושת` עם בלוק ה`נושא` שנמצא בפנים.\n\n\"when\"\"healthy\"\"sick\"\"sick\""
         },
         "CourseF_outbreak3": {
-          "hint1": "כדי להעניק למפלצות מסכות, השתמשו בבלוק `החלף תחפושת` עם אירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nהקפידו לגרור גם את הבלוק האדום הקטן `דמות שלחצו עליה`!",
-          "hint2": "הקוד החדש לשלב זה צריך להיראות כך:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "כדי להעניק למפלצות מסכות, השתמשו בבלוק `החלף תחפושת` עם אירוע `כאשר לוחצים על`:\n\n\"when\"\"healthy\"\"healthy\\_mask\"\n\nהקפידו לגרור גם את הבלוק האדום הקטן `דמות שלחצו עליה`!",
+          "hint2": "הקוד החדש לשלב זה צריך להיראות כך:\n\n\"when\"\"healthy\"\"healthy_mask\"\\<block type=\"gamelab_clickedSpritePointer\">\"when\"\"sick\"\"sick_mask\"\\<block type=\"gamelab_clickedSpritePointer\">"
         },
         "CourseF_outbreak4": {
-          "challenge": "## מחפשים אתגר נוסף?\n\nאתם יכולים גם לגרום למפלצות לנוע מהר יותר או לאט יותר.\n\n1.  לחצו על 'עריכה' בבלוק זה <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  הגדילו או הקטינו את המספר בבלוק הזה:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nכדי לגרום למפלצות לנוע לאט יותר, בחרו מספר עשרוני, למשל '0.5' או '0.25'. \n\nכדי לגרום להן לנוע מהר יותר, בחרו בכל מספר הגדול מ-1."
+          "challenge": "## מחפשים אתגר נוסף?\n\nאתם יכולים גם לגרום למפלצות לנוע מהר יותר או לאט יותר.\n\n1.  לחצו על 'עריכה' בבלוק זה wandering \n2.  הגדילו או הקטינו את המספר בבלוק הזה:\n\nthis sprite1\n\n\nכדי לגרום למפלצות לנוע לאט יותר, בחרו מספר עשרוני, למשל '0.5' או '0.25'. \n\nכדי לגרום להן לנוע מהר יותר, בחרו בכל מספר הגדול מ-1."
         },
         "CourseF_outbreak6": {
-          "hint2": "הקפידו להזיז את שאר בלוקי ה\"פעולה\" לחלק הפנימי של הבלוק `אם אחוז סיכוי`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint2": "הקפידו להזיז את שאר בלוקי ה\"פעולה\" לחלק הפנימי של הבלוק `אם אחוז סיכוי`:\n\n\n    \"when\"\n    \n      \n        \"healthy\"\n      \n    \n    \n      \n        \"sick\"\n      \n    \n    \n      \n      90\n        \n          \n            \"sick\"\n            \n              \n            \n          \n        \n      \n    \n  \n",
           "hint1": "הוסיפו עוד 3 אירועי `כאשר נוגע` כדי לבדוק את כל השילובים האפשריים של מגעים בין דמויות בריאות ובין דמויות נגועות."
         },
         "MC_HOC_2017_01_RETRY_2021": {
@@ -2481,8 +2481,8 @@
           "courseA_maze_seq13_b": "אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק \n  \n",
+          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n"
         },
         "courseB_Scrat_ramp1_2021": {
           "2": "אל תפחדו לטעות! נסו משהו, ואם זה לא מצליח, נסו משהו אחר!"
@@ -2490,14 +2490,14 @@
         "courseB_collector_loops_challenge2a_2021": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
           "courseB_collector_loops_challenge2a_b": "תסתכל על האפשרות הזו לעבור את המבוך. אתה רואה תבנית שאתה יכול לחזור עליה?",
-          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type=\"collector_collect\"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
+          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג  בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
         },
         "courseB_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!"
         },
         "courseB_iceage_loops1_2021": {
           "courseB_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseB_iceage_loops2_2021": {
           "courseB_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
@@ -2514,8 +2514,8 @@
           "courseB_iceage_loops9_c": "סקראט צריך ללכת בדרך המובילה אל הבלוט."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט לזוז!",
-          "courseB_maze_seq1_b": "גרור את שלושת החצים <xml><block type=\"maze_moveSouth\"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט להגיע אל הבלוט."
+          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק  כדי לגרום לסקראט לזוז!",
+          "courseB_maze_seq1_b": "גרור את שלושת החצים  החוצה וחבר אותם אל הבלוק  כדי לגרום לסקראט להגיע אל הבלוט."
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר."
@@ -2590,7 +2590,7 @@
         },
         "courseC_maze_programming2_2021": {
           "courseC_maze_programming2_b": "בדוק שוב שחיברת את כל הבלוקים יחד ואז לחץ שוב על \"הרץ\".",
-          "courseC_maze_programming2_a": "כדי להשתמש ב <xml><block type=\"maze_moveForward\"/></xml> , גררו אותו מחוץ לארגז הכלים והצמידו אותו אל <xml><block type=\"when_run\"/></xml>."
+          "courseC_maze_programming2_a": "כדי להשתמש ב  , גררו אותו מחוץ לארגז הכלים והצמידו אותו אל ."
         },
         "courseC_maze_programming3_2021": {
           "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם."
@@ -2682,7 +2682,7 @@
         },
         "courseD_iceage_loops1_2021": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseD_iceage_loops2_2021": {
           "courseD_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
@@ -2764,120 +2764,120 @@
           "Function_intro_Ryan_a": "תוכלו להשתמש בפונקציה פעמים רבות בתוך התוכנית שלכם! נסו להשתמש בה פעמיים כדי לפתור את החידה הזאת."
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n\n    \"when\"\n    \n      \n        \"cuteanimals_hippo\"\n      \n    \n    \n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        \"gradient\\_30\"\n      \n    \n  \n"
         },
         "helloworld_animals_behaviors": {
-          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n\n            \n              \n                \"cuteanimals_rooster_hello\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
         },
         "helloworld_animals_click": {
           "hw_click_sprites": "הקישו על הדמויות בעוד האירוע רץ.",
           "hw_no_changes": "אינכם צריכים לשנות שום דבר בקוד בשלב זה."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n\n    \"when\"\n    \n      \n        \"\"cuteanimals_sheep\"\n      \n    \n    \n      \\<block type=\"gamelab_setAnimation\">\n        \"\"cuteanimals_sheep\"\n        \n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            \"\"cuteanimals_goat_hello\"\n          \n        \n      \n    \n  \n"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n\n    \"when\"\n    \n      \n        \"cuteanimals_seahorse\"\n      \n    \n    \n      \\<block type=\"gamelab_spriteSay\">\n        Hello, ocean!\n        \n          \n            \"cuteanimals\\_seahorse\"\n          \n        \n      \n    \n  "
         },
         "helloworld_animals_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_multi": {
           "cat_xml": "ודאו כי התחפושות מתאימות בכל בלוק.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
         },
         "helloworld_animals_say": {
-          "hello-world-first-solution-bear": "כדי לגרום לדוב לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-bear": "כדי לגרום לדוב לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n\n    \n    \"cuteanimals_bear\"\n    \n      \\<block type=\"gamelab_location_picker\">\n        {\"x\":200,\"y\":200}\n      \n      \\<block type=\"gamelab_spriteSay\">\n    Hello, world!\n    \n      \n        \"cuteanimals\\_bear\"\n      \n    \n  \n  \n"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"cuteanimals_tiger\"\n        \n      \n      \n        \\<block type=\"math_number\">\n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"cuteanimals_cheetah_hello\"\n        \n      \n      \n        \n          10\n        \n      \n    "
         },
         "helloworld_emoji_backgrounds": {
-          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n\n    \"when\"\n    \n      \n        \"emoji_35_1\"\n      \n    \n    \n      \n        \"gradient_17_1\"\n      \n    \n  \n"
         },
         "helloworld_emoji_behaviors": {
-          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n\n            \n              \n                \"emoji_05_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
         },
         "helloworld_emoji_click": {
           "hw_click_sprites": "הקישו על הדמויות בעוד האירוע רץ.",
           "hw_no_changes": "אינכם צריכים לשנות שום דבר בקוד בשלב זה."
         },
         "helloworld_emoji_costumes": {
-          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n\n    \"when\"\n    \n      \n        \"emoji_18_1\"\n      \n    \n    \n      \n        \"emoji_25_1\"\n        \n          \n            \"emoji_18_1\"\n          \n        \n      \n    \n  \n"
         },
         "helloworld_emoji_events": {
-          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n\n    \"when\"\n    \n      \n        \"emoji_06_1\"\n      \n    \n    \n      \n        Look at that!\n        \n          \n            \"emoji_06_1\"\n          \n        \n      \n    \n  "
         },
         "helloworld_emoji_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_emoji_multi": {
-          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n\n      Look at me!\n      \n        \n          \"emoji_14_1\"\n        \n      \n    "
         },
         "helloworld_emoji_say": {
-          "hello-world-first-solution-emoji": "כדי לגרום לאמוג'י לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-emoji": "כדי לגרום לאמוג'י לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n\n    \n    \"emoji_19\"\n    \n      \\<block type=\"gamelab_location_picker\">\n        {\"x\":200,\"y\":200}\n      \n      \\<block type=\"gamelab_spriteSay\">\n    Hello, world!\n    \n      \n        \"emoji\\_19\"\n      \n    \n  \n  \n"
         },
         "helloworld_emoji_sizes": {
-          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"emoji_17_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"emoji_33_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
         },
         "helloworld_food_backgrounds": {
-          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
         },
         "helloworld_food_behaviors": {
-          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n\n            \n              \n                \"face_burger_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
         },
         "helloworld_food_click": {
           "hw_click_sprites": "הקישו על הדמויות בעוד האירוע רץ.",
           "hw_no_changes": "אינכם צריכים לשנות שום דבר בקוד בשלב זה."
         },
         "helloworld_food_costumes": {
-          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        \"face_taco_1\"\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  \n"
         },
         "helloworld_food_events": {
-          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
         },
         "helloworld_food_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
-          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n\n      Hello, broccoli!\n      \n        \n          \"face_carrot_1\"\n        \n      \n    "
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "כדי לגרום לפיצה לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_sizes": {
-          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n\n    \"when\"\n    \n      \n        \"retroship_21\"\n      \n    \n    \n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        \"background_landscape11_1\"\n      \n    \n  \n"
         },
         "helloworld_retro_behaviors": {
-          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n\n            \n              \n                \"retrocreature_09_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
         },
         "helloworld_retro_click": {
           "hw_click_sprites": "הקישו על הדמויות בעוד האירוע רץ.",
           "hw_no_changes": "אינכם צריכים לשנות שום דבר בקוד בשלב זה."
         },
         "helloworld_retro_costumes": {
-          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n\n    \"when\"\n    \n      \n        \"retrocreature_07_1\"\n      \n    \n    \n      \n        \"retrocreature_20_1\"\n        \n          \n            \"retrocreature_07_1\"\n          \n        \n      \n    \n  \n"
         },
         "helloworld_retro_events": {
-          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n\n    \"when\"\n    \n      \n        \"retro_powerup_heart\"\n      \n    \n    \n      \n        POWERUP!\n        \n          \n            \"retro_powerup_heart\"\n          \n        \n      \n    \n  "
         },
         "helloworld_retro_location": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n\n      Hello!\n      \n        \n          \"retrocreature\\_16\"\n        \n      \n    "
         },
         "helloworld_retro_say": {
-          "hello-world-first-solution-retrocreature": "כדי לגרום ליצור לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-retrocreature": "כדי לגרום ליצור לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n\n    \n    \"retrocreature_18_1\"\n    \n      \n        {\"x\":200,\"y\":200}\n      \n      \n    Hello, world!\n    \n      \n        \"retrocreature_18_1\"\n      \n    \n  \n  \n"
         },
         "helloworld_retro_sizes": {
-          "hw_retro_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
-          "hw_retro_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hw_retro_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n\n    \"scale\"\n    \n      \n        \"retro_purple_burst\"\n      \n    \n    \n      \n        50\n      \n    \n  ",
+          "hw_retro_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"retrocreature_11_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
         },
         "iceage_click_hello": {
           "iceage_click_hello_a": "הוסיפו את הבלוק \"שחקן 1 אומר\" פעם אחת או יותר לאירוע \"כאשר לוחצים על\" כדי לפתור את החידה."
@@ -2930,30 +2930,30 @@
           "iceage_warn_ice_age_b": "הוסיפו את שני הבלוקים החדשים מתחת לאירוע \"התחל ריצה\" כדי שיתרחשו מייד לאחר תחילת התוכנית."
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "לכל דמות יש \"מיקום\". תוכלו לקבוע את המיקום בלחיצה על הסיכה שעל הבלוק הזה:\n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\nלחצו על הסיכה ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) בבלוק המיקום ואז בחרו מקום חדש לדמות שלכם על המסך.\nלחצו על \"הרץ\" כשהקוד שלכם מוכן.",
-          "remove_hint": "אתם יכולים להסיר דמות במספר שורה מסוים. תוכלו להוסיף דמות חדשה שתתפוס את מקומה:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "לכל דמות יש \"מיקום\". תוכלו לקבוע את המיקום בלחיצה על הסיכה שעל הבלוק הזה:\n\n\"twinkling\\_star\"{\"x\":200,\"y\":225}\n\nלחצו על הסיכה ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) בבלוק המיקום ואז בחרו מקום חדש לדמות שלכם על המסך.\nלחצו על \"הרץ\" כשהקוד שלכם מוכן.",
+          "remove_hint": "אתם יכולים להסיר דמות במספר שורה מסוים. תוכלו להוסיף דמות חדשה שתתפוס את מקומה:\n\n3\"twinkling_star\"\\<block type=\"Poetry_makeNewSpriteAnon\">\"night\\_moon\"{\"x\":200,\"y\":225}"
         },
         "poetry_hoc_backgroundEffects": {
-          "add_background_effect": "מצאו בלוק רקע כמו זה: \n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\nובלוק אפקט טקסט כמו זה:\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nחברו את שני הבלוקים מתחת לבלוק `כשהריצה מתחילה` בסביבת העבודה שלכם.",
-          "add_more_effects": "הוסיפו עוד אפקטים של צבע כדי לעזור ביצירת האווירה של השיר.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"squiggles\"</title><title name=\"PALETTE\">\"sky\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value><next><block type=\"Poetry_setFont\"><title name=\"FONT\">\"Courier\"</title><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"typewriter\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "add_background_effect": "מצאו בלוק רקע כמו זה: \n\"colors\"\"sunrise\"\nובלוק אפקט טקסט כמו זה:\n\\#000099\n\nחברו את שני הבלוקים מתחת לבלוק `כשהריצה מתחילה` בסביבת העבודה שלכם.",
+          "add_more_effects": "הוסיפו עוד אפקטים של צבע כדי לעזור ביצירת האווירה של השיר.\n\"squiggles\"\"sky\"#000099\"Courier\"\"typewriter\""
         },
         "poetry_hoc_events1": {
-          "do_effect_hint": "הבלוק `בצע אפקט` יוסיף אפקט חדש פעם אחת. <xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\nתוכלו להוסיף לערמה יותר מבלוק `בצע אפקט` אחד כדי לגרום לו להימשך זמן רב יותר.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
-          "background_effect_hint": "תוכלו להוסיף אפקטים אחרים מתחת לבלוק האירוע בעזרת קוד שנראה כך: <xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
-          "more_events_hint": "תוכלו להשתמש ביותר מאירוע אחד בתוכנית שלכם. נסו להשתמש בשני אירועים עם אפקטים שונים ולהתאים להם שורות חדשות בשיר.\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
+          "do_effect_hint": "הבלוק `בצע אפקט` יוסיף אפקט חדש פעם אחת. 1\"twinkling\"\nתוכלו להוסיף לערמה יותר מבלוק `בצע אפקט` אחד כדי לגרום לו להימשך זמן רב יותר.\n0\"twinkling\"\"twinkling\"\"twinkling\"",
+          "background_effect_hint": "תוכלו להוסיף אפקטים אחרים מתחת לבלוק האירוע בעזרת קוד שנראה כך: 4\n    \"ripples\"\n    \"sky\"\n  ",
+          "more_events_hint": "תוכלו להשתמש ביותר מאירוע אחד בתוכנית שלכם. נסו להשתמש בשני אירועים עם אפקטים שונים ולהתאים להם שורות חדשות בשיר.\n\n2\"starburst\"\n\n4\"bubbles\""
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "מצאו את הבלוק הזה:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nאו הזה:\n<xml>\\<block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nחברו אותו אל מתחת לבלוק `כשהריצה מתחילה` בסביבת העבודה שלכם.",
-          "more_code": "הוסיפו עוד אפקטים וצבעים שיתאימו לצלילים שבחרתם.\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "מצאו את הבלוק הזה:\n\"sound://category_background/typewriter.mp3\"\nאו הזה:\n\\<block type=\"Poetry_playMusic\">\"sound://category_background/fire_burning.mp3\"\n\nחברו אותו אל מתחת לבלוק `כשהריצה מתחילה` בסביבת העבודה שלכם.",
+          "more_code": "הוסיפו עוד אפקטים וצבעים שיתאימו לצלילים שבחרתם.\n\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"\\<block type=\"Poetry_setBackgroundEffect\">\"blooming\"\"sunrise\"#996633\"fade\""
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "הוסיפו בלוק `דמות מתחילה` לקוד שלכם. ודאו כי כבר יצרתם את הדמות שאתם מוסיפים לה התנהגות.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "הוסיפו בלוק `דמות מתחילה` לקוד שלכם. ודאו כי כבר יצרתם את הדמות שאתם מוסיפים לה התנהגות.\n\n\"smiling_sun\"{\"x\":65,\"y\":105}\\<block type=\"Poetry_startBehavior\">\"smiling_sun\"spinning_right"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "מצאו את הבלוק הזה והקישו על `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nמה קורה כשהמספר הוא `25`?\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "מצאו את הבלוק הזה והקישו על `150`.\n\"ocean\\_wave\"150\n\nמה קורה כשהמספר הוא `25`?\n\"ocean\\_wave\"25"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## חיסונים\n\nתוכלו לדמות מתן חיסון למפלצות כאשר מקישים עליהן. כדי לעשות זאת, השתמשו בבלוק \"שנה תחפושת\" בצירוף האירוע הזה: \n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## חיסונים\n\nתוכלו לדמות מתן חיסון למפלצות כאשר מקישים עליהן. כדי לעשות זאת, השתמשו בבלוק \"שנה תחפושת\" בצירוף האירוע הזה: \n\n\n      \"when\"\n      \n        \n          \"healthy\\_mask\"\n        \n      \n    ",
           "verionhistory": "מרגישים תקועים? תוכלו לאפס את הקוד שלכם בכל עת בלחיצה על הלשונית \"היסטוריית גרסאות\" ואז לבחור באפשרות \"להתחיל מחדש\"."
         },
         "New Minecraft Hero Project": {
@@ -2992,7 +2992,7 @@
         },
         "CourseD_Dance_2020_022022": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   הרקדן חייב לבצע צעד\n-   עליכם ללחוץ על מקש חץ כלשהו\n\n_שלב זה נגמר אחרי 4 תיבות._",
-          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n<xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>"
+          "challenges": "**אתגר בונוס**\n\nהשתמשו ביותר מבלוק אחד כזה:\n"
         },
         "CourseD_Dance_2020_032022": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   כל רקדן צריך לבצע צעד ריקוד\n-   אתם חייבים ללחוץ על מקשי החיצים\n\n_שלב זה נגמר אחרי 6 תיבות._",
@@ -3020,7 +3020,7 @@
         "CourseD_Dance_2020_092022": {
           "validation": "**איך עוברים את השלב הזה?**\n\n-   פשוט לחצו על המקש \"סיים\"!",
           "repeat_every_ideas": "**צריכים רעיונות?**\n\n-   שנו שוב ושוב את גודלו של רקדן כדי לגרום לו לגדול\n-   שנו שוב ושוב את הזווית של רקדן כדי לגרום לו להסתובב\n\n_אתם יכולים להשתמש גם במספרים שליליים כדי ליצור אפקט הפוך!_",
-          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "next_previous": "**אתגר בונוס**\n\n-   אתם יכולים להשתמש בבלוק האירוע החדש הזה כדי לגלול רשימה של צעדי ריקוד דרך שינוי הצעד ל'(אקראי)', '(הבא)', או '(הקודם)'.\n\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"אקראי\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus12022": {
           "alternate": "הבלוק החלופי נמצא בקטגוריית ה\"שחקנים\"."
@@ -3047,26 +3047,26 @@
           "voyage_aquatic_9a": "רואים את הבלוקים של השוניות האדומות והכחולות? היעזרו בהם כציוני דרך לפניות ימינה ושמאלה בתוך השונית."
         },
         "CourseF_outbreak1_-2022-2": {
-          "step1": "השתמשו בבלוקים הבאים ליצירת הדמויות שלכם:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nבלוק זה נמצא בקטגוריית **דמויות** שבארגז הכלים.",
-          "step2": "שנו את גודל הדמויות באמצעות בלוק זה:\n<xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>\n\nהוא נמצא בקטגוריית **דמויות** שבארגז הכלים.",
-          "step3": "גרמו לכל דמות להתחיל לשוטט באמצעות:\n<xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nהבלוק הזה נמצא בקטגוריית **פעולות** שבארגז הכלים."
+          "step1": "השתמשו בבלוקים הבאים ליצירת הדמויות שלכם:\n\n\n      \"healthy\"\n      \n        \n          10\n        \n      \n    \n\n\n      \"sick\"\n      \n        \n          1\n        \n      \n    \n\nבלוק זה נמצא בקטגוריית **דמויות** שבארגז הכלים.",
+          "step2": "שנו את גודל הדמויות באמצעות בלוק זה:\n\"scale\"50\n\nהוא נמצא בקטגוריית **דמויות** שבארגז הכלים.",
+          "step3": "גרמו לכל דמות להתחיל לשוטט באמצעות:\nwandering.\n\nהבלוק הזה נמצא בקטגוריית **פעולות** שבארגז הכלים."
         },
         "CourseF_outbreak2_-2022-2": {
-          "hint1": "לחצו על הכפתור `+` בבלוק האירוע. מלאו את האזור הריק שבבלוק `שנה תחפושת` עם בלוק ה`נושא` שנמצא בפנים.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "לחצו על הכפתור `+` בבלוק האירוע. מלאו את האזור הריק שבבלוק `שנה תחפושת` עם בלוק ה`נושא` שנמצא בפנים.\n\n\"when\"\"healthy\"\"sick\"\"sick\""
         },
         "CourseF_outbreak3_-2022-2": {
-          "hint1": "כדי להעניק למפלצות מסכות, השתמשו בבלוק `החלף תחפושת` עם האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nהקפידו לגרור גם את הבלוק האדום הקטן `דמות שלחצו עליה`!",
-          "hint2": "הקוד החדש לשלב זה צריך להיראות כך:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "כדי להעניק למפלצות מסכות, השתמשו בבלוק `החלף תחפושת` עם האירוע `כאשר לוחצים על`:\n\n\"when\"\"healthy\"\"healthy\\_mask\"\n\nהקפידו לגרור גם את הבלוק האדום הקטן `דמות שלחצו עליה`!",
+          "hint2": "הקוד החדש לשלב זה צריך להיראות כך:\n\n\"when\"\"healthy\"\"healthy_mask\"\\<block type=\"gamelab_clickedSpritePointer\">\"when\"\"sick\"\"sick_mask\"\\<block type=\"gamelab_clickedSpritePointer\">"
         },
         "CourseF_outbreak4_-2022-2": {
-          "challenge": "## מחפשים אתגר נוסף?\n\nאתם יכולים גם לגרום למפלצות לנוע מהר יותר או לאט יותר.\n\n1.  לחצו על 'עריכה' בבלוק זה <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  הגדילו או הקטינו את המספר בבלוק הזה:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nכדי לגרום למפלצות לנוע לאט יותר, בחרו מספר עשרוני, למשל '0.5' או '0.25'. \n\nכדי לגרום להן לנוע מהר יותר, בחרו בכל מספר הגדול מ-1."
+          "challenge": "## מחפשים אתגר נוסף?\n\nאתם יכולים גם לגרום למפלצות לנוע מהר יותר או לאט יותר.\n\n1.  לחצו על 'עריכה' בבלוק זה wandering \n2.  הגדילו או הקטינו את המספר בבלוק הזה:\n\nthis sprite1\n\n\nכדי לגרום למפלצות לנוע לאט יותר, בחרו מספר עשרוני, למשל '0.5' או '0.25'. \n\nכדי לגרום להן לנוע מהר יותר, בחרו בכל מספר הגדול מ-1."
         },
         "CourseF_outbreak6_-2022-2": {
-          "hint2": "הקפידו להזיז את שאר בלוקי ה\"פעולה\" לחלק הפנימי של הבלוק `אם אחוז סיכוי`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint2": "הקפידו להזיז את שאר בלוקי ה\"פעולה\" לחלק הפנימי של הבלוק `אם אחוז סיכוי`:\n\n\n    \"when\"\n    \n      \n        \"healthy\"\n      \n    \n    \n      \n        \"sick\"\n      \n    \n    \n      \n      90\n        \n          \n            \"sick\"\n            \n              \n            \n          \n        \n      \n    \n  \n",
           "hint1": "הוסיפו עוד 3 אירועי `כאשר נוגע` כדי לבדוק את כל השילובים האפשריים של מגעים בין דמויות בריאות ובין דמויות נגועות."
         },
         "CourseF_outbreak7_-2022-2": {
-          "whenclicked": "## חיסונים\n\nתוכלו לדמות מתן חיסון למפלצות כאשר מקישים עליהן. כדי לעשות זאת, השתמשו בבלוק \"שנה תחפושת\" בצירוף האירוע הזה: \n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## חיסונים\n\nתוכלו לדמות מתן חיסון למפלצות כאשר מקישים עליהן. כדי לעשות זאת, השתמשו בבלוק \"שנה תחפושת\" בצירוף האירוע הזה: \n\n\n      \"when\"\n      \n        \n          \"healthy\\_mask\"\n        \n      \n    ",
           "verionhistory": "מרגישים תקועים? תוכלו לאפס את הקוד שלכם בכל עת בלחיצה על הלשונית \"היסטוריית גרסאות\" ואז לבחור באפשרות \"להתחיל מחדש\"."
         },
         "Function intro Ryan2022": {
@@ -3208,8 +3208,8 @@
           "courseA_harvester_seq5_b": "אתם צריכים למחוק בלוק אחד."
         },
         "courseA_maze_seq12022": {
-          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
-          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+          "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק \n  \n",
+          "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n"
         },
         "courseA_maze_seq132022": {
           "courseA_maze_seq13_b": "אל תפחד לעשות טעות! נסה להוסיף בלוקים והרץ את הקוד כדי לראות מה קורה."
@@ -3220,14 +3220,14 @@
         "courseB_collector_loops_challenge2a2022": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
           "courseB_collector_loops_challenge2a_b": "תסתכל על האפשרות הזו לעבור את המבוך. אתה רואה תבנית שאתה יכול לחזור עליה?",
-          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג <xml><block type=\"collector_collect\"/></xml> בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
+          "courseB_collector_loops_challenge2a_c": "כדי לאסוף את כל האוצר, תזדקק בכל מקרה להוסיף שני בלוקים מסוג  בתוך הלולאה שלך, או לשים את הבלוק בתוך בלוק 'חזור' משלו."
         },
         "courseB_iceage_loops102022": {
           "courseB_iceage_loops10_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוך המים!"
         },
         "courseB_iceage_loops12022": {
           "courseB_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseB_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseB_iceage_loops22022": {
           "courseB_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
@@ -3244,8 +3244,8 @@
           "courseB_iceage_loops9_c": "סקראט צריך ללכת בדרך המובילה אל הבלוט."
         },
         "courseB_maze_seq12022": {
-          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט לזוז!",
-          "courseB_maze_seq1_b": "גרור את שלושת החצים <xml><block type=\"maze_moveSouth\"/></xml> החוצה וחבר אותם אל הבלוק <xml><block type=\"when_run\"/></xml> כדי לגרום לסקראט להגיע אל הבלוט."
+          "courseB_maze_seq1_a": "חבר את הבלוקים אל הבלוק  כדי לגרום לסקראט לזוז!",
+          "courseB_maze_seq1_b": "גרור את שלושת החצים  החוצה וחבר אותם אל הבלוק  כדי לגרום לסקראט להגיע אל הבלוט."
         },
         "courseB_maze_seq52022": {
           "courseB_maze_seq5_a": "אם אתה נתקע, נסה לכתוב את הצעדים על גבי נייר."
@@ -3397,7 +3397,7 @@
         },
         "courseD_iceage_loops12022": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:"
         },
         "courseD_iceage_loops22022": {
           "courseD_iceage_loops2_a": "נסה לחלק את פתרון הבעיה ל-2 חלקים, אחד לפני הפינה ואחד אחרי הפינה.",
@@ -3456,22 +3456,22 @@
           "courseC_maze_programming1_b": "אל תפחדו לטעות! נסו משהו, ואם זה לא מצליח, נסו משהו אחר!"
         },
         "coursee_helloworld_events": {
-          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
         },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "כדי לגרום לפיצה לומר משהו, חברו את הבלוקים של הקוד באופן כזה:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_backgrounds_soccer-2022": {
-          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
         },
         "helloworld_food_backgrounds_space-2022": {
-          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "אתם יכולים לשנות את הרקע באמצעות חיבור הבלוק `קבע רקע` אל מתחת לבלוק האירוע `כאשר לוחצים על`:\n\n\n    \"when\"\n    \n      \n        \"face_avocado_1\"\n      \n    \n    \n      \n        \"gradient_25_1\"\n      \n    \n  \n"
         },
         "helloworld_food_behaviors_soccer-2022": {
-          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n\n            \n              \n                \"face_burger_1\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
         },
         "helloworld_food_behaviors_space-2022": {
-          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"space_astronaut_cat\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "שימו לב: כדי להוסיף לדמות התנהגות, עליכם להשתמש בבלוק `דמות מתחילה` ובבלוק התנהגות ירוק, כגון `להסתובב ימינה`.\n\n\n            \n              \n                \"space_astronaut_cat\"\n              \n            \n            \n              \n                \n                spinning right\n              \n              "
         },
         "helloworld_food_click_soccer-2022": {
           "hw_click_sprites": "הקישו על הדמויות בעוד האירוע רץ.",
@@ -3482,36 +3482,42 @@
           "hw_no_changes": "אינכם צריכים לשנות שום דבר בקוד בשלב זה."
         },
         "helloworld_food_costumes_soccer-2022": {
-          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_3\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"soccer_player_2\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n\n    \"when\"\n    \n      \n        \"soccer_player_2\"\n      \n    \n    \n      \n        \"soccer_player_3\"\n        \n          \n            \"soccer_player_2\"\n          \n        \n      \n    \n  \n"
         },
         "helloworld_food_costumes_space-2022": {
-          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"space_astronaut_2\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_astronaut_3\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "נסו לחבר את הבלוק `שנה תחפושת` מתחת לבלוק האירוע `כאשר לוחצים על`.\n\n\n    \"when\"\n    \n      \n        \"space_astronaut_3\"\n      \n    \n    \n      \n        \"space_astronaut_2\"\n        \n          \n            \"space_astronaut_3\"\n          \n        \n      \n    \n  \n"
         },
         "helloworld_food_events_soccer-2022": {
-          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n\n    \"when\"\n    \n      \n        \"face_burger_1\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"face_burger_1\"\n          \n        \n      \n    \n  "
         },
         "helloworld_food_events_space-2022": {
-          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"space_alien_ship\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "חברו בלוק `אמור` אל מתחת לבלוק `כאשר לוחצים על`.\n\n    \"when\"\n    \n      \n        \"space_alien_ship\"\n      \n    \n    \n      \n        Hello, world!\n        \n          \n            \"space_alien_ship\"\n          \n        \n      \n    \n  "
         },
         "helloworld_food_location_soccer-2022": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_location_space-2022": {
-          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו."
+          "location_pin_hint": "כדי לשנות את מיקום הדמות, הקישו על הסיכה בבלוק המיקום, ואז הקישו על המקום שתרצו שהדמות תלך אליו.\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n\n      Goal!\n      \n        \n          \"soccer\\_ball\"\n        \n      \n    "
         },
         "helloworld_food_multi_space-2022": {
-          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ודאו כי התחפושות מתאימות לכל דמות.\n\n      Hello, alien!\n      \n        \n          \"face_carrot_1\"\n        \n      \n    "
         },
         "helloworld_food_sizes_soccer-2022": {
-          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          50\n        \n      \n    ",
+          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n\n      \"scale\"\n      \n        \n          \"face_strawberry_1\"\n        \n      \n      \n        \n          10\n        \n      \n    "
         },
         "helloworld_food_sizes_space-2022": {
-          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
-          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+          "storyboard_setProp": "כדי להגדיר את הגודל של דמות פעם אחת בלבד, אפשר להשתמש בבלוק הזה:\n\n\n  \"when\"\n  \n    \n      \"space_astronaut_1\"\n    \n  \n  \n    \n      \"scale\"\n      \n        \n          \"space_astronaut_1\"\n        \n      \n      \n        \n          50\n        \n      \n    \n  \n",
+          "storyboard_changePropBy": "אם תרצו לשנות את גודל הדמות שוב ושוב (דרך אירועים), השתמשו בבלוק הזה:\n\n\n  \"when\"\n  \n    \n      \"space_satellite\"\n    \n  \n  \n    \\<block type=\"gamelab_changePropBy\">\n      \"scale\"\n      \n        \n          \"space_satellite\"\n        \n      \n      \n        \\<block type=\"math_number\" can_disconnect_from\\_parent=\"false\">\n          10\n        \n      \n    \n  \n"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "כדי לגרום לספרייט לומר משהו, חבר את גושי הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "כדי לגרום לספרייט לומר משהו, חבר את גושי הקוד כך:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         }
       }
     }

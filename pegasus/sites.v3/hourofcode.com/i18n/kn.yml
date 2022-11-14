@@ -45,6 +45,8 @@ kn:
   hoc2022_codeorg_title: ನಾಸಾ ಮತ್ತು ಇನ್ನಷ್ಟರ ಜೊತೆಗೆ ಅವರ್ ಆಫ್ ಕೋಡ್‌ ಸಂಭ್ರಮಿಸಿ
   hoc2022_codeorg_description: 10ನೇ ಅವರ್ ಆಫ್ ಕೋಡ್ ಈ ವಿಶ್ವದಾಚೆಯದ್ದು! ಬನ್ನಿ ಎಕ್ಸ್‌ಪ್ಲೋರ್
     ಮಾಡಿ, ಆಟವಾಡಿ ಮತ್ತು ನಮ್ಮ ಜೊತೆಗೆ ರಚನೆ ಮಾಡಿ.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: ಇಂದು ಕಲಿಯಿರಿ, ಪ್ರಖರ ಭವಿಷ್ಯವನ್ನು ರೂಪಿಸಿ.
@@ -1063,10 +1065,6 @@ kn:
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_banner_teachers_markdown: 'ಶಿಕ್ಷಕರು: [ಒಂದು ಗಂಟೆ ಹೋಸ್ಟ್‌ ಮಾಡಿ](%{host_url})
     ಅಥವಾ [ಮಾರ್ಗದರ್ಶಿಯನ್ನು ಓದಿ](%{howto_url})'
-  learn_robotics_banner_heading: Robotics and Circuits
-  learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
-    the activities below and make a tangible Hour of Code for students of any age!
-    Some activities even offer a simulator so you can get started without any hardware.
   tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -10489,7 +10487,7 @@ kn:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11257,7 +11255,7 @@ kn:
   tutorial_googlesuperhero_string_detail_programming_languages: Blocks
   tutorial_googlename _string_detail_programming_languages: Blocks
   tutorial_carnegiezillah_string_detail_programming_languages: Blocks
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Blocks
   tutorial_hatchxrsolar_string_detail_programming_languages: Blocks
   tutorial_hatchxrspace_string_detail_programming_languages: Blocks
   tutorial_hatchxrtrex_string_detail_programming_languages: Blocks
