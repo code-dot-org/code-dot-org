@@ -105,7 +105,7 @@
   "madlibNoSprites": "A promptod működik. Ha azt csinálja, amit vártál, elkezdheted hozzáadni a sprite-okat a projektedhez. Miről szól a történeted vagy a versed?",
   "madlibPrintVariable": "Úgy tűnik, hogy a csevegőrobot válaszol, de nem írta ki, amit a promptba beírtál. Győződj meg arról, hogy a megfelelő **változó** címke van a „Nyomtatás” blokkodhoz csatlakoztatva.",
   "madlibPrintWhenAnswered": "Jelenleg csak egyszer nyomtatod ki a szöveget. Győződj meg arról, hogy a „Print” blokk egy „Amikor válaszolt” blokk alatt van. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">név</title></block></value></block></xml>",
-  "madlibTitleVariable": "Úgy néz ki, mintha egy címképernyőt adtál volna a programodhoz, de nincs benne szöveg a promptból. ",
+  "madlibTitleVariable": "Úgy néz ki, mintha egy címképernyőt adtál volna a programodhoz, de nincs benne szöveg a promptból.",
   "makeSpritesWithEvent": "Több sprite-ot kell csinálnod amikor az esemény észlelve van.",
   "moveOnlyClickedSpriteWithBehavior": "Az összes sprite mozgott nem csak az, amire kattintva lett. Próbáld meg használni a `kattintott sprite` blokkot a `sprite kezdet` blokkal. Győződj meg róla, hogy olyan viselkedést választasz, amitől a sprite mozogni fog!",
   "moreSprites": "Több sprite-ot kell készítened.",

@@ -71,6 +71,14 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compressie"
         },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Code"
         },
@@ -213,7 +221,12 @@
           "word": "Code",
           "definition": "(v) instructies voor een computer schrijven."
         },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "program/poem-art/unversioned": {
+          "word": "",
           "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
         },
         "mood/poem-art/unversioned": {

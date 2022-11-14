@@ -2544,7 +2544,7 @@
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Just press the \"Finish\" button!",
       "repeat_every_ideas": "**Need some ideas?**\n\n-   Repeatedly change a dancer's size to make it grow.\n-   Repeatedly change a dancer's rotation to make it spin.\n\n_You can also use negative numbers to create an opposite effect!_",
-      "next_previous": "**Optional Challenge**\n\n-   You can also use this new event block to cycle through a list of dance moves by setting the move to `(Random)`, `(Next)`, or `(Previous)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+      "next_previous": "**Optional Challenge**\n\n-   You can also use this new event block to cycle through a list of dance moves by setting the move to `(Random)`, `(Next)`, or `(Previous)`.\n    [][0][][1]\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
     },
     "callouts": {
       "new_block_3": "New block!",

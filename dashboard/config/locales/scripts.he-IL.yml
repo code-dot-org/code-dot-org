@@ -1965,12 +1965,12 @@ he:
         vpl-csd2-ayw-pilot-2022:
           lessons:
             lesson-6:
-              name: מודולה 2 עבודה אסינכרונית
+              name: מודול 2 עבודה אסינכרונית
         soccer:
           name: כדורגל
-          title: קודד את משחק הכדורגל שלך
-          description_short: צור משחק כדורגל
-          description: צור משחק כדורגל
+          title: קודדו משחק כדורגל משלכם
+          description_short: צרו משחק כדורגל
+          description: צרו משחק כדורגל
         csa1-validation-pilot-2022:
           lesson_groups:
             lessonGroup-5:
@@ -1986,6 +1986,12 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: סקר
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: משתנים
+        hello-world-space-2022:
+          title: 'שלום, עולם: שטח'
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2011,7 +2017,7 @@ he:
         csc-function-machines-pilot:
           lessons:
             lesson-1:
-              name: מה זה הצליל הזה?
+              name: מה הצליל הזה?
         csp1-2023:
           lesson_groups:
             cspSurvey:

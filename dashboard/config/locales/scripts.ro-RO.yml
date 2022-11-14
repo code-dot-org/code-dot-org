@@ -1762,11 +1762,14 @@ ro:
               display_name: Conţinut
             required:
               display_name: Prezentare generală
+        dance-2019:
+          title: Petrecere dansantă
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
               display_name: Pașii următori
         dance-extras-2019:
+          title: Continuă să dansezi
           description: Mergi mai departe de prima oră cu ideile de extindere a proiectelor.
           student_description: Mergi mai departe de prima oră cu ideile de extindere
             a proiectelor.
@@ -3387,6 +3390,17 @@ ro:
               display_name: Sondaj
             lessonGroup-3:
               display_name: Conţinut
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variabile
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        hello-world-space-2022:
+          title: 'Bunā Lume: Spațiu'
+        hello-world-soccer-2022:
+          title: 'Bunā Lume: Fotbal'
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3476,3 +3490,7 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Chestionar după curs
+        csp-playground:
+          description_audience: Scriitori de Curriculum
+          description_short: Pentru actualizările pe stadii ale lecțiilor sau nivelurile
+            dintre versiunile planului curicular

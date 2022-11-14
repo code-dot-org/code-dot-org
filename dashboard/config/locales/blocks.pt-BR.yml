@@ -5,6 +5,8 @@ pt:
       AmysBlocks_setPromptWithChoices:
         text: pedir ao usuário {QUESTION} que informe a variável {VAR} com opções
           {A}{B}{C}
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}diga{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -994,6 +996,13 @@ pt:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: O microscópio tem {INPUT1}
+        options:
+          INPUT1:
+            '1': suco de limão
+            '3': baking soda
+            '5': both
       DansBlocks_setForegroundEffect2:
         text: criar efeito {EFFECT} efeito
         options:
@@ -1006,12 +1015,20 @@ pt:
             '"starburst"': Starburst
             '"glass"': Vidro estilhaçando
             '"twinkling"': Cintilante
-      FunctionBlocks_representManipulative:
+      DansBlocks_setMicroscope:
         options:
-          BEHAVIOR:
-            draggable(): ser arrastável
-            wandering(): vagando
-            shrinking(): encolhendo
+          INPUT1:
+            '1': suco de limão
+            '3': baking soda
+            '5': both
+      FunctionBlocks_communicate:
+        text: Comunique {VAR1} com {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: crie {NUM} novas {ANIMATION_NAME} fadas  {BEHAVIOR}
+      FunctionBlocks_representManipulative:
+        text: represente {NUM} novas {ANIMATION_NAME} fadas [BEHAVIOR][2]
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}diga{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
       gamelab_addTarget:
@@ -1364,6 +1381,7 @@ pt:
             "'sound://category_space/Pillars_SFX.mp3'": colunas
             "'sound://category_space/Southern_ring_SFX.mp3'": anel meridional
             "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       gamelab_playSpeech:
         text: reproduzir fala {SOUND}
       gamelab_playerBehaviors:
@@ -1966,8 +1984,39 @@ pt:
         text: coordenada x do {SPRITE}
       Mikelab_yLocationOf:
         text: coordenada y do {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: O microscópio tem {INPUT1}
+        options:
+          INPUT1:
+            '1': suco de limão
+            '3': baking soda
+            '5': both
+      ParticlesBlocks_setMicroscope:
+        options:
+          INPUT1:
+            '1': suco de limão
+            '3': baking soda
+            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): sólido
+            new Behavior(liquid, []): líquido
+            new Behavior(wandering, []): gás
+      ParticlesBlocks_statesOfMatter2:
+        text: Definir {COSTUME} como comportamento {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"solid"': 'partícula sólida '
+            '"liquid"': partícula líquida
+            '"gas"': patrícula gasosa
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'partícula sólida '
+            '"liquid"': partícula líquida
+            '"gas"': patrícula gasosa
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2041,6 +2090,21 @@ pt:
             '"sound://category_achievements/peaceful_win_1.mp3"': Vitória
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Redemoinho
             '"sound://category_achievements/peaceful_win_6.mp3"': Sinos de Vento
+      Poetry_playSoundOptionsSpace:
+        text: reproduzir som {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": buraco negro
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": aglomerado bala
+            "'sound://category_space/Carina_SFX.mp3'": Carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": Nebulosa do Caranguejo
+            "'sound://category_space/Launch_SFX.mp3'": lançamento
+            "'sound://category_space/Lift_Off.mp3'": lista detalhada
+            "'sound://category_space/Pillars_SFX.mp3'": colunas
+            "'sound://category_space/Southern_ring_SFX.mp3'": anel meridional
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
+            "'sound://category_space/Tycho_SFX.mp3'": tycho
       Poetry_setAuthor:
         text: definir o autor {AUTHOR}
       Poetry_setBackground:
@@ -2402,6 +2466,16 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      storylab_setForegroundEffect2:
+        text: criar efeito {EFFECT} efeito
+        options:
+          EFFECT:
+            '"bubbles"': Bolhas
+            '"confetti"': Confete
+            '"hearts"': copas
+            '"rain"': chuva
+            '"starburst"': Starburst
+            '"twinkling"': Cintilante
       storylab_setHeading:
         text: definir cabeçalho {HEADING}
       storylab_setSubheading:

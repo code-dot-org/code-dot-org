@@ -260,7 +260,8 @@
           "hello_world_new": "Nou bloc!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nou bloc!"
+          "hello_world_new": "Nou bloc!",
+          "hello_world_new_block": "Nou bloc!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nou bloc!"
@@ -369,6 +370,175 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nou bloc!"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "courseE_aboutme_22022": {
+          "": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_animals_location": {
+          "pin": "passador"
+        },
+        "helloworld_animals_multi": {
+          "pin": "passador"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_emoji_location": {
+          "pin": "passador"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "passador"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Feu clic aquí primer!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_food_location": {
+          "pin": "passador"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_multi": {
+          "pin": "passador"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "passador"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "helloworld_retro_location": {
+          "pin": "passador"
+        },
+        "helloworld_retro_multi": {
+          "pin": "passador"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin.",
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite."
         }
       }
     }

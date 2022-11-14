@@ -20,6 +20,9 @@
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi.",
           "student_overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin."
         },
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Salom Dunyo: Futbol"
+        },
         "hourofcode/Maze": {
           "name": "Labirint",
           "purpose": "Ushbu dars CS kodlash va dasturlashning asosiy tushunchalari (bloklardan foydalangan holda) hamda oddiy disk sozlamalarin usullarini taqdim etadi."
@@ -45,7 +48,7 @@
           "student_overview": "Bu darsda, o‘rganuvchilar informatikaga oid boshlang‘ich tajribaga ega bo‘ladilar va asosan bo‘limlar bilan kodlashdan foydalanib biron o‘yin yaratadilar. Bu dars, 10-16 yoshli, o‘rta sinfdagi o‘rganuvchilar uchun mo‘ljallangan, ammo kiritilgan turli xil takliflar yordamida yoshroq yoki kattaroq o‘rganuvchilar uchun ham moslashtirilishi mumkin."
         },
         "dance/Dance Party": {
-          "name": "Dance Party",
+          "name": "Raqs bazmi (2018)",
           "overview": "Ushbu darsda barcha yoshdagi o'quvchilar xavfsiz va qo'llab-quvvatlovchi muhitda kodlash va informatika bilan tanishish tajribasiga ega bo'ladilar. Ushbu dars barcha yoshdagi o'quvchilar uchun mo'ljallangan, ammo o'qishni talab qiladi. Bu jarayon tovush talab qiladigan, musiqaga javob qaytarish uchun qurilgan",
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
         },
@@ -57,6 +60,9 @@
           "name": "Oddiy Shifrlash",
           "preparation": "-   Qurilmaning ikkala variantini ham tekshirib ko‘ring",
           "purpose": "“Shifrlash” bu qabul qiluvchi bo‘lmaganlar uchun biron xabarning aslini yashirish maqsadida qilingan o‘zgartirish. Shifrlash shunchaki harbiylar yoki josuslar uchun emas. Biz shifrlashdan Internetda har kungi hayotimizda foydalanamiz, asosan savdo-sotiqdagi o‘tkazmalar qilishda va usiz iqtisodimiz inqirozga yuz tutishi mumkin. \n\nUshbu dars o'quvchilarga hisoblash vositalari oldida xabarlarni shifrlashga kirishadigan fikrlashning birinchi ta'mini beradi. Hisoblash vositalari biz ma'lumotni shifrlashda foydalanadigan algoritmlarning kuchi va murakkabligini keskin oshiradi, ammo aynan shu vositalar bizning shifrlash qobiliyatimizni oshiradi. Kuchli shifrlashni rivojlantirish kompyuterlar uchun 'qiyin' bo'lgan muammolarni bilishga va shu bilimlardan xabarlarni shifrlashda foydalanishga asoslangan. Manba sifatida siz _Blown to Bits_ ning 5-bobini o'qishingiz mumkin. Bu sizning sinfingizga olib kirishingiz mumkin bo'lgan ijtimoiy mazmunni taqdim etadi."
+        },
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Salom Dunyo: Kosmik"
         },
         "starwars/Hour of Code 2015": {
           "name": "Yulduzlar Jangi: Kod bilan Galaktika qurish (JavaScript)",
@@ -85,6 +91,12 @@
           "preparation": "-   Matnni Zichlovchi Qurilmani test qilib ko‘ring\n-   Qaysi tanlovni ishlatishni xohlashingizga qarab o‘rgatish usullarini qarab chiqing",
           "purpose": "Zichlashning asosiy maqsadi asl ma'lumotni namoyish qilish uchun kamroq bitlardan foydalanish usuli yoki protokolini ishlab chiqishdir. Ushbu darsda siqilgan ma'lumotlarni namoyish etish uslubi, takroriy naqshlarning 'lug'ati' bilan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) ga o'xshash, ammo shuni ta'kidlash kerakki, LZW o'quvchilar ushbu darsda bajaradigan narsalardan biroz farq qiladi. Talabalar bu yerda o'z usullarini ixtiro qilishadi. LZW nafaqat matn uchun (zip fayllar), balki GIF rasm fayli formati bilan ham qo'llaniladi."
         },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "sports/Sports": {
           "overview": "Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.",
           "student_overview": "Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!"
@@ -106,7 +118,7 @@
           "name": "Dasturlash soati - 2013"
         },
         "dance-2019/Dance Party": {
-          "name": "Raqs bazmi (2019)",
+          "name": "Dance Party",
           "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
         },
         "oceans/Oceans": {
@@ -275,6 +287,7 @@
         },
         "coursed-2022/Relay Programming": {
           "name": "Estafetali dasturlash",
+          "overview": "Ushbu **kontekstni o'rnatish** darsi nosozlikni sozlash va mustahkamlik bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar jamoalarga bo'linib, bir vaqtning o'zida bitta ifoda yozish uchun birgalikda ishlashganda tezroq bajarish poygasiga kirishishadi.",
           "purpose": "Informatika fanida jamoaviy ish juda muhimdir. Jamoalar birma-bir ishlash o'rniga, bir-birlari bilan kod yozishadi va disk sozlama  qilishadi. Ushbu darsda talabalar iloji boricha samarali bo'lishlari bilan birgalikda ishlashni o'rganadilar.\\\n Bu mashg'ulot talabalarni o'z vaqtlarini ehtiyotkorlik bilan saqlashga va xatolardan qochishga yo'l qo'ymaslik uchun o'rgatadigan shoshilinchlikni ta'minlaydi. Ushbu tajriba stressni keltirib chiqarishi mumkin (bu kutilmoqda!) Talabalarni mumkin bo'lgan ko'ngilsizliklarni  yengish uchun vositalar bilan ta'minlaganingizga ishonch hosil qiling. ",
           "student_overview": "Kursni boshida kod bilan chizmalar chizganingizni eslaysizmi? Bu darsda, xuddi shunga o‘xshash narsa qiish uchun biron jamoa bilan ishlaysiz!"
         },
@@ -728,6 +741,7 @@
           "name": "Mening onlayn atrofimda xavfsizlik",
           "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nInternetning kuchi o‘quvchilarga shaxsan ko‘rishlari mumkin bo‘lmagan joylarni ko‘rish va aylanish imkoniyatini beradi. Ammo, xuddi real dunyoda sayohat qilish kabi, Internetda sayohat qilishda ham xavfsiz bo‘lish muhim hisoblanadi. Ushbu virtual ekskursiyada bolalar onlayn sarguzashtlarda xavfsizlikni ta'minlash bilan shug‘ullanishlari mumkin.",
           "preparation": "-   Ko'rsatma materiallarni ko'rish.\n-   Har bir o'quvchi uchun tarqatma materiallarni chop etish.\n-   (Ixtiyoriy) Sinfda taqdim etish uchun poster chop etish.",
+          "purpose": "Common Sense’ning raqamli fuqarolik o‘quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo‘yicha so‘nggi tadqiqotlarga asoslangan oltita asosiy mavzuni o'rganadi. Ushbu dars Maxfiylik va xavfsizlik masalalariga qaratilgan. Talabalar o'zlari va boshqalar uchun himoya qilishlari uchun shaxsiy ma'lumotlarni qanday himoya qilishni o'rganadilar va ma'lumotlarning maxfiylik huquqlarini chuqurroq tushunadilar.",
           "student_overview": "Xavfsiz onlayn aylanishni o'rganing"
         },
         "coursea-2022/Learn to Drag and Drop": {

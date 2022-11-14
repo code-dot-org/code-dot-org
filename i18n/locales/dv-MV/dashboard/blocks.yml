@@ -1027,3 +1027,9 @@ dv:
             '"w"': w
             '"s"': s
             '"d"': d
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': ބަބްލްސް
+            '"confetti"': ކޮންފެޓީ
+            '"starburst"': ސްޓަރ ބަރސްޓް

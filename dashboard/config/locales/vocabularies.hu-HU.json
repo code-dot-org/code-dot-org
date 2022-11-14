@@ -267,6 +267,9 @@
         "programming/coursed/2022": {
           "word": "Programozás"
         },
+        "persistence/coursed/2022": {
+          "word": "Kitartás"
+        },
         "event/coursed/2022": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
@@ -332,6 +335,9 @@
         "programming/courseb/2022": {
           "word": "Programozás"
         },
+        "persistence/courseb/2022": {
+          "word": "Kitartás"
+        },
         "event/courseb/2022": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
@@ -378,6 +384,9 @@
         "programming/pre-express/2022": {
           "word": "Programozás"
         },
+        "persistence/pre-express/2022": {
+          "word": "Kitartás"
+        },
         "event/pre-express/2022": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
@@ -405,6 +414,9 @@
         "program/coursec/2022": {
           "word": "Program",
           "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "persistence/coursec/2022": {
+          "word": "Kitartás"
         },
         "programming/coursec/2022": {
           "word": "Programozás"
@@ -513,6 +525,9 @@
         "programming/courseb/2021": {
           "word": "Programozás"
         },
+        "persistence/courseb/2021": {
+          "word": "Kitartás"
+        },
         "event/courseb/2021": {
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
@@ -560,6 +575,9 @@
         },
         "programming/coursed/2021": {
           "word": "Programozás"
+        },
+        "persistence/coursed/2021": {
+          "word": "Kitartás"
         },
         "event/coursed/2021": {
           "word": "Esemény",
@@ -612,6 +630,9 @@
         },
         "programming/pre-express/2021": {
           "word": "Programozás"
+        },
+        "persistence/pre-express/2021": {
+          "word": "Kitartás"
         },
         "event/pre-express/2021": {
           "word": "Esemény",

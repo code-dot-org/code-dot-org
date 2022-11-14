@@ -97,7 +97,7 @@
   "madlibNoSprites": "Uw prompt functioneert. Als het doet wat u verwacht, dan kunt u sprites toevoegen aan uw project. Waar gaat uw verhaal of gedicht over? ",
   "madlibPrintVariable": "Het lijkt erop dat de chatbot reageert, maar niet afdrukte wat u had ingevoerd in de prompt. Controleer of de juist **variabele** etiket is verbonden met uw afdrukblok. ",
   "madlibPrintWhenAnswered": "Op dit moment drukt u tekst slechts één keer af. Let erop dat er een blok voor afdrukken onder het blok 'indien beantwoord' zit. \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">eten</title></block></value></block></xml>",
-  "madlibTitleVariable": "Het lijkt erop dat u een titelscherm aan uw programma hebt toegevoegd, maar geen tekst uit de prompt hebt gebruikt. ",
+  "madlibTitleVariable": "Het lijkt erop dat u een titelscherm aan uw programma hebt toegevoegd, maar geen tekst uit de prompt hebt gebruikt.",
   "moreSprites": "U moet meer sprites creëren.",
   "moveBothWays": "Uw sprite dient zich eerst de ene en daarna de andere richting te verplaatsen.",
   "moveSpriteByDrag": "Uw code ziet er geweldig uit. Klik erop tijdens het uitvoeren van het programma om uw sprite te verslepen.",
