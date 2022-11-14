@@ -7,6 +7,10 @@ function addFiveBlock() {
       };
       addFunctionBlock(newBlockObj);
     }
-    input = input + 5;
-    output = input;
+    if(typeof output === 'undefined') {
+      output = input;
+    }
+    //This structure makes validation code easier
+    input = output;
+    output = input + 5;
 }
