@@ -1064,12 +1064,18 @@ pl:
         text: AddSeven
       FunctionBlocks_addSixBlock:
         text: AddSix
+      FunctionBlocks_addThreeBlock:
+        text: AddThree
+      FunctionBlocks_addTwoBlock:
+        text: addTwo
       FunctionBlocks_communicate:
         text: Komunikuj {VAR1} z {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki  {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: representuj {NUM} nowe {ANIMATION_NAME} duszki [BEHAVIOR][2]
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] reprezentują {NUM} nowe {ANIMATION_NAME} duszki"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}powiedz {TEXT1}"
       gamelab_addBehaviorSimple:
