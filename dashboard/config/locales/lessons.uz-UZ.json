@@ -480,6 +480,9 @@
         },
         "courseb-2022/Digital Trails": {
           "name": "Raqamli izlar",
+          "overview": " \\[\\[<https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png>)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nOnlayn tarzda bajarayotkan  ishingiz doimo onlayn bo‘lib turadimi? O‘quvchilar Internetda baham ko‘rgan ma'lumotlari raqamli iz yoki \"iz\" qoldirishini bilib olishadi. Buni qanday amalga oshirayotganiga qarab, bu iz katta yoki kichik, zararli yoki foydali bo‘lishi mumkin. O‘quvchilar turli marshrutlarni taqqoslaydilar va qanday ma'lumotlarni qoldirish haqida tanqidiy fikrlashadi.",
+          "preparation": "-   o'quv materiallarini ko'rib chiqing.\n-   Har bir talaba uchun chop etish nashr (lar).",
+          "purpose": "Common Sense-ning raqamli  o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalarga oid so'nggi tadqiqotlar asosida oltita asosiy mavzuni muhokama qiladi. Ushbu dars Digital Footprint & Identity ga qaratilgan. Talabalar onlayn almashishning afzalliklari va xatarlarini ko'rib chiqadilar va raqamli shaxsning o'zini o'zi, obro'si va munosabatlariga qanday ta'sir qilishi mumkinligini o'rganadilar.",
           "student_overview": "Learn about your digital footprint and how to stay safe when visiting websites. "
         },
         "courseb-2022/Move It, Move It": {
@@ -491,17 +494,21 @@
         "courseb-2022/Sequencing with Angry Birds": {
           "name": "Jahldor qushlar bilan tartiblash",
           "overview": "Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.",
+          "preparation": "-   Agar o‘quvchilaringiz ko‘chirib olish va qo‘yishni endi o‘rganayotgan bo‘lsa, bu darsni boshlashidan oldin ularga  tayinlashni ko‘rib chiqing.-   . Code.org d oz sinifingiz bolimini yarating va har bir talabada   **otish kodi** bolgan karta borligiggaamin boling.\n-   Maktabingizdagi IT mutaxasisiga komputeringiz ish stolida sinfingiz bo‘limi uchun tezkor havola qildirib oling.\n-   Mashg‘ulotga bog‘lash uchun bitta  chop eting\n-   Har bir talabaning jurnali borligiga   amin bo‘ling.",
           "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
           "student_overview": "Qizil Jahldor Qushga yaramas cho‘chqaga boradigan yo‘ldan yurishiga yordam bering."
         },
         "courseb-2022/Programming with Angry Birds": {
           "name": "Jahldor qushlar bilan dasturlash",
           "overview": "Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+          "preparation": "-   Sinfingiz uchun mumkin bo'lgan muammoli joylardagi jumboqlarni o'ynang.\n-   **\\*Happy Maps** uchun materiallarni toping yoki qayta chop eting.\n-   Har bir talaba Reflection Journaliga ega ekanligiga ishonch hosil qiling.\n-   Har bir o'quvchiga ikkitadan to'plam berish uchun har bir yo'nalishning **\\*Manipulyativlarini** (N, S, E, W) etarlicha kesib oling (agar siz №1 ko'prik variantini tanlasangiz).",
+          "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
           "student_overview": "Create programs to help the Angry Bird move through the maze."
         },
         "courseb-2022/Programming with Harvester": {
           "name": "Terimchi bilan dasturlash",
           "overview": "Talabalar Terimchi (Harvester) muhitida o‘rgangan dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib hosilni yig‘ishi kerak bo‘ladi. Talabalar algoritmlar ketma-ketligi bo‘yicha mahoratlarini oshirishda davom etadilar va debug qilish jarayonidan foydalanishni boshlashadi.",
+          "preparation": "-   Jumboqlarni ko'rib, sinfingiz uchun mumkin bo'lgan muammolarni toping. \n-   Har bir talabada  oz aksini topgan jurnali mavjudligiga ishonch hosil qiling.",
           "purpose": "Bu darsda, talabalar o‘zlarining debug qilish mahoratlarini oshiradilar va dasturlash mahoratlarini oshirishda davom etadilar.",
           "student_overview": "Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga yordam bering."
         },
