@@ -38,19 +38,20 @@ const DEFAULT_ARGS = {
   showProjectThumbnails: true
 };
 
-const Template = overrideArgs => (
-  <ProjectsList {...{...DEFAULT_ARGS, ...overrideArgs}} />
-);
+const Template = args => <ProjectsList {...args} />;
 
 // Name of export determines what is shown in storybook entry
 export const WithThumbnails = Template.bind({}); // eslint-disable-line no-unused-vars
+WithThumbnails.args = DEFAULT_ARGS;
 
 export const WithoutThumbnails = Template.bind({});
-WithoutThumbnails.overrideArgs = {
+WithoutThumbnails.args = {
+  ...DEFAULT_ARGS,
   showProjectThumbnails: false
 };
 
 export const LocalizedWithThumbnails = Template.bind({});
-LocalizedWithThumbnails.overrideArgs = {
+LocalizedWithThumbnails.args = {
+  ...DEFAULT_ARGS,
   localeCode: 'es-MX'
 };
