@@ -1,6 +1,11 @@
 import React from 'react';
 import TextResponsesTable from './TextResponsesTable';
 
+export default {
+  title: 'TextResponsesTable',
+  component: TextResponsesTable
+};
+
 const sectionId = 1;
 const responses = [
   {
@@ -33,27 +38,18 @@ const responses = [
   }
 ];
 
-export default storybook =>
-  storybook.storiesOf('TextResponsesTable', module).addStoryTable([
-    {
-      name: 'Text responses table',
-      story: () => (
-        <TextResponsesTable
-          responses={responses}
-          sectionId={sectionId}
-          isLoading={false}
-        />
-      )
-    },
-    {
-      name: 'Empty text responses table',
-      description: 'Displays an empty state message',
-      story: () => (
-        <TextResponsesTable
-          responses={[]}
-          sectionId={sectionId}
-          isLoading={false}
-        />
-      )
-    }
-  ]);
+const Template = args => <TextResponsesTable {...args} />;
+
+export const TextResponsesTableWithResponses = Template.bind({});
+TextResponsesTableWithResponses.args = {
+  responses: responses,
+  sectionId: sectionId,
+  isLoading: false
+};
+
+export const TextResponsesTableWithoutResponses = Template.bind({});
+TextResponsesTableWithoutResponses.args = {
+  responses: [],
+  sectionId: sectionId,
+  isLoading: false
+};
