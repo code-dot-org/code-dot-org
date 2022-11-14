@@ -2,7 +2,7 @@ import GoogleBlockly from 'blockly/core';
 
 const EMPTY_OPTION = '???';
 
-export default class FieldDropdown extends GoogleBlockly.FieldDropdown {
+export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
   static ARROW_CHAR = '\u25BC';
 
   /** Turn changeHandler into validator
