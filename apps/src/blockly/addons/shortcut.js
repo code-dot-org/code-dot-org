@@ -22,10 +22,8 @@ const blockCopyToStorageShortcut = function() {
       // which may beep or otherwise indicate
       // an error due to the lack of a selection.
       e.preventDefault();
-      const blockText = Blockly.Xml.domToPrettyText(
-        Blockly.Xml.blockToDom(Blockly.selected)
-      );
-      localStorage.setItem('blocklyStash', blockText);
+      const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
+      localStorage.setItem('blocklyStash', copyData);
       return true;
     }
   };
@@ -84,10 +82,8 @@ const blockCutToStorageShortcut = function() {
       // which may beep or otherwise indicate
       // an error due to the lack of a selection.
       e.preventDefault();
-      const blockText = Blockly.Xml.domToPrettyText(
-        Blockly.Xml.blockToDom(Blockly.selected)
-      );
-      localStorage.setItem('blocklyStash', blockText);
+      const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
+      localStorage.setItem('blocklyStash', copyData);
       localStorage.getItem('blocklyStash');
       Blockly.Events.setGroup(true);
       Blockly.selected.dispose(true);
@@ -146,11 +142,8 @@ const blockPasteFromStorageShortcut = function() {
       // which may beep or otherwise indicate
       // an error due to the lack of a selection.
       e.preventDefault();
-      const blockText = localStorage.getItem('blocklyStash');
-      Blockly.Xml.domToBlockSpace(
-        Blockly.mainBlockSpace,
-        Blockly.Xml.textToDom(`<xml>${blockText}</xml>`)
-      );
+      const copyData = localStorage.getItem('blocklyStash');
+      Blockly.mainBlockSpace.paste(JSON.parse(copyData));
       return true;
     }
   };
