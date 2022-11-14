@@ -39,14 +39,10 @@ theme: responsive
   %aside
     %img{src: "/images/nasa-logo.svg", alt: "NASA logo"}
     .wrapper
-      %h1
-        Join NASA for a special Hour of Code feature about
-        %em
-          computer science in space
-        !
-      %p
-        Airing 9am EST, December 5th on NASA STEM's YouTube channel.
-    %a{href: "#", target: "_blank", rel: "noopener noreferrer"}
+      %h1=I18n.t(:hoc2022_nasa_banner_heading)
+      %p=I18n.t(:hoc2022_nasa_banner_description)
+    -# Hiding this until we get the link from NASA the week before Dec 5
+    -# %a{href: "#", target: "_blank", rel: "noopener noreferrer"}
       %button
         Learn more
 
