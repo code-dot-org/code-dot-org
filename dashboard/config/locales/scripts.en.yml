@@ -8855,7 +8855,7 @@ en:
             lesson-13:
               name: Two-Way Selection Statements
             lesson-14:
-              name: Expanding Conditions
+              name: Instantiating Objects
             lesson-15:
               name: Methods with Parameters
             lesson-16:
@@ -8917,6 +8917,8 @@ en:
               name: Unit 2 Assessment
             lesson-13:
               name: Store Management Project [1-Day Version]
+            lesson-14:
+              name: The this Keyword
           lesson_groups:
             lessonGroup-2:
               display_name: Content
