@@ -965,7 +965,7 @@
           "courseF_artist_variables4_c": "Þetta er mynstrið sem listamaðurinn mun fara eftir:\n\n![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)"
         },
         "OPD-K5-variables-7": {
-          "courseF_artist_variables5_a": "Seinni helmingur kóðans ætti að vera næstum því eins og fyrri hlutinn, nema hvað þú átt að snúa til _vinstri_, hoppa og svo snúa til _hægri_.",
+          "courseF_artist_variables5_a": "Seinni helmingur kóðans ætti að vera næstum því eins og fyrri hlutinn, nema hvað þú átt að snúa til *vinstri*, hoppa og svo snúa til *hægri*.",
           "courseF_artist_variables5_b": "Fyrri helmingur kóðans mun teikna þrjá þríhyrninga og seinni hlutinn mun teikna aðra þrjá.",
           "courseF_artist_variables5_c": "Byrjaðu á að bæta við sama kóða og í fyrri hluta forritsins og breyttu svo kóðanum svo hann búi til myndina sem er sýnd.",
           "courseF_artist_variables5_d": "Þetta er mynstrið sem listamaðurinn mun fylgja:\n\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)"
@@ -4905,7 +4905,7 @@
         },
         "courseC_starWars_loops6_copy": {
           "courseC_starWars_loops6_a": "Prófaðu að skrifa hreyfingarnar á blað og leita svo að endurtekningum.",
-          "courseC_starWars_loops6_b": "Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\\\nÞað er kallað **földuð lykkja**."
+          "courseC_starWars_loops6_b": "Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!  \nÞað er kallað **földuð lykkja**."
         },
         "courseC_starWars_loops7": {
           "courseC_starWars_loops7_a": "Þetta mynstur virðist flóknara en það er í raun! Prófaðu fyrst einfalt tröppumynstur. Nær það öllum málminum?",
@@ -7108,7 +7108,7 @@
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_b": "Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.",
           "courseD_artist_functions2_c": "Notaðu græna `teikna ferning` kubbinn til að \"kalla á\" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "Forritið þitt ætti að:\n\n-   Nota fall\n-   Fara áfram 100 + 75 díla\n-   Nota fall"
+          "courseD_artist_functions2_a": "Forritið þitt ætti að:\n- Nota fall\n- Fara áfram 100 + 75 díla\n- Nota fall"
         },
         "courseE_artist_functions3": {
           "courseD_artist_functions3_a": "Þú getur leyst þessa þraut með því að bæta við lykkju sem endurtekur byrjunarkóðann 8 sinnum.\n\nEf þú manst ekki hvernig byrjunarkóðinn var getur þú smellt á \"byrja aftur\" hnappinn fyrir ofan vinnusvæðið.",
