@@ -464,6 +464,9 @@
         "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
           "description": "Určete vztah mezi tím, jak je proměnná definována, uložena a načtena, když v programu stiskneme tlačítko „Spustit“."
         },
+        "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "Deklarovat proměnnou"
+        },
         "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
           "description": "Volejte proměnnou v programu opakovaně."
         },
@@ -1285,6 +1288,9 @@
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Rozhodněte se, jaké výroky lze říkat online, a jaké ne."
+        },
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Deklarovat proměnnou"
         },
         "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
           "description": "Přiřadit proměnné hodnotu"
