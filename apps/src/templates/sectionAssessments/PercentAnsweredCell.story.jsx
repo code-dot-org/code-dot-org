@@ -8,8 +8,8 @@ export default {
 
 const Template = args => <PercentAnsweredCell {...args} />;
 
-export const ShowCheckMark = Template.bind({});
-ShowCheckMark.args = {
+export const CorrectAnswer = Template.bind({});
+CorrectAnswer.args = {
   percentValue: 40,
   isCorrectAnswer: true
 };
