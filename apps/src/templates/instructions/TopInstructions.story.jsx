@@ -134,24 +134,24 @@ const Template = args => {
 
 // STORIES
 
-export const CSF_Instructions = Template.bind({});
-CSF_Instructions.args = {
+export const CSFInstructions = Template.bind({});
+CSFInstructions.args = {
   isCSF: true
 };
 
-export const CSF_Instructions_Right_to_Left = Template.bind({});
-CSF_Instructions_Right_to_Left.args = {
+export const CSFInstructionsRightToLeft = Template.bind({});
+CSFInstructionsRightToLeft.args = {
   rtl: true,
   isCSF: true
 };
 
-export const CSD_CSP_Instructions = Template.bind({});
-CSD_CSP_Instructions.args = {
+export const CSD_CSPInstructions = Template.bind({});
+CSD_CSPInstructions.args = {
   isCSF: false
 };
 
-export const CSD_CSP_Instructions_Right_to_Left = Template.bind({});
-CSD_CSP_Instructions_Right_to_Left.args = {
+export const CSD_CSPInstructionsRightToLeft = Template.bind({});
+CSD_CSPInstructionsRightToLeft.args = {
   rtl: true,
   isCSF: false
 };

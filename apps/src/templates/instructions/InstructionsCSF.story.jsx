@@ -137,21 +137,21 @@ const Template = args => {
 
 // STORIES
 
-export const Minimal_Example = Template.bind({});
-Minimal_Example.args = {};
+export const MinimalExample = Template.bind({});
+MinimalExample.args = {};
 
-export const Right_to_Left = Template.bind({});
-Right_to_Left.args = {
+export const RightToLeft = Template.bind({});
+RightToLeft.args = {
   rtl: true
 };
 
-export const Markdown_Instructions = Template.bind({});
-Markdown_Instructions.args = {
+export const MarkdownInstructions = Template.bind({});
+MarkdownInstructions.args = {
   longInstructions: true
 };
 
-export const Only_Long_Instructions_No_Short = Template.bind({});
-Only_Long_Instructions_No_Short.args = {
+export const OnlyLongInstructionsNoShort = Template.bind({});
+OnlyLongInstructionsNoShort.args = {
   longInstructions: true,
   disableShortInstructions: true
 };
@@ -166,8 +166,8 @@ Feedback.args = {
   feedback: true
 };
 
-export const Feedback_with_Failure_Avatar = Template.bind({});
-Feedback_with_Failure_Avatar.args = {
+export const FeedbackWithFailureAvatar = Template.bind({});
+FeedbackWithFailureAvatar.args = {
   avatar: true,
   failureAvatar: true,
   feedback: true
@@ -178,13 +178,13 @@ Hints.args = {
   hints: true
 };
 
-export const Sub_Instructions = Template.bind({});
-Sub_Instructions.args = {
+export const SubInstructions = Template.bind({});
+SubInstructions.args = {
   subInstructions: true
 };
 
-export const Full_Featured_Example = Template.bind({});
-Full_Featured_Example.args = {
+export const FullFeaturedExample = Template.bind({});
+FullFeaturedExample.args = {
   avatar: true,
   failureAvatar: true,
   feedback: true,
@@ -192,8 +192,8 @@ Full_Featured_Example.args = {
   longInstructions: true
 };
 
-export const Full_Featured_Right_to_Left_Example = Template.bind({});
-Full_Featured_Right_to_Left_Example.args = {
+export const FullFeaturedRightToLeftExample = Template.bind({});
+FullFeaturedRightToLeftExample.args = {
   avatar: true,
   failureAvatar: true,
   feedback: true,
