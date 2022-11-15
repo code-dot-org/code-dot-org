@@ -70,7 +70,7 @@ Passed_Dialog.args = {
   text:
     "However, you could've done it with only N blocks. Can you make your program even better?",
   children: [
-    <CodeWritten numLinesWritten={9} useChallengeStyles>
+    <CodeWritten numLinesWritten={9} useChallengeStyles key={0}>
       <GeneratedCode
         message="Here's your code:"
         code="console.log('F is friends who do stuff together!');"
@@ -90,7 +90,7 @@ Passed_Dialog_with_a_Bird.args = {
   text:
     "However, you could've done it with only N blocks. Can you make your program even better?",
   children: [
-    <CodeWritten numLinesWritten={9} useChallengeStyles>
+    <CodeWritten numLinesWritten={9} useChallengeStyles key={0}>
       <GeneratedCode
         message="Here's your code:"
         code="console.log('U is for you and me!');"
@@ -109,7 +109,7 @@ Perfect_Completion.args = {
   cancelButtonLabel: 'Replay',
   showPuzzleRatingButtons: true,
   children: [
-    <CodeWritten numLinesWritten={9} useChallengeStyles>
+    <CodeWritten numLinesWritten={9} useChallengeStyles key={0}>
       <GeneratedCode
         message="Here's your code:"
         code="console.log('N is for anywhere and anytime at all');"
@@ -127,7 +127,7 @@ Perfect_Completion_Without_Puzzle_Ratings.args = {
   primaryButtonLabel: 'Continue',
   cancelButtonLabel: 'Replay',
   children: [
-    <CodeWritten numLinesWritten={9} useChallengeStyles>
+    <CodeWritten numLinesWritten={9} useChallengeStyles key={0}>
       <GeneratedCode
         message="Here's your code:"
         code="console.log('N is for anywhere and anytime at all');"
