@@ -4,6 +4,7 @@ theme: responsive
 ---
 
 %link{href: "/css/generated/hoc2022-landing-page.css", rel: "stylesheet"}
+%link{href: "/css/hoc2022-nasa-skinny-banner.css", rel: "stylesheet"}
 
 -# Import FontAwesome Pro
 %script{src: "https://kit.fontawesome.com/ea2d9d4413.js", crossorigin: "anonymous"}
@@ -36,7 +37,7 @@ theme: responsive
   %img.right{src: "/images/hoc2022-landing-page-banner-right.svg", alt: I18n.t(:hoc2022_landing_page_banner_alt_right)}
 
 %main
-  %aside
+  %aside.nasa-skinny-banner
     %img{src: "/images/nasa-logo.svg", alt: "NASA logo"}
     .wrapper
       %h1=I18n.t(:hoc2022_nasa_banner_heading)
