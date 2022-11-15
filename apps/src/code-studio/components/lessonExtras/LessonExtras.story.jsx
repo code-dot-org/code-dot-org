@@ -1,24 +1,7 @@
 import React from 'react';
 import LessonExtras from './LessonExtras';
-import progress, {mergeResults} from '@cdo/apps/code-studio/progressRedux';
 import {Provider} from 'react-redux';
-import {createStore, combineReducers} from 'redux';
-
-function configureStore() {
-  const store = createStore(
-    combineReducers({
-      progress
-    })
-  );
-  store.dispatch(
-    mergeResults({
-      6: 100,
-      7: 100,
-      8: 100
-    })
-  );
-  return store;
-}
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const bonusLevels = [
   {
@@ -150,21 +133,23 @@ const bonusLevels = [
   }
 ];
 
-export default storybook => {
-  const store = configureStore();
-  storybook.storiesOf('LessonExtras', module).addStoryTable([
-    {
-      name: 'Default',
-      story: () => (
-        <Provider store={store}>
-          <LessonExtras
-            lessonNumber={1}
-            nextLevelPath="#"
-            bonusLevels={bonusLevels}
-            showProjectWidget={false}
-          />
-        </Provider>
-      )
-    }
-  ]);
+export default {
+  title: 'LessonExtras',
+  component: LessonExtras
+};
+
+// Template
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <LessonExtras {...args} />
+  </Provider>
+);
+
+// Stories
+export const Default = Template.bind({});
+Default.args = {
+  lessonNumber: 1,
+  nextLevelPath: '#',
+  bonusLevels: bonusLevels,
+  showProjectWidget: false
 };
