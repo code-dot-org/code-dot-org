@@ -9,6 +9,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     principal_approval
     principal_approval_completed
     principal_approval_completed_partner
+    principal_approval_completed_teacher_receipt
     accepted
     registration_reminder
     declined
@@ -28,14 +29,6 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
 
   def confirmation_awaiting_admin_approval__without_partner
     Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: false, is_awaiting_admin_approval: true)
-  end
-
-  def administrator_approval_completed_teacher__with_partner
-    Pd::Application::TeacherApplicationMailer.send :principal_approval_completed_teacher_receipt, build_application(matched: true, is_awaiting_admin_approval: true)
-  end
-
-  def administrator_approval_completed_teacher__without_partner
-    Pd::Application::TeacherApplicationMailer.send :principal_approval_completed_teacher_receipt, build_application(matched: false, is_awaiting_admin_approval: true)
   end
 
   private
