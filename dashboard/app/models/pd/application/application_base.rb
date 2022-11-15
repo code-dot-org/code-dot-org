@@ -61,12 +61,12 @@ module Pd::Application
     validate :status_is_valid_for_application_type
     validates_presence_of :type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
-    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+    validates_presence_of :status
     validates_inclusion_of :application_type, in: APPLICATION_TYPES
     validates_inclusion_of :application_year, in: APPLICATION_YEARS
 
-    # An application either has an "incomplete" or "unreviewed" state when created.
-    # The applied_at field gets set when the status becomes 'unreviewed' for the first time
+    # An application either has an 'incomplete', 'awaiting_admin_approval', or 'unreviewed' state when created.
+    # The applied_at field gets set when the status becomes 'unreviewed' or 'awaiting_admin_approval' for the first time
     before_save :set_applied_date, if: :status_changed?
 
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
@@ -96,15 +96,19 @@ module Pd::Application
       self.application_type = nil
     end
 
-    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted?
-    %w(accepted incomplete pending unreviewed waitlisted).each do |attribute|
+    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted? pending_space_availability? awaiting_admin_approval?
+    %w(accepted incomplete pending unreviewed waitlisted pending_space_availability awaiting_admin_approval).each do |attribute|
       define_method(:"#{attribute}?") do
         status == attribute
       end
     end
 
+    def status_on_submit?
+      unreviewed? || awaiting_admin_approval?
+    end
+
     def set_applied_date
-      self.applied_at = Time.now if applied_at.nil? && unreviewed?
+      self.applied_at = Time.now if applied_at.nil? && status_on_submit?
     end
 
     def update_accepted_date

@@ -12,13 +12,13 @@ nav: how_to_nav
 
 Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
 
-Provare un'Ora di Codice è un modo semplice e divertente per presentare l'informatica agli studenti, forse per la prima volta! Trova un'attività che sia ideale per il tuo contesto, che si svolga durante la lezione o dopo la scuola, virtualmente o di persona. Dai un'occhiata alla nostra [huida per la partecipazione, se hai altre domande]({{ localized_files/participation_guide }}) dopo aver verificato i passaggi elencati di seguito:
+Provare un'Ora di Codice è un modo semplice e divertente per presentare l'informatica agli studenti, forse per la prima volta! Trova un'attività che sia ideale per il tuo contesto, che si svolga durante la lezione o dopo la scuola, virtualmente o di persona. Dai un'occhiata alla nostra [guida per la partecipazione, se hai altre domande]({{ localized_files/participation_guide }}) dopo aver verificato i passaggi elencati di seguito:
 
 - [Guarda il video illustrativo dell'Ora del Codice](#how-to-video)
 - [Esplora attività e esercitazioni](#explore-activities)
 - [Crea il tuo piano di lavoro giornaliero.](#create-your-plan)
 - [Promuovi la tua Ora del Codice](#promote-your-hour)
-- [Inizia vigorosamente la tua Ora del Codice](#how-to-start)
+- [Come iniziare alla grande la tua Ora del Codice](#how-to-start)
 - [Inizia a programmare](#code)
 - [Celebra i successi dei tuoi alunni](#celebrate)
 - [Altre risorse dell'Ora del Codice per gli insegnanti:](#other-resources)
@@ -88,7 +88,7 @@ Scopri di più su poster, video, adesivi e altri modi per [promuovere il tuo eve
 
 <a id="how-to-start"></a>
 
-## 5. Come iniziare vigorosamente la tua Ora del Codice
+## 5. Come iniziare alla grande la tua Ora del Codice
 
 Quando arrivi alla celebrazione della tua Ora del Codice, assicurati di iniziare il tuo evento con alcuni di questi strumenti e suggerimenti.
 
@@ -113,7 +113,7 @@ Non preoccuparti se sia tu che i tuoi studenti siete digiuni di informatica. Qui
 
 Guida gli studenti nell'attività
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Scrivi il link dell'esercitazione sulla lavagna. Trova il collegamento elencato nelle [informazioni dell'attività selezionata]({{ urls/learn }}).
 
 Quando i partecipanti incontrano delle difficoltà, si può rispondere così:
 
@@ -153,6 +153,6 @@ Cosa fare se uno studente finisce prima?
 
 ### Cosa c'è dopo l'Ora del Codice?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+L'informatica non deve finire con l'Ora del Codice! [Scopri come](/beyond) portare l'informatica nella tua scuola per i tuoi studenti.
 
 {{ signup_button }}

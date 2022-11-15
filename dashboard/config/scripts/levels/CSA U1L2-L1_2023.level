@@ -4,11 +4,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
-    "encrypted_examples": [
-
-    ],
     "project_template_level_name": "CSA U1L2-Intro Program PBT_2023",
     "contained_level_names": [
       "CSA U1L2-L1 Contained_2023"
@@ -350,6 +347,9 @@
           "assetId": 0
         }
       ]
+    ],
+    "encrypted_examples": [
+
     ]
   },
   "game_id": 68,
@@ -357,6 +357,6 @@
   "created_at": "2022-10-10T14:55:14.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-10-10T14:55:14.777+00:00\",\"changed\":[\"cloned from \\\"CSA U1L2-Intro Program PBT_2023\\\"\"],\"cloned_from\":\"CSA U1L2-Intro Program PBT_2023\"},{\"changed_at\":\"2022-10-10 14:55:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 14:55:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 14:57:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 20:08:19 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-10T14:55:14.777+00:00\",\"changed\":[\"cloned from \\\"CSA U1L2-Intro Program PBT_2023\\\"\"],\"cloned_from\":\"CSA U1L2-Intro Program PBT_2023\"},{\"changed_at\":\"2022-10-10 14:55:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 14:55:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 14:57:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-10 20:08:19 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-10-26 14:57:30 +0000\",\"changed\":[\"hide_share_and_remix\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

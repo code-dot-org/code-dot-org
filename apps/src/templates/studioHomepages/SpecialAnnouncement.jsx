@@ -22,28 +22,27 @@ export default class SpecialAnnouncement extends Component {
     const headingText = isEnglish
       ? isTeacher
         ? i18n.teacherAnnouncementSpecialWinter2021Heading()
-        : i18n.studentAnnouncementSpecial2020Heading()
-      : i18n.intlAnnouncementSpecial2020Heading();
+        : i18n.studentAnnouncementSpecial2022HocHeading()
+      : i18n.studentAnnouncementSpecial2022HocHeading(); // replaces International string
     const descriptionText = isEnglish
       ? isTeacher
         ? i18n.teacherAnnouncementSpecialWinter2021Body()
-        : i18n.studentAnnouncementSpecial2020Body()
-      : i18n.intlAnnouncementSpecial2020Body();
+        : i18n.studentAnnouncementSpecial2022HocBody()
+      : i18n.studentAnnouncementSpecial2022HocBody(); // replaces International string
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special_winter2021'
       : 'student_homepage_announcement_special2020';
-    const url = isTeacher && isEnglish ? pegasus('/ai') : pegasus('/athome');
+    const url =
+      isTeacher && isEnglish ? pegasus('/ai') : pegasus('/hourofcode2022');
     const buttonText =
-      isTeacher && isEnglish
-        ? i18n.joinUs()
-        : i18n.studentAnnouncementSpecial2020Button();
+      isTeacher && isEnglish ? i18n.joinUs() : i18n.learnMore();
     const imageUrl =
       isTeacher && isEnglish
         ? pegasus(
             '/shared/images/fill-540x300/announcement/announcement_hoc2020_ai.png'
           )
         : pegasus(
-            '/shared/images/fill-540x300/announcement/announcement_special_fall2020.jpg'
+            '/shared/images/fill-540x300/announcement/announcement_special_hoc2022.png'
           );
 
     return (

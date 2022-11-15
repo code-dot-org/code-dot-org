@@ -47,36 +47,6 @@ module Pd::Application
       assert_equal 'Albus Dumbledore', application_without_principal_title.principal_greeting
     end
 
-    test 'set_total_course_hours calculates total course hours when there is info for it' do
-      custom_minutes_hours_weeks = {
-        cs_how_many_minutes: '45',
-        cs_how_many_days_per_week: '5',
-        cs_how_many_weeks_per_year: '30'
-      }
-
-      application = create :pd_teacher_application, form_data_hash: (
-        build :pd_teacher_application_hash, custom_minutes_hours_weeks
-      ), status: 'incomplete'
-
-      assert_equal 112, application.sanitize_form_data_hash[:cs_total_course_hours]
-    end
-
-    test 'set_total_course_hours does nothing when there is not enough info for it' do
-      empty_minutes_hours_weeks = {
-        cs_how_many_minutes: nil,
-        cs_how_many_days_per_week: nil,
-        cs_how_many_weeks_per_year: nil
-      }
-
-      %i(cs_how_many_minutes cs_how_many_days_per_week cs_how_many_weeks_per_year).each do |attribute|
-        application = create :pd_teacher_application, form_data_hash: (
-          build :pd_teacher_application_hash, empty_minutes_hours_weeks.slice(attribute)
-        ), status: 'incomplete'
-
-        assert_nil application.sanitize_form_data_hash[:cs_total_course_hours]
-      end
-    end
-
     test 'meets criteria says an application meets criteria when all YES_NO fields are marked yes' do
       teacher_application = build :pd_teacher_application, course: 'csd',
                                   response_scores: {
@@ -87,6 +57,12 @@ module Pd::Application
       teacher_application = build :pd_teacher_application, course: 'csp',
                                   response_scores: {
                                     meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csp].index_with('Yes')
+                                  }.to_json
+      assert_equal 'Yes', teacher_application.meets_criteria
+
+      teacher_application = build :pd_teacher_application, course: 'csa',
+                                  response_scores: {
+                                    meets_minimum_criteria_scores: SCOREABLE_QUESTIONS[:criteria_score_questions_csa].index_with('Yes')
                                   }.to_json
       assert_equal 'Yes', teacher_application.meets_criteria
     end
@@ -116,7 +92,7 @@ module Pd::Application
       assert_nil application.accepted_at
 
       Timecop.freeze(today) do
-        application.update!(status: 'accepted_not_notified')
+        application.update!(status: 'accepted')
         assert_equal today, application.accepted_at.to_time
 
         application.update!(status: 'declined')
@@ -124,7 +100,7 @@ module Pd::Application
       end
 
       Timecop.freeze(tomorrow) do
-        application.update!(status: 'accepted_not_notified')
+        application.update!(status: 'accepted')
         assert_equal tomorrow, application.accepted_at.to_time
       end
     end
@@ -342,22 +318,41 @@ module Pd::Application
       csv_filtered_labels_csd = TeacherApplication.csv_filtered_labels('csd')
       assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
       refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
+      refute csv_filtered_labels_csd[:teacher].include? :csa_which_grades
 
       csv_filtered_labels_csp = TeacherApplication.csv_filtered_labels('csp')
       refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
       assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
+      refute csv_filtered_labels_csp[:teacher].include? :csa_which_grades
+
+      csv_filtered_labels_csa = TeacherApplication.csv_filtered_labels('csa')
+      refute csv_filtered_labels_csa[:teacher].include? :csd_which_grades
+      refute csv_filtered_labels_csa[:teacher].include? :csp_which_grades
+      assert csv_filtered_labels_csa[:teacher].include? :csa_which_grades
     end
 
     test 'csv_header' do
+      csd_plan_offer_question = "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
+      csp_plan_offer_question = "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
+      csa_plan_offer_question = "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
+
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
-      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 96, csv_header_csd.length
+      assert csv_header_csd.include? csd_plan_offer_question
+      refute csv_header_csd.include? csp_plan_offer_question
+      refute csv_header_csd.include? csa_plan_offer_question
+      assert_equal 90, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
-      assert_equal 98, csv_header_csp.length
+      refute csv_header_csp.include? csd_plan_offer_question
+      assert csv_header_csp.include? csp_plan_offer_question
+      refute csv_header_csp.include? csa_plan_offer_question
+      assert_equal 92, csv_header_csp.length
+
+      csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
+      refute csv_header_csa.include? csd_plan_offer_question
+      refute csv_header_csd.include? csp_plan_offer_question
+      assert csv_header_csa.include? csa_plan_offer_question
+      assert_equal 94, csv_header_csa.length
     end
 
     test 'school cache' do
@@ -402,12 +397,20 @@ module Pd::Application
       filtered_labels_csd = TeacherApplication.filtered_labels('csd')
       assert filtered_labels_csd.include? :csd_which_grades
       refute filtered_labels_csd.include? :csp_which_grades
+      refute filtered_labels_csd.include? :csa_which_grades
       assert_equal ['csd'], TeacherApplication::FILTERED_LABELS.keys
 
-      filtered_labels_csd = TeacherApplication.filtered_labels('csp')
-      refute filtered_labels_csd.include? :csd_which_grades
-      assert filtered_labels_csd.include? :csp_which_grades
+      filtered_labels_csp = TeacherApplication.filtered_labels('csp')
+      refute filtered_labels_csp.include? :csd_which_grades
+      assert filtered_labels_csp.include? :csp_which_grades
+      refute filtered_labels_csp.include? :csa_which_grades
       assert_equal ['csd', 'csp'], TeacherApplication::FILTERED_LABELS.keys
+
+      filtered_labels_csa = TeacherApplication.filtered_labels('csa')
+      refute filtered_labels_csa.include? :csd_which_grades
+      refute filtered_labels_csa.include? :csp_which_grades
+      assert filtered_labels_csa.include? :csa_which_grades
+      assert_equal ['csd', 'csp', 'csa'], TeacherApplication::FILTERED_LABELS.keys
     end
 
     test 'status changes are logged' do
@@ -439,8 +442,8 @@ module Pd::Application
       application = create :pd_teacher_application
       assert_empty application.emails
 
-      application.expects(:queue_email).with('accepted_no_cost_registration')
-      application.update!(status: 'accepted_no_cost_registration')
+      application.expects(:queue_email).with('accepted')
+      application.update!(status: 'accepted')
     end
 
     test 'setting an non auto-email status does not queue up a status email' do
@@ -457,7 +460,7 @@ module Pd::Application
       associated_sent_email = create :pd_application_email, application: application, sent_at: Time.now
       associated_unsent_email = create :pd_application_email, application: application
 
-      application.update!(status: 'waitlisted')
+      application.update!(status: 'pending_space_availability')
       assert Email.exists?(unrelated_email.id)
       assert Email.exists?(associated_sent_email.id)
       refute Email.exists?(associated_unsent_email.id)
@@ -499,6 +502,17 @@ module Pd::Application
       assert_equal %w(cspWhichGrades cspHowOffer), application.errors.messages[:form_data]
     end
 
+    test 'test csa dynamically required fields' do
+      application_hash = build :pd_teacher_application_hash_common,
+        :csa,
+        csa_which_grades: nil,
+        csa_how_offer: nil,
+        csa_already_know: nil
+      application = build :pd_teacher_application, form_data_hash: application_hash
+      refute application.valid?
+      assert_equal %w(csaWhichGrades csaHowOffer csaAlreadyKnow), application.errors.messages[:form_data]
+    end
+
     test 'should_send_decision_email?' do
       application = build :pd_teacher_application, status: :pending
 
@@ -506,7 +520,7 @@ module Pd::Application
       refute application.should_send_decision_email?
 
       # auto-email status with no partner: yes email
-      application.status = :accepted_no_cost_registration
+      application.status = :accepted
       assert application.should_send_decision_email?
 
       # auto-email status, partner with sent_by_system: yes email
@@ -526,13 +540,11 @@ module Pd::Application
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
         previous_yearlong_cdo_pd: ['CS Principles'],
-        plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
@@ -544,7 +556,6 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csd_which_grades: YES,
-            plan_to_teach: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -569,13 +580,11 @@ module Pd::Application
         csp_which_grades: ['12'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
-        plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50,
         principal_wont_replace_existing_course: principal_options[:replace_course].second
@@ -587,7 +596,48 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
-            plan_to_teach: YES,
+            committed: YES,
+            previous_yearlong_cdo_pd: YES,
+            replace_existing: YES,
+            principal_approval: YES,
+            principal_schedule_confirmed: YES,
+          },
+          meets_scholarship_criteria_scores: {
+            free_lunch_percent: YES,
+            underrepresented_minority_percent: YES,
+          },
+        }.deep_stringify_keys,
+        JSON.parse(application.response_scores)
+      )
+    end
+
+    test 'autoscore with everything getting a positive response for csa' do
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
+
+      application_hash = build :pd_teacher_application_hash,
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        csa_already_know: options[:csa_already_know].first,
+        csa_which_grades: ['12'],
+        previous_yearlong_cdo_pd: ['CS Principles'],
+        csa_how_offer: options[:csa_how_offer].last,
+        replace_existing: options[:replace_existing].second,
+        committed: options[:committed].first,
+        race: options[:race].first(2),
+        principal_approval: principal_options[:do_you_approve].first,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
+        principal_free_lunch_percent: 50,
+        principal_underrepresented_minority_percent: 50,
+        principal_wont_replace_existing_course: principal_options[:replace_course].second
+
+      application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application.auto_score!
+
+      assert_equal(
+        {
+          meets_minimum_criteria_scores: {
+            csa_already_know: YES,
+            csa_which_grades: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -611,7 +661,6 @@ module Pd::Application
         csp_which_grades: ['12'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         csp_how_offer: options[:csp_how_offer].last,
-        plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
         committed: options[:committed].first,
         race: [options[:race].second]
@@ -623,7 +672,6 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: YES,
-            plan_to_teach: YES,
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
@@ -642,13 +690,11 @@ module Pd::Application
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
         previous_yearlong_cdo_pd: ['CS Discoveries'],
-        plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49,
         principal_wont_replace_existing_course: principal_options[:replace_course].first
@@ -684,13 +730,11 @@ module Pd::Application
         csp_which_grades: [options[:csp_which_grades].last],
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
-        plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
-        principal_diversity_recruitment: principal_options[:committed_to_diversity].last,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49,
         principal_wont_replace_existing_course: principal_options[:replace_course].first
@@ -702,6 +746,48 @@ module Pd::Application
         {
           meets_minimum_criteria_scores: {
             csp_which_grades: NO,
+            committed: NO,
+            previous_yearlong_cdo_pd: NO,
+            replace_existing: NO,
+            principal_approval: NO,
+            principal_schedule_confirmed: NO,
+          },
+          meets_scholarship_criteria_scores: {
+            free_lunch_percent: NO,
+            underrepresented_minority_percent: NO,
+          },
+        }.deep_stringify_keys,
+        JSON.parse(application.response_scores)
+      )
+    end
+
+    test 'autoscore with everything getting negative response for csa' do
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
+
+      application_hash = build :pd_teacher_application_hash,
+        program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        csa_already_know: options[:csa_already_know].last,
+        csa_which_grades: [options[:csa_which_grades].last],
+        previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
+        csa_how_offer: options[:csa_how_offer].first,
+        replace_existing: options[:replace_existing].first,
+        committed: options[:committed].last,
+        race: [options[:race].first],
+        principal_approval: principal_options[:do_you_approve].last,
+        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
+        principal_free_lunch_percent: 49,
+        principal_underrepresented_minority_percent: 49,
+        principal_wont_replace_existing_course: principal_options[:replace_course].first
+
+      application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
+      application.auto_score!
+
+      assert_equal(
+        {
+          meets_minimum_criteria_scores: {
+            csa_already_know: NO,
+            csa_which_grades: NO,
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
@@ -755,8 +841,7 @@ module Pd::Application
         },
         {
           principal_answers: {
-            replace_course: principal_options[:replace_course].first,
-            replace_which_course_csp: principal_options[:replace_which_course_csp].first
+            replace_course: principal_options[:replace_course].first
           },
           meet_requirement: NO
         },
@@ -814,7 +899,6 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,
         principal_approval: principal_options[:do_you_approve].first,
         principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth,
@@ -834,7 +918,7 @@ module Pd::Application
       application = create :pd_teacher_application
       assert_nil application.principal_approval_state
 
-      incomplete = "Incomplete - Principal email sent on Oct 8"
+      incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
         application.queue_email :principal_approval, deliver_now: true
@@ -956,6 +1040,16 @@ module Pd::Application
       assert_nil application.scholarship_status
     end
 
+    test 'course-specific scholarship statuses invalid for CSA application' do
+      application = create :pd_teacher_application, course: 'csa'
+      assert_nil application.scholarship_status
+
+      # This application status is only valid for CSP applications
+      # Asserting this application status can't be assigned to a CSA application
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_EIR)
+      assert_nil application.scholarship_status
+    end
+
     test 'associated models cache prefetch' do
       workshop = create :workshop
       application = create :pd_teacher_application, pd_workshop_id: workshop.id
@@ -972,13 +1066,14 @@ module Pd::Application
     private
 
     test 'test allow_sending_principal_email?' do
-      # By default we can send.
-      application = create :pd_teacher_application
-      assert application.allow_sending_principal_email?
-
-      # If we are unreviewed, we can send.
+      # If we are unreviewed, we cannot send.
       application = create :pd_teacher_application
       application.update!(status: 'unreviewed')
+      refute application.allow_sending_principal_email?
+
+      # If we are awaiting_admin_approval, we can send.
+      application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       assert application.allow_sending_principal_email?
 
       # If we are pending, we can send.
@@ -986,45 +1081,51 @@ module Pd::Application
       application.update!(status: 'pending')
       assert application.allow_sending_principal_email?
 
-      # If we are waitlisted, we can send.
+      # If we are pending_space_availability, we can send.
       application = create :pd_teacher_application
-      application.update!(status: 'waitlisted')
+      application.update!(status: 'pending_space_availability')
       assert application.allow_sending_principal_email?
 
-      # If we're no longer unreviewed/pending/waitlisted, we can't send.
+      # If we're no longer unreviewed/pending/pending_space_availability, we can't send.
       application = create :pd_teacher_application
-      application.update!(status: 'accepted_no_cost_registration')
+      application.update!(status: 'accepted')
       refute application.allow_sending_principal_email?
 
       # If principal approval is not required, we can't send.
       application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       application.update!(principal_approval_not_required: true)
       refute application.allow_sending_principal_email?
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       create :pd_principal_approval_application, teacher_application: application
       refute application.allow_sending_principal_email?
 
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
       refute application.allow_sending_principal_email?
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_email?
     end
 
     test 'test allow_sending_principal_approval_teacher_reminder_email?' do
-      # By default we can't send.
-      application = create :pd_teacher_application
-      refute application.allow_sending_principal_approval_teacher_reminder_email?
-
-      # If we are unreviewed, we can send.
+      # If we are unreviewed, we cannot send.
       application = create :pd_teacher_application
       application.update!(status: 'unreviewed')
+      create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
+      refute application.allow_sending_principal_approval_teacher_reminder_email?
+
+      # If we are awaiting_admin_approval, we can send.
+      application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_approval_teacher_reminder_email?
 
@@ -1034,15 +1135,15 @@ module Pd::Application
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_approval_teacher_reminder_email?
 
-      # If we are waitlisted, we can't send.
+      # If we are pending_space_availability, we can't send.
       application = create :pd_teacher_application
-      application.update!(status: 'waitlisted')
+      application.update!(status: 'pending_space_availability')
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
       # If we're no longer unreviewed/pending, we can't send.
       application = create :pd_teacher_application
-      application.update!(status: 'accepted_no_cost_registration')
+      application.update!(status: 'accepted')
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
@@ -1066,11 +1167,13 @@ module Pd::Application
 
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 1.day.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
+      application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       assert application.allow_sending_principal_approval_teacher_reminder_email?
     end

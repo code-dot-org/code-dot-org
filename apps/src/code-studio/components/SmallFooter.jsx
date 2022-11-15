@@ -6,6 +6,7 @@ import React from 'react';
 import debounce from 'lodash/debounce';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import i18n from '@cdo/locale';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -45,7 +46,8 @@ export default class SmallFooter extends React.Component {
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
     fullWidth: PropTypes.bool,
-    channel: PropTypes.string
+    channel: PropTypes.string,
+    unitYear: PropTypes.string
   };
 
   state = {
@@ -183,6 +185,10 @@ export default class SmallFooter extends React.Component {
       ...(this.props.fullWidth && styles.baseFullWidth)
     };
 
+    // Possible edge cases include unitYear with value 'unversioned'.
+    // Filter for year ('20XX') all-numeral format.
+    const yearIsNumeric = /^[0-9]+$/.test(this.props.unitYear);
+
     return (
       <div className={this.props.className} style={styles.smallFooter}>
         <div
@@ -193,6 +199,11 @@ export default class SmallFooter extends React.Component {
         >
           {this.renderI18nDropdown()}
           {this.renderCopyright()}
+          {!!this.props.unitYear && yearIsNumeric && (
+            <p>
+              {i18n.version()}: {this.props.unitYear}
+            </p>
+          )}
           {this.renderMoreMenuButton()}
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
