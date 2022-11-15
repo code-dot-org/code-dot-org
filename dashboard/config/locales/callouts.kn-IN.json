@@ -1890,6 +1890,24 @@
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "“ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ ಮತ್ತು ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಬ್ಲಾಕ್‌ಗಳ ಸುತ್ತಲೂ ಅದನ್ನು ಸುತ್ತಿ"
+        },
+        "frozen cross": {
+          "repeat_blocks_2": "(2) ಇಲ್ಲಿ “ರಿಪೀಟ್” ಬ್ಲಾಕ್ ಅನ್ನು ಮೂವ್ ಮಾಡಿ ಮತ್ತು ಒಳಗೆ ಗ್ರೇ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಇರಿಸಿ"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "ಈ ಆಕಾರವನ್ನು ರಚಿಸಲು ರಿಪೀಟ್ ಬ್ಲಾಕ್ ಬಳಸಿ."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "ಮೊದಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ!"
         }
       }
     }
