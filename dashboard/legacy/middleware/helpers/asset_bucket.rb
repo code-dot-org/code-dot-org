@@ -56,7 +56,7 @@ class AssetBucket < BucketHelper
     level.starter_assets.map do |friendly_name, uuid_name|
       src = "#{@bucket}/#{LevelStarterAssetsController::S3_PREFIX}#{uuid_name}"
       dest = s3_path dest_owner_id, dest_storage_app_id, friendly_name
-      s3.copy_object(bucket: @bucket, key: dest, copy_source: URI.encode(src), metadata_directive: 'REPLACE')
+      s3.copy_object(bucket: @bucket, key: dest, copy_source: ERB::Util.url_encode(src), metadata_directive: 'REPLACE')
     end
   end
 end
