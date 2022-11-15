@@ -28,6 +28,28 @@ export const baseToolbox = {
               }
             }
           }
+        },
+        {
+          kind: 'block',
+          type: BlockTypes.PLAY_SOUND_NOTE,
+          inputs: {
+            measure: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            },
+            note: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
         }
       ]
     },

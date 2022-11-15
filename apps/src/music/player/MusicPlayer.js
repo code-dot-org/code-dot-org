@@ -43,7 +43,28 @@ export default class MusicPlayer {
     this.isInitialized = true;
   }
 
+  rateFromNote(desiredNote, sampleNote) {
+    return 2 ** ((desiredNote - sampleNote) / 12);
+  }
+
+  getLengthForId(id) {
+    const splitId = id.split('/');
+    const path = splitId[0];
+    const src = splitId[1];
+
+    const folder = this.library.groups[0].folders.find(
+      folder => folder.path === path
+    );
+    const sound = folder.sounds.find(sound => sound.src === src);
+
+    return sound.length;
+  }
+
   playSoundAtMeasureById(id, measure, insideWhenRun) {
+    this.playSoundAtNoteAtMeasureById(id, null, measure, insideWhenRun);
+  }
+
+  playSoundAtNoteAtMeasureById(id, note, measure, insideWhenRun) {
     if (!this.isInitialized) {
       console.log('MusicPlayer not initialized');
       return;
@@ -57,10 +78,14 @@ export default class MusicPlayer {
       return;
     }
 
+    const rate = this.rateFromNote(note, 0);
+
     const soundEvent = {
       type: EventType.PLAY,
       id,
       insideWhenRun,
+      rate,
+      duration: this.getLengthForId(id) / rate,
       when: measure - 1
     };
 
@@ -76,14 +101,6 @@ export default class MusicPlayer {
     if (this.isPlaying) {
       this.playSoundEvent(soundEvent);
     }
-  }
-
-  playSoundAtMeasureByName(name, measure, insideWhenRun) {
-    this.playSoundAtMeasureById(
-      this.getIdForSoundName(name),
-      measure,
-      insideWhenRun
-    );
   }
 
   previewSound(id, onStop) {
@@ -226,13 +243,14 @@ export default class MusicPlayer {
         soundEvent.uniqueId = PlaySound(
           this.groupPrefix + '/' + soundEvent.id,
           GROUP_TAG,
-          eventStart
+          eventStart,
+          soundEvent.rate
         );
       }
     }
 
     if (soundEvent.type === EventType.PREVIEW) {
-      PlaySound(this.groupPrefix + '/' + soundEvent.id, GROUP_TAG, 0, () => {
+      PlaySound(this.groupPrefix + '/' + soundEvent.id, GROUP_TAG, 0, 1, () => {
         const index = this.playingPreviews.indexOf(soundEvent.id);
         if (index > -1) {
           this.playingPreviews.splice(index, 1);

@@ -107,6 +107,10 @@ export default class AnalyticsReporter {
       if (block.type === BlockTypes.PLAY_SOUND) {
         this.soundsUsed.add(block.getFieldValue('sound'));
       }
+
+      if (block.type === BlockTypes.PLAY_SOUND_NOTE) {
+        this.soundsUsed.add(block.getFieldValue('sound'));
+      }
     });
 
     this.blockStats = {

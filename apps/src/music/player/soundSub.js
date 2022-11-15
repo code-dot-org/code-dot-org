@@ -78,20 +78,28 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   audioBuffer,
   id,
   when,
+  rate,
   loop,
   callback
 ) {
-  var source = audioContext.createBufferSource(); // creates a sound source
-  source.buffer = audioBuffer; // tell the source which sound to play
+  // Creates a sound source.
+  var source = audioContext.createBufferSource();
 
-  // connect the source direct to the destination
+  // Tell the source which sound to play.
+  source.buffer = audioBuffer;
+
+  // Set the playback rate.
+  source.playbackRate.value = rate;
+
+  // Connect the source direct to the destination.
   source.connect(audioContext.destination);
 
   source.onended = callback.bind(this, id);
 
   source.loop = loop;
 
-  source.start(when); // play the source now
+  // Play the source now.
+  source.start(when);
 
   if (['suspended', 'interrupted'].includes(source.context.state)) {
     source.context.resume();

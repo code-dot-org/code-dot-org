@@ -52,3 +52,53 @@ export const playSound = {
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
     ');\n'
 };
+
+export const playSoundNote = {
+  definition: {
+    type: BlockTypes.PLAY_SOUND_NOTE,
+    message0: 'play %1 at note %2 at measure %3',
+    args0: [
+      {
+        type: 'field_sounds',
+        name: 'sound',
+        getLibrary: () => Globals.getLibrary(),
+        playPreview: (id, onStop) => {
+          Globals.getPlayer().previewSound(id, onStop);
+        },
+        currentValue: 'pop/cafe_beat'
+      },
+      {
+        type: 'input_value',
+        name: 'note'
+      },
+      {
+        type: 'input_value',
+        name: 'measure'
+      }
+    ],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    colour: 230,
+    tooltip: 'play sound',
+    helpUrl: ''
+  },
+  generator: ctx =>
+    'MusicPlayer.playSoundAtNoteAtMeasureById("' +
+    ctx.getFieldValue('sound') +
+    '", ' +
+    Blockly.JavaScript.valueToCode(
+      ctx,
+      'note',
+      Blockly.JavaScript.ORDER_ASSIGNMENT
+    ) +
+    ', ' +
+    Blockly.JavaScript.valueToCode(
+      ctx,
+      'measure',
+      Blockly.JavaScript.ORDER_ASSIGNMENT
+    ) +
+    ', ' +
+    (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
+    ');\n'
+};

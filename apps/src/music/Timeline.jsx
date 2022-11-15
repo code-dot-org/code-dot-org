@@ -132,7 +132,7 @@ export default class Timeline extends React.Component {
                 <div
                   key={index}
                   style={{
-                    width: barWidth * this.getLengthForId(eventData.id) - 4,
+                    width: barWidth * eventData.duration - 4,
                     position: 'absolute',
                     left: barWidth * eventData.when,
                     top: 20 + this.getVerticalOffsetForEventId(eventData.id),

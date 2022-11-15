@@ -45,18 +45,26 @@ export function PlaySound(
   name,
   groupTag,
   when = 0,
+  rate = 1,
   onStop = () => {},
   loop = false
 ) {
   for (var i = 0; i < soundList.length; i++) {
     if (soundList[i] === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
-      return PlaySoundByIndex(i, groupTag || name, when, loop, onStop);
+      return PlaySoundByIndex(i, groupTag || name, when, rate, loop, onStop);
     }
   }
 }
 
-function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop, onStop) {
+function PlaySoundByIndex(
+  audioBufferIndex,
+  groupTag,
+  when,
+  rate,
+  loop,
+  onStop
+) {
   if (!audioSoundBuffers[audioBufferIndex]) {
     return;
   }
@@ -74,6 +82,7 @@ function PlaySoundByIndex(audioBufferIndex, groupTag, when, loop, onStop) {
     audioSoundBuffers[audioBufferIndex],
     audioIdUpto,
     when,
+    rate,
     loop,
     function(id) {
       // callback received when sound ends
