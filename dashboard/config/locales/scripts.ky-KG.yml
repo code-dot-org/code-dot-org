@@ -554,6 +554,10 @@ ky:
           lessons:
             lesson-6:
               name: Циклдер
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Өзгөрмөлөр
         csp4-2023:
           lesson_groups:
             csp_variables:
