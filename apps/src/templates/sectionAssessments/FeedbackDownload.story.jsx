@@ -1,5 +1,5 @@
 import React from 'react';
-import {UnconnectedFeedbackDownload} from './FeedbackDownload';
+import {UnconnectedFeedbackDownload as FeedbackDownload} from './FeedbackDownload';
 
 const exampleExportableFeedbackData = [
   {
@@ -49,22 +49,19 @@ const exampleExportableFeedbackData = [
   }
 ];
 
-export default storybook => {
-  return storybook
-    .storiesOf('SectionAssessments/FeedbackDownload', module)
-    .addStoryTable([
-      {
-        name: 'Display feedback download',
-        description: 'Ability to see feedback download',
-        story: () => (
-          <UnconnectedFeedbackDownload
-            sectionName={'Test Section'}
-            onClickDownload={() => {}}
-            exportableFeedbackData={exampleExportableFeedbackData}
-            isCurrentScriptCSD={true}
-            scriptName={'csd8-2011'}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'FeedbackDownload',
+  component: FeedbackDownload
 };
+
+const Template = args => (
+  <FeedbackDownload
+    sectionName={'Test Section'}
+    onClickDownload={() => {}}
+    exportableFeedbackData={exampleExportableFeedbackData}
+    isCurrentScriptCSD={true}
+    scriptName={'csd8-2011'}
+  />
+);
+
+export const FeedbackDownloadExample = Template.bind({});
