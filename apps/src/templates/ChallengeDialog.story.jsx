@@ -16,15 +16,14 @@ const wrapperStyle = {
 
 const Template = args => (
   <div style={wrapperStyle}>
-    <ChallengeDialog {...args} />
+    <ChallengeDialog hideBackdrop={true} {...args} />
   </div>
 );
 
 // STORIES
 
-export const Starting_Dialog = Template.bind({});
-Starting_Dialog.args = {
-  hideBackdrop: true,
+export const StartingDialog = Template.bind({});
+StartingDialog.args = {
   avatar: '/blockly/media/skins/harvester/static_avatar.png',
   cancelButtonLabel: 'Skip for now',
   primaryButtonLabel: "I'm Ready!",
@@ -34,9 +33,8 @@ Starting_Dialog.args = {
   isIntro: true
 };
 
-export const Starting_Dialog_with_Large_Avatar = Template.bind({});
-Starting_Dialog_with_Large_Avatar.args = {
-  hideBackdrop: true,
+export const StartingDialogWithLargeAvatar = Template.bind({});
+StartingDialogWithLargeAvatar.args = {
   avatar: '/blockly/media/spritelab/avatar.png',
   cancelButtonLabel: 'Skip for now',
   primaryButtonLabel: "I'm Ready!",
@@ -46,9 +44,8 @@ Starting_Dialog_with_Large_Avatar.args = {
   isIntro: true
 };
 
-export const Starting_Dialog_If_Previously_Completed = Template.bind({});
-Starting_Dialog_If_Previously_Completed.args = {
-  hideBackdrop: true,
+export const StartingDialogIfPreviouslyCompleted = Template.bind({});
+StartingDialogIfPreviouslyCompleted.args = {
   avatar: '/blockly/media/skins/harvester/static_avatar.png',
   cancelButtonLabel: 'Skip for now',
   complete: true,
@@ -59,9 +56,8 @@ Starting_Dialog_If_Previously_Completed.args = {
   isIntro: true
 };
 
-export const Passed_Dialog = Template.bind({});
-Passed_Dialog.args = {
-  hideBackdrop: true,
+export const PassedDialog = Template.bind({});
+PassedDialog.args = {
   avatar: '/blockly/media/skins/harvester/win_avatar.png',
   title: 'You did it!',
   primaryButtonLabel: 'Continue',
@@ -79,9 +75,8 @@ Passed_Dialog.args = {
   ]
 };
 
-export const Passed_Dialog_with_a_Bird = Template.bind({});
-Passed_Dialog_with_a_Bird.args = {
-  hideBackdrop: true,
+export const PassedDialogWithABird = Template.bind({});
+PassedDialogWithABird.args = {
   avatar: '/blockly/media/skins/birds/win_avatar.png',
   title: 'You did it!',
   primaryButtonLabel: 'Continue',
@@ -99,9 +94,8 @@ Passed_Dialog_with_a_Bird.args = {
   ]
 };
 
-export const Perfect_Completion = Template.bind({});
-Perfect_Completion.args = {
-  hideBackdrop: true,
+export const PerfectCompletion = Template.bind({});
+PerfectCompletion.args = {
   avatar: '/blockly/media/skins/harvester/win_avatar.png',
   complete: true,
   title: 'Challenge Complete!',
@@ -118,9 +112,8 @@ Perfect_Completion.args = {
   ]
 };
 
-export const Perfect_Completion_Without_Puzzle_Ratings = Template.bind({});
-Perfect_Completion_Without_Puzzle_Ratings.args = {
-  hideBackdrop: true,
+export const PerfectCompletionWithoutPuzzleRatings = Template.bind({});
+PerfectCompletionWithoutPuzzleRatings.args = {
   avatar: '/blockly/media/skins/studio/win_avatar.png',
   complete: true,
   title: 'Challenge Complete!',
