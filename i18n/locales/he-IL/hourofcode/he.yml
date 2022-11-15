@@ -37,11 +37,13 @@ he:
   africa_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
   hoc2022_header: גלו, שחקו, צרו!
   social_hoc2022_explore_play_create: השתמשו במדעי המחשב כדי לגלות, לשחק וליצור!
-  codeorg_homepage_hoc2022_body: גלו את היקום, הבקיעו שער, פרצו מהלך - קיימים כל כך
-    הרבה דרכים לנסות את מדעי המחשב.
-  hoc2022_codeorg_title: תחגגו את "שעת קוד" עם נאס"א ועוד
-  hoc2022_codeorg_description: שעת הקוד העשרית היא לא מהעולם הזה! בואו לחקור, לשחק
+  codeorg_homepage_hoc2022_body: גלו את היקום, הבקיעו שער, עשו מהלך - יש כל כך הרבה
+    דרכים להתנסות במדעי המחשב.
+  hoc2022_codeorg_title: חגגו את Hour of Code עם נאס"א ועוד
+  hoc2022_codeorg_description: שעת הקוד העשירית היא לא מהעולם הזה! בואו לחקור, לשחק
     וליצור איתנו.
+  social_hoc2022_dance: Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
+    Gomez, music from Disney's "Encanto," and more!
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: למדו היום, צרו מחר מזהיר.
@@ -487,13 +489,13 @@ he:
   cta_try_an_activity: נסו פעילות
   hoc_homepage_join_the_movement_heading: הצטרפו לתנועה
   hoc_homepage_join_the_movement_description: Hour of Code זמינה לאורך כל השנה, אך
-    כל שנה בדצמבר, כיתתכם יכולה להצטרף אל מיליוני תלמידים ברחבי העולם החוגגים את שבוע
-    מדעי המחשב עם Hour of Code. הרשמה לחגיגה השנתית מתחילה כל שנה באוקטובר.
+    מדי שנה בדצמבר, כיתתכם יכולה להצטרף אל מיליוני תלמידים ברחבי העולם החוגגים את
+    שבוע מדעי המחשב עם Hour of Code. הרשמה לחגיגה השנתית מתחילה בכל שנה באוקטובר.
   hoc_homepage_what_is_hoc_subhead: ערכות לימוד בנות שעה אחת  ביותר מ-45 שפות. אין
     צורך בניסיון קודם. פעילויות של Hour of Code זמינות בחינם לאורך כל השנה.
-  hoc_homepage_what_is_hoc_description: Hour of Code הינה מבוא של שעה אחת למדעי המחשב,
-    תוך שימוש בערכות לימוד כייפיות כדי להראות שכל אחד יכול ללמוד את הבסיס.  הקמפיין
-    הבסיסי הזה נתמך ע"י יותר מ-400 שותפים ו-200,000 מחנכים ברחבי העולם.
+  hoc_homepage_what_is_hoc_description: תוכנית Hour of Code היא מבוא של שעה אחת למדעי
+    המחשב, המשתמשת בערכות לימוד מהנות כדי להראות שכל אחד יכול ללמוד את הבסיס. בקמפיין
+    קהילתי זה תומכים יותר מ-400 שותפים ו-200,000 מחנכים ברחבי העולם.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "\\[קראו את המדריך](%\\{howto_guide_url}%)
     כדי לתכנן אירוע לכיתתכם."
   hoc_homepage_highlights_heading: עיקרי הדברים של Hour of Code
@@ -552,6 +554,7 @@ he:
   signup_special_event_details_placeholder: לתאר מה הופך את זה אירוע מיוחד
   signup_send_posters_address_placeholder: כתובת זו לא ישותף על המפה שלנו
   signup_event_type_in_school: בבית הספר
+  signup_event_type_after_school: After school program
   signup_event_type_out_of_school: מחוץ לבית הספר
   signup_event_type_at_home: Home
   signup_submit_census_label: שליחה
@@ -978,10 +981,6 @@ he:
     or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
   learn_banner_teachers_markdown: 'מורים: [קיימו פעילות של שעה](%{host_url}) או [קראו
     את המדריך]%{howto_url}'
-  learn_robotics_banner_heading: Robotics and Circuits
-  learn_robotics_banner_blurb: Got robots or physical computing kits? Use them with
-    the activities below and make a tangible Hour of Code for students of any age!
-    Some activities even offer a simulator so you can get started without any hardware.
   tutorial_dance2019_name: Dance Party
   tutorial_danceparty_name: Dance Party
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -10409,7 +10408,7 @@ he:
   tutorial_clbinary_name: Learn How Binary Works with Computers using Minecraft
   tutorial_sascollabcode_name: 'SAS CodeSnaps: Collaborative coding for blind, low
     vision and sighted students'
-  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins nn'' Glory'
+  tutorial_codecombatgoblins_name: 'CodeCombat: Goblins ''n'' Glory'
   tutorial_scratchstorytelling_name: Anything is Possible! Storytelling with Scratch
   tutorial_crayolasymbols_name: 'Unplugged Coding from Crayola Education: Visual Symbols
     Convey Meaning'
@@ -11181,7 +11180,7 @@ he:
   tutorial_googlesuperhero_string_detail_programming_languages: Blocks
   tutorial_googlename _string_detail_programming_languages: Blocks
   tutorial_carnegiezillah_string_detail_programming_languages: Blocks
-  tutorial_nasachspacejam_string_detail_programming_languages: JavaScript, P5
+  tutorial_nasachspacejam_string_detail_programming_languages: Blocks
   tutorial_hatchxrsolar_string_detail_programming_languages: Blocks
   tutorial_hatchxrspace_string_detail_programming_languages: Blocks
   tutorial_hatchxrtrex_string_detail_programming_languages: Blocks
@@ -11216,6 +11215,29 @@ he:
   tutorial_nasapackage_string_detail_programming_languages: Blocks
   tutorial_nasalunar_string_detail_programming_languages: בלוקים, ג'אווה סקריפט
   tutorial_meeestate_string_detail_programming_languages: בלוקים, פיתון
+  tutorial_imagipixelart_longdescription: Learn Python and create your own colorful
+    animations in this 1 hour crash course!
+  tutorial_imagipixelart_name: Code your own pixel art!
+  tutorial_imagipixelart_string_detail_grades: Grades 2-8
+  tutorial_imagipixelart_string_detail_platforms: ''
+  tutorial_imagipixelart_string_detail_programming_languages: typing
+  tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhealth_longdescription: 'Learn about data visualization, algorithmic
+    art and coding, while exploring SDG #3 ''Good Health and Well-Being''.'
+  tutorial_kcjhealth_name: The Health & Well-Being Challenge
+  tutorial_kcjhealth_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_kcjhealth_string_detail_platforms: ''
+  tutorial_kcjhealth_string_detail_programming_languages: blocks
+  tutorial_kcjhealth_string_platforms: All modern browsers
+  tutorial_msftwakanda_longdescription: 'Shuri, Okoye, and Riri must band together
+    to help Wakanda. Code your own action-packed activity inspired by Marvel Studios''
+    ''Black Panther: Wakanda Forever''!'
+  tutorial_msftwakanda_name: Long Live Wakanda
+  tutorial_msftwakanda_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_msftwakanda_string_detail_platforms: ''
+  tutorial_msftwakanda_string_detail_programming_languages: blocks
+  tutorial_msftwakanda_string_platforms: All modern browsers
   school_not_found_heading: We couldn't find your school. Please enter more information.
   school_name: School name
   school_name_error: School name is required.
