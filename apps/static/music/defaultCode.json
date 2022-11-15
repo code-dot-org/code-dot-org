@@ -5,7 +5,7 @@
       {"type": "when_run", "x": 30, "y": 30},
       {
         "type": "triggered_at",
-        "x": 500,
+        "x": 425,
         "y": 30,
         "fields": {
           "trigger": "trigger1"
