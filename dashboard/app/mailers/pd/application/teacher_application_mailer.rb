@@ -56,7 +56,6 @@ module Pd::Application
 
       mail(
         to: @application.formatted_principal_email,
-        cc: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
         subject: "Thank you for completing your teacher's application"
       )
