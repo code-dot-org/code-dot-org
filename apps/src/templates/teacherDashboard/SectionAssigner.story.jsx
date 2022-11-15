@@ -3,7 +3,7 @@ import {UnconnectedSectionAssigner as SectionAssigner} from './SectionAssigner';
 import {action} from '@storybook/addon-actions';
 import {fakeTeacherSectionsForDropdown} from './sectionAssignmentTestHelper';
 
-export default storybook => {
+/*export default storybook => {
   storybook.storiesOf('SectionAssigner', module).addStoryTable([
     {
       name: 'SectionAssigner',
@@ -18,4 +18,19 @@ export default storybook => {
       )
     }
   ]);
+};*/
+
+export default {
+  title: 'SectionAssigner',
+  component: SectionAssigner
 };
+
+export const Basic = () => (
+  <div>
+    <SectionAssigner
+      selectedSectionId={fakeTeacherSectionsForDropdown[0].id}
+      sections={fakeTeacherSectionsForDropdown}
+      selectSection={action('selectSection')}
+    />
+  </div>
+);
