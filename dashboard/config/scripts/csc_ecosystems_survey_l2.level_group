@@ -1,0 +1,12 @@
+name 'csc_ecosystems_survey_L2'
+title 'Ecosystems Survey Lesson 2'
+submittable 'true'
+anonymous 'true'
+
+page
+level 'book covers_l2_q1'
+level 'book covers_l2_q2'
+level 'book covers_l2_q3’
+level 'book covers_l2_q4’
+level 'book covers_l2_q5’
+level 'book covers_l2_q6’

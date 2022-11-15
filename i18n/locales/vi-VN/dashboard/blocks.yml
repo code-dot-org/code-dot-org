@@ -988,6 +988,24 @@ vi:
         text: thiết lập
       Dancelab_whenSetup2:
         text: thiết lập
+      DansBlocks_setForegroundEffect2:
+        text: làm hiệu ứng {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Bong bóng
+            '"confetti"': Hoa giấy
+            '"hearts"': trái tim
+            '"emojis"': Biểu tượng cảm xúc vui vẻ
+            '"rain"': mưa
+            '"starburst"': Lóe sáng
+            '"glass"': Kính vỡ
+            '"twinkling"': Lấp lánh
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): có thể kéo được
+            wandering(): lang thang
+            shrinking(): thu nhỏ
       gamelab_addBehaviorSimple:
         text: nhân vật {SPRITE} bắt đầu {BEHAVIOR}
       gamelab_addTarget:
@@ -1329,7 +1347,6 @@ vi:
             "'sound://category_space/Pillars_SFX.mp3'": tiếng cột sáng tạo
             "'sound://category_space/Southern_ring_SFX.mp3'": tiếng tinh vân vòng phương nam
             "'sound://category_space/Supernova_SFX.mp3'": tiếng siêu tân tinh
-            "'sound://category_sports/One_Whistle_SFX.mp3'": tiếng siêu tân tinh tycho
       gamelab_playSpeech:
         text: phát lời nói {SOUND}
       gamelab_playerBehaviors:
@@ -1927,6 +1944,8 @@ vi:
         text: bố trí quái vật ngẫu nhiên
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         text: đặt khung thành {BRUSH}
         options:

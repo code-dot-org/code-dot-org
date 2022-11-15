@@ -521,7 +521,23 @@
         "helloworld_food_sizes_soccer-2022": "Nauč sa meniť veľkosť postáv.",
         "helloworld_food_sizes_space-2022": "Nauč sa meniť veľkosť postáv.",
         "helloworld_food_sounds_soccer-2022": "Nauč sa prehrávať zvuky.",
-        "helloworld_food_sounds_space-2022": "Nauč sa prehrávať zvuky."
+        "helloworld_food_sounds_space-2022": "Nauč sa prehrávať zvuky.",
+        "ml-customize apps-choice1": "Zmeň písmo, farbu, ohraničenie a ďalšie vlastnosti aplikácie",
+        "ml-customize apps-choice1_2022": "Zmeň písmo, farbu, ohraničenie a ďalšie vlastnosti aplikácie",
+        "ml-intro app lab-book recommender 5A-2021": "Zmeň písmo, farbu, ohraničenie a ďalšie vlastnosti aplikácie",
+        "ml-intro app lab-book recommender 5A_2022": "Zmeň písmo, farbu, ohraničenie a ďalšie vlastnosti aplikácie",
+        "ml-intro app lab-book recommender 5B-2021": "Pridaj obrázok na uvítaciu obrazovku",
+        "ml-intro app lab-book recommender 5B_2022": "Pridaj obrázok na uvítaciu obrazovku",
+        "ml-intro app lab-book recommender 5C-2021": "Pridaj do aplikácie zvuky, ktoré sa prehrajú, keď používateľ klikne na tlačidlá!",
+        "ml-intro app lab-book recommender 5C_2022": "Pridaj do aplikácie zvuky, ktoré sa prehrajú, keď používateľ klikne na tlačidlá!",
+        "ml-intro app lab-book recommender 5D-2021": "Pridaj tlačidlo, ktoré používateľom umožní otvoriť webovú stránku knižnice, aby si mohli vypožičať knihu.",
+        "ml-intro app lab-book recommender 5D_2022": "Pridaj tlačidlo, ktoré používateľom umožní otvoriť webovú stránku knižnice, aby si mohli vypožičať knihu.",
+        "ml-intro app lab-book recommender 5E-2021": "Použi blok playSpeech() na prečítanie textu nahlas.",
+        "ml-intro app lab-book recommender 5E_2022": "Použi blok playSpeech() na prečítanie textu nahlas.",
+        "ml-use model card-choice1": "Zmeň písmo, farbu, ohraničenie a ďalšie vlastnosti aplikácie",
+        "ml-use model card-choice1_2022": "Zmeň písmo, farbu, ohraničenie a ďalšie vlastnosti aplikácie",
+        "ml-use model card-choice5": "Použi blok playSpeech() na prečítanie textu nahlas.",
+        "ml-use model card-choice5_2022": "Použi blok playSpeech() na prečítanie textu nahlas."
       }
     }
   }
