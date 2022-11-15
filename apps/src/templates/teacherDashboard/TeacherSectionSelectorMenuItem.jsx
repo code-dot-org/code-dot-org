@@ -51,7 +51,6 @@ export function UnconnectedTeacherSectionSelectorMenuItem({
     if (section.isAssigned) {
       unassignSection(section.id).then(() => setIsPending(false));
     } else {
-      console.log('hello');
       assignToSection(
         section.id,
         courseId,
