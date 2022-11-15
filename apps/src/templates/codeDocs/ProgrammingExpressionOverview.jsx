@@ -168,10 +168,7 @@ export default function ProgrammingExpressionOverview({
       )}
       <div>
         <p />
-        <p>
-          Found a bug in the documentation? Let us know at{' '}
-          <a href="mailto:support@code.org">support@code.org</a>.
-        </p>
+        <EnhancedSafeMarkdown markdown={i18n.documentationBug()} />
       </div>
     </div>
   );
