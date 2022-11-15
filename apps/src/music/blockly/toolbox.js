@@ -17,20 +17,6 @@ export const baseToolbox = {
       contents: [
         {
           kind: 'block',
-          type: BlockTypes.PLAY_SAMPLE,
-          inputs: {
-            measure: {
-              shadow: {
-                type: 'math_number',
-                fields: {
-                  NUM: 1
-                }
-              }
-            }
-          }
-        },
-        {
-          kind: 'block',
           type: BlockTypes.PLAY_SOUND,
           inputs: {
             measure: {
@@ -44,12 +30,6 @@ export const baseToolbox = {
           }
         }
       ]
-    },
-    {
-      kind: 'category',
-      name: 'Samples',
-      cssConfig: baseCategoryCssConfig,
-      contents: []
     },
     {
       kind: 'category',
@@ -106,11 +86,14 @@ export const baseToolbox = {
       contents: [
         {
           kind: 'block',
-          type: BlockTypes.NUMBER
+          type: 'math_number'
         },
         {
           kind: 'block',
-          type: BlockTypes.ROUND,
+          type: 'math_round',
+          fields: {
+            OP: 'ROUNDUP'
+          },
           inputs: {
             NUM: {
               shadow: {
@@ -124,7 +107,7 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: BlockTypes.ARITHMETIC,
+          type: 'math_arithmetic',
           inputs: {
             A: {
               shadow: {
@@ -146,7 +129,7 @@ export const baseToolbox = {
         },
         {
           kind: 'block',
-          type: BlockTypes.RANDOM,
+          type: 'math_random_int',
           inputs: {
             FROM: {
               shadow: {
@@ -165,6 +148,28 @@ export const baseToolbox = {
               }
             }
           }
+        },
+        {
+          kind: 'block',
+          type: 'math_modulo',
+          inputs: {
+            DIVIDEND: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 3
+                }
+              }
+            },
+            DIVISOR: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 2
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -172,138 +177,22 @@ export const baseToolbox = {
       kind: 'category',
       name: 'Variables',
       cssConfig: baseCategoryCssConfig,
+      custom: 'VARIABLE'
+    },
+    {
+      kind: 'category',
+      name: 'Logic',
+      cssConfig: baseCategoryCssConfig,
       contents: [
         {
-          kind: 'button',
-          text: 'Create variable...',
-          callbackKey: 'createVariableHandler'
+          kind: 'block',
+          type: 'controls_if'
         },
         {
           kind: 'block',
-          type: BlockTypes.VARIABLES_GET,
-          fields: {
-            var: {
-              name: 'i',
-              type: 'number'
-            }
-          }
-        },
-        {
-          kind: 'block',
-          type: BlockTypes.VARIABLES_GET,
-          fields: {
-            var: {
-              name: 'currentTime',
-              type: 'number'
-            }
-          }
-        },
-        {
-          kind: 'block',
-          type: BlockTypes.VARIABLES_SET,
-          fields: {
-            var: {
-              name: 'i',
-              type: 'number'
-            }
-          },
-          inputs: {
-            value: {
-              shadow: {
-                type: 'math_number',
-                fields: {
-                  NUM: 1
-                }
-              }
-            }
-          }
+          type: 'logic_compare'
         }
       ]
     }
   ]
-};
-
-export const createMusicToolbox = (library, mode) => {
-  const toolbox = {...baseToolbox};
-
-  if (!library) {
-    return toolbox;
-  }
-
-  toolbox.contents[1].contents = [];
-
-  // Currently only supports 1 group
-  const group = library.groups[0];
-  for (let folder of group.folders) {
-    let category = {
-      kind: 'category',
-      name: folder.name,
-      cssConfig: baseCategoryCssConfig,
-      contents: []
-    };
-
-    for (let sound of folder.sounds) {
-      switch (mode) {
-        case 'dropdown': {
-          category.contents.push({
-            kind: 'block',
-            type: BlockTypes.PLAY_SOUND,
-            fields: {
-              sound: folder.path + '/' + sound.src
-            },
-            inputs: {
-              measure: {
-                shadow: {
-                  type: 'math_number',
-                  fields: {
-                    NUM: 1
-                  }
-                }
-              }
-            }
-          });
-          break;
-        }
-        case 'valueSample': {
-          category.contents.push({
-            kind: 'block',
-            type: BlockTypes.SAMPLE,
-            fields: {
-              sample: sound.name
-            }
-          });
-          break;
-        }
-        case 'playSample': {
-          category.contents.push({
-            kind: 'block',
-            type: BlockTypes.PLAY_SAMPLE,
-            inputs: {
-              sample: {
-                block: {
-                  type: BlockTypes.SAMPLE,
-                  fields: {
-                    sample: sound.name
-                  }
-                }
-              },
-              measure: {
-                shadow: {
-                  type: 'math_number',
-                  fields: {
-                    NUM: 1
-                  }
-                }
-              }
-            }
-          });
-        }
-      }
-    }
-
-    // Add to samples category
-    toolbox.contents[1].contents.push(category);
-  }
-
-  return toolbox;
 };

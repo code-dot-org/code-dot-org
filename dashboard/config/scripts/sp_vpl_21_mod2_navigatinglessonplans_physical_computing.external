@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 ##### **Step 1:** Open a new tab and log into your teacher account on Code.org. 
 
-##### **Step 2:** Click on "CS Discoveries" in the "Courses" column of the "Class Sections" table on the "My Dashboard" page. 
+##### **Step 2:** Click on the course of your choice in the "Courses" column of the "Class Sections" table on the "My Dashboard" page. 
 
-(If you have not created class sections, navigate to the CS Discoveries curriculum from the "My Courses" section of the "My Dashboard" page.)
+(If you have not created class sections, navigate to the content of your choice from the "My Courses" section of the "My Dashboard" page.)
 
 ##### **Step 3:** Navigate to the Unit you would like to view and click on the "Go to Unit" button.
 
@@ -26,7 +26,9 @@ markdown <<MARKDOWN
 
 ## Course overview page
 
-The course overview page contains a short description of each unit within the course along with unit level teacher resources. To access unit content, you can click on the “Go to Unit” button.
+The course overview page contains a short description of each unit within the course along with unit level teacher resources. To access unit content, you can click on the “Go to Unit” button. 
+
+**Note:** Courses containing only one unit will not have a course overview page. In this case, you will be taken directly to the unit overview page. 
 
 <hr style="clear:both">
 

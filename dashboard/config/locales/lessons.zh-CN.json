@@ -95,7 +95,7 @@
         "aquatic/Aquatic": {
           "name": "《我的世界》：水上航行",
           "overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课对任何6岁以上的学生都很有效。年龄较小的学习者可能完不成本教程，但是在一个小时的习题中会收获有很多乐趣。高中生基本上都会完成辅导课程，最后有时间玩自由游戏。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程： [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个人[Print one](https://code.org/certificates?script=mc)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程： [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个人[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术和条件语句。这组难题建立循环知识的基础上，将巩固相关知识，并引入条件语句。通过将这两个概念结合在一起，学生将能够探索在令人兴奋的新环境中创造有趣和创新项目的潜力。",
           "student_overview": "在本课中，所有年龄段的学员都将在一个安全的支持性环境中获得编程和计算机科学的入门经验。"
         },
@@ -4131,6 +4131,9 @@
         },
         "allthethings/Java Lab": {
           "name": "Java实验室"
+        },
+        "allthethings/lesson-48": {
+          "name": "诗歌"
         },
         "coursef-2021/lesson-6": {
           "name": "向你介绍精灵图实验室",

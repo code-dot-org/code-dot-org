@@ -7,7 +7,7 @@ wrong '`Square Triangle Square Square`'
 wrong '`Shape Shape Square Shape`'
 
 markdown <<MARKDOWN
-Consider the following two classes.
+Consider the following three classes.
 
 ```
 public class Shape {

@@ -43,35 +43,35 @@
         },
         "CourseE_Project_SpriteLab_cupcake_examples_2021": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "growing": "agrandir",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "growing": "grandir",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
           "patrolling": "patrouiller ",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "moving south": "aller vers le sud",
+          "jittering": "s'agiter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "moving west2": "aller vers l'Ouest2",
-          "spinning right2": "tourner à droite2",
-          "growing2": "agrandir2",
-          "swimming left and right2": "nager à gauche et à droite2",
-          "moving east2": "aller vers l'Est2",
-          "moving north2": "aller vers le Nord2",
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "moving west2": "aller vers l'ouest2",
+          "spinning right2": "tournoyer à droite2",
+          "growing2": "grandir2",
+          "swimming left and right2": "nager de gauche à droite2",
+          "moving east2": "aller vers l'est2",
+          "moving north2": "aller vers le nord2",
           "patrolling2": "patrouiller2",
-          "moving south2": "aller vers le Sud2",
-          "jittering2": "tresaillir2",
+          "moving south2": "aller vers le sud2",
+          "jittering2": "s'agiter2",
           "wandering2": "errer2",
-          "shrinking2": "contracter2",
-          "spinning left2": "tourner à gauche2",
+          "shrinking2": "rétrécir2",
+          "spinning left2": "tournoyer à gauche2",
           "driving with arrow keys": "conduire avec les touches fléchées ",
-          "fluttering": "flotter",
-          "wobbling": "vaciller",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "fluttering": "voleter",
+          "wobbling": "chanceler",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
@@ -454,102 +454,102 @@
         "courseF_text_choice_conversation": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
           "wandering": "errer",
-          "moving east": "aller vers l'Est",
-          "spinning left": "tourner à gauche ",
-          "spinning right": "tourner à droite",
-          "shrinking": "contracter",
-          "growing": "agrandir",
-          "moving south": "aller vers le Sud",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving north": "aller vers le Nord",
-          "jittering": "tresaillir",
-          "moving west": "aller vers l'Ouest",
+          "moving east": "aller vers l'est",
+          "spinning left": "tournoyer à gauche",
+          "spinning right": "tournoyer à droite",
+          "shrinking": "rétrécir",
+          "growing": "grandir",
+          "moving south": "aller vers le sud",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving north": "aller vers le nord",
+          "jittering": "gigoter",
+          "moving west": "aller vers l'ouest",
           "patrolling": "patrouiller ",
           "driving with arrow keys": "conduire avec les touches fléchées ",
-          "fluttering": "flotter",
-          "wobbling": "vaciller",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "fluttering": "voleter",
+          "wobbling": "chanceler",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_events": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
           "wandering": "errer",
-          "moving east": "aller vers l'Est",
-          "spinning left": "tourner à gauche ",
-          "spinning right": "tourner à droite",
-          "shrinking": "contracter",
-          "growing": "agrandir",
-          "moving south": "aller vers le Sud",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving north": "aller vers le Nord",
-          "jittering": "tresaillir",
-          "moving west": "aller vers l'Ouest",
+          "moving east": "aller vers l'est",
+          "spinning left": "tournoyer à gauche",
+          "spinning right": "tournoyer à droite",
+          "shrinking": "rétrécir",
+          "growing": "grandir",
+          "moving south": "aller vers le sud",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving north": "aller vers le nord",
+          "jittering": "gigoter",
+          "moving west": "aller vers l'ouest",
           "patrolling": "patrouiller ",
           "driving with arrow keys": "conduire avec les touches fléchées ",
-          "fluttering": "flotter",
-          "wobbling": "vaciller",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "fluttering": "voleter",
+          "wobbling": "chanceler",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_freeplay": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
           "wandering": "errer",
           "moving east": "aller vers l'Est",
-          "spinning left": "tourner à gauche ",
-          "spinning right": "tourner à droite",
-          "shrinking": "contracter",
-          "growing": "agrandir",
-          "moving south": "aller vers le Sud",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving north": "aller vers le Nord",
-          "jittering": "tresaillir",
-          "moving west": "aller vers l'Ouest",
+          "spinning left": "tournoyer à gauche",
+          "spinning right": "tournoyer à droite",
+          "shrinking": "rétrécir",
+          "growing": "grandir",
+          "moving south": "aller vers le sud",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving north": "aller vers le nord",
+          "jittering": "gigoter",
+          "moving west": "aller vers l'ouest",
           "patrolling": "patrouiller ",
           "driving with arrow keys": "conduire avec les touches fléchées ",
-          "fluttering": "flotter",
-          "wobbling": "vaciller",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "fluttering": "voleter",
+          "wobbling": "chanceler",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_interview": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
           "wandering": "errer",
-          "moving east": "aller vers l'Est",
-          "spinning left": "tourner à gauche ",
-          "spinning right": "tourner à droite",
-          "shrinking": "contracter",
-          "growing": "agrandir",
-          "moving south": "aller vers le Sud",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving north": "aller vers le Nord",
-          "jittering": "tresaillir",
-          "moving west": "aller vers l'Ouest",
+          "moving east": "aller vers l'est",
+          "spinning left": "tournoyer à gauche",
+          "spinning right": "tournoyer à droite",
+          "shrinking": "rétrécir",
+          "growing": "grandir",
+          "moving south": "aller vers le sud",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving north": "aller vers le nord",
+          "jittering": "gigoter",
+          "moving west": "aller vers l'ouest",
           "patrolling": "patrouiller ",
           "driving with arrow keys": "conduire avec les touches fléchées ",
-          "fluttering": "flotter",
-          "wobbling": "vaciller",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "fluttering": "voleter",
+          "wobbling": "chanceler",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_multiprompt": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
           "wandering": "errer",
-          "moving east": "aller vers l'Est",
-          "spinning left": "tourner à gauche ",
-          "spinning right": "tourner à droite",
-          "shrinking": "contracter",
-          "growing": "agrandir",
-          "moving south": "aller vers le Sud",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving north": "aller vers le Nord",
-          "jittering": "tresaillir",
-          "moving west": "aller vers l'Ouest",
+          "moving east": "aller vers l'est",
+          "spinning left": "tournoyer à gauche",
+          "spinning right": "tournoyer à droite",
+          "shrinking": "rétrécir",
+          "growing": "grandir",
+          "moving south": "aller vers le sud",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving north": "aller vers le nord",
+          "jittering": "gigoter",
+          "moving west": "se déplacer vers l'ouest",
           "patrolling": "patrouiller ",
           "driving with arrow keys": "conduire avec les touches fléchées ",
-          "fluttering": "flotter",
-          "wobbling": "vaciller",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "fluttering": "voleter",
+          "wobbling": "chanceler",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_card": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
@@ -693,7 +693,7 @@
           "wobbling": "vaciller",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -959,138 +959,138 @@
         "courseF_text_answer": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "s'agiter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_color": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "gigoter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_title": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "gigoter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_concat": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "s'agiter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
           "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "moving east and looping": "aller vers l'est et en boucle"
         },
         "courseF_text_events": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "s'agiter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_print": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "s'agiter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_prompts": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "s'agiter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_review": {
           "moving forward": "avancer",
           "patrolling": "patrouiller ",
-          "growing": "agrandir",
-          "moving west": "aller vers l'Ouest",
-          "spinning right": "tourner à droite",
-          "moving east": "aller vers l'Est",
-          "moving north": "aller vers le Nord",
-          "moving south": "aller vers le Sud",
-          "jittering": "tresaillir",
+          "growing": "grandir",
+          "moving west": "aller vers l'ouest",
+          "spinning right": "tournoyer à droite",
+          "moving east": "aller vers l'est",
+          "moving north": "aller vers le nord",
+          "moving south": "aller vers le sud",
+          "jittering": "s'agiter",
           "wandering": "errer",
-          "shrinking": "contracter",
-          "spinning left": "tourner à gauche ",
-          "fluttering": "flotter",
-          "moving west and looping": "aller vers l'Ouest et faire des boucles",
-          "moving east and looping": "aller vers l'Est et faire des boucles"
+          "shrinking": "rétrécir",
+          "spinning left": "tournoyer à gauche",
+          "fluttering": "voleter",
+          "moving west and looping": "se déplacer vers l'ouest et en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "aller vers l'Ouest et faire des boucles",
@@ -1458,16 +1458,16 @@
         },
         "CourseE_Project_SpriteLab_2021": {
           "wandering": "errer",
-          "moving east": "aller vers l'Est",
-          "spinning left": "tourner à gauche ",
-          "spinning right": "tourner à droite",
-          "shrinking": "contracter",
-          "growing": "agrandir",
-          "moving south": "aller vers le Sud",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving north": "aller vers le Nord",
-          "jittering": "tresaillir",
-          "moving west": "aller vers l'Ouest",
+          "moving east": "aller vers l'est",
+          "spinning left": "tournoyer à gauche",
+          "spinning right": "tournoyer à droite",
+          "shrinking": "rétrécir",
+          "growing": "grandir",
+          "moving south": "aller vers le sud",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving north": "aller vers le nord",
+          "jittering": "s'agiter",
+          "moving west": "aller vers l'ouest",
           "patrolling": "patrouiller "
         },
         "Dance Party 2_2021": {
@@ -1609,19 +1609,19 @@
           "patrolling": "patrouiller "
         },
         "courseF_variables_predict": {
-          "moving east": "aller vers l'Est",
-          "moving west": "aller vers l'Ouest",
-          "mystery behavior": "comportement mystérieux ",
+          "moving east": "aller vers l'est",
+          "moving west": "aller vers l'ouest",
+          "mystery behavior": "comportement mystère",
           "wandering": "errer",
-          "running east": "courir vers l'Est",
-          "spinning left": "tourner à gauche ",
-          "spinning right": "tourner à droite",
-          "shrinking": "contracter",
-          "growing": "agrandir",
-          "moving south": "aller vers le Sud",
-          "swimming left and right": "nager à gauche et à droite ",
-          "moving north": "aller vers le Nord",
-          "jittering": "tresaillir",
+          "running east": "courir vers l'est",
+          "spinning left": "tournoyer à gauche",
+          "spinning right": "tournoyer à droite",
+          "shrinking": "rétrécir",
+          "growing": "grandir",
+          "moving south": "aller vers le sud",
+          "swimming left and right": "nager de gauche à droite ",
+          "moving north": "aller vers le nord",
+          "jittering": "s'agiter",
           "patrolling": "patrouiller "
         },
         "international_outbreak_freeplay": {
@@ -1658,7 +1658,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -1677,7 +1677,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_emoji_behaviors": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
@@ -1696,7 +1696,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle",
           "swimming left and right": "nager de gauche à droite "
@@ -1716,7 +1716,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_food_events": {
           "moving forward": "avancer",
@@ -1733,7 +1733,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_retro_behaviors": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
@@ -1753,7 +1753,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -1772,7 +1772,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_animals_sounds": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
@@ -1792,7 +1792,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -1813,7 +1813,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle",
           "swimming left and right": "nager de gauche à droite "
@@ -1835,7 +1835,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle",
           "swimming left and right": "nager de gauche à droite "
@@ -1857,7 +1857,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle",
           "swimming left and right": "nager de gauche à droite "
@@ -1880,7 +1880,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -1920,7 +1920,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -1937,7 +1937,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "nager de gauche à droite ",
@@ -1957,7 +1957,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -1974,7 +1974,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "nager de gauche à droite ",
@@ -1994,7 +1994,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -2011,7 +2011,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_food_backgrounds": {
           "moving with arrow keys": "se déplacer avec les touches fléchées",
@@ -2030,7 +2030,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle",
           "swimming left and right": "nager de gauche à droite "
@@ -3109,7 +3109,7 @@
         "courseF_sprites_freeplay_food": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -3135,7 +3135,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "AllTheThings sprite lab with video": {
           "swimming left and right": "nager de gauche à droite ",
@@ -3195,7 +3195,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west2": "aller vers l'ouest2",
           "spinning right2": "tournoyer à droite2",
           "growing2": "grandir2",
@@ -3227,7 +3227,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west2": "aller vers l'ouest2",
           "spinning right2": "tournoyer à droite2",
           "growing2": "grandir2",
@@ -3392,7 +3392,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "Virtual Pet 2_-2022-2": {
           "wandering": "se balader",
@@ -3727,7 +3727,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_apps_madlib_-2022-2": {
           "wandering": "se balader",
@@ -3746,7 +3746,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_apps_pet2022": {
           "patrolling": "patrouiller",
@@ -3766,7 +3766,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_apps_pet_-2022-2": {
           "patrolling": "patrouiller",
@@ -3786,7 +3786,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_editable_card_-2022-2": {
           "blocking movement": "blocage du mouvement ",
@@ -3839,7 +3839,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_choice_conflict2_-2022-2": {
           "patrolling": "patrouiller",
@@ -3855,7 +3855,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_choice_conflict_-2022-2": {
           "patrolling": "patrouiller",
@@ -3872,7 +3872,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_choice_penguin_-2022-2": {
           "patrolling": "patrouiller",
@@ -3890,7 +3890,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
           "patrolling": "patrouiller",
@@ -3908,7 +3908,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_conflict_-2022-2": {
           "patrolling": "patrouiller",
@@ -3925,12 +3925,12 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_freeplay_air_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -3946,7 +3946,7 @@
         "courseF_events_freeplay_animals_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -3962,7 +3962,7 @@
         "courseF_events_freeplay_aquatic_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -3978,7 +3978,7 @@
         "courseF_events_freeplay_blank_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -3994,7 +3994,7 @@
         "courseF_events_freeplay_food_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4010,7 +4010,7 @@
         "courseF_events_freeplay_space_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4039,7 +4039,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_practice_reorder_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4059,7 +4059,7 @@
           "driving with arrow keys": "conduire avec les touches fléchées ",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_predict_-2022-2": {
           "mystery behavior": "comportement mystère",
@@ -4093,7 +4093,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_ship_-2022-2": {
           "patrolling": "patrouiller",
@@ -4111,7 +4111,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_stops_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4128,7 +4128,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_events_time_-2022-2": {
           "patrolling": "patrouiller",
@@ -4146,7 +4146,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_label_predict_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4177,7 +4177,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_sprites_behaviors_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4203,7 +4203,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_sprites_desert_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4218,12 +4218,12 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4239,7 +4239,7 @@
         "courseF_sprites_freeplay_animals_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4255,7 +4255,7 @@
         "courseF_sprites_freeplay_aquatic_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4271,7 +4271,7 @@
         "courseF_sprites_freeplay_blank_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4287,7 +4287,7 @@
         "courseF_sprites_freeplay_food_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4303,7 +4303,7 @@
         "courseF_sprites_freeplay_space_-2022-2": {
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
           "moving east": "se déplacer vers l'est",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving west": "se déplacer vers l'ouest",
           "wandering": "se balader",
           "spinning left": "tournoyer à gauche",
@@ -4329,7 +4329,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_sprites_moreSprites_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4344,7 +4344,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_sprites_positioning_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4359,7 +4359,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_sprites_predict_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4390,7 +4390,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_sprites_ship_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4405,7 +4405,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_answer_-2022-2": {
           "patrolling": "patrouiller",
@@ -4422,7 +4422,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_color_-2022-2": {
           "patrolling": "patrouiller",
@@ -4439,7 +4439,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_conversation_-2022-2": {
           "wandering": "se balader",
@@ -4459,7 +4459,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_events_-2022-2": {
           "wandering": "se balader",
@@ -4479,7 +4479,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_freeplay_-2022-2": {
           "wandering": "se balader",
@@ -4499,7 +4499,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_interview_-2022-2": {
           "wandering": "se balader",
@@ -4519,7 +4519,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
           "wandering": "se balader",
@@ -4539,7 +4539,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_choice_title_-2022-2": {
           "patrolling": "patrouiller",
@@ -4556,7 +4556,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_concat_-2022-2": {
           "patrolling": "patrouiller",
@@ -4573,7 +4573,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_events_-2022-2": {
           "patrolling": "patrouiller",
@@ -4590,7 +4590,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_print_-2022-2": {
           "patrolling": "patrouiller",
@@ -4607,7 +4607,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_prompts_-2022-2": {
           "patrolling": "patrouiller",
@@ -4624,7 +4624,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_text_review_-2022-2": {
           "patrolling": "patrouiller",
@@ -4641,7 +4641,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_card_-2022-2": {
           "wandering": "se balader",
@@ -4660,7 +4660,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_card_finish_-2022-2": {
           "wandering": "se balader",
@@ -4679,7 +4679,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_chatbot_-2022-2": {
           "wandering": "se balader",
@@ -4698,7 +4698,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
           "wandering": "se balader",
@@ -4717,7 +4717,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_madlib_-2022-2": {
           "wandering": "se balader",
@@ -4736,7 +4736,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_madlib_finish_-2022-2": {
           "wandering": "se balader",
@@ -4755,7 +4755,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "courseF_variables_predict_-2022-2": {
           "moving east": "se déplacer vers l'est",
@@ -4788,7 +4788,7 @@
           "spinning left": "tournoyer à gauche",
           "fluttering": "flotter",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "simcustom_-2022-2": {
           "wandering": "se balader",
@@ -4808,7 +4808,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle"
+          "moving east and looping": "se déplacer vers l'est et en boucle"
         },
         "helloworld_food_backgrounds_soccer-2022": {
           "wandering": "se balader",
@@ -4828,7 +4828,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -4850,7 +4850,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -4872,7 +4872,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         },
@@ -4894,7 +4894,7 @@
           "fluttering": "flotter",
           "wobbling": "chanceler",
           "moving west and looping": "se déplacer vers l'ouest et en boucle",
-          "moving east and looping": "aller vers l'est et mettre en boucle",
+          "moving east and looping": "se déplacer vers l'est et en boucle",
           "moving north and looping": "se déplacer vers le Nord et en boucle",
           "moving south and looping": "se déplacer vers le Sud et en boucle"
         }

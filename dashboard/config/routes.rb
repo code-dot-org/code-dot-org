@@ -36,7 +36,9 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
+    get "/incubator", to: "incubator#index"
     get "/musiclab", to: "musiclab#index"
+    get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
 
@@ -279,6 +281,8 @@ Dashboard::Application.routes.draw do
       resources :blocks, constraints: {id: /[^\/]+/}
     end
     resources :shared_blockly_functions, path: '/functions'
+
+    get 'helpful_links', to: 'helpful_links#index', as: 'helpful_links'
 
     resources :libraries do
       collection do
@@ -964,6 +968,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'sprite_upload'
         get 'default_sprites_editor'
+        get 'release_default_sprites_to_production'
         get 'select_start_animations'
       end
     end

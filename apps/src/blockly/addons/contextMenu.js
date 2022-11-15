@@ -18,9 +18,7 @@ const registerBlockCopyToStorage = function() {
       }
     },
     callback: function(scope) {
-      const copyData = Blockly.Xml.domToPrettyText(
-        Blockly.Xml.blockToDom(scope.block)
-      );
+      const copyData = JSON.stringify(Blockly.selected.toCopyData().saveInfo);
       localStorage.setItem('blocklyStash', copyData);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
@@ -49,10 +47,7 @@ const registerBlockPasteFromStorage = function() {
     },
     callback: function(scope) {
       const copyData = localStorage.getItem('blocklyStash');
-      Blockly.Xml.domToBlockSpace(
-        Blockly.mainBlockSpace,
-        Blockly.Xml.textToDom(`<xml>${copyData}</xml>`)
-      );
+      Blockly.mainBlockSpace.paste(JSON.parse(copyData));
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: 'blockPasteFromStorage',
