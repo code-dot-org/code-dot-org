@@ -1,6 +1,11 @@
 import React from 'react';
 import ProjectsList from './ProjectsList';
 
+export default {
+  title: 'ProjectsList',
+  component: ProjectsList
+};
+
 const STUB_PROJECTS_DATA = [
   {
     channel: 'ABCDEFGHIJKLM01234',
@@ -27,41 +32,23 @@ const STUB_PROJECTS_DATA = [
   }
 ];
 
-export default storybook => {
-  return storybook.storiesOf('Projects/ProjectsList', module).addStoryTable([
-    {
-      name: 'basic projects list without thumbnails column',
-      description: `This is a simple projects list with stub data.`,
-      story: () => (
-        <ProjectsList
-          projectsData={STUB_PROJECTS_DATA}
-          studioUrlPrefix={'https://studio.code.org'}
-          showProjectThumbnails={false}
-        />
-      )
-    },
-    {
-      name: 'basic projects list with thumbnails column',
-      description: `This is a simple projects list with stub data.`,
-      story: () => (
-        <ProjectsList
-          projectsData={STUB_PROJECTS_DATA}
-          studioUrlPrefix={'https://studio.code.org'}
-          showProjectThumbnails={true}
-        />
-      )
-    },
-    {
-      name: 'basic localized projects list',
-      description: `This is a simple projects list with stub data, rendered in a non-English locale`,
-      story: () => (
-        <ProjectsList
-          locale={'es-MX'}
-          projectsData={STUB_PROJECTS_DATA}
-          studioUrlPrefix={'https://studio.code.org'}
-          showProjectThumbnails={true}
-        />
-      )
-    }
-  ]);
+const Template = args => (
+  <ProjectsList
+    projectsData={STUB_PROJECTS_DATA}
+    studioUrlPrefix={'https://studio.code.org'}
+    showProjectThumbnails
+    {...args}
+  />
+);
+
+export const WithThumbnails = Template.bind({});
+
+export const WithoutThumbnails = Template.bind({});
+WithoutThumbnails.args = {
+  showProjectThumbnails: false
+};
+
+export const LocalizedWithThumbnails = Template.bind({});
+LocalizedWithThumbnails.args = {
+  localeCode: 'es-MX'
 };
