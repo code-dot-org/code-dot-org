@@ -165,7 +165,7 @@ def restore_redacted_files
       elsif original_path.starts_with? "i18n/locales/original/course_content"
         # Course content should be merged with existing content, so existing
         # data doesn't get lost
-        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly', 'startHtml'])
+        restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
@@ -181,6 +181,8 @@ def restore_redacted_files
           plugins << 'vocabularyDefinition'
         elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
           plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+        elsif %w(applab gamelab weblab).include?(File.basename(original_path, '.json'))
+          plugins << 'link'
         end
         RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
@@ -527,7 +529,7 @@ end
 
 # For untranslated apps, copy English file for all locales
 def copy_untranslated_apps
-  untranslated_apps = %w(applab calc eval gamelab netsim weblab)
+  untranslated_apps = %w(calc eval netsim)
 
   PegasusLanguages.get_locale.each do |prop|
     next unless prop[:locale_s] != 'en-US'
