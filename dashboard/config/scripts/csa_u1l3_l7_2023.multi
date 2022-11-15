@@ -1,22 +1,13 @@
 name 'CSA U1L3-L7_2023'
 title 'Check for Understanding'
 
-wrong 'I only'
-wrong 'II only'
-right 'I and II'
-wrong 'II and III'
-wrong 'I, II, and III'
+right '`art` is an instance of the `Painter` class'
+wrong '`Painter` is an instance of the `art` object'
 
 markdown <<MARKDOWN
-Which of the following are attributes that a `Student` object might have?
-
-I. `name`
-
-II. `grade`
-
-III. `goToSleep`
+A student creates a `Painter` class. The object `art` will be declared as a type `Painter`. Which of the following statements is true?
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-`name` and `grade` both represent characteristics that a student would have. `goToSleep` represents a behavior that a student would do rather than a characteristic a student would have.
+
 MARKDOWN
