@@ -138,6 +138,21 @@ module Api::V1::Pd::Application
       assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
     end
 
+    test 'updating an application with RP requiring admin approval is \'unreviewed\' if the principal approval is complete'  do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval, user: @applicant, status: 'awaiting_admin_approval'
+      assert_equal 'awaiting_admin_approval', TEACHER_APPLICATION_CLASS.last.status
+
+      application.update!(status: 'reopened')
+      assert_equal 'reopened', TEACHER_APPLICATION_CLASS.last.status
+
+      # while the application is reopened, the principal approval gets submitted
+      create :pd_principal_approval_application, teacher_application: application
+      put :update, params: {id: application.id}
+      assert_response :success
+      assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status
+    end
+
     test 'creating an application on an existing form renders conflict' do
       sign_in @applicant
       application = create TEACHER_APPLICATION_FACTORY, user: @applicant
