@@ -18,8 +18,8 @@ const Template = args => {
   );
 };
 
-export const ParticipantFeedbackNotificationStudent = Template.bind({});
-ParticipantFeedbackNotificationStudent.args = {
+export const ExampleStudent = Template.bind({});
+ExampleStudent.args = {
   studentId: 123
 };
 

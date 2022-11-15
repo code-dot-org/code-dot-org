@@ -38,18 +38,16 @@ const responses = [
   }
 ];
 
-const Template = args => <TextResponsesTable {...args} />;
+const Template = args => (
+  <TextResponsesTable sectionId={sectionId} isLoading={false} {...args} />
+);
 
-export const TextResponsesTableWithResponses = Template.bind({});
-TextResponsesTableWithResponses.args = {
-  responses: responses,
-  sectionId: sectionId,
-  isLoading: false
+export const WithResponses = Template.bind({});
+WithResponses.args = {
+  responses: responses
 };
 
-export const TextResponsesTableWithoutResponses = Template.bind({});
-TextResponsesTableWithoutResponses.args = {
-  responses: [],
-  sectionId: sectionId,
-  isLoading: false
+export const WithoutResponses = Template.bind({});
+WithoutResponses.args = {
+  responses: []
 };
