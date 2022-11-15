@@ -6,9 +6,17 @@ export default {
   component: PaginationWrapper
 };
 
-const Template = args => {
-  return <PaginationWrapper totalPages={3} {...args} />;
-};
+function defaultFunction() {}
+
+function Template(args) {
+  return (
+    <PaginationWrapper
+      onChangePage={defaultFunction}
+      totalPages={3}
+      {...args}
+    />
+  );
+}
 
 export const Page1Example = Template.bind({});
 Page1Example.args = {
