@@ -70,7 +70,9 @@
         "helloworld_food_multi_soccer-2022": "\\_ Razgovarajmo! Neka tvoja dva sprite-a nešto kažu.\\_\n\n-   Dodaj kod kako bi svaki sprite rekao nešto.\n-   Pritisni _\"Run\"_ kada završiš.\n\n\\_ Dodatni izazov:\\_ Postavi pozadinu.",
         "helloworld_food_multi_space-2022": "\\_ Razgovarajmo! Neka tvoja dva sprite-a nešto kažu.\\_\n\n-   Dodaj kod kako bi svaki sprite rekao nešto.\n-   Pritisni _\"Run\"_ kada završiš.\n\n\\_ Dodatni izazov:\\_ Postavi pozadinu.",
         "helloworld_food_say_soccer-2022": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš.",
-        "helloworld_food_say_space-2022": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš."
+        "helloworld_food_say_space-2022": "_Pozdrav svijete! Ja sam sprite. Koristite blok `say` da kažem što god želiš!_\n\n-   Povuci blok `make new sprite` u radni prostor i poveži ga pod `when run`.\n-   Poveži blok `say` _ispod_ blokom `make new sprite`.\n-   Provjeri jeste li odabrao isti kostim u svakom bloku koda.\n-   Pritisni _\"Run\"_ kada završiš.",
+        "poetry_modal_function_editor": "Ovo je razina poezije koja uključuje automatski popunjenu kategoriju `POSTUPCI` i uređivač modalnih funkcija.",
+        "poetry_no_modal_function_editor": "Ovo je razina poezije koja uključuje automatski popunjenu kategoriju `POSTUPCI` i nema uređivač modalnih funkcija."
       }
     }
   }
