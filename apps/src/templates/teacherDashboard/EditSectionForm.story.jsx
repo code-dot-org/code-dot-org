@@ -10,31 +10,36 @@ export default {
 
 const noStudentsSection = {
   ...testSection,
-  studentCount: 0,
-  participantType: 'student'
+  studentCount: 0
 };
 
 const studentSection = {
-  ...testSection,
-  participantType: 'student'
+  ...testSection
 };
 
 const emailLogin = {
   ...testSection,
-  loginType: 'email',
-  participantType: 'student'
+  loginType: 'email'
 };
 
 const wordLogin = {
   ...testSection,
-  loginType: 'word',
-  participantType: 'student'
+  loginType: 'word'
 };
 
 const pictureLogin = {
   ...testSection,
-  loginType: 'picture',
-  participantType: 'student'
+  loginType: 'picture'
+};
+
+const googleLogin = {
+  ...testSection,
+  loginType: 'google_classroom'
+};
+
+const cleverLogin = {
+  ...testSection,
+  loginType: 'clever'
 };
 
 const Template = args => (
@@ -69,6 +74,18 @@ GenericWord.args = {
 export const GenericPicture = Template.bind({});
 GenericPicture.args = {
   section: pictureLogin,
+  isSaveInProgress: false
+};
+
+export const GenericGoogle = Template.bind({});
+GenericGoogle.args = {
+  section: googleLogin,
+  isSaveInProgress: false
+};
+
+export const GenericClever = Template.bind({});
+GenericClever.args = {
+  section: cleverLogin,
   isSaveInProgress: false
 };
 
