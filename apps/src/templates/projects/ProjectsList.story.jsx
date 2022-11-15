@@ -32,26 +32,24 @@ const STUB_PROJECTS_DATA = [
   }
 ];
 
-const DEFAULT_ARGS = {
-  projectsData: STUB_PROJECTS_DATA,
-  studioUrlPrefix: 'https://studio.code.org',
-  showProjectThumbnails: true
-};
-
-const Template = args => <ProjectsList {...args} />;
+const Template = args => (
+  <ProjectsList
+    projectsData={STUB_PROJECTS_DATA}
+    studioUrlPrefix={'https://studio.code.org'}
+    showProjectThumbnails
+    {...args}
+  />
+);
 
 // Name of export determines what is shown in storybook entry
 export const WithThumbnails = Template.bind({}); // eslint-disable-line no-unused-vars
-WithThumbnails.args = DEFAULT_ARGS;
 
 export const WithoutThumbnails = Template.bind({});
 WithoutThumbnails.args = {
-  ...DEFAULT_ARGS,
   showProjectThumbnails: false
 };
 
 export const LocalizedWithThumbnails = Template.bind({});
 LocalizedWithThumbnails.args = {
-  ...DEFAULT_ARGS,
   localeCode: 'es-MX'
 };
