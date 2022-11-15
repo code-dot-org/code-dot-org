@@ -103,6 +103,7 @@ export const PublicGalleryWithoutStudentInfo = Template.bind(
   Galleries.PUBLIC,
   {}
 );
+
 PublicGalleryWithoutStudentInfo.args = {
   projectLists: generateFakePublicProjectsWithoutStudentInfo(),
   galleryType: 'public'
