@@ -41,8 +41,7 @@ const Template = args => (
   />
 );
 
-// Name of export determines what is shown in storybook entry
-export const WithThumbnails = Template.bind({}); // eslint-disable-line no-unused-vars
+export const WithThumbnails = Template.bind({});
 
 export const WithoutThumbnails = Template.bind({});
 WithoutThumbnails.args = {
