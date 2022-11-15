@@ -12,9 +12,24 @@ export const baseToolbox = {
   contents: [
     {
       kind: 'category',
-      name: 'Samples',
+      name: 'Play',
       cssConfig: baseCategoryCssConfig,
-      contents: []
+      contents: [
+        {
+          kind: 'block',
+          type: BlockTypes.PLAY_SOUND,
+          inputs: {
+            measure: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 1
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     {
       kind: 'category',
@@ -133,6 +148,28 @@ export const baseToolbox = {
               }
             }
           }
+        },
+        {
+          kind: 'block',
+          type: 'math_modulo',
+          inputs: {
+            DIVIDEND: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 3
+                }
+              }
+            },
+            DIVISOR: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 2
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -158,89 +195,4 @@ export const baseToolbox = {
       ]
     }
   ]
-};
-
-export const createMusicToolbox = (library, mode) => {
-  const toolbox = {...baseToolbox};
-
-  if (!library) {
-    return toolbox;
-  }
-
-  toolbox.contents[0].contents = [];
-
-  // Currently only supports 1 group
-  const group = library.groups[0];
-  for (let folder of group.folders) {
-    let category = {
-      kind: 'category',
-      name: folder.name,
-      cssConfig: baseCategoryCssConfig,
-      contents: []
-    };
-
-    for (let sound of folder.sounds) {
-      switch (mode) {
-        case 'dropdown': {
-          category.contents.push({
-            kind: 'block',
-            type: BlockTypes.PLAY_SOUND,
-            fields: {
-              sound: folder.path + '/' + sound.src
-            },
-            inputs: {
-              measure: {
-                shadow: {
-                  type: 'math_number',
-                  fields: {
-                    NUM: 1
-                  }
-                }
-              }
-            }
-          });
-          break;
-        }
-        case 'valueSample': {
-          category.contents.push({
-            kind: 'block',
-            type: BlockTypes.SAMPLE,
-            fields: {
-              sample: sound.name
-            }
-          });
-          break;
-        }
-        case 'playSample': {
-          category.contents.push({
-            kind: 'block',
-            type: BlockTypes.PLAY_SAMPLE,
-            inputs: {
-              sample: {
-                block: {
-                  type: BlockTypes.SAMPLE,
-                  fields: {
-                    sample: sound.name
-                  }
-                }
-              },
-              measure: {
-                shadow: {
-                  type: 'math_number',
-                  fields: {
-                    NUM: 1
-                  }
-                }
-              }
-            }
-          });
-        }
-      }
-    }
-
-    // Add to samples category
-    toolbox.contents[0].contents.push(category);
-  }
-
-  return toolbox;
 };

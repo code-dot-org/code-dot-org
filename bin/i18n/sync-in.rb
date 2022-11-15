@@ -32,6 +32,7 @@ def sync_in
   redact_level_content
   redact_block_content
   redact_script_and_course_content
+  redact_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
@@ -160,7 +161,6 @@ def get_i18n_strings(level)
       teacher_markdown
       placeholder
       title
-      start_html
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end
@@ -538,7 +538,6 @@ def select_redactable(i18n_strings)
     long_instructions
     short_instructions
     teacher_markdown
-    start_html
   )
 
   redactable = i18n_strings.select do |key, _|
@@ -573,7 +572,7 @@ def redact_level_file(source_path)
     file.write(JSON.pretty_generate(redactable_data))
   end
 
-  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly', 'startHtml'])
+  redacted_data = RedactRestoreUtils.redact_data(redactable_data, ['blockly'])
 
   File.open(source_path, 'w') do |source_file|
     source_file.write(JSON.pretty_generate(source_data.deep_merge(redacted_data)))
@@ -585,6 +584,23 @@ def redact_level_content
 
   Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
     redact_level_file(source_path)
+  end
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def redact_labs_content
+  puts "Redacting *labs content"
+
+  # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
+  # strings existing in crowdin already
+  redactable_labs = %w(applab gamelab weblab)
+
+  redactable_labs.each do |lab_name|
+    source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
+    backup_path = source_path.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(backup_path))
+    FileUtils.cp(source_path, backup_path)
+    RedactRestoreUtils.redact(source_path, source_path, ['link'])
   end
 end
 
