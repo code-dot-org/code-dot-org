@@ -17,14 +17,12 @@ const Template = args => (
       pendingText="Adding"
       className={classNames(dataStyles.button, dataStyles.buttonBlue)}
       text="Add pair"
+      isPending={false}
       {...args}
     />
   </Provider>
 );
 export const PendingButtonNotPending = Template.bind({});
-PendingButton.args = {
-  isPending: false
-};
 
 export const PendingButtonPending = Template.bind({});
 PendingButtonPending.args = {
