@@ -30,6 +30,14 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: false, is_awaiting_admin_approval: true)
   end
 
+  def administrator_approval_completed_teacher__with_partner
+    Pd::Application::TeacherApplicationMailer.send :principal_approval_completed_teacher_receipt, build_application(matched: true, is_awaiting_admin_approval: true)
+  end
+
+  def administrator_approval_completed_teacher__without_partner
+    Pd::Application::TeacherApplicationMailer.send :principal_approval_completed_teacher_receipt, build_application(matched: false, is_awaiting_admin_approval: true)
+  end
+
   private
 
   def build_application(matched: true, is_awaiting_admin_approval: true, partner_contact_info: true)
