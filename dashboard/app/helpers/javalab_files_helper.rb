@@ -121,7 +121,7 @@ module JavalabFilesHelper
 
   def self.generate_starter_asset_url(filename, level)
     prefix = get_dashboard_url_prefix
-    prefix + "/level_starter_assets/" + URI.encode(level.name) + "/" + filename
+    prefix + "/level_starter_assets/" + ERB::Util.url_encode(level.name) + "/" + filename
   end
 
   def self.get_dashboard_url_prefix
