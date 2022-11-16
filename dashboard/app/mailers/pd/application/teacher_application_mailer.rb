@@ -40,6 +40,24 @@ module Pd::Application
       end
     end
 
+    def needs_admin_approval(teacher_application)
+      @application = teacher_application
+
+      if @application.regional_partner
+        mail(
+          to: @application.formatted_applicant_email,
+          reply_to: @application.formatted_partner_contact_email,
+          subject: "Important: Your Application Requires Administrator/School Leader Approval"
+        )
+      else
+        mail(
+          from: 'Code.org <teacher@code.org>',
+          to: @application.formatted_applicant_email,
+          subject: "Important: Your Application Requires Administrator/School Leader Approval"
+        )
+      end
+    end
+
     def principal_approval(teacher_application)
       @application = teacher_application
 
