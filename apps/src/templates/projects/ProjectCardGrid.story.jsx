@@ -87,30 +87,32 @@ export default {
   component: ProjectCardGrid
 };
 
-const Template = (galleryType, args) => (
-  <Provider store={createProjectsStore(galleryType)}>
-    <ProjectCardGrid {...args} />
+const Template = args => (
+  <Provider store={createProjectsStore(args.selectedGallery)}>
+    <ProjectCardGrid
+      projectLists={args.projectLists}
+      galleryType={args.galleryType}
+    />
   </Provider>
 );
 
-export const PublicGalleryWithStudentInfo = Template.bind(Galleries.PUBLIC, {});
+export const PublicGalleryWithStudentInfo = Template.bind({});
 PublicGalleryWithStudentInfo.args = {
+  selectedGallery: Galleries.PUBLIC,
   projectLists: generateFakePublicProjectsWithStudentInfo(),
   galleryType: 'public'
 };
 
-export const PublicGalleryWithoutStudentInfo = Template.bind(
-  Galleries.PUBLIC,
-  {}
-);
-
+export const PublicGalleryWithoutStudentInfo = Template.bind({});
 PublicGalleryWithoutStudentInfo.args = {
+  selectedGallery: Galleries.PUBLIC,
   projectLists: generateFakePublicProjectsWithoutStudentInfo(),
   galleryType: 'public'
 };
 
-export const PersonalGallery = Template.bind(Galleries.PUBlIC, {});
+export const PersonalGallery = Template.bind({});
 PersonalGallery.args = {
+  selectedGallery: Galleries.PUBLIC,
   projectLists: generateFakePersonalProjects(),
   galleryType: 'personal'
 };
