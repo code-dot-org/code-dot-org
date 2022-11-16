@@ -14,6 +14,23 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
 
+const WorkshopCard = props => {
+  return (
+    <div
+      style={{
+        ...styles.workshopCollection,
+        ...props.style
+      }}
+    >
+      {props.content}
+    </div>
+  );
+};
+WorkshopCard.propTypes = {
+  style: PropTypes.object,
+  content: PropTypes.element
+};
+
 class RegionalPartnerSearch extends Component {
   static propTypes = {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
@@ -137,6 +154,8 @@ class RegionalPartnerSearch extends Component {
 
     let workshopCollections = [
       {
+        key: 'CSD',
+        name: ActiveCourseWorkshops.CSD,
         heading: `${ActiveCourseWorkshops.CSD} Workshops`,
         workshops:
           partnerInfo &&
@@ -145,6 +164,8 @@ class RegionalPartnerSearch extends Component {
           )
       },
       {
+        key: 'CSP',
+        name: ActiveCourseWorkshops.CSP,
         heading: `${ActiveCourseWorkshops.CSP} Workshops`,
         workshops:
           partnerInfo &&
@@ -153,6 +174,8 @@ class RegionalPartnerSearch extends Component {
           )
       },
       {
+        key: 'CSA',
+        name: ActiveCourseWorkshops.CSA,
         heading: `${ActiveCourseWorkshops.CSA} Workshops`,
         workshops:
           partnerInfo &&
@@ -300,59 +323,78 @@ class RegionalPartnerSearch extends Component {
             {appState !== WorkshopApplicationStates.now_closed && (
               <div>
                 <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
-                {workshopCollections.every(
-                  collection => collection.workshops.length === 0
-                ) && <div>Workshop details coming soon!</div>}
-
-                {!workshopCollections.every(
-                  collection => collection.workshops.length === 0
-                ) &&
-                  workshopCollections.map((collection, collectionIndex) => {
-                    // If the partner is not offering CSA workshops, we display a different message
+                {workshopCollections.map((collection, collectionIndex) => {
+                  if (collection.workshops.length === 0) {
+                    // If no current workshops for a course
                     if (
-                      collection.workshops.length === 0 &&
-                      collection.heading ===
-                        `${ActiveCourseWorkshops.CSA} Workshops`
+                      partnerInfo.pl_programs_offered.includes(collection.key)
                     ) {
+                      // If a program is offered but a workshop hasn't been scheduled yet
                       return (
-                        <div
+                        <WorkshopCard
                           key={collectionIndex}
-                          style={{
-                            ...styles.workshopCollection,
-                            ...workshopCollectionStyle
-                          }}
-                        >
-                          <h4>{collection.heading}</h4>
-                          <div>
-                            This Regional Partner is not offering CSA workshops
-                            at this time, but Code.org has a solution for you!
-                            Please complete the professional learning
-                            application, and a Code.org staff member will be in
-                            touch.
-                          </div>
-                        </div>
+                          style={workshopCollectionStyle}
+                          content={
+                            <>
+                              <h4>
+                                {collection.name} Workshop details are coming
+                                soon!
+                              </h4>
+                              <div>
+                                The Regional Partner is hard at work locking
+                                down the details of the workshops for this
+                                program. You can still apply and the Regional
+                                Partner will inform you when the workshop
+                                details are available.
+                              </div>
+                            </>
+                          }
+                        />
                       );
-                    } else if (collection.workshops.length > 0) {
+                    } else {
+                      // If a program is not offered
                       return (
-                        <div
+                        <WorkshopCard
                           key={collectionIndex}
-                          style={{
-                            ...styles.workshopCollection,
-                            ...workshopCollectionStyle
-                          }}
-                        >
-                          <h4>{collection.heading}</h4>
-                          {collection.workshops.map((workshop, index) => (
-                            <div key={index} style={styles.workshop}>
-                              <div>{workshop.workshop_date_range_string}</div>
-                              <div>{workshop.location_name}</div>
-                              <div>{workshop.location_address}</div>
-                            </div>
-                          ))}
-                        </div>
+                          style={workshopCollectionStyle}
+                          content={
+                            <>
+                              <h4>{collection.heading}</h4>
+                              <div>
+                                This Regional Partner is not offering{' '}
+                                {collection.name} workshops at this time.
+                                Code.org will review your application and
+                                contact you with options for joining the program
+                                hosted by a Regional Partner from a different
+                                region.
+                              </div>
+                            </>
+                          }
+                        />
                       );
                     }
-                  })}
+                  } else if (collection.workshops.length > 0) {
+                    // If workshops present for the given course
+                    return (
+                      <WorkshopCard
+                        key={collectionIndex}
+                        style={workshopCollectionStyle}
+                        content={
+                          <>
+                            <h4>{collection.heading}</h4>
+                            {collection.workshops.map((workshop, index) => (
+                              <div key={index} style={styles.workshop}>
+                                <div>{workshop.workshop_date_range_string}</div>
+                                <div>{workshop.location_name}</div>
+                                <div>{workshop.location_address}</div>
+                              </div>
+                            ))}
+                          </>
+                        }
+                      />
+                    );
+                  }
+                })}
               </div>
             )}
 
