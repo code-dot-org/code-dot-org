@@ -25,7 +25,6 @@ const Template = args => (
 );
 
 export const MigratedTeacherResources = Template.bind({});
-MigratedTeacherResources.args = {};
 
 export const MigratedStudentResources = Template.bind({});
 MigratedStudentResources.args = {
