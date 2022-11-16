@@ -22,7 +22,6 @@ const Template = args => (
 );
 
 export const ToolCard = Template.bind({});
-ToolCard.args = {};
 
 export const ToolCardWithWrap = Template.bind({});
 ToolCardWithWrap.args = {
