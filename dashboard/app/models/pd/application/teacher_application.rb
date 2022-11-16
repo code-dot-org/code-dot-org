@@ -1173,6 +1173,7 @@ module Pd::Application
       auto_score!
       queue_email(:principal_approval_completed, deliver_now: true)
       queue_email(:principal_approval_completed_partner, deliver_now: true)
+      queue_email(:principal_approval_completed_teacher_receipt, deliver_now: true)
     end
 
     # @override
