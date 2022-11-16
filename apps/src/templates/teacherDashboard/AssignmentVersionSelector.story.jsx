@@ -16,7 +16,6 @@ const styles = {
 
 const Template = args => (
   <AssignmentVersionSelector
-    dropdownStyle={styles.dropdown}
     onChangeVersion={action('onChangeVersion')}
     courseVersions={courseOfferings['1'].course_versions}
     selectedCourseVersionId={1}
@@ -25,8 +24,14 @@ const Template = args => (
 );
 
 export const Enabled = Template.bind({});
+Enabled.args = {
+  dropdownStyle: styles.dropdown
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  disabled: true
+  disabled: true,
+  dropdownStyle: styles.dropdown
 };
+
+export const EnabledNoStyling = Template.bind({});
