@@ -8,40 +8,6 @@ export default {
   component: EditSectionForm
 };
 
-const noStudentsSection = {
-  ...testSection,
-  studentCount: 0
-};
-
-const studentSection = {
-  ...testSection
-};
-
-const emailLogin = {
-  ...testSection,
-  loginType: 'email'
-};
-
-const wordLogin = {
-  ...testSection,
-  loginType: 'word'
-};
-
-const pictureLogin = {
-  ...testSection,
-  loginType: 'picture'
-};
-
-const googleLogin = {
-  ...testSection,
-  loginType: 'google_classroom'
-};
-
-const cleverLogin = {
-  ...testSection,
-  loginType: 'clever'
-};
-
 const Template = args => (
   <EditSectionForm
     title="Edit section details"
@@ -61,42 +27,60 @@ const Template = args => (
 
 export const GenericEmail = Template.bind({});
 GenericEmail.args = {
-  section: emailLogin,
+  section: {
+    ...testSection,
+    loginType: 'email'
+  },
   isSaveInProgress: false
 };
 
 export const GenericWord = Template.bind({});
 GenericWord.args = {
-  section: wordLogin,
+  section: {
+    ...testSection,
+    loginType: 'word'
+  },
   isSaveInProgress: false
 };
 
 export const GenericPicture = Template.bind({});
 GenericPicture.args = {
-  section: pictureLogin,
+  section: {
+    ...testSection,
+    loginType: 'picture'
+  },
   isSaveInProgress: false
 };
 
 export const GenericGoogle = Template.bind({});
 GenericGoogle.args = {
-  section: googleLogin,
+  section: {
+    ...testSection,
+    loginType: 'google_classroom'
+  },
   isSaveInProgress: false
 };
 
 export const GenericClever = Template.bind({});
 GenericClever.args = {
-  section: cleverLogin,
+  section: {
+    ...testSection,
+    loginType: 'clever'
+  },
   isSaveInProgress: false
 };
 
 export const NoStudents = Template.bind({});
 NoStudents.args = {
-  section: noStudentsSection,
+  section: {
+    ...testSection,
+    studentCount: 0
+  },
   isSaveInProgress: false
 };
 
 export const Saving = Template.bind({});
 Saving.args = {
-  section: studentSection,
+  section: testSection,
   isSaveInProgress: true
 };
