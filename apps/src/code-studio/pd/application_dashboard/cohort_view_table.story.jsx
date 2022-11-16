@@ -1,10 +1,10 @@
 import React from 'react';
-import cohort_view_table, {CohortViewTable} from './cohort_view_table';
+import {CohortViewTable} from './cohort_view_table';
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 export default {
-  title: 'cohort_view_table',
-  component: cohort_view_table
+  title: 'CohortViewTable',
+  component: CohortViewTable
 };
 
 //
