@@ -219,6 +219,8 @@ class UnconnectedMusicView extends React.Component {
       renderer: 'cdo_renderer_zelos'
     });
 
+    Blockly.setInfiniteLoopTrap();
+
     this.resizeBlockly();
 
     // Set initial blocks.
@@ -271,8 +273,6 @@ class UnconnectedMusicView extends React.Component {
     this.player.clearWhenRunEvents();
 
     this.executeSong();
-
-    console.log('onBlockSpaceChange', Blockly.getWorkspaceCode());
 
     this.analyticsReporter.onBlocksUpdated(this.workspace.getAllBlocks());
 
@@ -403,6 +403,8 @@ class UnconnectedMusicView extends React.Component {
     ).hooks.forEach(hook => {
       this.codeHooks[hook.name] = hook.func;
     });
+
+    console.log('executeSong', events);
 
     this.callUserGeneratedCode(this.codeHooks.whenRunButton);
   };
