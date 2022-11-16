@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseBlocksInternationalGradeBands from './CourseBlocksInternationalGradeBands';
+import CourseBlocksInternationalGradeBands from './CourseBlocksWrapper';
 
 export default storybook => {
   return storybook
