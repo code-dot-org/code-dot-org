@@ -119,6 +119,7 @@ namespace :circle do
           " --abort_when_failures_exceed 10" \
           " --retry_count 2" \
           " --output-synopsis" \
+          " --with-status-page" \
           " --html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb" \
@@ -130,6 +131,7 @@ namespace :circle do
             " --circle" \
             " --parallel 10" \
             " --retry_count 1" \
+            " --with-status-page" \
             " --html"
       end
     end
