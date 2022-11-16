@@ -9,37 +9,10 @@ import {
 } from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
-import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
-
-const TEACHER_CARDS = [
-  {
-    linkId: 'course-block-grade-band-elementary',
-    linkClass: 'linktag',
-    heading: i18n.courseBlocksGradeBandsElementary(),
-    description: i18n.courseBlocksGradeBandsElementaryDescription(),
-    buttonText: i18n.courseBlocksGradeBandsElementaryButton(),
-    path: '/educate/curriculum/elementary-school'
-  },
-  {
-    linkId: 'course-block-grade-band-middle',
-    linkClass: 'linktag',
-    heading: i18n.courseBlocksGradeBandsMiddle(),
-    description: i18n.courseBlocksGradeBandsMiddleDescription(),
-    buttonText: i18n.courseBlocksGradeBandsMiddleButton(),
-    path: '/educate/curriculum/middle-school'
-  },
-  {
-    linkId: 'course-block-grade-band-high',
-    linkClass: 'linktag',
-    heading: i18n.courseBlocksGradeBandsHigh(),
-    description: i18n.courseBlocksGradeBandsHighDescription(),
-    buttonText: i18n.courseBlocksGradeBandsHighButton(),
-    path: '/educate/curriculum/high-school'
-  }
-];
+import {TeacherGradeBandCards} from '@cdo/apps/util/CourseBlockCardsConstants';
 
 /**
  * This is the main content for the Courses page for a teacher using English,
@@ -70,11 +43,10 @@ class CoursesTeacherEnglish extends Component {
             <ProtectedStatefulDiv ref="courseExplorer" />
           </ContentContainer>
 
-          <CourseBlocksTeacherGradeBands />
           <CourseBlocksWrapper
             heading={i18n.courseBlocksGradeBandsContainerHeading()}
             description={i18n.courseBlocksGradeBandsContainerDescription()}
-            cards={TEACHER_CARDS}
+            cards={TeacherGradeBandCards}
           />
 
           <CscInfoActionBlock />
