@@ -6,8 +6,7 @@ module Cdo
   # AWS Glue Data Catalog table/schema utility functions.
   module Glue
     class << self
-      attr_accessor :s3_client
-      attr_accessor :glue_client
+      attr_accessor :s3_client, :glue_client
     end
 
     EXECUTOR = Concurrent::FixedThreadPool.new(100)
