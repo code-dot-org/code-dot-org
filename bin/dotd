@@ -481,8 +481,12 @@ def perform_self_check
   puts "Checking access to Slack"
   puts "current Developer of the Day is: #{DevelopersTopic.dotd}"
 
-  puts "Checking access to Honeybadger"
-  puts "TODO"
+  # We forego checking access to Honeybadger here; in part because Honeybadger
+  # access is not required for standard Dev of the Day operations but mostly
+  # because we don't really have a good way to do so. We could call
+  # Honeybadger.get_recent_issues, but probably we should create a
+  # more-targeted method on the Honeybadger class we can call to check
+  # connectivity. Saving that as a problem for a future developer.
 end
 
 # Creates a new branch with the given name from the given commit on the test
