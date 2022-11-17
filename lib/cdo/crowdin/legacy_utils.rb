@@ -57,7 +57,7 @@ module Crowdin
       languages.each_with_index do |language, i|
         language_code = language["id"]
         @logger.debug("#{language['name']} (#{language_code}): #{i}/#{num_languages}")
-        @logger.info("~#{(i * 100 / num_languages).round(-1)}% complete (#{i}/#{num_languages})") if i > 0 && i % (num_languages / 5) == 0
+        @logger.info("~#{(i * 100 / num_languages).round(-1)}% complete (#{i}/#{num_languages})") if i > 0 && i % [num_languages / 5, 1].max == 0
 
         etags[language_code] ||= {}
         # construct download directory; locale_subdir is optional, so compact
