@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-15 03:46:24 UTC",
+    "serialized_at": "2022-11-15 23:12:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2359,7 +2359,7 @@
       "key": "83c8f7a2-44b7-4d5b-9a2b-b0ed7269a6e4",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program by modifying the program as prompted and observing the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program by modifying the program as prompted and observing the results.",
         "progression_name": "Investigate and Modify: Painter Class Methods"
       },
       "seeding_key": {
@@ -2382,7 +2382,7 @@
       "key": "7bcdbe8f-cb47-4523-a833-bde861a8a06e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Calling Methods*.\n\n**Do This:** Explain how to call a method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the ***dot operator***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the method followed by an empty set of parentheses\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to Level 4 to practice using some of the methods in the `Painter` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Calling Methods*.\n\n**Do This:** Explain how to call a method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the ***dot operator***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Specify the name of the method followed by an empty set of parentheses\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to complete Levels 4 and 5. Students complete a Check for Understanding on Level 4, then continue to Level 5 to practice using some of the methods in the `Painter` class.",
         "duration": "15",
         "name": "Calling Methods",
         "progression_name": "Practice: Painter Class Methods"
@@ -5886,6 +5886,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Exit_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5908,6 +5911,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Skill Building_2023"
+        ],
         "progression": "Skill Building: Painter Objects"
       },
       "bonus": false,
@@ -5930,6 +5936,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 CFU_2023"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -5952,6 +5961,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L5_2023"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -5974,6 +5986,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L6_2023"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -5996,6 +6011,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L7_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6065,12 +6083,31 @@
     {
       "chapter": 16,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Painter Class Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L2-2_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83c8f7a2-44b7-4d5b-9a2b-b0ed7269a6e4"
+      },
+      "level_keys": [
+        "CSA U1L4-L2-2_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U1L4-L3_2023"
-        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6088,14 +6125,11 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
+      "chapter": 18,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L4-L4_2023"
-        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6113,14 +6147,11 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
+      "chapter": 19,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U1L4-L5_2023"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6138,7 +6169,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6163,7 +6194,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6188,11 +6219,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-2_2023"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6210,11 +6244,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-3_2023"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6232,11 +6269,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 CFU_2023"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -6254,11 +6294,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Practice_2023"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -6276,11 +6319,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Exit CFU_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6298,7 +6344,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6323,7 +6369,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6348,11 +6394,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6370,11 +6419,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-3_2023"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6392,11 +6444,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_2023"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6414,11 +6469,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_2023"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6436,11 +6494,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_2023"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6458,11 +6519,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6480,7 +6544,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6505,7 +6569,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6530,7 +6594,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6555,7 +6619,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6580,7 +6644,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6605,7 +6669,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6630,11 +6694,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-2_2023"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -6652,11 +6719,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-3_2023"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -6674,11 +6744,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_2023"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -6696,11 +6769,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_2023"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -6718,11 +6794,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L5_2023"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -6740,11 +6819,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L6_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6762,7 +6844,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6787,7 +6869,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6812,7 +6894,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6837,7 +6919,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6862,7 +6944,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6887,7 +6969,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6912,7 +6994,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6937,7 +7019,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6962,7 +7044,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6987,7 +7069,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7012,7 +7094,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7037,7 +7119,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7062,7 +7144,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7087,7 +7169,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -7112,7 +7194,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7137,7 +7219,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7162,7 +7244,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7187,11 +7269,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-2_2023"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7209,11 +7294,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-3_2023"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7231,11 +7319,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-4_2023"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7253,11 +7344,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_2023"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7275,11 +7369,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_2023"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7297,11 +7394,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7319,7 +7419,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7344,7 +7444,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7369,7 +7469,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -7394,7 +7494,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7419,7 +7519,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7444,7 +7544,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7469,7 +7569,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7494,7 +7594,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7693,6 +7793,18 @@
         "level.key": "CSA U1L4-L2_2023",
         "script_level.level_keys": [
           "CSA U1L4-L2_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2023",
+        "activity_section.key": "83c8f7a2-44b7-4d5b-9a2b-b0ed7269a6e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4-L2-2_2023",
+        "script_level.level_keys": [
+          "CSA U1L4-L2-2_2023"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
