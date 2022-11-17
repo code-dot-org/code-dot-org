@@ -7,15 +7,7 @@ export default {
   component: CohortViewTable
 };
 
-//
-// TEMPLATE
-//
-
 const Template = args => <CohortViewTable path="path" {...args} />;
-
-//
-// STORIES
-//
 
 export const CohortViewTeacherApp = Template.bind({});
 CohortViewTeacherApp.args = {

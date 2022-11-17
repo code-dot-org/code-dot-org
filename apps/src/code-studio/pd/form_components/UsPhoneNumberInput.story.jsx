@@ -6,15 +6,7 @@ export default {
   component: UsPhoneNumberInput
 };
 
-//
-// TEMPLATE
-//
-
 const Template = args => <UsPhoneNumberInput {...args} />;
-
-//
-// STORIES
-//
 
 export const DefaultPhoneInput = Template.bind({});
 DefaultPhoneInput.args = {

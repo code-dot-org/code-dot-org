@@ -6,15 +6,7 @@ export default {
   component: ButtonList
 };
 
-//
-// TEMPLATE
-//
-
 const Template = args => <ButtonList {...args} />;
-
-//
-// STORIES
-//
 
 export const RadioButtons = Template.bind({});
 RadioButtons.args = {
