@@ -8,11 +8,11 @@ class Services::IncompleteReminder
     # applications close.
     def queue_incomplete_reminders!
       applications_needing_first_reminder.each do |application|
-        application.queue_email 'complete_your_application_first_reminder'
+        application.queue_email 'complete_application_soft_reminder'
       end
 
       applications_needing_second_reminder.each do |application|
-        application.queue_email 'complete_your_application_second_reminder'
+        application.queue_email 'complete_application_final_reminder'
       end
     end
 
@@ -24,7 +24,7 @@ class Services::IncompleteReminder
       incomplete_applications.select do |app|
         most_recent_update = most_recently_updated(app)
         most_recent_update.before?(Date.today - 6.days) && most_recent_update.after?(Date.today - 14.days) &&
-          app.emails.where(email_type: 'complete_your_application_first_reminder').count == 0
+          app.emails.where(email_type: 'complete_application_soft_reminder').count == 0
       end
     end
 
@@ -35,7 +35,7 @@ class Services::IncompleteReminder
     def applications_needing_second_reminder
       incomplete_applications.select do |app|
         most_recently_updated(app).before?(Date.today - 13.days) &&
-          app.emails.where(email_type: 'complete_your_application_second_reminder').count == 0
+          app.emails.where(email_type: 'complete_application_final_reminder').count == 0
       end
     end
 
