@@ -1,6 +1,7 @@
 module Api::V1::Pd::Application
   class TeacherApplicationsController < Api::V1::Pd::FormsController
     include Pd::Application::ApplicationConstants
+    include Pd::TeacherApplicationConstants
     include Pd::Application::ActiveApplicationModels
 
     load_and_authorize_resource class: TEACHER_APPLICATION_CLASS.name, instance_name: 'application'
@@ -12,6 +13,9 @@ module Api::V1::Pd::Application
     end
 
     def new_status
+      # Do not modify status if the principal approval has already been completed.
+      return if @application.principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
+
       return 'incomplete' if ActiveModel::Type::Boolean.new.cast(params[:isSaving])
 
       regional_partner_id = @application.form_data_hash['regionalPartnerId']

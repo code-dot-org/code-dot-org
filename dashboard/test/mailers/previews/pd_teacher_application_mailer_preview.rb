@@ -9,6 +9,8 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     principal_approval
     principal_approval_completed
     principal_approval_completed_partner
+    principal_approval_completed_teacher_receipt
+    needs_admin_approval
     accepted
     registration_reminder
     declined
