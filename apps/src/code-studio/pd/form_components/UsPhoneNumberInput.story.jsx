@@ -10,5 +10,6 @@ const Template = args => <UsPhoneNumberInput {...args} />;
 
 export const DefaultPhoneInput = Template.bind({});
 DefaultPhoneInput.args = {
+  name: 'Storybook',
   label: 'Enter a phone number'
 };
