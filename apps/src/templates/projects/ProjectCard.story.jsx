@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
+export default {title: 'ProjectCard', component: ProjectCard};
+
 const defaultData = {
   channel: 'abcdef',
   name: 'Puppy Playdate',
@@ -11,40 +13,22 @@ const defaultData = {
   updatedAt: new Date()
 };
 
-export default storybook => {
-  storybook.storiesOf('Cards/ProjectCard', module).addStoryTable([
-    {
-      name: 'Project card - public - all app types view',
-      description: 'Project Gallery card used in the public gallery',
-      story: () => (
-        <ProjectCard
-          projectData={defaultData}
-          currentGallery="public"
-          isDetailView={false}
-        />
-      )
-    },
-    {
-      name: 'Project card - public - view more of one app type',
-      description: 'Project Gallery card used in the public gallery',
-      story: () => (
-        <ProjectCard
-          projectData={defaultData}
-          currentGallery="public"
-          isDetailView={true}
-        />
-      )
-    },
-    {
-      name: 'Project card - personal',
-      description: 'Project Gallery card used in the personal project widget',
-      story: () => (
-        <ProjectCard
-          projectData={defaultData}
-          currentGallery="personal"
-          isDetailView={true}
-        />
-      )
-    }
-  ]);
+const Template = args => <ProjectCard projectData={defaultData} {...args} />;
+
+export const PublicAllAppTypes = Template.bind({});
+PublicAllAppTypes.args = {
+  currentGallery: 'public',
+  isDetailView: false
+};
+
+export const PublicSingleAppTypeDetails = Template.bind({});
+PublicSingleAppTypeDetails.args = {
+  currentGallery: 'public',
+  isDetailView: true
+};
+
+export const Personal = Template.bind({});
+Personal.args = {
+  currentGallery: 'personal',
+  isDetailView: true
 };

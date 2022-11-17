@@ -149,8 +149,12 @@ module Pd::Application
       # Do not modify status if the principal approval has already been completed.
       return if principal_approval_state&.include?(PRINCIPAL_APPROVAL_STATE[:complete])
 
-      self.status = 'awaiting_admin_approval' unless principal_approval_not_required
-      self.status = 'unreviewed' if principal_approval_not_required && status == 'awaiting_admin_approval'
+      if !principal_approval_not_required && status != 'awaiting_admin_approval'
+        self.status = 'awaiting_admin_approval'
+        queue_email(:needs_admin_approval, deliver_now: true)
+      elsif principal_approval_not_required && status == 'awaiting_admin_approval'
+        self.status = 'unreviewed'
+      end
     end
 
     def save_partner
@@ -1169,6 +1173,7 @@ module Pd::Application
       auto_score!
       queue_email(:principal_approval_completed, deliver_now: true)
       queue_email(:principal_approval_completed_partner, deliver_now: true)
+      queue_email(:principal_approval_completed_teacher_receipt, deliver_now: true)
     end
 
     # @override
