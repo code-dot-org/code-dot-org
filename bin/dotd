@@ -204,23 +204,23 @@ def dotd_menu_prompt_all
       DTS:
 
         #{bold 'S'}: Commit content on #{underline 's'}taging.
-        #{bold 'DTS'}: #{underline 'DTS'} from levelbuilder.
+        #{bold 'DTS'}: #{underline 'D'}eploy #{underline 't'}o #{underline 's'}taging from levelbuilder.
 
       DTT:
 
-        #{bold 'DTT'}: #{underline 'DTT'}.
+        #{bold 'DTT'}: #{underline 'D'}eploy #{underline 't'}o #{underline 't'}est.
         #{bold 'G'}: Mark the most recent DTT #{underline 'g'}reen.
         #{bold 'R'}: Mark the most recent DTT #{underline 'r'}ed.
         #{bold 'K'}: #{underline 'K'}ill the currently running test run.
 
       DTP:
 
-        #{bold 'DTP'}: #{underline 'DTP'} the most recent green DTT.
+        #{bold 'DTP'}: #{underline 'D'}eploy #{underline 't'}o #{underline 'p'}roduction the most recent green DTT.
 
       DTL:
 
         #{bold 'L'}: Commit content on #{underline 'l'}evebuilder.
-        #{bold 'DTL'}: #{underline 'DTL'} the most recent green DTT.
+        #{bold 'DTL'}: #{underline 'D'}eploy #{underline 't'}o #{underline 'l'}evelbuilder the most recent green DTT.
 
       Quit:
 
