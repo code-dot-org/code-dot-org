@@ -11,10 +11,12 @@ import {
   pageTypes,
   setAuthProviders,
   setPageType,
+  beginCreatingSection,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
@@ -40,6 +42,29 @@ function showHomepage() {
 
   if (homepageData.mapboxAccessToken) {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
+  }
+
+  // remove courseOfferingId, courseVersionId, and unitId params so that if we
+  // navigate back we don't get the create section dialog again
+  let courseOfferingId;
+  let courseVersionId;
+  let unitId;
+  if (query.courseOfferingId) {
+    courseOfferingId = parseInt(query.courseOfferingId, 10);
+    updateQueryParam('courseOfferingId', undefined, true);
+  }
+  if (query.courseVersionId) {
+    courseVersionId = parseInt(query.courseVersionId, 10);
+    updateQueryParam('courseVersionId', undefined, true);
+  }
+  if (query.unitId) {
+    unitId = parseInt(query.unitId, 10);
+    updateQueryParam('unitId', undefined, true);
+  }
+  if (courseOfferingId && courseVersionId) {
+    store.dispatch(
+      beginCreatingSection(courseOfferingId, courseVersionId, unitId)
+    );
   }
 
   const announcement = getTeacherAnnouncement(announcementOverride);

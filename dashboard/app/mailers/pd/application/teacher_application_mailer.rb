@@ -40,12 +40,29 @@ module Pd::Application
       end
     end
 
+    def needs_admin_approval(teacher_application)
+      @application = teacher_application
+
+      if @application.regional_partner
+        mail(
+          to: @application.formatted_applicant_email,
+          reply_to: @application.formatted_partner_contact_email,
+          subject: "Important: Your Application Requires Administrator/School Leader Approval"
+        )
+      else
+        mail(
+          from: 'Code.org <teacher@code.org>',
+          to: @application.formatted_applicant_email,
+          subject: "Important: Your Application Requires Administrator/School Leader Approval"
+        )
+      end
+    end
+
     def principal_approval(teacher_application)
       @application = teacher_application
 
       mail(
         to: @application.formatted_principal_email,
-        cc: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
         subject: "Action Needed: #{@application.applicant_full_name} has applied to" \
             " #{@application.effective_regional_partner_name}'s Professional Learning Program!"
@@ -57,7 +74,6 @@ module Pd::Application
 
       mail(
         to: @application.formatted_principal_email,
-        cc: @application.formatted_applicant_email,
         reply_to: @application.formatted_partner_contact_email,
         subject: "Thank you for completing your teacher's application"
       )
@@ -67,10 +83,28 @@ module Pd::Application
       @application = teacher_application
 
       mail(
-        from: 'Becky Kenemuth <teacher@code.org>',
+        from: CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
         to: @application.formatted_partner_contact_email || CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
         subject: "#{@application.applicant_full_name} has received Administrator/School Leader approval!"
       )
+    end
+
+    def principal_approval_completed_teacher_receipt(teacher_application)
+      @application = teacher_application
+
+      if @application.regional_partner
+        mail(
+          to: @application.formatted_applicant_email,
+          reply_to: @application.formatted_partner_contact_email,
+          subject: "Your Administrator/School Leader has approved your application!"
+        )
+      else
+        mail(
+          from: CODE_ORG_DEFAULT_NOTIFICATION_EMAIL,
+          to: @application.formatted_applicant_email,
+          subject: "Your Administrator/School Leader has approved your application!"
+        )
+      end
     end
 
     def accepted(teacher_application)

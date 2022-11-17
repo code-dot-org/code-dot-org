@@ -12,7 +12,6 @@ const Controls = ({
   setPlaying,
   playTrigger,
   top,
-  startOverClicked,
   toggleInstructions,
   instructionsOnRight
 }) => {
@@ -24,19 +23,6 @@ const Controls = ({
   }, [isPlaying]);
 
   const analyticsReporter = useContext(AnalyticsContext);
-
-  const renderStartOver = () => {
-    return (
-      <button
-        type="button"
-        className={moduleStyles.startOverButton}
-        onClick={startOverClicked}
-      >
-        <FontAwesome icon={'refresh'} />
-        &nbsp; Start Over
-      </button>
-    );
-  };
 
   const renderBeatPad = () => {
     return (
@@ -97,7 +83,6 @@ const Controls = ({
           className={moduleStyles.iconButton}
         />
       </div>
-      {renderStartOver()}
       {rightIcon}
     </div>
   );
@@ -108,7 +93,6 @@ Controls.propTypes = {
   setPlaying: PropTypes.func.isRequired,
   playTrigger: PropTypes.func.isRequired,
   top: PropTypes.bool.isRequired,
-  startOverClicked: PropTypes.func.isRequired,
   toggleInstructions: PropTypes.func.isRequired,
   instructionsOnRight: PropTypes.bool.isRequired
 };

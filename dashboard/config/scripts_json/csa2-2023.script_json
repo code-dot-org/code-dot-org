@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-09 21:56:28 UTC",
+    "serialized_at": "2022-11-12 17:19:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -108,9 +108,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and explore the syntax and functionality of parameterized constructors. In the process, students discover the scope of variables and learn to use the `this` keyword to refer to the current object and its instance variables. Students then practice writing parameterized constructors in a class and write one in the `Dessert` class.",
+        "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
         "preparation": "* Preview the *Overloaded Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and explore the syntax and functionality of parameterized constructors. In the process, you discover the scope of variables and learn to use the `this` keyword to refer to the current object and its instance variables. You then practice writing parameterized constructors in a class and write one in the `Dessert` class."
+        "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -119,12 +119,27 @@
       }
     },
     {
-      "key": "lesson-6",
-      "name": "Constructors and Inheritance",
+      "key": "lesson-14",
+      "name": "The this Keyword",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Constructors and Inheritance",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -136,10 +151,10 @@
     {
       "key": "lesson-4",
       "name": "Variables",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -151,10 +166,10 @@
     {
       "key": "lesson-5",
       "name": "Accessor Methods",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -166,10 +181,10 @@
     {
       "key": "lesson-7",
       "name": "Operators and Expressions",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -181,10 +196,10 @@
     {
       "key": "lesson-8",
       "name": "Mutator Methods",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -196,10 +211,10 @@
     {
       "key": "lesson-9",
       "name": "Printing Objects",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -211,10 +226,10 @@
     {
       "key": "lesson-10",
       "name": "Store Management Project",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -226,10 +241,10 @@
     {
       "key": "lesson-11",
       "name": "FRQ Practice",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -241,10 +256,10 @@
     {
       "key": "lesson-12",
       "name": "Unit 2 Assessment",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -256,10 +271,10 @@
     {
       "key": "lesson-13",
       "name": "Store Management Project [1-Day Version]",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -355,23 +370,11 @@
       }
     },
     {
-      "key": "c0619254-d456-41fc-a50a-8a741a9ceb75",
+      "key": "216dfb87-cbd9-459f-a66b-4585d717d0db",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Day 1"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c0619254-d456-41fc-a50a-8a741a9ceb75",
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023"
-      }
-    },
-    {
-      "key": "216dfb87-cbd9-459f-a66b-4585d717d0db",
-      "position": 2,
-      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "216dfb87-cbd9-459f-a66b-4585d717d0db",
@@ -382,8 +385,10 @@
     },
     {
       "key": "d0a3f243-3b74-4984-ba89-14f699602749",
-      "position": 3,
+      "position": 2,
       "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d0a3f243-3b74-4984-ba89-14f699602749",
@@ -393,23 +398,11 @@
       }
     },
     {
-      "key": "e6d551f5-85c8-4578-b104-a2dd8a746282",
-      "position": 4,
-      "properties": {
-        "duration": 45,
-        "name": "Day 2"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282",
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023"
-      }
-    },
-    {
       "key": "b170c7df-de3a-429e-b09e-7d04f7f66103",
-      "position": 5,
+      "position": 3,
       "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b170c7df-de3a-429e-b09e-7d04f7f66103",
@@ -520,7 +513,7 @@
       "key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *class* and *object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *class* and *object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Declaring Instance Variables",
         "progression_name": "Investigate and Modify: Classes and Attributes"
@@ -568,7 +561,7 @@
       "key": "e4b874a6-cf68-4156-8638-4926b0a3ab9c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that an object gets a copy of the instance variables that are defined in the class when it is instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to practice writing instance variables in a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that an object gets a copy of the instance variables that are defined in the class when it is instantiated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing instance variables in a class.",
         "progression_name": "Skill Building: Declaring Instance Variables"
       },
       "seeding_key": {
@@ -580,7 +573,7 @@
       "key": "a8869e54-15ed-475f-bb2b-ba8afe251d83",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *inheritance* and how a subclass shares the attributes and behaviors of the superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the definition of *inheritance* and how a subclass shares the attributes and behaviors of the superclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 to complete Levels 6 and 7 on Code Studio. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Inheritance Hierarchies",
         "progression_name": "Investigate and Modify: Refactoring Code"
@@ -628,7 +621,7 @@
       "key": "0bdfa41d-7494-441a-b566-bdaedafe2ff0",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***refactor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to create the `Dessert` class and a `Dessert` subclass.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***refactor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 8 to complete Levels 8 and 9. Students complete a Check for Understanding on Level 8, then continue to Level 9 to create the `Dessert` class and a `Dessert` subclass.",
         "progression_name": "Practice: The Food Truck",
         "tips": [
           {
@@ -858,7 +851,7 @@
       "key": "a4c6cfb8-0e15-4f1e-8aba-2037f1d071ab",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall how objects are instantiated by calling the constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the flow of control when a constructor is called.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***no-argument constructor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall how objects are instantiated by calling the constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the flow of control when a constructor is called.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***no-argument constructor***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Constructors",
         "progression_name": "Investigate and Modify: Constructors"
@@ -889,7 +882,7 @@
       "key": "a099b41e-800a-4dee-b92a-5826454d8f5a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Constructors*.\n\n**Do This:** Explain the components of a constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The access modifier\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the constructor is the same as the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Empty parentheses since there are no parameters\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***constructor signature***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Assign values to the instance variables\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to practice writing a no-argument constructor in a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Constructors*.\n\n**Do This:** Explain the components of a constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The access modifier\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the constructor is the same as the class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Empty parentheses since there are no parameters\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***constructor signature***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Assign values to the instance variables\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to practice writing a no-argument constructor in a class.",
         "progression_name": "Skill Building: Writing a Constructor"
       },
       "seeding_key": {
@@ -937,7 +930,7 @@
       "key": "24fd5b6c-5778-4946-a023-a1285cb60c26",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding on Level 4, then continue to Level 5 to write a new class with instance variables and a no-argument constructor. On Level 6, students write a no-argument constructor in the `Dessert` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6, 7, and 8. Students complete a Check for Understanding on Level 6, then continue to Level 7 to write a new class with instance variables and a no-argument constructor. On Level 8, students write a no-argument constructor in the `Dessert` class.",
         "progression_name": "Practice: Writing a Class"
       },
       "seeding_key": {
@@ -1069,29 +1062,8 @@
       }
     },
     {
-      "key": "60b7032e-1b77-4af5-b52c-272ee86d6bf9",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "60b7032e-1b77-4af5-b52c-272ee86d6bf9",
-        "lesson_activity.key": "c0619254-d456-41fc-a50a-8a741a9ceb75"
-      }
-    },
-    {
-      "key": "8e4a95b1-3bc0-4178-b63e-a248150e92ba",
-      "position": 1,
-      "properties": {
-        "description": "##Warm Up (5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e4a95b1-3bc0-4178-b63e-a248150e92ba",
-        "lesson_activity.key": "216dfb87-cbd9-459f-a66b-4585d717d0db"
-      }
-    },
-    {
       "key": "cc8fe360-a9d4-419a-be39-d1917183e8db",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "When we created a `Painter` object, it always started at the same location with no paint and facing the same direction. The constructor we used set default values for its attributes.",
         "name": "Revisiting the Painter Class",
@@ -1104,7 +1076,7 @@
     },
     {
       "key": "0bfb418b-98b0-445b-a4de-75907e35e53f",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did you wish you could do when creating a `Painter` object?*\n\n**Discussion Goal:** Students recall that the `Painter` class constructor created a `Painter` object at the top-left corner of The Neighborhood with no paint facing east. Students suggest creating a `Painter` object at a specific location with a starting amount of paint and facing a specified direction.",
         "tips": [
@@ -1120,19 +1092,8 @@
       }
     },
     {
-      "key": "e277edf6-7bb1-447c-a922-a0192d07512e",
-      "position": 1,
-      "properties": {
-        "description": "##Activity (40 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "e277edf6-7bb1-447c-a922-a0192d07512e",
-        "lesson_activity.key": "d0a3f243-3b74-4984-ba89-14f699602749"
-      }
-    },
-    {
       "key": "0045c972-767a-49b2-a046-f1a1b27d539d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.",
         "duration": "5",
@@ -1145,7 +1106,7 @@
     },
     {
       "key": "f1a87b43-d492-4a0c-bc66-ab217ec0a001",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "We now know how to declare instance variables in a class to represent the attributes of an object and how to write a no-argument constructor to assign default values to these instance variables. Sometimes, though, we want to provide specific values for the instance variables when we instantiate an object. Today, we're going to find out how we can do this.",
         "remarks": true
@@ -1157,7 +1118,7 @@
     },
     {
       "key": "25b57c2c-2e26-4d53-9fd7-5af730e9592c",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Parameterized Constructors"
@@ -1169,7 +1130,7 @@
     },
     {
       "key": "87361aaa-cd4c-46a9-8406-5fa46613a003",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the class has a constructor that has variables inside the parentheses and that these variables are used to assign values to the instance variables. They also notice that the object that is instantiated with specific values now has those values assigned to its instance variables, while the object that is instantiated with the no-argument constructor has the default values assigned to its instance variables. Students may wonder about the syntax and functionality of the additional constructor, whether there is a limit to how many constructors they can have in a class, or when they might use one constructor over another."
       },
@@ -1180,7 +1141,7 @@
     },
     {
       "key": "9de5d5a3-450c-4ac7-9ff2-7f93c71b3363",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***state*** and explain that when a constructor is called, it sets the state of the object by assigning the values to the instance variables.",
         "duration": "15",
@@ -1199,9 +1160,9 @@
     },
     {
       "key": "e37a7624-7002-4de3-bc78-dee740f4de1b",
-      "position": 7,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations of a no-argument constructor?*\n\n**Discussion Goal:** Students suggest that a no-argument constructor limits the objects they can create because all objects start with the default values for its instance variables. Students may share examples, such as instantiating a `Painter` object with the no-argument constructor and then needing to navigate to a starting position to paint a mural.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations of a no-argument constructor?*\n\n**Discussion Goal:** Students suggest that a no-argument constructor limits the objects they can create because all objects start with the default values for its instance variables. Students may share examples, such as instantiating a `Painter` object with the no-argument constructor and then needing to navigate to a starting position to paint a mural.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Parameterized Constructors"
       },
       "seeding_key": {
@@ -1211,7 +1172,7 @@
     },
     {
       "key": "4468178e-1d82-4ac4-813e-1134704b7b94",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
@@ -1222,10 +1183,10 @@
     },
     {
       "key": "55f42faf-3944-429f-b8a2-d28d0ca0dbbb",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***parameterized constructor*** and introduce the parameterized constructor in the `Painter` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***overloading***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between a no-argument constructor and a parameterized constructor?*\n\n**Discussion Goal:** Students note that both constructors set the starting values for the instance variables when an object is instantiated. They note that these are different because the no-argument constructor sets default values for the instance variables, while the parameterized constructor sets user-specified values.",
-        "duration": "20",
+        "duration": "15",
         "name": "Writing and Using Constructors",
         "tips": [
           {
@@ -1241,7 +1202,7 @@
     },
     {
       "key": "8073cb28-205a-459f-9418-8bf21bc9087f",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When do you think it's best to use a no-argument constructor? What about a parameterized constructor?*\n\n**Discussion Goal:** Students suggest using a no-argument constructor when a default object is needed because the user has not given specific values. They note that a parameterized constructor is best when the user needs an object to be instantiated with specific starting values.",
         "tips": [
@@ -1258,10 +1219,10 @@
     },
     {
       "key": "2ea99a83-d8ea-4cdc-956b-36db847cb6be",
-      "position": 11,
+      "position": 10,
       "properties": {
-        "description": "**Do This:** Explain the components of a parameterized constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***formal parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***local variable***\n\n**Do This:** Explain how parameterized constructors are called:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***actual parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate ***call by value***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4 to practice writing one parameterized constructor in a class and writing multiple parameterized constructors in a class.",
-        "progression_name": "Skill Building: Parameterized Constructors"
+        "description": "**Do This:** Explain the components of a parameterized constructor:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***formal parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***local variable***\n\n**Do This:** Explain how parameterized constructors are called:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***actual parameter***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to demonstrate ***call by value***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to Level 6 to practice writing a parameterized constructor in a class. On Level 7, students practice writing multiple parameterized constructors in a class.",
+        "progression_name": "Practice: Parameterized Constructors"
       },
       "seeding_key": {
         "activity_section.key": "2ea99a83-d8ea-4cdc-956b-36db847cb6be",
@@ -1269,126 +1230,11 @@
       }
     },
     {
-      "key": "b6f7e131-b9f2-4724-af5d-806744f6024a",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the code segment and ask students to predict the outcome. Click through the animated slide to display the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that the formal parameters are local variables and explain that these are referenced first instead of the instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to investigate the program, make changes to the program as prompted, and observe the results.",
-        "duration": "15",
-        "name": "The this Keyword",
-        "progression_name": "Investigate and Modify: The this Keyword"
-      },
-      "seeding_key": {
-        "activity_section.key": "b6f7e131-b9f2-4724-af5d-806744f6024a",
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282"
-      }
-    },
-    {
-      "key": "331c2ac1-808c-470a-a4ff-d2a064695c2a",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does the word \"scope\" mean to you?*\n\n**Discussion Goal:** Students share definitions of scope, such as how much of a topic or area is being covered or investigating something.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nHave students share examples of where they have heard or used the word \"scope\" before. Prompt students to consider how these definitions and examples might be related to its use in programming."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "331c2ac1-808c-470a-a4ff-d2a064695c2a",
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282"
-      }
-    },
-    {
-      "key": "f5a081f1-4187-4132-b37d-c643d0b459be",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and explain ***scope***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `this` keyword and explain its functionality.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to practice using the `this` keyword in a parameterized constructor.",
-        "progression_name": "Skill Building: Using the this Keyword"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5a081f1-4187-4132-b37d-c643d0b459be",
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282"
-      }
-    },
-    {
-      "key": "28492427-2989-4fa8-81f8-26143b62f7a3",
-      "position": 4,
-      "properties": {
-        "description": "We have learned a lot about writing constructors that we can use to instantiate objects in our programs! Let's practice putting what we have learned so far together to write constructors in our classes.",
-        "duration": "20",
-        "name": "Putting It All Together",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "28492427-2989-4fa8-81f8-26143b62f7a3",
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282"
-      }
-    },
-    {
-      "key": "73620c8f-68ab-41eb-9597-893c3d8c84f5",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 7 on Code Studio to complete Levels 7, 8, and 9. On Level 7, students complete a Check for Understanding, then continue to Level 8 to practice writing no-argument and parameterized constructors in a class. On Level 9, students write parameterized constructors in the `Dessert` class.",
-        "progression_name": "Practice: Parameterized Constructors",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Check for Understanding and practice level can be used as a formative assessment to gauge understanding of the key terms and writing parameterized constructors in a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "73620c8f-68ab-41eb-9597-893c3d8c84f5",
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282"
-      }
-    },
-    {
-      "key": "f5c450d5-0b5e-4db3-98d0-e6a125f48502",
-      "position": 6,
-      "properties": {
-        "description": "This is a good time to commit our code and save our `Dessert` class to the Backpack. We will be adding to the classes throughout the unit as we learn more about designing classes and their components.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "f5c450d5-0b5e-4db3-98d0-e6a125f48502",
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282"
-      }
-    },
-    {
-      "key": "7115b1fd-6b4b-421e-9567-909c4817660a",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their `Dessert` class to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7115b1fd-6b4b-421e-9567-909c4817660a",
-        "lesson_activity.key": "e6d551f5-85c8-4578-b104-a2dd8a746282"
-      }
-    },
-    {
-      "key": "b74612ae-0eea-4ad0-b35e-e56a96758bef",
-      "position": 1,
-      "properties": {
-        "description": "##Wrap Up (10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "b74612ae-0eea-4ad0-b35e-e56a96758bef",
-        "lesson_activity.key": "b170c7df-de3a-429e-b09e-7d04f7f66103"
-      }
-    },
-    {
       "key": "120a47f4-35b0-4e30-a2e2-7a4db27cc534",
-      "position": 2,
+      "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
-        "name": "Constructor Corners",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as parameterized constructor, formal parameter, and actual parameter. Students also recall that formal parameters are local variables and explain how the values of the actual parameters are copied to the formal parameters. They should realize that parameterized constructors can provide multiple options for instantiating objects based on the needs of the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "name": "Three W's",
         "tips": [
           {
             "type": "teachingTip",
@@ -1403,7 +1249,7 @@
     },
     {
       "key": "28c18906-16c4-4ba0-9c20-babe0cc4d728",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
@@ -1414,7 +1260,7 @@
     },
     {
       "key": "b2c18d38-48d3-4b13-b161-39dd07ec2ae9",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -1425,7 +1271,7 @@
     },
     {
       "key": "d8fd9ad5-92d6-44ad-aae4-20d4e4cbeaf2",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -1438,7 +1284,7 @@
     },
     {
       "key": "a5b1fa23-9c04-4c9e-91ca-774694b8da9e",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
@@ -1513,6 +1359,50 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Classes and Attributes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L2-2_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569"
+      },
+      "level_keys": [
+        "CSA U2L1-L2-2_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Classes and Attributes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L2-3_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569"
+      },
+      "level_keys": [
+        "CSA U2L1-L2-3_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1536,8 +1426,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1561,14 +1451,33 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Refactoring Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L1-L4-2_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a8869e54-15ed-475f-bb2b-ba8afe251d83"
+      },
+      "level_keys": [
+        "CSA U2L1-L4-2_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U2L1-L5_2023"
-        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -1586,14 +1495,11 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L1-L6_2023"
-        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -1611,14 +1517,11 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U2L1-L7_2023"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1636,7 +1539,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1661,7 +1564,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1686,14 +1589,55 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L2-2_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a4c6cfb8-0e15-4f1e-8aba-2037f1d071ab"
+      },
+      "level_keys": [
+        "CSA U2L2-L2-2_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L2-L2-3_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a4c6cfb8-0e15-4f1e-8aba-2037f1d071ab"
+      },
+      "level_keys": [
+        "CSA U2L2-L2-3_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L2-L3_2023"
-        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -1711,14 +1655,11 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 4,
+      "chapter": 16,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U2L2-L4_2023"
-        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -1736,14 +1677,11 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 5,
+      "chapter": 17,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L2-L5_2023"
-        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -1761,14 +1699,11 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 6,
+      "chapter": 18,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L2-L6_2023"
-        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -1786,14 +1721,11 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 7,
+      "chapter": 19,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U2L2-L7_2023"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1811,11 +1743,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L1_2023"
+        ],
         "progression": "Predict and Run: Parameterized Constructors"
       },
       "bonus": false,
@@ -1833,11 +1768,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2_2023"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -1855,12 +1793,81 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building: Parameterized Constructors"
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2-2_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e37a7624-7002-4de3-bc78-dee740f4de1b"
+      },
+      "level_keys": [
+        "CSA U2L3-L2-2_2023"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3-L2-3_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e37a7624-7002-4de3-bc78-dee740f4de1b"
+      },
+      "level_keys": [
+        "CSA U2L3-L2-3_2023"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Practice: Parameterized Constructors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2L3 CFU_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2ea99a83-d8ea-4cdc-956b-36db847cb6be"
+      },
+      "level_keys": [
+        "CSA U2L3 CFU_2023"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U2L3-L3_2023"
+        ],
+        "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
       "seeding_key": {
@@ -1877,12 +1884,15 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 4,
-      "activity_section_position": 2,
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building: Parameterized Constructors"
+        "level_keys": [
+          "CSA U2L3-L4_2023"
+        ],
+        "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
       "seeding_key": {
@@ -1899,121 +1909,14 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate and Modify: The this Keyword"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2L3-L5_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "b6f7e131-b9f2-4724-af5d-806744f6024a"
-      },
-      "level_keys": [
-        "CSA U2L3-L5_2023"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building: Using the this Keyword"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2L3-L6_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "f5a081f1-4187-4132-b37d-c643d0b459be"
-      },
-      "level_keys": [
-        "CSA U2L3-L6_2023"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Practice: Parameterized Constructors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2L3-L7_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "73620c8f-68ab-41eb-9597-893c3d8c84f5"
-      },
-      "level_keys": [
-        "CSA U2L3-L7_2023"
-      ]
-    },
-    {
-      "chapter": 22,
+      "chapter": 27,
       "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: Parameterized Constructors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2L3-L8_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "73620c8f-68ab-41eb-9597-893c3d8c84f5"
-      },
-      "level_keys": [
-        "CSA U2L3-L8_2023"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 9,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice: Parameterized Constructors"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2L3-L9_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "73620c8f-68ab-41eb-9597-893c3d8c84f5"
-      },
-      "level_keys": [
-        "CSA U2L3-L9_2023"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L10_2023"
+        ],
         "progression": "Assessment: Check for Understanding"
       },
       "bonus": false,
@@ -2058,6 +1961,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U2L1-L2-2_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L2-2_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L2-3_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L2-3_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2c5b830a-3dac-4c8f-9fe3-03905f3fc569"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U2L1-L3_2023",
         "script_level.level_keys": [
           "CSA U2L1-L3_2023"
@@ -2073,6 +2000,18 @@
         "level.key": "CSA U2L1-L4_2023",
         "script_level.level_keys": [
           "CSA U2L1-L4_2023"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a8869e54-15ed-475f-bb2b-ba8afe251d83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L1-L4-2_2023",
+        "script_level.level_keys": [
+          "CSA U2L1-L4-2_2023"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
@@ -2133,6 +2072,30 @@
         "level.key": "CSA U2L2-L2_2023",
         "script_level.level_keys": [
           "CSA U2L2-L2_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a4c6cfb8-0e15-4f1e-8aba-2037f1d071ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L2-2_2023",
+        "script_level.level_keys": [
+          "CSA U2L2-L2-2_2023"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "a4c6cfb8-0e15-4f1e-8aba-2037f1d071ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L2-L2-3_2023",
+        "script_level.level_keys": [
+          "CSA U2L2-L2-3_2023"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
@@ -2226,6 +2189,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U2L3-L2-2_2023",
+        "script_level.level_keys": [
+          "CSA U2L3-L2-2_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e37a7624-7002-4de3-bc78-dee740f4de1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3-L2-3_2023",
+        "script_level.level_keys": [
+          "CSA U2L3-L2-3_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "e37a7624-7002-4de3-bc78-dee740f4de1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U2L3 CFU_2023",
+        "script_level.level_keys": [
+          "CSA U2L3 CFU_2023"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-2023",
+        "activity_section.key": "2ea99a83-d8ea-4cdc-956b-36db847cb6be"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U2L3-L3_2023",
         "script_level.level_keys": [
           "CSA U2L3-L3_2023"
@@ -2246,66 +2245,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-2023",
         "activity_section.key": "2ea99a83-d8ea-4cdc-956b-36db847cb6be"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2L3-L5_2023",
-        "script_level.level_keys": [
-          "CSA U2L3-L5_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "b6f7e131-b9f2-4724-af5d-806744f6024a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2L3-L6_2023",
-        "script_level.level_keys": [
-          "CSA U2L3-L6_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "f5a081f1-4187-4132-b37d-c643d0b459be"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2L3-L7_2023",
-        "script_level.level_keys": [
-          "CSA U2L3-L7_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "73620c8f-68ab-41eb-9597-893c3d8c84f5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2L3-L8_2023",
-        "script_level.level_keys": [
-          "CSA U2L3-L8_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "73620c8f-68ab-41eb-9597-893c3d8c84f5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2L3-L9_2023",
-        "script_level.level_keys": [
-          "CSA U2L3-L9_2023"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa2-2023",
-        "activity_section.key": "73620c8f-68ab-41eb-9597-893c3d8c84f5"
       }
     },
     {
@@ -2692,16 +2631,6 @@
       }
     },
     {
-      "key": "scope",
-      "word": "scope",
-      "definition": "where a variable can be used",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "scope"
-      }
-    },
-    {
       "key": "state",
       "word": "state",
       "definition": "the attributes of an object that are represented by its instance variables",
@@ -2800,12 +2729,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "vocabulary.key": "scope"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
         "vocabulary.key": "state"
       }
     }
@@ -2822,26 +2745,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "0251d959-08e7-47c3-b0eb-ee1649979d38"
-      }
-    },
-    {
-      "key": "0a14d722-3f78-4d55-90a9-2d643517bca4",
-      "properties": {
-        "description": "Identify the scope of variables"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "0a14d722-3f78-4d55-90a9-2d643517bca4"
-      }
-    },
-    {
-      "key": "5234aca8-9075-478f-a658-14ad0cfeb0a8",
-      "properties": {
-        "description": "Use the `this` keyword to refer to the current object"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "5234aca8-9075-478f-a658-14ad0cfeb0a8"
       }
     },
     {
