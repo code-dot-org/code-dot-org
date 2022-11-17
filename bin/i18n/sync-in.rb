@@ -123,11 +123,26 @@ def localize_external_sources
   Dir.glob(dataset_files).each do |dataset_file|
     original_dataset = JSON.parse(File.read(dataset_file))
 
-    # Currently only including fields for translation.
-    # Use field id as unique identifier.
-    fields_as_hash = original_dataset["fields"].map {|field| [field["id"], field]}.to_h
+    # Converts array to map and uses the field id as a unique identifier.
+    fields_as_hash = original_dataset["fields"].map do |field|
+      [
+        field["id"],
+        {
+          "id" => field["id"],
+          "description" => field["description"]
+        }
+      ]
+    end.to_h
+
     final_dataset = {
-      "fields" => fields_as_hash
+      "fields" => fields_as_hash,
+      "card" => {
+        "description" => original_dataset.dig("card", "description"),
+        "context" => {
+          "potentialUses" => original_dataset.dig("card", "context", "potentialUses"),
+          "potentialMisuses" => original_dataset.dig("card", "context", "potentialMisuses")
+        }
+      }
     }
 
     File.open(dataset_file, "w") do |f|
