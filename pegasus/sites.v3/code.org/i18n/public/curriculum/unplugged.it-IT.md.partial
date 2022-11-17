@@ -65,12 +65,12 @@ th, td {
     <th width=20%><center><big>Video</th>
      <tr>
     <th rowspan="3" id="t01">Course A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Gli studenti si eserciteranno a scrivere istruzioni precise lavorando per tradurre le istruzioni nei simboli forniti. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Gli studenti si eserciteranno a scrivere istruzioni precise lavorando per tradurre le istruzioni nei simboli forniti. Se sorgono problemi nel codice, gli studenti dovranno anche lavorare insieme per identificare bugs e risolverli..</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>Quest'attività è una rivisitazione di Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. A volte si desidera che il programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. A volte si desidera che il proprio programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
     <th rowspan="3" id="t02">Course B</th>
@@ -90,7 +90,7 @@ th, td {
 Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
   </tr>
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. A volte si desidera che il programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. A volte si desidera che il proprio programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
    </tr>
        </tr>
      <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. Opzionale - 18 perline nere/18 bianche, 1 scovolino per studente</i><br><small>Il binario è estremamente importante nel mondo dei computer. La maggior parte dei computer di oggi memorizza ogni tipo di informazione in forma binaria. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>

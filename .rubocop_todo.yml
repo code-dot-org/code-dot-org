@@ -95,11 +95,6 @@ Lint/EmptyClass:
 Lint/EmptyFile:
   Enabled: false
 
-# Offense count: 4
-# This cop supports safe auto-correction (--auto-correct).
-Lint/ErbNewArguments:
-  Enabled: false
-
 # Offense count: 7
 Lint/MissingSuper:
   Enabled: false
@@ -335,12 +330,6 @@ Security/MarshalLoad:
 # Configuration parameters: EnforcedStyle, AllowModifiersOnSymbols.
 # SupportedStyles: inline, group
 Style/AccessModifierDeclarations:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowOnConstant.
-Style/CaseEquality:
   Enabled: false
 
 # Offense count: 68
@@ -643,11 +632,6 @@ Style/SlicingWithRange:
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: AllowModifier.
 Style/SoleNestedConditional:
-  Enabled: false
-
-# Offense count: 29
-# This cop supports safe auto-correction (--auto-correct).
-Style/StderrPuts:
   Enabled: false
 
 # Offense count: 314

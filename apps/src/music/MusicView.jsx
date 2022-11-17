@@ -2,10 +2,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classNames from 'classnames';
 import {Provider, connect} from 'react-redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import queryString from 'query-string';
-import {baseToolbox, createMusicToolbox} from './blockly/toolbox';
+import {baseToolbox} from './blockly/toolbox';
 import Instructions from './Instructions';
 import SharePlaceholder from './SharePlaceholder';
 import Controls from './Controls';
@@ -13,18 +14,30 @@ import Timeline from './Timeline';
 import {MUSIC_BLOCKS} from './blockly/musicBlocks';
 import {BlockTypes} from './blockly/blockTypes';
 import MusicPlayer from './player/MusicPlayer';
-import InputContext from './InputContext';
-import {PLAY_ICON, STOP_ICON, Triggers} from './constants';
+import {Triggers} from './constants';
 import {musicLabDarkTheme} from './blockly/themes';
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {getStaticFilePath} from '@cdo/apps/music/utils';
-import feedbackStyles from './feedback.module.scss';
+import moduleStyles from './music.module.scss';
+import FieldSounds from './FieldSounds';
+import {AnalyticsContext} from './context';
+import TopButtons from './TopButtons';
+import Globals from './globals';
 
 const baseUrl = 'https://curriculum.code.org/media/musiclab/';
 
-var hooks = {};
+const InstructionsPositions = {
+  TOP: 'TOP',
+  LEFT: 'LEFT',
+  RIGHT: 'RIGHT'
+};
+
+const instructionPositionOrder = [
+  InstructionsPositions.TOP,
+  InstructionsPositions.LEFT,
+  InstructionsPositions.RIGHT
+];
 
 class UnconnectedMusicView extends React.Component {
   static propTypes = {
@@ -50,8 +63,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.codeAppRef = document.getElementById('codeApp');
     this.player = new MusicPlayer();
-    this.inputContext = new InputContext();
     this.analyticsReporter = new AnalyticsReporter();
+    this.codeHooks = {};
 
     // We have seen on Android devices that window.innerHeight will always be the
     // same whether in landscape or portrait orientation.  Given that we tell
@@ -77,22 +90,23 @@ class UnconnectedMusicView extends React.Component {
       updateNumber: 0,
       timelineAtTop: false,
       showInstructions: true,
-      feedbackClicked: false
+      instructionsPosIndex: 1
     };
   }
 
   componentDidMount() {
-    this.analyticsReporter.onSessionStart();
+    this.analyticsReporter.startSession().then(() => {
+      this.analyticsReporter.setUserProperties(
+        this.props.userId,
+        this.props.userType,
+        this.props.signInState
+      );
+    });
     // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
     window.addEventListener('beforeunload', () =>
-      this.analyticsReporter.onSessionEnd()
-    );
-    this.analyticsReporter.setUserProperties(
-      this.props.userId,
-      this.props.userType,
-      this.props.signInState
+      this.analyticsReporter.endSession()
     );
 
     const windowWidth = Math.max(window.innerWidth, window.innerHeight);
@@ -118,9 +132,11 @@ class UnconnectedMusicView extends React.Component {
     this.loadLibrary().then(library => {
       this.setState({library});
       this.initBlockly();
-      this.workspace.updateToolbox(createMusicToolbox(library, 'dropdown'));
       this.player.initialize(library);
       setInterval(this.updateTimer, 1000 / 30);
+
+      Globals.setLibrary(this.state.library);
+      Globals.setPlayer(this.player);
     });
 
     this.loadInstructions().then(instructions => {
@@ -169,32 +185,6 @@ class UnconnectedMusicView extends React.Component {
   };
 
   initBlockly = () => {
-    var self = this;
-
-    Blockly.blockly_.Extensions.register('dynamic_menu_extension', function() {
-      this.getInput('sound').appendField(
-        new Blockly.FieldDropdown(function() {
-          var options = [['anything', 'anything']];
-          if (self.state.groupPanel && self.state.groupPanel !== 'main') {
-            const folders = self.getCurrentGroupSounds();
-            options = folders
-              .map(folder => {
-                return folder.sounds.map(sound => {
-                  return [
-                    folder.name + '/' + sound.name,
-                    folder.path + '/' + sound.src
-                  ];
-                });
-              })
-              .flat(1);
-          }
-
-          return options;
-        }),
-        'sound'
-      );
-    });
-
     Blockly.blockly_.Extensions.register(
       'dynamic_trigger_extension',
       function() {
@@ -207,43 +197,6 @@ class UnconnectedMusicView extends React.Component {
       }
     );
 
-    Blockly.blockly_.Extensions.register('preview_extension', function() {
-      this.getField('image').setOnClickHandler(function() {
-        if (self.state.isPlaying) {
-          return;
-        }
-        const id = this.getSourceBlock()
-          .getField('sound')
-          .getValue();
-
-        if (self.player.isPreviewPlaying(id)) {
-          self.player.stopAndCancelPreviews();
-          this.setValue(getStaticFilePath(PLAY_ICON));
-        } else {
-          this.setValue(getStaticFilePath(STOP_ICON));
-          self.player.previewSound(id, () => {
-            this.setValue(getStaticFilePath(PLAY_ICON));
-          });
-        }
-      });
-    });
-
-    Blockly.blockly_.Extensions.register(
-      'clear_preview_on_change_extension',
-      function() {
-        this.setOnChange(function(event) {
-          if (
-            event.blockId === this.id &&
-            event.type === Blockly.blockly_.Events.BLOCK_CHANGE &&
-            event.name === 'sound' &&
-            self.player.isPreviewPlaying(event.oldValue)
-          ) {
-            self.player.stopAndCancelPreviews();
-          }
-        });
-      }
-    );
-
     for (let blockType of Object.keys(MUSIC_BLOCKS)) {
       Blockly.Blocks[blockType] = {
         init: function() {
@@ -253,6 +206,8 @@ class UnconnectedMusicView extends React.Component {
 
       Blockly.JavaScript[blockType] = MUSIC_BLOCKS[blockType].generator;
     }
+
+    Blockly.blockly_.fieldRegistry.register('field_sounds', FieldSounds);
 
     const container = document.getElementById('blockly-div');
 
@@ -374,11 +329,10 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    var blocklyArea = document.getElementById('blockly-area');
-    var blocklyDiv = document.getElementById('blockly-div');
+    const blocklyDiv = document.getElementById('blockly-div');
 
-    blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
-    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+    blocklyDiv.style.width = '100%';
+    blocklyDiv.style.height = '100%';
     Blockly.svgResize(this.workspace);
   };
 
@@ -390,6 +344,7 @@ class UnconnectedMusicView extends React.Component {
   setPlaying = play => {
     if (play) {
       this.playSong();
+      this.analyticsReporter.onButtonClicked('play');
     } else {
       this.stopSong();
     }
@@ -400,32 +355,59 @@ class UnconnectedMusicView extends React.Component {
   };
 
   playTrigger = id => {
-    //console.log('Playhead position: ' + this.player.getPlayheadPosition());
-    this.inputContext.onTrigger(id);
-    this.callUserGeneratedCode(hooks.triggeredAtButton);
+    if (!this.state.isPlaying) {
+      return;
+    }
+    this.analyticsReporter.onButtonClicked('trigger', {id});
+    const hook = this.codeHooks[this.triggerIdToEvent(id)];
+    if (hook) {
+      this.callUserGeneratedCode(hook);
+    }
+  };
+
+  toggleInstructions = fromKeyboardShortcut => {
+    this.analyticsReporter.onButtonClicked('show-hide-instructions', {
+      showing: !this.state.showInstructions,
+      fromKeyboardShortcut
+    });
+    this.setState({
+      showInstructions: !this.state.showInstructions
+    });
   };
 
   executeSong = () => {
-    var generator = Blockly.Generator.blockSpaceToCode.bind(
-      Blockly.Generator,
-      'JavaScript'
-    );
+    Blockly.getGenerator().init(this.workspace);
 
-    const events = {
-      whenRunButton: {code: generator(BlockTypes.WHEN_RUN)},
-      triggeredAtButton: {code: generator(BlockTypes.TRIGGERED_AT)}
-    };
+    const events = {};
 
-    CustomMarshalingInterpreter.evalWithEvents(
-      {MusicPlayer: this.player, InputContext: this.inputContext},
-      events
-    ).hooks.forEach(hook => {
-      //console.log('hook', hook);
-      hooks[hook.name] = hook.func;
+    this.workspace.getTopBlocks().forEach(block => {
+      if (block.type === BlockTypes.WHEN_RUN) {
+        events.whenRunButton = {
+          code: Blockly.JavaScript.blockToCode(block)
+        };
+      }
+
+      if (block.type === BlockTypes.TRIGGERED_AT) {
+        const id = block.getFieldValue('trigger');
+        events[this.triggerIdToEvent(id)] = {
+          code: Blockly.JavaScript.blockToCode(block)
+        };
+      }
     });
 
-    this.callUserGeneratedCode(hooks.whenRunButton);
+    this.codeHooks = {};
+
+    CustomMarshalingInterpreter.evalWithEvents(
+      {MusicPlayer: this.player},
+      events
+    ).hooks.forEach(hook => {
+      this.codeHooks[hook.name] = hook.func;
+    });
+
+    this.callUserGeneratedCode(this.codeHooks.whenRunButton);
   };
+
+  triggerIdToEvent = id => `triggeredAtButton-${id}`;
 
   playSong = () => {
     this.player.stopSong();
@@ -445,7 +427,6 @@ class UnconnectedMusicView extends React.Component {
 
   stopSong = () => {
     this.player.stopSong();
-    this.inputContext.clearTriggers();
 
     // Clear the events list, and hence the visual timeline, of any
     // user-triggered sounds.
@@ -484,201 +465,156 @@ class UnconnectedMusicView extends React.Component {
       this.setState({timelineAtTop: !this.state.timelineAtTop});
     }
     if (event.key === 'i') {
-      this.setState({showInstructions: !this.state.showInstructions});
+      this.toggleInstructions(true);
+    }
+    if (event.key === 'n') {
+      this.setState({
+        instructionsPosIndex:
+          (this.state.instructionsPosIndex + 1) %
+          instructionPositionOrder.length
+      });
     }
     Triggers.map(trigger => {
       if (event.key === trigger.keyboardKey) {
         this.playTrigger(trigger.id);
       }
     });
-    if (event.key === 'd') {
-      this.workspace.updateToolbox(
-        createMusicToolbox(this.state.library, 'dropdown')
-      );
-    }
-    if (event.key === 'v') {
-      this.workspace.updateToolbox(
-        createMusicToolbox(this.state.library, 'valueSample')
-      );
-    }
-    if (event.key === 'p') {
-      this.workspace.updateToolbox(
-        createMusicToolbox(this.state.library, 'playSample')
-      );
-    }
     if (event.code === 'Space') {
       this.setPlaying(!this.state.isPlaying);
     }
   };
 
   onFeedbackClicked = () => {
+    this.analyticsReporter.onButtonClicked('feedback');
     window.open(
       'https://docs.google.com/forms/d/e/1FAIpQLScnUgehPPNjhSNIcCpRMcHFgtE72TlfTOh6GkER6aJ-FtIwTQ/viewform?usp=sf_link',
       '_blank'
     );
-
-    this.setState({feedbackClicked: true});
   };
 
-  render() {
-    // The tutorial has a width:height ratio of 16:9.
-    const aspectRatio = 16 / 9;
-
-    // Let's minimize the tutorial width at 320px.
-    const minAppWidth = 320;
-
-    // Let's maximize the tutorial width at 1280px.
-    const maxAppWidth = 1280;
-
-    // Leave space above the small footer.
-    const reduceAppHeight = 36;
-
-    let containerWidth;
-
-    // Constrain tutorial to maximum width.
-    const maxContainerWidth = Math.min(this.state.appWidth, maxAppWidth);
-
-    // Use the smaller of the space allocated for the app and the window height,
-    // and leave space above the small footer.
-    const maxContainerHeight =
-      Math.min(this.state.appHeight, this.state.windowHeight) - reduceAppHeight;
-
-    if (maxContainerWidth / maxContainerHeight > aspectRatio) {
-      // Constrain by height.
-      containerWidth = maxContainerHeight * aspectRatio;
-    } else {
-      // Constrain by width.
-      containerWidth = maxContainerWidth;
+  renderInstructions(position) {
+    if (position === InstructionsPositions.TOP) {
+      return (
+        <div
+          id="instructions-area"
+          className={classNames(
+            moduleStyles.instructionsArea,
+            moduleStyles.instructionsTop
+          )}
+        >
+          <Instructions
+            instructions={this.state.instructions}
+            baseUrl={baseUrl}
+          />
+          <div
+            id="share-area"
+            className={classNames(
+              moduleStyles.shareArea,
+              moduleStyles.shareTop
+            )}
+          >
+            <SharePlaceholder />
+          </div>
+        </div>
+      );
     }
 
-    // Constrain tutorial to minimum width;
-    if (containerWidth < minAppWidth) {
-      containerWidth = minAppWidth;
-    }
+    return (
+      <div
+        className={classNames(
+          moduleStyles.instructionsArea,
+          moduleStyles.instructionsSide,
+          position === InstructionsPositions.LEFT
+            ? moduleStyles.instructionsLeft
+            : moduleStyles.instructionsRight
+        )}
+      >
+        <Instructions
+          instructions={this.state.instructions}
+          baseUrl={baseUrl}
+          vertical={true}
+          right={position === InstructionsPositions.RIGHT}
+        />
+      </div>
+    );
+  }
 
+  renderTimelineArea(timelineAtTop, instructionsOnRight) {
     const songData = {
       events: this.player.getSoundEvents()
     };
 
-    const blocklyAreaHeight = this.state.showInstructions
-      ? 'calc(100% - 300px)'
-      : 'calc(100% - 200px)';
-
-    const blocklyAreaTop = this.state.showInstructions
-      ? this.state.timelineAtTop
-        ? 300
-        : 100
-      : this.state.timelineAtTop
-      ? 200
-      : 0;
-
-    const timelinePosition = this.state.showInstructions
-      ? this.state.timelineAtTop
-        ? {top: 100}
-        : {bottom: 0}
-      : this.state.timelineAtTop
-      ? {top: 0}
-      : {bottom: 0};
-
     return (
       <div
-        id="music-lab-container"
-        style={{
-          position: 'relative',
-          backgroundColor: 'black',
-          color: 'white',
-          width: '100%',
-          height: 'calc(100% - 0px)',
-          borderRadius: 4,
-          padding: 0,
-          boxSizing: 'border-box',
-          overflow: 'hidden',
-          userSelect: 'none'
-        }}
-      >
-        {this.state.showInstructions && (
-          <div>
-            <div
-              id="instructions-area"
-              style={{
-                float: 'left',
-                color: 'white',
-                width: 'calc(100% - 150px)',
-                height: 90,
-                backgroundColor: 'black',
-                borderRadius: 4,
-                padding: 0,
-                boxSizing: 'border-box',
-                marginRight: 10
-              }}
-            >
-              <Instructions
-                instructions={this.state.instructions}
-                baseUrl={baseUrl}
-                analyticsReporter={this.analyticsReporter}
-              />
-            </div>
-            <div id="share-area" style={{width: 140, float: 'left'}}>
-              <SharePlaceholder analyticsReporter={this.analyticsReporter} />
-            </div>
-          </div>
+        id="timeline-area"
+        className={classNames(
+          moduleStyles.timelineArea,
+          timelineAtTop ? moduleStyles.timelineTop : moduleStyles.timelineBottom
         )}
-        <div
-          id="blockly-area"
-          style={{
-            float: 'left',
-            width: '100%',
-            height: blocklyAreaHeight,
-            position: 'absolute',
-            top: blocklyAreaTop,
-            borderRadius: 4,
-            overflow: 'hidden'
-          }}
-        >
-          <div id="blockly-div" />
-        </div>
-
-        <div
-          id="timeline-area"
-          style={{
-            height: 200,
-            width: '100%',
-            boxSizing: 'border-box',
-            position: 'absolute',
-            display: 'flex',
-            flexDirection: this.state.timelineAtTop
-              ? 'column-reverse'
-              : 'column',
-            ...timelinePosition
-          }}
-        >
-          <Controls
-            isPlaying={this.state.isPlaying}
-            setPlaying={this.setPlaying}
-            playTrigger={this.playTrigger}
-            top={this.state.timelineAtTop}
-            startOverClicked={this.clearCode}
-          />
-          <Timeline
-            isPlaying={this.state.isPlaying}
-            songData={songData}
-            currentAudioElapsedTime={this.state.currentAudioElapsedTime}
-            convertMeasureToSeconds={measure =>
-              this.player.convertMeasureToSeconds(measure)
-            }
-            currentMeasure={this.player.getCurrentMeasure()}
-            sounds={this.getCurrentGroupSounds()}
-          />
-          {!this.state.feedbackClicked && (
-            <div
-              className={feedbackStyles.feedbackButton}
-              onClick={this.onFeedbackClicked}
-            >
-              Tell us what you think
-            </div>
-          )}
-        </div>
+      >
+        <Controls
+          isPlaying={this.state.isPlaying}
+          setPlaying={this.setPlaying}
+          playTrigger={this.playTrigger}
+          top={timelineAtTop}
+          toggleInstructions={() => this.toggleInstructions(false)}
+          instructionsOnRight={instructionsOnRight}
+        />
+        <Timeline
+          isPlaying={this.state.isPlaying}
+          songData={songData}
+          currentAudioElapsedTime={this.state.currentAudioElapsedTime}
+          convertMeasureToSeconds={measure =>
+            this.player.convertMeasureToSeconds(measure)
+          }
+          currentMeasure={this.player.getCurrentMeasure()}
+          sounds={this.getCurrentGroupSounds()}
+        />
       </div>
+    );
+  }
+
+  render() {
+    const instructionsPosition =
+      instructionPositionOrder[this.state.instructionsPosIndex];
+
+    return (
+      <AnalyticsContext.Provider value={this.analyticsReporter}>
+        <div id="music-lab-container" className={moduleStyles.container}>
+          {this.state.showInstructions &&
+            instructionsPosition === InstructionsPositions.TOP &&
+            this.renderInstructions(InstructionsPositions.TOP)}
+
+          {this.state.timelineAtTop &&
+            this.renderTimelineArea(
+              true,
+              instructionsPosition === InstructionsPositions.RIGHT
+            )}
+
+          <div className={moduleStyles.middleArea}>
+            {this.state.showInstructions &&
+              instructionsPosition === InstructionsPositions.LEFT &&
+              this.renderInstructions(InstructionsPositions.LEFT)}
+
+            <div id="blockly-area" className={moduleStyles.blocklyArea}>
+              <div className={moduleStyles.topButtonsContainer}>
+                <TopButtons clearCode={this.clearCode} />
+              </div>
+              <div id="blockly-div" />
+            </div>
+
+            {this.state.showInstructions &&
+              instructionsPosition === InstructionsPositions.RIGHT &&
+              this.renderInstructions(InstructionsPositions.RIGHT)}
+          </div>
+
+          {!this.state.timelineAtTop &&
+            this.renderTimelineArea(
+              false,
+              instructionsPosition === InstructionsPositions.RIGHT
+            )}
+        </div>
+      </AnalyticsContext.Provider>
     );
   }
 }

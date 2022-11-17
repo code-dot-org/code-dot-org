@@ -130,7 +130,7 @@ export default class PrincipalApprovalButtons extends React.Component {
           onOk={this.handleResendEmailConfirmed}
           onCancel={this.handleResendEmailCancel}
           headerText="Resend"
-          bodyText="This will resend an email to this applicant’s principal with a link to the recommendation form. Proceed?"
+          bodyText="This will resend an email to this applicant’s administrator/school leader with a link to the recommendation form. Proceed?"
           okText="Resend"
         />
       </div>

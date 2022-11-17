@@ -111,7 +111,7 @@ module Crowdin
       end
     rescue Net::ReadTimeout, Net::OpenTimeout, AWSError => error
       # Only attempting retries on request errors. Surfacing errors during write.
-      STDERR.puts "download_file(#{dest})#{response.present? ? " error code: #{response.code}" : ''} error: #{error}"
+      warn "download_file(#{dest})#{response.present? ? " error code: #{response.code}" : ''} error: #{error}"
       raise if attempts <= 1
       download_file(download_url, dest, attempts: attempts - 1)
     end

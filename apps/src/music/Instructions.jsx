@@ -1,168 +1,149 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useContext, useEffect, useState} from 'react';
+import classNames from 'classnames';
+import moduleStyles from './instructions.module.scss';
+import {AnalyticsContext} from './context';
 
-export default class Instructions extends React.Component {
-  static propTypes = {
-    instructions: PropTypes.object,
-    baseUrl: PropTypes.string.isRequired,
-    analyticsReporter: PropTypes.object.isRequired
+const Instructions = ({instructions, baseUrl, vertical, right}) => {
+  const [currentPanel, setCurrentPanel] = useState(0);
+  const [showBigImage, setShowBigImage] = useState(false);
+
+  const getPreviousPanel = () => {
+    return currentPanel > 0 ? currentPanel - 1 : null;
   };
 
-  state = {
-    currentPanel: 0,
-    showBigImage: false
-  };
-
-  getPreviousPanel = () => {
-    return this.state.currentPanel > 0 ? this.state.currentPanel - 1 : null;
-  };
-
-  getNextPanel = () => {
-    return this.state.currentPanel + 1 <
-      this.props.instructions?.groups[0].panels.length
-      ? this.state.currentPanel + 1
+  const getNextPanel = () => {
+    return currentPanel + 1 < instructions?.groups[0].panels.length
+      ? currentPanel + 1
       : null;
   };
 
-  changePanel = nextPanel => {
-    const nextPanelIndex = nextPanel
-      ? this.getNextPanel()
-      : this.getPreviousPanel();
+  const changePanel = nextPanel => {
+    const nextPanelIndex = nextPanel ? getNextPanel() : getPreviousPanel();
 
     if (nextPanelIndex !== null) {
-      this.setState({currentPanel: nextPanelIndex, showBigImage: false});
+      setCurrentPanel(nextPanelIndex);
+      setShowBigImage(false);
     }
   };
 
-  imageClicked = () => {
-    this.setState({showBigImage: !this.state.showBigImage});
+  const imageClicked = () => {
+    setShowBigImage(!showBigImage);
   };
 
-  render() {
-    const {instructions, baseUrl, analyticsReporter} = this.props;
-
+  const analyticsReporter = useContext(AnalyticsContext);
+  useEffect(() => {
     // Instructions panels are 0-indexed, tracking is 1-based
-    analyticsReporter.onInstructionsVisited(this.state.currentPanel + 1);
+    analyticsReporter.onInstructionsVisited(currentPanel + 1);
+  }, [currentPanel, analyticsReporter]);
 
-    const previousPanel = this.getPreviousPanel();
-    const nextPanel = this.getNextPanel();
+  const previousPanel = getPreviousPanel();
+  const nextPanel = getNextPanel();
 
-    return (
-      <div
-        id="instructions"
-        style={{
-          backgroundColor: '#222',
-          width: '100%',
-          height: '100%',
-          borderRadius: 4,
-          backgroundSize: '100% 200%',
-          padding: 10,
-          boxSizing: 'border-box',
-          position: 'relative',
-          fontSize: 14,
-          lineHeight: 1.5
-        }}
-      >
-        {instructions?.groups[0].panels.map((panel, index) => {
-          return (
-            <div
-              key={index}
-              style={{
-                position: 'absolute',
-                top: 10,
-                opacity: index === this.state.currentPanel ? 1 : 0,
-                pointerEvents:
-                  index === this.state.currentPanel ? 'auto' : 'none'
-              }}
-            >
-              {panel.imageSrc && (
-                <div style={{float: 'left', width: 140, position: 'relative'}}>
-                  <img
-                    src={
-                      baseUrl +
-                      instructions.groups[0].path +
-                      '/' +
-                      panel.imageSrc
-                    }
-                    style={{height: 70, cursor: 'pointer'}}
-                    onClick={() => this.imageClicked()}
-                  />
-                  {this.state.showBigImage && (
-                    <div
-                      style={{
-                        position: 'absolute',
-                        width: 440,
-                        top: 0,
-                        left: 0
-                      }}
-                    >
-                      <img
-                        src={
-                          baseUrl +
-                          instructions.groups[0].path +
-                          '/' +
-                          panel.imageSrc
-                        }
-                        style={{
-                          width: '100%',
-                          position: 'absolute',
-                          border: '10px black solid',
-                          borderRadius: 4,
-                          zIndex: 80,
-                          cursor: 'pointer'
-                        }}
-                        onClick={() => this.imageClicked()}
-                      />
-                    </div>
-                  )}
-                </div>
-              )}
+  const progressText = instructions
+    ? `${currentPanel + 1}/${instructions.groups[0].panels.length}`
+    : '';
+
+  return (
+    <div
+      id="instructions"
+      className={classNames(
+        moduleStyles.instructions,
+        vertical && moduleStyles.vertical
+      )}
+    >
+      {instructions?.groups[0].panels.map((panel, index) => {
+        return (
+          <div
+            key={index}
+            className={classNames(
+              moduleStyles.item,
+              index === currentPanel && moduleStyles.visible,
+              vertical && moduleStyles.itemVertical
+            )}
+          >
+            {panel.imageSrc && (
               <div
-                style={{
-                  float: 'left',
-                  width: 'calc(100% - 290px)',
-                  height: 70,
-                  overflowY: 'auto'
-                }}
+                className={classNames(
+                  moduleStyles.imageContainer,
+                  !vertical && moduleStyles.horizontal
+                )}
               >
-                {panel.text}
+                <img
+                  src={
+                    baseUrl + instructions.groups[0].path + '/' + panel.imageSrc
+                  }
+                  className={classNames(
+                    moduleStyles.image,
+                    !vertical && moduleStyles.fixedHeight
+                  )}
+                  onClick={() => imageClicked()}
+                />
+                {showBigImage && (
+                  <div
+                    className={classNames(
+                      moduleStyles.bigImage,
+                      right && moduleStyles.bigImageRight
+                    )}
+                  >
+                    <img
+                      src={
+                        baseUrl +
+                        instructions.groups[0].path +
+                        '/' +
+                        panel.imageSrc
+                      }
+                      onClick={() => imageClicked()}
+                    />
+                  </div>
+                )}
               </div>
+            )}
+            <div
+              className={classNames(
+                moduleStyles.text,
+                vertical && moduleStyles.textVertical
+              )}
+            >
+              {panel.text}
             </div>
-          );
-        })}
-        <div
-          style={{
-            bottom: 4,
-            right: 4,
-            position: 'absolute'
-          }}
-        >
+          </div>
+        );
+      })}
+      <div className={moduleStyles.bottom}>
+        <div className={moduleStyles.progressText}>{progressText}</div>
+        <div>
           <button
             type="button"
-            onClick={() => this.changePanel(false)}
-            style={{
-              fontSize: 13,
-              padding: '4px 8px',
-              opacity: previousPanel !== null ? 1 : 0,
-              pointerEvents: previousPanel !== null ? 'auto' : 'none'
-            }}
+            onClick={() => changePanel(false)}
+            className={classNames(
+              moduleStyles.button,
+              previousPanel !== null && moduleStyles.buttonActive
+            )}
           >
             Previous
           </button>
           <button
             type="button"
-            onClick={() => this.changePanel(true)}
-            style={{
-              fontSize: 13,
-              padding: '4px 8px',
-              opacity: nextPanel !== null ? 1 : 0,
-              pointerEvents: nextPanel !== null ? 'auto' : 'none'
-            }}
+            onClick={() => changePanel(true)}
+            className={classNames(
+              moduleStyles.button,
+              nextPanel !== null && moduleStyles.buttonActive
+            )}
           >
             Next
           </button>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+Instructions.propTypes = {
+  instructions: PropTypes.object,
+  baseUrl: PropTypes.string.isRequired,
+  vertical: PropTypes.bool,
+  right: PropTypes.bool
+};
+
+export default Instructions;
