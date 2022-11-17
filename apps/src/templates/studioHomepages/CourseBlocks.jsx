@@ -10,7 +10,10 @@ import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {InternationalGradeBandCards} from '@cdo/apps/util/CourseBlockCardsConstants';
+import {
+  InternationalGradeBandCards,
+  ToolsCards
+} from '@cdo/apps/util/CourseBlockCardsConstants';
 
 class ModernCsfCourses extends Component {
   componentDidMount() {
@@ -248,6 +251,11 @@ export class CourseBlocksIntl extends Component {
           cards={InternationalGradeBandCards}
         />
 
+        <CourseBlocksWrapper
+          heading={i18n.courseBlocksToolsTitleNonEn()}
+          description={i18n.standaloneToolsDescription()}
+          cards={ToolsCards}
+        />
         <CourseBlocksTools isEnglish={false} />
       </div>
     );
