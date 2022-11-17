@@ -10,15 +10,11 @@ import firehoseClient from '../lib/util/firehose';
 
 // Some temporary logging to diagnose possible loading issues.
 function tempLog(event, data = null) {
-  const dataJson = {
-    is_cros: /\bCrOS\b/.test(navigator.userAgent),
-    data
-  };
   firehoseClient.putRecord(
     {
       study: 'weblab_loading_investigation_2022',
       event: event,
-      data_json: JSON.stringify(dataJson)
+      data_json: data === null ? null : JSON.stringify(data)
     },
     {includeUserId: true}
   );
