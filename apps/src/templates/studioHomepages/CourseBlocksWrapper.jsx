@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
-import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import PropTypes from 'prop-types';
+import ResourceCard from '@cdo/apps/templates/studioHomepages/ResourceCard';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/ResourceCardResponsiveContainer';
 
 class CourseBlocksWrapper extends Component {
   static propTypes = {
@@ -22,7 +24,19 @@ class CourseBlocksWrapper extends Component {
         linkText={this.props.linkText}
         hideBottomMargin={this.props.hideBottomMargin}
       >
-        <CourseBlocksGradeBands cards={this.props.cards} />
+        <ResourceCardResponsiveContainer>
+          {this.props.cards.map((card, cardIndex) => (
+            <ResourceCard
+              linkId={card.linkId}
+              linkClass={card.linkClass}
+              key={cardIndex}
+              title={card.heading}
+              description={card.description}
+              buttonText={card.buttonText}
+              link={pegasus(card.path)}
+            />
+          ))}
+        </ResourceCardResponsiveContainer>
       </ContentContainer>
     );
   }
