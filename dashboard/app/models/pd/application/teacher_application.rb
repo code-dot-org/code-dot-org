@@ -84,7 +84,7 @@ module Pd::Application
 
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     before_save :update_user_school_info!, if: -> {form_data_changed?}
-    before_save :log_status, if: -> {status_changed?}
+    before_save :log_status, if: -> {status_changed? || form_data_changed?}
 
     serialized_attrs %w(
       pd_workshop_id
