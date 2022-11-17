@@ -110,14 +110,17 @@ export const ToolsCards = [
   }
 ];
 
-export const ToolsAIExtrasCards = [
+export const ToolsAIExtrasCard = [
   {
     heading: i18n.courseBlocksToolsAi(),
     callout: i18n.newExclame(),
     description: i18n.courseBlocksToolsAiDescription(),
     buttonText: i18n.learnMoreAilab(),
     link: studio('/s/aiml')
-  },
+  }
+];
+
+export const ToolsWidgetsCard = [
   {
     heading: i18n.courseBlocksToolsWidgets(),
     description: i18n.courseBlocksToolsWidgetsDescription(),

@@ -34,6 +34,7 @@ class CourseBlocksWrapper extends Component {
               description={card.description}
               buttonText={card.buttonText}
               link={pegasus(card.path)}
+              callout={card.callout}
             />
           ))}
         </ResourceCardResponsiveContainer>

@@ -8,11 +8,15 @@ import {
   CscInfoActionBlock
 } from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
-import CourseBlocksTools from './CourseBlocksTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from '@cdo/locale';
 import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
-import {TeacherGradeBandCards} from '@cdo/apps/util/CourseBlockCardsConstants';
+import {
+  TeacherGradeBandCards,
+  ToolsAIExtrasCard,
+  ToolsWidgetsCard,
+  ToolsCards
+} from '@cdo/apps/util/CourseBlockCardsConstants';
 
 /**
  * This is the main content for the Courses page for a teacher using English,
@@ -53,7 +57,15 @@ class CoursesTeacherEnglish extends Component {
 
           <CourseBlocksHoc />
 
-          <CourseBlocksTools isEnglish showAiCard={this.props.showAiCard} />
+          <CourseBlocksWrapper
+            heading={i18n.courseBlocksToolsTitleTeacher()}
+            description={i18n.standaloneToolsDescription()}
+            cards={
+              this.props.showAiCard
+                ? ToolsCards.concat(ToolsAIExtrasCard)
+                : ToolsCards.concat(ToolsWidgetsCard)
+            }
+          />
 
           <AdministratorResourcesActionBlock />
         </div>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import CourseBlocksTools from './CourseBlocksTools';
 import SpecialAnnouncement from './SpecialAnnouncement';
 import CourseBlocksWrapper from './CourseBlocksWrapper';
 import {NotificationResponsive} from '@cdo/apps/templates/Notification';
@@ -12,7 +11,8 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   InternationalGradeBandCards,
-  ToolsCards
+  ToolsCards,
+  ToolsWidgetsCard
 } from '@cdo/apps/util/CourseBlockCardsConstants';
 
 class ModernCsfCourses extends Component {
@@ -254,9 +254,8 @@ export class CourseBlocksIntl extends Component {
         <CourseBlocksWrapper
           heading={i18n.courseBlocksToolsTitleNonEn()}
           description={i18n.standaloneToolsDescription()}
-          cards={ToolsCards}
+          cards={ToolsCards.concat(ToolsWidgetsCard)}
         />
-        <CourseBlocksTools isEnglish={false} />
       </div>
     );
   }
