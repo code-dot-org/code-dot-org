@@ -1638,6 +1638,7 @@
   hoc_overview_dance_2019_subtitle: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!"
   hoc_overview_dance_2022_subtitle: "Code a Dance Party to share with your friends. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney’s “Encanto,” and more!"
   hoc_overview_hello_world_2022_subtitle: "Choose from six fun themes (including space and soccer!) to code interactive characters in a world you create."
+  hoc_overview_hello_world_2022_alt_text: "Animated astronaut and animal characters floating around an illustration of the earth"
   hoc_overview_title: "Hour of Code Activities from Code.org"
   hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
   hoc_overview_subtitle_markdown: "The [Hour of Code](https://hourofcode.com) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
@@ -1683,7 +1684,7 @@
   hoc2018_mc_educators_box3_title: "Attend a free student workshop"
   hoc2018_mc_educators_box3_desc: "Visit a Microsoft Store in your area for a free Hour of Code workshop. For participants of all skill levels, ages six and up."
   hoc2018_mc_educators_box3_button: "Find a workshop"
-  hoc2022_mc_educators_box3_desc_markdown: 'Utilize this on demand [free course](https://learn.microsoft.com/en-us/training/educator-center/?source=mec%3Fsource%3Dmec) or register your entire class to attend a live Hour of Code workshop with a guest teacher. Offered at multiple times during CSEW, Dec 6 – 11. '
+  hoc2022_mc_educators_box3_desc_markdown: 'Utilize this on demand [free course](%{free_course_link}) or register your entire class to attend a live Hour of Code workshop with a guest teacher. Offered at multiple times during CSEW, Dec 6 – 11. '
   hoc2022_mc_educators_box3_button: "Register now"
   hoc2018_mc_educators_box4_title: "Access more computer science resources"
   hoc2018_mc_educators_box4_desc: "Create change in your community with digital skills and computer science education resources from Microsoft."
@@ -1893,3 +1894,6 @@
   try_it_yourself: "Try it yourself!"
   try_an_activity: "Try an activity"
   see_more_activities: "See more activities"
+  hoc2022_nasa_webb_alt_text: "Illustration of NASA's James Webb telescope"
+  hoc2022_nasa_banner_heading: "Join NASA for a special Hour of Code feature about computer science in space!"
+  hoc2022_nasa_banner_description: "Premiering 10AM ET, December 5th on NASA STEM's YouTube channel."

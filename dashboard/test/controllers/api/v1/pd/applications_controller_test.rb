@@ -668,7 +668,7 @@ module Api::V1::Pd
 
     test 'cohort view returns teacher applications of correct statuses' do
       expected_applications = []
-      teacher_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & TEACHER_APPLICATION_CLASS.statuses
+      teacher_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_CALCULATOR_STATUSES & TEACHER_APPLICATION_CLASS.statuses
       TEACHER_APPLICATION_CLASS.statuses.each do |status|
         application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
@@ -689,7 +689,7 @@ module Api::V1::Pd
 
     test 'cohort view returns facilitator applications of correct statuses' do
       expected_applications = []
-      facilitator_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_VIEW_STATUSES & FACILITATOR_APPLICATION_CLASS.statuses
+      facilitator_cohort_view_statuses = Pd::SharedApplicationConstants::COHORT_CALCULATOR_STATUSES & FACILITATOR_APPLICATION_CLASS.statuses
       FACILITATOR_APPLICATION_CLASS.statuses.each do |status|
         application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
         application.update_column(:status, status)
@@ -728,7 +728,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
 
         sign_in @workshop_organizer
@@ -746,7 +746,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             registered_workshop_id: workshop.id,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -772,7 +772,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
 
         sign_in @workshop_organizer
@@ -790,7 +790,7 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             registered_workshop_id: nil,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -868,7 +868,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
         application.lock!
 
@@ -887,7 +887,7 @@ module Api::V1::Pd
             assigned_workshop: 'January 1-5, 2020, Orchard Park NY',
             registered_workshop: 'Yes',
             registered_workshop_id: workshop.id,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -913,7 +913,7 @@ module Api::V1::Pd
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
         application.save!
-        application.status = 'accepted_not_notified'
+        application.status = 'accepted'
         application.save!
 
         sign_in @program_manager
@@ -931,7 +931,7 @@ module Api::V1::Pd
             assigned_workshop: nil,
             registered_workshop: nil,
             registered_workshop_id: nil,
-            status: 'accepted_not_notified',
+            status: 'accepted',
             notes: nil,
             notes_2: nil,
             notes_3: nil,
@@ -991,7 +991,7 @@ module Api::V1::Pd
     test 'cohort csv download returns expected columns for teachers' do
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
       create PRINCIPAL_APPROVAL_FACTORY, teacher_application: application
-      application.update(status: 'accepted_not_notified')
+      application.update(status: 'accepted')
       sign_in @workshop_admin
       get :cohort_view, format: 'csv', params: {role: 'csp_teachers'}
       assert_response :success
@@ -1049,7 +1049,7 @@ module Api::V1::Pd
         "Teacher's gender identity",
         "Teacher's race",
         "How did you hear about this program? (Teacher's response)",
-        "Principal Approval Form URL",
+        "Administrator/School Leader Approval Form URL",
         "Home street address",
         "Home city",
         "Home state",

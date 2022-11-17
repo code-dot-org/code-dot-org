@@ -10,6 +10,7 @@ class CourseBlocksInternationalGradeBands extends Component {
       linkClass: 'linktag',
       heading: i18n.courseBlocksInternationalGradeBandsElementary(),
       description: i18n.courseBlocksInternationalGradeBandsElementaryDescription(),
+      buttonText: i18n.courseBlocksInternationalGradeBandsElementaryButton(),
       path: '/educate/curriculum/elementary-school'
     },
     {
@@ -17,6 +18,7 @@ class CourseBlocksInternationalGradeBands extends Component {
       linkClass: 'linktag',
       heading: i18n.courseBlocksInternationalGradeBandsMiddle(),
       description: i18n.courseBlocksInternationalGradeBandsMiddleDescription(),
+      buttonText: i18n.courseBlocksInternationalGradeBandsMiddleButton(),
       path: '/educate/curriculum/middle-school'
     },
     {
@@ -24,6 +26,7 @@ class CourseBlocksInternationalGradeBands extends Component {
       linkClass: 'linktag',
       heading: i18n.courseBlocksInternationalGradeBandsHigh(),
       description: i18n.courseBlocksInternationalGradeBandsHighDescription(),
+      buttonText: i18n.courseBlocksInternationalGradeBandsHighButton(),
       path: '/educate/curriculum/high-school'
     }
   ];

@@ -28,9 +28,11 @@ def sync_in
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_external_sources
   redact_level_content
   redact_block_content
   redact_script_and_course_content
+  redact_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
@@ -106,6 +108,31 @@ def localize_docs
   FileUtils.mkdir_p(File.dirname(docs_content_file))
   File.open(docs_content_file, "w") do |file|
     file.write(JSON.pretty_generate(programming_env_docs))
+  end
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def localize_external_sources
+  puts "Preparing external sources"
+  external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
+
+  # ml-playground files
+  # These are overwritten in this format so the properties that use
+  # arrays have unique identifiers for translation.
+  dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
+  Dir.glob(dataset_files).each do |dataset_file|
+    original_dataset = JSON.parse(File.read(dataset_file))
+
+    # Currently only including fields for translation.
+    # Use field id as unique identifier.
+    fields_as_hash = original_dataset["fields"].map {|field| [field["id"], field]}.to_h
+    final_dataset = {
+      "fields" => fields_as_hash
+    }
+
+    File.open(dataset_file, "w") do |f|
+      f.write(JSON.pretty_generate(final_dataset))
+    end
   end
 end
 
@@ -557,6 +584,23 @@ def redact_level_content
 
   Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
     redact_level_file(source_path)
+  end
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def redact_labs_content
+  puts "Redacting *labs content"
+
+  # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
+  # strings existing in crowdin already
+  redactable_labs = %w(applab gamelab weblab)
+
+  redactable_labs.each do |lab_name|
+    source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
+    backup_path = source_path.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(backup_path))
+    FileUtils.cp(source_path, backup_path)
+    RedactRestoreUtils.redact(source_path, source_path, ['link'])
   end
 end
 
