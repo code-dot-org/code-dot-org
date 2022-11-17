@@ -14,11 +14,6 @@ python_package 'awscli' do
   action :upgrade
 end
 
-python_package 'awscli-cwlogs' do
-  version node['cdo-awscli']['cwlogs_version']
-  action :upgrade
-end
-
 directory "#{node[:home]}/.aws"
 
 template "#{node[:home]}/.aws/config" do
