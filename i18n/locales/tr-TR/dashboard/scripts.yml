@@ -64,7 +64,7 @@ tr:
           description_short: Cebir Yoluyla Fonksiyonel Programlamayı Öğren.
           student_description: Cebir Yoluyla Fonksiyonel Programlamayı Öğren.
         infinity:
-          title: Disney Infinity Play Lab
+          title: Disney Infinity Play Laboratuarı
           description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
           description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
           student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
@@ -2272,7 +2272,7 @@ tr:
           description_short: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin.
           lesson_groups:
             k5_getting_started:
-              display_name: İlk adım
+              display_name: Başlarken
             k5_basic_concepts:
               display_name: Temel Kodlama Kavramları ve Öğretme Pratikleri
             k5_diving_deeper:
@@ -2741,7 +2741,7 @@ tr:
           description_short: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin.
           lesson_groups:
             k5_getting_started_1:
-              display_name: İlk adım
+              display_name: Başlarken
             k5_basic_concepts_1:
               display_name: Temel Kodlama Kavramları ve Öğretme Pratikleri
             k5_diving_deeper_1:
@@ -3742,7 +3742,7 @@ tr:
         cs4all-invasive-species:
           lessons:
             lesson-21:
-              name: İlk adım
+              name: Başlarken
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4119,6 +4119,8 @@ tr:
               display_name: Anket
             lessonGroup-3:
               display_name: İçerik
+            lessonGroup-5:
+              display_name: Alternatif Dersler
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4168,3 +4170,77 @@ tr:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Bölüm 1: Donanım girdisi'
+        csc-function-machines-pilot:
+          lessons:
+            lesson-1:
+              name: O Ses de Ne?
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Anket
+            csp_unit1_2020:
+              display_name: 'Ünite 1: Sayısal bilgi'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Ünite 2: Internet'
+        csp3-2023:
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Ünite 3: Uygulama Tasarımına Giriş'
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Değişkenler
+            csp_conditionals:
+              display_name: Koşullar
+            csp_functions:
+              display_name: Fonksiyonlar
+            csp_project:
+              display_name: Proje
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Listeler
+            csp_loops:
+              display_name: Döngüler
+            csp_traversals:
+              display_name: Gezinmeler
+            csp_project:
+              display_name: Proje
+            lessonGroup-5:
+              display_name: Kurs-Sonrası Anketi
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Ünite 6: Algoritmalar'
+            lessonGroup-2:
+              display_name: Kurs-Sonrası Anketi
+        csp7-2023:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametreler ve Dönüş Değerleri
+            csp_libraries:
+              display_name: Kütüphaneler
+            lessonGroup-3:
+              display_name: Kurs-Sonrası Anketi
+        csp8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Performans Görevi Oluştur
+            lessonGroup-3:
+              display_name: Kurs-Sonrası Anketi
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Ünite 9: Veriler'
+            lessonGroup-2:
+              display_name: Kurs-Sonrası Anketi
+        csp10-2023:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: Ünite 10 - Siber güvenlik ve Küresel Etkiler
+            lessonGroup-2:
+              display_name: Kurs-Sonrası Anketi
+        csp-post-survey-2023:
+          title: Bilgisayar Bilimi İlkeleri Kurs Sonrası Anketi

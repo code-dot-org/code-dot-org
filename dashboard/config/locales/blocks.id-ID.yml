@@ -233,20 +233,12 @@ id:
             MOVES.XArmsUp: Meregang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
-      Dancelab_everyMeasuresRange:
-        text: 'ulangi setiap {N} langkah setelah {START} '
       Dancelab_everySeconds:
         text: 'ulangi setiap {N} {UNIT} '
         options:
           UNIT:
             '"measures"': langkah
             '"seconds"': detik
-      Dancelab_everySecondsRange:
-        text: 'setiap {N} {UNIT} dari {START} hingga {STOP} '
-        options:
-          UNIT:
-            measures: Langkah
-            seconds: Detik
       Dancelab_everyVerseChorus:
         text: 'setiap {UNIT} '
         options:
@@ -1009,6 +1001,24 @@ id:
             '"macklemore90"': Macklemore - Tak bisa menahan kita
             '"hammer"': MC Hammer - Kamu tak bisa menyentuhnya
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: lakukan efek {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"emojis"': Emoji Bahagia
+            '"rain"': hujan
+            '"starburst"': Semburan bintang
+            '"glass"': Kaca Pecah
+            '"twinkling"': Berkelip
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): yang diseret
+            wandering(): pengembaraan
+            shrinking(): penyusutan
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       gamelab_addTarget:
@@ -1341,8 +1351,28 @@ id:
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_playSoundOptionsSoccer:
         text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": airhorn
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": tepuk tangan
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": nyanyian
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": Sorak sorai
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": tendangan
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": peluit ganda
+            "'sound://category_sports/One_Whistle_SFX.mp3'": peluit
       gamelab_playSoundOptionsSpace:
         text: Playsound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": bullet cluster
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopeia
+            "'sound://category_space/Crab_nebula_SFX.mp3'": nebula kepiting
+            "'sound://category_space/Launch_SFX.mp3'": peluncuran
+            "'sound://category_space/Lift_Off.mp3'": lepas landas
+            "'sound://category_space/Pillars_SFX.mp3'": kepulan
+            "'sound://category_space/Southern_ring_SFX.mp3'": nebula cincin
+            "'sound://category_space/Supernova_SFX.mp3'": supernova
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
       gamelab_playerBehaviors:
@@ -1999,6 +2029,8 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2385,6 +2417,10 @@ id:
           DIR:
             right: kanan
             left: kiri -
+      storylab_setHeading:
+        text: tetapkan heading {HEADING}
+      storylab_setSubheading:
+        text: tetapkan subheading {SUBHEADING}
       validation_validatedBackground:
         text: atur latar belakang ke {IMG}
       validation_validatedSound:

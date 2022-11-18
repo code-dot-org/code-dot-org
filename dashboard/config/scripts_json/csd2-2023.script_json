@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2022-10-14 22:50:34 UTC",
+    "serialized_at": "2022-10-20 20:40:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -329,7 +329,6 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "assessment_opportunities": "1. **Identify the reasons someone might create a given website**\r\n\r\n\tCheck the table in the activity guide for reasonable purposes for each websites.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What are the different reasons people make websites?**\r\n\r\n\r\nIn this lesson, students explore the different reasons people make websites. They first think of different reasons that they visit websites, then investigate web sites that have been created to address a particular problem. After deciding what different purposes those websites might serve for the creators, they begin to think about the problem that they might want to solve with a web site. At the end of the lesson, students form the groups that they will be in for their chapter projects.",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
@@ -1105,21 +1104,8 @@
       }
     },
     {
-      "key": "ced75be6-30d9-4bbf-9af5-e8a3ffba9141",
-      "position": 3,
-      "properties": {
-        "name": "Forming Groups"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ced75be6-30d9-4bbf-9af5-e8a3ffba9141",
-        "lesson.key": "Websites for a Purpose",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd2-2023"
-      }
-    },
-    {
       "key": "65cf5d78-c054-48eb-8a4f-4b1d67b81708",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1177,7 +1163,7 @@
       "key": "c68f950d-620a-4e16-80de-d2ccd7132307",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1191,7 +1177,7 @@
       "key": "2c47d06f-1e97-43cc-96d1-ff58f95d38ee",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -4264,7 +4250,8 @@
       "key": "d8504bd0-409d-4826-a849-99165a054253",
       "position": 3,
       "properties": {
-        "description": "#### Exploring Websites\r\n\r\n#### Sample Websites"
+        "description": "This activity guide asks students to consider what purposes some sample web pages might serve. Student pairs select two sites that interest them and for each discuss:",
+        "name": "Exploring Websites"
       },
       "seeding_key": {
         "activity_section.key": "d8504bd0-409d-4826-a849-99165a054253",
@@ -4275,7 +4262,7 @@
       "key": "b96c4340-e0fa-4adc-a9fb-4445907e612a",
       "position": 4,
       "properties": {
-        "description": "This activity guide asks students to consider what purposes some sample web pages might serve. Student pairs select two sites that interest them and for each discuss:",
+        "description": "* Why people might use that site (what purpose does it serve users?)\n* Why the creators might have made that site (what purpose does it serve the creators?)\n\nEncourage students to be as detailed as possible when brainstorming the purposes of these sites.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4292,7 +4279,6 @@
       "key": "7b9c4fa3-2ba1-44d3-a617-772a185cd95e",
       "position": 5,
       "properties": {
-        "description": "* Why people might use that site (what purpose does it serve users?)\r\n* Why the creators might have made that site (what purpose does it serve the creators?)\r\n\r\nEncourage students to be as detailed as possible when brainstorming the purposes of these sites."
       },
       "seeding_key": {
         "activity_section.key": "7b9c4fa3-2ba1-44d3-a617-772a185cd95e",
@@ -4314,7 +4300,13 @@
       "key": "e66a8173-7449-408b-a2d8-cf80e5c9f9e1",
       "position": 7,
       "properties": {
-        "description": "If students haven't had time to brainstorm reasons they might make a website, allow them to do so before moving on to form their groups."
+        "description": "If students haven't had time to brainstorm reasons they might make a website, allow them to do so before moving on to form their groups.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** You can use the table on the activity guide and the reflection prompts as way to assess how well students can identify the reasons someone might create a given website. Consider collecting these activity guides at the end of the class period to review later."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e66a8173-7449-408b-a2d8-cf80e5c9f9e1",
@@ -4322,31 +4314,32 @@
       }
     },
     {
-      "key": "5d7cfccc-88a8-4298-91af-3c9f814a3b7e",
-      "position": 1,
+      "key": "7c879eb9-f148-45f5-bb77-cd47b6f91282",
+      "position": 8,
       "properties": {
         "description": "Over the next few classes, you'll have a chance to work in a group to create your own website to help solve a problem.",
+        "name": "Forming Groups",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "5d7cfccc-88a8-4298-91af-3c9f814a3b7e",
-        "lesson_activity.key": "ced75be6-30d9-4bbf-9af5-e8a3ffba9141"
+        "activity_section.key": "7c879eb9-f148-45f5-bb77-cd47b6f91282",
+        "lesson_activity.key": "6a4077e3-1aaf-47af-ab01-1fbe9cd31df2"
       }
     },
     {
-      "key": "fb2194da-00f1-4865-9c2f-aebe2190c68d",
-      "position": 2,
+      "key": "a5e4bcc7-17f9-417f-98e9-850e6cbbb8fb",
+      "position": 9,
       "properties": {
         "description": "**Share:** Ask students to share out the different problems that they could address with a website and display their answers in the front of the classroom."
       },
       "seeding_key": {
-        "activity_section.key": "fb2194da-00f1-4865-9c2f-aebe2190c68d",
-        "lesson_activity.key": "ced75be6-30d9-4bbf-9af5-e8a3ffba9141"
+        "activity_section.key": "a5e4bcc7-17f9-417f-98e9-850e6cbbb8fb",
+        "lesson_activity.key": "6a4077e3-1aaf-47af-ab01-1fbe9cd31df2"
       }
     },
     {
-      "key": "b611d6f9-49ec-4fcb-8589-baedc716e6a6",
-      "position": 3,
+      "key": "b5945daf-8e9e-4215-902d-62ee77a561c1",
+      "position": 10,
       "properties": {
         "description": "**Group:** Based on the natural discussion of how students reacted to the different topics, groupings may have started to emerge.  Allow students to form groups of 3-4, or assign them into groups.",
         "tips": [
@@ -4357,8 +4350,8 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b611d6f9-49ec-4fcb-8589-baedc716e6a6",
-        "lesson_activity.key": "ced75be6-30d9-4bbf-9af5-e8a3ffba9141"
+        "activity_section.key": "b5945daf-8e9e-4215-902d-62ee77a561c1",
+        "lesson_activity.key": "6a4077e3-1aaf-47af-ab01-1fbe9cd31df2"
       }
     },
     {
@@ -4739,7 +4732,7 @@
       "key": "2f2f5947-26a3-4f56-ad26-aaa7752749ed",
       "position": 4,
       "properties": {
-        "description": "**Prompt:** Now that we've identified some sites that are, and are not, trustworthy, work with your group to come up with a list of things to check for when trying to determine whether or not to believe a website.",
+        "description": "**Prompt:** Now that we've identified some sites that are, and are not, trustworthy, work with your group to come up with a list of things to check for when trying to determine whether or not to believe a website.\n\nHave students record their responses on the bottom of their activity guides",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -9398,7 +9391,7 @@
     },
     {
       "name": "Links and Research",
-      "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit",
+      "url": "https://docs.google.com/document/d/1ojSWv2at3l-QCzbkmMVyEbPYsouvPJSHbpOo8k2t-jA/edit",
       "key": "links_and_research_1",
       "properties": {
         "audience": "Student",

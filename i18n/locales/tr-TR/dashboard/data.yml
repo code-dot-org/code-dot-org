@@ -370,7 +370,7 @@ tr:
         CSF_stevie_big_project: Stevie ve büyük proje
         CSF_unspotted_bugs: Bulunamamış hatalar
         CSF_zuck_loops_short: Döngüleri yineleyin
-        frozen_intro: Kodlama Saati Giriş
+        frozen_intro: Kodlama Saatine Giriş
         frozen_loops: Döngülere Giriş
         frozen_functions: Fonksiyonlara Giriş
         playlab_intro: Oyun laboratuarı için giriş
@@ -379,7 +379,7 @@ tr:
         tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
         infinity_playlab_intro: Oyun Laboratuvarı - Giriş
         infinity_playlab_events: Oyun Laboratuvarı - Olaylar
-        infinity_playlab_repeat_forever: Oyun Laboratuvarı - Sonsuz Döngü
+        infinity_playlab_repeat_forever: Oyun Laboratuarı - Sonsuza kadar tekrarla
         csd_concept_how_computers_work: Bilgisayarların Nasıl Çalıştığını Anlayalım
         csd_concept_computer: 'Bir bilgisayarı, bilgisayar yapan nedir?'
         csd_concept_binary_data: 'Bilgisayar Nasıl İşler: İkili ve veri'
@@ -484,8 +484,8 @@ tr:
         mc_2018_conditionals: 'Minecraft: Su Yolculuğu Koşulları'
         mc_2018_closing: 'Minecraft: Su Yolculuğu Tebrikler'
         hoc_dance_warmup: Dans Partisi - Isınma
-        hoc_dance_events: Dans Kutlaması - Etkinlikler
-        hoc_dance_properties: Dans Kutlaması - Özellikler
+        hoc_dance_events: Dans Partisi - Etkinlikler
+        hoc_dance_properties: Dans Partisi - Özellikler
         hoc_dance_congrats: Dans Partisi - Parti Başlıyor!
         c_and_c_great_to_create: Oluşturmak ve Adil Oynamak Mükemmel
         c_and_c_digital_sharing: Dijital Paylaşım

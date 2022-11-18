@@ -76,18 +76,16 @@ class HocRoutesTest < Minitest::Test
 
     it 'redirects vanilla congrats page to code studio' do
       @pegasus.get CDO.code_org_url('/congrats')
-      assert_equal 301, @pegasus.last_response.status
-      expected_url = 'https://studio.code.org/congrats'
-      assert_equal expected_url, @pegasus.last_response['Location'].strip
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
     end
 
-    it 'serves png, jpg, jpeg certificate images, not others' do
-      cert_id = make_certificate
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpg")
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpeg")
-      assert_successful_png_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.png")
-
-      assert_not_found_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.bmp")
+    it 'preserves url params when redirecting congrats page' do
+      @pegasus.get CDO.code_org_url('/congrats?i=foo&s=bar')
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats?i=foo&s=bar', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
     end
 
     it 'starts and ends given tutorial, tracking company and tutorial' do

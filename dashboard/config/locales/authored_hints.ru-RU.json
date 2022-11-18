@@ -1510,8 +1510,8 @@
           "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3": {
-          "courseA_collector_loops3_a": "Попробуй использовать цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
-          "courseA_collector_loops3_b": "Помни, что в цикл [blockly block] можно вложить не один, а несколько блоков."
+          "courseA_collector_loops3_a": "Попробуйте использовать цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
+          "courseA_collector_loops3_b": "Учтите, что в цикл [blockly block] можно вложить не один, а несколько блоков."
         },
         "courseA_collector_loops3_2018": {
           "courseA_collector_loops3_a": "Попробуй использовать цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!",
@@ -1526,8 +1526,8 @@
           "courseA_collector_loops3_a": "Попробуй использовать цикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n!"
         },
         "courseA_collector_loops4": {
-          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
-          "courseA_collector_loops4_b": "Не забудь, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
+          "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измените количество раз выполнения цикла.",
+          "courseA_collector_loops4_b": "Не забывайте, что по окончании цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> Лорел потребуется пройти вниз и собрать сокровища!"
         },
         "courseA_collector_loops4_2018": {
           "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
@@ -1666,7 +1666,7 @@
           "courseA_collector_loops_challenge2kp_a": "Сможешь ли ты использовать циклы, чтобы решить эту головоломку?"
         },
         "courseA_collector_preLoops7": {
-          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, собери их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+          "courseA_collector_loops2_b": "Переместившись на квадратик с сокровищами, соберите их с помощью этого блока.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_harvester_loops5": {
           "courseA_harvester_loops5_a": "Если застрянешь, попробуй разбить эту задачу на две. Первая – двигаться до угла, а вторая – после.",
@@ -10691,8 +10691,8 @@
           "hw_retro_changePropBy": "Если вы хотите менять размер спрайта несколько раз (используя события), используйте этот блок:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "Каждый спрайт имеет **местоположение**. Вы можете выбрать местоположение, нажав на булавку в этом блоке: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Нажмите булавку ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) в блоке местоположения, а затем выберите новое положение для вашего спрайта на экране.\n-   Когда закончите код, нажмите кнопку \"Запуск\".",
-          "remove_hint": "Вы можете убрать спрайта в строке с конкретным номером. Вы можете добавить нового спрайта, который займет его место: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "Каждый спрайт имеет **местоположение**. Вы можете выбрать местоположение, нажав на булавку в этом блоке: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   Нажмите булавку ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) в блоке местоположения, а затем выберите новое положение для вашего спрайта на экране.\n-   Когда закончите код, нажмите кнопку \"Запуск\".",
+          "remove_hint": "Вы можете убрать спрайта в строке с конкретным номером. Вы можете добавить нового спрайта, который займет его место: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "Найдите блок фона, например:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nи найдите блок текстового эффекта, например: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nРазместите эти блоки в рабочем пространстве под `при запуске`.",
@@ -10704,14 +10704,14 @@
           "more_events_hint": "Вы можете использовать в вашей программе больше, чем один эффект. Попробуйте использовать два разных эффекта, соответствующих новым строкам стихотворения. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "Найдите этот блок:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nили этот блок: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nРазместите его под `при запуске` в вашем рабочем пространстве.",
-          "more_code": "Добавьте больше эффектов и цветов, которые будут использоваться выбранным звуком. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "Найдите этот блок:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nили этот блок: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nРазместите его под `при запуске` в вашем рабочем пространстве.",
+          "more_code": "Добавьте больше эффектов и цветов, которые будут использоваться выбранным звуком. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "Добавьте в ваш код блок `спрайт начинает`. Убедитесь, что вы уже создали спрайта, которому назначаете определенное поведение. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "Добавьте в ваш код блок `спрайт начинает`. Убедитесь, что вы уже создали спрайта, которому назначаете определенное поведение. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "Найдите этот блок и нажмите `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nЧто происходит, когда число равно `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "Найдите этот блок и нажмите `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nЧто происходит, когда число равно `25`? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "2-3 Maze 3": {
           "2-3_Maze_6_a": "Эту головоломку можно решить двумя способами!"
@@ -12608,6 +12608,28 @@
         "helloworld_food_sizes_space-2022": {
           "storyboard_setProp": "Для того чтобы помнять размер спрайта только один раз, вы можете использовать этот блок:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_setProp\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_astronaut_1\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">50</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>",
           "storyboard_changePropBy": "Если вы хотите менять размер спрайта несколько раз (используя события), используйте этот блок:\n\n<xml><block type=\"gamelab_spriteClicked\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"space_satellite\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_changePropBy\">\n      <field name=\"PROPERTY\">\"scale\"</field>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n          <field name=\"ANIMATION\">\"space_satellite\"</field>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\" can_disconnect_from_parent=\"false\">\n          <field name=\"NUM\">10</field>\n        </block>\n      </value>\n    </block>\n  </next>\n</block></xml>"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello-world-first-solution-pizza": "Чтобы спрайт что-то сказал, соедините блоки кода так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"soccer_player_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"soccer_player_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello-world-first-solution-pizza": "Чтобы спрайт что-то сказал, соедините блоки кода так:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "courseA_collector_loops_challenge2": {
+          "courseA_collector_loops_challenge2_b": "Нужно использовать только 1 блок, чтобы это решить.",
+          "courseA_collector_loops_challenge2_a": "Можно повторно вернуться на начало тропы, а уже потом двигаться на юг."
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_preLoops4_a": "Чтобы схватить сокровище, прикрепите два блока ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) и один блок ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) к нижней части программы и нажмите \"Выполнить\"!"
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_preLoops5_a": "Нужно отправиться в две разные стороны, чтобы получить драгоценный камень!"
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_preLoops6_a": "Используйте два блока ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png), чтобы решить эту задачу."
+        },
+        "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "В окружности 360°. Умножьте количество градусов за один поворот на количество повторений. Получится ли значение равным 360?\nПосмотрите на предлагаемые примеры, как можно выполнить оборот, убедитесь что они работают!\n\nВот несколько примеров для начала:\n\n-   Попробуйте выполнить оборот, повернув 6 раз на 60°\n-   Попробуйте выполнить оборот, повернув 8 раз на 45°\n-   Попробуйте выполнить оборот, повернув 12 раз на 30°"
         }
       }
     }

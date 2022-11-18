@@ -20,8 +20,8 @@ theme: responsive
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2022-23
-The following lessons can be found in <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">CS Fundamentals 2022-23</a>. <br><br>
+## Уроки без компьютера по основам информатики, 2022-23 гг
+Следующие уроки можно найти в <a href="https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview" target="_blank" rel="noopener noreferrer">Основы информатики, 2022-23 гг.</a>. <br><br>
 
 <style>
 table, th, td {
@@ -103,29 +103,29 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
     <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Мы не всегда располагаем всей необходимой информацией при написании программы. Иногда вы захотите сделать что-то иное в одной ситуации, а не в другой, даже если вы не знаете, какая ситуация будет истинной при выполнении вашего кода. Именно здесь на помощь приходят условные операторы. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Мы не всегда располагаем всей необходимой информацией при написании программы. Иногда вы захотите сделать что-то иное в одной ситуации, а не в другой, даже если вы не знаете, какая ситуация будет истинной при выполнении вашего кода. Именно здесь на помощь приходят условные операторы. Условные операторы позволяют компьютеру принимать решение в зависимости от верности условия в любое время, когда исполняется код.+</td><td>Условные операторы</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
   </tr>
   <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Функции (иногда называемые процедурами) — это мини-программы, которые можно использовать снова и снова внутри большой программы. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <th rowspan="3" id="t05">Курс E</th>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Написание песен</a><br><small>Одной из самых важных структур в мире информатики является функция. Функции (иногда называемые процедурами) — это мини-программы, которые можно использовать снова и снова внутри большой программы. В этом уроке ученики интуитивно поймут, почему использование фрагментов кода в качестве функции может быть очень полезно при написании кода.</td><td>Функции</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Разработка с учетом доступности</a><br><small>В этом уроке ученики узнают о доступности и важности эмпатии посредством мозгового штурма и разработки доступных решений для гипотетических приложений.</td><td>Важность вычислений</td><td><img src="/images/e18.png" width="90%"></td>
   <tr>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/16">E.16 - Распространение цифровой информации</a><br><i>*Что требуется: смартфон или планшет</i><br><small>Этот урок, разработанный для ознакомления с принципами авторских прав и креативности в рамках курса основ информатики, поможет ученикам понять проблемы и преимущества соблюдения авторских прав и прав собственности, особенно в цифровой среде. Учащиеся узнают, что соблюдение авторских прав авторов художественных произведений является важной частью цифрового сообщества.</td><td>Цифровое сообщество</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
   </tr>
     </tr>
          <tr>
     <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+           <td><a href= "https://studio.code.org/s/coursef-2022/lessons/6">F.6 -Истории с бланками</a><br><i>*Что потребуется: 6 конвертов (также подойдут бумага или открытки, сложенные пополам)</i><br><small>Ученики используются истории заполнения бланков (подобно Mad Libs®) в качестве контекста для понимания того, как компьютеры получают данные от пользователя и хранят их для использования в работе программы.
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. Эти новые структуры позволят ученикам писать более эффективный и динамичный код.</td><td>Циклы «for»</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. В ходе этого урока ученики представят себя плывущими по волнам интернета и познакомятся с соединениями, URL и IP-адресами, а также с DNS.</td><td>Данные</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 - Интернет</a><br><small>Несмотря на то, что многие люди ежедневно используют Интернет, немногие из них знают, как он работает. В ходе этого урока ученики представят себя плывущими по волнам интернета и познакомятся с соединениями, URL и IP-адресами, а также с DNS.</td><td>Данные</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>  </tr>
 </table>
 
 <p style="clear:both"></p>

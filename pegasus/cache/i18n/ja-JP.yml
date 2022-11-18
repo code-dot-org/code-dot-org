@@ -1717,6 +1717,7 @@ ja-JP:
   hoc_overview_dance_subtitle: ダンスパーティーをプログラミングして友だちと共有しましょう。ケイティ・ペリー、マドンナ、J. バルビン、シア、キース・アーバン、キアラ他25人以上が参加します！
   hoc_overview_dance_2019_subtitle: ダンスパーティーをプログラミングして友だちと共有しましょう。ケイティ・ペリー、ショーン・メンデス、パニック!
     アット・ザ・ ディスコ、リル・ナズ・X、ジョナス・ブラザーズ、ニッキー・ミナージュ他34人以上が参加します！
+  hoc_overview_hello_world_2022_subtitle: 楽しい4テーマから選択して作成した世界のインタラクティブなキャラクターをコーディングしましょう。
   hoc_overview_title: Code.orgのHour of Codeアクティビティ
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code</a>は、180か国以上で数千万人の生徒を対象とする世界的なイニシアティブです。誰でも、どこでも、Hour
     of Codeイベントを開催したり、45以上の言語で利用できる500以上の1時間のチュートリアルを受けたりすることができます。
@@ -1974,5 +1975,12 @@ ja-JP:
   footer_cookie_notice: クッキーについての通知
   top_hoc_tutorial_applab_alt_text: 青い背景に星や光を放射する人差し指でタッチスクリーンタブレットに触れる茶色の手
   minecraft_tile_alt: 珊瑚、イルカ、コンブが生息する水中のマインクラフトシーンを背景にした2人のマインクラフトのキャラクター (スティーブとアレックス)
+  hoc2022_banner_title: 探索、プレイ、作成！
+  hoc2022_banner_description: 宇宙を探検してゴールを決め、ダンスをしましょう。コンピューターサイエンスを試す方法はたくさんあります！
+  hoc2022_cta_primary: アップデート情報
+  hoc2022_cta_secondary: アクティビティをもっと試す
+  hoc2022_landing_page_explore_description: コンピュータサイエンスで新世界への扉を開きましょう！
+  hoc2022_landing_page_play_description: フィールドを取って、得点しましょう！
   hoc2022_landing_page_create_title: つくる
+  hoc2022_landing_page_create_description: 変で素敵なものを作りましょう！
   try_it_yourself: 自分でやってみよう！

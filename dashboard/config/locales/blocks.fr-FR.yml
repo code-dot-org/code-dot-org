@@ -239,20 +239,12 @@ fr:
             MOVES.Rest: Aucun
       Dancelab_eval:
         text: evaluer {CODE}
-      Dancelab_everyMeasuresRange:
-        text: 'répéter toutes les {N} mesures après {START} '
       Dancelab_everySeconds:
         text: 'répéter chaque {N} {UNIT} '
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': secondes
-      Dancelab_everySecondsRange:
-        text: 'chaque {N} {UNIT} de {START} à {STOP} '
-        options:
-          UNIT:
-            measures: Mesures
-            seconds: Secondes
       Dancelab_everyVerseChorus:
         text: 'chaque {UNIT} '
         options:
@@ -1006,6 +998,24 @@ fr:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_setForegroundEffect2:
+        text: Appliquer {EFFECT} effet
+        options:
+          EFFECT:
+            '"bubbles"': Bulles
+            '"confetti"': Confettis
+            '"hearts"': cœurs
+            '"emojis"': Emojis joyeux
+            '"rain"': pluie
+            '"starburst"': Starburst
+            '"glass"': Verre brisé
+            '"twinkling"': Scintillant
+      FunctionBlocks_representManipulative:
+        options:
+          BEHAVIOR:
+            draggable(): peut être déplacé
+            wandering(): se balader
+            shrinking(): se rétrécir
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} se met à {BEHAVIOR}
       gamelab_addTarget:
@@ -1064,8 +1074,8 @@ fr:
             new Behavior(patrolling, []): patrouiller
             new Behavior(moving_west_and_looping, []): se déplacer vers l'ouest et
               en boucle
-            new Behavior(moving_east_and_looping, []): aller vers l'est et mettre
-              en boucle
+            new Behavior(moving_east_and_looping, []): se déplacer vers l'est et en
+              boucle
             new Behavior(moving_north_and_looping, []): se déplacer vers le Nord et
               en boucle
             new Behavior(moving_south_and_looping, []): se déplacer vers le Sud et
@@ -1346,8 +1356,26 @@ fr:
             "'sound://category_digital/jump_7.mp3'": sauter
       gamelab_playSoundOptionsSoccer:
         text: jouer le son {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": avertisseur
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": Bravos
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": chanter
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": Encourager
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": frappe
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": deux sifflets
+            "'sound://category_sports/One_Whistle_SFX.mp3'": Sifflets
       gamelab_playSoundOptionsSpace:
         text: jouer le son {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": trou noir
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": " amas du boulet"
+            "'sound://category_space/Carina_SFX.mp3'": carina
+            "'sound://category_space/Cassiopeia_SFX.mp3'": Cassiopée
+            "'sound://category_space/Launch_SFX.mp3'": Lancer
+            "'sound://category_space/Pillars_SFX.mp3'": piliers
+            "'sound://category_space/Southern_ring_SFX.mp3'": anneau du sud
       gamelab_playSpeech:
         text: émettre les paroles {SOUND}
       gamelab_playerBehaviors:
@@ -2007,6 +2035,8 @@ fr:
         text: installer Monster Town avec{COUNT}monstres
       Outbreak_stopMoving:
         text: les monstres ne bougent plus
+      ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2347,7 +2377,7 @@ fr:
       binary_drawBinScreen:
         text: |-
           dessiner écran
-          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6]{B8}
+          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6][null][7]
       binary_drawDec:
         text: dessiner décimale {DEC}
       binary_drawPixelHere:
@@ -2467,6 +2497,10 @@ fr:
           DIR:
             right: droite ↻
             left: gauche ↺
+      storylab_setHeading:
+        text: définir le titre{HEADING}
+      storylab_setSubheading:
+        text: définir le sous-titre {SUBHEADING}
       validation_validatedBackground:
         text: établir {IMG} comme arrière-plan
       validation_validatedSound:

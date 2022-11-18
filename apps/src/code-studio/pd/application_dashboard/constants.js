@@ -8,41 +8,29 @@ const STATUS_GREEN = {
   backgroundColor: color.level_perfect,
   color: color.black
 };
+const STATUS_ORANGE = {
+  backgroundColor: color.lighter_orange,
+  color: color.black
+};
+const STATUS_GRAY = {
+  backgroundColor: color.charcoal,
+  color: color.white
+};
 
 /**
  * Mapping of application statuses to their background and text colors.
  */
 export const StatusColors = {
+  incomplete: STATUS_GRAY,
+  reopened: STATUS_GRAY,
+  awaiting_admin_approval: STATUS_GRAY,
   unreviewed: {
-    backgroundColor: color.charcoal,
-    color: color.white
-  },
-  reopened: {
-    backgroundColor: color.lighter_orange,
-    color: color.black
-  },
-  incomplete: {
     backgroundColor: color.lightest_cyan,
     color: color.black
   },
-  pending: {
-    backgroundColor: color.lighter_orange,
-    color: color.black
-  },
-  interview: {
-    backgroundColor: color.orange,
-    color: color.black
-  },
-  waitlisted: {
-    backgroundColor: color.level_passed,
-    color: color.black
-  },
+  pending: STATUS_ORANGE,
+  pending_space_availability: STATUS_ORANGE,
   accepted: STATUS_GREEN,
-  accepted_not_notified: STATUS_GREEN,
-  accepted_notified_by_partner: STATUS_GREEN,
-  accepted_no_cost_registration: STATUS_GREEN,
-  registration_sent: STATUS_GREEN,
-  paid: STATUS_GREEN,
   declined: {
     backgroundColor: color.red,
     color: color.white
@@ -59,7 +47,7 @@ export const StatusColors = {
 export const ApplicationFinalStatuses = [
   'accepted',
   'declined',
-  'waitlisted',
+  'pending_space_availability',
   'withdrawn'
 ];
 
@@ -71,34 +59,25 @@ export const ApplicationTypes = {
 /**
  * Application statuses for which we require a scholarship status
  */
-export const ScholarshipStatusRequiredStatuses = [
-  'accepted_not_notified',
-  'accepted_notified_by_partner',
-  'accepted_no_cost_registration',
-  'registration_sent',
-  'paid'
-];
+export const ScholarshipStatusRequiredStatuses = ['accepted'];
 
 /**
  * Valid statuses for this year's applications.
  * Format per application type is {value: label}
  */
-export function getApplicationStatuses(type, addAutoEmail = true) {
+export function getApplicationStatuses(type, addAutoEmail = false) {
   if (type === 'teacher') {
     return {
-      unreviewed: 'Unreviewed',
       incomplete: 'Incomplete',
-      reopened: 'Reopened',
-      pending: 'Pending',
-      waitlisted: `Waitlisted${autoEmailText(addAutoEmail)}`,
-      declined: `Declined${autoEmailText(addAutoEmail)}`,
-      accepted_not_notified: 'Accepted - Not notified',
-      accepted_notified_by_partner: 'Accepted - Notified by partner',
-      accepted_no_cost_registration: `Accepted - No cost registration${autoEmailText(
+      awaiting_admin_approval: `Awaiting Admin Approval${autoEmailText(
         addAutoEmail
       )}`,
-      registration_sent: `Registration Sent${autoEmailText(addAutoEmail)}`,
-      paid: 'Paid',
+      unreviewed: 'Unreviewed',
+      reopened: 'Reopened',
+      pending: 'Pending',
+      pending_space_availability: `Pending Space Availability`,
+      accepted: `Accepted${autoEmailText(addAutoEmail)}`,
+      declined: `Declined${autoEmailText(addAutoEmail)}`,
       withdrawn: 'Withdrawn'
     };
   } else if (type === 'facilitator') {

@@ -28,9 +28,11 @@ def sync_in
   localize_docs
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+  localize_external_sources
   redact_level_content
   redact_block_content
   redact_script_and_course_content
+  redact_labs_content
   localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
@@ -106,6 +108,46 @@ def localize_docs
   FileUtils.mkdir_p(File.dirname(docs_content_file))
   File.open(docs_content_file, "w") do |file|
     file.write(JSON.pretty_generate(programming_env_docs))
+  end
+end
+
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def localize_external_sources
+  puts "Preparing external sources"
+  external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
+
+  # ml-playground files
+  # These are overwritten in this format so the properties that use
+  # arrays have unique identifiers for translation.
+  dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
+  Dir.glob(dataset_files).each do |dataset_file|
+    original_dataset = JSON.parse(File.read(dataset_file))
+
+    # Converts array to map and uses the field id as a unique identifier.
+    fields_as_hash = original_dataset["fields"].map do |field|
+      [
+        field["id"],
+        {
+          "id" => field["id"],
+          "description" => field["description"]
+        }
+      ]
+    end.to_h
+
+    final_dataset = {
+      "fields" => fields_as_hash,
+      "card" => {
+        "description" => original_dataset.dig("card", "description"),
+        "context" => {
+          "potentialUses" => original_dataset.dig("card", "context", "potentialUses"),
+          "potentialMisuses" => original_dataset.dig("card", "context", "potentialMisuses")
+        }
+      }
+    }
+
+    File.open(dataset_file, "w") do |f|
+      f.write(JSON.pretty_generate(final_dataset))
+    end
   end
 end
 
@@ -217,12 +259,14 @@ def get_i18n_strings(level)
       i18n_strings['function_definitions'] = Hash.new unless functions.empty?
       functions.each do |function|
         name = function.at_xpath('./title[@name="NAME"]')
+        # The name is used to uniquely identify the function. Skip if there is no name.
+        next unless name
         description = function.at_xpath('./mutation/description')
         parameters = function.xpath('./mutation/arg').map do |parameter|
           [parameter["name"], parameter["name"]]
         end.to_h
         function_definition = Hash.new
-        function_definition["name"] = name.content if name
+        function_definition["name"] = name.content
         function_definition["description"] = description.content if description
         function_definition["parameters"] = parameters unless parameters.empty?
         i18n_strings['function_definitions'][name.content] = function_definition
@@ -558,6 +602,23 @@ def redact_level_content
   end
 end
 
+# These files are synced in using the `bin/i18n-codeorg/in.sh` script.
+def redact_labs_content
+  puts "Redacting *labs content"
+
+  # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
+  # strings existing in crowdin already
+  redactable_labs = %w(applab gamelab weblab)
+
+  redactable_labs.each do |lab_name|
+    source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
+    backup_path = source_path.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(backup_path))
+    FileUtils.cp(source_path, backup_path)
+    RedactRestoreUtils.redact(source_path, source_path, ['link'])
+  end
+end
+
 def redact_block_content
   puts "Redacting block content"
 
@@ -617,12 +678,19 @@ def localize_markdown_content
     hourofcode/unplugged-conditionals-with-cards.md.partial
     international/about.md.partial
     poetry.md.partial
+    ../views/hoc2022_create_activities.md.partial
+    ../views/hoc2022_play_activities.md.partial
+    ../views/hoc2022_explore_activities.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)
     original_path_exists = File.exist?(original_path)
     puts "#{original_path} does not exist" unless original_path_exists
     next unless original_path_exists
+    # This reforms the `../` relative paths so they appear as though they are
+    # within the `public` path. This is a legacy solution to keep things clean
+    # when viewed by the translators in crowdin.
+    path = path[3...] if path.start_with? "../"
     # Remove the .partial if it exists
     source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
     FileUtils.mkdir_p(File.dirname(source_path))

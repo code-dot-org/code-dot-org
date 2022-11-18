@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2022-10-18 01:17:21 UTC",
+    "serialized_at": "2022-10-24 15:43:47 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -186,10 +186,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "1. **Create and use a sprite**\n\n\tSee levels 10 and 11 on Code Studio.\n\n2. **Use dot notation to update a sprite's properties**\n\n\tSee level 11 on Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\r\n\r\nIn order to create more interesting and detailed images, students are introduced to the sprite object. The lesson starts with a discussion of the various information that programs must keep track of, then presents sprites as a way to keep track of that information. Students then learn how to assign each sprite an image, which will greatly increase the complexity of what they can draw on the screen.",
-        "preparation": "* (Optional) Print a copy of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "purpose": "Keeping track of many shapes and the different variables that control aspects of those shapes can get very complex. There will be lots of variables with different variable names. Instead, computer scientists created something called an **object** which allows for one variable name to control both the shape and all its aspects. In Game Lab we use a certain type of object called a **sprite**. A sprite is just a rectangle with **properties** for controlling its look. Properties are the variables that are attached to a sprite. You can access them through **dot notation**. \r\n\r\nUsing the Animation Tab, students can create or import images to be used with their sprites. Later on, these sprites will become a useful tool for creating animations, as their properties can be changed and updated throughout the course of a program.\r\n",
         "student_overview": "**Question of the Day:  How can we use sprites to help us keep track of lots of information in our programs?**\n\nToday you will learn about sprites which will not only give you a way to keep track of various pieces of information in your programs but will also allow you to create more interesting and fun images!"
       },
@@ -207,7 +206,6 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "**Use dot notation to update a sprite's properties**\n\nSee Code Studio level 5.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\r\n\r\nStudents extend their understanding of sprites by interacting with sprite properties.  Students start with a review of what a sprite is, then move on to Game Lab to practice more with sprites, using their properties to change their appearance. They then reflect on the connections between properties and variables.",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
@@ -3083,7 +3081,7 @@
       "key": "be31ea27-1175-4516-a827-c80adae7c150",
       "position": 2,
       "properties": {
-        "progression_name": "Exploration"
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "be31ea27-1175-4516-a827-c80adae7c150",
@@ -3091,11 +3089,29 @@
       }
     },
     {
-      "key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0",
+      "key": "1cf25bad-898f-4920-9419-15d582df7747",
       "position": 3,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What is a sprite?\n- What are properties?\n- What problem do sprites solve?\n\n**Discussion Goal:** The main goal is to cover key vocabulary which includes:\n\n- **Sprite** - A character on the screen with properties that describe its location, movement, and look.\n\n  - Sprites are a very complex concept, and students may have difficulty understanding exactly what they are. The most important aspect for students to understand is that sprites solve the problem of organizing a lot of information about how something should be drawn to a screen. Rather than creating new variables to hold all of that information, sprites use properties to hold all of the information about one thing which allows them to organize a lot of information about something that they want to draw to the screen.\n\n- **Property** - A label for a characteristic of a sprite, such as its location and appearance.\n\n  - Students should make the connection between properties and variables, that both hold information that their program needs to run. Properties are accessed through their sprites, and Game Lab sprites already have specific properties that are automatically created when students create each sprite, such as x position, height, and rotation.\n\n- **Dot Notation** - the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.\n\n**Content Corner**: The sprite is a type of data called an object. While we aren't yet explicitly introducing the concept of objects, students do need to understand that a sprite is a different type of value from the ones we've seen before, one that can hold references to many more values.",
-        "progression_name": "Video: Introduction to Sprites"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Sprites video in the slides\n\n**Questions to Consider with Video:**\n- What is a sprite?\n- What problem do sprites solve?\n\n**Discussion Goal:** From the video, students should think of sprites as a _container_ that helps us manage different properties of an image and helps us solve the problem of organizing a lot of information about how something should be drawn to a screen. It's okay if students also bring in some of their own experiences with animations and sprites, but emphasize that in Game Lab: a sprite isn't the animation or image itself, but the container that we can attach an image to. This helps manage expectations in the next few levels, where a sprite is just a gray rectangle until we learn to add animations to it.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1cf25bad-898f-4920-9419-15d582df7747",
+        "lesson_activity.key": "5e7156d5-4145-408f-81a5-97859a00ca73"
+      }
+    },
+    {
+      "key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0",
+      "position": 4,
+      "properties": {
+        "description": "Keeping track of many shapes and the different variables that control characteristics of those shapes can get very complex. Computer scientists created something called an object which allows for one variable name to control both the shape and all its additional characteristics. In Game Lab, students will use a certain type of object called a sprite. A sprite is just a rectangle with properties for controlling its look.",
+        "progression_name": "Video: Introduction to Sprites",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Sprites and Objects**: Behind the scenes, a sprite is a type of data called an object. Objects are programming structures that encapsulate data and behaviors into a single item. We don't need to introduce the formal idea of an object in this unit, but sprites are a good example of an object and students will learn to manipulate their properties throughout the unit."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0",
@@ -3103,8 +3119,19 @@
       }
     },
     {
+      "key": "ea19bb20-e66e-4a7f-860c-bece4d199d45",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Sprite** - A character on the screen with properties that describe its location, movement, and look."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea19bb20-e66e-4a7f-860c-bece4d199d45",
+        "lesson_activity.key": "5e7156d5-4145-408f-81a5-97859a00ca73"
+      }
+    },
+    {
       "key": "3161543e-f64c-473c-bfe6-5a8d377da346",
-      "position": 4,
+      "position": 6,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -3115,10 +3142,16 @@
     },
     {
       "key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n- What are the different ways to get an image?\n\n**Discussion Goal:** \n- *What are the steps to adding an image to a sprite?*\n  - Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n- *What are the different ways to get an image?*\n  - Students can use an animation already in the animation tab library, upload one from their computer, or create their own using the provided drawing tools. Additionally, students can use the drawing tools to modify the images they have chosen from the library or uploaded.\n\n**Misconception Alert!** Many students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, just as other properties can change, and that two or more sprites might share the same animation.\n",
-        "progression_name": "Video: The Animation Tab"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Animations video in the slide deck.\n\n**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n\n**Discussion Goal:** Make sure students understand that they will need to both **create the image** (or animation) in the Animation Tab **and** then **add the animation to the sprite** using the [`setAnimation()`(#f78183)](/docs/ide/gamelab/expressions/setAnimation) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n",
+        "progression_name": "Video: The Animation Tab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Misconception Alert!** Many students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, and that two or more sprites might share the same animation."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397",
@@ -3127,7 +3160,7 @@
     },
     {
       "key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9",
-      "position": 6,
+      "position": 8,
       "properties": {
         "name": "Skill Building",
         "progression_name": "Skill Building"
@@ -3138,8 +3171,20 @@
       }
     },
     {
+      "key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34",
+      "position": 9,
+      "properties": {
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34",
+        "lesson_activity.key": "5e7156d5-4145-408f-81a5-97859a00ca73"
+      }
+    },
+    {
       "key": "b6ae6fab-2cb3-46e1-a0d9-d38c0dbf9dee",
-      "position": 7,
+      "position": 10,
       "properties": {
         "name": "Practice",
         "progression_name": "Practice"
@@ -3151,7 +3196,7 @@
     },
     {
       "key": "f8c13dc6-af62-4cb6-afb2-62d1fb99f35b",
-      "position": 8,
+      "position": 11,
       "properties": {
         "name": "Assessment",
         "progression_name": "Assessment",
@@ -3169,7 +3214,7 @@
     },
     {
       "key": "aedcf92f-9a8c-451c-b17c-2b9d4cef55fe",
-      "position": 9,
+      "position": 12,
       "properties": {
         "name": "Challenges",
         "progression_name": "Challenges",
@@ -3189,7 +3234,7 @@
       "key": "0795f7c0-cd24-48f8-9995-2d0bf1a0d6af",
       "position": 1,
       "properties": {
-        "description": "**Key Vocabulary:**\r\n\r\n* **Sprite** - A character on the screen with properties that describe its location, movement, and look.\r\n* **Property** - A label for a characteristic of a sprite, such as its location and appearance.\r\n* **Dot Notation** - the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot."
+        "description": "**Key Vocabulary:**\n\n* **Sprite** - A character on the screen with properties that describe its location, movement, and look."
       },
       "seeding_key": {
         "activity_section.key": "0795f7c0-cd24-48f8-9995-2d0bf1a0d6af",
@@ -3285,6 +3330,7 @@
       "key": "d86c69ad-d7d1-4015-bb86-0d34ade76e5e",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Sprite Properties video in the slide deck\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -4931,13 +4977,7 @@
       "key": "1325cf3a-014f-483e-b95a-33446045ef8f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Give students a minute to write down thoughts before inviting them to share with a neighbor. Then have the class share their thoughts. You may wish to write their ideas on the board.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The earlier demonstration should have reinforced the fact that repeatedly giving the same instruction is something you would never do in real life. You would instead come up with a way to capture that the instruction should be repeated, like \"keep moving forward by 1.\"\r\n"
-          }
-        ]
+        "description": "**Discuss:** Give students a minute to write down thoughts before inviting them to share with a neighbor. Then have the class share their thoughts. You may wish to write their ideas on the board.\n\n**Discussion Goal:** The earlier demonstration should have reinforced the fact that repeatedly giving the same instruction is something you would never do in real life. You would instead come up with a way to capture that the instruction should be repeated, like \"keep moving forward by 1.\""
       },
       "seeding_key": {
         "activity_section.key": "1325cf3a-014f-483e-b95a-33446045ef8f",
@@ -5012,14 +5052,8 @@
       "key": "c2999695-82bf-4122-ad30-5d496c903195",
       "position": 4,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.",
-        "progression_name": "Video: Velocity",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Discussion Goals**\n\nIt may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n\nAs students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead.\n\n**Discussion Goal:**\n- *Why might you want to use a velocity block instead of the counter pattern?*\n  - It may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). \n  - If students are having trouble thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n- *Give an example of a counter pattern and how you could use a velocity block instead.*\n  - As students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation.",
+        "progression_name": "Video: Velocity"
       },
       "seeding_key": {
         "activity_section.key": "c2999695-82bf-4122-ad30-5d496c903195",
@@ -5156,13 +5190,7 @@
       "key": "aa999a9e-e56b-4465-9389-c1febc437ccf",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion.\r\n"
-          }
-        ]
+        "description": "**Discuss**: Allow the students to brainstorm ideas for how the computer could determine whether the two sprites are touching.  List their ideas on the board and tell them that they’ll have a chance to try out their theories in a moment.\n\n**Discussion Goal:** The purpose of this discussion is just to get some ideas on the board for students to use in the next activity. There's no need to actually evaluate or try them, because students will be working together to do so immediately after the discussion."
       },
       "seeding_key": {
         "activity_section.key": "aa999a9e-e56b-4465-9389-c1febc437ccf",
@@ -5551,13 +5579,7 @@
       "key": "9d5bcbab-052d-47b9-afaa-2f0b58537bda",
       "position": 3,
       "properties": {
-        "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\r\n"
-          }
-        ]
+        "description": "**Think-Pair-Share**  Allow students to discuss their ideas with a classmate before sharing with the entire class.\n\n**Discussion Goal:** It is unlikely that students will come up with the solution on their own, but encourage them to think of as many ideas as possible, and that they will keep working on the problem throughout the class.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9d5bcbab-052d-47b9-afaa-2f0b58537bda",
@@ -5686,13 +5708,7 @@
       "key": "02ffa3d9-d715-4484-bea3-711445317b72",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks, but being creative about combining the tools you already know how to use.\r\n"
-          }
-        ]
+        "description": "**Prompt:** On your paper make two lists. First, make a list of new things you can program sprites to do after today's lesson. On the second list write down all the new blocks you learned today.\n\n**Discussion Goal:** This conversation should highlight that students did not learn any new blocks in today's lesson, they just learned new ways to combine blocks and patterns they had learned previously. The broader point here is that programming is not always about learning new blocks but being creative about combining the tools you already know how to use."
       },
       "seeding_key": {
         "activity_section.key": "02ffa3d9-d715-4484-bea3-711445317b72",
@@ -5766,13 +5782,7 @@
       "key": "0ecdbdb5-2cb2-425e-bca3-cbd6b9ebbe5d",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus, because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** The goal of this discussion is for students to brainstorm ways to solve the problem of having one sprite push another across the screen. There's no need for students to come to a consensus because they will each have a chance to try out a solution in the next level in Code Studio. Students should understand that it is possible to use blocks to produce the desired movement just with the blocks that they have already learned."
       },
       "seeding_key": {
         "activity_section.key": "0ecdbdb5-2cb2-425e-bca3-cbd6b9ebbe5d",
@@ -6076,13 +6086,7 @@
       "key": "d31714b0-8d4b-41f6-82d8-ef52628dbb76",
       "position": 2,
       "properties": {
-        "description": "**Think-Pair-Share:** Allow students to explain their blocks to a partner before sharing out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As students share their ideas, make sure they have a clear idea of the code that they would use to make the block, reminding them that all of the blocks they have learned this chapter (e.g. velocity, collisions) have been built from blocks that they already knew.\r\n"
-          }
-        ]
+        "description": "**Think-Pair-Share:** Allow students to explain their blocks to a partner before sharing out their ideas.\n\n**Discussion Goal:** As students share their ideas, make sure they have a clear idea of the code that they would use to make the block, reminding them that all of the blocks they have learned this chapter (e.g. velocity, collisions) have been built from blocks that they already knew.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d31714b0-8d4b-41f6-82d8-ef52628dbb76",
@@ -6127,14 +6131,8 @@
       "key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
       "position": 2,
       "properties": {
-        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?",
-        "progression_name": "Video: Functions",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:**\n\n**Key Vocabulary:**\n- **Function** - a named bit of programming instructions\n\nMake sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program that the student wants that block of code to run."
-          }
-        ]
+        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?\n\n**Discussion Goal:** Ensure students know the key vocabulary term **Function** and its definition as *a named bit of programming instructions.* Make sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program where the student wants that block of code to run.",
+        "progression_name": "Video: Functions"
       },
       "seeding_key": {
         "activity_section.key": "c596e167-e8d2-4747-a7f2-1e1709c4d83c",
@@ -6240,7 +6238,7 @@
       "key": "b7ee1e8a-d621-4ad2-b4be-8eb1d3ad0c60",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students discuss at their table before talking as a class.",
+        "description": "**Discuss:** Have students discuss at their table before talking as a class.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -6292,14 +6290,8 @@
       "key": "5d8e45b6-cc6d-4702-9596-7735b1217b91",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.",
-        "name": "Stop: Review Project Guide\r",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Running the Conversation:** You can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should have individually created a list of variables, sprites, and functions they would create to make the defender game they played. Ask students to share their lists with a neighbor before discussing as a class.\n\n**Discussion Goal:** To help you run the conversation, you can write \"Variables\", \"Sprites\", and \"Functions\" on the board and record their ideas below each. Ask students to justify their decisions but don't feel the need to settle on one right answer.\n\n",
+        "name": "Stop: Review Project Guide\r"
       },
       "seeding_key": {
         "activity_section.key": "5d8e45b6-cc6d-4702-9596-7735b1217b91",
@@ -6485,13 +6477,7 @@
       "key": "fcf7e2c6-f669-4225-affe-8e575a4585a7",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterwards, lead a share out discussion. You can record ideas on the board.  Possible parts of each step include:",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided. This discussion will motivate the use of the project guide for building a game later in the lesson.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Students should brainstorm quietly and write down what each step might be. Afterward, lead a share-out discussion. You can record ideas on the board.  Possible parts of each step include:\n* Define: Figuring out what you want the game to look like, how it should work, and who will play it.\n* Prepare: Plan ahead what your code will look like. Decide on a structure for your game.\n* Try: Write the code following your plan.\n* Reflect: Test your code, play the game to make sure it works, and get feedback from other people to make the game better.\n\n**Discussion Goal:** Students should share their thoughts but if it doesn't come up naturally then suggest the examples provided above. This discussion will motivate the use of the project guide for building a game later in the lesson."
       },
       "seeding_key": {
         "activity_section.key": "fcf7e2c6-f669-4225-affe-8e575a4585a7",
@@ -6502,7 +6488,6 @@
       "key": "7aec7a54-3133-46a2-9196-44dc4ad0eff5",
       "position": 3,
       "properties": {
-        "description": "* Define: Figuring out what you want the game to look like, how it should work, who will play it.\r\n* Prepare: Plan ahead what your code will look like. Decide on a structure for your game.\r\n* Try: Write the code following your plan.\r\n* Reflect: Test your code, play the game to make sure it works, get feedback from other people to make the game better."
       },
       "seeding_key": {
         "activity_section.key": "7aec7a54-3133-46a2-9196-44dc4ad0eff5",
@@ -6717,13 +6702,7 @@
       "key": "443fdf1b-8a71-4e15-892a-ffd002b89656",
       "position": 2,
       "properties": {
-        "description": "**Share:** Allow students to share out their ideas.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\r\n"
-          }
-        ]
+        "description": "**Share:** Allow students to share out their ideas.\n\n**Discussion Goal:** This discussion serves to set cultural norms for the project. Students should expect that the project will be challenging, but that they will have plenty of opportunities to iterate on their work as they work together to learn as a community.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "443fdf1b-8a71-4e15-892a-ffd002b89656",
@@ -8022,15 +8001,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites Exploration_2023"
-        ],
-        "progression": "Exploration"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_2023"
+          "CSD U3L7 - Predict_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -8038,37 +8014,12 @@
         "activity_section.key": "be31ea27-1175-4516-a827-c80adae7c150"
       },
       "level_keys": [
-        "CSD U3 Sprites Exploration_2023"
+        "CSD U3L7 - Predict_test2023"
       ]
     },
     {
       "chapter": 43,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Sprites in Game Lab_2023"
-        ],
-        "progression": "Video: Introduction to Sprites"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Sprites in Game Lab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0"
-      },
-      "level_keys": [
-        "CSD: Sprites in Game Lab_2023"
-      ]
-    },
-    {
-      "chapter": 44,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8092,8 +8043,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 4,
+      "chapter": 44,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -8117,14 +8068,55 @@
       ]
     },
     {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      },
+      "level_keys": [
+        "CSD U3 Sprites Exploration_test2023"
+      ]
+    },
+    {
       "chapter": 46,
       "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      },
+      "level_keys": [
+        "CSD U3 Sprites intro sprites_test2023"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites anitab 1_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8135,52 +8127,24 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "3161543e-f64c-473c-bfe6-5a8d377da346"
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
       },
       "level_keys": [
         "CSD U3 Sprites anitab 1_2023"
       ]
     },
     {
-      "chapter": 47,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD: Animation Tab_2023"
-        ],
-        "progression": "Video: The Animation Tab"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD: Animation Tab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397"
-      },
-      "level_keys": [
-        "CSD: Animation Tab_2023"
-      ]
-    },
-    {
       "chapter": 48,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites sequencing_2023"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites sequencing_2023"
+          "CSD U3 Sprites sequencing_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -8188,19 +8152,16 @@
         "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
       },
       "level_keys": [
-        "CSD U3 Sprites sequencing_2023"
+        "CSD U3 Sprites sequencing_test2023"
       ]
     },
     {
       "chapter": 49,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawSprites placement match_2023"
-        ],
-        "progression": "Skill Building"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -8210,7 +8171,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+        "activity_section.key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34"
       },
       "level_keys": [
         "CSD U3 drawSprites placement match_2023"
@@ -13261,26 +13222,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites Exploration_2023",
+        "level.key": "CSD U3L7 - Predict_test2023",
         "script_level.level_keys": [
-          "CSD U3 Sprites Exploration_2023"
+          "CSD U3L7 - Predict_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
         "activity_section.key": "be31ea27-1175-4516-a827-c80adae7c150"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD: Sprites in Game Lab_2023",
-        "script_level.level_keys": [
-          "CSD: Sprites in Game Lab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "1adc1c2c-01c6-4023-b3fe-290da7c63ea0"
       }
     },
     {
@@ -13309,6 +13258,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U3 Sprites Exploration_test2023",
+        "script_level.level_keys": [
+          "CSD U3 Sprites Exploration_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites intro sprites_test2023",
+        "script_level.level_keys": [
+          "CSD U3 Sprites intro sprites_test2023"
+        ],
+        "lesson.key": "Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023",
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U3 Sprites anitab 1_2023",
         "script_level.level_keys": [
           "CSD U3 Sprites anitab 1_2023"
@@ -13316,26 +13289,14 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "3161543e-f64c-473c-bfe6-5a8d377da346"
+        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD: Animation Tab_2023",
+        "level.key": "CSD U3 Sprites sequencing_test2023",
         "script_level.level_keys": [
-          "CSD: Animation Tab_2023"
-        ],
-        "lesson.key": "Sprites",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd3-2023",
-        "activity_section.key": "25bcbbd2-7a2f-4c98-9f61-a99686d91397"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 Sprites sequencing_2023",
-        "script_level.level_keys": [
-          "CSD U3 Sprites sequencing_2023"
+          "CSD U3 Sprites sequencing_test2023"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -13352,7 +13313,7 @@
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023",
-        "activity_section.key": "7ff679e2-cec8-43dd-8f77-96ed68b65cd9"
+        "activity_section.key": "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34"
       }
     },
     {
@@ -16107,7 +16068,7 @@
       }
     },
     {
-      "name": "Introduction to Sprites",
+      "name": "Introduction to Sprites [Needs Updating]",
       "url": "https://youtu.be/aUHzpGt9nso",
       "key": "introduction_to_sprites",
       "properties": {
@@ -16570,6 +16531,18 @@
       }
     },
     {
+      "name": "Sprite Properties [Needs Updating]",
+      "url": "https://www.code.org",
+      "key": "sprite_properties_needs_updating_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_properties_needs_updating_"
+      }
+    },
+    {
       "name": "Sprite Scene Planning",
       "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
       "key": "sprite_scene_planning",
@@ -16621,7 +16594,7 @@
       }
     },
     {
-      "name": "The Animation Tab",
+      "name": "The Animation Tab [Needs Updating]",
       "url": "https://youtu.be/DQPruYTJ0Fk",
       "key": "the_animation_tab",
       "properties": {
@@ -17230,6 +17203,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties_needs_updating_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprites",
         "resource.key": "animation_tab"
       }
@@ -17581,18 +17560,12 @@
     {
       "seeding_key": {
         "lesson.key": "Sprite Properties",
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
         "vocabulary.key": "dot_notation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprites",
+        "lesson.key": "Sprite Properties",
         "vocabulary.key": "property"
       }
     },
@@ -17881,6 +17854,13 @@
         "lesson.key": "Sprites",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "drawSprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "setAnimation"
       }
     },
     {

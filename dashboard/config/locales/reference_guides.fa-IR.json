@@ -3,7 +3,7 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "",
+          "display_name": "رویدادهای شتاب سنج",
           "content": ""
         },
         "csd-2022/accuracy-in-ai-lab": {
@@ -34,7 +34,7 @@
           "content": ""
         },
         "csd-2022/board-events": {
-          "display_name": "",
+          "display_name": "رویدادهای بورد",
           "content": ""
         },
         "csd-2022/body-styling": {
@@ -230,7 +230,7 @@
           "content": ""
         },
         "csd-2022/maker-toolkit": {
-          "display_name": "",
+          "display_name": "جعبه ابزار Maker",
           "content": ""
         },
         "csd-2022/maker-toolkit-overview": {
@@ -282,7 +282,7 @@
           "content": ""
         },
         "csd-2022/playing-notes": {
-          "display_name": "",
+          "display_name": "نکات بازی",
           "content": ""
         },
         "csd-2022/producing-output": {
@@ -394,7 +394,7 @@
           "content": ""
         },
         "csd-2022/velocity-and-the-counter-pattern": {
-          "display_name": "",
+          "display_name": "الگوی شمارشگر و سرعت",
           "content": ""
         },
         "csd-2022/when-to-make-a-function": {

@@ -176,6 +176,8 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+        CSDU1-Draft:
+          description_short: حل مسأله
         CSDU5-Draft:
           description_short: داده‌ها
         CSF_Secret_Sample_Story:
@@ -222,10 +224,16 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+        minecraft:
+          description_short: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
+          description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
+          student_description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
         classic-hoc-impact-study:
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
         hoc-impact-study:
           description_short: اصول پایه ای علوم کامپیوتر را با بسیاری از شخصیت های سرگرم کننده آزمایش کن!
+        sports:
+          name: ورزشها
         csp3-support:
           lesson_groups:
             required:
@@ -364,6 +372,8 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+        dance:
+          name: رقص
         aquatic:
           name: آبزی، آبی
         cspplayground:
@@ -374,6 +384,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -396,8 +408,6 @@ fa:
               display_name: حلقه‌ها
             csf_conditionals:
               display_name: شرطی ها
-            csf_binary:
-              display_name: دو دویی
             csf_digcit:
               display_name: شهروندی دیجیتالی
         coursee-2019:
@@ -432,8 +442,6 @@ fa:
           lesson_groups:
             csf_digcit:
               display_name: شهروندی دیجیتالی
-            csf_binary:
-              display_name: دو دویی
             csf_loops:
               display_name: حلقه‌ها
             csf_events:
@@ -472,6 +480,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
             required:
               display_name: بررسی اجمالی
         csp1-pilot:
@@ -490,6 +500,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp2-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -498,6 +510,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -506,12 +520,16 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: فهرست‌ها
             csp_loops:
               display_name: حلقه‌ها
+            csp_project:
+              display_name: پروژه
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -520,6 +538,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -528,6 +548,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp9-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -536,6 +558,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -544,12 +568,16 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp5-pilot:
           lesson_groups:
             csp_lists:
               display_name: فهرست‌ها
             csp_loops:
               display_name: حلقه‌ها
+            csp_project:
+              display_name: پروژه
             required:
               display_name: بررسی اجمالی
         fit2019-novice:
@@ -626,6 +654,8 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -672,12 +702,16 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: فهرست‌ها
             csp_loops:
               display_name: حلقه‌ها
+            csp_project:
+              display_name: پروژه
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -698,8 +732,6 @@ fa:
           lesson_groups:
             csf_digcit:
               display_name: شهروندی دیجیتالی
-            csf_binary:
-              display_name: دو دویی
             csf_loops:
               display_name: حلقه‌ها
             csf_events:
@@ -714,8 +746,6 @@ fa:
               display_name: حلقه‌ها
             csf_conditionals:
               display_name: شرطی ها
-            csf_binary:
-              display_name: دو دویی
             csf_digcit:
               display_name: شهروندی دیجیتالی
         coursee-2020:
@@ -762,8 +792,6 @@ fa:
               display_name: رویدادها
         2021drafting:
           lesson_groups:
-            introduction:
-              display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
             debugging:
@@ -776,12 +804,16 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: فهرست‌ها
             csp_loops:
               display_name: حلقه‌ها
+            csp_project:
+              display_name: پروژه
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
@@ -806,8 +838,6 @@ fa:
           lesson_groups:
             csf_digcit:
               display_name: شهروندی دیجیتالی
-            csf_binary:
-              display_name: دو دویی
             csf_loops:
               display_name: حلقه‌ها
             csf_events:
@@ -822,8 +852,6 @@ fa:
               display_name: حلقه‌ها
             csf_conditionals:
               display_name: شرطی ها
-            csf_binary:
-              display_name: دو دویی
             csf_digcit:
               display_name: شهروندی دیجیتالی
             lessonGroup-6:
@@ -858,6 +886,8 @@ fa:
               display_name: شهروندی دیجیتالی
         express-2021:
           lesson_groups:
+            csf_warmup:
+              display_name: آمادگی
             csf_loops:
               display_name: حلقه‌ها
             csf_conditionals:
@@ -880,8 +910,6 @@ fa:
               display_name: رویدادها
         csf-2021-pilot:
           lesson_groups:
-            ramp_up:
-              display_name: مقدمه
             lessonGroup-3:
               display_name: متغیرها
             Sprites:
@@ -890,12 +918,6 @@ fa:
               display_name: متغیرها
         contagion-pilot:
           description_audience: رده ی سنی 5
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: مقدمه
-            Introduction:
-              display_name: مقدمه
         haikubot-pilot:
           lesson_groups:
             Lesson 3:
@@ -932,14 +954,22 @@ fa:
           lesson_groups:
             lessonGroup-2:
               display_name: دروس
+            lessonGroup-3:
+              display_name: پروژه
         csa-u7-dev:
           lesson_groups:
             lessonGroup-2:
               display_name: دروس
+            lessonGroup-3:
+              display_name: پروژه
         spelling-bee:
           title: زنبور عسل هجی کن
+        csd-post-survey-2021:
+          title: پرسشنامه پسادوره یافته های cs
         ai-ethics-2021:
           description_audience: رده سنی ۶-۱۲
+        explore-data-1-2021:
+          title: به تصویر در آوردن داده ها
         2022drafting:
           lesson_groups:
             lessonGroup-8:
@@ -982,12 +1012,16 @@ fa:
               display_name: شرطی ها
             csp_functions:
               display_name: توابع
+            csp_project:
+              display_name: پروژه
         csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: فهرست‌ها
             csp_loops:
               display_name: حلقه‌ها
+            csp_project:
+              display_name: پروژه
         courseb-2022:
           lesson_groups:
             csf_digcit:
@@ -1050,6 +1084,17 @@ fa:
               display_name: اسپرایت
             lessonGroup-8:
               display_name: متغیرها
+        csd-playground:
+          name: csd-playground
+          lessons:
+            lesson-7:
+              name: معرفی اسپرایت ها
+        csd-post-survey-2022:
+          title: پرسشنامه پسادوره یافته های cs
+        self-paced-pl-csd5-2022:
+          title: آموزش هوش مصنوعی و یادگیری ماشینی
+        csa-draft-pl:
+          name: csa-draft-pl
         soccer:
           name: فوتبال
         csa1-2023:
@@ -1058,3 +1103,23 @@ fa:
               name: آزمایشگاه جاوا
             lesson-6:
               name: حلقه‌ها
+        csd1-2023:
+          title: حل مسأله
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+            csp_project:
+              display_name: پروژه
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: فهرست‌ها
+            csp_loops:
+              display_name: حلقه‌ها
+            csp_project:
+              display_name: پروژه

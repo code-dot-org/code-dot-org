@@ -8,6 +8,7 @@ $min-table-width: 600px;
   min-width: $min-table-width;
   max-width: 99%;
   padding-left: 8px;
+  padding-right: 8px;
   display: inline-flex;
   &Hidden {
     display: none;
@@ -20,6 +21,10 @@ $min-table-width: 600px;
 
 .debugLink {
   float: right;
+}
+
+.debugLinkRtl {
+  float: left;
 }
 
 .debugData {

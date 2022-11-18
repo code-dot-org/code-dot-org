@@ -1209,3 +1209,17 @@ sl:
           lesson_groups:
             lessonGroup-3:
               display_name: Vsebina
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Spremenljivke
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke

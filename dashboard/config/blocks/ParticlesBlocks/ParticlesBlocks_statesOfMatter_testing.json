@@ -1,0 +1,35 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "statesOfMatter_testing",
+    "blockText": "[Testing] Set {COSTUME} to {BEHAVIOR} behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ],
+    "args": [
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "BEHAVIOR",
+        "options": [
+          [
+            "solid particle ",
+            "\"solid\""
+          ],
+          [
+            "liquid particle",
+            "\"liquid\""
+          ],
+          [
+            "gas particle",
+            "\"gas\""
+          ]
+        ]
+      }
+    ]
+  }
+}

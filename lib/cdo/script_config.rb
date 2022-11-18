@@ -4,7 +4,6 @@
 # comes from.
 
 require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
-require_relative 'script_constants'
 
 UNCACHED_HOC_UNITS = %w(playlab artist infinity iceage).freeze
 

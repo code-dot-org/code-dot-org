@@ -5,7 +5,7 @@
 //   hoverColor
 //   clickColor
 
-(function ($, document, window, Raphael, undefined) {
+function setupMapDrawing($, document, window, Raphael, undefined) {
   // jQuery Plugin Factory
   function jQueryPluginFactory($, name, methods, getters) {
     getters = getters instanceof Array ? getters : [];
@@ -785,11 +785,42 @@
 
   // Create the plugin
   jQueryPluginFactory($, "usmap", methods, getters);
-})(jQuery, document, window, Raphael);
+}
 
 var webServiceLocation = "/promote/state/";
 
+// Just adding this handler to assist with debugging on production.
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("DOMContentLoaded");
+});
+
+// NOTE: This is not a good pattern to replicate, but is a workaround
+// for an issue with loading Raphael before attempting to render the map.
+// A better implementation would move this code to /apps/src.
+
+let initAttemptsRemaining = 10;
+
 $(document).ready(function () {
+  initExtendedMap();
+});
+
+function initExtendedMap() {
+  if (initAttemptsRemaining === 0) {
+    return;
+  }
+
+  initAttemptsRemaining --;
+
+  if (typeof Raphael !== 'undefined') {
+    renderMap();
+  } else {
+    setTimeout(initExtendedMap, 1000);
+  }
+};
+
+function renderMap() {
+  setupMapDrawing(jQuery, document, window, Raphael);
+
   if (useUrl) {
     // Check if the URL specifies a specific state. If so, load the state
     if (window.location.pathname.replace("/promote", "") !== "") {
@@ -875,7 +906,7 @@ $(document).ready(function () {
       $("#" + state.toUpperCase()).click();
     }
   }
-});
+}
 
 // When the user uses the "back" button, load previous data into infobox and URL bar
 window.onpopstate = function (event) {

@@ -380,13 +380,13 @@ fr:
         text: "Wow, c'était amusant ! Heure du dîner. Je me déconnecte maintenant. Je suis impatient de me reconnecter pour voir ce que je peux encore découvrir."
     C1_pair_programming:
       1:
-        text: "Aujourd'hui, nous allons découvrir la programmation en binôme. Dans la programmation en binôme, tu travailles en équipe. Pourquoi deux personnes devraient-elles utiliser un ordinateur ? Parce que deux têtes valent mieux qu'une. Dans la programmation en binôme, toi et ton partenaire allez vous asseoir ensemble à un ordinateur et allez travailler tous les deux sur le même projet."
+        text: "Aujourd'hui, on va découvrir la programmation en binôme. Dans la programmation en binôme, on travail en équipe. Pourquoi deux personnes devraient-elles utiliser un ordinateur ? Parce que deux têtes valent mieux qu'une. Dans la programmation en binôme, tu vas t'asseoir avec ton partenaire à un ordinateur et vous allez travailler tous les deux sur le même projet."
       2:
-        text: "Dans la programmation en binôme, une personne est le pilote et l'autre personne est le navigateur, tout comme pour conduire une voiture. Le pilote est assis à l'ordinateur et c’est lui qui utilise le clavier et la souris ou l'écran tactile et qui contrôle les principales actions de l'ordinateur. L'autre personne est le navigateur. Le navigateur aide le conducteur en répondant aux questions du conducteur et en soulignant des problèmes potentiels ou des erreurs."
+        text: "Dans la programmation en binôme, une personne est le pilote et l'autre personne est le navigateur, tout comme quand on conduit une voiture. Le pilote est assis à l'ordinateur et c’est lui qui utilise le clavier et la souris ou l'écran tactile et qui contrôle les principales actions de l'ordinateur. L'autre personne est le navigateur. Le navigateur aide le conducteur en répondant aux questions du conducteur et en soulignant des problèmes potentiels ou des erreurs."
       3:
-        text: "La communication est la clé de la réussite de la programmation en binôme. Pas d'insultes, sois respectueux, ne sois pas un navigateur autoritaire, parce que personne n'aime les mouches du coche. Toi et ton partenaire devez toujours communiquer. Le pilote peut expliquer ce qu'il ou elle fait. Et le navigateur peut suggérer quoi faire ensuite."
+        text: "La communication est la clé de la réussite de la programmation en binôme. Pas d'insultes, sois respectueux, ne sois pas un navigateur qui fait son petit chef, parce que personne n'aime les mouches du coche. Il vous faut toujours communiquer entre partneraires. Le pilote peut expliquer ce qu'il ou elle fait. Et le navigateur peut suggérer quoi faire ensuite."
       4:
-        text: "Le navigateur doit penser à la vue d'ensemble et le pilote se concentre sur les détails. Les deux rôles sont importants. La programmation en binôme consiste à travailler ensemble en tant qu’équipe."
+        text: "Le navigateur doit penser à la vue d'ensemble et le pilote se concentrer sur les détails. Les deux rôles sont importants. Dans la programmation en binôme, tout est question de travailler ensemble, en équipe."
     C1_planting_seed:
       1:
         text: "Cette leçon s'appelle Planter une graine et elle va nous aider à comprendre les algorithmes. Les algorithmes sont des instructions spécifiques qui expliquent l'ordre dans lequel faire quelque chose. Même les choses quotidiennes, comme manger le petit déjeuner ou se brosser les dents, sont des algorithmes qui exigent de petites étapes pour que ces actions soient faites."
@@ -705,27 +705,27 @@ fr:
         text: "Les instructions « Si » sont la façon dont les ordinateurs sont capables de prendre des décisions. Les humains mettent en place des conditions pour l'ordinateur qui disent: si l’ordinateur rencontre cette situation, alors il doit faire cette action. « Sinon », qui signifie simplement dans le cas contraire, l’ordinateur doit faire cela. La partie supérieure de notre bloc « Si/Sinon » dit « Si à une fleur ». Mais la partie supérieure de notre bloc pourrait dire d’autres choses, comme « Si le nectar est égal à 2 » ou « S'il y a un chemin devant », notre bloc se comportera de la même manière. Si l’instruction dans la partie supérieure est vraie, alors elle fera la première série d'actions. Mais si l'instruction dans la partie supérieure est fausse, alors elle fera la deuxième série d'actions."
     C4_for_loops:
       1:
-        text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
+        text: "Quand tu utilises un bloc « répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « répéter » cache en fait un morceau de code plus sophistiqué, appelé une « boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin par un incrément précis."
       2:
-        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
+        text: "Par exemple, un bloc « répéter 3 » compte de 1 à 3 par saut de 1. À chaque fois qu'il compte, il exécute le code à l'intérieur de la boucle. La « boucle pour » sait combien de fois elle a exécuté l’action en utilisant une variable « compteur » qui est définie sur la valeur de départ au début de la boucle et à laquelle vient s'ajouter un incrément à chaque fois que la boucle est exécutée. Dès que la variable « compteur » devient supérieure à la valeur finale, la boucle cesse de s'exécuter."
       3:
-        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
+        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui ferait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
       4:
-        text: "De même, dans une « Boucle pour », tu peux augmenter le nombre du compteur par un chiffre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, 4 ou même un montant qui change à chaque fois."
+        text: "Par ailleurs, dans une « boucle pour », tu peux incrémenter le compteur par un nombre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, par 4 ou même par un montant qui change à chaque passage."
     C4_for_loops_bee:
       1:
-        text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
+        text: "Quand tu utilises un bloc « répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « répéter » cache en fait un morceau de code plus sophistiqué, appelé une « boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin par un incrément précis."
       2:
-        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner."
+        text: "Par exemple, un bloc « répéter 3 » compte de 1 à 3 par saut de 1. À chaque fois qu'il compte, il exécute le code à l'intérieur de la boucle. La « boucle pour » sait combien de fois elle a exécuté l’action en utilisant une variable « compteur » qui est définie sur la valeur de départ au début de la boucle et à laquelle vient s'ajouter un incrément à chaque fois que la boucle est exécutée. Dès que la variable « compteur » devient supérieure à la valeur finale, la boucle cesse de s'exécuter."
       3:
-        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui fait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
+        text: "L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle. Par exemple, si j'ai une série de fleurs, et que la première a un nectar, la seconde a deux nectars et la troisième en a trois, je peux utiliser la «Boucle pour» afin de dire à l'abeille de butiner les nectars du «Compteur» à chaque fois, ce qui ferait un à la première fleur, deux à la deuxième fleur et trois à la troisième."
       4:
-        text: "De même, dans une « Boucle pour », tu peux augmenter le nombre du compteur par un chiffre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, 4 ou même un montant qui change à chaque fois."
+        text: "Par ailleurs, dans une « boucle pour », tu peux incrémenter le compteur par un nombre autre que 1 à chaque fois. Tu peux éventuellement compter par 2, par 4 ou même par un montant qui change à chaque passage."
     C4_for_loops_no_bee:
       1:
-        text: "Quand tu utilises un bloc « Répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « Répéter » cache en fait un morceau de code plus sophistiqué, appelé une « Boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin avec une augmentation spécifique."
+        text: "Quand tu utilises un bloc « répéter » pour créer une boucle dans ton code, comment l'ordinateur sait-il quand le code a été répété suffisamment de fois ? Le bloc « répéter » cache en fait un morceau de code plus sophistiqué, appelé une « boucle pour », qui compte depuis une valeur de départ jusqu'à une valeur de fin par un incrément précis."
       2:
-        text: "Par exemple, un bloc « Répéter 3» compte de 1 à 3 par saut de 1. Chaque fois que ça compte, il exécute le code à l'intérieur de la boucle. La «Boucle pour» sait combien de fois elle a exécuté l’action en utilisant une variable «Compteur» qui est définie sur la valeur de départ au début de la boucle et ajoute l’augmentation chaque fois que la boucle est exécuté. Dès que la variable de «Compteur» est supérieure à la valeur de fin, la boucle s'arrête de fonctionner. L'avantage d'utiliser une vraie « Boucle pour » au lieu du bloc « Répéter » est que tu peux réellement voir la variable «Compteur» et l’utiliser dans ta boucle."
+        text: "Par exemple, un bloc « répéter 3 » compte de 1 à 3 par saut de 1. À chaque fois qu'il compte, il exécute le code à l'intérieur de la boucle. La « boucle pour » sait combien de fois elle a exécuté l’action en utilisant une variable « compteur » qui est définie sur la valeur de départ au début de la boucle et à laquelle vient s'ajouter un incrément à chaque fois que la boucle est exécutée. Dès que la variable « compteur » devient supérieure à la valeur finale, la boucle cesse de s'exécuter. L'avantage d'utiliser une vraie « boucle pour » au lieu du bloc « répéter » est que tu peux vraiment voir la variable « compteur » et l’utiliser dans ta boucle."
     C4_function_create:
       1:
         text: "Maintenant que tu as modifié des blocs de fonctions, il est temps de créer un nouveau bloc de fonction à partir de zéro. C'est vraiment simple. Tu verras que la boîte à outils a une catégorie appelée «fonctions». Si tu cliques dessus, tu verras un bouton orange appelé «Créer une fonction». Cliquer dessus affiche l'éditeur de fonction que tu as déjà utilisé pour modifier des blocs de fonctions existants."
@@ -815,11 +815,11 @@ fr:
         text: "Chaque fois que tu dois stocker un élément d'information pour plus tard, nous utilisons une variable. Disons que nous devons compter le nombre de fois où l'utilisateur a envoyé un message sur Twitter ou qu’il a «twitté», ou gazouillé en français. Chaque fois que l'utilisateur envoie un message sur Twitter, nous allons ajouter 1 à ce nombre et chaque fois que l'utilisateur supprime l’un de ses «gazouillis» (pour utiliser un terme français), nous allons réduire ce nombre de 1. Chaque fois que nous devons savoir combien de fois l'utilisateur a gazouillé, nous regarderons seulement cette variable."
     C4_variables_artist:
       1:
-        text: "Une variable est un conteneur dans lequel tu peux stocker une valeur. Lorsque tu utilises cette variable dans un algorithme, elle ouvre le conteneur et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
+        text: "Une variable est un récipient dans lequel tu peux stocker une valeur. Quand tu utilises cette variable dans un algorithme, elle ouvre le récipient et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
       2:
-        text: "Par exemple, si tu voulais écrire un algorithme permettant de dire «Joyeux Anniversaire, tu as 10 ans !» à mon petit frère, c'est très bien maintenant, mais quand j’exécuterai l’algorithme l'année prochaine je voudrais lui dire, «Joyeux Anniversaire, tu as 11 ans !» Je pourrais créer une variable appelée «Âge» pour stocker l'âge de mon frère et écrire mon algorithme pour dire Joyeux Anniversaire, tu as « Âge » à la place. Comme la variable peut changer, chaque année, je peux mettre à jour la variable « Âge » égale à « Âge » plus 1."
+        text: "Par exemple, si je voulais écrire un algorithme pour dire : « Joyeux Anniversaire, tu vas avoir 10 ans ! » à mon petit frère, ce serait très bien pour l'heure, mais quand j’exécuterais l’algorithme l'année prochaine, j'aurais envie qu'il y soit indiqué : « Joyeux Anniversaire, tu vas avoir 11 ans ! ». Je pourrais donc créer une variable que j'appelerais « âge » pour stocker l'âge de mon frère et faire que mon algorithme indique plutôt : « Joyeux Anniversaire, tu as \"âge\" ». Comme les variables peuvent changer, chaque année, je pourrais mettre à jour la variable « âge » pour qu'elle soit égale à « âge » plus 1."
       3:
-        text: "Dans ce puzzle, nous allons utiliser une variable qui définira la longueur de la ligne que notre artiste dessinera. Par la suite dans notre code, le bloc « Avancer » examinera cette variable «Longueur» pour voir à quelle valeur tu l’as réglée."
+        text: "Dans ce casse-tête, on va utiliser une variable qui définira la longueur de la ligne que notre artiste dessinera. Par la suite dans notre code, le bloc « avancer » examinera cette variable « longueur » pour voir à quelle valeur tu l’as fixée."
     C4_variables_playlab:
       1:
         text: "Une variable est un conteneur dans lequel tu peux stocker une valeur. Lorsque tu utilises cette variable dans un algorithme, elle ouvre le conteneur et examine la valeur à l'intérieur. Cela te permet d'écrire des algorithmes plus intelligents qui se comportent différemment en fonction de la valeur stockée dans la variable."
@@ -1410,57 +1410,57 @@ fr:
         text: "Katie : Eh bien, il faut apprendre à utiliser les boucles. Une boucle est ce que les développeurs écrivent pour donner des ordres à un ordinateur qui peuvent être exécuter encore et encore. Stacy : Compris, alors je pense que les niveaux suivant vont aborder ce sujet, alors on y va, on va essayer les boucles."
       7:
         image: 'notes/mc_2017_repeat_7.png'
-        text: "Dans le prochain niveau, vous pouvez utiliser une boucle pour déplacer l'Agent le long du chemin. Glisse le bloc répéter dans l'espace de travail et place un bloc avancer plus à l'intérieur du bloc répéter. Ça signifie que l'ordinateur doit faire plusieurs fois de suite la même chose sans avoir à glisser un tas de blocs à l'intérieur de l'espace de travail. Vous pouvez choisir combien de répétitions effectuer en plaçant un nombre dans le bloc répéter."
+        text: "Dans le prochain niveau, tu vas pouvoir utiliser une boucle pour déplacer l'Agent le long du chemin. Fais glisser le bloc répéter vers l'espace de travail et place un bloc avancer à l'intérieur du bloc répéter. Ça indique à l'ordinateur qu'il doit faire la même chose plusieurs fois de suite sans avoir à glisser un tas de blocs vers l'espace de travail. Tu peux choisir combien de répétitions effectuer en changeant le nombre dans le bloc répéter."
       8:
         image: 'notes/mc_2017_repeat_8.png'
-        text: "Vous pouvez aussi mettre des blocs tourner et plusieurs commandes à l'intérieur d'un bloc répéter, mais pour le moment, essayez d'utiliser répéter pour faire avancer l'Agent de quelques pas. Rappelez-vous, si vous êtes coincés sur un puzzle, vous pouvez toujours utiliser le bouton bleu Réinitialiser et recommencer."
+        text: "Tu peux aussi mettre des blocs tourner et de multiples commandes à l'intérieur d'un bloc répéter, mais pour le moment, essaie d'utiliser répéter pour faire avancer l'Agent de quelques pas. N'oublie pas que si tu te retrouves coincé sur un casse-tête, tu peux toujours utiliser le bouton bleu « réinitialiser » et réessayer."
       9:
         image: 'notes/mc_2017_repeat_9.png'
-        text: "Si vous pensez avoir un travail aussi cool que Katie, allez-y et cliquez sur le bouton montrer le code quand vous finissez chaque niveau. Cela va vous montrer le code Javascript que quelqu'un comme Katie utilise quand elle programme Minecraft. Katie: Oui, bonne chance à tous!"
+        text: "Si toi aussi, tu aimerais avoir un travail aussi cool que celui de Katie, vas-y, clique sur le bouton montrer le code quand tu termines chaque niveau. Cela te montrera le code Javascript que quelqu'un comme Katie utilise quand elle programme Minecraft. Katie : Oui, bonne chance, tout le monde !"
     mc_2017_functions:
       1:
         image: 'notes/mc_2017_functions_1.png'
-        text: "Preston: Ce n'est pas pour frimer mais je suis plutôt bon en parkour. Lizzy: Dormons comme ça il fera jour quand Stacy reviendra."
+        text: "Preston : C'est pas pour crâner, mais je suis plutôt fort en parkour. Lizzy : Viens, on dort, comme ça il fera jour quand Stacy revient."
       2:
         image: 'notes/mc_2017_functions_2.png'
-        text: "Stacy: Ok les amis, je reviens des bureaux de Minecraft, et je pense que je sais comment résoudre le problème que j'ai dans le jeu. Je pense que je peux utiliser une fonction. J'ouvre juste ceci."
+        text: "Stacy : Ok les gens, je reviens des bureaux de Minecraft, et je pense que je sais comment résoudre le problème que j'ai avec le jeu. Je crois que je peux utiliser une fonction. Je vais juste ouvrir ceci."
       3:
         image: 'notes/mc_2017_functions_3.png'
-        text: "Alors une fonction est une liste spécifique d'instructions pour accomplir une certaine tâche, un peu comme une recette. Dans les niveaux suivants, vous aurez accès aux fonctions et vous pourrez les utiliser pour résoudre les puzzles."
+        text: "Alors, une fonction, c'est une liste précise d'instructions qui sert à accomplir une certaine tâche, un peu comme une recette. Dans les niveaux suivants, tu auras accès aux fonctions, que tu vas pouvoir utiliser pour résoudre les casse-têtes."
       4:
         image: 'notes/mc_2017_functions_4.png'
-        text: "Examinez le code dans la fonction quand celle-ci est dans l'espace de travail pour voir ce qu'elle fait."
+        text: "Examine le code au sein de fonction quand il est dans l'espace de travail pour voir ce qu'il fait."
       5:
         image: 'notes/mc_2017_functions_5.png'
-        text: "Ensuite, trouvez le bloc avec ce nom dans la boîte à outils et glissez-le de la boîte à outils vers le bloc quand l'exécution commence."
+        text: "Puis, trouve le bloc de ce nom dans la boîte à outils et glisse-le de la boîte à outils vers le bloc quand l'exécution commence."
       6:
         image: 'notes/mc_2017_functions_6.png'
-        text: "Rappelez-vous, vous pouvez utiliser la même fonction à chaque fois que vous voulez exécuter la même série d'instructions pour faire quelque chose, comme construire un pont. Bonne chance, je sais que vous allez y arriver!"
+        text: "N'oublie pas que tu peux utiliser la même fonction à chaque fois que tu as besoin d'exécuter la même série d'instructions pour faire quelque chose, comme construire un pont. Bonne chance, je sais que tu vas y arriver !"
     mc_2017_congratulations:
       1:
         image: 'notes/mc_2017_congratulations_1.png'
-        text: "Preston: Félicitations!"
+        text: "Preston : Félicitations !"
       2:
         image: 'notes/mc_2017_congratulations_2.png'
-        text: "Lizzy: Félicitations!"
+        text: "Lizzy : Félicitations !"
       3:
         image: 'notes/mc_2017_congratulations_3.png'
-        text: "Stampy: Félicitations, vous avez réussi!"
+        text: "Stampy : Félicitations, tu as réussi !"
       4:
         image: 'notes/mc_2017_congratulations_4.png'
-        text: "Stacy: Félicitations les amis, vous avez assuré! Et maintenant que vous avez terminé l'Heure de Code, vous pouvez commencer à coder dans Minecraft. Vous avez appris les boucles, les fonctions et ce que l'Agent peut faire."
+        text: "Stacy : Félicitations les amis, vous avez assuré ! Et maintenant qu'on a terminé l'Heure de Code, on peut commencer à coder dans Minecraft. On a découvert les boucles, les fonctions et ce que fait un agent logiciel."
       5:
         image: 'notes/mc_2017_congratulations_5.png'
-        text: "Maintenant, c'est le moment de jouer sur un niveau libre, où vous êtes le développeur. Utiliser le reste du temps pour écrire vos propres fonctions pour explorer, creuser et construire."
+        text: "Maintenant, c'est l'heure du niveau en jeu libre, où c'est toi, le développeur. Utilise le temps qui reste pour écrire tes propres fonctions afin d'explorer, creuser et construire."
       6:
         image: 'notes/mc_2017_congratulations_6.png'
-        text: "Vous pouvez prendre le code que vous avez écrit dans ce niveau pour l'utiliser dans votre monde Minecraft de Minecraft: Education Edition. Cliquez juste sur 'Finir' et suivez les instructions pour avoir un lien à utiliser dans votre monde, pour continuer à coder avec l'Agent. Amusez-vous bien, et bon travail!"
+        text: "Tu peux prendre le code que tu as écrit dans ce niveau et l'utiliser dans ton univers Minecraft avec Minecraft : Education Edition. Clique simplement sur « Terminer » et suis les instructions pour avoir un lien à utiliser dans ton univers, pour que tu puisses continuer à coder avec l'Agent. Amuse-toi bien, et bon travail !"
       7:
         image: 'notes/mc_2017_congratulations_7.png'
-        text: "Stacy: Et je suis de retour! Donc là les amis, c'est l'Agent! Laissez-moi vous montrer ce qu'il peut faire. Regardez, il le fait! Je lui ai dit de construire un escalier à partir de blocs de terre cuite, et maintenant nous pouvons l'utiliser pour sortir de là. Et en plus, il n'y a pas que des escaliers. Je peux dire à l'Agent de faire tout ce que je veux, et il le fera pour moi."
+        text: "Stacy : Et voilà, je suis de retour ! Donc ça, les amis, c'est l'Agent ! Laissez-moi vous montrer ce qu'il peut faire. Regardez, il le fait ! Je lui ai dit de construire un escalier en utilisant ces blocs de terre cuite, et maintenant on peut s'en servir pour sortir de là. Et il n'y a pas que des escaliers qu'il puisse faire. Je peux dire à l'Agent de faire tout ce que je veux, et il le fera pour moi."
       8:
         image: 'notes/mc_2017_congratulations_8.png'
-        text: "Stampy: Comment tu as fait ça? Stacy: C'était facile en fait. J'ai juste utilisé du code!"
+        text: "Stampy : Comment tu as fait ça ? Stacy : C'était facile, en fait. J'ai juste utilisé du code !"
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'

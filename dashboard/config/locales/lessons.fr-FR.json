@@ -203,7 +203,7 @@
           "name": "Les Boucles « Pour »"
         },
         "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Le Labo des Lutins"
+          "name": "Le Labo des Sprites"
         },
         "k5-onlinepd-2019/Reviewing your reflections": {
           "name": "Examiner vos réflexions"
@@ -233,7 +233,7 @@
           "name": "La Mise en Route"
         },
         "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Fondamentaux de l'informatique"
+          "name": "Les bases de l'Informatique"
         },
         "K5-OnlinePD/Looking Ahead": {
           "name": "Regarder en avant"
@@ -305,7 +305,7 @@
           "name": "La Mise en Route"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Fondamentaux de l'informatique"
+          "name": "Les bases de l'Informatique"
         },
         "kodea-pd-2021/Looking Ahead": {
           "name": "Regarder en avant"
@@ -438,9 +438,9 @@
         },
         "coursed-2022/End of Course Project": {
           "name": "Projet de fin de cours",
-          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
+          "overview": "Cette leçon **projet** guide les élèves au travers du processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
-          "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
+          "student_overview": "Prépare tes mains à plein de codage ! C'est l'heure de commencer à construire ton projet."
         },
         "coursef-2022/The Power of Words": {
           "name": "Le Pouvoir des Mots",
@@ -472,7 +472,7 @@
         },
         "coursef-2022/Mini-Project: Virtual Pet": {
           "name": "Mini-projet : animal de compagnie virtuel ",
-          "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
+          "overview": "Dans cette leçon **mini-projet**, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon permet aux étudiants d'appliquer les concepts de programmation des leçons précédentes dans un autre contexte créatif. ",
           "student_overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !"
@@ -486,10 +486,10 @@
         },
         "coursef-2022/Text and Prompts": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "coursef-2022/Mini-Project: User Input Programs": {
           "overview": "Les étudiants appliqueront leurs nouvelles compétences avec des variables à l'un des trois **mini-projets** ouverts. Ils exploreront des exemples de programmes, créeront un plan pour leur propre projet et le programmeront entièrement depuis le début.",
@@ -526,7 +526,7 @@
         },
         "coursef-2022/End of Course Project": {
           "name": "Projet de fin de cours",
-          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
+          "overview": "Cette leçon **projet** guide les élèves au travers du processus de conception, de développement et de présentation de nouveaux projets !",
           "preparation": "Passez du temps à créer votre propre projet avec Artist et Sprite Lab. Familiarisez-vous avec les capacités et les limites de chaque outil.\n\n-   Modifiez la rubrique pour l'adapter aux objectifs de votre classe et imprimez une copie pour chaque élève.\n-   Modifiez la feuille de travail de conception de projet pour l'adapter à votre classe et imprimez un paquet pour chaque élève.",
           "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
@@ -584,7 +584,7 @@
         },
         "coursee-2022/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
@@ -604,7 +604,7 @@
           "name": "Les Fonctions avec l'Agricultrice",
           "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "coursee-2022/Designing for Accessibility": {
           "name": "Concevoir pour l'Accessibilité",
@@ -622,17 +622,18 @@
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
         },
         "courseb-2022/Digital Trails": {
-          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEst-ce que ce que vous faites en ligne reste toujours en ligne ? Les élèves apprennent que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils le gèrent, ce sentier peut être grand ou petit, nuisible ou utile. Les élèves comparent différentes pistes et réfléchissent de manière critique aux types d'informations qu'ils souhaitent laisser derrière eux. ",
+          "name": "Traces Numériques",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEst-ce que ce que l'on fait en ligne reste toujours en ligne ? Les élèves apprendront que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils la gèrent, cette trace peut être grande ou petite, nuisible ou utile. Les élèves compareront différentes traces et exerceront leur esprit critique concernant les types d'informations qu'ils souhaitent laisser derrière eux. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves les « empreintes numériques » et les informations qu'ils peuvent avoir dans la leur. ",
-          "student_overview": "Découvre ton empreinte numérique et comment rester en sécurité lorsque tu visites des sites Web. "
+          "student_overview": "Apprends tout au sujet de ta trace numérique et comment rester en sécurité lorsque tu visites des sites Web. "
         },
         "courseb-2022/Move It, Move It": {
-          "name": "Bouge, Bouge",
-          "overview": "Cette leçon servira à préparer mentalement les élèves aux exercices de codage qu'ils rencontreront tout au long de ce cours. En petites équipes, les élèves utiliseront une activité physique pour programmer leurs camarades de classe afin qu'ils aillent de case en case, prudemment, jusqu'à ce qu'un objectif soit atteint.",
+          "name": "Bouge, Bouge ton corps",
+          "overview": "Les élèves programmeront leurs camarades de classe à se déplacer attentivement sur une grande grille au sol dans cette leçon de **mise en contexte**.",
           "preparation": "-   Regardez la **\\*Vidéo du professeur**\n    \\-Imprimez (ou préparez-vous à afficher) une **\\*Réponse de la feuille de calcul**\n-   Imprimez une **\\*Activité Carte** et une **\\*Feuille de Travail** par groupe de 2-3 élèves\n-   Préparez des feuilles vierges pour remplir le reste de la grille de marche (4-7 nécessaires par groupe) ",
           "purpose": "En utilisant le mouvement physique pour programmer leurs camarades de classe, les élèves rencontreront des problèmes et des émotions similaires à ce qu'ils ressentiront lorsqu'ils commenceront à coder sur un ordinateur. Gérer ce stress, grâce à un environnement ludique et ouvert, aidera à en réduire l'intensité, tout en leur permettant de mettre en pratique les compétences nécessaires avant qu'ils ne rencontrent des problèmes par eux-mêmes. ",
-          "student_overview": "Programme tes camarades de classe afin qu'ils aillent de case en case, prudemment."
+          "student_overview": "Programme tes camarades de classe afin qu'ils se déplacent attentivement de case en case."
         },
         "courseb-2022/Sequencing with Angry Birds": {
           "name": "Séquencer avec Angry Birds",
@@ -643,7 +644,7 @@
         },
         "courseb-2022/Programming with Angry Birds": {
           "name": "Programmer avec Angry Birds",
-          "overview": "Dans ce cours de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Recherchez ou réimprimez les fournitures pour **\\*Happy Maps**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Coupez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
           "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces puzzles les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe."
@@ -692,12 +693,13 @@
         },
         "courseb-2022/The Big Event Jr": {
           "name": "Le Grand Événement Jr.",
-          "overview": "Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements.",
+          "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
           "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un \"bouton\" d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
           "student_overview": "Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante."
         },
         "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-Projet : Une Bataille Royale avec les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
@@ -756,11 +758,12 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2022/Virtual Pet with Sprite Lab": {
           "name": "Animal domestique virtuel avec le Labo des Sprites",
-          "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
+          "overview": "Dans cette leçon **mini-projet**, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon permet aux étudiants d'appliquer les concepts de programmation des leçons précédentes dans un autre contexte créatif. ",
           "student_overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !"
@@ -847,52 +850,53 @@
         },
         "express-2022/Functions with Harvester": {
           "name": "Les Fonctions avec l'Agricultrice",
-          "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves conjugueront les instructions conditionnelles avec les fonctions pour récolter des cultures dans L'Agricultrice.",
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "express-2022/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
         "express-2022/Text and Prompts": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "express-2022/Using Variables with the Artist": {
-          "overview": "Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.",
+          "name": "Utiliser des Variables avec l'Artistes",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves exploreront la création de motifs récurrents à l'aide de variables dans le monde de l'Artiste. Les élèves apprendront à utiliser les variables pour rendre le code plus facile à écrire et à lire. À la suite de casse-têtes guidées, les élèves termineront avec un niveau en jeu libre pour qu'ils puissent montrer ce qu'ils ont appris et créer de nouveaux designs.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
           "student_overview": "Dans cette leçon, tu vas faire des dessins en utilisant des variables qui changent au fur et à mesure que le programme s'exécute."
         },
         "express-2022/Variables with the Bee": {
           "name": "Modifier des Variables avec l'Abeille",
-          "overview": "Cette leçon aidera à illustrer comment les variables peuvent rendre les programmes plus puissants en permettant aux valeurs de changer pendant que le code est en cours d'exécution.",
+          "overview": "Cette leçon de **développement des compétences** aidera à illustrer comment les variables peuvent rendre les programmes plus dynamiques en permettant aux valeurs de changer pendant que le code est en cours d'exécution.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Cette abeille aime les variables !"
+          "student_overview": "Cette abeille adore les variables !"
         },
         "express-2022/For Loops with Bee": {
           "name": "Les Boucles « Pour » avec l'Abeille",
-          "overview": "Cette leçon de **renforcement des compétences** se concentre sur les boucles Pour et sur l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus complexes. ",
+          "overview": "Cette leçon de **développement des compétences** se concentre sur les boucles « pour » et sur l'utilisation d'une variable qui augmente pour résoudre des énigmes plus complexes. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
+          "student_overview": "Buzz buzz. Dans ces casse-têtes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
         },
         "express-2022/For Loops with Artist": {
           "name": "Les Boucles « Pour » avec l'Artiste",
-          "overview": "Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles Pour pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraineront sur les boucles « pour » avec l'Artiste. Les élèves complèteront des casse-têtes afin de créer des motifs complexes et de l'art unique.",
           "preparation": "-   Parcourez le cours pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "La créativité et la pensée critique se conjuguent magnifiquement, dans cette leçon. Les étudiants continueront leur pratique avec des boucles Pour et des variables, pendant qu'ils créeront des images à couper le souffle. Cette leçon inspire un esprit créatif tout en enseignant des concepts de base de l'informatique.",
-          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
+          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour créer des images à couper le souffle."
         },
         "express-2022/End of Course Project": {
           "name": "Projet de fin de cours",
-          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
+          "overview": "Cette leçon **projet** guide les élèves au travers du processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
-          "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
+          "student_overview": "Prépare tes mains à plein de codage ! C'est l'heure de commencer à construire ton projet."
         },
         "pre-express-2022/Learn to Drag and Drop": {
           "name": "Apprends à Faire Glisser et Déposer",
@@ -958,93 +962,95 @@
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "coursea-2022/Safety in My Online Neighborhood": {
-          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLa puissance d'Internet permet aux étudiants de découvrir et de visiter des endroits qu'ils ne pourraient peut-être pas voir en personne. Mais, tout comme pour voyager dans le monde réel, il est important d'être en sécurité lorsque vous voyagez en ligne. Lors de cette excursion virtuelle, les enfants peuvent s'entraîner à rester en sécurité lors d'aventures en ligne. ",
+          "name": "La Sécurité dans Mon Quarter en Ligne ",
+          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLe pouvoir de l'internet permet aux élèves de découvrir et de visiter des endroits qu'ils ne pourraient peut-être pas voir en personne. Mais, tout comme lorsqu'on se déplace dans le monde réel, il est important de rester en sécurité lorsqu'on voyage en ligne. Au cours de cette excursion virtuelle, les enfants pourront s'entraîner à rester en sécurité lors de leurs aventures en ligne. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   (Facultatif) Imprimez une affiche de poème pour l'affichage en classe. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves comment ils peuvent se déplacer en ligne en toute sécurité. ",
-          "student_overview": "Apprenez à vous déplacer en ligne en toute sécurité."
+          "student_overview": "Apprends à te déplacer en ligne en toute sécurité."
         },
         "coursea-2022/Learn to Drag and Drop": {
-          "name": "Apprends à Faire Glisser et Déposer",
+          "name": "Apprendre à Faire Glisser et Déposer",
           "overview": "Cette leçon de **développement des compétences** donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le labo informatique. Elle commence par une brève discussion les initiant aux usages dans un labo informatique, puis ils se mettront à utiliser des ordinateurs pour résoudre des casse-têtes en ligne.",
           "preparation": "-   Regardez la **\\*Comment créer une section de classe** sur Code.org - Vidéo de l'enseignant. Créez votre propre section de classe sur Code.org et assurez-vous que chaque élève ait bien une carte avec son mot de passe dessus.\n-   Assurez-vous que les élèves pourront accéder à la leçon 2 avec leur dispositif. Voyez si vous souhaitez masquer les futures leçons pour empêcher les élèves d'avancer trop rapidement.\n-   Demandez au responsable informatique de l'école d'ajouter un lien rapide pour votre section de classe sur le bureau de l'ordinateur.\n-   Consultez le site Web Common Sense Education pour plus de contenu sur la sécurité en ligne. ",
           "purpose": "L'objectif principal de cette leçon est de développer l'expérience des élèves avec les ordinateurs. En couvrant les fonctions informatiques les plus élémentaires telles que cliquer, faire glisser et déposer, nous créons un terrain de jeu plus égal dans la classe pour les futurs puzzles. Cette leçon offre également une excellente occasion d'introduire la terminologie de base du matériel informatique, y compris potentiellement \"souris\", \"trackpad\" ou \"écran tactile\", selon vos appareils. ",
-          "student_overview": "Clique et fais glisser pour terminer les énigmes."
+          "student_overview": "Clique et fais glisser pour terminer les casse-têtes."
         },
         "coursea-2022/Happy Maps": {
           "name": "Cartes Joyeuses",
-          "overview": "Cette leçon débranchée réunit des équipes avec une tâche simple : amener le « flurb » au fruit. Les élèves s'entraîneront à écrire des instructions précises tout en travaillant sur la traduction des instructions dans les symboles fournis. Si des problèmes apparaissent dans le code, les étudiants doivent également travailler ensemble pour reconnaître les bugs et construire des solutions.",
+          "overview": "Cette leçon de **mise en contexte** réunit des équipes autour d'une tâche simple : amener le « flurb » au fruit. Les élèves s'entraîneront à écrire des instructions précises tout en travaillant à traduire les instructions par les symboles fournis.",
           "preparation": "-   Imprimez une **\\*Feuille de travail** et un jeu de **\\*Manipulatifs** par groupe de 2-3.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Le pont entre les algorithmes et la programmation peut être court si les élèves comprennent la différence entre la planification d'une séquence et l'encodage de cette séquence, dans le langage approprié. Cette activité aidera les élèves à acquérir de l'expérience en lecture et en écriture en sténographie.",
-          "student_overview": "Écrives des instructions pour amener le Flurb au fruit."
+          "student_overview": "Écris les instructions qui amèneront le Flurb au fruit."
         },
         "coursea-2022/Sequencing with Scrat": {
           "name": "Séquencer avec Scrat",
-          "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves développeront des algorithmes séquentiels afin de déplacer un personnage type écureuil d'un côté du labyrinthe vers le gland qui se trouve de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire.",
           "preparation": "-   Découpez des blocs directionnels dans les **\\*Manipulatifs** à utiliser avec l'activité de transition Happy Maps.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
-          "student_overview": "Programme Scrat pour atteindre le gland."
+          "student_overview": "Programme Scrat de sorte qu'il atteigne le gland."
         },
         "coursea-2022/Programming with Scrat": {
           "name": "Programmer avec Scrat",
-          "overview": "Dans ce cours de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
           "preparation": "-   Jouez avec les énigmes pour trouver d'éventuels problèmes pour votre classe\n-   (Facultatif) Choisissez quelques énigmes sur lesquelles travailler en groupe avec votre classe\n-   Assurez-vous que chaque élève ait bien un journal de réflexion",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
           "student_overview": "Ecris des programmes pour aider Scrat à atteindre le gland."
         },
         "coursea-2022/Programming with Rey and BB-8": {
           "name": "Programmer avec Rey et BB-8",
-          "overview": "Dans cette leçon, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus compliquée pour naviguer dans un cours délicat avec BB-8.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus complexe pour naviguer un cours compliqué avec BB-8.",
           "preparation": "-   Résolvez les énigmes allant avec cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "En ayant le transfert des connaissances à l'esprit, cette leçon donne aux élèves un nouvel environnement pour exercer les compétences qu'ils développent. Les fans de Star Wars vont sauter de joie quand ils verront ces énigmes. Chaque énigme de cette série a été ajoutée pour fournir une compréhension accrue des concepts de base qu'ils utiliseront tout au long du reste de ce cours.",
-          "student_overview": "Aide BB-8 à collecter la ferraille."
+          "student_overview": "Aide BB-8 à ramasser la ferraille."
         },
         "coursea-2022/Happy Loops": {
-          "name": "Les Boucles Heureuses",
-          "overview": "Cette activité revisite les Cartes Joyeuses. Cette fois, les étudiants résoudront des énigmes plus grandes et plus longues avec leur code, ce qui les amènera à voir l'utilité des structures, qui leur permettent d'écrire plus de code de manière plus facile.",
+          "name": "Les Boucles Joyeuses",
+          "overview": "Cette leçon de **mise en contexte** revient sur les Cartes Joyeuses. Cette fois, les élèves utiliseront des boucles pour résoudre de plus gros et de plus longs casse-têtes avec leur code.",
           "preparation": "-   Imprimez une **\\*Fiche de travail** à afficher pour la classe\n-   Pour chaque groupe de 2-3, imprimez un de chaque : **\\*Pièces de jeu, \\*Feuille de travail XL et \\*Bonus Pack Manipulatives**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon sert d'initiation aux boucles. Les boucles permettent aux étudiants de simplifier leur code en regroupant les commandes qui doivent être répétées. Les élèves développeront des compétences de pensée critique en remarquant la répétition dans les mouvements de leurs camarades de classe, et en déterminant combien de fois répéter des commandes. En revoyant les « Cartes Joyeuses », les élèves auront la chance de relier les anciens concepts, tels que le séquençage, au nouveau concept de boucles de répétition.",
           "student_overview": "Aide le Flurb à résoudre des problèmes plus importants en utilisant des boucles."
         },
         "coursea-2022/Loops with Scrat": {
           "name": "Les Boucles avec Scrat",
-          "overview": "En s'appuyant sur le concept de répéter les instructions des \"Boucle Joyeuses\", les élèves utiliseront des boucles pour se rendre plus efficacement au gland, sur Code.org.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves travailleront la notion de boucles avec des casse-têtes de programmation où le but est d'aider l'écureuil à parvenir au gland. ",
           "preparation": "-   Examinez la précédente leçon hors ligne et élaborez des questions pour rappeler aux élèves pourquoi on utilise des boucles.\n-   (Facultatif) Choisissez quelques énigmes à faire avec toute la classe.\n-   Rassemblez des fournitures de précédentes Happy Loop, à réutiliser pour s'échauffer.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de boucles est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les énigmes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
           "student_overview": "Aide Scrat couvrir plus de terrain en utilisant des boucles."
         },
         "coursea-2022/Loops with Laurel": {
           "name": "Les Boucles avec Laurel",
-          "overview": "Dans cette leçon, les élèves continuent d'apprendre le concept de boucles. Dans la leçon précédente, les élèves ont été initiés aux boucles en se déplaçant dans un labyrinthe et en ramassant du maïs. Ici, les boucles sont utilisées pour collecter des trésors dans les espaces ouverts des grottes.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à découvrir la notion de boucles. Ici, les élèves utiliseront les boucles pour récolter du trésor dans des espaces type grottes ouvertes.",
           "preparation": "-   Résolvez les énigmes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Cette leçon donne aux élèves plus de pratique avec les boucles et présente un nouveau bloc, « obtenir un trésor ». Le bloc fonctionne de la même manière que « cueillette de maïs » dans Harvester. Ces énigmes sont plus ouvertes, donnant aux élèves plus de flexibilité pour leurs solutions finales. ",
-          "student_overview": "Aide Laurel l'Aventurière à collecter le trésor sous terre."
+          "student_overview": "Aide Laurel l'aventurière à récolter le trésor sous-terrain."
         },
         "coursea-2022/Ocean Scene with Loops": {
           "name": "Scène de l'Océan avec Boucles",
-          "overview": "Revenant aux boucles, les élèves apprennent à dessiner des images en bouclant de simples séquences d'instructions. Dans la leçon branchée précédente, des boucles étaient utilisées pour traverser un labyrinthe et collecter des trésors. Ici, les boucles créent des motifs. À la fin de cette phase, les étudiants auront la possibilité de créer leurs propres images à l'aide de boucles.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les boucles créent des motifs récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Recommandations de cours CSF**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments, dans la programmation. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucle, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des boucles et des schémas récurrents pour finir les images."
         },
         "coursea-2022/The Big Event Jr": {
           "name": "Le Grand Événement Jr.",
-          "overview": "Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements.",
+          "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
           "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un \"bouton\" d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
-          "student_overview": "Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante."
+          "student_overview": "Bouge et crie lorsque tes enseignants appuient sur les boutons d'une télécommande géante."
         },
         "coursea-2022/Mini-Project: On the Move with Play Lab": {
-          "overview": "Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !",
+          "name": "Mini-Projet : En route avec le Labo Jeux",
+          "overview": "Dans ce **mini-projet**, les élèves utiliseront les événements dans le Labo Jeux et mettront en pratique toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo Jeux !",
           "preparation": "-   Résolvez les énigmes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Les étudiants approfondiront leur compréhension des événements en utilisant le Labo du Jeu aujourd'hui. Les événements sont très fréquents dans la plupart des programmes informatiques. Dans cette activité, les élèves utiliseront les événements pour faire bouger un personnage sur l'écran, faire des bruits et changer d'arrière-plan en fonction des événements initiés par l'utilisateur.",
           "student_overview": "Crée ton jeu ou ta propre histoire."
         },
         "coursea-2022/End of Course Project": {
           "name": "Projet de fin de cours",
-          "overview": "Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et les boucles avec l'Artiste. ",
+          "overview": "Dans cette leçon **projet**, les élèves appliqueront ce qu'ils ont appris au sujet du séquencement et des boucles avec l'Artiste. ",
           "preparation": "-   Écrivez et codez à l'avance votre propre histoire pour l'Artiste afin d'inspirer les élèves ! ",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
-          "student_overview": "Racontez une histoire avec l'Artiste ! "
+          "student_overview": "Raconte une histoire avec l'Artiste ! "
         },
         "coursec-2022/Putting a STOP to Online Meanness": {
           "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternet regorge de toutes sortes de personnes intéressantes, mais parfois, certaines d'entre elles peuvent être méchantes les unes envers les autres. Avec ce jeu de rôle, aidez vos élèves à comprendre pourquoi il est souvent plus facile d'être méchant en ligne qu'en personne, et comment gérer la méchanceté en ligne lorsqu'ils la voient. ",
@@ -1140,7 +1146,7 @@
           "overview": "Cette leçon de synthèse guide les élèves à travers le processus de conception, de développement et de présentation de leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement de ce processus, nous avons fourni aux étudiants une structure, étape par étape, à suivre, de la planification sur papier au codage sur notre site web. De plus, nous offrons des idées pour aider les enseignants à animer un show de clôture ! ",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Imprimez un **\\*Guide de planification de projet** pour chaque élève (ou groupe de deux).\n-   Consultez le document **\\*Guide de planification de projet (exemplaire)**.\n-   (Facultatif) Complétez votre propre guide de planification et codez votre propre projet pour le montrer aux élèves ! ",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
-          "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
+          "student_overview": "Prépare tes mains à plein de codage ! C'est l'heure de commencer à construire ton projet."
         },
         "csd5-2022/Representation Matters": {
           "name": "Questions de Représentation"
@@ -1545,7 +1551,7 @@
           "name": "CS Discoveries Enquête Post-Cours"
         },
         "courseb-2018/Move It, Move It": {
-          "name": "Bouge, Bouge"
+          "name": "Bouge, Bouge ton corps"
         },
         "courseb-2018/Sequencing with Scrat": {
           "name": "Séquencer avec Scrat"
@@ -1608,7 +1614,7 @@
           "name": "Se Déplacer en Toute Sécurité"
         },
         "coursea-2018/Loops: Happy Loops": {
-          "name": "Les Boucles Heureuses"
+          "name": "Les Boucles Joyeuses"
         },
         "coursea-2018/Loops in Harvester": {
           "name": "Les Boucles avec l'Agricultrice"
@@ -2046,7 +2052,7 @@
           "name": "Stevie et le Grand Projet"
         },
         "pre-express-2018/Move It, Move It": {
-          "name": "Bouge, Bouge"
+          "name": "Bouge, Bouge ton corps"
         },
         "pre-express-2018/Sequencing with Scrat": {
           "name": "Séquencer avec Scrat"
@@ -2382,7 +2388,7 @@
           "name": "Se Déplacer en Toute Sécurité"
         },
         "coursea-2019/Learn to Drag and Drop": {
-          "name": "Apprends à Faire Glisser et Déposer"
+          "name": "Apprendre à Faire Glisser et Déposer"
         },
         "coursea-2019/Programming: Happy Maps": {
           "name": "Cartes Joyeuses"
@@ -2397,7 +2403,7 @@
           "name": "Programmer avec Rey et BB-8"
         },
         "coursea-2019/Loops: Happy Loops": {
-          "name": "Les Boucles Heureuses"
+          "name": "Les Boucles Joyeuses"
         },
         "coursea-2019/Loops in Ice Age": {
           "name": "Les Boucles avec Scrat"
@@ -2418,7 +2424,7 @@
           "name": "Ton Empreinte Numérique"
         },
         "courseb-2019/Move It, Move It": {
-          "name": "Bouge, Bouge"
+          "name": "Bouge, Bouge ton corps"
         },
         "courseb-2019/Sequencing in Maze": {
           "name": "Séquencer avec Angry Birds"
@@ -4148,7 +4154,7 @@
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
-          "student_overview": "Clique et fais glisser pour terminer les énigmes."
+          "student_overview": "Clique et fais glisser pour terminer les casse-têtes."
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Enquête Post-Cours Auprès des Étudiants de CSD (2018 - 2019)"
@@ -4247,7 +4253,7 @@
           "name": "La Cryptographie à Clé Publique"
         },
         "allthethings/Web Lab": {
-          "name": "Lab du Web"
+          "name": "Labo Web"
         },
         "allthethings/Single page assessment": {
           "name": "Évaluation d'une seule page"
@@ -4259,7 +4265,7 @@
           "name": "Référence Du Programme d'Études"
         },
         "allthethings/Sprite Lab": {
-          "name": "Le Labo des Lutins"
+          "name": "Le Labo des Sprites"
         },
         "allthethings/Dance Lab": {
           "name": "Le Labo de la Danse"
@@ -4281,6 +4287,9 @@
         },
         "allthethings/Java Lab": {
           "name": "Java Lab"
+        },
+        "allthethings/lesson-48": {
+          "name": "Poésie"
         },
         "coursef-2021/lesson-6": {
           "name": "Introduction au Labo des Sprites",
@@ -4305,7 +4314,7 @@
         },
         "coursef-2021/Virtual Pet": {
           "name": "Mini-projet : animal de compagnie virtuel ",
-          "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
+          "overview": "Dans cette leçon **mini-projet**, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon permet aux étudiants d'appliquer les concepts de programmation des leçons précédentes dans un autre contexte créatif. ",
           "student_overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !"
@@ -4326,10 +4335,10 @@
         },
         "coursef-2021/lesson-10": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "coursef-2021/lesson-11": {
           "overview": "Les étudiants appliqueront leurs nouvelles compétences avec des variables à l'un des trois **mini-projets** ouverts. Ils exploreront des exemples de programmes, créeront un plan pour leur propre projet et le programmeront entièrement depuis le début.",
@@ -4345,7 +4354,8 @@
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "coursef-2021/Variables that Change in Artist": {
-          "overview": "Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.",
+          "name": "Utiliser des Variables avec l'Artistes",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves exploreront la création de motifs récurrents à l'aide de variables dans le monde de l'Artiste. Les élèves apprendront à utiliser les variables pour rendre le code plus facile à écrire et à lire. À la suite de casse-têtes guidées, les élèves termineront avec un niveau en jeu libre pour qu'ils puissent montrer ce qu'ils ont appris et créer de nouveaux designs.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
           "student_overview": "Dans cette leçon, tu vas faire des dessins en utilisant des variables qui changent au fur et à mesure que le programme s'exécute."
@@ -4359,10 +4369,10 @@
         },
         "coursef-2021/Variables that Change in Bee": {
           "name": "Modifier des Variables avec l'Abeille",
-          "overview": "Cette leçon aidera à illustrer comment les variables peuvent rendre les programmes plus puissants en permettant aux valeurs de changer pendant que le code est en cours d'exécution.",
+          "overview": "Cette leçon de **développement des compétences** aidera à illustrer comment les variables peuvent rendre les programmes plus dynamiques en permettant aux valeurs de changer pendant que le code est en cours d'exécution.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon illustrera l'utilité du code avec des valeurs changeantes, tout en préparant les étudiants à comprendre comment les boucles Pour fonctionnent dans les leçons à venir. ",
-          "student_overview": "Cette abeille aime les variables !"
+          "student_overview": "Cette abeille adore les variables !"
         },
         "coursef-2021/For Loop Fun": {
           "name": "Jouer avec les Boucles « Pour »",
@@ -4373,17 +4383,17 @@
         },
         "coursef-2021/For Loops in Bee": {
           "name": "Les Boucles « Pour » avec l'Abeille",
-          "overview": "Cette leçon de **renforcement des compétences** se concentre sur les boucles Pour et sur l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus complexes. ",
+          "overview": "Cette leçon de **développement des compétences** se concentre sur les boucles « pour » et sur l'utilisation d'une variable qui augmente pour résoudre des énigmes plus complexes. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Le concept d'aujourd'hui, les boucles Pour, est un sujet très important en informatique. Non seulement on les utilise beaucoup, mais en savoir plus dessus permet aussi d'en savoir plus sur d'autres concepts importants (tels que les variables et les paramètres). Les élèves auront ensuite beaucoup de pratique pour réfléchir de manière critique à des problèmes en déterminant les valeurs de début, de fin et de progression pour chaque boucle Pour. Ce concept se sert aussi beaucoup des mathématiques, alors n'hésitez pas à l'associer à un cours de maths pour approfondir davantage le sujet.",
           "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
         },
         "coursef-2021/For Loops in Artist": {
           "name": "Les Boucles « Pour » avec l'Artiste",
-          "overview": "Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles Pour pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraineront sur les boucles « pour » avec l'Artiste. Les élèves complèteront des casse-têtes afin de créer des motifs complexes et de l'art unique.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "La créativité et la pensée critique se conjuguent magnifiquement, dans cette leçon. Les étudiants continueront leur pratique avec des boucles Pour et des variables, pendant qu'ils créeront des images à couper le souffle. Cette leçon inspire un esprit créatif tout en enseignant des concepts de base de l'informatique.",
-          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
+          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour créer des images à couper le souffle."
         },
         "coursef-2021/Simulating Experiments": {
           "name": "Simuler des Expérimentations",
@@ -4414,23 +4424,24 @@
         },
         "coursef-2021/End of Course Project": {
           "name": "Projet de fin de cours",
-          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
+          "overview": "Cette leçon **projet** guide les élèves au travers du processus de conception, de développement et de présentation de nouveaux projets !",
           "preparation": "Passez du temps à créer votre propre projet avec Artist et Sprite Lab. Familiarisez-vous avec les capacités et les limites de chaque outil.\n\n-   Modifiez la rubrique pour l'adapter aux objectifs de votre classe et imprimez une copie pour chaque élève.\n-   Modifiez la feuille de travail de conception de projet pour l'adapter à votre classe et imprimez un paquet pour chaque élève.",
           "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
         },
         "courseb-2021/Digital Trails": {
-          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEst-ce que ce que vous faites en ligne reste toujours en ligne ? Les élèves apprennent que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils le gèrent, ce sentier peut être grand ou petit, nuisible ou utile. Les élèves comparent différentes pistes et réfléchissent de manière critique aux types d'informations qu'ils souhaitent laisser derrière eux. ",
+          "name": "Traces Numériques",
+          "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nEst-ce que ce que l'on fait en ligne reste toujours en ligne ? Les élèves apprendront que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils la gèrent, cette trace peut être grande ou petite, nuisible ou utile. Les élèves compareront différentes traces et exerceront leur esprit critique concernant les types d'informations qu'ils souhaitent laisser derrière eux. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves les « empreintes numériques » et les informations qu'ils peuvent avoir dans la leur. ",
-          "student_overview": "Découvre ton empreinte numérique et comment rester en sécurité lorsque tu visites des sites Web. "
+          "student_overview": "Apprends tout au sujet de ta trace numérique et comment rester en sécurité lorsque tu visites des sites Web. "
         },
         "courseb-2021/Move It, Move It": {
-          "name": "Bouge, Bouge",
-          "overview": "Cette leçon servira à préparer mentalement les élèves aux exercices de codage qu'ils rencontreront tout au long de ce cours. En petites équipes, les élèves utiliseront une activité physique pour programmer leurs camarades de classe afin qu'ils aillent de case en case, prudemment, jusqu'à ce qu'un objectif soit atteint.",
+          "name": "Bouge, Bouge ton corps",
+          "overview": "Les élèves programmeront leurs camarades de classe à se déplacer attentivement sur une grande grille au sol dans cette leçon de **mise en contexte**.",
           "preparation": "-   Regardez la **\\*Vidéo du professeur**\n    \\-Imprimez (ou préparez-vous à afficher) une **\\*Réponse de la feuille de calcul**\n-   Imprimez une **\\*Activité Carte** et une **\\*Feuille de Travail** par groupe de 2-3 élèves\n-   Préparez des feuilles vierges pour remplir le reste de la grille de marche (4-7 nécessaires par groupe) ",
           "purpose": "En utilisant le mouvement physique pour programmer leurs camarades de classe, les élèves rencontreront des problèmes et des émotions similaires à ce qu'ils ressentiront lorsqu'ils commenceront à coder sur un ordinateur. Gérer ce stress, grâce à un environnement ludique et ouvert, aidera à en réduire l'intensité, tout en leur permettant de mettre en pratique les compétences nécessaires avant qu'ils ne rencontrent des problèmes par eux-mêmes. ",
-          "student_overview": "Programme tes camarades de classe afin qu'ils aillent de case en case, prudemment."
+          "student_overview": "Programme tes camarades de classe afin qu'ils se déplacent attentivement de case en case."
         },
         "courseb-2021/Sequencing in Maze": {
           "name": "Séquencer avec Angry Birds",
@@ -4441,7 +4452,7 @@
         },
         "courseb-2021/Programming in Maze": {
           "name": "Programmer avec Angry Birds",
-          "overview": "Dans ce cours de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Recherchez ou réimprimez les fournitures pour **\\*Happy Maps**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Coupez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
           "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces puzzles les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe."
@@ -4490,12 +4501,13 @@
         },
         "courseb-2021/Events: The Big Event": {
           "name": "Le Grand Événement Jr.",
-          "overview": "Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements.",
+          "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
           "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un \"bouton\" d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
           "student_overview": "Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante."
         },
         "courseb-2021/Events in Play Lab": {
+          "name": "Mini-Projet : Une Bataille Royale avec les Événements",
           "overview": "Dans ce **mini-projet**, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo Jeux et d'appliquer toutes les connaissances de codage qu'ils auront acquises pour créer un jeu animé.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
@@ -4509,93 +4521,95 @@
           "student_overview": "Crée ton propre jeu ou ta propre histoire !"
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLa puissance d'Internet permet aux étudiants de découvrir et de visiter des endroits qu'ils ne pourraient peut-être pas voir en personne. Mais, tout comme pour voyager dans le monde réel, il est important d'être en sécurité lorsque vous voyagez en ligne. Lors de cette excursion virtuelle, les enfants peuvent s'entraîner à rester en sécurité lors d'aventures en ligne. ",
+          "name": "La Sécurité dans Mon Quarter en Ligne ",
+          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLe pouvoir de l'internet permet aux élèves de découvrir et de visiter des endroits qu'ils ne pourraient peut-être pas voir en personne. Mais, tout comme lorsqu'on se déplace dans le monde réel, il est important de rester en sécurité lorsqu'on voyage en ligne. Au cours de cette excursion virtuelle, les enfants pourront s'entraîner à rester en sécurité lors de leurs aventures en ligne. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   (Facultatif) Imprimez une affiche de poème pour l'affichage en classe. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves comment ils peuvent se déplacer en ligne en toute sécurité. ",
-          "student_overview": "Apprenez à vous déplacer en ligne en toute sécurité."
+          "student_overview": "Apprends à te déplacer en ligne en toute sécurité."
         },
         "coursea-2021/Learn to Drag and Drop": {
-          "name": "Apprends à Faire Glisser et Déposer",
+          "name": "Apprendre à Faire Glisser et Déposer",
           "overview": "Cette leçon de **développement des compétences** donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le labo informatique. Elle commence par une brève discussion les initiant aux usages dans un labo informatique, puis ils se mettront à utiliser des ordinateurs pour résoudre des casse-têtes en ligne.",
           "preparation": "-   Regardez la **\\*Comment créer une section de classe** sur Code.org - Vidéo de l'enseignant. Créez votre propre section de classe sur Code.org et assurez-vous que chaque élève ait bien une carte avec son mot de passe dessus.\n-   Assurez-vous que les élèves pourront accéder à la leçon 2 avec leur dispositif. Voyez si vous souhaitez masquer les futures leçons pour empêcher les élèves d'avancer trop rapidement.\n-   Demandez au responsable informatique de l'école d'ajouter un lien rapide pour votre section de classe sur le bureau de l'ordinateur.\n-   Consultez le site Web Common Sense Education pour plus de contenu sur la sécurité en ligne. ",
           "purpose": "L'objectif principal de cette leçon est de développer l'expérience des élèves avec les ordinateurs. En couvrant les fonctions informatiques les plus élémentaires telles que cliquer, faire glisser et déposer, nous créons un terrain de jeu plus égal dans la classe pour les futurs puzzles. Cette leçon offre également une excellente occasion d'introduire la terminologie de base du matériel informatique, y compris potentiellement \"souris\", \"trackpad\" ou \"écran tactile\", selon vos appareils. ",
-          "student_overview": "Clique et fais glisser pour terminer les énigmes."
+          "student_overview": "Clique et fais glisser pour terminer les casse-têtes."
         },
         "coursea-2021/Programming: Happy Maps": {
           "name": "Cartes Joyeuses",
-          "overview": "Cette leçon débranchée réunit des équipes avec une tâche simple : amener le « flurb » au fruit. Les élèves s'entraîneront à écrire des instructions précises tout en travaillant sur la traduction des instructions dans les symboles fournis. Si des problèmes apparaissent dans le code, les étudiants doivent également travailler ensemble pour reconnaître les bugs et construire des solutions.",
+          "overview": "Cette leçon de **mise en contexte** réunit des équipes autour d'une tâche simple : amener le « flurb » au fruit. Les élèves s'entraîneront à écrire des instructions précises tout en travaillant à traduire les instructions par les symboles fournis.",
           "preparation": "-   Imprimez une **\\*Feuille de travail** et un jeu de **\\*Manipulatifs** par groupe de 2-3.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Le pont entre les algorithmes et la programmation peut être court si les élèves comprennent la différence entre la planification d'une séquence et l'encodage de cette séquence, dans le langage approprié. Cette activité aidera les élèves à acquérir de l'expérience en lecture et en écriture en sténographie.",
-          "student_overview": "Écrives des instructions pour amener le Flurb au fruit."
+          "student_overview": "Écris les instructions qui amèneront le Flurb au fruit."
         },
         "coursea-2021/Sequencing with Scrat": {
           "name": "Séquencer avec Scrat",
-          "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves développeront des algorithmes séquentiels afin de déplacer un personnage type écureuil d'un côté du labyrinthe vers le gland qui se trouve de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire.",
           "preparation": "-   Découpez des blocs directionnels dans les **\\*Manipulatifs** à utiliser avec l'activité de transition Happy Maps.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
-          "student_overview": "Programme Scrat pour atteindre le gland."
+          "student_overview": "Programme Scrat de sorte qu'il atteigne le gland."
         },
         "coursea-2021/Programming in Ice Age": {
           "name": "Programmer avec Scrat",
-          "overview": "Dans ce cours de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à travailler les algorithmes séquentiels.",
           "preparation": "-   Jouez avec les énigmes pour trouver d'éventuels problèmes pour votre classe\n-   (Facultatif) Choisissez quelques énigmes sur lesquelles travailler en groupe avec votre classe\n-   Assurez-vous que chaque élève ait bien un journal de réflexion",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
           "student_overview": "Ecris des programmes pour aider Scrat à atteindre le gland."
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "name": "Programmer avec Rey et BB-8",
-          "overview": "Dans cette leçon, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus compliquée pour naviguer dans un cours délicat avec BB-8.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves utiliseront leurs nouvelles compétences en programmation de manière plus complexe pour naviguer un cours compliqué avec BB-8.",
           "preparation": "-   Résolvez les énigmes allant avec cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "En ayant le transfert des connaissances à l'esprit, cette leçon donne aux élèves un nouvel environnement pour exercer les compétences qu'ils développent. Les fans de Star Wars vont sauter de joie quand ils verront ces énigmes. Chaque énigme de cette série a été ajoutée pour fournir une compréhension accrue des concepts de base qu'ils utiliseront tout au long du reste de ce cours.",
-          "student_overview": "Aide BB-8 à collecter la ferraille."
+          "student_overview": "Aide BB-8 à ramasser la ferraille."
         },
         "coursea-2021/Loops: Happy Loops": {
-          "name": "Les Boucles Heureuses",
-          "overview": "Cette activité revisite les Cartes Joyeuses. Cette fois, les étudiants résoudront des énigmes plus grandes et plus longues avec leur code, ce qui les amènera à voir l'utilité des structures, qui leur permettent d'écrire plus de code de manière plus facile.",
+          "name": "Les Boucles Joyeuses",
+          "overview": "Cette leçon de **mise en contexte** revient sur les Cartes Joyeuses. Cette fois, les élèves utiliseront des boucles pour résoudre de plus gros et de plus longs casse-têtes avec leur code.",
           "preparation": "-   Imprimez une **\\*Fiche de travail** à afficher pour la classe\n-   Pour chaque groupe de 2-3, imprimez un de chaque : **\\*Pièces de jeu, \\*Feuille de travail XL et \\*Bonus Pack Manipulatives**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon sert d'initiation aux boucles. Les boucles permettent aux étudiants de simplifier leur code en regroupant les commandes qui doivent être répétées. Les élèves développeront des compétences de pensée critique en remarquant la répétition dans les mouvements de leurs camarades de classe, et en déterminant combien de fois répéter des commandes. En revoyant les « Cartes Joyeuses », les élèves auront la chance de relier les anciens concepts, tels que le séquençage, au nouveau concept de boucles de répétition.",
           "student_overview": "Aide le Flurb à résoudre des problèmes plus importants en utilisant des boucles."
         },
         "coursea-2021/Loops in Ice Age": {
           "name": "Les Boucles avec Scrat",
-          "overview": "En s'appuyant sur le concept de répéter les instructions des \"Boucle Joyeuses\", les élèves utiliseront des boucles pour se rendre plus efficacement au gland, sur Code.org.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves travailleront la notion de boucles avec des casse-têtes de programmation où le but est d'aider l'écureuil à parvenir au gland. ",
           "preparation": "-   Examinez la précédente leçon hors ligne et élaborez des questions pour rappeler aux élèves pourquoi on utilise des boucles.\n-   (Facultatif) Choisissez quelques énigmes à faire avec toute la classe.\n-   Rassemblez des fournitures de précédentes Happy Loop, à réutiliser pour s'échauffer.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves iront plus loin dans leur apprentissage sur les boucles et la façon de les mettre en application dans du code Blockly. L'utilisation de boucles est une compétence importante dans la programmation, car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les énigmes de Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler du code répété dans des boucles, et à reconnaître des modèles qui doivent être répétés.",
           "student_overview": "Aide Scrat couvrir plus de terrain en utilisant des boucles."
         },
         "coursea-2021/Loops in Collector": {
           "name": "Les Boucles avec Laurel",
-          "overview": "Dans cette leçon, les élèves continuent d'apprendre le concept de boucles. Dans la leçon précédente, les élèves ont été initiés aux boucles en se déplaçant dans un labyrinthe et en ramassant du maïs. Ici, les boucles sont utilisées pour collecter des trésors dans les espaces ouverts des grottes.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves continueront à découvrir la notion de boucles. Ici, les élèves utiliseront les boucles pour récolter du trésor dans des espaces type grottes ouvertes.",
           "preparation": "-   Résolvez les énigmes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Cette leçon donne aux élèves plus de pratique avec les boucles et présente un nouveau bloc, « obtenir un trésor ». Le bloc fonctionne de la même manière que « cueillette de maïs » dans Harvester. Ces énigmes sont plus ouvertes, donnant aux élèves plus de flexibilité pour leurs solutions finales. ",
-          "student_overview": "Aide Laurel l'Aventurière à collecter le trésor sous terre."
+          "student_overview": "Aide Laurel l'aventurière à récolter le trésor sous-terrain."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "name": "Scène de l'Océan avec Boucles",
-          "overview": "Revenant aux boucles, les élèves apprennent à dessiner des images en bouclant de simples séquences d'instructions. Dans la leçon branchée précédente, des boucles étaient utilisées pour traverser un labyrinthe et collecter des trésors. Ici, les boucles créent des motifs. À la fin de cette phase, les étudiants auront la possibilité de créer leurs propres images à l'aide de boucles.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à dessiner des images mettant en boucle des séquences simples d'instructions. Ici, les boucles créent des motifs récurrents. À la fin de cette leçon, les élèves auront l'occasion de créer leurs propres images.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Recommandations de cours CSF**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon donne une perspective différente sur la façon dont les boucles peuvent créer des éléments, dans la programmation. Ici, les élèves peuvent également réfléchir à l'inefficacité de la programmation sans boucle, en raison du nombre important de blocs dont le programme aurait besoin sans l'aide de boucles `répéter`.",
           "student_overview": "Utilise des boucles et des schémas récurrents pour finir les images."
         },
         "coursea-2021/Events: The Big Event": {
           "name": "Le Grand Événement Jr.",
-          "overview": "Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements.",
+          "overview": "Dans cette **leçon de mise en contexte**, la classe fera l'expérience de la notion d'événements au travers d'un jeu où ils se déplaceront ou crieront  lorsque vous appuyez sur des boutons sur une télécommande géante. ",
           "preparation": "-   Préparez-vous à projeter **\\*Image du contrôleur**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront les activités interrompues en appuyant sur un \"bouton\" d'une télécommande en papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon. ",
-          "student_overview": "Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante."
+          "student_overview": "Bouge et crie lorsque tes enseignants appuient sur les boutons d'une télécommande géante."
         },
         "coursea-2021/Events in Play Lab": {
-          "overview": "Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !",
+          "name": "Mini-Projet : En route avec le Labo Jeux",
+          "overview": "Dans ce **mini-projet**, les élèves utiliseront les événements dans le Labo Jeux et mettront en pratique toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo Jeux !",
           "preparation": "-   Résolvez les énigmes pour identifier des problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Recommandations de cours CSF**\n-   Assurez-vous que chaque élève ait bien un journal de réflexion ",
           "purpose": "Les étudiants approfondiront leur compréhension des événements en utilisant le Labo du Jeu aujourd'hui. Les événements sont très fréquents dans la plupart des programmes informatiques. Dans cette activité, les élèves utiliseront les événements pour faire bouger un personnage sur l'écran, faire des bruits et changer d'arrière-plan en fonction des événements initiés par l'utilisateur.",
           "student_overview": "Crée ton jeu ou ta propre histoire."
         },
         "coursea-2021/lesson-1": {
           "name": "Projet de fin de cours",
-          "overview": "Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et les boucles avec l'Artiste. ",
+          "overview": "Dans cette leçon **projet**, les élèves appliqueront ce qu'ils ont appris au sujet du séquencement et des boucles avec l'Artiste. ",
           "preparation": "-   Écrivez et codez à l'avance votre propre histoire pour l'Artiste afin d'inspirer les élèves ! ",
           "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
-          "student_overview": "Racontez une histoire avec l'Artiste ! "
+          "student_overview": "Raconte une histoire avec l'Artiste ! "
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternet regorge de toutes sortes de personnes intéressantes, mais parfois, certaines d'entre elles peuvent être méchantes les unes envers les autres. Avec ce jeu de rôle, aidez vos élèves à comprendre pourquoi il est souvent plus facile d'être méchant en ligne qu'en personne, et comment gérer la méchanceté en ligne lorsqu'ils la voient. ",
@@ -4705,7 +4719,7 @@
           "overview": "Cette leçon de synthèse guide les élèves à travers le processus de conception, de développement et de présentation de leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement de ce processus, nous avons fourni aux étudiants une structure, étape par étape, à suivre, de la planification sur papier au codage sur notre site web. De plus, nous offrons des idées pour aider les enseignants à animer un show de clôture ! ",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Imprimez un **\\*Guide de planification de projet** pour chaque élève (ou groupe de deux).\n-   Consultez le document **\\*Guide de planification de projet (exemplaire)**.\n-   (Facultatif) Complétez votre propre guide de planification et codez votre propre projet pour le montrer aux élèves ! ",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
-          "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
+          "student_overview": "Prépare tes mains à plein de codage ! C'est l'heure de commencer à construire ton projet."
         },
         "coursed-2021/lesson-5": {
           "overview": " [![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nCette leçon a été créée à l'origine par [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nDes mots de passe en ligne plus forts et plus sécurisés sont une bonne idée pour tout le monde. Mais comment pouvons-nous aider les enfants à créer de meilleurs mots de passe et à s'en souvenir ? Utilisez les conseils de cette leçon pour aider les enfants à créer des mots de passe à la fois sécurisés et mémorisables. ",
@@ -4820,9 +4834,9 @@
         },
         "coursed-2021/End of Course Project": {
           "name": "Projet de fin de cours",
-          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
+          "overview": "Cette leçon **projet** guide les élèves au travers du processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
-          "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
+          "student_overview": "Prépare tes mains à plein de codage ! C'est l'heure de commencer à construire ton projet."
         },
         "express-2021/Programming with Angry Birds": {
           "name": "Programmer avec Angry Birds",
@@ -4870,11 +4884,12 @@
           "name": "Les Sprites en Action",
           "overview": "Dans cette leçon de **développement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les élèves écriront des programmes et découvriront les deux concepts qui sont au cœur du Labo des Sprites : les sprites et les comportements.",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous passerez par différents niveaux de programmation et terminerez sur une tâche « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
           "name": "Animal domestique virtuel avec le Labo des Sprites",
-          "overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
+          "overview": "Dans cette leçon **mini-projet**, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Sprites pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette leçon permet aux étudiants d'appliquer les concepts de programmation des leçons précédentes dans un autre contexte créatif. ",
           "student_overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !"
@@ -4962,52 +4977,53 @@
         },
         "express-2021/Functions with Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
         "express-2021/Functions with Harvester": {
           "name": "Les Fonctions avec l'Agricultrice",
-          "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves conjugueront les instructions conditionnelles avec les fonctions pour récolter des cultures dans L'Agricultrice.",
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "express-2021/lesson-4": {
           "name": "Texte et invites ",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraîneront avec les variables dans le Labo des Sprites. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
-          "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
+          "student_overview": "Dans ce cours, tu t'entraîneras sur les variables dans le Labo des Sprites."
         },
         "express-2021/Variables with Artist": {
-          "overview": "Dans cette leçon, les élèves exploreront la création de dessins répétitifs à l'aide de variables dans l'environnement de L'Artiste. Les élèves apprendront comment les variables peuvent être utilisées pour rendre le code plus facile à écrire et à lire. Après des énigmes guidées, les élèves termineront dans un niveau de jeu libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.",
+          "name": "Utiliser des Variables avec l'Artistes",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves exploreront la création de motifs récurrents à l'aide de variables dans le monde de l'Artiste. Les élèves apprendront à utiliser les variables pour rendre le code plus facile à écrire et à lire. À la suite de casse-têtes guidées, les élèves termineront avec un niveau en jeu libre pour qu'ils puissent montrer ce qu'ils ont appris et créer de nouveaux designs.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Les variables sont essentiellement des espaces réservés pour des valeurs qui peuvent être inconnues au moment où vous exécutez votre programme ou pour des valeurs qui peuvent changer pendant l'exécution d'un programme. Ceux-ci sont essentiels à la création de code dynamique car ils permettent à votre programme de changer et de se développer en fonction d'un nombre quelconque de modifications potentielles. Cette étape renforce l'utilisation des variables, en utilisant les capacités les plus élémentaires de les définir et de les utiliser. ",
           "student_overview": "Dans cette leçon, tu vas faire des dessins en utilisant des variables qui changent au fur et à mesure que le programme s'exécute."
         },
         "express-2021/Changing Variables with Bee": {
           "name": "Modifier des Variables avec l'Abeille",
-          "overview": "Cette leçon aidera à illustrer comment les variables peuvent rendre les programmes plus puissants en permettant aux valeurs de changer pendant que le code est en cours d'exécution.",
+          "overview": "Cette leçon de **développement des compétences** aidera à illustrer comment les variables peuvent rendre les programmes plus dynamiques en permettant aux valeurs de changer pendant que le code est en cours d'exécution.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Cette abeille aime les variables !"
+          "student_overview": "Cette abeille adore les variables !"
         },
         "express-2021/For Loops with Bee": {
           "name": "Les Boucles « Pour » avec l'Abeille",
-          "overview": "Cette leçon de **renforcement des compétences** se concentre sur les boucles Pour et sur l'utilisation d'une variable d'incrémentation pour résoudre des énigmes plus complexes. ",
+          "overview": "Cette leçon de **développement des compétences** se concentre sur les boucles « pour » et sur l'utilisation d'une variable qui augmente pour résoudre des énigmes plus complexes. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Buzz buzz. Dans ces énigmes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
+          "student_overview": "Buzz buzz. Dans ces casse-têtes, tu guideras une abeille vers le nectar et le miel en utilisant des boucles « pour » !"
         },
         "express-2021/For Loops with Artist": {
           "name": "Les Boucles « Pour » avec l'Artiste",
-          "overview": "Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles Pour pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves s'entraineront sur les boucles « pour » avec l'Artiste. Les élèves complèteront des casse-têtes afin de créer des motifs complexes et de l'art unique.",
           "preparation": "-   Parcourez le cours pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "La créativité et la pensée critique se conjuguent magnifiquement, dans cette leçon. Les étudiants continueront leur pratique avec des boucles Pour et des variables, pendant qu'ils créeront des images à couper le souffle. Cette leçon inspire un esprit créatif tout en enseignant des concepts de base de l'informatique.",
-          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
+          "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour créer des images à couper le souffle."
         },
         "express-2021/End of Course Project": {
           "name": "Projet de fin de cours",
-          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
+          "overview": "Cette leçon **projet** guide les élèves au travers du processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
-          "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
+          "student_overview": "Prépare tes mains à plein de codage ! C'est l'heure de commencer à construire ton projet."
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "name": "Apprends à Faire Glisser et Déposer",
@@ -5138,7 +5154,7 @@
         },
         "coursee-2021/Functions in Artist": {
           "name": "Les Fonctions avec L'Artiste",
-          "overview": "Les élèves seront initiés à l'utilisation de fonctions avec l'Artiste. Des images magnifiques seront créées et modifiées. Pour les motifs plus compliqués, les élèves apprendront les fonctions d'imbrication en appelant une fonction de l'intérieur d'une autre.",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves apprendront à utiliser les fonctions avec l'Artiste. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
@@ -5159,7 +5175,7 @@
           "name": "Les Fonctions avec l'Agricultrice",
           "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
-          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
+          "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail quand tu aides l'Agricultrice à récolter !"
         },
         "coursee-2021/lesson-1": {
           "name": "Concevoir pour l'Accessibilité",
@@ -5638,8 +5654,11 @@
         "express-2020/End of Course Project": {
           "name": "Projet de fin de cours"
         },
+        "courseb-2020/Digital Trails": {
+          "name": "Traces Numériques"
+        },
         "courseb-2020/Move It, Move It": {
-          "name": "Bouge, Bouge"
+          "name": "Bouge, Bouge ton corps"
         },
         "courseb-2020/Sequencing in Maze": {
           "name": "Séquencer avec Angry Birds"
@@ -5830,8 +5849,11 @@
         "coursee-2020/End of Course Project": {
           "name": "Projet de fin de cours"
         },
+        "coursea-2020/Safety in My Online Neighborhood": {
+          "name": "La Sécurité dans Mon Quarter en Ligne "
+        },
         "coursea-2020/Learn to Drag and Drop": {
-          "name": "Apprends à Faire Glisser et Déposer"
+          "name": "Apprendre à Faire Glisser et Déposer"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Cartes Joyeuses"
@@ -5846,7 +5868,7 @@
           "name": "Programmer avec Rey et BB-8"
         },
         "coursea-2020/Loops: Happy Loops": {
-          "name": "Les Boucles Heureuses"
+          "name": "Les Boucles Joyeuses"
         },
         "coursea-2020/Loops in Ice Age": {
           "name": "Les Boucles avec Scrat"

@@ -2807,9 +2807,18 @@ it-IT:
   ai_cognimates_description: Una piattaforma di formazione AI per la creazione di
     giochi, la programmazione di robot e la formazione.
   ai_try_activity: Prova l'attività
-  outbreak_tile_title: Epidemia
-  outbreak_tile_subtitle: Un virus ha infettato Monster Town! Codifica un simulatore
-    di epidemia e fai previsioni su ciò che accadrà ai vicini di Monster Town.
+  outbreak_tile_title: Simulazione di epidemia
+  outbreak_tile_subtitle: Un virus ha infettato la Città dei Mostri! Programma una
+    simulazione dell'epidemia e fai delle previsioni su ciò che accadrà ai vicini
+    della Città dei Mostri.
   footer_cookie_notice: Informativa sui cookie
+  hoc2022_banner_title: Esplora, gioca, crea!
+  hoc2022_banner_description: 'Esplora l''universo, segna un gol, prendi il ritmo:
+    ci sono così tanti modi per provare la scienza informatica!'
+  hoc2022_cta_primary: Scopri le novità
+  hoc2022_cta_secondary: Prova altre attività
+  hoc2022_landing_page_explore_description: Porte aperte per i nuovi mondi con l'informatica!
+  hoc2022_landing_page_play_description: Conquista il campo e segna!
   hoc2022_landing_page_create_title: Crea
+  hoc2022_landing_page_create_description: Fai qualcosa di strano ma fantastico!
   try_it_yourself: Prova da solo!
