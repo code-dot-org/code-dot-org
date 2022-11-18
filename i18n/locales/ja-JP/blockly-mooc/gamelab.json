@@ -1,4 +1,11 @@
 {
-  "foo":"foo",
-  "fooTooltip":"do foo"
+  "dropletBlock_createSprite_param2": "幅",
+  "dropletBlock_createSprite_param3": "高さ",
+  "dropletBlock_setCollider_param0": "タイプ",
+  "dropletBlock_setCollider_param4": "高さ",
+  "dropletBlock_setColliderEach_param0": "タイプ",
+  "dropletBlock_setColliderEach_param4": "高さ",
+  "errorLoadingAnimation": "「{animationName}」というアニメーションをアップロードすることができません。インターネット接続を確かめてページをリロードしてみてください。問題が続いたら、アニメーションが壊れている可能性があります。その場合は、アニメーションを外してください。",
+  "reinfFeedbackMsg": "やった！「進め」をクリックして次のレベルへ行きましょう。",
+  "shareGame": "あなたのゲームを共有："
 }

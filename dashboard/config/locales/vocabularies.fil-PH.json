@@ -429,14 +429,24 @@
           "word": "Interface ng User"
         },
         "code/poem-art/unversioned": {
-          "word": "Code"
+          "word": "Code",
+          "definition": ""
         },
         "event/poem-art/unversioned": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
         "program/poem-art/unversioned": {
-          "word": "Program"
+          "word": "Program",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Paggawi"

@@ -784,7 +784,7 @@
         "CourseF_Project_SpriteLab_2020": "Crée un projet Labo des Sprites",
         "CourseF_Project_SpriteLab_2021": "Crée un projet de Sprite Lab",
         "courseA_EOC_artist_3": "Artiste : Espace",
-        "courseA_EOC_playlab_fantasy": "Play Lab : Fantasie",
+        "courseA_EOC_playlab_fantasy": "Labo Jeux : Fantaisie",
         "spritelab_extras_repeat": "Beaucoup de sprites !",
         "courseF_apps_aquarium": "Aquarium virtuel",
         "courseF_apps_card": "Carte de voeux",
@@ -862,8 +862,8 @@
         "CourseF_Project_SpriteLab_examples_2021": "Danseur étoile (Sprite Lab)",
         "courseA_EOC_artist_1": "Artiste : Zoo",
         "courseA_EOC_artist_2": "Artiste : Jardin",
-        "courseA_EOC_playlab_animals": "Labo Jeu : Animaux",
-        "courseA_EOC_playlab_people": "Play Lab : Les gens",
+        "courseA_EOC_playlab_animals": "Labo Jeux : Animaux",
+        "courseA_EOC_playlab_people": "Labo Jeux : Personnes",
         "courseC19_playLab_sample1_2021": "Écureuil affamé ",
         "courseC19_playLab_sample2_2021": "Histoire d'alien",
         "courseF_sprites_behaviors": "Les comportements des Sprites",
@@ -1152,9 +1152,9 @@
         "courseA_EOC_artist_12022": "Artiste : Zoo",
         "courseA_EOC_artist_22022": "Artiste : Jardin",
         "courseA_EOC_artist_32022": "Artiste : Espace",
-        "courseA_EOC_playlab_animals2022": "Labo Jeu : Animaux",
-        "courseA_EOC_playlab_fantasy2022": "Play Lab : Fantasie",
-        "courseA_EOC_playlab_people2022": "Play Lab : Les gens",
+        "courseA_EOC_playlab_animals2022": "Labo Jeux : Animaux",
+        "courseA_EOC_playlab_fantasy2022": "Labo Jeux : Fantaisie",
+        "courseA_EOC_playlab_people2022": "Labo Jeux : Personnes",
         "courseC19_playLab_sample12022": "Écureuil affamé ",
         "courseC19_playLab_sample22022": "Histoire d'alien",
         "courseC_artist_prog72022": "Étiquette de nom d'animal de compagnie ",
@@ -1295,7 +1295,10 @@
         "helloworld_food_sizes_soccer-2022": "Taille",
         "helloworld_food_sizes_space-2022": "Taille",
         "helloworld_food_sounds_soccer-2022": "Sons",
-        "helloworld_food_sounds_space-2022": "Sons"
+        "helloworld_food_sounds_space-2022": "Sons",
+        "helloworld_food_backgrounds": "Cliquez sur Événements",
+        "helloworld_food_backgrounds_soccer-2022": "Cliquez sur Événements",
+        "helloworld_food_backgrounds_space-2022": "Cliquez sur Événements"
       }
     }
   }
