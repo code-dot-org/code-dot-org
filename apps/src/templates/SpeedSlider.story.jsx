@@ -17,8 +17,14 @@ class StorybookHarness extends React.Component {
   }
 }
 
-export default storybook => {
-  return storybook
-    .storiesOf('SpeedSlider', module)
-    .add('Default', () => <StorybookHarness />);
+const Template = args => <StorybookHarness {...args} />;
+
+export const BasicExample = Template.bind({});
+BasicExample.args = {
+  hasFocus: false
+};
+
+export default {
+  title: 'Speed Slider',
+  component: SpeedSlider
 };

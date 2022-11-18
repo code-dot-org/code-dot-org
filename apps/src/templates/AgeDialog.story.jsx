@@ -1,11 +1,15 @@
 import React from 'react';
 import {UnconnectedAgeDialog as AgeDialog} from './AgeDialog';
 
-export default storybook => {
-  return storybook.storiesOf('AgeDialog', module).addStoryTable([
-    {
-      name: 'AgeDialog',
-      story: () => <AgeDialog signedIn={false} turnOffFilter={() => {}} />
-    }
-  ]);
+const Template = args => <AgeDialog {...args} />;
+
+export const BasicExample = Template.bind({});
+BasicExample.args = {
+  signedIn: false,
+  turnOffFilter: () => {}
+};
+
+export default {
+  title: 'AgeDialog',
+  component: AgeDialog
 };
