@@ -989,10 +989,6 @@ mn:
             '"hearts"': зүрхнүүд
             '"rain"': бороотой
             '"starburst"': Оддын тэсрэлт
-      FunctionBlocks_representManipulative:
-        options:
-          BEHAVIOR:
-            draggable(): татаж болохуйц
       gamelab_addBehaviorSimple:
         text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
       gamelab_allSpritesWithAnimation:
@@ -1709,6 +1705,8 @@ mn:
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': үсрэх
+      Poetry_playSoundOptionsSpace:
+        text: хөгжимтоглох {SOUND}
       Poetry_setBackground:
         text: суурь өнгийг тохируулах {COLOR}
       Poetry_setBackgroundEffect:
@@ -1953,5 +1951,13 @@ mn:
           DIR:
             right: баруун гар тийш ↻
             left: зүүн гар тийш ↺
+      storylab_setForegroundEffect2:
+        options:
+          EFFECT:
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': зүрхнүүд
+            '"rain"': бороотой
+            '"starburst"': Оддын тэсрэлт
       validation_validatedBackground:
         text: суурь өнгийг {IMG} руу тохируулах

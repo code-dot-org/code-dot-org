@@ -37,6 +37,9 @@
     },
     "nutrition": {
       "fields": {
+        "Category": {
+          "id": "Categoria"
+        },
         "Description": {
           "id": "Descripció"
         }
