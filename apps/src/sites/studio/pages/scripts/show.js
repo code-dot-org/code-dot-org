@@ -97,6 +97,8 @@ function initPage() {
   // rendered on this page
   updateQueryParam('completedLessonNumber', undefined);
 
+  console.log(scriptData);
+
   ReactDOM.render(
     <Provider store={store}>
       <UnitOverview
@@ -132,7 +134,7 @@ function initPage() {
         }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
-        publishedState={scriptData.published_state}
+        publishedState={scriptData.publishedState}
       />
     </Provider>,
     mountPoint
