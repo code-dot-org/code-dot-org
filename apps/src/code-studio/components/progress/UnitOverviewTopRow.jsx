@@ -33,7 +33,6 @@ class UnitOverviewTopRow extends React.Component {
     assignedSectionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape).isRequired,
-    showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
@@ -115,7 +114,6 @@ class UnitOverviewTopRow extends React.Component {
       isRtl,
       teacherResources,
       studentResources,
-      showAssignButton,
       assignedSectionId,
       showCalendar,
       unitCalendarLessons,
@@ -233,7 +231,6 @@ class UnitOverviewTopRow extends React.Component {
               sections={sectionsForDropdown}
               selectedSectionId={selectedSectionId}
               assignmentName={unitTitle}
-              showAssignButton={showAssignButton}
               courseId={currentCourseId}
               courseOfferingId={courseOfferingId}
               courseVersionId={courseVersionId}

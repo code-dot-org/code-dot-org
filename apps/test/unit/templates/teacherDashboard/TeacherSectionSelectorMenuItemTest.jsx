@@ -130,19 +130,8 @@ describe('TeacherSectionSelectorMenuItemTest', () => {
       isAssigned: true,
       name: 'test section'
     };
-    const assignToSectionSpy = sinon
-      .stub()
-      .returns(new Promise(resolve => resolve()));
-    const unassignSectionSpy = sinon
-      .stub()
-      .returns(new Promise(resolve => resolve()));
     const wrapper = shallow(
-      <TeacherSectionSelectorMenuItem
-        section={section}
-        onClick={() => {}}
-        assignToSection={assignToSectionSpy}
-        unassignSection={unassignSectionSpy}
-      />
+      <TeacherSectionSelectorMenuItem section={section} onClick={() => {}} />
     );
 
     wrapper
@@ -152,15 +141,7 @@ describe('TeacherSectionSelectorMenuItemTest', () => {
         preventDefault: () => {},
         stopPropagation: () => {}
       });
-    expect(
-      wrapper
-        .find('FontAwesome')
-        .first()
-        .props().icon
-    ).to.equal('spinner');
-
-    expect(assignToSectionSpy).to.not.have.been;
-    expect(unassignSectionSpy).to.have.been.calledOnce;
+    expect(wrapper.find('UnassignSectionDialog').length).to.equal(1);
   });
 
   it('calls onClick when clicked', () => {
@@ -174,7 +155,10 @@ describe('TeacherSectionSelectorMenuItemTest', () => {
       <TeacherSectionSelectorMenuItem section={section} onClick={onClickSpy} />
     );
 
-    wrapper.simulate('click');
+    wrapper
+      .find('Item')
+      .first()
+      .simulate('click');
     expect(onClickSpy).to.have.been.calledOnce;
   });
 });

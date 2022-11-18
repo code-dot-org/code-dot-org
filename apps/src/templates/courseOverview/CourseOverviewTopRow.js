@@ -13,7 +13,6 @@ export default class CourseOverviewTopRow extends Component {
     courseVersionId: PropTypes.number,
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
-    showAssignButton: PropTypes.bool,
     isInstructor: PropTypes.bool
   };
 
@@ -24,7 +23,6 @@ export default class CourseOverviewTopRow extends Component {
       courseVersionId,
       teacherResources,
       studentResources,
-      showAssignButton,
       sectionsForDropdown,
       isInstructor
     } = this.props;
@@ -37,7 +35,6 @@ export default class CourseOverviewTopRow extends Component {
         {isInstructor && (
           <SectionAssigner
             sections={sectionsForDropdown}
-            showAssignButton={showAssignButton}
             courseId={id}
             buttonLocationAnalytics={'course-overview-top'}
             courseOfferingId={courseOfferingId}
