@@ -13,6 +13,7 @@ export const getColumnsByDataType = state => state.columnsByDataType;
 const getSelectedFeatures = state => state.selectedFeatures;
 export const getLabelColumn = state => state.labelColumn;
 export const getMetadata = state => state.metadata;
+export const getDatasetId = state => state.metadata && state.metadata.name;
 export const getTrainedModelDetails = state => state.trainedModelDetails;
 
 export const getCategoricalColumns = createSelector(

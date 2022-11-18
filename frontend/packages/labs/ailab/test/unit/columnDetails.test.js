@@ -16,9 +16,19 @@ import {
   premadeDatasetState,
   mosquitoCountMax,
   mosquitoCountMin,
-  mosquitoDescription
+  mosquitoDescription,
+  premadeDatasetTranslations
 } from './testData';
 import { ColumnTypes, UNIQUE_OPTIONS_MAX } from "../../src/constants.js";
+import I18n from "../../src/i18n";
+
+beforeEach(() => {
+  I18n.initI18n();
+});
+
+afterEach(() => {
+  I18n.reset();
+});
 
 describe("column data types", () => {
   test("column is categorical", async () => {
@@ -121,6 +131,16 @@ describe("getColumnDescription", () => {
       {}
     );
     expect(result).toEqual(mosquitoDescription);
+  });
+
+  test("gets localized description", async () => {
+    I18n.reset();
+    I18n.initI18n(premadeDatasetTranslations);
+    const result = getColumnDescription(
+      "mosquitoCount",
+      premadeDatasetState.metadata,
+      {});
+    expect(result).toEqual("mosquitoCount description");
   });
 
   test("no description", async () => {

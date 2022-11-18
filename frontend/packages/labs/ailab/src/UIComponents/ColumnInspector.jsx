@@ -18,15 +18,17 @@ import SelectLabelButton from "./SelectLabelButton";
 import UniqueOptionsWarning from "./UniqueOptionsWarning";
 import { currentColumnInspectorShape } from "./shapes";
 import I18n from "../i18n";
+import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 
 class ColumnInspector extends Component {
   static propTypes = {
     currentColumnDetails: currentColumnInspectorShape,
-    currentPanel: PropTypes.string
+    currentPanel: PropTypes.string,
+    datasetId: PropTypes.string
   };
 
   render() {
-    const { currentColumnDetails, currentPanel } = this.props;
+    const { currentColumnDetails, currentPanel, datasetId } = this.props;
 
     const selectingFeatures = currentPanel === "dataDisplayFeatures";
     const selectingLabel = currentPanel === "dataDisplayLabel";
@@ -41,6 +43,8 @@ class ColumnInspector extends Component {
     }
 
     const localizedDataType = I18n.t(`columnType_${currentColumnDetails.dataType}`)
+    const localizedColumnName = getLocalizedColumnName(datasetId, currentColumnDetails.id);
+
     return (
       currentColumnDetails && (
         <div
@@ -50,7 +54,7 @@ class ColumnInspector extends Component {
             ...styles.rightPanel
           }}
         >
-          <div style={styles.largeText}>{currentColumnDetails.id}</div>
+          <div style={styles.largeText}>{localizedColumnName}</div>
           <ScrollableContent>
             <div style={styles.cardRow}>
               <span style={styles.bold}>{I18n.t("columnInspectorDataType")}</span>
@@ -95,6 +99,7 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnDetails: getCurrentColumnDetails(state),
-    currentPanel: state.currentPanel
+    currentPanel: state.currentPanel,
+    datasetId: state.metadata && state.metadata.name
   })
 )(ColumnInspector);

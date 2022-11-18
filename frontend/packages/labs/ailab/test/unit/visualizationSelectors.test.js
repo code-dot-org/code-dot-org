@@ -10,6 +10,15 @@ import {
   currentColumnIsCategorical
 } from '../../src/selectors/currentColumnSelectors';
 import { allNumericalState, classificationState } from './testData';
+import I18n from "../../src/i18n";
+
+beforeEach(() => {
+  I18n.initI18n();
+});
+
+afterEach(() => {
+  I18n.reset();
+});
 
 describe("getScatterPlotData", () => {
   const expected = {
